@@ -286,18 +286,112 @@ function authors(opts){
   $('#af-sort').addEventListener('change',function(e){AF.sort=e.target.value;draw()});
   main.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;if(b.dataset.era){AF.eras[b.dataset.era]=!AF.eras[b.dataset.era]}else if(b.dataset.tag){AF.tags[b.dataset.tag]=!AF.tags[b.dataset.tag]}b.classList.toggle('on');draw()});
 }
-function author(id){
-  var a=AID[id];if(!a)return notfound();
-  var kinds={read:'read',site:'site',search:'search',about:'about'};
-  var links=a.links.slice().sort(function(x,y){var o={read:0,site:1,about:2,search:3};return o[x.kind]-o[y.kind]});
-  var same=A.filter(function(b){return b.era===a.era&&b.id!==a.id}).slice(0,14);
-  var h='<a class="backlink" href="#/authors">← All authors</a><div class="detail"><article class="detail-main"><div class="detail-head">'+avatar(a)+'<div><div class="eyebrow">'+esc(ERA[a.era].label)+(a.century?' · '+ord(a.century)+' century':'')+'</div><h1>'+esc(a.name)+'</h1><div class="dates">'+esc(dates(a))+'</div>'+badges(a,8)+'</div></div>'+
-   '<p class="summary dropcap">'+esc(a.desc)+'</p>'+(a.extract?'<div class="extract"><p>'+esc(a.extract)+(a.extract.length>=595?'…':'')+'</p><p class="small">Summary from Wikipedia'+(a.wikiDesc?' — “'+esc(a.wikiDesc)+'”':'')+'.</p></div>':'');
-  var _w='';if(a.works.length)_w='<div class="rule"></div><h3>Works to read online (New Advent)</h3><ul class="works">'+a.works.map(function(w){return '<li><a href="'+esc(w.url)+'" target="_blank" rel="noopener">'+esc(w.title)+'</a></li>'}).join('')+'</ul>';
-  h+=(a.doctor?'<div id="au-free"></div>':'')+_w+'<div id="au-books"></div></article><aside class="side"><div class="panel"><h3>Read &amp; explore</h3><ul class="linklist">'+links.map(function(l){return '<li><a href="'+esc(l.url)+'" target="_blank" rel="noopener"><span class="k '+kinds[l.kind]+'">'+l.kind+'</span>'+esc(l.label)+' ↗</a></li>'}).join('')+'</ul></div>'+
-   '<div id="au-ed"></div><div class="panel"><h3>Also in this era</h3><div class="related">'+same.map(function(b){return '<a href="#/author/'+b.id+'">'+esc(b.name)+'</a>'}).join('')+'</div></div></aside></div>';
-  render(h,'authors');document.title=a.name+' — Bibliotheca Catholica';authorBooks(a);authorEditions(a);if(a.doctor)readFree(a);
+/* ---------- v6: tabbed author profile ---------- */
+var AUTABS=[['works','Works'],['commentaries','Commentaries'],['buy','Buy the Books'],['related','Related']];
+var CUR_AU=null;
+function auResolve(id){if(AID[id])return AID[id];var c=A.filter(function(a){return a.id.slice(-id.length-1)==='-'+id||a.id.split('-').indexOf(id)>=0&&a.id.split('-').pop()===id});return c.length===1?c[0]:null}
+function auTabGet(){try{return localStorage.getItem('bc-au-tab')||''}catch(e){return ''}}
+function auTabSet(t){try{localStorage.setItem('bc-au-tab',t)}catch(e){}}
+function auLinkList(L){return '<ul class="linklist">'+L.map(function(l){return '<li><a href="'+esc(l.u)+'"'+(l.int?'':' target="_blank" rel="noopener"')+'><span class="k '+(l.k||'read')+'">'+esc(l.kl||l.k||'read')+'</span>'+esc(l.t)+(l.int?'':' ↗')+(l.n?'<span class="ll-n">'+esc(l.n)+'</span>':'')+'</a></li>'}).join('')+'</ul>'}
+function auNames(ids){return ids.filter(function(i){return AID[i]}).map(function(i){return '<a href="#/author/'+i+'">'+esc(AID[i].name)+'</a>'}).join('')}
+function author(id,tab){
+  var a=auResolve(id);if(!a)return notfound();
+  if(a.id!==id){location.replace('#/author/'+a.id+(tab?'/'+tab:''));return}
+  if(CUR_AU&&CUR_AU.id===a.id&&$('#au-tabs')){auShow(tab||CUR_AU.tab);return}
+  var X={};var site=a.links.filter(function(l){return l.kind==='site'}),wiki=a.links.filter(function(l){return /wikipedia\.org/.test(l.url)})[0];
+  var key=[];if(wiki)key.push(['Wikipedia',wiki.url]);if(a.qid)key.push(['Wikidata '+a.qid,'https://www.wikidata.org/wiki/'+a.qid]);else if(a.qidWork)key.push(['Wikidata '+a.qidWork,'https://www.wikidata.org/wiki/'+a.qidWork]);
+  site.slice(0,2).forEach(function(l){key.push([l.label,l.url])});
+  var h='<a class="backlink" href="#/authors">← All authors</a><article class="au-page"><header class="au-head"><div class="detail-head">'+avatar(a)+'<div><div class="eyebrow">'+esc(ERA[a.era].label)+(a.century?' · '+ord(a.century)+' century':'')+'</div><h1>'+esc(a.name)+'</h1><div class="dates">'+esc(dates(a))+'</div><div id="au-feast" class="au-feast"></div>'+badges(a,8)+'</div></div>'+
+   '<p class="summary dropcap">'+esc(a.desc)+'</p>'+(a.extract?'<div class="extract"><p>'+esc(a.extract)+(a.extract.length>=595?'…':'')+'</p><p class="small">Summary from Wikipedia'+(a.wikiDesc?': “'+esc(a.wikiDesc)+'”':'')+'.</p></div>':'')+
+   '<div class="au-key" id="au-key">'+key.map(function(k){return '<a class="chip" href="'+esc(k[1])+'" target="_blank" rel="noopener">'+esc(k[0])+' ↗</a>'}).join('')+'</div></header>'+
+   '<nav class="au-tabs" id="au-tabs" role="tablist" aria-label="Sections">'+AUTABS.map(function(t){return '<a role="tab" href="#/author/'+a.id+'/'+t[0]+'" data-t="'+t[0]+'" id="tab-'+t[0]+'">'+t[1]+' <span class="tc">…</span></a>'}).join('')+'</nav>'+
+   AUTABS.map(function(t){return '<section class="au-panel" role="tabpanel" id="tp-'+t[0]+'" aria-labelledby="tab-'+t[0]+'" hidden></section>'}).join('')+'</article>';
+  render(h,'authors');document.title=a.name+' — Bibliotheca Catholica';
+  CUR_AU={id:a.id,a:a,tab:'',n:{},ready:{}};
+  var T=$('#au-tabs');T.addEventListener('click',function(e){var l=e.target.closest('a[data-t]');if(!l)return;e.preventDefault();var t=l.dataset.t;history.pushState(null,'','#/author/'+a.id+'/'+t);auShow(t,true)});
+  auSticky();
+  var want=tab||auTabGet()||'works';CUR_AU.want=want;auShow(want);
+  // data
+  var pend=4;function step(){if(--pend===0)auBuild()}
+  loadBooks(function(){step()});loadGuide(function(){step()});lazy('authorx.js','AUTHORX',function(){step()});
+  if(a.doctor)lazy('doctors.js','DOCTORS_DATA',function(){step()});else step();
 }
+function auSticky(){var tb=document.querySelector('.topbar');var T=$('#au-tabs');if(!tb||!T)return;T.style.top=(tb.getBoundingClientRect().height-1)+'px'}
+window.addEventListener('resize',function(){if($('#au-tabs'))auSticky()});
+function auShow(t,user){var C=CUR_AU;if(!C)return;var ok=AUTABS.map(function(x){return x[0]});if(ok.indexOf(t)<0)t='works';
+  var el=$('#tab-'+t);if(el&&el.hidden&&C.built){t='works';if($('#tab-works').hidden)t='commentaries'}
+  C.tab=t;if(user||C.built)auTabSet(t);
+  if(C.built){var hh='#/author/'+C.id+'/'+t;var cur=location.hash;if(/^#\/author\/[^/]+\/./.test(cur)&&cur!==hh)history.replaceState(null,'',hh)}
+  document.querySelectorAll('#au-tabs a').forEach(function(x){var on=x.dataset.t===t;x.classList.toggle('on',on);x.setAttribute('aria-selected',on?'true':'false')});
+  document.querySelectorAll('.au-panel').forEach(function(p){p.hidden=p.id!=='tp-'+t});
+  if(user){var T=$('#au-tabs');var y=T.getBoundingClientRect().top;var top=parseFloat(T.style.top)||0;if(y<top+2)window.scrollTo(0,T.offsetTop-top+1)
+    var on=document.querySelector('#au-tabs a.on');if(on&&on.scrollIntoView)on.scrollIntoView({block:'nearest',inline:'nearest'})}
+  document.title=C.a.name+(t!=='works'?' · '+AUTABS.filter(function(x){return x[0]===t})[0][1]:'')+' — Bibliotheca Catholica'}
+function auCount(t,n,keep){var C=CUR_AU;C.n[t]=n;var el=$('#tab-'+t);if(!el)return;el.querySelector('.tc').textContent=n?n.toLocaleString():'0';el.hidden=!n&&!keep;el.classList.toggle('empty',!n)}
+function auBuild(){var C=CUR_AU;if(!C||!$('#au-tabs'))return;var a=C.a;var X=((window.AUTHORX||{}).by||{})[a.id]||{};C.X=X;
+  var DR=a.doctor&&window.DOCTORS_DATA?window.DOCTORS_DATA.doctors[a.id]:null;
+  // feast
+  var fe=DR?[DR.feast]:(X.feast||[]);if(fe.length)$('#au-feast').innerHTML='<span class="k">Feast</span> '+esc(fe.join(' · '))+(DR?'':' <span class="small muted" title="From Wikidata; calendars differ">(Wikidata'+(fe.length>1?'; calendars differ':'')+')</span>');
+  if(X.ce){var k=$('#au-key');if(k&&!/cathen/.test(k.innerHTML))k.insertAdjacentHTML('beforeend','<a class="chip" href="'+esc(X.ce)+'" target="_blank" rel="noopener">Catholic Encyclopedia ↗</a>')}
+  auWorks(a,X,DR);auComm(a,X,DR);auBuy(a);auRel(a,X);
+  C.built=true;var want=C.want;var el=$('#tab-'+want);if(!el||el.hidden){want=['works','commentaries'].filter(function(t){return !$('#tab-'+t).hidden})[0]}auShow(want)}
+function auWorks(a,X,DR){var p=$('#tp-works'),n=0,h='';
+  if(DR){h+='<div id="au-free"></div>';n+=DR.works.length}
+  if(a.works.length){n+=a.works.length;h+='<h3>Works to read online (New Advent)</h3><ul class="works">'+a.works.map(function(w){return '<li><a href="'+esc(w.url)+'" target="_blank" rel="noopener">'+esc(w.title)+'</a></li>'}).join('')+'</ul>'}
+  var rd=a.links.filter(function(l){return l.kind==='read'}).map(function(l){return {k:'read',t:l.label,u:l.url}});
+  if(X.ws)rd.push({k:'read',t:'Author page on Wikisource',u:X.ws});
+  var more=a.links.filter(function(l){return l.kind==='search'}).map(function(l){return {k:'search',t:l.label,u:l.url}});
+  if(X.wq)more.push({k:'about',kl:'quotes',t:'Quotations on Wikiquote',u:X.wq});
+  if(a.qid)more.push({k:'about',kl:'data',t:'Wikidata item '+a.qid,u:'https://www.wikidata.org/wiki/'+a.qid});
+  n+=rd.length;
+  if(rd.length)h+='<h3>Read free online</h3>'+auLinkList(rd);
+  if(X.own){n+=X.own.length;h+='<h3>Writing &amp; media by '+esc(a.name)+'</h3>'+auLinkList(X.own.map(function(o){return {k:o.k==='substack'?'read':'site',kl:o.k,t:o.t,u:o.u,n:o.n}}))}
+  var L=(B&&B.by[a.id]||[]).slice().sort(function(x,y){return x.tn.localeCompare(y.tn)});n+=L.length;
+  if(L.length){var fm={};L.forEach(function(b){b.f.forEach(function(f){fm[f]=(fm[f]||0)+1})});var fk=Object.keys(fm).sort(function(x,y){return fm[y]-fm[x]});
+    h+='<div class="rule"></div><h3>Books in the Isidore Index <span class="small">('+L.length+')</span></h3><div class="chips au-fmt" id="au-fmt"><button class="chip on" data-f="">All '+L.length+'</button>'+fk.map(function(f){return '<button class="chip" data-f="'+esc(f)+'">'+esc(f)+' '+fm[f]+'</button>'}).join('')+'</div><div class="blist compact" id="au-bl"></div><div id="au-blm"></div>'}
+  if(more.length)h+='<h3>Search &amp; data</h3>'+auLinkList(more);
+  p.innerHTML=h||'<div class="empty">No free texts are linked yet.</div>';auCount('works',n);
+  if(DR)readFree(a);
+  if(L.length){var cur='',lim=40;function draw(){var M=cur?L.filter(function(b){return b.f.indexOf(cur)>=0}):L;$('#au-bl').innerHTML=M.slice(0,lim).map(function(b){return brow(b)}).join('');
+      $('#au-blm').innerHTML=M.length>lim?'<button class="btn ghost" id="au-more">Show all '+M.length+'</button>':''}
+    draw();$('#au-fmt').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;cur=b.dataset.f;lim=40;$('#au-fmt').querySelectorAll('.chip').forEach(function(x){x.classList.toggle('on',x===b)});draw()});
+    p.addEventListener('click',function(e){if(e.target.id==='au-more'){lim=1e9;draw()}var t=e.target.closest('.b-tag');if(t){bfReset();BF.tag=t.dataset.tag;location.hash='#/isidore'}})}}
+var WOF={k:'podcast',t:'Way of the Fathers (Catholic Culture podcast)',u:'https://www.catholicculture.org/commentary/category/way-fathers/',n:'A podcast on the Fathers and Doctors of the Church.'};
+function auComm(a,X,DR){var p=$('#tp-commentaries'),n=0,h='';var cm=(X.comm||[]).slice();
+  var feat=cm.filter(function(c){return c.feat});cm=cm.filter(function(c){return !c.feat});
+  if(feat.length){n+=feat.length;h+=feat.map(function(c){return '<a class="au-feat" href="'+esc(c.u)+'" target="_blank" rel="noopener"><span class="eyebrow">Featured column</span><b>'+esc(c.t)+' ↗</b><span>'+esc(c.n)+'</span></a>'}).join('')}
+  if(a.doctor||/apostolic|ante-nicene|post-nicene|desert/.test(a.era))cm.push(WOF);
+  if(cm.length){n+=cm.length;h+='<h3>Commentary, podcasts &amp; Substacks</h3>'+auLinkList(cm.map(function(c){return {k:c.k==='substack'?'read':(c.k==='society'?'site':'about'),kl:c.k,t:c.t,u:c.u,n:c.n}}))}
+  if(X.studies){n+=X.studies.length;h+='<h3>Studies &amp; biographies by authors in our library</h3>'+auLinkList(X.studies.filter(function(s){return AID[s[0]]}).map(function(s){return {k:'read',kl:'study',t:AID[s[0]].name+', '+s[1],u:'#/author/'+s[0],int:1}}))}
+  var ref=[];if(X.ce)ref.push({k:'about',kl:'1913',t:'Catholic Encyclopedia article',u:X.ce,n:'The 1913 Catholic Encyclopedia at New Advent.'});
+  if(X.sep)ref.push({k:'about',kl:'SEP',t:'Stanford Encyclopedia of Philosophy',u:X.sep});if(X.iep)ref.push({k:'about',kl:'IEP',t:'Internet Encyclopedia of Philosophy',u:X.iep});
+  var wiki=a.links.filter(function(l){return /wikipedia\.org/.test(l.url)})[0];if(wiki)ref.push({k:'about',kl:'bio',t:'Biography on Wikipedia',u:wiki.url});
+  a.links.filter(function(l){return l.kind==='about'&&!/wikipedia|cathen/.test(l.url)}).forEach(function(l){ref.push({k:'about',t:l.label,u:l.url})});
+  if(ref.length){n+=ref.length;h+='<h3>Reference articles</h3>'+auLinkList(ref)}
+  var ab=(X.about||[]).map(function(i){return B&&B.ids[i]}).filter(Boolean);
+  if(ab.length){n+=ab.length;h+='<div class="rule"></div><h3>Books about '+esc(a.name)+' in the Isidore Index <span class="small">('+ab.length+')</span></h3><div class="blist compact">'+ab.slice(0,30).map(function(b){return brow(b)}).join('')+'</div>'}
+  var mail='mailto:micahwatson@bibliothecacatholica.com?subject='+encodeURIComponent('Commentary on '+a.name);
+  h+=(n?'<div class="au-cta small-cta">':'<div class="au-cta"><h3>Commentaries coming soon.</h3>')+'<p>'+(n?'Want to write about '+esc(a.name)+'? ':'Want to write one? ')+'We are looking for writers to contribute original commentary on '+esc(a.name)+(n?'.':', from short introductions to close readings.')+'</p><a class="btn'+(n?' ghost':'')+'" href="'+mail+'">Write a commentary ✉</a></div>';
+  p.innerHTML=h;auCount('commentaries',n,true)}
+function auBuy(a){var p=$('#tp-buy');var L=GD?GD.editions.filter(function(w){return w.aid===a.id}):[];
+  if(!L.length){p.innerHTML='';auCount('buy',0);return}
+  p.innerHTML='<p class="lede small">Our recommended translations and editions of '+esc(a.name)+', with verified ISBNs where we could confirm them. See the full <a href="#/editions">Which Edition?</a> guide.</p><div class="ed-list">'+L.map(edCard).join('')+'</div><p><a class="btn ghost" href="'+esc(bookshopUrl('',a.name))+'" target="_blank" rel="noopener sponsored">More by '+esc(a.name)+' on Bookshop.org ↗</a></p>'+discl();
+  auCount('buy',L.reduce(function(n,w){return n+w.picks.length},0))}
+function auRel(a,X){var p=$('#tp-related'),n=0,h='';
+  function grp(t,ids){ids=(ids||[]).filter(function(i){return AID[i]&&i!==a.id});if(!ids.length)return;n+=ids.length;h+='<h3>'+t+'</h3><div class="related">'+auNames(ids)+'</div>'}
+  grp('Influenced by',X.infl);grp('Influenced',X.inflOn);grp('Teachers',X.stof);grp('Students',X.stu);
+  if(X.wroteOn){n+=X.wroteOn.length;h+='<h3>Wrote about</h3>'+auLinkList(X.wroteOn.filter(function(s){return AID[s[0]]}).map(function(s){return {k:'read',kl:'study',t:AID[s[0]].name+': '+s[1],u:'#/author/'+s[0],int:1}}))}
+  var XB=(window.AUTHORX||{}).by||{};
+  (X.order||[]).forEach(function(o){var ids=A.filter(function(b){return b.id!==a.id&&((XB[b.id]||{}).order||[]).indexOf(o)>=0}).map(function(b){return b.id});grp('Also '+o+' <span class="small">('+ids.length+')</span>',ids.slice(0,24))});
+  var same=A.filter(function(b){return b.era===a.era&&b.id!==a.id}).slice(0,16).map(function(b){return b.id});grp('Also in this era: '+esc(ERA[a.era].label),same);
+  if(X.lists){n+=X.lists.length;h+='<h3>On our reading lists</h3>'+auLinkList(X.lists.map(function(l){return {k:'read',kl:'list',t:l[1],u:'#/reading/'+l[0],int:1}}))}
+  var lv=$('#au-ed-l');h+='<div id="au-rp"></div>';
+  p.innerHTML=h;auCount('related',n+(X.rare||[]).length+(X.proj||[]).length);
+  if(X.rare)lazy('rare.js','RARE_DATA',function(R){var box=$('#au-rp');if(!box||!R)return;var M={};R.items.forEach(function(r){M[r.id]=r});var L=X.rare.map(function(i){return M[i]}).filter(Boolean);
+    box.insertAdjacentHTML('afterbegin','<h3>Rare &amp; Obscure</h3>'+auLinkList(L.map(function(r){return {k:'read',kl:'rare',t:r.t,u:'#/rare/'+encodeURIComponent(r.id),int:1,n:[r.a,r.lang].filter(Boolean).join(' · ')}})))});
+  if(X.proj)lazy('projects.js','PROJECTS_DATA',function(R){var box=$('#au-rp');if(!box||!R)return;var M={};R.items.forEach(function(r){M[r.id]=r});var L=X.proj.map(function(i){return M[i]}).filter(Boolean);
+    box.insertAdjacentHTML('beforeend','<h3>Projects &amp; translations</h3>'+auLinkList(L.map(function(r){return {k:'site',kl:'project',t:r.n,u:r.u,n:r.d}})))})}
+
 function timeline(){
   var by={};A.forEach(function(a){if(!a.century)return;(by[a.century]=by[a.century]||[]).push(a)});
   var cs=Object.keys(by).map(Number).sort(function(a,b){return a-b});
@@ -369,7 +463,7 @@ function season(d){d=d||new Date();var y=d.getFullYear();function easter(Y){var 
   if(t>=ash&&t<holyThu)return {n:'Lent',c:'violet'};if(t>=holyThu&&t<E)return {n:'the Sacred Triduum',c:'red'};
   if(t>=E&&t<=pent)return {n:'Eastertide',c:'white'};return {n:'Ordinary Time',c:'green'}}
 function dailyPanel(){var d=new Date(),s=season(d);var ds=d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
-  var L=[['Today’s Mass readings','USCCB','https://bible.usccb.org/daily-bible-reading'],['Readings & Liturgy of the Hours','Universalis','https://universalis.com/'],['The Divine Office, with audio','divineoffice.org','https://divineoffice.org/'],['Saint of the day','Franciscan Media','https://www.franciscanmedia.org/saint-of-the-day/'],['Word of the day','Vatican News','https://www.vaticannews.va/en/word-of-the-day.html'],['Liturgical calendar','GCatholic','https://gcatholic.org/calendar/']];
+  var L=[['Today’s Mass readings','USCCB','https://bible.usccb.org/daily-bible-reading'],['Readings & Liturgy of the Hours','Universalis','https://universalis.com/'],['The Divine Office, with audio','divineoffice.org','https://divineoffice.org/'],['Saint of the day','Franciscan Media','https://www.franciscanmedia.org/saint-of-the-day/'],['Word of the day','Vatican News','https://www.vaticannews.va/en/word-of-the-day.html'],['Liturgical calendar','GCatholic','https://gcatholic.org/calendar/'],['This day in the liturgical year','Catholic Culture','https://www.catholicculture.org/culture/liturgicalyear/calendar/day.cfm?date='+d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)]];
   return '<section class="daily"><div class="daily-head"><div><div class="eyebrow">Hodie · today</div><h2>'+esc(ds)+'</h2><p class="season"><span class="sw sw-'+s.c+'"></span>'+esc(s.n)+'</p></div><a class="btn ghost" href="#/prayers">Prayers &amp; devotions →</a></div><div class="daily-grid">'+L.map(function(x){return '<a href="'+x[2]+'" target="_blank" rel="noopener"><b>'+esc(x[0])+' ↗</b><span>'+esc(x[1])+'</span></a>'}).join('')+'</div></section>'}
 function prayerText(t){return esc(t).split('\n').map(function(l){return '<p>'+l.replace(/^(V\.|R\.)/,'<b class="vr">$1</b>')+'</p>'}).join('')}
 function prayersBlock(){if(!PR)return '';var dow=new Date().getDay();var today={1:0,6:0,4:1,2:2,5:2,3:3,0:3}[dow];
@@ -418,7 +512,7 @@ function results(q){
 function notfound(){render('<div class="empty"><h2>Not found</h2><p><a href="#/">Return home</a></p></div>','')}
 function route(){var h=decodeURIComponent(location.hash.replace(/^#\/?/,''));var p=h.split('/');
   hideSug();
-  switch(p[0]){case '':home();break;case 'authors':authors();break;case 'doctors':authors({doctors:true});break;case 'author':author(p[1]);break;case 'timeline':timeline();break;
+  switch(p[0]){case '':home();break;case 'authors':authors();break;case 'doctors':authors({doctors:true});break;case 'author':author(p[1],p[2]||'');break;case 'timeline':timeline();break;
    case 'scripture':case 'magisterium':case 'references':case 'media':case 'libraries':section(p[0]);break;case 'prayers':section('prayers',p[1]||'');break;case 'rare':rare(p[1]||'');break;case 'projects':projects();break;case 'isidore':if(p[1]==='folders')isidore();else if(p[1]==='book')bookDetail(+p[2]);else books(p.slice(1).join('/'));break;case 'books':location.replace('#/isidore'+(p[1]?'/'+p.slice(1).join('/'):''));break;case 'data':openData();break;case 'editions':editions(p[1]||'');break;case 'reading':reading(p[1]||'');break;case 'substacks':substacks();break;case 'search':results(p.slice(1).join('/'));break;default:notfound()}}
 window.addEventListener('hashchange',route);
 

@@ -9,7 +9,7 @@
  *              'https://www.anrdoezrs.net/click-PID-AID?url={url}'
  *  publishers[key].param
  *              Optional query parameter appended to publisher links instead, e.g. 'ref=bibliotheca'
- *              (Shopify / LeadDyno style programs such as Word on Fire, Sophia or TAN).
+ *              (Shopify / LeadDyno style programs such as Word on Fire, Sophia, or TAN).
  */
 window.AFFILIATES = {
   bookshopId: '',

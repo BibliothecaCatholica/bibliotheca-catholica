@@ -6,7 +6,7 @@ L=[
 dict(id='start',t='Start Here',sub='New to Catholicism, coming home, or just curious',ic='✠',items=[
  I('bible','Begin with the Gospels in a good Catholic translation; Mark is shortest, John is deepest.'),
  I('ccc','Use the Compendium for a first pass, the full Catechism as your reference.'),
- I('catholicism','The best single tour of the faith through its beauty, saints and story.'),
+ I('catholicism','The best single tour of the faith through its beauty, saints, and story.'),
  I('kreeft','Every major doctrine explained in plain, lively prose.'),
  I('theologysanity','Why believing these things makes you saner, not narrower.'),
  I('orthodoxy','Chesterton discovers he has re-invented Christianity, only to find it was already there.'),
@@ -17,7 +17,7 @@ dict(id='start',t='Start Here',sub='New to Catholicism, coming home, or just cur
  I('jesus_naz','Benedict XVI introduces you to the Person at the centre of it all.'),
  I('imitation','Short chapters for daily reading, read by saints for 600 years.')]),
 dict(id='apologetics',t='Apologetics',sub='Reasons for the hope that is in you (1 Pet 3:15)',ic='⚔',items=[
- I('handbook','Arguments for God, Christ and the Church, compactly organised.'),
+ I('handbook','Arguments for God, Christ, and the Church, compactly organised.'),
  I('keating','The classic answer to fundamentalist objections.'),
  I('fathersknow','What the early Church actually believed, topic by topic.'),
  I('apfathers','Read the sources yourself: bishops who knew the Apostles.'),
@@ -29,10 +29,10 @@ dict(id='apologetics',t='Apologetics',sub='Reasons for the hope that is in you (
  I('intro_xty','Ratzinger on what it means to say “I believe.”')]),
 dict(id='spiritual',t='Spiritual Classics',sub='The books the saints read',ic='❦',items=[
  I('imitation','The handbook of interior life.'),
- I('devout','Prayer, virtue and friendship for lay people.'),
+ I('devout','Prayer, virtue, and friendship for lay people.'),
  I('storysoul','Confidence and love: the Little Way.'),
  I('teresa','The seven mansions of the soul.'),
- I('johncross','Purification, darkness and union.'),
+ I('johncross','Purification, darkness, and union.'),
  I('exercises','The Ignatian method of prayer and discernment.'),
  I('spiritualcombat','Practical warfare against the self.'),
  I('caussade','God’s will in the present moment.'),
@@ -70,7 +70,7 @@ dict(id='chesterton',t='The Chesterton Shelf',sub='Start anywhere; he is never d
  I(None,'Twenty essays on the great men of his day, and why they were wrong.','Heretics (1905)','G. K. Chesterton','',[['Standard Ebooks',SE+'g-k-chesterton/heretics'],['Gutenberg',G+'470']]),
  I('ckaquinas','Gilson said the Aquinas was the best book ever written on Thomas.'),
  I(None,'A London borough goes to war for its lamp-posts.','The Napoleon of Notting Hill (1904)','G. K. Chesterton','',[['Standard Ebooks',SE+'g-k-chesterton/the-napoleon-of-notting-hill'],['Gutenberg',G+'20058']]),
- I(None,'Family, property and the case for distributism.','What’s Wrong with the World (1910)','G. K. Chesterton','',[['Standard Ebooks',SE+'g-k-chesterton/whats-wrong-with-the-world']]),
+ I(None,'Family, property, and the case for distributism.','What’s Wrong with the World (1910)','G. K. Chesterton','',[['Standard Ebooks',SE+'g-k-chesterton/whats-wrong-with-the-world']]),
  I(None,'An atheist and a Catholic try to fight a duel and keep getting interrupted.','The Ball and the Cross (1909)','G. K. Chesterton','',[['Gutenberg',G+'5265']]),
  I(None,'A comic novel about a man who rediscovers life by recapturing his own wife and house.','Manalive (1912)','G. K. Chesterton','',[['Standard Ebooks',SE+'g-k-chesterton/manalive']])]),
 dict(id='philosophy',t='Philosophy & Theology',sub='Faith seeking understanding',ic='Φ',items=[

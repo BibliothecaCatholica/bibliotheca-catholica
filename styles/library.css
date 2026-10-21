@@ -25,3 +25,9 @@ select,input,button{max-width:100%}.reader-tools select,#library-topic,#search-s
 .flagship.fs-secondary{background:var(--card);border-color:var(--line)}
 @media (max-width:900px){.reading-home{grid-template-columns:1fr}}
 @media (max-width:720px){.reading-home{padding:20px 16px}.rh-list{grid-template-columns:1fr}}
+
+/* v9 LibriVox listen buttons */
+.listen{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:.75rem 0}
+.listen-lbl{flex-basis:100%;font-size:.85rem;color:var(--muted,#6b5e57)}
+.listen.compact{margin:.5rem 0 0}
+.listen-btn{font-size:.9rem;max-width:100%;white-space:normal;text-align:left}

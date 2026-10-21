@@ -177,7 +177,7 @@ function freeLinks(f){if(!f||!f.length)return '';return '<div class="free"><span
 function edCard(w){var au=w.aid&&AID[w.aid]?'<a href="#/author/'+w.aid+'">'+esc(w.a)+'</a>':esc(w.a);
   return '<article class="ed-card" id="ed-'+w.id+'"><div class="ed-head"><div><div class="eyebrow">'+esc(w.cat)+(w.orig?' · '+esc(w.orig):'')+'</div><h3>'+esc(w.t)+'</h3>'+(w.a?'<div class="ed-au">'+au+'</div>':'')+'</div>'+(w.free&&w.free.length?'<span class="pd-badge" title="An external reading link is available; edition rights vary">Free text online</span>':'')+'</div>'+
    '<p class="ed-why">'+esc(w.why)+'</p><ol class="picks">'+w.picks.map(function(p,i){return '<li class="pick'+(i===0?' top':'')+'"><div class="pick-lbl">'+esc(p.lbl)+'</div><div class="pick-tr">'+esc(p.tr)+'</div><div class="pick-meta">'+esc(p.pub)+(isbnOk(p.isbn)?' · ISBN '+p.isbn:'')+'</div>'+(p.note?'<p>'+esc(p.note)+'</p>':'')+buyBtns(p.isbn,p.bq||(w.multi?p.lbl:w.t),w.a,p.pk)+'</li>'}).join('')+'</ol>'+
-   (w.alt?'<p class="ed-alt"><b>Also good:</b> '+esc(w.alt)+'</p>':'')+freeLinks(w.free)+'</article>'}
+   (w.alt?'<p class="ed-alt"><b>Also good:</b> '+esc(w.alt)+'</p>':'')+freeLinks(w.free)+window.BCLibrary.listenEdition(w.id)+'</article>'}
 var EF={q:'',cat:''};
 function editions(arg){
   var h='<div class="page-head"><div class="eyebrow">Quae editio?</div><h1>Which Edition Should I Buy?</h1><p class="lede">Recommended translations and editions of the Catholic classics, with why, the publisher, a verified ISBN where we could confirm one, and a reading link where available; edition rights and completeness vary.</p></div>'+
@@ -532,11 +532,27 @@ function support(){var shop=AFF.bookshopShop||'';
    '<li><b>Share the library</b> with a friend, a parish, or a homeschool group.</li></ul>'+
    '<p class="small muted sup-fine">Bibliotheca Catholica is an independent project. Payments are handled by Buy Me a Coffee and PayPal; we never see your card details.</p>'+discl();
   render(h,'support')}
-function route(){var raw=location.hash.replace(/^#\/?/,'');var queryAt=raw.indexOf('?');var query=new URLSearchParams(queryAt<0?'':raw.slice(queryAt+1));var path=queryAt<0?raw:raw.slice(0,queryAt);var h;try{h=decodeURIComponent(path)}catch(e){notfound();return}var p=h.split('/');if(p[0]==='search'){searchScope=['curated','isidore','all'].indexOf(query.get('scope'))>=0?query.get('scope'):'all';}
+function route(){var raw=location.hash.replace(/^#\/?/,'');if(!raw&&window.BC_BOOT)raw=window.BC_BOOT;var queryAt=raw.indexOf('?');var query=new URLSearchParams(queryAt<0?'':raw.slice(queryAt+1));var path=queryAt<0?raw:raw.slice(0,queryAt);var h;try{h=decodeURIComponent(path)}catch(e){notfound();return}var p=h.split('/');if(p[0]==='search'){searchScope=['curated','isidore','all'].indexOf(query.get('scope'))>=0?query.get('scope'):'all';}
   hideSug();
   switch(p[0]){case 'library':window.BCLibrary.library(render,p[1]);break;case 'work':window.BCLibrary.work(render,p[1]);break;case 'read':window.BCLibrary.read(render,p[1],p[2],p[3],p[4]);break;case 'related':window.BCLibrary.related(render);break;case '':home();break;case 'authors':authors();break;case 'doctors':authors({doctors:true});break;case 'author':author(p[1],p[2]||'');break;case 'timeline':timeline();break;
    case 'scripture':case 'magisterium':case 'references':case 'media':case 'libraries':section(p[0]);break;case 'prayers':section('prayers',p[1]||'');break;case 'rare':rare(p[1]||'');break;case 'projects':projects();break;case 'isidore':if(p[1]==='folders')isidore();else if(p[1]==='book')bookDetail(+p[2]);else books(p.slice(1).join('/'));break;case 'books':location.replace('#/isidore'+(p[1]?'/'+p.slice(1).join('/'):''));break;case 'data':openData();break;case 'support':support();break;case 'editions':editions(p[1]||'');break;case 'reading':reading(p[1]||'');break;case 'substacks':substacks();break;case 'search':results(p.slice(1).join('/'));break;default:notfound()}}
 window.addEventListener('hashchange',route);
+/* ---------- per-route meta (description, canonical, Open Graph, Twitter) ---------- */
+var SITE='https://bibliothecacatholica.com/',DEF_DESC=(document.querySelector('meta[name=description]')||{}).content||'';
+var STATIC_SECTIONS=['library','related','authors','doctors','timeline','scripture','magisterium','references','media','libraries','prayers','rare','projects','isidore','data','support','editions','reading','substacks','policy'];
+function canonicalFor(){var raw=(location.hash.replace(/^#\/?/,'')||window.BC_BOOT||'').split('?')[0],p=raw.split('/').filter(Boolean);
+  if(!p.length)return SITE;if(p.length===1&&STATIC_SECTIONS.indexOf(p[0])>=0)return SITE+p[0]+'/';
+  if(p.length===2&&/^(author|work|editions)$/.test(p[0])&&/^[a-z0-9-]+$/.test(p[1]))return SITE+p[0]+'/'+p[1]+'/';
+  if(p.length===2&&p[0]==='reading'&&/^[a-z0-9-]+$/.test(p[1]))return SITE+'reading/'+p[1]+'/';
+  return SITE+'#/'+raw}
+function setMeta(sel,attr,val){var m=document.head.querySelector(sel);if(!m){m=document.createElement(sel.indexOf('link')===0?'link':'meta');var k=sel.match(/\[(\w+)=["']?([^"'\]]+)/);m.setAttribute(k[1],k[2]);document.head.appendChild(m)}m.setAttribute(attr,val)}
+function updateMeta(){var t=document.title,raw=(location.hash.replace(/^#\/?/,'')||window.BC_BOOT||'').split('?')[0].split('/'),d='';
+  var focus=raw[0]==='editions'&&raw[1]?main.querySelector('#ed-'+CSS.escape(raw[1])+' .ed-why'):null;if(focus)d=t.replace(/ — .*$/,'')+': '+focus.textContent.trim();
+  if(!d)[].slice.call(main.querySelectorAll('.page-head .lede, .page-head p:not(.small), .detail-main p, main p')).some(function(el){var x=el.textContent.replace(/\s+/g,' ').trim();if(x)d+=(d?' ':'')+x;return d.length>=60});
+  if(d.length<40)d=DEF_DESC;if(d.length>200)d=d.slice(0,197).replace(/\s+\S*$/,'')+'…';var u=canonicalFor();
+  setMeta('meta[name=description]','content',d);setMeta('link[rel=canonical]','href',u);setMeta('meta[property="og:title"]','content',t);setMeta('meta[property="og:description"]','content',d);setMeta('meta[property="og:url"]','content',u);setMeta('meta[name="twitter:title"]','content',t);setMeta('meta[name="twitter:description"]','content',d)}
+var metaT=null;function queueMeta(){clearTimeout(metaT);metaT=setTimeout(updateMeta,30)}
+new MutationObserver(queueMeta).observe(document.querySelector('title'),{childList:true,characterData:true,subtree:true});window.addEventListener('hashchange',queueMeta);
 
 /* ---------- header search with suggestions ---------- */
 var qi=$('#q'),sg=$('#suggest'),act=-1;

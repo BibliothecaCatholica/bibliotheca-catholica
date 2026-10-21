@@ -27,7 +27,8 @@ function fav(u){var h=host(u);return h?'<img class="fav" loading="lazy" alt="" s
 function badges(a,max){var t=a.tags.filter(function(x){return TAGL[x]});t.sort(function(x,y){return TAGF.indexOf(x)-TAGF.indexOf(y)});return '<div class="badges">'+t.slice(0,max||4).map(function(x){return '<span class="badge '+x+'">'+esc(x==='doctor'?'Doctor':TAGL[x])+'</span>'}).join('')+'</div>'}
 function acard(a){return '<a class="acard" href="#/author/'+a.id+'">'+avatar(a)+'<div><h3>'+esc(a.name)+'</h3><div class="dates">'+esc(dates(a))+' · '+esc(ERA[a.era].label)+'</div><p>'+esc(a.desc)+'</p>'+badges(a)+'</div></a>'}
 function rcard(r){return '<a class="rcard" href="'+esc(r.url)+'" target="_blank" rel="noopener"><div class="rc-top">'+fav(r.url)+'<h3>'+esc(r.name)+'</h3></div><p>'+esc(r.desc)+'</p><div class="host">'+esc(host(r.url))+' ↗</div></a>'}
-function setNav(k){document.querySelectorAll('.mainnav a').forEach(function(a){a.classList.toggle('on',a.dataset.nav===k)});$('#mainnav').classList.remove('open');var more=$('.nav-more');if(more)more.open=false}
+function setNav(k){document.querySelectorAll('.mainnav a').forEach(function(a){var active=a.dataset.nav===k;a.classList.toggle('on',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});$('#mainnav').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false');$('#menuBtn').setAttribute('aria-label','Open menu')}
+
 function render(html,k){main.innerHTML=html;setNav(k);window.scrollTo(0,0);document.title=(k?($('.page-head h1')||{}).textContent||'':'')+(k?' — ':'')+'Bibliotheca Catholica'}
 
 /* ---------- search index ---------- */
@@ -553,6 +554,7 @@ document.addEventListener('click',function(e){if(!e.target.closest('.searchwrap'
 sg.addEventListener('click',function(e){if(e.target.closest('a'))setTimeout(hideSug,0)});
 document.addEventListener('keydown',function(e){if(e.key==='/'&&!/input|textarea|select/i.test(document.activeElement.tagName)){e.preventDefault();qi.focus()}});
 $('#themeBtn').addEventListener('click',function(){var t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('hub-theme',t)}catch(e){}});
-$('#menuBtn').addEventListener('click',function(){$('#mainnav').classList.toggle('open')});
+$('#menuBtn').addEventListener('click',function(){var open=$('#mainnav').classList.toggle('open');this.setAttribute('aria-expanded',String(open));this.setAttribute('aria-label',open?'Close menu':'Open menu')});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&$('#mainnav').classList.contains('open')){$('#mainnav').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false');$('#menuBtn').setAttribute('aria-label','Open menu');$('#menuBtn').focus()}});
 route();
 })();

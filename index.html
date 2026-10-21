@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles/library.css">
-<link rel="stylesheet" href="styles/refresh.css">
+<link rel="stylesheet" href="styles/refresh.css?v=20261021-original-palette">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%238b1e2d'/><path d='M28 10h8v16h16v8H36v20h-8V34H12v-8h16z' fill='%23e9c46a'/></svg>">
 <script>try{var t=localStorage.getItem('hub-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
@@ -32,29 +32,31 @@
         <svg class="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="currentColor"/></svg>
         <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
       </button>
-      <button id="menuBtn" class="iconbtn menu-btn" aria-label="Open menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button id="menuBtn" class="iconbtn menu-btn" aria-label="Open menu" aria-controls="mainnav" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
   </div>
   <nav class="mainnav" id="mainnav" aria-label="Sections">
-    <a href="#/library" data-nav="library" class="nav-flag">Discover &amp; Read</a>
-    <a href="#/isidore" data-nav="isidore">Ebooks &amp; PDFs</a>
-    <a href="#/authors" data-nav="authors">Authors</a>
-    <a href="#/editions" data-nav="editions">Editions &amp; Translations</a>
-    <a href="#/reading" data-nav="reading">Reading Lists</a>
-    <a href="#/scripture" data-nav="scripture">Scripture</a>
-    <a href="#/prayers" data-nav="prayers">Prayer</a>
-    <details class="nav-more"><summary>Explore more</summary><div class="nav-more-links">
-      <a href="#/magisterium" data-nav="magisterium">Church Documents</a>
-      <a href="#/doctors" data-nav="doctors">Doctors of the Church</a>
+    <div class="nav-row nav-primary" role="group" aria-label="Reading and discovery">
+      <a href="#/library" data-nav="library" class="nav-flag">Discover &amp; Read</a>
+      <a href="#/isidore" data-nav="isidore">Ebooks &amp; PDFs</a>
+      <a href="#/authors" data-nav="authors">Authors</a>
       <a href="#/timeline" data-nav="timeline">Timeline</a>
+      <a href="#/reading" data-nav="reading">Reading Lists</a>
+      <a href="#/editions" data-nav="editions">Editions &amp; Translations</a>
+      <a href="#/media" data-nav="media">Podcasts &amp; Media</a>
+    </div>
+    <div class="nav-row nav-secondary" role="group" aria-label="Faith and reference collections">
+      <a href="#/scripture" data-nav="scripture">Scripture</a>
+      <a href="#/magisterium" data-nav="magisterium">Church Documents</a>
+      <a href="#/prayers" data-nav="prayers">Prayer</a>
+      <a href="#/doctors" data-nav="doctors">Doctors of the Church</a>
       <a href="#/references" data-nav="references">Reference Works</a>
       <a href="#/libraries" data-nav="libraries">Digital Libraries</a>
-      <a href="#/media" data-nav="media">Podcasts &amp; Media</a>
-      <a href="#/substacks" data-nav="substacks">Substacks</a>
       <a href="#/rare" data-nav="rare">Rare &amp; Obscure</a>
-      <a href="#/projects" data-nav="projects">Projects &amp; Translations</a>
-    </div></details>
-    <a href="#/support" data-nav="support" class="nav-m">♥ Support the Library</a>
+      <a href="#/substacks" data-nav="substacks">Substacks</a>
+      <a href="#/projects" data-nav="projects">Projects</a>
+      <a href="#/support" data-nav="support" class="nav-m">Support the Library</a>
+    </div>
   </nav>
 </header>
 <main id="main" tabindex="-1"><div class="loading">Loading the library…</div></main>
@@ -85,6 +87,6 @@
 <script src="scripts/search.js"></script>
 <script src="data/reading-options.js"></script>
 <script src="scripts/library.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v=20261021-visible-navigation"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@ A clean, searchable master index of Catholic authors, Scripture, the Magisterium
 
 ## Reading and discovery
 
-- **Discover & Read** `#/library`: 49 individual work records, including 24 hosted reading editions, eight Lewis titles, eight patristic writings/collections, and eight official Church documents.
+- **Discover & Read** `#/library`: 49 individual work records, including 22 hosted reading editions, eight Lewis titles, eight patristic writings/collections, and eight official Church documents.
 - **Reader** `#/read/<work>/<edition>`: text size, spacing, dark mode, source-heading navigation, full-text search, saved section, citation, and download/source links.
 - **Related Christian writers** `#/related`: C. S. Lewis, explicitly identified as Anglican.
 - Search defaults to the selected library. The full imported Isidore catalog remains available through its own scope and the Everything scope.
@@ -17,7 +17,7 @@ Python 3.10+ and Node 18+ are sufficient; no npm install is required.
 ```sh
 npm run dev      # http://127.0.0.1:4173
 npm run build    # deterministic catalog validation and browser bundle
-npm test        # search isolation, metadata integrity, rights and checksums
+npm test        # search isolation, metadata integrity, rights, and checksums
 python3 tools/build_open_data.py
 ```
 

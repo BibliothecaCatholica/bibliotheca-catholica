@@ -22,14 +22,12 @@
     </a>
     <div class="searchwrap" role="search">
       <svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      <input id="q" type="search" placeholder="Search titles, authors, and subjects…  ( / )" autocomplete="off" aria-label="Search library">
-      <label class="search-scope">Search in <select id="search-scope"><option value="curated">Selected library</option><option value="isidore">Imported Isidore index</option><option value="all">Everything</option></select></label>
+      <input id="q" type="search" placeholder="Search authors, 6,600 books, editions, reading editions…  ( / )" autocomplete="off" aria-label="Search everything">
       <div id="suggest" class="suggest" role="listbox" hidden></div>
     </div>
     <div class="top-actions">
       <a class="pill pill-vatican" href="https://www.vatican.va/content/vatican/en.html" target="_blank" rel="noopener" title="The Holy See">vatican.va ↗</a>
       <a class="pill pill-support" href="#/support" title="Support the Library" aria-label="Support the Library"><span aria-hidden="true">♥</span><span class="sup-t"> Support</span></a>
-      <a class="pill pill-isidore" href="https://isidore.co/calibre" target="_blank" rel="noopener" title="St. Isidore e-book library">isidore.co ↗</a>
       <button id="themeBtn" class="iconbtn" aria-label="Toggle dark mode" title="Toggle light/dark">
         <svg class="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="currentColor"/></svg>
         <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
@@ -83,6 +81,7 @@
 <script src="data/prayers.js"></script>
 <script>window.BOOKS_COUNT=6633;window.BOOKS_LANGS=22</script>
 <script src="data/library.js"></script>
+<script src="data/isidore-matches.js"></script>
 <script src="scripts/search.js"></script>
 <script src="scripts/library.js"></script>
 <script src="app.js"></script>

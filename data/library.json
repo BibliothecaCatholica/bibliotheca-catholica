@@ -55,14 +55,12 @@
               "name": "Doyle, Leonard J. (Leonard Joseph), 1914-1970"
             }
           ],
-          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Not hosted here: Leonard J. Doyle’s translation was first published in 1948, after this site’s pre-1931 hosting rule. Project Gutenberg lists it as public domain in the USA; read it at the source.",
           "checked": "2026-10-21",
           "note": "Leonard J. Doyle translation, not the Gasquet edition.",
           "sourceTitle": "St. Benedict's Rule for Monasteries",
           "digitalRelease": "Sep 22, 2015",
-          "access": "full-text",
-          "text": "data/texts/pg-50040.txt",
-          "sha256": "24b728e4c6c24717e23b264732cbba3842e4c80179b07d7eb7c5bd11a9332275"
+          "access": "full-text"
         }
       ]
     },
@@ -303,14 +301,12 @@
           "source": "https://www.gutenberg.org/ebooks/18269",
           "language": "English",
           "contributors": [],
-          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Not hosted here: this 1958 Dutton edition includes T. S. Eliot’s introduction, first published in 1931, after this site’s pre-1931 hosting rule. Read it at the source.",
           "checked": "2026-10-21",
           "note": "",
           "sourceTitle": "Pascal's Pensées",
           "digitalRelease": "Apr 27, 2006",
-          "access": "full-text",
-          "text": "data/texts/pg-18269.txt",
-          "sha256": "c75a39c79bc6e8a494674e33cfb9ff2b1eedcdf286637b018c68a1630d8d47fb"
+          "access": "full-text"
         }
       ]
     },

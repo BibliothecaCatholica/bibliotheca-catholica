@@ -12,7 +12,7 @@ class CatalogTests(unittest.TestCase):
         self.catalog=json.loads((ROOT/'data/library.json').read_text())
     def test_all_hosted_editions_have_verified_files_and_rights(self):
         build.validate(self.catalog)
-        self.assertEqual(24,sum(bool(e.get('text')) for w in self.catalog['works'] for e in w['editions']))
+        self.assertEqual(22,sum(bool(e.get('text')) for w in self.catalog['works'] for e in w['editions']))
     def test_duplicate_work_is_rejected(self):
         self.catalog['works'].append(copy.deepcopy(self.catalog['works'][0]))
         with self.assertRaises(AssertionError):build.validate(self.catalog)
@@ -32,3 +32,16 @@ class CatalogTests(unittest.TestCase):
     def test_existing_hub_snapshots_agree(self):
         js=(ROOT/'data/data.js').read_text().split('=',1)[1].strip().rstrip(';')
         self.assertEqual(json.loads(js),json.loads((ROOT/'data/catholic-hub.json').read_text()))
+
+class IsidoreMatchTests(unittest.TestCase):
+    def test_matches_point_to_real_books_and_works(self):
+        m=json.loads((ROOT/'data/isidore-matches.json').read_text())
+        js=json.loads((ROOT/'data/isidore-matches.js').read_text().split('=',1)[1].strip().rstrip(';'))
+        self.assertEqual(m,js)
+        books={b[0]:b for b in json.loads((ROOT/'data/books.json').read_text())['books']}
+        works={w['id']:w for w in json.loads((ROOT/'data/library.json').read_text())['works']}
+        for wid,L in m['matches'].items():
+            self.assertIn(wid,works);self.assertNotEqual(works[wid]['tradition'],'Anglican')
+            for b in L:
+                self.assertIn(b['id'],books);self.assertTrue(b['f'] and set(b['f'])<= {'EPUB','PDF'})
+                self.assertTrue(set(b['f'])<=set(books[b['id']][7].split('|')))

@@ -6,7 +6,7 @@ Each **work** has an identity, author, subject, tradition, optional work date, a
 
 ## Sources checked for this release (2026-10-21)
 
-- Project Gutenberg's catalog pages and complete UTF-8 texts: 25 identified editions, 24 hosted. Catalog metadata snapshots are in `data/sources/`. Original text files, including credits and the full Gutenberg license, are in `data/texts/`. No Gutenberg generated book summaries were imported.
+- Project Gutenberg's catalog pages and complete UTF-8 texts: 25 identified editions, 22 hosted. Two (#50040, Doyle’s 1948 Rule; #18269, the 1958 Pensées with T. S. Eliot’s 1931 introduction) link out because they postdate the pre-1931 hosting rule. Catalog metadata snapshots are in `data/sources/`. Original text files, including credits and the full Gutenberg license, are in `data/texts/`. No Gutenberg generated book summaries were imported.
 - Eight individual patristic texts/collections at New Advent. Those editions remain external, with their translation and editorial credits at source.
 - Eight individual Vatican documents: the four Vatican II constitutions, *Fides et Ratio*, *Veritatis Splendor*, *Deus Caritas Est*, and *Rerum Novarum*. These link to official English texts; they are not copied or framed.
 - [C. S. Lewis College](https://www.cslewiscollege.org/c-s-lewis/) establishes Lewis's Anglican identity. [Dallas Baptist University's bibliography](https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html) identifies the eight works and original publication dates. These are explicitly bibliographic references, not free reading editions.
@@ -39,3 +39,12 @@ The reading interface renders escaped plain text, not third-party HTML or iframe
 ## Follow-up editorial work
 
 This release establishes the model rather than claiming a complete scholarly catalog. Expand the reviewed collections by topic, give each edition a human editorial pass, add exact translation/publication dates when established, and audit the older guide's remaining outbound links and attributions. PDF/EPUB rendering and account-synchronized annotations are not part of this release.
+
+## Reading room and Isidore downloads
+
+The reading room is the primary way to read. EPUB and PDF files in the St. Isidore e-book library are the alternate path. `python3 tools/match_isidore.py` writes `data/isidore-matches.json` and `.js` from `library.json` and `books.json`, with no network access. A work and an Isidore book match only when:
+- the title is the same (ignoring a leading article, "Saint"/"St.", and "Holy"), or the Isidore title adds only a tail naming the author, or extends a title of three or more words;
+- an author name token also matches;
+- the book has an EPUB or PDF file.
+
+Commentaries, guides, selections, and numbered volumes are excluded, and Anglican (Lewis) reference records are never matched. Matched works show **Other formats** on their work page. Matched Isidore books whose work has a hosted reading edition show **Read online here**. Review the printout whenever the catalog changes; translations may differ between the two paths.

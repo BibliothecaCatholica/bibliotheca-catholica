@@ -53,3 +53,7 @@ The committed data snapshots remain usable. Some older ingestion scripts expect 
 
 - Each author page keeps the name, dates, portrait, blurb, feast day, and key links on top, with tabs for **Works**, **Commentaries**, **Buy the Books**, and **Related**. Every tab has its own link (e.g. `#/author/chesterton/works`), shows a count, and the site remembers the last tab you opened.
 - Commentaries include the featured Chesterton column, curated Substacks and podcasts, studies by other authors in the library, and encyclopedia articles. Want to contribute one? Write to micahwatson@bibliothecacatholica.com.
+
+## Reading options and design refresh
+
+The navigation guide is now **Editions & Translations** (`#/editions`, existing links preserved). Additional EPUB options live in `data/reading-options.json` and its browser snapshot. See [the refresh notes](docs/READING-DESIGN-REFRESH.md) for source checks, UI changes, and validation.

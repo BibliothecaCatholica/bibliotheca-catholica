@@ -1,0 +1,1289 @@
+{
+  "schemaVersion": 1,
+  "checked": "2026-10-21",
+  "works": [
+    {
+      "id": "confessions",
+      "title": "Confessions",
+      "author": "Augustine of Hippo",
+      "authorId": "augustine-of-hippo",
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-3296",
+          "label": "Project Gutenberg #3296",
+          "source": "https://www.gutenberg.org/ebooks/3296",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Pusey, E. B. (Edward Bouverie), 1800-1882"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "",
+          "sourceTitle": "The Confessions of St. Augustine",
+          "digitalRelease": "Jun 1, 2002",
+          "access": "full-text",
+          "text": "data/texts/pg-3296.txt",
+          "sha256": "ef3fa6267968c875def9091a1882d14b525a85bbf6996a3e2f130a775b2e22d2"
+        }
+      ]
+    },
+    {
+      "id": "rule-of-benedict",
+      "title": "Rule of Saint Benedict",
+      "author": "Benedict of Nursia",
+      "authorId": "benedict-of-nursia",
+      "category": "Monastic life",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-50040",
+          "label": "Project Gutenberg #50040",
+          "source": "https://www.gutenberg.org/ebooks/50040",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Doyle, Leonard J. (Leonard Joseph), 1914-1970"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Not hosted here: Leonard J. Doyle’s translation was first published in 1948, after this site’s pre-1931 hosting rule. Project Gutenberg lists it as public domain in the USA; read it at the source.",
+          "checked": "2026-10-21",
+          "note": "Leonard J. Doyle translation, not the Gasquet edition.",
+          "sourceTitle": "St. Benedict's Rule for Monasteries",
+          "digitalRelease": "Sep 22, 2015",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "imitation-of-christ",
+      "title": "The Imitation of Christ",
+      "author": "Thomas à Kempis",
+      "authorId": "thomas-a-kempis",
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-1653",
+          "label": "Project Gutenberg #1653",
+          "source": "https://www.gutenberg.org/ebooks/1653",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Benham, William, 1831-1910"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "",
+          "sourceTitle": "The Imitation of Christ",
+          "digitalRelease": "Feb 1, 1999",
+          "access": "full-text",
+          "text": "data/texts/pg-1653.txt",
+          "sha256": "7631799607b0ede62f1bd7ed2a8eb62d89524451a3c41e9ad2b5cbf4c2aa5383"
+        }
+      ]
+    },
+    {
+      "id": "story-of-a-soul",
+      "title": "Story of a Soul",
+      "author": "Thérèse of Lisieux",
+      "authorId": "therese-of-lisieux",
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-16772",
+          "label": "Project Gutenberg #16772",
+          "source": "https://www.gutenberg.org/ebooks/16772",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Taylor, Thomas N. (Thomas Nimmo), 1873-1963"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "Includes additional writings and sayings in the Thomas N. Taylor edition.",
+          "sourceTitle": "The Story of a Soul (L'Histoire d'une Âme): The Autobiography of St. Thérèse of Lisieux With Additional Writings and Sayings of St. Thérèse",
+          "digitalRelease": "Sep 28, 2005",
+          "access": "full-text",
+          "text": "data/texts/pg-16772.txt",
+          "sha256": "7a213de2d7d613e9040bd1463ee14d278c051a7b385e7333cbe6b9e294c4dadf"
+        }
+      ]
+    },
+    {
+      "id": "life-of-teresa",
+      "title": "The Life of Saint Teresa of Jesus",
+      "author": "Teresa of Ávila",
+      "authorId": "teresa-of-avila",
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-8120",
+          "label": "Project Gutenberg #8120",
+          "source": "https://www.gutenberg.org/ebooks/8120",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Lewis, David, 1814-1895"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "The autobiography, not The Interior Castle.",
+          "sourceTitle": "The Life of St. Teresa of Jesus, of the Order of Our Lady of Carmel",
+          "digitalRelease": "May 1, 2005",
+          "access": "full-text",
+          "text": "data/texts/pg-8120.txt",
+          "sha256": "3420485ba9b861cc44ac80833e3d9864683784e93e0f68f6ba5fc44c407a33bc"
+        }
+      ]
+    },
+    {
+      "id": "spiritual-exercises-adapted",
+      "title": "Spiritual Exercises: adapted retreat edition",
+      "author": "Ignatius of Loyola",
+      "authorId": "ignatius-of-loyola",
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-70790",
+          "label": "Project Gutenberg #70790",
+          "source": "https://www.gutenberg.org/ebooks/70790",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "adapter",
+              "name": "Charles Coppens"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "Adapted by Charles Coppens for an eight-day retreat and six triduums. This is not an unabridged critical edition of Ignatius’s original text.",
+          "sourceTitle": "The spiritual exercises of St. Ignatius :  adapted to an eight days retreat and six triduums in preparation for the semi-annual renovation of the vows, all for the use of Jesuits only",
+          "digitalRelease": "May 18, 2023",
+          "access": "full-text",
+          "text": "data/texts/pg-70790.txt",
+          "sha256": "035b4c18298791c0af9e73365165344dca46986afc0a2cd565e5a18043688687"
+        }
+      ]
+    },
+    {
+      "id": "revelations-divine-love",
+      "title": "Revelations of Divine Love",
+      "author": "Julian of Norwich",
+      "authorId": "julian-of-norwich",
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-52958",
+          "label": "Project Gutenberg #52958",
+          "source": "https://www.gutenberg.org/ebooks/52958",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "editor",
+              "name": "Warrack, G. (Grace Harriet), 1855-1932"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "",
+          "sourceTitle": "Revelations of Divine Love",
+          "digitalRelease": "Sep 2, 2016",
+          "access": "full-text",
+          "text": "data/texts/pg-52958.txt",
+          "sha256": "2e01d1a44b27b001b51053053fe69db771a6609edbbbc5a7fb31da9d4b3cc4b9"
+        }
+      ]
+    },
+    {
+      "id": "abandonment",
+      "title": "Abandonment; or, Absolute Surrender to Divine Providence",
+      "author": "Jean-Pierre de Caussade",
+      "authorId": "jean-pierre-de-caussade",
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-52057",
+          "label": "Project Gutenberg #52057",
+          "source": "https://www.gutenberg.org/ebooks/52057",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "McMahon, Ella"
+            },
+            {
+              "role": "editor",
+              "name": "Ramière, Henri, 1821-1884"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "Ella McMahon translation.",
+          "sourceTitle": "Abandonment; or, Absolute Surrender to Divine Providence",
+          "digitalRelease": "May 13, 2016",
+          "access": "full-text",
+          "text": "data/texts/pg-52057.txt",
+          "sha256": "6c157eaaae913f11e814d61bc78c303f44644c535456acfdb0fadfa30f5c2b23"
+        }
+      ]
+    },
+    {
+      "id": "practice-presence",
+      "title": "The Practice of the Presence of God",
+      "author": "Brother Lawrence",
+      "authorId": "brother-lawrence",
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-5657",
+          "label": "Project Gutenberg #5657",
+          "source": "https://www.gutenberg.org/ebooks/5657",
+          "language": "English",
+          "contributors": [],
+          "rights": "Copyrighted. Read the copyright notice inside this book for details.",
+          "checked": "2026-10-21",
+          "note": "This digital edition has a copyright notice; access is provided at its source only.",
+          "sourceTitle": "The Practice of the Presence of God",
+          "digitalRelease": "May 1, 2004",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "pensees",
+      "title": "Pensées",
+      "author": "Blaise Pascal",
+      "authorId": "blaise-pascal",
+      "category": "Apologetics",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-18269",
+          "label": "Project Gutenberg #18269",
+          "source": "https://www.gutenberg.org/ebooks/18269",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Not hosted here: this 1958 Dutton edition includes T. S. Eliot’s introduction, first published in 1931, after this site’s pre-1931 hosting rule. Read it at the source.",
+          "checked": "2026-10-21",
+          "note": "",
+          "sourceTitle": "Pascal's Pensées",
+          "digitalRelease": "Apr 27, 2006",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "apologia",
+      "title": "Apologia pro vita sua",
+      "author": "John Henry Newman",
+      "authorId": "john-henry-newman",
+      "category": "Apologetics",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-19690",
+          "label": "Project Gutenberg #19690",
+          "source": "https://www.gutenberg.org/ebooks/19690",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "",
+          "sourceTitle": "Apologia pro vita sua",
+          "digitalRelease": "Oct 31, 2006",
+          "access": "full-text",
+          "text": "data/texts/pg-19690.txt",
+          "sha256": "d8a2fc8705c87c8add062db52d44c040943edde25ea14e8ee9d92037b60cf09f"
+        }
+      ]
+    },
+    {
+      "id": "grammar-assent",
+      "title": "An Essay in Aid of a Grammar of Assent",
+      "author": "John Henry Newman",
+      "authorId": "john-henry-newman",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-34022",
+          "label": "Project Gutenberg #34022",
+          "source": "https://www.gutenberg.org/ebooks/34022",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "",
+          "sourceTitle": "An Essay in Aid of a Grammar of Assent",
+          "digitalRelease": "Oct 1, 2010",
+          "access": "full-text",
+          "text": "data/texts/pg-34022.txt",
+          "sha256": "73b8afc2096161cb1b45cc78cde11f459a29826674d8d4d1f3e5bb7a433ce241"
+        }
+      ]
+    },
+    {
+      "id": "development-doctrine",
+      "title": "An Essay on the Development of Christian Doctrine",
+      "author": "John Henry Newman",
+      "authorId": "john-henry-newman",
+      "category": "Theology",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-35110",
+          "label": "Project Gutenberg #35110",
+          "source": "https://www.gutenberg.org/ebooks/35110",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "",
+          "sourceTitle": "An Essay on the Development of Christian Doctrine",
+          "digitalRelease": "Jan 29, 2011",
+          "access": "full-text",
+          "text": "data/texts/pg-35110.txt",
+          "sha256": "511dd486875d0ace44fa7b5ec7c2dce3df71f5efd94fac6c36bb715d134b75b5"
+        }
+      ]
+    },
+    {
+      "id": "idea-university",
+      "title": "The Idea of a University",
+      "author": "John Henry Newman",
+      "authorId": "john-henry-newman",
+      "category": "Education",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-24526",
+          "label": "Project Gutenberg #24526",
+          "source": "https://www.gutenberg.org/ebooks/24526",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "",
+          "sourceTitle": "The Idea of a University Defined and Illustrated In Nine Discourses Delivered to the Catholics of Dublin",
+          "digitalRelease": "Feb 5, 2008",
+          "access": "full-text",
+          "text": "data/texts/pg-24526.txt",
+          "sha256": "811ebda414dcefd9664c6b845d60aa773a9f91f7a74e3adb678c47041dc02bcd"
+        }
+      ]
+    },
+    {
+      "id": "orthodoxy",
+      "title": "Orthodoxy",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Apologetics",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-16769",
+          "label": "Project Gutenberg #16769",
+          "source": "https://www.gutenberg.org/ebooks/16769",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "Published before Chesterton’s reception into the Catholic Church.",
+          "sourceTitle": "Orthodoxy",
+          "digitalRelease": "Sep 28, 2005",
+          "access": "full-text",
+          "text": "data/texts/pg-16769.txt",
+          "sha256": "05bc190064cbe4415a912a1a03c29b427f6f0c61d723d899391aba67e0a72257"
+        }
+      ]
+    },
+    {
+      "id": "everlasting-man",
+      "title": "The Everlasting Man",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Apologetics",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-65688",
+          "label": "Project Gutenberg #65688",
+          "source": "https://www.gutenberg.org/ebooks/65688",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "",
+          "sourceTitle": "The Everlasting Man",
+          "digitalRelease": "Jun 24, 2021",
+          "access": "full-text",
+          "text": "data/texts/pg-65688.txt",
+          "sha256": "acd5ff3cb765b1a0d203cbea0afb599bde1d94c2cd2c75d0ea369d701c64d25c"
+        }
+      ]
+    },
+    {
+      "id": "innocence-father-brown",
+      "title": "The Innocence of Father Brown",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-204",
+          "label": "Project Gutenberg #204",
+          "source": "https://www.gutenberg.org/ebooks/204",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "This is the first Father Brown collection, not the complete stories.",
+          "sourceTitle": "The innocence of Father Brown",
+          "digitalRelease": "Jul 9, 2008",
+          "access": "full-text",
+          "text": "data/texts/pg-204.txt",
+          "sha256": "77ef9c0c42a6800c5436d8adf3c7d55fab99039bc4c902b3e4d2daae328c120f"
+        }
+      ]
+    },
+    {
+      "id": "man-thursday",
+      "title": "The Man Who Was Thursday",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-1695",
+          "label": "Project Gutenberg #1695",
+          "source": "https://www.gutenberg.org/ebooks/1695",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "",
+          "sourceTitle": "The Man Who Was Thursday: A Nightmare",
+          "digitalRelease": "Apr 1, 1999",
+          "access": "full-text",
+          "text": "data/texts/pg-1695.txt",
+          "sha256": "16fde29acf764ba5742fd5db8833f424b6b89c0f6e282d518f6c626006faf6e1"
+        }
+      ]
+    },
+    {
+      "id": "chesterton-francis",
+      "title": "Saint Francis of Assisi",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-63084",
+          "label": "Project Gutenberg #63084",
+          "source": "https://www.gutenberg.org/ebooks/63084",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "This volume does not contain Chesterton’s Saint Thomas Aquinas.",
+          "sourceTitle": "St. Francis of Assisi",
+          "digitalRelease": "Aug 31, 2020",
+          "access": "full-text",
+          "text": "data/texts/pg-63084.txt",
+          "sha256": "aa52d050e45fd4fc5423b1282f84d9fc6337b687b86dce0bae85d6349d2dcfeb"
+        }
+      ]
+    },
+    {
+      "id": "europe-faith",
+      "title": "Europe and the Faith",
+      "author": "Hilaire Belloc",
+      "authorId": "hilaire-belloc",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-8442",
+          "label": "Project Gutenberg #8442",
+          "source": "https://www.gutenberg.org/ebooks/8442",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "This volume does not contain The Path to Rome.",
+          "sourceTitle": "Europe and the Faith \"Sine auctoritate nulla vita\"",
+          "digitalRelease": "Jul 1, 2005",
+          "access": "full-text",
+          "text": "data/texts/pg-8442.txt",
+          "sha256": "c3f1d47684156b7dd45fee731eff572c81266d851906eaa0c668c30aefc1d01f"
+        }
+      ]
+    },
+    {
+      "id": "divine-comedy",
+      "title": "Divine Comedy",
+      "author": "Dante Alighieri",
+      "authorId": "dante-alighieri",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-1004",
+          "label": "Project Gutenberg #1004",
+          "source": "https://www.gutenberg.org/ebooks/1004",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Longfellow, Henry Wadsworth, 1807-1882"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "Complete Longfellow translation.",
+          "sourceTitle": "Divine Comedy, Longfellow's Translation, Complete",
+          "digitalRelease": "Aug 1, 1997",
+          "access": "full-text",
+          "text": "data/texts/pg-1004.txt",
+          "sha256": "c233a7ef9444890cb7f16071ff54d997307a3c60dcd6506cfd415bae2430eac2"
+        }
+      ]
+    },
+    {
+      "id": "betrothed",
+      "title": "The Betrothed",
+      "author": "Alessandro Manzoni",
+      "authorId": "alessandro-manzoni",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-35155",
+          "label": "Project Gutenberg #35155",
+          "source": "https://www.gutenberg.org/ebooks/35155",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "",
+          "sourceTitle": "The Betrothed From the Italian of Alessandro Manzoni",
+          "digitalRelease": "Feb 3, 2011",
+          "access": "full-text",
+          "text": "data/texts/pg-35155.txt",
+          "sha256": "8294b2a37ed541d3a2935d524e5b1aa89ee57270388c3aec29afeff04cc1440c"
+        }
+      ]
+    },
+    {
+      "id": "lord-world",
+      "title": "Lord of the World",
+      "author": "Robert Hugh Benson",
+      "authorId": "robert-hugh-benson",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-14021",
+          "label": "Project Gutenberg #14021",
+          "source": "https://www.gutenberg.org/ebooks/14021",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "",
+          "sourceTitle": "Lord of the World",
+          "digitalRelease": "Nov 11, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-14021.txt",
+          "sha256": "ce5924e44c9d50a3a4857ab9436ae7085c50b3b97885abd6f277d67e6171cc82"
+        }
+      ]
+    },
+    {
+      "id": "come-rack",
+      "title": "Come Rack! Come Rope!",
+      "author": "Robert Hugh Benson",
+      "authorId": "robert-hugh-benson",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-15992",
+          "label": "Project Gutenberg #15992",
+          "source": "https://www.gutenberg.org/ebooks/15992",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "",
+          "sourceTitle": "Come Rack! Come Rope!",
+          "digitalRelease": "Jun 5, 2005",
+          "access": "full-text",
+          "text": "data/texts/pg-15992.txt",
+          "sha256": "9f4ef8e78e743f6e52a35bdf8cd41d9e72caf32e328a80f565d67e4c7f4d9352"
+        }
+      ]
+    },
+    {
+      "id": "hopkins-poems",
+      "title": "Poems of Gerard Manley Hopkins",
+      "author": "Gerard Manley Hopkins",
+      "authorId": "gerard-manley-hopkins",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "pg-22403",
+          "label": "Project Gutenberg #22403",
+          "source": "https://www.gutenberg.org/ebooks/22403",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "editor",
+              "name": "Bridges, Robert, 1844-1930"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-21",
+          "note": "The early collected edition, not a modern complete scholarly edition.",
+          "sourceTitle": "Poems of Gerard Manley Hopkins Now First Published",
+          "digitalRelease": "Aug 26, 2007",
+          "access": "full-text",
+          "text": "data/texts/pg-22403.txt",
+          "sha256": "7be6edff06b1894903c104ef500d1c2206a708a72f3509ae51fde405b8daab84"
+        }
+      ]
+    },
+    {
+      "id": "lewis-mere-christianity",
+      "title": "Mere Christianity",
+      "author": "C. S. Lewis",
+      "authorId": null,
+      "date": "1952",
+      "category": "Apologetics",
+      "tradition": "Anglican",
+      "description": "A related Christian work for Catholic readers.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "lewis-bibliography-mere-christianity",
+          "label": "Bibliographic record — Dallas Baptist University",
+          "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External bibliographic reference. No text hosted or downloadable here.",
+          "checked": "2026-10-21",
+          "note": "The date above is the first publication year. This bibliography identifies the work; it is not a free reading edition.",
+          "access": "reference"
+        }
+      ]
+    },
+    {
+      "id": "lewis-screwtape-letters",
+      "title": "The Screwtape Letters",
+      "author": "C. S. Lewis",
+      "authorId": null,
+      "date": "1942",
+      "category": "Literature",
+      "tradition": "Anglican",
+      "description": "A related Christian work for Catholic readers.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "lewis-bibliography-screwtape-letters",
+          "label": "Bibliographic record — Dallas Baptist University",
+          "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External bibliographic reference. No text hosted or downloadable here.",
+          "checked": "2026-10-21",
+          "note": "The date above is the first publication year. This bibliography identifies the work; it is not a free reading edition.",
+          "access": "reference"
+        }
+      ]
+    },
+    {
+      "id": "lewis-abolition-man",
+      "title": "The Abolition of Man",
+      "author": "C. S. Lewis",
+      "authorId": null,
+      "date": "1943",
+      "category": "Philosophy",
+      "tradition": "Anglican",
+      "description": "A related Christian work for Catholic readers.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "lewis-bibliography-abolition-man",
+          "label": "Bibliographic record — Dallas Baptist University",
+          "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External bibliographic reference. No text hosted or downloadable here.",
+          "checked": "2026-10-21",
+          "note": "The date above is the first publication year. This bibliography identifies the work; it is not a free reading edition.",
+          "access": "reference"
+        }
+      ]
+    },
+    {
+      "id": "lewis-great-divorce",
+      "title": "The Great Divorce",
+      "author": "C. S. Lewis",
+      "authorId": null,
+      "date": "1945",
+      "category": "Literature",
+      "tradition": "Anglican",
+      "description": "A related Christian work for Catholic readers.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "lewis-bibliography-great-divorce",
+          "label": "Bibliographic record — Dallas Baptist University",
+          "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External bibliographic reference. No text hosted or downloadable here.",
+          "checked": "2026-10-21",
+          "note": "The date above is the first publication year. This bibliography identifies the work; it is not a free reading edition.",
+          "access": "reference"
+        }
+      ]
+    },
+    {
+      "id": "lewis-problem-pain",
+      "title": "The Problem of Pain",
+      "author": "C. S. Lewis",
+      "authorId": null,
+      "date": "1940",
+      "category": "Apologetics",
+      "tradition": "Anglican",
+      "description": "A related Christian work for Catholic readers.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "lewis-bibliography-problem-pain",
+          "label": "Bibliographic record — Dallas Baptist University",
+          "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External bibliographic reference. No text hosted or downloadable here.",
+          "checked": "2026-10-21",
+          "note": "The date above is the first publication year. This bibliography identifies the work; it is not a free reading edition.",
+          "access": "reference"
+        }
+      ]
+    },
+    {
+      "id": "lewis-miracles",
+      "title": "Miracles",
+      "author": "C. S. Lewis",
+      "authorId": null,
+      "date": "1947",
+      "category": "Apologetics",
+      "tradition": "Anglican",
+      "description": "A related Christian work for Catholic readers.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "lewis-bibliography-miracles",
+          "label": "Bibliographic record — Dallas Baptist University",
+          "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External bibliographic reference. No text hosted or downloadable here.",
+          "checked": "2026-10-21",
+          "note": "The date above is the first publication year. This bibliography identifies the work; it is not a free reading edition.",
+          "access": "reference"
+        }
+      ]
+    },
+    {
+      "id": "lewis-four-loves",
+      "title": "The Four Loves",
+      "author": "C. S. Lewis",
+      "authorId": null,
+      "date": "1960",
+      "category": "Spiritual life",
+      "tradition": "Anglican",
+      "description": "A related Christian work for Catholic readers.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "lewis-bibliography-four-loves",
+          "label": "Bibliographic record — Dallas Baptist University",
+          "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External bibliographic reference. No text hosted or downloadable here.",
+          "checked": "2026-10-21",
+          "note": "The date above is the first publication year. This bibliography identifies the work; it is not a free reading edition.",
+          "access": "reference"
+        }
+      ]
+    },
+    {
+      "id": "lewis-till-we-have-faces",
+      "title": "Till We Have Faces",
+      "author": "C. S. Lewis",
+      "authorId": null,
+      "date": "1956",
+      "category": "Literature",
+      "tradition": "Anglican",
+      "description": "A related Christian work for Catholic readers.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "lewis-bibliography-till-we-have-faces",
+          "label": "Bibliographic record — Dallas Baptist University",
+          "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External bibliographic reference. No text hosted or downloadable here.",
+          "checked": "2026-10-21",
+          "note": "The date above is the first publication year. This bibliography identifies the work; it is not a free reading edition.",
+          "access": "reference"
+        }
+      ]
+    },
+    {
+      "id": "ignatius-of-antioch-epistle-to-the-ephesians",
+      "title": "Epistle to the Ephesians",
+      "author": "Ignatius of Antioch",
+      "authorId": "ignatius-of-antioch",
+      "category": "Church Fathers",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "ignatius-of-antioch-epistle-to-the-ephesians-newadvent",
+          "label": "New Advent reading edition",
+          "source": "https://www.newadvent.org/fathers/0104.htm",
+          "language": "English",
+          "contributors": [],
+          "rights": "External edition; its source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "note": "Consult the source page for translation and editorial credits.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "ignatius-of-antioch-epistle-to-the-romans",
+      "title": "Epistle to the Romans",
+      "author": "Ignatius of Antioch",
+      "authorId": "ignatius-of-antioch",
+      "category": "Church Fathers",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "ignatius-of-antioch-epistle-to-the-romans-newadvent",
+          "label": "New Advent reading edition",
+          "source": "https://www.newadvent.org/fathers/0107.htm",
+          "language": "English",
+          "contributors": [],
+          "rights": "External edition; its source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "note": "Consult the source page for translation and editorial credits.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "justin-martyr-first-apology",
+      "title": "First Apology",
+      "author": "Justin Martyr",
+      "authorId": "justin-martyr",
+      "category": "Church Fathers",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "justin-martyr-first-apology-newadvent",
+          "label": "New Advent reading edition",
+          "source": "https://www.newadvent.org/fathers/0126.htm",
+          "language": "English",
+          "contributors": [],
+          "rights": "External edition; its source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "note": "Consult the source page for translation and editorial credits.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "justin-martyr-second-apology",
+      "title": "Second Apology",
+      "author": "Justin Martyr",
+      "authorId": "justin-martyr",
+      "category": "Church Fathers",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "justin-martyr-second-apology-newadvent",
+          "label": "New Advent reading edition",
+          "source": "https://www.newadvent.org/fathers/0127.htm",
+          "language": "English",
+          "contributors": [],
+          "rights": "External edition; its source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "note": "Consult the source page for translation and editorial credits.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "justin-martyr-dialogue-with-trypho",
+      "title": "Dialogue with Trypho",
+      "author": "Justin Martyr",
+      "authorId": "justin-martyr",
+      "category": "Church Fathers",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "justin-martyr-dialogue-with-trypho-newadvent",
+          "label": "New Advent reading edition",
+          "source": "https://www.newadvent.org/fathers/0128.htm",
+          "language": "English",
+          "contributors": [],
+          "rights": "External edition; its source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "note": "Consult the source page for translation and editorial credits.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "athanasius-of-alexandria-on-the-incarnation-of-the-word",
+      "title": "On the Incarnation of the Word",
+      "author": "Athanasius of Alexandria",
+      "authorId": "athanasius-of-alexandria",
+      "category": "Church Fathers",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "athanasius-of-alexandria-on-the-incarnation-of-the-word-newadvent",
+          "label": "New Advent reading edition",
+          "source": "https://www.newadvent.org/fathers/2802.htm",
+          "language": "English",
+          "contributors": [],
+          "rights": "External edition; its source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "note": "Consult the source page for translation and editorial credits.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "basil-the-great-de-spiritu-sancto",
+      "title": "De Spiritu Sancto",
+      "author": "Basil the Great",
+      "authorId": "basil-the-great",
+      "category": "Church Fathers",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "basil-the-great-de-spiritu-sancto-newadvent",
+          "label": "New Advent reading edition",
+          "source": "https://www.newadvent.org/fathers/3203.htm",
+          "language": "English",
+          "contributors": [],
+          "rights": "External edition; its source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "note": "Consult the source page for translation and editorial credits.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "john-chrysostom-homilies-on-romans",
+      "title": "Homilies on Romans",
+      "author": "John Chrysostom",
+      "authorId": "john-chrysostom",
+      "category": "Church Fathers",
+      "tradition": "Catholic tradition",
+      "description": "",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "john-chrysostom-homilies-on-romans-newadvent",
+          "label": "New Advent reading edition",
+          "source": "https://www.newadvent.org/fathers/2102.htm",
+          "language": "English",
+          "contributors": [],
+          "rights": "External edition; its source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "note": "Consult the source page for translation and editorial credits.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "dei-verbum",
+      "title": "Dei Verbum",
+      "author": "Second Vatican Council",
+      "authorId": null,
+      "date": "1965-11-18",
+      "category": "Magisterium",
+      "tradition": "Catholic",
+      "description": "Dogmatic constitution on divine revelation.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "dei-verbum-vatican",
+          "label": "Vatican — official English text",
+          "source": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External official text; Vatican source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "lumen-gentium",
+      "title": "Lumen Gentium",
+      "author": "Second Vatican Council",
+      "authorId": null,
+      "date": "1964-11-21",
+      "category": "Magisterium",
+      "tradition": "Catholic",
+      "description": "Dogmatic constitution on the Church.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "lumen-gentium-vatican",
+          "label": "Vatican — official English text",
+          "source": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External official text; Vatican source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "sacrosanctum-concilium",
+      "title": "Sacrosanctum Concilium",
+      "author": "Second Vatican Council",
+      "authorId": null,
+      "date": "1963-12-04",
+      "category": "Magisterium",
+      "tradition": "Catholic",
+      "description": "Constitution on the sacred liturgy.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "sacrosanctum-concilium-vatican",
+          "label": "Vatican — official English text",
+          "source": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External official text; Vatican source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "gaudium-spes",
+      "title": "Gaudium et Spes",
+      "author": "Second Vatican Council",
+      "authorId": null,
+      "date": "1965-12-07",
+      "category": "Magisterium",
+      "tradition": "Catholic",
+      "description": "Pastoral constitution on the Church in the modern world.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "gaudium-spes-vatican",
+          "label": "Vatican — official English text",
+          "source": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External official text; Vatican source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "fides-ratio",
+      "title": "Fides et Ratio",
+      "author": "John Paul II",
+      "authorId": null,
+      "date": "1998-09-14",
+      "category": "Magisterium",
+      "tradition": "Catholic",
+      "description": "Encyclical on faith and reason.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "fides-ratio-vatican",
+          "label": "Vatican — official English text",
+          "source": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_14091998_fides-et-ratio.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External official text; Vatican source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "veritatis-splendor",
+      "title": "Veritatis Splendor",
+      "author": "John Paul II",
+      "authorId": null,
+      "date": "1993-08-06",
+      "category": "Magisterium",
+      "tradition": "Catholic",
+      "description": "Encyclical on fundamental questions of moral teaching.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "veritatis-splendor-vatican",
+          "label": "Vatican — official English text",
+          "source": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_06081993_veritatis-splendor.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External official text; Vatican source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "deus-caritas-est",
+      "title": "Deus Caritas Est",
+      "author": "Benedict XVI",
+      "authorId": null,
+      "date": "2005-12-25",
+      "category": "Magisterium",
+      "tradition": "Catholic",
+      "description": "Encyclical on Christian love.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "deus-caritas-est-vatican",
+          "label": "Vatican — official English text",
+          "source": "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External official text; Vatican source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "rerum-novarum",
+      "title": "Rerum Novarum",
+      "author": "Leo XIII",
+      "authorId": null,
+      "date": "1891-05-15",
+      "category": "Magisterium",
+      "tradition": "Catholic",
+      "description": "Encyclical on capital and labor.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "rerum-novarum-vatican",
+          "label": "Vatican — official English text",
+          "source": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_15051891_rerum-novarum.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "External official text; Vatican source notices apply. Not hosted here.",
+          "checked": "2026-10-21",
+          "access": "full-text"
+        }
+      ]
+    }
+  ]
+}

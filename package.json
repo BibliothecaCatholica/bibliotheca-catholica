@@ -1,0 +1,9 @@
+{
+  "name": "bibliotheca-catholica",
+  "private": true,
+  "scripts": {
+    "dev": "python3 tools/serve.py",
+    "build": "python3 tools/build_library.py",
+    "test": "node --test tests/*.test.js && python3 -m unittest discover -s tests -p 'test_*.py'"
+  }
+}

@@ -1,0 +1,4 @@
+# Preserve source-edition bytes for the recorded SHA-256 checksums.
+data/texts/*.txt -text linguist-vendored whitespace=-blank-at-eol,-blank-at-eof
+# CSV exports use the csv module's standard CRLF records.
+*.csv whitespace=cr-at-eol

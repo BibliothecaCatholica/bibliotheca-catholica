@@ -1,0 +1,299 @@
+{
+  "checked": "2026-10-21T21:03:30.841860+00:00",
+  "results": [
+    {
+      "url": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
+      "status": 200,
+      "finalUrl": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
+      "title": "C. S. Lewis Bibliography | Dr. Philip Irving Mitchell | Dallas Baptist University",
+      "sha256": "766d709910c8bcb3ce340c37af085887b693edfefb7c63bb7c1bb12b990a05f1"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/1004",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/1004",
+      "title": "Divine Comedy, Longfellow's Translation, Complete by Dante Alighieri | Project Gutenberg",
+      "sha256": "2b5e9cc16561e37bbf77b62439aa62e5bad88091f9555adffa0c4718765c9fba"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/14021",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/14021",
+      "title": "Lord of the World by Robert Hugh Benson | Project Gutenberg",
+      "sha256": "9f36f6620cb3fe59361689709855a22925643adfceaa7ca1a4aba64036a2239a"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/15992",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/15992",
+      "title": "Come Rack! Come Rope! by Robert Hugh Benson | Project Gutenberg",
+      "sha256": "d73ae03b4547ccc6a846cbbd4a0e5f23c2cf9ab6b639b51a62508bf249db5f06"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/1653",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/1653",
+      "title": "The Imitation of Christ by à Kempis Thomas | Project Gutenberg",
+      "sha256": "63583cf59222403d0b99c74034bc3eeee01e01e5093d9afcacbb2db2a0b933f4"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/16769",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/16769",
+      "title": "Orthodoxy by G. K. Chesterton | Project Gutenberg",
+      "sha256": "d6b517578f464fd7cf6884e6400c2de1074831fa47be7fe72d80c5081a32e442"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/16772",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/16772",
+      "title": "The Story of a Soul (L'Histoire d'une Âme): The Autobiography of St. Thérèse of… | Project Gutenberg",
+      "sha256": "6c9313124e539b9c73aa712eecfeea451e95579767991ae3891b8855b8629c45"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/1695",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/1695",
+      "title": "The Man Who Was Thursday: A Nightmare by G. K. Chesterton | Project Gutenberg",
+      "sha256": "d6098d12d018d975c04153d4090fc859696c865be446aa8e203cc60028aa0256"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/18269",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/18269",
+      "title": "Pascal's Pensées by Blaise Pascal | Project Gutenberg",
+      "sha256": "776b1f253fa417322f7eefd0d0703edee27676c23e23b0bdac7502d36af638ab"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/19690",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/19690",
+      "title": "Apologia pro vita sua by John Henry Newman | Project Gutenberg",
+      "sha256": "926038bf12f3e7a8515564e91be302437c1491bfcb72fafa11aa3029ee4ef5f1"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/204",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/204",
+      "title": "The innocence of Father Brown by G. K. Chesterton | Project Gutenberg",
+      "sha256": "1f8ce66ec5bfd74b6d0fdade4b39ad4902dd0cde6b0fb30a9c66f8de40f8df18"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/22403",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/22403",
+      "title": "Poems of Gerard Manley Hopkins by Gerard Manley Hopkins | Project Gutenberg",
+      "sha256": "bebe25cab5a2260702bd848cfa4c556615026a7bd752f8767fa92e60a08e3ed1"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/24526",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/24526",
+      "title": "The Idea of a University Defined and Illustrated by John Henry Newman | Project Gutenberg",
+      "sha256": "135ea6004c14dde62dabb8d87b2ef84f7cfc41651329c4e0677ada5f8ce37796"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/3296",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/3296",
+      "title": "The Confessions of St. Augustine by Saint of Hippo Augustine | Project Gutenberg",
+      "sha256": "cf14b46f1138c5620c5889820de754bf10b94318010438449dc03f56c120888a"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/34022",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/34022",
+      "title": "An Essay in Aid of a Grammar of Assent by John Henry Newman | Project Gutenberg",
+      "sha256": "547f2830b111fe42a82c901785d33415aae923de3f075dafec80c3db125b62be"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/35110",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/35110",
+      "title": "An Essay on the Development of Christian Doctrine by John Henry Newman | Project Gutenberg",
+      "sha256": "83fffe58c5f45b1e9d3d6728ddf3aa7ca3709e583759cf7e73d8d370e747292f"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/35155",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/35155",
+      "title": "The Betrothed by Alessandro Manzoni | Project Gutenberg",
+      "sha256": "bf07d790db89500b31d296854172cafbe515b2d157bd81cceb44b41da19b75c5"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/50040",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/50040",
+      "title": "St. Benedict's Rule for Monasteries by Abbot of Monte Cassino Saint Benedict | Project Gutenberg",
+      "sha256": "30ab9fac3ddc681c06d00dcef6ca227547ba2547af80154fe5b9f70fca77b46c"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/52057",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/52057",
+      "title": "Abandonment; or, Absolute Surrender to Divine Providence by Jean Pierre de Caussade | Project Gutenberg",
+      "sha256": "5e7dae942555a3d6b47f91b0f8f4350ec7ae4c7f8a54830789389fc0e6b47e35"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/52958",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/52958",
+      "title": "Revelations of Divine Love by of Norwich Julian | Project Gutenberg",
+      "sha256": "a0079f3314af014e07f57d00594ff20e2c023f16c34b8f7fcf4c2450d7e229da"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/5657",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/5657",
+      "title": "The Practice of the Presence of God by Brother of the Resurrection Lawrence | Project Gutenberg",
+      "sha256": "506430475fc6f36778f6771e52883b8b87310fb58ddd5e0eebeb0820745c74e4"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/63084",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/63084",
+      "title": "St. Francis of Assisi by G. K. Chesterton | Project Gutenberg",
+      "sha256": "565de86e3eb1e31a91ac82006349a42c0dbb74b4ac1c6fed114da130db5603a2"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/65688",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/65688",
+      "title": "The Everlasting Man by G. K. Chesterton | Project Gutenberg",
+      "sha256": "eef70ea076d78a777190eb79f6e4dfac8e06db990e0b6779de383266bdd209b6"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/70790",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/70790",
+      "title": "The spiritual exercises of St. Ignatius :  adapted to an eight days retreat and… | Project Gutenberg",
+      "sha256": "32e69c09a27d2d691d80cef2e528b2cc8279bf844b2c8e06f4d7cc1b5f59fcd8"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/8120",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/8120",
+      "title": "The Life of St. Teresa of Jesus, of the Order of Our Lady of Carmel by Teresa | Project Gutenberg",
+      "sha256": "803bf387014afb7147c09880b8f676a5052955e9dab903e0dd17ff2c87ad6a61"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/8442",
+      "status": 200,
+      "finalUrl": "https://www.gutenberg.org/ebooks/8442",
+      "title": "Europe and the Faith by Hilaire Belloc | Project Gutenberg",
+      "sha256": "d57418d1e3482b9eabad5f41b4d753f9f81730ea220ab162d8fb9b3e8cc43306"
+    },
+    {
+      "url": "https://www.newadvent.org/fathers/0104.htm",
+      "status": 200,
+      "finalUrl": "https://www.newadvent.org/fathers/0104.htm",
+      "title": "CHURCH FATHERS: Epistle to the Ephesians (St. Ignatius)",
+      "sha256": "590d76c6e1e0048ed26461b6df6e4a863795f96069b1063584e077526560c407"
+    },
+    {
+      "url": "https://www.newadvent.org/fathers/0107.htm",
+      "status": 200,
+      "finalUrl": "https://www.newadvent.org/fathers/0107.htm",
+      "title": "CHURCH FATHERS: Epistle to the Romans (St. Ignatius)",
+      "sha256": "d16104b7d5f3035bbf0b5a7bfa5d21ad6c016482f773ecde99916d84801579e5"
+    },
+    {
+      "url": "https://www.newadvent.org/fathers/0126.htm",
+      "status": 200,
+      "finalUrl": "https://www.newadvent.org/fathers/0126.htm",
+      "title": "CHURCH FATHERS: The First Apology (St. Justin Martyr)",
+      "sha256": "eeb0e53e046abdc67f1fe68f787b920da27001c2c2b34f4d0d20d2ca6c9f8c44"
+    },
+    {
+      "url": "https://www.newadvent.org/fathers/0127.htm",
+      "status": 200,
+      "finalUrl": "https://www.newadvent.org/fathers/0127.htm",
+      "title": "CHURCH FATHERS: The Second Apology (St. Justin Martyr)",
+      "sha256": "0f039d0e1ac99cd339d2482dbfce12d7f23f2946db0463fadfc6e669871db6fa"
+    },
+    {
+      "url": "https://www.newadvent.org/fathers/0128.htm",
+      "status": 200,
+      "finalUrl": "https://www.newadvent.org/fathers/0128.htm",
+      "title": "CHURCH FATHERS: Dialogue with Trypho (Justin Martyr)",
+      "sha256": "49fd8658ccec33cd8f91c8203778ddf593b0696854ed86132fa1e8e00e066bbb"
+    },
+    {
+      "url": "https://www.newadvent.org/fathers/2102.htm",
+      "status": 200,
+      "finalUrl": "https://www.newadvent.org/fathers/2102.htm",
+      "title": "CHURCH FATHERS: Homilies on Romans (Chrysostom)",
+      "sha256": "2229fbb379360d207268e8c2b4254b46ca98c3f743d64251390e8690378cf93a"
+    },
+    {
+      "url": "https://www.newadvent.org/fathers/2802.htm",
+      "status": 200,
+      "finalUrl": "https://www.newadvent.org/fathers/2802.htm",
+      "title": "CHURCH FATHERS: On the Incarnation of the Word (Athanasius)",
+      "sha256": "8ed6fc33b310cd21659da02bf48b32adf53c78508f23220834e2da26df756b22"
+    },
+    {
+      "url": "https://www.newadvent.org/fathers/3203.htm",
+      "status": 200,
+      "finalUrl": "https://www.newadvent.org/fathers/3203.htm",
+      "title": "CHURCH FATHERS: De Spiritu Sancto (Basil)",
+      "sha256": "dd5c4285f3ea70c7d73b8843467364866e9549ba3509f56ab6bd2e75a34e8bbe"
+    },
+    {
+      "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
+      "status": 200,
+      "finalUrl": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
+      "title": "Sacrosanctum Concilium",
+      "sha256": "3cfc290b5445086fc2be06b47ed6cb86ee3bc3e90bdbb2b5454889dfd76fd96e"
+    },
+    {
+      "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html",
+      "status": 200,
+      "finalUrl": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html",
+      "title": "Lumen gentium",
+      "sha256": "7e0dccd5d56d433a3530defc93eb765ddea634e75269d7619467f32fec5ce1b0"
+    },
+    {
+      "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html",
+      "status": 200,
+      "finalUrl": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html",
+      "title": "Dei verbum",
+      "sha256": "e5eac5f655389e3c54295985be85e5a4ce9f55f0165e8e8ee9ce6167fedb8e5f"
+    },
+    {
+      "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html",
+      "status": 200,
+      "finalUrl": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html",
+      "title": "Gaudium et spes",
+      "sha256": "23b935b99bdaa1cd8bc5ee0951f418672d1d246d008d026ada56e1d01861c12d"
+    },
+    {
+      "url": "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html",
+      "status": 200,
+      "finalUrl": "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html",
+      "title": "Deus caritas est (December 25, 2005)",
+      "sha256": "0f21533523e1bcdb06482dd3290c470be3e83024de199fbc9ac2cc8de5cdc554"
+    },
+    {
+      "url": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_06081993_veritatis-splendor.html",
+      "status": 200,
+      "finalUrl": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_06081993_veritatis-splendor.html",
+      "title": "Veritatis Splendor (6 August 1993)",
+      "sha256": "144095cc862884c494016c2e4d7e5c71880f500961efe4e42734835174b7366d"
+    },
+    {
+      "url": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_14091998_fides-et-ratio.html",
+      "status": 200,
+      "finalUrl": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_14091998_fides-et-ratio.html",
+      "title": "Fides et Ratio (14 September 1998)",
+      "sha256": "5f36fcbb7826c939a959bcec24d8ee1ce23679d17c22fb78c8fc805f4ddeb6ab"
+    },
+    {
+      "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_15051891_rerum-novarum.html",
+      "status": 200,
+      "finalUrl": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_15051891_rerum-novarum.html",
+      "title": "Rerum Novarum (May 15, 1891)",
+      "sha256": "56312d1af3d74621fff9315c70eb110f74a10880d52c5aeb426b712fba2b6b33"
+    }
+  ]
+}

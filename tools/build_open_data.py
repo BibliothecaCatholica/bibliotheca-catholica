@@ -1,6 +1,7 @@
 """Build the CC0 open-data release in site/data/open/ (JSON + CSV + README + manifest)."""
 import json,csv,os,re,subprocess,datetime,urllib.parse,hashlib
-S='site/data/';O=S+'open/';os.makedirs(O,exist_ok=True)
+from pathlib import Path
+S=str(Path(__file__).resolve().parents[1]/'data')+'/';O=S+'open/';os.makedirs(O,exist_ok=True)
 def loadjs(p,var):
     s=open(p,encoding='utf-8').read();i=s.index('=')+1;return json.loads(s[i:].strip().rstrip(';'))
 hub=json.load(open(S+'catholic-hub.json'));bk=json.load(open(S+'books.json'))

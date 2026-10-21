@@ -52,7 +52,7 @@ function predSub(t,id){t=String(t).normalize('NFD').replace(/[\u0300-\u036f]/g,'
 function encPath(s){return encodeURIComponent(s).replace(/[!'()*]/g,function(c){return '%'+c.charCodeAt(0).toString(16).toUpperCase()})}
 var LANGN={eng:'English',lat:'Latin',fra:'French',ita:'Italian',spa:'Spanish',deu:'German',por:'Portuguese',grc:'Ancient Greek',ell:'Greek',nld:'Dutch',pol:'Polish',heb:'Hebrew',rus:'Russian',hun:'Hungarian',cat:'Catalan',ara:'Arabic',syr:'Syriac',cop:'Coptic',lit:'Lithuanian',ces:'Czech',slk:'Slovak',hrv:'Croatian',slv:'Slovenian',gle:'Irish',ina:'Interlingua',epo:'Esperanto',swe:'Swedish',dan:'Danish',nor:'Norwegian',fin:'Finnish',jpn:'Japanese',zho:'Chinese',kor:'Korean',ukr:'Ukrainian',arm:'Armenian',hye:'Armenian',chu:'Church Slavonic',und:'Undetermined'};
 function prepBooks(R){var L=R.books.map(function(r){var o={id:r[0],t:r[1],a:r[2].map(function(i){return R.authors[i]}),y:r[3]||0,tg:r[4].map(function(i){return R.tags[i]}),se:r[5]>=0?R.series[r[5]]:'',si:r[6],f:r[7]?r[7].split('|'):[],fo:R.folders[r[8]],sub:r[9]||predSub(r[1],r[0]),lg:r[10]?r[10].split(','):[],pub:r[11]>=0?R.publishers[r[11]]:''};
-   o.an=o.a.map(function(x){return x[0]}).join(' & ');o.x=norm(o.t+' '+o.an+' '+o.se+' '+o.tg.join(' ')+' '+o.pub+' '+o.y);o.tn=norm(o.t);return o});
+   o.an=o.a.map(function(x){return x[0]}).join(' & ');o.x=norm(o.t+' '+o.an+' '+o.se+' '+o.tg.join(' ')+' '+o.pub+' '+o.y);o.tn=norm(o.t);o.ts=o.tn.replace(/^[^a-z0-9]+/,'').replace(/^(the|a|an) /,'');return o});
   var BY={};L.forEach(function(b){b.a.forEach(function(x){if(x[1]&&AID[x[1]]){(BY[x[1]]=BY[x[1]]||[]).push(b)}})});
   var langs={},fmts={};L.forEach(function(b){b.lg.forEach(function(l){langs[l]=(langs[l]||0)+1});b.f.forEach(function(f){fmts[f]=(fmts[f]||0)+1})});
   return {list:L,by:BY,langs:langs,fmts:fmts,server:R.server,base:R.base,count:R.count}}
@@ -66,15 +66,18 @@ function brow(b,q){return '<div class="brow"><div class="b-main"><a class="b-tit
   (b.tg.length?'<div class="b-tags">'+b.tg.slice(0,5).map(function(t){return '<button class="b-tag" data-tag="'+esc(t)+'">'+esc(t)+'</button>'}).join('')+'</div>':'')+'</div>'+
   '<div class="b-side"><div class="b-fmts">'+b.f.slice(0,5).map(function(f){return '<span class="fmt fmt-'+esc(f.toLowerCase())+'">'+esc(f.replace('_',' '))+'</span>'}).join('')+(b.lg.length?'<span class="lang">'+esc(b.lg.map(function(l){return LANGN[l]||l}).join(', '))+'</span>':'')+'</div>'+
   '<div class="b-links"><a href="'+esc(bookUrl(b))+'" target="_blank" rel="noopener">Details ↗</a><a href="'+esc(bookFiles(b))+'" target="_blank" rel="noopener">Files ↗</a><a href="'+esc(bookAppUrl(b))+'" target="_blank" rel="noopener">Calibre ↗</a></div></div></div>'}
-var BF={q:'',fmt:'',lang:'',sort:'title',linked:false,tag:''};
+var BF={q:'',fmt:'',lang:'',sort:'title',linked:false,tag:'',ontopic:true};
+var OFFT=/mathemat|physics|physique|computer|programming|\blie (theory|group|algebra)|^lie|differential|calculus|algebra|mechanics|electro|electric|magnetism|quantum|astronom|astrophys|cosmolog|chemistry|relativity|thermodynam|gravity|plasma|linux|unix|networking|^security$|cryptograph|artificial intelligence|machine learning|data science|data processing|bitcoin|cooking|vegan|nutrition|health & fitness|diet|amateur radio|prepper|e-commerce|software|operating systems|open source|algorithms|combinatoric|geometry|symmetry|perturbation|celestial|satisfiab|^sat$|^c$|^web$|information technology|system administration|discrete math|group theory|mathematical|analysis$|acoustics|electronics|engineering|business|leadership|self-help|personal growth|gardening|^google$|sample book|amazon\.com|intellectual property|creative commons|biology|life sciences|embryology|medical|musical instruments|vocal technique/i;
+var RELT=/relig|theolog|cathol|christ|church|saint|\bst\.|bible|biblic|liturg|spiritu|prayer|pope|papa|papal|thom|aquin|dominic|mary|virgin|scholast|apolog|catech|\bmass\b|chant|canon|monast|mystic|sacrament|god|jesus|devot|council|vatican|trent|ecclesi|moral|natural law|virtue|marriage|celibacy|sermon|patrist|fathers|creed|missal|divine office|rosary|grace|faith|jesuit|franciscan|benedictine|carmelit|duhem|jaki/i;
+function offTopic(b){if(b._off!=null)return b._off;b._off=b.tg.some(function(t){return OFFT.test(t)})&&!b.tg.some(function(t){return RELT.test(t)})&&!b.a.some(function(x){return x[1]})&&!RELT.test(b.t);return b._off}
 function books(arg){
   if(arg!=null&&arg!==''){BF.q=arg;BF.tag=''}
   var h='<div class="page-head"><div class="eyebrow">Catalogus librorum</div><h1>Books in the isidore.co Library</h1><p class="lede">Every title in the <a href="https://isidore.co/calibre" target="_blank" rel="noopener">St. Isidore e-book library</a> — searchable by title, author, series, subject or year. Each book links to its isidore.co page, its folder of downloadable files, and the full Calibre viewer.</p></div>'+
    '<div class="toolbar"><input type="search" id="bk-q" placeholder="Search titles, authors, series, subjects…" value="'+esc(BF.q)+'">'+
-   '<select id="bk-sort" aria-label="Sort"><option value="title">Title A → Z</option><option value="new">Newest first</option><option value="old">Oldest first</option><option value="author">Author A → Z</option></select>'+
+   '<select id="bk-sort" aria-label="Sort"><option value="title">English first, A → Z</option><option value="az">Title A → Z (all languages)</option><option value="new">Newest first</option><option value="old">Oldest first</option><option value="author">Author A → Z</option></select>'+
    '<select id="bk-lang" aria-label="Language"><option value="">All languages</option></select>'+
    '<div class="filter-row"><label>Format</label><div class="chips" id="bk-fmt"></div></div>'+
-   '<div class="filter-row"><label>Show</label><div class="chips"><button class="chip gold'+(BF.linked?' on':'')+'" id="bk-linked" title="Only books by authors who have a page on this site">Authors with a page here</button><span id="bk-tagchip"></span></div></div></div>'+
+   '<div class="filter-row"><label>Show</label><div class="chips"><button class="chip gold'+(BF.ontopic?' on':'')+'" id="bk-ontopic" title="Hide maths, computing, cooking and other off-topic books that share the isidore.co shelves">Catholic &amp; related subjects only</button><button class="chip gold'+(BF.linked?' on':'')+'" id="bk-linked" title="Only books by authors who have a page on this site">Authors with a page here</button><span id="bk-tagchip"></span></div></div></div>'+
    '<div class="result-meta" id="bk-meta">Loading the catalog…</div><div class="blist" id="bk-out"></div><div class="bk-more-wrap"><button class="btn ghost" id="bk-more" hidden>Show more</button></div>';
   render(h,'books');
   loadBooks(function(err){if(err){$('#bk-meta').textContent='The book catalog could not be loaded.';return}if(!$('#bk-out'))return;
@@ -86,15 +89,17 @@ function books(arg){
     var shown=60,cur=[];
     function filt(){var toks=norm(BF.q).split(/\s+/).filter(Boolean);var L=B.list.filter(function(b){
         if(BF.fmt&&b.f.indexOf(BF.fmt)<0)return false;if(BF.lang&&b.lg.indexOf(BF.lang)<0)return false;if(BF.tag&&b.tg.indexOf(BF.tag)<0)return false;
-        if(BF.linked&&!b.a.some(function(x){return x[1]}))return false;
+        if(BF.linked&&!b.a.some(function(x){return x[1]}))return false;if(BF.ontopic&&offTopic(b))return false;
         for(var j=0;j<toks.length;j++)if(b.x.indexOf(toks[j])<0)return false;return true});
       if(BF.sort==='new')L=L.slice().sort(function(a,b){return (b.y||0)-(a.y||0)});
       else if(BF.sort==='old')L=L.slice().sort(function(a,b){return (a.y||9999)-(b.y||9999)});
       else if(BF.sort==='author')L=L.slice().sort(function(a,b){return norm(a.an||'~').localeCompare(norm(b.an||'~'))});
+      else if(BF.sort==='az')L=L.slice().sort(function(a,b){return a.ts.localeCompare(b.ts)});
+      else if(!toks.length)L=L.slice().sort(function(a,b){var ea=a.lg.indexOf('eng')>=0?0:1,eb=b.lg.indexOf('eng')>=0?0:1;return (ea-eb)||a.ts.localeCompare(b.ts)});
       else if(toks.length){var nq=norm(BF.q);L=L.map(function(b){var s=0;if(b.tn===nq)s+=20;else if(b.tn.indexOf(nq)===0)s+=10;else if(b.tn.indexOf(nq)>=0)s+=6;toks.forEach(function(t){if(b.tn.indexOf(t)>=0)s+=2});return [s,b]}).sort(function(a,b){return b[0]-a[0]}).map(function(x){return x[1]})}
       return L}
     function draw(reset){if(reset){shown=60;cur=filt()}
-      $('#bk-meta').innerHTML=cur.length.toLocaleString()+' of '+B.list.length.toLocaleString()+' books'+(BF.q?' matching “'+esc(BF.q)+'”':'')+(BF.q?' · <a href="https://isidore.co/calibre/mobile?search='+encodeURIComponent(BF.q)+'&num=25" target="_blank" rel="noopener">same search on isidore.co ↗</a>':'');
+      $('#bk-meta').innerHTML=cur.length.toLocaleString()+' of '+B.list.length.toLocaleString()+' books'+(BF.ontopic?' <span class="muted">(off-topic subjects hidden)</span>':'')+(BF.q?' matching “'+esc(BF.q)+'”':'')+(BF.q?' · <a href="https://isidore.co/calibre/mobile?search='+encodeURIComponent(BF.q)+'&num=25" target="_blank" rel="noopener">same search on isidore.co ↗</a>':'');
       $('#bk-out').innerHTML=cur.length?cur.slice(0,shown).map(function(b){return brow(b,BF.q)}).join(''):'<div class="empty">No books match. Try clearing a filter.</div>';
       $('#bk-more').hidden=shown>=cur.length;$('#bk-more').textContent='Show more ('+(cur.length-shown).toLocaleString()+' remaining)';
       $('#bk-tagchip').innerHTML=BF.tag?'<button class="chip on" id="bk-untag">Subject: '+esc(BF.tag)+' ✕</button>':''}
@@ -104,6 +109,7 @@ function books(arg){
     $('#bk-lang').addEventListener('change',function(e){BF.lang=e.target.value;draw(true)});
     $('#bk-fmt').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;BF.fmt=b.dataset.f;$('#bk-fmt').querySelectorAll('.chip').forEach(function(x){x.classList.toggle('on',x===b)});draw(true)});
     $('#bk-linked').addEventListener('click',function(e){BF.linked=!BF.linked;e.currentTarget.classList.toggle('on',BF.linked);draw(true)});
+    $('#bk-ontopic').addEventListener('click',function(e){BF.ontopic=!BF.ontopic;e.currentTarget.classList.toggle('on',BF.ontopic);draw(true)});
     $('#bk-more').addEventListener('click',function(){shown+=120;draw(false)});
     $('#bk-tagchip').addEventListener('click',function(){BF.tag='';draw(true)});
     $('#bk-out').addEventListener('click',function(e){var t=e.target.closest('.b-tag');if(t){BF.tag=t.dataset.tag;draw(true);window.scrollTo({top:0,behavior:'smooth'});return}
@@ -115,6 +121,85 @@ function authorBooks(a){var box=$('#au-books');if(!box)return;loadBooks(function
   if(!L.length){box.innerHTML='';return}
   box.innerHTML='<div class="rule"></div><h3>Books in the isidore.co library <span class="small">('+L.length+')</span></h3><div class="blist compact">'+L.slice(0,40).map(function(b){return brow(b)}).join('')+'</div>'+(L.length>40?'<p><a href="#/books/'+encodeURIComponent(L[0].a.filter(function(x){return x[1]===a.id})[0][0])+'">See all '+L.length+' books →</a></p>':'');
   box.addEventListener('click',function(e){var t=e.target.closest('.b-tag');if(t){BF.tag=t.dataset.tag;BF.q='';location.hash='#/books'}})})}
+
+
+/* ---------- guide data: editions, reading lists, substacks (lazy) ---------- */
+var GD=null,GWAIT=[],GLOADING=false,ED={};
+function loadGuide(cb){if(GD){cb&&cb();return}if(cb)GWAIT.push(cb);if(GLOADING)return;GLOADING=true;
+  function done(){var R=window.GUIDE_DATA;if(!R){GLOADING=false;GWAIT.splice(0).forEach(function(f){try{f(true)}catch(e){}});return}
+    GD=R;GD.editions.forEach(function(w){ED[w.id]=w});addGuideToIdx();GWAIT.splice(0).forEach(function(f){f()})}
+  if(window.GUIDE_DATA){setTimeout(done,0);return}
+  var s=document.createElement('script');s.src='data/guide.js';s.onload=done;s.onerror=function(){done()};document.head.appendChild(s)}
+function addGuideToIdx(){GD.editions.forEach(function(w){IDX.push({type:'Edition guide',t:w.t,s:(w.a?w.a+' · ':'')+'Which edition should I buy? '+w.picks.map(function(p){return p.tr}).slice(0,2).join(' · '),h:'#/editions/'+w.id,x:norm(w.t+' '+w.a+' '+w.cat+' '+w.picks.map(function(p){return p.tr+' '+p.pub}).join(' ')),w:2.6})});
+  GD.lists.forEach(function(l){IDX.push({type:'Reading list',t:l.t,s:l.sub,h:'#/reading/'+l.id,x:norm(l.t+' '+l.sub+' reading list recommendations'),w:2.4})});
+  GD.substacks.concat([GD.featured]).forEach(function(s){IDX.push({type:'Substack',t:s.name,s:s.author+' · '+s.desc,h:s.url,ext:1,x:norm(s.name+' '+s.author+' '+s.desc+' '+(s.cat||'')+' substack newsletter'),w:2.2})})}
+var AFF=window.AFFILIATES||{bookshopId:'',publishers:{},disclosure:''};
+function isbnOk(i){return /^97[89]\d{10}$/.test(i||'')}
+function bookshopUrl(isbn,q){var id=(AFF.bookshopId||'').trim();
+  if(isbnOk(isbn))return id?'https://bookshop.org/a/'+encodeURIComponent(id)+'/'+isbn:'https://bookshop.org/search?keywords='+isbn;
+  return 'https://bookshop.org/search?keywords='+encodeURIComponent(q)}
+function pubUrl(pk,q){var p=(AFF.publishers||{})[pk];if(!p||!p.search)return '';var u=p.search.replace('{q}',encodeURIComponent(q));
+  if(p.wrap)return p.wrap.replace('{url}',encodeURIComponent(u));if(p.param)u+=(u.indexOf('?')>=0?'&':'?')+p.param;return u}
+function buyBtns(isbn,title,author,pk){var q=title+(author?' '+author:'');var h='<div class="buy"><span class="buy-l">Buy</span><a class="buy-b bs" href="'+esc(bookshopUrl(isbn,q))+'" target="_blank" rel="noopener sponsored">Bookshop.org ↗</a>';
+  var pu=pk&&pubUrl(pk,title);if(pu)h+='<a class="buy-b" href="'+esc(pu)+'" target="_blank" rel="noopener sponsored">'+esc(AFF.publishers[pk].name)+' ↗</a>';
+  return h+'</div>'}
+function discl(){return '<p class="disclosure">'+esc(AFF.disclosure||'')+'</p>'}
+function freeLinks(f){if(!f||!f.length)return '';return '<div class="free"><span class="free-l">Free text</span>'+f.map(function(x){return '<a href="'+esc(x[1])+'" target="_blank" rel="noopener">'+esc(x[0])+' ↗</a>'}).join('')+'</div>'}
+function edCard(w){var au=w.aid&&AID[w.aid]?'<a href="#/author/'+w.aid+'">'+esc(w.a)+'</a>':esc(w.a);
+  return '<article class="ed-card" id="ed-'+w.id+'"><div class="ed-head"><div><div class="eyebrow">'+esc(w.cat)+(w.orig?' · '+esc(w.orig):'')+'</div><h3>'+esc(w.t)+'</h3>'+(w.a?'<div class="ed-au">'+au+'</div>':'')+'</div>'+(w.free&&w.free.length?'<span class="pd-badge" title="A public-domain text is free online">Free text online</span>':'')+'</div>'+
+   '<p class="ed-why">'+esc(w.why)+'</p><ol class="picks">'+w.picks.map(function(p,i){return '<li class="pick'+(i===0?' top':'')+'"><div class="pick-lbl">'+esc(p.lbl)+'</div><div class="pick-tr">'+esc(p.tr)+'</div><div class="pick-meta">'+esc(p.pub)+(isbnOk(p.isbn)?' · ISBN '+p.isbn:'')+'</div>'+(p.note?'<p>'+esc(p.note)+'</p>':'')+buyBtns(p.isbn,p.bq||(w.multi?p.lbl:w.t),w.a,p.pk)+'</li>'}).join('')+'</ol>'+
+   (w.alt?'<p class="ed-alt"><b>Also good:</b> '+esc(w.alt)+'</p>':'')+freeLinks(w.free)+'</article>'}
+var EF={q:'',cat:''};
+function editions(arg){
+  var h='<div class="page-head"><div class="eyebrow">Quae editio?</div><h1>Which Edition Should I Buy?</h1><p class="lede">Recommended translations and editions of the Catholic classics, with why, the publisher, a verified ISBN where we could confirm one, and a link to a free public-domain text wherever one exists.</p></div>'+
+   '<div class="callout">ISBNs were checked against Open Library records. Where an ISBN is blank, the buy button runs a search instead. Prices and printings change, so check the edition before you buy.</div>'+
+   '<div class="toolbar"><input type="search" id="ed-q" placeholder="Filter by title, author, translator, publisher…" value="'+esc(EF.q)+'"><div class="chips" id="ed-c"></div></div><div class="result-meta" id="ed-m">Loading…</div><div id="ed-out" class="ed-list"></div>'+discl();
+  render(h,'editions');
+  loadGuide(function(err){if(err||!$('#ed-out')){if($('#ed-m'))$('#ed-m').textContent='The guide could not be loaded.';return}
+    var cats=[];GD.editions.forEach(function(w){if(cats.indexOf(w.cat)<0)cats.push(w.cat)});
+    $('#ed-c').innerHTML='<button class="chip'+(EF.cat?'':' on')+'" data-c="">All</button>'+cats.map(function(c){return '<button class="chip'+(EF.cat===c?' on':'')+'" data-c="'+esc(c)+'">'+esc(c)+'</button>'}).join('');
+    function draw(){var t=norm(EF.q).split(/\s+/).filter(Boolean);var L=GD.editions.filter(function(w){if(EF.cat&&w.cat!==EF.cat)return false;var x=norm(w.t+' '+w.a+' '+w.cat+' '+w.picks.map(function(p){return p.tr+' '+p.pub+' '+p.isbn}).join(' '));return t.every(function(k){return x.indexOf(k)>=0})});
+      $('#ed-m').textContent=L.length+' of '+GD.editions.length+' works · '+GD.editions.reduce(function(n,w){return n+w.picks.length},0)+' recommended editions';
+      $('#ed-out').innerHTML=L.map(edCard).join('')||'<div class="empty">Nothing matches.</div>'}
+    draw();
+    $('#ed-q').addEventListener('input',function(e){EF.q=e.target.value;draw()});
+    $('#ed-c').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;EF.cat=b.dataset.c;$('#ed-c').querySelectorAll('.chip').forEach(function(x){x.classList.toggle('on',x===b)});draw()});
+    if(arg){var el=document.getElementById('ed-'+arg);if(!el&&(EF.q||EF.cat)){EF.q='';EF.cat='';$('#ed-q').value='';draw();el=document.getElementById('ed-'+arg)}
+      if(el){el.classList.add('flash');setTimeout(function(){window.scrollTo({top:el.getBoundingClientRect().top+scrollY-130,behavior:'smooth'})},30);var w=ED[arg];if(w)document.title=w.t+' — editions — Bibliotheca Catholica'}}
+  })}
+function recItem(it){var w=it.e&&ED[it.e];var t=w?w.t:it.t,a=w?w.a:it.a;var p=w?w.picks[0]:null;
+  var isbn=p?p.isbn:it.isbn,pk=p?p.pk:it.pk,fr=w?w.free:it.free;
+  return '<li class="rec"><div class="rec-main"><h3>'+(w?'<a href="#/editions/'+w.id+'">'+esc(t)+'</a>':esc(t))+'</h3><div class="ed-au">'+(w&&w.aid&&AID[w.aid]?'<a href="#/author/'+w.aid+'">'+esc(a)+'</a>':esc(a))+'</div><p>'+esc(it.b)+'</p>'+
+   (p?'<div class="pick-meta">Recommended: '+esc(p.tr)+' · '+esc(p.pub)+' · <a href="#/editions/'+w.id+'">all editions →</a></div>':'')+freeLinks(fr)+'</div>'+buyBtns(isbn,t,a,pk)+'</li>'}
+function reading(arg){
+  var h='<div class="page-head"><div class="eyebrow">Tolle, lege</div><h1>Reading Lists</h1><p class="lede">Curated shelves for every stage of the journey. Each book links to our edition guide, a free text where one exists, and a place to buy a good copy.</p></div><div class="chips rl-tabs" id="rl-t"></div><div id="rl-out"><div class="loading">Loading…</div></div>'+discl();
+  render(h,'reading');
+  loadGuide(function(err){if(err||!$('#rl-out'))return;var cur=arg&&GD.lists.some(function(l){return l.id===arg})?arg:'';
+    function draw(){$('#rl-t').innerHTML='<button class="chip'+(cur?'':' on')+'" data-l="">All lists</button>'+GD.lists.map(function(l){return '<button class="chip'+(cur===l.id?' on':'')+'" data-l="'+l.id+'">'+esc(l.t)+'</button>'}).join('');
+      var L=cur?GD.lists.filter(function(l){return l.id===cur}):GD.lists;
+      $('#rl-out').innerHTML=(cur?'':'<div class="grid g-lists">'+GD.lists.map(function(l){return '<a class="sec-card" href="#/reading/'+l.id+'"><span class="count">'+l.items.length+'</span><div class="glyph">'+esc(l.ic)+'</div><h3>'+esc(l.t)+'</h3><p>'+esc(l.sub)+'</p></a>'}).join('')+'</div>')+
+        L.map(function(l){return '<section class="rl" id="rl-'+l.id+'"><div class="cat-title"><h2>'+esc(l.t)+' <span class="small">('+l.items.length+')</span></h2></div><p class="lede small">'+esc(l.sub)+'</p>'+(l.id==='chesterton'?featuredMini():'')+'<ol class="recs">'+l.items.map(recItem).join('')+'</ol></section>'}).join('')}
+    draw();if(cur)document.title=GD.lists.filter(function(l){return l.id===cur})[0].t+' — Reading Lists — Bibliotheca Catholica';
+    $('#rl-t').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;location.hash='#/reading'+(b.dataset.l?'/'+b.dataset.l:'')})})}
+function featuredMini(){var F=GD.featured;return '<a class="feat-mini" href="#/substacks"><span class="k read">column</span> Read <b>'+esc(F.author)+'</b>’s Chesterton commentary column, coming soon, and his essays on Substack →</a>'}
+function postsList(p){if(!p||!p.length)return '';return '<ul class="posts">'+p.map(function(x){return '<li><a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.t)+'</a><span>'+esc(x.d)+'</span></li>'}).join('')+'</ul>'}
+function substacks(){
+  var h='<div class="page-head"><div class="eyebrow">Scriptores hodierni</div><h1>Top Catholic Substacks</h1><p class="lede">Writers, columnists and newsletters worth subscribing to, from literature and liturgy to news and the spiritual life. Latest posts are a snapshot taken when the site was last built.</p></div><div id="ss-out"><div class="loading">Loading…</div></div>';
+  render(h,'substacks');
+  loadGuide(function(err){if(err||!$('#ss-out'))return;var F=GD.featured,P=F.pickPost;var cats=[];GD.substacks.forEach(function(s){if(cats.indexOf(s.cat)<0)cats.push(s.cat)});
+    var o='<section class="featured"><div class="feat-l"><div class="eyebrow">Featured column · Chesterton commentary coming soon</div><h2><a href="'+esc(F.url)+'" target="_blank" rel="noopener">'+esc(F.author)+'</a></h2><div class="host">'+esc(host(F.url))+' ↗</div><p>'+esc(F.desc)+'</p>'+
+      '<div class="hero-cta"><a class="btn" href="'+esc(F.url)+'" target="_blank" rel="noopener">Read on Substack ↗</a><a class="btn ghost" href="'+esc(F.url)+'/subscribe" target="_blank" rel="noopener">Subscribe (free) ↗</a><a class="btn ghost" href="#/reading/chesterton">The Chesterton Shelf</a></div></div>'+
+      '<div class="feat-r"><div class="small eyebrow">Featured read</div><a class="feat-post" href="'+esc(P.u)+'" target="_blank" rel="noopener"><b>'+esc(P.t)+'</b><span>'+esc(P.s)+'</span><small>'+esc(P.d)+' ↗</small></a><div class="small eyebrow" style="margin-top:12px">Latest</div>'+postsList(F.posts)+'</div></section>';
+    o+='<div class="toolbar"><input type="search" id="ss-q" placeholder="Filter Substacks…"><div class="chips" id="ss-c"><button class="chip on" data-c="">All</button>'+cats.map(function(c){return '<button class="chip" data-c="'+esc(c)+'">'+esc(c)+'</button>'}).join('')+'</div></div><div id="ss-list"></div>'+
+      '<p class="small muted">Snapshot of latest posts: '+esc(GD.generated)+'. Substack feeds can’t be read live from a static site (no CORS), so they refresh whenever the site is rebuilt. Know a great Catholic Substack? Tell us.</p>';
+    $('#ss-out').innerHTML=o;var cur='',q='';
+    function draw(){var out='';cats.forEach(function(c){if(cur&&c!==cur)return;var L=GD.substacks.filter(function(s){return s.cat===c&&(!q||norm(s.name+' '+s.author+' '+s.desc).indexOf(norm(q))>=0)});if(!L.length)return;
+      out+='<div class="cat-title"><h2>'+esc(c)+'</h2></div><div class="grid g-subs">'+L.map(function(s){return '<div class="sscard"><a class="ss-top" href="'+esc(s.url)+'" target="_blank" rel="noopener">'+fav(s.url)+'<div><h3>'+esc(s.name)+'</h3><div class="ed-au">'+esc(s.author)+'</div></div></a><p>'+esc(s.desc)+'</p>'+postsList(s.posts.slice(0,2))+'<div class="host">'+esc(host(s.url))+' ↗</div></div>'}).join('')+'</div>'});
+      $('#ss-list').innerHTML=out||'<div class="empty">Nothing matches.</div>'}
+    draw();$('#ss-q').addEventListener('input',function(e){q=e.target.value;draw()});
+    $('#ss-c').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;cur=b.dataset.c;$('#ss-c').querySelectorAll('.chip').forEach(function(x){x.classList.toggle('on',x===b)});draw()})})}
+function authorEditions(a){loadGuide(function(err){if(err)return;var box=$('#au-ed');if(!box)return;var L=GD.editions.filter(function(w){return w.aid===a.id});if(!L.length)return;
+  box.innerHTML='<div class="panel"><h3>Which edition?</h3><ul class="linklist">'+L.map(function(w){return '<li><a href="#/editions/'+w.id+'"><span class="k read">guide</span>'+esc(w.t)+'</a></li>'}).join('')+'</ul></div>'})}
 
 /* ---------- views ---------- */
 function home(){
@@ -132,8 +217,12 @@ function home(){
   '<a class="sec-card" href="#/doctors"><span class="count">'+docs.length+'</span><div class="glyph">D</div><h3>Doctors of the Church</h3><p>The '+docs.length+' saints whose teaching the Church holds up as eminent.</p></a>';
   Object.keys(SECTIONS).forEach(function(k){var s=SECTIONS[k];h+='<a class="sec-card" href="#/'+k+'"><span class="count">'+cnt[k]+'</span><div class="glyph">'+s.g+'</div><h3>'+esc(s.t)+'</h3><p>'+esc(s.d)+'</p></a>'});
   h+='<a class="sec-card" href="#/books"><span class="count">'+(window.BOOKS_COUNT||6633).toLocaleString()+'</span><div class="glyph">B</div><h3>Books</h3><p>Every title in the isidore.co Calibre library, searchable by title, author, series and subject.</p></a>';
+  h+='<a class="sec-card" href="#/editions"><span class="count">60+</span><div class="glyph">E</div><h3>Which Edition?</h3><p>The best translation and edition of each Catholic classic, with free texts and where to buy.</p></a>';
+  h+='<a class="sec-card" href="#/reading"><span class="count">10</span><div class="glyph">❦</div><h3>Reading Lists</h3><p>Start Here, Apologetics, Spiritual Classics, a Waugh starter, the Chesterton shelf and more.</p></a>';
+  h+='<a class="sec-card" href="#/substacks"><span class="count">30+</span><div class="glyph">S</div><h3>Catholic Substacks</h3><p>The best Catholic writers and newsletters, with our featured Chesterton column.</p></a>';
   h+='<a class="sec-card" href="#/isidore"><span class="count">'+D.isidore.length.toLocaleString()+'</span><div class="glyph">I</div><h3>Isidore Index</h3><p>A readable A–Z of every author folder in the isidore.co Calibre library.</p></a></div>';
   h+='<div class="rule"></div><div class="page-head"><div class="eyebrow">Start here</div><h2>Beloved voices</h2></div><div class="feature-strip">'+picks.map(function(a){return '<a href="#/author/'+a.id+'">'+avatar(a)+esc(a.name)+'</a>'}).join('')+'</div>';
+  h+='<a class="feat-banner" href="#/substacks"><span class="eyebrow">Featured column</span><b>Chris Wettig on Substack</b><span>Chesterton commentary, coming soon. Read his latest essays now →</span></a>';
   h+='<div class="two" style="margin-top:20px"><div class="panel"><h3>Read the Church in her own words</h3><ul class="linklist">'+[['Catechism of the Catholic Church','https://www.vatican.va/archive/ENG0015/_INDEX.HTM'],['Documents of Vatican II','https://www.vatican.va/archive/hist_councils/ii_vatican_council/index.htm'],['Code of Canon Law','https://www.vatican.va/archive/cod-iuris-canonici/cic_index_en.html'],['Pope Leo XIV','https://www.vatican.va/content/leo-xiv/en.html'],['Today’s Mass readings (USCCB)','https://bible.usccb.org/daily-bible-reading']].map(function(x){return '<li><a href="'+x[1]+'" target="_blank" rel="noopener"><span class="k read">read</span>'+x[0]+' ↗</a></li>'}).join('')+'</ul></div>'+
   '<div class="panel"><h3>The great libraries</h3><ul class="linklist">'+[['St. Isidore e-book library (Calibre)','https://isidore.co/calibre'],['New Advent — Encyclopedia, Fathers, Summa','https://www.newadvent.org/'],['Christian Classics Ethereal Library','https://ccel.org/'],['Documenta Catholica Omnia','https://www.documentacatholicaomnia.eu/'],['Corpus Thomisticum','https://www.corpusthomisticum.org/']].map(function(x){return '<li><a href="'+x[1]+'" target="_blank" rel="noopener"><span class="k site">site</span>'+x[0]+' ↗</a></li>'}).join('')+'</ul></div></div>';
   render(h,'');document.title='Bibliotheca Catholica — a library of libraries';
@@ -169,8 +258,8 @@ function author(id){
    '<p class="summary dropcap">'+esc(a.desc)+'</p>'+(a.extract?'<div class="extract"><p>'+esc(a.extract)+(a.extract.length>=595?'…':'')+'</p><p class="small">Summary from Wikipedia'+(a.wikiDesc?' — “'+esc(a.wikiDesc)+'”':'')+'.</p></div>':'');
   var _w='';if(a.works.length)_w='<div class="rule"></div><h3>Works to read online (New Advent)</h3><ul class="works">'+a.works.map(function(w){return '<li><a href="'+esc(w.url)+'" target="_blank" rel="noopener">'+esc(w.title)+'</a></li>'}).join('')+'</ul>';
   h+=_w+'<div id="au-books"></div></article><aside class="side"><div class="panel"><h3>Read &amp; explore</h3><ul class="linklist">'+links.map(function(l){return '<li><a href="'+esc(l.url)+'" target="_blank" rel="noopener"><span class="k '+kinds[l.kind]+'">'+l.kind+'</span>'+esc(l.label)+' ↗</a></li>'}).join('')+'</ul></div>'+
-   '<div class="panel"><h3>Also in this era</h3><div class="related">'+same.map(function(b){return '<a href="#/author/'+b.id+'">'+esc(b.name)+'</a>'}).join('')+'</div></div></aside></div>';
-  render(h,'authors');document.title=a.name+' — Bibliotheca Catholica';authorBooks(a);
+   '<div id="au-ed"></div><div class="panel"><h3>Also in this era</h3><div class="related">'+same.map(function(b){return '<a href="#/author/'+b.id+'">'+esc(b.name)+'</a>'}).join('')+'</div></div></aside></div>';
+  render(h,'authors');document.title=a.name+' — Bibliotheca Catholica';authorBooks(a);authorEditions(a);
 }
 function timeline(){
   var by={};A.forEach(function(a){if(!a.century)return;(by[a.century]=by[a.century]||[]).push(a)});
@@ -203,9 +292,10 @@ function isidore(){
   $('#iso-l').addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var el=document.getElementById('L-'+a.dataset.l);if(el)window.scrollTo({top:el.getBoundingClientRect().top+scrollY-140,behavior:'smooth'})});
 }
 function results(q){
+  if(!GD){loadGuide(function(){if(decodeURIComponent(location.hash).indexOf('#/search/')===0)results(q)})}
   if(!B){loadBooks(function(){if(decodeURIComponent(location.hash).indexOf('#/search/')===0)results(q)})}
   var R=search(q,1200);var groups={};R.forEach(function(e){(groups[e.type]=groups[e.type]||[]).push(e)});
-  var order=['Author','Book','Work','Sacred Scripture','Magisterium','References','Podcasts & Media','Libraries & Institutions','isidore.co folder'];
+  var order=['Author','Edition guide','Reading list','Book','Work','Substack','Sacred Scripture','Magisterium','References','Podcasts & Media','Libraries & Institutions','isidore.co folder'];
   var h='<div class="page-head"><div class="eyebrow">Quaerite et invenietis</div><h1>Results for “'+esc(q)+'”</h1><p class="result-meta">'+R.length+(R.length>=600?'+':'')+' matches across authors, books, works, resources and the isidore.co index'+(B?'':' (loading books…)')+' · <a href="https://isidore.co/calibre/mobile?search='+encodeURIComponent(q)+'&num=25" target="_blank" rel="noopener">Search isidore.co’s full catalog for “'+esc(q)+'” ↗</a> · <a href="https://www.vatican.va/content/vatican/en/search.html?q='+encodeURIComponent(q)+'" target="_blank" rel="noopener">Search vatican.va ↗</a></p></div>';
   if(!R.length)h+='<div class="empty">Nothing found here. Try the external searches above.</div>';
   order.forEach(function(g){var L=groups[g];if(!L)return;h+='<section class="sr-group"><div class="cat-title"><h2>'+esc(g==='Author'?'Authors':g==='Work'?'Works':g==='isidore.co folder'?'isidore.co library folders':g==='Book'?'Books in the isidore.co catalog':g)+' <span class="small">('+L.length+')</span></h2>'+(g==='Book'?'<a class="cat-more" href="#/books/'+encodeURIComponent(q)+'">Browse all in Books →</a>':'')+'</div>'+L.slice(0,g==='isidore.co folder'?40:g==='Book'?30:60).map(function(e){return '<a class="sr-item" href="'+esc(e.h)+'"'+(e.ext?' target="_blank" rel="noopener"':'')+'><small>'+esc(e.type)+(e.ext?' · '+esc(host(e.h))+' ↗':'')+'</small><br><b>'+hl(e.t,q)+'</b><span>'+hl(e.s.slice(0,220),q)+'</span></a>'}).join('')+'</section>'});
@@ -215,13 +305,13 @@ function notfound(){render('<div class="empty"><h2>Not found</h2><p><a href="#/"
 function route(){var h=decodeURIComponent(location.hash.replace(/^#\/?/,''));var p=h.split('/');
   hideSug();
   switch(p[0]){case '':home();break;case 'authors':authors();break;case 'doctors':authors({doctors:true});break;case 'author':author(p[1]);break;case 'timeline':timeline();break;
-   case 'scripture':case 'magisterium':case 'references':case 'media':case 'libraries':section(p[0]);break;case 'isidore':isidore();break;case 'books':books(p.slice(1).join('/'));break;case 'search':results(p.slice(1).join('/'));break;default:notfound()}}
+   case 'scripture':case 'magisterium':case 'references':case 'media':case 'libraries':section(p[0]);break;case 'isidore':isidore();break;case 'books':books(p.slice(1).join('/'));break;case 'editions':editions(p[1]||'');break;case 'reading':reading(p[1]||'');break;case 'substacks':substacks();break;case 'search':results(p.slice(1).join('/'));break;default:notfound()}}
 window.addEventListener('hashchange',route);
 
 /* ---------- header search with suggestions ---------- */
 var qi=$('#q'),sg=$('#suggest'),act=-1;
 function hideSug(){sg.hidden=true;act=-1}
-function showSug(){var q=qi.value.trim();if(q.length<2){hideSug();return}if(!B)loadBooks(function(e){if(!e&&document.activeElement===qi)showSug()});var R=search(q,60);var by={},order=[];R.forEach(function(e){if(!by[e.type]){by[e.type]=[];order.push(e.type)}if(by[e.type].length<(e.type==='Author'?6:e.type==='Book'?5:3))by[e.type].push(e)});
+function showSug(){var q=qi.value.trim();if(q.length<2){hideSug();return}if(!B)loadBooks(function(e){if(!e&&document.activeElement===qi)showSug()});if(!GD)loadGuide(function(e){if(!e&&document.activeElement===qi)showSug()});var R=search(q,60);var by={},order=[];R.forEach(function(e){if(!by[e.type]){by[e.type]=[];order.push(e.type)}if(by[e.type].length<(e.type==='Author'?6:e.type==='Book'?5:3))by[e.type].push(e)});
   var html='';order.slice(0,7).forEach(function(t){html+='<div class="sg-h">'+esc(t)+'</div>'+by[t].map(function(e){return '<a role="option" href="'+esc(e.h)+'"'+(e.ext?' target="_blank" rel="noopener"':'')+'><span>'+hl(e.t,q)+(e.ext?' ↗':'')+'</span><small>'+esc(e.s)+'</small></a>'}).join('')});
   html+='<a class="sg-all" href="#/search/'+encodeURIComponent(q)+'">See all results for “'+esc(q)+'” →</a>';sg.innerHTML=html;sg.hidden=false;act=-1}
 qi.addEventListener('input',showSug);qi.addEventListener('focus',showSug);

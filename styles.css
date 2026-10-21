@@ -498,3 +498,26 @@ mark{background:color-mix(in srgb,var(--gold2) 45%,transparent);color:inherit;bo
 .au-panel .linklist .ll-n{flex-basis:100%}
 .au-tabs a.empty .tc{background:transparent;color:var(--muted)}
 .au-tabs a.on.empty .tc{color:var(--rubric);border-color:var(--rubric)}
+
+/* ---------- v7: Support the Library ---------- */
+.pill.pill-support{display:inline-flex;align-items:center;gap:2px;color:#fff8ea;background:var(--rubric);border-color:var(--rubric)}
+.pill.pill-support:hover{color:#fff8ea;filter:brightness(1.08)}
+.pill-support span[aria-hidden]{color:#f7c8c8}
+.mainnav a.nav-m{display:none}
+.footer-links a.footer-support{font-weight:700;color:var(--rubric)}
+.sec-card.sec-support{border-color:color-mix(in srgb,var(--rubric) 40%,var(--line))}
+.sup-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:8px 0 28px}
+.sup-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 26px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.sup-card h2{margin:0;font-size:26px}
+.sup-card p{margin:0 0 8px;color:var(--ink2)}
+.sup-ico{font-size:30px;line-height:1;color:var(--gold)}
+.sup-btn{margin-top:4px}
+.sup-btn.sup-pp{background:#ffc439;border-color:#ffc439;color:#111}
+.sup-btn.sup-pp:hover{filter:brightness(1.04);color:#111}
+.sup-h{margin:8px 0 10px}
+.sup-list{margin:0 0 18px;padding-left:20px;max-width:760px}
+.sup-list li{margin:0 0 10px;color:var(--ink2)}
+.sup-fine{max-width:760px}
+.au-buy-more{display:flex;flex-wrap:wrap;gap:8px}
+@media (max-width:980px){.pill.pill-support{display:inline-flex}}
+@media (max-width:720px){.sup-grid{grid-template-columns:1fr}.sup-card{padding:20px}.mainnav.open a.nav-m{display:inline-block;font-weight:700;color:var(--rubric)}.pill.pill-support{display:none}}

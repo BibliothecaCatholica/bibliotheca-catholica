@@ -172,7 +172,7 @@ function pubUrl(pk,q){var p=(AFF.publishers||{})[pk];if(!p||!p.search)return '';
 function buyBtns(isbn,title,author,pk){var q=title+(author?' '+author:'');var h='<div class="buy"><span class="buy-l">Buy</span><a class="buy-b bs" href="'+esc(bookshopUrl(isbn,q))+'" target="_blank" rel="noopener sponsored">Bookshop.org ↗</a>';
   var pu=pk&&pubUrl(pk,title);if(pu)h+='<a class="buy-b" href="'+esc(pu)+'" target="_blank" rel="noopener sponsored">'+esc(AFF.publishers[pk].name)+' ↗</a>';
   return h+'</div>'}
-function discl(){return '<p class="disclosure">'+esc(AFF.disclosure||'')+'</p>'}
+function discl(){var t=AFF.disclosure||'';var m=/^Affiliate disclosure:\s*/.exec(t);return '<p class="disclosure">'+(m?'<b>Affiliate disclosure:</b> '+esc(t.slice(m[0].length)):esc(t))+'</p>'}
 function freeLinks(f){if(!f||!f.length)return '';return '<div class="free"><span class="free-l">Free text</span>'+f.map(function(x){return '<a href="'+esc(x[1])+'" target="_blank" rel="noopener">'+esc(x[0])+' ↗</a>'}).join('')+'</div>'}
 function edCard(w){var au=w.aid&&AID[w.aid]?'<a href="#/author/'+w.aid+'">'+esc(w.a)+'</a>':esc(w.a);
   return '<article class="ed-card" id="ed-'+w.id+'"><div class="ed-head"><div><div class="eyebrow">'+esc(w.cat)+(w.orig?' · '+esc(w.orig):'')+'</div><h3>'+esc(w.t)+'</h3>'+(w.a?'<div class="ed-au">'+au+'</div>':'')+'</div>'+(w.free&&w.free.length?'<span class="pd-badge" title="A public-domain text is free online">Free text online</span>':'')+'</div>'+
@@ -257,6 +257,7 @@ function home(){
   h+='<a class="sec-card" href="#/rare"><span class="count">122</span><div class="glyph">❧</div><h3>Rare &amp; Obscure</h3><p>Forgotten recusant tracts, Baroque scholastics, incunabula, and old periodicals in the digital archives.</p></a>';
   h+='<a class="sec-card" href="#/projects"><span class="count">70+</span><div class="glyph">P</div><h3>Projects &amp; Translations</h3><p>New Catholic translations, datasets, apps, and open libraries, with AI-assisted work clearly labeled.</p></a>';
   h+='<a class="sec-card" href="#/isidore/folders"><span class="count">'+D.isidore.length.toLocaleString()+'</span><div class="glyph">I</div><h3>Isidore author folders</h3><p>A readable A–Z of every author folder in the isidore.co Calibre library.</p></a>'+
+  '<a class="sec-card sec-support" href="#/support"><span class="count">♥</span><div class="glyph">✠</div><h3>Support the Library</h3><p>Free for everyone. Donations by Buy Me a Coffee or PayPal cover hosting and curation.</p></a>'+
   '<a class="sec-card" href="#/data"><span class="count">CC0</span><div class="glyph">⊕</div><h3>Open Data</h3><p>The index, authors, editions, Doctors’ free texts, rare works, and projects as JSON and CSV.</p></a></div>';
   h+='<div class="rule"></div><div class="page-head"><div class="eyebrow">Start here</div><h2>Beloved voices</h2></div><div class="feature-strip">'+picks.map(function(a){return '<a href="#/author/'+a.id+'">'+avatar(a)+esc(a.name)+'</a>'}).join('')+'</div>';
   h+='<a class="feat-banner" href="#/substacks"><span class="eyebrow">Featured column</span><b>Chris Wettig on Substack</b><span>Chesterton commentary, coming soon. Read his latest essays now →</span></a>';
@@ -375,7 +376,7 @@ function auComm(a,X,DR){var p=$('#tp-commentaries'),n=0,h='';var cm=(X.comm||[])
   p.innerHTML=h;auCount('commentaries',n,true)}
 function auBuy(a){var p=$('#tp-buy');var L=GD?GD.editions.filter(function(w){return w.aid===a.id}):[];
   if(!L.length){p.innerHTML='';auCount('buy',0);return}
-  p.innerHTML='<p class="lede small">Our recommended translations and editions of '+esc(a.name)+', with verified ISBNs where we could confirm them. See the full <a href="#/editions">Which Edition?</a> guide.</p><div class="ed-list">'+L.map(edCard).join('')+'</div><p><a class="btn ghost" href="'+esc(bookshopUrl('',a.name))+'" target="_blank" rel="noopener sponsored">More by '+esc(a.name)+' on Bookshop.org ↗</a></p>'+discl();
+  p.innerHTML='<p class="lede small">Our recommended translations and editions of '+esc(a.name)+', with verified ISBNs where we could confirm them. See the full <a href="#/editions">Which Edition?</a> guide.</p><div class="ed-list">'+L.map(edCard).join('')+'</div><p class="au-buy-more"><a class="btn ghost" href="'+esc(bookshopUrl('',a.name))+'" target="_blank" rel="noopener sponsored">More by '+esc(a.name)+' on Bookshop.org ↗</a>'+(AFF.bookshopShop?'<a class="btn ghost" href="'+esc(AFF.bookshopShop)+'" target="_blank" rel="noopener sponsored">Our Bookshop.org shop ↗</a>':'')+'</p>'+discl();
   auCount('buy',L.reduce(function(n,w){return n+w.picks.length},0))}
 function auRel(a,X){var p=$('#tp-related'),n=0,h='';
   function grp(t,ids){ids=(ids||[]).filter(function(i){return AID[i]&&i!==a.id});if(!ids.length)return;n+=ids.length;h+='<h3>'+t+'</h3><div class="related">'+auNames(ids)+'</div>'}
@@ -510,10 +511,25 @@ function results(q){
   render(h,'');document.title='Search: '+q+' — Bibliotheca Catholica';$('#q').value=q;
 }
 function notfound(){render('<div class="empty"><h2>Not found</h2><p><a href="#/">Return home</a></p></div>','')}
+/* ---------- v7: Support the Library ---------- */
+var SUPPORT={bmc:'https://buymeacoffee.com/bibliothecacatholica',paypal:'https://www.paypal.com/donate/?hosted_button_id=D48R9YU7SH43A'};
+function support(){var shop=AFF.bookshopShop||'';
+  var h='<div class="page-head"><div class="eyebrow">Adiuva bibliothecam</div><h1>Support the Library</h1><p class="lede">Bibliotheca Catholica is free for everyone, with no ads and no paywall. Donations cover hosting and the hours of curation behind every author page, edition, and link.</p></div>'+
+   '<div class="sup-grid">'+
+   '<div class="sup-card"><div class="sup-ico" aria-hidden="true">☕</div><h2>Buy Me a Coffee</h2><p>A quick, small gift in a few taps.</p><a class="btn sup-btn" href="'+SUPPORT.bmc+'" target="_blank" rel="noopener">Buy us a coffee ↗</a></div>'+
+   '<div class="sup-card"><div class="sup-ico" aria-hidden="true">✠</div><h2>Donate with PayPal</h2><p>Give once, or set up a monthly gift that keeps the library growing.</p><a class="btn sup-btn sup-pp" href="'+SUPPORT.paypal+'" target="_blank" rel="noopener">Donate with PayPal ↗</a><p class="small muted">Choose one-time or monthly on the PayPal page.</p></div>'+
+   '</div>'+
+   '<h2 class="sup-h">Other ways to help</h2><ul class="sup-list">'+
+   (shop?'<li><b>Buy books through our <a href="'+esc(shop)+'" target="_blank" rel="noopener sponsored">Bookshop.org shop ↗</a>.</b> It supports independent bookstores, and the library earns a small commission at no extra cost to you.</li>':'')+
+   '<li><b>Write a commentary.</b> We welcome original, human-written commentary on the authors in the library. <a href="mailto:micahwatson@bibliothecacatholica.com?subject=Commentary">Get in touch ✉</a></li>'+
+   '<li><b>Report a broken link or an error.</b> <a href="mailto:micahwatson@bibliothecacatholica.com?subject=Correction">Tell us ✉</a>, and we will fix it.</li>'+
+   '<li><b>Share the library</b> with a friend, a parish, or a homeschool group.</li></ul>'+
+   '<p class="small muted sup-fine">Bibliotheca Catholica is an independent project. Payments are handled by Buy Me a Coffee and PayPal; we never see your card details.</p>'+discl();
+  render(h,'support')}
 function route(){var h=decodeURIComponent(location.hash.replace(/^#\/?/,''));var p=h.split('/');
   hideSug();
   switch(p[0]){case '':home();break;case 'authors':authors();break;case 'doctors':authors({doctors:true});break;case 'author':author(p[1],p[2]||'');break;case 'timeline':timeline();break;
-   case 'scripture':case 'magisterium':case 'references':case 'media':case 'libraries':section(p[0]);break;case 'prayers':section('prayers',p[1]||'');break;case 'rare':rare(p[1]||'');break;case 'projects':projects();break;case 'isidore':if(p[1]==='folders')isidore();else if(p[1]==='book')bookDetail(+p[2]);else books(p.slice(1).join('/'));break;case 'books':location.replace('#/isidore'+(p[1]?'/'+p.slice(1).join('/'):''));break;case 'data':openData();break;case 'editions':editions(p[1]||'');break;case 'reading':reading(p[1]||'');break;case 'substacks':substacks();break;case 'search':results(p.slice(1).join('/'));break;default:notfound()}}
+   case 'scripture':case 'magisterium':case 'references':case 'media':case 'libraries':section(p[0]);break;case 'prayers':section('prayers',p[1]||'');break;case 'rare':rare(p[1]||'');break;case 'projects':projects();break;case 'isidore':if(p[1]==='folders')isidore();else if(p[1]==='book')bookDetail(+p[2]);else books(p.slice(1).join('/'));break;case 'books':location.replace('#/isidore'+(p[1]?'/'+p.slice(1).join('/'):''));break;case 'data':openData();break;case 'support':support();break;case 'editions':editions(p[1]||'');break;case 'reading':reading(p[1]||'');break;case 'substacks':substacks();break;case 'search':results(p.slice(1).join('/'));break;default:notfound()}}
 window.addEventListener('hashchange',route);
 
 /* ---------- header search with suggestions ---------- */

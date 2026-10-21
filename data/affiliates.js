@@ -12,8 +12,9 @@
  *              (Shopify / LeadDyno style programs such as Word on Fire, Sophia, or TAN).
  */
 window.AFFILIATES = {
-  bookshopId: '',
-  disclosure: 'Some “Buy” links may be affiliate links: if you buy through them, Bibliotheca Catholica may earn a small commission at no extra cost to you. It helps keep the library free. We recommend editions on their merits.',
+  bookshopId: '130222',
+  bookshopShop: 'https://bookshop.org/shop/bibliotheca-catholica',
+  disclosure: 'Affiliate disclosure: Bookshop.org “Buy” links are affiliate links. If you buy through them, Bibliotheca Catholica earns a small commission at no extra cost to you, which helps keep the library free. Publisher links may become affiliate links too. Commissions never decide what we recommend: editions are chosen on their merits.',
   publishers: {
     ignatius:   { name: 'Ignatius Press',      search: 'https://ignatius.com/search.php?search_query={q}', wrap: '', param: '', program: 'CJ (10%): https://www.ignatius.com/affiliate-programs/' },
     tan:        { name: 'TAN Books',           search: 'https://tanbooks.com/search?q={q}',                wrap: '', param: '', program: 'LeadDyno (8%): https://tanbooks.com/affiliate-program/' },

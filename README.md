@@ -15,3 +15,9 @@ A clean, searchable master index of Catholic authors, Scripture, the Magisterium
 * **Prayers & Devotions** `#/prayers`: public-domain prayer texts live in `data/prayers.js`; the links come from the resources data.
 * **Read free** panels on every Doctor's page come from `data/doctors.js`. **Rare & Obscure** `#/rare` uses `data/rare.js`, and **Projects & Translations** `#/projects` uses `data/projects.js`.
   All three are built from the research files by `tools/build_v4_data.py`. Every one of these texts is an outbound link; none is hosted here.
+
+## The Isidore Index and Open Data (v5)
+
+- The Isidore Index (`#/isidore`) is now the flagship. All 6,633 isidore.co books can be filtered by era, language (22 canonical), format, and subject, and each book has its own page with direct downloads from isidore.co.
+- Open Data (`#/data`, `/data/open/`) offers the index, curated authors (with verified Wikidata QIDs), editions, Doctors' free texts, rare works, and projects as JSON and CSV under CC0.
+- Hygiene: a junk folder was removed, language codes were normalized, the aquinas.cc link was confirmed, and LibriVox was added.

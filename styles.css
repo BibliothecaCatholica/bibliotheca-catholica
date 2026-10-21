@@ -418,3 +418,44 @@ mark{background:color-mix(in srgb,var(--gold2) 45%,transparent);color:inherit;bo
 /* v4: desktop nav wraps into centered rows instead of scrolling */
 @media (min-width:721px){.mainnav{flex-wrap:wrap;justify-content:center;overflow:visible;row-gap:2px}}
 .chips .chip{max-width:100%;white-space:normal;text-align:left}
+
+/* ---------- v5: Isidore Index flagship ---------- */
+.mainnav a.nav-flag{color:var(--rubric);font-weight:700;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--rubric) 45%,transparent)}
+.mainnav a.nav-flag.on{color:#fff8ea;box-shadow:none}
+.isx-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.isx-tabs a{font:600 13.5px var(--sans);padding:7px 14px;border-radius:999px;border:1px solid var(--line);color:var(--ink2);text-decoration:none;background:var(--card)}
+.isx-tabs a.on{background:var(--rubric);border-color:var(--rubric);color:#fff8ea}
+.isx-sel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:100%}
+.isx-sel label{display:flex;flex-direction:column;gap:4px;font:600 11px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.isx-sel select{width:100%;min-width:0;font:500 14px var(--sans);letter-spacing:0;text-transform:none;color:var(--ink)}
+.isx-tools #bk-q{width:100%}
+.era-tag{font:600 11.5px var(--sans);color:var(--gold);letter-spacing:.02em}
+.isx-note{margin-top:18px}
+.bookd h1{font-size:clamp(28px,4vw,44px);overflow-wrap:anywhere}
+.b-meta.big{font-size:16px;margin-bottom:12px}
+.bk-dl{display:grid;grid-template-columns:max-content 1fr;gap:8px 18px;margin:14px 0 20px;font:500 15px var(--sans)}
+.bk-dl dt{color:var(--muted);font-weight:600}
+.bk-dl dd{margin:0;color:var(--ink2);overflow-wrap:anywhere}
+.bk-dl a{color:var(--rubric)}
+.dl-row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px}
+.mini-au{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-bottom:8px}
+.mini-au span{font:500 12.5px var(--sans);color:var(--muted);margin-left:auto}
+.mini-au .avatar{width:44px;height:44px;flex:none}
+.flagship{margin-top:22px;display:grid;grid-template-columns:1.2fr 1fr;gap:22px;align-items:center;padding:26px 28px;border-radius:var(--r);border:1px solid color-mix(in srgb,var(--gold) 55%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--card) 88%,var(--gold2)),var(--card));box-shadow:var(--shadow)}
+.flagship h2{margin:4px 0 6px;font-size:clamp(28px,3.4vw,40px)}
+.flagship p{margin:0 0 14px;color:var(--ink2)}
+.fs-search{max-width:none}
+.fs-links{display:flex;flex-wrap:wrap;gap:8px;align-content:center}
+.fs-links .chip{text-decoration:none}
+.fs-l{width:100%;font:600 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.od-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.od{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;min-width:0}
+.od h3{margin:0 0 6px;font-size:21px}
+.od p{margin:0 0 6px;font-size:15px;color:var(--ink2)}
+.od summary{cursor:pointer;font:600 13px var(--sans);color:var(--rubric)}
+.od-f{display:grid;grid-template-columns:max-content 1fr;gap:4px 12px;font:500 12.5px var(--sans);margin:8px 0 0}
+.od-f dt{font-family:ui-monospace,monospace;color:var(--ink)}
+.od-f dd{margin:0;color:var(--muted);overflow-wrap:anywhere}
+@media (max-width:900px){.isx-sel{grid-template-columns:1fr 1fr}.flagship{grid-template-columns:1fr}}
+@media (max-width:720px){.flagship{padding:20px 16px}.bk-dl{grid-template-columns:1fr;gap:2px}.bk-dl dd{margin-bottom:8px}.od-f{grid-template-columns:1fr}}
+@media (max-width:720px){.isx-tools .filter-row .chips{flex-wrap:wrap;overflow:visible}.isx-tools #bk-fmt .chip{white-space:nowrap;padding:5px 10px}.isx-tools .filter-row .chips .chip{flex:none}}

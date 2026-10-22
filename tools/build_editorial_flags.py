@@ -68,6 +68,10 @@ def policy_html(counts,total):
      '<h2>Report a concern</h2>'
      '<p>If you think a record needs a context note, has the wrong one, or should not be listed, or if you hold the rights to a work and want a listing changed, write to '
      '<a href="mailto:'+MAIL+'?subject=Editorial%20concern">'+MAIL+'</a>. Please include the book’s Index number or page link.</p>'
+     '<h2 id="privacy">Privacy</h2>'
+     '<p>This site uses Google Analytics to count visits and understand which pages are used. Google may set cookies in your browser to do this. '
+     'The site itself has no accounts and does not collect your name, email address, or other personal information. '
+     'See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from sites that use its services</a>.</p>'
      '</section>')
 def main():
     books=json.loads((ROOT/'data/books.json').read_text());have={str(b[0]):b for b in books['books']}

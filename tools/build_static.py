@@ -41,6 +41,10 @@ def load_flags():
     p=ROOT/'data/editorial-flags.json'
     if not p.exists():return {'books':{},'hubAuthors':[]}
     return json.loads(p.read_text())
+def ga_tag(tpl):
+    m=re.search(r'<!-- Google tag \(gtag\.js\) -->.*?</script>\n<script>.*?</script>\n',tpl,flags=re.S)
+    assert m and tpl.count('googletagmanager.com/gtag/js')==1,'index.html must carry exactly one Google tag right after <head>'
+    return m.group(0)
 def page(tpl,route,title,desc,body,noindex=False):
     url=SITE+(route+'/' if route else '');t=E(title);d=E(desc)
     s=tpl
@@ -65,7 +69,7 @@ def years(au):
     f=lambda y:(str(-y)+' BC' if y<0 else str(y)) if isinstance(y,int) else ''
     return ' ('+f(b)+'–'+f(d)+')' if (b or d) else ''
 def main():
-    tpl=(ROOT/'index.html').read_text();hub=json.loads((ROOT/'data/catholic-hub.json').read_text())
+    tpl=(ROOT/'index.html').read_text();global GA_TAG;GA_TAG=ga_tag(tpl);hub=json.loads((ROOT/'data/catholic-hub.json').read_text())
     lib=json.loads((ROOT/'data/library.json').read_text());guide=jsvar('data/guide.js','GUIDE_DATA');flags=load_flags()
     skip_auth=set(flags.get('hubAuthors',[]))
     eras={e['id']:e['label'] for e in hub['eras']}
@@ -121,7 +125,8 @@ def main():
     urls=[SITE]+[SITE+r+'/' for r in sorted(out)]
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('  <url><loc>'+E(u)+'</loc></url>\n' for u in urls)+'</urlset>\n')
     (ROOT/'robots.txt').write_text('# Bibliotheca Catholica\nUser-agent: *\nAllow: /\nDisallow: /data/texts/\n\nSitemap: '+SITE+'sitemap.xml\n')
-    (ROOT/'404.html').write_text('''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Not found — Bibliotheca Catholica</title><meta name="robots" content="noindex">
+    (ROOT/'404.html').write_text('''<!doctype html><html lang="en"><head>
+'''+GA_TAG+'''<meta charset="utf-8"><title>Not found — Bibliotheca Catholica</title><meta name="robots" content="noindex">
 <script>(function(){var p=location.pathname.replace(/^\\/+|\\/+$/g,'').replace(/\\/index\\.html$/,'');
 if(p&&/^[A-Za-z0-9._~%\\/-]+$/.test(p)){location.replace('/#/'+p+location.search);return}location.replace('/#/404')})();</script></head>
 <body><p>Page not found. <a href="/">Go to Bibliotheca Catholica</a>.</p></body></html>

@@ -114,3 +114,54 @@ dict(id='liturgy',t='Liturgy',sub='Lex orandi, lex credendi',ic='☧',items=[
  I('rule','“Let nothing be preferred to the Work of God.”'),
  I('duffy','What liturgy meant to ordinary medieval Catholics.'),
  I(None,'The prayers and ceremonies of the Mass explained by the great abbot of Solesmes.','The Holy Mass','Dom Prosper Guéranger','9781905574049',pk='baronius')])]
+
+# Guidance describes a suggested first step, not a compulsory sequence.
+GUIDANCE = {
+ 'start': ('New readers', 'Begin with one Gospel, then use the Compendium to look up questions as they arise. Choose one other book that interests you; you do not need to read this whole shelf in order.'),
+ 'apologetics': ('Questions about the faith', 'Start with one question you actually have. Read an introductory explanation, then follow its references to Scripture and the early Church.'),
+ 'spiritual': ('Prayer and daily life', 'Begin with Introduction to the Devout Life or a short chapter of The Imitation of Christ. Read slowly and return to a passage in prayer. Retreat exercises are best approached with appropriate guidance.'),
+ 'fiction': ('Novels and poetry', 'Choose a story you enjoy. The order is a shelf arrangement, not a reading schedule; Dante benefits from an edition with explanatory notes.'),
+ 'waugh': ('A suggested author sequence', 'Begin with Decline and Fall for the early comedy, or Brideshead Revisited for a more explicitly Catholic novel. Follow the suggested order if you want to trace Waugh’s development.'),
+ 'chesterton': ('An author to explore', 'Try a Father Brown story first, then Orthodoxy. Move to The Everlasting Man when you want a longer argument about history and Christianity.'),
+ 'philosophy': ('Sustained study', 'Begin with an introduction such as Theology and Sanity or Aquinas: A Beginner’s Guide. Approach the Summa by question and article, alongside a guide.'),
+ 'history': ('Historical context', 'Choose an introductory narrative before a specialist study. Compare an author’s interpretation with the primary sources and the period being discussed.'),
+ 'saints': ('Biography and conversion', 'Start with Story of a Soul or Confessions. Distinguish a saint’s autobiography from later biographies and collections of devotional stories.'),
+ 'liturgy': ('Understanding worship', 'Begin with one explanation of the Mass. Ratzinger and Guardini wrote different books called The Spirit of the Liturgy; check the author when choosing.'),
+}
+for shelf in L:
+    shelf['audience'], shelf['start'] = GUIDANCE[shelf['id']]
+    for item in shelf['items']:
+        if item.get('t') == 'The Life of St. Teresa of Jesus':
+            item['workIds'] = ['life-of-teresa']
+        if shelf['id'] == 'history' and item.get('e') == 'waugh':
+            item.update(e=None, t='Edmund Campion', a='Evelyn Waugh', isbn='9781586170431', pk='ignatius')
+        if shelf['id'] == 'saints' and item.get('e') == 'apologia':
+            item['b'] = 'Newman’s account of his religious development and conversion.'
+        if shelf['id'] == 'start' and item.get('e') == 'bible':
+            item['b'] = 'Begin with one Gospel in a Catholic translation. Mark offers a compact starting point; read John alongside it when you want to explore further.'
+
+L.extend([
+ dict(id='fathers', t='Read the Church Fathers', sub='Short primary texts before the larger collections', ic='☩', audience='First encounters with the Fathers',
+      start='Begin with Ignatius’s Letter to the Ephesians, then Athanasius’s On the Incarnation. Read the introductions and translation notes at the original source.',
+      items=[dict(workIds=[w], b=b) for w,b in [
+       ('ignatius-of-antioch-epistle-to-the-ephesians','A short letter on unity, worship, and life in the early Church.'),
+       ('ignatius-of-antioch-epistle-to-the-romans','Ignatius writes about his approaching martyrdom.'),
+       ('justin-martyr-first-apology','An early explanation of Christian belief and worship addressed to imperial authorities.'),
+       ('athanasius-of-alexandria-on-the-incarnation-of-the-word','A sustained account of the Incarnation and salvation.'),
+       ('basil-the-great-de-spiritu-sancto','A more demanding study of the Holy Spirit, worship, and the Trinity.')]]),
+ dict(id='documents', t='Read Church Documents', sub='Council constitutions and papal teaching at their official sources', ic='✠', audience='Readers seeking primary sources',
+      start='Begin with Dei Verbum for Scripture and Tradition, then Lumen Gentium for the Church. These are selected entry points, not a substitute for reading the documents in context.',
+      items=[dict(workIds=[w], b=b) for w,b in [
+       ('dei-verbum','Vatican II on revelation, Scripture, and Tradition.'),
+       ('lumen-gentium','Vatican II on the Church, holiness, and the people of God.'),
+       ('sacrosanctum-concilium','The council’s constitution on the sacred liturgy.'),
+       ('deus-caritas-est','Benedict XVI on Christian love and charitable service.'),
+       ('fides-ratio','John Paul II on the relationship of faith and reason.'),
+       ('rerum-novarum','Leo XIII on workers, property, and the social question.')]]),
+ dict(id='related-christian', t='Related Christian Voices', sub='C. S. Lewis in conversation with Catholic readers', ic='✒', audience='Christian apologetics and literature',
+      start='Lewis was Anglican. Begin with Mere Christianity for apologetics or The Screwtape Letters for imaginative moral reflection. These entries provide bibliographic references rather than hosted full texts.',
+      items=[dict(workIds=[w], b=b) for w,b in [
+       ('lewis-mere-christianity','An account of shared Christian belief; read alongside Catholic sources when questions of doctrine arise.'),
+       ('lewis-screwtape-letters','A fictional treatment of temptation and the habits of the spiritual life.'),
+       ('lewis-abolition-man','A short argument about education, value, and human nature.')]])
+])

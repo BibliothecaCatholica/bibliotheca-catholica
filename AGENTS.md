@@ -11,6 +11,8 @@ Read this before changing the site. It applies to every contributor and coding a
 
 ## Files that must never be deleted or moved
 
+**Document archive:** `BibliothecaCatholica/bibliotheca-texts` serves the 22 verified TXT copies at `https://texts.bibliothecacatholica.com/texts/`. The main reader prefers that host and falls back to local `data/texts/`. Keep local originals and provenance. `textArchive` in `data/library.json` controls this behavior. Export offline with `python3 tools/build_text_archive.py --output /absolute/path/to/bibliotheca-texts`; review the manifest and checksums before publishing the separate repository. Do not bulk mirror unreviewed imported books. See `docs/PROJECT-REVIEW-2026-10-22.md`.
+
 `CNAME`, `.nojekyll`, `.well-known/atproto-did` (the Bluesky handle; leave it unchanged), `robots.txt`, `sitemap.xml`, `404.html`, `assets/og-image.png`, `data/texts/`, and `data/sources/`.
 
 ## Content rules (non-negotiable)

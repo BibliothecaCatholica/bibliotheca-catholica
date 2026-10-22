@@ -1,6 +1,10 @@
 {
   "schemaVersion": 1,
   "checked": "2026-10-21",
+  "textArchive": {
+    "baseUrl": "https://texts.bibliothecacatholica.com/texts/",
+    "enabled": true
+  },
   "works": [
     {
       "id": "confessions",

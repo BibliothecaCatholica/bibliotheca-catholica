@@ -332,3 +332,38 @@ dict(id='carroll',t='The Founding of Christendom (History of Christendom vol. 1)
  why='A Catholic narrative history from the beginning.',
  picks=[P('Best overall','Christendom Press','Christendom Press','','9780931888212','')],alt='',free=[]),
 ]
+
+# Explicit work relationships: a shared author or source URL is not enough to
+# treat a companion work or adaptation as another edition of the same title.
+WORK_IDS = {
+ 'confessions':['confessions'], 'rule':['rule-of-benedict'],
+ 'imitation':['imitation-of-christ'], 'storysoul':['story-of-a-soul'],
+ 'julian':['revelations-divine-love'], 'caussade':['abandonment'],
+ 'presence':['practice-presence'], 'pensees':['pensees'],
+ 'apologia':['apologia'], 'grammar':['grammar-assent'],
+ 'development':['development-doctrine'], 'idea':['idea-university'],
+ 'orthodoxy':['orthodoxy'], 'everlasting':['everlasting-man'],
+ 'fatherbrown':['innocence-father-brown'], 'thursday':['man-thursday'],
+ 'ckaquinas':['chesterton-francis'], 'belloc':['europe-faith'],
+ 'dante':['divine-comedy'], 'betrothed':['betrothed'],
+ 'lordworld':['lord-world'], 'hopkins':['hopkins-poems']
+}
+for work in W:
+    work['workIds'] = WORK_IDS.get(work['id'], [])
+    if work['id'] == 'teresa':
+        work['related'] = [work['free'].pop()]
+    elif work['id'] == 'exercises':
+        work['related'] = [('Coppens: adapted eight-day retreat (1916)', G+'70790')]
+        work['free'] = [('Spiritual Exercises (CCEL)', CC+'ignatius/exercises')]
+        work['readingNote'] = 'The Coppens retreat manual below is an adaptation, not the complete text of Ignatius’s Spiritual Exercises. The Puhl print translation is a separate edition.'
+    elif work['id'] == 'ccc':
+        work['related'] = [work['free'].pop()]
+    elif work['id'] == 'lordworld':
+        work['related'] = [work['free'].pop()]
+        work['picks'][0]['access'] = 'ebook'
+    elif work['id'] == 'confessions':
+        work['free'].append(('Confessions (CCEL)', CC+'augustine/confess'))
+    elif work['id'] == 'summa':
+        work['free'].append(('Summa Theologica (CCEL)', CC+'aquinas/summa'))
+    if work.get('multi') or work['id'] in ('apfathers','johncross','fatherbrown','ckaquinas','belloc'):
+        work['readingNote'] = 'This shelf covers more than one work. Each online link identifies the particular title available; it may not include the whole collection.'

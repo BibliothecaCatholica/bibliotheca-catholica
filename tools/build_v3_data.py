@@ -5,6 +5,14 @@ sys.path.insert(0,os.path.dirname(__file__))
 from editions_data import W
 from reading_lists import L
 from substacks_src import FEATURED,S
+if '--catalog-only' in sys.argv:
+    from pathlib import Path
+    path = Path(__file__).resolve().parents[1] / 'data' / 'guide.js'
+    old = json.loads(path.read_text(encoding='utf-8').split('=', 1)[1].strip().rstrip(';'))
+    old.update(editions=W, lists=L)
+    path.write_text('window.GUIDE_DATA='+json.dumps(old,ensure_ascii=False,separators=(',',':'))+';\n', encoding='utf-8')
+    print('Updated reading guides; preserved the existing feed snapshot.')
+    sys.exit(0)
 UA={'User-Agent':'Mozilla/5.0 (BibliothecaCatholica feed snapshot)'}
 def feed(url,n=3):
     try:

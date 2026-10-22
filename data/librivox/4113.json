@@ -1,0 +1,554 @@
+{
+ "id": 4113,
+ "title": "Betrothed (I Promessi Sposi)",
+ "url": "https://librivox.org/the-betrothed-by-alessandro-manzoni/",
+ "zip": "https://archive.org/compress/betrothed_1212_librivox/formats=64KBPS MP3&file=/betrothed_1212_librivox.zip",
+ "sections": [
+  {
+   "n": 0,
+   "t": "Introduction",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_00_manzoni_64kb.mp3",
+   "s": 633,
+   "r": "TriciaG"
+  },
+  {
+   "n": 1,
+   "t": "Chapter 1, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_01_manzoni_64kb.mp3",
+   "s": 1407,
+   "r": "TriciaG"
+  },
+  {
+   "n": 2,
+   "t": "Chapter 1, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_02_manzoni_64kb.mp3",
+   "s": 1368,
+   "r": "TriciaG"
+  },
+  {
+   "n": 3,
+   "t": "Chapter 2, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_03_manzoni_64kb.mp3",
+   "s": 940,
+   "r": "TriciaG"
+  },
+  {
+   "n": 4,
+   "t": "Chapter 2, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_04_manzoni_64kb.mp3",
+   "s": 1010,
+   "r": "TriciaG"
+  },
+  {
+   "n": 5,
+   "t": "Chapter 3, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_05_manzoni_64kb.mp3",
+   "s": 1333,
+   "r": "TriciaG"
+  },
+  {
+   "n": 6,
+   "t": "Chapter 3, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_06_manzoni_64kb.mp3",
+   "s": 986,
+   "r": "TriciaG"
+  },
+  {
+   "n": 7,
+   "t": "Chapter 4, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_07_manzoni_64kb.mp3",
+   "s": 1135,
+   "r": "Luigina"
+  },
+  {
+   "n": 8,
+   "t": "Chapter 4, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_08_manzoni_64kb.mp3",
+   "s": 1186,
+   "r": "Luigina"
+  },
+  {
+   "n": 9,
+   "t": "Chapter 5, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_09_manzoni_64kb.mp3",
+   "s": 1170,
+   "r": "Brendan Stallard"
+  },
+  {
+   "n": 10,
+   "t": "Chapter 5, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_10_manzoni_64kb.mp3",
+   "s": 1409,
+   "r": "Brendan Stallard"
+  },
+  {
+   "n": 11,
+   "t": "Chapter 6, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_11_manzoni_64kb.mp3",
+   "s": 950,
+   "r": "clover"
+  },
+  {
+   "n": 12,
+   "t": "Chapter 6, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_12_manzoni_64kb.mp3",
+   "s": 1013,
+   "r": "SuD"
+  },
+  {
+   "n": 13,
+   "t": "Chapter 7, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_13_manzoni_64kb.mp3",
+   "s": 1757,
+   "r": "Brendan Stallard"
+  },
+  {
+   "n": 14,
+   "t": "Chapter 7, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_14_manzoni_64kb.mp3",
+   "s": 1383,
+   "r": "Peter Turner"
+  },
+  {
+   "n": 15,
+   "t": "Chapter 8, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_15_manzoni_64kb.mp3",
+   "s": 1445,
+   "r": "Peter Turner"
+  },
+  {
+   "n": 16,
+   "t": "Chapter 8, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_16_manzoni_64kb.mp3",
+   "s": 2245,
+   "r": "Brendan Stallard"
+  },
+  {
+   "n": 17,
+   "t": "Chapter 9, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_17_manzoni_64kb.mp3",
+   "s": 1428,
+   "r": "Luigina"
+  },
+  {
+   "n": 18,
+   "t": "Chapter 9, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_18_manzoni_64kb.mp3",
+   "s": 1719,
+   "r": "Luigina"
+  },
+  {
+   "n": 19,
+   "t": "Chapter 10, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_19_manzoni_64kb.mp3",
+   "s": 1730,
+   "r": "Lani Small"
+  },
+  {
+   "n": 20,
+   "t": "Chapter 10, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_20_manzoni_64kb.mp3",
+   "s": 1570,
+   "r": "T.K. Kirven"
+  },
+  {
+   "n": 21,
+   "t": "Chapter 11, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_21_manzoni_64kb.mp3",
+   "s": 1466,
+   "r": "Charles McHugh"
+  },
+  {
+   "n": 22,
+   "t": "Chapter 11, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_22_manzoni_64kb.mp3",
+   "s": 1648,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 23,
+   "t": "Chapter 12, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_23_manzoni_64kb.mp3",
+   "s": 1383,
+   "r": "Brendan Stallard"
+  },
+  {
+   "n": 24,
+   "t": "Chapter 12, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_24_manzoni_64kb.mp3",
+   "s": 1132,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 25,
+   "t": "Chapter 13, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_25_manzoni_64kb.mp3",
+   "s": 1437,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 26,
+   "t": "Chapter 13, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_26_manzoni_64kb.mp3",
+   "s": 1125,
+   "r": "Lani Small"
+  },
+  {
+   "n": 27,
+   "t": "Chapter 14, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_27_manzoni_64kb.mp3",
+   "s": 1305,
+   "r": "Lani Small"
+  },
+  {
+   "n": 28,
+   "t": "Chapter 14, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_28_manzoni_64kb.mp3",
+   "s": 1097,
+   "r": "Lani Small"
+  },
+  {
+   "n": 29,
+   "t": "Chapter 15, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_29_manzoni_64kb.mp3",
+   "s": 1132,
+   "r": "Lani Small"
+  },
+  {
+   "n": 30,
+   "t": "Chapter 15, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_30_manzoni_64kb.mp3",
+   "s": 1261,
+   "r": "Lani Small"
+  },
+  {
+   "n": 31,
+   "t": "Chapter 16, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_31_manzoni_64kb.mp3",
+   "s": 1386,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 32,
+   "t": "Chapter 16, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_32_manzoni_64kb.mp3",
+   "s": 1209,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 33,
+   "t": "Chapter 17, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_33_manzoni_64kb.mp3",
+   "s": 1391,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 34,
+   "t": "Chapter 17, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_34_manzoni_64kb.mp3",
+   "s": 1392,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 35,
+   "t": "Chapter 18, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_35_manzoni_64kb.mp3",
+   "s": 1506,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 36,
+   "t": "Chapter 18, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_36_manzoni_64kb.mp3",
+   "s": 1092,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 37,
+   "t": "Chapter 19, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_37_manzoni_64kb.mp3",
+   "s": 1451,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 38,
+   "t": "Chapter 19, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_38_manzoni_64kb.mp3",
+   "s": 1106,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 39,
+   "t": "Chapter 20, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_39_manzoni_64kb.mp3",
+   "s": 1212,
+   "r": "Alan Mapstone"
+  },
+  {
+   "n": 40,
+   "t": "Chapter 20, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_40_manzoni_64kb.mp3",
+   "s": 989,
+   "r": "Alan Mapstone"
+  },
+  {
+   "n": 41,
+   "t": "Chapter 21, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_41_manzoni_64kb.mp3",
+   "s": 1343,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 42,
+   "t": "Chapter 21, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_42_manzoni_64kb.mp3",
+   "s": 1299,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 43,
+   "t": "Chapter 22, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_43_manzoni_64kb.mp3",
+   "s": 1196,
+   "r": "Martin Geeson"
+  },
+  {
+   "n": 44,
+   "t": "Chapter 22, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_44_manzoni_64kb.mp3",
+   "s": 1343,
+   "r": "Martin Geeson"
+  },
+  {
+   "n": 45,
+   "t": "Chapter 23, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_45_manzoni_64kb.mp3",
+   "s": 1964,
+   "r": "Brendan Stallard"
+  },
+  {
+   "n": 46,
+   "t": "Chapter 23, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_46_manzoni_64kb.mp3",
+   "s": 1455,
+   "r": "Brendan Stallard"
+  },
+  {
+   "n": 47,
+   "t": "Chapter 24, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_47_manzoni_64kb.mp3",
+   "s": 1572,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 48,
+   "t": "Chapter 24, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_48_manzoni_64kb.mp3",
+   "s": 1360,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 49,
+   "t": "Chapter 24, Part 3",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_49_manzoni_64kb.mp3",
+   "s": 1555,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 50,
+   "t": "Chapter 25, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_50_manzoni_64kb.mp3",
+   "s": 864,
+   "r": "Jeanie"
+  },
+  {
+   "n": 51,
+   "t": "Chapter 25, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_51_manzoni_64kb.mp3",
+   "s": 1332,
+   "r": "Jeanie"
+  },
+  {
+   "n": 52,
+   "t": "Chapter 26, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_52_manzoni_64kb.mp3",
+   "s": 1260,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 53,
+   "t": "Chapter 26, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_53_manzoni_64kb.mp3",
+   "s": 1427,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 54,
+   "t": "Chapter 27, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_54_manzoni_64kb.mp3",
+   "s": 1353,
+   "r": "Alan Mapstone"
+  },
+  {
+   "n": 55,
+   "t": "Chapter 27, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_55_manzoni_64kb.mp3",
+   "s": 1389,
+   "r": "Alan Mapstone"
+  },
+  {
+   "n": 56,
+   "t": "Chapter 28, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_56_manzoni_64kb.mp3",
+   "s": 1923,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 57,
+   "t": "Chapter 28, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_57_manzoni_64kb.mp3",
+   "s": 1942,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 58,
+   "t": "Chapter 29, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_58_manzoni_64kb.mp3",
+   "s": 1282,
+   "r": "Jules Hawryluk"
+  },
+  {
+   "n": 59,
+   "t": "Chapter 29, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_59_manzoni_64kb.mp3",
+   "s": 1035,
+   "r": "Lani Small"
+  },
+  {
+   "n": 60,
+   "t": "Chapter 30, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_60_manzoni_64kb.mp3",
+   "s": 838,
+   "r": "Michele Eaton"
+  },
+  {
+   "n": 61,
+   "t": "Chapter 30, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_61_manzoni_64kb.mp3",
+   "s": 879,
+   "r": "Michele Eaton"
+  },
+  {
+   "n": 62,
+   "t": "Chapter 31, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_62_manzoni_64kb.mp3",
+   "s": 1422,
+   "r": "Alan Mapstone"
+  },
+  {
+   "n": 63,
+   "t": "Chapter 31, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_63_manzoni_64kb.mp3",
+   "s": 1573,
+   "r": "Alan Mapstone"
+  },
+  {
+   "n": 64,
+   "t": "Chapter 32, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_64_manzoni_64kb.mp3",
+   "s": 1480,
+   "r": "Lani Small"
+  },
+  {
+   "n": 65,
+   "t": "Chapter 32, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_65_manzoni_64kb.mp3",
+   "s": 1234,
+   "r": "Lani Small"
+  },
+  {
+   "n": 66,
+   "t": "Chapter 33, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_66_manzoni_64kb.mp3",
+   "s": 1508,
+   "r": "Lani Small"
+  },
+  {
+   "n": 67,
+   "t": "Chapter 33, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_67_manzoni_64kb.mp3",
+   "s": 1847,
+   "r": "Sandra Estenson"
+  },
+  {
+   "n": 68,
+   "t": "Chapter 34, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_68_manzoni_64kb.mp3",
+   "s": 2128,
+   "r": "Sandra Estenson"
+  },
+  {
+   "n": 69,
+   "t": "Chapter 34, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_69_manzoni_64kb.mp3",
+   "s": 1609,
+   "r": "Lani Small"
+  },
+  {
+   "n": 70,
+   "t": "Chapter 35, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_70_manzoni_64kb.mp3",
+   "s": 1009,
+   "r": "Lani Small"
+  },
+  {
+   "n": 71,
+   "t": "Chapter 35, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_71_manzoni_64kb.mp3",
+   "s": 1070,
+   "r": "Lani Small"
+  },
+  {
+   "n": 72,
+   "t": "Chapter 36, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_72_manzoni_64kb.mp3",
+   "s": 1705,
+   "r": "Lani Small"
+  },
+  {
+   "n": 73,
+   "t": "Chapter 36, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_73_manzoni_64kb.mp3",
+   "s": 1256,
+   "r": "Lani Small"
+  },
+  {
+   "n": 74,
+   "t": "Chapter 37, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_74_manzoni_64kb.mp3",
+   "s": 1225,
+   "r": "TriciaG"
+  },
+  {
+   "n": 75,
+   "t": "Chapter 37, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_75_manzoni_64kb.mp3",
+   "s": 1002,
+   "r": "TriciaG"
+  },
+  {
+   "n": 76,
+   "t": "Chapter 38, Part 1",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_76_manzoni_64kb.mp3",
+   "s": 1262,
+   "r": "TriciaG"
+  },
+  {
+   "n": 77,
+   "t": "Chapter 38, Part 2",
+   "mp3": "https://archive.org/download/betrothed_1212_librivox/betrothed_77_manzoni_64kb.mp3",
+   "s": 1574,
+   "r": "TriciaG"
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "id": 1159,
+ "title": "Ballad of the White Horse",
+ "url": "https://librivox.org/the-ballad-of-the-white-horse-by-gk-chesterton/",
+ "zip": "https://archive.org/compress/ballad_of_the_whitehorse_jbc_librivox/formats=64KBPS MP3&file=/ballad_of_the_whitehorse_jbc_librivox.zip",
+ "sections": [
+  {
+   "n": 0,
+   "t": "Prefatory Note &amp; Dedication",
+   "mp3": "https://archive.org/download/ballad_of_the_whitehorse_jbc_librivox/whitehorse_00_chesterton_64kb.mp3",
+   "s": 515,
+   "r": "Joshua B. Christensen"
+  },
+  {
+   "n": 1,
+   "t": "The Vision of the King",
+   "mp3": "https://archive.org/download/ballad_of_the_whitehorse_jbc_librivox/whitehorse_01_chesterton_64kb.mp3",
+   "s": 724,
+   "r": "Joshua B. Christensen"
+  },
+  {
+   "n": 2,
+   "t": "The Gathering of the Chiefs",
+   "mp3": "https://archive.org/download/ballad_of_the_whitehorse_jbc_librivox/whitehorse_02_chesterton_64kb.mp3",
+   "s": 704,
+   "r": "Joshua B. Christensen"
+  },
+  {
+   "n": 3,
+   "t": "The Harp of Alfred",
+   "mp3": "https://archive.org/download/ballad_of_the_whitehorse_jbc_librivox/whitehorse_03_chesterton_64kb.mp3",
+   "s": 925,
+   "r": "Joshua B. Christensen"
+  },
+  {
+   "n": 4,
+   "t": "The Woman in the Forest",
+   "mp3": "https://archive.org/download/ballad_of_the_whitehorse_jbc_librivox/whitehorse_04_chesterton_64kb.mp3",
+   "s": 763,
+   "r": "Joshua B. Christensen"
+  },
+  {
+   "n": 5,
+   "t": "Ethandune: The First Stroke",
+   "mp3": "https://archive.org/download/ballad_of_the_whitehorse_jbc_librivox/whitehorse_05_chesterton_64kb.mp3",
+   "s": 724,
+   "r": "Joshua B. Christensen"
+  },
+  {
+   "n": 6,
+   "t": "Ethandune: The Slaying of the Chiefs",
+   "mp3": "https://archive.org/download/ballad_of_the_whitehorse_jbc_librivox/whitehorse_06_chesterton_64kb.mp3",
+   "s": 716,
+   "r": "Joshua B. Christensen"
+  },
+  {
+   "n": 7,
+   "t": "Ethandune: The Last Charge",
+   "mp3": "https://archive.org/download/ballad_of_the_whitehorse_jbc_librivox/whitehorse_07_chesterton_64kb.mp3",
+   "s": 885,
+   "r": "Joshua B. Christensen"
+  },
+  {
+   "n": 8,
+   "t": "The Scouring of the Horse",
+   "mp3": "https://archive.org/download/ballad_of_the_whitehorse_jbc_librivox/whitehorse_08_chesterton_64kb.mp3",
+   "s": 941,
+   "r": "Joshua B. Christensen"
+  }
+ ]
+}

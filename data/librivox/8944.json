@@ -1,0 +1,715 @@
+{
+ "id": 8944,
+ "title": "Divine Comedy (version 2 Dramatic Reading)",
+ "url": "https://librivox.org/the-divine-comedy-version-2-dramatic-reading-by-dante-alighieri/",
+ "zip": "https://archive.org/compress/divinecomedy2dramatic_1509_librivox/formats=64KBPS MP3&file=/divinecomedy2dramatic_1509_librivox.zip",
+ "sections": [
+  {
+   "n": 0,
+   "t": "000 - Dramatis Personae",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_000_alighieri_64kb.mp3",
+   "s": 652,
+   "r": "Anna Simon, Vin Reilly, Ruth Golding, Andrew Coleman, David Lawrence, Leni, TriciaG, Martin Geeson, Availle, Amy Gramour, Beth Thomas (1974-2020), Amanda Friday, Kristin G., Alan Mapstone, Rob Marland, Patrick Eaton, BeniaminoMassimo, Peter Tucker, Mary J, Lydia, Sarah Terry, Shakira Searle, inflected, K. Cotter, Zach K. , Rosslyn Carlyle, Adele de Pignerolles, Jessie Yun, DomBombadil, LibriNinja, GaylorSwift, Nan Mig, Vincent Alexander, Johnny Alexander, Holly Alexander, Alex Lane, Vespero, Bryan Rupert, David N. Winkler"
+  },
+  {
+   "n": 1,
+   "t": "001 - Inferno I",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_001_alighieri_64kb.mp3",
+   "s": 464,
+   "r": "Anna Simon, Peter Tucker, Mary J"
+  },
+  {
+   "n": 2,
+   "t": "002 - Inferno II",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_002_alighieri_64kb.mp3",
+   "s": 443,
+   "r": "Anna Simon, TriciaG, Peter Tucker, Mary J, Lydia"
+  },
+  {
+   "n": 3,
+   "t": "003 - Inferno III",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_003_alighieri_64kb.mp3",
+   "s": 447,
+   "r": "Anna Simon, Peter Tucker, Mary J, inflected"
+  },
+  {
+   "n": 4,
+   "t": "004 - Inferno IV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_004_alighieri_64kb.mp3",
+   "s": 495,
+   "r": "Anna Simon, Alan Mapstone, Peter Tucker, Mary J"
+  },
+  {
+   "n": 5,
+   "t": "005 - Inferno V",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_005_alighieri_64kb.mp3",
+   "s": 465,
+   "r": "Anna Simon, Amanda Friday, Peter Tucker, Mary J, Bryan Rupert"
+  },
+  {
+   "n": 6,
+   "t": "006 - Inferno VI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_006_alighieri_64kb.mp3",
+   "s": 392,
+   "r": "Anna Simon, Peter Tucker, Mary J, Zach K. "
+  },
+  {
+   "n": 7,
+   "t": "007 - Inferno VII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_007_alighieri_64kb.mp3",
+   "s": 431,
+   "r": "Anna Simon, Andrew Coleman, TriciaG, Kristin G., Peter Tucker, Mary J, Holly Alexander"
+  },
+  {
+   "n": 8,
+   "t": "008 - Inferno VIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_008_alighieri_64kb.mp3",
+   "s": 419,
+   "r": "Anna Simon, Availle, Kristin G., Peter Tucker, Mary J, inflected, Zach K. , Rosslyn Carlyle, LibriNinja"
+  },
+  {
+   "n": 9,
+   "t": "009 - Inferno IX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_009_alighieri_64kb.mp3",
+   "s": 434,
+   "r": "Anna Simon, Availle, Kristin G., Patrick Eaton, Peter Tucker, Mary J, Sarah Terry"
+  },
+  {
+   "n": 10,
+   "t": "010 - Inferno X",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_010_alighieri_64kb.mp3",
+   "s": 453,
+   "r": "Anna Simon, Andrew Coleman, Kristin G., Peter Tucker, Mary J"
+  },
+  {
+   "n": 11,
+   "t": "011 - Inferno XI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_011_alighieri_64kb.mp3",
+   "s": 404,
+   "r": "Anna Simon, Peter Tucker, Mary J"
+  },
+  {
+   "n": 12,
+   "t": "012 - Inferno XII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_012_alighieri_64kb.mp3",
+   "s": 473,
+   "r": "Anna Simon, Kristin G., Alan Mapstone, Peter Tucker, Mary J, inflected"
+  },
+  {
+   "n": 13,
+   "t": "013 - Inferno XIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_013_alighieri_64kb.mp3",
+   "s": 506,
+   "r": "Anna Simon, Andrew Coleman, Peter Tucker, Mary J, Sarah Terry, Zach K. , Rosslyn Carlyle"
+  },
+  {
+   "n": 14,
+   "t": "014 - Inferno XIV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_014_alighieri_64kb.mp3",
+   "s": 489,
+   "r": "Anna Simon, Kristin G., Peter Tucker, Mary J"
+  },
+  {
+   "n": 15,
+   "t": "015 - Inferno XV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_015_alighieri_64kb.mp3",
+   "s": 493,
+   "r": "Anna Simon, Martin Geeson, Peter Tucker, Mary J"
+  },
+  {
+   "n": 16,
+   "t": "016 - Inferno XVI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_016_alighieri_64kb.mp3",
+   "s": 460,
+   "r": "Anna Simon, Alan Mapstone, Peter Tucker, Mary J, inflected, Zach K. "
+  },
+  {
+   "n": 17,
+   "t": "017 - Inferno XVII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_017_alighieri_64kb.mp3",
+   "s": 439,
+   "r": "Anna Simon, TriciaG, Peter Tucker, Mary J"
+  },
+  {
+   "n": 18,
+   "t": "018 - Inferno XVIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_018_alighieri_64kb.mp3",
+   "s": 449,
+   "r": "Anna Simon, Andrew Coleman, TriciaG, Peter Tucker, Mary J, inflected"
+  },
+  {
+   "n": 19,
+   "t": "019 - Inferno XIX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_019_alighieri_64kb.mp3",
+   "s": 454,
+   "r": "Anna Simon, Alan Mapstone, Peter Tucker, Mary J"
+  },
+  {
+   "n": 20,
+   "t": "020 - Inferno XX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_020_alighieri_64kb.mp3",
+   "s": 454,
+   "r": "Anna Simon, Peter Tucker, Mary J"
+  },
+  {
+   "n": 21,
+   "t": "021 - Inferno XXI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_021_alighieri_64kb.mp3",
+   "s": 455,
+   "r": "Anna Simon, Kristin G., Peter Tucker, Mary J, Lydia, Sarah Terry, Zach K. , Rosslyn Carlyle, Vincent Alexander"
+  },
+  {
+   "n": 22,
+   "t": "022 - Inferno XXII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_022_alighieri_64kb.mp3",
+   "s": 471,
+   "r": "Anna Simon, Kristin G., Peter Tucker, Mary J, Lydia, inflected, Zach K. , Rosslyn Carlyle, Vincent Alexander"
+  },
+  {
+   "n": 23,
+   "t": "023 - Inferno XXIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_023_alighieri_64kb.mp3",
+   "s": 458,
+   "r": "Anna Simon, Kristin G., Peter Tucker, Mary J, Zach K. "
+  },
+  {
+   "n": 24,
+   "t": "024 - Inferno XXIV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_024_alighieri_64kb.mp3",
+   "s": 489,
+   "r": "Anna Simon, Andrew Coleman, Peter Tucker, Mary J"
+  },
+  {
+   "n": 25,
+   "t": "025 - Inferno XXV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_025_alighieri_64kb.mp3",
+   "s": 475,
+   "r": "Anna Simon, Andrew Coleman, Kristin G., Peter Tucker, Mary J, Zach K. , GaylorSwift, Vincent Alexander, Holly Alexander"
+  },
+  {
+   "n": 26,
+   "t": "026 - Inferno XXVI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_026_alighieri_64kb.mp3",
+   "s": 448,
+   "r": "Anna Simon, Peter Tucker, Mary J, David N. Winkler"
+  },
+  {
+   "n": 27,
+   "t": "027 - Inferno XXVII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_027_alighieri_64kb.mp3",
+   "s": 499,
+   "r": "Anna Simon, Andrew Coleman, Kristin G., Peter Tucker, Mary J, Zach K. , Bryan Rupert"
+  },
+  {
+   "n": 28,
+   "t": "028 - Inferno XXVIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_028_alighieri_64kb.mp3",
+   "s": 467,
+   "r": "Anna Simon, Kristin G., BeniaminoMassimo, Peter Tucker, Mary J, Adele de Pignerolles, Johnny Alexander"
+  },
+  {
+   "n": 29,
+   "t": "029 - Inferno XXIX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_029_alighieri_64kb.mp3",
+   "s": 447,
+   "r": "Anna Simon, Rob Marland, Peter Tucker, Mary J, Zach K. "
+  },
+  {
+   "n": 30,
+   "t": "030 - Inferno XXX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_030_alighieri_64kb.mp3",
+   "s": 590,
+   "r": "Anna Simon, Andrew Coleman, Alan Mapstone, Rob Marland, Peter Tucker, Mary J"
+  },
+  {
+   "n": 31,
+   "t": "031 - Inferno XXXI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_031_alighieri_64kb.mp3",
+   "s": 467,
+   "r": "Anna Simon, Andrew Coleman, Peter Tucker, Mary J"
+  },
+  {
+   "n": 32,
+   "t": "032 - Inferno XXXII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_032_alighieri_64kb.mp3",
+   "s": 437,
+   "r": "TriciaG, Kristin G., Peter Tucker, Mary J, Rosslyn Carlyle, Alex Lane"
+  },
+  {
+   "n": 33,
+   "t": "033 - Inferno XXXIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_033_alighieri_64kb.mp3",
+   "s": 523,
+   "r": "Anna Simon, Beth Thomas (1974-2020), Peter Tucker, Mary J, Zach K. "
+  },
+  {
+   "n": 34,
+   "t": "034 - Inferno XXXIV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_034_alighieri_64kb.mp3",
+   "s": 468,
+   "r": "Anna Simon, Peter Tucker, Mary J"
+  },
+  {
+   "n": 35,
+   "t": "035 - Purgatorio I",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_035_alighieri_64kb.mp3",
+   "s": 482,
+   "r": "Anna Simon, Alan Mapstone, Peter Tucker, Mary J"
+  },
+  {
+   "n": 36,
+   "t": "036 - Purgatorio II",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_036_alighieri_64kb.mp3",
+   "s": 443,
+   "r": "Anna Simon, Kristin G., Alan Mapstone, Peter Tucker, Mary J, Lydia, Shakira Searle"
+  },
+  {
+   "n": 37,
+   "t": "037 - Purgatorio III",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_037_alighieri_64kb.mp3",
+   "s": 500,
+   "r": "Anna Simon, Alan Mapstone, Peter Tucker, Mary J, Nan Mig"
+  },
+  {
+   "n": 38,
+   "t": "038 - Purgatorio IV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_038_alighieri_64kb.mp3",
+   "s": 436,
+   "r": "Anna Simon, TriciaG, Availle, Beth Thomas (1974-2020), Peter Tucker, Mary J, Zach K. "
+  },
+  {
+   "n": 39,
+   "t": "039 - Purgatorio V",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_039_alighieri_64kb.mp3",
+   "s": 436,
+   "r": "Anna Simon, Andrew Coleman, TriciaG, Availle, Beth Thomas (1974-2020), Kristin G., Peter Tucker, Mary J, Lydia"
+  },
+  {
+   "n": 40,
+   "t": "040 - Purgatorio VI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_040_alighieri_64kb.mp3",
+   "s": 485,
+   "r": "Anna Simon, Peter Tucker, Mary J, Sarah Terry"
+  },
+  {
+   "n": 41,
+   "t": "041 - Purgatorio VII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_041_alighieri_64kb.mp3",
+   "s": 434,
+   "r": "Anna Simon, Peter Tucker, Mary J, Sarah Terry"
+  },
+  {
+   "n": 42,
+   "t": "042 - Purgatorio VIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_042_alighieri_64kb.mp3",
+   "s": 453,
+   "r": "Anna Simon, BeniaminoMassimo, Peter Tucker, Mary J, Sarah Terry, Zach K. "
+  },
+  {
+   "n": 43,
+   "t": "043 - Purgatorio IX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_043_alighieri_64kb.mp3",
+   "s": 458,
+   "r": "Anna Simon, Andrew Coleman, Kristin G., Peter Tucker, Mary J, Lydia"
+  },
+  {
+   "n": 44,
+   "t": "044 - Purgatorio X",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_044_alighieri_64kb.mp3",
+   "s": 433,
+   "r": "Anna Simon, Availle, Patrick Eaton, Peter Tucker, Mary J"
+  },
+  {
+   "n": 45,
+   "t": "045 - Purgatorio XI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_045_alighieri_64kb.mp3",
+   "s": 514,
+   "r": "Anna Simon, Andrew Coleman, Leni, TriciaG, Kristin G., Peter Tucker, Mary J, Jessie Yun"
+  },
+  {
+   "n": 46,
+   "t": "046 - Purgatorio XII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_046_alighieri_64kb.mp3",
+   "s": 448,
+   "r": "Anna Simon, Peter Tucker, Mary J, Lydia, Shakira Searle"
+  },
+  {
+   "n": 47,
+   "t": "047 - Purgatorio XIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_047_alighieri_64kb.mp3",
+   "s": 480,
+   "r": "Anna Simon, Andrew Coleman, TriciaG, Kristin G., Peter Tucker, Mary J, Sarah Terry, Zach K. "
+  },
+  {
+   "n": 48,
+   "t": "048 - Purgatorio XIV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_048_alighieri_64kb.mp3",
+   "s": 464,
+   "r": "Anna Simon, Leni, Kristin G., Peter Tucker, Mary J, Zach K. , DomBombadil"
+  },
+  {
+   "n": 49,
+   "t": "049 - Purgatorio XV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_049_alighieri_64kb.mp3",
+   "s": 483,
+   "r": "Anna Simon, TriciaG, Availle, Kristin G., Peter Tucker, Mary J, Shakira Searle, K. Cotter, Rosslyn Carlyle, DomBombadil, Vincent Alexander, Johnny Alexander, Holly Alexander"
+  },
+  {
+   "n": 50,
+   "t": "050 - Purgatorio XVI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_050_alighieri_64kb.mp3",
+   "s": 530,
+   "r": "Anna Simon, Andrew Coleman, Peter Tucker, Mary J"
+  },
+  {
+   "n": 51,
+   "t": "051 - Puragtorio XVII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_051_alighieri_64kb.mp3",
+   "s": 453,
+   "r": "Anna Simon, Kristin G., Peter Tucker, Mary J, K. Cotter"
+  },
+  {
+   "n": 52,
+   "t": "052 - Purgatorio XVIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_052_alighieri_64kb.mp3",
+   "s": 489,
+   "r": "Anna Simon, Kristin G., Rob Marland, Peter Tucker, Mary J, Rosslyn Carlyle, DomBombadil, Vincent Alexander"
+  },
+  {
+   "n": 53,
+   "t": "053 - Purgatorio XIX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_053_alighieri_64kb.mp3",
+   "s": 518,
+   "r": "Anna Simon, Andrew Coleman, Leni, TriciaG, Availle, Kristin G., Peter Tucker, Mary J"
+  },
+  {
+   "n": 54,
+   "t": "054 - Purgatorio XX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_054_alighieri_64kb.mp3",
+   "s": 486,
+   "r": "Anna Simon, Ruth Golding, TriciaG, Kristin G., Peter Tucker, Mary J, Lydia"
+  },
+  {
+   "n": 55,
+   "t": "055 - Purgatorio XXI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_055_alighieri_64kb.mp3",
+   "s": 454,
+   "r": "Anna Simon, Leni, Peter Tucker, Mary J"
+  },
+  {
+   "n": 56,
+   "t": "056 - Purgatorio XXII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_056_alighieri_64kb.mp3",
+   "s": 499,
+   "r": "Anna Simon, Leni, Amy Gramour, Peter Tucker, Mary J"
+  },
+  {
+   "n": 57,
+   "t": "057 - Purgatorio XXIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_057_alighieri_64kb.mp3",
+   "s": 461,
+   "r": "Anna Simon, Andrew Coleman, Peter Tucker, Mary J, Shakira Searle"
+  },
+  {
+   "n": 58,
+   "t": "058 - Purgatorio XXIV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_058_Alighieri_64kb.mp3",
+   "s": 503,
+   "r": "Andrew Coleman, Amy Gramour, Kristin G., Peter Tucker, Mary J, Sarah Terry"
+  },
+  {
+   "n": 59,
+   "t": "059 - Purgatorio XXV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_059_alighieri_64kb.mp3",
+   "s": 463,
+   "r": "Anna Simon, Leni, Peter Tucker, Mary J, Shakira Searle"
+  },
+  {
+   "n": 60,
+   "t": "060 - Purgatorio XXVI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_060_alighieri_64kb.mp3",
+   "s": 483,
+   "r": "Anna Simon, Andrew Coleman, Availle, Kristin G., Peter Tucker, Mary J, Rosslyn Carlyle, Vespero"
+  },
+  {
+   "n": 61,
+   "t": "061 - Purgatorio XXVII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_061_alighieri_64kb.mp3",
+   "s": 474,
+   "r": "Anna Simon, TriciaG, Peter Tucker, Mary J, Sarah Terry, Shakira Searle"
+  },
+  {
+   "n": 62,
+   "t": "062 - Purgatorio XXVIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_062_alighieri_64kb.mp3",
+   "s": 558,
+   "r": "Peter Tucker, Mary J, Shakira Searle"
+  },
+  {
+   "n": 63,
+   "t": "063 - Purgatorio XXIX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_063_alighieri_64kb.mp3",
+   "s": 465,
+   "r": "Kristin G., Peter Tucker, Mary J, Shakira Searle, Rosslyn Carlyle"
+  },
+  {
+   "n": 64,
+   "t": "064 - Purgatorio XXX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_064_alighieri_64kb.mp3",
+   "s": 450,
+   "r": "Leni, TriciaG, Kristin G., Peter Tucker, Mary J, Lydia, Shakira Searle, K. Cotter, Rosslyn Carlyle"
+  },
+  {
+   "n": 65,
+   "t": "065 - Purgatorio XXXI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_065_alighieri_64kb.mp3",
+   "s": 459,
+   "r": "Availle, Kristin G., Peter Tucker, Mary J, Lydia, Sarah Terry, Shakira Searle, K. Cotter, Zach K. , Jessie Yun"
+  },
+  {
+   "n": 66,
+   "t": "066 - Purgatorio XXXII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_066_alighieri_64kb.mp3",
+   "s": 484,
+   "r": "Andrew Coleman, Leni, TriciaG, Availle, Kristin G., Peter Tucker, Mary J, Lydia, Sarah Terry, Shakira Searle, K. Cotter, Zach K. , Jessie Yun"
+  },
+  {
+   "n": 67,
+   "t": "067 - Purgatorio XXXIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_067_alighieri_64kb.mp3",
+   "s": 440,
+   "r": "Availle, Kristin G., Peter Tucker, Mary J, Lydia, Sarah Terry, Shakira Searle, K. Cotter, Zach K. , Jessie Yun"
+  },
+  {
+   "n": 68,
+   "t": "068 - Paradiso I",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_068_alighieri_64kb.mp3",
+   "s": 437,
+   "r": "Peter Tucker, Mary J"
+  },
+  {
+   "n": 69,
+   "t": "069 - Paradiso II",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_069_alighieri_64kb.mp3",
+   "s": 423,
+   "r": "Peter Tucker, Mary J"
+  },
+  {
+   "n": 70,
+   "t": "070 - Paradiso III",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_070_alighieri_64kb.mp3",
+   "s": 411,
+   "r": "Peter Tucker, Mary J, Sarah Terry"
+  },
+  {
+   "n": 71,
+   "t": "071 - Paradiso IV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_071_alighieri_64kb.mp3",
+   "s": 412,
+   "r": "Peter Tucker, Mary J"
+  },
+  {
+   "n": 72,
+   "t": "072 - Paradiso V",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_072_alighieri_64kb.mp3",
+   "s": 408,
+   "r": "Andrew Coleman, Amy Gramour, Peter Tucker, Mary J"
+  },
+  {
+   "n": 73,
+   "t": "073 - Paradiso VI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_073_alighieri_64kb.mp3",
+   "s": 551,
+   "r": "Andrew Coleman, Mary J"
+  },
+  {
+   "n": 74,
+   "t": "074 - Paradiso VII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_074_alighieri_64kb.mp3",
+   "s": 398,
+   "r": "Andrew Coleman, Peter Tucker, Mary J"
+  },
+  {
+   "n": 75,
+   "t": "075 - Paradiso VIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_075_alighieri_64kb.mp3",
+   "s": 477,
+   "r": "Peter Tucker, Mary J, Shakira Searle, Zach K. "
+  },
+  {
+   "n": 76,
+   "t": "076 - Paradiso IX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_076_alighieri_64kb.mp3",
+   "s": 450,
+   "r": "Kristin G., Peter Tucker, Mary J, Zach K. , Holly Alexander"
+  },
+  {
+   "n": 77,
+   "t": "077 - Paradiso X",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_077_alighieri_64kb.mp3",
+   "s": 507,
+   "r": "Andrew Coleman, Peter Tucker, Mary J"
+  },
+  {
+   "n": 78,
+   "t": "078 - Paradiso XI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_078_alighieri_64kb.mp3",
+   "s": 537,
+   "r": "Andrew Coleman, Peter Tucker, Mary J"
+  },
+  {
+   "n": 79,
+   "t": "079 - Paradiso XII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_079_alighieri_64kb.mp3",
+   "s": 470,
+   "r": "Peter Tucker, Mary J, Zach K. "
+  },
+  {
+   "n": 80,
+   "t": "080 - Paradiso XIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_080_alighieri_64kb.mp3",
+   "s": 580,
+   "r": "Andrew Coleman, Peter Tucker, Mary J"
+  },
+  {
+   "n": 81,
+   "t": "081 - Paradiso XIV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_081_alighieri_64kb.mp3",
+   "s": 427,
+   "r": "Alan Mapstone, Peter Tucker, Mary J"
+  },
+  {
+   "n": 82,
+   "t": "082 - Paradiso XV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_082_alighieri_64kb.mp3",
+   "s": 479,
+   "r": "Vin Reilly, Peter Tucker, Mary J"
+  },
+  {
+   "n": 83,
+   "t": "083 - Paradiso XVI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_083_alighieri_64kb.mp3",
+   "s": 534,
+   "r": "Vin Reilly, Peter Tucker, Mary J"
+  },
+  {
+   "n": 84,
+   "t": "084 - Paradiso XVII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_084_alighieri_64kb.mp3",
+   "s": 440,
+   "r": "Vin Reilly, Peter Tucker, Mary J"
+  },
+  {
+   "n": 85,
+   "t": "085 - Paradiso XVIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_085_alighieri_64kb.mp3",
+   "s": 402,
+   "r": "Vin Reilly, Peter Tucker, Mary J"
+  },
+  {
+   "n": 86,
+   "t": "086 - Paradiso XIX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_086_alighieri_64kb.mp3",
+   "s": 468,
+   "r": "TriciaG, Peter Tucker, Mary J"
+  },
+  {
+   "n": 87,
+   "t": "087 - Paradiso XX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_087_alighieri_64kb.mp3",
+   "s": 468,
+   "r": "TriciaG, Peter Tucker, Mary J"
+  },
+  {
+   "n": 88,
+   "t": "088 - Paradiso XXI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_088_alighieri_64kb.mp3",
+   "s": 438,
+   "r": "David Lawrence, Peter Tucker, Mary J"
+  },
+  {
+   "n": 89,
+   "t": "089 - Paradiso XXII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_089_alighieri_64kb.mp3",
+   "s": 466,
+   "r": "Kristin G., Peter Tucker, Mary J"
+  },
+  {
+   "n": 90,
+   "t": "090 - Paradiso XXIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_090_alighieri_64kb.mp3",
+   "s": 437,
+   "r": "Peter Tucker, Mary J, Shakira Searle"
+  },
+  {
+   "n": 91,
+   "t": "091 - Paradiso XXIV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_091_alighieri_64kb.mp3",
+   "s": 497,
+   "r": "Andrew Coleman, Peter Tucker, Mary J, Shakira Searle"
+  },
+  {
+   "n": 92,
+   "t": "092 - Paradiso XXV",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_092_alighieri_64kb.mp3",
+   "s": 407,
+   "r": "Beth Thomas (1974-2020), Kristin G., Peter Tucker, Mary J, Shakira Searle"
+  },
+  {
+   "n": 93,
+   "t": "093 - Paradiso XXVI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_093_alighieri_64kb.mp3",
+   "s": 458,
+   "r": "Kristin G., Alan Mapstone, Peter Tucker, Mary J, Shakira Searle"
+  },
+  {
+   "n": 94,
+   "t": "094 - Paradiso XXVII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_094_alighieri_64kb.mp3",
+   "s": 475,
+   "r": "Andrew Coleman, Peter Tucker, Mary J, Shakira Searle"
+  },
+  {
+   "n": 95,
+   "t": "095 - Paradiso XXVIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_095_alighieri_64kb.mp3",
+   "s": 387,
+   "r": "Peter Tucker, Mary J"
+  },
+  {
+   "n": 96,
+   "t": "096 - Paradiso XXIX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_096_alighieri_64kb.mp3",
+   "s": 384,
+   "r": "Peter Tucker, Mary J"
+  },
+  {
+   "n": 97,
+   "t": "097 - Paradiso XXX",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_097_alighieri_64kb.mp3",
+   "s": 418,
+   "r": "Peter Tucker, Mary J"
+  },
+  {
+   "n": 98,
+   "t": "098 - Paradiso XXXI",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_098_alighieri_64kb.mp3",
+   "s": 437,
+   "r": "Peter Tucker, Mary J, Zach K. "
+  },
+  {
+   "n": 99,
+   "t": "099 - Paradiso XXXII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_099_alighieri_64kb.mp3",
+   "s": 465,
+   "r": "Peter Tucker, Mary J, Shakira Searle, Zach K. "
+  },
+  {
+   "n": 100,
+   "t": "100 - Paradiso XXXIII",
+   "mp3": "https://archive.org/download/divinecomedy2dramatic_1509_librivox/divinecomedy_100_alighieri_64kb.mp3",
+   "s": 481,
+   "r": "Peter Tucker, Mary J, Zach K. "
+  }
+ ]
+}

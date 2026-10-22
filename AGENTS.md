@@ -19,7 +19,14 @@ Read this before changing the site. It applies to every contributor and coding a
 
 ## Files that must never be deleted or moved
 
-**Document archive:** `BibliothecaCatholica/bibliotheca-texts` serves the 22 verified TXT copies at `https://texts.bibliothecacatholica.com/texts/`. The main reader prefers that host and falls back to local `data/texts/`. Keep local originals and provenance. `textArchive` in `data/library.json` controls this behavior. Export offline with `python3 tools/build_text_archive.py --output /absolute/path/to/bibliotheca-texts`; review the manifest and checksums before publishing the separate repository. Do not bulk mirror unreviewed imported books. See `docs/PROJECT-REVIEW-2026-10-22.md`.
+**Document archive:** `BibliothecaCatholica/bibliotheca-texts` serves the 42 verified TXT copies at `https://texts.bibliothecacatholica.com/texts/`. The main reader prefers that host and falls back to local `data/texts/`. Keep local originals and provenance. `textArchive` in `data/library.json` controls this behavior. Export offline with `python3 tools/build_text_archive.py --output /absolute/path/to/bibliotheca-texts`; review the manifest and checksums before publishing the separate repository. Do not bulk mirror unreviewed imported books. See `docs/PROJECT-REVIEW-2026-10-22.md`.
+
+**Adding a hosted Gutenberg text (v10 pattern):**
+1. Check the specific edition or translation year in the Gutenberg front matter (pre-1931 only; record the evidence in the edition `note`).
+2. `python3 tools/fetch_gutenberg_edition.py <PG number> ...` downloads the original `pgN.txt` bytes to `data/texts/pg-N.txt`, snapshots the catalog record to `data/sources/pg-N.json`, and prints the SHA-256. It never edits `data/library.json` and skips releases with no plain-text file.
+3. Add the work and edition to `data/library.json` by hand (`label`, `rights`, `checked`, `note`, `sourceTitle`, `text`, `sha256`), with `"added": "YYYY-MM-DD"`. The `added` date drives the **Recently added** section on Discover & Read and a "New" card badge for 90 days.
+4. `python3 tools/fetch_librivox.py` rebuilds `data/librivox.json/.js` and the per-recording chapter lists in `data/librivox/<id>.json` that power the reader's persistent **Listen** dock. Use the work's `audioTitles` array for LibriVox title aliases; leave out a recording that is clearly a different work.
+5. `npm run build`, update test counts, then re-export and push `bibliotheca-texts` (step above) so the text is served from the texts subdomain.
 
 `CNAME`, `.nojekyll`, `.well-known/atproto-did` (the Bluesky handle; leave it unchanged), `robots.txt`, `sitemap.xml`, `404.html`, `assets/og-image.png`, `data/texts/`, and `data/sources/`.
 

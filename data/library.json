@@ -47,6 +47,9 @@
       "tradition": "Catholic tradition",
       "description": "A rule for monastic community, organizing prayer, work, authority, hospitality, and daily conduct. The linked Doyle translation is distinct from earlier English editions.",
       "reviewStatus": "source-checked",
+      "audioTitles": [
+        "Rule of St. Benedict"
+      ],
       "editions": [
         {
           "id": "pg-50040",
@@ -141,6 +144,9 @@
       "tradition": "Catholic tradition",
       "description": "Teresa recounts her life, experiences of prayer, and the beginnings of her reform. This is her autobiography, a different work from Interior Castle.",
       "reviewStatus": "source-checked",
+      "audioTitles": [
+        "Life of St. Teresa"
+      ],
       "editions": [
         {
           "id": "pg-8120",
@@ -726,6 +732,641 @@
           "access": "full-text",
           "text": "data/texts/pg-22403.txt",
           "sha256": "7be6edff06b1894903c104ef500d1c2206a708a72f3509ae51fde405b8daab84"
+        }
+      ]
+    },
+    {
+      "id": "heretics",
+      "title": "Heretics",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Apologetics",
+      "tradition": "Catholic tradition",
+      "description": "Twenty essays answering Kipling, Shaw, Wells, and other modern writers, arguing that a person's ultimate beliefs are the most practical thing about him. Its challenge led directly to Orthodoxy.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "date": "1905",
+      "editions": [
+        {
+          "id": "pg-470",
+          "label": "Project Gutenberg #470",
+          "source": "https://www.gutenberg.org/ebooks/470",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "First published 1905 (John Lane). Gutenberg's transcription states it follows the twelfth edition, John Lane Company, New York, 1919.",
+          "sourceTitle": "Heretics",
+          "digitalRelease": "Mar 1, 1996",
+          "access": "full-text",
+          "text": "data/texts/pg-470.txt",
+          "sha256": "291fb27d68c0cfca7523032a42d57a743e62a6e58faf9cc728f78ef748703829"
+        }
+      ]
+    },
+    {
+      "id": "whats-wrong-world",
+      "title": "What's Wrong with the World",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's case for the family, the home, and small property against both big business and state socialism, with chapters on imperialism, feminism, and education.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "date": "1910",
+      "editions": [
+        {
+          "id": "pg-1717",
+          "label": "Project Gutenberg #1717",
+          "source": "https://www.gutenberg.org/ebooks/1717",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "First published 1910 (London: Cassell; New York: Dodd, Mead).",
+          "sourceTitle": "What's Wrong with the World",
+          "digitalRelease": "Apr 1, 1999",
+          "access": "full-text",
+          "text": "data/texts/pg-1717.txt",
+          "sha256": "3fca1be002cd168dfbc50369202a53ed89e34a88d6de3c44032e15319d5d5bd4"
+        }
+      ]
+    },
+    {
+      "id": "ball-and-cross",
+      "title": "The Ball and the Cross",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A Catholic Highlander and an atheist editor agree to settle their quarrel with swords, and spend the novel being prevented from fighting by a modern world that thinks religion does not matter.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "date": "1909",
+      "editions": [
+        {
+          "id": "pg-5265",
+          "label": "Project Gutenberg #5265",
+          "source": "https://www.gutenberg.org/ebooks/5265",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "First published 1909 (New York: John Lane; London: Wells Gardner, Darton, 1910).",
+          "sourceTitle": "The Ball and the Cross",
+          "digitalRelease": "Mar 1, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-5265.txt",
+          "sha256": "26feb9fae70f1813484af8ad103c3349b49328f59ca2575fc313848c5ef69623"
+        }
+      ]
+    },
+    {
+      "id": "wisdom-father-brown",
+      "title": "The Wisdom of Father Brown",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "The second collection of Father Brown stories, twelve mysteries in which the priest-detective's knowledge of sin and human nature finds the truth.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "date": "1914",
+      "editions": [
+        {
+          "id": "pg-223",
+          "label": "Project Gutenberg #223",
+          "source": "https://www.gutenberg.org/ebooks/223",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "First published 1914 (London: Cassell). Twelve stories; this is the second collection, not the complete Father Brown.",
+          "sourceTitle": "The wisdom of Father Brown",
+          "digitalRelease": "Feb 1, 1995",
+          "access": "full-text",
+          "text": "data/texts/pg-223.txt",
+          "sha256": "86a5d9c201d8e4d4504d21676cc7b5dd94fca600dad21562a88bdebbe03500d6"
+        }
+      ]
+    },
+    {
+      "id": "ballad-white-horse",
+      "title": "The Ballad of the White Horse",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "A long narrative poem on King Alfred's Christian stand against the Danes, with the Virgin Mary's counsel at its center; a favorite of Tolkien's generation.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "date": "1911",
+      "editions": [
+        {
+          "id": "pg-1719",
+          "label": "Project Gutenberg #1719",
+          "source": "https://www.gutenberg.org/ebooks/1719",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "First published 1911 (London: Methuen). Includes Chesterton's prefatory note.",
+          "sourceTitle": "The Ballad of the White Horse",
+          "digitalRelease": "Apr 1, 1999",
+          "access": "full-text",
+          "text": "data/texts/pg-1719.txt",
+          "sha256": "854d65ace137b7273a44d4ba17839935a65b66bc660288466f3347ba3f28f444"
+        }
+      ]
+    },
+    {
+      "id": "catholic-church-conversion",
+      "title": "The Catholic Church and Conversion",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Apologetics",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's short account, written four years after his own reception, of the stages by which a person approaches, resists, and finally enters the Catholic Church.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "date": "1926",
+      "editions": [
+        {
+          "id": "pg-76305",
+          "label": "Project Gutenberg #76305",
+          "source": "https://www.gutenberg.org/ebooks/76305",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "series editor",
+              "name": "Hilaire Belloc"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "Calvert Series. The transcribed copy is the Macmillan, New York printing of 1927; the title page records copyright 1926 and first publication November 1926, with the 1926 Nihil Obstat and Imprimatur.",
+          "sourceTitle": "The Catholic Church and conversion",
+          "digitalRelease": "Jun 15, 2025",
+          "access": "full-text",
+          "text": "data/texts/pg-76305.txt",
+          "sha256": "04d66187865db8c5f48d75f1898057d970f16a257df83ec772fc78724467bc0e"
+        }
+      ]
+    },
+    {
+      "id": "servile-state",
+      "title": "The Servile State",
+      "author": "Hilaire Belloc",
+      "authorId": "hilaire-belloc",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "Belloc's argument that capitalism, unable to last, was sliding toward a society where most people would be secured but unfree, and his case for the widely distributed property of the Catholic social tradition.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "date": "1912",
+      "editions": [
+        {
+          "id": "pg-64882",
+          "label": "Project Gutenberg #64882",
+          "source": "https://www.gutenberg.org/ebooks/64882",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "Transcribed from the first edition, T. N. Foulis, London and Edinburgh, 1912.",
+          "sourceTitle": "The Servile State",
+          "digitalRelease": "Mar 20, 2021",
+          "access": "full-text",
+          "text": "data/texts/pg-64882.txt",
+          "sha256": "dd6eb9a2564ab426eb47e55b91f69eb0e786896eeb32abe165d326b71394aef1"
+        }
+      ]
+    },
+    {
+      "id": "catholic-church-history",
+      "title": "The Catholic Church and History",
+      "author": "Hilaire Belloc",
+      "authorId": "hilaire-belloc",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "A brief rebuttal of the historical arguments raised against the Church's claim to teach with divine authority, from the papacy and persecutions to the Reformation.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "date": "1926",
+      "editions": [
+        {
+          "id": "pg-78085",
+          "label": "Project Gutenberg #78085",
+          "source": "https://www.gutenberg.org/ebooks/78085",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "Calvert Series. Macmillan, New York; the title page records copyright 1926, first publication November 1926, and reprints in 1927.",
+          "sourceTitle": "The Catholic Church and history",
+          "digitalRelease": "Mar 2, 2026",
+          "access": "full-text",
+          "text": "data/texts/pg-78085.txt",
+          "sha256": "3a4ce454324345216b61fb375e41bfd75191f928b56b68557aa42675a6119e4c"
+        }
+      ]
+    },
+    {
+      "id": "loss-and-gain",
+      "title": "Loss and Gain: The Story of a Convert",
+      "author": "John Henry Newman",
+      "authorId": "john-henry-newman",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Newman's first novel follows Charles Reding through Oxford in the years of the Tractarian controversies until he becomes a Catholic, a lightly told mirror of Newman's own path.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "date": "1848",
+      "editions": [
+        {
+          "id": "pg-24574",
+          "label": "Project Gutenberg #24574",
+          "source": "https://www.gutenberg.org/ebooks/24574",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "First published anonymously in 1848. The transcribed copy is the eighth edition, Burns and Oates, London, 1881, with Newman's dedication to Charles W. Russell.",
+          "sourceTitle": "Loss and gain : The story of a convert",
+          "digitalRelease": "Feb 11, 2008",
+          "access": "full-text",
+          "text": "data/texts/pg-24574.txt",
+          "sha256": "99a55617b7f059657213e28457aa330c2ae853c1502d4c4f066dd9e4b4f499cd"
+        }
+      ]
+    },
+    {
+      "id": "callista",
+      "title": "Callista: A Tale of the Third Century",
+      "author": "John Henry Newman",
+      "authorId": "john-henry-newman",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A historical novel set in North Africa during the Decian persecution, in which a Greek sculptor of pagan idols comes to faith in Christ.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "date": "1855",
+      "editions": [
+        {
+          "id": "pg-30664",
+          "label": "Project Gutenberg #30664",
+          "source": "https://www.gutenberg.org/ebooks/30664",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "First published 1855. The transcribed copy is a Longmans, Green and Co. new impression of 1904, with Newman's 1855 advertisement and later postscripts.",
+          "sourceTitle": "Callista : a Tale of the Third Century",
+          "digitalRelease": "Dec 13, 2009",
+          "access": "full-text",
+          "text": "data/texts/pg-30664.txt",
+          "sha256": "96d32b87eefb00923d948e2bd536736ae4002defab0ba3d3d32507cdd786343e"
+        }
+      ]
+    },
+    {
+      "id": "dream-gerontius",
+      "title": "The Dream of Gerontius",
+      "author": "John Henry Newman",
+      "authorId": "john-henry-newman",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "Newman's dramatic poem on the death of a faithful man, his judgment, and his entry into Purgatory, later set to music by Edward Elgar.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "date": "1865",
+      "editions": [
+        {
+          "id": "pg-48927",
+          "label": "Project Gutenberg #48927",
+          "source": "https://www.gutenberg.org/ebooks/48927",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "editor and commentator",
+              "name": "Maurice Francis Egan"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "Poem first published 1865. This school edition, with Maurice Francis Egan's introduction and notes, is the Longmans, Green and Co. 1910 printing (copyright 1903).",
+          "sourceTitle": "The Dream of Gerontius",
+          "digitalRelease": "May 10, 2015",
+          "access": "full-text",
+          "text": "data/texts/pg-48927.txt",
+          "sha256": "4380b7b5eae11a51b546ce425451bc8b44dba0017a64519e5d6004a7961c0e19"
+        }
+      ]
+    },
+    {
+      "id": "aquinas-prayer-contemplative",
+      "title": "On Prayer and the Contemplative Life",
+      "author": "Thomas Aquinas",
+      "authorId": "thomas-aquinas",
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "Selections from the Summa Theologica on prayer, the contemplative and active lives, and the religious state, translated and arranged as a single book.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "editions": [
+        {
+          "id": "pg-22295",
+          "label": "Project Gutenberg #22295",
+          "source": "https://www.gutenberg.org/ebooks/22295",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Hugh Pope, O.P."
+            },
+            {
+              "role": "preface",
+              "name": "Vincent McNabb, O.P."
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "Published 1914 by R. & T. Washbourne, London, with a 1913 Imprimatur. These are questions from the Summa, not a separate treatise by Aquinas.",
+          "sourceTitle": "On prayer and the contemplative life",
+          "digitalRelease": "Aug 10, 2007",
+          "access": "full-text",
+          "text": "data/texts/pg-22295.txt",
+          "sha256": "97039fc2a806568693df12797f12e0db2cf98f1213dfdddc7a0c8e9dd25c217b"
+        }
+      ]
+    },
+    {
+      "id": "city-of-god",
+      "title": "The City of God",
+      "author": "Augustine of Hippo",
+      "authorId": "augustine-of-hippo",
+      "category": "Theology",
+      "tradition": "Catholic tradition",
+      "description": "Augustine's answer to pagans who blamed Christianity for the sack of Rome, growing into a history and theology of two cities, one built by love of self and one by love of God.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "editions": [
+        {
+          "id": "pg-45304",
+          "label": "Project Gutenberg #45304 · Volume I",
+          "source": "https://www.gutenberg.org/ebooks/45304",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator and editor",
+              "name": "Marcus Dods"
+            },
+            {
+              "role": "translator (Books IV, XVII, XVIII)",
+              "name": "George Wilson"
+            },
+            {
+              "role": "translator (Books V–VIII)",
+              "name": "J. J. Smith"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "Volume I (Books I–XIII) of the Edinburgh T. & T. Clark translation, 1871.",
+          "sourceTitle": "The City of God, Volume I",
+          "digitalRelease": "Apr 8, 2014",
+          "access": "full-text",
+          "text": "data/texts/pg-45304.txt",
+          "sha256": "3bbc1ec72bb2629fb8f787f786c39e05571ce7bedadcdfd8963b348068a70391"
+        },
+        {
+          "id": "pg-45305",
+          "label": "Project Gutenberg #45305 · Volume II",
+          "source": "https://www.gutenberg.org/ebooks/45305",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator and editor",
+              "name": "Marcus Dods"
+            },
+            {
+              "role": "translator (Books IV, XVII, XVIII)",
+              "name": "George Wilson"
+            },
+            {
+              "role": "translator (Books V–VIII)",
+              "name": "J. J. Smith"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "Volume II (Books XIV–XXII) of the Edinburgh T. & T. Clark translation, 1871.",
+          "sourceTitle": "The City of God, Volume II",
+          "digitalRelease": "Apr 8, 2014",
+          "access": "full-text",
+          "text": "data/texts/pg-45305.txt",
+          "sha256": "612d851c4be99c3684110c67e796af572d7bd75503b8e87d94004ddc76310e5f"
+        }
+      ]
+    },
+    {
+      "id": "bede-ecclesiastical-history",
+      "title": "Ecclesiastical History of the English People",
+      "author": "Bede the Venerable",
+      "authorId": "bede-the-venerable",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "Bede's history of the conversion of the English, from Roman Britain and Augustine of Canterbury's mission to the saints and councils of his own day. Bede is a Doctor of the Church.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "audioTitles": [
+        "Bede's Ecclesiastical History of England"
+      ],
+      "editions": [
+        {
+          "id": "pg-38326",
+          "label": "Project Gutenberg #38326",
+          "source": "https://www.gutenberg.org/ebooks/38326",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "A. M. Sellar"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "A revised translation with introduction, life, and notes by A. M. Sellar, London: George Bell and Sons, 1907.",
+          "sourceTitle": "Bede's Ecclesiastical History of England",
+          "digitalRelease": "Dec 17, 2011",
+          "access": "full-text",
+          "text": "data/texts/pg-38326.txt",
+          "sha256": "977da0babf070c825befb0a5db65a9cc2440d9ab45aa869a959c1bab911be2c8"
+        }
+      ]
+    },
+    {
+      "id": "catherine-letters",
+      "title": "Saint Catherine of Siena as Seen in Her Letters",
+      "author": "Catherine of Siena",
+      "authorId": "catherine-of-siena",
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "A selection of Catherine's letters to her family, disciples, rulers, and popes, arranged with introductions that trace her life and her work for the Church. Catherine is a Doctor of the Church.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "editions": [
+        {
+          "id": "pg-7403",
+          "label": "Project Gutenberg #7403",
+          "source": "https://www.gutenberg.org/ebooks/7403",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator and editor",
+              "name": "Vida D. Scudder"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "Selected letters, not the complete correspondence. Scudder's translation was first published in 1905 (London: J. M. Dent; New York: E. P. Dutton); the Gutenberg transcription omits the title-page date. Her Dialogue is not yet in the reading room.",
+          "sourceTitle": "Letters of Catherine Benincasa",
+          "digitalRelease": "Feb 1, 2005",
+          "access": "full-text",
+          "text": "data/texts/pg-7403.txt",
+          "sha256": "d207bb39366ef31ebf1c08078ef048c5af45d0fce8a7c28aa499d9c169645a87"
+        }
+      ]
+    },
+    {
+      "id": "consolation-philosophy",
+      "title": "The Consolation of Philosophy",
+      "author": "Boethius",
+      "authorId": "boethius",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "Written in prison while awaiting execution, Boethius's dialogue with Lady Philosophy on fortune, happiness, providence, and free will shaped Christian thought for a thousand years.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "editions": [
+        {
+          "id": "pg-14328",
+          "label": "Project Gutenberg #14328",
+          "source": "https://www.gutenberg.org/ebooks/14328",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "H. R. James"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "Translated into English prose and verse by H. R. James, London: Elliot Stock, 1897.",
+          "sourceTitle": "The Consolation of Philosophy",
+          "digitalRelease": "Dec 11, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-14328.txt",
+          "sha256": "82257f260aeb9f1f2d197ceb18aec1180c7a831fe6437a642f6ba5b32f44cdbd"
+        }
+      ]
+    },
+    {
+      "id": "apostolic-fathers",
+      "title": "The Writings of the Apostolic Fathers",
+      "author": "Clement of Rome, Ignatius of Antioch, Polycarp, and others",
+      "category": "Church Fathers",
+      "tradition": "Catholic tradition",
+      "description": "The earliest Christian writings after the New Testament: Clement's letter to the Corinthians, the letters of Ignatius and Polycarp, the Martyrdom of Polycarp, the Epistle of Barnabas, the Shepherd of Hermas, and related texts.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "editions": [
+        {
+          "id": "pg-77576",
+          "label": "Project Gutenberg #77576",
+          "source": "https://www.gutenberg.org/ebooks/77576",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator and editor",
+              "name": "Alexander Roberts"
+            },
+            {
+              "role": "translator and editor",
+              "name": "James Donaldson"
+            },
+            {
+              "role": "translator (Shepherd of Hermas)",
+              "name": "F. Crombie"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "Ante-Nicene Christian Library, volume I, Edinburgh: T. & T. Clark, 1870. Translations of this period predate the discovery of the Didache (1873).",
+          "sourceTitle": "The writings of the Apostolic Fathers",
+          "digitalRelease": "Dec 30, 2025",
+          "access": "full-text",
+          "text": "data/texts/pg-77576.txt",
+          "sha256": "2a50a9cb4e98ab58a01fc6e11df700a9ab685b638d52be954fc0a7467eb598cb"
+        }
+      ]
+    },
+    {
+      "id": "glories-of-mary",
+      "title": "The Glories of Mary",
+      "author": "Alphonsus Liguori",
+      "authorId": "alphonsus-liguori",
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "Alphonsus's commentary on the Salve Regina and meditations on the feasts, sorrows, and virtues of the Blessed Virgin, one of the most widely read Marian books. Alphonsus is a Doctor of the Church.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "date": "1750",
+      "editions": [
+        {
+          "id": "pg-72411",
+          "label": "Project Gutenberg #72411",
+          "source": "https://www.gutenberg.org/ebooks/72411",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "Second American edition, New York: Edward Dunigan and Brother, 1852, approved by Archbishop John Hughes of New York. The translator is not named.",
+          "sourceTitle": "The glories of Mary",
+          "digitalRelease": "Dec 14, 2023",
+          "access": "full-text",
+          "text": "data/texts/pg-72411.txt",
+          "sha256": "18684ebb448fe34ec152f2a0645c1d8bd85cd0d1b2281929467833036e74352f"
+        }
+      ]
+    },
+    {
+      "id": "paradoxes-catholicism",
+      "title": "Paradoxes of Catholicism",
+      "author": "Robert Hugh Benson",
+      "authorId": "robert-hugh-benson",
+      "category": "Apologetics",
+      "tradition": "Catholic tradition",
+      "description": "Lenten sermons by the convert priest and novelist on the apparent contradictions of the Church: peace and war, wealth and poverty, faith and reason, authority and liberty.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-22",
+      "date": "1913",
+      "editions": [
+        {
+          "id": "pg-16309",
+          "label": "Project Gutenberg #16309",
+          "source": "https://www.gutenberg.org/ebooks/16309",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-22",
+          "note": "Preached in England, New York (Lent 1912), and Rome (Lent 1913); published 1913 (London: Longmans, Green). The preface is dated Easter 1913.",
+          "sourceTitle": "Paradoxes of Catholicism",
+          "digitalRelease": "Jul 16, 2005",
+          "access": "full-text",
+          "text": "data/texts/pg-16309.txt",
+          "sha256": "981dd3afc08ab950db53c0bcb5f4ec2b3de7a6ad3e8cdc9dfc75a73774c1f131"
         }
       ]
     },

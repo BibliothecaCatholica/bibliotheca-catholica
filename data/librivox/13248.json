@@ -1,0 +1,71 @@
+{
+ "id": 13248,
+ "title": "Ballad of the White Horse (Version 3)",
+ "url": "https://librivox.org/ballad-of-the-white-horse-by-g-k-chesterton/",
+ "zip": "https://archive.org/compress/balladofthewhitehorse_1809_librivox/formats=64KBPS MP3&file=/balladofthewhitehorse_1809_librivox.zip",
+ "sections": [
+  {
+   "n": 0,
+   "t": "Prefatory Note and Dedication",
+   "mp3": "https://archive.org/download/balladofthewhitehorse_1809_librivox/balladwhitehorse_00_chesterton_64kb.mp3",
+   "s": 447,
+   "r": "Robin Lamb"
+  },
+  {
+   "n": 1,
+   "t": "Book I. The Vision of the King",
+   "mp3": "https://archive.org/download/balladofthewhitehorse_1809_librivox/balladwhitehorse_01_chesterton_64kb.mp3",
+   "s": 646,
+   "r": "Robin Lamb"
+  },
+  {
+   "n": 2,
+   "t": "Book II. The Gathering of the Chiefs",
+   "mp3": "https://archive.org/download/balladofthewhitehorse_1809_librivox/balladwhitehorse_02_chesterton_64kb.mp3",
+   "s": 631,
+   "r": "Robin Lamb"
+  },
+  {
+   "n": 3,
+   "t": "Book III. The Harp of Alfred",
+   "mp3": "https://archive.org/download/balladofthewhitehorse_1809_librivox/balladwhitehorse_03_chesterton_64kb.mp3",
+   "s": 816,
+   "r": "Robin Lamb"
+  },
+  {
+   "n": 4,
+   "t": "Book IV. The Woman in the Forest",
+   "mp3": "https://archive.org/download/balladofthewhitehorse_1809_librivox/balladwhitehorse_04_chesterton_64kb.mp3",
+   "s": 686,
+   "r": "Robin Lamb"
+  },
+  {
+   "n": 5,
+   "t": "Book V. Ethandune: The First Stroke",
+   "mp3": "https://archive.org/download/balladofthewhitehorse_1809_librivox/balladwhitehorse_05_chesterton_64kb.mp3",
+   "s": 653,
+   "r": "Robin Lamb"
+  },
+  {
+   "n": 6,
+   "t": "Book VI. Ethandune: The Slaying of the Chiefs",
+   "mp3": "https://archive.org/download/balladofthewhitehorse_1809_librivox/balladwhitehorse_06_chesterton_64kb.mp3",
+   "s": 660,
+   "r": "Robin Lamb"
+  },
+  {
+   "n": 7,
+   "t": "Book VII. Ethandune: The Last Charge",
+   "mp3": "https://archive.org/download/balladofthewhitehorse_1809_librivox/balladwhitehorse_07_chesterton_64kb.mp3",
+   "s": 812,
+   "r": "Robin Lamb"
+  },
+  {
+   "n": 8,
+   "t": "Book VIII. The Scouring of the Horse",
+   "mp3": "https://archive.org/download/balladofthewhitehorse_1809_librivox/balladwhitehorse_08_chesterton_64kb.mp3",
+   "s": 814,
+   "r": "Robin Lamb"
+  }
+ ]
+}

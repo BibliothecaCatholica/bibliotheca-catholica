@@ -17,7 +17,7 @@ class TextArchiveTests(unittest.TestCase):
     def test_export_preserves_every_verified_text_and_its_provenance(self):
         with tempfile.TemporaryDirectory() as directory:
             manifest = archive.export(directory)
-            self.assertEqual(22, len(manifest['documents']))
+            self.assertEqual(42, len(manifest['documents']))
             for entry in manifest['documents']:
                 raw = (Path(directory) / entry['file']).read_bytes()
                 self.assertEqual(entry['sha256'], hashlib.sha256(raw).hexdigest())

@@ -1,0 +1,22 @@
+{
+ "id": 14376,
+ "title": "Dream of Gerontius",
+ "url": "https://librivox.org/the-dream-of-gerontius-by-john-henry-newman/",
+ "zip": "https://archive.org/compress/dream_of_gerontius_1910_librivox/formats=64KBPS MP3&file=/dream_of_gerontius_1910_librivox.zip",
+ "sections": [
+  {
+   "n": 1,
+   "t": "Section 1",
+   "mp3": "https://archive.org/download/dream_of_gerontius_1910_librivox/dreamofgerontius_01_newman_64kb.mp3",
+   "s": 1523,
+   "r": "Russ Hobbs"
+  },
+  {
+   "n": 2,
+   "t": "Section 2",
+   "mp3": "https://archive.org/download/dream_of_gerontius_1910_librivox/dreamofgerontius_02_newman_64kb.mp3",
+   "s": 1831,
+   "r": "Russ Hobbs"
+  }
+ ]
+}

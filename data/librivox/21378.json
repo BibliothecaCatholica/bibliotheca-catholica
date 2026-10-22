@@ -1,0 +1,29 @@
+{
+ "id": 21378,
+ "title": "Dream of Gerontius (Version 2)",
+ "url": "https://librivox.org/the-dream-of-gerontius-by-john-henry-newman-2/",
+ "zip": "https://archive.org/compress/thedreamofgerontius_2504_librivox/formats=64KBPS MP3&file=/thedreamofgerontius_2504_librivox.zip",
+ "sections": [
+  {
+   "n": 0,
+   "t": "Introduction and Dramatis Personae",
+   "mp3": "https://archive.org/download/thedreamofgerontius_2504_librivox/dreamofgerontius_0_newman_64kb.mp3",
+   "s": 141,
+   "r": "Alan Mapstone"
+  },
+  {
+   "n": 1,
+   "t": "Part 1",
+   "mp3": "https://archive.org/download/thedreamofgerontius_2504_librivox/dreamofgerontius_1_newman_64kb.mp3",
+   "s": 653,
+   "r": "Alan Mapstone, Larry Wilson, Inkell"
+  },
+  {
+   "n": 2,
+   "t": "Part 2",
+   "mp3": "https://archive.org/download/thedreamofgerontius_2504_librivox/dreamofgerontius_2_newman_64kb.mp3",
+   "s": 2331,
+   "r": "ToddHW, Alan Mapstone, Larry Wilson, Brian Fullen, Agnes Robert Behr, ShrimpPhish, Jon Hunter"
+  }
+ ]
+}

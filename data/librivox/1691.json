@@ -1,0 +1,491 @@
+{
+ "id": 1691,
+ "title": "City of God",
+ "url": "https://librivox.org/the-city-of-god-by-st-augustine-of-hippo/",
+ "zip": "https://archive.org/compress/city_of_god_ds_librivox/formats=64KBPS MP3&file=/city_of_god_ds_librivox.zip",
+ "sections": [
+  {
+   "n": 1,
+   "t": "Book I: Preface; Chapters 1-15",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_01a_augustine_64kb.mp3",
+   "s": 2826,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 2,
+   "t": "Book I: Chapters 16-36",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_01b_augustine_64kb.mp3",
+   "s": 2924,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 3,
+   "t": "Book II: Chapters 1-17",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_02a_augustine_64kb.mp3",
+   "s": 2451,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 4,
+   "t": "Book II: Chapters 18-29",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_02b_augustine_64kb.mp3",
+   "s": 2815,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 5,
+   "t": "Book III: Chapters 1-16",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_03a_augustine_64kb.mp3",
+   "s": 2595,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 6,
+   "t": "Book III: Chapters 17-31",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_03b_augustine_64kb.mp3",
+   "s": 2692,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 7,
+   "t": "Book IV: Chapters 1-18",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_04a_augustine_64kb.mp3",
+   "s": 2618,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 8,
+   "t": "Book IV: Chapters 19-34",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_04b_augustine_64kb.mp3",
+   "s": 2507,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 9,
+   "t": "Book V: Preface; Chapters 1-12",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_05a_augustine_64kb.mp3",
+   "s": 3247,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 10,
+   "t": "Book V: Chapters 13-26",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_05b_augustine_64kb.mp3",
+   "s": 2882,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 11,
+   "t": "Book VI: Preface; Chapters 1-6",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_06a_augustine_64kb.mp3",
+   "s": 1810,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 12,
+   "t": "Book VI: Chapters 7-12",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_06b_augustine_64kb.mp3",
+   "s": 1806,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 13,
+   "t": "Book VII: Preface; Chapters 1-17",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_07a_augustine_64kb.mp3",
+   "s": 2821,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 14,
+   "t": "Book VII: Chapters 18-35",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_07b_augustine_64kb.mp3",
+   "s": 2731,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 15,
+   "t": "Book VIII: Chapters 1-14",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_08a_augustine_64kb.mp3",
+   "s": 2745,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 16,
+   "t": "Book VIII: Chapters 15-27",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_08b_augustine_64kb.mp3",
+   "s": 3048,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 17,
+   "t": "Book IX: Chapters 1-12",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_09a_augustine_64kb.mp3",
+   "s": 1653,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 18,
+   "t": "Book IX: Chapters 13-23",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_09b_augustine_64kb.mp3",
+   "s": 1807,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 19,
+   "t": "Book X: Chapters 1-17",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_10a_augustine_64kb.mp3",
+   "s": 3330,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 20,
+   "t": "Book X: Chapters 18-32",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_10b_augustine_64kb.mp3",
+   "s": 3540,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 21,
+   "t": "Book XI: Chapters 1-9",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_11a_augustine_64kb.mp3",
+   "s": 1491,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 22,
+   "t": "Book XI: Chapters 10-22",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_11b_augustine_64kb.mp3",
+   "s": 1960,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 23,
+   "t": "Book XI: Chapters 23-34",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_11c_augustine_64kb.mp3",
+   "s": 2290,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 24,
+   "t": "Book XII: Chapters 1-9",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_12a_augustine_64kb.mp3",
+   "s": 1783,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 25,
+   "t": "Book XII: Chapters 10-18",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_12b_augustine_64kb.mp3",
+   "s": 1869,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 26,
+   "t": "Book XII: Chapters 19-27",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_12c_augustine_64kb.mp3",
+   "s": 1585,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 27,
+   "t": "Book XIII: Chapters 1-11",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_13a_augustine_64kb.mp3",
+   "s": 1649,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 28,
+   "t": "Book XIII: Chapters 12-21",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_13b_augustine_64kb.mp3",
+   "s": 1809,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 29,
+   "t": "Book XIII: Chapters 22-24",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_13c_augustine_64kb.mp3",
+   "s": 1509,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 30,
+   "t": "Book XIV: Chapters 1-7",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_14a_augustine_64kb.mp3",
+   "s": 1352,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 31,
+   "t": "Book XIV: Chapters 8-12",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_14b_augustine_64kb.mp3",
+   "s": 1782,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 32,
+   "t": "Book XIV: Chapters 13-21",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_14c_augustine_64kb.mp3",
+   "s": 1620,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 33,
+   "t": "Book XIV: Chapters 22-28",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_14d_augustine_64kb.mp3",
+   "s": 1428,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 34,
+   "t": "Book XV: Chapters 1-7",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_15a_augustine_64kb.mp3",
+   "s": 1660,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 35,
+   "t": "Book XV: Chapters 8-14",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_15b_augustine_64kb.mp3",
+   "s": 1841,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 36,
+   "t": "Book XV: Chapters 15-21",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_15c_augustine_64kb.mp3",
+   "s": 2071,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 37,
+   "t": "Book XV: Chapters 22-27",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_15d_augustine_64kb.mp3",
+   "s": 1684,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 38,
+   "t": "Book XVI: Chapters 1-8",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_16a_augustine_64kb.mp3",
+   "s": 1911,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 39,
+   "t": "Book XVI: Chapters 9-20",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_16b_augustine_64kb.mp3",
+   "s": 1947,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 40,
+   "t": "Book XVI: Chapters 21-31",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_16c_augustine_64kb.mp3",
+   "s": 1883,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 41,
+   "t": "Book XVI: Chapters 32-43",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_16d_augustine_64kb.mp3",
+   "s": 2324,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 42,
+   "t": "Book XVII: Chapters 1-4",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_17a_augustine_64kb.mp3",
+   "s": 1908,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 43,
+   "t": "Book XVII: Chapters 5-8",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_17b_augustine_64kb.mp3",
+   "s": 1754,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 44,
+   "t": "Book XVII: Chapters 9-16",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_17c_augustine_64kb.mp3",
+   "s": 1697,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 45,
+   "t": "Book XVII: Chapters 17-24",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_17d_augustine_64kb.mp3",
+   "s": 1673,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 46,
+   "t": "Book XVIII: Chapters 1-11",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_18a_augustine_64kb.mp3",
+   "s": 1701,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 47,
+   "t": "Book XVIII: Chapters 12-22",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_18b_augustine_64kb.mp3",
+   "s": 1799,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 48,
+   "t": "Book XVIII: Chapters 23-31",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_18c_augustine_64kb.mp3",
+   "s": 1501,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 49,
+   "t": "Book XVIII: Chapters 32-39",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_18d_augustine_64kb.mp3",
+   "s": 1904,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 50,
+   "t": "Book XVIII: Chapters 40-47",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_18e_augustine_64kb.mp3",
+   "s": 1893,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 51,
+   "t": "Book XVIII: Chapters 48-54",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_18f_augustine_64kb.mp3",
+   "s": 1698,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 52,
+   "t": "Book XIX: Chapters 1-4",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_19a_augustine_64kb.mp3",
+   "s": 2041,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 53,
+   "t": "Book XIX: Chapters 5-12",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_19b_augustine_64kb.mp3",
+   "s": 1710,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 54,
+   "t": "Book XIX: Chapters 13-21",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_19c_augustine_64kb.mp3",
+   "s": 1999,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 55,
+   "t": "Book XIX: Chapters 22-28",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_19d_augustine_64kb.mp3",
+   "s": 1599,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 56,
+   "t": "Book XX: Chapters 1-6",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_20a_augustine_64kb.mp3",
+   "s": 1614,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 57,
+   "t": "Book XX: Chapters 7-11",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_20b_augustine_64kb.mp3",
+   "s": 2063,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 58,
+   "t": "Book XX: Chapters 12-19",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_20c_augustine_64kb.mp3",
+   "s": 1972,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 59,
+   "t": "Book XX: Chapters 20-24",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_20d_augustine_64kb.mp3",
+   "s": 2197,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 60,
+   "t": "Book XX: Chapters 25-30",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_20e_augustine_64kb.mp3",
+   "s": 1840,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 61,
+   "t": "Book XXI: Chapters 1-6",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_21a_augustine_64kb.mp3",
+   "s": 1825,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 62,
+   "t": "Book XXI: Chapters 7-14",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_21b_augustine_64kb.mp3",
+   "s": 2231,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 63,
+   "t": "Book XXI: Chapters 15-24",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_21c_augustine_64kb.mp3",
+   "s": 2486,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 64,
+   "t": "Book XXI: Chapters 25-27",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_21d_augustine_64kb.mp3",
+   "s": 2345,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 65,
+   "t": "Book XXII: Chapters 1-7",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_22a_augustine_64kb.mp3",
+   "s": 1908,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 66,
+   "t": "Book XXII: Chapters 8-9",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_22b_augustine_64kb.mp3",
+   "s": 2526,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 67,
+   "t": "Book XXII: Chapters 10-19",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_22c_augustine_64kb.mp3",
+   "s": 2277,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 68,
+   "t": "Book XXII: Chapters 20-25",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_22d_augustine_64kb.mp3",
+   "s": 2705,
+   "r": "Darren L. Slider"
+  },
+  {
+   "n": 69,
+   "t": "Book XXII: Chapters 26-30",
+   "mp3": "https://archive.org/download/city_of_god_ds_librivox/cityofgod_22e_augustine_64kb.mp3",
+   "s": 2474,
+   "r": "Darren L. Slider"
+  }
+ ]
+}

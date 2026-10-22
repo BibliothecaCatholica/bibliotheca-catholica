@@ -1,0 +1,71 @@
+{
+ "id": 5381,
+ "title": "Ballad of the White Horse (Version 2)",
+ "url": "https://librivox.org/the-ballad-of-the-white-horse-version-2-by-g-k-chesterton/",
+ "zip": "https://archive.org/compress/balladwhitehorse_1404_librivox/formats=64KBPS MP3&file=/balladwhitehorse_1404_librivox.zip",
+ "sections": [
+  {
+   "n": 0,
+   "t": "Prefatory Note &amp; Dedication",
+   "mp3": "https://archive.org/download/balladwhitehorse_1404_librivox/balladofthewhitehorse_00_chesterton_64kb.mp3",
+   "s": 457,
+   "r": "Gayle Cato"
+  },
+  {
+   "n": 1,
+   "t": "Book I - The Vision of the King",
+   "mp3": "https://archive.org/download/balladwhitehorse_1404_librivox/balladofthewhitehorse_01_chesterton_64kb.mp3",
+   "s": 680,
+   "r": "Gayle Cato"
+  },
+  {
+   "n": 2,
+   "t": "Book II - The Gathering of the Chiefs",
+   "mp3": "https://archive.org/download/balladwhitehorse_1404_librivox/balladofthewhitehorse_02_chesterton_64kb.mp3",
+   "s": 684,
+   "r": "Gayle Cato"
+  },
+  {
+   "n": 3,
+   "t": "Book III - The Harp of Alfred",
+   "mp3": "https://archive.org/download/balladwhitehorse_1404_librivox/balladofthewhitehorse_03_chesterton_64kb.mp3",
+   "s": 971,
+   "r": "Gayle Cato"
+  },
+  {
+   "n": 4,
+   "t": "Book IV - The Woman in the Forest",
+   "mp3": "https://archive.org/download/balladwhitehorse_1404_librivox/balladofthewhitehorse_04_chesterton_64kb.mp3",
+   "s": 754,
+   "r": "Gayle Cato"
+  },
+  {
+   "n": 5,
+   "t": "Book V - Ethandune: The First Stroke",
+   "mp3": "https://archive.org/download/balladwhitehorse_1404_librivox/balladofthewhitehorse_05_chesterton_64kb.mp3",
+   "s": 715,
+   "r": "Gayle Cato"
+  },
+  {
+   "n": 6,
+   "t": "Book VI - Ethandune: The Slaying of the Chiefs",
+   "mp3": "https://archive.org/download/balladwhitehorse_1404_librivox/balladofthewhitehorse_06_chesterton_64kb.mp3",
+   "s": 715,
+   "r": "Gayle Cato"
+  },
+  {
+   "n": 7,
+   "t": "Book VII - Ethandune: The Last Charge",
+   "mp3": "https://archive.org/download/balladwhitehorse_1404_librivox/balladofthewhitehorse_07_chesterton_64kb.mp3",
+   "s": 900,
+   "r": "Gayle Cato"
+  },
+  {
+   "n": 8,
+   "t": "Book VIII - The Scouring of the Horse",
+   "mp3": "https://archive.org/download/balladwhitehorse_1404_librivox/balladofthewhitehorse_08_chesterton_64kb.mp3",
+   "s": 874,
+   "r": "Gayle Cato"
+  }
+ ]
+}

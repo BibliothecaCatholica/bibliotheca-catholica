@@ -48,3 +48,9 @@ The reading room is the primary way to read. EPUB and PDF files in the St. Isido
 - the book has an EPUB or PDF file.
 
 Commentaries, guides, selections, and numbered volumes are excluded, and Anglican (Lewis) reference records are never matched. Matched works show **Other formats** on their work page. Matched Isidore books whose work has a hosted reading edition show **Read online here**. Review the printout whenever the catalog changes; translations may differ between the two paths.
+
+## Reading access audit
+
+Every selected work now has an original description and a direct full-text or sample access path. Lewis's eight bibliography records remain as publication references, with two PBS excerpts and six Google Books/Play samples in a separate `readingLinks` field. Samples never count as hosted or complete texts. Library searches are labeled as searches, with no promise of holdings or borrowing eligibility. The validator rejects a reference-only work without a reading sample.
+
+The collection-wide audit tool, `tools/audit_collection.py`, inventories the selected catalog, all guide/list entries, New Advent work links, supplemental collections, author reading links, and imported book metadata. Its report distinguishes HTTP reachability from a bibliographic review. Imported download files are not fetched in bulk. See `docs/COLLECTION-REVIEW.md` for findings and unresolved checks.

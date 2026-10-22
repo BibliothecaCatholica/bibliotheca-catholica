@@ -32,9 +32,10 @@ test('a companion work or adaptation cannot become the primary reading edition',
  assert.equal(guides.works(data.editions.find(w=>w.id==='fatherbrown'),catalog)[0].id,'innocence-father-brown');
 });
 test('reading filters distinguish hosted texts, external reading, EPUBs, and references',()=>{
- assert.deepEqual(guides.available(data.editions.find(w=>w.id==='confessions'),catalog,options),{here:true,online:true,epub:true});
- assert.deepEqual(guides.available({workIds:['dei-verbum']},catalog,options),{here:false,online:true,epub:false});
- assert.deepEqual(guides.available({workIds:['lewis-mere-christianity']},catalog,options),{here:false,online:false,epub:false});
+ assert.deepEqual(guides.available(data.editions.find(w=>w.id==='confessions'),catalog,options),{here:true,online:true,sample:false,epub:true});
+ assert.deepEqual(guides.available({workIds:['dei-verbum']},catalog,options),{here:false,online:true,sample:false,epub:false});
+ assert.deepEqual(guides.available({workIds:['lewis-mere-christianity']},catalog,options),{here:false,online:false,sample:true,epub:false});
  assert(guides.matches({t:'Story of a Soul',a:'Thérèse of Lisieux'},'therese soul'));
+ assert(guides.matches({t:'Mere Christianity',a:'C. S. Lewis'},'CS Lewis'));
  assert(!guides.matches({t:'Confessions',a:'Augustine'},'therese'));
 });

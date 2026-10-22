@@ -30,3 +30,4 @@ input::placeholder{color:var(--muted);opacity:1}
 @media(max-width:600px){.guide-toolbar>label{width:100%}.ed-head h2{font-size:24px}.ed-card{padding:18px}.guide-copy .reading-actions{gap:12px}.rec{padding-right:14px}.rl-tabs{gap:8px}.g-lists{grid-template-columns:1fr}}
 
 .ed-list>.ed-card:only-child{grid-column:1/-1;max-width:900px}
+.library-card .reading-actions{font:500 13px var(--sans);margin-top:14px}.library-card .reading-action{padding:9px 11px;border:1px solid var(--line);border-radius:5px;text-decoration:none}.library-finders{font:500 12px var(--sans);line-height:1.6;margin-top:14px}.library-finders a{overflow-wrap:anywhere}

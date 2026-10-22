@@ -22,7 +22,7 @@
 {
 "name": "Aquinas Institute — Opera Omnia online (aquinas.cc)",
 "category": "translation",
-"url": "https://aquinas.cc/la/en/~ST.I",
+"url": "https://aquinas.cc/",
 "github": null,
 "license": "Free to read online; print edition sold (copyright held)",
 "languages": "Latin -> English (also Polish and other parallel editions)",
@@ -39,7 +39,7 @@
 {
 "name": "Aquinas Institute — Augustine online (augustinus.cc)",
 "category": "translation",
-"url": "https://augustinus.cc/la/en/",
+"url": "https://augustinus.cc/",
 "github": null,
 "license": "Free to read online",
 "languages": "Latin -> English",

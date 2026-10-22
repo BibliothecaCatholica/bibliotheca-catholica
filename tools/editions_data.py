@@ -367,3 +367,12 @@ for work in W:
         work['free'].append(('Summa Theologica (CCEL)', CC+'aquinas/summa'))
     if work.get('multi') or work['id'] in ('apfathers','johncross','fatherbrown','ckaquinas','belloc'):
         work['readingNote'] = 'This shelf covers more than one work. Each online link identifies the particular title available; it may not include the whole collection.'
+
+# Additional free reading editions verified during the collection audit.
+for work in W:
+    if work['id'] == 'spiritualcombat':
+        work['free'] = [('EPUB edition: St. Isidore library', 'https://isidore.co/calibre/legacy/book/8123/CalibreLibrary')]
+    elif work['id'] == 'truedevotion':
+        work['free'] = [('Read PDF: Montfort Missionaries', 'https://www.montfort.org/content/uploads/pdf/PDF_EN_26_1.pdf')]
+    elif work['id'] == 'bible':
+        work['free'].append(('Knox Bible: New Advent', 'https://www.newadvent.org/bible/'))

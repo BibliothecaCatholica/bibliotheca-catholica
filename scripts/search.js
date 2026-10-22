@@ -1,7 +1,7 @@
 /* Shared, dependency-free search rules. Imported records never enter selected search. */
 (function(root){
   'use strict';
-  function norm(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
+  function norm(s){return String(s||'').replace(/\b([a-z])\.\s*([a-z])\./gi,'$1$2').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
   function imported(e){return e.type==='Book'||e.type==='isidore.co folder'}
   function search(entries,q,scope,limit){
     var query=norm(q),tokens=query.split(/\s+/).filter(Boolean);

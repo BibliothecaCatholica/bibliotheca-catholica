@@ -159,7 +159,7 @@ L.extend([
        ('fides-ratio','John Paul II on the relationship of faith and reason.'),
        ('rerum-novarum','Leo XIII on workers, property, and the social question.')]]),
  dict(id='related-christian', t='Related Christian Voices', sub='C. S. Lewis in conversation with Catholic readers', ic='✒', audience='Christian apologetics and literature',
-      start='Lewis was Anglican. Begin with Mere Christianity for apologetics or The Screwtape Letters for imaginative moral reflection. These entries provide bibliographic references rather than hosted full texts.',
+      start='Lewis was Anglican. Begin with Mere Christianity for apologetics or The Screwtape Letters for imaginative moral reflection. Open the labeled excerpt or limited preview for each title, then check a library for a complete copy.',
       items=[dict(workIds=[w], b=b) for w,b in [
        ('lewis-mere-christianity','An account of shared Christian belief; read alongside Catholic sources when questions of doctrine arise.'),
        ('lewis-screwtape-letters','A fictional treatment of temptation and the habits of the spiritual life.'),

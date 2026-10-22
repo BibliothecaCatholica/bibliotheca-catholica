@@ -11,7 +11,7 @@ Read this before changing the site. It applies to every contributor and coding a
 
 ## Google Analytics (GA4)
 
-- Measurement ID **`G-HFG445Y1LT`**. Every HTML page must carry **exactly one** copy of the standard Google tag (gtag.js) snippet, placed immediately after `<head>`.
+- Measurement ID **`G-HFG445Y1LT`**. Every HTML content page must carry **exactly one** copy of the standard Google tag (gtag.js) snippet, placed immediately after `<head>`. The owner-supplied Search Console verification file `google3b007babfa8923a4.html` is a verification response, not a content page: retain its exact original bytes, add no analytics or HTML wrapper, and keep it published at the site root.
 - The single source is `index.html`. `tools/build_static.py` copies it into every static page and into `404.html` (it fails if `index.html` has zero or two tags). Never paste the tag into generated pages by hand, never remove it, and never add a second tag, Google Tag Manager container, or another analytics script without the owner's approval.
 - The site is a hash-route SPA. The `gtag('config', ...)` call sends the first page view; `app.js` sends `gtag('event','page_view',...)` (title, full URL, and path with hash) only on later `hashchange` events, guarded by `typeof gtag==='function'`. Do not add `send_page_view` changes or a second page-view listener, or visits will be double-counted.
 - The privacy disclosure is the "Privacy" section at the end of the Fidelity & Editorial Policy (`tools/build_editorial_flags.py`, `#/policy`, `/policy/`), linked from the footer as "Privacy & Analytics". Keep it accurate if analytics change. `tests/test_analytics.py` checks all of this.

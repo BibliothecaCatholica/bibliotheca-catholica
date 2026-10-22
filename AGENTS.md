@@ -5,6 +5,7 @@ Read this before changing the site. It applies to every contributor and coding a
 ## Architecture
 
 - **Static single-page app.** Vanilla HTML, CSS, and JavaScript: `index.html`, `app.js` (router and most views), `scripts/library.js` (reading room, work pages, LibriVox buttons), `scripts/guides.js` (edition guides and reading paths), `scripts/search.js`, `styles.css` plus `styles/`. Routes are hashes (`#/author/<id>`, `#/work/<id>`, `#/read/<work>/<edition>`, `#/editions/<id>`, `#/reading/<id>`, `#/isidore/book/<n>`, `#/policy`).
+- **Reader (v11):** `scripts/reader.js` (loaded after `scripts/library.js`, before `app.js`) and `styles/reader.css` add highlights and notes, the sticky edition banner with progress, the contents sidebar (sticky at ≥1100px, a drawer below), keyboard shortcuts, the mobile bottom bar, Print / save as PDF, and Continue reading. `scripts/library.js` `read()` calls `BCReader.enhance(...)` after rendering a section; the home page and Discover & Read call `BCReader.continueRow()`. Pure logic lives in `BCReader.core` and is tested in `tests/reader.test.js`. See "Reader storage and features" below.
 - **Data lives in files, not a server.** `data/catholic-hub.json` = `data/data.js` (authors, resources, eras), `data/library.json` → `data/library.js` (selected works and editions), `data/guide.js` (edition guides and reading lists, built from `tools/editions_data.py` and `tools/reading_lists.py`), `data/reading-options.json/.js` (EPUB options), `data/isidore-matches.*`, `data/librivox.*`, `data/editorial-flags.*`, and `data/books.js` (the 6,633-record Isidore Index, lazy-loaded, about 1.2 MB). Each `.js` file is a generated copy of its `.json`; never edit only one of them.
 - **No build step to serve.** The one generator that must be rerun is `python3 tools/build_static.py`. It pre-renders about 630 static entry pages (`author/`, `work/`, `editions/`, `reading/`, sections, `policy/`) from `index.html`, and it writes `sitemap.xml`, `robots.txt`, and `404.html`. **Rerun it whenever you change `index.html` (header, footer, script tags, meta), routes, authors, works, edition guides, reading lists, or editorial flags, and commit the output.** CI fails if the output is stale.
 - When you bump the `?v=` cache-busting query on script tags in `index.html`, keep `data/data.js` as a script tag: `build_static.py` inserts `window.BC_BOOT` right before it.
@@ -16,6 +17,26 @@ Read this before changing the site. It applies to every contributor and coding a
 - The site is a hash-route SPA. The `gtag('config', ...)` call sends the first page view; `app.js` sends `gtag('event','page_view',...)` (title, full URL, and path with hash) only on later `hashchange` events, guarded by `typeof gtag==='function'`. Do not add `send_page_view` changes or a second page-view listener, or visits will be double-counted.
 - The privacy disclosure is the "Privacy" section at the end of the Fidelity & Editorial Policy (`tools/build_editorial_flags.py`, `#/policy`, `/policy/`), linked from the footer as "Privacy & Analytics". Keep it accurate if analytics change. `tests/test_analytics.py` checks all of this.
 - Google Search Console verifies the domain by DNS TXT record (owner-managed DNS) or by this GA tag; do not add or remove `google*.html` verification files or verification meta tags without the owner's approval.
+
+## Reader storage and features (v11)
+
+Everything a reader saves stays in that browser's `localStorage`; nothing is sent to this site, Google, or anyone else. Keep it that way (no sync, no accounts, no analytics events containing notes or quotes), and keep the Privacy section sentence in `tools/build_editorial_flags.py` accurate.
+
+| Key | Value | Written by |
+|---|---|---|
+| `bc-notes:<workId>/<editionId>` | `{v:1,items:[{id,s,a:{start,end,exact,prefix,suffix,p,po},c,n,ct,ut}]}`: highlights and notes. `a` is a text-quote anchor: `exact` plus 40 characters of `prefix`/`suffix`, offsets within the section text (paragraphs joined by a blank line), `p` = global paragraph index of the start, and `po` = offset in that paragraph. `c` is `yellow`, `green`, `blue`, or `pink`; `n` is the note. | `scripts/reader.js` |
+| `bc-recent` | Continue reading list, newest first, at most 8: `[{w,e,p,n,t,title,author}]` (`p` section index, `n` section count). | `scripts/reader.js` |
+| `bc-reading:<editionId>` | Saved section index. | `scripts/library.js` |
+| `bc:reader-size`, `bc:reader-spacing` | Display preferences. | `scripts/library.js` |
+| `bc-listen:<workId>` | Listen dock state (recording, chapter, time, open). | `scripts/library.js` |
+| `hub-theme` | `light` or `dark`. | `app.js` |
+
+- **Anchoring:** highlights resolve by offset first, then by searching the section for the exact quote and choosing the occurrence whose prefix and suffix match best. Sections are 35 paragraphs (`size` in `read()`); `p` lets highlights find their section even if that size changes. If a passage can no longer be found, My notes still lists it as unplaced. Do not change `splitText()` or the `reading-p-<index>` paragraph ids without a migration.
+- **My notes panel:** lists a work's highlights, jumps to them, and edits or deletes them. It exports notes as Markdown or plain text, and backs up or restores everything (notes, Continue reading, saved places, and preferences) as JSON (`format: "bibliotheca-catholica-reader-backup"`, merged by highlight id, newer edit wins).
+- **Shortcuts:** ← or k (previous section), → or j (next), / (find in work, overrides the site search only in the reader), t (contents), n (notes), Esc (close a panel), ? (help). `BCReader.core.shortcutAction()` ignores keys while typing in inputs, textareas, selects, contenteditable, or media controls, and with Ctrl, Cmd, or Alt.
+- **Edition banner:** "Reading: <title>, tr. <translator>, Project Gutenberg #N" (from `editionLine()`), with "Section X of Y" and a percentage bar. On screens ≤760px it collapses to a one-line chip pinned at the top, the site header scrolls away, and a bottom bar (Prev, Contents, Notes, Find, Next; 44px targets; safe-area insets) hides on scroll down. The Listen dock sits above that bar and moves with it.
+- **Print:** `styles/reader.css` has the print stylesheet. "Print / save as PDF" prints the current section or the whole work, and the printout must keep the edition line and the Project Gutenberg license notice (the whole-work printout repeats the notice at the start and end). Never hide `.pg-notice` or `.print-edition` in print.
+- **Accessibility:** reader controls have labels, panels move focus in and restore it on close, `:focus-visible` rings are on, and reader text meets 4.5:1 contrast in light and dark (reader-scoped color fixes are at the end of `styles/reader.css`).
 
 ## Files that must never be deleted or moved
 
@@ -56,8 +77,8 @@ Read this before changing the site. It applies to every contributor and coding a
 npm run build                         # library.js and guide.js must not change afterward
 python3 tools/build_static.py         # static pages, sitemap, and robots must not change afterward
 git diff --exit-code                  # nothing stale
-npm test                              # node tests plus tests/test_*.py (editorial flags, v9 crawlability, catalog, analytics)
-node --check app.js && node --check scripts/library.js && node --check scripts/guides.js && node --check scripts/search.js
+npm test                              # node tests (incl. reader anchoring and shortcut guard) plus tests/test_*.py (editorial flags, v9 crawlability, catalog, analytics)
+node --check app.js && node --check scripts/reader.js && node --check scripts/library.js && node --check scripts/guides.js && node --check scripts/search.js
 ```
 
-Optional network checks: `python3 tools/check_links.py` (writes `docs/link-health.*`) and `python3 tools/check_library_links.py --output /tmp/source-links.json`. Then preview with `npm run dev` and check the home page, an author page, `/policy/`, a flagged book (for example `#/isidore/book/3895`), and a reading-room work with a Listen button.
+Optional network checks: `python3 tools/check_links.py` (writes `docs/link-health.*`) and `python3 tools/check_library_links.py --output /tmp/source-links.json`. Then preview with `npm run dev` and check the home page, an author page, `/policy/`, a flagged book (for example `#/isidore/book/3895`), and a reading-room work with a Listen button (highlight a passage, reload, and check My notes, Continue reading on the home page, and the print preview).

@@ -72,6 +72,7 @@ def policy_html(counts,total):
      '<p>This site uses Google Analytics to count visits and understand which pages are used. Google may set cookies in your browser to do this. '
      'The site itself has no accounts and does not collect your name, email address, or other personal information. '
      'See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from sites that use its services</a>.</p>'
+     '<p>In the reading room, your highlights, notes, reading progress, Continue reading list, and display preferences stay in your browser’s local storage on this device. They are never sent to this site, to Google, or to anyone else, and you can export, back up, or clear them yourself.</p>'
      '</section>')
 def main():
     books=json.loads((ROOT/'data/books.json').read_text());have={str(b[0]):b for b in books['books']}

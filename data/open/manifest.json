@@ -28,7 +28,9 @@
     "isidore_book_url": "book page on isidore.co",
     "isidore_files_url": "folder of files on isidore.co",
     "download_urls": "per-format download URLs on isidore.co",
-    "page_url": "detail page on Bibliotheca Catholica"
+    "page_url": "detail page on Bibliotheca Catholica",
+    "editorial_flag": "editorial category if the record carries a context note (see #/policy); listing is not endorsement",
+    "context_note": "short factual context note shown on the record page"
    }
   },
   {

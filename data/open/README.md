@@ -19,7 +19,7 @@ Each dataset ships as both `.json` and `.csv`.
 
 | Dataset | Records | What it is |
 |---|---|---|
-| `isidore-index` | 6,633 | Every book in the St. Isidore (isidore.co) Calibre library: authors, catalog year, normalized language, author era, formats, subjects, series, publisher, and deep links (book page, files folder, per-format downloads). |
+| `isidore-index` | 6,633 | Every book in the St. Isidore (isidore.co) Calibre library: authors, catalog year, normalized language, author era, formats, subjects, series, publisher, and deep links (book page, files folder, per-format downloads), plus `editorial_flag` and `context_note` for the 54 records that carry an editorial context note (see the Fidelity & Editorial Policy, https://bibliothecacatholica.com/policy/). Listing is not endorsement. |
 | `isidore-folders` | 3,352 | Every author folder in isidore.co's CalibreLibrary, linked to a curated author where the match is confident. |
 | `authors` | 476 | Curated Catholic authors in 12 eras: dates, roles, our one-line summary, **Wikidata QIDs** (450 people, plus 5 work items for anonymous authors), and cross-links. |
 | `editions` | 111 | The "Which edition?" guide: recommended translations and editions of 69 classics, with ISBNs checked against Open Library. |

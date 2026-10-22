@@ -101,6 +101,8 @@ def main():
         elif k=='editions':extra='<ul>'+''.join('<li>'+a('/editions/'+e['id']+'/',e['t'])+'</li>' for e in guide['editions'])+'</ul>'
         elif k=='reading':extra='<ul>'+''.join('<li>'+a('/reading/'+L['id']+'/',L['t'])+'</li>' for L in guide['lists'])+'</ul>'
         out[k]=(t+' — Bibliotheca Catholica',d,head('Bibliotheca Catholica',t,d)+extra)
+    if flags.get('policy_html'):
+        out['policy']=('Fidelity & Editorial Policy — Bibliotheca Catholica','Bibliotheca Catholica is faithful to the Magisterium. Listing a book in the Isidore Index is not endorsement; flagged records carry context notes. How to report a concern.',flags['policy_html'])
     extra_pages=ROOT/'tools/static_extra.json'
     if extra_pages.exists():
         for k,v in json.loads(extra_pages.read_text()).items():out[k]=(v['title'],v['desc'],v['body'])

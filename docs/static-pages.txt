@@ -552,6 +552,7 @@ libraries/index.html
 library/index.html
 magisterium/index.html
 media/index.html
+policy/index.html
 prayers/index.html
 projects/index.html
 rare/index.html

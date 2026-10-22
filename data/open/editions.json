@@ -2,7 +2,7 @@
 "name": "editions",
 "description": "“Which edition?” guide: recommended translations and editions of Catholic classics, with verified ISBNs.",
 "license": "CC0-1.0",
-"generated": "2026-10-21",
+"generated": "2026-10-22",
 "count": 111,
 "fields": {
 "work_id": "work slug",

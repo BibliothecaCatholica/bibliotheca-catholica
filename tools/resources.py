@@ -75,7 +75,7 @@ add(L,'Liturgy','Divinum Officium (traditional breviary & missal)','https://www.
 add(L,'Liturgy','General Instruction of the Roman Missal (USCCB)','https://www.usccb.org/prayer-and-worship/the-mass/general-instruction-of-the-roman-missal','Norms for celebrating the Mass.','liturgy')
 add(L,'Liturgy','Roman Martyrology (Internet Archive)','https://archive.org/search?query=roman+martyrology','The Church\'s official list of saints (scans of English editions).','saints')
 add(L,'Liturgy','GregoBase — Gregorian chant database','https://gregobase.selapa.net/','Thousands of Gregorian chants in GABC/PDF.','chant,music')
-add(L,'Liturgy','Church Music Association of America — chant books','https://musicasacra.com/','Free PDFs of the Graduale Romanum, Liber Usualis, and more.','chant,music')
+add(L,'Liturgy','Church Music Association of America — chant books','https://churchmusicassociation.org/','Free PDFs of the Graduale Romanum, Liber Usualis, and more.','chant,music')
 add(L,'Liturgy','Choral Public Domain Library','https://www.cpdl.org/','Free sacred choral scores — Palestrina, Victoria, Byrd, and more.','music')
 add(L,'Saints & hagiography','Butler\'s Lives of the Saints (CCEL)','https://ccel.org/ccel/butler','Alban Butler\'s Lives of the Saints.','saints')
 add(L,'Saints & hagiography','The Golden Legend (Fordham Medieval Sourcebook)','https://sourcebooks.fordham.edu/basis/goldenlegend/','Jacobus de Voragine\'s medieval collection of saints\' lives.','saints,medieval')
@@ -126,7 +126,7 @@ add(B,'Learning','Word on Fire','https://www.wordonfire.org/','Bishop Barron\'s 
 add(B,'Publishers','Ignatius Press','https://www.ignatius.com/','Major orthodox Catholic publisher.','publisher')
 add(B,'Publishers','TAN Books','https://tanbooks.com/','Traditional Catholic classics.','publisher')
 add(B,'Publishers','Sophia Institute Press','https://www.sophiainstitute.com/','Catholic classics and contemporary works.','publisher')
-add(B,'Publishers','Angelico Press','https://angelicopress.org/','Catholic philosophy, theology, and literature.','publisher')
+add(B,'Publishers','Angelico Press','https://angelicopress.com/','Catholic philosophy, theology, and literature.','publisher')
 add(B,'Publishers','Catholic University of America Press','https://www.cuapress.org/','Academic theology, incl. the Fathers of the Church series.','publisher,scholarly')
 add(B,'Publishers','Emmaus Road Publishing','https://stpaulcenter.com/emmaus-road-publishing/','Scripture-centered publishing of the St. Paul Center.','publisher')
 add(B,'Publishers','Ascension','https://ascensionpress.com/','Bible and Catechism in a Year, Great Adventure Bible studies.','publisher')
@@ -134,6 +134,16 @@ add(B,'Education & homeschool','Seton Home Study School','https://www.setonhome.
 add(B,'Education & homeschool','Mother of Divine Grace School','https://modg.org/','Classical Catholic distance-learning program, K–12.','homeschool,classical')
 add(B,'Education & homeschool','Kolbe Academy','https://www.kolbe.org/','Classical Catholic homeschool and online school.','homeschool,classical')
 add(B,'Education & homeschool','Catholic Heritage Curricula','https://chcweb.com/','Gentle, affordable Catholic homeschool materials for young children.','homeschool')
+
+# v9 (2026-10-21): verified Catholic-relevant libraries from research/ebook-libraries.json
+add(B,'E-book libraries','CatholicLibrary.org','https://catholiclibrary.org/','Free full-text reading of the Fathers, Doctors, councils, and Scripture, with prayers and tradition texts.','ebooks,patristic,free')
+add(B,'E-book libraries','The Online Books Page (University of Pennsylvania)','https://onlinebooks.library.upenn.edu/','A curated, copyright-checked index of free online books; browse by subject for Catholic titles.','ebooks,index,free')
+add(B,'Scholarly','Jesuit Studies Digital Collection (Boston College)','https://jsdc.bc.edu/','Open-access books and sources on Jesuit history, spirituality, and education from the Portal to Jesuit Studies.','jesuit,scholarly')
+add(B,'Scholarly','Patrologia Graeca PDF index (Roger Pearse)','https://www.roger-pearse.com/weblog/patrologia-graeca-pg-pdfs/','Volume-by-volume links to free scans of Migne’s Patrologia Graeca for the Greek Fathers.','patristic,greek,migne')
+add(B,'E-book libraries','Biblioteca Electrónica Cristiana (multimedios.org)','https://multimedios.org/','Spanish-language Catholic library of classics, catechesis, and Church documents.','spanish,ebooks')
+add(B,'E-book libraries','Catholic eBooks Project','https://catholicebooks.wordpress.com/','A small, curated index of legal, free Catholic e-books by subject.','ebooks,index,free')
+add(B,'E-book libraries','Saints’ Books','https://www.saintsbooks.net/','Free PDF editions of public-domain spiritual classics and lives of the saints.','ebooks,saints,free')
+add(B,'E-book libraries','Biblioteca Virtual Miguel de Cervantes','https://www.cervantesvirtual.com/','Spanish digital library with the classics of the Spanish mystics and theologians (Teresa, John of the Cross, Luis de Granada).','spanish,mystics')
 P='media'
 def pod(cat,name,url,desc,tags='podcast'): add(P,cat,name,url,desc,tags)
 pod('Podcasts','The Bible in a Year (Fr. Mike Schmitz)','https://bibleinayear.fireside.fm/','Read the whole Bible in 365 daily episodes with Fr. Mike Schmitz and Jeff Cavins.','podcast,scripture,daily')
@@ -142,7 +152,7 @@ pod('Podcasts','Catholic Answers Live','https://www.catholic.com/audio/cal','Dai
 pod('Podcasts','Pints with Aquinas (Matt Fradd)','https://pintswithaquinas.com/','Interviews and debates on philosophy and the Faith.','podcast,video')
 pod('Podcasts','Word on Fire Show (Bishop Barron)','https://www.wordonfire.org/videos/wordonfire-show/','Bishop Barron and Brandon Vogt on faith and culture.','podcast')
 pod('Podcasts','The Thomistic Institute podcast','https://podcast.thomisticinstitute.org/','Lectures from leading Catholic scholars.','podcast,aquinas')
-pod('Podcasts','Godsplaining (Dominican friars)','https://www.godsplaining.com/','Dominican friars of the Province of St. Joseph discuss the Faith.','podcast,aquinas')
+pod('Podcasts','Godsplaining (Dominican friars)','https://www.youtube.com/@godsplaining','Dominican friars of the Province of St. Joseph discuss the Faith.','podcast,aquinas')
 pod('Podcasts','Catholic Stuff You Should Know','https://www.catholicstuffpodcast.com/','Young priests on doctrine, history, and culture.','podcast')
 pod('Podcasts','The Catholic Talk Show','https://catholictalkshow.com/','Three priests and a layman on culture and the Faith.','podcast')
 pod('Podcasts','Abiding Together','https://www.abidingtogetherpodcast.com/','Women\'s spirituality podcast.','podcast,women')
@@ -181,7 +191,7 @@ yt=[('Bishop Robert Barron','https://www.youtube.com/@BishopBarron','Sermons, co
 ('Enlightenment, Ltd.','https://www.youtube.com/@EnlightenmentLtd','Short, beautifully made films on Catholic history: saints, medieval monks, manuscripts, and popes, from a team of filmmakers and amateur historians.'),
 ]
 for n,u,d in yt: pod('YouTube',n,u,d,'video,youtube')
-N=[('Catholic News Agency','https://www.catholicnewsagency.com/','EWTN-owned Catholic news wire.'),('National Catholic Register','https://www.ncregister.com/','EWTN\'s Catholic newspaper.'),('The Pillar','https://www.pillarcatholic.com/','Investigative Catholic journalism.'),('Catholic World Report','https://www.catholicworldreport.com/','Ignatius Press news magazine.'),('First Things','https://www.firstthings.com/','Ecumenical journal of religion and public life.'),('Crisis Magazine','https://crisismagazine.com/','Catholic commentary magazine.'),('The Catholic Thing','https://www.thecatholicthing.org/','Daily Catholic commentary.'),('Aleteia','https://aleteia.org/','Catholic news and lifestyle in many languages.'),('America Magazine','https://www.americamagazine.org/','Jesuit weekly.'),('National Catholic Reporter','https://www.ncronline.org/','Independent Catholic news.'),('Catholic Herald','https://catholicherald.co.uk/','UK Catholic magazine.'),('OSV News','https://www.osvnews.com/','Catholic news service from Our Sunday Visitor.'),('Crux','https://cruxnow.com/','Independent news on the Vatican and the Church worldwide.'),('Catholic World News','https://www.catholicculture.org/news/','Daily headline digest from CatholicCulture.org.'),('ZENIT','https://zenit.org/','International news agency covering the Pope and the Holy See.'),('Agenzia Fides','https://www.fides.org/en','News agency of the Pontifical Mission Societies, focused on the missions.'),('The Tablet','https://www.thetablet.co.uk/','London Catholic weekly, founded in 1840.')]
+N=[('Catholic News Agency','https://www.catholicnewsagency.com/','EWTN-owned Catholic news wire.'),('National Catholic Register','https://www.ncregister.com/','EWTN\'s Catholic newspaper.'),('The Pillar','https://www.pillarcatholic.com/','Investigative Catholic journalism.'),('Catholic World Report','https://www.catholicworldreport.com/','Ignatius Press news magazine.'),('First Things','https://www.firstthings.com/','Ecumenical journal of religion and public life.'),('Crisis Magazine','https://crisismagazine.com/','Catholic commentary magazine.'),('The Catholic Thing','https://www.thecatholicthing.org/','Daily Catholic commentary.'),('Aleteia','https://aleteia.org/','Catholic news and lifestyle in many languages.'),('America Magazine','https://www.americamagazine.org/','Jesuit weekly.'),('National Catholic Reporter','https://www.ncronline.org/','Independent Catholic news.'),('Catholic Herald','https://thecatholicherald.com/','UK Catholic magazine.'),('OSV News','https://www.osvnews.com/','Catholic news service from Our Sunday Visitor.'),('Crux','https://cruxnow.com/','Independent news on the Vatican and the Church worldwide.'),('Catholic World News','https://www.catholicculture.org/news/','Daily headline digest from CatholicCulture.org.'),('ZENIT','https://zenit.org/','International news agency covering the Pope and the Holy See.'),('Agenzia Fides','https://www.fides.org/en','News agency of the Pontifical Mission Societies, focused on the missions.'),('The Tablet','https://www.thetablet.co.uk/','London Catholic weekly, founded in 1840.')]
 for n,u,d in N: pod('News & magazines',n,u,d,'news')
 Q='prayers'
 add(Q,'Daily','USCCB Daily Readings','https://bible.usccb.org/daily-bible-reading','Today\'s Mass readings from the approved lectionary with audio and a video reflection.','daily,readings')

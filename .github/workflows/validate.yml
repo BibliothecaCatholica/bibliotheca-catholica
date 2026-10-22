@@ -15,5 +15,7 @@ jobs:
           python-version: '3.12'
       - run: npm run build
       - run: git diff --exit-code -- data/library.js data/guide.js
+      - run: python3 tools/build_static.py
+      - run: git diff --exit-code && test -z "$(git status --porcelain -- sitemap.xml robots.txt 404.html docs/static-pages.txt author work editions reading policy)"
       - run: npm test
       - run: node --check app.js && node --check scripts/library.js && node --check scripts/guides.js

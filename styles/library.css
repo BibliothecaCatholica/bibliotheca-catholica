@@ -25,3 +25,21 @@ select,input,button{max-width:100%}.reader-tools select,#library-topic,#search-s
 .flagship.fs-secondary{background:var(--card);border-color:var(--line)}
 @media (max-width:900px){.reading-home{grid-template-columns:1fr}}
 @media (max-width:720px){.reading-home{padding:20px 16px}.rh-list{grid-template-columns:1fr}}
+
+/* v9 LibriVox listen buttons */
+.listen{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:.75rem 0}
+.listen-lbl{flex-basis:100%;font-size:.85rem;color:var(--muted,#6b5e57)}
+.listen.compact{margin:.5rem 0 0}
+.listen-btn{font-size:.9rem;max-width:100%;white-space:normal;text-align:left}
+
+/* Part B: editorial context notes and policy */
+.ef-badge{display:inline-block;margin-left:.4rem;padding:.05rem .45rem;border:1px solid #b07a2a;border-radius:999px;font-size:.72rem;font-family:Inter,system-ui,sans-serif;color:#7a4b0c;background:#fbf1de;text-decoration:none;vertical-align:middle;white-space:nowrap}
+[data-theme=dark] .ef-badge{color:#f2d59b;background:#3a2a12;border-color:#9a6b22}
+.ef-box{margin:1rem 0 1.25rem;padding:1rem 1.15rem;border:1px solid #b07a2a;border-left:5px solid #8b1e2d;border-radius:10px;background:#fdf7ea}
+[data-theme=dark] .ef-box{background:#2a2016;border-color:#8a6a35;border-left-color:#c0485a}
+.ef-h{font-family:Inter,system-ui,sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#8b1e2d;margin-bottom:.4rem}
+[data-theme=dark] .ef-h{color:#f0a0aa}
+.ef-cat{display:inline-block;margin-right:.4rem;padding:.05rem .45rem;border-radius:999px;background:#8b1e2d;color:#fff;text-transform:none;letter-spacing:0}
+.dh-quote{margin:.6rem 0;padding:.2rem 0 .2rem .9rem;border-left:3px solid #e9c46a;font-style:italic}
+.dh-quote p{margin:0}.dh-quote footer{font-style:normal;font-size:.85rem;margin-top:.2rem;opacity:.85}
+.policy h2{margin-top:1.4rem}

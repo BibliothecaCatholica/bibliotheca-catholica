@@ -2,12 +2,14 @@
 
 A clean, searchable master index of Catholic authors, Scripture, the Magisterium, prayers, references, podcasts, and the great digital libraries. A selected collection can be read on the site; the wider index links to its original sources.
 
+**Contributors and coding agents: read [AGENTS.md](AGENTS.md) first.** It covers the architecture, the files that must stay, the content rules, and the checks to run before a PR.
+
 ## Reading and discovery
 
 - **Discover & Read** `#/library`: 49 individual work records, including 22 hosted reading editions, eight Lewis titles, eight patristic writings/collections, and eight official Church documents.
 - **Reader** `#/read/<work>/<edition>`: text size, spacing, dark mode, source-heading navigation, full-text search, saved section, citation, and download/source links.
 - **Related Christian writers** `#/related`: C. S. Lewis, explicitly identified as Anglican.
-- Search defaults to the selected library. The full imported Isidore catalog remains available through its own scope and the Everything scope.
+- Search defaults to **Everything**, with selected works ranked first. The Selected library and Isidore Index scopes are available from the results page.
 - Read [catalog provenance and editorial boundaries](docs/CATALOG.md) before adding new editions.
 
 ### Develop and validate
@@ -57,3 +59,11 @@ The committed data snapshots remain usable. Some older ingestion scripts expect 
 ## Reading options and design refresh
 
 The navigation guide is now **Editions & Translations** (`#/editions`, existing links preserved). Additional EPUB options live in `data/reading-options.json` and its browser snapshot. See [the refresh notes](docs/READING-DESIGN-REFRESH.md) for source checks, UI changes, and validation.
+
+## Crawlability, link health, and audio (v9)
+
+- **Static entry pages.** `python3 tools/build_static.py` pre-renders `<route>/index.html` for every author, reading-room work, edition guide, reading list, and section (about 620 pages). Each is a copy of `index.html` with its own title, description, canonical URL, Open Graph and Twitter tags, and real content in `<main>`; `window.BC_BOOT` tells `app.js` which view to open, so `/author/g-k-chesterton/` and `/#/author/g-k-chesterton` show the same page. It also writes `sitemap.xml`, `robots.txt`, and `404.html` (which forwards other clean paths to the hash route). No build step is needed to serve the site: run the script after data changes and commit its output; CI fails if the output is stale. Isidore Index book pages are not pre-rendered.
+- **Per-route meta.** `app.js` updates the description, canonical URL, and Open Graph and Twitter tags after every view renders. The default share image `assets/og-image.png` (1200×630) is drawn typographically by `tools/make_og_image.py` with Pillow, using the site's Cormorant Garamond and EB Garamond fonts and colours.
+- **Link health.** `python3 tools/check_links.py` checks every outbound URL in the site data and scripts (with a sample of isidore.co book URLs) and writes `docs/link-health.json` and `docs/link-health.md`, classed as ok, redirect-offsite, soft-404/parked, client-error, server-error, blocked (401/403/429, usually bot protection), and timeout/error.
+- **LibriVox.** `python3 tools/fetch_librivox.py` matches reading-room works and edition guides to public-domain LibriVox recordings (title plus author, whole works only) and writes `data/librivox.json` and `data/librivox.js`. Work pages, the reader, and edition cards show “Listen” buttons linking to `https://librivox.org/…`.
+- **Shared hub data.** `tools/hubio.py` loads and saves `data/catholic-hub.json` and `data/data.js` together so the two copies stay identical.

@@ -2,6 +2,7 @@
 import json,csv,os,re,subprocess,datetime,urllib.parse,hashlib
 from pathlib import Path
 S=str(Path(__file__).resolve().parents[1]/'data')+'/';O=S+'open/';os.makedirs(O,exist_ok=True)
+EFL=json.load(open(S+'editorial-flags.json',encoding='utf-8'))['books'] if os.path.exists(S+'editorial-flags.json') else {}
 def loadjs(p,var):
     s=open(p,encoding='utf-8').read();i=s.index('=')+1;return json.loads(s[i:].strip().rstrip(';'))
 hub=json.load(open(S+'catholic-hub.json'));bk=json.load(open(S+'books.json'))
@@ -31,8 +32,8 @@ for r in bk['books']:
       formats=fm,subjects=[bk['tags'][i] for i in r[4]],series=bk['series'][r[5]] if r[5]>=0 else None,series_index=r[6] if r[5]>=0 else None,
       publisher=bk['publishers'][r[11]] if r[11]>=0 else None,
       isidore_book_url=bk['server']+f'legacy/book/{r[0]}/CalibreLibrary',isidore_files_url=bk['base']+urllib.parse.quote(fo)+'/'+urllib.parse.quote(sub)+'/',
-      download_urls=[bk['server']+f'get/{f}/{r[0]}/CalibreLibrary' for f in fm],page_url=SITE+f'#/isidore/book/{r[0]}'))
-F1={'id':'isidore.co Calibre book id','title':'title as catalogued','authors':'author names as catalogued (Calibre "Surname, Forename")','curated_author_ids':'ids of matching pages in authors.json','catalog_year':'Calibre pubdate year; often a scan or reprint date, NOT evidence of copyright status','era':'era id (see authors.json eras)','era_source':'"curated author page" or "catalog life dates" (inferred)','languages':'canonical language names','language_codes':'ISO 639-2/3 codes after normalization','formats':'file formats on isidore.co','subjects':'Calibre tags (up to 6, most common first)','series':'series','series_index':'number in series','publisher':'publisher','isidore_book_url':'book page on isidore.co','isidore_files_url':'folder of files on isidore.co','download_urls':'per-format download URLs on isidore.co','page_url':'detail page on Bibliotheca Catholica'}
+      download_urls=[bk['server']+f'get/{f}/{r[0]}/CalibreLibrary' for f in fm],page_url=SITE+f'#/isidore/book/{r[0]}',editorial_flag=(EFL.get(str(r[0])) or {}).get('flag'),context_note=(EFL.get(str(r[0])) or {}).get('note')))
+F1={'id':'isidore.co Calibre book id','title':'title as catalogued','authors':'author names as catalogued (Calibre "Surname, Forename")','curated_author_ids':'ids of matching pages in authors.json','catalog_year':'Calibre pubdate year; often a scan or reprint date, NOT evidence of copyright status','era':'era id (see authors.json eras)','era_source':'"curated author page" or "catalog life dates" (inferred)','languages':'canonical language names','language_codes':'ISO 639-2/3 codes after normalization','formats':'file formats on isidore.co','subjects':'Calibre tags (up to 6, most common first)','series':'series','series_index':'number in series','publisher':'publisher','isidore_book_url':'book page on isidore.co','isidore_files_url':'folder of files on isidore.co','download_urls':'per-format download URLs on isidore.co','page_url':'detail page on Bibliotheca Catholica','editorial_flag':'editorial category if the record carries a context note (see #/policy); listing is not endorsement','context_note':'short factual context note shown on the record page'}
 write('isidore-index',rows,list(F1),'Every book record in the St. Isidore (isidore.co) Calibre library, normalized: canonical languages, author era, and deep links. Files stay on isidore.co.',F1)
 # 2. Folders
 fold2={}

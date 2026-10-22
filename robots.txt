@@ -1,0 +1,6 @@
+# Bibliotheca Catholica
+User-agent: *
+Allow: /
+Disallow: /data/texts/
+
+Sitemap: https://bibliothecacatholica.com/sitemap.xml

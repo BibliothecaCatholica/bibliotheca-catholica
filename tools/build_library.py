@@ -7,6 +7,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def validate(catalog):
     assert catalog['schemaVersion'] == 1
+    archive = catalog.get('textArchive')
+    if archive:
+        assert archive['baseUrl'] == 'https://texts.bibliothecacatholica.com/texts/'
+        assert isinstance(archive['enabled'], bool)
     ids, editions = set(), set()
     authors = {a['id'] for a in json.loads((ROOT / 'data/catholic-hub.json').read_text())['authors']}
     for work in catalog['works']:

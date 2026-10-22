@@ -1,5 +1,9 @@
 # Catalog and reading editions
 
+## Document archive (October 22, 2026)
+
+The 22 hosted TXT editions are also published at `https://texts.bibliothecacatholica.com/texts/` from `BibliothecaCatholica/bibliotheca-texts`. `textArchive` in `data/library.json` controls the reader's preferred host. Original local paths, hashes, and source records remain authoritative; the reader falls back to local files on archive failure. Export with `python3 tools/build_text_archive.py --output /absolute/path/to/bibliotheca-texts`. The export preserves original bytes and includes provenance, a searchable directory, and a manifest. See `docs/PROJECT-REVIEW-2026-10-22.md` for the full assessment.
+
 `data/library.json` is the maintained source; `python3 tools/build_library.py` validates it and emits `data/library.js`. Both are committed so the site can still deploy as plain static files. There are no API keys, production server, database, or runtime package dependencies.
 
 Each **work** has an identity, author, subject, tradition, optional work date, and review status. Each **edition** has its own identity, language, credited contributor roles, source URL, access type, rights statement, and check date. A hosted **copy** additionally has a local text path and SHA-256 checksum. Unknown publication/translation dates and contributor roles are left unspecified. A Gutenberg digital-release date is not the work's composition date.

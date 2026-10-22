@@ -1,6 +1,11 @@
 (function(){
 'use strict';
 var C=window.LIBRARY_DATA,main=document.getElementById('main');
+function textUrl(e){return C.textArchive&&C.textArchive.enabled?C.textArchive.baseUrl+encodeURIComponent(e.text.split('/').pop()):e.text}
+function fetchReadingText(e){
+ var primary=textUrl(e),controller=new AbortController(),timer=setTimeout(function(){controller.abort()},8000);
+ return fetch(primary,{signal:controller.signal}).then(function(r){if(!r.ok)throw Error('Text unavailable');return r.text()}).catch(function(err){if(primary===e.text)throw err;return fetch(e.text).then(function(r){if(!r.ok)throw Error('Text unavailable');return r.text()})}).finally(function(){clearTimeout(timer)});
+}
 function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function link(url,label){return '<a target="_blank" rel="noopener" href="'+esc(url)+'">'+esc(label)+' ↗</a>'}
 function norm(v){return String(v||'').replace(/\b([a-z])\.\s*([a-z])\./gi,'$1$2').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
@@ -44,7 +49,7 @@ function read(render,id,editionId,part,anchor){
  if(!e||!e.text){work(render,id);return}
  var requestedHash=location.hash,key='bc-reading:'+e.id;
  render('<div class="page-head"><h1>'+esc(w.title)+'</h1><p role="status">Loading the reading edition…</p></div>','library');
- fetch(e.text).then(function(r){if(!r.ok)throw Error('Text unavailable');return r.text()}).then(function(raw){
+ fetchReadingText(e).then(function(raw){
   if(location.hash!==requestedHash)return;
   var blocks=splitText(raw),size=35,total=Math.ceil(blocks.length/size),saved=null;
   var startAt=blocks.findIndex(function(p){return /\*\*\* ?START OF (THE |THIS )?PROJECT GUTENBERG/i.test(p)});
@@ -61,5 +66,5 @@ function read(render,id,editionId,part,anchor){
   document.getElementById('reader-find').onsubmit=function(ev){ev.preventDefault();var term=document.getElementById('reader-term').value.trim().toLowerCase(),hits=[];if(term.length<2)return;blocks.forEach(function(p,i){var pos=p.toLowerCase().indexOf(term);if(pos>=0)hits.push({part:Math.floor(i/size),snippet:p.slice(Math.max(0,pos-65),pos+140)})});document.getElementById('reader-hits').innerHTML='<p>'+hits.length+' matching paragraphs'+(hits.length>50?' (first 50 shown)':'')+'</p><ul>'+hits.slice(0,50).map(function(h){return '<li><a href="'+base+'/'+h.part+'">Section '+(h.part+1)+'</a>: '+esc(h.snippet)+'</li>'}).join('')+'</ul>'};
  }).catch(function(){if(location.hash===requestedHash)render('<h1>The reading edition could not load</h1><p>Please try again, or '+link(e.source,'read at the source')+'.</p><a href="#/work/'+w.id+'">Edition details</a>','library')});
 }
-window.BCLibrary={listen:listen,listenEdition:function(id){return listen(LV.edition[id])},sampleLinks:sampleLinks,libraryLinks:libraryLinks,formatLinks:formatLinks,readHere:readHere,library:library,work:work,read:read,related:related,authorWorks:authorWorks,entries:C.works.map(function(w){return {type:'Selected work',t:w.title,s:w.author+' · '+w.category+' · '+w.tradition,h:'#/work/'+w.id,x:w.title+' '+w.author+' '+w.category+' '+(w.description||''),w:4}}).concat([{type:'Author',t:'C. S. Lewis',s:'Anglican · related Christian writer',h:'#/related',x:'C. S. Lewis cs lewis clive staples anglican apologetics',w:4}])};
+window.BCLibrary={textUrl:textUrl,fetchReadingText:fetchReadingText,listen:listen,listenEdition:function(id){return listen(LV.edition[id])},sampleLinks:sampleLinks,libraryLinks:libraryLinks,formatLinks:formatLinks,readHere:readHere,library:library,work:work,read:read,related:related,authorWorks:authorWorks,entries:C.works.map(function(w){return {type:'Selected work',t:w.title,s:w.author+' · '+w.category+' · '+w.tradition,h:'#/work/'+w.id,x:w.title+' '+w.author+' '+w.category+' '+(w.description||''),w:4}}).concat([{type:'Author',t:'C. S. Lewis',s:'Anglican · related Christian writer',h:'#/related',x:'C. S. Lewis cs lewis clive staples anglican apologetics',w:4}])};
 })();

@@ -14,6 +14,13 @@ def validate(catalog):
         ids.add(work['id'])
         assert work['title'] and work['author'] and work['category'] and work['tradition']
         assert not work.get('authorId') or work['authorId'] in authors
+        assert work['description'].strip(), f"Missing description: {work['id']}"
+        if all(e['access']=='reference' for e in work['editions']):
+            assert work.get('readingLinks'), f"Reference-only work needs a reading sample: {work['id']}"
+        for item in work.get('readingLinks', []):
+            assert item['kind'] in ['excerpt', 'preview'], work['id']
+            assert item['url'].startswith('https://')
+            assert item['label'] and item['note'] and item['checked']
         assert work['editions'], work['id']
         for edition in work['editions']:
             assert edition['id'] not in editions, edition['id']

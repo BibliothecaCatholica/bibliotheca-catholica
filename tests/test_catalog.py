@@ -29,6 +29,14 @@ class CatalogTests(unittest.TestCase):
         for w in self.catalog['works']:
             if w['id']=='practice-presence' or w['tradition']=='Anglican':
                 self.assertTrue(all(not e.get('text') for e in w['editions']))
+    def test_reference_only_work_requires_a_reading_sample(self):
+        work=next(w for w in self.catalog['works'] if w['tradition']=='Anglican')
+        work.pop('readingLinks', None)
+        with self.assertRaises(AssertionError):build.validate(self.catalog)
+    def test_samples_cannot_be_mislabeled_as_complete_text(self):
+        work=next(w for w in self.catalog['works'] if w['tradition']=='Anglican')
+        work['readingLinks'][0]['kind']='full-text'
+        with self.assertRaises(AssertionError):build.validate(self.catalog)
     def test_existing_hub_snapshots_agree(self):
         js=(ROOT/'data/data.js').read_text().split('=',1)[1].strip().rstrip(';')
         self.assertEqual(json.loads(js),json.loads((ROOT/'data/catholic-hub.json').read_text()))

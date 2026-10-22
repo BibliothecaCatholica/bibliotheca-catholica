@@ -25,7 +25,7 @@ def check(url):
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--output');args=parser.parse_args()
     catalog=json.loads((ROOT/'data/library.json').read_text())
-    urls=sorted({e['source'] for w in catalog['works'] for e in w['editions']})
+    urls=sorted({e['source'] for w in catalog['works'] for e in w['editions']} | {link['url'] for w in catalog['works'] for link in w.get('readingLinks',[])})
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
         results=list(pool.map(check,urls))
     report=dict(checked=datetime.datetime.now(datetime.timezone.utc).isoformat(),results=results)

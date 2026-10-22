@@ -58,7 +58,7 @@ This batch uses about 13 MB. GitHub Pages' 1 GB published-site limit and soft 10
 
 ## Validation and evidence
 
-The current suite passes 12 Node tests and 19 Python tests, including new export integrity and reader fallback checks. The static generator produces 627 entry pages. Deployment checks must also verify live file hashes, browser cross-origin loading, DNS, and HTTPS; offline tests alone establish none of those.
+The current suite passes 12 Node tests and 19 Python tests, including new export integrity and reader fallback checks. The static generator produces 627 entry pages. `python3 tools/verify_text_archive.py` checks deployed document hashes and cross-origin response headers against the maintained catalog. DNS, HTTPS, and browser loading remain separate deployment checks; offline tests alone establish none of those. Main-site TXT download links retain the existing same-origin files so they remain usable during DNS or certificate transitions; the archive directory supplies its own downloads.
 
 Supporting records: `docs/CATALOG.md`, `docs/COLLECTION-REVIEW.md`, `docs/collection-audit.json`, `docs/READING-GUIDES.md`, `docs/PALETTE-NAVIGATION.md`, and `AGENTS.md`.
 

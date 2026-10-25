@@ -21,7 +21,7 @@ SECTIONS={
  'related':('Related Christian writers','Christian writers outside the Catholic communion who are often read alongside the Catholic tradition, such as C. S. Lewis.'),
  'authors':('Catholic Authors','Hundreds of Catholic authors from the Apostolic Fathers to today, with dates, eras, short biographies, and links to their works online.'),
  'doctors':('Doctors of the Church','The Doctors of the Church, with their principal works and where to read them free online.'),
- 'timeline':('Timeline','Two thousand years of Catholic writers arranged by era, from the Apostolic Fathers to the present.'),
+ 'timeline':('Timeline of Saints & Writers','Saints and Catholic writers through the centuries, linked to their writings, biographies, reading editions, and sources.'),
  'scripture':('Sacred Scripture','Bibles in English, Latin, and the original languages; commentaries ancient and modern; daily readings.'),
  'magisterium':('Church Documents','Catechisms, ecumenical councils, papal encyclicals, canon law, and doctrinal documents, straight from the source.'),
  'references':('Reference Works','Encyclopedias, dictionaries, the Summa, patristic collections, liturgy, chant, saints, and apologetics.'),
@@ -142,6 +142,14 @@ def main():
         extra=''
         if k in('scripture','magisterium','references','media','libraries','prayers'):
             extra='<ul>'+''.join('<li>'+a(r['url'],r['name'],True)+' — '+E(r.get('desc',''))+'</li>' for r in hub['resources'] if r['section']==k)+'</ul>'
+        elif k=='timeline':
+            extra='<p>Authors are placed by their principal-work century; additional saints use sourced life dates. Undated and legendary figures remain outside the dated sequence. Writings by a person and biographies about them are listed separately in the interactive timeline.</p><p>'+a('/saints/','Saints & Hagiography')+' · '+a('/library/','Reading room')+'</p>'
+            for au in sorted(authors,key=lambda x:(x.get('century') or 999,x['name'])):
+                mine=[w for w in lib['works'] if w.get('authorId')==au['id']]
+                sa=saints_by_author.get(au['id'])
+                extra+='<h2>'+a('/author/'+au['id']+'/',au['name'])+'</h2><p>'+E(str(au.get('century','Unplaced'))+' century · principal work')+(' · '+E(s_status(sa)) if sa else '')+'</p>'
+                if mine:extra+='<ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>'
+            extra+='<h2>Additional saints and traditional figures</h2><ul>'+''.join('<li>'+a(s_href(x),x['name'])+' — '+E(s_status(x))+(' · '+E(FLAGL[x['historicity']['flag']]) if x.get('historicity') else '')+'</li>' for x in saints if not x.get('author_id') and x['id'] not in skip_auth)+'</ul>'
         elif k=='authors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors)+'</ul>'
         elif k=='library':extra='<ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title']+' — '+w['author'])+'</li>' for w in lib['works'])+'</ul>'
         elif k=='editions':extra='<ul>'+''.join('<li>'+a('/editions/'+e['id']+'/',e['t'])+'</li>' for e in guide['editions'])+'</ul>'

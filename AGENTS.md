@@ -103,6 +103,8 @@ Text on gradients (`.btn.gold`, `.sec-card .glyph`, `.avatar`) must also pass ag
 
 ## How to add things
 
+- **Connected timeline:** `scripts/timeline.js` joins authors and the existing saints guide, with by/about reading links and rights-gated read-here buttons. Keep historical flags and the undated group. See `docs/TIMELINE.md` and `tests/timeline.test.js`.
+
 - **A reading-room work or edition:** follow `docs/CATALOG.md`. Edit `data/library.json` (with rights evidence in `data/sources/`, plus `data/texts/` and SHA-256 if hosted), then run `npm run build`.
 - **An author or resource:** load, edit, and save with `tools/hubio.py` (`load()` and `save()`) so `catholic-hub.json` and `data.js` stay identical. Author ids are kebab-case slugs used in URLs.
 - **An edition guide or reading list:** edit `tools/editions_data.py` or `tools/reading_lists.py`, then run `npm run build`. Never add a flagged title.

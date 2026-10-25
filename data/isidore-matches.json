@@ -13,7 +13,8 @@
     "f": [
      "PDF",
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    }
   ],
   "rule-of-benedict": [
@@ -26,7 +27,8 @@
     "f": [
      "PDF",
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    }
   ],
   "imitation-of-christ": [
@@ -39,7 +41,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "public_domain_us"
    },
    {
     "id": 7544,
@@ -53,7 +56,8 @@
     "f": [
      "PDF",
      "EPUB"
-    ]
+    ],
+    "r": "link_only"
    }
   ],
   "story-of-a-soul": [
@@ -67,7 +71,8 @@
     "f": [
      "PDF",
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    },
    {
     "id": 6502,
@@ -79,7 +84,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    }
   ],
   "life-of-teresa": [
@@ -91,7 +97,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "public_domain_us"
    }
   ],
   "pensees": [
@@ -104,7 +111,8 @@
     "f": [
      "PDF",
      "EPUB"
-    ]
+    ],
+    "r": "link_only"
    },
    {
     "id": 4766,
@@ -114,7 +122,8 @@
     ],
     "f": [
      "PDF"
-    ]
+    ],
+    "r": "unknown"
    },
    {
     "id": 8234,
@@ -124,7 +133,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    }
   ],
   "idea-university": [
@@ -136,7 +146,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "public_domain_us"
    }
   ],
   "orthodoxy": [
@@ -150,7 +161,8 @@
     "f": [
      "PDF",
      "EPUB"
-    ]
+    ],
+    "r": "link_only"
    }
   ],
   "everlasting-man": [
@@ -163,7 +175,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "public_domain_us"
    }
   ],
   "chesterton-francis": [
@@ -175,7 +188,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "link_only"
    }
   ],
   "europe-faith": [
@@ -187,7 +201,8 @@
     ],
     "f": [
      "PDF"
-    ]
+    ],
+    "r": "unknown"
    }
   ],
   "lord-world": [
@@ -199,7 +214,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    }
   ],
   "come-rack": [
@@ -211,7 +227,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    }
   ],
   "heretics": [
@@ -224,7 +241,8 @@
     "f": [
      "PDF",
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    }
   ],
   "whats-wrong-world": [
@@ -236,7 +254,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "link_only"
    }
   ],
   "wisdom-father-brown": [
@@ -248,7 +267,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "link_only"
    }
   ],
   "aquinas-prayer-contemplative": [
@@ -261,7 +281,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "public_domain_us"
    }
   ],
   "city-of-god": [
@@ -276,7 +297,8 @@
     "f": [
      "PDF",
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    }
   ],
   "bede-ecclesiastical-history": [
@@ -290,7 +312,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    }
   ],
   "catherine-letters": [
@@ -303,7 +326,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    }
   ],
   "consolation-philosophy": [
@@ -316,7 +340,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "public_domain_us"
    }
   ],
   "glories-of-mary": [
@@ -329,7 +354,8 @@
     ],
     "f": [
      "PDF"
-    ]
+    ],
+    "r": "unknown"
    },
    {
     "id": 6179,
@@ -339,7 +365,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    }
   ],
   "athanasius-of-alexandria-on-the-incarnation-of-the-word": [
@@ -352,7 +379,8 @@
     "f": [
      "PDF",
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    }
   ],
   "life-legends-francis": [
@@ -364,7 +392,8 @@
     ],
     "f": [
      "EPUB"
-    ]
+    ],
+    "r": "link_only"
    }
   ],
   "golden-legend": [
@@ -378,7 +407,8 @@
     ],
     "f": [
      "PDF"
-    ]
+    ],
+    "r": "link_only"
    }
   ],
   "roman-martyrology": [
@@ -392,7 +422,8 @@
     "f": [
      "PDF",
      "EPUB"
-    ]
+    ],
+    "r": "link_only"
    }
   ],
   "catherine-dialogue": [
@@ -406,8 +437,10 @@
     "f": [
      "PDF",
      "EPUB"
-    ]
+    ],
+    "r": "unknown"
    }
   ]
- }
+ },
+ "rightsChecked": "2026-10-25"
 }

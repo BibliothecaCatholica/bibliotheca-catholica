@@ -6,7 +6,7 @@
  "datasets": [
   {
    "name": "isidore-index",
-   "description": "Every book record in the St. Isidore (isidore.co) Calibre library, normalized: canonical languages, author era, and deep links. Files stay on isidore.co.",
+   "description": "Every book record in the St. Isidore (isidore.co) Calibre library, normalized: canonical languages, author era, rights status, and deep links. Files stay on isidore.co; file links are given only for public-domain, openly licensed, or permitted records.",
    "count": 6633,
    "json": "data/open/isidore-index.json",
    "csv": "data/open/isidore-index.csv",
@@ -26,8 +26,11 @@
     "series_index": "number in series",
     "publisher": "publisher",
     "isidore_book_url": "book page on isidore.co",
-    "isidore_files_url": "folder of files on isidore.co",
-    "download_urls": "per-format download URLs on isidore.co",
+    "isidore_files_url": "folder of files on isidore.co; empty unless rights_status is public_domain_us, open_license, or permission_granted",
+    "download_urls": "per-format download URLs on isidore.co; empty unless rights_status is public_domain_us, open_license, or permission_granted",
+    "rights_status": "public_domain_us, open_license, permission_granted, link_only, or unknown (see /rights; not legal advice). Only the first three may be downloaded or read here",
+    "rights_evidence": "why the record has that status: a lead to check, a presumption, or written evidence",
+    "rights_checked": "date the status was last checked (YYYY-MM-DD)",
     "page_url": "detail page on Bibliotheca Catholica",
     "editorial_flag": "editorial category if the record carries a context note (see #/policy); listing is not endorsement",
     "context_note": "short factual context note shown on the record page"

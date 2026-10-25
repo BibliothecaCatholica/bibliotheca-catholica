@@ -1,6 +1,6 @@
 # Bibliotheca Catholica open data
 
-Version: v5 (2026-10-21). License: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), public domain dedication. You do not have to give credit, but a link to https://bibliothecacatholica.com is appreciated.
+Version: v6 (2026-10-25). License: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), public domain dedication. You do not have to give credit, but a link to https://bibliothecacatholica.com is appreciated.
 
 Each dataset ships as both `.json` and `.csv`.
 
@@ -19,7 +19,7 @@ Each dataset ships as both `.json` and `.csv`.
 
 | Dataset | Records | What it is |
 |---|---|---|
-| `isidore-index` | 6,633 | Every book in the St. Isidore (isidore.co) Calibre library: authors, catalog year, normalized language, author era, formats, subjects, series, publisher, and deep links (book page, files folder, per-format downloads), plus `editorial_flag` and `context_note` for the 54 records that carry an editorial context note (see the Fidelity & Editorial Policy, https://bibliothecacatholica.com/policy/). Listing is not endorsement. |
+| `isidore-index` | 6,633 | Every book in the St. Isidore (isidore.co) Calibre library: authors, catalog year, normalized language, author era, formats, subjects, series, publisher, a **rights status** (`rights_status`, `rights_evidence`, `rights_checked`), and deep links (book page always; files folder and per-format downloads only for records whose rights status allows it), plus `editorial_flag` and `context_note` for the 54 records that carry an editorial context note (see the Fidelity & Editorial Policy, https://bibliothecacatholica.com/policy/). Listing is not endorsement. |
 | `isidore-folders` | 3,352 | Every author folder in isidore.co's CalibreLibrary, linked to a curated author where the match is confident. |
 | `authors` | 476 | Curated Catholic authors in 12 eras: dates, roles, our one-line summary, **Wikidata QIDs** (450 people, plus 5 work items for anonymous authors), and cross-links. |
 | `editions` | 111 | The "Which edition?" guide: recommended translations and editions of 69 classics, with ISBNs checked against Open Library. |
@@ -31,6 +31,7 @@ Each dataset ships as both `.json` and `.csv`.
 
 **isidore-index**
 - **Source.** The data comes from the public Calibre metadata of isidore.co, snapshot 2026-10-21. Bibliotheca Catholica hosts **no book files**. Every download URL points to isidore.co.
+- **Rights status (v6).** `rights_status` is one of `public_domain_us`, `open_license`, `permission_granted`, `link_only`, or `unknown` (explained at https://bibliothecacatholica.com/rights/). `rights_evidence` says why, and `rights_checked` gives the date (YYYY-MM-DD). `isidore_files_url` and `download_urls` are filled in **only** for the first three statuses; for `link_only` and `unknown` records use `isidore_book_url`, the record's book page. The statuses come from a 2026-10-25 research classification by publication year, ISBN, publisher, and an automated copyright-renewal match. "Likely hostable" leads (a pre-1931 catalog year, a Project Gutenberg source, or no renewal found) are recorded as `unknown` until a person checks the title page and the evidence: catalog years are often scan or reprint dates. The only records marked `public_domain_us` automatically are the same Project Gutenberg texts our reading room hosts after a rights check. This is a research aid, **not legal advice**, and public domain in the US may not be public domain in your country.
 - **Catalog year.** `catalog_year` is Calibre's pubdate. It is often a scan or reprint date, so **do not use it to judge copyright**.
 - **Languages.** The 87 raw language strings, over 26 codes, were normalized to 22 canonical languages, de-duplicated per book. Two merges and one fix were made:
   - Mis-tagged `enq` became English.
@@ -53,4 +54,5 @@ Each dataset ships as both `.json` and `.csv`.
 
 ## Changelog
 
+- **v6 (2026-10-25):** `isidore-index` gains `rights_status`, `rights_evidence`, and `rights_checked`; file links are given only for public-domain, openly licensed, or permitted records.
 - **v5 (2026-10-21):** first documented release.

@@ -1,0 +1,25 @@
+/* v16 rights badges and the /rights and /takedown pages. Every text color passes 4.5:1 on its own
+   background in light and dark (tests/test_rights.py checks the pairs below). */
+.rights-badge{display:inline-flex;align-items:center;gap:.3em;margin-left:.4rem;padding:.08rem .5rem;border:1px solid;border-radius:999px;font:500 .72rem/1.45 var(--sans);text-decoration:none;vertical-align:middle;white-space:nowrap}
+.rights-badge .rb-k{font-weight:400}
+.rights-badge:hover,.rights-badge:focus-visible{text-decoration:underline}
+.rb-public-domain-us{color:#1f5a37;background:#e9f3eb;border-color:#9cc5a8}
+.rb-open-license{color:#1d4c75;background:#e8f0f8;border-color:#9fbedc}
+.rb-permission-granted{color:#5b2d78;background:#f3ecf8;border-color:#c3a6d9}
+.rb-link-only{color:#4b463e;background:#f1eee8;border-color:#c9c1b3}
+.rb-unknown{color:#5e4a17;background:#f7f0dd;border-color:#d4bf86}
+[data-theme=dark] .rb-public-domain-us{color:#a6dbb6;background:#172d1f;border-color:#3f7552}
+[data-theme=dark] .rb-open-license{color:#a9cbef;background:#152436;border-color:#3e6488}
+[data-theme=dark] .rb-permission-granted{color:#d7baee;background:#281c35;border-color:#6c4d88}
+[data-theme=dark] .rb-link-only{color:#d3cec5;background:#29282a;border-color:#5a5650}
+[data-theme=dark] .rb-unknown{color:#e8d197;background:#2e2716;border-color:#77673a}
+.rights-line{margin:.9rem 0 .4rem}.rights-line .rights-badge{margin-left:0;font-size:.8rem}
+.rights-line p{margin:.35rem 0 0;color:var(--ink2)}
+.rights-hold{margin:.4rem 0 1rem}
+.rights-page .rights-list{list-style:none;padding:0;margin:.6rem 0 1rem}
+.rights-page .rights-list li{margin:0 0 .8rem;padding:0}
+.rights-page .rights-list .rights-badge{margin-left:0;font-size:.8rem}
+.rights-page .rights-count{color:var(--muted);font-size:.9em}
+.rights-page .notice,.rights-page .placeholder{border:1px solid var(--line);border-left:4px solid var(--gold);background:var(--card);padding:.7rem .9rem;border-radius:8px;color:var(--ink)}
+.rights-page .placeholder{border-left-color:var(--rubric)}
+.rights-page ol li,.rights-page ul li{margin-bottom:.35rem}

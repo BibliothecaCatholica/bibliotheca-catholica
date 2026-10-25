@@ -30,7 +30,7 @@ SECTIONS={
  'prayers':('Prayers & Devotions','The common prayers of the Church, the Rosary, daily readings, the saint of the day, prayer apps, and parish finders.'),
  'rare':('Rare & Obscure','Rare and lesser-known Catholic books and manuscripts that are freely available online.'),
  'projects':('Projects','Open Catholic software, data, and digitization projects: liturgical calendars, Bible APIs, breviaries, and more.'),
- 'isidore':('Ebooks & PDFs: the Isidore Index','A searchable index of more than 6,600 books in the St. Isidore e-book library (isidore.co), with formats and downloads.'),
+ 'isidore':('Ebooks & PDFs: the Isidore Index','A searchable index of more than 6,600 books in the St. Isidore e-book library (isidore.co), with formats, rights badges, and links to isidore.co.'),
  'data':('Open Data','The open data behind Bibliotheca Catholica: authors, resources, editions, and the Isidore catalogue, free to reuse.'),
  'support':('Support the Library','How to support Bibliotheca Catholica, an independent, ad-free index of Catholic sources.'),
  'editions':('Editions & Translations','Read a free edition, compare translations, or choose a print copy of the Catholic classics, with EPUB options and recommended picks.'),
@@ -150,6 +150,10 @@ def main():
         out[k]=(t+' — Bibliotheca Catholica',d,head('Bibliotheca Catholica',t,d)+extra)
     if flags.get('policy_html'):
         out['policy']=('Fidelity & Editorial Policy — Bibliotheca Catholica','Bibliotheca Catholica is faithful to the Magisterium. Listing a book in the Isidore Index is not endorsement; flagged records carry context notes. How to report a concern.',flags['policy_html'])
+    # v16 rights pages: same HTML as the app (data/rights-pages.js, written by tools/build_rights.py from tools/rights_pages.py)
+    rp=json.loads((ROOT/'data/rights-pages.js').read_text().strip()[len('window.RIGHTS_PAGES='):-1])
+    out['rights']=('Rights & Permissions — Bibliotheca Catholica','What the five rights badges mean (public domain in the US, open license, permission granted, link only, and unknown), how each status is decided, and when downloads are shown. Not legal advice.',rp['rights'])
+    out['takedown']=('Takedown requests — Bibliotheca Catholica','How a rights holder can ask Bibliotheca Catholica to remove a text, a link, or a record’s file links, and how to send a counter-notice. Not legal advice.',rp['takedown'])
     extra_pages=ROOT/'tools/static_extra.json'
     if extra_pages.exists():
         for k,v in json.loads(extra_pages.read_text()).items():out[k]=(v['title'],v['desc'],v['body'])

@@ -1,5 +1,5 @@
 """Match selected-library works to Isidore Index books (title + author, conservative).
-Writes data/isidore-matches.json. Review the printout before committing; no network."""
+Writes data/isidore-matches.json. Then run tools/build_rights.py to add each match's rights status (`r`). Review the printout before committing; no network."""
 import json,re,unicodedata
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]

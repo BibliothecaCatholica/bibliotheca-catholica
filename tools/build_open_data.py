@@ -6,6 +6,11 @@ EFL=json.load(open(S+'editorial-flags.json',encoding='utf-8'))['books'] if os.pa
 def loadjs(p,var):
     s=open(p,encoding='utf-8').read();i=s.index('=')+1;return json.loads(s[i:].strip().rstrip(';'))
 hub=json.load(open(S+'catholic-hub.json'));bk=json.load(open(S+'books.json'))
+# v16 rights status (tools/build_rights.py): file links only for public_domain_us, open_license, permission_granted
+RT=json.load(open(S+'rights.json',encoding='utf-8'))
+def rights(i):
+    r=RT['records'][str(i)];c=RT['codes'][r[0]];st=r[3] if r[0]=='M' else c['status']
+    return st,(c['text']+' '+r[1]).strip() if len(r)>1 and r[1] else c['text'],(r[2] if r[0]=='M' else RT['checked']),RT['statuses'][st]['hostable']
 guide=loadjs(S+'guide.js','GUIDE_DATA');doc=loadjs(S+'doctors.js','DOCTORS_DATA');rare=loadjs(S+'rare.js','RARE_DATA');proj=loadjs(S+'projects.js','PROJECTS_DATA')
 SITE='https://bibliothecacatholica.com/'
 ERAL={e['id']:e['label'] for e in hub['eras']}
@@ -26,15 +31,16 @@ for r in bk['books']:
     au=[bk['authors'][i] for i in r[2]];fo=bk['folders'][r[8]];sub=r[9] or predSub(r[1],r[0])
     e=r[12] if len(r)>12 else -1
     fm=r[7].split('|') if r[7] else []
+    rs,rev,rch,ok=rights(r[0])
     rows.append(dict(id=r[0],title=r[1],authors=[a[0] for a in au],curated_author_ids=[a[1] for a in au if a[1]],catalog_year=r[3] or None,
       era=bk['eras'][e%100] if e>=0 else None,era_source=('catalog life dates' if e>=100 else 'curated author page') if e>=0 else None,
       languages=[LANGN.get(l,l) for l in (r[10].split(',') if r[10] else [])],language_codes=r[10].split(',') if r[10] else [],
       formats=fm,subjects=[bk['tags'][i] for i in r[4]],series=bk['series'][r[5]] if r[5]>=0 else None,series_index=r[6] if r[5]>=0 else None,
       publisher=bk['publishers'][r[11]] if r[11]>=0 else None,
-      isidore_book_url=bk['server']+f'legacy/book/{r[0]}/CalibreLibrary',isidore_files_url=bk['base']+urllib.parse.quote(fo)+'/'+urllib.parse.quote(sub)+'/',
-      download_urls=[bk['server']+f'get/{f}/{r[0]}/CalibreLibrary' for f in fm],page_url=SITE+f'#/isidore/book/{r[0]}',editorial_flag=(EFL.get(str(r[0])) or {}).get('flag'),context_note=(EFL.get(str(r[0])) or {}).get('note')))
-F1={'id':'isidore.co Calibre book id','title':'title as catalogued','authors':'author names as catalogued (Calibre "Surname, Forename")','curated_author_ids':'ids of matching pages in authors.json','catalog_year':'Calibre pubdate year; often a scan or reprint date, NOT evidence of copyright status','era':'era id (see authors.json eras)','era_source':'"curated author page" or "catalog life dates" (inferred)','languages':'canonical language names','language_codes':'ISO 639-2/3 codes after normalization','formats':'file formats on isidore.co','subjects':'Calibre tags (up to 6, most common first)','series':'series','series_index':'number in series','publisher':'publisher','isidore_book_url':'book page on isidore.co','isidore_files_url':'folder of files on isidore.co','download_urls':'per-format download URLs on isidore.co','page_url':'detail page on Bibliotheca Catholica','editorial_flag':'editorial category if the record carries a context note (see #/policy); listing is not endorsement','context_note':'short factual context note shown on the record page'}
-write('isidore-index',rows,list(F1),'Every book record in the St. Isidore (isidore.co) Calibre library, normalized: canonical languages, author era, and deep links. Files stay on isidore.co.',F1)
+      isidore_book_url=bk['server']+f'legacy/book/{r[0]}/CalibreLibrary',isidore_files_url=bk['base']+urllib.parse.quote(fo)+'/'+urllib.parse.quote(sub)+'/' if ok else None,
+      download_urls=[bk['server']+f'get/{f}/{r[0]}/CalibreLibrary' for f in fm] if ok else [],rights_status=rs,rights_evidence=rev,rights_checked=rch,page_url=SITE+f'#/isidore/book/{r[0]}',editorial_flag=(EFL.get(str(r[0])) or {}).get('flag'),context_note=(EFL.get(str(r[0])) or {}).get('note')))
+F1={'id':'isidore.co Calibre book id','title':'title as catalogued','authors':'author names as catalogued (Calibre "Surname, Forename")','curated_author_ids':'ids of matching pages in authors.json','catalog_year':'Calibre pubdate year; often a scan or reprint date, NOT evidence of copyright status','era':'era id (see authors.json eras)','era_source':'"curated author page" or "catalog life dates" (inferred)','languages':'canonical language names','language_codes':'ISO 639-2/3 codes after normalization','formats':'file formats on isidore.co','subjects':'Calibre tags (up to 6, most common first)','series':'series','series_index':'number in series','publisher':'publisher','isidore_book_url':'book page on isidore.co','isidore_files_url':'folder of files on isidore.co; empty unless rights_status is public_domain_us, open_license, or permission_granted','download_urls':'per-format download URLs on isidore.co; empty unless rights_status is public_domain_us, open_license, or permission_granted','rights_status':'public_domain_us, open_license, permission_granted, link_only, or unknown (see /rights; not legal advice). Only the first three may be downloaded or read here','rights_evidence':'why the record has that status: a lead to check, a presumption, or written evidence','rights_checked':'date the status was last checked (YYYY-MM-DD)','page_url':'detail page on Bibliotheca Catholica','editorial_flag':'editorial category if the record carries a context note (see #/policy); listing is not endorsement','context_note':'short factual context note shown on the record page'}
+write('isidore-index',rows,list(F1),'Every book record in the St. Isidore (isidore.co) Calibre library, normalized: canonical languages, author era, rights status, and deep links. Files stay on isidore.co; file links are given only for public-domain, openly licensed, or permitted records.',F1)
 # 2. Folders
 fold2={}
 for a in hub['authors']:

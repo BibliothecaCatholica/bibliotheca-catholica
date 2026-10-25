@@ -572,6 +572,7 @@ reading/start/index.html
 reading/waugh/index.html
 references/index.html
 related/index.html
+rights/index.html
 saints/index.html
 saints/about/index.html
 saints/agatha-of-sicily/index.html
@@ -624,6 +625,7 @@ saints/veronica/index.html
 scripture/index.html
 substacks/index.html
 support/index.html
+takedown/index.html
 timeline/index.html
 work/abandonment/index.html
 work/ancient-lives-saint-patrick/index.html

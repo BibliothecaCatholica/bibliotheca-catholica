@@ -7,7 +7,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-HFG445Y1LT');
+  gtag('config', 'G-HFG445Y1LT', {'send_page_view': false});
 </script>
 <meta charset="utf-8">
 <base href="/">
@@ -52,7 +52,7 @@
       <div id="suggest" class="suggest" role="listbox" hidden></div>
     </div>
     <div class="top-actions">
-      <a class="pill pill-support" href="#/support" title="Support the Library" aria-label="Support the Library"><span aria-hidden="true">♥</span><span class="sup-t"> Support</span></a>
+      <a class="pill pill-support" data-support="header" href="#/support" title="Support the Library" aria-label="Support the Library"><span aria-hidden="true">♥</span><span class="sup-t"> Support</span></a>
       <button id="themeBtn" class="iconbtn" aria-label="Toggle dark mode" title="Toggle light/dark">
         <svg class="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="currentColor"/></svg>
         <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
@@ -80,17 +80,17 @@
       <a href="#/rare" data-nav="rare">Rare &amp; Obscure</a>
       <a href="#/substacks" data-nav="substacks">Substacks</a>
       <a href="#/projects" data-nav="projects">Projects</a>
-      <a href="#/support" data-nav="support" class="nav-m">Support the Library</a>
+      <a href="#/support" data-nav="support" class="nav-m" data-support="menu">Support the Library</a>
     </div>
   </nav>
 </header>
-<main id="main" tabindex="-1"><div class="static-prerender"><div class="page-head"><div class="eyebrow">Fides et ratio</div><h1>Fidelity &amp; Editorial Policy</h1><p class="lede">Bibliotheca Catholica is an independent index that intends to be faithful to the Magisterium of the Catholic Church. It points readers to the Church’s own documents, to the Fathers and Doctors, and to the great Catholic digital libraries.</p></div><section class="panel policy"><h2>Listing is not endorsement</h2><p>The Isidore Index mirrors the catalogue of a third-party library, <a href="https://isidore.co/calibre" target="_blank" rel="noopener">isidore.co</a>, with its records imported as supplied. A book’s presence in the Index, in search results, or in the open data is not a recommendation, an endorsement, or a judgment that it is free of error. Our own recommendations are the hand-picked shelves: <a href="#/library">Discover &amp; Read</a>, <a href="#/editions">Editions &amp; Translations</a>, and the <a href="#/reading">Reading Lists</a>.</p><h2>Context notes on flagged records</h2><p>Some records in the Index contain antisemitic conspiracy claims, conspiracy-theory history, or positions the Church does not accept, such as sedevacantism. We do not remove them: they remain available for historical study and research, and files stay on isidore.co. Instead, each flagged record carries a short, factual context note, this policy’s disclaimer, and a link back to this page. Flagged records are never featured on the home page, in reading lists, edition guides, or recommendations, or in the reading room, and their pages ask search engines not to index them.</p><p>Categories currently in use (54 records):</p><ul><li><b>Antisemitic content</b> (19 records)</li><li><b>Polemical history (conspiracy theory)</b> (6 records)</li><li><b>Sedevacantist position</b> (5 records)</li><li><b>Author context</b> (24 records)</li></ul><p>“Author context” marks other works by an author whose writing is flagged elsewhere; it is not a judgment that every such work contains the same claims.</p><h2>Why we keep them, with this disclaimer</h2><blockquote class="dh-quote"><p>“The truth cannot impose itself except by virtue of its own truth, as it makes its entrance into the mind at once quietly and with power.”</p><footer>(Vatican II, Dignitatis Humanae 1)</footer></blockquote><blockquote class="dh-quote"><p>“The inquiry is to be free, carried on with the aid of teaching or instruction, communication and dialogue, in the course of which men explain to one another the truth they have discovered, or think they have discovered, in order thus to assist one another in the quest for truth.”</p><footer>(Dignitatis Humanae 3)</footer></blockquote><p class="small">Source: <a href="https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651207_dignitatis-humanae_en.html" target="_blank" rel="noopener">Second Vatican Council, Declaration on Religious Freedom, Dignitatis Humanae (7 December 1965), vatican.va</a>.</p><h2>Report a concern</h2><p>If you think a record needs a context note, has the wrong one, or should not be listed, or if you hold the rights to a work and want a listing changed, write to <a href="mailto:micahwatson@bibliothecacatholica.com?subject=Editorial%20concern">micahwatson@bibliothecacatholica.com</a>. Please include the book’s Index number or page link.</p><h2 id="privacy">Privacy</h2><p>This site uses Google Analytics to count visits and understand which pages are used. Google may set cookies in your browser to do this. The site itself has no accounts and does not collect your name, email address, or other personal information. See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from sites that use its services</a>.</p><p>In the reading room, your highlights, notes, reading progress, Continue reading list, and display preferences stay in your browser’s local storage on this device. They are never sent to this site, to Google, or to anyone else, and you can export, back up, or clear them yourself.</p></section></div></main>
+<main id="main" tabindex="-1"><div class="static-prerender"><div class="page-head"><div class="eyebrow">Fides et ratio</div><h1>Fidelity &amp; Editorial Policy</h1><p class="lede">Bibliotheca Catholica is an independent index that intends to be faithful to the Magisterium of the Catholic Church. It points readers to the Church’s own documents, to the Fathers and Doctors, and to the great Catholic digital libraries.</p></div><section class="panel policy"><h2>Listing is not endorsement</h2><p>The Isidore Index mirrors the catalogue of a third-party library, <a href="https://isidore.co/calibre" target="_blank" rel="noopener">isidore.co</a>, with its records imported as supplied. A book’s presence in the Index, in search results, or in the open data is not a recommendation, an endorsement, or a judgment that it is free of error. Our own recommendations are the hand-picked shelves: <a href="#/library">Discover &amp; Read</a>, <a href="#/editions">Editions &amp; Translations</a>, and the <a href="#/reading">Reading Lists</a>.</p><h2>Context notes on flagged records</h2><p>Some records in the Index contain antisemitic conspiracy claims, conspiracy-theory history, or positions the Church does not accept, such as sedevacantism. We do not remove them: they remain available for historical study and research, and files stay on isidore.co. Instead, each flagged record carries a short, factual context note, this policy’s disclaimer, and a link back to this page. Flagged records are never featured on the home page, in reading lists, edition guides, or recommendations, or in the reading room, and their pages ask search engines not to index them.</p><p>Categories currently in use (54 records):</p><ul><li><b>Antisemitic content</b> (19 records)</li><li><b>Polemical history (conspiracy theory)</b> (6 records)</li><li><b>Sedevacantist position</b> (5 records)</li><li><b>Author context</b> (24 records)</li></ul><p>“Author context” marks other works by an author whose writing is flagged elsewhere; it is not a judgment that every such work contains the same claims.</p><h2>Why we keep them, with this disclaimer</h2><blockquote class="dh-quote"><p>“The truth cannot impose itself except by virtue of its own truth, as it makes its entrance into the mind at once quietly and with power.”</p><footer>(Vatican II, Dignitatis Humanae 1)</footer></blockquote><blockquote class="dh-quote"><p>“The inquiry is to be free, carried on with the aid of teaching or instruction, communication and dialogue, in the course of which men explain to one another the truth they have discovered, or think they have discovered, in order thus to assist one another in the quest for truth.”</p><footer>(Dignitatis Humanae 3)</footer></blockquote><p class="small">Source: <a href="https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651207_dignitatis-humanae_en.html" target="_blank" rel="noopener">Second Vatican Council, Declaration on Religious Freedom, Dignitatis Humanae (7 December 1965), vatican.va</a>.</p><h2>Report a concern</h2><p>If you think a record needs a context note, has the wrong one, or should not be listed, or if you hold the rights to a work and want a listing changed, write to <a href="mailto:micahwatson@bibliothecacatholica.com?subject=Editorial%20concern">micahwatson@bibliothecacatholica.com</a>. Please include the book’s Index number or page link.</p><h2 id="privacy">Privacy</h2><p>This site uses Google Analytics to understand aggregate usage: which pages are visited, what people search for, which reading-room texts and audio chapters are opened, which library filters are used, and which outside links are clicked. Search terms are shortened to 100 characters, and nothing else you type, including your highlights and notes, is sent. Google may set cookies in your browser to do this. The site itself has no accounts, collects no personal data such as your name, email address, or location, and runs no ads. See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from sites that use its services</a>.</p><p>In the reading room, your highlights, notes, reading progress, Continue reading list, and display preferences stay in your browser’s local storage on this device. They are never sent to this site, to Google, or to anyone else, and you can export, back up, or clear them yourself.</p></section></div></main>
 <footer class="footer">
   <div class="footer-inner">
     <div>
       <div class="footer-title">Bibliotheca Catholica</div>
       <p>An independent index that links out to the Church’s own sources and to the great Catholic digital libraries. A selected reading collection is available here, with source editions and credits; other texts remain with their publishers.</p>
-      <p class="small disclosure"><b>Affiliate disclosure:</b> Bookshop.org “Buy” links are affiliate links: Bibliotheca Catholica earns a small commission, at no extra cost to you, when you buy through them. Editions are recommended on their merits. <a href="#/support">Support the Library</a>.</p>
+      <p class="small disclosure"><b>Affiliate disclosure:</b> Bookshop.org “Buy” links are affiliate links: Bibliotheca Catholica earns a small commission, at no extra cost to you, when you buy through them. Editions are recommended on their merits. <a data-support="footer_disclosure" href="#/support">Support the Library</a>.</p>
       <p class="small">Ad maiorem Dei gloriam · Data compiled <span id="gen"></span> · Biographical summaries courtesy of Wikipedia (CC BY-SA).</p>
     </div>
     <nav class="footer-links" aria-label="Library information">
@@ -101,13 +101,14 @@
       <a href="#/data">Open Data · JSON &amp; CSV</a>
       <a href="#/policy">Fidelity &amp; Editorial Policy</a>
       <a href="#/policy" title="Privacy is the last section of the Fidelity &amp; Editorial Policy">Privacy &amp; Analytics</a>
-      <a class="footer-support" href="#/support">Support the Library</a>
+      <a class="footer-support" data-support="footer" href="#/support">Support the Library</a>
     </nav>
   </div>
 </footer>
 <script>window.BC_BOOT="policy"</script>
 <script src="data/data.js?v=20261025-v13"></script>
 <script src="data/affiliates.js?v=20261025-v13"></script>
+<script src="scripts/analytics.js?v=20261025-v14"></script>
 <script src="data/prayers.js"></script>
 <script>window.BOOKS_COUNT=6633;window.BOOKS_LANGS=22</script>
 <script src="data/library.js?v=20261022-v11"></script>
@@ -117,8 +118,8 @@
 <script src="data/reading-options.js"></script>
 <script src="data/librivox.js?v=20261022-v10"></script>
 <script src="data/editorial-flags.js?v=20261022-v9"></script>
-<script src="scripts/library.js?v=20261022-v11"></script>
+<script src="scripts/library.js?v=20261025-v14"></script>
 <script src="scripts/reader.js?v=20261022-v11"></script>
-<script src="app.js?v=20261025-v13"></script>
+<script src="app.js?v=20261025-v14"></script>
 </body>
 </html>

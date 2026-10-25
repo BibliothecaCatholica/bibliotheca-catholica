@@ -15,6 +15,11 @@ var SECTIONS={scripture:{t:'Sacred Scripture',e:'Verbum Dei',d:'Bibles in Englis
 var PR=window.PRAYERS||null;
 var TAGL={father:'Church Father',doctor:'Doctor of the Church',saint:'Saint',pope:'Pope',martyr:'Martyr',bishop:'Bishop',cardinal:'Cardinal',theologian:'Theologian',philosopher:'Philosopher',mystic:'Mystic',apologist:'Apologist',novelist:'Novelist',poet:'Poet',historian:'Historian',spiritual:'Spiritual writer',monastic:'Monastic',scripture:'Scripture scholar',convert:'Convert',founder:'Founder',preacher:'Preacher',liturgist:'Liturgist',scientist:'Scientist',journalist:'Journalist',canonist:'Canonist',catechist:'Catechist'};
 var TAGF=['doctor','father','saint','pope','martyr','theologian','philosopher','mystic','spiritual','apologist','scripture','historian','novelist','poet','monastic','convert','founder','liturgist','scientist'];
+/* GA4 events go only through window.BCAnalytics.track (scripts/analytics.js): guarded, try/catch, no personal data */
+function track(n,p){try{if(window.BCAnalytics)window.BCAnalytics.track(n,p)}catch(e){}}
+function cleanTerm(q){try{return window.BCAnalytics?window.BCAnalytics.cleanTerm(q):''}catch(e){return ''}}
+function gaOnce(sc,k){try{return window.BCAnalytics?window.BCAnalytics.once(sc,k):false}catch(e){return false}}
+function gaReset(sc){try{if(window.BCAnalytics)window.BCAnalytics.reset(sc)}catch(e){}}
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function norm(s){return String(s||'').replace(/\b([a-z])\.\s*([a-z])\./gi,'$1$2').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
 function roman(n){var r='',m=[[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']];m.forEach(function(p){while(n>=p[0]){r+=p[1];n-=p[0]}});return r}
@@ -85,7 +90,7 @@ var BF={q:'',fmt:'',lang:'',era:'',tag:'',sort:'title',linked:false,ontopic:true
 function bfReset(){BF.q='';BF.fmt='';BF.lang='';BF.era='';BF.tag='';BF.linked=false;BF.ontopic=true;BF.sort='title'}
 function eraLabel(id){return ERA[id]?ERA[id].label:id}
 function books(arg){
-  if(arg!=null&&arg!==''){var m=/^(lang|era|fmt|tag|q)=(.*)$/.exec(arg);bfReset();if(m){BF[m[1]==='q'?'q':m[1]]=m[2]}else BF.q=arg}
+  var qArg=false;if(arg!=null&&arg!==''){var m=/^(lang|era|fmt|tag|q)=(.*)$/.exec(arg);bfReset();if(m){BF[m[1]==='q'?'q':m[1]]=m[2];qArg=m[1]==='q'}else{BF.q=arg;qArg=true}}
   var h='<div class="page-head isx-head"><div class="eyebrow">Index Isidorianus · EPUB &amp; PDF downloads</div><h1>The Isidore Index</h1><p class="lede">All '+(window.BOOKS_COUNT||6633).toLocaleString()+' books in the <a href="https://isidore.co/calibre" target="_blank" rel="noopener">St. Isidore e-book library</a>, catalogued and searchable by title, author, series, subject, language, format, and era. Every book has a detail page with download links back to isidore.co.</p>'+
    '<p class="callout">Catalog records are imported from isidore.co as supplied and have not each been reviewed; inclusion is not a recommendation. For a hand-picked starting point with texts you can read here, see <a href="#/library">Discover &amp; Read</a>. Some records carry editorial context notes: see the <a href="#/policy">Fidelity &amp; Editorial Policy</a>.</p><div class="isx-tabs"><a class="on" href="#/isidore">Books</a><a href="#/isidore/folders">Author folders A–Z ('+D.isidore.length.toLocaleString()+')</a></div></div>'+
    '<div class="toolbar isx-tools"><input type="search" id="bk-q" placeholder="Search titles, authors, series, subjects…" value="'+esc(BF.q)+'">'+
@@ -127,14 +132,17 @@ function books(arg){
       $('#bk-out').innerHTML=cur.length?cur.slice(0,shown).map(function(b){return brow(b,BF.q)}).join(''):'<div class="empty">No books match. Try clearing a filter.</div>';
       $('#bk-more').hidden=shown>=cur.length;$('#bk-more').textContent='Show more ('+(cur.length-shown).toLocaleString()+' remaining)'}
     $('#bk-sort').value=BF.sort;draw(true);
-    var tm;$('#bk-q').addEventListener('input',function(e){BF.q=e.target.value;clearTimeout(tm);tm=setTimeout(function(){draw(true)},140)});
-    [['#bk-sort','sort'],['#bk-lang','lang'],['#bk-era','era'],['#bk-tag','tag']].forEach(function(x){$(x[0]).addEventListener('change',function(e){BF[x[1]]=e.target.value;draw(true)})});
-    $('#bk-fmt').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;BF.fmt=b.dataset.f;draw(true)});
-    $('#bk-linked').addEventListener('click',function(e){BF.linked=!BF.linked;e.currentTarget.classList.toggle('on',BF.linked);draw(true)});
-    $('#bk-ontopic').addEventListener('click',function(e){BF.ontopic=!BF.ontopic;e.currentTarget.classList.toggle('on',BF.ontopic);draw(true)});
+    var lastTerm='';function trackQ(){var t=cleanTerm(BF.q);if(t.length<2||t===lastTerm||!$('#bk-out'))return;lastTerm=t;track('search',{search_term:t,search_scope:'Isidore Index',results_count:cur.length})}
+    if(qArg)trackQ();
+    function fil(n,v){track('filter_use',{filter_name:n,filter_value:v===''||v==null?'All':String(v),filter_scope:'isidore'})}
+    var tm,tq;$('#bk-q').addEventListener('input',function(e){BF.q=e.target.value;clearTimeout(tm);tm=setTimeout(function(){draw(true)},140);clearTimeout(tq);tq=setTimeout(trackQ,1500)});
+    [['#bk-sort','sort'],['#bk-lang','lang','Language'],['#bk-era','era','Era'],['#bk-tag','tag','Subject']].forEach(function(x){$(x[0]).addEventListener('change',function(e){BF[x[1]]=e.target.value;draw(true);if(x[2])fil(x[2],e.target.value)})});
+    $('#bk-fmt').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;BF.fmt=b.dataset.f;draw(true);fil('Format',BF.fmt||'Any')});
+    $('#bk-linked').addEventListener('click',function(e){BF.linked=!BF.linked;e.currentTarget.classList.toggle('on',BF.linked);draw(true);fil('Linked',BF.linked?'on':'off')});
+    $('#bk-ontopic').addEventListener('click',function(e){BF.ontopic=!BF.ontopic;e.currentTarget.classList.toggle('on',BF.ontopic);draw(true);fil('On-topic',BF.ontopic?'on':'off')});
     $('#bk-clear').addEventListener('click',function(){bfReset();$('#bk-q').value='';$('#bk-sort').value='title';$('#bk-linked').classList.remove('on');$('#bk-ontopic').classList.add('on');draw(true)});
     $('#bk-more').addEventListener('click',function(){shown+=120;draw(false)});
-    $('#bk-out').addEventListener('click',function(e){var t=e.target.closest('.b-tag');if(t){BF.tag=t.dataset.tag;draw(true);window.scrollTo({top:0,behavior:'smooth'});return}
+    $('#bk-out').addEventListener('click',function(e){var t=e.target.closest('.b-tag');if(t){BF.tag=t.dataset.tag;draw(true);fil('Tag',BF.tag);window.scrollTo({top:0,behavior:'smooth'});return}
       var a=e.target.closest('.b-au[data-author]');if(a){e.preventDefault();BF.q=a.dataset.author;$('#bk-q').value=BF.q;draw(true);window.scrollTo({top:0,behavior:'smooth'})}});
   });
 }
@@ -158,7 +166,7 @@ function authorBooks(a){var box=$('#au-books');if(!box)return;loadBooks(function
   var L=(B.by[a.id]||[]).slice().sort(function(x,y){return x.tn.localeCompare(y.tn)});
   if(!L.length){box.innerHTML='';return}
   box.innerHTML='<div class="rule"></div><h3>Books in the isidore.co library <span class="small">('+L.length+')</span></h3><div class="blist compact">'+L.slice(0,40).map(function(b){return brow(b)}).join('')+'</div>'+(L.length>40?'<p><a href="#/isidore/'+encodeURIComponent(L[0].a.filter(function(x){return x[1]===a.id})[0][0])+'">See all '+L.length+' books →</a></p>':'');
-  box.addEventListener('click',function(e){var t=e.target.closest('.b-tag');if(t){bfReset();BF.tag=t.dataset.tag;location.hash='#/isidore'}})})}
+  box.addEventListener('click',function(e){var t=e.target.closest('.b-tag');if(t){bfReset();BF.tag=t.dataset.tag;track('filter_use',{filter_name:'Tag',filter_value:BF.tag,filter_scope:'isidore'});location.hash='#/isidore'}})})}
 
 
 /* ---------- guide data: editions, reading lists, substacks (lazy) ---------- */
@@ -179,7 +187,7 @@ function bookshopUrl(isbn,q){var id=(AFF.bookshopId||'').trim();
 function pubUrl(pk,q){var p=(AFF.publishers||{})[pk];if(!p||!p.search)return '';var u=p.search.replace('{q}',encodeURIComponent(q));
   if(p.wrap)return p.wrap.replace('{url}',encodeURIComponent(u));if(p.param)u+=(u.indexOf('?')>=0?'&':'?')+p.param;return u}
 function buyBtns(isbn,title,author,pk){var q=title+(author?' '+author:'');var h='<div class="buy"><span class="buy-l">Buy</span><a class="buy-b bs" href="'+esc(bookshopUrl(isbn,q))+'" target="_blank" rel="noopener sponsored">Bookshop.org ↗</a>';
-  var pu=pk&&pubUrl(pk,title);if(pu)h+='<a class="buy-b" href="'+esc(pu)+'" target="_blank" rel="noopener sponsored">'+esc(AFF.publishers[pk].name)+' ↗</a>';
+  var pu=pk&&pubUrl(pk,title);if(pu)h+='<a class="buy-b" data-pub="'+esc(pk)+'" href="'+esc(pu)+'" target="_blank" rel="noopener sponsored">'+esc(AFF.publishers[pk].name)+' ↗</a>';
   return h+'</div>'}
 function discl(){var t=AFF.disclosure||'';var m=/^Affiliate disclosure:\s*/.exec(t);return '<p class="disclosure">'+(m?'<b>Affiliate disclosure:</b> '+esc(t.slice(m[0].length)):esc(t))+'</p>'}
 function guideWorks(w){return BCGuides.works(w,window.LIBRARY_DATA.works)}
@@ -373,7 +381,7 @@ function auWorks(a,X,DR){var p=$('#tp-works'),n=window.LIBRARY_DATA.works.filter
   if(L.length){var cur='',lim=40;function draw(){var M=cur?L.filter(function(b){return b.f.indexOf(cur)>=0}):L;$('#au-bl').innerHTML=M.slice(0,lim).map(function(b){return brow(b)}).join('');
       $('#au-blm').innerHTML=M.length>lim?'<button class="btn ghost" id="au-more">Show all '+M.length+'</button>':''}
     draw();$('#au-fmt').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;cur=b.dataset.f;lim=40;$('#au-fmt').querySelectorAll('.chip').forEach(function(x){x.classList.toggle('on',x===b)});draw()});
-    p.addEventListener('click',function(e){if(e.target.id==='au-more'){lim=1e9;draw()}var t=e.target.closest('.b-tag');if(t){bfReset();BF.tag=t.dataset.tag;location.hash='#/isidore'}})}}
+    p.addEventListener('click',function(e){if(e.target.id==='au-more'){lim=1e9;draw()}var t=e.target.closest('.b-tag');if(t){bfReset();BF.tag=t.dataset.tag;track('filter_use',{filter_name:'Tag',filter_value:BF.tag,filter_scope:'isidore'});location.hash='#/isidore'}})}}
 var WOF={k:'podcast',t:'Way of the Fathers (Catholic Culture podcast)',u:'https://www.catholicculture.org/commentary/category/way-fathers/',n:'A podcast on the Fathers and Doctors of the Church.'};
 function auComm(a,X,DR){var p=$('#tp-commentaries'),n=0,h='';var cm=(X.comm||[]).slice();
   var feat=cm.filter(function(c){return c.feat});cm=cm.filter(function(c){return !c.feat});
@@ -530,32 +538,38 @@ function results(q){
   if(!R.length)h+='<div class="empty">Nothing found here. Try the external searches above.</div>';
   order.forEach(function(g){var L=groups[g];if(!L)return;h+='<section class="sr-group"><div class="cat-title"><h2>'+esc(g==='Author'?'Authors':g==='Work'?'Works':g==='isidore.co folder'?'isidore.co library folders':g==='Book'?'Books in the isidore.co catalog':g)+' <span class="small">('+L.length+')</span></h2>'+(g==='Book'?'<a class="cat-more" href="#/isidore/'+encodeURIComponent(q)+'">Browse all in the Isidore Index →</a>':'')+'</div>'+L.slice(0,g==='isidore.co folder'?40:g==='Book'?30:60).map(function(e){return '<a class="sr-item" href="'+esc(e.h)+'"'+(e.ext?' target="_blank" rel="noopener"':'')+'><small>'+esc(e.type)+(window.BCSearch.imported(e)?' · External catalog · unreviewed':'')+(e.ext?' · '+esc(host(e.h))+' ↗':'')+'</small><br><b>'+hl(e.t,q)+'</b><span>'+hl(e.s.slice(0,220),q)+'</span></a>'}).join('')+'</section>'});
   render(h,'');document.title='Search: '+q+' — Bibliotheca Catholica';$('#q').value=q;
+  /* one search event per committed search: after the catalogs this scope needs have loaded (or 8 s), once per visit to this results URL */
+  var ready=GD&&(searchScope==='curated'||B),n=R.length;clearTimeout(srchT);srchT=setTimeout(function(){if(location.hash!==requestedHash||!gaOnce('search',requestedHash))return;
+    track('search',{search_term:cleanTerm(q),search_scope:SCOPE_LABEL[searchScope]||'Everything',results_count:n})},ready?300:8000);
 }
+var srchT=null,SCOPE_LABEL={all:'Everything',curated:'Selected library',isidore:'Isidore Index'};
 function notfound(){render('<div class="empty"><h2>Not found</h2><p><a href="#/">Return home</a></p></div>','')}
 /* ---------- v7: Support the Library ---------- */
 var SUPPORT={bmc:'https://buymeacoffee.com/bibliothecacatholica',paypal:'https://www.paypal.com/donate/?hosted_button_id=D48R9YU7SH43A'};
 function support(){var shop=AFF.bookshopShop||'';
   var h='<div class="page-head"><div class="eyebrow">Adiuva bibliothecam</div><h1>Support the Library</h1><p class="lede">Bibliotheca Catholica is free for everyone, with no ads and no paywall. Donations cover hosting and the hours of curation behind every author page, edition, and link.</p></div>'+
    '<div class="sup-grid">'+
-   '<div class="sup-card"><div class="sup-ico" aria-hidden="true">☕</div><h2>Buy Me a Coffee</h2><p>A quick, small gift in a few taps.</p><a class="btn sup-btn" href="'+SUPPORT.bmc+'" target="_blank" rel="noopener">Buy us a coffee ↗</a></div>'+
-   '<div class="sup-card"><div class="sup-ico" aria-hidden="true">✠</div><h2>Donate with PayPal</h2><p>Give once, or set up a monthly gift that keeps the library growing.</p><a class="btn sup-btn sup-pp" href="'+SUPPORT.paypal+'" target="_blank" rel="noopener">Donate with PayPal ↗</a><p class="small muted">Choose one-time or monthly on the PayPal page.</p></div>'+
+   '<div class="sup-card"><div class="sup-ico" aria-hidden="true">☕</div><h2>Buy Me a Coffee</h2><p>A quick, small gift in a few taps.</p><a class="btn sup-btn" data-support="buymeacoffee" href="'+SUPPORT.bmc+'" target="_blank" rel="noopener">Buy us a coffee ↗</a></div>'+
+   '<div class="sup-card"><div class="sup-ico" aria-hidden="true">✠</div><h2>Donate with PayPal</h2><p>Give once, or set up a monthly gift that keeps the library growing.</p><a class="btn sup-btn sup-pp" data-support="paypal" href="'+SUPPORT.paypal+'" target="_blank" rel="noopener">Donate with PayPal ↗</a><p class="small muted">Choose one-time or monthly on the PayPal page.</p></div>'+
    '</div>'+
    '<h2 class="sup-h">Other ways to help</h2><ul class="sup-list">'+
-   (shop?'<li><b>Buy books through our <a href="'+esc(shop)+'" target="_blank" rel="noopener sponsored">Bookshop.org shop ↗</a>.</b> It supports independent bookstores, and the library earns a small commission at no extra cost to you.</li>':'')+
-   '<li><b>Write a commentary.</b> We welcome original, human-written commentary on the authors in the library. <a href="mailto:micahwatson@bibliothecacatholica.com?subject=Commentary">Get in touch ✉</a></li>'+
-   '<li><b>Report a broken link or an error.</b> <a href="mailto:micahwatson@bibliothecacatholica.com?subject=Correction">Tell us ✉</a>, and we will fix it.</li>'+
+   (shop?'<li><b>Buy books through our <a data-support="bookshop_shop" href="'+esc(shop)+'" target="_blank" rel="noopener sponsored">Bookshop.org shop ↗</a>.</b> It supports independent bookstores, and the library earns a small commission at no extra cost to you.</li>':'')+
+   '<li><b>Write a commentary.</b> We welcome original, human-written commentary on the authors in the library. <a data-support="commentary_email" href="mailto:micahwatson@bibliothecacatholica.com?subject=Commentary">Get in touch ✉</a></li>'+
+   '<li><b>Report a broken link or an error.</b> <a data-support="correction_email" href="mailto:micahwatson@bibliothecacatholica.com?subject=Correction">Tell us ✉</a>, and we will fix it.</li>'+
    '<li><b>Share the library</b> with a friend, a parish, or a homeschool group.</li></ul>'+
    '<p class="small muted sup-fine">Bibliotheca Catholica is an independent project. Payments are handled by Buy Me a Coffee and PayPal; we never see your card details.</p>'+discl();
   render(h,'support')}
 function route(){var raw=location.hash.replace(/^#\/?/,'');if(!raw&&window.BC_BOOT)raw=window.BC_BOOT;var queryAt=raw.indexOf('?');var query=new URLSearchParams(queryAt<0?'':raw.slice(queryAt+1));var path=queryAt<0?raw:raw.slice(0,queryAt);var h;try{h=decodeURIComponent(path)}catch(e){notfound();return}var p=h.split('/');if(p[0]==='search'){searchScope=['curated','isidore','all'].indexOf(query.get('scope'))>=0?query.get('scope'):'all';}
-  hideSug();
+  hideSug();if(p[0]!=='search')gaReset('search');
   switch(p[0]){case 'library':window.BCLibrary.library(render,p[1]);break;case 'work':window.BCLibrary.work(render,p[1]);break;case 'read':window.BCLibrary.read(render,p[1],p[2],p[3],p[4]);break;case 'related':window.BCLibrary.related(render);break;case '':home();break;case 'authors':authors();break;case 'doctors':authors({doctors:true});break;case 'author':author(p[1],p[2]||'');break;case 'timeline':timeline();break;
    case 'scripture':case 'magisterium':case 'references':case 'media':case 'libraries':section(p[0]);break;case 'prayers':section('prayers',p[1]||'');break;case 'rare':rare(p[1]||'');break;case 'projects':projects();break;case 'isidore':if(p[1]==='folders')isidore();else if(p[1]==='book')bookDetail(+p[2]);else books(p.slice(1).join('/'));break;case 'books':location.replace('#/isidore'+(p[1]?'/'+p.slice(1).join('/'):''));break;case 'data':openData();break;case 'support':support();break;case 'policy':policy();break;case 'editions':editions(p[1]||'');break;case 'reading':reading(p[1]||'');break;case 'substacks':substacks();break;case 'search':results(p.slice(1).join('/'));break;default:notfound()}}
 window.addEventListener('hashchange',route);
-/* ---------- Google Analytics: the gtag config in <head> sends the first page_view; send one per later hash route ---------- */
-var gaT=null,gaLast=location.pathname+location.hash;
-window.addEventListener('hashchange',function(){clearTimeout(gaT);gaT=setTimeout(function(){var path=location.pathname+location.hash;if(path===gaLast||typeof gtag!=='function')return;gaLast=path;
-  gtag('event','page_view',{page_title:document.title,page_location:location.href,page_path:path})},400)});
+/* ---------- Google Analytics page views: the config in <head> has send_page_view:false, so app.js sends exactly one page_view
+   for the first load (index.html, static entry pages, and the /#/ page that 404.html redirects to) and one per later hash route ---------- */
+var gaT=null,gaLast=null;
+function gaPageView(){clearTimeout(gaT);gaT=setTimeout(function(){var path=location.pathname+location.hash;if(path===gaLast)return;gaLast=path;
+  track('page_view',{page_title:document.title,page_location:location.href,page_path:path})},400)}
+window.addEventListener('hashchange',gaPageView);
 /* ---------- per-route meta (description, canonical, Open Graph, Twitter) ---------- */
 var SITE='https://bibliothecacatholica.com/',DEF_DESC=(document.querySelector('meta[name=description]')||{}).content||'';
 var STATIC_SECTIONS=['library','related','authors','doctors','timeline','scripture','magisterium','references','media','libraries','prayers','rare','projects','isidore','data','support','editions','reading','substacks','policy'];
@@ -588,8 +602,8 @@ qi.addEventListener('keydown',function(e){var items=sg.querySelectorAll('a');
 document.addEventListener('click',function(e){if(!e.target.closest('.searchwrap'))hideSug()});
 sg.addEventListener('click',function(e){if(e.target.closest('a'))setTimeout(hideSug,0)});
 document.addEventListener('keydown',function(e){if(e.key==='/'&&!/input|textarea|select/i.test(document.activeElement.tagName)){e.preventDefault();qi.focus()}});
-$('#themeBtn').addEventListener('click',function(){var t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('hub-theme',t)}catch(e){}});
+$('#themeBtn').addEventListener('click',function(){var t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('hub-theme',t)}catch(e){}track('theme_toggle',{theme:t})});
 $('#menuBtn').addEventListener('click',function(){var open=$('#mainnav').classList.toggle('open');this.setAttribute('aria-expanded',String(open));this.setAttribute('aria-label',open?'Close menu':'Open menu')});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&$('#mainnav').classList.contains('open')){$('#mainnav').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false');$('#menuBtn').setAttribute('aria-label','Open menu');$('#menuBtn').focus()}});
-route();
+route();gaPageView();
 })();

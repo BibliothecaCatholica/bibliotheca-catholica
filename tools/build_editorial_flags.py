@@ -69,8 +69,9 @@ def policy_html(counts,total):
      '<p>If you think a record needs a context note, has the wrong one, or should not be listed, or if you hold the rights to a work and want a listing changed, write to '
      '<a href="mailto:'+MAIL+'?subject=Editorial%20concern">'+MAIL+'</a>. Please include the book’s Index number or page link.</p>'
      '<h2 id="privacy">Privacy</h2>'
-     '<p>This site uses Google Analytics to count visits and understand which pages are used. Google may set cookies in your browser to do this. '
-     'The site itself has no accounts and does not collect your name, email address, or other personal information. '
+     '<p>This site uses Google Analytics to understand aggregate usage: which pages are visited, what people search for, which reading-room texts and audio chapters are opened, which library filters are used, and which outside links are clicked. '
+     'Search terms are shortened to 100 characters, and nothing else you type, including your highlights and notes, is sent. Google may set cookies in your browser to do this. '
+     'The site itself has no accounts, collects no personal data such as your name, email address, or location, and runs no ads. '
      'See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from sites that use its services</a>.</p>'
      '<p>In the reading room, your highlights, notes, reading progress, Continue reading list, and display preferences stay in your browser’s local storage on this device. They are never sent to this site, to Google, or to anyone else, and you can export, back up, or clear them yourself.</p>'
      '</section>')

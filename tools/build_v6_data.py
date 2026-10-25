@@ -23,7 +23,9 @@ for q,o in W.items():
     if o['ce']: e['ce']='https://www.newadvent.org/cathen/'+o['ce'][0]+'.htm'
     if o['sep']: e['sep']='https://plato.stanford.edu/entries/'+o['sep'][0]+'/'
     if o['iep']: e['iep']='https://iep.utm.edu/'+o['iep'][0]+'/'
-    if o['ws']: e['ws']='https://en.wikisource.org/wiki/'+o['ws'].replace(' ','_')
+    # WS_FIX: Wikidata sitelinks that 404 on Wikisource (verified 2026-10-25)
+    WS_FIX={'Portal:William of Ockham':'Author:William of Ockham'}
+    if o['ws']: e['ws']='https://en.wikisource.org/wiki/'+WS_FIX.get(o['ws'],o['ws']).replace(' ','_')
     if o['wq']: e['wq']='https://en.wikiquote.org/wiki/'+o['wq'].replace(' ','_')
     f=list(dict.fromkeys(o['feast']))
     if f and ('saint' in AID[i]['tags'] or AID[i]['doctor']): e['feast']=f[:3]
@@ -53,7 +55,7 @@ COMM={
  'thomas-aquinas':[dict(k='podcast',t='The Thomistic Institute podcast',u='https://podcast.thomisticinstitute.org/',n='Lectures on Aquinas and Thomism by leading scholars.'),
    dict(k='video',t='The Thomistic Institute on YouTube',u='https://www.youtube.com/@ThomisticInstitute',n='Lectures in philosophy and theology.'),
    ss('Investigations','Essays from the Dominican Thomistic Institute.'),
-   dict(k='podcast',t='Pints with Aquinas (Matt Fradd)',u='https://pintswithaquinas.com/',n='Interviews and debates that began as a show about the Summa.')],
+   dict(k='podcast',t='Pints with Aquinas (Matt Fradd)',u='https://www.dailywire.com/show/pints-with-aquinas',n='Interviews and debates that began as a show about the Summa.')],
  'j-r-r-tolkien':[ss('The Tolkien Road','A long-running podcast and newsletter reading through the legendarium.'),ss('Holly Ordway’s Newsletter','From the author of Tolkien’s Faith: A Spiritual Biography.')],
  'dante-alighieri':[ss('Word & Song','From Anthony Esolen, translator of the Divine Comedy.')],
  'flannery-o-connor':[ss('The Scandal of Reading','From Jessica Hooten Wilson, a leading O’Connor scholar.')],

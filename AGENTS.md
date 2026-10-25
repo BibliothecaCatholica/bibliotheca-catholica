@@ -36,7 +36,20 @@ Everything a reader saves stays in that browser's `localStorage`; nothing is sen
 - **Shortcuts:** ← or k (previous section), → or j (next), / (find in work, overrides the site search only in the reader), t (contents), n (notes), Esc (close a panel), ? (help). `BCReader.core.shortcutAction()` ignores keys while typing in inputs, textareas, selects, contenteditable, or media controls, and with Ctrl, Cmd, or Alt.
 - **Edition banner:** "Reading: <title>, tr. <translator>, Project Gutenberg #N" (from `editionLine()`), with "Section X of Y" and a percentage bar. On screens ≤760px it collapses to a one-line chip pinned at the top, the site header scrolls away, and a bottom bar (Prev, Contents, Notes, Find, Next; 44px targets; safe-area insets) hides on scroll down. The Listen dock sits above that bar and moves with it.
 - **Print:** `styles/reader.css` has the print stylesheet. "Print / save as PDF" prints the current section or the whole work, and the printout must keep the edition line and the Project Gutenberg license notice (the whole-work printout repeats the notice at the start and end). Never hide `.pg-notice` or `.print-edition` in print.
-- **Accessibility:** reader controls have labels, panels move focus in and restore it on close, `:focus-visible` rings are on, and reader text meets 4.5:1 contrast in light and dark (reader-scoped color fixes are at the end of `styles/reader.css`).
+- **Accessibility:** reader controls have labels, panels move focus in and restore it on close, `:focus-visible` rings are on, and reader text meets 4.5:1 contrast in light and dark (site-wide since v12; see "Palette and text contrast").
+
+## Palette and text contrast (v12)
+
+Colors come from the tokens at the top of `styles.css` (`:root` for light, `[data-theme=dark]` for dark). Any text color, in **both** modes, must keep a contrast ratio of at least **4.5:1** against the background it sits on (3:1 only for large text, 24px+ or 18.66px+ bold). Check both themes before changing a token or adding a text color.
+
+| Token | Light | Dark | Use |
+|---|---|---|---|
+| `--muted` | `#6f604b` (was `#867660`) | `#a49b8c` (was `#9a907f`) | secondary and fine-print text |
+| `--gold-ink` (new) | `#80601a` | `#d9b45a` | gold **text** (eyebrows, dates, counts, brand subtitle, DJVU badge). `--gold` (`#b8892d`) is for borders, rules, and fills only, never small text in light mode |
+| `--on-rubric` (new) | `#fff8ea` | `#14161c` | text on `--rubric`/`--rubric2` fills (`.btn`, `.chip.on`, `.mainnav a.on`, Bookshop button, reader controls). Never hard-code `#fff`/`#fff8ea` on a rubric fill: dark-mode rubric is light pink |
+| `--rubric` | `#8b1e2d` (unchanged) | `#e37f89` (was `#e0707b`) | links, accents, and filled buttons |
+
+Text on gradients (`.btn.gold`, `.sec-card .glyph`, `.avatar`) must also pass against every part of the gradient behind the text.
 
 ## Files that must never be deleted or moved
 

@@ -9,7 +9,7 @@ function load(withGtag,throwing){const calls=[];const ctx={URL,location:{hash:''
  vm.runInNewContext(SRC,ctx);return {A:ctx.BCAnalytics,calls,ctx}}
 test('event names are the agreed GA4 set',()=>{
  const {A}=load(false);
- assert.deepEqual(Array.from(A.EVENTS).sort(),['filter_use','listen_complete','listen_play','open_text','outbound_click','page_view','reader_section','search','support_click','theme_toggle']);
+ assert.deepEqual(Array.from(A.EVENTS).sort(),['filter_use','listen_complete','listen_play','open_text','outbound_click','page_view','reader_section','saint_open','search','support_click','theme_toggle']);
 });
 test('track is a no-op without gtag and never throws',()=>{
  const {A}=load(false);assert.equal(A.track('search',{search_term:'x'}),false);

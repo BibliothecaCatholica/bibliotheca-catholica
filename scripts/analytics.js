@@ -6,7 +6,7 @@
  */
 (function(root){
 'use strict';
-var EVENTS=['page_view','search','open_text','reader_section','listen_play','listen_complete','outbound_click','filter_use','support_click','theme_toggle'];
+var EVENTS=['page_view','search','open_text','reader_section','listen_play','listen_complete','outbound_click','filter_use','support_click','theme_toggle','saint_open'];
 var MAX=100;
 function str(v){return String(v==null?'':v)}
 function cleanTerm(s){return str(s).replace(/\s+/g,' ').trim().toLowerCase().slice(0,MAX)}

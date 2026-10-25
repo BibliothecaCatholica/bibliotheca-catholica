@@ -36,7 +36,27 @@ SECTIONS={
  'editions':('Editions & Translations','Read a free edition, compare translations, or choose a print copy of the Catholic classics, with EPUB options and recommended picks.'),
  'reading':('Reading Lists','Curated Catholic reading lists: start here, apologetics, spiritual classics, fiction, philosophy, Church history, and more.'),
  'substacks':('Catholic Substacks','Catholic writers and newsletters on Substack, with recent posts.'),
+ 'saints':('Saints & Hagiography','A sourced guide to 185 saints: feast days as Vatican News lists them, the writers in the library, saints of legend, and the old lives of the saints.'),
 }
+# --- Saints & Hagiography (v15): see docs/SAINTS.md ---------------------------------------------
+MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December']
+FLAGL={'tradition':'Tradition and legend','tradition-with-historical-core':'Historical core, later legend','angel':'Archangel'}
+def s_date(md):m,d=md.split('-');return str(int(d))+' '+MONTHS[int(m)-1]
+def s_status(s):return {'archangel':'Archangel','saint':'Saint','blessed':'Blessed','venerable':'Venerable'}.get(s['status']['value'],'Status not recorded')
+def s_years(s):  # mirrors years() in scripts/saints.js
+    f=lambda y:str(-y)+' BC' if y<0 else str(y)
+    b=s['born']['year'] if s.get('born') else None;d=s['died']['year'] if s.get('died') else None
+    c='c. ' if d is not None and d<1000 else ''
+    if b is not None and d is not None:return c+f(b)+'–'+f(d)
+    if d is not None:return 'd. '+c+f(d)
+    return 'b. '+f(b) if b is not None else ''
+def s_vn(s):return ', '.join(s_date(v['date']) for v in s['feasts']['vatican_news'])
+def s_facts(s):
+    """One factual line built only from the spec's sourced fields (no prose copied from anywhere)."""
+    t=s_status(s)+(' ('+s_years(s)+', Wikidata)' if s_years(s) else '')
+    if s['feasts']['vatican_news']:t+='. Vatican News “Saint of the day”: '+s_vn(s)
+    if s.get('historicity'):t+='. '+FLAGL[s['historicity']['flag']]+': '+s['historicity']['note'].rstrip('.')
+    return t+'.'
 def load_flags():
     p=ROOT/'data/editorial-flags.json'
     if not p.exists():return {'books':{},'hubAuthors':[]}
@@ -74,6 +94,9 @@ def main():
     skip_auth=set(flags.get('hubAuthors',[]))
     eras={e['id']:e['label'] for e in hub['eras']}
     out={}  # route -> html
+    SD=json.loads((ROOT/'data/saints.json').read_text());saints=SD['saints']
+    saints_by_author={x['author_id']:x for x in saints if x['tier']==1 and x.get('author_id')}
+    libw={w['id']:w for w in lib['works']}
     head=lambda eyebrow,h1,lede:'<div class="page-head"><div class="eyebrow">'+E(eyebrow)+'</div><h1>'+E(h1)+'</h1><p class="lede">'+E(lede)+'</p></div>'
     authors=[x for x in hub['authors'] if x['id'] not in skip_auth]
     for au in authors:
@@ -82,6 +105,8 @@ def main():
         works=''.join('<li>'+a(w['url'],w['title'],True)+'</li>' for w in au.get('works') or [] if w.get('url'))
         mine=[w for w in lib['works'] if w.get('authorId')==au['id']]
         body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+(('<h2>Read here</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else '')+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+'<p>'+a('/authors/','All authors')+'</p>'
+        sa=saints_by_author.get(au['id'])
+        if sa:body=body.replace('<p>'+a('/authors/','All authors')+'</p>','<h2>Saint</h2><p>'+E(s_facts(sa))+' '+a('/saints/','Saints & Hagiography')+'</p><p>'+a('/authors/','All authors')+'</p>')
         out['author/'+au['id']]=(au['name']+' — Bibliotheca Catholica',(desc or au['name']+', Catholic author: biography and works online.')[:300],body)
     for w in lib['works']:
         eds=''.join('<li>'+E(e['label'])+(' · '+a('/#/read/'+w['id']+'/'+e['id'],'Read here') if e.get('text') else '')+' · '+a(e['source'],'Source',True)+'</li>' for e in w['editions'])
@@ -97,6 +122,22 @@ def main():
         items=''.join('<li>'+(a('/editions/'+i['e']+'/',gid[i['e']]['t']) if i.get('e') in gid else E(i.get('t','')+(' — '+i['a'] if i.get('a') else '')))+(': '+E(i['b']) if i.get('b') else '')+'</li>' for i in L['items'])
         body=head('Reading list',L['t'],L.get('sub',''))+'<ol>'+items+'</ol><p>'+a('/reading/','All reading lists')+'</p>'
         out['reading/'+L['id']]=(L['t']+' — Reading Lists — Bibliotheca Catholica',(L['t']+': '+L.get('sub',''))[:300],body)
+    s_href=lambda x:'/author/'+x['author_id']+'/' if x['tier']==1 and x.get('author_id') else '/saints/'+x['id']+'/'
+    for x in saints:
+        if x['tier']==1:continue  # writers' pages are their author pages
+        L=[]
+        if x.get('catholic_encyclopedia'):L.append(a(x['catholic_encyclopedia']['url'],'Catholic Encyclopedia (New Advent)',True))
+        if x['feasts']['vatican_news']:L.append(a(x['feasts']['vatican_news'][0]['source_url'],'Vatican News',True))
+        if x.get('wikipedia'):L.append(a(x['wikipedia'],'Wikipedia',True))
+        L.append(a(x['wikidata'],'Wikidata '+x['qid'],True))
+        rw=''.join('<li>'+a('/work/'+w+'/',libw[w]['title'])+'</li>' for w in x.get('reading_room_works',[]) if w in libw)
+        ws=''.join('<li>'+(a('/work/'+b['work_id']+'/',b['title']) if b.get('work_id') in libw else a(b['url'],b['title'],True))+'</li>' for b in SD['shelf'] if x['id'] in b.get('about',[]))
+        body=head(s_status(x)+(' · '+s_years(x) if s_years(x) else ''),x['name'],s_facts(x))+'<p>'+' · '.join(L)+'</p>'+('<h2>Read here</h2><ul>'+rw+'</ul>' if rw else '')+('<h2>Lives</h2><ul>'+ws+'</ul>' if ws else '')+'<p>'+a('/saints/','Saints & Hagiography')+'</p>'
+        d=x['name']+': '+s_facts(x)[0].lower()+s_facts(x)[1:]+' Sources, feast days, and where to read more.'
+        out['saints/'+x['id']]=(x['name']+' — Saints — Bibliotheca Catholica',d[:300],body)
+    sh=''.join('<li>'+a(b['url'],b['title'],True)+' — '+E(b['author'])+'; '+E(b['edition'] or b['imprint'])+(' (novel)' if b.get('fiction') else '')+'</li>' for b in SD['shelf'])
+    out['saints/books']=('The hagiography shelf — Saints — Bibliotheca Catholica','Public-domain lives of the saints, with editions and rights checked: Butler, Baring-Gould, the Golden Legend, the Little Flowers of St. Francis, and more.',head('Saints & Hagiography','The hagiography shelf','Public-domain lives of the saints, each with its edition, imprint, and rights evidence.')+'<ul>'+sh+'</ul><p>'+a('/saints/','Saints & Hagiography')+'</p>')
+    out['saints/about']=('Saints: sources and method — Bibliotheca Catholica','Where the saints guide gets its facts, how feast dates are labelled, and what CatholicSaints.Info links mean.',head('Saints & Hagiography','Sources & method','Every fact links its source. Feast dates are labelled by where they come from: Vatican News “Saint of the day”, the General Roman Calendar (not yet checked), and other calendars recorded in Wikidata.')+'<p>'+a('/saints/','Saints & Hagiography')+'</p>')
     for k,(t,d) in SECTIONS.items():
         extra=''
         if k in('scripture','magisterium','references','media','libraries','prayers'):
@@ -104,6 +145,7 @@ def main():
         elif k=='authors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors)+'</ul>'
         elif k=='library':extra='<ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title']+' — '+w['author'])+'</li>' for w in lib['works'])+'</ul>'
         elif k=='editions':extra='<ul>'+''.join('<li>'+a('/editions/'+e['id']+'/',e['t'])+'</li>' for e in guide['editions'])+'</ul>'
+        elif k=='saints':extra='<ul>'+''.join('<li>'+a(s_href(x),x['name'])+' — '+E(s_status(x))+(' · Vatican News: '+E(s_vn(x)) if x['feasts']['vatican_news'] else '')+(' · '+E(FLAGL[x['historicity']['flag']]) if x.get('historicity') else '')+'</li>' for x in sorted(saints,key=lambda x:x['name']))+'</ul><p>'+a('/saints/books/','The hagiography shelf')+' · '+a('/saints/about/','Sources & method')+'</p>'
         elif k=='reading':extra='<ul>'+''.join('<li>'+a('/reading/'+L['id']+'/',L['t'])+'</li>' for L in guide['lists'])+'</ul>'
         out[k]=(t+' — Bibliotheca Catholica',d,head('Bibliotheca Catholica',t,d)+extra)
     if flags.get('policy_html'):

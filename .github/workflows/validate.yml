@@ -14,8 +14,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: npm run build
-      - run: git diff --exit-code -- data/library.js data/guide.js
+      - run: git diff --exit-code -- data/library.js data/guide.js data/saints.js data/saints-aliases.json
       - run: python3 tools/build_static.py
-      - run: git diff --exit-code && test -z "$(git status --porcelain -- sitemap.xml robots.txt 404.html docs/static-pages.txt author work editions reading policy)"
+      - run: git diff --exit-code && test -z "$(git status --porcelain -- sitemap.xml robots.txt 404.html docs/static-pages.txt author work editions reading policy saints)"
       - run: npm test
-      - run: node --check app.js && node --check scripts/library.js && node --check scripts/guides.js
+      - run: node --check app.js && node --check scripts/library.js && node --check scripts/guides.js && node --check scripts/saints.js

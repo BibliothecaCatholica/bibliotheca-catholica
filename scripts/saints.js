@@ -41,7 +41,7 @@
   function flagBadge(s){var h=s.historicity;return h&&h.flag?'<span class="saint-flag f-'+esc(h.flag)+'">'+esc(FLAGL[h.flag]||h.flag)+'</span>':''}
   function statusChip(s){var v=(s.status||{}).value;return '<span class="saint-status s-'+esc(v||'unknown')+'">'+esc(statusLabel(s))+'</span>'}
   function head(eyebrow,h1,lede){return '<div class="page-head"><div class="eyebrow">'+esc(eyebrow)+'</div><h1>'+esc(h1)+'</h1>'+(lede?'<p class="lede">'+lede+'</p>':'')+'</div>'}
-  function crumbs(extra){return '<a class="backlink" href="#/saints">← Saints &amp; Hagiography</a>'+(extra||'')}
+  function crumbs(extra){return '<a class="backlink" href="#/saints">← Saints &amp; Hagiography</a> <a class="backlink" href="#/timeline/saints">Saints on the timeline →</a>'+(extra||'')}
   function srow(s){var f=(s.feasts||{}).vatican_news||[];return '<li class="saint-row"><a href="'+href(s)+'"><b>'+esc(s.name)+'</b></a> '+statusChip(s)+flagBadge(s)+
     '<span class="saint-meta">'+esc(years(s))+(f.length?(years(s)?' · ':'')+'Vatican News: '+esc(f.map(function(v){return fmtDate(v.date)}).join(', ')):'')+(s.tier===1?' · Writer in the library':'')+'</span></li>'}
   function searchBox(){return '<form class="hero-search saint-search" role="search" data-saint-search><input name="q" placeholder="Find a saint: “Little Flower”, “Aquinas”, “Laurence”…" aria-label="Find a saint by name"><button class="btn">Find</button></form><div class="saint-search-out" aria-live="polite"></div>'}
@@ -56,7 +56,8 @@
     h+='<section class="saint-today"><div class="eyebrow">Hodie · '+esc(fmtDate(md))+'</div>'+(t.vn.length?'<h2>On this day, as listed by Vatican News</h2><ul class="saint-list">'+t.vn.map(srow).join('')+'</ul>':'<h2>No saint in our guide is listed for today by Vatican News</h2>')+
       (t.other.length?'<h3 class="small-h">Also on this day in other calendars (Wikidata)</h3><ul class="saint-list">'+t.other.map(srow).join('')+'</ul>':'')+
       '<p class="small muted">'+esc(VN_NOTE)+' <a href="#/saints/calendar/'+md+'">This day in the calendar →</a></p></section>';
-    var tiles=[['#/saints/calendar','◷','Calendar','The year day by day, with the date each saint is listed by Vatican News, and other calendars labelled.',''],
+    var tiles=[['#/timeline/saints','T','Historical timeline','Follow saints through the centuries and open their writings, biographies, and sources.',''],
+      ['#/saints/calendar','◷','Calendar','The year day by day, with the date each saint is listed by Vatican News, and other calendars labelled.',''],
       ['#/saints/az','A','A–Z','Every saint in the guide by name, with other names and spellings.',D.saints.length],
       ['#/saints/writers','✎','Writers who are saints','Saints, blesseds, and venerables whose own books are in the library.',n[1]],
       ['#/saints/books','❦','The hagiography shelf','Butler, Baring-Gould, the Golden Legend, the Roman Martyrology (1897), and more, all public domain.',D.shelf.length],

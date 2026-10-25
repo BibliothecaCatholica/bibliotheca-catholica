@@ -281,7 +281,7 @@ function home(){
   h+=dailyPanel();
   h+='<div class="rule"></div><div class="page-head"><div class="eyebrow">Explore</div><h2>The sections of the library</h2></div><div class="grid g-sections">'+
   '<a class="sec-card" href="#/authors"><span class="count">'+A.length+'</span><div class="glyph">A</div><h3>Authors</h3><p>Fathers, Doctors, scholastics, mystics, saints, popes, theologians, apologists, novelists, and poets.</p></a>'+
-  '<a class="sec-card" href="#/timeline"><span class="count">I–XXI</span><div class="glyph">T</div><h3>Timeline</h3><p>Every author placed by century, from Clement of Rome to Pope Leo XIV.</p></a>'+
+  '<a class="sec-card" href="#/timeline"><span class="count">I–XXI</span><div class="glyph">T</div><h3>Timeline</h3><p>Saints and writers through the centuries, connected to writings, biographies, and reading sources.</p></a>'+
   '<a class="sec-card" href="#/doctors"><span class="count">'+docs.length+'</span><div class="glyph">D</div><h3>Doctors of the Church</h3><p>The '+docs.length+' saints whose teaching the Church holds up as eminent.</p></a>'+
   '<a class="sec-card" href="#/saints"><span class="count">185</span><div class="glyph">✣</div><h3>Saints &amp; Hagiography</h3><p>A sourced guide to saints and their feast days, the saints of legend, and the old lives of the saints.</p></a>';
   Object.keys(SECTIONS).forEach(function(k){var s=SECTIONS[k];h+='<a class="sec-card" href="#/'+k+'"><span class="count">'+cnt[k]+'</span><div class="glyph">'+s.g+'</div><h3>'+esc(s.t)+'</h3><p>'+esc(s.d)+'</p></a>'});
@@ -338,7 +338,7 @@ function author(id,tab){
   var X={};var site=a.links.filter(function(l){return l.kind==='site'}),wiki=a.links.filter(function(l){return /wikipedia\.org/.test(l.url)})[0];
   var key=[];if(wiki)key.push(['Wikipedia',wiki.url]);if(a.qid)key.push(['Wikidata '+a.qid,'https://www.wikidata.org/wiki/'+a.qid]);else if(a.qidWork)key.push(['Wikidata '+a.qidWork,'https://www.wikidata.org/wiki/'+a.qidWork]);
   site.slice(0,2).forEach(function(l){key.push([l.label,l.url])});
-  var h='<a class="backlink" href="#/authors">← All authors</a><article class="au-page"><header class="au-head"><div class="detail-head">'+avatar(a)+'<div><div class="eyebrow">'+esc(ERA[a.era].label)+(a.century?' · '+ord(a.century)+' century':'')+'</div><h1>'+esc(a.name)+'</h1><div class="dates">'+esc(dates(a))+'</div><div id="au-feast" class="au-feast"></div>'+badges(a,8)+'</div></div>'+
+  var h='<a class="backlink" href="#/authors">← All authors</a> <a class="backlink" href="#/timeline/person/'+esc(a.id)+'">Find in timeline →</a><article class="au-page"><header class="au-head"><div class="detail-head">'+avatar(a)+'<div><div class="eyebrow">'+esc(ERA[a.era].label)+(a.century?' · '+ord(a.century)+' century':'')+'</div><h1>'+esc(a.name)+'</h1><div class="dates">'+esc(dates(a))+'</div><div id="au-feast" class="au-feast"></div>'+badges(a,8)+'</div></div>'+
    '<p class="summary dropcap">'+esc(a.desc)+'</p>'+(a.extract?'<div class="extract"><p>'+esc(a.extract)+(a.extract.length>=595?'…':'')+'</p><p class="small">Summary from Wikipedia'+(a.wikiDesc?': “'+esc(a.wikiDesc)+'”':'')+'.</p></div>':'')+
    '<div id="au-saint"></div><div class="au-key" id="au-key">'+key.map(function(k){return '<a class="chip" href="'+esc(k[1])+'" target="_blank" rel="noopener">'+esc(k[0])+' ↗</a>'}).join('')+'</div></header>'+
    '<nav class="au-tabs" id="au-tabs" role="tablist" aria-label="Sections">'+AUTABS.map(function(t){return '<a role="tab" href="#/author/'+a.id+'/'+t[0]+'" data-t="'+t[0]+'" id="tab-'+t[0]+'">'+t[1]+' <span class="tc">…</span></a>'}).join('')+'</nav>'+
@@ -431,13 +431,7 @@ function auRel(a,X){var p=$('#tp-related'),n=0,h='';
   if(X.proj)lazy('projects.js','PROJECTS_DATA',function(R){var box=$('#au-rp');if(!box||!R)return;var M={};R.items.forEach(function(r){M[r.id]=r});var L=X.proj.map(function(i){return M[i]}).filter(Boolean);
     box.insertAdjacentHTML('beforeend','<h3>Projects &amp; translations</h3>'+auLinkList(L.map(function(r){return {k:'site',kl:'project',t:r.n,u:r.u,n:r.d}})))})}
 
-function timeline(){
-  var by={};A.forEach(function(a){if(!a.century)return;(by[a.century]=by[a.century]||[]).push(a)});
-  var cs=Object.keys(by).map(Number).sort(function(a,b){return a-b});
-  var h='<div class="page-head"><div class="eyebrow">Per saecula</div><h1>Timeline of Catholic Authors</h1><p class="lede">Each author placed in the century of their principal work. Gold-bordered names are Doctors of the Church.</p></div><div class="timeline">';
-  cs.forEach(function(c){var L=by[c].sort(function(a,b){return (a.died||a.born+60)-(b.died||b.born+60)});h+='<div class="century"><div class="c-label">'+roman(c)+'<small>'+((c-1)*100)+'–'+(c*100)+'</small></div><div class="c-people">'+L.map(function(a){return '<a class="'+(a.doctor?'doc':'')+'" href="#/author/'+a.id+'" title="'+esc(dates(a)+' — '+a.desc)+'">'+avatar(a,'mini')+esc(a.name)+'</a>'}).join('')+'</div></div>'});
-  render(h+'</div>','timeline');
-}
+function timeline(scope,focus){window.BCTimeline.view(render,{scope:scope==='person'?'all':scope||'all',focus:scope==='person'?focus:null})}
 
 /* ---------- v4 lazy data: doctors' free texts, rare works, projects ---------- */
 var LZ={};
@@ -580,7 +574,7 @@ function support(){var shop=AFF.bookshopShop||'';
   render(h,'support')}
 function route(){var raw=location.hash.replace(/^#\/?/,'');if(!raw&&window.BC_BOOT)raw=window.BC_BOOT;var queryAt=raw.indexOf('?');var query=new URLSearchParams(queryAt<0?'':raw.slice(queryAt+1));var path=queryAt<0?raw:raw.slice(0,queryAt);var h;try{h=decodeURIComponent(path)}catch(e){notfound();return}var p=h.split('/');if(p[0]==='search'){searchScope=['curated','isidore','all'].indexOf(query.get('scope'))>=0?query.get('scope'):'all';}
   hideSug();if(p[0]!=='search')gaReset('search');
-  switch(p[0]){case 'library':window.BCLibrary.library(render,p[1]);break;case 'work':window.BCLibrary.work(render,p[1]);break;case 'read':window.BCLibrary.read(render,p[1],p[2],p[3],p[4]);break;case 'related':window.BCLibrary.related(render);break;case '':home();break;case 'authors':authors();break;case 'doctors':authors({doctors:true});break;case 'author':author(p[1],p[2]||'');break;case 'timeline':timeline();break;
+  switch(p[0]){case 'library':window.BCLibrary.library(render,p[1]);break;case 'work':window.BCLibrary.work(render,p[1]);break;case 'read':window.BCLibrary.read(render,p[1],p[2],p[3],p[4]);break;case 'related':window.BCLibrary.related(render);break;case '':home();break;case 'authors':authors();break;case 'doctors':authors({doctors:true});break;case 'author':author(p[1],p[2]||'');break;case 'timeline':timeline(p[1],p[2]);break;
    case 'scripture':case 'magisterium':case 'references':case 'media':case 'libraries':section(p[0]);break;case 'prayers':section('prayers',p[1]||'');break;case 'rare':rare(p[1]||'');break;case 'projects':projects();break;case 'isidore':if(p[1]==='folders')isidore();else if(p[1]==='book')bookDetail(+p[2]);else books(p.slice(1).join('/'));break;case 'books':location.replace('#/isidore'+(p[1]?'/'+p.slice(1).join('/'):''));break;case 'data':openData();break;case 'support':support();break;case 'policy':policy();break;case 'rights':case 'takedown':rightsPage(p[0]);break;case 'editions':editions(p[1]||'');break;case 'reading':reading(p[1]||'');break;case 'substacks':substacks();break;case 'search':results(p.slice(1).join('/'));break;case 'saints':window.BCSaints.view(render,p.slice(1));break;default:notfound()}}
 window.addEventListener('hashchange',route);
 /* ---------- Google Analytics page views: the config in <head> has send_page_view:false, so app.js sends exactly one page_view

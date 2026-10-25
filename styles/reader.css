@@ -21,7 +21,7 @@ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-ri
 .rs-heads a:hover{background:var(--bg2);color:var(--ink)}.rs-heads li.here a{color:var(--ink)}.rs-heads a[aria-current]{background:var(--bg2);font-weight:600;color:var(--rubric)}
 .rs-secs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:4px}
 .rs-secs a{display:grid;place-items:center;min-height:32px;border:1px solid var(--line);border-radius:8px;color:var(--ink2);text-decoration:none;font-size:13px}
-.rs-secs a[aria-current]{background:var(--rubric);border-color:var(--rubric);color:#fff8ea;font-weight:600}
+.rs-secs a[aria-current]{background:var(--rubric);border-color:var(--rubric);color:var(--on-rubric);font-weight:600}
 .rs-close{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--ink);font-size:22px;cursor:pointer}
 /* drawer below 1100px */
 @media(max-width:1099px){
@@ -39,7 +39,7 @@ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-ri
 .rb-actions{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .rb-btn{font:600 13px var(--sans);min-height:34px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;list-style:none}
 .rb-btn::-webkit-details-marker{display:none}.rb-btn:hover{border-color:var(--rubric);color:var(--rubric)}
-.rb-btn[aria-expanded=true]{background:var(--rubric);border-color:var(--rubric);color:#fff8ea}
+.rb-btn[aria-expanded=true]{background:var(--rubric);border-color:var(--rubric);color:var(--on-rubric)}
 .rb-count{display:inline-block;min-width:1.5em;padding:0 5px;margin-left:2px;border-radius:99px;background:var(--bg2);color:var(--ink);font-size:12px;text-align:center}
 .rb-print{position:relative}.rb-menu{position:absolute;right:0;top:calc(100% + 6px);z-index:25;display:flex;flex-direction:column;min-width:170px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:6px}
 .rb-menu button{font:500 14px var(--sans);text-align:left;min-height:40px;padding:8px 10px;border:0;border-radius:8px;background:none;color:var(--ink);cursor:pointer}.rb-menu button:hover{background:var(--bg2)}
@@ -54,7 +54,7 @@ mark.hl-flash{outline:3px solid var(--rubric);outline-offset:2px;transition:outl
 .hl-toolbar[hidden]{display:none}
 .hl-sw{display:inline-block;width:30px;height:30px;border-radius:50%;border:2px solid color-mix(in srgb,var(--ink) 35%,transparent);cursor:pointer;padding:0}
 .hl-toolbar .hl-sw{width:36px;height:36px}
-.hl-addnote{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--rubric);background:var(--rubric);color:#fff8ea;font:inherit;cursor:pointer}
+.hl-addnote{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--rubric);background:var(--rubric);color:var(--on-rubric);font:inherit;cursor:pointer}
 @media(pointer:coarse){.hl-toolbar .hl-sw{width:44px;height:44px}.hl-addnote{min-height:44px}}
 /* notes panel */
 .notes-panel{position:fixed;z-index:50;top:var(--tb-h);right:0;bottom:0;width:min(372px,100vw);overflow:auto;background:var(--card);border-left:1px solid var(--line);box-shadow:var(--shadow);padding:16px 18px calc(24px + env(safe-area-inset-bottom));font:15px/1.5 var(--sans);overscroll-behavior:contain}
@@ -67,7 +67,7 @@ mark.hl-flash{outline:3px solid var(--rubric);outline-offset:2px;transition:outl
 .np-meta{color:var(--muted);margin-top:4px}.np-note{margin:6px 0 0;white-space:pre-wrap}
 .np-acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .np-acts button{font:600 13px var(--sans);min-height:36px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);cursor:pointer}
-.np-acts .btn{background:var(--rubric);color:#fff8ea;border-color:var(--rubric)}
+.np-acts .btn{background:var(--rubric);color:var(--on-rubric);border-color:var(--rubric)}
 .np-edit textarea{width:100%;box-sizing:border-box;font:16px/1.5 var(--sans);padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
 .np-lbl{display:block;font-weight:600;margin:8px 0 4px}
 .np-colors{border:0;padding:0;margin:8px 0;display:flex;flex-wrap:wrap;gap:6px 12px}.np-colors legend{font-weight:600;padding:0;margin-bottom:4px}
@@ -143,11 +143,7 @@ kbd{font:600 13px ui-monospace,Menlo,monospace;padding:2px 7px;border:1px solid 
  #print-all .pa-notice{font-size:9pt;border:1px solid #999;padding:6pt 8pt}
  #print-all p{white-space:pre-wrap;orphans:3;widows:3}
 }
-/* contrast: reader-scoped fixes (WCAG AA 4.5:1) without changing the site-wide palette */
-html:not([data-theme=dark]) body.in-reader,html:not([data-theme=dark]) .continue-reading{--muted:#6f604b}
-html:not([data-theme=dark]) body.in-reader .eyebrow,html:not([data-theme=dark]) .continue-reading .eyebrow{color:#80601a}
-.in-reader .pg-notice{color:var(--ink2)}
-[data-theme=dark] .rb-btn[aria-expanded=true],[data-theme=dark] .rs-secs a[aria-current],[data-theme=dark] .hl-addnote,[data-theme=dark] .np-acts .btn,[data-theme=dark] .in-reader .reader-pagination .btn:not(.ghost){color:#14161c}
+/* contrast: site-wide palette tokens in styles.css (--muted, --gold-ink, --on-rubric) keep reader text at >=4.5:1 in both modes */
 @media print{main,body.notes-open.in-reader main{padding:0!important}}
 @media(min-width:1100px) and (max-width:1439px){body.notes-open.in-reader .reader-shell{display:block}body.notes-open.in-reader .reader-side{display:none}}
 /* mobile: let the site header scroll away in the reader so only the one-line chip stays pinned */

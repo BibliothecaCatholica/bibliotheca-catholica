@@ -44,8 +44,7 @@ select,input,button{max-width:100%}.reader-tools select,#library-topic,#search-s
 .dh-quote p{margin:0}.dh-quote footer{font-style:normal;font-size:.85rem;margin-top:.2rem;opacity:.85}
 .policy h2{margin-top:1.4rem}
 /* v10: Recently added + New badge */
-.new-badge{display:inline-block;margin-left:.5rem;padding:1px 8px;border-radius:999px;background:var(--rubric);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;vertical-align:middle}
-[data-theme=dark] .new-badge{color:#14161c}
+.new-badge{display:inline-block;margin-left:.5rem;padding:1px 8px;border-radius:999px;background:var(--rubric);color:var(--on-rubric);font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;vertical-align:middle}
 .recent-added{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--r);padding:20px 22px;margin:18px 0 26px}
 .ra-head{display:flex;flex-wrap:wrap;gap:6px 24px;align-items:flex-end;justify-content:space-between}.ra-head h2{margin:2px 0}.ra-head p{margin:0;max-width:52ch}
 .ra-list{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
@@ -54,8 +53,7 @@ select,input,button{max-width:100%}.reader-tools select,#library-topic,#search-s
 .lib-all-h{margin:8px 0 10px}
 /* v10: reader Listen dock (persists across sections of a work) */
 .listen-dock{position:fixed;right:16px;bottom:16px;z-index:40;display:flex;flex-direction:column;align-items:flex-end;gap:8px;max-width:calc(100vw - 32px)}
-.ld-toggle{order:2;border:0;border-radius:999px;padding:10px 18px;background:var(--rubric);color:#fff;font:inherit;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.22)}
-[data-theme=dark] .ld-toggle{color:#14161c}
+.ld-toggle{order:2;border:0;border-radius:999px;padding:10px 18px;background:var(--rubric);color:var(--on-rubric);font:inherit;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.22)}
 .ld-toggle:focus-visible,.ld-panel button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 .ld-panel{order:1;width:360px;max-width:100%;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,.25);display:flex;flex-direction:column;gap:8px}
 .ld-panel[hidden]{display:none}

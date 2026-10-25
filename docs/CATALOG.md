@@ -2,11 +2,37 @@
 
 ## Document archive (October 22, 2026)
 
-The 42 hosted TXT editions are also published at `https://texts.bibliothecacatholica.com/texts/` from `BibliothecaCatholica/bibliotheca-texts`. `textArchive` in `data/library.json` controls the reader's preferred host. Original local paths, hashes, and source records remain authoritative; the reader falls back to local files on archive failure. Export with `python3 tools/build_text_archive.py --output /absolute/path/to/bibliotheca-texts`. The export preserves original bytes and includes provenance, a searchable directory, and a manifest. See `docs/PROJECT-REVIEW-2026-10-22.md` for the full assessment.
+The 56 hosted TXT editions are also published at `https://texts.bibliothecacatholica.com/texts/` from `BibliothecaCatholica/bibliotheca-texts`. `textArchive` in `data/library.json` controls the reader's preferred host. Original local paths, hashes, and source records remain authoritative; the reader falls back to local files on archive failure. Export with `python3 tools/build_text_archive.py --output /absolute/path/to/bibliotheca-texts`. The export preserves original bytes and includes provenance, a searchable directory, and a manifest. See `docs/PROJECT-REVIEW-2026-10-22.md` for the full assessment.
 
 `data/library.json` is the maintained source; `python3 tools/build_library.py` validates it and emits `data/library.js`. Both are committed so the site can still deploy as plain static files. There are no API keys, production server, database, or runtime package dependencies.
 
 Each **work** has an identity, author, subject, tradition, optional work date, and review status. Each **edition** has its own identity, language, credited contributor roles, source URL, access type, rights statement, and check date. A hosted **copy** additionally has a local text path and SHA-256 checksum. Unknown publication/translation dates and contributor roles are left unspecified. A Gutenberg digital-release date is not the work's composition date.
+
+## Saints and hagiography books (2026-10-25, v14)
+
+Source: Bibliotheca Research's verified list (35 records, `saints-books-verified.json`, checked 2026-10-25). Each Gutenberg imprint below was re-read from the downloaded PG file; every Internet Archive item was re-checked through its `/metadata` record (publisher, date, and no lending restriction).
+
+**Hosted (14 Project Gutenberg editions, `"added": "2026-10-25"`):**
+- Alban Butler, *The Lives of the Saints*: January–March (Kenedy, imprimatur 1895, #20450) and July (Kenedy 1908, #49604).
+- Sabine Baring-Gould (Anglican), *The Lives of the Saints*: January, February, and March (Nimmo, MDCCCXCVII, #46947, #45604, and #48395), and *Virgin Saints and Martyrs* (Crowell 1901, #53841).
+- Anna Jameson, *Sacred and Legendary Art*, vol. 1 (6th ed., Longmans 1870, #69581; vol. 2 links to an Internet Archive scan) and *Legends of the Madonna* (Houghton, Mifflin 1881, #12047).
+- William Canton, *A Child's Book of Saints* (Dent 1906, first published 1898, #22112).
+- Paul Sabatier (Protestant), *Life of St. Francis of Assisi* (tr. Houghton, Hodder & Stoughton 1919, ©1894, #18787).
+- Candide Chalippe, *The Life and Legends of Saint Francis of Assisi* (Duerk's Jubilee Edition, imprimatur 1917, #6367).
+- Aubrey de Vere, *The Legends of Saint Patrick* (Cassell 1892, #7165).
+- James O'Leary (ed.), *The Most Ancient Lives of Saint Patrick* (5th ed., Kenedy 1880, #18482).
+- Nicholas Wiseman, *Fabiola* (Benziger 1886, ©1885, #62254), labeled as fiction (a historical novel) in its description.
+
+**Link-only (16 works; scans or texts at their source, not hosted):** Butler's 1812 London edition (8 volumes on the Internet Archive), further volumes of Baring-Gould's 1897 edition (5 volumes), Jameson's *Legends of the Monastic Orders* (1863), *The Golden Legend* (Ellis's Temple Classics edition, 1900, at Fordham plus 6 IA volumes), *The Roman Martyrology* (Baltimore 1897), the Ramsgate *Book of Saints* (1st ed., 1921 only), Dunbar's *Dictionary of Saintly Women* (1904–1905), Shea's *Pictorial Lives of the Saints* (1887), Delehaye's *Legends of the Saints* (tr. Crawford, 1907), Alger's *Little Flowers of Saint Francis* (1887), Thorold's *Dialogue* of Catherine of Siena (1896 complete and 1907 abridged), O'Kennedy's *The Holy Angels* (1887), Goodier's *The Crown of Sorrow* (1918; 1927 impression), Nepveu's *Meditations for Every Day in the Month* (1911), Yorke's *The Mass* (1921), and *The New Catholic Dictionary* (1929).
+
+**Resource link fixes:** "Butler's Lives of the Saints (CCEL)" pointed to CCEL's page for Joseph Butler (the Anglican bishop), and `/ccel/butler/lives` returns 404. It is now two resources, Gutenberg #20450 (January–March) and #49604 (July). "Roman Martyrology (Internet Archive)" was a search; it now opens the 1897 Baltimore edition (`romanmartyrology00cath`).
+
+**Skipped:**
+- Fulton J. Sheen, *The Seven Last Words* (Appleton-Century 1934): after the pre-1931 cutoff, and the Internet Archive copy is lending-only.
+- Richard F. Clarke, *Charity*: neither Internet Archive upload shows a publisher, date, or imprimatur, and one adds modern captions.
+- Joseph Simler, *Catechism of Mental Prayer*: only an 1888 approbation line in a user upload, with no scanned title page.
+- *The Catholic Encyclopedia* (1907–1913) saint entries: New Advent is already a listed library; per-saint links belong to the separate Saints & Hagiography section, which awaits the owner's go-ahead.
+- The LibriVox recording of Butler's one-volume *Lives of the Saints with Reflections* (#5324) is an abridgment, so it is excluded (`audioExclude`) from the full Kenedy volumes.
 
 ## Reading-room expansion (2026-10-22, v10)
 

@@ -12,7 +12,7 @@ class CatalogTests(unittest.TestCase):
         self.catalog=json.loads((ROOT/'data/library.json').read_text())
     def test_all_hosted_editions_have_verified_files_and_rights(self):
         build.validate(self.catalog)
-        self.assertEqual(42,sum(bool(e.get('text')) for w in self.catalog['works'] for e in w['editions']))
+        self.assertEqual(56,sum(bool(e.get('text')) for w in self.catalog['works'] for e in w['editions']))
     def test_duplicate_work_is_rejected(self):
         self.catalog['works'].append(copy.deepcopy(self.catalog['works'][0]))
         with self.assertRaises(AssertionError):build.validate(self.catalog)

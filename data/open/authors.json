@@ -2,7 +2,7 @@
 "name": "authors",
 "description": "Curated Catholic authors (476) in 12 eras, with Wikidata QIDs and cross-links.",
 "license": "CC0-1.0",
-"generated": "2026-10-22",
+"generated": "2026-10-25",
 "count": 476,
 "fields": {
 "id": "stable slug",

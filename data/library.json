@@ -2001,6 +2001,1099 @@
           "access": "full-text"
         }
       ]
+    },
+    {
+      "id": "butler-lives-january-march",
+      "title": "The Lives of the Saints: January, February, and March",
+      "author": "Alban Butler",
+      "authorId": "alban-butler",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Butler's saint-by-saint lives for the first three months of the year, each sourced to the early lives and the Bollandists, with Butler's own notes. The classic English Catholic collection of saints' lives.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "1756–1759 (this edition 1895)",
+      "editions": [
+        {
+          "id": "pg-20450",
+          "label": "Project Gutenberg #20450",
+          "source": "https://www.gutenberg.org/ebooks/20450",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "First published 1756–1759. Gutenberg's text is vol. 1 (January–March) of the P. J. Kenedy “complete and unabridged” edition, New York, with an imprimatur dated June 28, 1895, and a publisher's notice dated September 1895.",
+          "sourceTitle": "The Lives of the Fathers, Martyrs, and Other Principal Saints. January, February, March",
+          "digitalRelease": "Jan 26, 2007",
+          "access": "full-text",
+          "text": "data/texts/pg-20450.txt",
+          "sha256": "0567160470a1f8d029c4ebda775c5dc2e0a569b359a789ee462874c3d27c20b9"
+        }
+      ],
+      "audioExclude": [
+        5324
+      ]
+    },
+    {
+      "id": "butler-lives-july",
+      "title": "The Lives of the Saints: July",
+      "author": "Alban Butler",
+      "authorId": "alban-butler",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Butler's lives of the saints for July, from St. Rumold to St. Ignatius of Loyola, with his historical notes.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "1756–1759 (this edition 1908)",
+      "editions": [
+        {
+          "id": "pg-49604",
+          "label": "Project Gutenberg #49604",
+          "source": "https://www.gutenberg.org/ebooks/49604",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "First published 1756–1759. Gutenberg's title page: vol. VII (July), P. J. Kenedy, New York, 1908, with the approbation of Archbishop M. A. Corrigan.",
+          "sourceTitle": "The Lives of the Fathers, Martyrs, and Other Principal Saints, Vol. 7. July",
+          "digitalRelease": "Aug 4, 2015",
+          "access": "full-text",
+          "text": "data/texts/pg-49604.txt",
+          "sha256": "d790562e8e394eef5364b9e8ee3c55ea7cfba8ba706bb0a496e127367ccbdf2f"
+        }
+      ],
+      "audioExclude": [
+        5324
+      ]
+    },
+    {
+      "id": "butler-lives-scans",
+      "title": "The Lives of the Saints (1812 London edition, scans)",
+      "author": "Alban Butler",
+      "authorId": "alban-butler",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Page scans of an early twelve-volume London edition of Butler's Lives, for the months not yet transcribed on Project Gutenberg. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "1756–1759 (this edition 1812–1813)",
+      "editions": [
+        {
+          "id": "ia-livesoffathersma01butl-0",
+          "label": "Internet Archive scan, vol. 1 (London: J. Murphy, 1812)",
+          "source": "https://archive.org/details/livesoffathersma01butl_0",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Internet Archive metadata: London, J. Murphy, 1812. Volumes 3, 7, 8, and 9 of this edition were not found.",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-livesoffathersma02butl-1",
+          "label": "Internet Archive scan, vol. 2 (London: J. Murphy, 1812)",
+          "source": "https://archive.org/details/livesoffathersma02butl_1",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-livesoffathersma04butl-1",
+          "label": "Internet Archive scan, vol. 4 (London: J. Murphy, 1812)",
+          "source": "https://archive.org/details/livesoffathersma04butl_1",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-livesoffathersma05butl-0",
+          "label": "Internet Archive scan, vol. 5 (London: J. Murphy, 1812)",
+          "source": "https://archive.org/details/livesoffathersma05butl_0",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-livesoffathersma06butl-0",
+          "label": "Internet Archive scan, vol. 6 (London: J. Murphy, 1812)",
+          "source": "https://archive.org/details/livesoffathersma06butl_0",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-livesoffathersma10butl-0",
+          "label": "Internet Archive scan, vol. 10 (London: J. Murphy, 1812)",
+          "source": "https://archive.org/details/livesoffathersma10butl_0",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-livesoffathersma11butl-0",
+          "label": "Internet Archive scan, vol. 11 (London: J. Murphy, 1812)",
+          "source": "https://archive.org/details/livesoffathersma11butl_0",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-livesoffathersma12butl-0",
+          "label": "Internet Archive scan, vol. 12 (London: J. Murphy, 1812)",
+          "source": "https://archive.org/details/livesoffathersma12butl_0",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        }
+      ],
+      "audioExclude": [
+        5324
+      ]
+    },
+    {
+      "id": "baring-gould-lives-january",
+      "title": "The Lives of the Saints: January",
+      "author": "Sabine Baring-Gould",
+      "authorId": null,
+      "category": "Biography",
+      "tradition": "Anglican writer",
+      "description": "The first volume of Baring-Gould's day-by-day lives, written by an Anglican priest with a historian's eye. He often notes where a life rests on legend rather than record.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "1872–1877 (this edition 1897)",
+      "editions": [
+        {
+          "id": "pg-46947",
+          "label": "Project Gutenberg #46947",
+          "source": "https://www.gutenberg.org/ebooks/46947",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "First published 1872–1877. Gutenberg's title page: “New Edition in 16 Volumes,” vol. 1 (January), John C. Nimmo, London, MDCCCXCVII (1897). Baring-Gould was an Anglican priest.",
+          "sourceTitle": "The Lives of the Saints, Volume 01 (of 16): January",
+          "digitalRelease": "Sep 24, 2014",
+          "access": "full-text",
+          "text": "data/texts/pg-46947.txt",
+          "sha256": "2b536f5b99e5078766aad0ce7080e6eee1257e5e4bfdd56d80296feada8be26f"
+        }
+      ]
+    },
+    {
+      "id": "baring-gould-lives-february",
+      "title": "The Lives of the Saints: February",
+      "author": "Sabine Baring-Gould",
+      "authorId": null,
+      "category": "Biography",
+      "tradition": "Anglican writer",
+      "description": "Baring-Gould's lives for February, from the 1897 revised edition. An Anglican priest's careful, sometimes skeptical, account of the saints of the month.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "1872–1877 (this edition 1897)",
+      "editions": [
+        {
+          "id": "pg-45604",
+          "label": "Project Gutenberg #45604",
+          "source": "https://www.gutenberg.org/ebooks/45604",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "First published 1872–1877. Gutenberg's title page: “New Edition in 16 Volumes,” vol. 2 (February), John C. Nimmo, London, MDCCCXCVII (1897). Baring-Gould was an Anglican priest.",
+          "sourceTitle": "The Lives of the Saints, Volume 02 (of 16): February",
+          "digitalRelease": "May 7, 2014",
+          "access": "full-text",
+          "text": "data/texts/pg-45604.txt",
+          "sha256": "a9764942247dbca66e2e0e8192d9950c75a2d075eea441da364f7c6cc1ace883"
+        }
+      ]
+    },
+    {
+      "id": "baring-gould-lives-march",
+      "title": "The Lives of the Saints: March",
+      "author": "Sabine Baring-Gould",
+      "authorId": null,
+      "category": "Biography",
+      "tradition": "Anglican writer",
+      "description": "Baring-Gould's lives for March, from the 1897 revised edition, with engravings. Written by an Anglican priest who often weighs legend against record.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "1872–1877 (this edition 1897)",
+      "editions": [
+        {
+          "id": "pg-48395",
+          "label": "Project Gutenberg #48395",
+          "source": "https://www.gutenberg.org/ebooks/48395",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "First published 1872–1877. Gutenberg's title page: “New Edition in 16 Volumes,” vol. 3 (March), John C. Nimmo, London, MDCCCXCVII (1897). Baring-Gould was an Anglican priest.",
+          "sourceTitle": "The Lives of the Saints, Volume 03 (of 16): March",
+          "digitalRelease": "Mar 1, 2015",
+          "access": "full-text",
+          "text": "data/texts/pg-48395.txt",
+          "sha256": "74726e4461b64679287857627fc526ed5a9287d3e3f45042698266a9540612d6"
+        }
+      ]
+    },
+    {
+      "id": "baring-gould-lives-scans",
+      "title": "The Lives of the Saints (1897 edition, further volumes, scans)",
+      "author": "Sabine Baring-Gould",
+      "authorId": null,
+      "category": "Biography",
+      "tradition": "Anglican writer",
+      "description": "Page scans of further volumes of Baring-Gould's 1897 revised edition, for months not yet on Project Gutenberg. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "1872–1877 (this edition 1897)",
+      "editions": [
+        {
+          "id": "ia-livesofsaints05abari",
+          "label": "Internet Archive scan, vol. 5 (London: John C. Nimmo, 1897)",
+          "source": "https://archive.org/details/livesofsaints05abari",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Internet Archive metadata: London, John C. Nimmo, 1897. Other volumes were not located.",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-livesofsaints06bari",
+          "label": "Internet Archive scan, vol. 6 (London: John C. Nimmo, 1897)",
+          "source": "https://archive.org/details/livesofsaints06bari",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-livesofsaints10abari",
+          "label": "Internet Archive scan, vol. 10 (London: John C. Nimmo, 1897)",
+          "source": "https://archive.org/details/livesofsaints10abari",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-livesofsaints0013bari",
+          "label": "Internet Archive scan, vol. 13 (London: John C. Nimmo, 1897)",
+          "source": "https://archive.org/details/livesofsaints0013bari",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-livesofsaints14abari",
+          "label": "Internet Archive scan, vol. 14 (London: John C. Nimmo, 1897)",
+          "source": "https://archive.org/details/livesofsaints14abari",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "virgin-saints-and-martyrs",
+      "title": "Virgin Saints and Martyrs",
+      "author": "Sabine Baring-Gould",
+      "authorId": null,
+      "category": "Biography",
+      "tradition": "Anglican writer",
+      "description": "Lives of women saints from the early martyrs Thekla, Blandina, and Agnes to Teresa of Ávila and later foundresses, by the Anglican hagiographer.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "1901",
+      "editions": [
+        {
+          "id": "pg-53841",
+          "label": "Project Gutenberg #53841",
+          "source": "https://www.gutenberg.org/ebooks/53841",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "illustrator",
+              "name": "Anger, F."
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "Gutenberg's title page: Thomas Y. Crowell & Co., New York, 1901. Baring-Gould was an Anglican priest.",
+          "sourceTitle": "Virgin Saints and Martyrs",
+          "digitalRelease": "Dec 30, 2016",
+          "access": "full-text",
+          "text": "data/texts/pg-53841.txt",
+          "sha256": "b54ebe1bc39d5ec3094aeb22724f41e67631c6b6a027df46fb89f826be116aa9"
+        }
+      ]
+    },
+    {
+      "id": "sacred-legendary-art",
+      "title": "Sacred and Legendary Art",
+      "author": "Anna Jameson",
+      "authorId": null,
+      "category": "Art",
+      "tradition": "Anglican writer",
+      "description": "The standard Victorian guide to how painters and sculptors portrayed the angels, the evangelists, the apostles, the Doctors of the Church, and Mary Magdalene, and how to read a saint's emblems.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "1848 (this edition 1870)",
+      "editions": [
+        {
+          "id": "pg-69581",
+          "label": "Project Gutenberg #69581 (vol. 1 of 2)",
+          "source": "https://www.gutenberg.org/ebooks/69581",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "Volume 1 of 2. First published 1848. Gutenberg's title page: sixth edition, Longmans, Green, and Co., London, 1870. Jameson was not a Catholic.",
+          "sourceTitle": "Sacred and legendary art, volume 1 (of 2) Containing legends of the angels and archangels, the evangelists, the Apostles, the doctors of the church, and St. Mary magdalene, as represented in the fine arts.",
+          "digitalRelease": "Dec 19, 2022",
+          "access": "full-text",
+          "text": "data/texts/pg-69581.txt",
+          "sha256": "bb7ad07b7eb7cb6ba6fdcf65f8b49ddb6419d4e8d47f3396139c1af89cff6ac1"
+        },
+        {
+          "id": "ia-sacredlegendaryar02jame",
+          "label": "Internet Archive scan, vol. 2 (Boston: Houghton Mifflin)",
+          "source": "https://archive.org/details/sacredlegendaryar02jame",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Volume 2 of 2 (the later saints). The Internet Archive dates this scan 1857, which conflicts with its Houghton Mifflin imprint; check the title page at the source.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "legends-of-the-madonna",
+      "title": "Legends of the Madonna",
+      "author": "Anna Jameson",
+      "authorId": null,
+      "category": "Art",
+      "tradition": "Anglican writer",
+      "description": "Jameson's survey of how Christian art has represented the Virgin Mary, from the devotional images to the scenes of her life.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "1852 (this edition 1881)",
+      "editions": [
+        {
+          "id": "pg-12047",
+          "label": "Project Gutenberg #12047",
+          "source": "https://www.gutenberg.org/ebooks/12047",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "First published 1852. Gutenberg's title page: “corrected and enlarged edition,” Houghton, Mifflin and Company, Boston, 1881. Jameson was not a Catholic.",
+          "sourceTitle": "Legends of the Madonna as Represented in the Fine Arts",
+          "digitalRelease": "Apr 1, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-12047.txt",
+          "sha256": "5b401fbf6df73b3a8a20381a54c9388203c8b4c92c053bb5111b6cb94001e41e"
+        }
+      ]
+    },
+    {
+      "id": "legends-monastic-orders",
+      "title": "Legends of the Monastic Orders as Represented in the Fine Arts",
+      "author": "Anna Jameson",
+      "authorId": null,
+      "category": "Art",
+      "tradition": "Anglican writer",
+      "description": "The second series of Sacred and Legendary Art: the founders and saints of the Benedictine, Franciscan, Dominican, and other orders, and how artists depicted them. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "1850 (this edition 1863)",
+      "editions": [
+        {
+          "id": "ia-legendsmonastic00jame",
+          "label": "Internet Archive scan (London: Longman, Green, 1863)",
+          "source": "https://archive.org/details/legendsmonastic00jame",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Internet Archive metadata: London, Longman, Green, Longman, Roberts & Green, 1863.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "child-book-of-saints",
+      "title": "A Child's Book of Saints",
+      "author": "William Canton",
+      "authorId": null,
+      "category": "Biography",
+      "tradition": "Christian tradition",
+      "description": "Saints' legends retold for children as stories told to the author's young daughter, with the brief verses that close each tale.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "1898 (this edition 1906)",
+      "editions": [
+        {
+          "id": "pg-22112",
+          "label": "Project Gutenberg #22112",
+          "source": "https://www.gutenberg.org/ebooks/22112",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "illustrator",
+              "name": "Robinson, T. H. (Thomas Heath), 1869-1954"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "First published 1898. Gutenberg's text is the J. M. Dent edition, London, first edition March 1906, reprinted May 1906.",
+          "sourceTitle": "A Child's Book of Saints",
+          "digitalRelease": "Jul 20, 2007",
+          "access": "full-text",
+          "text": "data/texts/pg-22112.txt",
+          "sha256": "a8c80fffb73152fd7b1a882610eddb79f732ff409e411e55c3c40d68a3c199b7"
+        }
+      ]
+    },
+    {
+      "id": "sabatier-francis",
+      "title": "Life of St. Francis of Assisi",
+      "author": "Paul Sabatier",
+      "authorId": null,
+      "category": "Biography",
+      "tradition": "Protestant writer",
+      "description": "The influential, and in its day controversial, modern critical life of St. Francis by a French Protestant scholar. It reshaped Franciscan studies, and Catholic historians have disputed parts of its reading of Francis and the Church.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "1894 (this printing 1919)",
+      "editions": [
+        {
+          "id": "pg-18787",
+          "label": "Project Gutenberg #18787",
+          "source": "https://www.gutenberg.org/ebooks/18787",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Houghton, Louise Seymour, 1838-1920"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "Sabatier's French original appeared in 1894. Gutenberg's title page: tr. Louise Seymour Houghton, Hodder & Stoughton, London, 1919, with “Copyright, 1894, by Charles Scribner's Sons.”",
+          "sourceTitle": "Life of St. Francis of Assisi",
+          "digitalRelease": "Jul 8, 2006",
+          "access": "full-text",
+          "text": "data/texts/pg-18787.txt",
+          "sha256": "78524402abc1fc7e2c0b9e5b4a1bf645a918a1bde7a22f03bb16b7a593d5b812"
+        }
+      ]
+    },
+    {
+      "id": "life-legends-francis",
+      "title": "The Life and Legends of Saint Francis of Assisi",
+      "author": "Candide Chalippe, O.F.M.",
+      "authorId": null,
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "A classic Franciscan life of St. Francis, first written in French in 1727, with the legends handed down in the order.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "1727 (this edition 1917)",
+      "editions": [
+        {
+          "id": "pg-6367",
+          "label": "Project Gutenberg #6367",
+          "source": "https://www.gutenberg.org/ebooks/6367",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "editor",
+              "name": "Duerk, Hilarion, 1883-1954"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "Chalippe's French life appeared in 1727; an Oratorian English translation followed in 1852. Gutenberg's text is Hilarion Duerk's revised Jubilee Edition, with the imprimatur of Fr. Samuel Macke, O.F.M., St. Louis, September 1, 1917.",
+          "sourceTitle": "The Life and Legends of Saint Francis of Assisi",
+          "digitalRelease": "Aug 1, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-6367.txt",
+          "sha256": "8e26cea04bdbeb34c97c42d40c3e3da00891161594a91a5a47083b40a678daf7"
+        }
+      ]
+    },
+    {
+      "id": "golden-legend",
+      "title": "The Golden Legend",
+      "author": "Jacobus de Voragine",
+      "authorId": "jacobus-de-voragine",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "The medieval best seller of saints' lives and feasts, in Caxton's English as edited by F. S. Ellis. Many of its stories are legends, not history. Read at Fordham or in the Internet Archive scans.",
+      "reviewStatus": "source-checked",
+      "date": "c. 1260 (this edition 1900)",
+      "editions": [
+        {
+          "id": "golden-legend-fordham",
+          "label": "Fordham Internet Medieval Sourcebook (Temple Classics, 1900)",
+          "source": "https://sourcebooks.fordham.edu/basis/goldenlegend/",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Caxton, William, approximately 1422-1491"
+            },
+            {
+              "role": "editor",
+              "name": "Ellis, F. S. (Frederick Startridge), 1830-1901"
+            }
+          ],
+          "rights": "External text at Fordham; Fordham's notices apply. Not hosted here.",
+          "checked": "2026-10-25",
+          "note": "Fordham's e-text of the Temple Classics edition, ed. F. S. Ellis, J. M. Dent, London, 1900, all seven volumes.",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-thegoldenlegendvol1-202609",
+          "label": "Internet Archive scan, vol. 1 (London: J. M. Dent, 1900)",
+          "source": "https://archive.org/details/thegoldenlegendvol1_202609",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-thegoldenlegendvol2",
+          "label": "Internet Archive scan, vol. 2 (London: J. M. Dent, 1900)",
+          "source": "https://archive.org/details/TheGoldenLegendVol2",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-thegoldenlegendv3",
+          "label": "Internet Archive scan, vol. 3 (London: J. M. Dent, 1900)",
+          "source": "https://archive.org/details/TheGoldenLegendV3",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-thegoldenlegendvol4",
+          "label": "Internet Archive scan, vol. 4 (London: J. M. Dent, 1900)",
+          "source": "https://archive.org/details/TheGoldenLegendVol4",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-goldenlegendorli05jaco",
+          "label": "Internet Archive scan, vol. 5 (London: J. M. Dent, 1900)",
+          "source": "https://archive.org/details/goldenlegendorli05jaco",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-thegoldenlegendvol7",
+          "label": "Internet Archive scan, vol. 7 (London: J. M. Dent, 1900)",
+          "source": "https://archive.org/details/TheGoldenLegendVol7",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "legends-of-saint-patrick",
+      "title": "The Legends of Saint Patrick",
+      "author": "Aubrey de Vere",
+      "authorId": "aubrey-de-vere",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "Verse retellings of the Patrick legends by the Irish Catholic poet, from his captivity and call to the conversion of the Irish kings.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "1872 (this edition 1892)",
+      "editions": [
+        {
+          "id": "pg-7165",
+          "label": "Project Gutenberg #7165",
+          "source": "https://www.gutenberg.org/ebooks/7165",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "author of introduction",
+              "name": "Morley, Henry, 1822-1894"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "First published 1872. Gutenberg's text is the Cassell's National Library edition, with an introduction by Henry Morley, Cassell & Co., London, Paris, and Melbourne, 1892.",
+          "sourceTitle": "The Legends of Saint Patrick",
+          "digitalRelease": "Dec 1, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-7165.txt",
+          "sha256": "7afec0631c8cbb0d8766902a32bfb3d5a58cc72daac74715ac1de342131f4b1d"
+        }
+      ]
+    },
+    {
+      "id": "ancient-lives-saint-patrick",
+      "title": "The Most Ancient Lives of Saint Patrick",
+      "author": "James O'Leary (ed.)",
+      "authorId": null,
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Patrick's own Confession and Letter to Coroticus, together with the early Irish lives and Jocelin's twelfth-century life.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "5th–12th centuries (this edition 1880)",
+      "editions": [
+        {
+          "id": "pg-18482",
+          "label": "Project Gutenberg #18482",
+          "source": "https://www.gutenberg.org/ebooks/18482",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "editor",
+              "name": "O'Leary, James"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "Gutenberg's title page: fifth edition, P. J. Kenedy, New York, 1880 (entered 1874).",
+          "sourceTitle": "The Most Ancient Lives of Saint Patrick Including the Life by Jocelin, Hitherto Unpublished in America, and His Extant Writings",
+          "digitalRelease": "Jun 1, 2006",
+          "access": "full-text",
+          "text": "data/texts/pg-18482.txt",
+          "sha256": "c5dff515aa87f3dea983fb9b469cb6189318dd8fe6719c963eace5de914e418b"
+        }
+      ]
+    },
+    {
+      "id": "fabiola",
+      "title": "Fabiola; or, The Church of the Catacombs",
+      "author": "Nicholas Wiseman",
+      "authorId": "nicholas-wiseman",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Fiction: a historical novel, not a history. Cardinal Wiseman's story of Christian Rome under Diocletian, with St. Agnes, St. Sebastian, and St. Pancras among its characters.",
+      "reviewStatus": "source-checked",
+      "added": "2026-10-25",
+      "date": "1854 (this edition 1886)",
+      "editions": [
+        {
+          "id": "pg-62254",
+          "label": "Project Gutenberg #62254",
+          "source": "https://www.gutenberg.org/ebooks/62254",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "author of introduction",
+              "name": "Brennan, Richard, 1833?-1893"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-10-25",
+          "note": "Novel, first published 1854. Gutenberg's title page: illustrated edition, introduction by Richard Brennan, Benziger Brothers, New York, Cincinnati, and St. Louis, 1886 (“Copyright, 1885”).",
+          "sourceTitle": "Fabiola; Or, The Church of the Catacombs",
+          "digitalRelease": "May 28, 2020",
+          "access": "full-text",
+          "text": "data/texts/pg-62254.txt",
+          "sha256": "685d8c6b6efa50e89dfff95e9d6e427b63c060a32b0c12775baa6fd68f4bafb5"
+        }
+      ]
+    },
+    {
+      "id": "roman-martyrology",
+      "title": "The Roman Martyrology",
+      "author": "Catholic Church",
+      "authorId": null,
+      "category": "Liturgy",
+      "tradition": "Catholic tradition",
+      "description": "The Church's day-by-day register of saints and martyrs, in an 1897 Baltimore English edition. It reflects the calendar before the 1969 reform, so many dates differ from the current Martyrology.",
+      "reviewStatus": "source-checked",
+      "date": "1897",
+      "editions": [
+        {
+          "id": "ia-romanmartyrology00cath",
+          "label": "Internet Archive scan (Baltimore: J. Murphy, 1897)",
+          "source": "https://archive.org/details/romanmartyrology00cath",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Internet Archive metadata: Baltimore, J. Murphy, 1897. Historical calendar only; many feasts moved in 1969 and in the 2001 and 2004 editions.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "book-of-saints-ramsgate",
+      "title": "The Book of Saints",
+      "author": "Benedictine Monks of St. Augustine's Abbey, Ramsgate",
+      "authorId": null,
+      "category": "Reference",
+      "tradition": "Catholic tradition",
+      "description": "A one-volume dictionary of the canonized saints, with dates, feasts, and short notices. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "1921",
+      "editions": [
+        {
+          "id": "ia-bookofsaintsdict00stau",
+          "label": "Internet Archive scan (London: A. & C. Black, 1921)",
+          "source": "https://archive.org/details/bookofsaintsdict00stau",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "First edition, London, A. & C. Black, 1921. Later editions (1947 onward) are not public domain.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "dictionary-saintly-women",
+      "title": "A Dictionary of Saintly Women",
+      "author": "Agnes B. C. Dunbar",
+      "authorId": null,
+      "category": "Reference",
+      "tradition": "Christian tradition",
+      "description": "A two-volume dictionary of holy women from the apostolic age onward, drawn from the martyrologies and the Bollandists. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "1904–1905",
+      "editions": [
+        {
+          "id": "ia-saintlywomen01dunbuoft",
+          "label": "Internet Archive scan, vol. 1, A–L (London: George Bell & Sons, 1904)",
+          "source": "https://archive.org/details/saintlywomen01dunbuoft",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Vol. 1 title page: George Bell & Sons, London, 1904.",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-saintlywomen02dunbuoft",
+          "label": "Internet Archive scan, vol. 2, M–Z (London: George Bell & Sons, 1905)",
+          "source": "https://archive.org/details/saintlywomen02dunbuoft",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "pictorial-lives-saints",
+      "title": "Pictorial Lives of the Saints",
+      "author": "John Gilmary Shea (ed.)",
+      "authorId": null,
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Short illustrated lives with a reflection for every day of the year, condensed from Butler, with lives of the saints canonized in 1881. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "1878 (this edition 1887)",
+      "editions": [
+        {
+          "id": "ia-pictoriallives00unknuoft",
+          "label": "Internet Archive scan (New York: Benziger Brothers, 1887)",
+          "source": "https://archive.org/details/pictoriallives00unknuoft",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "editor",
+              "name": "Shea, John Gilmary, 1824-1892"
+            }
+          ],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Benziger Brothers, New York, with the imprimatur of Archbishop Corrigan, January 21, 1887 (“Copyright, 1878 … 1887”).",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "legends-of-the-saints-delehaye",
+      "title": "The Legends of the Saints: An Introduction to Hagiography",
+      "author": "Hippolyte Delehaye, S.J.",
+      "authorId": null,
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "The Bollandist classic on how saints' legends grow and how historians weigh them against the record. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "1905 (this translation 1907)",
+      "editions": [
+        {
+          "id": "ia-thelegendsofthesa00deleuoft",
+          "label": "Internet Archive scan (London: Longmans, Green, 1907)",
+          "source": "https://archive.org/details/thelegendsofthesa00deleuoft",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Crawford, V. M. (Virginia Mary), 1862-1948"
+            }
+          ],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Tr. V. M. Crawford, Longmans, Green, London, 1907.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "little-flowers-francis",
+      "title": "The Little Flowers of Saint Francis",
+      "author": "Anonymous (Fioretti)",
+      "authorId": null,
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "Fourteenth-century stories of St. Francis and his first companions, in Abby Langdon Alger's translation. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "14th century (this translation 1887)",
+      "editions": [
+        {
+          "id": "ia-littleflowersofs00fioriala",
+          "label": "Internet Archive scan (Boston: Roberts Brothers, 1887)",
+          "source": "https://archive.org/details/littleflowersofs00fioriala",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Alger, Abby Langdon, 1850-"
+            }
+          ],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Tr. Abby Langdon Alger; “Copyright, 1887, by Roberts Brothers.”",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "catherine-dialogue",
+      "title": "The Dialogue of St. Catherine of Siena",
+      "author": "Catherine of Siena",
+      "authorId": "catherine-of-siena",
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "Catherine's mystical dialogue between God the Father and a soul, on discretion, prayer, providence, and obedience, in Algar Thorold's translation. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "1378 (this translation 1896)",
+      "editions": [
+        {
+          "id": "ia-seraphicvirginca00cathuoft",
+          "label": "Internet Archive scan, complete (London: Kegan Paul, 1896)",
+          "source": "https://archive.org/details/seraphicvirginca00cathuoft",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Thorold, Algar Labouchere, 1866-1936"
+            }
+          ],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Thorold's complete first edition, London, Kegan Paul, 1896.",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-dialogueofseraph00cath",
+          "label": "Internet Archive scan, abridged (London: Kegan Paul, 1907)",
+          "source": "https://archive.org/details/dialogueofseraph00cath",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Thorold, Algar Labouchere, 1866-1936"
+            }
+          ],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Thorold's new and abridged edition, Kegan Paul, Trench, Trübner, London, 1907.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "holy-angels-okennedy",
+      "title": "The Holy Angels",
+      "author": "Richard O'Kennedy",
+      "authorId": null,
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "A treatise on the angels: their nature, their offices, and devotion to them. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "1887",
+      "editions": [
+        {
+          "id": "ia-theholyangels00okenuoft",
+          "label": "Internet Archive scan (London: Burns & Oates, 1887)",
+          "source": "https://archive.org/details/theholyangels00okenuoft",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Burns & Oates, London, and Catholic Publication Society, New York, with the imprimatur of Cardinal Manning, 1887.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "crown-of-sorrow",
+      "title": "The Crown of Sorrow",
+      "author": "Alban Goodier, S.J.",
+      "authorId": null,
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "Lenten meditations on the Passion, with a harmony of the Gospel accounts, by the Jesuit archbishop of Bombay. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "1918 (this impression 1927)",
+      "editions": [
+        {
+          "id": "ia-thecrownofsorrow00gooduoft",
+          "label": "Internet Archive scan (London: Burns Oates & Washbourne, third impression, 1927)",
+          "source": "https://archive.org/details/thecrownofsorrow00gooduoft",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "First published 1918; this scan is the third impression, 1927.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "nepveu-meditations",
+      "title": "Meditations for Every Day in the Month",
+      "author": "François Nepveu, S.J.",
+      "authorId": null,
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "A month of short meditations from the French Jesuit's Christian reflections. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "17th century (this translation 1911)",
+      "editions": [
+        {
+          "id": "ia-meditationsforev00nepvuoft",
+          "label": "Internet Archive scan (New York: Benziger Brothers, 1911)",
+          "source": "https://archive.org/details/meditationsforev00nepvuoft",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Ryan, Francis A. (Francis Aloysius), b. 1887"
+            }
+          ],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Tr. F. A. Ryan, Benziger Brothers, New York, with the imprimatur of Archbishop Farley, February 1, 1911.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "yorke-the-mass",
+      "title": "The Mass",
+      "author": "Peter C. Yorke",
+      "authorId": null,
+      "category": "Liturgy",
+      "tradition": "Catholic tradition",
+      "description": "A short explanation of the Mass for students by the San Francisco priest and catechist. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "1921",
+      "editions": [
+        {
+          "id": "ia-themasss00yorkuoft",
+          "label": "Internet Archive scan (San Francisco: Text Book Publishing Co., 1921)",
+          "source": "https://archive.org/details/themasss00yorkuoft",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Internet Archive metadata: San Francisco, Text Book Publishing Co., 1921.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "new-catholic-dictionary",
+      "title": "The New Catholic Dictionary",
+      "author": "Condé B. Pallen and John J. Wynne, S.J. (eds.)",
+      "authorId": null,
+      "category": "Reference",
+      "tradition": "Catholic",
+      "description": "A one-volume reference work on the Church's belief, rites, history, saints, and institutions, published in 1929. Read at the Internet Archive.",
+      "reviewStatus": "source-checked",
+      "date": "1929",
+      "editions": [
+        {
+          "id": "ia-newcatholicdicti0000cond",
+          "label": "Internet Archive scan (New York: Universal Knowledge Foundation, 1929)",
+          "source": "https://archive.org/details/newcatholicdicti0000cond",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-10-25",
+          "note": "Universal Knowledge Foundation, New York, with the imprimatur of Cardinal Hayes (“Copyright 1929”). Works published in 1929 entered the U.S. public domain on January 1, 2025.",
+          "access": "full-text"
+        }
+      ]
     }
   ]
 }

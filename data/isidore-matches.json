@@ -214,12 +214,194 @@
     ]
    }
   ],
+  "heretics": [
+   {
+    "id": 3056,
+    "t": "Heretics",
+    "a": [
+     "Chesterton, Gilbert Keith"
+    ],
+    "f": [
+     "PDF",
+     "EPUB"
+    ]
+   }
+  ],
+  "whats-wrong-world": [
+   {
+    "id": 6806,
+    "t": "Whats Wrong With the World",
+    "a": [
+     "Chesterton, Gilbert Keith"
+    ],
+    "f": [
+     "EPUB"
+    ]
+   }
+  ],
+  "wisdom-father-brown": [
+   {
+    "id": 8151,
+    "t": "The Wisdom of Father Brown",
+    "a": [
+     "Chesterton, Gilbert Keith"
+    ],
+    "f": [
+     "EPUB"
+    ]
+   }
+  ],
+  "aquinas-prayer-contemplative": [
+   {
+    "id": 8091,
+    "t": "On Prayer and The Contemplative Life",
+    "a": [
+     "Aquinas, St. Thomas",
+     "Pope, Hugh, O.P., S.T.M."
+    ],
+    "f": [
+     "EPUB"
+    ]
+   }
+  ],
+  "city-of-god": [
+   {
+    "id": 5416,
+    "t": "City of God and Christian Doctrine",
+    "a": [
+     "Augustine, St.",
+     "Schaff, Philip",
+     "McCallion, David"
+    ],
+    "f": [
+     "PDF",
+     "EPUB"
+    ]
+   }
+  ],
+  "bede-ecclesiastical-history": [
+   {
+    "id": 7149,
+    "t": "The Ecclesiastical History of the English People",
+    "a": [
+     "Bede, Venerable, St.",
+     "Colgrave, Bertram",
+     "McClure, Judith"
+    ],
+    "f": [
+     "EPUB"
+    ]
+   }
+  ],
+  "catherine-letters": [
+   {
+    "id": 6156,
+    "t": "Saint Catherine of Siena as Seen in Her Letters",
+    "a": [
+     "Caterina da Siena, Santa, T.O.P.",
+     "Scudder, Vida Dutton"
+    ],
+    "f": [
+     "EPUB"
+    ]
+   }
+  ],
+  "consolation-philosophy": [
+   {
+    "id": 4067,
+    "t": "The Consolation of Philosophy",
+    "a": [
+     "Boethius, Anicius Manlius Severinus",
+     "Rintoul, David"
+    ],
+    "f": [
+     "EPUB"
+    ]
+   }
+  ],
+  "glories-of-mary": [
+   {
+    "id": 3874,
+    "t": "The Glories of Mary",
+    "a": [
+     "Liguori, St. Alfonso Maria de', 1696-1787",
+     "Francis, Daniel"
+    ],
+    "f": [
+     "PDF"
+    ]
+   },
+   {
+    "id": 6179,
+    "t": "The Glories of Mary",
+    "a": [
+     "Liguori, St. Alfonso Maria de', 1696-1787"
+    ],
+    "f": [
+     "EPUB"
+    ]
+   }
+  ],
   "athanasius-of-alexandria-on-the-incarnation-of-the-word": [
    {
     "id": 4407,
     "t": "On the Incarnation of the Word",
     "a": [
      "Athanasius, St."
+    ],
+    "f": [
+     "PDF",
+     "EPUB"
+    ]
+   }
+  ],
+  "life-legends-francis": [
+   {
+    "id": 8245,
+    "t": "The Life and Legends of Saint Francis of Assisi",
+    "a": [
+     "Chalippe, Fr. Candide"
+    ],
+    "f": [
+     "EPUB"
+    ]
+   }
+  ],
+  "golden-legend": [
+   {
+    "id": 7173,
+    "t": "The Golden Legend: Readings on the Saints",
+    "a": [
+     "de Voragine, Jacobus, O.P.",
+     "Ryan, William Granger",
+     "Duffy, Eamon"
+    ],
+    "f": [
+     "PDF"
+    ]
+   }
+  ],
+  "roman-martyrology": [
+   {
+    "id": 9440,
+    "t": "The Roman Martyrology",
+    "a": [
+     "Catholic Church",
+     "Collins, Raphael, B.A."
+    ],
+    "f": [
+     "PDF",
+     "EPUB"
+    ]
+   }
+  ],
+  "catherine-dialogue": [
+   {
+    "id": 4408,
+    "t": "The Dialogue of Saint Catherine of Siena",
+    "a": [
+     "Caterina da Siena, Santa, T.O.P.",
+     "Thorold, Algar"
     ],
     "f": [
      "PDF",

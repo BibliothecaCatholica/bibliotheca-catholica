@@ -5,7 +5,8 @@ A match needs the same core title (ignoring a leading article, a trailing parent
 recordings are skipped. Re-run and review the printout when the catalog changes.
 For reading-room works (a hosted text), it also writes data/librivox/<recording id>.json with the
 recording's chapter MP3s (archive.org, forced to https) so the reader's Listen dock can play them
-in the page. A work may list extra LibriVox titles in "audioTitles" (exact recording titles only)."""
+in the page. A work may list extra LibriVox titles in "audioTitles" (exact recording titles only), and LibriVox
+recording ids to leave out in "audioExclude" (for a recording that is clearly a different work or abridgment)."""
 import json,re,time,unicodedata,urllib.parse,urllib.request
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -34,6 +35,7 @@ def tracks(book_id):
                     'r':', '.join(r.get('display_name','') for r in x.get('readers',[]))})
     return {'id':int(b['id']),'title':b['title'],'url':(b.get('url_librivox') or '').replace('://www.librivox.org','://librivox.org'),
             'zip':b.get('url_zip_file',''),'sections':out}
+EXCLUDE={}
 def targets():
     lib=json.loads((ROOT/'data/library.json').read_text())
     g=(ROOT/'data/guide.js').read_text();G=json.loads(g[g.index('=')+1:].strip().rstrip(';'))
@@ -47,6 +49,8 @@ def targets():
         out.append(('edition',e['id'],titles,e['a']))
     return out
 def main():
+    global EXCLUDE
+    EXCLUDE={('work',w['id']):set(w.get('audioExclude',[])) for w in json.loads((ROOT/'data/library.json').read_text())['works']}
     res={'work':{},'edition':{}};cache={}
     for kind,key,titles,author in targets():
         at={t for t in norm(author).split() if t not in STOP and len(t)>=4}
@@ -65,6 +69,7 @@ def main():
                 if not url.startswith('https://librivox.org/'):continue
                 h={'id':int(b['id']),'title':b['title'],'url':url,'lang':b.get('language',''),'time':b.get('totaltime','')}
                 if h not in hits:hits.append(h)
+        hits=[h for h in hits if h['id'] not in EXCLUDE.get((kind,key),())]
         hits.sort(key=lambda h:(h['lang']!='English',h['id']))
         if hits:res[kind][key]=hits
         print(kind,key,'->',[(h['title'],h['lang']) for h in hits])

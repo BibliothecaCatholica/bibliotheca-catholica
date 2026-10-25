@@ -6,7 +6,7 @@ A clean, searchable master index of Catholic authors, Scripture, the Magisterium
 
 ## Reading and discovery
 
-- **Discover & Read** `#/library`: 68 individual work records, including 42 hosted reading editions (20 added October 22, 2026, shown under **Recently added**), eight Lewis titles, nine Church Fathers records, and eight official Church documents. Hosted works with LibriVox audio have a persistent **Listen** player inside the reader.
+- **Discover & Read** `#/library`: 98 individual work records, including 56 hosted reading editions (20 added October 22, 2026, and 14 saints and hagiography editions added October 25, 2026, shown under **Recently added**), 16 link-only works with scans or texts at their source (October 25, 2026), eight Lewis titles, nine Church Fathers records, and eight official Church documents. Hosted works with LibriVox audio have a persistent **Listen** player inside the reader.
 - **Reader** `#/read/<work>/<edition>`: text size, spacing, dark mode, source-heading navigation, full-text search, saved section, citation, and download/source links.
 - **Related Christian writers** `#/related`: C. S. Lewis, explicitly identified as Anglican.
 - Search defaults to **Everything**, with selected works ranked first. The Selected library and Isidore Index scopes are available from the results page.

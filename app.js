@@ -314,13 +314,18 @@ function home(){
   h+='<a class="sec-card" href="#/isidore/folders"><span class="count">'+D.isidore.length.toLocaleString()+'</span><div class="glyph">I</div><h3>Isidore Index authors</h3><p>A readable A–Z of every author in the isidore.co catalog, each opening their books in the Isidore Index.</p></a>'+
   '<a class="sec-card sec-support" href="#/support"><span class="count">♥</span><div class="glyph">✠</div><h3>Support the Library</h3><p>Free for everyone. Donations by Buy Me a Coffee or PayPal cover hosting and curation.</p></a>'+
   '</div>';
-  h+='<div class="rule"></div><div class="page-head"><div class="eyebrow">Start here</div><h2>Beloved voices</h2></div><div class="feature-strip">'+picks.map(function(a){return '<a href="#/author/'+a.id+'">'+avatar(a)+esc(a.name)+'</a>'}).join('')+'</div>';
+  h+='<div class="rule"></div><div class="page-head"><div class="eyebrow">Start here</div><h2 id="voices-h">Beloved voices</h2></div><div class="feature-strip hscroll" tabindex="0" role="region" aria-labelledby="voices-h">'+picks.map(function(a){return '<a href="#/author/'+a.id+'">'+avatar(a)+esc(a.name)+'</a>'}).join('')+'</div>';
   h+='<a class="feat-banner" href="#/substacks"><span class="eyebrow">Featured column</span><b>Chris Wettig on Substack</b><span>Chesterton commentary, coming soon. Read his latest essays now →</span></a>';
   h+='<div class="two" style="margin-top:20px"><div class="panel"><h3>Read the Church in her own words</h3><ul class="linklist">'+[['Catechism of the Catholic Church','https://www.vatican.va/archive/ENG0015/_INDEX.HTM'],['Documents of Vatican II','https://www.vatican.va/archive/hist_councils/ii_vatican_council/index.htm'],['Code of Canon Law','https://www.vatican.va/archive/cod-iuris-canonici/cic_index_en.html'],['Pope Leo XIV','https://www.vatican.va/content/leo-xiv/en.html'],['Today’s Mass readings (USCCB)','https://bible.usccb.org/daily-bible-reading']].map(function(x){return '<li><a href="'+x[1]+'" target="_blank" rel="noopener"><span class="k read">read</span>'+x[0]+' ↗</a></li>'}).join('')+'</ul></div>'+
   '<div class="panel"><h3>The great libraries</h3><ul class="linklist">'+[['St. Isidore e-book library (Calibre)','https://isidore.co/calibre'],['New Advent — Encyclopedia, Fathers, Summa','https://www.newadvent.org/'],['Christian Classics Ethereal Library','https://ccel.org/'],['Documenta Catholica Omnia','https://www.documentacatholicaomnia.eu/'],['Corpus Thomisticum','https://www.corpusthomisticum.org/']].map(function(x){return '<li><a href="'+x[1]+'" target="_blank" rel="noopener"><span class="k site">site</span>'+x[0]+' ↗</a></li>'}).join('')+'</ul></div></div>';
-  render(h,'');document.title=SC.homeTitle||'Bibliotheca Catholica';
+  render(h,'');document.title=SC.homeTitle||'Bibliotheca Catholica';hsInit();
   window.BCSaints.load(function(){var el=$('#hodie-saints');if(el)el.innerHTML=window.BCSaints.todayLine()});
 }
+// v21: horizontal scrollers (.hscroll) show a soft edge fade only on a side that has more to scroll.
+function hsUpdate(el){var max=el.scrollWidth-el.clientWidth;el.classList.toggle('hs-l',el.scrollLeft>2);el.classList.toggle('hs-r',max-el.scrollLeft>2)}
+function hsInit(){Array.prototype.forEach.call(document.querySelectorAll('.hscroll'),hsUpdate)}
+document.addEventListener('scroll',function(e){var t=e.target;if(t&&t.classList&&t.classList.contains('hscroll'))hsUpdate(t)},true);
+window.addEventListener('resize',hsInit);
 var AF={q:'',eras:{},tags:{},sort:'chron'};
 function authors(opts){
   opts=opts||{};var doctorsOnly=opts.doctors;

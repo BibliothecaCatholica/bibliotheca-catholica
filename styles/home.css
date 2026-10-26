@@ -14,3 +14,29 @@ h1.hero-name{margin:0;line-height:inherit}
 .crumbs{margin:0 0 10px;color:var(--muted);font-family:var(--sans)}
 .section-intro{max-width:760px;color:var(--ink2);font-size:17px;line-height:1.6;margin:0 0 18px}
 .static-prerender .hero-orn{display:none}
+/* v21: horizontal scrollers (.hscroll; the home page "Beloved voices" strip). A slim gold scrollbar on a faint track, a soft
+   edge fade only on a side with more to scroll (app.js hsUpdate sets .hs-l and .hs-r), and proximity snapping.
+   Thumb against track is at least 3:1 in both themes (light #80601a on about #e7dcc5, dark about #a28849 on about #272b35). */
+.hscroll{--hs-thumb:var(--gold-ink);--hs-thumb-hover:var(--rubric);--hs-track:color-mix(in srgb,var(--line) 70%,transparent);--hs-fade:44px;--hs-a:#000;--hs-b:#000;
+  overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scroll-padding-inline:var(--hs-fade);padding:4px 2px 14px;border-radius:12px;
+  scrollbar-width:thin;scrollbar-color:var(--hs-thumb) var(--hs-track)}
+[data-theme=dark] .hscroll{--hs-thumb:color-mix(in srgb,var(--gold) 72%,var(--bg));--hs-thumb-hover:var(--gold2)}
+.hscroll:hover{scrollbar-color:var(--hs-thumb-hover) var(--hs-track)}
+.hscroll>*{scroll-snap-align:start}.hscroll>:last-child{scroll-snap-align:end}
+@supports selector(::-webkit-scrollbar){
+  .hscroll{scrollbar-width:auto;scrollbar-color:auto}
+  .hscroll::-webkit-scrollbar{height:6px;background:transparent}
+  .hscroll::-webkit-scrollbar-button{display:none}
+  .hscroll::-webkit-scrollbar-track{background:var(--hs-track);border-radius:999px;margin-inline:6px}
+  .hscroll::-webkit-scrollbar-thumb{background:var(--hs-thumb);border-radius:999px}
+  .hscroll::-webkit-scrollbar-thumb:hover,.hscroll::-webkit-scrollbar-thumb:active{background:var(--hs-thumb-hover)}
+}
+.hscroll.hs-l{--hs-a:transparent}.hscroll.hs-r{--hs-b:transparent}
+.hscroll.hs-l,.hscroll.hs-r{
+  -webkit-mask-image:linear-gradient(to right,var(--hs-a) 0,#000 var(--hs-fade),#000 calc(100% - var(--hs-fade)),var(--hs-b) 100%),linear-gradient(#000,#000);
+  mask-image:linear-gradient(to right,var(--hs-a) 0,#000 var(--hs-fade),#000 calc(100% - var(--hs-fade)),var(--hs-b) 100%),linear-gradient(#000,#000);
+  -webkit-mask-size:100% calc(100% - 12px),100% 12px;mask-size:100% calc(100% - 12px),100% 12px;
+  -webkit-mask-position:0 0,0 100%;mask-position:0 0,0 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.hscroll:focus-visible{-webkit-mask-image:none;mask-image:none;outline:3px solid var(--focus,var(--gold));outline-offset:2px}
+@media(prefers-reduced-motion:no-preference){.hscroll{scroll-behavior:smooth}}
+@media(max-width:720px){.hscroll{--hs-fade:28px}}

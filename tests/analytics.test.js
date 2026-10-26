@@ -50,3 +50,32 @@ test('once() dedupes within a scope until reset',()=>{
  assert.equal(A.once('reader_section','a/b/1'),true);assert.equal(A.once('reader_section','a/b/1'),false);
  assert.equal(A.once('reader_section','a/b/2'),true);A.reset('reader_section');assert.equal(A.once('reader_section','a/b/1'),true);
 });
+test('v18: page_path never carries a search term or Index filter, and one view has one path',()=>{
+ const {A}=load(false);
+ assert.equal(A.pagePath('#/search/augustine%20confessions?scope=all'),'/#/search');
+ assert.equal(A.pagePath('#/search/my private query'),'/#/search');
+ assert.equal(A.pagePath('#/isidore/q=summa'),'/#/isidore');
+ assert.equal(A.pagePath('#/isidore/Chesterton%2C%20G.%20K.'),'/#/isidore');
+ assert.equal(A.pagePath('#/isidore/lang=eng'),'/#/isidore');
+ assert.equal(A.pagePath('#/books/garrigou'),'/#/isidore');
+ assert.equal(A.pagePath('#/isidore/book/6229'),'/#/isidore/book/6229');
+ assert.equal(A.pagePath('#/isidore/folders'),'/#/isidore/folders');
+ assert.equal(A.pagePath('#/author/g-k-chesterton'),'/#/author/g-k-chesterton');
+ assert.equal(A.pagePath('#/author/g-k-chesterton','work/orthodoxy'),'/#/author/g-k-chesterton');
+ assert.equal(A.pagePath('','work/orthodoxy'),'/#/work/orthodoxy');
+ assert.equal(A.pagePath('',''),'/');assert.equal(A.pagePath('#/'),'/');
+ assert.equal(A.pagePath('#/nothing here/x'),'/');
+ assert.equal(A.pageLocation(A.pagePath('#/search/secret')),'https://bibliothecacatholica.com/#/search');
+ for(const h of ['#/search/secret','#/isidore/secret','#/isidore/q=secret','#/books/secret']){assert.doesNotMatch(A.pagePath(h),/secret/);assert.doesNotMatch(A.pageLocation(A.pagePath(h)),/secret/)}
+});
+test('v18: gaPageView sends the normalized path and location, never location.href',()=>{
+ const app=fs.readFileSync('app.js','utf8');const m=/function gaPageView\(\)\{[\s\S]*?\},400\)\}/.exec(app);assert.ok(m);
+ assert.match(m[0],/pagePath\(location\.hash,window\.BC_BOOT\)/);assert.match(m[0],/page_location:A\.pageLocation\(path\)/);
+ assert.doesNotMatch(m[0],/location\.href/);
+});
+test('v18: outbound_click carries only link_domain and link_kind',()=>{
+ const {A,calls,ctx}=load(true);ctx.location.hash='#/work/orthodoxy';
+ const a={getAttribute:k=>k==='href'?'https://ignatius.com/x':null,closest:sel=>sel==='a[href]'?a:null};
+ A.onClick({target:a});
+ assert.deepEqual(calls.map(c=>c[1]),['outbound_click']);assert.deepEqual(calls[0][2],{link_domain:'ignatius.com',link_kind:'publisher'});
+});

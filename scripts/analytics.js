@@ -1,8 +1,9 @@
-/* Bibliotheca Catholica: GA4 event helper (v14).
+/* Bibliotheca Catholica: GA4 event helper (v14; v18 page paths).
  * Uses only the existing Google tag (G-HFG445Y1LT) in <head>. No other tracking IDs, no Google Tag Manager,
  * no personal data. Every call is guarded with typeof gtag==='function' and wrapped in try/catch, so analytics
  * can never break the reader. Notes, highlights, quotes, and other free text are never sent; the only free text
- * is the search term, trimmed, lowercased, and cut to 100 characters. See AGENTS.md, "Google Analytics (GA4)".
+ * is the search term, trimmed, lowercased, and cut to 100 characters, sent only on the search event. Page views carry a
+ * normalized route (pagePath) that never includes a search term or filter. See AGENTS.md, "Google Analytics (GA4)".
  */
 (function(root){
 'use strict';
@@ -27,6 +28,18 @@ function linkKind(d,hints){hints=hints||{};d=str(d).toLowerCase();
 function publisherKey(d){return pubHosts()[str(d).toLowerCase()]||''}
 /* work id from the current route (#/work/<id> or #/read/<id>/...) */
 function routeWork(hash){var m=/^#\/(?:work|read)\/([a-z0-9-]+)/i.exec(str(hash));return m?m[1]:''}
+/* pagePath(hash, boot): the route a page_view reports. One form per view whatever URL served it (/#/author/x and
+   /work/y/#/author/x both give /#/author/x; a static page with no hash uses its BC_BOOT route). Search and Isidore Index
+   filters are free text, so they collapse to /#/search and /#/isidore; a segment that is not a plain slug ends the path. */
+var ORIGIN='https://bibliothecacatholica.com';
+function pagePath(hash,boot){var raw=str(hash).replace(/^#\/?/,'');if(!raw)raw=str(boot);raw=raw.split('?')[0];
+  var p=raw.split('/').filter(Boolean),out=[];
+  if(!p.length)return '/';
+  if(p[0]==='search')return '/#/search';
+  if(p[0]==='isidore'||p[0]==='books'){if(p[1]==='book'&&/^\d+$/.test(p[2]||''))return '/#/isidore/book/'+p[2];if(p[1]==='folders')return '/#/isidore/folders';return '/#/isidore'}
+  for(var i=0;i<p.length&&i<6;i++){if(!/^[a-z0-9_.-]{1,80}$/i.test(p[i]))break;out.push(p[i])}
+  return out.length?'/#/'+out.join('/'):'/'}
+function pageLocation(path){return ORIGIN+(path||'/')}
 /* once(key): true the first time a key is seen in a scope; reset(scope) forgets it */
 var SEEN={};
 function once(scope,key){var s=SEEN[scope]||(SEEN[scope]={});if(s[key])return false;s[key]=1;return true}
@@ -34,12 +47,10 @@ function reset(scope){delete SEEN[scope]}
 function onClick(e){try{var t=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(!t)return;
   var sup=t.closest('[data-support]');if(sup)track('support_click',{target:sup.getAttribute('data-support')});
   var href=t.getAttribute('href')||'';if(!/^https?:\/\//i.test(href))return;var d=domain(href);if(!d||d==='bibliothecacatholica.com')return;
-  var dw=t.closest('[data-work]'),wk=(dw&&dw.getAttribute('data-work'))||routeWork(root.location&&root.location.hash);
   var ot=t.getAttribute('data-open-text');if(ot)track('open_text',{work_id:ot,text_source:'external',link_domain:d});
-  var pk=t.getAttribute('data-pub')||publisherKey(d);
   var kind=linkKind(d,{publisher:t.getAttribute('data-pub'),substack:!!t.closest('#ss-out')});
-  track('outbound_click',{link_domain:d,link_kind:kind,work_id:wk,publisher:kind==='publisher'?pk:''})}catch(err){}}
-var api={EVENTS:EVENTS,MAX_TERM:MAX,track:track,cleanTerm:cleanTerm,clean:clean,domain:domain,linkKind:linkKind,publisherKey:publisherKey,routeWork:routeWork,once:once,reset:reset,onClick:onClick};
+  track('outbound_click',{link_domain:d,link_kind:kind})}catch(err){}}
+var api={EVENTS:EVENTS,MAX_TERM:MAX,track:track,cleanTerm:cleanTerm,clean:clean,domain:domain,linkKind:linkKind,publisherKey:publisherKey,routeWork:routeWork,pagePath:pagePath,pageLocation:pageLocation,once:once,reset:reset,onClick:onClick};
 root.BCAnalytics=api;
 if(root.document&&root.document.addEventListener)root.document.addEventListener('click',onClick,true);
 if(typeof module!=='undefined'&&module.exports)module.exports=api;

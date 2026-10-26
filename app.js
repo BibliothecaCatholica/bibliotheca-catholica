@@ -484,12 +484,15 @@ function projects(){
     draw();$('#pj-q').addEventListener('input',function(e){q=e.target.value;draw()});
     $('#pj-c').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;if(b.id==='pj-h'){hum=!hum;b.classList.toggle('on',hum);draw();return}cur=b.dataset.c;document.querySelectorAll('#pj-c .chip').forEach(function(x){if(x.id!=='pj-h')x.classList.toggle('on',x===b)});draw()})})}
 function openData(){
-  var h='<div class="page-head"><div class="eyebrow">Data aperta</div><h1>Open Data</h1><p class="lede">The Isidore Index, curated authors, editions, Doctors’ free texts, rare works, and projects, as documented JSON and CSV under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>. Use them for anything; a link back is appreciated.</p></div>'+
+  var h='<div class="page-head"><div class="eyebrow">Data aperta</div><h1>Open Data</h1><p class="lede">The Isidore Index, curated authors, editions, Doctors’ free texts, rare works, and projects, as documented JSON and CSV. These datasets and the reading catalog below are dedicated to the public domain under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>, so you may reuse them without asking; a link back is appreciated. CC0 covers only this data, not the texts, Wikipedia summaries, portraits, or other third-party material it points to (see <a href="'+LICENSING_URL+'" target="_blank" rel="noopener">Licensing</a>).</p></div>'+
    '<div class="callout">Read the <a href="'+odUrl('data/open/README.md')+'" target="_blank" rel="noopener">README</a> for how each dataset was made and its caveats. CC0 covers our compilation and curation; it does not cover third-party texts reached through the links, and no Wikipedia text is included. The <a href="'+odUrl('data/open/manifest.json')+'" target="_blank" rel="noopener">manifest</a> lists every field.</div><div id="od-out"><div class="loading">Loading…</div></div>';
-  h+='<section class="panel"><h2>Selected reading catalog</h2><p>49 work records with edition sources, contributor roles, access labels, and hosted-copy checksums. Rights notices for texts remain separate from catalog metadata.</p><a class="btn ghost" href="data/library.json" download>Download catalog JSON</a> · <a href="docs/CATALOG.md" target="_blank" rel="noopener">Sources &amp; editorial notes</a></section>';
+  h+='<section class="panel"><h2>Selected reading catalog</h2><p>'+libCount('works')+' work records ('+libCount('editions')+' editions, '+libCount('hosted')+' hosted here) with edition sources, contributor roles, access labels, and hosted-copy checksums. Rights notices for texts remain separate from catalog metadata.</p><a class="btn ghost" href="data/library.json" download>Download catalog JSON</a> · <a href="docs/CATALOG.md" target="_blank" rel="noopener">Sources &amp; editorial notes</a></section>';
   render(h,'data');
   lazy('open.js','OPEN_MANIFEST',function(M){if(!$('#od-out'))return;if(!M){$('#od-out').innerHTML='<div class="empty">Manifest failed to load.</div>';return}
     $('#od-out').innerHTML='<div class="od-grid">'+M.datasets.map(function(d){var f=Object.keys(d.fields);return '<div class="od"><h3>'+esc(d.name)+' <span class="small muted">'+d.count.toLocaleString()+' records</span></h3><p>'+esc(d.description)+'</p><div class="dl-row"><a class="btn gold" href="'+odUrl(d.json)+'" download>JSON ↓</a><a class="btn ghost" href="'+odUrl(d.csv)+'" download>CSV ↓</a></div><details><summary>'+f.length+' fields</summary><dl class="od-f">'+f.map(function(k){return '<dt>'+esc(k)+'</dt><dd>'+esc(d.fields[k])+'</dd>'}).join('')+'</dl></details></div>'}).join('')+'</div><p class="small muted">Generated '+esc(M.generated)+'.</p>'})}
+/* v18: counts come from the catalog itself, never typed into copy */
+function libCount(k){var W=(window.LIBRARY_DATA&&window.LIBRARY_DATA.works)||[];if(k==='works')return W.length;var n=0;W.forEach(function(w){w.editions.forEach(function(e){if(k==='editions'||e.text)n++})});return n}
+var LICENSING_URL='https://github.com/BibliothecaCatholica/bibliotheca-catholica/blob/main/LICENSING.md';
 function odUrl(p){return (location.protocol==='file:'?'https://bibliothecacatholica.com/':'')+p}
 function season(d){d=d||new Date();var y=d.getFullYear();function easter(Y){var a=Y%19,b=Math.floor(Y/100),c=Y%100,dd=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-dd-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1;return new Date(Y,mo-1,da)}
   function add(x,n){var r=new Date(x);r.setDate(r.getDate()+n);return r}var t=new Date(y,d.getMonth(),d.getDate());
@@ -589,8 +592,11 @@ document.addEventListener('click',function(e){if(e.defaultPrevented||e.button||e
 /* ---------- Google Analytics page views: the config in <head> has send_page_view:false, so app.js sends exactly one page_view
    for the first load (index.html, static entry pages, and the /#/ page that 404.html redirects to) and one per later hash route ---------- */
 var gaT=null,gaLast=null;
-function gaPageView(){clearTimeout(gaT);gaT=setTimeout(function(){var path=location.pathname+location.hash;if(path===gaLast)return;gaLast=path;
-  track('page_view',{page_title:document.title,page_location:location.href,page_path:path})},400)}
+/* v18: dedupe on the raw URL, but report the normalized route (BCAnalytics.pagePath): never a search term or Index filter,
+   and one path per view whether it was served from / or a static page. Free-text titles are replaced the same way. */
+function gaPageView(){clearTimeout(gaT);gaT=setTimeout(function(){var raw=location.pathname+location.hash;if(raw===gaLast)return;gaLast=raw;
+  var A=window.BCAnalytics,path=A.pagePath(location.hash,window.BC_BOOT),title=path==='/#/search'?'Search — Bibliotheca Catholica':path==='/#/isidore'?'The Isidore Index — Bibliotheca Catholica':document.title;
+  track('page_view',{page_title:title,page_location:A.pageLocation(path),page_path:path})},400)}
 window.addEventListener('hashchange',gaPageView);
 /* ---------- per-route meta (description, canonical, Open Graph, Twitter) ---------- */
 var SITE='https://bibliothecacatholica.com/',DEF_DESC=(document.querySelector('meta[name=description]')||{}).content||'';

@@ -25,7 +25,7 @@ The 56 hosted text editions are also published at [texts.bibliothecacatholica.co
 | `index.html`, `app.js`, `scripts/`, `styles/` | Site shell, browser application, and presentation |
 | `data/library.json` | Maintained reading-room work and edition records |
 | `data/texts/`, `data/sources/` | Hosted text copies and source/provenance snapshots |
-| `data/isidore*` | Imported Isidore catalog snapshots; see the review and rights notes before changing them |
+| `data/books.json`, `data/books.js`, `data/isidore-matches.json` | Imported Isidore catalog snapshots and curated matches; see the catalog and rights notes before changing them |
 | `data/open/` | Generated JSON/CSV exports and their reuse terms |
 | `tools/`, `tests/` | Data builders, static-page generation, validation, and regression checks |
 | `docs/` | Catalog rules, editorial and rights details, source reviews, and maintenance notes |

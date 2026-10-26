@@ -12,6 +12,8 @@
 <meta charset="utf-8">
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<script src="scripts/boot.js?v=20261026-quality"></script>
 <title>Rights &amp; Permissions — Bibliotheca Catholica</title>
 <meta name="description" content="What the five Bibliotheca Catholica rights badges mean, how each status is decided, and when downloads are shown. Not legal advice.">
 <link rel="canonical" href="https://bibliothecacatholica.com/rights/">
@@ -39,6 +41,7 @@
 <link rel="stylesheet" href="styles/saints.css?v=20261025-v15">
 <link rel="stylesheet" href="styles/rights.css?v=20261026-v18-2">
 <link rel="stylesheet" href="styles/home.css?v=20261026-v17">
+<link rel="stylesheet" href="styles/resilience.css?v=20261026-quality">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%238b1e2d'/><path d='M28 10h8v16h16v8H36v20h-8V34H12v-8h16z' fill='%23e9c46a'/></svg>">
 <script>try{var t=localStorage.getItem('hub-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){}</script>
 <!-- jsonld:start --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Bibliotheca Catholica","item":"https://bibliothecacatholica.com/"},{"@type":"ListItem","position":2,"name":"Rights & Permissions","item":"https://bibliothecacatholica.com/rights/"}]}</script><!-- jsonld:end -->
@@ -51,11 +54,12 @@
       <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M29 12h6v14h14v6H35v20h-6V32H15v-6h14z" fill="currentColor"/></svg>
       <span class="brand-text"><span class="brand-name">Bibliotheca Catholica</span><span class="brand-sub">a library of libraries</span></span>
     </a>
-    <div class="searchwrap" role="search">
+    <form class="searchwrap" id="site-search" role="search" action="/search/" method="get">
       <svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      <input id="q" type="search" placeholder="Search authors, 6,600 books, editions, reading editions…  ( / )" autocomplete="off" aria-label="Search everything">
+      <input id="q" name="lookup" type="search" placeholder="Search people, titles, and sources…  ( / )" autocomplete="off" aria-label="Search everything" role="combobox" aria-autocomplete="list" aria-controls="suggest" aria-expanded="false" maxlength="300">
+      <button type="submit" class="search-submit">Search</button>
       <div id="suggest" class="suggest" role="listbox" hidden></div>
-    </div>
+    </form>
     <div class="top-actions">
       <a class="pill pill-support" data-support="header" href="/support/" title="Support the Library" aria-label="Support the Library"><span aria-hidden="true">♥</span><span class="sup-t"> Support</span></a>
       <button id="themeBtn" class="iconbtn" aria-label="Toggle dark mode" title="Toggle light/dark">
@@ -90,15 +94,21 @@
     </div>
   </nav>
 </header>
+<section id="app-status" class="app-status" role="alert" hidden>
+  <h2>Interactive features could not start</h2>
+  <p>The library’s plain pages are still available. Browse <a href="/library/">reading editions</a>, <a href="/authors/">authors</a>, or <a href="/saints/">saints</a>, or use the <a href="/search/">title and author directory</a>.</p>
+  <p>Check your connection and <button id="app-reload" type="button" class="btn ghost">Reload this page</button>. If the problem continues, <a href="https://github.com/BibliothecaCatholica/bibliotheca-catholica/issues/new?template=site_problem.yml" target="_blank" rel="noopener">report a site problem ↗</a>.</p>
+</section>
+<noscript><p class="no-script">Interactive search, the on-site reader, and saved notes need JavaScript. You can still browse the <a href="/search/">title and author directory</a> and open original source editions from the plain pages.</p><style>.mainnav{display:flex!important;max-height:none!important}.menu-btn,#themeBtn,.searchwrap{display:none!important}</style></noscript>
 <main id="main" tabindex="-1"><div class="static-prerender"><div class="rights-page"><div class="page-head"><div class="eyebrow">Rights &amp; Permissions</div><h1>Rights &amp; Permissions</h1><p class="lede">Every record in the Isidore Index, and every edition in the reading room, carries a rights badge. The badge says whether we can offer the book’s files, and why.</p></div><p class="notice"><b>This is not legal advice.</b> It explains how this library labels and links books. If you need advice about a particular work, ask a lawyer.</p><section class="panel policy"><h2>The five badges</h2><ul class="rights-list"><li><span class="rights-badge rb-public-domain-us"><span class="rb-k">Rights:</span> Public domain (US)</span> <span class="rights-count">(6 Index records)</span><br>Published before 1931, or otherwise shown to be in the US public domain, with written evidence. It may not be public domain in your country. <b>Download and reader buttons are shown.</b></li><li><span class="rights-badge rb-open-license"><span class="rb-k">Rights:</span> Open license</span> <span class="rights-count">(0 Index records)</span><br>Released under an open license (Creative Commons or CC0). The license is linked in the evidence and its terms apply. <b>Download and reader buttons are shown.</b></li><li><span class="rights-badge rb-permission-granted"><span class="rb-k">Rights:</span> Permission granted</span> <span class="rights-count">(0 Index records)</span><br>The rights holder gave written permission. The date of the permission is in the evidence. <b>Download and reader buttons are shown.</b></li><li><span class="rights-badge rb-link-only"><span class="rb-k">Rights:</span> Link only</span> <span class="rights-count">(4,149 Index records)</span><br>In copyright or restricted. We link to the record’s book page on isidore.co, never to its files. <b>No download or reader buttons.</b></li><li><span class="rights-badge rb-unknown"><span class="rb-k">Rights:</span> Unknown</span> <span class="rights-count">(2,478 Index records)</span><br>Not yet reviewed, or the evidence is not strong enough. Treated as link only until a person checks it. <b>No download or reader buttons.</b></li></ul><p>For <b>Link only</b> and <b>Unknown</b> records we link only to the record’s book page on isidore.co, never to its files or to isidore.co’s folder listings. Bibliotheca Catholica does not host, and does not vouch for, any file at isidore.co. Hover over or tap a badge to see the evidence and the date it was checked; a record’s own page shows the same details.</p><h2>How the status is decided</h2><ul><li><b>Reading-room texts.</b> Each text we host was checked edition by edition before it was added: the specific edition or translation must have been published before 1931, and the evidence is recorded with the edition. These show <b>Public domain (US)</b>.</li><li><b>Isidore Index records.</b> Each record was classified on 2026-10-25 from its catalog year, ISBN, publisher, and an automated match against the NYPL transcription of US copyright renewals. Records presumed in copyright (for example, a 1978 or later edition, an ISBN with no year, a renewed 1931–63 book, or a post-1930 papal or curial text) are <b>Link only</b>.</li><li><b>Leads are not decisions.</b> A pre-1931 catalog year, a public-domain source named in the catalog, or “no renewal found” is a lead for a person to check, not proof. Catalog years are often scan or reprint dates, and a modern reprint can add a protected translation, introduction, or notes. Until someone checks the title page and the evidence, these records are <b>Unknown</b>.</li><li><b>The only automatic public-domain records</b> in the Index are the same Project Gutenberg texts that our reading room hosts after a rights check.</li><li>When in doubt, the status is <b>Unknown</b>. A status changes only with written evidence (a URL, a quotation, or a renewal-record citation) and the date it was checked.</li></ul><h2>The checked date</h2><p>Each badge shows when its status was last checked. Copyright status changes over time (each 1 January more US works enter the public domain), and our evidence can improve, so an older date means “as of then”.</p><h2>The 1931 rule still applies</h2><p>We host a full text only if that edition was published before 1931 and its rights were checked. Anything later is a link to its source, whatever its badge. A badge of <b>Public domain (US)</b> refers to the United States; the book may not be in the public domain in your country.</p><h2>Rights are not recommendations</h2><p>A rights badge says nothing about a book’s content. The <a href="#/policy">Fidelity &amp; Editorial Policy</a> still applies: listing is not endorsement, flagged titles keep their context note, and flagged titles are never featured.</p><h2>Corrections and removal</h2><p>If a badge is wrong, or you hold the rights to a work and want a link or a text removed, see <a href="#/takedown">Takedown requests</a>. Data: each record’s <code>rights_status</code>, <code>rights_evidence</code>, and <code>rights_checked</code> are in the <a href="#/data">Open Data</a>.</p><p class="notice"><b>This is not legal advice.</b> It explains how this library labels and links books. If you need advice about a particular work, ask a lawyer.</p></section></div></div></main>
 <footer class="footer">
   <div class="footer-inner">
     <div>
       <div class="footer-title">Bibliotheca Catholica</div>
-      <p>An independent index that links out to the Church’s own sources and to the great Catholic digital libraries. A selected reading collection is available here, with source editions and credits; other texts remain with their publishers.</p>
+      <p>A free Catholic library of libraries: a selected reading room and a curated resource index. Read classic texts here, compare editions, and follow links to original Church sources and digital libraries. Coverage is selective, and listing is not endorsement.</p>
       <p class="small disclosure"><b>Affiliate disclosure:</b> Bookshop.org “Buy” links are affiliate links: Bibliotheca Catholica earns a small commission, at no extra cost to you, when you buy through them. Editions are recommended on their merits. <a data-support="footer_disclosure" href="/support/">Support the Library</a>.</p>
       <p class="small non-affiliation">Bibliotheca Catholica (bibliothecacatholica.com) is an independent project and is not affiliated with other projects of a similar name.</p>
-      <p class="small">Ad maiorem Dei gloriam · Data compiled <span id="gen"></span> · Author excerpts are shortened from <a class="wiki-credit" href="https://en.wikipedia.org/" target="_blank" rel="noopener">Wikipedia</a> under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> and credited on each author page, as are portraits · <a class="license-link" href="/licensing/">Licensing</a>: code MIT, open data CC0, site writing CC BY 4.0, hosted texts public domain in the US.</p>
+      <p class="small">Ad maiorem Dei gloriam · Data compiled <span id="gen">2026-10-21</span> · Author excerpts are shortened from <a class="wiki-credit" href="https://en.wikipedia.org/" target="_blank" rel="noopener">Wikipedia</a> under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> and credited on each author page, as are portraits · <a class="license-link" href="/licensing/">Licensing</a>: code MIT, open data CC0, site writing CC BY 4.0, hosted texts public domain in the US.</p>
     </div>
     <nav class="footer-links" aria-label="Library information">
       <span class="eyebrow">The library</span>
@@ -107,6 +117,8 @@
       <a href="/editions/">Editions &amp; Translations</a>
       <a href="/data/">Open Data · JSON &amp; CSV</a>
       <a href="/about/">About the library</a>
+      <a href="https://github.com/BibliothecaCatholica/bibliotheca-catholica" target="_blank" rel="noopener">Official source repository ↗</a>
+      <a href="https://github.com/BibliothecaCatholica/bibliotheca-catholica/issues/new?template=site_problem.yml" target="_blank" rel="noopener">Report a problem ↗</a>
       <a href="/policy/">Fidelity &amp; Editorial Policy</a>
       <a href="/rights/">Rights &amp; Permissions</a>
       <a href="/takedown/">Takedown requests</a>
@@ -115,6 +127,7 @@
       <a class="footer-support" data-support="footer" href="/support/">Support the Library</a>
     </nav>
   </div>
+  <p class="build-note">Site build <a href="/build.json"><span id="build-id">bc-e62afd8c7d09</span></a> · <a href="https://github.com/BibliothecaCatholica/bibliotheca-catholica/commits/main/" target="_blank" rel="noopener">Source history ↗</a>. The data date identifies the original catalog snapshot; individual source checks have their own dates.</p>
 </footer>
 <script>window.BC_BOOT="rights"</script>
 <script src="data/data.js?v=20261026-v18-2"></script>
@@ -134,7 +147,7 @@
 <script src="scripts/reader.js?v=20261022-v11"></script>
 <script src="scripts/saints.js?v=20261025-connected-timeline"></script>
 <script src="scripts/timeline.js?v=20261025-connected-timeline"></script>
-<script src="data/site-copy.js?v=2c7198735e"></script>
-<script src="app.js?v=20261026-v18-2"></script>
+<script src="data/site-copy.js?v=97fd1ffe0c"></script>
+<script src="app.js?v=20261026-quality"></script>
 </body>
 </html>

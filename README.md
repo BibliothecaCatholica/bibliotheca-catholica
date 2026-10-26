@@ -2,7 +2,7 @@
 
 **Live site: [Bibliotheca Catholica](https://bibliothecacatholica.com)** (https://bibliothecacatholica.com)
 
-A clean, searchable master index of Catholic authors, Scripture, the Magisterium, prayers, references, podcasts, and the great digital libraries. A selected collection can be read on the site; the wider index links to its original sources.
+A free Catholic library of libraries: a selected reading room and a curated resource index. Read classic texts online, compare editions, and explore saints, Church documents, and original sources. Coverage is selective, and listing is not endorsement.
 
 **Contributors and coding agents: read [AGENTS.md](AGENTS.md) first.** It covers the architecture, the files that must stay, the content rules, and the checks to run before a PR.
 
@@ -28,6 +28,8 @@ python3 tools/build_open_data.py
 
 Optional external availability check: `python3 tools/check_library_links.py --output /tmp/source-links.json`. Network checks are separate from deterministic CI tests.
 
+Run `python3 tools/build_static.py` after template, route, data, or application changes. It refreshes the crawlable pages, shared site copy, footer snapshot date, sitemap, and deterministic build fingerprint. `/build.json` lists source hashes; its ID identifies content, not a Git commit or the date every record was reviewed. `/search/` provides a plain title-and-author directory when JavaScript is unavailable. See [the verified quality review](docs/QUALITY-AUDIT-2026-10-26.md), [contributing](CONTRIBUTING.md), and [security](SECURITY.md).
+
 Deploy the repository's static files as before. Preserve `data/texts/`, `data/sources/`, the new `scripts/` and `styles/` directories. No hosting migration or server-side secret is needed.
 
 ### Legacy generator inputs
@@ -36,7 +38,7 @@ The committed data snapshots remain usable. Some older ingestion scripts expect 
 
 ## Editions, reading lists, Substacks, and buy links (v3)
 
-* **Which Edition?** `#/editions`, **Reading Lists** `#/reading`, **Top Catholic Substacks** `#/substacks`.
+* **Editions & Translations** `#/editions`, **Reading Lists** `#/reading`, **Catholic Substacks** `#/substacks`.
 * Content lives in `tools/editions_data.py`, `tools/reading_lists.py`, and `tools/substacks_src.py`. Run
   `python3 tools/build_v3_data.py` to rebuild `data/guide.js` (this also refreshes the Substack "latest posts" snapshot).
 * **Affiliate IDs:** paste them into `data/affiliates.js` (`bookshopId`, and `wrap`/`param` per publisher). While they are

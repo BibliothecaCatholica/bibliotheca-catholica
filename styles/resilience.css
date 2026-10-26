@@ -9,7 +9,7 @@
 .app-unavailable .menu-btn,.app-unavailable #themeBtn{display:none}
 .app-unavailable .mainnav{display:flex!important}
 .no-script{font:14px/1.6 var(--sans);padding:12px 22px;background:var(--card);color:var(--ink)}
-.build-note{font:12px/1.6 var(--sans);overflow-wrap:anywhere}
+.footer .build-note{max-width:1200px;margin:0 auto;padding:0 20px 22px;font:12px/1.6 var(--sans);overflow-wrap:anywhere}
 .search-browse{columns:2 300px;column-gap:30px}
 .search-browse li{break-inside:avoid;padding:4px 0}
 @media(max-width:760px){.app-status{margin:12px}.app-unavailable .mainnav{max-height:none;overflow:visible}.search-submit{padding:0 8px}.searchwrap input{padding-right:77px}}

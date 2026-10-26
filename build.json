@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-e62afd8c7d09",
+  "id": "bc-f8f2182ac953",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "6613a71c5019621556191c753c79ebff89159f20c950b855b82ab34a33e7e351",
@@ -34,7 +34,7 @@
     "data/saints-aliases.json": "383954ead9dcb5734c03d1a1330f71a7a2a8286f7f5dbd5724b2978f6b21809e",
     "data/saints.js": "be627f893f081079e8395e5887fc610292220be7a59f5f5429daa164d76f10c3",
     "data/saints.json": "b6a2988437bca324a9716a68a5762b588a1e152533b3e6eb867821b531f02957",
-    "index.template": "7df70f624554503ca18bd9a8d07660bf2f424dd344145a52ae8e5a8c0e1e853a",
+    "index.template": "84317aea85aea549fd03f169ce24b7ccdbd9ebfd31da7fe76db631d74f75a535",
     "scripts/analytics.js": "f68ec6e1c7c0a022b5a0739f497747018e23da954e1ba435a2465a41d4d6d777",
     "scripts/boot.js": "aacd6fd1dbf3b9ba84d2dbe4d0b72d4e7a931fa3ff96da23af94d73e05e5547b",
     "scripts/guides.js": "a77f6dfdeffbef2490b218b6acb671aed8f067f8f1c3d53c40b8d8fdf10629bf",
@@ -49,7 +49,7 @@
     "styles/library.css": "38fd584daea391ed9afa239ec9e5192dbfabad499897462fd63ecf7efe09c92e",
     "styles/reader.css": "b45f131c89f70b54a878829f3845f80bf7849d6265bcd29465d107fbbecef8ff",
     "styles/refresh.css": "1660cf83d7aa77dc1e36dddd616e1494e40114ebd2597ce04619c9f056f2f3de",
-    "styles/resilience.css": "7b26234084e60f5093a23de460be1695856f89b500824c2e38d69cb8e5d03221",
+    "styles/resilience.css": "9fee6c1baa59b219e0fd7bd7d4b2b9a537f53b513c1c933176ca8edffb8b8f5d",
     "styles/rights.css": "4443e41b31507ef98826fada5fb6e94980b55ac40934de4449ef1750a17231e9",
     "styles/saints.css": "9a8f739ad93710fba2e99dbcb9150f1cb50c0d530f756e4d825e99e91b249d22",
     "styles/timeline.css": "bcd2e6689f1e65d23f87a51f1c57c0426cd54174b6009e3bad36abe72066d4c0",

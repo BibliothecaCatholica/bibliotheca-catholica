@@ -83,7 +83,8 @@
   .rites-table td::before{content:attr(data-label);display:block;font-weight:600;font-size:12px;color:var(--ink2)}
   .rmap-inset{flex-basis:90px}
 }
-.rites-page{overflow-wrap:anywhere}
+.rites-page{overflow-wrap:break-word}
+@media(max-width:720px){.rites-page{overflow-wrap:anywhere}}
 .rites-record .rmap{max-width:860px}
 .rites-record .rmap-insets{max-width:600px}
 

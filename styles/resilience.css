@@ -1,0 +1,16 @@
+/* Established palette; useful with scripts disabled or unavailable. */
+.search-submit{position:absolute;right:5px;top:5px;bottom:5px;border:1px solid var(--line);border-radius:7px;padding:0 12px;background:var(--card);color:var(--rubric);font:600 12px var(--sans);cursor:pointer;min-height:34px}
+.searchwrap input{padding-right:88px}
+.app-status{max-width:1160px;margin:18px auto;padding:18px 22px;border:1px solid var(--rubric);border-radius:var(--r);background:var(--card);color:var(--ink);font:15px/1.6 var(--sans)}
+.app-status[hidden]{display:none}
+.app-status h2{font:600 23px var(--display);margin:0 0 7px}
+.app-status p{margin:6px 0}
+.app-status button{font:600 13px var(--sans);min-height:44px}
+.app-unavailable .menu-btn,.app-unavailable #themeBtn{display:none}
+.app-unavailable .mainnav{display:flex!important}
+.no-script{font:14px/1.6 var(--sans);padding:12px 22px;background:var(--card);color:var(--ink)}
+.build-note{font:12px/1.6 var(--sans);overflow-wrap:anywhere}
+.search-browse{columns:2 300px;column-gap:30px}
+.search-browse li{break-inside:avoid;padding:4px 0}
+@media(max-width:760px){.app-status{margin:12px}.app-unavailable .mainnav{max-height:none;overflow:visible}.search-submit{padding:0 8px}.searchwrap input{padding-right:77px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation:none!important;transition:none!important}}

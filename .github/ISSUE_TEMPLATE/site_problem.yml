@@ -1,0 +1,35 @@
+name: Site problem or catalog correction
+description: Report a broken link, reading problem, accessibility issue, or metadata correction.
+title: "[Site] "
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Kind of problem
+      options:
+        - Broken link or missing text
+        - Reading or search problem
+        - Metadata or attribution correction
+        - Accessibility problem
+        - Source suggestion
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page or record URL
+      description: Link to the affected page. Do not include personal information.
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened, and what should change?
+      description: For a correction, include a reliable source. For a technical issue, include steps and browser/device details. Avoid private notes or credentials.
+    validations:
+      required: true
+  - type: input
+    id: build
+    attributes:
+      label: Site build (optional)
+      description: The bc- identifier in the footer helps reproduce a problem.

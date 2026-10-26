@@ -625,6 +625,7 @@ saints/ursula/index.html
 saints/valentine/index.html
 saints/veronica/index.html
 scripture/index.html
+search/index.html
 substacks/index.html
 support/index.html
 takedown/index.html

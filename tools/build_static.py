@@ -14,14 +14,14 @@ pre-rendered or put in the sitemap.  Run after data changes and commit the outpu
 import hashlib,html,json,re,shutil,sys,urllib.parse
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE='https://bibliothecacatholica.com/';E=html.escape
-sys.path.insert(0,str(ROOT/'tools'));import site_copy
+sys.path.insert(0,str(ROOT/'tools'));import site_copy,build_info
 # --- v17 SEO: see docs/SEO.md ---------------------------------------------------------------------
 NAME='Bibliotheca Catholica';OG_IMAGE=SITE+'assets/og-image.png'
 # Profiles we can verify belong to the project: the GitHub organization (this repo) and the Bluesky
 # handle bibliothecacatholica.com, which resolves to the DID in .well-known/atproto-did.
 SAME_AS=['https://github.com/BibliothecaCatholica','https://bsky.app/profile/bibliothecacatholica.com']
-HOME_TITLE='Bibliotheca Catholica: a free library of Catholic authors and classics'
-HOME_DESC='Bibliotheca Catholica is a free, curated, searchable library of Catholic authors, Scripture, Church documents, prayers, saints, and classics to read online.'
+HOME_TITLE='Bibliotheca Catholica — a library of libraries'
+HOME_DESC='A free Catholic reading room and curated resource index. Read classic texts online, compare editions, and explore saints, Church documents, and source texts.'
 DESC_MIN,DESC_MAX=120,160
 def fit(parts,extra=(),hi=DESC_MAX,lo=150):
     """Join sentences into a meta description of at most `hi` characters: the core `parts` first, then
@@ -150,7 +150,7 @@ def years(au):
     f=lambda y:(str(-y)+' BC' if y<0 else str(y)) if isinstance(y,int) else ''
     return ' ('+f(b)+'–'+f(d)+')' if (b or d) else ''
 TAGL={'saint':'saint','theologian':'theologian','philosopher':'philosopher','convert':'convert','bishop':'bishop','mystic':'mystic','monastic':'monastic','spiritual':'spiritual writer','father':'Church Father','historian':'historian','poet':'poet','apologist':'apologist','founder':'founder','cardinal':'cardinal','novelist':'novelist','preacher':'preacher','martyr':'martyr','pope':'pope','scripture':'Scripture scholar','liturgist':'liturgist','scholar':'scholar','journalist':'journalist','scientist':'scientist','catechist':'catechist','biographer':'biographer','hagiographer':'hagiographer','canonist':'canonist','statesman':'statesman','publisher':'publisher'}
-def write_home(tpl,counts):
+def write_home(tpl,counts,snapshot):
     """v17: the home page IS index.html.  Rewrite only its marked regions (the crawlable landing content
     inside <main> and the WebSite/Organization JSON-LD) and data/site-copy.js, so hand edits elsewhere in
     index.html survive.  Idempotent: CI reruns this and checks git diff."""
@@ -160,18 +160,21 @@ def write_home(tpl,counts):
       '<p class="lede">Discover the writers, ideas, and spiritual classics of the Catholic tradition. Read here, download an ebook, or find the edition that belongs on your shelf.</p>'
       '<div class="hero-cta"><a class="btn gold" href="/library/">Discover &amp; Read →</a><a class="btn ghost" href="/isidore/">Explore the Isidore Index</a><a class="btn ghost" href="/timeline/">Browse the timeline</a></div></section>')
     home='<!-- static-home:start --><div class="static-prerender">'+hero+about+'</div><!-- static-home:end -->'
-    s=(ROOT/'index.html').read_text()
+    s=tpl
     assert '<!-- static-home:start -->' in s,'index.html <main> must contain the static-home markers'
     s=HOME_RE.sub(lambda m:home,s,count=1)
     s=re.sub(r'<title>.*?</title>',lambda m:'<title>'+E(HOME_TITLE)+'</title>',s,count=1,flags=re.S)
     s=re.sub(r'<meta name="description" content="[^"]*">',lambda m:'<meta name="description" content="'+E(HOME_DESC)+'">',s,count=1)
+    for key,value in (('og:title',HOME_TITLE),('og:description',HOME_DESC),('twitter:title',HOME_TITLE),('twitter:description',HOME_DESC)):
+        attr='property' if key.startswith('og:') else 'name'
+        s=re.sub(r'<meta '+attr+'="'+key+'" content="[^"]*">',lambda m:'<meta '+attr+'="'+key+'" content="'+E(value)+'">',s,count=1)
     org={'@context':'https://schema.org','@type':'Organization','@id':SITE+'#organization','name':NAME,'url':SITE,'logo':OG_IMAGE,'sameAs':SAME_AS}
     web={'@context':'https://schema.org','@type':'WebSite','@id':SITE+'#website','name':NAME,'url':SITE,'description':HOME_DESC,'inLanguage':'en','publisher':{'@id':SITE+'#organization'}}
     s=LD_RE.sub('',s).replace('</head>','<!-- jsonld:start -->'+ld(web)+ld(org)+'<!-- jsonld:end -->\n</head>',1)
     js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'home':about,'about':site_copy.about_page(counts)},ensure_ascii=False,separators=(',',':'))+';\n'
     (ROOT/'data/site-copy.js').write_text(js)
     s=re.sub(r'data/site-copy\.js\?v=[0-9a-f]*','data/site-copy.js?v='+hashlib.sha256(js.encode()).hexdigest()[:10],s)
-    (ROOT/'index.html').write_text(s)
+    (ROOT/'index.html').write_text(build_info.stamp(s,snapshot))
 def main():
     tpl=(ROOT/'index.html').read_text();global GA_TAG;GA_TAG=ga_tag(tpl);hub=json.loads((ROOT/'data/catholic-hub.json').read_text())
     lib=json.loads((ROOT/'data/library.json').read_text());guide=jsvar('data/guide.js','GUIDE_DATA');flags=load_flags()
@@ -298,6 +301,11 @@ def main():
     m=re.search(r'window\.BOOKS_COUNT=(\d+)',tpl)
     if m:counts['books']=int(m.group(1))
     out['about']=('About the library — Bibliotheca Catholica','About Bibliotheca Catholica: what the free Catholic library holds, where its texts come from, the 1931 rule, rights badges, editorial policy, and goals.',site_copy.about_page(counts),[crumbs(('About the library','about/'))])
+    directory=head('Find a text','Search and browse the library','Use the search box for interactive results. Without JavaScript, browse the titles and authors below, or use your browser’s Find command.')
+    directory+='<h2>Selected reading editions</h2><ul class="search-browse">'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+' — '+E(w['author'])+'</li>' for w in sorted(lib['works'],key=lambda w:w['title'].casefold()))+'</ul>'
+    directory+='<h2>Authors</h2><ul class="search-browse">'+''.join('<li>'+a('/author/'+au['id']+'/',au['name'])+'</li>' for au in sorted(authors,key=lambda au:au['name'].casefold()))+'</ul>'
+    directory+='<p>'+a('/saints/','Saints & Hagiography')+' · '+a('/editions/','Editions & Translations')+' · '+a('/reading/','Reading Lists')+'</p>'
+    out['search']=('Search and browse — Bibliotheca Catholica','Search Bibliotheca Catholica for people and titles, or browse the plain directory of selected reading editions and Catholic authors without JavaScript.',directory,[crumbs(('Search and browse','search/'))])
     extra_pages=ROOT/'tools/static_extra.json'
     if extra_pages.exists():
         for k,v in json.loads(extra_pages.read_text()).items():out[k]=(v['title'],v['desc'],v['body'])
@@ -309,9 +317,11 @@ def main():
             if f.name=='index.html' and f.exists():f.unlink()
             d=f.parent
             while d!=ROOT and d.exists() and not any(d.iterdir()):d.rmdir();d=d.parent
+    # Build the shared template first, so every entry page gets the same copy token, date, and build ID.
+    write_home(tpl,counts,hub['generated'])
+    tpl=(ROOT/'index.html').read_text()
     for route,v in out.items():
         t,d,body=v[:3];f=ROOT/route/'index.html';f.parent.mkdir(parents=True,exist_ok=True);f.write_text(page(tpl,route,t,d,body,jsonld=v[3] if len(v)>3 else ()))
-    write_home(tpl,counts)
     man.write_text(''.join(r+'/index.html\n' for r in sorted(out)))
     urls=[SITE]+[SITE+r+'/' for r in sorted(out)]
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('  <url><loc>'+E(u)+'</loc></url>\n' for u in urls)+'</urlset>\n')

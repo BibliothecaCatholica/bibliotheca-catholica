@@ -36,9 +36,9 @@ def home_about(n):
     sec=''.join('<li>'+a(h,l)+' <span>'+E(d)+'</span></li>' for h,l,d in SECTION_LINKS)
     info=' · '.join(a(h,l) for h,l in INFO_LINKS)
     return ('<section class="home-about" aria-labelledby="home-about-h"><div class="eyebrow">About the library</div>'
-     '<h2 id="home-about-h">A free master library of the Catholic tradition</h2>'
+     '<h2 id="home-about-h">A Catholic reading room and resource index</h2>'
      '<div class="home-about-text">'
-     '<p><b>Bibliotheca Catholica</b> (bibliothecacatholica.com) is a free, curated, and searchable master library of the Catholic tradition. '
+     '<p><b>Bibliotheca Catholica</b> (bibliothecacatholica.com) is a free Catholic library of libraries: a selected reading room and a curated resource index. '
      'It gathers Catholic authors from the Apostolic Fathers to today, Sacred Scripture, the documents of the Magisterium, prayers and devotions, reference works, podcasts and media, and a reading room of classic texts. '
      'Each entry links to its original source, such as vatican.va, New Advent, the Christian Classics Ethereal Library, Project Gutenberg, and the St. Isidore e-book library.</p>'
      '<p>The '+a('/library/','reading room')+' comes first. Its '+str(n['hosted'])+' hosted texts are older editions listed by their sources as public domain in the United States, chosen under our pre-1931 rule and checked against those sources, and readable right here, with contents, search, highlights, notes, and your place saved in your own browser. '
@@ -51,7 +51,7 @@ def home_about(n):
      '</div><h3>Sections of the library</h3><ul class="home-sections">'+sec+'</ul><p class="home-info">'+info+'</p></section>')
 def about_page(n):
     return ('<div class="page-head"><div class="eyebrow">De bibliotheca</div><h1>About the library</h1>'
-     '<p class="lede">Bibliotheca Catholica is a free, curated, and searchable master library of Catholic authors, Scripture, the Magisterium, prayers, reference works, media, and reading-room texts, with links to the original sources.</p></div>'
+     '<p class="lede">A free Catholic library of libraries: a selected reading room and a curated resource index, with links to original Church sources and digital libraries. Coverage is selective, not exhaustive.</p></div>'
      '<section class="panel policy"><h2>What is here</h2>'
      '<p>The library has four parts. The '+a('/library/','reading room')+' holds '+str(n['hosted'])+' classic texts you can read on this site. '
      'The '+a('/authors/','author pages')+' ('+str(n['authors'])+' authors), the '+a('/saints/','saints guide')+' ('+str(n['saints'])+' saints), the '+a('/editions/','edition guides')+', and the '+a('/reading/','reading lists')+' are our own curated shelves. '

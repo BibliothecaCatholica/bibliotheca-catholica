@@ -1,5 +1,7 @@
 # Collection review and reading access
 
+> Historical review from October 21, 2026. The 49-work totals below describe that snapshot and have since changed; use the current [README](../README.md) and live catalog for present counts. Lewis preview availability can vary by provider, location, and account.
+
 ## Why Lewis previously led to a dead end
 
 The initial eight Lewis entries cited the same academic bibliography to establish titles and publication dates. Those were reference records, and the later reading path reused them without adding a reading destination. An author biography or bibliography does not satisfy a reading action.

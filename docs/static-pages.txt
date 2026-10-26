@@ -559,6 +559,7 @@ prayers/index.html
 projects/index.html
 rare/index.html
 reading/index.html
+reading/advent-2026/index.html
 reading/apologetics/index.html
 reading/chesterton/index.html
 reading/documents/index.html

@@ -16,6 +16,7 @@ SECTION_LINKS=[
  ('/timeline/','Timeline','saints and writers through the centuries'),
  ('/editions/','Editions & Translations','which translation of each classic to read or buy'),
  ('/reading/','Reading Lists','curated paths for beginners, apologetics, spiritual classics, and more'),
+ ('/reading/advent-2026/','Advent with the Fathers','a daily reading plan for Advent 2026, November 29 to December 24'),
  ('/isidore/','The Isidore Index','e-books and PDFs in the St. Isidore library, each with a rights badge'),
  ('/scripture/','Sacred Scripture','Bibles, commentaries, and daily readings'),
  ('/magisterium/','Church Documents','catechisms, councils, encyclicals, and canon law'),

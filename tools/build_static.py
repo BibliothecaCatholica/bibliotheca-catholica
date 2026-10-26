@@ -175,9 +175,31 @@ def write_home(tpl,counts,snapshot):
     (ROOT/'data/site-copy.js').write_text(js)
     s=re.sub(r'data/site-copy\.js\?v=[0-9a-f]*','data/site-copy.js?v='+hashlib.sha256(js.encode()).hexdigest()[:10],s)
     (ROOT/'index.html').write_text(build_info.stamp(s,snapshot))
+# --- v20 dated reading plans: the static page lists every day; scripts/plans.js adds the today highlight and marks.
+PLAN_DESC={'advent-2026':'Advent with the Fathers: 26 daily readings for Advent 2026, November 29 to December 24, from Augustine, Clement, Ignatius, Bede, Aquinas, Julian, and more.'}
+WEEKDAYS=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+def plan_date(iso,weekday=True):
+    import datetime;d=datetime.date.fromisoformat(iso);return (WEEKDAYS[d.weekday()]+', ' if weekday else '')+MONTHS[d.month-1]+' '+str(d.day)
+PLAN_SPAN=lambda P:plan_date(P['start'],False)+' to '+plan_date(P['end'],False)+', '+str(P['year'])
+def plan_day_html(d):
+    """Mirrors dayHtml() in scripts/plans.js, without the today highlight and the mark-as-read box."""
+    au=a('/author/'+d['authorId']+'/',d['author']) if d['authorId'] else E(d['author'])
+    ed=E(d['editionLabel'])+(', tr. '+E(', '.join(d['contributors'])) if d['contributors'] else '')+'. '+('Edition: ' if d['yearKind']=='edition' else 'Translation by ')+str(d['year'])+'.'
+    return ('<li class="plan-day'+(' has-marker' if d['marker'] else '')+'" id="day-'+str(d['day'])+'" data-date="'+d['date']+'">'
+      '<div class="pd-head"><span class="pd-num">Day '+str(d['day'])+'</span><time datetime="'+d['date']+'">'+E(plan_date(d['date']))+'</time></div>'
+      +('<p class="pd-marker">'+E(d['marker'])+'</p>' if d['marker'] else '')+
+      '<h2 class="pd-title">'+au+', <cite>'+a('/work/'+d['work']+'/',d['title'])+'</cite></h2>'
+      '<p class="pd-ref">'+E(d['ref'])+' · about '+str(d['minutes'])+' min</p>'
+      '<blockquote class="pd-quote"><p>“'+E(d['quote'])+('…' if d['cut'] else '')+'”</p></blockquote><p class="pd-note">'+E(d['note'])+'</p>'
+      '<div class="pd-foot"><a class="btn" href="/'+E(d['href'])+'">Read day '+str(d['day'])+' →</a><span class="pd-print-link">bibliothecacatholica.com/'+E(d['href'])+'</span></div>'
+      '<p class="small pd-ed">'+ed+' <a class="rights-badge rb-public-domain-us" href="/rights/" data-rights="public_domain_us" title="'+E(d['yearEvidence'])+'"><span class="rb-k">Rights:</span> Public domain (US)</a></p></li>')
+def plan_html(P):
+    return (crumb_html(('Reading Lists','reading/'),(P['t'],''))+'<div class="page-head plan-head"><div class="eyebrow">Reading plan · '+E(PLAN_SPAN(P))+'</div><h1>'+E(P['t'])+'</h1><p class="lede">'+E(P['intro'])+'</p></div>'
+      '<ol class="plan-days">'+''.join(plan_day_html(d) for d in P['days'])+'</ol>'
+      '<p class="small plan-foot">Every reading opens in the on-site reader at the start of the passage. The editions are public domain in the United States; each badge links to '+a('/rights/','how rights are determined')+'. '+a('/reading/','All reading lists')+'.</p>')
 def main():
     tpl=(ROOT/'index.html').read_text();global GA_TAG;GA_TAG=ga_tag(tpl);hub=json.loads((ROOT/'data/catholic-hub.json').read_text())
-    lib=json.loads((ROOT/'data/library.json').read_text());guide=jsvar('data/guide.js','GUIDE_DATA');flags=load_flags()
+    lib=json.loads((ROOT/'data/library.json').read_text());guide=jsvar('data/guide.js','GUIDE_DATA');flags=load_flags();plans=json.loads((ROOT/'data/reading-plans.json').read_text())['plans']
     skip_auth=set(flags.get('hubAuthors',[]))
     eras={e['id']:e['label'] for e in hub['eras']}
     out={}  # route -> html
@@ -253,6 +275,9 @@ def main():
         body=head('Reading list',L['t'],L.get('sub',''))+'<ol>'+items+'</ol><p>'+a('/reading/','All reading lists')+'</p>'
         md=fit([L['t']+', a Catholic reading list:',L.get('sub','').rstrip('.')+'.'],((str(len(L['items']))+' books, with edition guides and free texts.',str(len(L['items']))+' books.'),)+DESC_EXTRA)
         out['reading/'+L['id']]=(L['t']+' — Reading Lists — Bibliotheca Catholica',md,crumb_html(('Reading Lists','reading/'),(L['t'],''))+body,[crumbs(('Reading Lists','reading/'),(L['t'],'reading/'+L['id']+'/'))])
+    # v20 dated reading plans (data/reading-plans.json from tools/build_reading_plans.py); see docs/READING-GUIDES.md
+    for P in plans:
+        out['reading/'+P['id']]=(P['t']+' '+str(P['year'])+': a daily reading plan — Bibliotheca Catholica',PLAN_DESC[P['id']],plan_html(P),[crumbs(('Reading Lists','reading/'),(P['t'],'reading/'+P['id']+'/'))])
     s_href=lambda x:'/author/'+x['author_id']+'/' if x['tier']==1 and x.get('author_id') else '/saints/'+x['id']+'/'
     for x in saints:
         if x['tier']==1:continue  # writers' pages are their author pages
@@ -286,7 +311,7 @@ def main():
         elif k=='library':extra='<ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title']+' — '+w['author'])+'</li>' for w in lib['works'])+'</ul>'
         elif k=='editions':extra='<ul>'+''.join('<li>'+a('/editions/'+e['id']+'/',e['t'])+'</li>' for e in guide['editions'])+'</ul>'
         elif k=='saints':extra='<ul>'+''.join('<li>'+a(s_href(x),x['name'])+' — '+E(s_status(x))+(' · Vatican News: '+E(s_vn(x)) if x['feasts']['vatican_news'] else '')+(' · '+E(FLAGL[x['historicity']['flag']]) if x.get('historicity') else '')+'</li>' for x in sorted(saints,key=lambda x:x['name']))+'</ul><p>'+a('/saints/books/','The hagiography shelf')+' · '+a('/saints/about/','Sources & method')+'</p>'
-        elif k=='reading':extra='<ul>'+''.join('<li>'+a('/reading/'+L['id']+'/',L['t'])+'</li>' for L in guide['lists'])+'</ul>'
+        elif k=='reading':extra='<h2>Reading plans</h2><ul>'+''.join('<li>'+a('/reading/'+P['id']+'/',P['t']+' ('+str(len(P['days']))+' days, '+PLAN_SPAN(P)+')')+'</li>' for P in plans)+'</ul><h2>Reading lists</h2><ul>'+''.join('<li>'+a('/reading/'+L['id']+'/',L['t'])+'</li>' for L in guide['lists'])+'</ul>'
         elif k=='doctors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors if x.get('doctor'))+'</ul>'
         intro='<p class="section-intro">'+E(INTRO[k])+'</p>' if k in INTRO else ''
         out[k]=(t+' — Bibliotheca Catholica',fit([d],DESC_EXTRA),head('Bibliotheca Catholica',t,d)+intro+extra,[crumbs((t,k+'/'))])

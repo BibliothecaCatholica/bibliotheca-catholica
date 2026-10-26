@@ -1,0 +1,39 @@
+/* v20 dated reading plans (scripts/plans.js, reading/<id>/ static pages). Colors use the theme
+   variables only, so light and dark both keep text at 4.5:1 or better (tests/test_reading_plans.py). */
+.plan-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px;font-family:var(--sans);font-size:15px}
+.plan-tools #plan-progress{color:var(--ink2);margin-right:6px}
+.plan-privacy{color:var(--muted);margin:8px 0 0}
+.plan-days{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:14px}
+.plan-day{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--shadow);scroll-margin-top:190px}
+.plan-day.has-marker{border-left-color:var(--gold-ink)}
+.plan-day.is-today{border-color:var(--rubric);border-left-color:var(--rubric);box-shadow:0 0 0 3px color-mix(in srgb,var(--rubric) 22%,transparent),var(--shadow)}
+.plan-day.is-read .pd-num::after{content:" · read";letter-spacing:.04em;text-transform:none}
+.pd-head{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;font:600 13px var(--sans);color:var(--ink2)}
+.pd-num{letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink)}
+.pd-today{background:var(--rubric);color:var(--on-rubric);border-radius:999px;padding:2px 10px;font-size:12px}
+.pd-marker{margin:6px 0 0;font:600 14px var(--sans);color:var(--rubric)}
+.pd-title{font-size:22px;margin:8px 0 2px}
+.pd-title a{color:var(--ink)}
+.pd-title cite{font-style:italic}
+.pd-ref{margin:0;font:500 14px var(--sans);color:var(--ink2)}
+.pd-quote{margin:12px 0;padding:2px 0 2px 16px;border-left:2px solid var(--gold-ink);color:var(--ink)}
+.pd-quote p{margin:0;font-size:18px}
+.pd-note{margin:0 0 12px;color:var(--ink2);font-size:16px}
+.pd-foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.pd-check{display:inline-flex;gap:8px;align-items:center;font:500 15px var(--sans);color:var(--ink);min-height:44px;cursor:pointer}
+.pd-check input{width:20px;height:20px;accent-color:var(--rubric)}
+.pd-ed{margin:10px 0 0;color:var(--muted)}
+.plan-foot{margin-top:22px;color:var(--muted)}
+.plan-card .glyph{font-size:24px}
+@media (max-width:760px){.plan-day{padding:14px 14px}.pd-title{font-size:19px}.plan-tools .btn{flex:1 1 auto;text-align:center}}
+@media print{
+  .plan-tools,.pd-check,.plan-privacy,.pd-foot .btn{display:none!important}
+  .plan-days{gap:0}
+  .plan-day{break-inside:avoid;box-shadow:none;border:0;border-bottom:1px solid #999;border-radius:0;padding:10px 0;background:#fff;color:#000}
+  .plan-day.is-today{box-shadow:none}
+  .pd-num,.pd-marker,.pd-head,.pd-ref,.pd-note,.pd-ed,.pd-title a,.pd-quote{color:#000!important}
+  .pd-today{background:none;color:#000;border:1px solid #000}
+  .plan-day .rights-badge{border:1px solid #000;color:#000;background:none}
+  .pd-foot .pd-print-link{display:inline}
+}
+.pd-print-link{display:none;font-size:12px;color:#000;word-break:break-all}

@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "python3 tools/serve.py",
-    "build": "python3 tools/build_library.py && python3 tools/build_v3_data.py --catalog-only && python3 tools/build_saints.py && python3 tools/build_rights.py && python3 tools/build_rites.py",
+    "build": "python3 tools/build_library.py && python3 tools/build_v3_data.py --catalog-only && python3 tools/build_saints.py && python3 tools/build_rights.py && python3 tools/build_rites.py && python3 tools/build_reading_plans.py",
     "test": "node --test tests/*.test.js && python3 -m unittest discover -s tests -p 'test_*.py'"
   }
 }

@@ -62,6 +62,7 @@ Everything a reader saves stays in that browser's `localStorage`; nothing is sen
 | `bc-reading:<editionId>` | Saved section index. | `scripts/library.js` |
 | `bc:reader-size`, `bc:reader-spacing` | Display preferences. | `scripts/library.js` |
 | `bc-listen:<workId>` | Listen dock state (recording, chapter, time, open). | `scripts/library.js` |
+| `bc-plan:<planId>` | `{v:1,read:[day numbers]}`: the days of a dated reading plan (for example `bc-plan:advent-2026`) marked as read. Removed when every mark is cleared. | `scripts/plans.js` |
 | `hub-theme` | `light` or `dark`. | `app.js` |
 
 - **Anchoring:** highlights resolve by offset first, then by searching the section for the exact quote and choosing the occurrence whose prefix and suffix match best. Sections are 35 paragraphs (`size` in `read()`); `p` lets highlights find their section even if that size changes. If a passage can no longer be found, My notes still lists it as unplaced. Do not change `splitText()` or the `reading-p-<index>` paragraph ids without a migration.
@@ -83,6 +84,16 @@ Colors come from the tokens at the top of `styles.css` (`:root` for light, `[dat
 | `--rubric` | `#8b1e2d` (unchanged) | `#e37f89` (was `#e0707b`) | links, accents, and filled buttons |
 
 Text on gradients (`.btn.gold`, `.sec-card .glyph`, `.avatar`) must also pass against every part of the gradient behind the text.
+
+## Dated reading plans (v20)
+
+`#/reading/<planId>` and the static `reading/<planId>/` page show a dated plan: one short reading per day, each a deep link into the on-site reader (`#/read/<work>/<edition>/<section>/<paragraph>`). The first plan is **Advent with the Fathers 2026** (`advent-2026`, 26 days, November 29 to December 24). Source: `tools/reading_plans.py`; `tools/build_reading_plans.py` (part of `npm run build`) validates it and writes `data/reading-plans.json` and `data/reading-plans.js`, which CI diff-checks. See `docs/READING-GUIDES.md`.
+
+- **Editions:** hosted reading-room editions only, each with a year before 1931 and its evidence in `EDITION_YEARS` (`edition` year from the title page or note, or `translator` death year when the file names no edition year). Never Orthodoxy (`pg-16769`), never a flagged author or book. Rights badges come from `BCRights.edition()` in the app and are pre-rendered as Public domain (US) on the static page; keep them linking to `/rights/`.
+- **Anchors:** paragraph indexes are `splitText()` blocks (the `reading-p-<index>` ids); the link targets `at`, and the whole passage `p` must sit in the same 35-paragraph section. The builder fails if a passage crosses a section or the text's SHA-256 changes.
+- **Quotes:** each day's quote is the first 20 words of the passage's first paragraph of 12 or more words (a shorter paragraph is quoted whole, without an ellipsis), as they stand in the hosted text, with only whitespace collapsed and Gutenberg `_` italics and `[n]`/`(n)` footnote markers dropped. `tests/test_reading_plans.py` re-matches every quote against the raw file character by character. Never paraphrase inside quotation marks.
+- **Copy:** notes are short and factual, with Oxford commas and no em-dashes. Markers name the Advent Sundays, feasts, and the O Antiphons (December 17 to 23) and are tested by date.
+- **Browser only:** the static page lists every day; `scripts/plans.js` highlights today (local date, `aria-current="date"`) and saves mark-as-read under `bc-plan:<planId>`. No analytics event is fired. Add a new plan's id to `IDS` in `scripts/plans.js` and a 150 to 160 character description to `PLAN_DESC` in `tools/build_static.py`.
 
 ## Files that must never be deleted or moved
 
@@ -133,6 +144,7 @@ Text on gradients (`.btn.gold`, `.sec-card .glyph`, `.avatar`) must also pass ag
 - **A reading-room work or edition:** follow `docs/CATALOG.md`. Edit `data/library.json` (with rights evidence in `data/sources/`, plus `data/texts/` and SHA-256 if hosted), then run `npm run build`.
 - **An author or resource:** load, edit, and save with `tools/hubio.py` (`load()` and `save()`) so `catholic-hub.json` and `data.js` stay identical. Author ids are kebab-case slugs used in URLs.
 - **An edition guide or reading list:** edit `tools/editions_data.py` or `tools/reading_lists.py`, then run `npm run build`. Never add a flagged title.
+- **A dated reading plan:** add it to `tools/reading_plans.py` (see "Dated reading plans" above), add its id to `IDS` in `scripts/plans.js` and its description to `PLAN_DESC` in `tools/build_static.py`, then run `npm run build` and `python3 tools/build_static.py`.
 - **An editorial flag:** add the Isidore book id to `tools/build_editorial_flags.py` with a category (`antisemitic-content`, `polemical-historical`, `sedevacantist-position`, or `author-context`) and a factual note. Then run `python3 tools/build_editorial_flags.py`, `python3 tools/build_open_data.py`, and `python3 tools/build_static.py`.
 - **A saint:** add the saint to `research/saints-pilot.json` (outside this repo) and rerun `python3 tools/import_saints_pilot.py --research <dir>`, or edit `data/saints.json` directly: every claim needs a `source_url`; tier 1 ids must equal a hub author id; tier 3 saints need a `historicity` flag. Then run `python3 tools/build_saints.py` (it validates, rebuilds the alias table, and fails on an ambiguous multi-word alias) and `python3 tools/build_static.py`. Search aliases: exact keys after NFKD, diacritic stripping, lowercasing, and dropping leading honorifics (Saint, St., Blessed, Pope); bare first names such as "John" are collisions shown as "Did you mean". Add a nickname (for example "Little Flower") to `HAND_ALIASES` in `tools/import_saints_pilot.py`.
 - **A rights status:** add a hand-checked entry to `MANUAL` in `tools/build_rights.py`, rerun `python3 tools/build_rights.py --research <research dir>` (or without `--research` to keep the current classification), then `python3 tools/build_open_data.py` and `python3 tools/build_static.py`.
@@ -143,11 +155,11 @@ Text on gradients (`.btn.gold`, `.sec-card .glyph`, `.avatar`) must also pass ag
 ## Before opening a PR
 
 ```sh
-npm run build                         # library.js, guide.js, and saints.js must not change afterward
+npm run build                         # library.js, guide.js, saints.js, and reading-plans.json/.js must not change afterward
 python3 tools/build_static.py         # static pages, sitemap, and robots must not change afterward
 git diff --exit-code                  # nothing stale
 npm test                              # node tests (incl. reader anchoring and shortcut guard) plus tests/test_*.py (editorial flags, v9 crawlability, catalog, analytics, saints)
-node --check app.js && node --check scripts/saints.js && node --check scripts/analytics.js && node --check scripts/reader.js && node --check scripts/library.js && node --check scripts/guides.js && node --check scripts/search.js && node --check scripts/rights.js && node --check scripts/rites.js && node --check data/site-copy.js
+node --check app.js && node --check scripts/saints.js && node --check scripts/analytics.js && node --check scripts/reader.js && node --check scripts/library.js && node --check scripts/guides.js && node --check scripts/search.js && node --check scripts/rights.js && node --check scripts/rites.js && node --check scripts/plans.js && node --check data/site-copy.js
 ```
 
 Optional network checks: `python3 tools/check_links.py` (writes `docs/link-health.*`) and `python3 tools/check_library_links.py --output /tmp/source-links.json`. Then preview with `npm run dev` and check the home page (with JavaScript off too), an author page, `/policy/`, a flagged book (for example `#/isidore/book/3895`), and a reading-room work with a Listen button (highlight a passage, reload, and check My notes, Continue reading on the home page, and the print preview).

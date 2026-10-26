@@ -1,5 +1,7 @@
 # Bibliotheca Catholica
 
+**Live site: [Bibliotheca Catholica](https://bibliothecacatholica.com)** (https://bibliothecacatholica.com)
+
 A clean, searchable master index of Catholic authors, Scripture, the Magisterium, prayers, references, podcasts, and the great digital libraries. A selected collection can be read on the site; the wider index links to its original sources.
 
 **Contributors and coding agents: read [AGENTS.md](AGENTS.md) first.** It covers the architecture, the files that must stay, the content rules, and the checks to run before a PR.
@@ -11,6 +13,7 @@ A clean, searchable master index of Catholic authors, Scripture, the Magisterium
 - **Related Christian writers** `#/related`: C. S. Lewis, explicitly identified as Anglican.
 - Search defaults to **Everything**, with selected works ranked first. The Selected library and Isidore Index scopes are available from the results page.
 - Read [catalog provenance and editorial boundaries](docs/CATALOG.md) before adding new editions.
+- SEO rules for titles, descriptions, and structured data: [docs/SEO.md](docs/SEO.md). Reading texts live in [bibliotheca-texts](https://github.com/BibliothecaCatholica/bibliotheca-texts).
 
 ### Develop and validate
 

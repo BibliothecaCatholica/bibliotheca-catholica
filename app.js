@@ -262,11 +262,12 @@ function authorEditions(a){loadGuide(function(err){if(err)return;var box=$('#au-
   box.innerHTML='<div class="panel"><h3>Editions &amp; Translations</h3><ul class="linklist">'+L.map(function(w){return '<li><a href="#/editions/'+w.id+'"><span class="k read">guide</span>'+esc(w.t)+'</a></li>'}).join('')+'</ul></div>'})}
 
 /* ---------- views ---------- */
+var SC=window.SITE_COPY||{};
 function home(){
   var docs=A.filter(function(a){return a.doctor});
   var picks=['thomas-aquinas','augustine-of-hippo','g-k-chesterton','john-henry-newman','fulton-j-sheen','teresa-of-avila','flannery-o-connor','j-r-r-tolkien','joseph-ratzinger','therese-of-lisieux','hilaire-belloc','evelyn-waugh','francis-de-sales','ignatius-of-antioch'].map(function(i){return AID[i]}).filter(Boolean);
   var cnt={};D.resources.forEach(function(r){cnt[r.section]=(cnt[r.section]||0)+1});
-  var h='<section class="hero hero-c"><div class="eyebrow">Bibliotheca Catholica</div><h1 class="hero-title">Tolle Lege</h1><p class="hero-trans">Take up and read</p><div class="hero-orn" aria-hidden="true"><span>✠</span></div>'+
+  var h='<section class="hero hero-c"><h1 class="eyebrow hero-name">Bibliotheca Catholica</h1><p class="hero-title">Tolle Lege</p><p class="hero-trans">Take up and read</p><div class="hero-orn" aria-hidden="true"><span>✠</span></div>'+
   '<p class="hero-sub">Two thousand years of Catholic thought, in one place.</p>'+
   '<p class="lede">Discover the writers, ideas, and spiritual classics of the Catholic tradition. Read here, download an ebook, or find the edition that belongs on your shelf.</p>'+
   '<form class="hero-search" onsubmit="location.hash=\'#/search/\'+encodeURIComponent(this.q.value);return false"><input name="q" placeholder="Try “Confessions”, “Chesterton”, “encyclical”, “Latin dictionary”…" aria-label="Search"><button class="btn">Search</button></form>'+
@@ -279,6 +280,7 @@ function home(){
    '<form class="hero-search fs-search" onsubmit="location.hash=\'#/isidore/\'+encodeURIComponent(this.q.value);return false"><input name="q" placeholder="Search the Index: “Garrigou-Lagrange”, “De Trinitate”, “catechism”…" aria-label="Search the Isidore Index"><button class="btn">Search</button></form></div>'+
    '<div class="fs-links"><span class="fs-l">Browse</span>'+[['English','lang=eng'],['Latin','lang=lat'],['French','lang=fra'],['Ancient Greek','lang=grc'],['Church Fathers (325–500)','era=post-nicene'],['High Middle Ages','era=scholastic'],['Nineteenth Century','era=19th-century'],['Twentieth Century','era=20th-century'],['EPUB','fmt=EPUB'],['DJVU','fmt=DJVU']].map(function(x){return '<a class="chip" href="#/isidore/'+x[1]+'">'+x[0]+'</a>'}).join('')+'<a class="chip gold" href="#/isidore/folders">Author folders A–Z</a></div></section>';
   h+=dailyPanel();
+  h+=SC.home||'';
   h+='<div class="rule"></div><div class="page-head"><div class="eyebrow">Explore</div><h2>The sections of the library</h2></div><div class="grid g-sections">'+
   '<a class="sec-card" href="#/authors"><span class="count">'+A.length+'</span><div class="glyph">A</div><h3>Authors</h3><p>Fathers, Doctors, scholastics, mystics, saints, popes, theologians, apologists, novelists, and poets.</p></a>'+
   '<a class="sec-card" href="#/timeline"><span class="count">I–XXI</span><div class="glyph">T</div><h3>Timeline</h3><p>Saints and writers through the centuries, connected to writings, biographies, and reading sources.</p></a>'+
@@ -298,7 +300,7 @@ function home(){
   h+='<a class="feat-banner" href="#/substacks"><span class="eyebrow">Featured column</span><b>Chris Wettig on Substack</b><span>Chesterton commentary, coming soon. Read his latest essays now →</span></a>';
   h+='<div class="two" style="margin-top:20px"><div class="panel"><h3>Read the Church in her own words</h3><ul class="linklist">'+[['Catechism of the Catholic Church','https://www.vatican.va/archive/ENG0015/_INDEX.HTM'],['Documents of Vatican II','https://www.vatican.va/archive/hist_councils/ii_vatican_council/index.htm'],['Code of Canon Law','https://www.vatican.va/archive/cod-iuris-canonici/cic_index_en.html'],['Pope Leo XIV','https://www.vatican.va/content/leo-xiv/en.html'],['Today’s Mass readings (USCCB)','https://bible.usccb.org/daily-bible-reading']].map(function(x){return '<li><a href="'+x[1]+'" target="_blank" rel="noopener"><span class="k read">read</span>'+x[0]+' ↗</a></li>'}).join('')+'</ul></div>'+
   '<div class="panel"><h3>The great libraries</h3><ul class="linklist">'+[['St. Isidore e-book library (Calibre)','https://isidore.co/calibre'],['New Advent — Encyclopedia, Fathers, Summa','https://www.newadvent.org/'],['Christian Classics Ethereal Library','https://ccel.org/'],['Documenta Catholica Omnia','https://www.documentacatholicaomnia.eu/'],['Corpus Thomisticum','https://www.corpusthomisticum.org/']].map(function(x){return '<li><a href="'+x[1]+'" target="_blank" rel="noopener"><span class="k site">site</span>'+x[0]+' ↗</a></li>'}).join('')+'</ul></div></div>';
-  render(h,'');document.title='Bibliotheca Catholica — a library of libraries';
+  render(h,'');document.title=SC.homeTitle||'Bibliotheca Catholica';
   window.BCSaints.load(function(){var el=$('#hodie-saints');if(el)el.innerHTML=window.BCSaints.todayLine()});
 }
 var AF={q:'',eras:{},tags:{},sort:'chron'};
@@ -575,8 +577,15 @@ function support(){var shop=AFF.bookshopShop||'';
 function route(){var raw=location.hash.replace(/^#\/?/,'');if(!raw&&window.BC_BOOT)raw=window.BC_BOOT;var queryAt=raw.indexOf('?');var query=new URLSearchParams(queryAt<0?'':raw.slice(queryAt+1));var path=queryAt<0?raw:raw.slice(0,queryAt);var h;try{h=decodeURIComponent(path)}catch(e){notfound();return}var p=h.split('/');if(p[0]==='search'){searchScope=['curated','isidore','all'].indexOf(query.get('scope'))>=0?query.get('scope'):'all';}
   hideSug();if(p[0]!=='search')gaReset('search');
   switch(p[0]){case 'library':window.BCLibrary.library(render,p[1]);break;case 'work':window.BCLibrary.work(render,p[1]);break;case 'read':window.BCLibrary.read(render,p[1],p[2],p[3],p[4]);break;case 'related':window.BCLibrary.related(render);break;case '':home();break;case 'authors':authors();break;case 'doctors':authors({doctors:true});break;case 'author':author(p[1],p[2]||'');break;case 'timeline':timeline(p[1],p[2]);break;
-   case 'scripture':case 'magisterium':case 'references':case 'media':case 'libraries':section(p[0]);break;case 'prayers':section('prayers',p[1]||'');break;case 'rare':rare(p[1]||'');break;case 'projects':projects();break;case 'isidore':if(p[1]==='folders')isidore();else if(p[1]==='book')bookDetail(+p[2]);else books(p.slice(1).join('/'));break;case 'books':location.replace('#/isidore'+(p[1]?'/'+p.slice(1).join('/'):''));break;case 'data':openData();break;case 'support':support();break;case 'policy':policy();break;case 'rights':case 'takedown':rightsPage(p[0]);break;case 'editions':editions(p[1]||'');break;case 'reading':reading(p[1]||'');break;case 'substacks':substacks();break;case 'search':results(p.slice(1).join('/'));break;case 'saints':window.BCSaints.view(render,p.slice(1));break;default:notfound()}}
+   case 'scripture':case 'magisterium':case 'references':case 'media':case 'libraries':section(p[0]);break;case 'prayers':section('prayers',p[1]||'');break;case 'rare':rare(p[1]||'');break;case 'projects':projects();break;case 'isidore':if(p[1]==='folders')isidore();else if(p[1]==='book')bookDetail(+p[2]);else books(p.slice(1).join('/'));break;case 'books':location.replace('#/isidore'+(p[1]?'/'+p.slice(1).join('/'):''));break;case 'data':openData();break;case 'support':support();break;case 'policy':policy();break;case 'about':render(SC.about||'<div class="empty">This page could not be loaded. <a href="/about/">Open the plain version</a>.</div>','about');break;case 'rights':case 'takedown':rightsPage(p[0]);break;case 'editions':editions(p[1]||'');break;case 'reading':reading(p[1]||'');break;case 'substacks':substacks();break;case 'search':results(p.slice(1).join('/'));break;case 'saints':window.BCSaints.view(render,p.slice(1));break;default:notfound()}}
 window.addEventListener('hashchange',route);
+/* v17: header, footer, and home links are real paths (/authors/, /work/x/) so crawlers follow them to the static pages.
+   On the home document they become hash routes without a reload; on static pages they load the static page. */
+var APP_ONE=['library','related','authors','doctors','timeline','scripture','magisterium','references','media','libraries','prayers','rare','projects','isidore','data','support','editions','reading','substacks','policy','saints','rights','takedown','about'];
+function appPath(u){if(u.origin!==location.origin||u.hash||u.search)return null;var p=u.pathname.replace(/^\/+|\/+$/g,'');if(!p)return '';var s=p.split('/');
+  if(s.length===1&&APP_ONE.indexOf(s[0])>=0)return p;if(s.length===2&&/^(author|work|editions|reading|saints)$/.test(s[0])&&/^[a-z0-9_-]+$/.test(s[1]))return p;return null}
+document.addEventListener('click',function(e){if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;var a=e.target.closest&&e.target.closest('a[href]');if(!a||a.target||a.hasAttribute('download')||location.pathname!=='/')return;
+  var u;try{u=new URL(a.getAttribute('href'),location.href)}catch(x){return}var p=appPath(u);if(p===null)return;e.preventDefault();if(location.hash.replace(/^#\/?/,'')===p)route();else location.hash='#/'+p});
 /* ---------- Google Analytics page views: the config in <head> has send_page_view:false, so app.js sends exactly one page_view
    for the first load (index.html, static entry pages, and the /#/ page that 404.html redirects to) and one per later hash route ---------- */
 var gaT=null,gaLast=null;
@@ -585,7 +594,7 @@ function gaPageView(){clearTimeout(gaT);gaT=setTimeout(function(){var path=locat
 window.addEventListener('hashchange',gaPageView);
 /* ---------- per-route meta (description, canonical, Open Graph, Twitter) ---------- */
 var SITE='https://bibliothecacatholica.com/',DEF_DESC=(document.querySelector('meta[name=description]')||{}).content||'';
-var STATIC_SECTIONS=['library','related','authors','doctors','timeline','scripture','magisterium','references','media','libraries','prayers','rare','projects','isidore','data','support','editions','reading','substacks','policy','saints','rights','takedown'];
+var STATIC_SECTIONS=['library','related','authors','doctors','timeline','scripture','magisterium','references','media','libraries','prayers','rare','projects','isidore','data','support','editions','reading','substacks','policy','saints','rights','takedown','about'];
 function canonicalFor(){var raw=(location.hash.replace(/^#\/?/,'')||window.BC_BOOT||'').split('?')[0],p=raw.split('/').filter(Boolean);
   if(!p.length)return SITE;if(p.length===1&&STATIC_SECTIONS.indexOf(p[0])>=0)return SITE+p[0]+'/';
   if(p.length===2&&/^(author|work|editions)$/.test(p[0])&&/^[a-z0-9-]+$/.test(p[1]))return SITE+p[0]+'/'+p[1]+'/';
@@ -596,7 +605,7 @@ function setMeta(sel,attr,val){var m=document.head.querySelector(sel);if(!m){m=d
 function updateMeta(){var t=document.title,raw=(location.hash.replace(/^#\/?/,'')||window.BC_BOOT||'').split('?')[0].split('/'),d='';
   var focus=raw[0]==='editions'&&raw[1]?main.querySelector('#ed-'+CSS.escape(raw[1])+' .ed-why'):null;if(focus)d=t.replace(/ — .*$/,'')+': '+focus.textContent.trim();
   if(!d)[].slice.call(main.querySelectorAll('.page-head .lede, .page-head p:not(.small), .detail-main p, main p')).some(function(el){var x=el.textContent.replace(/\s+/g,' ').trim();if(x)d+=(d?' ':'')+x;return d.length>=60});
-  if(d.length<40)d=DEF_DESC;if(d.length>200)d=d.slice(0,197).replace(/\s+\S*$/,'')+'…';var u=canonicalFor();
+  if(!raw[0]&&SC.homeDesc)d=SC.homeDesc;if(d.length<40)d=DEF_DESC;if(d.length>200)d=d.slice(0,197).replace(/\s+\S*$/,'')+'…';var u=canonicalFor();
   var bk=raw[0]==='isidore'&&raw[1]==='book'&&efOf(raw[2]);setMeta('meta[name=robots]','content',bk?'noindex,follow':'index,follow');
   setMeta('meta[name=description]','content',d);setMeta('link[rel=canonical]','href',u);setMeta('meta[property="og:title"]','content',t);setMeta('meta[property="og:description"]','content',d);setMeta('meta[property="og:url"]','content',u);setMeta('meta[name="twitter:title"]','content',t);setMeta('meta[name="twitter:description"]','content',d)}
 var metaT=null;function queueMeta(){clearTimeout(metaT);metaT=setTimeout(updateMeta,30)}

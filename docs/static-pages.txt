@@ -1,3 +1,4 @@
+about/index.html
 author/adolphe-tanquerey/index.html
 author/adomnan/index.html
 author/adrian-fortescue/index.html

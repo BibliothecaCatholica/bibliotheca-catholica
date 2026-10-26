@@ -1,0 +1,16 @@
+/* v17: crawlable home text (About the library), breadcrumbs, and section intros. Colors use the contrast tokens. */
+h1.hero-name{margin:0;line-height:inherit}
+.home-about{margin:34px 0 10px;padding:28px 0 6px;border-top:1px solid var(--line)}
+.home-about h2{font-size:clamp(26px,3.2vw,36px);margin:8px 0 14px}
+.home-about-text{columns:2 340px;column-gap:44px}
+.home-about-text p{margin:0 0 14px;font-size:17px;line-height:1.6;color:var(--ink2);break-inside:avoid}
+.home-about-text b{color:var(--ink)}
+.home-about h3{font:600 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);margin:18px 0 10px}
+.home-sections{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:8px 26px}
+.home-sections li{font-size:15.5px;line-height:1.45;padding:6px 0;border-bottom:1px solid var(--line)}
+.home-sections a{font-weight:600;text-decoration:none}
+.home-sections span{display:block;color:var(--muted);font-size:14px}
+.home-info{margin:16px 0 0;font:14px var(--sans);color:var(--muted)}
+.crumbs{margin:0 0 10px;color:var(--muted);font-family:var(--sans)}
+.section-intro{max-width:760px;color:var(--ink2);font-size:17px;line-height:1.6;margin:0 0 18px}
+.static-prerender .hero-orn{display:none}

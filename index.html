@@ -11,8 +11,8 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bibliotheca Catholica — a master library of Catholic authors, Scripture, the Magisterium, and media</title>
-<meta name="description" content="A clean, searchable hub for Catholic authors from the Apostolic Fathers to today, Scripture, Church documents, prayers, references, podcasts, and libraries — linking to vatican.va, isidore.co, New Advent, CCEL, and more.">
+<title>Bibliotheca Catholica: a free library of Catholic authors and classics</title>
+<meta name="description" content="Bibliotheca Catholica is a free, curated, searchable library of Catholic authors, Scripture, Church documents, prayers, saints, and classics to read online.">
 <link rel="canonical" href="https://bibliothecacatholica.com/">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
@@ -37,14 +37,16 @@
 <link rel="stylesheet" href="styles/refresh.css?v=20261021-collection-access">
 <link rel="stylesheet" href="styles/saints.css?v=20261025-v15">
 <link rel="stylesheet" href="styles/rights.css?v=20261025-v16">
+<link rel="stylesheet" href="styles/home.css?v=20261026-v17">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%238b1e2d'/><path d='M28 10h8v16h16v8H36v20h-8V34H12v-8h16z' fill='%23e9c46a'/></svg>">
 <script>try{var t=localStorage.getItem('hub-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){}</script>
+<!-- jsonld:start --><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://bibliothecacatholica.com/#website","name":"Bibliotheca Catholica","url":"https://bibliothecacatholica.com/","description":"Bibliotheca Catholica is a free, curated, searchable library of Catholic authors, Scripture, Church documents, prayers, saints, and classics to read online.","inLanguage":"en","publisher":{"@id":"https://bibliothecacatholica.com/#organization"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://bibliothecacatholica.com/#organization","name":"Bibliotheca Catholica","url":"https://bibliothecacatholica.com/","logo":"https://bibliothecacatholica.com/assets/og-image.png","sameAs":["https://github.com/BibliothecaCatholica","https://bsky.app/profile/bibliothecacatholica.com"]}</script><!-- jsonld:end -->
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" href="#/" aria-label="Bibliotheca Catholica home">
+    <a class="brand" href="/" aria-label="Bibliotheca Catholica home">
       <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M29 12h6v14h14v6H35v20h-6V32H15v-6h14z" fill="currentColor"/></svg>
       <span class="brand-text"><span class="brand-name">Bibliotheca Catholica</span><span class="brand-sub">a library of libraries</span></span>
     </a>
@@ -54,7 +56,7 @@
       <div id="suggest" class="suggest" role="listbox" hidden></div>
     </div>
     <div class="top-actions">
-      <a class="pill pill-support" data-support="header" href="#/support" title="Support the Library" aria-label="Support the Library"><span aria-hidden="true">♥</span><span class="sup-t"> Support</span></a>
+      <a class="pill pill-support" data-support="header" href="/support/" title="Support the Library" aria-label="Support the Library"><span aria-hidden="true">♥</span><span class="sup-t"> Support</span></a>
       <button id="themeBtn" class="iconbtn" aria-label="Toggle dark mode" title="Toggle light/dark">
         <svg class="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="currentColor"/></svg>
         <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
@@ -64,49 +66,50 @@
   </div>
   <nav class="mainnav" id="mainnav" aria-label="Sections">
     <div class="nav-row nav-primary" role="group" aria-label="Reading and discovery">
-      <a href="#/library" data-nav="library" class="nav-flag">Discover &amp; Read</a>
-      <a href="#/isidore" data-nav="isidore">Ebooks &amp; PDFs</a>
-      <a href="#/authors" data-nav="authors">Authors</a>
-      <a href="#/timeline" data-nav="timeline">Timeline</a>
-      <a href="#/reading" data-nav="reading">Reading Lists</a>
-      <a href="#/editions" data-nav="editions">Editions &amp; Translations</a>
-      <a href="#/media" data-nav="media">Podcasts &amp; Media</a>
+      <a href="/library/" data-nav="library" class="nav-flag">Discover &amp; Read</a>
+      <a href="/isidore/" data-nav="isidore">Ebooks &amp; PDFs</a>
+      <a href="/authors/" data-nav="authors">Authors</a>
+      <a href="/timeline/" data-nav="timeline">Timeline</a>
+      <a href="/reading/" data-nav="reading">Reading Lists</a>
+      <a href="/editions/" data-nav="editions">Editions &amp; Translations</a>
+      <a href="/media/" data-nav="media">Podcasts &amp; Media</a>
     </div>
     <div class="nav-row nav-secondary" role="group" aria-label="Faith and reference collections">
-      <a href="#/scripture" data-nav="scripture">Scripture</a>
-      <a href="#/magisterium" data-nav="magisterium">Church Documents</a>
-      <a href="#/prayers" data-nav="prayers">Prayer</a>
-      <a href="#/doctors" data-nav="doctors">Doctors of the Church</a>
-      <a href="#/saints" data-nav="saints">Saints</a>
-      <a href="#/references" data-nav="references">Reference Works</a>
-      <a href="#/libraries" data-nav="libraries">Digital Libraries</a>
-      <a href="#/rare" data-nav="rare">Rare &amp; Obscure</a>
-      <a href="#/substacks" data-nav="substacks">Substacks</a>
-      <a href="#/projects" data-nav="projects">Projects</a>
-      <a href="#/support" data-nav="support" class="nav-m" data-support="menu">Support the Library</a>
+      <a href="/scripture/" data-nav="scripture">Scripture</a>
+      <a href="/magisterium/" data-nav="magisterium">Church Documents</a>
+      <a href="/prayers/" data-nav="prayers">Prayer</a>
+      <a href="/doctors/" data-nav="doctors">Doctors of the Church</a>
+      <a href="/saints/" data-nav="saints">Saints</a>
+      <a href="/references/" data-nav="references">Reference Works</a>
+      <a href="/libraries/" data-nav="libraries">Digital Libraries</a>
+      <a href="/rare/" data-nav="rare">Rare &amp; Obscure</a>
+      <a href="/substacks/" data-nav="substacks">Substacks</a>
+      <a href="/projects/" data-nav="projects">Projects</a>
+      <a href="/support/" data-nav="support" class="nav-m" data-support="menu">Support the Library</a>
     </div>
   </nav>
 </header>
-<main id="main" tabindex="-1"><div class="loading">Loading the library…</div><noscript><p>Bibliotheca Catholica needs JavaScript for search and browsing. Static pages for every <a href="/authors/">author</a>, <a href="/library/">reading-room work</a>, and <a href="/editions/">edition guide</a> are listed in the <a href="/sitemap.xml">sitemap</a>.</p></noscript></main>
+<main id="main" tabindex="-1"><!-- static-home:start --><div class="static-prerender"><section class="hero hero-c"><h1 class="eyebrow hero-name">Bibliotheca Catholica</h1><p class="hero-title">Tolle Lege</p><p class="hero-trans">Take up and read</p><p class="hero-sub">Two thousand years of Catholic thought, in one place.</p><p class="lede">Discover the writers, ideas, and spiritual classics of the Catholic tradition. Read here, download an ebook, or find the edition that belongs on your shelf.</p><div class="hero-cta"><a class="btn gold" href="/library/">Discover &amp; Read →</a><a class="btn ghost" href="/isidore/">Explore the Isidore Index</a><a class="btn ghost" href="/timeline/">Browse the timeline</a></div></section><section class="home-about" aria-labelledby="home-about-h"><div class="eyebrow">About the library</div><h2 id="home-about-h">A free master library of the Catholic tradition</h2><div class="home-about-text"><p><b>Bibliotheca Catholica</b> (bibliothecacatholica.com) is a free, curated, and searchable master library of the Catholic tradition. It gathers Catholic authors from the Apostolic Fathers to today, Sacred Scripture, the documents of the Magisterium, prayers and devotions, reference works, podcasts and media, and a reading room of classic texts. Each entry links to its original source, such as vatican.va, New Advent, the Christian Classics Ethereal Library, Project Gutenberg, and the St. Isidore e-book library.</p><p>The <a href="/library/">reading room</a> comes first. Its 55 hosted texts are public-domain editions published before 1931, checked against their sources, and readable right here, with contents, search, highlights, notes, and your place saved in your own browser. Every hosted text keeps its source record, its SHA-256 checksum, and its rights evidence. Everything else stays with its publisher, and Bibliotheca Catholica links to it.</p><p>Beyond the reading room, the library indexes 476 <a href="/authors/">Catholic authors</a> with short biographies and works online, 185 <a href="/saints/">saints</a> with sourced feast days, <a href="/editions/">edition guides</a> that compare translations, curated <a href="/reading/">reading lists</a>, and the <a href="/isidore/">Isidore Index</a> of 6,633 e-books, each with a <a href="/rights/">rights badge</a>. Listing a book is not endorsement; the <a href="/policy/">Fidelity &amp; Editorial Policy</a> explains how context notes work.</p><p>Bibliotheca Catholica is independent, free for everyone, and has no ads. Start with a section below, or search everything from the box at the top of any page.</p></div><h3>Sections of the library</h3><ul class="home-sections"><li><a href="/library/">Reading Room: Discover &amp; Read</a> <span>classic texts to read here, with source editions and rights notes</span></li><li><a href="/authors/">Catholic Authors</a> <span>biographies and works online, from the Apostolic Fathers to today</span></li><li><a href="/saints/">Saints &amp; Hagiography</a> <span>sourced feast days, the saints of legend, and the old lives of the saints</span></li><li><a href="/doctors/">Doctors of the Church</a> <span>the saints honored for eminent teaching</span></li><li><a href="/timeline/">Timeline</a> <span>saints and writers through the centuries</span></li><li><a href="/editions/">Editions &amp; Translations</a> <span>which translation of each classic to read or buy</span></li><li><a href="/reading/">Reading Lists</a> <span>curated paths for beginners, apologetics, spiritual classics, and more</span></li><li><a href="/isidore/">The Isidore Index</a> <span>e-books and PDFs in the St. Isidore library, each with a rights badge</span></li><li><a href="/scripture/">Sacred Scripture</a> <span>Bibles, commentaries, and daily readings</span></li><li><a href="/magisterium/">Church Documents</a> <span>catechisms, councils, encyclicals, and canon law</span></li><li><a href="/prayers/">Prayers &amp; Devotions</a> <span>the common prayers of the Church and the Rosary</span></li><li><a href="/references/">Reference Works</a> <span>encyclopedias, dictionaries, liturgy, and chant</span></li><li><a href="/libraries/">Digital Libraries</a> <span>the great Catholic archives and online libraries</span></li><li><a href="/media/">Podcasts &amp; Media</a> <span>podcasts, channels, radio, and news</span></li><li><a href="/rare/">Rare &amp; Obscure</a> <span>lesser-known books and manuscripts online</span></li><li><a href="/projects/">Projects</a> <span>open Catholic software, data, and translations</span></li><li><a href="/substacks/">Catholic Substacks</a> <span>writers and newsletters worth reading</span></li><li><a href="/data/">Open Data</a> <span>the catalogue as JSON and CSV, free to reuse</span></li></ul><p class="home-info"><a href="/about/">About the library</a> · <a href="/policy/">Fidelity &amp; Editorial Policy</a> · <a href="/rights/">Rights &amp; Permissions</a> · <a href="/takedown/">Takedown requests</a> · <a href="/support/">Support the Library</a></p></section></div><!-- static-home:end --></main>
 <footer class="footer">
   <div class="footer-inner">
     <div>
       <div class="footer-title">Bibliotheca Catholica</div>
       <p>An independent index that links out to the Church’s own sources and to the great Catholic digital libraries. A selected reading collection is available here, with source editions and credits; other texts remain with their publishers.</p>
-      <p class="small disclosure"><b>Affiliate disclosure:</b> Bookshop.org “Buy” links are affiliate links: Bibliotheca Catholica earns a small commission, at no extra cost to you, when you buy through them. Editions are recommended on their merits. <a data-support="footer_disclosure" href="#/support">Support the Library</a>.</p>
+      <p class="small disclosure"><b>Affiliate disclosure:</b> Bookshop.org “Buy” links are affiliate links: Bibliotheca Catholica earns a small commission, at no extra cost to you, when you buy through them. Editions are recommended on their merits. <a data-support="footer_disclosure" href="/support/">Support the Library</a>.</p>
       <p class="small">Ad maiorem Dei gloriam · Data compiled <span id="gen"></span> · Biographical summaries courtesy of Wikipedia (CC BY-SA).</p>
     </div>
     <nav class="footer-links" aria-label="Library information">
       <span class="eyebrow">The library</span>
-      <a href="#/library">Reading Room</a>
-      <a href="#/libraries">Digital Libraries &amp; Sources</a>
-      <a href="#/editions">Editions &amp; Translations</a>
-      <a href="#/data">Open Data · JSON &amp; CSV</a>
-      <a href="#/policy">Fidelity &amp; Editorial Policy</a>
-      <a href="#/rights">Rights &amp; Permissions</a>
-      <a href="#/takedown">Takedown requests</a>
-      <a href="#/policy" title="Privacy is the last section of the Fidelity &amp; Editorial Policy">Privacy &amp; Analytics</a>
-      <a class="footer-support" data-support="footer" href="#/support">Support the Library</a>
+      <a href="/library/">Reading Room</a>
+      <a href="/libraries/">Digital Libraries &amp; Sources</a>
+      <a href="/editions/">Editions &amp; Translations</a>
+      <a href="/data/">Open Data · JSON &amp; CSV</a>
+      <a href="/about/">About the library</a>
+      <a href="/policy/">Fidelity &amp; Editorial Policy</a>
+      <a href="/rights/">Rights &amp; Permissions</a>
+      <a href="/takedown/">Takedown requests</a>
+      <a href="/policy/" title="Privacy is the last section of the Fidelity &amp; Editorial Policy">Privacy &amp; Analytics</a>
+      <a class="footer-support" data-support="footer" href="/support/">Support the Library</a>
     </nav>
   </div>
 </footer>
@@ -127,6 +130,7 @@
 <script src="scripts/reader.js?v=20261022-v11"></script>
 <script src="scripts/saints.js?v=20261025-connected-timeline"></script>
 <script src="scripts/timeline.js?v=20261025-connected-timeline"></script>
-<script src="app.js?v=20261025-connected-timeline"></script>
+<script src="data/site-copy.js?v=130c881b0e"></script>
+<script src="app.js?v=20261026-v17"></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-2ff461be5c86",
+  "id": "bc-932b2a149ba5",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
-    "README.md": "a25da6ca62ae9784fcd9ee56e6accb93fbb4d8912211254c8a088aece3467a45",
+    "README.md": "e53fba2b67d14f6226062d9c608bc2385ab94f72489f50de29c0c49f1077b64b",
     "app.js": "a1d262761c6254ff743caa6f6e535cf97b04e411de36944213a291a22d71f1fe",
     "data/affiliates.js": "a88b8eb221269f8f41cea2471a2c491505009987a67a6bf143646efba0c59f1c",
     "data/authorx.js": "33df4d9832532c80e8f6b73806dcd1f4f1e3810a6900d13d1983104f571eebc1",

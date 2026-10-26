@@ -8,4 +8,4 @@ Maintain recommendations in `tools/reading_lists.py` and `tools/editions_data.py
 
 Verification: catalog relationship and access-filter tests; existing library/search tests; browser checks for path selection, accent-insensitive search, original versus adapted works, external reading links, expandable print suggestions, direct reader links, and narrow-screen layout.
 
-This revision does not change hash routing or provide an EPUB/PDF renderer. Indexable static work pages and a structured reader remain subsequent projects.
+The current site still uses hash routes for interactive navigation, and the build also pre-renders clean, crawlable work and section pages. The on-site reader displays hosted plain-text editions; it does not render EPUB or PDF files. Those formats remain links to the source or publisher, subject to the record's rights status.

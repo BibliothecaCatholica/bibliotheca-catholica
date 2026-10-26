@@ -551,6 +551,7 @@ editions/waugh/index.html
 isidore/index.html
 libraries/index.html
 library/index.html
+licensing/index.html
 magisterium/index.html
 media/index.html
 policy/index.html

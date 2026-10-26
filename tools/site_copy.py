@@ -29,7 +29,7 @@ SECTION_LINKS=[
  ('/data/','Open Data','the catalogue as JSON and CSV, free to reuse'),
 ]
 INFO_LINKS=[('/about/','About the library'),('/policy/','Fidelity & Editorial Policy'),('/rights/','Rights & Permissions'),('/takedown/','Takedown requests'),('/support/','Support the Library')]
-LICENSING_URL='https://github.com/BibliothecaCatholica/bibliotheca-catholica/blob/main/LICENSING.md'
+LICENSING_URL='/licensing/'
 def a(href,label):return '<a href="'+E(href)+'">'+E(label)+'</a>'
 def home_about(n):
     """The descriptive block on the home page (static HTML and the app). n: dict of counts."""

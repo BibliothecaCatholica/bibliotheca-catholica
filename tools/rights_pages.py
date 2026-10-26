@@ -1,4 +1,4 @@
-"""HTML for the /rights and /takedown pages (v16). One source for the app (data/rights-pages.js,
+"""HTML for the /rights, /takedown, and (v18.1) /licensing pages (v16). One source for the app (data/rights-pages.js,
 written by tools/build_rights.py) and the static pages (tools/build_static.py). Not legal advice.
 Owner decisions still open, kept as visible placeholders: the designated takedown agent (name,
 address, email) and whether to register a DMCA agent with the US Copyright Office."""
@@ -46,3 +46,45 @@ def takedown_html():
      '<h2>Please be accurate</h2><p>Knowingly misrepresenting that material is infringing, or that it was removed by mistake, can create liability (17 U.S.C. § 512(f)).</p>'
      '<p>How badges are decided: <a href="#/rights">Rights &amp; Permissions</a>.</p>'
      +NOT_LEGAL+'</section></div>')
+
+# v18.1: /licensing/ renders LICENSING.md (the one source) as a page on the site, for the footer's "Licensing & credits".
+import re as _re
+REPO='https://github.com/BibliothecaCatholica/bibliotheca-catholica/blob/main/'
+def _inline(t):
+    t=E(t,quote=False)
+    t=_re.sub(r'`([^`]+)`',r'<code>\1</code>',t)
+    t=_re.sub(r'\*\*([^*]+)\*\*',r'<b>\1</b>',t)
+    def link(m):
+        label,href=m.group(1),m.group(2)
+        if not _re.match(r'https?://',href):href=REPO+href
+        ext='' if href.startswith('https://bibliothecacatholica.com/') else ' target="_blank" rel="noopener"'
+        return '<a href="'+href.replace('"','&quot;')+'"'+ext+'>'+label+'</a>'
+    t=_re.sub(r'\[([^\]]+)\]\(([^)]+)\)',link,t)
+    t=_re.sub(r'(?<![">])(https://bibliothecacatholica\.com/[a-z/]*|https://texts\.bibliothecacatholica\.com)',lambda m:'<a href="'+m.group(1)+'">'+m.group(1)+'</a>',t)
+    return t
+def licensing_html(md):
+    """The LICENSING.md text as page HTML: one H1, its sections as H2, the table, lists, and paragraphs."""
+    lines=md.strip('\n').split('\n');out=[];i=0;h1='Licensing';lede=''
+    while i<len(lines):
+        L=lines[i]
+        if L.startswith('# '):h1=L[2:].strip();i+=1;continue
+        if L.startswith('## '):out.append('<h2>'+_inline(L[3:].strip())+'</h2>');i+=1;continue
+        if L.startswith('|'):
+            rows=[]
+            while i<len(lines) and lines[i].startswith('|'):rows.append([c.strip() for c in lines[i].strip('|').split('|')]);i+=1
+            rows=[r for r in rows if not all(_re.fullmatch(r'-+',c) for c in r)]
+            out.append('<div class="table-wrap"><table class="licensing-table"><thead><tr>'+''.join('<th scope="col">'+_inline(c)+'</th>' for c in rows[0])+'</tr></thead><tbody>'
+                       +''.join('<tr>'+''.join('<td>'+_inline(c)+'</td>' for c in r)+'</tr>' for r in rows[1:])+'</tbody></table></div>');continue
+        if L.startswith('- '):
+            items=[]
+            while i<len(lines) and lines[i].startswith('- '):items.append(lines[i][2:]);i+=1
+            out.append('<ul>'+''.join('<li>'+_inline(x)+'</li>' for x in items)+'</ul>');continue
+        if not L.strip():i+=1;continue
+        para=[]
+        while i<len(lines) and lines[i].strip() and not _re.match(r'(#|\||- )',lines[i]):para.append(lines[i]);i+=1
+        p=_inline(' '.join(para))
+        if not lede:lede=p
+        else:out.append('<p>'+p+'</p>')
+    return ('<div class="rights-page"><div class="page-head"><div class="eyebrow">Rights &amp; Permissions</div><h1>'+_inline(h1)+'</h1>'
+            '<p class="lede">'+lede+'</p></div><section class="panel policy">'+''.join(out)+
+            '<p class="small">This page shows <a href="'+REPO+'LICENSING.md" target="_blank" rel="noopener">LICENSING.md</a> from the site’s repository.</p></section></div>')

@@ -21,7 +21,7 @@ The MIT License covers code only. It does not cover the data files the code read
 
 The datasets in `data/open/` are dedicated to the public domain under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) (`data/open/LICENSE.txt`). CC0 covers our compilation, normalization, and curation: our one-line summaries, notes, rights labels, matches, and Wikidata links.
 
-The reading catalog metadata in `data/library.json` (work and edition records, contributor roles, rights labels, checked dates, notes, and checksums) is also dedicated to the public domain under CC0 1.0. It was checked on 2026-10-26 and contains no Wikipedia text. CC0 does not extend to the texts those records point to.
+The reading catalog metadata in `data/library.json` (work and edition records, contributor roles, rights labels, checked dates, notes, and checksums) is also dedicated to the public domain under CC0 1.0, and `data/open/LICENSE.txt` names it in its scope. It was checked on 2026-10-26 and contains no Wikipedia text. CC0 does not extend to the texts those records point to.
 
 CC0 does not cover any third-party material described in section 5. In particular, the Wikipedia excerpts in `data/catholic-hub.json` and `data/data.js` are **not** CC0, and they are not included in `data/open/`.
 
@@ -40,5 +40,7 @@ The texts in `data/texts/` and at https://texts.bibliothecacatholica.com are edi
 - **Project Gutenberg.** Texts and catalog snapshots from Project Gutenberg follow the [Project Gutenberg License](https://www.gutenberg.org/policy/license.html) and terms of use.
 - **Isidore Index.** The Index reproduces catalog information from the St. Isidore e-book library (isidore.co). Files listed there are held by isidore.co, not by this site; Bibliotheca Catholica does not host, and does not vouch for, any file at isidore.co.
 - **Facts and links.** Names, titles, dates, ISBNs, and links are facts.
+
+This note is also shown on the site at https://bibliothecacatholica.com/licensing/.
 
 Questions or rights concerns: see https://bibliothecacatholica.com/rights/ and https://bibliothecacatholica.com/takedown/.

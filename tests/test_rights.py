@@ -73,7 +73,7 @@ class Pages(unittest.TestCase):
         for k in ('Public domain (US)','Open license','Permission granted','Link only','Unknown','1931','#/policy','checked','may not be in the public domain in your country'):self.assertIn(k,s)
     def test_app_routes_and_footer(self):
         app=(ROOT/'app.js').read_text();html=(ROOT/'index.html').read_text()
-        self.assertIn("case 'rights':case 'takedown':rightsPage(p[0])",app)
+        self.assertIn("case 'rights':case 'takedown':case 'licensing':rightsPage(p[0])",app)
         self.assertRegex(app,r"STATIC_SECTIONS=\[[^\]]*'rights','takedown'")
         # v17: footer links are real paths (app.js routes them as hashes on the home page)
         self.assertIn('href="/rights/">Rights &amp; Permissions</a>',html);self.assertIn('href="/takedown/">Takedown requests</a>',html)

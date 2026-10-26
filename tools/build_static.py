@@ -196,7 +196,10 @@ def main():
               '<p class="small wiki-credit">Shortened excerpt from the Wikipedia article '+(a(wk,'“'+wt+'”',True) if wk else '“'+E(wt)+'”')+', available under '+a(CC_BY_SA,'CC BY-SA 4.0',True)+'.</p>')
         works=''.join('<li>'+a(w['url'],w['title'],True)+'</li>' for w in au.get('works') or [] if w.get('url'))
         mine=[w for w in lib['works'] if w.get('authorId')==au['id']]
-        body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+wiki_block+(('<h2>Read here</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else '')+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+'<p>'+a('/authors/','All authors')+'</p>'
+        # v18.1: the 211 former isidore.co folder links became internal Isidore Index searches (#/isidore/<catalog name>)
+        iso_n=next((i['n'] for i in hub['isidore'] if i['f']==au.get('isidoreFolder')),None) if au.get('isidoreFolder') else None
+        iso_link=('<p>'+a('/#/isidore/'+urllib.parse.quote(iso_n,safe=''),'All their books in the Isidore Index')+'</p>') if iso_n else ''
+        body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+wiki_block+(('<h2>Read here</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else '')+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+iso_link+'<p>'+a('/authors/','All authors')+'</p>'
         sa=saints_by_author.get(au['id'])
         if sa:body=body.replace('<p>'+a('/authors/','All authors')+'</p>','<h2>Saint</h2><p>'+E(s_facts(sa))+' '+a('/saints/','Saints & Hagiography')+'</p><p>'+a('/authors/','All authors')+'</p>')
         # v17: facts already in the data (era, century, vocations from tags, Doctor of the Church) and the curated links
@@ -289,6 +292,7 @@ def main():
     rp=json.loads((ROOT/'data/rights-pages.js').read_text().strip()[len('window.RIGHTS_PAGES='):-1])
     out['rights']=('Rights & Permissions — Bibliotheca Catholica','What the five Bibliotheca Catholica rights badges mean, how each status is decided, and when downloads are shown. Not legal advice.',rp['rights'],[crumbs(('Rights & Permissions','rights/'))])
     out['takedown']=('Takedown requests — Bibliotheca Catholica','How a rights holder can ask Bibliotheca Catholica to remove a text, a link, or a record’s file links, and how to send a counter-notice. Not legal advice.',rp['takedown'],[crumbs(('Takedown requests','takedown/'))])
+    out['licensing']=('Licensing & credits — Bibliotheca Catholica','How Bibliotheca Catholica is licensed: code MIT, open data CC0, site writing CC BY 4.0, texts public domain in the US, plus Wikipedia and portrait credits.',rp['licensing'],[crumbs(('Licensing & credits','licensing/'))])
     counts={'authors':len(authors),'saints':len(saints),'books':6633,'hosted':sum(1 for w in lib['works'] if any(e.get('text') for e in w['editions']))}
     m=re.search(r'window\.BOOKS_COUNT=(\d+)',tpl)
     if m:counts['books']=int(m.group(1))

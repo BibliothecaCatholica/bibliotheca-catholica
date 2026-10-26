@@ -3,7 +3,8 @@
  * no personal data. Every call is guarded with typeof gtag==='function' and wrapped in try/catch, so analytics
  * can never break the reader. Notes, highlights, quotes, and other free text are never sent; the only free text
  * is the search term, trimmed, lowercased, and cut to 100 characters, sent only on the search event. Page views carry a
- * normalized route (pagePath) that never includes a search term or filter. See AGENTS.md, "Google Analytics (GA4)".
+ * normalized route (pagePath) that never includes a search term or filter, and every event is preceded by
+ * gtag('set') with the term-free page_title and page_location for the route (v18.1). See AGENTS.md, "Google Analytics (GA4)".
  */
 (function(root){
 'use strict';
@@ -15,7 +16,13 @@ function clean(params){var out={};if(!params||typeof params!=='object')return ou
   if(v==null||v==='')return;if(typeof v==='number'){if(isFinite(v))out[k]=v;return}if(typeof v==='boolean'){out[k]=v;return}
   if(k==='page_location'||k==='page_path'){out[k]=str(v).slice(0,500);return}out[k]=str(v).slice(0,MAX)});return out}
 /* track(name, params): the only way the site sends a GA4 event. Returns true when an event was handed to gtag. */
-function track(name,params){try{if(typeof gtag!=='function')return false;if(EVENTS.indexOf(name)<0)return false;gtag('event',name,clean(params));return true}catch(e){return false}}
+function track(name,params){try{if(typeof gtag!=='function')return false;if(EVENTS.indexOf(name)<0)return false;
+  var c=context();if(c)gtag('set',{page_title:c.title,page_location:c.location});gtag('event',name,clean(params));return true}catch(e){return false}}
+/* context(): the term-free page title and location for the current route. Set before every event (v18.1), so the
+   search, outbound_click, and GA's own enhanced-measurement events never fall back to a document title or URL that
+   holds free text. */
+function context(){try{var L=root.location;if(!L)return null;var d=root.document,path=pagePath(L.hash,root.BC_BOOT);
+  return {path:path,title:pageTitle(path,d&&d.title),location:pageLocation(path)}}catch(e){return null}}
 function domain(url){try{return new URL(url,'https://bibliothecacatholica.com/').hostname.replace(/^www\./,'').toLowerCase()}catch(e){return ''}}
 var PUB_HOSTS=null;
 function pubHosts(){if(PUB_HOSTS)return PUB_HOSTS;PUB_HOSTS={};try{var P=(root.AFFILIATES&&root.AFFILIATES.publishers)||{};Object.keys(P).forEach(function(k){var d=domain(P[k].search||'');if(d)PUB_HOSTS[d]=k})}catch(e){}return PUB_HOSTS}
@@ -40,6 +47,11 @@ function pagePath(hash,boot){var raw=str(hash).replace(/^#\/?/,'');if(!raw)raw=s
   for(var i=0;i<p.length&&i<6;i++){if(!/^[a-z0-9_.-]{1,80}$/i.test(p[i]))break;out.push(p[i])}
   return out.length?'/#/'+out.join('/'):'/'}
 function pageLocation(path){return ORIGIN+(path||'/')}
+/* pageTitle(path, docTitle): search and Index routes get a fixed title; elsewhere the document title, which on
+   those routes is built from catalog data only. */
+var SITE_NAME='Bibliotheca Catholica';
+function pageTitle(path,docTitle){if(path==='/#/search')return 'Search — '+SITE_NAME;if(path==='/#/isidore')return 'The Isidore Index — '+SITE_NAME;
+  return str(docTitle||SITE_NAME).slice(0,MAX)}
 /* once(key): true the first time a key is seen in a scope; reset(scope) forgets it */
 var SEEN={};
 function once(scope,key){var s=SEEN[scope]||(SEEN[scope]={});if(s[key])return false;s[key]=1;return true}
@@ -50,7 +62,7 @@ function onClick(e){try{var t=e.target&&e.target.closest?e.target.closest('a[hre
   var ot=t.getAttribute('data-open-text');if(ot)track('open_text',{work_id:ot,text_source:'external',link_domain:d});
   var kind=linkKind(d,{publisher:t.getAttribute('data-pub'),substack:!!t.closest('#ss-out')});
   track('outbound_click',{link_domain:d,link_kind:kind})}catch(err){}}
-var api={EVENTS:EVENTS,MAX_TERM:MAX,track:track,cleanTerm:cleanTerm,clean:clean,domain:domain,linkKind:linkKind,publisherKey:publisherKey,routeWork:routeWork,pagePath:pagePath,pageLocation:pageLocation,once:once,reset:reset,onClick:onClick};
+var api={EVENTS:EVENTS,MAX_TERM:MAX,track:track,cleanTerm:cleanTerm,clean:clean,domain:domain,linkKind:linkKind,publisherKey:publisherKey,routeWork:routeWork,pagePath:pagePath,pageLocation:pageLocation,pageTitle:pageTitle,context:context,once:once,reset:reset,onClick:onClick};
 root.BCAnalytics=api;
 if(root.document&&root.document.addEventListener)root.document.addEventListener('click',onClick,true);
 if(typeof module!=='undefined'&&module.exports)module.exports=api;

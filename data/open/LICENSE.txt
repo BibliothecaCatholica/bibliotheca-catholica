@@ -2,5 +2,8 @@ CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
 https://creativecommons.org/publicdomain/zero/1.0/legalcode
 
 To the extent possible under law, the Bibliotheca Catholica contributors have waived all copyright and related or
-neighboring rights to the compilation, normalization, and curation in this directory (data/open/). This does not
-extend to third-party texts reached through the links, which keep their own rights.
+neighboring rights to the compilation, normalization, and curation in this directory (data/open/) and in the reading
+catalog metadata file data/library.json (work and edition records, notes, rights labels, and checksums;
+checked 2026-10-26 to contain no Wikipedia text). This does not extend to the texts those records point
+to, to the hosted texts in data/texts/, or to third-party texts reached through the links, which keep
+their own rights. See LICENSING.md at the repository root.

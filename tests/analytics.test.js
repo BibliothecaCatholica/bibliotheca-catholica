@@ -18,8 +18,9 @@ test('track is a no-op without gtag and never throws',()=>{
 test('track sends gtag event with cleaned params and rejects unknown names',()=>{
  const {A,calls}=load(true);
  assert.equal(A.track('search',{search_term:'confessions',search_scope:'Everything',results_count:12,empty:'',nothing:null}),true);
- assert.deepEqual(calls[0],['event','search',{search_term:'confessions',search_scope:'Everything',results_count:12}]);
- assert.equal(A.track('made_up_event',{}),false);assert.equal(calls.length,1);
+ const ev=calls.filter(c=>c[0]==='event');
+ assert.deepEqual(ev[0],['event','search',{search_term:'confessions',search_scope:'Everything',results_count:12}]);
+ assert.equal(A.track('made_up_event',{}),false);assert.equal(calls.filter(c=>c[0]==='event').length,1);
 });
 test('search terms are trimmed, lowercased, and cut to 100 characters',()=>{
  const {A}=load(false);
@@ -77,5 +78,26 @@ test('v18: outbound_click carries only link_domain and link_kind',()=>{
  const {A,calls,ctx}=load(true);ctx.location.hash='#/work/orthodoxy';
  const a={getAttribute:k=>k==='href'?'https://ignatius.com/x':null,closest:sel=>sel==='a[href]'?a:null};
  A.onClick({target:a});
- assert.deepEqual(calls.map(c=>c[1]),['outbound_click']);assert.deepEqual(calls[0][2],{link_domain:'ignatius.com',link_kind:'publisher'});
+ const ev=calls.filter(c=>c[0]==='event');assert.deepEqual(ev.map(c=>c[1]),['outbound_click']);assert.deepEqual(ev[0][2],{link_domain:'ignatius.com',link_kind:'publisher'});
+ assert.deepEqual(calls[0],['set',{page_title:'Bibliotheca Catholica',page_location:'https://bibliothecacatholica.com/#/work/orthodoxy'}]);
+});
+
+test('v18.1: no search or Index term reaches page_title or page_location on any event; only search_term carries it, capped',()=>{
+ const term='zqx'+'b'.repeat(150);assert.equal(term.length,153);
+ const routes=['#/search/'+term,'#/search/'+encodeURIComponent(term)+'?scope=isidore','#/isidore/q='+term,'#/isidore/'+term,'#/isidore/lang=eng&q='+term,'#/books/'+term];
+ for(const h of routes){const {A,calls,ctx}=load(true);ctx.location.hash=h;ctx.document={title:'Search: '+term+' — Bibliotheca Catholica'};
+  A.track('search',{search_term:A.cleanTerm(term),search_scope:'Everything',results_count:0});
+  A.track('outbound_click',{link_domain:'isidore.co',link_kind:'other'});
+  A.track('page_view',{page_title:A.pageTitle(A.pagePath(h),ctx.document.title),page_location:A.pageLocation(A.pagePath(h)),page_path:A.pagePath(h)});
+  const sets=calls.filter(c=>c[0]==='set');assert.equal(sets.length,3,h);
+  for(const c of calls){const p=c[c.length-1];for(const k of ['page_title','page_location','page_path'])if(p[k]!==undefined){assert.doesNotMatch(p[k],/zqx|bbbb/,h+' '+k)}}
+  // the term appears only in the search event's search_term, at 100 characters
+  const withTerm=calls.filter(c=>/zqx/.test(JSON.stringify(c)));assert.equal(withTerm.length,1,h);
+  assert.equal(withTerm[0][1],'search');assert.equal(withTerm[0][2].search_term.length,100);
+ }
+});
+test('v18.1: app.js keeps search terms out of document.title and uses pageTitle for page views',()=>{
+ const APP=fs.readFileSync('app.js','utf8');
+ assert.doesNotMatch(APP,/document\.title='Search: '\+/);assert.match(APP,/document\.title='Search — Bibliotheca Catholica'/);
+ assert.match(APP,/title=A\.pageTitle\(path,document\.title\)/);
 });

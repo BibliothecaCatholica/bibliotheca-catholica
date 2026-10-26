@@ -22,7 +22,8 @@ class Licensing(unittest.TestCase):
         for p in('index.html','about/index.html','author/augustine-of-hippo/index.html','isidore/index.html'):
             f=footer(R(p))
             with self.subTest(p):
-                self.assertIn('LICENSING.md',f);self.assertIn('https://creativecommons.org/licenses/by-sa/4.0/',f)
+                self.assertIn('<a href="/licensing/">Licensing &amp; credits</a>',f);self.assertNotIn('LICENSING.md',f);self.assertIn('https://creativecommons.org/licenses/by-sa/4.0/',f)
+                self.assertIn('code MIT, open data CC0, site writing CC BY 4.0, hosted texts public domain in the US',f)
                 self.assertIn('href="https://en.wikipedia.org/"',f)
                 self.assertIn('is an independent project and is not affiliated with other projects of a similar name',f)
                 self.assertNotIn('—',f[f.index('non-affiliation'):])
@@ -66,3 +67,37 @@ class Licensing(unittest.TestCase):
         self.assertIn('does not vouch for',R('app.js'));self.assertIn('does not vouch for',main(R('rights/index.html')));self.assertIn('does not vouch for',main(R('isidore/index.html')))
         self.assertIn('>Isidore Index</a>',R('index.html'));self.assertNotIn('Ebooks &amp; PDFs',R('index.html'))
 if __name__=='__main__':unittest.main()
+
+class V181(unittest.TestCase):
+    def test_licensing_page_renders_licensing_md_and_is_in_sitemap(self):
+        m=main(R('licensing/index.html'))
+        self.assertEqual(m.count('<h1'),1);self.assertIn('Licensing (draft)',m);self.assertIn('not legal advice',m)
+        for k in('MIT','CC0 1.0','CC BY 4.0','CC BY-SA 4.0','Project Gutenberg License','data/library.json','does not vouch for'):self.assertIn(k,m)
+        self.assertIn('<loc>https://bibliothecacatholica.com/licensing/</loc>',R('sitemap.xml'))
+        self.assertIn("case 'licensing':rightsPage(p[0])",R('app.js'))
+    def test_cc0_scope_matches_in_license_txt_and_licensing_md(self):
+        t=R('data/open/LICENSE.txt');self.assertIn('data/open/',t);self.assertIn('data/library.json',t)
+        self.assertIn('`data/open/LICENSE.txt` names it',R('LICENSING.md'))
+    def test_portrait_credit_names_are_tidy(self):
+        import re
+        hub=json.loads(R('data/catholic-hub.json'));n=0
+        for a in hub['authors']:
+            c=a.get('imgCredit')
+            if not c or 'artist' not in c:continue
+            n+=1;t=c['artist']
+            with self.subTest(a['id']):
+                self.assertNotRegex(t,r'(?i)not specified')
+                self.assertNotRegex(t,r'(?i)\b(\w[\w.]*(?: \w[\w.]*){0,4}) \1\b')
+                self.assertNotRegex(t,r'(?i)^(unknown|anonymous)( (author|artist|photographer))?$')
+        self.assertGreater(n,80)
+        files=json.loads(R('data/portrait-credits.json'))['files']
+        self.assertEqual(files['roger-bacon']['license'],'CC BY-SA 3.0');self.assertFalse(files['roger-bacon']['shown'])
+        self.assertNotIn('imgCredit',next(a for a in hub['authors'] if a['id']=='roger-bacon'))
+    def test_former_folder_authors_link_to_their_index_search(self):
+        hub=json.loads(R('data/catholic-hub.json'));names={i['f']:i['n'] for i in hub['isidore']}
+        A=[a for a in hub['authors'] if a.get('isidoreFolder')];self.assertEqual(len(A),211)
+        import urllib.parse
+        for a in A[:400]:
+            with self.subTest(a['id']):
+                self.assertIn('href="/#/isidore/'+urllib.parse.quote(names[a['isidoreFolder']],safe='')+'"',main(R('author/'+a['id']+'/index.html')))
+        self.assertIn("All their books in the Isidore Index",R('app.js'))

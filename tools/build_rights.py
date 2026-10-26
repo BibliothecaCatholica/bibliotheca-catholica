@@ -125,7 +125,7 @@ def main():
     from collections import Counter
     c=Counter(status_of(data,r) for r in data['records'].values())
     sys.path.insert(0,str(ROOT/'tools'));import rights_pages as RP
-    pages={'rights':RP.rights_html(STATUSES,c,data['checked']),'takedown':RP.takedown_html()}
+    pages={'rights':RP.rights_html(STATUSES,c,data['checked']),'takedown':RP.takedown_html(),'licensing':RP.licensing_html((ROOT/'LICENSING.md').read_text())}
     (D/'rights-pages.js').write_text('window.RIGHTS_PAGES='+json.dumps(pages,ensure_ascii=False,separators=(',',':'))+';\n')
     print('rights:',', '.join('%s %d'%(k,c.get(k,0)) for k in STATUSES),'· rights.js',(D/'rights.js').stat().st_size,'bytes')
 if __name__=='__main__':main()

@@ -50,7 +50,7 @@ The committed data snapshots remain usable. Some older ingestion scripts expect 
 
 ## The Isidore Index and Open Data (v5)
 
-- The Isidore Index (`#/isidore`) is now the flagship. All 6,633 isidore.co books can be filtered by era, language (22 canonical), format, and subject, and each book has its own page with a rights badge. Since v16, download links appear only for records marked public domain (US), open license, or permission granted; other records link to their isidore.co book page. Since v18, the Authors A–Z tab opens Isidore Index searches instead of raw isidore.co folder listings.
+- The Isidore Index (`#/isidore`) is now the flagship. All 6,633 isidore.co books can be filtered by era, language (22 canonical), format, and subject, and each book has its own page with a rights badge. Since v16, download links appear only for records marked public domain (US), open license, or permission granted; other records link to their isidore.co book page. Since v18, the Authors A–Z tab opens Isidore Index searches instead of raw isidore.co folder listings, and since v18.1 the 211 author pages that used to link a folder link to that author's Index search instead.
 - Open Data (`#/data`, `/data/open/`) offers the index, curated authors (with verified Wikidata QIDs), editions, Doctors' free texts, rare works, and projects as JSON and CSV under CC0.
 - Hygiene: a junk folder was removed, language codes were normalized, the aquinas.cc link was confirmed, and LibriVox was added.
 
@@ -73,10 +73,10 @@ The navigation guide is now **Editions & Translations** (`#/editions`, existing 
 
 ## License (v18)
 
-Different parts of this repository are under different terms. [`LICENSING.md`](LICENSING.md) is the full summary (a draft, not legal advice):
+Different parts of this repository are under different terms. [`LICENSING.md`](LICENSING.md) is the full summary (a draft, not legal advice), also shown on the site at [/licensing/](https://bibliothecacatholica.com/licensing/):
 
 - **Code** (HTML templates, JavaScript, CSS, Python tools, tests): [MIT](LICENSE).
-- **Open data** (`data/open/`) and the reading catalog metadata (`data/library.json`): CC0 1.0.
+- **Open data** (`data/open/`) and the reading catalog metadata (`data/library.json`): CC0 1.0 (`data/open/LICENSE.txt` names both).
 - **Site writing**: CC BY 4.0.
 - **Hosted texts** (`data/texts/`, texts.bibliothecacatholica.com): public domain in the US; no license from us, and each file keeps its source notice (the Project Gutenberg License for Gutenberg files).
 - **Third-party material**: the Wikipedia excerpts in `data/catholic-hub.json` and `data/data.js` are CC BY-SA 4.0 and are outside the MIT and CC0 grants; portraits stay under the licenses on their Wikimedia Commons or Wikipedia file pages (`data/portrait-credits.json`).

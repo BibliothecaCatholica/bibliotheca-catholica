@@ -23,3 +23,8 @@
 .rights-page .notice,.rights-page .placeholder{border:1px solid var(--line);border-left:4px solid var(--gold);background:var(--card);padding:.7rem .9rem;border-radius:8px;color:var(--ink)}
 .rights-page .placeholder{border-left-color:var(--rubric)}
 .rights-page ol li,.rights-page ul li{margin-bottom:.35rem}
+/* v18.1 /licensing/: the LICENSING.md table scrolls sideways on narrow screens instead of widening the page */
+.table-wrap{overflow-x:auto;margin:1rem 0}
+.licensing-table{border-collapse:collapse;width:100%;font-size:.95rem}
+.licensing-table th,.licensing-table td{text-align:left;vertical-align:top;padding:.45rem .6rem;border-bottom:1px solid var(--line,rgba(127,127,127,.3))}
+.licensing-table code{white-space:nowrap}

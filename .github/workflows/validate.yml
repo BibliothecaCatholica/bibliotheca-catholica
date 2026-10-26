@@ -14,8 +14,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: npm run build
-      - run: git diff --exit-code -- data/library.js data/guide.js data/saints.js data/saints-aliases.json data/rights.js data/rights-pages.js data/isidore-matches.js data/isidore-matches.json
+      - run: git diff --exit-code -- data/library.js data/guide.js data/saints.js data/saints-aliases.json data/rights.js data/rights-pages.js data/isidore-matches.js data/isidore-matches.json data/rites.js data/rites.json styles/rites.css
       - run: python3 tools/build_static.py
-      - run: git diff --exit-code && test -z "$(git status --porcelain -- sitemap.xml robots.txt 404.html docs/static-pages.txt index.html data/site-copy.js build.json author work editions reading policy saints rights takedown about search)"
+      - run: git diff --exit-code && test -z "$(git status --porcelain -- sitemap.xml robots.txt 404.html docs/static-pages.txt index.html data/site-copy.js build.json author work editions reading policy saints rites rights takedown about search)"
       - run: npm test
-      - run: node --check app.js && node --check scripts/boot.js && node --check scripts/timeline.js && node --check scripts/library.js && node --check scripts/guides.js && node --check scripts/saints.js && node --check scripts/rights.js && node --check data/site-copy.js
+      - run: node --check app.js && node --check scripts/boot.js && node --check scripts/timeline.js && node --check scripts/library.js && node --check scripts/guides.js && node --check scripts/saints.js && node --check scripts/rights.js && node --check scripts/rites.js && node --check data/site-copy.js

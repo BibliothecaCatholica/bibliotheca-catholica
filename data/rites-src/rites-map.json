@@ -1,0 +1,3378 @@
+{
+ "meta": {
+  "title": "Catholic Churches sui iuris and Latin rites — research dataset",
+  "generated": "2026-10-26",
+  "status": "research draft; not for publication without editorial review",
+  "definitions": {
+   "rite": {
+    "value": "CCEO can. 28 §1: a rite is the liturgical, theological, spiritual and disciplinary patrimony… (Ritus est patrimonium liturgicum, theologicum, spirituale et disciplinare)",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high"
+   },
+   "church_sui_iuris": {
+    "value": "CCEO can. 27: a community of the faithful joined by a hierarchy according to law, recognised as sui iuris by the supreme authority",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high"
+   },
+   "five_eastern_traditions": {
+    "value": "Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan (CCEO can. 28 §2)",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high"
+   },
+   "ccc_1203_list": {
+    "value": "Latin (principally Roman; also Ambrosian, certain religious orders), Byzantine, Alexandrian or Coptic, Syriac, Armenian, Maronite and Chaldean",
+    "source": "https://www.vatican.va/archive/ENG0015/__P3C.HTM",
+    "confidence": "high"
+   }
+  },
+  "count_note": "24 Churches sui iuris = Latin + 23 Eastern. Lists differ at the margins: GCatholic omits Albanian and lists 'Byzantine Church in Kazakhstan and Central Asia'; Ruthenian/Mukachevo/Czech exarchate grouping varies (CNEWA). This file follows the Annuario-derived CNEWA grouping and flags the variants.",
+  "coordinates_caveat": "Lat/lng are of a historical centre or present see (Wikidata). They are NOT territories; use rites-map-shading.json for 'where'.",
+  "rights_vocabulary": [
+   "public domain US",
+   "open license",
+   "permission granted",
+   "link only",
+   "unknown"
+  ],
+  "sources_index": {
+   "CCC1203": "https://www.vatican.va/archive/ENG0015/__P3C.HTM",
+   "CCEO": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+   "OE": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_orientalium-ecclesiarum_en.html",
+   "GCR": "https://gcatholic.org/dioceses/rites.htm",
+   "CNEWA_LIST": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/",
+   "CNEWA_STATS": "https://cnewa.org/eastern-christian-churches/eastern-catholic-churches-statistics/",
+   "CNEWA_2017": "https://cnewa.org/wp-content/uploads/2020/03/2017-Statistics-Worldwide-pie-chart.pdf",
+   "TC": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/20210716-motu-proprio-traditionis-custodes.html",
+   "TC_LETTER": "https://www.vatican.va/content/francesco/en/letters/2021/documents/20210716-lettera-vescovi-liturgia.html",
+   "SP": "https://www.vatican.va/content/benedict-xvi/en/motu_proprio/documents/hf_ben-xvi_motu-proprio_20070707_summorum-pontificum.html",
+   "RESPONSA": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2021/12/18/211218c.html",
+   "RESCRIPT": "https://www.vatican.va/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_20230220_rescriptum-traditioniscustodes_en.html",
+   "MR1969": "https://www.vatican.va/content/paul-vi/en/apost_constitutions/documents/hf_p-vi_apc_19690403_missale-romanum.html",
+   "AC": "https://www.vatican.va/content/benedict-xvi/en/apost_constitutions/documents/hf_ben-xvi_apc_20091104_anglicanorum-coetibus.html",
+   "DW_CTS": "https://www.ctsbooks.org/product/divine-worship-the-ordinariate-missal/",
+   "ICEL": "https://www.icelweb.org/copyright.htm",
+   "AMB": "https://www.chiesadimilano.it/messale-ambrosiano",
+   "AMB2": "https://www.chiesadimilano.it/vivere-la-chiesa/celebrare-la-fede/rito-ambrosiano-2",
+   "MOZ": "https://www.cardenaldonmarcelo.es/",
+   "BRAGA": "https://www.diocese-braga.pt/historia-arquidiocese",
+   "MCI": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+   "BYZCATH_ANTH": "https://byzcath.org/index.php/news-mainmenu-49/5710-vatican-commissions-eastern-christian-publications-to-reprint-greek-liturgical-texts",
+   "ORIENT": "https://www.orientchurch.va/",
+   "MR2002": "https://www.cultodivino.va/en/formazione/pubblicazioni/libri-liturgici/missale/missale-romanum.html",
+   "CWR": "https://www.catholicworldreport.com/"
+  }
+ },
+ "churches": [
+  {
+   "id": "latin",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Latin Church",
+    "source": "https://www.vatican.va/archive/ENG0015/__P3C.HTM",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Latin tradition (principally the Roman Rite; also local rites such as the Ambrosian, and rites of certain religious orders)",
+    "source": "https://www.vatican.va/archive/ENG0015/__P3C.HTM",
+    "confidence": "high"
+   },
+   "family": "lat",
+   "canonical_status": {
+    "value": "Church sui iuris; the only Western Church sui iuris",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "medium",
+    "note": "CCEO governs the Eastern Churches; Latin Church is governed by the 1983 CIC. Characterisation is standard but stated here from CCC 1203 + CCEO framework."
+   },
+   "head": {
+    "value": "The Roman Pontiff (Pope Leo XIV, elected 2025)",
+    "source": "https://www.vatican.va/content/leo-xiv/en.html",
+    "confidence": "medium",
+    "note": "URL not curl-verified in this pass"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Rome",
+     "wikidata": "Q220",
+     "lat": 41.8931,
+     "lng": 12.4828,
+     "role": "historical and present see (Rome)",
+     "source": "https://www.wikidata.org/wiki/Q220",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Rome",
+     "wikidata": "Q220",
+     "lat": 41.8931,
+     "lng": 12.4828,
+     "role": "see of Rome",
+     "source": "https://www.wikidata.org/wiki/Q220",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1st–4th c.",
+     "event": "Roman liturgical tradition develops; traditional apostolic origins (no single founding date is historically assignable)",
+     "source": "https://www.newadvent.org/cathen/13155a.htm",
+     "confidence": "medium"
+    },
+    {
+     "when": "1570",
+     "event": "Missale Romanum of St Pius V promulgated (bull Quo primum)",
+     "source": "https://www.newadvent.org/cathen/10354c.htm",
+     "confidence": "high"
+    },
+    {
+     "when": "1962",
+     "event": "Last typical edition of the pre-conciliar Missale Romanum (John XXIII)",
+     "source": "https://www.vatican.va/content/benedict-xvi/en/motu_proprio/documents/hf_ben-xvi_motu-proprio_20070707_summorum-pontificum.html",
+     "confidence": "high"
+    },
+    {
+     "when": "1969",
+     "event": "Apostolic constitution Missale Romanum (Paul VI) promulgates the revised Missal (typical edition 1970)",
+     "source": "https://www.vatican.va/content/paul-vi/en/apost_constitutions/documents/hf_p-vi_apc_19690403_missale-romanum.html",
+     "confidence": "high"
+    },
+    {
+     "when": "2007",
+     "event": "Summorum Pontificum: 1962 Missal as 'extraordinary expression' of the lex orandi",
+     "source": "https://www.vatican.va/content/benedict-xvi/en/motu_proprio/documents/hf_ben-xvi_motu-proprio_20070707_summorum-pontificum.html",
+     "confidence": "high"
+    },
+    {
+     "when": "2021-07-16",
+     "event": "Traditionis custodes: post-conciliar books 'the unique expression of the lex orandi of the Roman Rite'",
+     "source": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/20210716-motu-proprio-traditionis-custodes.html",
+     "confidence": "high"
+    }
+   ],
+   "sub_rites": [
+    "latin-roman",
+    "latin-roman-1962",
+    "latin-ambrosian",
+    "latin-hispanic-mozarabic",
+    "latin-braga",
+    "latin-divine-worship",
+    "latin-religious-orders"
+   ],
+   "official_source": {
+    "value": "https://www.vatican.va/archive/ENG0015/__P3C.HTM",
+    "source": "https://www.vatican.va/archive/ENG0015/__P3C.HTM",
+    "confidence": "high"
+   },
+   "secondary_sources": [
+    "https://gcatholic.org/dioceses/rites.htm"
+   ],
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "coptic",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Coptic Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Cp.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Alexandrian tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "alex",
+   "canonical_status": {
+    "value": "Patriarchal Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-Cp.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Patriarch: Patriarch Ibrahim Isaac Sedrak (71)",
+    "source": "https://gcatholic.org/dioceses/rite-Cp.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-21"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Alexandria",
+     "wikidata": "Q87",
+     "lat": 31.1975,
+     "lng": 29.8925,
+     "role": "historical centre of the Alexandrian tradition",
+     "source": "https://www.wikidata.org/wiki/Q87",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Cairo",
+     "wikidata": "Q85",
+     "lat": 30.0444,
+     "lng": 31.2358,
+     "role": "patriarchal residence (Cairo)",
+     "source": "https://www.wikidata.org/wiki/Q85",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1442-02-04",
+     "event": "Cantate Domino signed at the Council of Florence (no lasting result)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-coptic-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1741",
+     "event": "Anba Athanasius made Vicar Apostolic for Coptic Catholics",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-coptic-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1824",
+     "event": "Patriarchate erected on paper only",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-coptic-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1895–1899",
+     "event": "Patriarchate re-established (1895); Cyril Makarios appointed Patriarch (1899)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-coptic-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1908–1947",
+     "event": "Patriarchal office vacant",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-coptic-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Coptic/Ge'ez books (Anaphoras of St Basil, St Gregory, St Cyril/Mark in Coptic use; Ethiopic anaphoras in Ge'ez use); current editions not verified.",
+    "source": "https://www.newadvent.org/cathen/01300b.htm",
+    "confidence": "low"
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I (Brightman, 1896) — Egyptian rites",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "1896",
+     "confidence": "high"
+    },
+    {
+     "title": "The Liturgies of SS. Mark, James, Clement, Chrysostom and Basil (Neale & Littledale, 1870s)",
+     "url": "https://archive.org/details/liturgiesofssmar00neal",
+     "rights": "public domain US",
+     "rights_evidence": "19th-century publication",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Church of Alexandria'",
+     "url": "https://www.newadvent.org/cathen/01300b.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-coptic-catholic-church/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-coptic-catholic-church/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-coptic-catholic-church/"
+   ],
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "ethiopian",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Ethiopian Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Et.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Alexandrian tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "alex",
+   "canonical_status": {
+    "value": "Metropolitan Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-Et.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Metropolitan: Archbishop Tesfaye Tadesse Gebresilasie , M.C.C.J. (57)",
+    "source": "https://gcatholic.org/dioceses/rite-Et.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-23"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Addis Ababa",
+     "wikidata": "Q3624",
+     "lat": 9.0358,
+     "lng": 38.7525,
+     "role": "present metropolitan see; historical centres of Ethiopian Christianity lie elsewhere (e.g. Aksum) — not geocoded here",
+     "source": "https://www.wikidata.org/wiki/Q3624",
+     "confidence": "medium",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Addis Ababa",
+     "wikidata": "Q3624",
+     "lat": 9.0358,
+     "lng": 38.7525,
+     "role": "metropolitan see (Addis Ababa)",
+     "source": "https://www.wikidata.org/wiki/Q3624",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1622–1636",
+     "event": "Short-lived union under Emperor Susenyos; dissolved 1636",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-ethiopian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1839",
+     "event": "Lazarist and Capuchin missionary activity resumes",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-ethiopian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1961",
+     "event": "Metropolitan see of Addis Ababa established",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-ethiopian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "2015-01-19",
+     "event": "Eritrea detached as separate metropolitan Church; Bahir Dar-Dessie eparchy erected",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-ethiopian-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Coptic/Ge'ez books (Anaphoras of St Basil, St Gregory, St Cyril/Mark in Coptic use; Ethiopic anaphoras in Ge'ez use); current editions not verified.",
+    "source": "https://www.newadvent.org/cathen/01300b.htm",
+    "confidence": "low"
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I (Brightman, 1896) — Egyptian rites",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "1896",
+     "confidence": "high"
+    },
+    {
+     "title": "The Liturgies of SS. Mark, James, Clement, Chrysostom and Basil (Neale & Littledale, 1870s)",
+     "url": "https://archive.org/details/liturgiesofssmar00neal",
+     "rights": "public domain US",
+     "rights_evidence": "19th-century publication",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Church of Alexandria'",
+     "url": "https://www.newadvent.org/cathen/01300b.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-ethiopian-catholic-church/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-ethiopian-catholic-church/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-ethiopian-catholic-church/"
+   ],
+   "notes": "Ge'ez liturgy shared with the Eritrean Church. In southern Ethiopia most Catholic jurisdictions are Latin (CNEWA).",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "eritrean",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Eritrean Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Er.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Alexandrian tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "alex",
+   "canonical_status": {
+    "value": "Metropolitan Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-Er.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Metropolitan: Archbishop Menghesteab Tesfamariam , M.C.C.J. (77)",
+    "source": "https://gcatholic.org/dioceses/rite-Er.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-21"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Asmara",
+     "wikidata": "Q3642",
+     "lat": 15.3333,
+     "lng": 38.9167,
+     "role": "metropolitan see (Asmara)",
+     "source": "https://www.wikidata.org/wiki/Q3642",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Asmara",
+     "wikidata": "Q3642",
+     "lat": 15.3333,
+     "lng": 38.9167,
+     "role": "metropolitan see (Asmara)",
+     "source": "https://www.wikidata.org/wiki/Q3642",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1894",
+     "event": "Apostolic Prefecture for Eritrea",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-eritrean-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1951",
+     "event": "Ordinariate becomes Apostolic Exarchate",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-eritrean-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1961",
+     "event": "Eparchy of Asmara",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-eritrean-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "2015-01-19",
+     "event": "Raised to metropolitan Church sui iuris (Pope Francis)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-eritrean-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Coptic/Ge'ez books (Anaphoras of St Basil, St Gregory, St Cyril/Mark in Coptic use; Ethiopic anaphoras in Ge'ez use); current editions not verified.",
+    "source": "https://www.newadvent.org/cathen/01300b.htm",
+    "confidence": "low"
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I (Brightman, 1896) — Egyptian rites",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "1896",
+     "confidence": "high"
+    },
+    {
+     "title": "The Liturgies of SS. Mark, James, Clement, Chrysostom and Basil (Neale & Littledale, 1870s)",
+     "url": "https://archive.org/details/liturgiesofssmar00neal",
+     "rights": "public domain US",
+     "rights_evidence": "19th-century publication",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Church of Alexandria'",
+     "url": "https://www.newadvent.org/cathen/01300b.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-eritrean-catholic-church/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-eritrean-catholic-church/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-eritrean-catholic-church/"
+   ],
+   "notes": "Uses the Ge'ez (Alexandrian-derived) liturgy; it is NOT a separate liturgical family from the Ethiopian.",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "syriac",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Syriac Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-S.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Antiochene (West Syriac) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "ant",
+   "canonical_status": {
+    "value": "Patriarchal Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-S.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Patriarch: Patriarch Ignace Youssif III Younan (81)",
+    "source": "https://gcatholic.org/dioceses/rite-S.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-21"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Antioch (Antakya)",
+     "wikidata": "Q80561",
+     "lat": 36.2025,
+     "lng": 36.1606,
+     "role": "historical centre of the Antiochene tradition",
+     "source": "https://www.wikidata.org/wiki/Q80561",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Beirut",
+     "wikidata": "Q3820",
+     "lat": 33.8869,
+     "lng": 35.5131,
+     "role": "patriarchal residence (Beirut)",
+     "source": "https://www.wikidata.org/wiki/Q3820",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1626",
+     "event": "Jesuit/Capuchin mission at Aleppo",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syrian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1662–1702",
+     "event": "First Catholic patriarchal line (Akhidjan elected 1662); ends 1702",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syrian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1782",
+     "event": "Michael Jarweh elected; unbroken succession since",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syrian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1831 → 1850 → early 1920s",
+     "event": "Patriarchate at Aleppo, then Mardin, then Beirut",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syrian-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Syriac (West Syriac) books based on the Anaphora of St James and other anaphoras; current approved editions per Church not verified.",
+    "source": "https://www.newadvent.org/cathen/14417a.htm",
+    "confidence": "low",
+    "note": "CE describes the rite (1912), not current editions."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I (Brightman, 1896) — Syrian rite texts",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "1896",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Antiochene Liturgy'",
+     "url": "https://www.newadvent.org/cathen/01571a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Syrian Rite (West)'",
+     "url": "https://www.newadvent.org/cathen/14417a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syrian-catholic-church/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syrian-catholic-church/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syrian-catholic-church/"
+   ],
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "maronite",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Maronite Church",
+    "source": "https://gcatholic.org/dioceses/rite-M.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Antiochene (West Syriac) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "ant",
+   "canonical_status": {
+    "value": "Patriarchal Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-M.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Patriarch: Cardinal Béchara Pierre Raï (86)",
+    "source": "https://gcatholic.org/dioceses/rite-M.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-22"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Antioch (Antakya)",
+     "wikidata": "Q80561",
+     "lat": 36.2025,
+     "lng": 36.1606,
+     "role": "historical region of origin (monastery of St Maron between Aleppo and Antioch, not geocoded precisely)",
+     "source": "https://www.wikidata.org/wiki/Q80561",
+     "confidence": "medium",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Bkerké",
+     "wikidata": "Q879905",
+     "lat": 33.9678,
+     "lng": 35.6339,
+     "role": "patriarchal residence (Bkerké) since 1790",
+     "source": "https://www.wikidata.org/wiki/Q879905",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "late 4th–5th c.",
+     "event": "Disciples of St Maron; monastery between Aleppo and Antioch",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-maronite-catholic-church/",
+     "confidence": "medium"
+    },
+    {
+     "when": "by the 8th c.",
+     "event": "Move to Mount Lebanon; distinct church identity with a patriarch",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-maronite-catholic-church/",
+     "confidence": "medium"
+    },
+    {
+     "when": "1182",
+     "event": "Formal confirmation of union with Rome (Maronite tradition holds communion was never broken)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-maronite-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1736",
+     "event": "Synod of Mount Lebanon",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-maronite-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1790",
+     "event": "Patriarchs reside at Bkerké",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-maronite-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Maronite Qurbono (West Syriac, with East Syriac and Latin influences; essentially a variation of the Liturgy of St James per CNEWA). Current Maronite missal edition title not verified.",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-maronite-catholic-church/",
+    "confidence": "medium"
+   },
+   "access": [
+    {
+     "title": "Catholic Encyclopedia: 'Maronites'",
+     "url": "https://www.newadvent.org/cathen/09683c.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Antiochene Liturgy'",
+     "url": "https://www.newadvent.org/cathen/01571a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-maronite-catholic-church/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-maronite-catholic-church/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-maronite-catholic-church/"
+   ],
+   "notes": "CCC 1203 lists 'Maronite' as its own rite; CCEO can. 28 §2 places it within the Antiochene tradition. Show both, do not force one.",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "syro-malankara",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Syro-Malankara Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Ml.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Antiochene (West Syriac) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "ant",
+   "canonical_status": {
+    "value": "Major Archiepiscopal Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-Ml.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Major Archbishop: Cardinal Baselios Cleemis Thottunkal (67)",
+    "source": "https://gcatholic.org/dioceses/rite-Ml.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-21"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Thiruvananthapuram",
+     "wikidata": "Q167715",
+     "lat": 8.4875,
+     "lng": 76.9525,
+     "role": "major archiepiscopal see (Thiruvananthapuram)",
+     "source": "https://www.wikidata.org/wiki/Q167715",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Thiruvananthapuram",
+     "wikidata": "Q167715",
+     "lat": 8.4875,
+     "lng": 76.9525,
+     "role": "major archiepiscopal see",
+     "source": "https://www.wikidata.org/wiki/Q167715",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1930-09-20",
+     "event": "Reception into full communion of Mar Ivanios and companions",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syro-malankara-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "2005-02-10",
+     "event": "Raised to Major Archiepiscopal Church",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syro-malankara-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "2010",
+     "event": "Exarchate for the United States",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syro-malankara-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Syriac (West Syriac) books based on the Anaphora of St James and other anaphoras; current approved editions per Church not verified.",
+    "source": "https://www.newadvent.org/cathen/14417a.htm",
+    "confidence": "low",
+    "note": "CE describes the rite (1912), not current editions."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I (Brightman, 1896) — Syrian rite texts",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "1896",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Antiochene Liturgy'",
+     "url": "https://www.newadvent.org/cathen/01571a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Syrian Rite (West)'",
+     "url": "https://www.newadvent.org/cathen/14417a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syro-malankara-catholic-church/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syro-malankara-catholic-church/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syro-malankara-catholic-church/"
+   ],
+   "notes": "West Syriac (Antiochene) — not East Syriac. Shares Kerala and the St Thomas heritage with the Syro-Malabar Church but a different rite.",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "armenian",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Armenian Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-A.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Armenian tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "arm",
+   "canonical_status": {
+    "value": "Patriarchal Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-A.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Patriarch: Patriarch Raphaël Bedros XXI Minassian (79)",
+    "source": "https://gcatholic.org/dioceses/rite-A.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-25"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Vagharshapat",
+     "wikidata": "Q183394",
+     "lat": 40.1728,
+     "lng": 44.2925,
+     "role": "historical centre of Armenian Christianity (Vagharshapat/Etchmiadzin)",
+     "source": "https://www.wikidata.org/wiki/Q183394",
+     "confidence": "medium",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Beirut",
+     "wikidata": "Q3820",
+     "lat": 33.8869,
+     "lng": 35.5131,
+     "role": "patriarchal residence (Beirut); patriarchal convent at Bzommar",
+     "source": "https://www.wikidata.org/wiki/Q3820",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1198–1375",
+     "event": "Union in the Cilician kingdom (not accepted outside Cilicia)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-armenian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1439-11-22",
+     "event": "Exultate Deo (Council of Florence)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-armenian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1742",
+     "event": "Abraham Ardzivian confirmed as Patriarch of Cilicia (Benedict XIV)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-armenian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1867",
+     "event": "Sees united; patriarchate moved to Constantinople",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-armenian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1928",
+     "event": "Synod transfers patriarchate back to Lebanon",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-armenian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1991-07-13",
+     "event": "Ordinariate for Armenian Catholics of Eastern Europe (Gyumri)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-armenian-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Armenian Badarak (Divine Liturgy of St Athanasius as attributed in the tradition); current Catholic edition not verified.",
+    "source": "https://www.newadvent.org/cathen/01736b.htm",
+    "confidence": "low"
+   },
+   "access": [
+    {
+     "title": "The Armenian Liturgy (1862)",
+     "url": "https://archive.org/details/TheArmenianLiturgy",
+     "rights": "public domain US",
+     "rights_evidence": "1862",
+     "confidence": "high"
+    },
+    {
+     "title": "The Armenian Church: founded by St. Gregory the Illuminator (Fortescue, 1872)",
+     "url": "https://archive.org/details/armenianchurchfo00fort",
+     "rights": "public domain US",
+     "rights_evidence": "1872",
+     "confidence": "medium",
+     "note": "title as shown on archive.org; verify author attribution before display"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Armenia'",
+     "url": "https://www.newadvent.org/cathen/01736b.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-armenian-catholic-church/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-armenian-catholic-church/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-armenian-catholic-church/"
+   ],
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "chaldean",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Chaldean Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Ch.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Chaldean (East Syriac) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "chal",
+   "canonical_status": {
+    "value": "Patriarchal Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-Ch.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Patriarch: Patriarch Paul III Nona (58)",
+    "source": "https://gcatholic.org/dioceses/rite-Ch.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-22"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Seleucia-Ctesiphon",
+     "wikidata": "Q1378794",
+     "lat": 33.1,
+     "lng": 44.5833,
+     "role": "historical see of the Church of the East (Seleucia-Ctesiphon)",
+     "source": "https://www.wikidata.org/wiki/Q1378794",
+     "confidence": "medium",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Baghdad",
+     "wikidata": "Q1530",
+     "lat": 33.3153,
+     "lng": 44.3661,
+     "role": "patriarchal see (Baghdad) since 1950",
+     "source": "https://www.wikidata.org/wiki/Q1530",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1553",
+     "event": "Yohannan Sulaqa proclaimed patriarch by Julius III",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-chaldean-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1830-07-05",
+     "event": "Stable line: Pius VIII confirms John Hormizdas as Patriarch of Babylon (see Mosul)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-chaldean-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1950",
+     "event": "See moved to Baghdad",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-chaldean-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "East Syriac Qurbana (Anaphora of Addai and Mari, with those of Theodore and Nestorius in the tradition); current approved editions per Church not verified.",
+    "source": "https://www.newadvent.org/cathen/14413a.htm",
+    "confidence": "low",
+    "note": "CE is historical; current editions unverified."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I (Brightman, 1896) — Persian (East Syrian) rite",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "1896",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Syrian Rite (East)' / Chaldean & Malabar",
+     "url": "https://www.newadvent.org/cathen/14413a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of Addeus and Maris'",
+     "url": "https://www.newadvent.org/cathen/01136d.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-chaldean-catholic-church/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-chaldean-catholic-church/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-chaldean-catholic-church/"
+   ],
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "syro-malabar",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Syro-Malabar Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Sb.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Chaldean (East Syriac) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "chal",
+   "canonical_status": {
+    "value": "Major Archiepiscopal Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-Sb.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Major Archbishop: Major Archbishop Raphael Thattil (70)",
+    "source": "https://gcatholic.org/dioceses/rite-Sb.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-22"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Kochi",
+     "wikidata": "Q1800",
+     "lat": 9.9667,
+     "lng": 76.2833,
+     "role": "Kochi (Ernakulam), seat of the Major Archbishop of Ernakulam-Angamaly",
+     "source": "https://www.wikidata.org/wiki/Q1800",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Kochi",
+     "wikidata": "Q1800",
+     "lat": 9.9667,
+     "lng": 76.2833,
+     "role": "major archiepiscopal see",
+     "source": "https://www.wikidata.org/wiki/Q1800",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1498",
+     "event": "Portuguese contact",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-syro-malabar-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1599",
+     "event": "Synod of Diamper",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-syro-malabar-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1653–1662",
+     "event": "Break (1653); majority return by 1662",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-syro-malabar-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1896 / 1923",
+     "event": "Vicariates for Syro-Malabar faithful (1896); hierarchy (1923)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-syro-malabar-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1957–1962",
+     "event": "Restored Qurbana approved 1957, introduced 1962",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-syro-malabar-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1992-12-16",
+     "event": "Raised to Major Archiepiscopal Church",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-syro-malabar-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "East Syriac Qurbana (Anaphora of Addai and Mari, with those of Theodore and Nestorius in the tradition); current approved editions per Church not verified.",
+    "source": "https://www.newadvent.org/cathen/14413a.htm",
+    "confidence": "low",
+    "note": "CE is historical; current editions unverified."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I (Brightman, 1896) — Persian (East Syrian) rite",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "1896",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Syrian Rite (East)' / Chaldean & Malabar",
+     "url": "https://www.newadvent.org/cathen/14413a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of Addeus and Maris'",
+     "url": "https://www.newadvent.org/cathen/01136d.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Official Church site (link only)",
+     "url": "https://www.syromalabarchurch.in/",
+     "rights": "link only",
+     "rights_evidence": "copyright of the publishing Church; no open licence found",
+     "confidence": "medium"
+    }
+   ],
+   "official_source": {
+    "value": "https://www.syromalabarchurch.in/",
+    "source": "https://www.syromalabarchurch.in/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-syro-malabar-catholic-church/"
+   ],
+   "notes": "The chat's label 'East Syriac = Syro-Malabar and Chaldean' is a correct list of the two Catholic East Syriac Churches but is not a rite name; and Syro-Malankara must NOT be grouped here. The mode-of-celebration controversy in Ernakulam-Angamaly should be noted neutrally if mentioned at all, citing the Synod/Holy See.",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "ukrainian",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Ukrainian Greek Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-U.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": "Major Archiepiscopal Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-U.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Major Archbishop: Major Archbishop Sviatoslav Shevchuk (56)",
+    "source": "https://gcatholic.org/dioceses/rite-U.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-22"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Kyiv",
+     "wikidata": "Q1899",
+     "lat": 50.45,
+     "lng": 30.5236,
+     "role": "Kyiv — see of the Major Archbishop since 2005; historical centre of the Kyivan Metropolia",
+     "source": "https://www.wikidata.org/wiki/Q1899",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Kyiv",
+     "wikidata": "Q1899",
+     "lat": 50.45,
+     "lng": 30.5236,
+     "role": "major archiepiscopal see (Kyiv)",
+     "source": "https://www.wikidata.org/wiki/Q1899",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1595–1596",
+     "event": "Union of Brest",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ukrainian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1692 / 1700",
+     "event": "Przemyśl (1692) and Lviv (1700) adhere",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ukrainian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1839 / 1875",
+     "event": "Union abolished in Russian Empire (1839); Kholm 1875",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ukrainian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1946",
+     "event": "Pseudo-synod of Lviv; Church suppressed",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ukrainian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1963",
+     "event": "Slipyj released; title Major Archbishop of Lviv",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ukrainian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1989-12-01",
+     "event": "Communities allowed to register",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ukrainian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "2005-08-21",
+     "event": "See moved to Kyiv; title 'Major Archbishop of Kyiv and Halych'",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ukrainian-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Official Church site (link only)",
+     "url": "https://ugcc.ua/en/",
+     "rights": "link only",
+     "rights_evidence": "copyright of the publishing Church; no open licence found",
+     "confidence": "medium"
+    }
+   ],
+   "official_source": {
+    "value": "https://ugcc.ua/en/",
+    "source": "https://ugcc.ua/en/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ukrainian-catholic-church/"
+   ],
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "melkite",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Melkite Greek Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-GM.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": "Patriarchal Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-GM.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Patriarch: Patriarch Youssef Absi (80)",
+    "source": "https://gcatholic.org/dioceses/rite-GM.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-22"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Antioch (Antakya)",
+     "wikidata": "Q80561",
+     "lat": 36.2025,
+     "lng": 36.1606,
+     "role": "historical Patriarchate of Antioch",
+     "source": "https://www.wikidata.org/wiki/Q80561",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Damascus",
+     "wikidata": "Q3766",
+     "lat": 33.5131,
+     "lng": 36.2919,
+     "role": "patriarchal residence (Damascus) since 1848",
+     "source": "https://www.wikidata.org/wiki/Q3766",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1724",
+     "event": "Disputed election; Cyril VI elected by the Damascus party",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-melkite-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1729",
+     "event": "Benedict XIII recognises Cyril VI",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-melkite-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1838",
+     "event": "Titles of Jerusalem and Alexandria added",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-melkite-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1848",
+     "event": "Ottoman recognition; patriarchate to Damascus",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-melkite-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Official Church site (link only)",
+     "url": "https://www.melkitepat.org/",
+     "rights": "link only",
+     "rights_evidence": "copyright of the publishing Church; no open licence found",
+     "confidence": "medium"
+    }
+   ],
+   "official_source": {
+    "value": "https://www.melkitepat.org/",
+    "source": "https://www.melkitepat.org/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-melkite-catholic-church/"
+   ],
+   "notes": "Byzantine, not Antiochene-Syriac, despite the Antiochene patriarchal title — a common map error.",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "romanian",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Romanian Greek Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Rm.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": "Major Archiepiscopal Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-Rm.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Major Archbishop: Major Archbishop Claudiu-Lucian Pop (54)",
+    "source": "https://gcatholic.org/dioceses/rite-Rm.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-22"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Blaj",
+     "wikidata": "Q624236",
+     "lat": 46.1742,
+     "lng": 23.9225,
+     "role": "Blaj — residence of the bishops since 1737; major archiepiscopal seat",
+     "source": "https://www.wikidata.org/wiki/Q624236",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Blaj",
+     "wikidata": "Q624236",
+     "lat": 46.1742,
+     "lng": 23.9225,
+     "role": "Blaj",
+     "source": "https://www.wikidata.org/wiki/Q624236",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1698–1700",
+     "event": "Union of Metropolitan Atanasie (1698); synod concludes it 4 Sep 1700",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-romanian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1853",
+     "event": "Metropolitan province of Făgăraș-Alba Iulia",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-romanian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1948",
+     "event": "Suppressed by the communist state",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-romanian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1990",
+     "event": "Decree of 1948 abrogated; hierarchy restored 14 Mar 1990",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-romanian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "2005-12-16",
+     "event": "Raised to Major Archiepiscopal Church",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-romanian-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Official Church site (link only)",
+     "url": "https://www.bru.ro/",
+     "rights": "link only",
+     "rights_evidence": "copyright of the publishing Church; no open licence found",
+     "confidence": "medium"
+    }
+   ],
+   "official_source": {
+    "value": "https://www.bru.ro/",
+    "source": "https://www.bru.ro/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-romanian-catholic-church/"
+   ],
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "ruthenian",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Ruthenian Greek Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Rt.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": "Metropolitan Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-Rt.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Metropolitan: Archbishop William Charles Skurla (70)",
+    "source": "https://gcatholic.org/dioceses/rite-Rt.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-21"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Uzhhorod",
+     "wikidata": "Q156711",
+     "lat": 48.6239,
+     "lng": 22.295,
+     "role": "Uzhhorod — Union of Uzhhorod, historical homeland (Transcarpathia)",
+     "source": "https://www.wikidata.org/wiki/Q156711",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Pittsburgh",
+     "wikidata": "Q1342",
+     "lat": 40.4417,
+     "lng": -80.0,
+     "role": "Pittsburgh — Metropolitan see of the Church sui iuris",
+     "source": "https://www.wikidata.org/wiki/Q1342",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1646-04-24",
+     "event": "Union of Uzhhorod",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ruthenian-catholic-churches/",
+     "confidence": "high"
+    },
+    {
+     "when": "1771",
+     "event": "Eparchy of Mukachevo erected (Clement XIV)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ruthenian-catholic-churches/",
+     "confidence": "high"
+    },
+    {
+     "when": "1949",
+     "event": "Suppressed in Soviet Transcarpathia",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ruthenian-catholic-churches/",
+     "confidence": "high"
+    },
+    {
+     "when": "1991-01-16",
+     "event": "Holy See confirms underground bishops of Mukachevo",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ruthenian-catholic-churches/",
+     "confidence": "high"
+    },
+    {
+     "when": "1996",
+     "event": "Apostolic Exarchate in the Czech Republic",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ruthenian-catholic-churches/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ruthenian-catholic-churches/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ruthenian-catholic-churches/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ruthenian-catholic-churches/"
+   ],
+   "notes": "CNEWA: three jurisdictions (Pittsburgh metropolia sui iuris; Mukachevo eparchy immediately subject to the Holy See; Czech exarchate) whose relationship 'has not been clarified'. Show this, do not merge silently.",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "slovak",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Slovak Greek Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Sv.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": "Metropolitan Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-Sv.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Metropolitan: Archbishop Jonáš Jozef Maxim , M.S.U. (51)",
+    "source": "https://gcatholic.org/dioceses/rite-Sv.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-21"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Prešov",
+     "wikidata": "Q26119",
+     "lat": 49.0,
+     "lng": 21.2333,
+     "role": "Prešov — metropolitan see",
+     "source": "https://www.wikidata.org/wiki/Q26119",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Prešov",
+     "wikidata": "Q26119",
+     "lat": 49.0,
+     "lng": 21.2333,
+     "role": "Prešov",
+     "source": "https://www.wikidata.org/wiki/Q26119",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1646",
+     "event": "Union of Uzhhorod accepted in today's eastern Slovakia",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-slovak-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1818-09-22",
+     "event": "Eparchy of Prešov created",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-slovak-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1950 / 1968",
+     "event": "Suppressed 1950; parishes allowed to return 1968",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-slovak-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "2008-01-30",
+     "event": "Raised to Metropolitan Church sui iuris",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-slovak-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Official Church site (link only)",
+     "url": "https://www.grkatpo.sk/",
+     "rights": "link only",
+     "rights_evidence": "copyright of the publishing Church; no open licence found",
+     "confidence": "medium"
+    }
+   ],
+   "official_source": {
+    "value": "https://www.grkatpo.sk/",
+    "source": "https://www.grkatpo.sk/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-slovak-catholic-church/"
+   ],
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "hungarian",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Hungarian Greek Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Hg.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": "Metropolitan Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-Hg.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": "Metropolitan: Archbishop Peter Fülöp Kocsis (63)",
+    "source": "https://gcatholic.org/dioceses/rite-Hg.htm",
+    "confidence": "high",
+    "note": "as displayed 2026-10-21"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Hajdúdorog",
+     "wikidata": "Q252325",
+     "lat": 47.8167,
+     "lng": 21.5,
+     "role": "Hajdúdorog — titular see (residence Debrecen; Debrecen not geocoded here)",
+     "source": "https://www.wikidata.org/wiki/Q252325",
+     "confidence": "medium",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Hajdúdorog",
+     "wikidata": "Q252325",
+     "lat": 47.8167,
+     "lng": 21.5,
+     "role": "Hajdúdorog (title); seat Debrecen",
+     "source": "https://www.wikidata.org/wiki/Q252325",
+     "confidence": "medium",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1912-06-18",
+     "event": "Eparchy of Hajdúdorog erected (Pius X)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-hungarian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1924-06-04",
+     "event": "Apostolic Exarchate of Miskolc",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-hungarian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "2015-03-20",
+     "event": "Raised to Metropolitan Church sui iuris",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-hungarian-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Official Church site (link only)",
+     "url": "https://www.gorogkatolikus.hu/",
+     "rights": "link only",
+     "rights_evidence": "copyright of the publishing Church; no open licence found",
+     "confidence": "medium"
+    }
+   ],
+   "official_source": {
+    "value": "https://www.gorogkatolikus.hu/",
+    "source": "https://www.gorogkatolikus.hu/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-hungarian-catholic-church/"
+   ],
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "bulgarian",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Bulgarian Greek Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Bg.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": "Eparchial Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-Bg.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": null,
+    "source": "https://gcatholic.org/dioceses/rite-Bg.htm",
+    "confidence": "low",
+    "note": "no proper hierarchy listed"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Sofia",
+     "wikidata": "Q472",
+     "lat": 42.6979,
+     "lng": 23.3217,
+     "role": "Sofia — see",
+     "source": "https://www.wikidata.org/wiki/Q472",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Sofia",
+     "wikidata": "Q472",
+     "lat": 42.6979,
+     "lng": 23.3217,
+     "role": "Sofia",
+     "source": "https://www.wikidata.org/wiki/Q472",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1861-04-08",
+     "event": "Joseph Sokolsky ordained by Pius IX as archbishop for Bulgarian Catholics",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-bulgarian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1883",
+     "event": "Apostolic vicariates in Thessaloniki and Adrianople",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-bulgarian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1926",
+     "event": "Apostolic Exarchate of Sofia",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-bulgarian-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Official Church site (link only)",
+     "url": "https://www.catholic-bg.org/",
+     "rights": "link only",
+     "rights_evidence": "copyright of the publishing Church; no open licence found",
+     "confidence": "medium"
+    }
+   ],
+   "official_source": {
+    "value": "https://www.catholic-bg.org/",
+    "source": "https://www.catholic-bg.org/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-bulgarian-catholic-church/"
+   ],
+   "notes": "GCatholic now lists the type as 'Eparchial' (exarchate raised to eparchy); date of elevation not verified in this pass.",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "greek",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Greek Byzantine Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Gc.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": null,
+    "source": "https://gcatholic.org/dioceses/rite-Gc.htm",
+    "confidence": "low",
+    "note": "GCatholic gives no type; see notes"
+   },
+   "head": {
+    "value": null,
+    "source": "https://gcatholic.org/dioceses/rite-Gc.htm",
+    "confidence": "low",
+    "note": "no proper hierarchy listed"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Constantinople",
+     "wikidata": "Q16869",
+     "lat": 41.0122,
+     "lng": 28.976,
+     "role": "Constantinople — community's origin (1856 mission)",
+     "source": "https://www.wikidata.org/wiki/Q16869",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Athens",
+     "wikidata": "Q1524",
+     "lat": 37.9842,
+     "lng": 23.7281,
+     "role": "Athens — exarchate",
+     "source": "https://www.wikidata.org/wiki/Q1524",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1856",
+     "event": "Fr John Marangos begins mission in Constantinople",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-greek-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1911-06-11",
+     "event": "Ordinariate for Greeks in the Ottoman Empire",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-greek-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1922–1923",
+     "event": "Move to Athens; Apostolic Exarchate (1923)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-greek-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1932",
+     "event": "Divided into exarchates of Athens and Istanbul",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-greek-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-greek-catholic-church/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-greek-catholic-church/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-greek-catholic-church/"
+   ],
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "italo-albanian",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Italo-Albanian Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-IA.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": "Eparchial Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-IA.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": null,
+    "source": "https://gcatholic.org/dioceses/rite-IA.htm",
+    "confidence": "low",
+    "note": "no proper hierarchy listed"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Lungro",
+     "wikidata": "Q53897",
+     "lat": 39.75,
+     "lng": 16.1167,
+     "role": "Lungro — eparchy (1919)",
+     "source": "https://www.wikidata.org/wiki/Q53897",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Lungro",
+     "wikidata": "Q53897",
+     "lat": 39.75,
+     "lng": 16.1167,
+     "role": "Lungro; also Piana degli Albanesi and Grottaferrata",
+     "source": "https://www.wikidata.org/wiki/Q53897",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1004",
+     "event": "Grottaferrata abbey founded (territorial abbey 1937)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-italo-albanian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1742",
+     "event": "Etsi pastoralis (Benedict XIV)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-italo-albanian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1919",
+     "event": "Eparchy of Lungro",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-italo-albanian-catholic-church/",
+     "confidence": "high"
+    },
+    {
+     "when": "1937",
+     "event": "Eparchy of Piana degli Albanesi",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-italo-albanian-catholic-church/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-italo-albanian-catholic-church/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-italo-albanian-catholic-church/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-italo-albanian-catholic-church/"
+   ],
+   "notes": "No Orthodox counterpart (CNEWA category). GCatholic names it 'Byzantine Church in Italy'.",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "macedonian",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Macedonian Greek Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Mc.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": "Eparchial Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-Mc.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": null,
+    "source": "https://gcatholic.org/dioceses/rite-Mc.htm",
+    "confidence": "low",
+    "note": "no proper hierarchy listed"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Strumica",
+     "wikidata": "Q48814",
+     "lat": 41.4375,
+     "lng": 22.6431,
+     "role": "Strumica (eparchy of Strumica-Skopje)",
+     "source": "https://www.wikidata.org/wiki/Q48814",
+     "confidence": "medium",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Strumica",
+     "wikidata": "Q48814",
+     "lat": 41.4375,
+     "lng": 22.6431,
+     "role": "Strumica",
+     "source": "https://www.wikidata.org/wiki/Q48814",
+     "confidence": "medium",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "19th c.",
+     "event": "Macedonian Slav Catholics via missionary activity",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/greek-catholic-churches-in-former-yugoslavia/",
+     "confidence": "medium"
+    },
+    {
+     "when": "2001",
+     "event": "Apostolic Exarchate for the former Yugoslav Republic of Macedonia",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/greek-catholic-churches-in-former-yugoslavia/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/greek-catholic-churches-in-former-yugoslavia/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/greek-catholic-churches-in-former-yugoslavia/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/greek-catholic-churches-in-former-yugoslavia/"
+   ],
+   "notes": "Later raised to an eparchy (GCatholic type 'Eparchial'); elevation date not verified here.",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "croatia-serbia",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Greek Catholic Church of Croatia and Serbia",
+    "source": "https://gcatholic.org/dioceses/rite-Hr.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": "Eparchial Church sui iuris",
+    "source": "https://gcatholic.org/dioceses/rite-Hr.htm",
+    "confidence": "high"
+   },
+   "head": {
+    "value": null,
+    "source": "https://gcatholic.org/dioceses/rite-Hr.htm",
+    "confidence": "low",
+    "note": "no proper hierarchy listed"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Križevci",
+     "wikidata": "Q5718",
+     "lat": 46.0333,
+     "lng": 16.5333,
+     "role": "Križevci — eparchy since 1777",
+     "source": "https://www.wikidata.org/wiki/Q5718",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Križevci",
+     "wikidata": "Q5718",
+     "lat": 46.0333,
+     "lng": 16.5333,
+     "role": "Križevci (offices in Zagreb since 1966)",
+     "source": "https://www.wikidata.org/wiki/Q5718",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1611",
+     "event": "Byzantine vicar for Serbs in Croatia (Marča monastery)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/greek-catholic-churches-in-former-yugoslavia/",
+     "confidence": "high"
+    },
+    {
+     "when": "1777-06-17",
+     "event": "Eparchy of Križevci (Pius VI)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/greek-catholic-churches-in-former-yugoslavia/",
+     "confidence": "high"
+    },
+    {
+     "when": "2003",
+     "event": "Apostolic Exarchate for Serbia and Montenegro",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/greek-catholic-churches-in-former-yugoslavia/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/greek-catholic-churches-in-former-yugoslavia/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/greek-catholic-churches-in-former-yugoslavia/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/greek-catholic-churches-in-former-yugoslavia/"
+   ],
+   "notes": "Listing as one Church follows GCatholic ('Byzantine Church in Croatia and Serbia'); some lists split or merge it differently.",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "belarusian",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Belarusian Greek Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Bl.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": "No proper hierarchy (Apostolic Visitator)",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+    "confidence": "medium"
+   },
+   "head": {
+    "value": null,
+    "source": "https://gcatholic.org/dioceses/rite-Bl.htm",
+    "confidence": "low",
+    "note": "no proper hierarchy listed"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Minsk",
+     "wikidata": "Q2280",
+     "lat": 53.9022,
+     "lng": 27.5618,
+     "role": "Minsk (no proper hierarchy)",
+     "source": "https://www.wikidata.org/wiki/Q2280",
+     "confidence": "medium",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Minsk",
+     "wikidata": "Q2280",
+     "lat": 53.9022,
+     "lng": 27.5618,
+     "role": "—",
+     "source": "https://www.wikidata.org/wiki/Q2280",
+     "confidence": "low",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1595–1596",
+     "event": "Origins in the Union of Brest",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+     "confidence": "high"
+    },
+    {
+     "when": "1931 / 1940",
+     "event": "Apostolic Visitator (1931); Exarch (1940)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+     "confidence": "high"
+    },
+    {
+     "when": "1993",
+     "event": "Apostolic Visitator appointed after re-emergence",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/"
+   ],
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "russian",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Russian Greek Catholic Church",
+    "source": "https://gcatholic.org/dioceses/rite-Rs.htm",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": "Exarchates officially extant but not reconstituted",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+    "confidence": "medium"
+   },
+   "head": {
+    "value": null,
+    "source": "https://gcatholic.org/dioceses/rite-Rs.htm",
+    "confidence": "low",
+    "note": "no proper hierarchy listed"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Moscow",
+     "wikidata": "Q649",
+     "lat": 55.7506,
+     "lng": 37.6175,
+     "role": "Moscow (communities; no functioning hierarchy)",
+     "source": "https://www.wikidata.org/wiki/Q649",
+     "confidence": "low",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Moscow",
+     "wikidata": "Q649",
+     "lat": 55.7506,
+     "lng": 37.6175,
+     "role": "—",
+     "source": "https://www.wikidata.org/wiki/Q649",
+     "confidence": "low",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1917",
+     "event": "Apostolic Exarchate for Russia",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+     "confidence": "high"
+    },
+    {
+     "when": "1928",
+     "event": "Apostolic Exarchate in Harbin (China)",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+     "confidence": "high"
+    },
+    {
+     "when": "2004",
+     "event": "Latin bishop of Novosibirsk named Ordinary for Byzantine-rite Catholics in Russia",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/"
+   ],
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "albanian",
+   "kind": "church_sui_iuris",
+   "name": {
+    "value": "Albanian Greek Catholic Church",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+    "confidence": "high"
+   },
+   "rite_tradition": {
+    "value": "Constantinopolitan (Byzantine) tradition",
+    "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19901018_codex-can-eccl-orient-1.html",
+    "confidence": "high",
+    "note": "CCEO can. 28 §2 names the five Eastern traditions (Alexandrian, Antiochene, Armenian, Chaldean, Constantinopolitan)."
+   },
+   "family": "byz",
+   "canonical_status": {
+    "value": "Listed among the 23 Eastern Churches in Annuario-derived lists; omitted by GCatholic (which lists 'Byzantine Church in Kazakhstan and Central Asia' instead). Disputed/minimal.",
+    "source": "https://gcatholic.org/dioceses/rites.htm",
+    "confidence": "medium"
+   },
+   "head": {
+    "value": "Apostolic Administrator of Southern Albania",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+    "confidence": "low"
+   },
+   "origin": {
+    "mother_city": {
+     "name": "Elbasan",
+     "wikidata": "Q114257",
+     "lat": 41.1131,
+     "lng": 20.0818,
+     "role": "Elbasan — centre of the c. 1900 community",
+     "source": "https://www.wikidata.org/wiki/Q114257",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    },
+    "present_see": {
+     "name": "Elbasan",
+     "wikidata": "Q114257",
+     "lat": 41.1131,
+     "lng": 20.0818,
+     "role": "—",
+     "source": "https://www.wikidata.org/wiki/Q114257",
+     "confidence": "low",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1628–1765",
+     "event": "Mission on the Epirus coast",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+     "confidence": "high"
+    },
+    {
+     "when": "c. 1900",
+     "event": "Community founded by Fr George Germanos",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+     "confidence": "medium"
+    },
+    {
+     "when": "1939",
+     "event": "Apostolic Administration of Southern Albania",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+     "confidence": "high"
+    },
+    {
+     "when": "1996",
+     "event": "Bishop appointed; faithful (~3,500) almost entirely Latin",
+     "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Byzantine service books (Hieratikon/Služebnik for the Divine Liturgies of St John Chrysostom and St Basil and the Presanctified; Horologion, Octoechos, Triodion, Pentecostarion, Menaion). Editions and translations are approved by each Church's own authority; no single edition is common to all Byzantine Churches.",
+    "source": "https://mci.archpitt.org/liturgy/LiturgicalBooks.html",
+    "confidence": "medium",
+    "note": "Generic book names only. Exact current edition titles per Church not yet verified — do not display a specific edition until confirmed on the Church's official site."
+   },
+   "access": [
+    {
+     "title": "Liturgies Eastern and Western, vol. I: Eastern Liturgies (F. E. Brightman, 1896)",
+     "url": "https://archive.org/details/liturgieseastern00brig",
+     "rights": "public domain US",
+     "rights_evidence": "published 1896 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Greek Rites'",
+     "url": "https://www.newadvent.org/cathen/06774a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "published 1907–1912",
+     "confidence": "high"
+    },
+    {
+     "title": "Catholic Encyclopedia: 'Liturgy of St. Basil'",
+     "url": "https://www.newadvent.org/cathen/02321a.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+    "confidence": "medium"
+   },
+   "secondary_sources": [
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/"
+   ],
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  }
+ ],
+ "latin_rites_and_uses": [
+  {
+   "id": "latin-roman",
+   "kind": "latin_rite_or_use",
+   "name": {
+    "value": "Roman Rite (Missal of Paul VI / John Paul II)",
+    "source": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/20210716-motu-proprio-traditionis-custodes.html",
+    "confidence": "high"
+   },
+   "church": "latin",
+   "origin": {
+    "mother_city": {
+     "name": "Rome",
+     "wikidata": "Q220",
+     "lat": 41.8931,
+     "lng": 12.4828,
+     "role": "Rome",
+     "source": "https://www.wikidata.org/wiki/Q220",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1969-04-03",
+     "event": "Missale Romanum (Paul VI)",
+     "source": "https://www.vatican.va/content/paul-vi/en/apost_constitutions/documents/hf_p-vi_apc_19690403_missale-romanum.html",
+     "confidence": "high"
+    },
+    {
+     "when": "2002 / 2008",
+     "event": "Missale Romanum, editio typica tertia (2002); reimpressio emendata (2008)",
+     "source": "https://www.cultodivino.va/en/formazione/pubblicazioni/libri-liturgici/missale/missale-romanum.html",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Missale Romanum, editio typica tertia (2002; reimpressio emendata 2008) with later variationes; vernacular editions approved by conferences (English: The Roman Missal, ICEL translation)",
+    "source": "https://www.cultodivino.va/en/formazione/pubblicazioni/libri-liturgici/missale/missale-romanum.html",
+    "confidence": "high",
+    "note": "Latin title/dates from the Dicastery page; the English edition date (2011 in the US) not primary-verified here."
+   },
+   "access": [
+    {
+     "title": "ICEL (English translation rights holder) — permissions",
+     "url": "https://www.icelweb.org/copyright.htm",
+     "rights": "link only",
+     "rights_evidence": "ICEL page: requests for permission go to ICEL Secretariat",
+     "confidence": "high"
+    },
+    {
+     "title": "Missale Romanum (1922 printing) — historical",
+     "url": "https://archive.org/details/missaleromanum0000unse",
+     "rights": "public domain US",
+     "rights_evidence": "1922 (pre-1931)",
+     "confidence": "high"
+    },
+    {
+     "title": "The Roman Missal adapted to the use of the laity (c. 1900)",
+     "url": "https://archive.org/details/romanmissaladapt00unknuoft",
+     "rights": "public domain US",
+     "rights_evidence": "c. 1900",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/20210716-motu-proprio-traditionis-custodes.html",
+    "source": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/20210716-motu-proprio-traditionis-custodes.html",
+    "confidence": "high"
+   },
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "latin-roman-1962",
+   "kind": "latin_rite_or_use",
+   "name": {
+    "value": "Roman Missal of 1962 (pre-conciliar form)",
+    "source": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/20210716-motu-proprio-traditionis-custodes.html",
+    "confidence": "high"
+   },
+   "church": "latin",
+   "status_magisterial": [
+    {
+     "value": "Art. 1: the liturgical books promulgated by Paul VI and John Paul II 'are the unique expression of the lex orandi of the Roman Rite'.",
+     "source": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/20210716-motu-proprio-traditionis-custodes.html",
+     "confidence": "high"
+    },
+    {
+     "value": "Art. 2: it is the diocesan bishop's 'exclusive competence to authorize the use of the 1962 Roman Missal in his diocese, according to the guidelines of the Apostolic See'.",
+     "source": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/20210716-motu-proprio-traditionis-custodes.html",
+     "confidence": "high"
+    },
+    {
+     "value": "Responsa ad dubia of the Congregation for Divine Worship (dated 4 Dec 2021, published 18 Dec 2021) on application.",
+     "source": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2021/12/18/211218c.html",
+     "confidence": "high"
+    },
+    {
+     "value": "Rescript (20 Feb 2023, published 21 Feb 2023): dispensations for use in parish churches and for priests ordained after 16 Jul 2021 reserved to the Apostolic See.",
+     "source": "https://www.vatican.va/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_20230220_rescriptum-traditioniscustodes_en.html",
+     "confidence": "high"
+    },
+    {
+     "value": "Traditionis custodes abrogated the norms of Summorum Pontificum (2007), which had called the 1962 Missal the 'extraordinary expression' of the lex orandi.",
+     "source": "https://www.vatican.va/content/benedict-xvi/en/motu_proprio/documents/hf_ben-xvi_motu-proprio_20070707_summorum-pontificum.html",
+     "confidence": "high"
+    }
+   ],
+   "status_reported_not_magisterial": [
+    {
+     "value": "Reported (Oct 2026): no change to Traditionis custodes under Leo XIV; press reports a letter of Leo XIV to Card. Roche (dated 29 Jun 2026) and an interview remark by Card. Roche. These are reports, not legislative acts.",
+     "source": "https://www.ncronline.org/",
+     "confidence": "low",
+     "note": "Specific article URLs from the earlier pass should be re-attached before publication; do not quote."
+    }
+   ],
+   "terminology_note": "Use neutral terms: 'Roman Missal of 1962' / 'pre-conciliar Roman Missal'. Avoid 'Extraordinary Form' as a current legal category (it derives from Summorum Pontificum, abrogated in 2021) and avoid partisan labels.",
+   "access": [
+    {
+     "title": "Missale Romanum (1922 printing)",
+     "url": "https://archive.org/details/missaleromanum0000unse",
+     "rights": "public domain US",
+     "rights_evidence": "1922",
+     "confidence": "high",
+     "note": "Pre-1962 printing; text differs in details from 1962."
+    },
+    {
+     "title": "Divinum Officium / Missale Meum projects (software MIT; text provenance mixed)",
+     "url": "https://www.divinumofficium.com/",
+     "rights": "link only",
+     "rights_evidence": "software licence ≠ text licence",
+     "confidence": "medium",
+     "note": "site returned 403 to curl; already linked from the site's projects.js"
+    }
+   ],
+   "official_source": {
+    "value": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/20210716-motu-proprio-traditionis-custodes.html",
+    "source": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/20210716-motu-proprio-traditionis-custodes.html",
+    "confidence": "high"
+   },
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": true,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "latin-ambrosian",
+   "kind": "latin_rite_or_use",
+   "name": {
+    "value": "Ambrosian Rite",
+    "source": "https://www.chiesadimilano.it/vivere-la-chiesa/celebrare-la-fede/rito-ambrosiano-2",
+    "confidence": "high"
+   },
+   "church": "latin",
+   "origin": {
+    "mother_city": {
+     "name": "Milan",
+     "wikidata": "Q490",
+     "lat": 45.4669,
+     "lng": 9.19,
+     "role": "Milan",
+     "source": "https://www.wikidata.org/wiki/Q490",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "geography": {
+    "value": "Archdiocese of Milan (most parishes) and Ambrosian parishes in the dioceses of Bergamo, Lodi, Lugano and Novara",
+    "source": "https://www.chiesadimilano.it/vivere-la-chiesa/celebrare-la-fede/rito-ambrosiano-2",
+    "confidence": "medium"
+   },
+   "milestones": [
+    {
+     "when": "4th c. (traditional attribution to St Ambrose)",
+     "event": "Origins of the Milanese liturgy",
+     "source": "https://www.newadvent.org/cathen/01394a.htm",
+     "confidence": "medium"
+    },
+    {
+     "when": "1976",
+     "event": "Messale Ambrosiano, first post-conciliar edition (Card. Colombo)",
+     "source": "https://www.chiesadimilano.it/messale-ambrosiano",
+     "confidence": "high"
+    },
+    {
+     "when": "2024-11-17",
+     "event": "Messale Ambrosiano, second edition, in force (Abp Delpini)",
+     "source": "https://www.chiesadimilano.it/messale-ambrosiano",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Messale Ambrosiano (2nd ed., 2024; © ITL srl)",
+    "source": "https://www.chiesadimilano.it/messale-ambrosiano",
+    "confidence": "high"
+   },
+   "access": [
+    {
+     "title": "Chiesa di Milano — Messale Ambrosiano (PDFs for consultation; rights ITL)",
+     "url": "https://www.chiesadimilano.it/messale-ambrosiano",
+     "rights": "link only",
+     "rights_evidence": "posted 'per la consultazione, lo studio e la preghiera personale'; rights reserved",
+     "confidence": "high"
+    },
+    {
+     "title": "The Ambrosian Liturgy (1909)",
+     "url": "https://archive.org/details/ambrosianliturgy00cathuoft",
+     "rights": "public domain US",
+     "rights_evidence": "1909",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://www.chiesadimilano.it/messale-ambrosiano",
+    "source": "https://www.chiesadimilano.it/messale-ambrosiano",
+    "confidence": "high"
+   },
+   "gc_code": "Am",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "latin-hispanic-mozarabic",
+   "kind": "latin_rite_or_use",
+   "name": {
+    "value": "Hispanic (Mozarabic) Rite",
+    "source": "https://www.newadvent.org/cathen/10611a.htm",
+    "confidence": "high"
+   },
+   "church": "latin",
+   "origin": {
+    "mother_city": {
+     "name": "Toledo",
+     "wikidata": "Q5836",
+     "lat": 39.8667,
+     "lng": -4.0333,
+     "role": "Toledo",
+     "source": "https://www.wikidata.org/wiki/Q5836",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "6th–7th c. (Visigothic period)",
+     "event": "Formation of the Hispanic liturgy",
+     "source": "https://www.newadvent.org/cathen/10611a.htm",
+     "confidence": "medium"
+    },
+    {
+     "when": "1991–1995",
+     "event": "Post-conciliar books: Missale Hispano-Mozarabicum I (1991) & II (1994); Liber Commicus I (1994) & II (1995)",
+     "source": "https://www.cardenaldonmarcelo.es/",
+     "confidence": "medium"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Missale Hispano-Mozarabicum (2 vols, 1991/1994); Liber Commicus (1994/1995); Liber Offerentium (1991)",
+    "source": "https://www.cardenaldonmarcelo.es/",
+    "confidence": "medium"
+   },
+   "access": [
+    {
+     "title": "The Mozarabic and Ambrosian Rites (W. C. Bishop, 1924)",
+     "url": "https://archive.org/details/mozarabicambrosi00bish",
+     "rights": "public domain US",
+     "rights_evidence": "1924",
+     "confidence": "high"
+    },
+    {
+     "title": "Mozarabic Collects (1881)",
+     "url": "https://archive.org/details/mozarabiccollect00hale",
+     "rights": "public domain US",
+     "rights_evidence": "1881",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://www.cardenaldonmarcelo.es/",
+    "source": "https://www.cardenaldonmarcelo.es/",
+    "confidence": "medium"
+   },
+   "gc_code": "Mz",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "latin-braga",
+   "kind": "latin_rite_or_use",
+   "name": {
+    "value": "Rite of Braga (Bracarense)",
+    "source": "https://www.diocese-braga.pt/historia-arquidiocese",
+    "confidence": "high"
+   },
+   "church": "latin",
+   "origin": {
+    "mother_city": {
+     "name": "Braga",
+     "wikidata": "Q83247",
+     "lat": 41.5333,
+     "lng": -8.4167,
+     "role": "Braga",
+     "source": "https://www.wikidata.org/wiki/Q83247",
+     "confidence": "high",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "1918–1924",
+     "event": "Restored by the Synod of 1918; missal and breviary approved by bulls of 1919 and 1924; obligatory from 1924",
+     "source": "https://www.diocese-braga.pt/historia-arquidiocese",
+     "confidence": "high"
+    },
+    {
+     "when": "1971-11-18",
+     "event": "Use made optional ('facultativo') after Vatican II",
+     "source": "https://www.diocese-braga.pt/historia-arquidiocese",
+     "confidence": "high"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Missal Bracarense (1924 edition) — optional use",
+    "source": "https://www.diocese-braga.pt/historia-arquidiocese",
+    "confidence": "medium"
+   },
+   "access": [
+    {
+     "title": "Arquidiocese de Braga — história",
+     "url": "https://www.diocese-braga.pt/historia-arquidiocese",
+     "rights": "link only",
+     "rights_evidence": "diocesan site",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://www.diocese-braga.pt/historia-arquidiocese",
+    "source": "https://www.diocese-braga.pt/historia-arquidiocese",
+    "confidence": "high"
+   },
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "latin-divine-worship",
+   "kind": "latin_rite_or_use",
+   "name": {
+    "value": "Divine Worship (Personal Ordinariates; Anglican liturgical patrimony)",
+    "source": "https://www.vatican.va/content/benedict-xvi/en/apost_constitutions/documents/hf_ben-xvi_apc_20091104_anglicanorum-coetibus.html",
+    "confidence": "high"
+   },
+   "church": "latin",
+   "origin": {
+    "mother_city": {
+     "name": "Houston",
+     "wikidata": "Q16555",
+     "lat": 29.7628,
+     "lng": -95.3831,
+     "role": "Houston — Ordinariate of the Chair of St Peter (one of three ordinariates)",
+     "source": "https://www.wikidata.org/wiki/Q16555",
+     "confidence": "medium",
+     "caveat": "Historical/symbolic centre or present see only; NOT the extent of the Church's current territory or faithful."
+    }
+   },
+   "milestones": [
+    {
+     "when": "2009-11-04",
+     "event": "Anglicanorum coetibus",
+     "source": "https://www.vatican.va/content/benedict-xvi/en/apost_constitutions/documents/hf_ben-xvi_apc_20091104_anglicanorum-coetibus.html",
+     "confidence": "high"
+    },
+    {
+     "when": "2015",
+     "event": "Divine Worship: The Missal published",
+     "source": "https://www.ctsbooks.org/product/divine-worship-the-ordinariate-missal/",
+     "confidence": "medium"
+    }
+   ],
+   "liturgical_books_current": {
+    "value": "Divine Worship: The Missal (2015)",
+    "source": "https://www.ctsbooks.org/product/divine-worship-the-ordinariate-missal/",
+    "confidence": "medium"
+   },
+   "access": [
+    {
+     "title": "CTS — Divine Worship: The Ordinariate Missal",
+     "url": "https://www.ctsbooks.org/product/divine-worship-the-ordinariate-missal/",
+     "rights": "link only",
+     "rights_evidence": "commercial in-copyright edition",
+     "confidence": "high"
+    }
+   ],
+   "notes": "A form within the Roman Rite approved for the Ordinariates; GCatholic labels it 'Anglican Use' (3 jurisdictions). Not a separate rite marker.",
+   "official_source": {
+    "value": "https://www.vatican.va/content/benedict-xvi/en/apost_constitutions/documents/hf_ben-xvi_apc_20091104_anglicanorum-coetibus.html",
+    "source": "https://www.vatican.va/content/benedict-xvi/en/apost_constitutions/documents/hf_ben-xvi_apc_20091104_anglicanorum-coetibus.html",
+    "confidence": "high"
+   },
+   "gc_code": "An",
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  },
+  {
+   "id": "latin-religious-orders",
+   "kind": "latin_rite_or_use",
+   "name": {
+    "value": "Rites/uses of certain religious orders (e.g. Carthusian, Dominican, Carmelite, Premonstratensian, Cistercian)",
+    "source": "https://www.vatican.va/archive/ENG0015/__P3C.HTM",
+    "confidence": "medium"
+   },
+   "church": "latin",
+   "notes": "CCC 1203 mentions rites 'of certain religious orders' without naming them. Present-day status varies (some living, some largely historical or permitted only with the 1962-era framework). Each order needs its own verified source before a record is published.",
+   "access": [
+    {
+     "title": "Catholic Encyclopedia: 'Rites'",
+     "url": "https://www.newadvent.org/cathen/13064b.htm",
+     "rights": "public domain US",
+     "rights_evidence": "1907–1912",
+     "confidence": "high"
+    }
+   ],
+   "official_source": {
+    "value": "https://www.vatican.va/archive/ENG0015/__P3C.HTM",
+    "source": "https://www.vatican.va/archive/ENG0015/__P3C.HTM",
+    "confidence": "high"
+   },
+   "_audit": {
+    "fully_sourced": true,
+    "has_low_confidence_fields": false,
+    "checked": "2026-10-26"
+   }
+  }
+ ]
+}

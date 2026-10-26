@@ -297,6 +297,14 @@ def main():
     out['rights']=('Rights & Permissions — Bibliotheca Catholica','What the five Bibliotheca Catholica rights badges mean, how each status is decided, and when downloads are shown. Not legal advice.',rp['rights'],[crumbs(('Rights & Permissions','rights/'))])
     out['takedown']=('Takedown requests — Bibliotheca Catholica','How a rights holder can ask Bibliotheca Catholica to remove a text, a link, or a record’s file links, and how to send a counter-notice. Not legal advice.',rp['takedown'],[crumbs(('Takedown requests','takedown/'))])
     out['licensing']=('Licensing & credits — Bibliotheca Catholica','How Bibliotheca Catholica is licensed: code MIT, open data CC0, site writing CC BY 4.0, texts public domain in the US, plus Wikipedia and portrait credits.',rp['licensing'],[crumbs(('Licensing & credits','licensing/'))])
+    # v19 Rites & Liturgy: same HTML as the app (data/rites.js, written by tools/build_rites.py from tools/rites_pages.py),
+    # with the map inlined and shaded for the default layer so the pages work without JavaScript
+    sys.path.insert(0,str(ROOT/'tools'));import rites_pages
+    rj=json.loads((ROOT/'data/rites.js').read_text().strip()[len('window.RITES_DATA='):-1])
+    for k,pg in rj['pages'].items():
+        route='rites/'+k if k else 'rites'
+        cr=[('Rites & Liturgy','rites/')]+([(pg['h1'] if k!='sources' else 'Sources and method',route+'/')] if k else [])
+        out[route]=(pg['title']+' — Bibliotheca Catholica',pg['desc'],rites_pages.expand(pg['html'],rj),[crumbs(*cr)])
     counts={'authors':len(authors),'saints':len(saints),'books':6633,'hosted':sum(1 for w in lib['works'] if any(e.get('text') for e in w['editions']))}
     m=re.search(r'window\.BOOKS_COUNT=(\d+)',tpl)
     if m:counts['books']=int(m.group(1))

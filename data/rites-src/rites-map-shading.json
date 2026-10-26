@@ -1,0 +1,795 @@
+{
+ "meta": {
+  "title": "Rites map — shading data (country-level presence, heartlands, estimates)",
+  "generated": "2026-10-26",
+  "boundaries": {
+   "dataset": "Natural Earth Admin 0 – Countries (1:110m for world view, 1:50m for Middle East/India inset)",
+   "url": "https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/",
+   "rights": "public domain (Natural Earth terms of use)",
+   "rights_source": "https://www.naturalearthdata.com/about/terms-of-use/",
+   "join_key": "ISO 3166-1 alpha-2; use Natural Earth's ISO_A2_EH field (ISO_A2 is -99 for a few countries) — check during build",
+   "confidence": "medium",
+   "disputed_borders_note": "Natural Earth draws de facto boundaries; add a visible disclaimer that borders are illustrative and imply no position."
+  },
+  "data_licensing": {
+   "GCatholic": "© GCatholic.org; facts (country lists, counts) used with attribution and link; do not copy pages/maps. robots.txt permits crawling except /temp/.",
+   "CNEWA": "© CNEWA; cite figures with attribution; do not rehost PDFs.",
+   "Annuario Pontificio": "© Libreria Editrice Vaticana; figures cited via CNEWA.",
+   "Natural Earth": "public domain",
+   "Wikidata": "CC0"
+  },
+  "palette": {
+   "by_family": {
+    "lat": "#0072B2",
+    "byz": "#E69F00",
+    "ant": "#009E73",
+    "chal": "#D55E00",
+    "alex": "#CC79A7",
+    "arm": "#56B4E9",
+    "no-data": "#BBBBBB"
+   },
+   "source": "https://jfly.uni-koeln.de/color/",
+   "name": "Okabe–Ito (Color Universal Design)",
+   "confidence": "medium",
+   "note": "Hex values are the widely published Okabe–Ito set; the jfly page shows them as a figure — re-check against it during build. Always pair colour with hatch pattern + text label; never rely on colour alone. Sequential layers (counts): ColorBrewer single-hue Blues (https://colorbrewer2.org/)."
+  },
+  "phase2_note": "Copied from the research folder on 2026-10-26 with population_estimates and population_policy removed: Phase 2 shows no population numbers."
+ },
+ "layers": [
+  {
+   "church_id": "latin",
+   "family": "lat",
+   "present_jurisdictions_countries": {
+    "value": [],
+    "source": null,
+    "as_of": null,
+    "confidence": "low",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": "worldwide (Latin Church) — shade via a separate 'Latin present' base layer"
+   },
+   "heartland_historical": {
+    "countries": [],
+    "description": "worldwide; not shaded as a heartland",
+    "source": "https://gcatholic.org/dioceses/rites.htm",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "coptic",
+   "family": "alex",
+   "present_jurisdictions_countries": {
+    "value": [
+     "EG"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Cp.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "EG"
+    ],
+    "description": "Egypt, esp. Upper Egypt",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-coptic-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "ethiopian",
+   "family": "alex",
+   "present_jurisdictions_countries": {
+    "value": [
+     "ET"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Et.htm",
+    "as_of": "2026-10-23",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "ET"
+    ],
+    "description": "central and northern Ethiopia",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-ethiopian-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "eritrean",
+   "family": "alex",
+   "present_jurisdictions_countries": {
+    "value": [
+     "ER"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Er.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "ER"
+    ],
+    "description": "Eritrea",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-eritrean-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "syriac",
+   "family": "ant",
+   "present_jurisdictions_countries": {
+    "value": [
+     "CA",
+     "EG",
+     "IL",
+     "IQ",
+     "JO",
+     "LB",
+     "PS",
+     "SD",
+     "SS",
+     "SY",
+     "TR",
+     "US",
+     "VE"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-S.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "SY",
+     "IQ",
+     "TR",
+     "LB"
+    ],
+    "description": "Aleppo, Mosul/Nineveh, Mardin region, Beirut",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syrian-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "maronite",
+   "family": "ant",
+   "present_jurisdictions_countries": {
+    "value": [
+     "AO",
+     "AR",
+     "AU",
+     "BF",
+     "BJ",
+     "BR",
+     "CA",
+     "CD",
+     "CF",
+     "CG",
+     "CI",
+     "CM",
+     "CO",
+     "CY",
+     "EG",
+     "FR",
+     "GA",
+     "GH",
+     "GM",
+     "GN",
+     "GQ",
+     "GW",
+     "IL",
+     "JO",
+     "LB",
+     "LR",
+     "ML",
+     "MR",
+     "MX",
+     "NE",
+     "NG",
+     "PS",
+     "SD",
+     "SL",
+     "SN",
+     "SS",
+     "SY",
+     "TD",
+     "TG",
+     "TR",
+     "US"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-M.htm",
+    "as_of": "2026-10-22",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "LB",
+     "SY"
+    ],
+    "description": "Mount Lebanon; northern Syria (origins)",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-maronite-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "syro-malankara",
+   "family": "ant",
+   "present_jurisdictions_countries": {
+    "value": [
+     "CA",
+     "IN",
+     "US"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Ml.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "IN"
+    ],
+    "description": "Kerala",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-syro-malankara-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "armenian",
+   "family": "arm",
+   "present_jurisdictions_countries": {
+    "value": [
+     "AM",
+     "AR",
+     "AZ",
+     "BR",
+     "BY",
+     "CA",
+     "EE",
+     "EG",
+     "FR",
+     "GE",
+     "GR",
+     "IL",
+     "IQ",
+     "IR",
+     "JO",
+     "LB",
+     "LT",
+     "LV",
+     "MD",
+     "MX",
+     "PS",
+     "RO",
+     "RU",
+     "SD",
+     "SS",
+     "SY",
+     "TR",
+     "UA",
+     "US",
+     "UY"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-A.htm",
+    "as_of": "2026-10-25",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "AM",
+     "TR",
+     "LB",
+     "SY"
+    ],
+    "description": "historic Armenia, Cilicia; Beirut and Aleppo today",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-oriental-orthodox-churches/the-armenian-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "chaldean",
+   "family": "chal",
+   "present_jurisdictions_countries": {
+    "value": [
+     "AU",
+     "CA",
+     "EG",
+     "IL",
+     "IQ",
+     "IR",
+     "JO",
+     "LB",
+     "NZ",
+     "PS",
+     "SY",
+     "TR",
+     "US"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Ch.htm",
+    "as_of": "2026-10-22",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "IQ",
+     "IR",
+     "TR"
+    ],
+    "description": "Mesopotamia (Baghdad, Mosul), NW Iran, SE Anatolia",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-chaldean-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "syro-malabar",
+   "family": "chal",
+   "present_jurisdictions_countries": {
+    "value": [
+     "AU",
+     "CA",
+     "GB",
+     "IN",
+     "NZ",
+     "US"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Sb.htm",
+    "as_of": "2026-10-22",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "IN"
+    ],
+    "description": "Kerala",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-assyrian-church-of-the-east/the-syro-malabar-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "ukrainian",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [
+     "AR",
+     "AU",
+     "BE",
+     "BR",
+     "CA",
+     "CH",
+     "DE",
+     "DK",
+     "FI",
+     "FR",
+     "GB",
+     "IT",
+     "LU",
+     "NL",
+     "NO",
+     "NZ",
+     "PL",
+     "SE",
+     "UA",
+     "US"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-U.htm",
+    "as_of": "2026-10-22",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "UA",
+     "PL"
+    ],
+    "description": "Galicia (western Ukraine) and SE Poland",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ukrainian-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "melkite",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [
+     "AR",
+     "AU",
+     "BR",
+     "CA",
+     "EG",
+     "IL",
+     "IQ",
+     "JO",
+     "KW",
+     "LB",
+     "MX",
+     "NZ",
+     "PS",
+     "SD",
+     "SS",
+     "SY",
+     "TR",
+     "US",
+     "VE"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-GM.htm",
+    "as_of": "2026-10-22",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "SY",
+     "LB",
+     "IL",
+     "PS",
+     "JO",
+     "EG"
+    ],
+    "description": "Patriarchates of Antioch, Jerusalem, Alexandria",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-melkite-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "romanian",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [
+     "CA",
+     "RO",
+     "US"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Rm.htm",
+    "as_of": "2026-10-22",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "RO"
+    ],
+    "description": "Transylvania",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-romanian-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "ruthenian",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [
+     "CA",
+     "CZ",
+     "UA",
+     "US"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Rt.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "UA",
+     "SK",
+     "PL"
+    ],
+    "description": "Transcarpathia; NE Slovakia; Lemko region",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ruthenian-catholic-churches/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "slovak",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [
+     "CA",
+     "SK"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Sv.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "SK"
+    ],
+    "description": "eastern Slovakia",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-slovak-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "hungarian",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [
+     "HU"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Hg.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "HU"
+    ],
+    "description": "eastern Hungary",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-hungarian-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "bulgarian",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [
+     "BG"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Bg.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "BG"
+    ],
+    "description": "Bulgaria (earlier Macedonia/Thrace)",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-bulgarian-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "greek",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [
+     "GR",
+     "TR"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Gc.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "GR",
+     "TR"
+    ],
+    "description": "Constantinople → Athens",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-greek-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "italo-albanian",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [
+     "IT"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-IA.htm",
+    "as_of": "2026-10-26",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "IT"
+    ],
+    "description": "Calabria and Sicily",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-italo-albanian-catholic-church/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "macedonian",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [
+     "MK"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Mc.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "MK"
+    ],
+    "description": "North Macedonia",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/greek-catholic-churches-in-former-yugoslavia/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "croatia-serbia",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [
+     "BA",
+     "HR",
+     "RS",
+     "SI",
+     "XK"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Hr.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "HR",
+     "RS"
+    ],
+    "description": "Žumberak/Križevci; Vojvodina",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/greek-catholic-churches-in-former-yugoslavia/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "belarusian",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [
+     "BY"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Bl.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "BY"
+    ],
+    "description": "Belarus",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "russian",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [
+     "CN",
+     "RU"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Rs.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": null
+   },
+   "heartland_historical": {
+    "countries": [
+     "RU"
+    ],
+    "description": "Russia",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "church_id": "albanian",
+   "family": "byz",
+   "present_jurisdictions_countries": {
+    "value": [],
+    "source": null,
+    "as_of": null,
+    "confidence": "low",
+    "meaning": "countries where this Church has at least one jurisdiction of its own (eparchy, exarchate, ordinariate etc.). Faithful elsewhere are under Latin or other ordinaries and are NOT shown.",
+    "note": "no country list parsed (bot challenge or no jurisdiction); verify manually"
+   },
+   "heartland_historical": {
+    "countries": [
+     "AL"
+    ],
+    "description": "Elbasan / southern Albania",
+    "source": "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/other-eastern-catholic-communities/",
+    "confidence": "medium",
+    "note": "approximate, sub-national regions; render as hatched overlay, not as borders"
+   }
+  },
+  {
+   "rite_id": "latin-ambrosian",
+   "family": "lat",
+   "present_jurisdictions_countries": {
+    "value": [
+     "IT"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Am.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high"
+   }
+  },
+  {
+   "rite_id": "latin-hispanic-mozarabic",
+   "family": "lat",
+   "present_jurisdictions_countries": {
+    "value": [
+     "ES"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-Mz.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high"
+   }
+  },
+  {
+   "rite_id": "latin-divine-worship",
+   "family": "lat",
+   "present_jurisdictions_countries": {
+    "value": [
+     "AU",
+     "CA",
+     "GB",
+     "GU",
+     "JP",
+     "US"
+    ],
+    "source": "https://gcatholic.org/dioceses/rite-An.htm",
+    "as_of": "2026-10-21",
+    "confidence": "high"
+   }
+  }
+ ]
+}

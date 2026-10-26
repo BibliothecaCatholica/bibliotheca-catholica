@@ -458,7 +458,7 @@ function timeline(scope,focus){window.BCTimeline.view(render,{scope:scope==='per
 var LZ={};
 function lazy(file,gv,cb){var st=LZ[gv]||(LZ[gv]={w:[],l:false,d:null});if(st.d){cb&&cb(st.d);return}if(cb)st.w.push(cb);if(st.l)return;st.l=true;
   function done(){st.d=window[gv]||null;if(st.d&&LZIDX[gv])LZIDX[gv](st.d);st.w.splice(0).forEach(function(f){try{f(st.d)}catch(e){console.warn(e)}})}
-  if(window[gv]){setTimeout(done,0);return}var sc=document.createElement('script');sc.src='data/'+file+'?v=20261026-v18-2';sc.onload=done;sc.onerror=done;document.head.appendChild(sc)}
+  if(window[gv]){setTimeout(done,0);return}var sc=document.createElement('script');sc.src='data/'+file+'?v=20261026-v20-1';sc.onload=done;sc.onerror=done;document.head.appendChild(sc)}
 var LZIDX={RARE_DATA:function(R){R.items.forEach(function(r){IDX.push({type:'Rare & Obscure',t:r.t,s:(r.a||'')+(r.d?' · '+r.d:'')+' · '+r.th,h:'#/rare/'+encodeURIComponent(r.id),x:norm(r.t+' '+r.o+' '+r.a+' '+r.th+' '+r.g+' '+r.w+' '+r.lang),w:1.8})})},
   PROJECTS_DATA:function(R){R.items.forEach(function(p){IDX.push({type:'Projects & Translations',t:p.n,s:p.cat+' · '+p.d,h:p.u,ext:1,x:norm(p.n+' '+p.cat+' '+p.d+' '+p.tx+' '+p.lang),w:2})})}};
 var PDL={pd:['pd','Public domain'],orig:['pd','PD · original language'],free:['free','Free to read · not PD'],cr:['cr','Copyrighted'],unc:['unc','Rights uncertain']};

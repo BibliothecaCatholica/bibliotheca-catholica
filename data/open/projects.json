@@ -766,15 +766,15 @@
 {
 "name": "Magisterium AI",
 "category": "tool",
-"url": "https://www.magisterium.com/",
+"url": "https://www.magisterium.com",
 "github": null,
 "license": "Proprietary (freemium)",
 "languages": "75+ languages",
-"description": "A Catholic AI answer engine that cites Church documents.",
+"description": "A Catholic AI assistant that answers from Church documents with citations.",
 "texts": "Answer engine over magisterial and theological documents",
 "ai": "ai",
 "ai_detail": "yes",
-"note": null,
+"note": "A third-party tool, not operated by Bibliotheca Catholica. Listing is not endorsement; check its answers against the sources it cites.",
 "x_handles": [
 "@magisteriumai"
 ]

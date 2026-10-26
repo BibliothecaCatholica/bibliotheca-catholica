@@ -21,7 +21,17 @@ function hits(href){const arg=decodeURIComponent(href.replace(/^#\/isidore\//,''
  const q=m?m[1]:arg,ontopic=!m,toks=ctx.isoNorm(q).split(/\s+/).filter(Boolean);
  return ctx.B.list.filter(b=>!(ontopic&&ctx.offTopic(b))&&toks.every(t=>b.x.indexOf(t)>=0)).length}
 test('books() reads author= links as a search with the off-topic filter off',()=>{
- assert.match(APP,/if\(m&&m\[1\]==='author'\)\{BF\.q=m\[2\];BF\.ontopic=false;qArg=true\}/)});
+ assert.match(APP,/if\(m&&m\[1\]==='author'\)\{BF\.q=m\[2\];BF\.ontopic=false;authorArg=true\}/)});
+test('v18.3: an author= link sends no GA search event; a q= or typed search still does',()=>{
+ const b=fn(APP,'books');
+ assert.match(b,/var qArg=false,authorArg=false;/);
+ // only q= (or a bare term) sets qArg, which is what sends the search event on load
+ assert.doesNotMatch(b.match(/if\(m&&m\[1\]==='author'\)\{[^}]*\}/)[0],/qArg/);
+ assert.match(b,/if\(qArg\)trackQ\(\);/);
+ assert.match(b,/else if\(m\)\{BF\[m\[1\]==='q'\?'q':m\[1\]\]=m\[2\];qArg=m\[1\]==='q'\}else\{BF\.q=arg;qArg=true\}/);
+ // the author name counts as already seen, so it is not sent later unless the reader changes the query
+ assert.match(b,/var lastTerm=authorArg\?cleanTerm\(BF\.q\):'';function trackQ\(\)\{var t=cleanTerm\(BF\.q\);if\(t\.length<2\|\|t===lastTerm/);
+ assert.equal((b.match(/track\('search'/g)||[]).length,1)});
 test('the Isidore search folds ł, ø, đ, æ, œ, ß and treats ?/_ in dates like .',()=>{
  assert.equal(ctx.norm('Wojtyła Søren Đorđe Ælfric Œuvres Straße'),'wojtyla soren dorde aelfric oeuvres strasse');
  assert.equal(ctx.isoNorm('1248?-1309'),ctx.isoNorm('1248.-1309'));assert.equal(ctx.isoNorm('1232_-1316'),'1232.-1316')});

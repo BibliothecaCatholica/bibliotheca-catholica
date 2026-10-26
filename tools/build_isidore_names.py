@@ -10,6 +10,7 @@ open data) use `a` when present, so every link finds that author's books.  Run: 
 import collections,json,re,sys,unicodedata
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'tools'));import hubio
+from catalog_fixes import CATALOG_NAME_FIXES  # v18.3
 LET=str.maketrans({'ł':'l','Ł':'L','ø':'o','Ø':'O','đ':'d','Đ':'D','ð':'d','Ð':'D','þ':'th','Þ':'Th','æ':'ae','Æ':'Ae','œ':'oe','Œ':'Oe','ß':'ss','ı':'i','ħ':'h','Ħ':'H'})
 def fold(s):
     s=unicodedata.normalize('NFKD',str(s).translate(LET));s=''.join(c for c in s if not unicodedata.combining(c))
@@ -20,6 +21,8 @@ def main():
     for r in d['books']:by[F[r[8]]].append([A[i][0] for i in r[2]])
     changed=same=0
     for i in h['isidore']:
+        # v18.3: a corrected catalog name (tools/catalog_fixes.py) replaces the shown name; the folder `f` stays as on isidore.co
+        if i['f'] in CATALOG_NAME_FIXES or i['n'] in CATALOG_NAME_FIXES:i['n']=CATALOG_NAME_FIXES.get(i['f'],CATALOG_NAME_FIXES.get(i['n'],i['n']))
         i.pop('a',None);names=by.get(i['f']) or []
         cand=collections.Counter(x for L in names for x in L if fold(x)==fold(i['n']))
         if not cand:cand=collections.Counter(L[0] for L in names if L)

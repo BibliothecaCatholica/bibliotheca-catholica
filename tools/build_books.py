@@ -1,5 +1,6 @@
 """Build compact book index from isidore.co Calibre metadata.db -> site/data/books.js + books.json"""
 import sqlite3,json,re,unicodedata,urllib.parse
+import os,sys;sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)));from catalog_fixes import fix as name_fix  # v18.3: hand-checked catalog name corrections
 from collections import Counter,defaultdict
 c=sqlite3.connect('metadata.db')
 hub=json.load(open('../site/data/catholic-hub.json'))
@@ -116,7 +117,7 @@ def name_fl(n):
 # tables
 alist=[];aidx={}
 def ai(a):
-    if a not in aidx: aidx[a]=len(alist); alist.append([AN[a].replace('|',','),auth_site.get(a,'')])
+    if a not in aidx: aidx[a]=len(alist); alist.append([name_fix(AN[a].replace('|',',')),auth_site.get(a,'')])
     return aidx[a]
 tlist=[];tidx={}
 def ti(t):
@@ -141,7 +142,7 @@ def pred_sub(t,bid):
 def book_era(bid):
     es=[ERA_OF[auth_site[a]] for a in BA[bid] if a in auth_site]
     if es: return min(EORD.index(e) for e in es)
-    fls=[f for f in (name_fl(AN[a]) for a in BA[bid]) if f]
+    fls=[f for f in (name_fl(name_fix(AN[a].replace('|',','))) for a in BA[bid]) if f]
     if fls: return EORD.index(era_from_year(min(fls)))+100   # +100 = inferred from catalog life dates
     return -1
 out=[];stats=Counter()

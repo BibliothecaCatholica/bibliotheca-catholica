@@ -116,7 +116,7 @@ var BF={q:'',fmt:'',lang:'',era:'',tag:'',sort:'title',linked:false,ontopic:true
 function bfReset(){BF.q='';BF.fmt='';BF.lang='';BF.era='';BF.tag='';BF.linked=false;BF.ontopic=true;BF.sort='title'}
 function eraLabel(id){return ERA[id]?ERA[id].label:id}
 function books(arg){
-  var qArg=false;if(arg!=null&&arg!==''){var m=/^(lang|era|fmt|tag|q|author)=(.*)$/.exec(arg);bfReset();if(m&&m[1]==='author'){BF.q=m[2];BF.ontopic=false;qArg=true}else if(m){BF[m[1]==='q'?'q':m[1]]=m[2];qArg=m[1]==='q'}else{BF.q=arg;qArg=true}}
+  var qArg=false,authorArg=false;if(arg!=null&&arg!==''){var m=/^(lang|era|fmt|tag|q|author)=(.*)$/.exec(arg);bfReset();if(m&&m[1]==='author'){BF.q=m[2];BF.ontopic=false;authorArg=true}else if(m){BF[m[1]==='q'?'q':m[1]]=m[2];qArg=m[1]==='q'}else{BF.q=arg;qArg=true}}
   var h='<div class="page-head isx-head"><div class="eyebrow">Index Isidorianus · catalog with rights badges</div><h1>The Isidore Index</h1><p class="lede">All '+(window.BOOKS_COUNT||6633).toLocaleString()+' books in the <a href="https://isidore.co/calibre" target="_blank" rel="noopener">St. Isidore e-book library</a>, catalogued and searchable by title, author, series, subject, language, format, and era. Every book has a detail page and a <a href="#/rights">rights badge</a>. Download buttons appear only for books marked public domain (US), open license, or permission granted; for the rest we link to the book’s page on isidore.co.</p>'+
    '<p class="callout">Catalog records are imported from isidore.co as supplied and have not each been reviewed; inclusion is not a recommendation. For a hand-picked starting point with texts you can read here, see <a href="#/library">Discover &amp; Read</a>. Some records carry editorial context notes: see the <a href="#/policy">Fidelity &amp; Editorial Policy</a>. '+ISO_NOTE+'</p><div class="isx-tabs"><a class="on" href="#/isidore">Books</a><a href="#/isidore/folders">Authors A–Z ('+D.isidore.length.toLocaleString()+')</a></div></div>'+
    '<div class="toolbar isx-tools"><input type="search" id="bk-q" placeholder="Search titles, authors, series, subjects…" value="'+esc(BF.q)+'">'+
@@ -158,7 +158,8 @@ function books(arg){
       $('#bk-out').innerHTML=cur.length?cur.slice(0,shown).map(function(b){return brow(b,BF.q)}).join(''):'<div class="empty">No books match. Try clearing a filter.</div>';
       $('#bk-more').hidden=shown>=cur.length;$('#bk-more').textContent='Show more ('+(cur.length-shown).toLocaleString()+' remaining)'}
     $('#bk-sort').value=BF.sort;draw(true);
-    var lastTerm='';function trackQ(){var t=cleanTerm(BF.q);if(t.length<2||t===lastTerm||!$('#bk-out'))return;lastTerm=t;track('search',{search_term:t,search_scope:'Isidore Index',results_count:cur.length})}
+    /* v18.3: an author= link is a page view, not a search: no search event, and its name is not counted unless the reader changes it */
+    var lastTerm=authorArg?cleanTerm(BF.q):'';function trackQ(){var t=cleanTerm(BF.q);if(t.length<2||t===lastTerm||!$('#bk-out'))return;lastTerm=t;track('search',{search_term:t,search_scope:'Isidore Index',results_count:cur.length})}
     if(qArg)trackQ();
     function fil(n,v){track('filter_use',{filter_name:n,filter_value:v===''||v==null?'All':String(v),filter_scope:'isidore'})}
     var tm,tq;$('#bk-q').addEventListener('input',function(e){BF.q=e.target.value;clearTimeout(tm);tm=setTimeout(function(){draw(true)},140);clearTimeout(tq);tq=setTimeout(trackQ,1500)});

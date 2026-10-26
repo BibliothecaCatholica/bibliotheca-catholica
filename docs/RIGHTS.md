@@ -23,4 +23,4 @@ Counts on 2026-10-25: public domain (US) 6, open license 0, permission granted 0
 
 - DMCA designated agent: register (US Copyright Office, $6 per 3 years) and replace the PLACEHOLDER on `/takedown`.
 - Whether to promise a specific removal time (the research guide suggested 48 hours; the page says "promptly").
-- Raw isidore.co author-folder links (the Index's "Author folders A–Z" tab and a few hub resources) still link to directory listings; they are not per-record files and were left as they are.
+- Closed in v18 (2026-10-26): raw isidore.co author-folder links. A folder listing links every file whatever its badge, so the Index's A–Z tab (now "Authors A–Z") opens Isidore Index searches instead, the 211 author-page folder links and the folder-index resource were removed (folder names kept as data in `isidoreFolder`), the Denzinger and Ott resources point to their book pages (6229 and 7262, both `unknown`), and the open data carries `index_url` instead of folder URLs. Link-only records stay listed.

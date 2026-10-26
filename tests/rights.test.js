@@ -15,7 +15,7 @@ const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;'
 const APP=fs.readFileSync('app.js','utf8'),LIB=fs.readFileSync('scripts/library.js','utf8');
 const idsBy=st=>Object.keys(RD.records).filter(i=>RT.resolve(RD,i).status===st);
 const RAW=/calibre\/get\/|isidore\.co\/CalibreLibrary\/|#book_id=/;
-function appCtx(){const ctx={RT,esc,hl:esc,efBadge:()=>'',efOf:()=>null,efBox:()=>'',bookAuthors:()=>'',eraLabel:x=>x,LANGN:{},AID:{},avatar:()=>'',dates:()=>'',notfound:()=>{throw new Error('nf')},
+function appCtx(){const ctx={ISO_NOTE:'Bibliotheca Catholica does not host, and does not vouch for, any file at isidore.co.',RT,esc,hl:esc,efBadge:()=>'',efOf:()=>null,efBox:()=>'',bookAuthors:()=>'',eraLabel:x=>x,LANGN:{},AID:{},avatar:()=>'',dates:()=>'',notfound:()=>{throw new Error('nf')},
   B:{server:'https://isidore.co/calibre/',base:'https://isidore.co/CalibreLibrary/',ids:{}},document:{},out:'',window:{BCLibrary:{readHere:()=>''}}};
  ctx.render=h=>{ctx.out=h};ctx.loadBooks=cb=>cb();
  ctx.encPath=encodeURIComponent;vm.runInNewContext(['bookUrl','bookFiles','bookAppUrl','rightsOf','canHost','brow','dlUrl','bookDetail'].map(n=>fn(APP,n)).join('\n'),ctx);return ctx}
@@ -54,3 +54,19 @@ test('every hosted reading-room edition maps to public domain (US); external edi
  assert(n>=50)});
 test('badges are calm and accessible: a link to #/rights with evidence and checked date in the title',()=>{
  const h=RT.badge(RT.resolve(RD,idsBy('link_only')[0]));assert.match(h,/href="#\/rights"/);assert.match(h,/title="Link only\. .+ Checked 2026-10-25\. Not legal advice\."/);assert(!/!|warning|illegal|pirat/i.test(h))});
+test('v18: the Authors A-Z tab, search entries, and hub data never link raw isidore.co folder listings',()=>{
+ const els={};const $=sel=>els[sel]||(els[sel]={innerHTML:'',textContent:'',addEventListener(){}});
+ const hub=JSON.parse(fs.readFileSync('data/catholic-hub.json','utf8'));
+ const ctx={esc,hl:esc,norm:s=>String(s).toLowerCase(),$,D:{isidore:hub.isidore.slice(0,400)},window:{scrollTo(){}},document:{getElementById:()=>null},out:''};
+ ctx.render=h=>{ctx.out=h};
+ vm.runInNewContext(fn(APP,'isoAuthorHref')+'\nvar ISO_NOTE="note";\n'+fn(APP,'isidore'),ctx);ctx.isidore();
+ const all=ctx.out+els['#iso-out'].innerHTML;
+ assert(!/isidore\.co\/CalibreLibrary\//.test(all),'raw folder link in the A-Z page');
+ assert(/href="#\/isidore\/[^"]+"/.test(els['#iso-out'].innerHTML),'names open Isidore Index searches');
+ assert.match(ctx.out,/Authors A–Z/);assert.doesNotMatch(ctx.out,/Author folders/);
+ assert.match(APP,/IDX\.push\(\{type:'Isidore Index author',t:i\.n,[^}]*h:isoAuthorHref\(i\.n\)/);
+ assert.doesNotMatch(APP,/'isidore\.co folder'/);
+ const raw=JSON.stringify(hub);assert(!/isidore\.co\/CalibreLibrary\//.test(raw),'hub data still links a folder listing');
+ assert(hub.isidore.every(i=>i.n&&typeof i.f==='string'&&!('u' in i)));
+ for(const ds of ['isidore-folders','authors']){assert(!/isidore\.co\/CalibreLibrary\//.test(fs.readFileSync('data/open/'+ds+'.json','utf8')),ds)}
+});

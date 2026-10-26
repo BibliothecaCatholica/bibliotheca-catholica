@@ -1,6 +1,6 @@
 # Bibliotheca Catholica open data
 
-Version: v6 (2026-10-25). License: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), public domain dedication. You do not have to give credit, but a link to https://bibliothecacatholica.com is appreciated.
+Version: v7 (2026-10-26). License: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), public domain dedication. You do not have to give credit, but a link to https://bibliothecacatholica.com is appreciated.
 
 Each dataset ships as both `.json` and `.csv`.
 
@@ -20,7 +20,7 @@ Each dataset ships as both `.json` and `.csv`.
 | Dataset | Records | What it is |
 |---|---|---|
 | `isidore-index` | 6,633 | Every book in the St. Isidore (isidore.co) Calibre library: authors, catalog year, normalized language, author era, formats, subjects, series, publisher, a **rights status** (`rights_status`, `rights_evidence`, `rights_checked`), and deep links (book page always; files folder and per-format downloads only for records whose rights status allows it), plus `editorial_flag` and `context_note` for the 54 records that carry an editorial context note (see the Fidelity & Editorial Policy, https://bibliothecacatholica.com/policy/). Listing is not endorsement. |
-| `isidore-folders` | 3,352 | Every author folder in isidore.co's CalibreLibrary, linked to a curated author where the match is confident. |
+| `isidore-folders` | 3,352 | Every author name in the isidore.co catalog, with its catalog folder name as text, a link to that author's Isidore Index search, and a curated author where the match is confident. Raw folder listings are not linked (v7). |
 | `authors` | 476 | Curated Catholic authors in 12 eras: dates, roles, our one-line summary, **Wikidata QIDs** (450 people, plus 5 work items for anonymous authors), and cross-links. |
 | `editions` | 111 | The "Which edition?" guide: recommended translations and editions of 69 classics, with ISBNs checked against Open Library. |
 | `doctors-free-texts` | 270 | The 38 Doctors of the Church and their key works. There are 248 free full-text links, each with a per-edition rights status, plus rows for works with no free text. |
@@ -48,11 +48,12 @@ Each dataset ships as both `.json` and `.csv`.
 
 **Wikidata QIDs** come from each author's English Wikipedia article (`pageprops.wikibase_item`). Each was confirmed on Wikidata by checking that the item's enwiki sitelink is that same article. Authors without an article have no QID, and no QIDs were guessed.
 
-**What CC0 covers.** CC0 applies to our compilation, normalization, and curation: summaries, notes, rights labels, matches, and QID links. We include **no Wikipedia text**, which is CC BY-SA. Titles, names, and links are facts. Texts reached through the links keep their own rights.
+**What CC0 covers.** CC0 applies to our compilation, normalization, and curation: summaries, notes, rights labels, matches, and QID links. We include **no Wikipedia text**, which is CC BY-SA. Titles, names, and links are facts. Texts reached through the links keep their own rights. The reading catalog metadata outside this folder, `data/library.json`, is also CC0 (it contains no Wikipedia text); see `LICENSING.md` at the repository root for every part of the site.
 
 **Rights labels** in `doctors-free-texts` and `rare-works` follow a simple US rule: public domain if published before 1931, judged by the specific edition linked. They are research aids, not legal advice.
 
 ## Changelog
 
+- **v7 (2026-10-26):** `isidore-folders` drops the raw isidore.co folder `url` and gains `folder` (the folder name as text) and `index_url` (the author's Isidore Index search, where rights badges decide each book's links). `authors` replaces `isidore_folder_url` with `isidore_index_url`. Folder listings link straight to files whatever their rights status, so they are no longer linked (rights rule 10).
 - **v6 (2026-10-25):** `isidore-index` gains `rights_status`, `rights_evidence`, and `rights_checked`; file links are given only for public-domain, openly licensed, or permitted records.
 - **v5 (2026-10-21):** first documented release.

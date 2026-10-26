@@ -2,7 +2,7 @@
 (function(root){
   'use strict';
   function norm(s){return String(s||'').replace(/\b([a-z])\.\s*([a-z])\./gi,'$1$2').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
-  function imported(e){return e.type==='Book'||e.type==='isidore.co folder'}
+  function imported(e){return e.type==='Book'||e.type==='Isidore Index author'}
   function search(entries,q,scope,limit){
     var query=norm(q),tokens=query.split(/\s+/).filter(Boolean);
     if(!tokens.length)return [];

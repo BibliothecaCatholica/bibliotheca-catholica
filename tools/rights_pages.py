@@ -14,7 +14,7 @@ def rights_html(statuses,counts,checked):
      '<p class="lede">Every record in the Isidore Index, and every edition in the reading room, carries a rights badge. The badge says whether we can offer the book’s files, and why.</p></div>'
      +NOT_LEGAL+
      '<section class="panel policy"><h2>The five badges</h2><ul class="rights-list">'+items+'</ul>'
-     '<p>For <b>Link only</b> and <b>Unknown</b> records we link only to the record’s book page on isidore.co, never to its files. Hover over or tap a badge to see the evidence and the date it was checked; a record’s own page shows the same details.</p>'
+     '<p>For <b>Link only</b> and <b>Unknown</b> records we link only to the record’s book page on isidore.co, never to its files or to isidore.co’s folder listings. Bibliotheca Catholica does not host, and does not vouch for, any file at isidore.co. Hover over or tap a badge to see the evidence and the date it was checked; a record’s own page shows the same details.</p>'
      '<h2>How the status is decided</h2>'
      '<ul><li><b>Reading-room texts.</b> Each text we host was checked edition by edition before it was added: the specific edition or translation must have been published before 1931, and the evidence is recorded with the edition. These show <b>Public domain (US)</b>.</li>'
      '<li><b>Isidore Index records.</b> Each record was classified on '+E(checked)+' from its catalog year, ISBN, publisher, and an automated match against the NYPL transcription of US copyright renewals. Records presumed in copyright (for example, a 1978 or later edition, an ISBN with no year, a renewed 1931–63 book, or a post-1930 papal or curial text) are <b>Link only</b>.</li>'

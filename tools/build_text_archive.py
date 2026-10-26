@@ -106,11 +106,21 @@ Served at https://texts.bibliothecacatholica.com by GitHub Pages from `main`.
 
 Read these texts in the reader at [Bibliotheca Catholica](https://bibliothecacatholica.com) (https://bibliothecacatholica.com), the free library of Catholic authors and classics this collection serves.
 
-This repository contains verified copies of the main library’s hosted texts. Original bytes, credits, and Project Gutenberg notices are preserved. Individual edition rights and SHA-256 hashes are recorded in `manifest.json`; source metadata snapshots are in `provenance/`. These are United States public-domain designations, not worldwide clearance. No blanket license overrides the individual source notices.
+This repository contains verified copies of the main library’s hosted texts. Original bytes, credits, and Project Gutenberg notices are preserved. Individual edition rights and SHA-256 hashes are recorded in `manifest.json`; source metadata snapshots are in `provenance/`. These are United States public-domain designations, not worldwide clearance. No blanket license overrides the individual source notices. See `NOTICE.md`.
 
 The authoritative catalog, reader, and export tool remain in https://github.com/BibliothecaCatholica/bibliotheca-catholica. To refresh this checkout, run `python3 tools/build_text_archive.py --output /absolute/path/to/bibliotheca-texts` from that repository, review the diff and manifest, and publish it here. The export is offline and does not download additional works. Check for stale or retired files before publishing a later export; the exporter never deletes files.
 
 Do not replace this repository with unreviewed Isidore downloads. New hosted editions require edition-specific rights review under the main repository’s contributor guide. Keep GitHub Pages below its published size and traffic limits. Keep an independent backup.
+''')
+    (output / 'NOTICE.md').write_text('''# Notice
+
+This repository holds copies of texts that Bibliotheca Catholica (https://bibliothecacatholica.com) checked as public domain in the United States. This notice is a summary, not legal advice.
+
+- **No license from us.** Bibliotheca Catholica claims no rights in these texts and adds no license. There is no blanket license over this repository; it is not MIT and not CC0.
+- **Source notices apply.** Each file is kept byte for byte as its source published it. Project Gutenberg files keep their full Project Gutenberg License and credits, and those terms apply to them as distributed (https://www.gutenberg.org/policy/license.html). "Project Gutenberg" is a registered trademark of the Project Gutenberg Literary Archive Foundation.
+- **United States only.** Public-domain status is a United States designation for each edition. Outside the United States, check your local law before reusing a text.
+- **Records.** `manifest.json` lists each file's rights statement and SHA-256 checksum, and `provenance/` holds the source catalog snapshots. The catalog metadata in the main repository is CC0, and its code is MIT; see https://github.com/BibliothecaCatholica/bibliotheca-catholica/blob/main/LICENSING.md.
+- **Concerns.** A rights holder can follow https://bibliothecacatholica.com/takedown/.
 ''')
     print(f"Exported {len(entries)} texts, {manifest['totalBytes']:,} bytes, to {output}")
     return manifest

@@ -1,7 +1,7 @@
 {
  "title": "Bibliotheca Catholica open data",
  "license": "CC0-1.0",
- "generated": "2026-10-25",
+ "generated": "2026-10-26",
  "homepage": "https://bibliothecacatholica.com/#/data",
  "datasets": [
   {
@@ -38,13 +38,14 @@
   },
   {
    "name": "isidore-folders",
-   "description": "Every author folder in the isidore.co CalibreLibrary, with links to curated author pages where confident.",
+   "description": "Every author name in the isidore.co catalog, with a link to its Isidore Index search and to curated author pages where confident. Raw folder listings are not linked.",
    "count": 3352,
    "json": "data/open/isidore-folders.json",
    "csv": "data/open/isidore-folders.csv",
    "fields": {
-    "name": "folder name (Calibre author)",
-    "url": "folder URL on isidore.co",
+    "name": "author name as catalogued on isidore.co",
+    "folder": "the catalog folder name (text only; folder listings are not linked)",
+    "index_url": "this author in the Isidore Index on bibliothecacatholica.com, where rights badges decide which links each book gets",
     "curated_author_id": "matching page in authors.json, if any"
    }
   },
@@ -69,7 +70,7 @@
     "wikidata_qid": "Wikidata item for the person, verified via the enwiki sitelink",
     "wikidata_work_qid": "for anonymous authors: Wikidata item of the work",
     "wikipedia_url": "English Wikipedia article",
-    "isidore_folder_url": "isidore.co folder",
+    "isidore_index_url": "this author in the Isidore Index (v18; replaces isidore_folder_url)",
     "catholic_encyclopedia_url": "New Advent Catholic Encyclopedia article",
     "gutenberg_url": "Project Gutenberg author page",
     "ccel_url": "CCEL author page",

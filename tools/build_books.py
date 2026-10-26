@@ -7,6 +7,7 @@ def norm(s): return ''.join(ch for ch in unicodedata.normalize('NFKD',s) if not 
 # --- site author <-> isidore folder map
 fold2site={}
 for a in hub['authors']:
+    if a.get('isidoreFolder'):fold2site[a['isidoreFolder']]=a['id']  # v18: folder name kept as data, no longer a link
     for l in a['links']:
         if 'isidore.co/CalibreLibrary/' in l['url']:
             f=urllib.parse.unquote(l['url'].split('/CalibreLibrary/')[1].rstrip('/'))

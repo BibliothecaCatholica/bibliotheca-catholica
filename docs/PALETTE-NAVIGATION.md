@@ -4,7 +4,7 @@ Restores the original shared colors from styles.css by removing the green-tinted
 
 Navigation is organized into two visible groups instead of hiding core collections under a dropdown:
 
-- Reading and discovery: Discover & Read, Ebooks & PDFs, Authors, Timeline, Reading Lists, Editions & Translations, Podcasts & Media.
+- Reading and discovery: Discover & Read, Isidore Index (v18; was "Ebooks & PDFs"), Authors, Timeline, Reading Lists, Editions & Translations, Podcasts & Media.
 - Faith and reference: Scripture, Church Documents, Prayer, Doctors, Reference Works, Digital Libraries, Rare & Obscure, Substacks, Projects.
 
 Open Data stays in the footer. On phones, the menu displays all collections in a wrapping two-column layout. It announces its expanded state, closes when a section is chosen, supports Escape, and marks the current section with aria-current. Updated asset query strings prevent an older cached override from retaining the green palette after the new HTML loads.

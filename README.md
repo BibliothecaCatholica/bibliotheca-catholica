@@ -50,7 +50,7 @@ The committed data snapshots remain usable. Some older ingestion scripts expect 
 
 ## The Isidore Index and Open Data (v5)
 
-- The Isidore Index (`#/isidore`) is now the flagship. All 6,633 isidore.co books can be filtered by era, language (22 canonical), format, and subject, and each book has its own page with direct downloads from isidore.co.
+- The Isidore Index (`#/isidore`) is now the flagship. All 6,633 isidore.co books can be filtered by era, language (22 canonical), format, and subject, and each book has its own page with a rights badge. Since v16, download links appear only for records marked public domain (US), open license, or permission granted; other records link to their isidore.co book page. Since v18, the Authors A–Z tab opens Isidore Index searches instead of raw isidore.co folder listings.
 - Open Data (`#/data`, `/data/open/`) offers the index, curated authors (with verified Wikidata QIDs), editions, Doctors' free texts, rare works, and projects as JSON and CSV under CC0.
 - Hygiene: a junk folder was removed, language codes were normalized, the aquinas.cc link was confirmed, and LibriVox was added.
 
@@ -70,3 +70,13 @@ The navigation guide is now **Editions & Translations** (`#/editions`, existing 
 - **Link health.** `python3 tools/check_links.py` checks every outbound URL in the site data and scripts (with a sample of isidore.co book URLs) and writes `docs/link-health.json` and `docs/link-health.md`, classed as ok, redirect-offsite, soft-404/parked, client-error, server-error, blocked (401/403/429, usually bot protection), and timeout/error.
 - **LibriVox.** `python3 tools/fetch_librivox.py` matches reading-room works and edition guides to public-domain LibriVox recordings (title plus author, whole works only) and writes `data/librivox.json` and `data/librivox.js`. Work pages, the reader, and edition cards show “Listen” buttons linking to `https://librivox.org/…`.
 - **Shared hub data.** `tools/hubio.py` loads and saves `data/catholic-hub.json` and `data/data.js` together so the two copies stay identical.
+
+## License (v18)
+
+Different parts of this repository are under different terms. [`LICENSING.md`](LICENSING.md) is the full summary (a draft, not legal advice):
+
+- **Code** (HTML templates, JavaScript, CSS, Python tools, tests): [MIT](LICENSE).
+- **Open data** (`data/open/`) and the reading catalog metadata (`data/library.json`): CC0 1.0.
+- **Site writing**: CC BY 4.0.
+- **Hosted texts** (`data/texts/`, texts.bibliothecacatholica.com): public domain in the US; no license from us, and each file keeps its source notice (the Project Gutenberg License for Gutenberg files).
+- **Third-party material**: the Wikipedia excerpts in `data/catholic-hub.json` and `data/data.js` are CC BY-SA 4.0 and are outside the MIT and CC0 grants; portraits stay under the licenses on their Wikimedia Commons or Wikipedia file pages (`data/portrait-credits.json`).

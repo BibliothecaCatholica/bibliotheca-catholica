@@ -29,6 +29,7 @@ SECTION_LINKS=[
  ('/data/','Open Data','the catalogue as JSON and CSV, free to reuse'),
 ]
 INFO_LINKS=[('/about/','About the library'),('/policy/','Fidelity & Editorial Policy'),('/rights/','Rights & Permissions'),('/takedown/','Takedown requests'),('/support/','Support the Library')]
+LICENSING_URL='https://github.com/BibliothecaCatholica/bibliotheca-catholica/blob/main/LICENSING.md'
 def a(href,label):return '<a href="'+E(href)+'">'+E(label)+'</a>'
 def home_about(n):
     """The descriptive block on the home page (static HTML and the app). n: dict of counts."""
@@ -40,7 +41,7 @@ def home_about(n):
      '<p><b>Bibliotheca Catholica</b> (bibliothecacatholica.com) is a free, curated, and searchable master library of the Catholic tradition. '
      'It gathers Catholic authors from the Apostolic Fathers to today, Sacred Scripture, the documents of the Magisterium, prayers and devotions, reference works, podcasts and media, and a reading room of classic texts. '
      'Each entry links to its original source, such as vatican.va, New Advent, the Christian Classics Ethereal Library, Project Gutenberg, and the St. Isidore e-book library.</p>'
-     '<p>The '+a('/library/','reading room')+' comes first. Its '+str(n['hosted'])+' hosted texts are public-domain editions published before 1931, checked against their sources, and readable right here, with contents, search, highlights, notes, and your place saved in your own browser. '
+     '<p>The '+a('/library/','reading room')+' comes first. Its '+str(n['hosted'])+' hosted texts are older editions listed by their sources as public domain in the United States, chosen under our pre-1931 rule and checked against those sources, and readable right here, with contents, search, highlights, notes, and your place saved in your own browser. '
      'Every hosted text keeps its source record, its SHA-256 checksum, and its rights evidence. Everything else stays with its publisher, and Bibliotheca Catholica links to it.</p>'
      '<p>Beyond the reading room, the library indexes '+str(n['authors'])+' '+a('/authors/','Catholic authors')+' with short biographies and works online, '
      +str(n['saints'])+' '+a('/saints/','saints')+' with sourced feast days, '+a('/editions/','edition guides')+' that compare translations, curated '+a('/reading/','reading lists')+', and the '
@@ -58,7 +59,11 @@ def about_page(n):
      'The section pages, such as '+a('/scripture/','Scripture')+', '+a('/magisterium/','Church Documents')+', and '+a('/libraries/','Digital Libraries')+', point to the Church’s own documents and the great Catholic digital libraries.</p>'
      '<h2>Where the texts come from</h2>'
      '<p>Every hosted text is a public-domain edition from a known source, usually Project Gutenberg. We keep the original file, a snapshot of its catalogue record, and its SHA-256 checksum, so anyone can check that the text has not been changed, and each reader page shows the source edition, its translator where known, and its license notice. '
-     'We host only works published before 1931, checking the year of the specific edition or translation. Later works are linked at their publishers or libraries, never copied.</p>'
+     'Our rule is to host only texts first published before 1931, in an edition or translation its source lists as public domain in the United States. The rule applies to the text, not always to the printing that was transcribed: a file can come from a later reprint of an earlier text, for example a 1934 reprint of a 1908 book. For some hosted editions our records do not yet note the year of the specific translation; we are adding that evidence. Later works are linked at their publishers or libraries, never copied.</p>'
+     '<h2>Licensing and credits</h2>'
+     '<p>The site’s code is under the MIT License, the '+a('/data/','open data')+' is dedicated to the public domain under CC0, and the writing on these pages is under CC BY 4.0. Hosted texts carry no license from us: they are public domain in the United States, and each keeps its source’s notice. Author excerpts from Wikipedia are shortened and shared under CC BY-SA 4.0, and each portrait is credited on its author page. The details are in our <a href="'+LICENSING_URL+'">licensing note</a>, a summary rather than legal advice.</p>'
+     '<h2>Our name</h2>'
+     '<p>Bibliotheca Catholica (bibliothecacatholica.com) is an independent project. It is not affiliated with IntraText’s “Bibliotheca Catholica” collection (intratext.com) or with Minha Biblioteca Católica (bibliotecacatolica.com.br), and it does not speak for them.</p>'
      '<h2>Rights badges</h2>'
      '<p>Every record carries one of five '+a('/rights/','rights badges')+': public domain (US), open license, permission granted, link only, or unknown, with its evidence and the date it was checked. Download and reader buttons appear only for the first three. '
      'A rights holder who wants a text or link removed can follow the '+a('/takedown/','takedown process')+'.</p>'

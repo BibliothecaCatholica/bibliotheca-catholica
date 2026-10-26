@@ -2,7 +2,7 @@
 "name": "doctors-free-texts",
 "description": "Key works of the 38 Doctors of the Church with free full-text links and per-edition rights status.",
 "license": "CC0-1.0",
-"generated": "2026-10-25",
+"generated": "2026-10-26",
 "count": 270,
 "fields": {
 "doctor_id": "authors.json id",

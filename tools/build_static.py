@@ -11,7 +11,7 @@ Isidore Index book pages are not pre-rendered, and nothing listed in data/editor
 pre-rendered or put in the sitemap.  Run after data changes and commit the output:
     python3 tools/build_static.py
 """
-import hashlib,html,json,re,shutil,sys
+import hashlib,html,json,re,shutil,sys,urllib.parse
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE='https://bibliothecacatholica.com/';E=html.escape
 sys.path.insert(0,str(ROOT/'tools'));import site_copy
@@ -56,7 +56,7 @@ INTRO={
  'editions':'Each guide below answers one question: which edition or translation of a Catholic classic to read. Guides list the recommended translations, free editions, and print copies, with a short note on why each pick is recommended.',
  'reading':'Reading lists are curated paths through the library. Pick a list, start with its first book, and follow the links to edition guides and free texts.',
  'saints':'This guide lists every saint in the pilot collection, with feast days labelled by their source. Writers who are saints open their author pages; other saints have their own profiles with sources and the lives written about them.',
- 'isidore':'The Isidore Index catalogues the St. Isidore e-book library (isidore.co). Search or filter by title, author, language, era, or format; each record shows a rights badge that decides whether it links to isidore.co’s book page or offers a download.',
+ 'isidore':'The Isidore Index catalogues the St. Isidore e-book library (isidore.co). Search or filter by title, author, language, era, or format; each record shows a rights badge that decides whether it links to isidore.co’s book page or offers a download. Bibliotheca Catholica does not host, and does not vouch for, any file at isidore.co.',
  'scripture':'Free Bibles, commentaries, and daily readings, each linking to the original site.',
  'magisterium':'The documents of the Church’s teaching office, from catechisms and councils to encyclicals and canon law, linked at vatican.va and other official sources.',
  'references':'Standard Catholic reference works, linked at their original sites.',
@@ -67,7 +67,7 @@ INTRO={
  'projects':'Open Catholic software, datasets, and digitization projects.',
  'substacks':'Catholic writers and newsletters published on Substack.',
  'related':'Writers outside the Catholic communion who are widely read alongside the Catholic tradition.',
- 'data':'The open data behind Bibliotheca Catholica, published under CC0 for anyone to reuse.',
+ 'data':'The open data behind Bibliotheca Catholica, dedicated to the public domain under CC0 for anyone to reuse. CC0 covers this data only, not the texts, Wikipedia excerpts, or portraits it points to.',
  'support':'Bibliotheca Catholica is free for everyone and has no ads. Here is how you can help keep it that way.',
 }
 DESC_EXTRA=(('Part of Bibliotheca Catholica, a free Catholic library.','From Bibliotheca Catholica, a free Catholic library.','At Bibliotheca Catholica, a free Catholic library.','Free at Bibliotheca Catholica.','At Bibliotheca Catholica.'),)
@@ -87,7 +87,7 @@ SECTIONS={
  'prayers':('Prayers & Devotions','The common prayers of the Church, the Rosary, daily readings, the saint of the day, prayer apps, and parish finders.'),
  'rare':('Rare & Obscure','Rare and lesser-known Catholic books and manuscripts that are freely available online.'),
  'projects':('Projects','Open Catholic software, data, and digitization projects: liturgical calendars, Bible APIs, breviaries, and more.'),
- 'isidore':('Ebooks & PDFs: the Isidore Index','A searchable index of more than 6,600 books in the St. Isidore e-book library (isidore.co), with formats, rights badges, and links to isidore.co.'),
+ 'isidore':('The Isidore Index: e-book catalog','A searchable index of more than 6,600 books in the St. Isidore e-book library (isidore.co), with formats, rights badges, and links to isidore.co.'),
  'data':('Open Data','The open data behind Bibliotheca Catholica: authors, resources, editions, and the Isidore catalogue, free to reuse.'),
  'support':('Support the Library','How to support Bibliotheca Catholica, an independent, ad-free index of Catholic sources.'),
  'editions':('Editions & Translations','Read a free edition, compare translations, or choose a print copy of the Catholic classics, with EPUB options and recommended picks.'),
@@ -142,6 +142,7 @@ def page(tpl,route,title,desc,body,noindex=False,jsonld=()):
     s=re.sub(r'<script src="data/data\.js(\?[^"]*)?"></script>',lambda m:'<script>window.BC_BOOT='+json.dumps(route)+'</script>\n'+m.group(0),s,count=1)
     assert 'window.BC_BOOT' in s,'data/data.js script tag not found in index.html'
     return s
+CC_BY_SA='https://creativecommons.org/licenses/by-sa/4.0/'
 def a(href,label,ext=False):
     return '<a href="'+E(href)+'"'+(' target="_blank" rel="noopener"' if ext else '')+'>'+E(label)+'</a>'
 def years(au):
@@ -185,10 +186,17 @@ def main():
     authors=[x for x in hub['authors'] if x['id'] not in skip_auth]
     for au in authors:
         desc=au.get('desc') or au.get('wikiDesc') or ''
-        lede=desc+(' '+au['extract'] if au.get('extract') and au['extract'] not in desc else '')
+        lede=desc
+        # v18: the Wikipedia excerpt is its own block with the credit CC BY-SA 4.0 asks for (article link, license link, "shortened")
+        wk=next((l['url'] for l in au.get('links') or [] if 'wikipedia.org/wiki/' in l.get('url','')),None)
+        wiki_block=''
+        if au.get('extract') and au['extract'] not in desc:
+            wt=urllib.parse.unquote(wk.split('/wiki/')[1]).replace('_',' ') if wk else au['name']
+            wiki_block=('<blockquote class="extract"><p>'+E(au['extract']+('…' if len(au['extract'])>=595 else ''))+'</p></blockquote>'
+              '<p class="small wiki-credit">Shortened excerpt from the Wikipedia article '+(a(wk,'“'+wt+'”',True) if wk else '“'+E(wt)+'”')+', available under '+a(CC_BY_SA,'CC BY-SA 4.0',True)+'.</p>')
         works=''.join('<li>'+a(w['url'],w['title'],True)+'</li>' for w in au.get('works') or [] if w.get('url'))
         mine=[w for w in lib['works'] if w.get('authorId')==au['id']]
-        body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+(('<h2>Read here</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else '')+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+'<p>'+a('/authors/','All authors')+'</p>'
+        body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+wiki_block+(('<h2>Read here</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else '')+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+'<p>'+a('/authors/','All authors')+'</p>'
         sa=saints_by_author.get(au['id'])
         if sa:body=body.replace('<p>'+a('/authors/','All authors')+'</p>','<h2>Saint</h2><p>'+E(s_facts(sa))+' '+a('/saints/','Saints & Hagiography')+'</p><p>'+a('/authors/','All authors')+'</p>')
         # v17: facts already in the data (era, century, vocations from tags, Doctor of the Church) and the curated links

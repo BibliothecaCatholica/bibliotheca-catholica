@@ -2,7 +2,7 @@
 "name": "isidore-index",
 "description": "Every book record in the St. Isidore (isidore.co) Calibre library, normalized: canonical languages, author era, rights status, and deep links. Files stay on isidore.co; file links are given only for public-domain, openly licensed, or permitted records.",
 "license": "CC0-1.0",
-"generated": "2026-10-25",
+"generated": "2026-10-26",
 "count": 6633,
 "fields": {
 "id": "isidore.co Calibre book id",

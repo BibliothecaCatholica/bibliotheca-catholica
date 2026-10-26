@@ -28,3 +28,12 @@
 .licensing-table{border-collapse:collapse;width:100%;font-size:.95rem}
 .licensing-table th,.licensing-table td{text-align:left;vertical-align:top;padding:.45rem .6rem;border-bottom:1px solid var(--line,rgba(127,127,127,.3))}
 .licensing-table code{white-space:nowrap}
+/* v18.2: on narrow screens each licensing-table row becomes a card, one labelled line per column, nothing hidden */
+@media (max-width:640px){
+  .licensing-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .licensing-table,.licensing-table tbody,.licensing-table tr,.licensing-table td{display:block;width:100%}
+  .licensing-table tr{border:1px solid var(--line,rgba(127,127,127,.3));border-radius:8px;padding:.35rem .2rem;margin:0 0 .75rem}
+  .licensing-table td{border-bottom:0;padding:.3rem .6rem}
+  .licensing-table td::before{content:attr(data-label);display:block;font-weight:600;font-size:.8rem;opacity:.85}
+  .licensing-table code{white-space:normal;overflow-wrap:anywhere}
+}

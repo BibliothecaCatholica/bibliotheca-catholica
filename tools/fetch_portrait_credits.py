@@ -15,7 +15,8 @@ Author pages show each credited portrait with its credit line; list thumbnails (
 show only portraits that need no attribution (`pd`: public domain, CC0, or no restrictions).
 Credit names are tidied by `artist_name()` (v18.1): Commons often repeats a phrase ("Unknown author Unknown author")
 or says "not specified"; those become "Author unknown", doubled phrases are collapsed, and "[réf. nécessaire]"-style
-citation markers are dropped. The snapshot keeps the file page's raw `artist` and the shown `credit` name.
+citation markers are dropped. In the snapshot (v18.2), `artist` is that tidied name, the one the site shows, and
+`artistRaw` is the Artist text exactly as the file page gives it.
 Network required.  Run:  python3 tools/fetch_portrait_credits.py
 Offline (re-apply the snapshot, for example after changing artist_name()):  python3 tools/fetch_portrait_credits.py --apply
 """
@@ -56,24 +57,32 @@ def artist_name(raw):
     if not a or UNKNOWN.match(a):return 'Author unknown'
     if re.match(r'unknown\b',a):a='U'+a[1:]
     return a if len(a)<=200 else a[:199].rsplit(' ',1)[0]+'…'
+RULE='shown only when the file page gives a free license and, unless public domain or CC0, names an author; otherwise the portrait is hidden'
+FIELDS={'artist':'credit name shown on the site (tidied by artist_name(); "Author unknown" when the file page gives none)',
+        'artistRaw':'Artist text exactly as the file page gives it','license':'LicenseShortName from the file page','licenseUrl':'LicenseUrl from the file page',
+        'shown':'true when the portrait and its credit appear on the site','nonFree':'the file page marks the file non-free (fair use)',
+        'missing':'the file page or its metadata could not be found','page':'the file page','wiki':'commons or en','file':'file name'}
 def apply(h,files):
     """Set imgCredit on hub authors from the snapshot's file records."""
     credited=0
     for a in h['authors']:
         a.pop('imgCredit',None);rec=files.get(a['id'])
         if not a.get('img') or not rec:continue
-        ok=not rec['missing'] and not rec['nonFree'] and rec['license'] and FREE.search(rec['license']) and (rec['artist'] or NOATTR.search(rec['license']))
-        rec['shown']=bool(ok);rec.pop('credit',None)
+        if 'artistRaw' not in rec:rec['artistRaw']=rec.get('artist','')  # snapshots before v18.2 kept the raw text in `artist`
+        rec.pop('credit',None);raw=rec['artistRaw'];rec['artist']=artist_name(raw) if raw else ''
+        ok=not rec['missing'] and not rec['nonFree'] and rec['license'] and FREE.search(rec['license']) and (raw or NOATTR.search(rec['license']))
+        rec['shown']=bool(ok)
         if not ok:continue
         credited+=1
         a['imgCredit']={'page':rec['page'],'license':rec['license']}
-        if rec['artist']:a['imgCredit']['artist']=rec['credit']=artist_name(rec['artist'])
+        if rec['artist']:a['imgCredit']['artist']=rec['artist']
         if rec['licenseUrl']:a['imgCredit']['licenseUrl']=rec['licenseUrl']
         if NOATTR.search(rec['license']):a['imgCredit']['pd']=1  # no attribution required: may also appear as a small list thumbnail
     return credited
 def main():
     if '--apply' in sys.argv:
         h=hubio.load();snap=json.loads((ROOT/'data/portrait-credits.json').read_text());credited=apply(h,snap['files'])
+        files=snap.pop('files');snap['rule']=RULE;snap['fields']=FIELDS;snap['files']=files
         (ROOT/'data/portrait-credits.json').write_text(json.dumps(snap,ensure_ascii=False,indent=1)+'\n');hubio.save(h)
         print(len(snap['files']),'portraits;',credited,'credited and shown;',len(snap['files'])-credited,'hidden');return
     h=hubio.load();want={}
@@ -97,11 +106,11 @@ def main():
     for a in h['authors']:
         if not a.get('img'):continue
         w,n=parse(a['img']);m=meta.get((w,n)) or {'missing':True}
-        files[a['id']]={'wiki':w,'file':n,'page':PAGE[w]+urllib.parse.quote(n.replace(' ','_')),'artist':m.get('artist',''),'license':m.get('license',''),'licenseUrl':m.get('licenseUrl',''),'nonFree':m.get('nonFree',False),'missing':m.get('missing',False)}
+        files[a['id']]={'wiki':w,'file':n,'page':PAGE[w]+urllib.parse.quote(n.replace(' ','_')),'artistRaw':m.get('artist',''),'license':m.get('license',''),'licenseUrl':m.get('licenseUrl',''),'nonFree':m.get('nonFree',False),'missing':m.get('missing',False)}
     # free license required; an author name is required too unless the file is public domain or CC0
     credited=apply(h,files)
     out={'checked':str(datetime.date.today()),'source':'MediaWiki API imageinfo extmetadata of each file page (commons.wikimedia.org or en.wikipedia.org)',
-         'rule':'shown only when the file page gives a free license and, unless public domain or CC0, names an author; otherwise the portrait is hidden','files':files}
+         'rule':RULE,'fields':FIELDS,'files':files}
     (ROOT/'data/portrait-credits.json').write_text(json.dumps(out,ensure_ascii=False,indent=1)+'\n')
     hubio.save(h)
     print(len(files),'portraits;',credited,'credited and shown;',len(files)-credited,'hidden')

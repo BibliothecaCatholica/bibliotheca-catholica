@@ -49,6 +49,7 @@ def takedown_html():
 
 # v18.1: /licensing/ renders LICENSING.md (the one source) as a page on the site, for the footer's "Licensing & credits".
 import re as _re
+import html as _html
 REPO='https://github.com/BibliothecaCatholica/bibliotheca-catholica/blob/main/'
 def _inline(t):
     t=E(t,quote=False)
@@ -74,7 +75,7 @@ def licensing_html(md):
             while i<len(lines) and lines[i].startswith('|'):rows.append([c.strip() for c in lines[i].strip('|').split('|')]);i+=1
             rows=[r for r in rows if not all(_re.fullmatch(r'-+',c) for c in r)]
             out.append('<div class="table-wrap"><table class="licensing-table"><thead><tr>'+''.join('<th scope="col">'+_inline(c)+'</th>' for c in rows[0])+'</tr></thead><tbody>'
-                       +''.join('<tr>'+''.join('<td>'+_inline(c)+'</td>' for c in r)+'</tr>' for r in rows[1:])+'</tbody></table></div>');continue
+                       +''.join('<tr>'+''.join('<td data-label="'+_html.escape(_html.unescape(_re.sub(r'<[^>]+>','',_inline(rows[0][k]))),quote=True)+'">'+_inline(c)+'</td>' for k,c in enumerate(r))+'</tr>' for r in rows[1:])+'</tbody></table></div>');continue
         if L.startswith('- '):
             items=[]
             while i<len(lines) and lines[i].startswith('- '):items.append(lines[i][2:]);i+=1
@@ -82,6 +83,7 @@ def licensing_html(md):
         if not L.strip():i+=1;continue
         para=[]
         while i<len(lines) and lines[i].strip() and not _re.match(r'(#|\||- )',lines[i]):para.append(lines[i]);i+=1
+        if 'also shown on the site at' in ' '.join(para):continue  # v18.2: the repo file's pointer to this page would link to itself
         p=_inline(' '.join(para))
         if not lede:lede=p
         else:out.append('<p>'+p+'</p>')

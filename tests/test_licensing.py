@@ -12,6 +12,8 @@ class Licensing(unittest.TestCase):
         self.assertEqual(json.loads(R('package.json')).get('license'),'MIT')
         self.assertIn('## License',R('README.md'))
         self.assertIn('NOTICE.md',R('tools/build_text_archive.py'))
+        t=R('tools/build_text_archive.py');self.assertNotIn('catalog metadata in the main repository is CC0',t)  # v18.2: CC0 scope as in LICENSING.md
+        self.assertIn('only the open data in `data/open/` and the reading catalog metadata in `data/library.json` are CC0',t)
     def test_library_json_cc0_only_while_free_of_wikipedia_text(self):
         lib=R('data/library.json');hub=json.loads(R('data/catholic-hub.json'))
         self.assertNotIn('wikipedia',lib.lower())
@@ -66,7 +68,6 @@ class Licensing(unittest.TestCase):
             self.assertNotRegex(R(p),r'isidore\.co/CalibreLibrary/[^"\s]',p)
         self.assertIn('does not vouch for',R('app.js'));self.assertIn('does not vouch for',main(R('rights/index.html')));self.assertIn('does not vouch for',main(R('isidore/index.html')))
         self.assertIn('>Isidore Index</a>',R('index.html'));self.assertNotIn('Ebooks &amp; PDFs',R('index.html'))
-if __name__=='__main__':unittest.main()
 
 class V181(unittest.TestCase):
     def test_licensing_page_renders_licensing_md_and_is_in_sitemap(self):
@@ -94,10 +95,46 @@ class V181(unittest.TestCase):
         self.assertEqual(files['roger-bacon']['license'],'CC BY-SA 3.0');self.assertFalse(files['roger-bacon']['shown'])
         self.assertNotIn('imgCredit',next(a for a in hub['authors'] if a['id']=='roger-bacon'))
     def test_former_folder_authors_link_to_their_index_search(self):
-        hub=json.loads(R('data/catholic-hub.json'));names={i['f']:i['n'] for i in hub['isidore']}
+        hub=json.loads(R('data/catholic-hub.json'));names={i['f']:i.get('a') or i['n'] for i in hub['isidore']}  # v18.2: the books' author name
         A=[a for a in hub['authors'] if a.get('isidoreFolder')];self.assertEqual(len(A),211)
         import urllib.parse
         for a in A[:400]:
             with self.subTest(a['id']):
-                self.assertIn('href="/#/isidore/'+urllib.parse.quote(names[a['isidoreFolder']],safe='')+'"',main(R('author/'+a['id']+'/index.html')))
+                self.assertIn('href="/#/isidore/author='+urllib.parse.quote(names[a['isidoreFolder']],safe='')+'"',main(R('author/'+a['id']+'/index.html')))
         self.assertIn("All their books in the Isidore Index",R('app.js'))
+
+class V182(unittest.TestCase):
+    """v18.2 QA fixes: Isidore names from the books, /licensing/ table and self-link, portrait-credits fields, era shown once."""
+    def test_isidore_names_from_books(self):
+        hub=json.loads(R('data/catholic-hub.json'));I={i['f']:i for i in hub['isidore']}
+        self.assertEqual(I['Wojtyla, Karol']['a'],'Wojtyła, Karol')
+        self.assertEqual(I['Angela of Foligno, Bl., 1248_-1309']['a'],'Angela of Foligno, Bl., 1248?-1309')
+        self.assertEqual(I['Llull, Ramon, 1232_-1316']['a'],'Llull, Ramon, 1232?-1316')
+        self.assertEqual(I['Kierkegaard, Soren']['a'],'Kierkegaard, Søren')
+        import csv,io
+        rows=list(csv.DictReader(io.StringIO(R('data/open/isidore-folders.csv'))))
+        w=next(r for r in rows if r['folder']=='Wojtyla, Karol');self.assertTrue(w['index_url'].endswith('#/isidore/author=Wojty%C5%82a%2C%20Karol'))
+    def test_licensing_page_stacks_and_has_no_self_link(self):
+        s=R('licensing/index.html');page=s[s.index('<main'):]
+        self.assertNotIn('also shown on the site at',page)
+        self.assertIn('also shown on the site at',R('LICENSING.md'))
+        self.assertIn('<td data-label="Terms">',page);self.assertIn('<td data-label="Material">',page)
+        css=R('styles/rights.css');self.assertIn('.licensing-table td::before{content:attr(data-label)',css)
+        self.assertRegex(css,r'@media \(max-width:640px\)\{\s*\.licensing-table thead')
+    def test_portrait_credits_fields(self):
+        import re
+        pc=json.loads(R('data/portrait-credits.json'));self.assertIn('fields',pc)
+        for k,r in pc['files'].items():
+            with self.subTest(k):
+                self.assertIn('artistRaw',r);self.assertNotIn('credit',r)
+                self.assertNotRegex(r['artist'],r'(?i)not specified')
+                self.assertNotRegex(r['artist'],r'(?i)\b(\w[\w.]*(?: \w[\w.]*){0,4}) \1\b')
+        self.assertEqual(sum(1 for r in pc['files'].values() if r['shown'] and r['artist']=='Author unknown'),87)
+        self.assertEqual(pc['files']['mary-ann-glendon']['artist'],'United States Department of State')
+        self.assertIn('`artistRaw`',R('LICENSING.md'));self.assertIn('87',R('AGENTS.md'))
+    def test_era_shown_once(self):
+        self.assertIn("a.era!==ord(a.century)+'-century'",R('app.js'))
+        s=R('author/john-paul-ii/index.html')
+        self.assertNotIn('Twentieth Century (20th century)',s)
+
+if __name__=='__main__':unittest.main()

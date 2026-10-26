@@ -2,30 +2,42 @@
  "checked": "2026-10-26",
  "source": "MediaWiki API imageinfo extmetadata of each file page (commons.wikimedia.org or en.wikipedia.org)",
  "rule": "shown only when the file page gives a free license and, unless public domain or CC0, names an author; otherwise the portrait is hidden",
+ "fields": {
+  "artist": "credit name shown on the site (tidied by artist_name(); \"Author unknown\" when the file page gives none)",
+  "artistRaw": "Artist text exactly as the file page gives it",
+  "license": "LicenseShortName from the file page",
+  "licenseUrl": "LicenseUrl from the file page",
+  "shown": "true when the portrait and its credit appear on the site",
+  "nonFree": "the file page marks the file non-free (fair use)",
+  "missing": "the file page or its metadata could not be found",
+  "page": "the file page",
+  "wiki": "commons or en",
+  "file": "file name"
+ },
  "files": {
   "clement-of-rome": {
    "wiki": "commons",
    "file": "Clemens_Romanus.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Clemens_Romanus.jpg",
-   "artist": "Unknown",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown"
   },
   "ignatius-of-antioch": {
    "wiki": "commons",
    "file": "Hosios_Loukas_(south_west_chapel,_south_side)_-_Ignatios.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Hosios_Loukas_%28south_west_chapel%2C_south_side%29_-_Ignatios.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "polycarp-of-smyrna": {
    "wiki": "commons",
@@ -37,7 +49,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "PravoslavnyChristianin"
+   "artistRaw": "PravoslavnyChristianin"
   },
   "papias-of-hierapolis": {
    "wiki": "commons",
@@ -49,7 +61,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Michel Wolgemut, Wilhelm Pleydenwurff (Text: Hartmann Schedel )"
+   "artistRaw": "Michel Wolgemut, Wilhelm Pleydenwurff (Text: Hartmann Schedel )"
   },
   "hermas": {
    "wiki": "commons",
@@ -61,7 +73,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "WolfgangRieger"
+   "artistRaw": "WolfgangRieger"
   },
   "justin-martyr": {
    "wiki": "commons",
@@ -73,7 +85,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Theophanes the Cretan"
+   "artistRaw": "Theophanes the Cretan"
   },
   "irenaeus-of-lyons": {
    "wiki": "commons",
@@ -85,19 +97,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Lucien Bégule"
+   "artistRaw": "Lucien Bégule"
   },
   "athenagoras-of-athens": {
    "wiki": "commons",
    "file": "Greek_Icon_of_Saint_Athenagoras_of_Athens.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Greek_Icon_of_Saint_Athenagoras_of_Athens.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "theophilus-of-antioch": {
    "wiki": "commons",
@@ -109,7 +121,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "William Cave"
+   "artistRaw": "William Cave"
   },
   "clement-of-alexandria": {
    "wiki": "commons",
@@ -121,7 +133,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "André Thévet"
+   "artistRaw": "André Thévet"
   },
   "tertullian": {
    "wiki": "commons",
@@ -133,7 +145,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "André Thevet"
+   "artistRaw": "André Thevet"
   },
   "hippolytus-of-rome": {
    "wiki": "commons",
@@ -145,7 +157,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Dobroš © Dana Stehlíková"
+   "artistRaw": "Dobroš © Dana Stehlíková"
   },
   "origen": {
    "wiki": "commons",
@@ -156,67 +168,68 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "cyprian-of-carthage": {
    "wiki": "commons",
    "file": "Cyprian_von_Karthago2.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Cyprian_von_Karthago2.jpg",
-   "artist": "The original uploader was Bwag at German Wikipedia .",
+   "artist": "The original uploader was Bwag at German Wikipedia",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "The original uploader was Bwag at German Wikipedia"
+   "artistRaw": "The original uploader was Bwag at German Wikipedia ."
   },
   "gregory-thaumaturgus": {
    "wiki": "commons",
    "file": "Grigorii_chudotvoretz.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Grigorii_chudotvoretz.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "dionysius-of-alexandria": {
    "wiki": "commons",
    "file": "Dionisii_alek.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Dionisii_alek.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "methodius-of-olympus": {
    "wiki": "commons",
    "file": "Methodius_of_Olympus.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Methodius_of_Olympus.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "lactantius": {
    "wiki": "commons",
    "file": "Lactantius.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Lactantius.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "arnobius-of-sicca": {
    "wiki": "commons",
@@ -228,7 +241,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Schedel H."
+   "artistRaw": "Schedel H."
   },
   "eusebius-of-caesarea": {
    "wiki": "commons",
@@ -240,7 +253,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Unknown, the art is from the 6th Century AD"
+   "artistRaw": "Unknown, the art is from the 6th Century AD"
   },
   "athanasius-of-alexandria": {
    "wiki": "commons",
@@ -252,7 +265,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Byzantine Institute staff"
+   "artistRaw": "Byzantine Institute staff"
   },
   "hilary-of-poitiers": {
    "wiki": "commons",
@@ -264,67 +277,67 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Richard de Montbaston et collaborateurs."
+   "artistRaw": "Richard de Montbaston et collaborateurs."
   },
   "ephrem-the-syrian": {
    "wiki": "commons",
    "file": "Mor_Ephrem_icon.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Mor_Ephrem_icon.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "cyril-of-jerusalem": {
    "wiki": "commons",
    "file": "Saint_Cyril_of_Jerusalem.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Saint_Cyril_of_Jerusalem.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "basil-the-great": {
    "wiki": "commons",
    "file": "Basil_of_Caesarea.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Basil_of_Caesarea.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "gregory-of-nazianzus": {
    "wiki": "commons",
    "file": "Gregor-Chora_(cropped).jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Gregor-Chora_%28cropped%29.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Copyrighted free use",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "gregory-of-nyssa": {
    "wiki": "commons",
    "file": "Gregory_of_Nyssa.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Gregory_of_Nyssa.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "ambrose-of-milan": {
    "wiki": "commons",
@@ -335,7 +348,8 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "jerome": {
    "wiki": "commons",
@@ -347,7 +361,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Matthias Stom"
+   "artistRaw": "Matthias Stom"
   },
   "john-chrysostom": {
    "wiki": "commons",
@@ -358,7 +372,8 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "augustine-of-hippo": {
    "wiki": "commons",
@@ -370,7 +385,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Philippe de Champaigne"
+   "artistRaw": "Philippe de Champaigne"
   },
   "cyril-of-alexandria": {
    "wiki": "commons",
@@ -382,7 +397,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Rabe!"
+   "artistRaw": "Rabe!"
   },
   "leo-the-great": {
    "wiki": "commons",
@@ -394,7 +409,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Francisco Herrera the Younger"
+   "artistRaw": "Francisco Herrera the Younger"
   },
   "peter-chrysologus": {
    "wiki": "commons",
@@ -406,7 +421,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "School of Guercino"
+   "artistRaw": "School of Guercino"
   },
   "rufinus-of-aquileia": {
    "wiki": "commons",
@@ -418,7 +433,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Bloemaert, Frederick (Bloemaert, Frederick) From: 1614— To: 1669"
+   "artistRaw": "Bloemaert, Frederick (Bloemaert, Frederick) From: 1614— To: 1669"
   },
   "paulinus-of-nola": {
    "wiki": "commons",
@@ -430,7 +445,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Wolfgang Sauber"
+   "artistRaw": "Wolfgang Sauber"
   },
   "prudentius": {
    "wiki": "commons",
@@ -441,7 +456,8 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "vincent-of-lerins": {
    "wiki": "commons",
@@ -453,19 +469,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Bojan Teodosijević"
+   "artistRaw": "Bojan Teodosijević"
   },
   "prosper-of-aquitaine": {
    "wiki": "commons",
    "file": "Aquitániai_Szent_Prosper.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Aquit%C3%A1niai_Szent_Prosper.jpg",
-   "artist": "unknown autor",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "unknown autor"
   },
   "theodoret-of-cyrrhus": {
    "wiki": "commons",
@@ -477,7 +493,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Jutory"
+   "artistRaw": "Jutory"
   },
   "aphrahat": {
    "wiki": "commons",
@@ -489,31 +505,31 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Internet Archive Book Images"
+   "artistRaw": "Internet Archive Book Images"
   },
   "epiphanius-of-salamis": {
    "wiki": "commons",
    "file": "Epiphanius-Kosovo.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Epiphanius-Kosovo.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "john-cassian": {
    "wiki": "commons",
    "file": "John_Cassian.jpeg",
    "page": "https://commons.wikimedia.org/wiki/File:John_Cassian.jpeg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "antony-the-great": {
    "wiki": "commons",
@@ -525,7 +541,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Michael Damaskinos"
+   "artistRaw": "Michael Damaskinos"
   },
   "pachomius": {
    "wiki": "commons",
@@ -536,7 +552,8 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "evagrius-ponticus": {
    "wiki": "commons",
@@ -548,43 +565,43 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Davidfmurphy at English Wikipedia"
+   "artistRaw": "Davidfmurphy at English Wikipedia"
   },
   "macarius-of-egypt": {
    "wiki": "commons",
    "file": "Saint_Macarius_the_Egyptian.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Saint_Macarius_the_Egyptian.jpg",
-   "artist": "Unknown (reedited by uploader)",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown (reedited by uploader)"
   },
   "syncletica-of-alexandria": {
    "wiki": "commons",
    "file": "Righteous_Syncletica_of_Alexandria_(Menologion_of_Basil_II).jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Righteous_Syncletica_of_Alexandria_%28Menologion_of_Basil_II%29.jpg",
-   "artist": "Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators [1] : Pantoleon with Georgios, Michael the Younger, Michael of Blachernae, Symeon, Symeon of Blachernae, Menas, and Nestor ( Online on Vatican site )",
+   "artist": "Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators : Pantoleon with Georgios, Michael the Younger, Michael of Blachernae, Symeon, Symeon of…",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators : Pantoleon with Georgios, Michael the Younger, Michael of Blachernae, Symeon, Symeon of…"
+   "artistRaw": "Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators [1] : Pantoleon with Georgios, Michael the Younger, Michael of Blachernae, Symeon, Symeon of Blachernae, Menas, and Nestor ( Online on Vatican site )"
   },
   "john-climacus": {
    "wiki": "commons",
    "file": "Lestvichnik.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Lestvichnik.jpg",
-   "artist": "Unknown",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown"
   },
   "benedict-of-nursia": {
    "wiki": "commons",
@@ -596,19 +613,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Hans Memling"
+   "artistRaw": "Hans Memling"
   },
   "boethius": {
    "wiki": "commons",
    "file": "Boethius.jpeg",
    "page": "https://commons.wikimedia.org/wiki/File:Boethius.jpeg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "cassiodorus": {
    "wiki": "commons",
@@ -620,19 +637,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Fulda workshop"
+   "artistRaw": "Fulda workshop"
   },
   "pseudo-dionysius-the-areopagite": {
    "wiki": "commons",
    "file": "Plotin.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Plotin.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "gregory-the-great": {
    "wiki": "commons",
@@ -644,7 +661,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "British Library"
+   "artistRaw": "British Library"
   },
   "gregory-of-tours": {
    "wiki": "commons",
@@ -655,7 +672,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
    "nonFree": false,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": ""
   },
   "isidore-of-seville": {
    "wiki": "commons",
@@ -667,19 +685,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Bartolomé Esteban Murillo"
+   "artistRaw": "Bartolomé Esteban Murillo"
   },
   "columbanus": {
    "wiki": "commons",
    "file": "San_Colombano.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:San_Colombano.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "bede-the-venerable": {
    "wiki": "commons",
@@ -691,19 +709,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "http://www.e-codices.unifr.ch/de/bke/0047/1v"
+   "artistRaw": "http://www.e-codices.unifr.ch/de/bke/0047/1v"
   },
   "john-of-damascus": {
    "wiki": "commons",
    "file": "Athonite_Fresco_Icon_of_Saint_John_of_Damascus.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Athonite_Fresco_Icon_of_Saint_John_of_Damascus.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "alcuin-of-york": {
    "wiki": "commons",
@@ -715,7 +733,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Fulda"
+   "artistRaw": "Fulda"
   },
   "rabanus-maurus": {
    "wiki": "commons",
@@ -727,7 +745,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Fulda"
+   "artistRaw": "Fulda"
   },
   "paschasius-radbertus": {
    "wiki": "commons",
@@ -739,7 +757,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Bycro"
+   "artistRaw": "Bycro"
   },
   "gregory-of-narek": {
    "wiki": "commons",
@@ -751,7 +769,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "MarshallBagramyan"
+   "artistRaw": "MarshallBagramyan"
   },
   "peter-damian": {
    "wiki": "commons",
@@ -763,7 +781,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Srnec at English Wikipedia"
+   "artistRaw": "Srnec at English Wikipedia"
   },
   "anselm-of-canterbury": {
    "wiki": "commons",
@@ -775,7 +793,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Anselm_of_Canterbury,_seal.jpg : The original uploader was Srnec at English Wikipedia . derivative work: MLWatts"
+   "artistRaw": "Anselm_of_Canterbury,_seal.jpg : The original uploader was Srnec at English Wikipedia . derivative work: MLWatts"
   },
   "bernard-of-clairvaux": {
    "wiki": "commons",
@@ -786,7 +804,8 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "hugh-of-saint-victor": {
    "wiki": "commons",
@@ -798,7 +817,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Bender235"
+   "artistRaw": "Bender235"
   },
   "richard-of-saint-victor": {
    "wiki": "commons",
@@ -810,7 +829,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Bender235"
+   "artistRaw": "Bender235"
   },
   "peter-lombard": {
    "wiki": "commons",
@@ -822,19 +841,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Peter Lombard"
+   "artistRaw": "Peter Lombard"
   },
   "hildegard-of-bingen": {
    "wiki": "commons",
    "file": "Hildegard_von_Bingen.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Hildegard_von_Bingen.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "aelred-of-rievaulx": {
    "wiki": "commons",
@@ -846,7 +865,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Elredo de Rieval, posiblemente"
+   "artistRaw": "Elredo de Rieval, posiblemente"
   },
   "william-of-saint-thierry": {
    "wiki": "commons",
@@ -858,19 +877,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Havang(nl)"
+   "artistRaw": "Havang(nl)"
   },
   "gratian": {
    "wiki": "commons",
    "file": "Cambrige,_Fitzwilliam_Museum_Ms._262_fol._71v_Decretum_-_Tree_of_Affinity.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Cambrige%2C_Fitzwilliam_Museum_Ms._262_fol._71v_Decretum_-_Tree_of_Affinity.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "francis-of-assisi": {
    "wiki": "commons",
@@ -882,7 +901,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Parzi"
+   "artistRaw": "Parzi"
   },
   "dominic-de-guzman": {
    "wiki": "commons",
@@ -894,7 +913,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Claudio Coello"
+   "artistRaw": "Claudio Coello"
   },
   "clare-of-assisi": {
    "wiki": "commons",
@@ -906,7 +925,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Gunnar Bach Pedersen"
+   "artistRaw": "Gunnar Bach Pedersen"
   },
   "anthony-of-padua": {
    "wiki": "commons",
@@ -918,7 +937,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Francisco de Zurbarán"
+   "artistRaw": "Francisco de Zurbarán"
   },
   "albert-the-great": {
    "wiki": "commons",
@@ -930,7 +949,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Vicente Salvador Gómez"
+   "artistRaw": "Vicente Salvador Gómez"
   },
   "thomas-aquinas": {
    "wiki": "commons",
@@ -942,7 +961,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Carlo Crivelli"
+   "artistRaw": "Carlo Crivelli"
   },
   "bonaventure": {
    "wiki": "commons",
@@ -954,7 +973,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Claude François"
+   "artistRaw": "Claude François"
   },
   "robert-grosseteste": {
    "wiki": "commons",
@@ -966,7 +985,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Unknown 14th century scribe"
+   "artistRaw": "Unknown 14th century scribe"
   },
   "roger-bacon": {
    "wiki": "commons",
@@ -977,7 +996,8 @@
    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
    "nonFree": false,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": ""
   },
   "ramon-llull": {
    "wiki": "commons",
@@ -989,7 +1009,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Francesc Ribalta"
+   "artistRaw": "Francesc Ribalta"
   },
   "duns-scotus": {
    "wiki": "commons",
@@ -1001,7 +1021,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Manuel Pereira de Brito, c. 1700"
+   "artistRaw": "Manuel Pereira de Brito, c. 1700"
   },
   "william-of-ockham": {
    "wiki": "commons",
@@ -1013,7 +1033,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "self-created (Moscarlop)"
+   "artistRaw": "self-created (Moscarlop)"
   },
   "jacobus-de-voragine": {
    "wiki": "commons",
@@ -1025,7 +1045,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Georges Jansoone ( JoJan )"
+   "artistRaw": "Georges Jansoone ( JoJan )"
   },
   "dante-alighieri": {
    "wiki": "commons",
@@ -1037,7 +1057,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Wolfgang Sauber"
+   "artistRaw": "Wolfgang Sauber"
   },
   "mechthild-of-magdeburg": {
    "wiki": "commons",
@@ -1049,7 +1069,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Photo: Andreas Praefcke"
+   "artistRaw": "Photo: Andreas Praefcke"
   },
   "gertrude-the-great": {
    "wiki": "commons",
@@ -1061,7 +1081,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Didier Descouens"
+   "artistRaw": "Didier Descouens"
   },
   "angela-of-foligno": {
    "wiki": "commons",
@@ -1073,7 +1093,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "XVIIth century print"
+   "artistRaw": "XVIIth century print"
   },
   "meister-eckhart": {
    "wiki": "commons",
@@ -1085,7 +1105,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Andrea di Bonaiuto"
+   "artistRaw": "Andrea di Bonaiuto"
   },
   "johannes-tauler": {
    "wiki": "commons",
@@ -1097,31 +1117,31 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Ji-Elle"
+   "artistRaw": "Ji-Elle"
   },
   "henry-suso": {
    "wiki": "commons",
    "file": "Heinrich_Suso_Gemälde_1601.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Heinrich_Suso_Gem%C3%A4lde_1601.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "john-of-ruysbroeck": {
    "wiki": "commons",
    "file": "Jan_Van_Ruysbroeck.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Jan_Van_Ruysbroeck.jpg",
-   "artist": "The original uploader was Polylerus at English Wikipedia .",
+   "artist": "The original uploader was Polylerus at English Wikipedia",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "The original uploader was Polylerus at English Wikipedia"
+   "artistRaw": "The original uploader was Polylerus at English Wikipedia ."
   },
   "catherine-of-siena": {
    "wiki": "commons",
@@ -1133,7 +1153,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Giovanni Battista Tiepolo"
+   "artistRaw": "Giovanni Battista Tiepolo"
   },
   "bridget-of-sweden": {
    "wiki": "commons",
@@ -1145,7 +1165,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Heliga_Birgitta_på_ett_altarskåp_i_Salems_kyrka.jpg : Hermann Rode (late 15th century) derivative work: Bea o"
+   "artistRaw": "Heliga_Birgitta_på_ett_altarskåp_i_Salems_kyrka.jpg : Hermann Rode (late 15th century) derivative work: Bea o"
   },
   "julian-of-norwich": {
    "wiki": "commons",
@@ -1157,7 +1177,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "User:Poliphilo"
+   "artistRaw": "User:Poliphilo"
   },
   "richard-rolle": {
    "wiki": "en",
@@ -1168,7 +1188,8 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "the-cloud-of-unknowing-author": {
    "wiki": "commons",
@@ -1180,7 +1201,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "the \" Cloud author \""
+   "artistRaw": "the \" Cloud author \""
   },
   "thomas-a-kempis": {
    "wiki": "commons",
@@ -1192,7 +1213,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "zeitgenössischer Maler"
+   "artistRaw": "zeitgenössischer Maler"
   },
   "jean-gerson": {
    "wiki": "en",
@@ -1204,7 +1225,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Bernard Picart (Life time: 1673–1733)"
+   "artistRaw": "Bernard Picart (Life time: 1673–1733)"
   },
   "nicholas-of-cusa": {
    "wiki": "commons",
@@ -1216,7 +1237,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Master of the Life of the Virgin"
+   "artistRaw": "Master of the Life of the Virgin"
   },
   "catherine-of-genoa": {
    "wiki": "commons",
@@ -1228,7 +1249,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Denys3200"
+   "artistRaw": "Denys3200"
   },
   "vincent-ferrer": {
    "wiki": "commons",
@@ -1240,7 +1261,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Juan de Juanes"
+   "artistRaw": "Juan de Juanes"
   },
   "bernardino-of-siena": {
    "wiki": "commons",
@@ -1252,7 +1273,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Jacopo Bellini"
+   "artistRaw": "Jacopo Bellini"
   },
   "antoninus-of-florence": {
    "wiki": "commons",
@@ -1264,7 +1285,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Sailko"
+   "artistRaw": "Sailko"
   },
   "denis-the-carthusian": {
    "wiki": "commons",
@@ -1276,7 +1297,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Adriaen Millaert"
+   "artistRaw": "Adriaen Millaert"
   },
   "girolamo-savonarola": {
    "wiki": "commons",
@@ -1288,7 +1309,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Fra Bartolomeo"
+   "artistRaw": "Fra Bartolomeo"
   },
   "thomas-cajetan": {
    "wiki": "commons",
@@ -1300,7 +1321,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Francesco de' Rossi (+ 1563)"
+   "artistRaw": "Francesco de' Rossi (+ 1563)"
   },
   "thomas-more": {
    "wiki": "commons",
@@ -1312,7 +1333,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Hans Holbein the Younger"
+   "artistRaw": "Hans Holbein the Younger"
   },
   "john-fisher": {
    "wiki": "commons",
@@ -1324,7 +1345,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Hans Holbein the Younger"
+   "artistRaw": "Hans Holbein the Younger"
   },
   "erasmus-of-rotterdam": {
    "wiki": "commons",
@@ -1336,19 +1357,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Hans Holbein the Younger"
+   "artistRaw": "Hans Holbein the Younger"
   },
   "ignatius-of-loyola": {
    "wiki": "commons",
    "file": "Ignatius_Loyola.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Ignatius_Loyola.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "francis-xavier": {
    "wiki": "commons",
@@ -1359,19 +1380,20 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "peter-faber": {
    "wiki": "commons",
    "file": "Pierre_Favre(1).jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Pierre_Favre%281%29.jpg",
-   "artist": "The original uploader was Bwag at German Wikipedia .",
+   "artist": "The original uploader was Bwag at German Wikipedia",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "The original uploader was Bwag at German Wikipedia"
+   "artistRaw": "The original uploader was Bwag at German Wikipedia ."
   },
   "francisco-de-vitoria": {
    "wiki": "commons",
@@ -1383,7 +1405,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Raúl Hernández González Seguir Francisco de Vitoria 3 Detalles de la fachada de la iglesia del convento de San Esteban, los Dominicos, en Salamanca. Estatua de Francisco de Vitoria"
+   "artistRaw": "Raúl Hernández González Seguir Francisco de Vitoria 3 Detalles de la fachada de la iglesia del convento de San Esteban, los Dominicos, en Salamanca. Estatua de Francisco de Vitoria"
   },
   "domingo-de-soto": {
    "wiki": "commons",
@@ -1395,7 +1417,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Vicente Alcober Bosch, Valencia (España)"
+   "artistRaw": "Vicente Alcober Bosch, Valencia (España)"
   },
   "melchior-cano": {
    "wiki": "commons",
@@ -1407,7 +1429,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Boix, Esteban (1774-ca. 1828) por dibujo de José Camarón Bonanat"
+   "artistRaw": "Boix, Esteban (1774-ca. 1828) por dibujo de José Camarón Bonanat"
   },
   "john-of-avila": {
    "wiki": "commons",
@@ -1419,7 +1441,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Workshop of El Greco"
+   "artistRaw": "Workshop of El Greco"
   },
   "peter-of-alcantara": {
    "wiki": "commons",
@@ -1431,7 +1453,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Pedro de Mena"
+   "artistRaw": "Pedro de Mena"
   },
   "teresa-of-avila": {
    "wiki": "commons",
@@ -1443,19 +1465,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Eduardo Balaca"
+   "artistRaw": "Eduardo Balaca"
   },
   "john-of-the-cross": {
    "wiki": "commons",
    "file": "Zurbarán_(atribuido)-John_of_the_Cross-1656.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Zurbar%C3%A1n_%28atribuido%29-John_of_the_Cross-1656.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "louis-of-granada": {
    "wiki": "commons",
@@ -1467,19 +1489,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Fondo Antiguo de la Biblioteca de la Universidad de Sevilla from Sevilla, España"
+   "artistRaw": "Fondo Antiguo de la Biblioteca de la Universidad de Sevilla from Sevilla, España"
   },
   "peter-canisius": {
    "wiki": "commons",
    "file": "Saint_Petrus_Canisius.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Saint_Petrus_Canisius.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "charles-borromeo": {
    "wiki": "commons",
@@ -1491,7 +1513,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Giovanni Ambrogio Figino"
+   "artistRaw": "Giovanni Ambrogio Figino"
   },
   "philip-neri": {
    "wiki": "commons",
@@ -1503,19 +1525,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Sebastiano Conca"
+   "artistRaw": "Sebastiano Conca"
   },
   "robert-bellarmine": {
    "wiki": "commons",
    "file": "Portret_van_kardinaal_Robertus_Bellarminus,_onbekend,_schilderij,_Museum_Plantin-Moretus_(Antwerpen)_-_MPM_V_IV_110_(cropped).jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Portret_van_kardinaal_Robertus_Bellarminus%2C_onbekend%2C_schilderij%2C_Museum_Plantin-Moretus_%28Antwerpen%29_-_MPM_V_IV_110_%28cropped%29.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "CC0",
    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "francisco-suarez": {
    "wiki": "commons",
@@ -1527,7 +1549,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Harris & Ewing Collection"
+   "artistRaw": "Harris & Ewing Collection"
   },
   "luis-de-molina": {
    "wiki": "commons",
@@ -1539,7 +1561,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Molina, Luis de"
+   "artistRaw": "Molina, Luis de"
   },
   "domingo-banez": {
    "wiki": "commons",
@@ -1551,19 +1573,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Fondazione Mansutti"
+   "artistRaw": "Fondazione Mansutti"
   },
   "cesare-baronius": {
    "wiki": "commons",
    "file": "Portret_van_kardinaal_Baronius,_onbekend,_schilderij,_Museum_Plantin-Moretus_(Antwerpen)_-_MPM_V_IV_111_(cropped).jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Portret_van_kardinaal_Baronius%2C_onbekend%2C_schilderij%2C_Museum_Plantin-Moretus_%28Antwerpen%29_-_MPM_V_IV_111_%28cropped%29.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "CC0",
    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "lawrence-of-brindisi": {
    "wiki": "commons",
@@ -1574,7 +1596,8 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "francis-de-sales": {
    "wiki": "commons",
@@ -1586,55 +1609,55 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Benjamin Gavaudo"
+   "artistRaw": "Benjamin Gavaudo"
   },
   "jane-frances-de-chantal": {
    "wiki": "commons",
    "file": "Sainte_Jeanne-Françoise_Frémyot_de_Chantal.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Sainte_Jeanne-Fran%C3%A7oise_Fr%C3%A9myot_de_Chantal.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "lorenzo-scupoli": {
    "wiki": "commons",
    "file": "Laurentius_Scupulus.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Laurentius_Scupulus.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "edmund-campion": {
    "wiki": "commons",
    "file": "Edmundus_Campion.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Edmundus_Campion.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "robert-southwell": {
    "wiki": "commons",
    "file": "Robert_Southwell.JPG",
    "page": "https://commons.wikimedia.org/wiki/File:Robert_Southwell.JPG",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "pierre-de-berulle": {
    "wiki": "commons",
@@ -1646,7 +1669,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Philippe de Champaigne"
+   "artistRaw": "Philippe de Champaigne"
   },
   "vincent-de-paul": {
    "wiki": "commons",
@@ -1658,7 +1681,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Simon François de Tours (1606-1671)"
+   "artistRaw": "Simon François de Tours (1606-1671)"
   },
   "john-eudes": {
    "wiki": "commons",
@@ -1670,31 +1693,31 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Unidentified painter"
+   "artistRaw": "Unidentified painter"
   },
   "jean-jacques-olier": {
    "wiki": "commons",
    "file": "J.J._Olier.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:J.J._Olier.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "blaise-pascal": {
    "wiki": "commons",
    "file": "Blaise_Pascal_Versailles,_circa_1690.JPG",
    "page": "https://commons.wikimedia.org/wiki/File:Blaise_Pascal_Versailles%2C_circa_1690.JPG",
-   "artist": "unknown; a copy of the painting of François II Quesnel, which was made for Gérard Edelinck en 1691 [réf. nécessaire] .",
+   "artist": "Unknown; a copy of the painting of François II Quesnel, which was made for Gérard Edelinck en 1691",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Unknown; a copy of the painting of François II Quesnel, which was made for Gérard Edelinck en 1691"
+   "artistRaw": "unknown; a copy of the painting of François II Quesnel, which was made for Gérard Edelinck en 1691 [réf. nécessaire] ."
   },
   "jacques-benigne-bossuet": {
    "wiki": "commons",
@@ -1706,7 +1729,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Hyacinthe Rigaud"
+   "artistRaw": "Hyacinthe Rigaud"
   },
   "francois-fenelon": {
    "wiki": "commons",
@@ -1718,31 +1741,31 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Joseph Vivien"
+   "artistRaw": "Joseph Vivien"
   },
   "brother-lawrence": {
    "wiki": "commons",
    "file": "Brother_Lawrence_in_the_kitchen.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Brother_Lawrence_in_the_kitchen.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "margaret-mary-alacoque": {
    "wiki": "commons",
    "file": "Marguerite-Marie_Alacoque.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Marguerite-Marie_Alacoque.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "louis-de-montfort": {
    "wiki": "commons",
@@ -1754,19 +1777,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Неизвестный автор"
+   "artistRaw": "Неизвестный автор"
   },
   "john-of-saint-thomas": {
    "wiki": "commons",
    "file": "John_of_St._Thomas.webp",
    "page": "https://commons.wikimedia.org/wiki/File:John_of_St._Thomas.webp",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "mary-of-agreda": {
    "wiki": "commons",
@@ -1778,31 +1801,31 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Unidentified painter"
+   "artistRaw": "Unidentified painter"
   },
   "alphonsus-liguori": {
    "wiki": "commons",
    "file": "Liguori.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Liguori.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "CC BY-SA 3.0",
    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "leonard-of-port-maurice": {
    "wiki": "commons",
    "file": "S_Leonardo.JPG",
    "page": "https://commons.wikimedia.org/wiki/File:S_Leonardo.JPG",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "paul-of-the-cross": {
    "wiki": "commons",
@@ -1814,7 +1837,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Plet philippe"
+   "artistRaw": "Plet philippe"
   },
   "prospero-lambertini": {
    "wiki": "commons",
@@ -1826,19 +1849,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Pierre Subleyras"
+   "artistRaw": "Pierre Subleyras"
   },
   "richard-challoner": {
    "wiki": "commons",
    "file": "Richard_Challoner_painting.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Richard_Challoner_painting.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "jean-mabillon": {
    "wiki": "commons",
@@ -1850,7 +1873,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "John Pass"
+   "artistRaw": "John Pass"
   },
   "joseph-de-maistre": {
    "wiki": "commons",
@@ -1862,7 +1885,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Carl Christian Vogel von Vogelstein"
+   "artistRaw": "Carl Christian Vogel von Vogelstein"
   },
   "francois-rene-de-chateaubriand": {
    "wiki": "commons",
@@ -1874,7 +1897,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Anne-Louis Girodet"
+   "artistRaw": "Anne-Louis Girodet"
   },
   "johann-adam-mohler": {
    "wiki": "commons",
@@ -1886,7 +1909,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Eduard Istas"
+   "artistRaw": "Eduard Istas"
   },
   "juan-donoso-cortes": {
    "wiki": "commons",
@@ -1898,7 +1921,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Federico de Madrazo y Kuntz"
+   "artistRaw": "Federico de Madrazo y Kuntz"
   },
   "jaime-balmes": {
    "wiki": "commons",
@@ -1910,7 +1933,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Luis Brochetón y Muguruza"
+   "artistRaw": "Luis Brochetón y Muguruza"
   },
   "antonio-rosmini": {
    "wiki": "commons",
@@ -1922,7 +1945,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Francesco Hayez"
+   "artistRaw": "Francesco Hayez"
   },
   "alessandro-manzoni": {
    "wiki": "commons",
@@ -1934,7 +1957,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Francesco Hayez"
+   "artistRaw": "Francesco Hayez"
   },
   "john-henry-newman": {
    "wiki": "commons",
@@ -1946,7 +1969,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Herbert Rose Barraud"
+   "artistRaw": "Herbert Rose Barraud"
   },
   "henry-edward-manning": {
    "wiki": "commons",
@@ -1958,7 +1981,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Alexander Bassano"
+   "artistRaw": "Alexander Bassano"
   },
   "frederick-william-faber": {
    "wiki": "commons",
@@ -1970,7 +1993,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Joseph Brown, engraver"
+   "artistRaw": "Joseph Brown, engraver"
   },
   "nicholas-wiseman": {
    "wiki": "commons",
@@ -1982,7 +2005,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Herbert Watkins (died 1916)"
+   "artistRaw": "Herbert Watkins (died 1916)"
   },
   "orestes-brownson": {
    "wiki": "commons",
@@ -1994,31 +2017,31 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "George Peter Alexander Healy"
+   "artistRaw": "George Peter Alexander Healy"
   },
   "isaac-hecker": {
    "wiki": "commons",
    "file": "Father_Isaac_Hecker.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Father_Isaac_Hecker.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "james-gibbons": {
    "wiki": "commons",
    "file": "GibbonsPhotoStanding.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:GibbonsPhotoStanding.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "matthias-joseph-scheeben": {
    "wiki": "commons",
@@ -2030,7 +2053,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Tohma ( talk ) photo"
+   "artistRaw": "Tohma ( talk ) photo"
   },
   "prosper-gueranger": {
    "wiki": "commons",
@@ -2042,7 +2065,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Claude Ferdinand Gaillard"
+   "artistRaw": "Claude Ferdinand Gaillard"
   },
   "jean-marie-vianney": {
    "wiki": "commons",
@@ -2054,7 +2077,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "BarãoPandora"
+   "artistRaw": "BarãoPandora"
   },
   "anne-catherine-emmerich": {
    "wiki": "commons",
@@ -2066,7 +2089,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Gabriel von Max"
+   "artistRaw": "Gabriel von Max"
   },
   "frederic-ozanam": {
    "wiki": "commons",
@@ -2078,7 +2101,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Engraving by Antoine Maurin known as \"Maurin the Elder\" (1793-1860) from a drawing by Louis Janmot (1814-1892)"
+   "artistRaw": "Engraving by Antoine Maurin known as \"Maurin the Elder\" (1793-1860) from a drawing by Louis Janmot (1814-1892)"
   },
   "henri-dominique-lacordaire": {
    "wiki": "commons",
@@ -2090,7 +2113,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Théodore Chassériau"
+   "artistRaw": "Théodore Chassériau"
   },
   "louis-veuillot": {
    "wiki": "commons",
@@ -2102,7 +2125,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Nadar (Life time: (1820 – 1910))"
+   "artistRaw": "Nadar (Life time: (1820 – 1910))"
   },
   "therese-of-lisieux": {
    "wiki": "commons",
@@ -2114,7 +2137,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Céline Martin"
+   "artistRaw": "Céline Martin"
   },
   "john-bosco": {
    "wiki": "commons",
@@ -2126,19 +2149,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Attributed to Carlo Felice Deasti"
+   "artistRaw": "Attributed to Carlo Felice Deasti"
   },
   "gerard-manley-hopkins": {
    "wiki": "commons",
    "file": "GerardManleyHopkins.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:GerardManleyHopkins.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "francis-thompson": {
    "wiki": "commons",
@@ -2150,7 +2173,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Published by Herder, MO, USA"
+   "artistRaw": "Published by Herder, MO, USA"
   },
   "coventry-patmore": {
    "wiki": "commons",
@@ -2162,7 +2185,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "John Singer Sargent"
+   "artistRaw": "John Singer Sargent"
   },
   "alice-meynell": {
    "wiki": "commons",
@@ -2174,7 +2197,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Published by Herder, MO, USA"
+   "artistRaw": "Published by Herder, MO, USA"
   },
   "leon-bloy": {
    "wiki": "commons",
@@ -2185,7 +2208,8 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "joris-karl-huysmans": {
    "wiki": "commons",
@@ -2197,31 +2221,31 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Frédéric Boissonnas / André Taponier"
+   "artistRaw": "Frédéric Boissonnas / André Taponier"
   },
   "ludwig-von-pastor": {
    "wiki": "commons",
    "file": "Ludwig_von_Pastor.JPG",
    "page": "https://commons.wikimedia.org/wiki/File:Ludwig_von_Pastor.JPG",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "columba-marmion": {
    "wiki": "commons",
    "file": "Columba_Marmion_(1858-1923).jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Columba_Marmion_%281858-1923%29.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "elizabeth-of-the-trinity": {
    "wiki": "commons",
@@ -2233,7 +2257,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Willuconquer"
+   "artistRaw": "Willuconquer"
   },
   "faustina-kowalska": {
    "wiki": "commons",
@@ -2245,31 +2269,31 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Stanisław Sztama"
+   "artistRaw": "Stanisław Sztama"
   },
   "maximilian-kolbe": {
    "wiki": "commons",
    "file": "Fr.Maximilian_Kolbe_in_1936.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Fr.Maximilian_Kolbe_in_1936.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "edith-stein": {
    "wiki": "commons",
    "file": "Edith_Stein_(ca._1938-1939).jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Edith_Stein_%28ca._1938-1939%29.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "pio-of-pietrelcina": {
    "wiki": "commons",
@@ -2281,7 +2305,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "File:Padre Pio portrait.jpg : The original uploader was Manfredonia at Italian Wikipedia . derivative work: MisterNox"
+   "artistRaw": "File:Padre Pio portrait.jpg : The original uploader was Manfredonia at Italian Wikipedia . derivative work: MisterNox"
   },
   "josemaria-escriva": {
    "wiki": "commons",
@@ -2293,7 +2317,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Oficina de Información de la Prelatura del Opus Dei en España"
+   "artistRaw": "Oficina de Información de la Prelatura del Opus Dei en España"
   },
   "g-k-chesterton": {
    "wiki": "commons",
@@ -2305,7 +2329,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Ernest Herbert Mills"
+   "artistRaw": "Ernest Herbert Mills"
   },
   "hilaire-belloc": {
    "wiki": "commons",
@@ -2317,7 +2341,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Keystone/Hulton Archive"
+   "artistRaw": "Keystone/Hulton Archive"
   },
   "robert-hugh-benson": {
    "wiki": "commons",
@@ -2329,7 +2353,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Photograph by G. Jerrard"
+   "artistRaw": "Photograph by G. Jerrard"
   },
   "maurice-baring": {
    "wiki": "commons",
@@ -2341,7 +2365,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "photographer: Bertram Park"
+   "artistRaw": "photographer: Bertram Park"
   },
   "ronald-knox": {
    "wiki": "en",
@@ -2352,7 +2376,8 @@
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": ""
   },
   "christopher-dawson": {
    "wiki": "commons",
@@ -2364,7 +2389,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Levan Ramishvili"
+   "artistRaw": "Levan Ramishvili"
   },
   "j-r-r-tolkien": {
    "wiki": "commons",
@@ -2376,7 +2401,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Unknown photo studio commissioned by Tolkien's students 1925/6 (private communication from Catherine McIlwaine, Tolkien Archivist, Bodleian Library)"
+   "artistRaw": "Unknown photo studio commissioned by Tolkien's students 1925/6 (private communication from Catherine McIlwaine, Tolkien Archivist, Bodleian Library)"
   },
   "evelyn-waugh": {
    "wiki": "commons",
@@ -2388,7 +2413,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Carl Van Vechten (1880–1964)"
+   "artistRaw": "Carl Van Vechten (1880–1964)"
   },
   "graham-greene": {
    "wiki": "commons",
@@ -2400,7 +2425,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "FOTO:Fortepan — ID 84697 : Adományozó/Donor: Magyar Hírek folyóirat. archive copy at the Wayback Machine"
+   "artistRaw": "FOTO:Fortepan — ID 84697 : Adományozó/Donor: Magyar Hírek folyóirat. archive copy at the Wayback Machine"
   },
   "muriel-spark": {
    "wiki": "en",
@@ -2411,7 +2436,8 @@
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": ""
   },
   "flannery-o-connor": {
    "wiki": "commons",
@@ -2423,7 +2449,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Cmacauley"
+   "artistRaw": "Cmacauley"
   },
   "walker-percy": {
    "wiki": "commons",
@@ -2435,7 +2461,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Aspen Institute Pictures"
+   "artistRaw": "Aspen Institute Pictures"
   },
   "j-f-powers": {
    "wiki": "en",
@@ -2446,7 +2472,8 @@
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": ""
   },
   "sigrid-undset": {
    "wiki": "commons",
@@ -2458,7 +2485,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Aage Remfeldt / Aage Rasmussen (1889-1983)"
+   "artistRaw": "Aage Remfeldt / Aage Rasmussen (1889-1983)"
   },
   "francois-mauriac": {
    "wiki": "commons",
@@ -2470,19 +2497,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Agence de presse Meurisse"
+   "artistRaw": "Agence de presse Meurisse"
   },
   "georges-bernanos": {
    "wiki": "commons",
    "file": "Georges-Bernanos.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Georges-Bernanos.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "paul-claudel": {
    "wiki": "commons",
@@ -2494,7 +2521,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Underwood & Underwood"
+   "artistRaw": "Underwood & Underwood"
   },
   "charles-peguy": {
    "wiki": "commons",
@@ -2506,43 +2533,43 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Eugène Pirou"
+   "artistRaw": "Eugène Pirou"
   },
   "gertrud-von-le-fort": {
    "wiki": "commons",
    "file": "Gertrud_v_Le_Fort_c1935.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Gertrud_v_Le_Fort_c1935.jpg",
-   "artist": "Anonymous Unknown author , no author disclosure",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author , no author disclosure"
   },
   "shusaku-endo": {
    "wiki": "commons",
    "file": "Shusaku-Endo-1.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Shusaku-Endo-1.jpg",
-   "artist": "Unknown photographer",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown photographer"
   },
   "henryk-sienkiewicz": {
    "wiki": "commons",
    "file": "Henryk_Sienkiewicz_ca_1885_(45871548)_(cropped).jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Henryk_Sienkiewicz_ca_1885_%2845871548%29_%28cropped%29.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "lew-wallace": {
    "wiki": "commons",
@@ -2554,7 +2581,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Materialscientist"
+   "artistRaw": "Materialscientist"
   },
   "willa-cather": {
    "wiki": "commons",
@@ -2566,7 +2593,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Carl Van Vechten"
+   "artistRaw": "Carl Van Vechten"
   },
   "dorothy-day": {
    "wiki": "commons",
@@ -2578,19 +2605,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Vivian Cherry"
+   "artistRaw": "Vivian Cherry"
   },
   "peter-maurin": {
    "wiki": "commons",
    "file": "Peter_Maurin.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Peter_Maurin.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "thomas-merton": {
    "wiki": "en",
@@ -2601,7 +2628,8 @@
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": ""
   },
   "fulton-j-sheen": {
    "wiki": "commons",
@@ -2613,42 +2641,43 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Fred Palumbo , World Telegram staff photographer"
+   "artistRaw": "Fred Palumbo , World Telegram staff photographer"
   },
   "maisie-ward": {
    "wiki": "en",
    "file": "Maisie_Ward.png",
    "page": "https://en.wikipedia.org/wiki/File:Maisie_Ward.png",
-   "artist": "Unknown",
+   "artist": "Author unknown",
    "license": "Fair use",
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": "Unknown"
   },
   "jacques-maritain": {
    "wiki": "commons",
    "file": "Maritain_Jacques.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Maritain_Jacques.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "raissa-maritain": {
    "wiki": "commons",
    "file": "Raissa_Maritain_1905_portrait_(3x4_cropped).jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Raissa_Maritain_1905_portrait_%283x4_cropped%29.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "etienne-gilson": {
    "wiki": "commons",
@@ -2660,7 +2689,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "IsidoreHendrix"
+   "artistRaw": "IsidoreHendrix"
   },
   "reginald-garrigou-lagrange": {
    "wiki": "commons",
@@ -2672,19 +2701,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Lex.mercurio"
+   "artistRaw": "Lex.mercurio"
   },
   "antonin-dalmace-sertillanges": {
    "wiki": "commons",
    "file": "Antonin-Dalmace_Sertillanges.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Antonin-Dalmace_Sertillanges.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "josef-pieper": {
    "wiki": "commons",
@@ -2696,7 +2725,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Muesse"
+   "artistRaw": "Muesse"
   },
   "dietrich-von-hildebrand": {
    "wiki": "commons",
@@ -2708,30 +2737,31 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Max Fenichel"
+   "artistRaw": "Max Fenichel"
   },
   "romano-guardini": {
    "wiki": "commons",
    "file": "Romano_Guardini_um_1920.JPG",
    "page": "https://commons.wikimedia.org/wiki/File:Romano_Guardini_um_1920.JPG",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "henri-de-lubac": {
    "wiki": "en",
    "file": "Henri_de_Lubac,_S.J.jpg",
    "page": "https://en.wikipedia.org/wiki/File:Henri_de_Lubac%2C_S.J.jpg",
-   "artist": "Unknown",
+   "artist": "Author unknown",
    "license": "Fair use",
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": "Unknown"
   },
   "yves-congar": {
    "wiki": "commons",
@@ -2743,43 +2773,43 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Collona , elements by SajoR"
+   "artistRaw": "Collona , elements by SajoR"
   },
   "jean-danielou": {
    "wiki": "commons",
    "file": "Giorgio_La_Pira_and_Jean_Daniélou.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Giorgio_La_Pira_and_Jean_Dani%C3%A9lou.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "hans-urs-von-balthasar": {
    "wiki": "commons",
    "file": "HUvB-microphone.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:HUvB-microphone.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "adrienne-von-speyr": {
    "wiki": "commons",
    "file": "Adrienne_von_Speyr_older.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Adrienne_von_Speyr_older.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "karl-rahner": {
    "wiki": "commons",
@@ -2791,7 +2821,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Letizia Mancino Cremer (foto / upload Andy Nestl )"
+   "artistRaw": "Letizia Mancino Cremer (foto / upload Andy Nestl )"
   },
   "bernard-lonergan": {
    "wiki": "commons",
@@ -2803,7 +2833,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "BCLonergan"
+   "artistRaw": "BCLonergan"
   },
   "charles-journet": {
    "wiki": "commons",
@@ -2815,7 +2845,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Fondation Armand Niquille"
+   "artistRaw": "Fondation Armand Niquille"
   },
   "ronald-rolheiser": {
    "wiki": "commons",
@@ -2827,7 +2857,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "GreenIsBest10"
+   "artistRaw": "GreenIsBest10"
   },
   "henri-nouwen": {
    "wiki": "commons",
@@ -2839,19 +2869,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Frank Hamilton"
+   "artistRaw": "Frank Hamilton"
   },
   "frank-duff": {
    "wiki": "commons",
    "file": "Frank_Duff,_1934_(cropped).jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Frank_Duff%2C_1934_%28cropped%29.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "alfred-delp": {
    "wiki": "commons",
@@ -2863,19 +2893,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Graf Foto"
+   "artistRaw": "Graf Foto"
   },
   "titus-brandsma": {
    "wiki": "commons",
    "file": "TitusBrandsma.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:TitusBrandsma.jpg",
-   "artist": "Unknown photographer",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown photographer"
   },
   "jerome-lejeune": {
    "wiki": "en",
@@ -2886,19 +2916,20 @@
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": "Laurent Maous"
   },
   "russell-kirk": {
    "wiki": "commons",
    "file": "Kirk_1962.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Kirk_1962.jpg",
-   "artist": "Unknown photographer Unknown photographer",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown photographer Unknown photographer"
   },
   "marshall-mcluhan": {
    "wiki": "commons",
@@ -2910,7 +2941,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Josephine Smith"
+   "artistRaw": "Josephine Smith"
   },
   "alasdair-macintyre": {
    "wiki": "commons",
@@ -2922,7 +2953,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Sean O'Connor"
+   "artistRaw": "Sean O'Connor"
   },
   "charles-taylor": {
    "wiki": "commons",
@@ -2934,7 +2965,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Lëa-Kim Châteauneuf"
+   "artistRaw": "Lëa-Kim Châteauneuf"
   },
   "rene-girard": {
    "wiki": "commons",
@@ -2946,7 +2977,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Vicq"
+   "artistRaw": "Vicq"
   },
   "gabriel-marcel": {
    "wiki": "en",
@@ -2957,7 +2988,8 @@
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": ""
   },
   "elizabeth-anscombe": {
    "wiki": "en",
@@ -2968,7 +3000,8 @@
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": "Mary Gustafson"
   },
   "peter-geach": {
    "wiki": "en",
@@ -2979,19 +3012,20 @@
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": "Steve Pyke (c)"
   },
   "john-finnis": {
    "wiki": "commons",
    "file": "John_Finnis_on_After_Dark_26th_June_1987_(3x4_cropped).jpg",
    "page": "https://commons.wikimedia.org/wiki/File:John_Finnis_on_After_Dark_26th_June_1987_%283x4_cropped%29.jpg",
-   "artist": "(c)1987 Open Media Ltd. Uploaded to Wikipedia by AnOpenMedium .",
+   "artist": "(c)1987 Open Media Ltd. Uploaded to Wikipedia by AnOpenMedium",
    "license": "GFDL",
    "licenseUrl": "http://www.gnu.org/copyleft/fdl.html",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "(c)1987 Open Media Ltd. Uploaded to Wikipedia by AnOpenMedium"
+   "artistRaw": "(c)1987 Open Media Ltd. Uploaded to Wikipedia by AnOpenMedium ."
   },
   "robert-p-george": {
    "wiki": "commons",
@@ -3003,7 +3037,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Gage Skidmore"
+   "artistRaw": "Gage Skidmore"
   },
   "edward-feser": {
    "wiki": "commons",
@@ -3015,7 +3049,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Edward Feser"
+   "artistRaw": "Edward Feser"
   },
   "peter-kreeft": {
    "wiki": "commons",
@@ -3027,7 +3061,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "uploaded by Marax"
+   "artistRaw": "uploaded by Marax"
   },
   "servais-pinckaers": {
    "wiki": "commons",
@@ -3039,7 +3073,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "University of Fribourg"
+   "artistRaw": "University of Fribourg"
   },
   "thomas-joseph-white": {
    "wiki": "commons",
@@ -3051,7 +3085,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Segrettore"
+   "artistRaw": "Segrettore"
   },
   "scott-hahn": {
    "wiki": "commons",
@@ -3063,7 +3097,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Patrick Sweeney"
+   "artistRaw": "Patrick Sweeney"
   },
   "jimmy-akin": {
    "wiki": "commons",
@@ -3075,7 +3109,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "AndrewReder"
+   "artistRaw": "AndrewReder"
   },
   "trent-horn": {
    "wiki": "commons",
@@ -3087,7 +3121,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "ReasonTV"
+   "artistRaw": "ReasonTV"
   },
   "robert-barron": {
    "wiki": "commons",
@@ -3099,7 +3133,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "ARC Forum"
+   "artistRaw": "ARC Forum"
   },
   "peter-kwasniewski": {
    "wiki": "commons",
@@ -3111,7 +3145,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Julian Kwasniewski"
+   "artistRaw": "Julian Kwasniewski"
   },
   "george-weigel": {
    "wiki": "commons",
@@ -3123,7 +3157,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "slowking"
+   "artistRaw": "slowking"
   },
   "joseph-pearce": {
    "wiki": "commons",
@@ -3135,7 +3169,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "PeterMottola"
+   "artistRaw": "PeterMottola"
   },
   "dana-gioia": {
    "wiki": "commons",
@@ -3147,7 +3181,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Dana Gioia by Star Black"
+   "artistRaw": "Dana Gioia by Star Black"
   },
   "marilynne-robinson": {
    "wiki": "commons",
@@ -3159,7 +3193,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Christian Scott Heinen Bell"
+   "artistRaw": "Christian Scott Heinen Bell"
   },
   "benedict-groeschel": {
    "wiki": "commons",
@@ -3171,7 +3205,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Ambrose Little"
+   "artistRaw": "Ambrose Little"
   },
   "jacques-barzun": {
    "wiki": "commons",
@@ -3183,7 +3217,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Eric Robert Morse"
+   "artistRaw": "Eric Robert Morse"
   },
   "warren-h-carroll": {
    "wiki": "commons",
@@ -3195,7 +3229,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Christendom College"
+   "artistRaw": "Christendom College"
   },
   "eamon-duffy": {
    "wiki": "commons",
@@ -3207,7 +3241,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Fr James Bradley from Southampton, UK"
+   "artistRaw": "Fr James Bradley from Southampton, UK"
   },
   "thomas-e-woods": {
    "wiki": "commons",
@@ -3219,7 +3253,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Gage Skidmore from Surprise, AZ, United States of America"
+   "artistRaw": "Gage Skidmore from Surprise, AZ, United States of America"
   },
   "mother-teresa-of-calcutta": {
    "wiki": "commons",
@@ -3231,7 +3265,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Kingkongphoto & www.celebrity-photos.com from Laurel Maryland, USA"
+   "artistRaw": "Kingkongphoto & www.celebrity-photos.com from Laurel Maryland, USA"
   },
   "john-paul-ii": {
    "wiki": "commons",
@@ -3243,7 +3277,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Gregorini Demetrio"
+   "artistRaw": "Gregorini Demetrio"
   },
   "joseph-ratzinger": {
    "wiki": "commons",
@@ -3255,7 +3289,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Kancelaria Prezydenta RP"
+   "artistRaw": "Kancelaria Prezydenta RP"
   },
   "pope-francis": {
    "wiki": "commons",
@@ -3266,7 +3300,8 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": "Korea.net / Korean Culture and Information Service (Jeon Han)"
   },
   "pope-leo-xiv": {
    "wiki": "commons",
@@ -3278,7 +3313,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Edgar Beltrán , The Pillar"
+   "artistRaw": "Edgar Beltrán , The Pillar"
   },
   "pope-leo-xiii": {
    "wiki": "commons",
@@ -3290,7 +3325,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Braun et Compagnie"
+   "artistRaw": "Braun et Compagnie"
   },
   "pope-pius-ix": {
    "wiki": "commons",
@@ -3301,7 +3336,8 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "pope-pius-x": {
    "wiki": "commons",
@@ -3312,7 +3348,8 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "pope-pius-xi": {
    "wiki": "commons",
@@ -3324,7 +3361,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Nicola Perscheid"
+   "artistRaw": "Nicola Perscheid"
   },
   "pope-pius-xii": {
    "wiki": "commons",
@@ -3336,7 +3373,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Michael Pitcairn"
+   "artistRaw": "Michael Pitcairn"
   },
   "pope-john-xxiii": {
    "wiki": "commons",
@@ -3348,7 +3385,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "De Agostini Editore"
+   "artistRaw": "De Agostini Editore"
   },
   "pope-paul-vi": {
    "wiki": "commons",
@@ -3360,7 +3397,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Fotografia Felici"
+   "artistRaw": "Fotografia Felici"
   },
   "gregory-xvi": {
    "wiki": "commons",
@@ -3372,7 +3409,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Paul Delaroche"
+   "artistRaw": "Paul Delaroche"
   },
   "francis-arinze": {
    "wiki": "commons",
@@ -3384,7 +3421,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "At commons.cathopedia.org, User Name: Padre Mimmo Spatuzzi"
+   "artistRaw": "At commons.cathopedia.org, User Name: Padre Mimmo Spatuzzi"
   },
   "robert-sarah": {
    "wiki": "commons",
@@ -3396,7 +3433,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "François-Régis Salefran"
+   "artistRaw": "François-Régis Salefran"
   },
   "christoph-schonborn": {
    "wiki": "commons",
@@ -3408,7 +3445,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Mureccles"
+   "artistRaw": "Mureccles"
   },
   "avery-dulles": {
    "wiki": "en",
@@ -3419,7 +3456,8 @@
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": ""
   },
   "john-o-connor": {
    "wiki": "en",
@@ -3430,30 +3468,32 @@
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": "Archives of the Archdiocese of New York"
   },
   "francis-xavier-nguyen-van-thuan": {
    "wiki": "en",
    "file": "Nguyễn_Văn_Thuận.jpg",
    "page": "https://en.wikipedia.org/wiki/File:Nguy%E1%BB%85n_V%C4%83n_Thu%E1%BA%ADn.jpg",
-   "artist": "unknown author",
+   "artist": "Author unknown",
    "license": "Fair use",
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": "unknown author"
   },
   "jozsef-mindszenty": {
    "wiki": "commons",
    "file": "József_Mindszenty.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:J%C3%B3zsef_Mindszenty.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "leo-j-trese": {
    "wiki": "commons",
@@ -3465,19 +3505,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Clementeste"
+   "artistRaw": "Clementeste"
   },
   "mary-ann-glendon": {
    "wiki": "commons",
    "file": "Mary_Ann_Glendon_ambassador.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Mary_Ann_Glendon_ambassador.jpg",
-   "artist": "United States Department of State. Photographer not specified.",
+   "artist": "United States Department of State",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "United States Department of State"
+   "artistRaw": "United States Department of State. Photographer not specified."
   },
   "robert-spaemann": {
    "wiki": "commons",
@@ -3489,19 +3529,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Demo für Alle"
+   "artistRaw": "Demo für Alle"
   },
   "remi-brague": {
    "wiki": "commons",
    "file": "Paris_-_Rémi_Brague_-_1.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Paris_-_R%C3%A9mi_Brague_-_1.jpg",
-   "artist": "This illustration was made by Peter Potrowl . Please credit this with : © Peter Potrowl in the immediate vicinity of the image. A link to my website sitemai.eu would be much appreciated but isn't mandatory. An email to Peter Potrowl would be appreciated too. Do not copy this image illegally by ignoring the terms of the license below, as it is not in the public domain. If you would like special permission to use, license, or purchase the image please contact me Peter Potrowl to negotiate terms. More free pictures in my website . Donations are accepted here and here .",
+   "artist": "This illustration was made by Peter Potrowl . Please credit this with : © Peter Potrowl in the immediate vicinity of the image. A link to my website sitemai.eu would be much appreciated but isn't…",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "This illustration was made by Peter Potrowl . Please credit this with : © Peter Potrowl in the immediate vicinity of the image. A link to my website sitemai.eu would be much appreciated but isn't…"
+   "artistRaw": "This illustration was made by Peter Potrowl . Please credit this with : © Peter Potrowl in the immediate vicinity of the image. A link to my website sitemai.eu would be much appreciated but isn't mandatory. An email to Peter Potrowl would be appreciated too. Do not copy this image illegally by ignoring the terms of the license below, as it is not in the public domain. If you would like special permission to use, license, or purchase the image please contact me Peter Potrowl to negotiate terms. More free pictures in my website . Donations are accepted here and here ."
   },
   "pierre-teilhard-de-chardin": {
    "wiki": "commons",
@@ -3513,19 +3553,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Phillippe Halsman"
+   "artistRaw": "Phillippe Halsman"
   },
   "georges-lemaitre": {
    "wiki": "commons",
    "file": "GLemaitre30.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:GLemaitre30.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "stanley-jaki": {
    "wiki": "commons",
@@ -3537,19 +3577,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Antonio G Colombo"
+   "artistRaw": "Antonio G Colombo"
   },
   "gregor-mendel": {
    "wiki": "commons",
    "file": "Gregor_Mendel_2.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Gregor_Mendel_2.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "alfred-noyes": {
    "wiki": "commons",
@@ -3561,7 +3601,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Alexander Bassano"
+   "artistRaw": "Alexander Bassano"
   },
   "siegfried-sassoon": {
    "wiki": "commons",
@@ -3573,18 +3613,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "George Charles Beresford"
+   "artistRaw": "George Charles Beresford"
   },
   "david-jones": {
    "wiki": "en",
    "file": "David_Jones_(artist,_poet).jpg",
    "page": "https://en.wikipedia.org/wiki/File:David_Jones_%28artist%2C_poet%29.jpg",
-   "artist": "Unknown",
+   "artist": "Author unknown",
    "license": "Fair use",
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": "Unknown"
   },
   "edith-sitwell": {
    "wiki": "commons",
@@ -3596,7 +3637,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Elliott & Fry"
+   "artistRaw": "Elliott & Fry"
   },
   "oscar-wilde": {
    "wiki": "commons",
@@ -3608,19 +3649,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Napoleon Sarony / Adam Cuerden"
+   "artistRaw": "Napoleon Sarony / Adam Cuerden"
   },
   "ernest-dowson": {
    "wiki": "commons",
    "file": "Ernest_Dowson.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Ernest_Dowson.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "joyce-kilmer": {
    "wiki": "commons",
@@ -3632,7 +3673,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Columbia University (1908)"
+   "artistRaw": "Columbia University (1908)"
   },
   "joseph-fessio": {
    "wiki": "commons",
@@ -3644,7 +3685,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "TraLeSollecitudini"
+   "artistRaw": "TraLeSollecitudini"
   },
   "mike-aquilina": {
    "wiki": "commons",
@@ -3656,7 +3697,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "James Merrick"
+   "artistRaw": "James Merrick"
   },
   "fr-mike-schmitz": {
    "wiki": "commons",
@@ -3668,7 +3709,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Steubenville Conferences"
+   "artistRaw": "Steubenville Conferences"
   },
   "taylor-marshall": {
    "wiki": "commons",
@@ -3680,7 +3721,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Elliott Hulse | WISDOM"
+   "artistRaw": "Elliott Hulse | WISDOM"
   },
   "matt-fradd": {
    "wiki": "commons",
@@ -3692,7 +3733,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Steubenville Conferences"
+   "artistRaw": "Steubenville Conferences"
   },
   "patrick-madrid": {
    "wiki": "commons",
@@ -3704,7 +3745,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "BryRadio1"
+   "artistRaw": "BryRadio1"
   },
   "ross-douthat": {
    "wiki": "commons",
@@ -3716,7 +3757,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Mercatus Center"
+   "artistRaw": "Mercatus Center"
   },
   "sohrab-ahmari": {
    "wiki": "commons",
@@ -3728,7 +3769,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Elekes Andor"
+   "artistRaw": "Elekes Andor"
   },
   "erik-varden": {
    "wiki": "commons",
@@ -3740,7 +3781,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Archivo Fotográfico Universidad de Navarra"
+   "artistRaw": "Archivo Fotográfico Universidad de Navarra"
   },
   "aristides-of-athens": {
    "wiki": "commons",
@@ -3752,7 +3793,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Peloponnisios"
+   "artistRaw": "Peloponnisios"
   },
   "epistle-of-barnabas": {
    "wiki": "commons",
@@ -3764,7 +3805,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "WolfgangRieger"
+   "artistRaw": "WolfgangRieger"
   },
   "didache": {
    "wiki": "commons",
@@ -3776,19 +3817,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "didachist"
+   "artistRaw": "didachist"
   },
   "pope-dionysius": {
    "wiki": "commons",
    "file": "Pope_Dionysius.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Pope_Dionysius.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "movses-khorenatsi": {
    "wiki": "commons",
@@ -3800,19 +3841,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Ashnag"
+   "artistRaw": "Ashnag"
   },
   "pamphilus-of-caesarea": {
    "wiki": "commons",
    "file": "Pamphilus_of_Caesarea.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Pamphilus_of_Caesarea.jpg",
-   "artist": "Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators [1] : Pantoleon with Georgios, Michael the Younger, Michael of Blachernae, Symeon, Symeon of Blachernae, Menas, and Nestor ( Online on Vatican site )",
+   "artist": "Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators : Pantoleon with Georgios, Michael the Younger, Michael of Blachernae, Symeon, Symeon of…",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators : Pantoleon with Georgios, Michael the Younger, Michael of Blachernae, Symeon, Symeon of…"
+   "artistRaw": "Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators [1] : Pantoleon with Georgios, Michael the Younger, Michael of Blachernae, Symeon, Symeon of Blachernae, Menas, and Nestor ( Online on Vatican site )"
   },
   "peter-of-alexandria": {
    "wiki": "commons",
@@ -3824,7 +3865,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Georgios Foukas"
+   "artistRaw": "Georgios Foukas"
   },
   "victorinus-of-pettau": {
    "wiki": "commons",
@@ -3836,31 +3877,31 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Jakob Brollo"
+   "artistRaw": "Jakob Brollo"
   },
   "alexander-of-alexandria": {
    "wiki": "commons",
    "file": "Veljusa_Monastery_St._Alexander_of_Alexandria.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Veljusa_Monastery_St._Alexander_of_Alexandria.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "FAL",
    "licenseUrl": "http://artlibre.org/licence/lal/en",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "sophronius-of-jerusalem": {
    "wiki": "commons",
    "file": "Athonite_Fresco_Icon_of_Saint_Sophronios_of_Jerusalem.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Athonite_Fresco_Icon_of_Saint_Sophronios_of_Jerusalem.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "andrew-of-crete": {
    "wiki": "commons",
@@ -3872,7 +3913,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Tzortzis Phouka"
+   "artistRaw": "Tzortzis Phouka"
   },
   "germanus-i-of-constantinople": {
    "wiki": "commons",
@@ -3884,31 +3925,31 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Tzortzis Phouka"
+   "artistRaw": "Tzortzis Phouka"
   },
   "theodore-the-studite": {
    "wiki": "commons",
    "file": "Studite.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Studite.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "romanos-the-melodist": {
    "wiki": "commons",
    "file": "1649._Пакроў.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:1649._%D0%9F%D0%B0%D0%BA%D1%80%D0%BE%D1%9E.jpg",
-   "artist": "not specified",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "not specified"
   },
   "venantius-fortunatus": {
    "wiki": "en",
@@ -3919,19 +3960,20 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "fulgentius-of-ruspe": {
    "wiki": "commons",
    "file": "Fulgentius_von_Ruspe_17Jh.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Fulgentius_von_Ruspe_17Jh.jpg",
-   "artist": "Anonymous Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Anonymous Unknown author"
   },
   "caesarius-of-arles": {
    "wiki": "commons",
@@ -3943,7 +3985,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Neoclassicism Enthusiast"
+   "artistRaw": "Neoclassicism Enthusiast"
   },
   "leander-of-seville": {
    "wiki": "commons",
@@ -3955,7 +3997,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Bartolomé Esteban Murillo"
+   "artistRaw": "Bartolomé Esteban Murillo"
   },
   "ildephonsus-of-toledo": {
    "wiki": "commons",
@@ -3967,7 +4009,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "El Greco"
+   "artistRaw": "El Greco"
   },
   "boniface": {
    "wiki": "commons",
@@ -3979,19 +4021,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Cornelis Bloemaert"
+   "artistRaw": "Cornelis Bloemaert"
   },
   "paul-the-deacon": {
    "wiki": "commons",
    "file": "PaulusDiaconus_Plut.65.35.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:PaulusDiaconus_Plut.65.35.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "hincmar-of-reims": {
    "wiki": "commons",
@@ -4003,19 +4045,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "GO69"
+   "artistRaw": "GO69"
   },
   "odo-of-cluny": {
    "wiki": "commons",
    "file": "Odo_Cluny-11.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Odo_Cluny-11.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "fulbert-of-chartres": {
    "wiki": "commons",
@@ -4027,7 +4069,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "GO69"
+   "artistRaw": "GO69"
   },
   "lanfranc": {
    "wiki": "commons",
@@ -4039,7 +4081,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Ealdgyth"
+   "artistRaw": "Ealdgyth"
   },
   "rupert-of-deutz": {
    "wiki": "commons",
@@ -4051,7 +4093,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Stephanus"
+   "artistRaw": "Stephanus"
   },
   "alan-of-lille": {
    "wiki": "commons",
@@ -4062,7 +4104,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "nonFree": false,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": ""
   },
   "joachim-of-fiore": {
    "wiki": "commons",
@@ -4074,7 +4117,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Gregorio Vasquez de Arce y Ceballos"
+   "artistRaw": "Gregorio Vasquez de Arce y Ceballos"
   },
   "alexander-of-hales": {
    "wiki": "commons",
@@ -4086,7 +4129,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "George Glover"
+   "artistRaw": "George Glover"
   },
   "raymond-of-penyafort": {
    "wiki": "commons",
@@ -4098,7 +4141,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Tommaso Dolabella"
+   "artistRaw": "Tommaso Dolabella"
   },
   "giles-of-rome": {
    "wiki": "en",
@@ -4109,31 +4152,32 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "thomas-of-celano": {
    "wiki": "commons",
    "file": "Tommaso_da_Celano_OFM.jpeg",
    "page": "https://commons.wikimedia.org/wiki/File:Tommaso_da_Celano_OFM.jpeg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "john-capistrano": {
    "wiki": "commons",
    "file": "82Johannes_von_Capestrano.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:82Johannes_von_Capestrano.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "gabriel-biel": {
    "wiki": "commons",
@@ -4145,7 +4189,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Kagbub123"
+   "artistRaw": "Kagbub123"
   },
   "johannes-capreolus": {
    "wiki": "commons",
@@ -4157,7 +4201,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Jean Caprioli"
+   "artistRaw": "Jean Caprioli"
   },
   "francis-of-paola": {
    "wiki": "commons",
@@ -4169,7 +4213,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Giovanni Domenico Tiepolo"
+   "artistRaw": "Giovanni Domenico Tiepolo"
   },
   "robert-persons": {
    "wiki": "commons",
@@ -4181,7 +4225,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Jacob Neefs"
+   "artistRaw": "Jacob Neefs"
   },
   "thomas-stapleton": {
    "wiki": "commons",
@@ -4193,19 +4237,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Léonard Gaultier"
+   "artistRaw": "Léonard Gaultier"
   },
   "william-allen": {
    "wiki": "commons",
    "file": "Cardinal_William_Allen.png",
    "page": "https://commons.wikimedia.org/wiki/File:Cardinal_William_Allen.png",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "johann-eck": {
    "wiki": "commons",
@@ -4216,7 +4260,8 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "cornelius-a-lapide": {
    "wiki": "commons",
@@ -4228,7 +4273,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "a Lapide, Cornelius Cornelii, S.J. (1567-1637) (depicted)"
+   "artistRaw": "a Lapide, Cornelius Cornelii, S.J. (1567-1637) (depicted)"
   },
   "leonard-lessius": {
    "wiki": "commons",
@@ -4240,7 +4285,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Rijksmuseum"
+   "artistRaw": "Rijksmuseum"
   },
   "gabriel-vasquez": {
    "wiki": "commons",
@@ -4252,43 +4297,43 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Vasquez, Gabriel, S.J. (1551-1604) (depicted)"
+   "artistRaw": "Vasquez, Gabriel, S.J. (1551-1604) (depicted)"
   },
   "juan-de-lugo": {
    "wiki": "commons",
    "file": "Juan_de_Lugo.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Juan_de_Lugo.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "angelus-silesius": {
    "wiki": "commons",
    "file": "Johannes_Scheffler.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Johannes_Scheffler.jpg",
-   "artist": "Unknown artist Unknown artist",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown artist Unknown artist"
   },
   "friedrich-spee": {
    "wiki": "commons",
    "file": "Fridericus_Spee_SJ.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Fridericus_Spee_SJ.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "claude-la-colombiere": {
    "wiki": "commons",
@@ -4299,19 +4344,20 @@
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
-   "shown": true
+   "shown": true,
+   "artistRaw": ""
   },
   "jean-baptiste-de-la-salle": {
    "wiki": "commons",
    "file": "Jean_baptiste_de_la_Salle.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Jean_baptiste_de_la_Salle.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "augustin-calmet": {
    "wiki": "commons",
@@ -4323,7 +4369,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Rijksmuseum"
+   "artistRaw": "Rijksmuseum"
   },
   "giovanni-battista-scaramelli": {
    "wiki": "commons",
@@ -4335,7 +4381,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Scaramelli, Joannes Baptista, S.J. (1687-1752) (depicted)"
+   "artistRaw": "Scaramelli, Joannes Baptista, S.J. (1687-1752) (depicted)"
   },
   "clemens-brentano": {
    "wiki": "commons",
@@ -4347,7 +4393,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Emilie Linder"
+   "artistRaw": "Emilie Linder"
   },
   "friedrich-schlegel": {
    "wiki": "commons",
@@ -4359,7 +4405,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Franz Gareis"
+   "artistRaw": "Franz Gareis"
   },
   "joseph-gorres": {
    "wiki": "commons",
@@ -4371,7 +4417,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Joseph Anton Nikolaus Settegast"
+   "artistRaw": "Joseph Anton Nikolaus Settegast"
   },
   "felicite-de-lamennais": {
    "wiki": "commons",
@@ -4383,7 +4429,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "L. D. Lancôme"
+   "artistRaw": "L. D. Lancôme"
   },
   "augustus-pugin": {
    "wiki": "commons",
@@ -4395,7 +4441,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Unidentified painter"
+   "artistRaw": "Unidentified painter"
   },
   "william-george-ward": {
    "wiki": "commons",
@@ -4407,7 +4453,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Not stated"
+   "artistRaw": "Not stated"
   },
   "wilfrid-ward": {
    "wiki": "commons",
@@ -4419,7 +4465,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "George Grantham Bain Collection (Library of Congress)"
+   "artistRaw": "George Grantham Bain Collection (Library of Congress)"
   },
   "lord-acton": {
    "wiki": "commons",
@@ -4431,7 +4477,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Allen & Co."
+   "artistRaw": "Allen & Co."
   },
   "aubrey-de-vere": {
    "wiki": "commons",
@@ -4443,7 +4489,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Julia Margaret Cameron"
+   "artistRaw": "Julia Margaret Cameron"
   },
   "desire-joseph-mercier": {
    "wiki": "commons",
@@ -4455,43 +4501,43 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Published by NY Times"
+   "artistRaw": "Published by NY Times"
   },
   "adrian-fortescue": {
    "wiki": "commons",
    "file": "Adrian_Fortescue_portrait.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Adrian_Fortescue_portrait.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "herbert-thurston": {
    "wiki": "commons",
    "file": "Herbert_Thurston_(1856–1939).png",
    "page": "https://commons.wikimedia.org/wiki/File:Herbert_Thurston_%281856%E2%80%931939%29.png",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "cuthbert-butler": {
    "wiki": "commons",
    "file": "Edward_Cuthbert_Butler_(1858–1934).png",
    "page": "https://commons.wikimedia.org/wiki/File:Edward_Cuthbert_Butler_%281858%E2%80%931934%29.png",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "john-chapman": {
    "wiki": "commons",
@@ -4503,7 +4549,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Christian Daw"
+   "artistRaw": "Christian Daw"
   },
   "vincent-mcnabb": {
    "wiki": "commons",
@@ -4515,19 +4561,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "St. Dominic's Press"
+   "artistRaw": "St. Dominic's Press"
   },
   "bede-jarrett": {
    "wiki": "commons",
    "file": "Bede_Jarrett_(1881–1934).png",
    "page": "https://commons.wikimedia.org/wiki/File:Bede_Jarrett_%281881%E2%80%931934%29.png",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "c-c-martindale": {
    "wiki": "commons",
@@ -4539,19 +4585,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Lafayette Ltd"
+   "artistRaw": "Lafayette Ltd"
   },
   "anscar-vonier": {
    "wiki": "commons",
    "file": "Anscar_Vonier.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Anscar_Vonier.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "Public domain",
    "licenseUrl": "",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "josef-jungmann": {
    "wiki": "commons",
@@ -4563,7 +4609,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Society of Jesus (Innbruck)"
+   "artistRaw": "Society of Jesus (Innbruck)"
   },
   "charles-de-koninck": {
    "wiki": "commons",
@@ -4575,19 +4621,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Photo : Roger Bédard"
+   "artistRaw": "Photo : Roger Bédard"
   },
   "jean-leclercq": {
    "wiki": "commons",
    "file": "Dom_Jean_Leclercq.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Dom_Jean_Leclercq.jpg",
-   "artist": "Unknown author Unknown author",
+   "artist": "Author unknown",
    "license": "CC0",
    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Author unknown"
+   "artistRaw": "Unknown author Unknown author"
   },
   "bernard-haring": {
    "wiki": "commons",
@@ -4599,7 +4645,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Pater Josef Steinle AMPR"
+   "artistRaw": "Pater Josef Steinle AMPR"
   },
   "romano-amerio": {
    "wiki": "commons",
@@ -4611,7 +4657,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Enrico Maria Radaelli"
+   "artistRaw": "Enrico Maria Radaelli"
   },
   "martin-mosebach": {
    "wiki": "commons",
@@ -4623,7 +4669,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Udoweier"
+   "artistRaw": "Udoweier"
   },
   "fabrice-hadjadj": {
    "wiki": "commons",
@@ -4635,7 +4681,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Djares"
+   "artistRaw": "Djares"
   },
   "chiara-lubich": {
    "wiki": "commons",
@@ -4647,7 +4693,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "CSC Audiovisivi"
+   "artistRaw": "CSC Audiovisivi"
   },
   "luigi-giussani": {
    "wiki": "en",
@@ -4658,7 +4704,8 @@
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": ""
   },
   "catherine-doherty": {
    "wiki": "en",
@@ -4669,7 +4716,8 @@
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": ""
   },
   "mortimer-adler": {
    "wiki": "commons",
@@ -4681,7 +4729,7 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Center for the Study of The Great Ideas"
+   "artistRaw": "Center for the Study of The Great Ideas"
   },
   "raymond-arroyo": {
    "wiki": "commons",
@@ -4693,18 +4741,19 @@
    "nonFree": false,
    "missing": false,
    "shown": true,
-   "credit": "Gage Skidmore"
+   "artistRaw": "Gage Skidmore"
   },
   "mother-angelica": {
    "wiki": "en",
    "file": "Mother_Angelica.jpeg",
    "page": "https://en.wikipedia.org/wiki/File:Mother_Angelica.jpeg",
-   "artist": "unknown",
+   "artist": "Author unknown",
    "license": "Fair use",
    "licenseUrl": "",
    "nonFree": true,
    "missing": false,
-   "shown": false
+   "shown": false,
+   "artistRaw": "unknown"
   }
  }
 }

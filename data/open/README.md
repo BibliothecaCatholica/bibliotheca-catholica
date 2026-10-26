@@ -54,6 +54,7 @@ Each dataset ships as both `.json` and `.csv`.
 
 ## Changelog
 
+- **v7.1 (2026-10-26):** `index_url` in `isidore-folders` and `isidore_index_url` in `authors` now search the author name as the books carry it (for example `Wojtyła, Karol`, not the folder's `Wojtyla, Karol`) and show all subjects (`#/isidore/author=<name>`), so every link finds that author's books. Fields are unchanged.
 - **v7 (2026-10-26):** `isidore-folders` drops the raw isidore.co folder `url` and gains `folder` (the folder name as text) and `index_url` (the author's Isidore Index search, where rights badges decide each book's links). `authors` replaces `isidore_folder_url` with `isidore_index_url`. Folder listings link straight to files whatever their rights status, so they are no longer linked (rights rule 10).
 - **v6 (2026-10-25):** `isidore-index` gains `rights_status`, `rights_evidence`, and `rights_checked`; file links are given only for public-domain, openly licensed, or permitted records.
 - **v5 (2026-10-21):** first documented release.

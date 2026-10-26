@@ -76,7 +76,9 @@ class TestAnalytics(unittest.TestCase):
         self.assertIn('https://policies.google.com/technologies/partner-sites', s)
         self.assertIn('what people search for', s)
         self.assertIn('which outside links are clicked', s)
-        self.assertIn('Search terms are shortened to 100 characters', s)
+        self.assertIn('The site’s own events shorten search terms to 100 characters and send them only with the search itself.', s)
+        self.assertNotIn('Search terms are shortened', s)  # v18.2: GA’s own outbound-click event is covered separately
+        self.assertIn('built-in outside-link measurement', s)
         self.assertIn('collects no personal data', s)
         self.assertIn('runs no ads', s)
         self.assertIn('local storage on this device', s)

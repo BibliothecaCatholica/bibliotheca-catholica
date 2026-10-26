@@ -1,7 +1,8 @@
 /* Shared, dependency-free search rules. Imported records never enter selected search. */
 (function(root){
   'use strict';
-  function norm(s){return String(s||'').replace(/\b([a-z])\.\s*([a-z])\./gi,'$1$2').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
+  var FOLD={'ł':'l','Ł':'L','ø':'o','Ø':'O','đ':'d','Đ':'D','ð':'d','Ð':'D','þ':'th','Þ':'Th','æ':'ae','Æ':'Ae','œ':'oe','Œ':'Oe','ß':'ss','ı':'i','ħ':'h','Ħ':'H'};
+  function norm(s){return String(s||'').replace(/[łŁøØđĐðÐþÞæÆœŒßıħĦ]/g,function(c){return FOLD[c]}).replace(/\b([a-z])\.\s*([a-z])\./gi,'$1$2').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
   function imported(e){return e.type==='Book'||e.type==='Isidore Index author'}
   function search(entries,q,scope,limit){
     var query=norm(q),tokens=query.split(/\s+/).filter(Boolean);

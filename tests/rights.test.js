@@ -59,12 +59,12 @@ test('v18: the Authors A-Z tab, search entries, and hub data never link raw isid
  const hub=JSON.parse(fs.readFileSync('data/catholic-hub.json','utf8'));
  const ctx={esc,hl:esc,norm:s=>String(s).toLowerCase(),$,D:{isidore:hub.isidore.slice(0,400)},window:{scrollTo(){}},document:{getElementById:()=>null},out:''};
  ctx.render=h=>{ctx.out=h};
- vm.runInNewContext(fn(APP,'isoAuthorHref')+'\nvar ISO_NOTE="note";\n'+fn(APP,'isidore'),ctx);ctx.isidore();
+ vm.runInNewContext(fn(APP,'isoName')+'\n'+fn(APP,'isoAuthorHref')+'\nvar ISO_NOTE="note";\n'+fn(APP,'isidore'),ctx);ctx.isidore();
  const all=ctx.out+els['#iso-out'].innerHTML;
  assert(!/isidore\.co\/CalibreLibrary\//.test(all),'raw folder link in the A-Z page');
- assert(/href="#\/isidore\/[^"]+"/.test(els['#iso-out'].innerHTML),'names open Isidore Index searches');
+ assert(/href="#\/isidore\/author=[^"]+"/.test(els['#iso-out'].innerHTML),'names open Isidore Index searches');
  assert.match(ctx.out,/Authors A–Z/);assert.doesNotMatch(ctx.out,/Author folders/);
- assert.match(APP,/IDX\.push\(\{type:'Isidore Index author',t:i\.n,[^}]*h:isoAuthorHref\(i\.n\)/);
+ assert.match(APP,/IDX\.push\(\{type:'Isidore Index author',t:isoName\(i\),[^}]*h:isoAuthorHref\(i\)/);
  assert.doesNotMatch(APP,/'isidore\.co folder'/);
  const raw=JSON.stringify(hub);assert(!/isidore\.co\/CalibreLibrary\//.test(raw),'hub data still links a folder listing');
  assert(hub.isidore.every(i=>i.n&&typeof i.f==='string'&&!('u' in i)));

@@ -197,15 +197,16 @@ def main():
         works=''.join('<li>'+a(w['url'],w['title'],True)+'</li>' for w in au.get('works') or [] if w.get('url'))
         mine=[w for w in lib['works'] if w.get('authorId')==au['id']]
         # v18.1: the 211 former isidore.co folder links became internal Isidore Index searches (#/isidore/<catalog name>)
-        iso_n=next((i['n'] for i in hub['isidore'] if i['f']==au.get('isidoreFolder')),None) if au.get('isidoreFolder') else None
-        iso_link=('<p>'+a('/#/isidore/'+urllib.parse.quote(iso_n,safe=''),'All their books in the Isidore Index')+'</p>') if iso_n else ''
+        # v18.2: the search uses the author name as the books carry it (hub.isidore `a`, else `n`) and shows all subjects
+        iso_n=next((i.get('a') or i['n'] for i in hub['isidore'] if i['f']==au.get('isidoreFolder')),None) if au.get('isidoreFolder') else None
+        iso_link=('<p>'+a('/#/isidore/author='+urllib.parse.quote(iso_n,safe=''),'All their books in the Isidore Index')+'</p>') if iso_n else ''
         body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+wiki_block+(('<h2>Read here</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else '')+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+iso_link+'<p>'+a('/authors/','All authors')+'</p>'
         sa=saints_by_author.get(au['id'])
         if sa:body=body.replace('<p>'+a('/authors/','All authors')+'</p>','<h2>Saint</h2><p>'+E(s_facts(sa))+' '+a('/saints/','Saints & Hagiography')+'</p><p>'+a('/authors/','All authors')+'</p>')
         # v17: facts already in the data (era, century, vocations from tags, Doctor of the Church) and the curated links
         era=eras.get(au.get('era'));tags=[TAGL[t] for t in au.get('tags',[]) if t in TAGL]
         facts=[]
-        if era:facts.append('Era: '+era+(' ('+ORDINAL(au['century'])+' century)' if isinstance(au.get('century'),int) and au['century']>0 else '')+'.')
+        if era:facts.append('Era: '+era+(' ('+ORDINAL(au['century'])+' century)' if isinstance(au.get('century'),int) and au['century']>0 and au.get('era')!=ORDINAL(au['century'])+'-century' else '')+'.')  # v18.2: the century once
         if tags:facts.append(oxford(tags)[0].upper()+oxford(tags)[1:]+'.')
         if au.get('doctor'):facts.append('Doctor of the Church.')
         # never isidore.co folder listings or raw files (rights rule 10): book pages and outside sites only

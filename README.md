@@ -1,84 +1,69 @@
 # Bibliotheca Catholica
 
-**Live site: [Bibliotheca Catholica](https://bibliothecacatholica.com)** (https://bibliothecacatholica.com)
+[Open the library](https://bibliothecacatholica.com) · [Report a problem or correction](https://github.com/BibliothecaCatholica/bibliotheca-catholica/issues/new?template=site_problem.yml) · [Browse the source code](https://github.com/BibliothecaCatholica/bibliotheca-catholica)
 
-A free Catholic library of libraries: a selected reading room and a curated resource index. Read classic texts online, compare editions, and explore saints, Church documents, and original sources. Coverage is selective, and listing is not endorsement.
+Bibliotheca Catholica is a free Catholic **reading room and curated resource index**—a library of libraries. It helps readers find classic texts, compare editions, follow sourced links to original documents, and discover authors, saints, reference works, and media. Coverage is selective, not exhaustive; inclusion is not endorsement.
 
-**Contributors and coding agents: read [AGENTS.md](AGENTS.md) first.** It covers the architecture, the files that must stay, the content rules, and the checks to run before a PR.
+## What readers will find
 
-## Reading and discovery
+- **Discover & Read** is the selected reading room: 98 individual work records, including 56 hosted reading editions. A *work* is the title; an *edition* is a particular translation, printing, or source copy. Some works have a text to read here; others point to an external text, scan, or bibliographic reference. The reader provides contents navigation, text search, display controls, saved place, notes, and source/download links.
+- **Authors, Saints, Timeline, Editions & Translations, and Reading Lists** connect people, writings, editions, and paths through the collection. An author or saint page can point to a work without claiming that the work is hosted here.
+- **The Isidore Index** is a separate discovery layer for the St. Isidore e-book library. It contains 6,633 imported catalog records. Those records have not each been reviewed; a listing is not a recommendation, a full-text copy, or confirmation that an outside file is available. The site links to files only when its record meets the displayed rights rule; otherwise it sends readers to the book's page at isidore.co.
+- **Related Christian Writers** includes C. S. Lewis as an Anglican voice. The eight Lewis records are bibliographic references, not eight hosted free books. More generally, a title record does not promise a free online edition.
+- **Digital Libraries, Scripture, Church Documents, Prayer, Reference Works, Podcasts & Media, Rare & Obscure, and Projects** are curated directories that help readers continue to original publishers and source libraries.
 
-- **Discover & Read** `#/library`: 98 individual work records, including 56 hosted reading editions (20 added October 22, 2026, and 14 saints and hagiography editions added October 25, 2026, shown under **Recently added**), 16 link-only works with scans or texts at their source (October 25, 2026), eight Lewis titles, nine Church Fathers records, and eight official Church documents. Hosted works with LibriVox audio have a persistent **Listen** player inside the reader.
-- **Reader** `#/read/<work>/<edition>`: text size, spacing, dark mode, source-heading navigation, full-text search, saved section, citation, and download/source links.
-- **Related Christian writers** `#/related`: C. S. Lewis, explicitly identified as Anglican.
-- Search defaults to **Everything**, with selected works ranked first. The Selected library and Isidore Index scopes are available from the results page.
-- Read [catalog provenance and editorial boundaries](docs/CATALOG.md) before adding new editions.
-- SEO rules for titles, descriptions, and structured data: [docs/SEO.md](docs/SEO.md). Reading texts live in [bibliotheca-texts](https://github.com/BibliothecaCatholica/bibliotheca-texts).
+Search defaults to **Everything**. Readers can narrow it to the **Selected library** or the **Isidore Index**; the selected scope excludes the imported Isidore book records. Search and the on-site reader need JavaScript. The static pages and `/search/` directory still provide useful links if JavaScript does not run.
 
-### Develop and validate
+## What this repository contains
 
-Python 3.10+ and Node 18+ are sufficient; no npm install is required.
+This repository is the source for the main website: its static app, catalog, reading texts, generators, tests, and documentation. It deploys as static files; there is no production database, login, or server-side search service.
+
+The 56 hosted text editions are also published at [texts.bibliothecacatholica.com](https://texts.bibliothecacatholica.com) from the separate [bibliotheca-texts repository](https://github.com/BibliothecaCatholica/bibliotheca-texts). The main repository remains authoritative for the catalog, source evidence, reader, and export tool. The text repository is a checked copy for delivery, not a place to add unreviewed downloads.
+
+| Path | Purpose |
+|---|---|
+| `index.html`, `app.js`, `scripts/`, `styles/` | Site shell, browser application, and presentation |
+| `data/library.json` | Maintained reading-room work and edition records |
+| `data/texts/`, `data/sources/` | Hosted text copies and source/provenance snapshots |
+| `data/books.json`, `data/books.js`, `data/isidore-matches.json` | Imported Isidore catalog snapshots and curated matches; see the catalog and rights notes before changing them |
+| `data/open/` | Generated JSON/CSV exports and their reuse terms |
+| `tools/`, `tests/` | Data builders, static-page generation, validation, and regression checks |
+| `docs/` | Catalog rules, editorial and rights details, source reviews, and maintenance notes |
+
+## Develop and validate
+
+Python 3.10+ and Node 18+ are sufficient for the current site build; no npm package installation is required.
 
 ```sh
-npm run dev      # http://127.0.0.1:4173
-npm run build    # deterministic catalog validation and browser bundle
-npm test        # search isolation, metadata integrity, rights, and checksums
-python3 tools/build_open_data.py
+npm run dev      # serve at http://127.0.0.1:4173
+npm run build    # validate and generate the browser data bundles
+python3 tools/build_static.py  # refresh crawlable pages, sitemap, and build fingerprint
+npm test         # run JavaScript and Python tests
+git diff --check
 ```
 
-Optional external availability check: `python3 tools/check_library_links.py --output /tmp/source-links.json`. Network checks are separate from deterministic CI tests.
+Commit generated output after changing a template, route, application code, or source data. Re-run the builds and tests, then confirm `git diff --exit-code` is clean. CI runs the offline validation on pull requests. Optional network checks are separate: they can be blocked or redirected and do not establish that a text is accurate, licensed, or the edition described.
 
-Run `python3 tools/build_static.py` after template, route, data, or application changes. It refreshes the crawlable pages, shared site copy, footer snapshot date, sitemap, and deterministic build fingerprint. `/build.json` lists source hashes; its ID identifies content, not a Git commit or the date every record was reviewed. `/search/` provides a plain title-and-author directory when JavaScript is unavailable. See [the verified quality review](docs/QUALITY-AUDIT-2026-10-26.md), [contributing](CONTRIBUTING.md), and [security](SECURITY.md).
+## Updating the catalog
 
-Deploy the repository's static files as before. Preserve `data/texts/`, `data/sources/`, the new `scripts/` and `styles/` directories. No hosting migration or server-side secret is needed.
+Start with [the catalog rules](docs/CATALOG.md) and [contributing guide](CONTRIBUTING.md). For an existing reading-room work, edit `data/library.json`; preserve stable IDs, cite the exact source edition, record translator/editor evidence and rights checks, and include the original file and checksum only when hosting is approved. Run `npm run build` and `python3 tools/build_static.py` so generated data and pages stay aligned.
 
-### Legacy generator inputs
+Edition guides, reading lists, and Substack metadata are maintained in `tools/editions_data.py`, `tools/reading_lists.py`, and `tools/substacks_src.py`. `python3 tools/build_v3_data.py --catalog-only` regenerates the guides while preserving the existing feed snapshot. The full generator refreshes external feeds and is a separate editorial/network operation.
 
-The committed data snapshots remain usable. Some older ingestion scripts expect the original `metadata.db`, `research/`, author research files, or a historical `site/data/` layout that is not present in this checkout. They are not a reproducible full rebuild and should not be run over current data without restoring their inputs. The new library build and the open-data exporter resolve paths from this repository and work independently of those missing sources.
+The open-data exporter is `python3 tools/build_open_data.py`. The text archive export is `python3 tools/build_text_archive.py --output /absolute/path/to/bibliotheca-texts`; review its manifest and diff before publishing to the separate text repository.
 
-## Editions, reading lists, Substacks, and buy links (v3)
+Some older import scripts expect source material such as `metadata.db` or a historical `research/` directory that is not included in this checkout. Their presence does not make those inputs reproducible. Do not run legacy ingestion scripts over current data without first confirming their inputs and output paths.
 
-* **Editions & Translations** `#/editions`, **Reading Lists** `#/reading`, **Catholic Substacks** `#/substacks`.
-* Content lives in `tools/editions_data.py`, `tools/reading_lists.py`, and `tools/substacks_src.py`. Run
-  `python3 tools/build_v3_data.py` to rebuild `data/guide.js` (this also refreshes the Substack "latest posts" snapshot).
-* **Affiliate IDs:** paste them into `data/affiliates.js` (`bookshopId`, and `wrap`/`param` per publisher). While they are
-  empty, every Buy link works as a plain link.
+## Editorial, rights, and licensing boundaries
 
-## Prayers, Doctors' free texts, Rare & Obscure, and Projects (v4)
+- The site is an independent index and reading room, not the publisher or host of every linked work. Prefer primary sources and identify the edition readers will reach.
+- Catalog records distinguish hosted reading editions, external full-text sources, and references. Never describe a reference or a scan link as a text hosted by this site.
+- Hosted editions require edition-specific rights evidence and retain their original source notices. The pre-1931 rule is a project selection rule, not worldwide legal clearance. Unknown rights fail closed.
+- Isidore catalog rows are imported and unreviewed as a whole; automated author associations can be imperfect. CatholicSaints.Info remains link-only; do not copy or crawl it.
+- Current terms differ by material: code is MIT; open data and reading-catalog metadata are CC0; site writing is CC BY 4.0; hosted texts carry their source terms and no blanket license from this project. See [LICENSING.md](LICENSING.md) and the live [licensing note](https://bibliothecacatholica.com/licensing/).
 
-* **Prayers & Devotions** `#/prayers`: public-domain prayer texts live in `data/prayers.js`; the links come from the resources data.
-* **Read free** panels on every Doctor's page come from `data/doctors.js`. **Rare & Obscure** `#/rare` uses `data/rare.js`, and **Projects & Translations** `#/projects` uses `data/projects.js`.
-  All three are built from the research files by `tools/build_v4_data.py`. Every one of these texts is an outbound link; none is hosted here.
+For broken links, metadata corrections, search/reader problems, or accessibility reports, use the [site problem form](https://github.com/BibliothecaCatholica/bibliotheca-catholica/issues/new?template=site_problem.yml). Do not include private reader notes or credentials in public issues. See [SECURITY.md](SECURITY.md) for private vulnerability reporting.
 
-## The Isidore Index and Open Data (v5)
+## License
 
-- The Isidore Index (`#/isidore`) is now the flagship. All 6,633 isidore.co books can be filtered by era, language (22 canonical), format, and subject, and each book has its own page with a rights badge. Since v16, download links appear only for records marked public domain (US), open license, or permission granted; other records link to their isidore.co book page. Since v18, the Authors A–Z tab opens Isidore Index searches instead of raw isidore.co folder listings, and since v18.1 the 211 author pages that used to link a folder link to that author's Index search instead.
-- Open Data (`#/data`, `/data/open/`) offers the index, curated authors (with verified Wikidata QIDs), editions, Doctors' free texts, rare works, and projects as JSON and CSV under CC0.
-- Hygiene: a junk folder was removed, language codes were normalized, the aquinas.cc link was confirmed, and LibriVox was added.
-
-## Tabbed author profiles (v6)
-
-- Each author page keeps the name, dates, portrait, blurb, feast day, and key links on top, with tabs for **Works**, **Commentaries**, **Buy the Books**, and **Related**. Every tab has its own link (e.g. `#/author/chesterton/works`), shows a count, and the site remembers the last tab you opened.
-- Commentaries include the featured Chesterton column, curated Substacks and podcasts, studies by other authors in the library, and encyclopedia articles. Want to contribute one? Write to micahwatson@bibliothecacatholica.com.
-
-## Reading options and design refresh
-
-The navigation guide is now **Editions & Translations** (`#/editions`, existing links preserved). Additional EPUB options live in `data/reading-options.json` and its browser snapshot. See [the refresh notes](docs/READING-DESIGN-REFRESH.md) for source checks, UI changes, and validation.
-
-## Crawlability, link health, and audio (v9)
-
-- **Static entry pages.** `python3 tools/build_static.py` pre-renders `<route>/index.html` for every author, reading-room work, edition guide, reading list, and section (about 620 pages). Each is a copy of `index.html` with its own title, description, canonical URL, Open Graph and Twitter tags, and real content in `<main>`; `window.BC_BOOT` tells `app.js` which view to open, so `/author/g-k-chesterton/` and `/#/author/g-k-chesterton` show the same page. It also writes `sitemap.xml`, `robots.txt`, and `404.html` (which forwards other clean paths to the hash route). No build step is needed to serve the site: run the script after data changes and commit its output; CI fails if the output is stale. Isidore Index book pages are not pre-rendered.
-- **Per-route meta.** `app.js` updates the description, canonical URL, and Open Graph and Twitter tags after every view renders. The default share image `assets/og-image.png` (1200×630) is drawn typographically by `tools/make_og_image.py` with Pillow, using the site's Cormorant Garamond and EB Garamond fonts and colours.
-- **Link health.** `python3 tools/check_links.py` checks every outbound URL in the site data and scripts (with a sample of isidore.co book URLs) and writes `docs/link-health.json` and `docs/link-health.md`, classed as ok, redirect-offsite, soft-404/parked, client-error, server-error, blocked (401/403/429, usually bot protection), and timeout/error.
-- **LibriVox.** `python3 tools/fetch_librivox.py` matches reading-room works and edition guides to public-domain LibriVox recordings (title plus author, whole works only) and writes `data/librivox.json` and `data/librivox.js`. Work pages, the reader, and edition cards show “Listen” buttons linking to `https://librivox.org/…`.
-- **Shared hub data.** `tools/hubio.py` loads and saves `data/catholic-hub.json` and `data/data.js` together so the two copies stay identical.
-
-## License (v18)
-
-Different parts of this repository are under different terms. [`LICENSING.md`](LICENSING.md) is the full summary (a draft, not legal advice), also shown on the site at [/licensing/](https://bibliothecacatholica.com/licensing/):
-
-- **Code** (HTML templates, JavaScript, CSS, Python tools, tests): [MIT](LICENSE).
-- **Open data** (`data/open/`) and the reading catalog metadata (`data/library.json`): CC0 1.0 (`data/open/LICENSE.txt` names both).
-- **Site writing**: CC BY 4.0.
-- **Hosted texts** (`data/texts/`, texts.bibliothecacatholica.com): public domain in the US; no license from us, and each file keeps its source notice (the Project Gutenberg License for Gutenberg files).
-- **Third-party material**: the Wikipedia excerpts in `data/catholic-hub.json` and `data/data.js` are CC BY-SA 4.0 and are outside the MIT and CC0 grants; portraits stay under the licenses on their Wikimedia Commons or Wikipedia file pages (`data/portrait-credits.json`).
+This repository contains material under different terms; the root [MIT License](LICENSE) applies to code only. The full [licensing summary](LICENSING.md) explains the scope and exceptions. Do not infer a license for a text, image, dataset, or excerpt from its location in this repository.

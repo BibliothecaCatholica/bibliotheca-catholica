@@ -7,7 +7,7 @@ Phases 1 (editorial review) and 2 (section and map) are built. Phase 3 (populati
 
 | File | What it is |
 |---|---|
-| `data/rites-src/rites-map.json` | Research copy of the 31 records (24 Churches sui iuris, 7 Latin rites and uses), unchanged. |
+| `data/rites-src/rites-map.json` | Research copy of the 31 records (24 Churches sui iuris, 7 Latin rites and uses), unchanged except an Oxford comma added to the Ambrosian dioceses list on 2026-11-02. |
 | `data/rites-src/rites-map-shading.json` | Research copy of the country layers, with `population_estimates` and `population_policy` removed. |
 | `data/rites-src/geo.json` | Map geometry from Natural Earth, written by `tools/rites_geo.py`. |
 | `tools/rites_geo.py` | Offline: `python3 tools/rites_geo.py <dir>` reads `ne_110m_admin_0_countries.geojson`, `ne_50m_admin_0_countries.geojson`, and `ne_50m_admin_1_states_provinces.geojson` (Natural Earth 5.x, from github.com/nvkelso/natural-earth-vector). Equirectangular, 1000 px wide, latitude 84 to -57; Douglas-Peucker simplification; relative paths in 0.1 px; insets clipped to their boxes; Guam (missing at 1:110m) drawn as a 3 px square from 1:50m. Rerun only to change the geometry. |

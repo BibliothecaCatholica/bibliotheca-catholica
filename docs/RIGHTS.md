@@ -10,7 +10,7 @@ Not legal advice. This explains how the site labels and links books.
 | `link_only` | Link only | no; link to the isidore.co book page | research codes L1–L6 (1978+, ISBN, renewed, post-1930 Church texts, and similar) |
 | `unknown` | Unknown | no; link to the isidore.co book page | research codes H1–H3 and U1a–U4, including every "likely hostable" lead |
 
-Counts on 2026-10-25: public domain (US) 6, open license 0, permission granted 0, link only 4,149, unknown 2,478 (6,633 records).
+Counts on 2026-10-25 (unchanged on 2026-11-02): public domain (US) 6, open license 0, permission granted 0, link only 4,149, unknown 2,478 (6,633 records).
 
 ## Files
 

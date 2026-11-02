@@ -7,10 +7,11 @@ Bibliotheca Catholica is a free Catholic **reading room and curated resource ind
 ## What readers will find
 
 - **Discover & Read** is the selected reading room: 98 individual work records, including 56 hosted reading editions. A *work* is the title; an *edition* is a particular translation, printing, or source copy. Some works have a text to read here; others point to an external text, scan, or bibliographic reference. The reader provides contents navigation, text search, display controls, saved place, notes, and source/download links.
+- **Saints & Hagiography** has sourced profiles, a calendar, and the hagiography shelf at [/saints/](https://bibliothecacatholica.com/saints/).
 - **Authors, Saints, Timeline, Editions & Translations, and Reading Lists** connect people, writings, editions, and paths through the collection. An author or saint page can point to a work without claiming that the work is hosted here.
-- **Rites & Liturgy** offers sourced pages for 24 Churches sui iuris and seven Latin rites and uses, with an interactive map and visible source and uncertainty notes.
-- **Seasonal reading plans** connect day-by-day readings to the hosted texts. The 2026 Advent plan runs November 29–December 24; reading progress is saved in the reader's browser.
-- **The Isidore Index** is a separate discovery layer for the St. Isidore e-book library. It contains 6,633 imported catalog records. Those records have not each been reviewed; a listing is not a recommendation, a full-text copy, or confirmation that an outside file is available. The site links to files only when its record meets the displayed rights rule; otherwise it sends readers to the book's page at isidore.co.
+- **Rites & Liturgy** ([/rites/](https://bibliothecacatholica.com/rites/)) offers sourced pages for 24 Churches sui iuris and seven Latin rites and uses, with an interactive map and visible source and uncertainty notes.
+- **Seasonal reading plans** connect day-by-day readings to the hosted texts. [Advent with the Fathers 2026](https://bibliothecacatholica.com/reading/advent-2026/) has 26 daily readings, November 29 to December 24, all from hosted pre-1931 editions; reading progress is saved in the reader's browser.
+- **The Isidore Index** is a separate discovery layer for the St. Isidore e-book library. It contains 6,633 imported catalog records. Those records have not each been reviewed; a listing is not a recommendation, a full-text copy, or confirmation that an outside file is available. Every record and every reading-room edition shows one of five rights badges (Public domain (US), Open license, Permission granted, Link only, or Unknown), explained at [/rights/](https://bibliothecacatholica.com/rights/). The site links to files only for the first three; otherwise it sends readers to the book's page at isidore.co. Rights holders can use [/takedown/](https://bibliothecacatholica.com/takedown/).
 - **Related Christian Writers** includes C. S. Lewis, identified as Anglican. His eight title records link to external excerpts or previews; they are not hosted complete books. More generally, a title record does not promise a free online edition.
 - **Digital Libraries, Scripture, Church Documents, Prayer, Reference Works, Podcasts & Media, Rare & Obscure, and Projects** are curated directories that help readers continue to original publishers and source libraries.
 
@@ -30,7 +31,8 @@ The 56 hosted text editions are also published at [texts.bibliothecacatholica.co
 | `data/books.json`, `data/books.js`, `data/isidore-matches.json` | Imported Isidore catalog snapshots and curated matches; see the catalog and rights notes before changing them |
 | `data/open/` | Generated JSON/CSV exports and their reuse terms |
 | `tools/`, `tests/` | Data builders, static-page generation, validation, and regression checks |
-| `docs/` | Catalog rules, editorial and rights details, source reviews, and maintenance notes |
+| `docs/` | Catalog rules, editorial and rights details (`RIGHTS.md`), Rites & Liturgy (`RITES.md`), saints (`SAINTS.md`), SEO (`SEO.md`), reading guides and plans (`READING-GUIDES.md`), source reviews, and maintenance notes |
+| `AGENTS.md` | Continuity guide: architecture, must-keep files, analytics privacy, and content rules for every contributor |
 
 ## Develop and validate
 
@@ -44,7 +46,7 @@ npm test         # run JavaScript and Python tests
 git diff --check
 ```
 
-Commit generated output after changing a template, route, application code, or source data. Re-run the builds and tests, then confirm `git diff --exit-code` is clean. CI runs the offline validation on pull requests. Optional network checks are separate: they can be blocked or redirected and do not establish that a text is accurate, licensed, or the edition described.
+Commit generated output after changing a template, route, application code, or source data. Re-run the builds and tests, then confirm `git diff --exit-code` is clean. CI (the "Validate library" workflow) runs the offline validation on every push and pull request, and GitHub Pages deploys `main`. Optional network checks are separate: they can be blocked or redirected and do not establish that a text is accurate, licensed, or the edition described.
 
 ## Updating the catalog
 

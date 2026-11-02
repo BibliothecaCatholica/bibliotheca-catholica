@@ -45,3 +45,28 @@ test('updateMeta uses robotsFor and the empty search page keeps the static title
  const title=fs.readFileSync('search/index.html','utf8').match(/<title>([^<]*)<\/title>/)[1];
  assert(app.includes("document.title='"+title+"'"),title);
 });
+test('canonicalFor(): edition slugs with an underscore keep their own static URL (QA 2026-11-02 re-check)',()=>{
+ const m=app.match(/^function canonicalFor\(\)[\s\S]*?return SITE\+'#\/'\+raw\}$/m);
+ assert(m,'canonicalFor() found in app.js');
+ const c={location:{hash:''},window:{BC_BOOT:'',BCSaints:{get:()=>null}},STATIC_SECTIONS:['editions','reading','rites','saints','search'],SITE:'https://bibliothecacatholica.com/'};
+ vm.runInNewContext(m[0]+';this.canonicalFor=canonicalFor;',c);
+ const at=(hash,boot)=>{c.location.hash=hash;c.window.BC_BOOT=boot||'';return c.canonicalFor()};
+ for(const s of ['campion_ck','intro_xty','jesus_naz','spirit_lit']){
+  const own='https://bibliothecacatholica.com/editions/'+s+'/';
+  assert(sitemap.includes('<loc>'+own+'</loc>'),s);
+  assert.equal(at('#/editions/'+s),own,s);
+  assert.equal(at('','editions/'+s),own,s);
+ }
+ assert.equal(at('#/editions/confessions'),'https://bibliothecacatholica.com/editions/confessions/');
+ // other routes are not loosened: an underscore there still falls back to the hash URL
+ assert.equal(at('#/author/a_b'),'https://bibliothecacatholica.com/#/author/a_b');
+ assert.equal(at('#/work/a_b'),'https://bibliothecacatholica.com/#/work/a_b');
+ assert.equal(at('#/editions/Bad_Slug'),'https://bibliothecacatholica.com/#/editions/Bad_Slug');
+});
+test('route(): the "Search and browse" title is set only on the empty search page',()=>{
+ const i=app.indexOf("case 'search':"),j=app.indexOf('break;',app.indexOf("document.title='Search and browse",i));
+ assert(i>0&&j>i);
+ const seg=app.slice(i,j);
+ assert.match(seg,/results\(p\.slice\(1\)\.join\('\/'\)\);else\{render\(/,'else branch has braces');
+ assert(seg.endsWith("document.title='Search and browse — Bibliotheca Catholica'}"),'title line sits inside the else block');
+});

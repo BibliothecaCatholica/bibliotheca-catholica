@@ -6,7 +6,7 @@
    already sends. Pure helpers live in BCRites.core (tested in tests/rites.test.js). See docs/RITES.md. */
 (function(root){
   'use strict';
-  var VER='20261026-v19';
+  var VER='20261102-v19-2';
   var D=null,WAIT=[],LOADING=false;
   function load(cb){if(D){cb&&cb(D);return}if(cb)WAIT.push(cb);if(LOADING)return;LOADING=true;
     function done(){D=root.RITES_DATA||null;WAIT.splice(0).forEach(function(f){try{f(D)}catch(e){console.warn(e)}})}

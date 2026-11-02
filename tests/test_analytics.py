@@ -79,6 +79,12 @@ class TestAnalytics(unittest.TestCase):
         self.assertIn('The site’s own events shorten search terms to 100 characters and send them only with the search itself.', s)
         self.assertNotIn('Search terms are shortened', s)  # v18.2: GA’s own outbound-click event is covered separately
         self.assertIn('built-in outside-link measurement', s)
+        # QA 2026-11-02: GA's built-in form events from the header search form are disclosed, and carry no search words
+        self.assertIn('built-in form measurement also records when someone starts or submits the header search form', s)
+        self.assertIn('These form events contain no search words.', s)
+        agents = (ROOT / 'AGENTS.md').read_text(encoding='utf-8')
+        self.assertIn('`form_start`', agents)
+        self.assertIn('`form_submit`', agents)
         self.assertIn('collects no personal data', s)
         self.assertIn('runs no ads', s)
         self.assertIn('local storage on this device', s)

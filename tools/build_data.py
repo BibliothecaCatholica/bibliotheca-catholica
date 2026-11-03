@@ -21,7 +21,7 @@ for a in A:
     links.append(dict(label='Search the Internet Archive',url='https://archive.org/search?query='+urllib.parse.quote('"'+q+'"'),kind='search'))
     toks=[t for t in re.split(r'[\s\.]+',q) if t and norm(t) not in STOP]
     key=(toks[-1] if toks else q) if ' of ' not in q else q.split(' of ')[0]
-    links.append(dict(label='Search the isidore.co catalog',url='https://isidore.co/calibre/mobile?search='+urllib.parse.quote(key)+'&num=25',kind='search'))
+    # Phase A (2026-11): no isidore.co mobile-catalog search link; its results offer raw get/ files whatever the rights badge (rule 10)
     if a.get('wikiUrl'): links.append(dict(label='Wikipedia',url=a['wikiUrl'],kind='about'))
     try: b=int(a['born'])
     except: b=None

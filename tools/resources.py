@@ -100,7 +100,7 @@ add(B,'E-book libraries','Catholic Culture Library','https://www.catholicculture
 add(B,'E-book libraries','LibriVox','https://librivox.org/','Free public-domain audiobooks read by volunteers, including many Catholic classics.','audio,free')
 add(B,'E-book libraries','St. Isidore Forum e-book library (Calibre)','https://isidore.co/calibre','Thousands of Catholic e-books — the Calibre catalog this hub is built to complement.','ebooks,isidore')
 # v18: the raw CalibreLibrary/ folder listing is no longer linked (rights rule 10)
-add(B,'E-book libraries','St. Isidore — simple (no-JS) catalog','https://isidore.co/calibre/mobile','Lightweight searchable list view of the isidore.co Calibre library.','ebooks,isidore')
+# Phase A (2026-11): the isidore.co mobile catalog is not linked; it lists raw get/ files whatever the rights badge (rule 10)
 add(B,'E-book libraries','New Advent','https://www.newadvent.org/','Catholic Encyclopedia, Fathers, Summa, and Bible in one site.','reference')
 add(B,'E-book libraries','Christian Classics Ethereal Library (CCEL)','https://ccel.org/','Thousands of public-domain Christian classics.','ebooks')
 add(B,'E-book libraries','Documenta Catholica Omnia','https://www.documentacatholicaomnia.eu/','Massive multilingual archive of Catholic texts (PDF).','ebooks,latin')

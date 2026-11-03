@@ -58,6 +58,14 @@ class CatalogTests(unittest.TestCase):
         tags=re.findall(r'<script[^>]* src="(?!https://www\.googletagmanager)[^"]+"[^>]*>',idx)
         self.assertTrue(tags);self.assertTrue(all(' defer ' in t or t.startswith('<script defer') for t in tags if 'boot.js' not in t),tags)
         self.assertEqual(idx.count('rel="preload" as="font"'),2)
+        # fonts are self-hosted: no Google Fonts request, and every face in styles/fonts.css exists in fonts/
+        self.assertNotIn('fonts.googleapis.com/css',idx);self.assertNotIn('fonts.gstatic.com',idx)
+        for f in re.findall(r'href="/fonts/([^"]+)"',idx)+re.findall(r'url\(/fonts/([^)]+)\)',(ROOT/'styles/fonts.css').read_text()):self.assertTrue((ROOT/'fonts'/f).exists(),f)
+        for f in('cormorantgaramond','ebgaramond','inter'):self.assertIn('SIL Open Font License',(ROOT/'fonts'/('OFL-'+f+'.txt')).read_text())
+        # static author and timeline pages preload the lazy author detail with the token data.js carries
+        pre='<link rel="preload" as="script" href="data/authors-detail.js?v='+js['detailV']+'">'
+        self.assertIn(pre,(ROOT/'author/trent-horn/index.html').read_text());self.assertIn(pre,(ROOT/'timeline/index.html').read_text())
+        self.assertNotIn('authors-detail',(ROOT/'work/confessions/index.html').read_text())
 
 class IsidoreMatchTests(unittest.TestCase):
     def test_matches_point_to_real_books_and_works(self):

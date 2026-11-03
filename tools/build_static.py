@@ -124,6 +124,8 @@ def ga_tag(tpl):
     return m.group(0)
 HOME_RE=re.compile(r'<!-- static-home:start -->.*?<!-- static-home:end -->',re.S)
 LD_RE=re.compile(r'<!-- jsonld:start -->.*?<!-- jsonld:end -->\n',re.S)
+import hubio as _hubio
+DETAIL_V=_hubio.split(_hubio.load())[0]['detailV']
 def page(tpl,route,title,desc,body,noindex=False,jsonld=()):
     url=SITE+(route+'/' if route else '');t=E(title);d=E(desc)
     s=LD_RE.sub('',tpl)
@@ -141,6 +143,8 @@ def page(tpl,route,title,desc,body,noindex=False,jsonld=()):
     s=sub(r'<main id="main" tabindex="-1">.*?</main>','<main id="main" tabindex="-1"><div class="static-prerender">'+body+'</div></main>',s)
     s=re.sub(r'<script (?:defer )?src="data/data\.js(\?[^"]*)?"></script>',lambda m:'<script>window.BC_BOOT='+json.dumps(route)+'</script>\n'+m.group(0),s,count=1)
     assert 'window.BC_BOOT' in s,'data/data.js script tag not found in index.html'
+    if route.startswith('author/') or route=='timeline':  # Phase B item 5: these routes wait for the lazy author detail; fetch it with the core
+        s=s.replace('</head>','<link rel="preload" as="script" href="data/authors-detail.js?v='+DETAIL_V+'">\n</head>',1)
     return s
 CC_BY_SA='https://creativecommons.org/licenses/by-sa/4.0/'
 def a(href,label,ext=False):

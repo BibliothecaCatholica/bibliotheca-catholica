@@ -10,6 +10,7 @@ Bibliotheca Catholica (bibliothecacatholica.com) contains several kinds of mater
 | Hosted texts | `data/texts/` and texts.bibliothecacatholica.com | public domain in the US; no license from us; source notices apply |
 | Wikipedia excerpts | the `extract` field in `data/catholic-hub.json` and `data/authors-detail.js` (split from it by `tools/hubio.py`; `data/data.js` carries no excerpts) | CC BY-SA 4.0, not MIT and not CC0 |
 | Portraits | images shown on author pages | the license on each image's file page |
+| Fonts | `fonts/` (Cormorant Garamond, EB Garamond, Inter, self-hosted copies of the Google Fonts files) | SIL Open Font License 1.1 (`fonts/OFL-*.txt`) |
 
 ## 1. Code
 

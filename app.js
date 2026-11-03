@@ -428,7 +428,7 @@ function auWorks(a,X,DR){var p=$('#tp-works'),n=window.LIBRARY_DATA.works.filter
   var rd=a.links.filter(function(l){return l.kind==='read'}).map(function(l){return {k:'read',t:l.label,u:l.url}});
   if(X.ws)rd.push({k:'read',t:'Author page on Wikisource',u:X.ws});
   var more=a.links.filter(function(l){return l.kind==='search'}).map(function(l){return {k:'search',t:l.label,u:l.url}});
-  if(a.isidoreFolder){var iso=D.isidore.filter(function(i){return i.f===a.isidoreFolder})[0];if(iso)more.unshift({k:'search',kl:'index',t:'All their books in the Isidore Index',u:isoAuthorHref(iso),int:1})}
+  if(a.isidoreFolder){var iso=a.isoRec||D.isidore.filter(function(i){return i.f===a.isidoreFolder})[0];if(iso)more.unshift({k:'search',kl:'index',t:'All their books in the Isidore Index',u:isoAuthorHref(iso),int:1})}
   if(X.wq)more.push({k:'about',kl:'quotes',t:'Quotations on Wikiquote',u:X.wq});
   if(a.qid)more.push({k:'about',kl:'data',t:'Wikidata item '+a.qid,u:'https://www.wikidata.org/wiki/'+a.qid});
   n+=rd.length;
@@ -481,7 +481,8 @@ function auRel(a,X){var p=$('#tp-related'),n=0,h='';
     box.insertAdjacentHTML('beforeend','<h3>Projects &amp; translations</h3>'+auLinkList(L.map(function(r){return {k:'site',kl:'project',t:r.n,u:r.u,n:r.d}})))})}
 
 /* Phase B item 5: data/data.js carries slim authors only. The author page and timeline wait for data/authors-detail.js
-   (merged into each author once), the author page and the Isidore A-Z list for data/isidore-authors.js. Both files are
+   (merged into each author once; static author and timeline pages preload it), and search and the Isidore A-Z list
+   load data/isidore-authors.js. Both files are
    cache-busted by content tokens in data.js (tools/hubio.py). On a static page's first paint the prerender stays until
    the data arrives, so nothing shifts; on in-app navigation a short loading note shows. */
 D.isidore=D.isidore||[];
@@ -639,7 +640,7 @@ function support(){var shop=AFF.bookshopShop||'';
   render(h,'support')}
 function route(){var raw=location.hash.replace(/^#\/?/,'');if(!raw&&window.BC_BOOT)raw=window.BC_BOOT;if(raw==='search'&&!location.hash){var lookup=new URLSearchParams(location.search).get('lookup');if(lookup)raw='search/'+encodeURIComponent(lookup.slice(0,300))}var queryAt=raw.indexOf('?');var query=new URLSearchParams(queryAt<0?'':raw.slice(queryAt+1));var path=queryAt<0?raw:raw.slice(0,queryAt);var h;try{h=decodeURIComponent(path)}catch(e){notfound();return}var p=h.split('/');if(p[0]==='search'){searchScope=['curated','isidore','all'].indexOf(query.get('scope'))>=0?query.get('scope'):'all';}
   hideSug();if(p[0]!=='search')gaReset('search');
-  switch(p[0]){case 'library':window.BCLibrary.library(render,p[1]);break;case 'work':window.BCLibrary.work(render,p[1]);break;case 'read':window.BCLibrary.read(render,p[1],p[2],p[3],p[4]);break;case 'related':window.BCLibrary.related(render);break;case '':home();break;case 'authors':authors();break;case 'doctors':authors({doctors:true});break;case 'author':hubNeed([hubDetail,hubIsidore],function(){author(p[1],p[2]||'')});break;case 'timeline':hubNeed([hubDetail],function(){timeline(p[1],p[2])});break;
+  switch(p[0]){case 'library':window.BCLibrary.library(render,p[1]);break;case 'work':window.BCLibrary.work(render,p[1]);break;case 'read':window.BCLibrary.read(render,p[1],p[2],p[3],p[4]);break;case 'related':window.BCLibrary.related(render);break;case '':home();break;case 'authors':authors();break;case 'doctors':authors({doctors:true});break;case 'author':hubNeed([hubDetail],function(){author(p[1],p[2]||'')});break;case 'timeline':hubNeed([hubDetail],function(){timeline(p[1],p[2])});break;
    case 'scripture':case 'magisterium':case 'references':case 'media':case 'libraries':section(p[0]);break;case 'prayers':section('prayers',p[1]||'');break;case 'rare':rare(p[1]||'');break;case 'projects':projects();break;case 'isidore':if(p[1]==='folders')hubNeed([hubIsidore],isidore);else if(p[1]==='book')bookDetail(+p[2]);else books(p.slice(1).join('/'));break;case 'books':location.replace('#/isidore'+(p[1]?'/'+p.slice(1).join('/'):''));break;case 'data':openData();break;case 'support':support();break;case 'policy':policy();break;case 'guides':guidePage(p[1]||'');break;case 'about':render(SC.about||'<div class="empty">This page could not be loaded. <a href="/about/">Open the plain version</a>.</div>','about');break;case 'rights':case 'takedown':case 'licensing':rightsPage(p[0]);break;case 'editions':editions(p[1]||'');break;case 'reading':if(p[1]&&window.BCPlans&&window.BCPlans.has(p[1]))window.BCPlans.view(render,p[1]);else reading(p[1]||'');break;case 'substacks':substacks();break;case 'search':if(p.slice(1).join('/').trim())results(p.slice(1).join('/'));else{render('<div class="page-head"><h1>Search the library</h1><p class="lede">Enter a person, title, or topic in the search box above. You can also browse <a href="/authors/">authors</a>, <a href="/library/">reading editions</a>, or <a href="/saints/">saints</a>.</p></div>','');document.title='Search and browse — Bibliotheca Catholica'}break;case 'saints':window.BCSaints.view(render,p.slice(1));break;case 'rites':if(window.BCRites)window.BCRites.view(render,p.slice(1));else notfound();break;default:notfound()}}
 window.addEventListener('hashchange',route);
 /* v17: header, footer, and home links are real paths (/authors/, /work/x/) so crawlers follow them to the static pages.

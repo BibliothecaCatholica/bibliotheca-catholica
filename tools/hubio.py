@@ -2,7 +2,8 @@
 
   data/data.js            window.HUB_DATA     core, loaded on every page: eras, resources, and slim authors (no detail
                                               fields), plus isidoreCount, detailV, and isidoreV (content tokens)
-  data/authors-detail.js  window.HUB_DETAIL   {by:{id:{detail fields}}}: loaded on demand by the author page and timeline
+  data/authors-detail.js  window.HUB_DETAIL   {by:{id:{detail fields, isoRec}}}: loaded on demand by the author page and timeline
+                                              (isoRec = the author's Isidore Index name record, so the author page needs no name list)
   data/isidore-authors.js window.HUB_ISIDORE  the Isidore Index author names: loaded on demand by search and the A-Z list
 
 merged() rebuilds the full snapshot from the three files (tests/test_catalog.py checks it equals the JSON)."""
@@ -14,7 +15,7 @@ DETAIL=('extract','links','intro','books','media','qidWork','isidoreFolder')
 def load():return json.loads((ROOT/'data/catholic-hub.json').read_text())
 def dumps(o):return json.dumps(o,ensure_ascii=False,separators=(',',':'))
 def split(h):
-    core={k:v for k,v in h.items() if k not in('authors','isidore')};authors=[];by={}
+    core={k:v for k,v in h.items() if k not in('authors','isidore')};authors=[];by={};iso_by={i['f']:i for i in h.get('isidore',[])}
     for a in h['authors']:
         c={};d={}
         for k,v in a.items():(d if k in DETAIL else c)[k]=v
@@ -24,6 +25,7 @@ def split(h):
             if cr.get('pd'):c['imgCredit']={'pd':True}
             else:
                 if 'img' in c:d['img']=c.pop('img')
+        if a.get('isidoreFolder') in iso_by:d['isoRec']=iso_by[a['isidoreFolder']]  # the author page needs only this file, not the 190 KB name list
         if d:by[a['id']]=d
         authors.append(c)
     det=dumps({'by':by});iso=dumps(h.get('isidore',[]))
@@ -45,7 +47,7 @@ def merged():
         if k=='authors':
             L=[]
             for a,o in zip(core['authors'],src['authors']):
-                m=dict(a);m.update(det.get(a['id'],{}));L.append({k2:m[k2] for k2 in o if k2 in m} if set(m)==set(o) else m)
+                m=dict(a);m.update(det.get(a['id'],{}));m.pop('isoRec',None);L.append({k2:m[k2] for k2 in o if k2 in m} if set(m)==set(o) else m)
             out[k]=L
         elif k=='isidore':out[k]=iso
         else:out[k]=core.get(k)

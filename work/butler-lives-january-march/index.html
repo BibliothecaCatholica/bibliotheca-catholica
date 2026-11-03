@@ -31,11 +31,10 @@
 <meta name="twitter:description" content="The Lives of the Saints: January, February, and March by Alban Butler: Butler&#x27;s saint-by-saint lives for the first three months of the year, each sourced to…">
 <meta name="twitter:image" content="https://bibliothecacatholica.com/assets/og-image.png">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Phase B item 5: preload the two latin text faces (display headings, body) that paint the first screen; the URLs come from the css2 request below and change only when Google ships a new font version -->
-<link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/ebgaramond/v33/SlGUmQSNjdsmc35JDF1K5GR1SDk.woff2">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Phase B item 5: fonts are self-hosted (styles/fonts.css, fonts/); preload the two latin faces that paint the first screen -->
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/cormorantgaramond-normal-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/ebgaramond-normal-latin.woff2">
+<link rel="stylesheet" href="styles/fonts.css?v=20261103-v27">
 <link rel="stylesheet" href="styles.css?v=20261103-v24-2">
 <link rel="stylesheet" href="styles/timeline.css?v=20261025-connected-timeline">
 <link rel="stylesheet" href="styles/library.css?v=20261025-v12">
@@ -135,7 +134,7 @@
       <a class="footer-support" data-support="footer" href="/support/">Support the Library</a>
     </nav>
   </div>
-  <p class="build-note">Site build <a href="/build.json"><span id="build-id">bc-757d0184275b</span></a> · <a href="https://github.com/BibliothecaCatholica/bibliotheca-catholica/commits/main/" target="_blank" rel="noopener">Source history ↗</a>. The data date identifies the original catalog snapshot; individual source checks have their own dates.</p>
+  <p class="build-note">Site build <a href="/build.json"><span id="build-id">bc-43ab1bb8b583</span></a> · <a href="https://github.com/BibliothecaCatholica/bibliotheca-catholica/commits/main/" target="_blank" rel="noopener">Source history ↗</a>. The data date identifies the original catalog snapshot; individual source checks have their own dates.</p>
 </footer>
 <script>window.BC_BOOT="work/butler-lives-january-march"</script>
 <script defer src="data/data.js?v=20261103-v27"></script>
@@ -158,6 +157,6 @@
 <script defer src="scripts/timeline.js?v=20261025-connected-timeline"></script>
 <script defer src="scripts/plans.js?v=20261026-v20"></script>
 <script defer src="data/site-copy.js?v=7cb6d7a4f5"></script>
-<script defer src="app.js?v=20261103-v27"></script>
+<script defer src="app.js?v=20261103-v27-1"></script>
 </body>
 </html>

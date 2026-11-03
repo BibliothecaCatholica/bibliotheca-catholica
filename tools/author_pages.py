@@ -6,7 +6,7 @@ Each such page gets, from data already in the repo (nothing invented, nothing ho
     app.js `auIntro()` builds the same text in the browser (tests/author_pages.test.js compares them);
   - their reading-room works (link only) and their Isidore Index books, each with its rights badge and a link to
     the record page only (rights rule 10: never files, folder listings, or the viewer);
-  - their edition guides, with Bookshop.org buttons only for ISBNs already in data/guide.js (bookshop.org/a/<id>/<isbn>);
+  - their edition guides (Bookshop.org buttons switched off on author pages until the owner approves: AUTHOR_GUIDE_BOOKSHOP_BUTTONS);
   - their official site, talks, and podcasts: hub `links` of kind `site` and AUTHORX `own`, shown only when the URL
     is in CHECKED (it answered 200 on that date; rerun tools/check_author_links.py to refresh).
 The Wikipedia excerpt is not shown on these pages (the Wikipedia link stays in "More sources").
@@ -152,7 +152,7 @@ RESEARCH_BOOKSHOP_BUTTONS=False
 # The edition-guide Bookshop buttons that commit 937ddf5a added to author pages are switched off the same way (they were
 # new links on author pages; the edition-guide pages keep theirs). True restores them, with the affiliate disclosure.
 AUTHOR_GUIDE_BOOKSHOP_BUTTONS=False
-LINK_ONLY={'status':'link_only','evidence':'Published after 1931 and in copyright: we link to it and host nothing','checked':'2026-11-03'}
+LINK_ONLY={'status':'link_only','evidence':'Published after 1931 and in copyright: we link to it and host nothing.','checked':'2026-11-03'}
 def books_html(au,E,a):
     """'Selected books' from hub books[] (data/modern-authors.json via tools/import_modern_authors.py): link-only, rights badge,
     verified ISBN-13 as text. The ISBN is the disabled Bookshop hook (RESEARCH_BOOKSHOP_BUTTONS); nothing is linked to Bookshop."""

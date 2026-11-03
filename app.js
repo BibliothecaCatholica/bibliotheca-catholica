@@ -372,7 +372,7 @@ function auIntro(a,era,nb,ng,no){if(a.intro)return a.intro;
   return s+' '+(parts.length?'This page lists '+auOxford(parts)+'.':'This page links outside sources about '+a.name+'.')}
 /* hub books[] (tools/import_modern_authors.py): link-only, rights badge, ISBN as text; no Bookshop button (disabled hook,
    tools/author_pages.py RESEARCH_BOOKSHOP_BUTTONS) */
-function auBooks(a){if(!a.books||!a.books.length)return '';var X={status:'link_only',evidence:'Published after 1931 and in copyright: we link to it and host nothing',checked:'2026-11-03'};
+function auBooks(a){if(!a.books||!a.books.length)return '';var X={status:'link_only',evidence:'Published after 1931 and in copyright: we link to it and host nothing.',checked:'2026-11-03'};
   return '<section class="au-sel"><h2>Selected books</h2><p class="small">These books are in copyright. Each title links to its publisher or library record; we host none of them.</p><ul class="au-books">'+a.books.map(function(b){var m=[b.pub,b.y?String(b.y):''].filter(Boolean).join(', ');
   return '<li data-isbn="'+esc(b.isbn)+'">'+(b.url?'<a href="'+esc(b.url)+'" target="_blank" rel="noopener">'+esc(b.t)+'</a>':esc(b.t))+(m?' ('+esc(m)+')':'')+(b.note?', '+esc(b.note):'')+'. <span class="small">ISBN '+esc(b.isbn)+'</span>'+RT.badge(X)+'</li>'}).join('')+'</ul></section>'}
 function author(id,tab){

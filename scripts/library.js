@@ -43,7 +43,7 @@ function listenDock(w){var recs=LV.work[w.id]||[];if(!recs.length){closeDock();r
  document.body.appendChild(el);document.body.classList.add('has-listen-dock');DOCK.el=el;
  function save(){try{localStorage.setItem(key,JSON.stringify(st))}catch(err){}}
  var panel=el.querySelector('.ld-panel'),tog=el.querySelector('.ld-toggle'),loaded=false;
- function setOpen(o){st.open=o;panel.hidden=!o;el.classList.toggle('open',o);tog.setAttribute('aria-expanded',o?'true':'false');save();if(o)load()}
+ function setOpen(o){st.open=o;panel.hidden=!o;el.classList.toggle('open',o);tog.setAttribute('aria-expanded',o?'true':'false');save();if(o){load();if(gaOnce('listen_open',w.id))track('listen_open',{work_id:w.id,listen_source:'dock'})}}
  tog.onclick=function(){setOpen(!st.open)};el.querySelector('.ld-close').onclick=function(){setOpen(false);tog.focus()};
  var rec=el.querySelector('.ld-rec'),sec=el.querySelector('.ld-sec'),au=el.querySelector('.ld-audio'),cur=null;
  function load(){if(loaded||!rec)return;loaded=true;useRec(rec.value,String(st.rec)===rec.value)}
@@ -118,7 +118,7 @@ function read(render,id,editionId,part,anchor){
   [['reader-size','fontSize','px'],['reader-spacing','lineHeight','']].forEach(function(setting){var input=document.getElementById(setting[0]);try{var pref=localStorage.getItem('bc:'+setting[0]);if(Array.from(input.options).some(function(o){return o.value===pref}))input.value=pref}catch(err){}function apply(){document.getElementById('reading-text').style[setting[1]]=input.value+setting[2];try{localStorage.setItem('bc:'+setting[0],input.value)}catch(err){}}input.onchange=apply;apply()});
   document.getElementById('reader-find').onsubmit=function(ev){ev.preventDefault();var term=document.getElementById('reader-term').value.trim().toLowerCase(),hits=[];if(term.length<2)return;blocks.forEach(function(p,i){var pos=p.toLowerCase().indexOf(term);if(pos>=0)hits.push({part:Math.floor(i/size),snippet:p.slice(Math.max(0,pos-65),pos+140)})});document.getElementById('reader-hits').innerHTML='<p>'+hits.length+' matching paragraphs'+(hits.length>50?' (first 50 shown)':'')+'</p><ul>'+hits.slice(0,50).map(function(h){return '<li><a href="'+base+'/'+h.part+'">Section '+(h.part+1)+'</a>: '+esc(h.snippet)+'</li>'}).join('')+'</ul>'};
   if(gaOnce('open_text',w.id+'/'+e.id)){gaReset('open_text');gaOnce('open_text',w.id+'/'+e.id);gaReset('reader_section');track('open_text',{work_id:w.id,edition_id:e.id,text_source:'hosted'})}
-  if(gaOnce('reader_section',w.id+'/'+e.id+'/'+page))track('reader_section',{work_id:w.id,edition_id:e.id,section_index:page});
+  if(gaOnce('reader_section',w.id+'/'+e.id+'/'+page))track('reader_section',{work_id:w.id,edition_id:e.id,section_index:page,sections_total:total});
   if(window.BCReader)window.BCReader.enhance({w:w,e:e,blocks:blocks,size:size,total:total,page:page,base:base,headings:headings,anchor:anchor});
  }).catch(function(){if(location.hash===requestedHash)render('<h1>The reading edition could not load</h1><p>Please try again, or '+link(e.source,'read at the source')+'.</p><a href="#/work/'+w.id+'">Edition details</a>','library')});
 }

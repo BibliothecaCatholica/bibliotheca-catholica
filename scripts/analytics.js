@@ -8,7 +8,7 @@
  */
 (function(root){
 'use strict';
-var EVENTS=['page_view','search','open_text','reader_section','listen_play','listen_complete','outbound_click','filter_use','support_click','theme_toggle','saint_open'];
+var EVENTS=['page_view','search','open_text','reader_section','listen_play','listen_complete','outbound_click','filter_use','support_click','theme_toggle','saint_open','listen_open'];
 var MAX=100;
 function str(v){return String(v==null?'':v)}
 function cleanTerm(s){return str(s).replace(/\s+/g,' ').trim().toLowerCase().slice(0,MAX)}
@@ -16,7 +16,7 @@ function clean(params){var out={};if(!params||typeof params!=='object')return ou
   if(v==null||v==='')return;if(typeof v==='number'){if(isFinite(v))out[k]=v;return}if(typeof v==='boolean'){out[k]=v;return}
   if(k==='page_location'||k==='page_path'){out[k]=str(v).slice(0,500);return}out[k]=str(v).slice(0,MAX)});return out}
 /* track(name, params): the only way the site sends a GA4 event. Returns true when an event was handed to gtag. */
-function track(name,params){try{if(typeof gtag!=='function')return false;if(EVENTS.indexOf(name)<0)return false;
+function track(name,params){try{if(typeof gtag!=='function')return false;if(EVENTS.indexOf(name)<0)return false;if(name==='page_view')reset('listen_open');
   var c=context();if(c)gtag('set',{page_title:c.title,page_location:c.location});gtag('event',name,clean(params));return true}catch(e){return false}}
 /* context(): the term-free page title and location for the current route. Set before every event (v18.1), so the
    search, outbound_click, and GA's own enhanced-measurement events never fall back to a document title or URL that
@@ -26,11 +26,19 @@ function context(){try{var L=root.location;if(!L)return null;var d=root.document
 function domain(url){try{return new URL(url,'https://bibliothecacatholica.com/').hostname.replace(/^www\./,'').toLowerCase()}catch(e){return ''}}
 var PUB_HOSTS=null;
 function pubHosts(){if(PUB_HOSTS)return PUB_HOSTS;PUB_HOSTS={};try{var P=(root.AFFILIATES&&root.AFFILIATES.publishers)||{};Object.keys(P).forEach(function(k){var d=domain(P[k].search||'');if(d)PUB_HOSTS[d]=k})}catch(e){}return PUB_HOSTS}
-/* linkKind(domain, hints): 'bookshop', 'publisher', 'substack', or 'other'. hints: {publisher:key, substack:bool} */
+/* linkKind(domain, hints): 'bookshop', 'publisher', 'substack', 'audio', 'official', 'source', or 'other', in that order
+   of precedence (analytics spec 2026-11-03). hints: {publisher:key, substack:bool, source:bool (the link has data-open-text)}.
+   Each host matches itself and its subdomains. */
+var AUDIO_HOSTS=['librivox.org'],OFFICIAL_HOSTS=['vatican.va','usccb.org','vaticannews.va'],
+  SOURCE_HOSTS=['isidore.co','gutenberg.org','newadvent.org','ccel.org','archive.org','documentacatholicaomnia.eu','tertullian.org','dbu.edu','sourcebooks.fordham.edu'];
+function hostIn(d,list){for(var i=0;i<list.length;i++){var h=list[i];if(d===h||d.slice(-h.length-1)==='.'+h)return true}return false}
 function linkKind(d,hints){hints=hints||{};d=str(d).toLowerCase();
   if(d==='bookshop.org'||/\.bookshop\.org$/.test(d))return 'bookshop';
   if(hints.publisher||pubHosts()[d])return 'publisher';
   if(hints.substack||d==='substack.com'||/\.substack\.com$/.test(d))return 'substack';
+  if(hostIn(d,AUDIO_HOSTS))return 'audio';
+  if(hostIn(d,OFFICIAL_HOSTS))return 'official';
+  if(hints.source||hostIn(d,SOURCE_HOSTS))return 'source';
   return 'other'}
 function publisherKey(d){return pubHosts()[str(d).toLowerCase()]||''}
 /* work id from the current route (#/work/<id> or #/read/<id>/...) */
@@ -46,7 +54,15 @@ function pagePath(hash,boot){var raw=str(hash).replace(/^#\/?/,'');if(!raw)raw=s
   if(p[0]==='isidore'||p[0]==='books'){if(p[1]==='book'&&/^\d+$/.test(p[2]||''))return '/#/isidore/book/'+p[2];if(p[1]==='folders')return '/#/isidore/folders';return '/#/isidore'}
   for(var i=0;i<p.length&&i<6;i++){if(!/^[a-z0-9_.-]{1,80}$/i.test(p[i]))break;out.push(p[i])}
   return out.length?'/#/'+out.join('/'):'/'}
-function pageLocation(path){return ORIGIN+(path||'/')}
+/* pageLocation(path, search): ORIGIN + path. Only the landing page_view passes location.search (app.js gaPageView()); from
+   it only utm_source, utm_medium, utm_campaign, and utm_content are kept, each trimmed and cut to 100 characters. utm_term,
+   gclid, lookup, q, and every other parameter are dropped, so no search term can reach page_location (spec 2026-11-03). */
+var UTM_KEEP=['utm_source','utm_medium','utm_campaign','utm_content'];
+function utmQuery(search){var q=str(search).replace(/^\?/,''),got={},out=[];if(!q)return '';
+  q.split('&').forEach(function(kv){var i=kv.indexOf('='),k,v;if(i<1)return;try{k=decodeURIComponent(kv.slice(0,i).replace(/\+/g,' '));v=decodeURIComponent(kv.slice(i+1).replace(/\+/g,' '))}catch(e){return}
+    if(UTM_KEEP.indexOf(k)<0||got.hasOwnProperty(k))return;v=v.replace(/\s+/g,' ').trim().slice(0,MAX);if(v)got[k]=v});
+  UTM_KEEP.forEach(function(k){if(got.hasOwnProperty(k))out.push(k+'='+encodeURIComponent(got[k]))});return out.length?'?'+out.join('&'):''}
+function pageLocation(path,search){return ORIGIN+(path||'/')+(search?utmQuery(search):'')}
 /* pageTitle(path, docTitle): search and Index routes get a fixed title; elsewhere the document title, which on
    those routes is built from catalog data only. */
 var SITE_NAME='Bibliotheca Catholica';
@@ -60,9 +76,12 @@ function onClick(e){try{var t=e.target&&e.target.closest?e.target.closest('a[hre
   var sup=t.closest('[data-support]');if(sup)track('support_click',{target:sup.getAttribute('data-support')});
   var href=t.getAttribute('href')||'';if(!/^https?:\/\//i.test(href))return;var d=domain(href);if(!d||d==='bibliothecacatholica.com')return;
   var ot=t.getAttribute('data-open-text');if(ot)track('open_text',{work_id:ot,text_source:'external',link_domain:d});
-  var kind=linkKind(d,{publisher:t.getAttribute('data-pub'),substack:!!t.closest('#ss-out')});
+  var kind=linkKind(d,{publisher:t.getAttribute('data-pub'),substack:!!t.closest('#ss-out'),source:!!ot});
+  /* listen_open (librivox): a work-page Listen link (class listen-btn) to LibriVox, once per work per page view */
+  if(kind==='audio'&&t.classList&&t.classList.contains('listen-btn')){var L=root.location||{},wid=routeWork(L.hash)||routeWork('#/'+str(root.BC_BOOT));
+    if(wid&&once('listen_open',wid))track('listen_open',{work_id:wid,listen_source:'librivox'})}
   track('outbound_click',{link_domain:d,link_kind:kind})}catch(err){}}
-var api={EVENTS:EVENTS,MAX_TERM:MAX,track:track,cleanTerm:cleanTerm,clean:clean,domain:domain,linkKind:linkKind,publisherKey:publisherKey,routeWork:routeWork,pagePath:pagePath,pageLocation:pageLocation,pageTitle:pageTitle,context:context,once:once,reset:reset,onClick:onClick};
+var api={utmQuery:utmQuery,hostIn:hostIn,EVENTS:EVENTS,MAX_TERM:MAX,track:track,cleanTerm:cleanTerm,clean:clean,domain:domain,linkKind:linkKind,publisherKey:publisherKey,routeWork:routeWork,pagePath:pagePath,pageLocation:pageLocation,pageTitle:pageTitle,context:context,once:once,reset:reset,onClick:onClick};
 root.BCAnalytics=api;
 if(root.document&&root.document.addEventListener)root.document.addEventListener('click',onClick,true);
 if(typeof module!=='undefined'&&module.exports)module.exports=api;

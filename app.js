@@ -636,12 +636,14 @@ document.addEventListener('click',function(e){if(e.defaultPrevented||e.button||e
   var u;try{u=new URL(a.getAttribute('href'),location.href)}catch(x){return}var p=appPath(u);if(p===null)return;e.preventDefault();if(location.hash.replace(/^#\/?/,'')===p)route();else location.hash='#/'+p});
 /* ---------- Google Analytics page views: the config in <head> has send_page_view:false, so app.js sends exactly one page_view
    for the first load (index.html, static entry pages, and the /#/ page that 404.html redirects to) and one per later hash route ---------- */
-var gaT=null,gaLast=null;
+var gaT=null,gaLast=null,gaLanded=false;
 /* v18: dedupe on the raw URL, but report the normalized route (BCAnalytics.pagePath): never a search term or Index filter,
    and one path per view whether it was served from / or a static page. Free-text titles are replaced the same way. */
 function gaPageView(){clearTimeout(gaT);gaT=setTimeout(function(){var raw=location.pathname+location.hash;if(raw===gaLast)return;gaLast=raw;
   var A=window.BCAnalytics;if(!A)return;var path=A.pagePath(location.hash,window.BC_BOOT),title=A.pageTitle(path,document.title);
-  track('page_view',{page_title:title,page_location:A.pageLocation(path),page_path:path})},400)}
+  /* only the landing view keeps the four utm_ campaign tags (BCAnalytics.utmQuery); later views send the bare route */
+  var loc=A.pageLocation(path,gaLanded?'':location.search);gaLanded=true;
+  track('page_view',{page_title:title,page_location:loc,page_path:path})},400)}
 window.addEventListener('hashchange',gaPageView);
 /* ---------- per-route meta (description, canonical, Open Graph, Twitter) ---------- */
 var SITE='https://bibliothecacatholica.com/',DEF_DESC=(document.querySelector('meta[name=description]')||{}).content||'';

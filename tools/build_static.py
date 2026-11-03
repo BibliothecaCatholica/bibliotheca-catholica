@@ -420,6 +420,10 @@ def main():
     out['rights']=('Rights & Permissions — Bibliotheca Catholica','What the five Bibliotheca Catholica rights badges mean, how each status is decided, and when downloads are shown. Not legal advice.',rp['rights'],[crumbs(('Rights & Permissions','rights/'))])
     out['takedown']=('Takedown requests — Bibliotheca Catholica','How a rights holder can ask Bibliotheca Catholica to remove a text, a link, or a record’s file links, and how to send a counter-notice. Not legal advice.',rp['takedown'],[crumbs(('Takedown requests','takedown/'))])
     out['licensing']=('Licensing & credits — Bibliotheca Catholica','How Bibliotheca Catholica is licensed: code MIT, open data CC0, site writing CC BY 4.0, texts public domain in the US, plus Wikipedia and portrait credits.',rp['licensing'],[crumbs(('Licensing & credits','licensing/'))])
+    # Steering C (2026-11-03) help guides: same HTML as the app (data/guides.js, written by tools/build_guides.py from tools/guide_pages.py)
+    gj=json.loads((ROOT/'data/guides.js').read_text().strip()[len('window.GUIDES='):-1]);sys.path.insert(0,str(ROOT/'tools'));import guide_pages
+    for k,g in gj.items():
+        out['guides/'+k]=(g['title']+' — Bibliotheca Catholica',guide_pages.PAGES[k]['desc'],g['html'],[crumbs((g['title'],'guides/'+k+'/'))])
     # v19 Rites & Liturgy: same HTML as the app (data/rites.js, written by tools/build_rites.py from tools/rites_pages.py),
     # with the map inlined and shaded for the default layer so the pages work without JavaScript
     sys.path.insert(0,str(ROOT/'tools'));import rites_pages

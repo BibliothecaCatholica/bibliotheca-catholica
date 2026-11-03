@@ -548,6 +548,7 @@ editions/theologysanity/index.html
 editions/thursday/index.html
 editions/truedevotion/index.html
 editions/waugh/index.html
+guides/epub-on-your-device/index.html
 isidore/index.html
 libraries/index.html
 library/index.html

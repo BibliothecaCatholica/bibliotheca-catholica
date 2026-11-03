@@ -147,7 +147,7 @@ class RitesPages(unittest.TestCase):
         self.assertIn('<a href="/rites/" data-nav="rites">Rites<span class="nav-long">&nbsp;&amp; Liturgy</span></a>',sec)
         self.assertEqual(idx.count('scripts/rites.js'),1);self.assertNotIn('data/rites.js',idx)  # lazy-loaded
         app=R('app.js');self.assertIn("case 'rites':if(window.BCRites)window.BCRites.view(render,p.slice(1));else notfound()",app)
-        self.assertIn("saints|rites)$/.test(s[0])",app);self.assertIn("p[0]==='rites'",app)
+        self.assertIn("saints|rites|guides)$/.test(s[0])",app);self.assertIn("p[0]==='rites'",app)
         self.assertNotIn('RITES_DATA',R('data/books.js'));self.assertNotIn('rites',R('scripts/analytics.js').lower())
     def test_builds_are_current(self):
         before=R('data/rites.js');B.main();self.assertEqual(R('data/rites.js'),before)

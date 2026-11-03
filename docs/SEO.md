@@ -27,4 +27,4 @@ Bibliotheca Catholica (https://bibliothecacatholica.com) is a static site. Googl
 
 ## Owner steps outside the repo
 
-Search Console: URL inspection, then Request indexing for `/`, `/authors/`, `/author/thomas-aquinas/`, and `/work/confessions/`; confirm the sitemap shows about 765 discovered URLs (765 on 2026-11-02; `build_static.py` prints the current count). Bing Webmaster Tools: import from Search Console. Link the site from the project's own profiles. Branded results usually take several weeks to settle.
+Search Console: URL inspection, then Request indexing for `/`, `/authors/`, `/author/thomas-aquinas/`, and `/work/confessions/`; confirm the sitemap shows about 766 discovered URLs (766 on 2026-11-03, after the EPUB guide; 765 on 2026-11-02; `build_static.py` prints the current count). Bing Webmaster Tools: import from Search Console. Link the site from the project's own profiles. Branded results usually take several weeks to settle.

@@ -524,3 +524,13 @@ mark{background:color-mix(in srgb,var(--gold2) 45%,transparent);color:inherit;bo
 /* Phase A item 2: intro on author pages with no hosted work (static and app) */
 .au-intro{font-size:17px;line-height:1.55;color:var(--ink);margin:10px 0 14px;max-width:72ch}
 .au-books li{margin:3px 0}
+
+/* Phase B item 6 (CLS): the brand name has a fixed width in em, so the header wraps the same way before and after the web
+   font loads (at 412 px the fallback serif is wider and used to push the actions to a second row, then snap back). While the
+   app starts, the static prerender reserves a full screen, so the footer never sits in the first viewport and then jumps
+   when the app's longer page replaces it. html.js is set by the inline theme script; without JS, nothing is reserved. */
+.brand-name{display:block;width:8.75em;white-space:nowrap}
+.searchwrap input{line-height:19px}
+@media(max-width:760px){.searchwrap input{line-height:20px}}
+html.js #main>.static-prerender{min-height:100vh}
+html.app-unavailable #main>.static-prerender{min-height:0}

@@ -467,7 +467,7 @@ mark{background:color-mix(in srgb,var(--gold2) 45%,transparent);color:inherit;bo
 .au-feast{font:500 14px var(--sans);color:var(--ink2);margin:4px 0 6px}
 .au-feast .k{font:700 10.5px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink);margin-right:4px}
 .au-key{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.au-key .chip{text-decoration:none}
+.au-key .chip{text-decoration:none;max-width:100%;white-space:normal;text-align:left}
 .au-tabs{position:sticky;top:0;z-index:20;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(8px);border:1px solid var(--line);border-top:0;padding:8px 14px 0;box-shadow:0 6px 14px -12px rgba(0,0,0,.35)}
 .au-tabs::-webkit-scrollbar{display:none}
 .au-tabs a{flex:none;white-space:nowrap;font:600 14.5px var(--sans);color:var(--ink2);text-decoration:none;padding:10px 14px 11px;border-bottom:3px solid transparent;border-radius:8px 8px 0 0}

@@ -72,7 +72,7 @@ class SEO(unittest.TestCase):
         self.assertEqual(sorted(types),['Organization','WebSite'])
         self.assertFalse(any('potentialAction' in j for j in home))  # no SearchAction: the site search is a hash route
         org=[j for j in home if j['@type']=='Organization'][0]
-        self.assertEqual(org['sameAs'],['https://github.com/BibliothecaCatholica','https://bsky.app/profile/bibliothecacatholica.com'])
+        self.assertEqual(org['sameAs'],['https://github.com/BibliothecaCatholica','https://x.com/BiblioCatholica','https://bsky.app/profile/bibliothecacatholica.com'])
         self.assertEqual((ROOT/'.well-known/atproto-did').read_text().strip(),'did:plc:phhtp6omv2vh4nua6bkmzaww')
     def test_no_review_or_faq_schema(self):
         for r,p in PARSED.items():

@@ -292,7 +292,7 @@ def main():
                 buys=0;li=[]
                 for e in au_guides:
                     btn=[]
-                    for pk in e.get('picks') or []:
+                    for pk in (e.get('picks') or []) if AP.AUTHOR_GUIDE_BOOKSHOP_BUTTONS else []:
                         if re.fullmatch(r'97[89]\d{10}',pk.get('isbn') or ''):
                             btn.append('<a class="buy-b bs" href="https://bookshop.org/a/'+BSID+'/'+pk['isbn']+'" target="_blank" rel="noopener sponsored">Bookshop.org: '+E(pk.get('lbl') or pk.get('tr') or e['t'])+(' ('+E(pk['pub'])+')' if pk.get('pub') else '')+'</a>')
                     buys+=len(btn)
@@ -301,7 +301,7 @@ def main():
             official=AP.official(au,AX.get(au['id'],{}))
             of_html=('<h2>Official site, talks, and podcasts</h2><ul>'+''.join('<li>'+a(u,t,True)+'</li>' for t,u,k in official)+'</ul>') if official else ''
             iso_only=('<p>'+a('/#/isidore/author='+urllib.parse.quote(iso_n,safe=''),'All their books in the Isidore Index')+' · '+a('/isidore/','Browse the Isidore Index')+'</p>') if iso_n else ''
-            body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+intro+lib_html+bk_html+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+gd_html+of_html+iso_only+'<p>'+a('/authors/','All authors')+'</p>'
+            body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+intro+AP.books_html(au,E,a)+lib_html+bk_html+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+gd_html+of_html+iso_only+'<p>'+a('/authors/','All authors')+'</p>'
         else:
           body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+wiki_block+(('<h2>Read here</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else '')+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+iso_link+'<p>'+a('/authors/','All authors')+'</p>'
         sa=saints_by_author.get(au['id'])

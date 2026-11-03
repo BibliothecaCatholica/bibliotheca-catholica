@@ -4,25 +4,26 @@
 longer show the Wikipedia excerpt. They show our own intro, then link-only lists with rights badges. See AGENTS.md,
 "Author pages without a hosted work", for the template and rules.
 
-## Hand-written intros (hub `intro`)
+## The four Research pages (Horn, Woods, Hahn, Carroll)
 
-Each sentence is a plain fact taken from the sources below (all checked on 2026-11-03).
+Data: `data/modern-authors.json`, a copy of Research's `research/modern-authors-pages.json` (2026-11-03; sources, credentials,
+and the verified-vs-unverified ledger are in it). `python3 tools/import_modern_authors.py` writes into the hub, through hubio:
 
-- **Trent Horn** (`trent-horn`): https://www.trenthorn.com/about (convert, three master's degrees, Catholic Answers,
-  The Counsel of Trent), https://www.trenthorn.com/books/ (titles).
-- **Thomas E. Woods Jr.** (`thomas-e-woods`): https://www.thomasewoods.com/abouttom1.htm, https://tomwoods.com/about,
-  and the encyclopedia.com biography (Columbia PhD in history, book titles).
-- **Warren H. Carroll** (`warren-h-carroll`): https://www.christendom.edu/about/warren-h-carroll/ (conversion in 1968,
-  founding in 1977, president until 1985, History chair until 2002), Wikipedia and Open Library (dates, A History of Christendom).
-- **Scott Hahn** (`scott-hahn`): https://stpaulcenter.com/scott-hahn/bio/ and https://stpaulcenter.com/history/
-  (former Presbyterian minister, entered the Church in 1986, Franciscan University since 1990, St. Paul Center founder, books).
+- `intro`: Research's original 60 to 90 word intro, as written (each fact has a source in the file).
+- `born`: cleared for Trent Horn (1985 is only on Wikipedia and Wikidata, unsourced).
+- `books`: every book with a verified ISBN-13, link-only with a rights badge. The title links its publisher page or Open
+  Library record (never Amazon, never scotthahn.com book pages, which sell through Amazon). No year where Research marks it
+  unverified or in conflict (What the Saints Never Said, Sacred Then and Sacred Now). Christendom Press ISBNs that are 2004
+  reprint records say "ISBN is the 2004 Christendom Press reprint". Thomas Woods: all four books in the file (owner, 2026-11-03).
+- `media`: official site, podcasts, YouTube, X, and organization pages, only URLs in `author_pages.CHECKED` (200 to curl,
+  ours or Research's check; christendom.edu blocks curl with a WAF 202, so its founder page was read with a fetch tool).
+  Left out: Facebook (400 login wall), Rumble (403), mises.org (403), and trenthorn.com's dead YouTube link
+  (`youtube.com/user/defense4thefaith`, 404); Horn's channel is `@TheCounselofTrent`.
 
-## Official links added to the hub (all returned 200 on 2026-11-03)
-
-- Trent Horn: https://www.trenthorn.com/ and https://www.trenthorn.com/books/ (curl needs a browser User-Agent; plain curl gets 406).
-- Warren H. Carroll: https://press.christendom.edu/ (publisher of A History of Christendom).
-- Not added: tomwoods.com for Thomas Woods (not in the data or a Research file; a candidate for the owner).
-- Excluded from "Official site, talks, and podcasts" because they failed the check: coramfratribus.com (403), mysteriousworld.com (no response).
+**No Bookshop.org buttons.** Business asked on 2026-11-03 for no new Bookshop links until the owner approves, and no Bookshop
+product page could be verified (Cloudflare 403). The ISBN stays in the data and in `data-isbn` as a disabled hook:
+`RESEARCH_BOOKSHOP_BUTTONS` and `AUTHOR_GUIDE_BOOKSHOP_BUTTONS` in `tools/author_pages.py` are False. The edition-guide pages
+and the app's Buy tab keep the Bookshop links they already had.
 
 ## Templated intro
 

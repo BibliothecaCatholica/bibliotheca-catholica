@@ -1,0 +1,1027 @@
+{
+ "generated": "2026-11-03",
+ "prepared_by": "Research (Grok Bot executor) for Catholic Repo, item 2 of site-improvements-2026-11.md",
+ "rules_applied": [
+  "Nothing hosted: every book is link_only (post-1931, in copyright)",
+  "No Amazon links",
+  "Bookshop affiliate id 130222 is applied by Catholic Repo; no bookshop URL verified here",
+  "No donation wording",
+  "Intros are original, not copied; each fact in them is in credentials or books with a source"
+ ],
+ "status_note": "The live site already removed the isidore.co mobile-search link from these four author pages, and the Hahn and Carroll pages link their edition guides (curl 2026-11-03). Titles are still 'Name — Bibliotheca Catholica'.",
+ "authors": [
+  {
+   "id": "trent-horn",
+   "name": "Trent Horn",
+   "born": null,
+   "born_status": "unverified",
+   "born_note": "Wikipedia and Wikidata give 1985, but Wikidata's only reference is 'imported from Wikipedia' and the Library of Congress authority (no2015153694) has no date. Keep the existing 1985 off the page or mark it unverified until a primary source is found.",
+   "died": null,
+   "credentials": [
+    {
+     "fact": "Convert to Catholicism; entered the Church at age 17",
+     "src": [
+      "https://holyapostles.edu/from-religious-questions-to-catholic-answers/"
+     ]
+    },
+    {
+     "fact": "Three master's degrees, in theology, philosophy, and bioethics",
+     "src": [
+      "https://www.trenthorn.com/about/",
+      "https://www.catholic.com/profile/trent-horn"
+     ]
+    },
+    {
+     "fact": "M.A. in Philosophy, Holy Apostles College & Seminary, 2018; served as an adjunct professor there",
+     "src": [
+      "https://holyapostles.edu/from-religious-questions-to-catholic-answers/"
+     ]
+    },
+    {
+     "fact": "Staff apologist at Catholic Answers (position since 2012)",
+     "src": [
+      "https://www.catholic.com/profile/trent-horn",
+      "https://holyapostles.edu/from-religious-questions-to-catholic-answers/"
+     ]
+    },
+    {
+     "fact": "Host of the weekly podcast The Counsel of Trent",
+     "src": [
+      "https://www.catholic.com/profile/trent-horn"
+     ]
+    },
+    {
+     "fact": "Author or co-author of over a dozen books",
+     "src": [
+      "https://www.trenthorn.com/about/"
+     ]
+    }
+   ],
+   "intro": "Trent Horn is a staff apologist at Catholic Answers, which he joined in 2012, and the host of the weekly podcast The Counsel of Trent. He entered the Catholic Church at seventeen and went on to earn three master's degrees, in theology, philosophy, and bioethics. His books answer the objections of atheists and Protestants, work through difficult passages of Scripture, and make the pro-life case, with steady attention to charitable and persuasive conversation. All are in copyright, so we link to them.",
+   "intro_sources": [
+    "https://www.catholic.com/profile/trent-horn",
+    "https://holyapostles.edu/from-religious-questions-to-catholic-answers/",
+    "https://www.trenthorn.com/about/",
+    "https://www.trenthorn.com/books/"
+   ],
+   "official_site": "https://www.trenthorn.com/",
+   "social": [
+    {
+     "platform": "X",
+     "url": "https://x.com/Trent_Horn",
+     "evidence": "Linked from trenthorn.com footer (as twitter.com/Trent_Horn, redirects to x.com); curl 200"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/TrentHornCatholicApologist/",
+     "evidence": "Linked from trenthorn.com footer; Facebook login wall (400) blocks curl, so existence is not curl-verified"
+    }
+   ],
+   "social_rejected": [
+    {
+     "url": "https://www.youtube.com/user/defense4thefaith",
+     "reason": "Linked from trenthorn.com home page but returns 404 on 2026-11-03; do not use"
+    }
+   ],
+   "free_media": [
+    {
+     "kind": "podcast",
+     "label": "The Counsel of Trent (Catholic Answers)",
+     "url": "https://www.catholic.com/audio/cot",
+     "evidence": "catholic.com official page; curl 200"
+    },
+    {
+     "kind": "youtube",
+     "label": "The Counsel of Trent on YouTube",
+     "url": "https://www.youtube.com/@TheCounselofTrent",
+     "evidence": "Linked from catholic.com/audio/cot (as youtube.com/TheCounselofTrent); curl 200"
+    },
+    {
+     "kind": "podcast",
+     "label": "The Counsel of Trent on Apple Podcasts",
+     "url": "https://podcasts.apple.com/us/podcast/the-counsel-of-trent/id1354647807",
+     "evidence": "Linked from catholic.com/audio/cot; curl 200"
+    },
+    {
+     "kind": "podcast",
+     "label": "The Counsel of Trent on Spotify",
+     "url": "https://open.spotify.com/show/5PGmCKE1KzIHMN9kvKOpC8",
+     "evidence": "Linked from catholic.com/audio/cot; curl 200"
+    }
+   ],
+   "organizations": [
+    {
+     "label": "Catholic Answers: Trent Horn profile",
+     "url": "https://www.catholic.com/profile/trent-horn"
+    },
+    {
+     "label": "Trent Horn: Books (official)",
+     "url": "https://www.trenthorn.com/books/"
+    }
+   ],
+   "books": [
+    {
+     "title": "Answering Atheism: How to Make the Case for God with Logic and Charity",
+     "publisher": "Catholic Answers Press",
+     "first_published": 2013,
+     "first_published_status": "verified",
+     "isbn13": "9781938983436",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL27579221M",
+      "https://shop.catholic.com/answering-atheism-how-to-make-the-case-for-god-with-logic-and-charity/"
+     ],
+     "edition_note": "Paperback, 2013 (Open Library).",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "Persuasive Pro-Life: How to Talk About Our Culture's Toughest Issue",
+     "publisher": "Catholic Answers Press",
+     "first_published": 2014,
+     "first_published_status": "verified",
+     "isbn13": "9781941663042",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL37069606M"
+     ],
+     "edition_note": "Paperback, Oct 2014 (Open Library). The shop link on trenthorn.com returns 404.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "Hard Sayings: A Catholic Approach to Answering Bible Difficulties",
+     "publisher": "Catholic Answers Press",
+     "first_published": 2016,
+     "first_published_status": "verified",
+     "isbn13": "9781941663745",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL37739292M"
+     ],
+     "edition_note": "Hardcover, Jun 2016 (Open Library). The shop link on trenthorn.com redirects to a 404 page.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "Why We're Catholic: Our Reasons for Faith, Hope, and Love",
+     "publisher": "Catholic Answers Press",
+     "first_published": 2017,
+     "first_published_status": "verified",
+     "isbn13": "9781683570240",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL32182826M",
+      "https://shop.catholic.com/why-were-catholic-our-reasons-for-faith-hope-and-love/"
+     ],
+     "edition_note": "Paperback, May 2017.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "The Case for Catholicism: Answers to Classic and Contemporary Protestant Objections",
+     "publisher": "Ignatius Press",
+     "first_published": 2017,
+     "first_published_status": "verified",
+     "isbn13": "9781621641445",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://ignatius.com/the-case-for-catholicism-ccatp/",
+      "https://openlibrary.org/books/OL29776930M"
+     ],
+     "edition_note": "Paperback, publication date October 25, 2017 (Ignatius Press product page).",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "Made This Way: How to Prepare Kids to Face Today's Tough Moral Issues",
+     "publisher": "Catholic Answers Press",
+     "first_published": 2018,
+     "first_published_status": "verified",
+     "isbn13": "9781683570974",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL31846749M",
+      "https://shop.catholic.com/made-this-way-how-to-prepare-kids-to-face-todays-tough-moral-issues/"
+     ],
+     "edition_note": "Paperback, Sep 2018.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check.",
+     "coauthor": "Leila Miller"
+    },
+    {
+     "title": "Counterfeit Christs: Finding the Real Jesus Among the Impostors",
+     "publisher": "Catholic Answers Press",
+     "first_published": 2019,
+     "first_published_status": "verified",
+     "isbn13": "9781683571162",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL32842693M",
+      "https://shop.catholic.com/counterfeit-christs-finding-the-real-jesus-among-the-impostors/"
+     ],
+     "edition_note": "Paperback, Apr 2019 (Open Library).",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "What the Saints Never Said: Pious Misquotes and the Subtle Heresies They Teach",
+     "publisher": "Catholic Answers Press",
+     "first_published": null,
+     "first_published_status": "unverified",
+     "isbn13": "9781683570691",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://shop.catholic.com/what-the-saints-never-said-pious-misquotes-and-the-subtle-heresies-they-teach-you/"
+     ],
+     "edition_note": "ISBN from the publisher's shop page. Not found in Open Library by ISBN.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check.",
+     "notes": "Publication year not found on the publisher page or Open Library; leave the year off. Subtitle as shown in the publisher URL slug and page."
+    }
+   ],
+   "our_site": {
+    "author_page": "https://bibliothecacatholica.com/author/trent-horn/",
+    "edition_guides": [],
+    "note": "No edition guide yet. Hub resources already list the Counsel of Trent podcast and YouTube channel (data/catholic-hub.json resources)."
+   },
+   "flags": [],
+   "intro_words": 82
+  },
+  {
+   "id": "thomas-e-woods",
+   "name": "Thomas E. Woods Jr.",
+   "born": 1972,
+   "born_status": "verified",
+   "born_src": [
+    "https://id.loc.gov/authorities/names/no2003072548.madsrdf.json"
+   ],
+   "born_note": "Library of Congress name authority 'Woods, Thomas E., Jr., 1972-' (citing an ECIP data view: born August 1, 1972).",
+   "died": null,
+   "credentials": [
+    {
+     "fact": "B.A. in history, Harvard; M.A., M.Phil., and Ph.D., Columbia University",
+     "src": [
+      "https://tomwoods.com/about/"
+     ]
+    },
+    {
+     "fact": "Senior fellow of the Mises Institute; host of The Tom Woods Show",
+     "src": [
+      "https://tomwoods.com/about/"
+     ]
+    },
+    {
+     "fact": "Associate editor of The Latin Mass magazine for eleven years",
+     "src": [
+      "https://tomwoods.com/about/"
+     ]
+    },
+    {
+     "fact": "Templeton Enterprise Award for The Church and the Market",
+     "src": [
+      "https://tomwoods.com/about/"
+     ],
+     "note": "Self-reported on his own site; not independently checked."
+    }
+   ],
+   "intro": "Thomas E. Woods Jr. is an American historian who studied at Harvard and earned his doctorate at Columbia. He appears here for his books on Catholic history: How the Catholic Church Built Western Civilization, The Church Confronts Modernity, a study of Catholic intellectuals in the Progressive Era, and Sacred Then and Sacred Now, on the traditional Latin Mass. He also writes on economics and politics; in The Church and the Market he argues for a free economy. Those views are his own, not Church teaching.",
+   "intro_sources": [
+    "https://tomwoods.com/about/",
+    "https://id.loc.gov/authorities/names/no2003072548.madsrdf.json"
+   ],
+   "intro_note": "The Church and the Market is described as his argument (from its subtitle), not as Catholic social teaching. No political label is used in the copy.",
+   "official_site": "https://tomwoods.com/",
+   "social": [
+    {
+     "platform": "X",
+     "url": "https://x.com/thomasewoods",
+     "evidence": "Linked from tomwoods.com home and about pages; curl 200"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/@TomWoodsTV",
+     "evidence": "Linked from tomwoods.com (youtube.com/tomwoodstv and @TomWoodsTV/videos); curl 200"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/ThomasEWoods/",
+     "evidence": "Linked from tomwoods.com; Facebook login wall blocks curl"
+    },
+    {
+     "platform": "Rumble",
+     "url": "https://rumble.com/user/tomwoodshow",
+     "evidence": "Linked from tomwoods.com; Rumble returns 403 to curl, not curl-verified"
+    }
+   ],
+   "free_media": [
+    {
+     "kind": "podcast",
+     "label": "The Tom Woods Show",
+     "url": "https://tomwoods.com/podcasts/",
+     "evidence": "Official site; curl 200"
+    },
+    {
+     "kind": "podcast",
+     "label": "The Tom Woods Show on Apple Podcasts",
+     "url": "https://podcasts.apple.com/us/podcast/the-tom-woods-show/id716825890",
+     "evidence": "Linked from tomwoods.com; curl 200"
+    },
+    {
+     "kind": "podcast",
+     "label": "The Tom Woods Show on Spotify",
+     "url": "https://open.spotify.com/show/4RziZyRebkVYcRuGJlkJHN",
+     "evidence": "Linked from tomwoods.com; curl 200"
+    }
+   ],
+   "free_media_note": "His podcast and channel are mainly on economics, politics, and history, not Catholic topics. Suggest labeling them 'His podcast (economics and politics)' or leaving them off. Liberty Classroom is paid, so leave it off.",
+   "organizations": [
+    {
+     "label": "Mises Institute (senior fellow)",
+     "url": "https://mises.org/",
+     "evidence": "Named on tomwoods.com/about; mises.org returns 403 to curl, not curl-verified"
+    }
+   ],
+   "books": [
+    {
+     "title": "The Church Confronts Modernity: Catholic Intellectuals and the Progressive Era",
+     "publisher": "Columbia University Press",
+     "first_published": 2004,
+     "first_published_status": "verified",
+     "isbn13": "9780231131865",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL3691914M"
+     ],
+     "edition_note": "2004 (Open Library edition record). Paperback 2006/2007: 9780231131872 (Open Library OL9316400M).",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "How the Catholic Church Built Western Civilization",
+     "publisher": "Regnery Publishing",
+     "first_published": 2005,
+     "first_published_status": "verified",
+     "isbn13": "9780895260383",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL8250523M"
+     ],
+     "edition_note": "Hardcover, May 2, 2005.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "The Church and the Market: A Catholic Defense of the Free Economy",
+     "publisher": "Lexington Books",
+     "first_published": 2005,
+     "first_published_status": "verified",
+     "isbn13": "9780739110362",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL7913535M"
+     ],
+     "edition_note": "Paperback, Mar 2005. Hardcover 9780739110355 (OL9442460M).",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check.",
+     "notes": "Economic argument by the author, not magisterial teaching. Label it that way if it's listed."
+    },
+    {
+     "title": "Sacred Then and Sacred Now: The Return of the Old Latin Mass",
+     "publisher": "Roman Catholic Books",
+     "first_published": 2008,
+     "first_published_status": "conflict",
+     "isbn13": "9780979354021",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL11840237M"
+     ],
+     "edition_note": "Open Library gives Feb 1, 2008. Wikipedia says 2007.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check.",
+     "notes": "The year conflicts: Open Library says 2008 and Wikipedia says 2007. Show no year, or say 'c. 2007–2008'."
+    }
+   ],
+   "books_omitted_note": "Most of his other books, such as Diary of a Psychosis (listed on tomwoods.com/about), are political or economic rather than Catholic. Suggest leaving them off a Catholic library page. Micah decides.",
+   "our_site": {
+    "author_page": "https://bibliothecacatholica.com/author/thomas-e-woods/",
+    "edition_guides": [],
+    "note": "No edition guide. The current hub 'desc' already names How the Catholic Church Built Western Civilization."
+   },
+   "flags": [
+    {
+     "topic": "League of the South",
+     "fact": "English Wikipedia ('Tom Woods', section 'Affiliation with League of the South') says Woods was a founding member of the League of the South in 1994 and has been criticized for it. It cites outside sources, which I didn't independently verify.",
+     "src": [
+      "https://en.wikipedia.org/wiki/Tom_Woods"
+     ],
+     "recommendation": "Leave it off the page copy. Micah decides whether any context note is needed."
+    },
+    {
+     "topic": "The Great Façade (2002)",
+     "fact": "Wikipedia lists The Great Façade: Vatican II and the Regime of Novelty in the Catholic Church (2002, co-authored with Christopher Ferrara). It isn't in the book list on his own about page. The book is critical of the post-conciliar Church.",
+     "src": [
+      "https://en.wikipedia.org/wiki/Tom_Woods"
+     ],
+     "recommendation": "Don't feature it. If the Isidore Index has it, rule 4 (editorial flags) may apply. Ask Micah."
+    },
+    {
+     "topic": "COVID-19 commentary",
+     "fact": "His own site lists Diary of a Psychosis: How Public Health Disgraced Itself During COVID Mania. Wikipedia describes his criticism of public-health measures.",
+     "src": [
+      "https://tomwoods.com/about/",
+      "https://en.wikipedia.org/wiki/Tom_Woods"
+     ],
+     "recommendation": "Not a Catholic topic, so leave it off."
+    },
+    {
+     "topic": "Magisterium vs opinion",
+     "fact": "His Austrian-school economics and libertarian politics are his own opinions, not Catholic social teaching.",
+     "src": [],
+     "recommendation": "The intro says this in one neutral sentence."
+    }
+   ],
+   "intro_words": 85
+  },
+  {
+   "id": "scott-hahn",
+   "name": "Scott Hahn",
+   "born": 1957,
+   "born_status": "verified",
+   "born_src": [
+    "https://www.scotthahn.com/about-dr-hahn"
+   ],
+   "died": null,
+   "credentials": [
+    {
+     "fact": "B.A. (triple major in theology, philosophy, and economics), Grove City College, 1979; M.Div., Gordon-Conwell Theological Seminary, 1982; Ph.D. in Biblical Theology, Marquette University, 1995",
+     "src": [
+      "https://www.scotthahn.com/about-dr-hahn"
+     ]
+    },
+    {
+     "fact": "Ordained a Presbyterian minister in 1982; entered the Catholic Church at the Easter Vigil, 1986",
+     "src": [
+      "https://www.scotthahn.com/about-dr-hahn"
+     ]
+    },
+    {
+     "fact": "Has taught at Franciscan University of Steubenville since 1990; holds the Father Michael Scanlan, T.O.R., Chair of Biblical Theology and the New Evangelization",
+     "src": [
+      "https://www.scotthahn.com/about-dr-hahn"
+     ]
+    },
+    {
+     "fact": "Founder and president of the St. Paul Center for Biblical Theology",
+     "src": [
+      "https://www.scotthahn.com/about-dr-hahn"
+     ]
+    }
+   ],
+   "intro": "Scott Hahn, born in 1957, is a biblical theologian who has taught at Franciscan University of Steubenville since 1990 and founded the St. Paul Center for Biblical Theology. Ordained a Presbyterian minister in 1982, he entered the Catholic Church at the Easter Vigil of 1986, a journey he and his wife Kimberly tell in Rome Sweet Home. His popular books, including The Lamb's Supper and Hail, Holy Queen, explain the Mass and Mary through Scripture. All are in copyright, so we link to them.",
+   "intro_sources": [
+    "https://www.scotthahn.com/about-dr-hahn",
+    "https://ignatius.com/rome-sweet-home-rshp/"
+   ],
+   "intro_note": "The Mass and Mary come from the subtitles of The Lamb's Supper and Hail, Holy Queen (Open Library).",
+   "official_site": "https://www.scotthahn.com/",
+   "social": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/scottwhahn",
+     "evidence": "Linked from scotthahn.com; Instagram login wall blocks curl"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/Dr.ScottHahn",
+     "evidence": "Linked from scotthahn.com; Facebook login wall blocks curl"
+    }
+   ],
+   "social_rejected": [
+    {
+     "url": "X @DrScottHahn",
+     "reason": "Listed in Wikidata (P2002), but not linked from scotthahn.com or stpaulcenter.com, so it's not used"
+    }
+   ],
+   "free_media": [
+    {
+     "kind": "audio/video",
+     "label": "Free Online Resources (scotthahn.com)",
+     "url": "https://www.scotthahn.com/listen-online",
+     "evidence": "Official site nav 'Free Online Resources'; curl 200"
+    },
+    {
+     "kind": "audio",
+     "label": "Sunday Bible Reflections",
+     "url": "https://www.scotthahn.com/audio-video/2016/1/20/sunday-bible-reflections",
+     "evidence": "Featured on scotthahn.com/listen-online; curl 200"
+    },
+    {
+     "kind": "youtube",
+     "label": "St. Paul Center on YouTube",
+     "url": "https://www.youtube.com/@StPaulCenter",
+     "evidence": "stpaulcenter.com links youtube.com/c/stpaulcenter; both URLs curl 200"
+    }
+   ],
+   "organizations": [
+    {
+     "label": "St. Paul Center for Biblical Theology",
+     "url": "https://stpaulcenter.com/"
+    },
+    {
+     "label": "Franciscan University of Steubenville",
+     "url": "https://www.franciscan.edu/"
+    }
+   ],
+   "books": [
+    {
+     "title": "Rome Sweet Home: Our Journey to Catholicism",
+     "publisher": "Ignatius Press",
+     "first_published": 1993,
+     "first_published_status": "verified",
+     "isbn13": "9780898704785",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://ignatius.com/rome-sweet-home-rshp/",
+      "https://openlibrary.org/books/OL1443841M"
+     ],
+     "edition_note": "Paperback, publication date September 21, 1993 (Ignatius). Matches our edition guide.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check.",
+     "coauthor": "Kimberly Hahn"
+    },
+    {
+     "title": "A Father Who Keeps His Promises: God's Covenant Love in Scripture",
+     "publisher": "Charis (Servant Publications)",
+     "first_published": 1998,
+     "first_published_status": "verified",
+     "isbn13": "9780892838295",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL698412M"
+     ],
+     "edition_note": "Open Library lists ISBN-10 0892838299 (Charis, 1998). The ISBN-13 is converted from it and resolves to the same Open Library record. The subtitle comes from the Open Library record.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "The Lamb's Supper: The Mass as Heaven on Earth",
+     "publisher": "Doubleday",
+     "first_published": 1999,
+     "first_published_status": "verified",
+     "isbn13": "9780385496599",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL37087M"
+     ],
+     "edition_note": "Open Library lists ISBN-10 0385496591 (Doubleday, 1999). The ISBN-13 resolves to it and matches our edition guide.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "Hail, Holy Queen: The Mother of God in the Word of God",
+     "publisher": "Doubleday",
+     "first_published": 2001,
+     "first_published_status": "verified",
+     "isbn13": "9780385501682",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL6788677M"
+     ],
+     "edition_note": "Doubleday 2001 hardcover (ISBN-10 0385501684; the ISBN-13 resolves on Open Library). Image paperback 2006: 9780385501699 (OL7440710M).",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "Reasons to Believe: How to Understand, Explain, and Defend the Catholic Faith",
+     "publisher": "Doubleday",
+     "first_published": 2007,
+     "first_published_status": "verified",
+     "isbn13": "9780385509350",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL7440923M"
+     ],
+     "edition_note": "May 8, 2007.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "Kinship by Covenant: A Canonical Approach to the Fulfillment of God's Saving Promises",
+     "publisher": "Yale University Press",
+     "first_published": 2009,
+     "first_published_status": "verified",
+     "isbn13": "9780300140972",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL24073218M"
+     ],
+     "edition_note": "Yale University Press, 2009.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "Ignatius Catholic Study Bible: New Testament (RSV-2CE)",
+     "publisher": "Ignatius Press",
+     "first_published": 2010,
+     "first_published_status": "verified",
+     "isbn13": "9781586174859",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL26010787M"
+     ],
+     "edition_note": "Co-edited with Curtis Mitch. Matches the ISBN in our 'Best study notes (NT)' edition pick.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check.",
+     "coauthor": "Curtis Mitch",
+     "notes": "Scripture text RSV-2CE, under the publisher's copyright."
+    },
+    {
+     "title": "The Fourth Cup: Unveiling the Mystery of the Last Supper and the Cross",
+     "publisher": "Image",
+     "first_published": 2018,
+     "first_published_status": "verified",
+     "isbn13": "9781524758790",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL27360486M"
+     ],
+     "edition_note": "Hardcover, Feb 20, 2018.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    }
+   ],
+   "our_site": {
+    "author_page": "https://bibliothecacatholica.com/author/scott-hahn/",
+    "edition_guides": [
+     "https://bibliothecacatholica.com/editions/romesweethome/",
+     "https://bibliothecacatholica.com/editions/lambssupper/"
+    ],
+    "other_mentions": [
+     "Ignatius Catholic Study Bible NT appears as an edition pick (tools/editions_data.py line 14)",
+     "Hub resources: St. Paul Center Bible study; Scott Hahn — St. Paul Center YouTube"
+    ],
+    "note": "The live static author page already links both guides (checked 2026-11-03)."
+   },
+   "flags": [
+    {
+     "topic": "Official site sells via Amazon",
+     "fact": "scotthahn.com book pages have 'Purchase from Amazon' buttons.",
+     "src": [
+      "https://www.scotthahn.com/"
+     ],
+     "recommendation": "Link scotthahn.com/books or stpaulcenter.com, never those Amazon links (rule 7)."
+    }
+   ],
+   "intro_words": 84
+  },
+  {
+   "id": "warren-h-carroll",
+   "name": "Warren H. Carroll",
+   "born": 1932,
+   "died": 2011,
+   "born_status": "verified",
+   "died_status": "verified",
+   "born_src": [
+    "https://www.christendom.edu/about/warren-h-carroll/",
+    "https://www.ncregister.com/news/warren-carroll-1932-2011-83xz3xbw"
+   ],
+   "dates_note": "Christendom College: 'March 24, 1932 - July 17, 2011'. The National Catholic Register obituary (July 22, 2011) is titled 'Warren Carroll (1932-2011)'. christendom.edu returns a WAF 202/502 to curl, so its page was read with the fetch tool instead; ncregister.com curls 200.",
+   "credentials": [
+    {
+     "fact": "B.A. summa cum laude in history, Bates College; M.A. and Ph.D. in history, Columbia University",
+     "src": [
+      "https://www.christendom.edu/about/warren-h-carroll/"
+     ]
+    },
+    {
+     "fact": "Received into the Catholic Church in 1968",
+     "src": [
+      "https://www.christendom.edu/about/warren-h-carroll/"
+     ]
+    },
+    {
+     "fact": "Joined the staff of Triumph magazine in 1973",
+     "src": [
+      "https://www.christendom.edu/about/warren-h-carroll/"
+     ]
+    },
+    {
+     "fact": "Founded Christendom College, which opened in September 1977; president until 1985; chaired the History Department until retiring in 2002",
+     "src": [
+      "https://www.christendom.edu/about/warren-h-carroll/",
+      "https://www.ncregister.com/news/warren-carroll-1932-2011-83xz3xbw"
+     ]
+    }
+   ],
+   "intro": "Warren H. Carroll (1932–2011) was an American historian who earned his doctorate at Columbia and was received into the Catholic Church in 1968. In 1977 he founded Christendom College in Virginia, serving as its first president and later chairing its history department until 2002. His multi-volume History of Christendom tells the story of the West from an openly Catholic perspective, and he also wrote on Isabel of Spain and Our Lady of Guadalupe. His books are in copyright, so we link to them.",
+   "intro_sources": [
+    "https://www.christendom.edu/about/warren-h-carroll/",
+    "https://press.christendom.edu/product/the-founding-of-christendom/"
+   ],
+   "intro_note": "Book subjects come from the titles (Open Library and Christendom Press).",
+   "official_site": null,
+   "official_site_note": "Deceased. Use Christendom College's founder page as the primary page.",
+   "social": [],
+   "free_media": [],
+   "free_media_note": "Christendom says his later public lectures were on iTunes U, but I found no live, verified free lecture URL. None is listed.",
+   "organizations": [
+    {
+     "label": "Christendom College: Our Founder",
+     "url": "https://www.christendom.edu/about/warren-h-carroll/",
+     "evidence": "Read with the fetch tool (curl blocked by the site's WAF)"
+    },
+    {
+     "label": "Christendom College Press: The History of Christendom",
+     "url": "https://press.christendom.edu/product/history-of-christendom-collection/",
+     "evidence": "curl 200"
+    },
+    {
+     "label": "National Catholic Register obituary (2011)",
+     "url": "https://www.ncregister.com/news/warren-carroll-1932-2011-83xz3xbw",
+     "evidence": "curl 200"
+    }
+   ],
+   "books": [
+    {
+     "title": "1917: Red Banners, White Mantle",
+     "publisher": "Christendom Publications",
+     "first_published": 1981,
+     "first_published_status": "verified",
+     "isbn13": "9780931888052",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL3044488M",
+      "https://press.christendom.edu/product/1917/"
+     ],
+     "edition_note": "ISBN-10 0931888050 (1981). The ISBN-13 resolves on Open Library.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "Our Lady of Guadalupe and the Conquest of Darkness",
+     "publisher": "Christendom Publications",
+     "first_published": 1983,
+     "first_published_status": "verified",
+     "isbn13": "9780931888120",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL8385028M",
+      "https://press.christendom.edu/product/our-lady-of-guadalupe-2/"
+     ],
+     "edition_note": "ISBN-10 0931888123 (1983). The ISBN-13 resolves on Open Library (2004 Christendom Press record).",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "The Founding of Christendom (A History of Christendom, vol. 1)",
+     "publisher": "Christendom Press",
+     "first_published": 1985,
+     "first_published_status": "verified",
+     "isbn13": "9780931888212",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL8385032M",
+      "https://press.christendom.edu/product/the-founding-of-christendom/"
+     ],
+     "edition_note": "Paperback (Open Library 2004 record), which matches our edition guide. The 1985 first edition is 9780931888182 (OL19749865M, titled A history of Christendom, 1985).",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "The Building of Christendom (vol. 2)",
+     "publisher": "Christendom Press",
+     "first_published": 1987,
+     "first_published_status": "verified",
+     "isbn13": "9780931888243",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL8385034M",
+      "https://press.christendom.edu/product/the-building-of-christendom-324-1100/"
+     ],
+     "edition_note": "Paperback (Open Library 2004 record).",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "Isabel of Spain: The Catholic Queen",
+     "publisher": "Christendom Press",
+     "first_published": 1991,
+     "first_published_status": "verified",
+     "isbn13": "9780931888434",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL8385041M",
+      "https://press.christendom.edu/product/isabel-of-spain/"
+     ],
+     "edition_note": "Paperback (Open Library 2004 record). Hardcover 9780931888427 (OL8385040M). Subtitle 'Catholic Queen' per Open Library.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "The Glory of Christendom (vol. 3)",
+     "publisher": "Christendom Press",
+     "first_published": 1993,
+     "first_published_status": "verified",
+     "isbn13": "9780931888557",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL1185320M",
+      "https://press.christendom.edu/product/the-glory-of-christendom-1100-1517/"
+     ],
+     "edition_note": "Open Library lists ISBN-10s 0931888549 and 0931888557 for 1993. 9780931888557 resolves.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "The Last Crusade",
+     "publisher": "Christendom Press",
+     "first_published": 1996,
+     "first_published_status": "verified",
+     "isbn13": "9780931888670",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL623217M",
+      "https://press.christendom.edu/product/the-last-crusade-2/"
+     ],
+     "edition_note": "1996 (Open Library).",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "The Cleaving of Christendom (vol. 4)",
+     "publisher": "Christendom Press",
+     "first_published": 2000,
+     "first_published_status": "verified",
+     "isbn13": "9780931888755",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL8385062M",
+      "https://press.christendom.edu/product/the-cleaving-of-christendom-1517-1661/"
+     ],
+     "edition_note": "Paperback (Open Library 2004 record).",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "The Revolution Against Christendom (vol. 5)",
+     "publisher": "Christendom Press",
+     "first_published": 2005,
+     "first_published_status": "verified",
+     "isbn13": "9780931888809",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL8385066M",
+      "https://press.christendom.edu/product/the-revolution-against-christendom-1661-1815/"
+     ],
+     "edition_note": "First published 2005 per Open Library work; this paperback record is dated March 7, 2006.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    },
+    {
+     "title": "The Crisis of Christendom (vol. 6)",
+     "publisher": "Christendom Press",
+     "first_published": 2013,
+     "first_published_status": "verified",
+     "isbn13": "9780931888847",
+     "isbn13_status": "verified",
+     "isbn_sources": [
+      "https://openlibrary.org/books/OL25687142M",
+      "https://press.christendom.edu/product/the-crisis-of-christendom-1815-2005/"
+     ],
+     "edition_note": "Published posthumously in 2013. Christendom's founder page called it 'forthcoming'.",
+     "rights": "link_only",
+     "rights_reason": "Published after 1931 and in copyright; no open license found from the author or publisher (checked 2026-11-03).",
+     "bookshop_url": null,
+     "bookshop_status": "not verified: bookshop.org returned Cloudflare 403 / challenge to curl and headless Chrome on 2026-11-03. Catholic Repo should build bookshop.org/a/130222/<isbn13> only after a manual check."
+    }
+   ],
+   "our_site": {
+    "author_page": "https://bibliothecacatholica.com/author/warren-h-carroll/",
+    "edition_guides": [
+     "https://bibliothecacatholica.com/editions/carroll/"
+    ],
+    "note": "The live static author page already links /editions/carroll/ (checked 2026-11-03). The guide's ISBN 9780931888212 matches Open Library."
+   },
+   "flags": [],
+   "intro_words": 83
+  }
+ ],
+ "next_batch": [
+  {
+   "id": "robert-barron",
+   "name": "Bishop Robert Barron",
+   "wikipedia_views_12mo": 211780,
+   "official_site": "https://www.wordonfire.org/",
+   "edition_guides": [
+    "https://bibliothecacatholica.com/editions/catholicism/"
+   ],
+   "confidence": 0.8,
+   "why": "Very high search demand, a large free video and podcast catalog (Word on Fire), books all in copyright, and an author page with no works list."
+  },
+  {
+   "id": "fr-mike-schmitz",
+   "name": "Fr. Mike Schmitz",
+   "wikipedia_views_12mo": 189487,
+   "official_site": null,
+   "official_site_note": "Ascension's page URL I tried returned 404, so I still need his canonical page. His YouTube channel, Ascension Presents, curls 200.",
+   "edition_guides": [],
+   "confidence": 0.7,
+   "why": "High demand driven by Bible in a Year and Catechism in a Year. The searcher wants podcasts and books, and our page has neither."
+  },
+  {
+   "id": "peter-kreeft",
+   "name": "Peter Kreeft",
+   "wikipedia_views_12mo": 63950,
+   "official_site": "https://www.peterkreeft.com/",
+   "edition_guides": [
+    "https://bibliothecacatholica.com/editions/kreeft/",
+    "https://bibliothecacatholica.com/editions/handbook/"
+   ],
+   "confidence": 0.85,
+   "why": "Dozens of in-copyright books, many free talks on his site, and two edition guides, but no works list."
+  },
+  {
+   "id": "brant-pitre",
+   "name": "Brant Pitre",
+   "wikipedia_views_12mo": 26612,
+   "official_site": "https://catholicproductions.com/",
+   "edition_guides": [
+    "https://bibliothecacatholica.com/editions/pitre/"
+   ],
+   "confidence": 0.75,
+   "why": "Same apologist and Scripture-teacher pattern as Hahn. Books plus talks on Catholic Productions."
+  },
+  {
+   "id": "edward-feser",
+   "name": "Edward Feser",
+   "wikipedia_views_12mo": 31769,
+   "official_site": "https://edwardfeser.blogspot.com/",
+   "edition_guides": [
+    "https://bibliothecacatholica.com/editions/feser/"
+   ],
+   "confidence": 0.65,
+   "why": "Strong philosophy demand. His blog is free and his books are in copyright. Lower confidence because his blog includes public disputes, so it would need the same neutral handling as Woods."
+  }
+ ],
+ "next_batch_note": "Views are English Wikipedia user pageviews, Nov 2025 to Oct 2026, from the Wikimedia REST API. They show demand for the person, not our Search Console impressions, since per-query GSC data for these names isn't in the QA report. Every candidate is a hub author with works: [] and a live static page with no /work/ links (checked 2026-11-03). Higher-view names I skipped: Pope Leo XIV (different page type), Ross Douthat (journalist), and Taylor Marshall (publicly controversial, needs Micah's call first).",
+ "url_checks": "All URLs above were curl-checked on 2026-11-03 (see the url_checks list in the .md). Exceptions are noted per entry: Facebook and Instagram login walls, Rumble 403, mises.org 403, christendom.edu WAF (read with the fetch tool), bookshop.org Cloudflare."
+}

@@ -33,4 +33,4 @@ test('the four rebuilt pages carry hand-written intros',()=>{
  for(const id of ['trent-horn','thomas-e-woods','warren-h-carroll','scott-hahn']){
   const a=hub.authors.find(x=>x.id===id);assert(a.intro&&a.intro.length>120,id);assert(!/—/.test(a.intro),id)}});
 test('the app shows the intro, not the Wikipedia excerpt, for authors with no hosted work',()=>{
- assert.match(APP,/\(!auHosted\(a\.id\)\?'<p class="au-intro" id="au-intro">'\+esc\(a\.intro\|\|''\)\+'<\/p>':a\.extract\?/)});
+ assert.match(APP,/\(!auHosted\(a\.id\)\?'<p class="au-intro" id="au-intro">'\+esc\(a\.intro\|\|''\)\+'<\/p>'\+auBooks\(a\):a\.extract\?/)});

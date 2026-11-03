@@ -77,9 +77,97 @@ CHECKED={
 }
 # Not shown: isidore.co (rule 10; the Calibre app root offers files), searches, and URLs that did not answer 200
 # on 2026-11-03 (coramfratribus.com 403, mysteriousworld.com no response).
+# Phase A item 2 (Research file data/modern-authors.json): answered 200 to curl on 2026-11-03 (ours or Research's
+# modern-authors-pages-urlchecks.tsv; Open Library often times out, so either check counts). christendom.edu answers curl
+# with a WAF 202, so its founder page was read with a fetch tool instead.
+CHECKED.update({
+ 'https://ignatius.com/rome-sweet-home-rshp/':'2026-11-03',
+ 'https://ignatius.com/the-case-for-catholicism-ccatp/':'2026-11-03',
+ 'https://open.spotify.com/show/4RziZyRebkVYcRuGJlkJHN':'2026-11-03',
+ 'https://open.spotify.com/show/5PGmCKE1KzIHMN9kvKOpC8':'2026-11-03',
+ 'https://openlibrary.org/books/OL11840237M':'2026-11-03',
+ 'https://openlibrary.org/books/OL1185320M':'2026-11-03',
+ 'https://openlibrary.org/books/OL1443841M':'2026-11-03',
+ 'https://openlibrary.org/books/OL24073218M':'2026-11-03',
+ 'https://openlibrary.org/books/OL25687142M':'2026-11-03',
+ 'https://openlibrary.org/books/OL26010787M':'2026-11-03',
+ 'https://openlibrary.org/books/OL27360486M':'2026-11-03',
+ 'https://openlibrary.org/books/OL27579221M':'2026-11-03',
+ 'https://openlibrary.org/books/OL29776930M':'2026-11-03',
+ 'https://openlibrary.org/books/OL3044488M':'2026-11-03',
+ 'https://openlibrary.org/books/OL31846749M':'2026-11-03',
+ 'https://openlibrary.org/books/OL32182826M':'2026-11-03',
+ 'https://openlibrary.org/books/OL32842693M':'2026-11-03',
+ 'https://openlibrary.org/books/OL3691914M':'2026-11-03',
+ 'https://openlibrary.org/books/OL37069606M':'2026-11-03',
+ 'https://openlibrary.org/books/OL37087M':'2026-11-03',
+ 'https://openlibrary.org/books/OL37739292M':'2026-11-03',
+ 'https://openlibrary.org/books/OL623217M':'2026-11-03',
+ 'https://openlibrary.org/books/OL6788677M':'2026-11-03',
+ 'https://openlibrary.org/books/OL698412M':'2026-11-03',
+ 'https://openlibrary.org/books/OL7440923M':'2026-11-03',
+ 'https://openlibrary.org/books/OL8250523M':'2026-11-03',
+ 'https://openlibrary.org/books/OL8385028M':'2026-11-03',
+ 'https://openlibrary.org/books/OL8385032M':'2026-11-03',
+ 'https://openlibrary.org/books/OL8385034M':'2026-11-03',
+ 'https://openlibrary.org/books/OL8385041M':'2026-11-03',
+ 'https://openlibrary.org/books/OL8385062M':'2026-11-03',
+ 'https://openlibrary.org/books/OL8385066M':'2026-11-03',
+ 'https://podcasts.apple.com/us/podcast/the-counsel-of-trent/id1354647807':'2026-11-03',
+ 'https://podcasts.apple.com/us/podcast/the-tom-woods-show/id716825890':'2026-11-03',
+ 'https://press.christendom.edu/product/1917/':'2026-11-03',
+ 'https://press.christendom.edu/product/history-of-christendom-collection/':'2026-11-03',
+ 'https://press.christendom.edu/product/isabel-of-spain/':'2026-11-03',
+ 'https://press.christendom.edu/product/our-lady-of-guadalupe-2/':'2026-11-03',
+ 'https://press.christendom.edu/product/the-building-of-christendom-324-1100/':'2026-11-03',
+ 'https://press.christendom.edu/product/the-cleaving-of-christendom-1517-1661/':'2026-11-03',
+ 'https://press.christendom.edu/product/the-crisis-of-christendom-1815-2005/':'2026-11-03',
+ 'https://press.christendom.edu/product/the-founding-of-christendom/':'2026-11-03',
+ 'https://press.christendom.edu/product/the-glory-of-christendom-1100-1517/':'2026-11-03',
+ 'https://press.christendom.edu/product/the-last-crusade-2/':'2026-11-03',
+ 'https://press.christendom.edu/product/the-revolution-against-christendom-1661-1815/':'2026-11-03',
+ 'https://shop.catholic.com/answering-atheism-how-to-make-the-case-for-god-with-logic-and-charity/':'2026-11-03',
+ 'https://shop.catholic.com/counterfeit-christs-finding-the-real-jesus-among-the-impostors/':'2026-11-03',
+ 'https://shop.catholic.com/made-this-way-how-to-prepare-kids-to-face-todays-tough-moral-issues/':'2026-11-03',
+ 'https://shop.catholic.com/what-the-saints-never-said-pious-misquotes-and-the-subtle-heresies-they-teach-you/':'2026-11-03',
+ 'https://shop.catholic.com/why-were-catholic-our-reasons-for-faith-hope-and-love/':'2026-11-03',
+ 'https://tomwoods.com/':'2026-11-03',
+ 'https://tomwoods.com/podcasts/':'2026-11-03',
+ 'https://www.catholic.com/profile/trent-horn':'2026-11-03',
+ 'https://www.christendom.edu/about/warren-h-carroll/':'2026-11-03',
+ 'https://www.franciscan.edu/':'2026-11-03',
+ 'https://www.instagram.com/scottwhahn':'2026-11-03',
+ 'https://www.ncregister.com/news/warren-carroll-1932-2011-83xz3xbw':'2026-11-03',
+ 'https://www.scotthahn.com/':'2026-11-03',
+ 'https://www.scotthahn.com/audio-video/2016/1/20/sunday-bible-reflections':'2026-11-03',
+ 'https://www.scotthahn.com/listen-online':'2026-11-03',
+ 'https://www.youtube.com/@TomWoodsTV':'2026-11-03',
+ 'https://x.com/Trent_Horn':'2026-11-03',
+ 'https://x.com/thomasewoods':'2026-11-03',
+})
+# Bookshop.org buttons for the Research books: DISABLED until the owner approves new Bookshop links (Business, 2026-11-03).
+# No Bookshop product page could be verified (Cloudflare 403). The ISBN-13 stays in the data (hub `books[].isbn`) as the hook;
+# nothing is rendered while this is False.
+RESEARCH_BOOKSHOP_BUTTONS=False
+# The edition-guide Bookshop buttons that commit 937ddf5a added to author pages are switched off the same way (they were
+# new links on author pages; the edition-guide pages keep theirs). True restores them, with the affiliate disclosure.
+AUTHOR_GUIDE_BOOKSHOP_BUTTONS=False
+LINK_ONLY={'status':'link_only','evidence':'Published after 1931 and in copyright: we link to it and host nothing','checked':'2026-11-03'}
+def books_html(au,E,a):
+    """'Selected books' from hub books[] (data/modern-authors.json via tools/import_modern_authors.py): link-only, rights badge,
+    verified ISBN-13 as text. The ISBN is the disabled Bookshop hook (RESEARCH_BOOKSHOP_BUTTONS); nothing is linked to Bookshop."""
+    bs=au.get('books') or []
+    if not bs:return ''
+    li=[]
+    for b in bs:
+        t=a(b['url'],b['t'],True) if b.get('url') else E(b['t'])
+        meta=', '.join(x for x in [b.get('pub'),str(b['y']) if b.get('y') else ''] if x)
+        li.append('<li data-isbn="'+b['isbn']+'">'+t+(' ('+E(meta)+')' if meta else '')+(', '+E(b['note']) if b.get('note') else '')+'. <span class="small">ISBN '+b['isbn']+'</span>'+badge(LINK_ONLY)+'</li>')
+    return '<h2>Selected books</h2><p class="small">These books are in copyright. Each title links to its publisher or library record; we host none of them.</p><ul class="au-books">'+''.join(li)+'</ul>'
 def official(au,X):
     """[(label, url, kind)] of the author's own sites and media, CHECKED only, in data order, no duplicates."""
     out,seen=[],set()
+    for m in au.get('media') or []:out.append((m['label'],m['url'],m['kind']))
     for l in au.get('links') or []:
         if l.get('kind')=='site':out.append((l['label'],l['url'],'site'))
     for o in (X.get('own') or []):out.append((o['t'],o['u'],o.get('k') or 'site'))

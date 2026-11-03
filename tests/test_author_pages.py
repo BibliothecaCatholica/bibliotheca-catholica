@@ -42,15 +42,34 @@ class AuthorPages(unittest.TestCase):
     def test_flagged_books_never_listed(self):
         ids={k for k in FL['books']};allm=''.join(main(page(a['id'])) for a in NOH)
         for k in ids:self.assertNotIn('legacy/book/%s/CalibreLibrary'%k,allm)
-    def test_bookshop_links_use_our_id_and_known_isbns(self):
-        n=0
+    def test_no_new_bookshop_links_on_author_pages(self):
+        # Business, 2026-11-03: no new Bookshop.org links until the owner approves; the ISBN stays as a disabled hook
+        self.assertFalse(AP.RESEARCH_BOOKSHOP_BUTTONS);self.assertFalse(AP.AUTHOR_GUIDE_BOOKSHOP_BUTTONS)
         for a in NOH:
             m=main(page(a['id']))
-            self.assertNotRegex(m.lower(),r'amazon\.|amzn\.')
-            for h in re.findall(r'href="(https://bookshop\.org[^"]*)"',m):
-                n+=1;mm=re.fullmatch(r'https://bookshop\.org/a/130222/(97[89]\d{10})',h);self.assertTrue(mm,h);self.assertIn(mm.group(1),ISBNS)
-            if 'bookshop.org' in m:self.assertIn('Affiliate disclosure',m)
-        self.assertGreater(n,0)
+            self.assertNotRegex(m.lower(),r'amazon\.|amzn\.|bookshop\.org',a['id'])
+    def test_selected_books_from_research(self):
+        R={r['id']:r for r in json.loads((ROOT/'data/modern-authors.json').read_text())['authors']}
+        hub={a['id']:a for a in HUB['authors']}
+        for id,r in R.items():
+            a=hub[id];m=main(page(id))
+            self.assertEqual(a['intro'],r['intro'],id)
+            want=[b for b in r['books'] if b.get('isbn13_status')=='verified']
+            self.assertEqual([b['isbn'] for b in a['books']],[b['isbn13'] for b in want],id)
+            lis=re.findall(r'<li data-isbn="(97[89]\d{10})">(.*?)</li>',m)
+            self.assertEqual([x[0] for x in lis],[b['isbn'] for b in a['books']],id)
+            for isbn,li in lis:
+                self.assertIn('rb-link-only',li);self.assertIn('ISBN '+isbn,li)
+                for h in re.findall(r'href="([^"]+)"',li):
+                    self.assertNotRegex(h,r'amazon|amzn|bookshop|scotthahn\.com',id)
+                    if h!='/rights/':self.assertIn(h,AP.CHECKED,id)
+            for x in a.get('media') or []:self.assertIn(x['url'],AP.CHECKED,id);self.assertIn('href="%s"'%x['url'],m,id)
+        self.assertEqual(len(hub['thomas-e-woods']['books']),4)  # owner, 2026-11-03: list all his books
+        self.assertIsNone(hub['trent-horn'].get('born'));self.assertIn('<h1>Trent Horn</h1>',page('trent-horn'))
+        sac=next(b for b in hub['thomas-e-woods']['books'] if b['t'].startswith('Sacred Then'));self.assertNotIn('y',sac)
+        rep=[b['t'] for b in hub['warren-h-carroll']['books'] if b.get('note')=='ISBN is the 2004 Christendom Press reprint']
+        self.assertGreaterEqual(len(rep),4,rep)
+        self.assertIn('href="https://www.youtube.com/@TheCounselofTrent"',page('trent-horn'));self.assertNotIn('defense4thefaith',page('trent-horn'))
     def test_official_links_checked(self):
         for a in NOH:
             m=main(page(a['id']))
@@ -58,7 +77,7 @@ class AuthorPages(unittest.TestCase):
             if sec:
                 for h in re.findall(r'href="([^"]+)"',sec.group(1)):self.assertIn(h.replace('&amp;','&'),AP.CHECKED,a['id'])
     def test_the_four_named_pages(self):
-        want={'warren-h-carroll':['/editions/carroll/','https://press.christendom.edu/'],'scott-hahn':['/editions/romesweethome/','/editions/lambssupper/','https://stpaulcenter.com/'],
+        want={'warren-h-carroll':['/editions/carroll/','https://press.christendom.edu/','https://www.christendom.edu/about/warren-h-carroll/'],'scott-hahn':['/editions/romesweethome/','/editions/lambssupper/','https://stpaulcenter.com/'],
               'trent-horn':['https://www.trenthorn.com/','https://www.catholic.com/audio/cot'],'thomas-e-woods':['https://isidore.co/calibre/legacy/book/4949/CalibreLibrary']}
         for id,hs in want.items():
             s=page(id);m=main(s)

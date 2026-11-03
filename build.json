@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-5c1728d77b20",
+  "id": "bc-eccb6185d7c5",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "0d5ef38d3e1907627ace3d99c3cd047c4a096f009e4a75253fb8b614aadd4087",
@@ -39,7 +39,7 @@
     "data/saints-aliases.json": "383954ead9dcb5734c03d1a1330f71a7a2a8286f7f5dbd5724b2978f6b21809e",
     "data/saints.js": "be627f893f081079e8395e5887fc610292220be7a59f5f5429daa164d76f10c3",
     "data/saints.json": "b6a2988437bca324a9716a68a5762b588a1e152533b3e6eb867821b531f02957",
-    "index.template": "65f254adcb85cc621d94a052decdb61f0445cdaadf844b29508d6770e11142ba",
+    "index.template": "520b1aec2681578a8800468314c44ce682b48ed25c35ca77632c1fecb5b7c86d",
     "scripts/analytics.js": "17cdbbbbd6ed9a66351272cd56bc682b3acf0e3073d186c058e4c5fe04afe521",
     "scripts/boot.js": "aacd6fd1dbf3b9ba84d2dbe4d0b72d4e7a931fa3ff96da23af94d73e05e5547b",
     "scripts/guides.js": "a77f6dfdeffbef2490b218b6acb671aed8f067f8f1c3d53c40b8d8fdf10629bf",
@@ -75,7 +75,7 @@
     "tools/build_rights.py": "6ff76fe3ae4ad2e77eed5786d6a35781a7f61ce17ad8b1a25449a6464f0dabd8",
     "tools/build_rites.py": "d8eb28f82fda6b51462f994de5addb12532466348ed3ce213e21d7137d15ebfb",
     "tools/build_saints.py": "4efa770df8d5967b085c227e5feca9924c6abe50e8c4ef9589bff544aae7ae85",
-    "tools/build_static.py": "d83a54b9c1b17b22f444d465a5c7ea5cc813f0f5ca5734243764e1282e73b9e9",
+    "tools/build_static.py": "ee186b3f36d28a018d6af78d8ae9ea462bd7f83979bcebf04d5cc2c823d968db",
     "tools/build_text_archive.py": "1994318f71c09574cd8af50ba4c3a0e9c844fd1432567e7c1dedb2fbbec0f343",
     "tools/build_v3_data.py": "9a86464ea15f713a8a2dc8a3370f1553e1ed7ec0126647ff78433d44066b4f18",
     "tools/build_v4_data.py": "5e5dc32de5cba26c4535f20b31eaf59c9b937e41682f8d36539a978f686c0a7b",

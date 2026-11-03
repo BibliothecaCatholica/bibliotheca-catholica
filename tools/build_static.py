@@ -19,7 +19,7 @@ sys.path.insert(0,str(ROOT/'tools'));import site_copy,build_info
 NAME='Bibliotheca Catholica';OG_IMAGE=SITE+'assets/og-image.png'
 # Profiles we can verify belong to the project: the GitHub organization (this repo) and the Bluesky
 # handle bibliothecacatholica.com, which resolves to the DID in .well-known/atproto-did.
-SAME_AS=['https://github.com/BibliothecaCatholica','https://bsky.app/profile/bibliothecacatholica.com']
+SAME_AS=['https://github.com/BibliothecaCatholica','https://x.com/BiblioCatholica','https://bsky.app/profile/bibliothecacatholica.com']
 HOME_TITLE='Bibliotheca Catholica — a library of libraries'
 HOME_DESC='A free Catholic reading room and curated resource index. Read classic texts online, compare editions, and explore saints, Church documents, and source texts.'
 DESC_MIN,DESC_MAX=120,160

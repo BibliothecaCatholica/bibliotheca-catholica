@@ -38,8 +38,26 @@ class CatalogTests(unittest.TestCase):
         work['readingLinks'][0]['kind']='full-text'
         with self.assertRaises(AssertionError):build.validate(self.catalog)
     def test_existing_hub_snapshots_agree(self):
-        js=(ROOT/'data/data.js').read_text().split('=',1)[1].strip().rstrip(';')
-        self.assertEqual(json.loads(js),json.loads((ROOT/'data/catholic-hub.json').read_text()))
+        # Phase B item 5: data.js (core) + authors-detail.js + isidore-authors.js rebuild the JSON exactly (tools/hubio.py)
+        import sys;sys.path.insert(0,str(ROOT/'tools'));import hubio
+        hub=json.loads((ROOT/'data/catholic-hub.json').read_text())
+        self.assertEqual(hubio.merged(),hub)
+        core,det,iso=hubio.split(hub)
+        self.assertEqual((ROOT/'data/data.js').read_text(),'window.HUB_DATA='+hubio.dumps(core)+';\n')
+        self.assertEqual((ROOT/'data/authors-detail.js').read_text(),'window.HUB_DETAIL='+det+';\n')
+        self.assertEqual((ROOT/'data/isidore-authors.js').read_text(),'window.HUB_ISIDORE='+iso+';\n')
+    def test_core_hub_is_slim(self):
+        js=json.loads((ROOT/'data/data.js').read_text().split('=',1)[1].strip().rstrip(';'))
+        self.assertLess((ROOT/'data/data.js').stat().st_size,400_000)
+        self.assertNotIn('isidore',js);self.assertEqual(js['isidoreCount'],len(json.loads((ROOT/'data/catholic-hub.json').read_text())['isidore']))
+        for a in js['authors']:
+            for k in('extract','links','intro','books','media','qidWork','isidoreFolder'):self.assertNotIn(k,a)
+            if 'imgCredit' in a:self.assertEqual(a['imgCredit'],{'pd':True});self.assertIn('img',a)
+        idx=(ROOT/'index.html').read_text()
+        import re
+        tags=re.findall(r'<script[^>]* src="(?!https://www\.googletagmanager)[^"]+"[^>]*>',idx)
+        self.assertTrue(tags);self.assertTrue(all(' defer ' in t or t.startswith('<script defer') for t in tags if 'boot.js' not in t),tags)
+        self.assertEqual(idx.count('rel="preload" as="font"'),2)
 
 class IsidoreMatchTests(unittest.TestCase):
     def test_matches_point_to_real_books_and_works(self):

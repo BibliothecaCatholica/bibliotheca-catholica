@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 R=lambda p:(ROOT/p).read_text(encoding='utf-8')
 class V183(unittest.TestCase):
     def test_ewtn_news_link(self):
-        for p in ['data/catholic-hub.json','data/data.js','media/index.html','tools/resources.py']:
+        for p in ['data/catholic-hub.json','data/data.js','media/index.html','tools/resources.py']:  # resources stay in the core data.js
             with self.subTest(p):
                 s=R(p);self.assertNotIn('catholicnewsagency.com',s);self.assertIn('https://www.ewtnnews.com/',s);self.assertIn('EWTN News',s)
     def test_gregory_dates(self):
@@ -19,7 +19,7 @@ class V183(unittest.TestCase):
         self.assertIn('Gregory the Great, Pope St., O.S.B. (c. 540-604)',names)
         self.assertFalse(any('Gregory' in n and '480-547' in n for n,_ in books['authors']))
         # the only place the old string stays is the folder's actual name on isidore.co (folder lists and the open data folder column)
-        for p in ['author/gregory-the-great/index.html','data/open/isidore-index.csv','data/open/authors.csv','data/data.js']:
+        for p in ['author/gregory-the-great/index.html','data/open/isidore-index.csv','data/open/authors.csv','data/data.js','data/authors-detail.js','data/isidore-authors.js']:
             with self.subTest(p):self.assertEqual(R(p).count('O.S.B. (480-547)'),R(p).count('"isidoreFolder":"Gregory the Great, Pope St., O.S.B. (480-547)"')+R(p).count('"f":"Gregory the Great, Pope St., O.S.B. (480-547)"'))
         self.assertIn('author=Gregory%20the%20Great%2C%20Pope%20St.%2C%20O.S.B.%20%28c.%20540-604%29',R('author/gregory-the-great/index.html'))
         self.assertIn('from catalog_fixes import',R('tools/build_books.py'))

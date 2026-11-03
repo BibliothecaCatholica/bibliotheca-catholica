@@ -22,11 +22,11 @@ test('startup timeout displays recovery and ready cancels the timeout',()=>{
 test('partial search failures attempt each missing collection once and announce incomplete results',()=>{
  const source=fs.readFileSync('app.js','utf8'),code=source.slice(source.indexOf('function results(q){'),source.indexOf('var srchT=null'));
  const tries={},rendered=[];const attempt=(name,cb,value)=>{tries[name]=(tries[name]||0)+1;if(tries[name]>1)throw Error('unbounded retry: '+name);cb(value)};
- const ctx={location:{hash:'#/search/test'},SAINTS_IN:false,SEARCH_ERRORS:{},GD:null,B:null,LZ:{},searchScope:'all',
+ const ctx={location:{hash:'#/search/test'},D:{isidoreV:'t'},SAINTS_IN:false,SEARCH_ERRORS:{},GD:null,B:null,LZ:{},searchScope:'all',
   saintsIdx:cb=>attempt('saints',cb,null),loadGuide:cb=>attempt('guides',cb,true),loadBooks:cb=>attempt('books',cb,true),lazy:(file,name,cb)=>attempt(name,cb,null),
   search:()=>[],saintHit:()=>'',esc:String,encodeURIComponent,render:h=>rendered.push(h),document:{title:''},$:()=>({}),
   setTimeout:()=>1,clearTimeout:()=>{},srchT:null,window:{BCSearch:{imported:()=>false}}};
  vm.runInNewContext(code+"\nresults('test');results('test');",ctx);
- assert.equal(Object.keys(tries).length,5);assert(Object.values(tries).every(n=>n===1));
+ assert.equal(Object.keys(tries).length,6);assert('HUB_ISIDORE' in tries);assert(Object.values(tries).every(n=>n===1));
  assert(rendered.at(-1).includes('These results are incomplete'));assert(!rendered.at(-1).includes('(loading books…)'));
 });

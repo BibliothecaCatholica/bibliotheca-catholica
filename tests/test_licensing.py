@@ -66,7 +66,7 @@ class Licensing(unittest.TestCase):
         app=R('app.js');self.assertIn('function portraitOk(a,full){return !!(a.img&&a.imgCredit&&(full||a.imgCredit.pd))}',app)
         self.assertIn("avatar(a,null,1)",app);self.assertIn('portraitCredit(a)',app)
     def test_no_raw_isidore_folder_links(self):
-        for p in('data/catholic-hub.json','data/data.js','tools/resources.py','data/open/isidore-folders.json','data/open/authors.json','app.js'):
+        for p in('data/catholic-hub.json','data/data.js','data/authors-detail.js','data/isidore-authors.js','tools/resources.py','data/open/isidore-folders.json','data/open/authors.json','app.js'):
             self.assertNotRegex(R(p),r'isidore\.co/CalibreLibrary/[^"\s]',p)
         self.assertIn('does not vouch for',R('app.js'));self.assertIn('does not vouch for',main(R('rights/index.html')));self.assertIn('does not vouch for',main(R('isidore/index.html')))
         self.assertIn('>Isidore Index</a>',R('index.html'));self.assertNotIn('Ebooks &amp; PDFs',R('index.html'))

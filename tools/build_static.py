@@ -139,7 +139,7 @@ def page(tpl,route,title,desc,body,noindex=False,jsonld=()):
     for nm,val in (('twitter:title',t),('twitter:description',d)):
         s=sub(r'<meta name="%s" content="[^"]*">'%nm,'<meta name="%s" content="%s">'%(nm,val),s)
     s=sub(r'<main id="main" tabindex="-1">.*?</main>','<main id="main" tabindex="-1"><div class="static-prerender">'+body+'</div></main>',s)
-    s=re.sub(r'<script src="data/data\.js(\?[^"]*)?"></script>',lambda m:'<script>window.BC_BOOT='+json.dumps(route)+'</script>\n'+m.group(0),s,count=1)
+    s=re.sub(r'<script (?:defer )?src="data/data\.js(\?[^"]*)?"></script>',lambda m:'<script>window.BC_BOOT='+json.dumps(route)+'</script>\n'+m.group(0),s,count=1)
     assert 'window.BC_BOOT' in s,'data/data.js script tag not found in index.html'
     return s
 CC_BY_SA='https://creativecommons.org/licenses/by-sa/4.0/'

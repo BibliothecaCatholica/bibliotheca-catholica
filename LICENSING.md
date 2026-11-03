@@ -8,7 +8,7 @@ Bibliotheca Catholica (bibliothecacatholica.com) contains several kinds of mater
 | Open data | `data/open/`, and the reading catalog metadata in `data/library.json` | CC0 1.0 public domain dedication |
 | Site writing | text written for this site | CC BY 4.0 |
 | Hosted texts | `data/texts/` and texts.bibliothecacatholica.com | public domain in the US; no license from us; source notices apply |
-| Wikipedia excerpts | the `extract` field in `data/catholic-hub.json` and `data/data.js` | CC BY-SA 4.0, not MIT and not CC0 |
+| Wikipedia excerpts | the `extract` field in `data/catholic-hub.json` and `data/authors-detail.js` (split from it by `tools/hubio.py`; `data/data.js` carries no excerpts) | CC BY-SA 4.0, not MIT and not CC0 |
 | Portraits | images shown on author pages | the license on each image's file page |
 
 ## 1. Code
@@ -23,7 +23,7 @@ The datasets in `data/open/` are dedicated to the public domain under [CC0 1.0](
 
 The reading catalog metadata in `data/library.json` (work and edition records, contributor roles, rights labels, checked dates, notes, and checksums) is also dedicated to the public domain under CC0 1.0, and `data/open/LICENSE.txt` names it in its scope. It was checked on 2026-10-26 and contains no Wikipedia text. CC0 does not extend to the texts those records point to.
 
-CC0 does not cover any third-party material described in section 5. In particular, the Wikipedia excerpts in `data/catholic-hub.json` and `data/data.js` are **not** CC0, and they are not included in `data/open/`.
+CC0 does not cover any third-party material described in section 5. In particular, the Wikipedia excerpts in `data/catholic-hub.json` and `data/authors-detail.js` are **not** CC0, and they are not included in `data/open/`.
 
 ## 3. Site writing (CC BY 4.0)
 

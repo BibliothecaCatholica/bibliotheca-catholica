@@ -57,7 +57,7 @@ test('badges are calm and accessible: a link to #/rights with evidence and check
 test('v18: the Authors A-Z tab, search entries, and hub data never link raw isidore.co folder listings',()=>{
  const els={};const $=sel=>els[sel]||(els[sel]={innerHTML:'',textContent:'',addEventListener(){}});
  const hub=JSON.parse(fs.readFileSync('data/catholic-hub.json','utf8'));
- const ctx={esc,hl:esc,norm:s=>String(s).toLowerCase(),$,D:{isidore:hub.isidore.slice(0,400)},window:{scrollTo(){}},document:{getElementById:()=>null},out:''};
+ const ctx={esc,hl:esc,norm:s=>String(s).toLowerCase(),$,D:{isidore:hub.isidore.slice(0,400),isidoreCount:400},window:{scrollTo(){}},document:{getElementById:()=>null},out:''};
  ctx.render=h=>{ctx.out=h};
  vm.runInNewContext(fn(APP,'isoName')+'\n'+fn(APP,'isoAuthorHref')+'\nvar ISO_NOTE="note";\n'+fn(APP,'isidore'),ctx);ctx.isidore();
  const all=ctx.out+els['#iso-out'].innerHTML;

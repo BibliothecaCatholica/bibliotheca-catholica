@@ -197,6 +197,15 @@ def plan_html(P):
     return (crumb_html(('Reading Lists','reading/'),(P['t'],''))+'<div class="page-head plan-head"><div class="eyebrow">Reading plan · '+E(PLAN_SPAN(P))+'</div><h1>'+E(P['t'])+'</h1><p class="lede">'+E(P['intro'])+'</p></div>'
       '<ol class="plan-days">'+''.join(plan_day_html(d) for d in P['days'])+'</ol>'
       '<p class="small plan-foot">Every reading opens in the on-site reader at the start of the passage. The editions are public domain in the United States; each badge links to '+a('/rights/','how rights are determined')+'. '+a('/reading/','All reading lists')+'.</p>')
+def list_item_title(i,gid,libw):
+    """A reading-list entry's title: its edition guide, else its reading-room works (Phase A: the 14 entries
+    that carry only `workIds` rendered as ": description"), else its own title and author. Never empty."""
+    if i.get('e') in gid:return a('/editions/'+i['e']+'/',gid[i['e']]['t'])
+    ws=[libw[x] for x in i.get('workIds') or [] if x in libw]
+    if ws:return ', '.join(a('/work/'+w['id']+'/',w['title'])+' by '+E(w['author']) for w in ws)
+    t=E(i.get('t','')+(' — '+i['a'] if i.get('a') else ''))
+    assert t.strip(),'reading-list entry with no title, guide, or work: %r'%i
+    return t
 def main():
     tpl=(ROOT/'index.html').read_text();global GA_TAG;GA_TAG=ga_tag(tpl);hub=json.loads((ROOT/'data/catholic-hub.json').read_text())
     lib=json.loads((ROOT/'data/library.json').read_text());guide=jsvar('data/guide.js','GUIDE_DATA');flags=load_flags();plans=json.loads((ROOT/'data/reading-plans.json').read_text())['plans']
@@ -207,6 +216,36 @@ def main():
     saints_by_author={x['author_id']:x for x in saints if x['tier']==1 and x.get('author_id')}
     libw={w['id']:w for w in lib['works']}
     auth_ids={x['id'] for x in hub['authors'] if x['id'] not in skip_auth}
+    # Phase A item 3: onward links between work, author, edition-guide, reading-list, and saint pages (all from existing data)
+    gid={e['id']:e for e in guide['editions']}
+    guides_for,lists_for,saints_for={}, {}, {}
+    for ed in guide['editions']:
+        for wid in ed.get('workIds') or []:guides_for.setdefault(wid,[]).append(ed)
+    list_guides={}
+    for L in guide['lists']:
+        for i in L['items']:
+            for wid in (i.get('workIds') or [])+(gid[i['e']].get('workIds') or [] if i.get('e') in gid else []):
+                if L not in lists_for.setdefault(wid,[]):lists_for[wid].append(L)
+            if i.get('e') in gid and L not in list_guides.setdefault(i['e'],[]):list_guides[i['e']].append(L)
+    for x in saints:
+        if x['id'] in skip_auth:continue
+        for wid in x.get('reading_room_works') or []:
+            if x not in saints_for.setdefault(wid,[]):saints_for[wid].append(x)
+    for b in SD['shelf']:
+        for sid in b.get('about') or []:
+            x=next((y for y in saints if y['id']==sid and y['id'] not in skip_auth),None)
+            if x and b.get('work_id') and x not in saints_for.setdefault(b['work_id'],[]):saints_for[b['work_id']].append(x)
+    s_href=lambda x:'/author/'+x['author_id']+'/' if x['tier']==1 and x.get('author_id') else '/saints/'+x['id']+'/'
+    shelf_works={b['work_id'] for b in SD['shelf'] if b.get('work_id') in libw}
+    def same_author(w):
+        k=w.get('authorId') or w['author']
+        return [v for v in lib['works'] if v['id']!=w['id'] and (v.get('authorId') or v['author'])==k]
+    BK=json.loads((ROOT/'data/books.json').read_text())
+    iso_names={}  # hub author id -> the name its Isidore books carry most often
+    for bk in BK['books']:
+        for ai in bk[2]:
+            nm,hid=BK['authors'][ai][0],BK['authors'][ai][1]
+            if hid:iso_names.setdefault(hid,{});iso_names[hid][nm]=iso_names[hid].get(nm,0)+1
     head=lambda eyebrow,h1,lede:'<div class="page-head"><div class="eyebrow">'+E(eyebrow)+'</div><h1>'+E(h1)+'</h1><p class="lede">'+E(lede)+'</p></div>'
     authors=[x for x in hub['authors'] if x['id'] not in skip_auth]
     for au in authors:
@@ -224,7 +263,11 @@ def main():
         # v18.1: the 211 former isidore.co folder links became internal Isidore Index searches (#/isidore/<catalog name>)
         # v18.2: the search uses the author name as the books carry it (hub.isidore `a`, else `n`) and shows all subjects
         iso_n=next((i.get('a') or i['n'] for i in hub['isidore'] if i['f']==au.get('isidoreFolder')),None) if au.get('isidoreFolder') else None
-        iso_link=('<p>'+a('/#/isidore/author='+urllib.parse.quote(iso_n,safe=''),'All their books in the Isidore Index')+'</p>') if iso_n else ''
+        if not iso_n and iso_names.get(au['id']):iso_n=max(iso_names[au['id']].items(),key=lambda kv:(kv[1],kv[0]))[0]  # Phase A: mapped books, no folder
+        # Phase A item 3: the hash search has no static page, so /isidore/ (pre-rendered) is the crawlable fallback beside it
+        iso_link=('<p>'+a('/#/isidore/author='+urllib.parse.quote(iso_n,safe=''),'All their books in the Isidore Index')+' · '+a('/isidore/','Browse the Isidore Index')+'</p>') if iso_n else ''
+        au_guides=[e for e in guide['editions'] if e.get('aid')==au['id']]
+        if au_guides:iso_link=('<h2>Edition guides</h2><ul>'+''.join('<li>'+a('/editions/'+e['id']+'/',e['t'])+'</li>' for e in au_guides)+'</ul>')+iso_link
         body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+wiki_block+(('<h2>Read here</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else '')+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+iso_link+'<p>'+a('/authors/','All authors')+'</p>'
         sa=saints_by_author.get(au['id'])
         if sa:body=body.replace('<p>'+a('/authors/','All authors')+'</p>','<h2>Saint</h2><p>'+E(s_facts(sa))+' '+a('/saints/','Saints & Hagiography')+'</p><p>'+a('/authors/','All authors')+'</p>')
@@ -250,12 +293,26 @@ def main():
         if iso_year(au.get('died')):person['deathDate']=iso_year(au['died'])
         if au.get('qid'):person['sameAs']=['https://www.wikidata.org/wiki/'+au['qid']]
         out['author/'+au['id']]=(au['name']+' — Bibliotheca Catholica',d,body,[person,crumbs(('Authors','authors/'),(au['name'],'author/'+au['id']+'/'))])
+    def work_related(w):
+        r=[]
+        for ed in guides_for.get(w['id'],[]):r.append('Edition guide: '+a('/editions/'+ed['id']+'/',ed['t']))
+        for L in lists_for.get(w['id'],[]):r.append('Reading list: '+a('/reading/'+L['id']+'/',L['t']))
+        for x in saints_for.get(w['id'],[]):
+            h=s_href(x)
+            if h!='/author/'+str(w.get('authorId'))+'/':r.append(('Author page: ' if h.startswith('/author/') else 'Saint: ')+a(h,x['name']))
+        sa=same_author(w)
+        if sa:r.append('More by '+E(w['author'])+': '+', '.join(a('/work/'+v['id']+'/',v['title']) for v in sa[:8]))
+        if w['id'] in shelf_works:r.append(a('/saints/books/','The hagiography shelf'))
+        if len(r)<2:  # few onward links: up to six other works of the same category, in library order
+            cat=[v for v in lib['works'] if v['category']==w['category'] and v['id']!=w['id'] and v not in sa][:6]
+            if cat:r.append('More in '+E(w['category'])+': '+', '.join(a('/work/'+v['id']+'/',v['title']) for v in cat))
+        return ('<h2>Related</h2><ul>'+''.join('<li>'+x+'</li>' for x in r)+'</ul>') if r else ''
     for w in lib['works']:
         eds=''.join('<li>'+E(e['label'])+(' · '+a('/#/read/'+w['id']+'/'+e['id'],'Read here') if e.get('text') else '')+' · '+a(e['source'],'Source',True)+'</li>' for e in w['editions'])
         d=w.get('description') or (w['title']+' by '+w['author']+': free reading edition with source, credits, and rights notes.')
         hosted=any(e.get('text') for e in w['editions'])
         by=a('/author/'+w['authorId']+'/',w['author']) if w.get('authorId') in auth_ids else E(w['author'])
-        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p><h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul><p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
+        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p><h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
         book={'@context':'https://schema.org','@type':'Book','name':w['title'],'url':SITE+'work/'+w['id']+'/','author':{'@type':'Person','name':w['author']},'description':d,'genre':w['category']}
         if w.get('authorId') in auth_ids:book['author']['url']=SITE+'author/'+w['authorId']+'/'
         langs=sorted({e['language'] for e in w['editions'] if e.get('language')})
@@ -263,22 +320,27 @@ def main():
         if hosted:book['isAccessibleForFree']=True
         md=fit([w['title']+' by '+w['author']+':',d.rstrip('.')+'.'],(('Read it free online, with source and rights notes.','Read it free online.') if hosted else ('Editions and sources, with rights notes.','Editions and sources.'),)+DESC_EXTRA)
         out['work/'+w['id']]=(w['title']+' — Bibliotheca Catholica',md,body,[book,crumbs(('Discover & Read','library/'),(w['title'],'work/'+w['id']+'/'))])
+    def ed_related(ed):
+        r=[]
+        if ed.get('aid') in auth_ids:r.append('Author: '+a('/author/'+ed['aid']+'/',ed.get('a') or ed['aid']))
+        for wid in ed.get('workIds') or []:
+            if wid in libw:r.append('In the reading room: '+a('/work/'+wid+'/',libw[wid]['title']))
+        for L in list_guides.get(ed['id'],[]):r.append('Reading list: '+a('/reading/'+L['id']+'/',L['t']))
+        return ('<h2>Related</h2><ul>'+''.join('<li>'+x+'</li>' for x in r)+'</ul>') if r else ''
     for ed in guide['editions']:
         picks=''.join('<li><b>'+E(p.get('lbl',''))+':</b> '+E(p.get('tr',''))+(' ('+E(p['pub'])+')' if p.get('pub') else '')+'</li>' for p in ed.get('picks',[]))
-        body=head('Editions & Translations · '+ed.get('cat',''),ed['t'],(ed.get('a')+'. ' if ed.get('a') else '')+ed.get('why',''))+'<ol>'+picks+'</ol>'+('<p>Also good: '+E(ed['alt'])+'</p>' if ed.get('alt') else '')+'<p>'+a('/editions/','All edition guides')+'</p>'
+        body=head('Editions & Translations · '+ed.get('cat',''),ed['t'],(ed.get('a')+'. ' if ed.get('a') else '')+ed.get('why',''))+'<ol>'+picks+'</ol>'+('<p>Also good: '+E(ed['alt'])+'</p>' if ed.get('alt') else '')+ed_related(ed)+'<p>'+a('/editions/','All edition guides')+'</p>'
         body=crumb_html(('Editions & Translations','editions/'),(ed['t'],''))+body
         md=fit(['Which edition of '+ed['t']+(' by '+ed['a'] if ed.get('a') else '')+' to read:',ed.get('why','').rstrip('.')+'.'],(('Recommended translations, free texts, and print copies.','Translations, free texts, and print copies.','Translations compared.'),('Compare translations at Bibliotheca Catholica.','At Bibliotheca Catholica.')))
         out['editions/'+ed['id']]=(ed['t']+': Editions & Translations — Bibliotheca Catholica',md,body,[crumbs(('Editions & Translations','editions/'),(ed['t'],'editions/'+ed['id']+'/'))])
-    gid={e['id']:e for e in guide['editions']}
     for L in guide['lists']:
-        items=''.join('<li>'+(a('/editions/'+i['e']+'/',gid[i['e']]['t']) if i.get('e') in gid else E(i.get('t','')+(' — '+i['a'] if i.get('a') else '')))+(': '+E(i['b']) if i.get('b') else '')+'</li>' for i in L['items'])
+        items=''.join('<li>'+list_item_title(i,gid,libw)+(': '+E(i['b']) if i.get('b') else '')+'</li>' for i in L['items'])
         body=head('Reading list',L['t'],L.get('sub',''))+'<ol>'+items+'</ol><p>'+a('/reading/','All reading lists')+'</p>'
         md=fit([L['t']+', a Catholic reading list:',L.get('sub','').rstrip('.')+'.'],((str(len(L['items']))+' books, with edition guides and free texts.',str(len(L['items']))+' books.'),)+DESC_EXTRA)
         out['reading/'+L['id']]=(L['t']+' — Reading Lists — Bibliotheca Catholica',md,crumb_html(('Reading Lists','reading/'),(L['t'],''))+body,[crumbs(('Reading Lists','reading/'),(L['t'],'reading/'+L['id']+'/'))])
     # v20 dated reading plans (data/reading-plans.json from tools/build_reading_plans.py); see docs/READING-GUIDES.md
     for P in plans:
         out['reading/'+P['id']]=(P['t']+' '+str(P['year'])+': a daily reading plan — Bibliotheca Catholica',PLAN_DESC[P['id']],plan_html(P),[crumbs(('Reading Lists','reading/'),(P['t'],'reading/'+P['id']+'/'))])
-    s_href=lambda x:'/author/'+x['author_id']+'/' if x['tier']==1 and x.get('author_id') else '/saints/'+x['id']+'/'
     for x in saints:
         if x['tier']==1:continue  # writers' pages are their author pages
         L=[]
@@ -353,8 +415,11 @@ def main():
     # Build the shared template first, so every entry page gets the same copy token, date, and build ID.
     write_home(tpl,counts,hub['generated'])
     tpl=(ROOT/'index.html').read_text()
+    # Phase A item 3: a hash route that has a pre-rendered page becomes its real path (#/policy -> /policy/), so crawlers follow it.
+    # Hash routes with no static page (#/read/..., #/isidore/author=...) stay, each beside a real fallback link.
+    unhash=lambda body:re.sub(r'href="/?#/([a-z0-9/-]+?)/?"',lambda m:'href="/'+m.group(1)+'/"' if m.group(1) in out else m.group(0),body)
     for route,v in out.items():
-        t,d,body=v[:3];f=ROOT/route/'index.html';f.parent.mkdir(parents=True,exist_ok=True);f.write_text(page(tpl,route,t,d,body,jsonld=v[3] if len(v)>3 else ()))
+        t,d,body=v[:3];body=unhash(body);f=ROOT/route/'index.html';f.parent.mkdir(parents=True,exist_ok=True);f.write_text(page(tpl,route,t,d,body,jsonld=v[3] if len(v)>3 else ()))
     man.write_text(''.join(r+'/index.html\n' for r in sorted(out)))
     urls=[SITE]+[SITE+r+'/' for r in sorted(out)]
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('  <url><loc>'+E(u)+'</loc></url>\n' for u in urls)+'</urlset>\n')

@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-f48de6056fbb",
+  "id": "bc-c8168d522d33",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "0d5ef38d3e1907627ace3d99c3cd047c4a096f009e4a75253fb8b614aadd4087",
@@ -73,7 +73,7 @@
     "tools/build_rights.py": "6ff76fe3ae4ad2e77eed5786d6a35781a7f61ce17ad8b1a25449a6464f0dabd8",
     "tools/build_rites.py": "d8eb28f82fda6b51462f994de5addb12532466348ed3ce213e21d7137d15ebfb",
     "tools/build_saints.py": "4efa770df8d5967b085c227e5feca9924c6abe50e8c4ef9589bff544aae7ae85",
-    "tools/build_static.py": "0d5967c03169487747957342f2393ba9dcd4cd80f6ef892fab3afa6b5c35f4da",
+    "tools/build_static.py": "30d1b4bae0a36ebfa477b5281032f20997d01982edac3a5a7bbcd63900018184",
     "tools/build_text_archive.py": "1994318f71c09574cd8af50ba4c3a0e9c844fd1432567e7c1dedb2fbbec0f343",
     "tools/build_v3_data.py": "9a86464ea15f713a8a2dc8a3370f1553e1ed7ec0126647ff78433d44066b4f18",
     "tools/build_v4_data.py": "5e5dc32de5cba26c4535f20b31eaf59c9b937e41682f8d36539a978f686c0a7b",

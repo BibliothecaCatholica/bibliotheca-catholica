@@ -1,11 +1,11 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-43ab1bb8b583",
+  "id": "bc-83e0e980a2cd",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "0d5ef38d3e1907627ace3d99c3cd047c4a096f009e4a75253fb8b614aadd4087",
     "app.js": "47c5b823114998095fcf83e914a239b1192f540f01ff72d6e5c38f59e404fa35",
-    "data/affiliates.js": "a88b8eb221269f8f41cea2471a2c491505009987a67a6bf143646efba0c59f1c",
+    "data/affiliates.js": "1c8f7425b0caf30deaa22fa1b732e36fb8f341180328e35ccd263ad7da7c6030",
     "data/authors-detail.js": "7d06bc11d9d4f7391682814925eea63535abff1192321edc7347fd0c45717fde",
     "data/authorx.js": "33df4d9832532c80e8f6b73806dcd1f4f1e3810a6900d13d1983104f571eebc1",
     "data/books.js": "7b380c1e116603d0f7317fc3bdedef93d6e8db2bb1ea8700e5b37851f8ed04fd",
@@ -42,7 +42,7 @@
     "data/saints-aliases.json": "383954ead9dcb5734c03d1a1330f71a7a2a8286f7f5dbd5724b2978f6b21809e",
     "data/saints.js": "be627f893f081079e8395e5887fc610292220be7a59f5f5429daa164d76f10c3",
     "data/saints.json": "b6a2988437bca324a9716a68a5762b588a1e152533b3e6eb867821b531f02957",
-    "index.template": "d4a4d002cf98d6701cd908c629c37dcf5aeaa3f2b51398f783c95e3e4ea5639d",
+    "index.template": "ea5052fc279368b1b5f2bf15a648ada855e222d03ad752499d96fbdfcc588340",
     "scripts/analytics.js": "17cdbbbbd6ed9a66351272cd56bc682b3acf0e3073d186c058e4c5fe04afe521",
     "scripts/boot.js": "aacd6fd1dbf3b9ba84d2dbe4d0b72d4e7a931fa3ff96da23af94d73e05e5547b",
     "scripts/guides.js": "a77f6dfdeffbef2490b218b6acb671aed8f067f8f1c3d53c40b8d8fdf10629bf",

@@ -37,7 +37,9 @@ class Licensing(unittest.TestCase):
     def test_wikipedia_credit_on_author_pages(self):
         app=R('app.js');self.assertIn('Shortened excerpt from the Wikipedia article',app);self.assertIn("CC_BY_SA='https://creativecommons.org/licenses/by-sa/4.0/'",app)
         hub=json.loads(R('data/catholic-hub.json'))
-        ids=[a['id'] for a in hub['authors'] if a.get('extract')]
+        # Phase A item 2: only authors with a hosted work show the excerpt (the others show our intro; tests/test_author_pages.py)
+        lib=json.loads(R('data/library.json'));hosted={w['authorId'] for w in lib['works'] if w.get('authorId') and any(e.get('text') for e in w['editions'])}
+        ids=[a['id'] for a in hub['authors'] if a.get('extract') and a['id'] in hosted]
         n=0
         for i in ids:
             f=ROOT/'author'/i/'index.html'
@@ -50,7 +52,7 @@ class Licensing(unittest.TestCase):
                 lede=re.search(r'<p class="lede">(.*?)</p>',s).group(1)
                 a=next(x for x in hub['authors'] if x['id']==i)
                 self.assertNotIn(a['extract'][:60].replace('&','&amp;'),lede)
-        self.assertGreater(n,400)
+        self.assertGreater(n,15)
     def test_portraits_need_credits(self):
         hub=json.loads(R('data/catholic-hub.json'));pc=json.loads(R('data/portrait-credits.json'))
         for a in hub['authors']:

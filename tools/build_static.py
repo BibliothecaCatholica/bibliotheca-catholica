@@ -248,6 +248,15 @@ def main():
             if hid:iso_names.setdefault(hid,{});iso_names[hid][nm]=iso_names[hid].get(nm,0)+1
     head=lambda eyebrow,h1,lede:'<div class="page-head"><div class="eyebrow">'+E(eyebrow)+'</div><h1>'+E(h1)+'</h1><p class="lede">'+E(lede)+'</p></div>'
     authors=[x for x in hub['authors'] if x['id'] not in skip_auth]
+    # Phase A item 2: authors with no hosted work get tools/author_pages.py sections instead of the Wikipedia excerpt
+    import author_pages as AP
+    hosted_auth={w['authorId'] for w in lib['works'] if w.get('authorId') and any(e.get('text') for e in w['editions'])}
+    RJ=json.loads((ROOT/'data/rights.json').read_text());AX=jsvar('data/authorx.js','AUTHORX')['by'];BSID=AP.bookshop_id(ROOT);DISCL=AP.disclosure(ROOT)
+    fbooks=set((flags.get('books') or {}).keys());books_by={}
+    for bk in BK['books']:
+        for ai in bk[2]:
+            hid=BK['authors'][ai][1]
+            if hid and str(bk[0]) not in fbooks:books_by.setdefault(hid,[]).append(bk)  # as app.js B.by, flagged books left out
     for au in authors:
         desc=au.get('desc') or au.get('wikiDesc') or ''
         lede=desc
@@ -268,7 +277,33 @@ def main():
         iso_link=('<p>'+a('/#/isidore/author='+urllib.parse.quote(iso_n,safe=''),'All their books in the Isidore Index')+' · '+a('/isidore/','Browse the Isidore Index')+'</p>') if iso_n else ''
         au_guides=[e for e in guide['editions'] if e.get('aid')==au['id']]
         if au_guides:iso_link=('<h2>Edition guides</h2><ul>'+''.join('<li>'+a('/editions/'+e['id']+'/',e['t'])+'</li>' for e in au_guides)+'</ul>')+iso_link
-        body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+wiki_block+(('<h2>Read here</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else '')+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+iso_link+'<p>'+a('/authors/','All authors')+'</p>'
+        official=[]
+        if au['id'] not in hosted_auth:
+            wiki_block=''  # no Wikipedia excerpt; the Wikipedia link stays in More sources
+            bks=sorted(books_by.get(au['id'],[]),key=lambda b:(re.sub(r'^(the|a|an) ','',b[1].casefold()),b[0]))
+            n_online=sum(1 for w in au.get('works') or [] if w.get('url'))
+            intro='<p class="au-intro">'+E(AP.intro(au,eras.get(au.get('era'),''),len(bks),len(au_guides),n_online))+'</p>'
+            def ed_badge(w):
+                return AP.badge(next((x for x in (AP.edition(e) for e in w['editions']) if x),None))
+            lib_html=('<h2>In our library (read at the source)</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+ed_badge(w)+'</li>' for w in mine)+'</ul>') if mine else ''
+            bk_html=('<h2>Books in the Isidore Index</h2><p class="small">Each title opens its catalog record on isidore.co. We do not host these books; the badge says what the record allows.</p><ul class="au-books">'+''.join('<li>'+a(BK['server']+'legacy/book/'+str(b[0])+'/CalibreLibrary',b[1],True)+(' ('+str(b[3])+')' if b[3] else '')+AP.badge(AP.resolve(RJ,b[0]))+'</li>' for b in bks)+'</ul>') if bks else ''
+            gd_html=''
+            if au_guides:
+                buys=0;li=[]
+                for e in au_guides:
+                    btn=[]
+                    for pk in e.get('picks') or []:
+                        if re.fullmatch(r'97[89]\d{10}',pk.get('isbn') or ''):
+                            btn.append('<a class="buy-b bs" href="https://bookshop.org/a/'+BSID+'/'+pk['isbn']+'" target="_blank" rel="noopener sponsored">Bookshop.org: '+E(pk.get('lbl') or pk.get('tr') or e['t'])+(' ('+E(pk['pub'])+')' if pk.get('pub') else '')+'</a>')
+                    buys+=len(btn)
+                    li.append('<li>'+a('/editions/'+e['id']+'/',e['t'])+(': '+E(e['why']) if e.get('why') else '')+('<div class="buy">'+''.join(btn)+'</div>' if btn else '')+'</li>')
+                gd_html='<h2>Edition guides</h2><ul>'+''.join(li)+'</ul>'+(DISCL if buys else '')
+            official=AP.official(au,AX.get(au['id'],{}))
+            of_html=('<h2>Official site, talks, and podcasts</h2><ul>'+''.join('<li>'+a(u,t,True)+'</li>' for t,u,k in official)+'</ul>') if official else ''
+            iso_only=('<p>'+a('/#/isidore/author='+urllib.parse.quote(iso_n,safe=''),'All their books in the Isidore Index')+' · '+a('/isidore/','Browse the Isidore Index')+'</p>') if iso_n else ''
+            body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+intro+lib_html+bk_html+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+gd_html+of_html+iso_only+'<p>'+a('/authors/','All authors')+'</p>'
+        else:
+          body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+wiki_block+(('<h2>Read here</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else '')+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+iso_link+'<p>'+a('/authors/','All authors')+'</p>'
         sa=saints_by_author.get(au['id'])
         if sa:body=body.replace('<p>'+a('/authors/','All authors')+'</p>','<h2>Saint</h2><p>'+E(s_facts(sa))+' '+a('/saints/','Saints & Hagiography')+'</p><p>'+a('/authors/','All authors')+'</p>')
         # v17: facts already in the data (era, century, vocations from tags, Doctor of the Church) and the curated links
@@ -278,7 +313,8 @@ def main():
         if tags:facts.append(oxford(tags)[0].upper()+oxford(tags)[1:]+'.')
         if au.get('doctor'):facts.append('Doctor of the Church.')
         # never isidore.co folder listings or raw files (rights rule 10): book pages and outside sites only
-        more=[a(l['url'],l['label'],True) for l in au.get('links') or [] if l.get('url') and not re.search(r'isidore\.co/(CalibreLibrary/|get/|calibre/get)',l['url'])]
+        shown={u for t,u,k in official}
+        more=[a(l['url'],l['label'],True) for l in au.get('links') or [] if l.get('url') and l['url'] not in shown and not re.search(r'isidore\.co/(CalibreLibrary/|get/|calibre/get)',l['url'])]
         if au.get('qid'):more.append(a('https://www.wikidata.org/wiki/'+au['qid'],'Wikidata '+au['qid'],True))
         extra=('<h2>At a glance</h2><p>'+E(' '.join(facts))+'</p>' if facts else '')+(('<h2>More sources</h2><ul>'+''.join('<li>'+x+'</li>' for x in more)+'</ul>') if more else '')
         body=body.replace('<p>'+a('/authors/','All authors')+'</p>',extra+'<p>'+a('/authors/','All authors')+' · '+a('/timeline/','Timeline')+(' · '+a('/doctors/','Doctors of the Church') if au.get('doctor') else '')+'</p>')

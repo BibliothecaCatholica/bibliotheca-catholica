@@ -356,6 +356,20 @@ function auTabGet(){try{return localStorage.getItem('bc-au-tab')||''}catch(e){re
 function auTabSet(t){try{localStorage.setItem('bc-au-tab',t)}catch(e){}}
 function auLinkList(L){return '<ul class="linklist">'+L.map(function(l){return '<li><a href="'+esc(l.u)+'"'+(l.int?'':' target="_blank" rel="noopener"')+'><span class="k '+(l.k||'read')+'">'+esc(l.kl||l.k||'read')+'</span>'+esc(l.t)+(l.int?'':' ↗')+(l.n?'<span class="ll-n">'+esc(l.n)+'</span>':'')+'</a></li>'}).join('')+'</ul>'}
 function auNames(ids){return ids.filter(function(i){return AID[i]}).map(function(i){return '<a href="#/author/'+i+'">'+esc(AID[i].name)+'</a>'}).join('')}
+/* Phase A item 2: authors with no hosted work show a short intro instead of the Wikipedia excerpt: the hand-written
+   a.intro, else auIntro(), the same two sentences as tools/author_pages.py intro() (tests/author_pages.test.js). */
+var AU_ROLE={saint:'saint',father:'Church Father',pope:'pope',martyr:'martyr',bishop:'bishop',cardinal:'cardinal',theologian:'theologian',philosopher:'philosopher',mystic:'mystic',apologist:'apologist',novelist:'novelist',poet:'poet',historian:'historian',spiritual:'spiritual writer',monastic:'monastic',scripture:'Scripture scholar',convert:'convert',founder:'founder',preacher:'preacher',liturgist:'liturgist',scientist:'scientist',journalist:'journalist',canonist:'canonist',catechist:'catechist'};
+function auHosted(id){return window.LIBRARY_DATA.works.some(function(w){return w.authorId===id&&w.editions.some(function(e){return e.text})})}
+function auOxford(x){return x.length===1?x[0]:x.length===2?x.join(' and '):x.slice(0,-1).join(', ')+', and '+x[x.length-1]}
+function auIntro(a,era,nb,ng,no){if(a.intro)return a.intro;
+  var f=function(y){return y<0?(-y)+' BC':String(y)},isn=function(y){return typeof y==='number'&&y%1===0};
+  var yrs=isn(a.born)&&isn(a.died)?' ('+f(a.born)+'–'+f(a.died)+')':isn(a.born)?' (born '+f(a.born)+')':isn(a.died)?' (died '+f(a.died)+')':'';
+  var roles=(a.tags||[]).filter(function(t){return AU_ROLE.hasOwnProperty(t)}).map(function(t){return AU_ROLE[t]}).slice(0,3);
+  var s=a.name+yrs+' appears in our authors list'+(era?' under '+era:'')+(roles.length?', as '+(/^[aeiou]/i.test(roles[0])?'an':'a')+' '+auOxford(roles):'')+'.';
+  var pl=function(n,one,many){return n+' '+(n===1?one:many)},parts=[];
+  if(ng)parts.push(pl(ng,'edition guide','edition guides'));if(no)parts.push(pl(no,'work','works')+' to read at outside sources');
+  if(nb)parts.push(pl(nb,'book','books')+' in the Isidore Index, each linked to its catalog record with a rights badge');
+  return s+' '+(parts.length?'This page lists '+auOxford(parts)+'.':'This page links outside sources about '+a.name+'.')}
 function author(id,tab){
   var a=auResolve(id);if(!a)return notfound();
   if(a.id!==id){location.replace('#/author/'+a.id+(tab?'/'+tab:''));return}
@@ -364,7 +378,7 @@ function author(id,tab){
   var key=[];if(wiki)key.push(['Wikipedia',wiki.url]);if(a.qid)key.push(['Wikidata '+a.qid,'https://www.wikidata.org/wiki/'+a.qid]);else if(a.qidWork)key.push(['Wikidata '+a.qidWork,'https://www.wikidata.org/wiki/'+a.qidWork]);
   site.slice(0,2).forEach(function(l){key.push([l.label,l.url])});
   var h='<a class="backlink" href="#/authors">← All authors</a> <a class="backlink" href="#/timeline/person/'+esc(a.id)+'">Find in timeline →</a><article class="au-page"><header class="au-head"><div class="detail-head">'+avatar(a,null,1)+'<div><div class="eyebrow">'+esc(ERA[a.era].label)+(a.century&&a.era!==ord(a.century)+'-century'?' · '+ord(a.century)+' century':'')+'</div><h1>'+esc(a.name)+'</h1><div class="dates">'+esc(dates(a))+'</div><div id="au-feast" class="au-feast"></div>'+badges(a,8)+'</div></div>'+
-   '<p class="summary dropcap">'+esc(a.desc)+'</p>'+(a.extract?'<div class="extract"><p>'+esc(a.extract)+(a.extract.length>=595?'…':'')+'</p><p class="small wiki-credit">Shortened excerpt from the Wikipedia article '+(wiki?'<a href="'+esc(wiki.url)+'" target="_blank" rel="noopener">“'+esc(wikiTitle(wiki.url))+'”</a>':'on '+esc(a.name))+', available under <a href="'+CC_BY_SA+'" target="_blank" rel="noopener">CC BY-SA 4.0</a>'+(a.wikiDesc?'. Wikipedia’s short description: “'+esc(a.wikiDesc)+'”':'')+'.</p></div>':'')+portraitCredit(a)+
+   '<p class="summary dropcap">'+esc(a.desc)+'</p>'+(!auHosted(a.id)?'<p class="au-intro" id="au-intro">'+esc(a.intro||'')+'</p>':a.extract?'<div class="extract"><p>'+esc(a.extract)+(a.extract.length>=595?'…':'')+'</p><p class="small wiki-credit">Shortened excerpt from the Wikipedia article '+(wiki?'<a href="'+esc(wiki.url)+'" target="_blank" rel="noopener">“'+esc(wikiTitle(wiki.url))+'”</a>':'on '+esc(a.name))+', available under <a href="'+CC_BY_SA+'" target="_blank" rel="noopener">CC BY-SA 4.0</a>'+(a.wikiDesc?'. Wikipedia’s short description: “'+esc(a.wikiDesc)+'”':'')+'.</p></div>':'')+portraitCredit(a)+
    '<div id="au-saint"></div><div class="au-key" id="au-key">'+key.map(function(k){return '<a class="chip" href="'+esc(k[1])+'" target="_blank" rel="noopener">'+esc(k[0])+' ↗</a>'}).join('')+'</div></header>'+
    '<nav class="au-tabs" id="au-tabs" role="tablist" aria-label="Sections">'+AUTABS.map(function(t){return '<a role="tab" href="#/author/'+a.id+'/'+t[0]+'" data-t="'+t[0]+'" id="tab-'+t[0]+'">'+t[1]+' <span class="tc">…</span></a>'}).join('')+'</nav>'+
    AUTABS.map(function(t){return '<section class="au-panel" role="tabpanel" id="tp-'+t[0]+'" aria-labelledby="tab-'+t[0]+'" hidden></section>'}).join('')+'</article>';
@@ -397,6 +411,7 @@ function auBuild(){var C=CUR_AU;if(!C||!$('#au-tabs'))return;var a=C.a;var X=((w
   // feast
   var fe=DR?[DR.feast]:(X.feast||[]);if(C_SAINT[a.id]&&!DR)fe=[];if(fe.length)$('#au-feast').innerHTML='<span class="k">Feast</span> '+esc(fe.join(' · '))+(DR?'':' <span class="small muted" title="From Wikidata; calendars differ">(Wikidata'+(fe.length>1?'; calendars differ':'')+')</span>');
   if(X.ce){var k=$('#au-key');if(k&&!/cathen/.test(k.innerHTML))k.insertAdjacentHTML('beforeend','<a class="chip" href="'+esc(X.ce)+'" target="_blank" rel="noopener">Catholic Encyclopedia ↗</a>')}
+  var ai=$('#au-intro');if(ai&&!a.intro)ai.textContent=auIntro(a,ERA[a.era]?ERA[a.era].label:'',(B&&B.by[a.id]||[]).filter(function(b){return !efOf(b.id)}).length,GD?GD.editions.filter(function(w){return w.aid===a.id}).length:0,a.works.filter(function(w){return w.url}).length);
   auWorks(a,X,DR);auComm(a,X,DR);auBuy(a);auRel(a,X);
   C.built=true;var want=C.want;var el=$('#tab-'+want);if(!el||el.hidden){want=['works','commentaries'].filter(function(t){return !$('#tab-'+t).hidden})[0]}auShow(want)}
 function auWorks(a,X,DR){var p=$('#tp-works'),n=window.LIBRARY_DATA.works.filter(function(w){return w.authorId===a.id}).length,h=window.BCLibrary.authorWorks(a.id);

@@ -562,7 +562,7 @@ html.app-unavailable #main>.static-prerender{min-height:0}
 .featured.own-substack{grid-template-columns:1fr;margin-bottom:22px}
 
 /* Footer: reading links, project information, and policies in balanced groups. */
-.footer-inner{grid-template-columns:minmax(240px, .9fr) minmax(0, 1.6fr);gap:48px;padding:40px 24px 28px}
+.footer .footer-inner{grid-template-columns:minmax(240px, .9fr) minmax(0, 1.6fr);gap:48px;padding:40px 24px 28px}
 .footer-description{max-width:30ch;margin:12px 0 20px;color:var(--muted);line-height:1.6}
 .footer-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
 .footer-links{gap:10px;align-items:flex-start}
@@ -578,5 +578,5 @@ html.app-unavailable #main>.static-prerender{min-height:0}
 .footer-credits>div{max-width:105ch;padding-top:8px}
 .footer-credits .small,.footer-credits .build-note{font:12px/1.7 var(--sans);color:var(--muted);margin:10px 0 0;padding:0}
 @media(max-width:1280px){.footer-lower{margin-inline:24px}}
-@media(max-width:900px){.footer-inner{grid-template-columns:1fr;gap:32px}.footer-description{max-width:none}.footer-intro{max-width:40rem}}
-@media(max-width:520px){.footer-inner{padding:28px 20px 24px}.footer-groups{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}.footer-groups nav:last-child{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}.footer-groups nav:last-child h2{grid-column:1/-1}.footer-lower{margin-inline:20px}}
+@media(max-width:900px){.footer .footer-inner{grid-template-columns:1fr;gap:32px}.footer-description{max-width:none}.footer-intro{max-width:40rem}}
+@media(max-width:520px){.footer .footer-inner{padding:28px 20px 24px}.footer-groups{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}.footer-groups nav:last-child{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}.footer-groups nav:last-child h2{grid-column:1/-1}.footer-lower{margin-inline:20px}}

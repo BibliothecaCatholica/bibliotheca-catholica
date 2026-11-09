@@ -19,6 +19,6 @@ jobs:
       - run: python3 tools/build_static.py
       - run: git diff --exit-code && test -z "$(git status --porcelain -- sitemap.xml robots.txt 404.html docs/static-pages.txt index.html data/site-copy.js build.json author work summa editions reading policy saints rites rights takedown about search disclosure)"
       - run: npm run build:study
-      - run: git diff --exit-code -- assets/study pagefind study/passages
+      - run: git diff --exit-code -- assets/study assets/libraries pagefind study/passages
       - run: npm test
       - run: node --check app.js && node --check scripts/boot.js && node --check scripts/timeline.js && node --check scripts/library.js && node --check scripts/guides.js && node --check scripts/saints.js && node --check scripts/rights.js && node --check scripts/rites.js && node --check scripts/plans.js && node --check data/site-copy.js

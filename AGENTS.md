@@ -188,3 +188,7 @@ The site is served free by GitHub Pages from `main`; the reading-room texts also
 - **Repository files:** warning above 50 MiB, blocked above 100 MiB (25 MiB through the browser); repos ideally under 1 GB, strongly recommended under 5 GB (https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github).
 - **Releases:** up to 1,000 assets per release, each under 2 GiB; no limit on total release size or bandwidth (https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases).
 - So the ~32 GB of isidore.co files cannot go on Pages or in a repo; Releases could hold permitted files one by one, but nothing is hosted until each file is rights-checked and the owner approves.
+
+## Study desk (2026-11-09)
+
+Run npm ci and npm run build:study after build_static.py when changing hosted text, tools/build_study.py, src/study/, or study/index.html. This builds pinned Pagefind, Citation.js, Bible Passage Reference Parser, and Mirador assets. Scripts in scripts/study-links.js connect work pages and Hodie to these tools. See README's Study desk integrations for calendar coverage, external services, and generated output. No Zimit integration belongs to this project.

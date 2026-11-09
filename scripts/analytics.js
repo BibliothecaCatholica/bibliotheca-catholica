@@ -1,4 +1,4 @@
-/* Bibliotheca Catholica: GA4 event helper (v14; v18 page paths).
+/* Bibliotheca Catholica: GA4 event helper (v14; v18 page paths; real-path page views 2026-11-09).
  * Uses only the existing Google tag (G-HFG445Y1LT) in <head>. No other tracking IDs, no Google Tag Manager,
  * no personal data. Every call is guarded with typeof gtag==='function' and wrapped in try/catch, so analytics
  * can never break the reader. Notes, highlights, quotes, and other free text are never sent; the only free text
@@ -47,18 +47,24 @@ function linkKind(d,hints){hints=hints||{};d=str(d).toLowerCase();
 function publisherKey(d){return pubHosts()[str(d).toLowerCase()]||''}
 /* work id from the current route (#/work/<id> or #/read/<id>/...) */
 function routeWork(hash){var m=/^#\/(?:work|read)\/([a-z0-9-]+)/i.exec(str(hash));return m?m[1]:''}
-/* pagePath(hash, boot): the route a page_view reports. One form per view whatever URL served it (/#/author/x and
-   /work/y/#/author/x both give /#/author/x; a static page with no hash uses its BC_BOOT route). Search and Isidore Index
-   filters are free text, so they collapse to /#/search and /#/isidore; a segment that is not a plain slug ends the path. */
+/* pagePath(hash, boot): the path a page_view reports, in the site's real path form with a trailing slash (GA ga-path fix,
+   QA 2026-11-09, owner-approved): /author/karl-adam/, /work/confessions/, /library/, /work/orthodoxy/ch/01-.../. GA4 takes
+   Page path from the URL path of page_location and ignores everything after '#', so the old hash form (/#/author/x)
+   counted every view as '/'. For every page with a static entry page this is the path of its <link rel=canonical>
+   (canonicalFor() in app.js and build_static.py use the same /<route>/ form). One form per view whatever URL served it
+   (/#/author/x and /work/y/#/author/x both give /author/x/; a static page with no hash uses its BC_BOOT route). App-only
+   routes keep the same form (/read/<work>/<edition>/<section>/, /saints/calendar/11-09/, /isidore/book/N/). Search and
+   Isidore Index filters are free text, so they collapse to /search/ and /isidore/; a segment that is not a plain slug
+   ends the path. */
 var ORIGIN='https://bibliothecacatholica.com';
 function pagePath(hash,boot){var raw=str(hash).replace(/^#\/?/,'');if(!raw)raw=str(boot);raw=raw.split('?')[0];
   var p=raw.split('/').filter(Boolean),out=[];
   if(!p.length)return '/';
-  if(p[0]==='search')return '/#/search';
-  if(p[0]==='isidore'||p[0]==='books'){if(p[1]==='book'&&/^\d+$/.test(p[2]||''))return '/#/isidore/book/'+p[2];if(p[1]==='folders')return '/#/isidore/folders';return '/#/isidore'}
+  if(p[0]==='search')return '/search/';
+  if(p[0]==='isidore'||p[0]==='books'){if(p[1]==='book'&&/^\d+$/.test(p[2]||''))return '/isidore/book/'+p[2]+'/';if(p[1]==='folders')return '/isidore/folders/';return '/isidore/'}
   for(var i=0;i<p.length&&i<6;i++){if(!/^[a-z0-9_.-]{1,80}$/i.test(p[i]))break;out.push(p[i])}
-  return out.length?'/#/'+out.join('/'):'/'}
-/* pageLocation(path, search): ORIGIN + path. Only the landing page_view passes location.search (app.js gaPageView()); from
+  return out.length?'/'+out.join('/')+'/':'/'}
+/* pageLocation(path, search): ORIGIN + path (+ the kept utm query; a path that still holds a '#' gets the query before it). Only the landing page_view passes location.search (app.js gaPageView()); from
    it only utm_source, utm_medium, utm_campaign, and utm_content are kept, each trimmed and cut to 100 characters. utm_term,
    gclid, lookup, q, and every other parameter are dropped, so no search term can reach page_location (spec 2026-11-03). */
 var UTM_KEEP=['utm_source','utm_medium','utm_campaign','utm_content'];
@@ -66,10 +72,10 @@ function utmQuery(search){var q=str(search).replace(/^\?/,''),got={},out=[];if(!
   q.split('&').forEach(function(kv){var i=kv.indexOf('='),k,v;if(i<1)return;try{k=decodeURIComponent(kv.slice(0,i).replace(/\+/g,' '));v=decodeURIComponent(kv.slice(i+1).replace(/\+/g,' '))}catch(e){return}
     if(UTM_KEEP.indexOf(k)<0||got.hasOwnProperty(k))return;v=v.replace(/\s+/g,' ').trim().slice(0,MAX);if(v)got[k]=v});
   UTM_KEEP.forEach(function(k){if(got.hasOwnProperty(k))out.push(k+'='+encodeURIComponent(got[k]))});return out.length?'?'+out.join('&'):''}
-/* The kept tags go in the query string before the '#' (ORIGIN/?utm_source=x#/work/y), because GA4 reads campaign tags only
+/* The kept tags go in the query string (ORIGIN/work/y/?utm_source=x; before any '#'), because GA4 reads campaign tags only
    from the query string of page_location; tags after the '#' are part of the fragment and the visit counts as Direct
    (QA 2026-11-03, owner-approved fix 2026-11-09). */
-function pageLocation(path,search){path=path||'/';var q=search?utmQuery(search):'';return q?ORIGIN+'/'+q+path.slice(1):ORIGIN+path}
+function pageLocation(path,search){path=path||'/';var q=search?utmQuery(search):'',i=path.indexOf('#');return i<0?ORIGIN+path+q:ORIGIN+path.slice(0,i)+q+path.slice(i)}
 /* hashUtm(hash): links that put the tags after the '#' (/#/library?utm_source=x) still count. Splits the hash's own query
    into its utm_ pairs (query, '?'-prefixed, raw) and the hash without them (hash; any other hash parameters stay). */
 function hashUtm(hash){var h=str(hash),i=h.indexOf('?');if(i<0)return {query:'',hash:h,changed:false};
@@ -96,7 +102,7 @@ function campaignUrl(route,tags){var r=str(route||'/'),u=new URL(r.charAt(0)==='
 /* pageTitle(path, docTitle): search and Index routes get a fixed title; elsewhere the document title, which on
    those routes is built from catalog data only. */
 var SITE_NAME='Bibliotheca Catholica';
-function pageTitle(path,docTitle){if(path==='/#/search')return 'Search — '+SITE_NAME;if(path==='/#/isidore')return 'The Isidore Index — '+SITE_NAME;
+function pageTitle(path,docTitle){if(path==='/search/')return 'Search — '+SITE_NAME;if(path==='/isidore/')return 'The Isidore Index — '+SITE_NAME;
   return str(docTitle||SITE_NAME).slice(0,MAX)}
 /* once(key): true the first time a key is seen in a scope; reset(scope) forgets it */
 var SEEN={};

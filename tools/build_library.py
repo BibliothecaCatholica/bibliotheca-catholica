@@ -53,6 +53,21 @@ def validate(catalog):
                         assert v['url'] == 'https://archive.org/details/' + v['identifier'] and v['year'] < 1931, v['identifier']
                         assert re.fullmatch(r'[0-9a-f]{64}', v['ocrSha256']), v['identifier']
                     continue
+                if source.get('kind') == 'public-domain-text':
+                    # On Christian Doctrine (2026-11-09): Shaw translation from CCEL NPNF1-02 Public Domain plain text
+                    # (no Gutenberg ebook). Print witness before 1931; New Advent stays link-only.
+                    assert source['sha256'] == edition['sha256'], edition['id']
+                    assert source['title'] == edition['sourceTitle'], edition['id']
+                    assert edition['rights'].startswith('Public domain in the USA.'), edition['id']
+                    assert b'*** END OF THE HOSTED TEXT' in raw, edition['id']
+                    assert 'gutenberg.org' not in edition['source'], edition['id']
+                    assert source.get('sourceUrl', '').startswith('https://'), edition['id']
+                    assert re.fullmatch(r'[0-9a-f]{64}', source.get('sourceFileSha256', '')), edition['id']
+                    ia = source.get('iaWitness') or {}
+                    if ia:
+                        assert ia['url'] == 'https://archive.org/details/' + ia['identifier'] and ia['year'] < 1931, ia
+                        assert re.fullmatch(r'[0-9a-f]{64}', ia.get('ocrSha256', '')), ia
+                    continue
                 assert b'END OF THE PROJECT GUTENBERG' in raw.upper()
                 assert source['metadata']['Copyright'] == ['Public domain in the USA.']
                 assert source['metadata']['Title'][0] == edition['sourceTitle']

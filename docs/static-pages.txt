@@ -4493,6 +4493,7 @@ work/lumen-gentium/index.html
 work/man-thursday/index.html
 work/nepveu-meditations/index.html
 work/new-catholic-dictionary/index.html
+work/on-christian-doctrine/index.html
 work/orthodoxy/index.html
 work/orthodoxy/ch/01-introduction-in-defence-of-everything-else/index.html
 work/orthodoxy/ch/02-the-maniac/index.html

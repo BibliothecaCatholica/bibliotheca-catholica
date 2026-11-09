@@ -1,0 +1,47 @@
+{
+  "id": "ccel-npnf102-doctrine",
+  "kind": "public-domain-text",
+  "title": "On Christian Doctrine",
+  "translator": "Shaw, J. F. (Rev. Professor J. F. Shaw, of Londonderry)",
+  "editor": "Schaff, Philip (1819-1893)",
+  "series": "Nicene and Post-Nicene Fathers, Series I, Volume II",
+  "printBasis": "New York: The Christian Literature Publishing Co., 1890 (CCEL header). Same Shaw text as the 1887 Buffalo Christian Literature Co. NPNF Series I Vol. II printing.",
+  "shawFirstPublished": "Edinburgh: T. and T. Clark, 1873 (in The Works of Aurelius Augustine)",
+  "sourceUrl": "https://www.ccel.org/ccel/s/schaff/npnf102/cache/npnf102.txt",
+  "sourcePage": "https://www.ccel.org/ccel/schaff/npnf102.html",
+  "sourceFileSha256": "5c973feda803f3e58a88ed7df210b42d436f5466741eb8dbeae713ab56dedae4",
+  "sha256": "3d3f5411ae851572805e2a1ee62b0073d27fb85c2cb6af1c852968d1c6e8caad",
+  "rights": "Public domain in the USA. The CCEL NPNF1-02 plain-text header states Rights: Public Domain. The Shaw translation (1873) and the NPNF Series I Vol. II printings (1887, 1890) were published before 1931.",
+  "ccelCopyrightPage": "https://www.ccel.org/about/copyright.html",
+  "ccelTermsNote": "CCEL says most editions are based on U.S. public-domain books; introductions, cover art, and other special contents may be copyrighted. The NPNF1-02 cache file used here declares Rights: Public Domain. CCEL asks contact for permission to republish CCEL works commercially; this hosted file is the public-domain Shaw/NPNF treatise text only (Preface and Books I to IV), not CCEL cover art or site special contents.",
+  "whyNotGutenberg": "Project Gutenberg has no plain-text ebook of On Christian Doctrine (De Doctrina Christiana). Gutenberg does host Augustine Confessions and City of God separately.",
+  "whyNotNewAdvent": "New Advent is link-only on this site. Its HTML was not copied.",
+  "iaWitness": {
+    "identifier": "selectlibraryofn0002unse",
+    "url": "https://archive.org/details/selectlibraryofn0002unse",
+    "title": "St. Augustin's City of God and Christian doctrine",
+    "year": 1887,
+    "publisher": "Buffalo: Christian Literature Co.",
+    "ocr": "selectlibraryofn0002unse_djvu.txt",
+    "ocrSha256": "ba6fbfe2110ef9616172ad4015810336c450e3cf58507ae45034ecf1d55f1703",
+    "note": "Print witness for the same NPNF Series I Vol. II Shaw text. The hosted file is taken from the proofed CCEL Public Domain plain text of that volume, not from this OCR."
+  },
+  "extraction": {
+    "includes": [
+      "Preface",
+      "Book I",
+      "Book II",
+      "Book III",
+      "Book IV"
+    ],
+    "omits": [
+      "Schaff's Introductory Note by the Editor",
+      "Contents of Christian Doctrine abstracts",
+      "Index to Christian Doctrine",
+      "City of God (remainder of NPNF1-02)"
+    ],
+    "method": "Extracted lines for the Preface through the end of Book IV from the CCEL NPNF1-02 plain-text cache; unwrapped line breaks into paragraphs; normalized BOOK and CHAPTER headings for the reading-room contents list; dropped NPNF Argument abstracts under each Book; kept inline footnote markers and footnote definitions from the NPNF apparatus."
+  },
+  "checked": "2026-11-09",
+  "bytes": 464072
+}

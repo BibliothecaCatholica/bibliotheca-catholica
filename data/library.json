@@ -39,6 +39,53 @@
       ]
     },
     {
+      "id": "on-christian-doctrine",
+      "title": "On Christian Doctrine",
+      "author": "Augustine of Hippo",
+      "authorId": "augustine-of-hippo",
+      "category": "Church Fathers",
+      "tradition": "Catholic tradition",
+      "description": "Augustine's guide to interpreting Scripture and teaching its meaning: things and signs, use and enjoyment, figurative language, and Christian eloquence, in a preface and four books (De Doctrina Christiana).",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-09",
+      "editions": [
+        {
+          "id": "ccel-npnf102-doctrine",
+          "label": "Shaw translation (NPNF Series I, Vol. II)",
+          "source": "https://www.ccel.org/ccel/schaff/npnf102.html",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Shaw, J. F. (Rev. Professor J. F. Shaw, of Londonderry)"
+            },
+            {
+              "role": "editor",
+              "name": "Schaff, Philip, 1819-1893"
+            }
+          ],
+          "rights": "Public domain in the USA. Shaw translation 1873; NPNF Series I, Volume II printings 1887 and 1890, before 1931. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-09",
+          "note": "J. F. Shaw's English translation (T. and T. Clark, Edinburgh, 1873), reprinted in Philip Schaff's Nicene and Post-Nicene Fathers, Series I, Volume II (Christian Literature Co., Buffalo 1887 / New York 1890). Hosted from the CCEL NPNF1-02 plain-text file, whose header states Rights: Public Domain. Project Gutenberg has no ebook of this work. The Internet Archive scan selectlibraryofn0002unse (1887) is the print witness. New Advent remains a link-only alternate. Includes the Preface and Books I to IV; omits Schaff's introductory note and the index.",
+          "sourceTitle": "On Christian Doctrine",
+          "access": "full-text",
+          "text": "data/texts/ccel-npnf102-doctrine.txt",
+          "sha256": "3d3f5411ae851572805e2a1ee62b0073d27fb85c2cb6af1c852968d1c6e8caad"
+        },
+        {
+          "id": "on-christian-doctrine-newadvent",
+          "label": "New Advent reading edition",
+          "source": "https://www.newadvent.org/fathers/1202.htm",
+          "language": "English",
+          "contributors": [],
+          "rights": "External edition; its source notices apply. Not hosted here.",
+          "checked": "2026-11-09",
+          "note": "Link only. Consult the source page for translation and editorial credits. Do not use New Advent HTML as a hosting source.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
       "id": "rule-of-benedict",
       "title": "Rule of Saint Benedict",
       "author": "Benedict of Nursia",

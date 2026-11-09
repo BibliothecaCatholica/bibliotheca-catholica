@@ -5,6 +5,9 @@ import {build} from 'esbuild';
 import {createIndex, close} from 'pagefind';
 
 mkdirSync('assets/study', {recursive: true});
+mkdirSync('assets/libraries', {recursive: true});
+await build({entryPoints: ['src/libraries/desk.js'], bundle: true, format: 'iife', outfile: 'assets/libraries/desk.js', minify: true});
+copyFileSync('node_modules/fuse.js/LICENSE', 'assets/libraries/Fuse-LICENSE');
 await build({entryPoints: ['src/study/tools.js'], bundle: true, format: 'iife', outfile: 'assets/study/tools.js', minify: true});
 copyFileSync('node_modules/mirador/dist/mirador.min.js', 'assets/study/mirador.js');
 execFileSync('python3', ['tools/build_study.py'], {stdio: 'inherit'});

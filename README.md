@@ -93,3 +93,7 @@ The Roman-calendar snapshot at data/study/calendar.json comes from LiturgicalCal
 Mirador fetches IIIF images from iiif.archive.org only when the visitor opens the scan viewer. The original scan remains linked. Bible lookup opens BibleGateway's NRSV Catholic Edition. Citation.js emits the catalog's edition data and does not infer a publication date. Source dependency licenses are retained in assets/study/licenses. The index includes catalog-approved hosted texts only.
 
 The shared footer is maintained in index.html. build_static.py also synchronizes it to the standalone Study desk. Reading links, project links, and policies have separate groups; credits and build information live in the expandable lower row.
+
+### Great libraries and offline saints recovery
+
+The Libraries page includes research paths, searches that open a chosen external catalog, and local Fuse.js matching. Rebuild its shared markup with `npm run build` and its pinned browser bundle with `npm run build:study`. See [Libraries and archives](docs/LIBRARIES-AND-ARCHIVES.md) for the integration review and the optional, offline-only CatholicSaints ZIM recovery tool. Recovered third-party content is not part of the public site build.

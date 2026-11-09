@@ -194,3 +194,7 @@ The site is served free by GitHub Pages from `main`; the reading-room texts also
 ## Study desk (2026-11-09)
 
 Run npm ci and npm run build:study after build_static.py when changing hosted text, tools/build_study.py, tools/build_study.mjs, src/study/, or study/index.html. This builds pinned Pagefind, Citation.js, Bible Passage Reference Parser, and Mirador assets. Pagefind is indexed through its JS API with HTML files added in sorted `sourcePath` order so the committed `pagefind/` bundle is byte-identical across machines (the CLI directory walk is not sorted; see Pagefind #1395). Scripts in scripts/study-links.js connect work pages and Hodie to these tools. See README's Study desk integrations for calendar coverage, external services, and generated output. No Zimit integration belongs to this project.
+
+## Great Libraries research desk and owner-supplied archive recovery (2026-11-09)
+
+`tools/library_desk.py` generates shared Libraries markup; `src/libraries/` builds the lazy Fuse.js bundle during `npm run build:study`. See `docs/LIBRARIES-AND-ARCHIVES.md`. The owner's November 9 request authorizes transformation of the supplied October 25 CatholicSaints ZIM into private offline outputs via `tools/recover_saints_archive.py`. This is an exception to rule 8 only for the local supplied archive: no new crawling, build/runtime dependency, or public republication of unreviewed source content. Keep the archive and recovered outputs outside the public repository. Public saints links retain the existing rules.

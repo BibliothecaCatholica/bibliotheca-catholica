@@ -577,6 +577,8 @@ function prayersBlock(){if(!PR)return '';var dow=new Date().getDay();var today={
   return h}
 function prayersWire(focus){document.querySelectorAll('.pr-lat').forEach(function(b){b.addEventListener('click',function(){var d=b.closest('.pr-body');var la=$('.pr-la',d),en=$('.pr-en',d);var on=la.hidden;la.hidden=!on;en.hidden=on;b.classList.toggle('on',on);b.textContent=on?'English':'Latin'})});
   if(focus){var el=document.getElementById('pr-'+focus);if(el){el.open=true;setTimeout(function(){el.scrollIntoView({block:'center'})},30)}}}
+var LIB_DESK_LOADING=false,LIB_DESK_WAIT=[];
+function libraryDeskLoad(cb){if(window.BCLibraryDesk){cb();return}LIB_DESK_WAIT.push(cb);if(LIB_DESK_LOADING)return;LIB_DESK_LOADING=true;var s=document.createElement('script');s.src='/assets/libraries/desk.js?v=20261109';s.onload=function(){LIB_DESK_WAIT.splice(0).forEach(function(f){f()})};s.onerror=function(){LIB_DESK_LOADING=false;LIB_DESK_WAIT=[]};document.head.appendChild(s)}
 function section(k,focus){
   var s=SECTIONS[k];var R=D.resources.filter(function(r){return r.section===k});var cats=[];R.forEach(function(r){if(cats.indexOf(r.category)<0)cats.push(r.category)});
   var h='<div class="page-head"><div class="eyebrow">'+esc(s.e)+'</div><h1>'+esc(s.t)+'</h1><p class="lede">'+esc(s.d)+'</p></div>';
@@ -586,7 +588,8 @@ function section(k,focus){
   if(k==='libraries')h+='<div class="callout">This hub is built to complement the <a href="https://isidore.co/calibre" target="_blank" rel="noopener">St. Isidore e-book library</a>. Browse its authors in a readable A–Z on the <a href="#/isidore">Isidore Index</a> page. For forgotten scans, see <a href="#/rare">Rare &amp; Obscure</a>; for new translation efforts, see <a href="#/projects">Projects &amp; Translations</a>.</div>';
   h+='<div class="toolbar"><input type="search" id="rs-q" placeholder="Filter '+esc(s.t)+'…"><div class="chips" id="rs-c"><button class="chip on" data-c="">All</button>'+cats.map(function(c){return '<button class="chip" data-c="'+esc(c)+'">'+esc(c)+'</button>'}).join('')+'</div></div><div id="rs-out"></div>';
   render(h,k);var cur='',q='';
-  function draw(){var out='';cats.forEach(function(c){if(cur&&c!==cur)return;var L=R.filter(function(r){return r.category===c&&(!q||norm(r.name+' '+r.desc+' '+r.tags.join(' ')).indexOf(norm(q))>=0)});if(!L.length)return;out+='<div class="cat-title"><h2>'+esc(c)+'</h2></div><div class="grid g-res">'+L.map(rcard).join('')+'</div>'});$('#rs-out').innerHTML=out||'<div class="empty">Nothing matches.</div>'}
+  if(k==='libraries')lazy('library-desk.js','LIBRARY_DESK',function(d){if(!d||!$('#rs-out')||!main.querySelector('h1')||main.querySelector('h1').textContent!==s.t)return;var box=document.createElement('div');box.innerHTML=d.html;$('#rs-q').closest('.toolbar').before(box);libraryDeskLoad(function(){if(window.BCLibraryDesk)window.BCLibraryDesk.mount();draw()})},'20261109');
+  function draw(){var out='';cats.forEach(function(c){if(cur&&c!==cur)return;var ranked=k==='libraries'&&window.BCLibraryDesk?window.BCLibraryDesk.rank(R,q):R.filter(function(r){return !q||norm(r.name+' '+r.desc+' '+r.tags.join(' ')).indexOf(norm(q))>=0});var L=ranked.filter(function(r){return r.category===c});if(!L.length)return;out+='<div class="cat-title"><h2>'+esc(c)+'</h2></div><div class="grid g-res">'+L.map(rcard).join('')+'</div>'});$('#rs-out').innerHTML=out||'<div class="empty">Nothing matches.</div>'}
   draw();$('#rs-q').addEventListener('input',function(e){q=e.target.value;draw()});
   if(k==='prayers')prayersWire(focus);
   $('#rs-c').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;cur=b.dataset.c;document.querySelectorAll('#rs-c .chip').forEach(function(x){x.classList.toggle('on',x===b)});draw()});

@@ -657,6 +657,7 @@ def main():
         elif k=='editions':extra='<ul>'+''.join('<li>'+a('/editions/'+e['id']+'/',e['t'])+'</li>' for e in guide['editions'])+'</ul>'
         elif k=='saints':extra='<ul>'+''.join('<li>'+a(s_href(x),x['name'])+' — '+E(s_status(x))+(' · Vatican News: '+E(s_vn(x)) if x['feasts']['vatican_news'] else '')+(' · '+E(FLAGL[x['historicity']['flag']]) if x.get('historicity') else '')+'</li>' for x in sorted(saints,key=lambda x:x['name']))+'</ul><p>'+a('/saints/books/','The hagiography shelf')+' · '+a('/saints/about/','Sources & method')+'</p>'
         elif k=='reading':extra='<h2>Reading plans</h2><ul>'+''.join('<li>'+a('/reading/'+P['id']+'/',P['t']+' ('+str(len(P['days']))+' days, '+PLAN_SPAN(P)+')')+'</li>' for P in plans)+'</ul><h2>Reading lists</h2><ul>'+''.join('<li>'+a('/reading/'+L['id']+'/',L['t'])+'</li>' for L in guide['lists'])+'</ul>'
+        elif k=='substacks':extra=guide['own']['html']  # our own newsletter first (tools/substacks_src.py OWN, 2026-11-09)
         elif k=='doctors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors if x.get('doctor'))+'</ul>'
         intro='<p class="section-intro">'+E(INTRO[k])+'</p>' if k in INTRO else ''
         out[k]=(t+' — Bibliotheca Catholica',fit([d],DESC_EXTRA),head('Bibliotheca Catholica',t,d)+intro+extra,[crumbs((t,k+'/'))])

@@ -558,3 +558,5 @@ html.app-unavailable #main>.static-prerender{min-height:0}
 .newsletter-box .nl-embed{display:block;width:100%;max-width:480px;height:320px;border-radius:8px}
 .newsletter-box .nl-fine{color:var(--muted);margin:10px 0 0}
 @media (max-width:720px){.footer-newsletter .nl-btn{width:100%;justify-content:center}.buy-print{padding:14px}}
+/* Our newsletter at the top of /substacks/ (2026-11-09): the featured-card design, one column, a gap before the featured column */
+.featured.own-substack{grid-template-columns:1fr;margin-bottom:22px}

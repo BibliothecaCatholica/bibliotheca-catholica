@@ -39,3 +39,17 @@ S=[
 ('Catholic Founders','Silas Mähner','https://www.catholicfounders.com','Spiritual Life','Running a business like a saint: Church teaching for entrepreneurs.'),
 ('Catholic Link','Catholic Link','https://catholiclink.substack.com','Spiritual Life','En español: everything a Catholic needs to connect faith with daily life.'),
 ]
+
+# Our own newsletter (owner request 2026-11-09): shown first on /substacks/ ("Our newsletter"), in the static page and the
+# app (GUIDE_DATA.own, written by tools/build_v3_data.py, also with --catalog-only). Plain links, no iframe on this page,
+# no analytics attributes. Nothing is posted yet, so the text promises nothing that already exists.
+OWN=dict(name='Bibliotheca Catholica',url='https://bibliothecacatholica.substack.com/',
+  subscribe='https://bibliothecacatholica.substack.com/subscribe',
+  desc='The library’s own free newsletter. This Advent it brings Advent with the Fathers, a short reading from the Church Fathers each day, Nov 29 to Dec 24, along with news of new texts, guides, and features.')
+def own_html(o=OWN):
+    import html
+    E=html.escape
+    return ('<section class="featured own-substack" aria-label="Our newsletter"><div class="feat-l"><div class="eyebrow">Our newsletter</div>'
+      '<h2><a href="'+E(o['url'])+'" target="_blank" rel="noopener">'+E(o['name'])+'</a></h2><div class="host">'+E(o['url'].split('//')[1].rstrip('/'))+' ↗</div>'
+      '<p>'+E(o['desc'])+'</p><div class="hero-cta"><a class="btn" href="'+E(o['subscribe'])+'" target="_blank" rel="noopener">Subscribe (free) ↗</a>'
+      '<a class="btn ghost" href="/reading/advent-2026/">Advent with the Fathers</a></div></div></section>')

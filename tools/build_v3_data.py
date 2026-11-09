@@ -4,12 +4,12 @@ from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0,os.path.dirname(__file__))
 from editions_data import W
 from reading_lists import L
-from substacks_src import FEATURED,S
+from substacks_src import FEATURED,S,OWN,own_html
 if '--catalog-only' in sys.argv:
     from pathlib import Path
     path = Path(__file__).resolve().parents[1] / 'data' / 'guide.js'
     old = json.loads(path.read_text(encoding='utf-8').split('=', 1)[1].strip().rstrip(';'))
-    old.update(editions=W, lists=L)
+    old.update(editions=W, lists=L, own=dict(OWN, html=own_html()))
     path.write_text('window.GUIDE_DATA='+json.dumps(old,ensure_ascii=False,separators=(',',':'))+';\n', encoding='utf-8')
     print('Updated reading guides; preserved the existing feed snapshot.')
     sys.exit(0)
@@ -46,7 +46,7 @@ F['pickPost']=pk[0] if pk else {'t':'A Defense of Man’s Place in Nature','u':F
 if not F['posts']:
     # keep last good snapshot if feed temporarily fails
     pass
-G={'generated':datetime.date.today().isoformat(),'editions':W,'lists':L,'featured':F,'substacks':[{k:v for k,v in s.items() if k!='ok'} for s in subs]}
+G={'generated':datetime.date.today().isoformat(),'editions':W,'lists':L,'own':dict(OWN,html=own_html()),'featured':F,'substacks':[{k:v for k,v in s.items() if k!='ok'} for s in subs]}
 js='window.GUIDE_DATA='+json.dumps(G,ensure_ascii=False,separators=(',',':'))+';\n'
 p=(os.path.join(os.path.dirname(__file__),'..','site','data','guide.js') if os.path.isdir(os.path.join(os.path.dirname(__file__),'..','site')) else os.path.join(os.path.dirname(__file__),'..','data','guide.js'))
 open(p,'w').write(js)

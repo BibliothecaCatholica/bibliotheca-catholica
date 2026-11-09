@@ -3,9 +3,10 @@
  const q=selector=>document.querySelector(selector);
  const text=(el,value)=>{el.textContent=value};
  try{
-  if(window.PagefindUI)new PagefindUI({element:'#passage-search',showSubResults:true,processResult:function(result){
+  if(window.PagefindUI)new PagefindUI({element:'#passage-search',showSubResults:false,processResult:function(result){
     const path=result.url.split('/').pop().replace('.html','');
     result.url=result.meta.reader || result.url;
+    delete result.meta.reader;
     return result;
   }});
   const lib=await fetch('/data/library.json').then(r=>r.json()),editions=[];

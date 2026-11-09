@@ -44,6 +44,26 @@ class Importer(unittest.TestCase):
     def test_raw_copy_is_git_ignored(self):
         self.assertIn('.local/',(ROOT/'.gitignore').read_text().split())
         self.assertEqual(subprocess.run(['git','check-ignore','-q','.local/saints-calendar.json'],cwd=ROOT).returncode,0)
+class RealShape(unittest.TestCase):
+    """Clean-up rules for the full-year export's shape (records with entry_type)."""
+    def run_rows(self,rows):
+        with tempfile.TemporaryDirectory() as t:
+            f=Path(t)/'r.jsonl';f.write_text('\n'.join(json.dumps(r) for r in rows));return IS.import_records(IS.read_records(f))
+    def row(self,**k):
+        r={'date':'25-december','entry_type':'unknown','name':'','slug':'','canonical_url':'','born':'','died':'','beatified':'','canonized':'','patronage':[],'aliases':[]};r.update(k);return r
+    def test_day_rows_and_junk(self):
+        S,D,st,P=self.run_rows([self.row(name='Calendar of Saints - 25 December',slug='christmas'),
+            self.row(name='Also celebrated but no entry yet',slug='also-celebrated-but-no-entry-yet'),
+            self.row(date='21-april',name='Calendar of Saints - 21 April',slug='easter'),
+            self.row(date='15-august',name='Assumption of the Blessed Virgin Mary',slug='assumption-of-the-blessed-virgin-mary')])
+        names={s['name']:s['type'] for s in S.values()}
+        self.assertEqual(names.get('Nativity of the Lord (Christmas)'),'feast')
+        self.assertEqual(names.get('Assumption of the Blessed Virgin Mary'),'feast')
+        self.assertEqual(len(names),2,names)
+    def test_life_facts(self):
+        self.assertEqual(IS.life_fact('7 March 1274 at Fossanuova monastery near Terracina, Italy of natural causes'),'7 March 1274 at Fossanuova monastery near Terracina, Italy')
+        self.assertIsNone(IS.life_fact('relics taken to Mauzac Abbey in 761'))
+        self.assertNotIn('relic',IS.life_fact('relics taken to Mauzac Abbey in 761 \u2022 5th century') or '')
 class Names(unittest.TestCase):
     def test_site_style(self):
         for a,b in (('Saint Thomas Aquinas','St. Thomas Aquinas'),('Pope Saint John Paul II','Pope St. John Paul II'),('Saints Perpetua and Felicity','Sts. Perpetua and Felicity'),('St Agnes','St. Agnes'),('Bl. Fixture','Blessed Fixture'),('Holy Innocents','Holy Innocents')):
@@ -67,7 +87,7 @@ class Merged(unittest.TestCase):
     def test_one_entry_per_person(self):
         M,L=self.day('01-28');self.assertEqual(len(L),1,'guide and calendar Aquinas are one entry')
         x=L[0];self.assertEqual(x['name'],'St. Thomas Aquinas');self.assertEqual(x['href'],'/author/thomas-aquinas/')
-        self.assertIn('Canonized 18 July 1323',x['facts']);self.assertEqual(x['notes'],['Also kept on 7 March in some calendars.'])
+        self.assertIn('Canonized: 18 July 1323',x['facts']);self.assertEqual(x['notes'],['Also kept on 7 March in some calendars.'])
         M,L=self.day('08-27');self.assertEqual([x['name'] for x in L],['St. Monica of Hippo'],'one-word calendar name merges with the guide saint of the same day')
         M,L=self.day('01-21');self.assertEqual(sorted(M),['Fixture Unlinked Name (TEST DATA)','St. Agnes of Rome'])
     def test_disagreement_notes(self):

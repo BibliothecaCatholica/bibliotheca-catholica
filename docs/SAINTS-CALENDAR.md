@@ -1,7 +1,7 @@
-# Full-year saints calendar (facts only): REVIEW BRANCH, not approved for publication
+# Full-year saints calendar (facts only)
 
-Status (2026-11-09): built on the local branch `saints-calendar` for the owner's review. Nothing here is public
-until Micah approves it.
+Status: live since 2026-11-09 (owner-approved launch, Micah, 2026-11-09). Built from the full-year facts export
+(12,337 rows) with the decisions below.
 
 ## Owner's decisions (2026-11-09)
 
@@ -74,11 +74,27 @@ replaces em-dashes, drops Amazon links and URLs outside catholicsaints.info/.mob
 characters as prose, and rejects bad dates. `--strict` exits 1 if a record was rejected. The report lists bad dates,
 missing slugs (unlinked names), conflicts, dropped keys, prose dropped, and days with no record.
 
+### Clean-up rules for the full-year export (`tidy()` in `tools/import_saints.py`)
+
+- "Calendar of Saints - <day>" rows name the day's lead entry only by its slug: the name is read from the slug
+  (`SLUG_NAMES` maps the few that do not read as a name; Easter, a moveable feast, and Halloween are dropped).
+- "Also celebrated but no entry yet" rows are page furniture and are dropped.
+- Unlinked names (no page of their own) are kept as names only; a bare name that repeats a full entry on the same
+  day is dropped, and two entries with the same name and facts on one day are shown once.
+- Untyped entries are typed from their name: feasts (`FEAST_NAME`, for example the Assumption or All Saints) and
+  St., Blessed, and Pope titles.
+- Born and died keep one short fact (the first part with a year, never a note about relics or burial), cut before
+  any cause, story, or commentary, at most 100 characters; beatified and canonized keep the date and pope.
+- Aliases with commentary, colons, or numbers are dropped (at most 5); patronage is capped at 8.
+- Notes listing other days name at most 4 and count the rest.
+
+Result (2026-11-09): 12,136 entries on 366 days (saint 7,421, blessed 2,824, martyr group 596, marian title 156,
+pope 88, feast 41, other 1,010); 191 junk rows dropped. Per-day counts run from 4 (29 February) to 76.
+
 ## Size and hosting
 
-Measured with a synthetic 12,337-row file of the same shape (not committed): 366 day pages of about 28 KB on
-average (36 KB max), 13 MB in all; `build_static.py` about 0.5 s slower. File count: +367 (366 pages and
-`data/saints-days.json`), about 6,360 of the 20,000-file Cloudflare Pages limit. Pagefind (the Study desk) indexes
+366 day pages, about 22 KB on average (33 KB max), 8.1 MB in all; `data/saints-days.json` is 1.7 MB. File count: +367 (366 pages and
+`data/saints-days.json`), 6,362 of the 20,000-file Cloudflare Pages limit. Pagefind (the Study desk) indexes
 only hosted texts and is unchanged.
 
 Tests: `tests/test_saints_calendar.py`, `tests/saints-calendar.test.js` (fixture: `tests/fixtures/saints-sample.jsonl`).

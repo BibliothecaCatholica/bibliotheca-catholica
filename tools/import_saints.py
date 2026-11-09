@@ -33,17 +33,17 @@ FIELDS=OrderedDict([
  ('name',('name','display_name','title_name','saint')),
  ('slug',('slug','id','saint_slug')),
  ('aliases',('aliases','also_known_as','aka','alias','other_names')),
- ('type',('type','kind','category','record_type')),
- ('born_date',('born_date','birth_date','born_on')),
+ ('type',('type','entry_type','kind','category','record_type')),
+ ('born_date',('born_date','birth_date','born_on','born')),
  ('born_place',('born_place','birth_place','born_in')),
- ('died_date',('died_date','death_date','died_on')),
+ ('died_date',('died_date','death_date','died_on','died')),
  ('died_place',('died_place','death_place','died_in')),
  ('patronage',('patronage','patron_of','patronages','patron')),
  ('beatified',('beatified','beatification','beatification_date')),
  ('canonized',('canonized','canonised','canonization','canonisation','canonization_date')),
  ('url',('url','canonical_url','catholicsaints_url','source_url','link')),
 ])
-NESTED={'born':('born_date','born_place'),'died':('died_date','died_place'),'birth':('born_date','born_place'),'death':('died_date','died_place')}
+NESTED={'birth':('born_date','born_place'),'death':('died_date','died_place')}  # nested {date, place} objects; plain 'born'/'died' strings map to *_date
 TYPES=OrderedDict([('saint','Saints'),('blessed','Blessed'),('pope','Popes'),('martyr-group','Martyr groups'),('marian-title','Marian titles'),('feast','Feasts'),('unknown','Other names')])
 TYPE_MAP={'saint':'saint','saints':'saint','st':'saint','st.':'saint','blessed':'blessed','bl':'blessed','bl.':'blessed','beatus':'blessed',
  'pope':'pope','popes':'pope','martyr group':'martyr-group','martyr-group':'martyr-group','martyr_group':'martyr-group','martyrs':'martyr-group','group':'martyr-group','group of martyrs':'martyr-group',
@@ -54,6 +54,10 @@ AMAZON=re.compile(r'(amazon\.|amzn\.)',re.I)
 def norm_date(v):
     """MM-DD from '01-21', '1-21', '01/21', 'January 21', or '2026-01-21'."""
     s=str(v or '').strip().lower()
+    m3=re.fullmatch(r'(\d{1,2})[-\s]([a-z]+)',s)  # '16-november' (catholicsaints.mobi export)
+    if m3 and m3.group(2)[:3] in [x[:3] for x in MONTHS]:
+        mo,d=[x[:3] for x in MONTHS].index(m3.group(2)[:3])+1,int(m3.group(1))
+        return '%02d-%02d'%(mo,d) if 1<=d<=DAYS_IN[mo] else None
     m=re.fullmatch(r'(?:\d{4}-)?(\d{1,2})[-/](\d{1,2})',s)
     if not m:
         m2=re.fullmatch(r'([a-z]+)\.?\s+(\d{1,2})',s)
@@ -98,15 +102,112 @@ def pick(rec,keys):
     for k in keys:
         if k in rec and rec[k] not in(None,'',[]):return rec[k]
     return None
+# ---- clean-up for the catholicsaints.mobi export (2026-11-09 file): reported in P['tidy'] ----
+JUNK_NAMES=re.compile(r'^(also celebrated but no entry yet|calendar of saints\b.*|saints? of the day\b.*)$',re.I)
+# "Calendar of Saints - <day>" rows name the day's lead entry only by its slug. Most slugs read as a name; these do not.
+# None = drop (a moveable or non-liturgical day). Names checked against the General Roman Calendar where it has them.
+SLUG_NAMES={'christmas':'Nativity of the Lord (Christmas)','easter':None,'halloween':None,'>':None,
+ 'servites':'Seven Holy Founders of the Servite Order',
+ 'pictorial-lives-of-the-saints-the-conversion-of-saint-paul':'Conversion of St. Paul',
+ 'butlers-lives-of-the-saints-the-dedication-of-the-churches-of-saints-peter-and-paul-at-rome':'Dedication of the Basilicas of Sts. Peter and Paul',
+ 'michael-the-archangel':'St. Michael the Archangel','gabriel-the-archangel':'St. Gabriel the Archangel','guardian-angels':'Guardian Angels'}
+FEAST_NAME=re.compile(r'^(mary, mother of god|feast of|solemnity of|nativity|assumption|annunciation|presentation of|visitation|conversion of|dedication of|exaltation|transfiguration|baptism of the lord|epiphany|espousal|immaculate|most precious|most holy|holy name|guardian angels|all saints|all souls|chair of|holy family|holy innocents|holy cross|sacred heart|immaculate heart|christ the king|candlemas|corpus christi)',re.I)
+SMALL={'the','of','de','da','di','del','della','dei','von','van','der','la','le','du','des','and','at','in','on','y','e','a','an','ap','al','el'}
+ROMAN=re.compile(r'^(i|ii|iii|iv|v|vi|vii|viii|ix|x|xi|xii|xiii|xiv|xv|xvi|xx|xxi|xxii|xxiii)$')
+def slug_name(slug):
+    w=slug.split('-');out=[]
+    for i,x in enumerate(w):
+        out.append(x.upper() if ROMAN.match(x) and i>0 else x if (x in SMALL and i>0) else x[:1].upper()+x[1:])
+    return ' '.join(out)
+CUT=re.compile(r'(\s+of natural causes\b.*|\s+(from|after|while|during|when|following|because|due to|with|whilst|where)\b.*|,\s+(?=[a-z])[^,]*.*)$')
+DEATH_VERBS=re.compile(r'^(martyred|beheaded|burned|crucified|drowned|stoned|hanged|hung|killed|murdered|executed|shot|strangled|tortured and|died|c\.|in |at |near )')
+def cut_cause(x):
+    """Drop ' of <cause>' after a capitalized place or a date ('…, Italy of natural causes', '1908 in Taikia, China of typhus')."""
+    for m in re.finditer(r'\s+of\s+(?=[a-z"])',x):
+        prev=x[:m.start()].split()[-1:] or ['']
+        if prev[0][:1].isupper() or prev[0][:1].isdigit() or prev[0].endswith(')'):return x[:m.start()]
+    return x
+def life_fact(v):
+    """born/died: one bullet (the first with a year, else the first), cut before narrative clauses; None if long or not a fact."""
+    parts=[x.strip(' ;,') for x in str(v or '').split('\u2022') if x.strip(' ;,')]
+    if not parts:return None
+    life=[x for x in parts if 'relic' not in x.lower() and not re.match(r'^(relics?|buried|interred|re-?interred|remains|body|shrine|tomb|grave|his |her |many |some )',x,re.I)]
+    if not life:return None  # only notes about relics or burial: not a life fact
+    pick=next((x for x in life if re.search(r'\d{3,4}',x)),life[0])
+    if not re.search(r'\d',pick) and pick[:1].islower() and not DEATH_VERBS.match(pick):return None
+    x=CUT.sub('',cut_cause(pick)).strip(' ;,.')
+    if x.count('(')>x.count(')'):x=re.sub(r'\s*\([^()]*$','',x).strip(' ;,.')  # an aside cut short: drop it
+    return x if 0<len(x)<=100 else None
+DATEBY=re.compile(r'((?:\d{1,2} [A-Z][a-z]+ )?(?:c\.\s?)?\d{3,4})(?:(?:(?!\u2022).)*?\b(by (?:Pope )?(?:Saint |Blessed )?[A-Z][a-z]+(?: [A-Z][a-z]+)?(?: [IVXL]+)?))?')
+def cause_fact(v):
+    parts=[x.strip(' ;,') for x in str(v or '').split('\u2022') if x.strip(' ;,')]
+    if not parts:return None
+    x=parts[0]
+    if len(x)<=80:return x
+    m=DATEBY.search(x)
+    return (m.group(1)+(' '+m.group(2) if m.group(2) else '')) if m else None
+JUNK_ALIAS={'memorial','about the feast','works','feast','memorial day','derivation','article','profile','readings','name meaning'}
+def _k(x):
+    sys.path.insert(0,str(ROOT/'tools'));import saints_calendar as SC;return SC.key(x)
+def tidy(rec,P):
+    """Returns the record ready for the field whitelist, or None (junk). Changes are counted in P['tidy']."""
+    T=P['tidy'];rec=dict(rec)
+    name=re.sub(r'[`\u00b4]','',str(rec.get('name') or '')).strip()
+    name=re.sub(r'\s*\((?:19|20)\d\d\)$','',name)
+    et=str(rec.get('entry_type') or rec.get('type') or '').strip().lower()
+    if JUNK_NAMES.match(name):
+        slug=str(rec.get('slug') or '')
+        if name.lower().startswith('calendar of saints') and slug in SLUG_NAMES:
+            if SLUG_NAMES[slug] is None:T['dropped_junk_'+(et or 'unknown')]+=1;return None
+            name=SLUG_NAMES[slug];T['name_from_slug']+=1
+        elif name.lower().startswith('calendar of saints') and re.fullmatch(r'[a-z0-9]+(-[a-z0-9]+)*',slug) and not slug.startswith(('butlers-lives','pictorial-lives')):
+            name=slug_name(slug);T['name_from_slug']+=1
+        else:T['dropped_junk_'+(et or 'unknown')]+=1;return None
+    if et=='unlinked_name':  # a name the calendar lists with no page: keep the name only
+        T['unlinked_kept']+=1
+        rec['slug']=None;rec['canonical_url']=None
+        lo=name.lower()
+        et='marian-title' if lo.startswith(('our lady','mary ','blessed virgin')) else 'saint' if lo.startswith(('saint ','st. ')) else 'blessed' if lo.startswith('blessed ') else 'martyr-group' if re.match(r'^(\d+ )?(martyrs|apostles|companions)\b',lo) else 'unknown'
+    if et in('marian_title','marian-title','unknown','') and FEAST_NAME.match(name):et='feast';T['typed_as_feast']+=1
+    elif et in('unknown',''):
+        lo=name.lower()
+        t2='pope' if lo.startswith('pope ') else 'saint' if lo.startswith(('saint ','st. ','saints ','sts. ')) else 'blessed' if lo.startswith('blessed ') else None
+        if t2:et=t2;T['typed_from_title']+=1
+    rec['type']=et;rec.pop('entry_type',None);rec['name']=name
+    for f in('born','died'):
+        if rec.get(f):
+            v=life_fact(rec[f])
+            if v is None:T[f+'_dropped_long']+=1
+            elif v!=str(rec[f]).strip():T[f+'_trimmed']+=1
+            rec[f]=v
+    for f in('beatified','canonized'):
+        if rec.get(f):
+            v=cause_fact(rec[f])
+            if v is None:T[f+'_dropped']+=1
+            elif v!=str(rec[f]).strip():T[f+'_trimmed']+=1
+            rec[f]=v
+    if isinstance(rec.get('aliases'),list):
+        al=[a.strip() for a in rec['aliases'] if isinstance(a,str) and 0<len(a.strip())<=50 and a.strip().lower() not in JUNK_ALIAS and a.strip()[:1].isupper() and '. ' not in a and not re.search(r'\([a-z]|[:\d]',a)]
+        if len(al)<len(rec['aliases']):T['aliases_dropped']+=len(rec['aliases'])-len(al)
+        rec['aliases']=al[:5]
+    if isinstance(rec.get('patronage'),list):
+        pa=[a.strip() for a in rec['patronage'] if isinstance(a,str) and 0<len(a.strip())<=60]
+        if len(pa)>8:pa=pa[:8]+['others'];T['patronage_capped']+=1
+        rec['patronage']=pa
+    return rec
 def import_records(records):
     P={'bad_json':[],'bad_date':[],'missing_name':[],'missing_slug':[],'slug_from_url':0,'bad_slug':[],'bad_url':[],'amazon':[],
-       'prose_dropped':[],'emdash_fixed':Counter(),'dropped_keys':Counter(),'type_unmapped':Counter(),'conflicts':[],'duplicate_rows':0}
+       'prose_dropped':[],'emdash_fixed':Counter(),'dropped_keys':Counter(),'type_unmapped':Counter(),'conflicts':[],'duplicate_rows':0,'tidy':Counter()}
     used={k for ks in FIELDS.values() for k in ks}|set(NESTED)
     saints=OrderedDict();days={}
     rows=0
     for n,rec in records:
         rows+=1
         if '__error__' in rec:P['bad_json'].append(n);continue
+        known={'entry_type','representation','papal_ascension','additional_memorials','group_members','source','parse_confidence','canonical_url','slug','name','date','aliases','born','died','beatified','canonized','patronage'}
+        if 'entry_type' in rec or set(rec)<=known:
+            rec=tidy(rec,P)
+            if rec is None:continue
         for k in rec:
             if k not in used:P['dropped_keys'][k]+=1
         for k,(fd,fp) in NESTED.items():
@@ -149,7 +250,10 @@ def import_records(records):
             s=saints[slug]
             for f,v in facts.items():
                 if f not in s:s[f]=v
-                elif s[f]!=v:P['conflicts'].append({'slug':slug,'field':f,'kept':s[f],'other':v})
+                elif s[f]!=v:
+                    P['conflicts'].append({'slug':slug,'field':f,'kept':s[f],'other':v})
+                    # a day-specific page title ("Stigmata of Saint Francis of Assisi") must not rename the person
+                    if f=='name' and _k(v)==_k(slug_name(slug)) and _k(s[f])!=_k(slug_name(slug)):s[f]=v;P['conflicts'][-1]['kept'],P['conflicts'][-1]['other']=v,P['conflicts'][-1]['kept']
         if md not in s['dates']:s['dates'].append(md)
         for a in al:
             if a not in s['aliases']:s['aliases'].append(a)
@@ -211,11 +315,11 @@ def main(argv=None):
     guide=json.loads((ROOT/'data/saints.json').read_text())['saints']
     alias=json.loads((ROOT/'data/saints-aliases.json').read_text())['aliases']
     doc=SC.make_days(raw,guide,alias)
-    SC.validate(doc,{g['id'] for g in guide})
-    Path(a.output).write_text(dump_days(doc),encoding='utf-8')
     stats['matched_to_guide']=doc['matched']
     R=report_json(stats,P)
     if a.report:Path(a.report).write_text(json.dumps(R,ensure_ascii=False,indent=1)+'\n',encoding='utf-8')
+    SC.validate(doc,{g['id'] for g in guide})
+    Path(a.output).write_text(dump_days(doc),encoding='utf-8')
     print('import_saints: %d rows -> %d slugs on %d days (%s); %d unlinked names; %d multi-day slugs; matched to the guide: %s'%(stats['rows'],stats['slugs'],stats['days'],', '.join('%s %d'%kv for kv in stats['by_type'].items()),stats['unlinked_names'],stats['multi_day_slugs'],json.dumps(doc['matched'])))
     probs={k:(len(v) if isinstance(v,list) else sum(v.values()) if isinstance(v,Counter) else v) for k,v in P.items()}
     print('problems:',json.dumps(probs))

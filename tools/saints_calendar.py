@@ -51,16 +51,21 @@ def fmt_when(v):
     return v
 def oxford(xs):
     xs=list(xs);return xs[0] if len(xs)==1 else ' and '.join(xs) if len(xs)==2 else ', '.join(xs[:-1])+', and '+xs[-1]
+FACTS_MAX=300
 def facts_line(s):
-    out=[]
+    """Short facts in a fixed order; a part that would push the line past FACTS_MAX characters is left out."""
+    parts=[]
     for lab,dk,pk in(('Born','born_date','born_place'),('Died','died_date','died_place')):
         v=', '.join(fmt_when(s[k]) if k.endswith('date') else s[k] for k in(dk,pk) if s.get(k))
-        if v:out.append(lab+' '+v+'.')
-    if s.get('patronage'):out.append('Patron of '+oxford(s['patronage'])+'.')
-    if s.get('beatified'):out.append('Beatified '+fmt_when(s['beatified'])+'.')
-    if s.get('canonized'):out.append('Canonized '+fmt_when(s['canonized'])+'.')
-    if s.get('aliases'):out.append('Also called '+oxford(s['aliases'])+'.')
-    return ' '.join(out)
+        if v:parts.append(lab+': '+v+'.')
+    if s.get('beatified'):parts.append('Beatified: '+fmt_when(s['beatified'])+'.')
+    if s.get('canonized'):parts.append('Canonized: '+fmt_when(s['canonized'])+'.')
+    if s.get('patronage'):parts.append('Patronage: '+oxford(s['patronage'])+'.')
+    if s.get('aliases'):parts.append('Also called '+oxford(s['aliases'])+'.')
+    out=''
+    for x in parts:
+        if len(out)+1+len(x)<=FACTS_MAX:out=(out+' '+x).strip()
+    return out
 # ---------- import time: raw calendar -> data/saints-days.json ----------
 def url_path(u):
     p=urlparse(u or '');return '/'+'/'.join(x for x in p.path.split('/') if x).lower() if p.hostname in HOSTS else None
@@ -90,6 +95,7 @@ def make_days(raw,guide_saints,alias_table):
     for md in ALL_DAYS:
         d=raw['days'].get(md);L=[]
         if d:
+            seen=set()
             for sl in d['slugs']:
                 s=S[sl];e={'n':site_name(s['name']),'t':s['type']}
                 f=facts_line(s)
@@ -97,8 +103,13 @@ def make_days(raw,guide_saints,alias_table):
                 o=[x for x in s['dates'] if x!=md]
                 if o:e['o']=o
                 if sl in M:e['g']=M[sl]
-                L.append(e)
-            for n in d.get('names',[]):L.append({'n':site_name(n['name']),'t':n['type']})
+                if (e['n'],e.get('f'),e['t']) in seen:continue  # two source pages, same name and facts: show once
+                seen.add((e['n'],e.get('f'),e['t']));L.append(e)
+            have={key(x['n']) for x in L}
+            for n in d.get('names',[]):
+                e={'n':site_name(n['name']),'t':n['type']}
+                if key(e['n']) in have:continue  # a bare name repeating a full entry on the same day
+                have.add(key(e['n']));L.append(e)
         if L:days[md]=L
     return {'note':'Facts only, per day, in site style. Built by tools/import_saints.py; no source URLs or slugs. The calendar facts source is credited on the Resources page. See docs/SAINTS-CALENDAR.md.',
             'matched':how,'days':days}
@@ -176,9 +187,9 @@ def merged_day(md,doc,guide_saints,guide_href):
         if s and x['src']!={'guide','cal'}:
             # on this day in one source only, while the other places the same person elsewhere
             elsewhere=(cal_days_of.get(s['id'],set()) if 'guide' in x['src'] else set(vn(s)))-{md}
-            if elsewhere:x['notes'].insert(0,'Date differs between sources; also kept on '+oxford(fmt_day(d) for d in sorted(elsewhere))+'.')
+            if elsewhere:x['notes'].insert(0,'Date differs between sources; also kept on '+days_list(elsewhere)+'.')
             other-=elsewhere
-        if other:x['notes'].append('Also kept on '+oxford(fmt_day(d) for d in sorted(other))+' in some calendars.')
+        if other:x['notes'].append('Also kept on '+days_list(other)+' in some calendars.')
     return out
 def counts(doc,guide_saints):
     href=lambda s:''
@@ -191,6 +202,10 @@ def guide_days(doc,s):
     for md,L in (doc or {}).get('days',{}).items():
         if any(e.get('g')==s['id'] for e in L):D.add(md)
     return sorted(D)
+def days_list(days,cap=4):
+    d=sorted(days);shown=[fmt_day(x) for x in d[:cap]]
+    if len(d)>cap:shown.append(str(len(d)-cap)+' other days')
+    return oxford(shown)
 def neighbours(md):
     i=ALL_DAYS.index(md);return ALL_DAYS[i-1],ALL_DAYS[(i+1)%len(ALL_DAYS)]
 PAGE_NOTE=('This list combines the Vatican News “Saint of the day” pages with a long-form calendar of saints, blessed, and feasts '

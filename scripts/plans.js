@@ -55,7 +55,7 @@ function view(render,id){
       '<ol class="plan-days">'+plan.days.map(function(d){return dayHtml(d,state)}).join('')+'</ol>'+
       '<p class="small plan-foot">Every reading opens in the on-site reader at the start of the passage. The editions are public domain in the United States; each badge links to <a href="#/rights">how rights are determined</a>. <a href="#/reading">All reading lists</a>.</p>'+
       (id==='advent-2026'&&root.SITE_COPY&&root.SITE_COPY.newsletter||'');  /* 2026-11-09: the Substack sign-up (tools/site_copy.py newsletter_box) */
-    main.innerHTML=h;document.title=plan.t+' '+plan.year+': a daily reading plan — Bibliotheca Catholica';
+    main.innerHTML=h;document.title=plan.t+' '+plan.year+': a daily reading plan · Bibliotheca Catholica';
     function sync(){var L=Object.keys(read).filter(function(k){return read[k]}).map(Number);setRead(id,L);document.getElementById('plan-progress').textContent=progress(plan,read);document.getElementById('plan-reset').hidden=!L.length}
     main.querySelector('.plan-days').addEventListener('change',function(e){var t=e.target;if(!t.matches||!t.matches('input[data-day]'))return;var n=Number(t.dataset.day);read[n]=t.checked;if(!t.checked)delete read[n];t.closest('.plan-day').classList.toggle('is-read',t.checked);sync()});
     document.getElementById('plan-reset').onclick=function(){read={};main.querySelectorAll('input[data-day]').forEach(function(x){x.checked=false;x.closest('.plan-day').classList.remove('is-read')});sync()};

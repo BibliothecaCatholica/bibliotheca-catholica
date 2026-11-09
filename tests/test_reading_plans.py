@@ -94,7 +94,7 @@ class ReadingPlans(unittest.TestCase):
             s=(ROOT/f).read_text();titles.setdefault(re.search(r'<title>(.*?)</title>',s).group(1),[]).append(f);descs.setdefault(re.search(r'<meta name="description" content="([^"]*)">',s).group(1),[]).append(f)
         self.assertEqual(titles[t],['reading/advent-2026/index.html']);self.assertEqual(descs[desc],['reading/advent-2026/index.html'])
         for s in (t,desc,PLAN['intro'],PLAN['sub'])+tuple(x for d in PLAN['days'] for x in (d['reflection'],d['theme'],d['attrRest'],d['marker'])):
-            self.assertNotIn('\u2014',s.replace(' — Bibliotheca Catholica',''));self.assertNotIn('tax-deductible',s.lower())
+            self.assertNotIn('\u2014',s.replace(' · Bibliotheca Catholica',''));self.assertNotIn('tax-deductible',s.lower())
         self.assertNotIn('amazon.',PAGE.lower())
     def test_listed_and_linked(self):
         self.assertIn('<loc>https://bibliothecacatholica.com/reading/advent-2026/</loc>',(ROOT/'sitemap.xml').read_text())

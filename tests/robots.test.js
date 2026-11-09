@@ -68,5 +68,5 @@ test('route(): the "Search and browse" title is set only on the empty search pag
  assert(i>0&&j>i);
  const seg=app.slice(i,j);
  assert.match(seg,/results\(p\.slice\(1\)\.join\('\/'\)\);else\{render\(/,'else branch has braces');
- assert(seg.endsWith("document.title='Search and browse — Bibliotheca Catholica'}"),'title line sits inside the else block');
+ assert(seg.endsWith("document.title='Search and browse · Bibliotheca Catholica'}"),'title line sits inside the else block');
 });

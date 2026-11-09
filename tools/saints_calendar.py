@@ -231,7 +231,7 @@ def day_page(md,entries,a):
     order={t:i for i,(t,_) in enumerate(TYPES)}
     top=[x['name'] for x in sorted(entries,key=lambda x:(0 if x.get('href') else 1,order[x['type']],key(x['name'])))][:2]
     desc_core='Saints, blessed, and feasts for '+day+(': '+oxford(top)+(', and more' if total>2 else '') if top else '')+'.'
-    return 'Saints of '+day+' — Saints — Bibliotheca Catholica',desc_core,h,total
+    return 'Saints of '+day+' · Saints · Bibliotheca Catholica',desc_core,h,total
 def months_html(n,a):
     """The whole year as month lists of day links (static /saints/ page); `n` is counts()."""
     out='<h2>The full-year calendar</h2><p>Every day of the year, with the saints, blessed, and feasts kept on it ('+format(sum(n.values()),',')+' entries in all), short facts, and a note wherever calendars disagree.</p>'

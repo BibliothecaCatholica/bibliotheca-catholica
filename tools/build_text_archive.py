@@ -67,7 +67,7 @@ def export(output):
                     ' bytes</p><p class="hash">SHA-256: ' + e['sha256'] + '</p></details></article>')
     template = '''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Text collection — Bibliotheca Catholica</title><meta name="description" content="Verified reading copies, original source credits, and downloadable Catholic classics.">
+<title>Text collection · Bibliotheca Catholica</title><meta name="description" content="Verified reading copies, original source credits, and downloadable Catholic classics.">
 <link rel="canonical" href="https://texts.bibliothecacatholica.com/">
 <style>
 :root{color-scheme:light dark;--bg:#f6f0e2;--card:#fffaf0;--ink:#2a2118;--accent:#8b1e2d;--line:#d8c9ad}

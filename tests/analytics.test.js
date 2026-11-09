@@ -85,7 +85,7 @@ test('v18: outbound_click carries only link_domain and link_kind',()=>{
 test('v18.1: no search or Index term reaches page_title or page_location on any event; only search_term carries it, capped',()=>{
  const term='zqx'+'b'.repeat(150);assert.equal(term.length,153);
  const routes=['#/search/'+term,'#/search/'+encodeURIComponent(term)+'?scope=isidore','#/isidore/q='+term,'#/isidore/'+term,'#/isidore/lang=eng&q='+term,'#/books/'+term];
- for(const h of routes){const {A,calls,ctx}=load(true);ctx.location.hash=h;ctx.document={title:'Search: '+term+' — Bibliotheca Catholica'};
+ for(const h of routes){const {A,calls,ctx}=load(true);ctx.location.hash=h;ctx.document={title:'Search: '+term+' · Bibliotheca Catholica'};
   A.track('search',{search_term:A.cleanTerm(term),search_scope:'Everything',results_count:0});
   A.track('outbound_click',{link_domain:'isidore.co',link_kind:'other'});
   A.track('page_view',{page_title:A.pageTitle(A.pagePath(h),ctx.document.title),page_location:A.pageLocation(A.pagePath(h)),page_path:A.pagePath(h)});
@@ -98,7 +98,7 @@ test('v18.1: no search or Index term reaches page_title or page_location on any 
 });
 test('v18.1: app.js keeps search terms out of document.title and uses pageTitle for page views',()=>{
  const APP=fs.readFileSync('app.js','utf8');
- assert.doesNotMatch(APP,/document\.title='Search: '\+/);assert.match(APP,/document\.title='Search — Bibliotheca Catholica'/);
+ assert.doesNotMatch(APP,/document\.title='Search: '\+/);assert.match(APP,/document\.title='Search · Bibliotheca Catholica'/);
  assert.match(APP,/title=A\.pageTitle\(path,document\.title\)/);
 });
 
@@ -269,7 +269,7 @@ test('2026-11-09: page_path is the real path GA4 can store, never a #/ route',()
  for(const [h,b,want] of cases){const p=A.pagePath(h,b);assert.equal(p,want,h+' '+b);assert.doesNotMatch(p,/#/);
   const u=new URL(A.pageLocation(p));assert.equal(u.pathname,want);assert.equal(u.hash,'');assert.equal(u.href,O+want)}
  assert.equal(A.pageLocation(A.pagePath('','author/karl-adam')),'https://bibliothecacatholica.com/author/karl-adam/');
- assert.equal(A.pageTitle('/search/','Search — x'),'Search — Bibliotheca Catholica');assert.equal(A.pageTitle('/isidore/','x'),'The Isidore Index — Bibliotheca Catholica');
+ assert.equal(A.pageTitle('/search/','Search — x'),'Search · Bibliotheca Catholica');assert.equal(A.pageTitle('/isidore/','x'),'The Isidore Index · Bibliotheca Catholica');
 });
 test('2026-11-09: on every static page, page_path equals the path of its <link rel=canonical>',()=>{
  const {A}=load(false),{execSync}=require('child_process');

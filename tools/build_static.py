@@ -20,7 +20,7 @@ NAME='Bibliotheca Catholica';OG_IMAGE=SITE+'assets/og-image.png'
 # Profiles we can verify belong to the project: the GitHub organization (this repo) and the Bluesky
 # handle bibliothecacatholica.com, which resolves to the DID in .well-known/atproto-did.
 SAME_AS=['https://github.com/BibliothecaCatholica','https://x.com/BiblioCatholica','https://bsky.app/profile/bibliothecacatholica.com']
-HOME_TITLE='Bibliotheca Catholica — a library of libraries'
+HOME_TITLE='Bibliotheca Catholica · a library of libraries'
 HOME_DESC='A free Catholic reading room and curated resource index. Read classic texts online, compare editions, and explore saints, Church documents, and source texts.'
 DESC_MIN,DESC_MAX=120,160
 def fit(parts,extra=(),hi=DESC_MAX,lo=150):
@@ -275,7 +275,7 @@ def related_authors(out,lib,ra_badge):
         d=fit([ra['desc']])
         assert 120<=len(d)<=160,(ra['id'],len(d))
         person={'@context':'https://schema.org','@type':'Person','name':ra['name'],'url':SITE+'author/'+ra['id']+'/','birthDate':iso_year(ra['born']),'deathDate':iso_year(ra['died'])}
-        out['author/'+ra['id']]=(ra['name']+' — Bibliotheca Catholica',d,body,[person,crumbs(('Related Christian writers','related/'),(ra['name'],'author/'+ra['id']+'/'))])
+        out['author/'+ra['id']]=(ra['name']+' · Bibliotheca Catholica',d,body,[person,crumbs(('Related Christian writers','related/'),(ra['name'],'author/'+ra['id']+'/'))])
 def series_html(w,lib,TPD):
     """Deep-link gaps: the books of a series in order (data/library.json `series`), mirrored by seriesList() in scripts/library.js."""
     libw={v['id']:v for v in lib['works']};h=''
@@ -318,7 +318,7 @@ def part_pages(out,lib,by_html,author_ld):
             md=fit([what],(('The full text on one page, free, with a link into the reading room for notes and highlights.','The full text on one page, with a link into the reading room.','The full text, free to read.'),)+DESC_EXTRA)
             ld_part={'@context':'https://schema.org','@type':'Chapter' if d['kind']=='ch' else 'ShortStory','name':x['title'],'url':SITE+route+'/','position':k+1,
                      'isPartOf':{'@type':'Book','name':w['title'],'url':SITE+'work/'+wid+'/','author':author_ld(w)},'isAccessibleForFree':True,'inLanguage':e.get('language') or 'English'}
-            out[route]=(x['title']+' ('+w['title']+', '+part_label(d,x,True)+') — Bibliotheca Catholica',md,body,[ld_part,crumbs(('Discover & Read','library/'),(w['title'],'work/'+wid+'/'),(x['title'],route+'/'))])
+            out[route]=(x['title']+' ('+w['title']+', '+part_label(d,x,True)+') · Bibliotheca Catholica',md,body,[ld_part,crumbs(('Discover & Read','library/'),(w['title'],'work/'+wid+'/'),(x['title'],route+'/'))])
     return TPD
 
 # Deep-link gaps 4 (2026-11-09): the Summa Theologiae by question and article (data/summa.json from tools/build_summa.py)
@@ -386,7 +386,7 @@ def summa_pages(out,lib):
           +'<p class="small">About this text: the English Dominican translation, first printed 1911 to 1925. A sample check on 2026-11-09 against pre-1931 printings at the Internet Archive found that the article text matches, with no 1947 introduction, synopsis, or index; “From the Complete American Edition” in Gutenberg’s catalog titles is a provenance note only.</p>'
           +'<p class="dl-row"><a class="btn" href="/work/'+w['id']+'/">Work page and editions</a> '+a('/editions/summa/','Edition guide')+'</p>'
           +''.join(edline(P) for P in S['parts'][:1])+other+pg_notice+tr_notice+'<p>'+a('/author/thomas-aquinas/','Thomas Aquinas')+' · '+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>')
-    out['summa']=('Summa Theologiae by Question and Article — Bibliotheca Catholica',
+    out['summa']=('Summa Theologiae by Question and Article · Bibliotheca Catholica',
         fit(['The Summa Theologiae of Thomas Aquinas in English, one free page for each of its %d questions and %d articles.'%(total_q,total_a)],(('Read in the reading room too.',''),)+DESC_EXTRA),
         body,[{'@context':'https://schema.org','@type':'Book','name':'Summa Theologiae','url':SITE+'summa/','author':ld_by,'isAccessibleForFree':True,'inLanguage':'English','hasPart':[{'@type':'Book','name':'Summa Theologiae, '+P['name'],'url':SITE+'summa/'+P['slug']+'/'} for P in S['parts']]},crumbs(*C,('By question and article','summa/'))])
     for pi,P in enumerate(S['parts']):
@@ -411,7 +411,7 @@ def summa_pages(out,lib):
               +(ABOUT_SUPP+'<p class="small">'+str(len(P['ocrFlags']))+' passages in the Supplement are marked “OCR uncertain” where the scan could not be read with confidence; each links to its scan page.</p>' if P['slug']=='supp' else '')
               +edline(P)+nav+NOTICE(P)+pro+'<h2>Questions</h2><ol class="text-parts">'+''.join(li)+'</ol>'+('<p class="small">Aquinas left the Third Part unfinished here, at question 90, where the Gutenberg files end. The '+a('/summa/supp/','Supplement')+' completes it.</p>' if P['slug']=='3' else '')+nav+other+source(P))
         body=body.replace('<ol class="text-parts"></ol>','')
-        out['summa/'+P['slug']]=('Summa Theologiae, '+P['name']+' ('+P['latin']+') — Bibliotheca Catholica',
+        out['summa/'+P['slug']]=('Summa Theologiae, '+P['name']+' ('+P['latin']+') · Bibliotheca Catholica',
             fit(['The %s of the Summa Theologiae (%s) by Thomas Aquinas in English: %d questions and %d articles, each on its own free page.'%(P['name'],P['latin'],len(P['questions']),na_)],DESC_EXTRA),
             body,[{'@context':'https://schema.org','@type':'Book','name':'Summa Theologiae, '+P['name'],'url':SITE+'summa/'+P['slug']+'/','author':ld_by,'isPartOf':{'@type':'Book','name':'Summa Theologiae','url':SITE+'summa/'},'isAccessibleForFree':True,'inLanguage':'English'},crumbs(*CP)])
     for k,(P,q) in enumerate(qflat):
@@ -428,7 +428,7 @@ def summa_pages(out,lib):
               +'<p class="dl-row"><a class="btn" href="'+E(reader(P,q['heading']))+'">Read in the reading room →</a> '+a(na(P,q),'This question at New Advent',True)+'</p>'
               +(SUPP_LINE if P['slug']=='supp' else '')+edline(P)+nav+NOTICE(P)+'<article class="reading-text" aria-label="'+E('Question '+str(q['n']))+'">'+pro+'</article>'
               +'<h2>Articles</h2>'+arts+nav+other+source(P))
-        out[qpath(P,q)]=('Summa Theologiae '+qref(P,q)+': '+q['title']+' — Bibliotheca Catholica',
+        out[qpath(P,q)]=('Summa Theologiae '+qref(P,q)+': '+q['title']+' · Bibliotheca Catholica',
             fit(['Summa Theologiae, %s, question %d: %s.'%(P['name'],q['n'],q['title'].rstrip('?.')),'The question’s opening and its %d article%s, by Thomas Aquinas, free in English.'%(len(q['articles']),'' if len(q['articles'])==1 else 's')],DESC_EXTRA),
             body,[{'@context':'https://schema.org','@type':'Chapter','name':'Question '+str(q['n'])+'. '+q['title'],'url':SITE+qpath(P,q)+'/','position':q['n'],'isPartOf':{'@type':'Book','name':'Summa Theologiae, '+P['name'],'url':SITE+'summa/'+P['slug']+'/','author':ld_by},'isAccessibleForFree':True,'inLanguage':'English'},crumbs(*CQ)])
     for k,(P,q,x) in enumerate(flat):
@@ -447,7 +447,7 @@ def summa_pages(out,lib):
         if (P['slug'],q['n'],x['n'])==('1',2,1):
             assert re.search(r'Q\. 3, Art\. 4',text)
             body+='<aside><h2>References in this article</h2>'+a('/summa/1/q3/a4/','I, q. 3, a. 4 · Whether essence and existence are the same in God?')+'</aside>'
-        out[apath(P,q,x)]=('Summa Theologiae '+aref(P,q,x)+': '+x['title']+' — Bibliotheca Catholica',
+        out[apath(P,q,x)]=('Summa Theologiae '+aref(P,q,x)+': '+x['title']+' · Bibliotheca Catholica',
             fit(['Summa Theologiae, %s, question %d, article %d: %s'%(P['name'],q['n'],x['n'],x['title'] if x['title'].endswith(('?','.')) else x['title']+'.'),'The objections, the answer, and the replies by Thomas Aquinas, free in English.'],DESC_EXTRA),
             body,[{'@context':'https://schema.org','@type':'Article','headline':x['title'][:110],'name':aref(P,q,x)+': '+x['title'],'url':SITE+apath(P,q,x)+'/','author':ld_by,'isPartOf':{'@type':'Chapter','name':'Question '+str(q['n'])+'. '+q['title'],'url':SITE+qpath(P,q)+'/'},'isAccessibleForFree':True,'inLanguage':'English'},
                   crumbs(*C,('Summa','summa/'),(P['name'],'summa/'+P['slug']+'/'),('Question '+str(q['n']),qpath(P,q)+'/'),('Article '+str(x['n']),apath(P,q,x)+'/'))])
@@ -586,7 +586,7 @@ def main():
         if iso_year(au.get('born')):person['birthDate']=iso_year(au['born'])
         if iso_year(au.get('died')):person['deathDate']=iso_year(au['died'])
         if au.get('qid'):person['sameAs']=['https://www.wikidata.org/wiki/'+au['qid']]
-        out['author/'+au['id']]=(au['name']+' — Bibliotheca Catholica',d,body,[person,crumbs(('Authors','authors/'),(au['name'],'author/'+au['id']+'/'))])
+        out['author/'+au['id']]=(au['name']+' · Bibliotheca Catholica',d,body,[person,crumbs(('Authors','authors/'),(au['name'],'author/'+au['id']+'/'))])
     def work_related(w):
         r=[]
         for ed in guides_for.get(w['id'],[]):r.append('Edition guide: '+a('/editions/'+ed['id']+'/',ed['t']))
@@ -625,7 +625,7 @@ def main():
         if langs:book['inLanguage']=langs[0] if len(langs)==1 else langs
         if hosted:book['isAccessibleForFree']=True
         md=fit([w['title']+' by '+w['author']+':',d.rstrip('.')+'.'],(('Read it free online, with source and rights notes.','Read it free online.') if hosted else ('Editions and sources, with rights notes.','Editions and sources.'),)+DESC_EXTRA)
-        out['work/'+w['id']]=(w['title']+' — Bibliotheca Catholica',md,body,[book,crumbs(('Discover & Read','library/'),(w['title'],'work/'+w['id']+'/'))])
+        out['work/'+w['id']]=(w['title']+' · Bibliotheca Catholica',md,body,[book,crumbs(('Discover & Read','library/'),(w['title'],'work/'+w['id']+'/'))])
     def ed_related(ed):
         r=[]
         if ed.get('aid') in auth_ids:r.append('Author: '+a('/author/'+ed['aid']+'/',ed.get('a') or ed['aid']))
@@ -640,15 +640,15 @@ def main():
         body=head('Editions & Translations · '+ed.get('cat',''),ed['t'],(ed.get('a')+'. ' if ed.get('a') else '')+ed.get('why',''))+'<ol class="ed-picks">'+picks+'</ol>'+(PE['disclosure'] if any(bs(p) for p in ed.get('picks',[])) else '')+('<p>Also good: '+E(ed['alt'])+'</p>' if ed.get('alt') else '')+ed_related(ed)+'<p>'+a('/editions/','All edition guides')+'</p>'
         body=crumb_html(('Editions & Translations','editions/'),(ed['t'],''))+body
         md=fit(['Which edition of '+ed['t']+(' by '+ed['a'] if ed.get('a') else '')+' to read:',ed.get('why','').rstrip('.')+'.'],(('Recommended translations, free texts, and print copies.','Translations, free texts, and print copies.','Translations compared.'),('Compare translations at Bibliotheca Catholica.','At Bibliotheca Catholica.')))
-        out['editions/'+ed['id']]=(ed['t']+': Editions & Translations — Bibliotheca Catholica',md,body,[crumbs(('Editions & Translations','editions/'),(ed['t'],'editions/'+ed['id']+'/'))])
+        out['editions/'+ed['id']]=(ed['t']+': Editions & Translations · Bibliotheca Catholica',md,body,[crumbs(('Editions & Translations','editions/'),(ed['t'],'editions/'+ed['id']+'/'))])
     for L in guide['lists']:
         items=''.join('<li>'+list_item_title(i,gid,libw)+(': '+E(i['b']) if i.get('b') else '')+'</li>' for i in L['items'])
         body=head('Reading list',L['t'],L.get('sub',''))+'<ol>'+items+'</ol><p>'+a('/reading/','All reading lists')+'</p>'
         md=fit([L['t']+', a Catholic reading list:',L.get('sub','').rstrip('.')+'.'],((str(len(L['items']))+' books, with edition guides and free texts.',str(len(L['items']))+' books.'),)+DESC_EXTRA)
-        out['reading/'+L['id']]=(L['t']+' — Reading Lists — Bibliotheca Catholica',md,crumb_html(('Reading Lists','reading/'),(L['t'],''))+body,[crumbs(('Reading Lists','reading/'),(L['t'],'reading/'+L['id']+'/'))])
+        out['reading/'+L['id']]=(L['t']+' · Reading Lists · Bibliotheca Catholica',md,crumb_html(('Reading Lists','reading/'),(L['t'],''))+body,[crumbs(('Reading Lists','reading/'),(L['t'],'reading/'+L['id']+'/'))])
     # v20 dated reading plans (data/reading-plans.json from tools/build_reading_plans.py); see docs/READING-GUIDES.md
     for P in plans:
-        out['reading/'+P['id']]=(P['t']+' '+str(P['year'])+': a daily reading plan — Bibliotheca Catholica',PLAN_DESC[P['id']],plan_html(P),[crumbs(('Reading Lists','reading/'),(P['t'],'reading/'+P['id']+'/'))])
+        out['reading/'+P['id']]=(P['t']+' '+str(P['year'])+': a daily reading plan · Bibliotheca Catholica',PLAN_DESC[P['id']],plan_html(P),[crumbs(('Reading Lists','reading/'),(P['t'],'reading/'+P['id']+'/'))])
     for x in saints:
         if x['tier']==1:continue  # writers' pages are their author pages
         L=[]
@@ -661,10 +661,10 @@ def main():
         body=head(s_status(x)+(' · '+s_years(x) if s_years(x) else ''),x['name'],s_facts(x))+'<p>'+' · '.join(L)+'</p>'+cal_line(x['id'])+('<h2>Read here</h2><ul>'+rw+'</ul>' if rw else '')+('<h2>Lives</h2><ul>'+ws+'</ul>' if ws else '')+'<p>'+a('/saints/','Saints & Hagiography')+'</p>'
         d=x['name']+': '+s_facts(x)[0].lower()+s_facts(x)[1:]+' Sources, feast days, and where to read more.'
         d=fit([d],DESC_EXTRA)
-        out['saints/'+x['id']]=(x['name']+' — Saints — Bibliotheca Catholica',d,crumb_html(('Saints & Hagiography','saints/'),(x['name'],''))+body,[crumbs(('Saints & Hagiography','saints/'),(x['name'],'saints/'+x['id']+'/'))])
+        out['saints/'+x['id']]=(x['name']+' · Saints · Bibliotheca Catholica',d,crumb_html(('Saints & Hagiography','saints/'),(x['name'],''))+body,[crumbs(('Saints & Hagiography','saints/'),(x['name'],'saints/'+x['id']+'/'))])
     sh=''.join('<li>'+a(b['url'],b['title'],True)+' — '+E(b['author'])+'; '+E(b['edition'] or b['imprint'])+(' (novel)' if b.get('fiction') else '')+'</li>' for b in SD['shelf'])
-    out['saints/books']=('The hagiography shelf — Saints — Bibliotheca Catholica','Public-domain lives of the saints, with editions and rights checked: Butler, Baring-Gould, the Golden Legend, the Little Flowers of St. Francis, and more.',head('Saints & Hagiography','The hagiography shelf','Public-domain lives of the saints, each with its edition, imprint, and rights evidence.')+'<ul>'+sh+'</ul><p>'+a('/saints/','Saints & Hagiography')+'</p>',[crumbs(('Saints & Hagiography','saints/'),('The hagiography shelf','saints/books/'))])
-    out['saints/about']=('Saints: sources and method — Bibliotheca Catholica','Where the Bibliotheca Catholica saints guide gets its facts, how feast dates are labelled by source, and what the CatholicSaints.Info links mean.',head('Saints & Hagiography','Sources & method','Every fact links its source. Feast dates are labelled by where they come from: Vatican News “Saint of the day”, the General Roman Calendar (not yet checked), and other calendars recorded in Wikidata.')+'<p>'+a('/saints/','Saints & Hagiography')+'</p>',[crumbs(('Saints & Hagiography','saints/'),('Sources & method','saints/about/'))])
+    out['saints/books']=('The hagiography shelf · Saints · Bibliotheca Catholica','Public-domain lives of the saints, with editions and rights checked: Butler, Baring-Gould, the Golden Legend, the Little Flowers of St. Francis, and more.',head('Saints & Hagiography','The hagiography shelf','Public-domain lives of the saints, each with its edition, imprint, and rights evidence.')+'<ul>'+sh+'</ul><p>'+a('/saints/','Saints & Hagiography')+'</p>',[crumbs(('Saints & Hagiography','saints/'),('The hagiography shelf','saints/books/'))])
+    out['saints/about']=('Saints: sources and method · Bibliotheca Catholica','Where the Bibliotheca Catholica saints guide gets its facts, how feast dates are labelled by source, and what the CatholicSaints.Info links mean.',head('Saints & Hagiography','Sources & method','Every fact links its source. Feast dates are labelled by where they come from: Vatican News “Saint of the day”, the General Roman Calendar (not yet checked), and other calendars recorded in Wikidata.')+'<p>'+a('/saints/','Saints & Hagiography')+'</p>',[crumbs(('Saints & Hagiography','saints/'),('Sources & method','saints/about/'))])
     if CAL is not None:
         CAL_N={}
         for md in SC.ALL_DAYS:
@@ -691,18 +691,18 @@ def main():
         elif k=='substacks':extra=guide['own']['html']  # our own newsletter first (tools/substacks_src.py OWN, 2026-11-09)
         elif k=='doctors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors if x.get('doctor'))+'</ul>'
         intro='<p class="section-intro">'+E(INTRO[k])+'</p>' if k in INTRO else ''
-        out[k]=(t+' — Bibliotheca Catholica',fit([d],DESC_EXTRA),head('Bibliotheca Catholica',t,d)+intro+extra,[crumbs((t,k+'/'))])
+        out[k]=(t+' · Bibliotheca Catholica',fit([d],DESC_EXTRA),head('Bibliotheca Catholica',t,d)+intro+extra,[crumbs((t,k+'/'))])
     if flags.get('policy_html'):
-        out['policy']=('Fidelity & Editorial Policy — Bibliotheca Catholica','Bibliotheca Catholica is faithful to the Magisterium. Listing is not endorsement; flagged records carry calm context notes. Privacy and how to report a concern.',flags['policy_html'],[crumbs(('Fidelity & Editorial Policy','policy/'))])
+        out['policy']=('Fidelity & Editorial Policy · Bibliotheca Catholica','Bibliotheca Catholica is faithful to the Magisterium. Listing is not endorsement; flagged records carry calm context notes. Privacy and how to report a concern.',flags['policy_html'],[crumbs(('Fidelity & Editorial Policy','policy/'))])
     # v16 rights pages: same HTML as the app (data/rights-pages.js, written by tools/build_rights.py from tools/rights_pages.py)
     rp=json.loads((ROOT/'data/rights-pages.js').read_text().strip()[len('window.RIGHTS_PAGES='):-1])
-    out['rights']=('Rights & Permissions — Bibliotheca Catholica','What the five Bibliotheca Catholica rights badges mean, how each status is decided, and when downloads are shown. Not legal advice.',rp['rights'],[crumbs(('Rights & Permissions','rights/'))])
-    out['takedown']=('Takedown requests — Bibliotheca Catholica','How a rights holder can ask Bibliotheca Catholica to remove a text, a link, or a record’s file links, and how to send a counter-notice. Not legal advice.',rp['takedown'],[crumbs(('Takedown requests','takedown/'))])
-    out['licensing']=('Licensing & credits — Bibliotheca Catholica','How Bibliotheca Catholica is licensed: code MIT, open data CC0, site writing CC BY 4.0, texts public domain in the US, plus Wikipedia and portrait credits.',rp['licensing'],[crumbs(('Licensing & credits','licensing/'))])
+    out['rights']=('Rights & Permissions · Bibliotheca Catholica','What the five Bibliotheca Catholica rights badges mean, how each status is decided, and when downloads are shown. Not legal advice.',rp['rights'],[crumbs(('Rights & Permissions','rights/'))])
+    out['takedown']=('Takedown requests · Bibliotheca Catholica','How a rights holder can ask Bibliotheca Catholica to remove a text, a link, or a record’s file links, and how to send a counter-notice. Not legal advice.',rp['takedown'],[crumbs(('Takedown requests','takedown/'))])
+    out['licensing']=('Licensing & credits · Bibliotheca Catholica','How Bibliotheca Catholica is licensed: code MIT, open data CC0, site writing CC BY 4.0, texts public domain in the US, plus Wikipedia and portrait credits.',rp['licensing'],[crumbs(('Licensing & credits','licensing/'))])
     # Steering C (2026-11-03) help guides: same HTML as the app (data/guides.js, written by tools/build_guides.py from tools/guide_pages.py)
     gj=json.loads((ROOT/'data/guides.js').read_text().strip()[len('window.GUIDES='):-1]);sys.path.insert(0,str(ROOT/'tools'));import guide_pages
     for k,g in gj.items():
-        out['guides/'+k]=(g['title']+' — Bibliotheca Catholica',guide_pages.PAGES[k]['desc'],g['html'],[crumbs((g['title'],'guides/'+k+'/'))])
+        out['guides/'+k]=(g['title']+' · Bibliotheca Catholica',guide_pages.PAGES[k]['desc'],g['html'],[crumbs((g['title'],'guides/'+k+'/'))])
     # v19 Rites & Liturgy: same HTML as the app (data/rites.js, written by tools/build_rites.py from tools/rites_pages.py),
     # with the map inlined and shaded for the default layer so the pages work without JavaScript
     sys.path.insert(0,str(ROOT/'tools'));import rites_pages
@@ -710,17 +710,17 @@ def main():
     for k,pg in rj['pages'].items():
         route='rites/'+k if k else 'rites'
         cr=[('Rites & Liturgy','rites/')]+([(pg['h1'] if k!='sources' else 'Sources and method',route+'/')] if k else [])
-        out[route]=(pg['title']+' — Bibliotheca Catholica',pg['desc'],rites_pages.expand(pg['html'],rj),[crumbs(*cr)])
+        out[route]=(pg['title']+' · Bibliotheca Catholica',pg['desc'],rites_pages.expand(pg['html'],rj),[crumbs(*cr)])
     counts={'authors':len(authors),'saints':len(saints),'books':6633,'hosted':sum(1 for w in lib['works'] if any(e.get('text') for e in w['editions']))}
     m=re.search(r'window\.BOOKS_COUNT=(\d+)',tpl)
     if m:counts['books']=int(m.group(1))
-    out['disclosure']=(site_copy.DISCLOSURE_TITLE+' — Bibliotheca Catholica',site_copy.DISCLOSURE_DESC,disclosure_html(),[crumbs((site_copy.DISCLOSURE_TITLE,'disclosure/'))])
-    out['about']=('About the library — Bibliotheca Catholica','About Bibliotheca Catholica: what the free Catholic library holds, where its texts come from, the 1931 rule, rights badges, editorial policy, and goals.',site_copy.about_page(counts),[crumbs(('About the library','about/'))])
+    out['disclosure']=(site_copy.DISCLOSURE_TITLE+' · Bibliotheca Catholica',site_copy.DISCLOSURE_DESC,disclosure_html(),[crumbs((site_copy.DISCLOSURE_TITLE,'disclosure/'))])
+    out['about']=('About the library · Bibliotheca Catholica','About Bibliotheca Catholica: what the free Catholic library holds, where its texts come from, the 1931 rule, rights badges, editorial policy, and goals.',site_copy.about_page(counts),[crumbs(('About the library','about/'))])
     directory=head('Find a text','Search and browse the library','Use the search box for interactive results. Without JavaScript, browse the titles and authors below, or use your browser’s Find command.')
     directory+='<h2>Selected reading editions</h2><ul class="search-browse">'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+' — '+E(w['author'])+'</li>' for w in sorted(lib['works'],key=lambda w:w['title'].casefold()))+'</ul>'
     directory+='<h2>Authors</h2><ul class="search-browse">'+''.join('<li>'+a('/author/'+au['id']+'/',au['name'])+'</li>' for au in sorted(authors,key=lambda au:au['name'].casefold()))+'</ul>'
     directory+='<p>'+a('/saints/','Saints & Hagiography')+' · '+a('/editions/','Editions & Translations')+' · '+a('/reading/','Reading Lists')+'</p>'
-    out['search']=('Search and browse — Bibliotheca Catholica','Search Bibliotheca Catholica for people and titles, or browse the plain directory of selected reading editions and Catholic authors without JavaScript.',directory,[crumbs(('Search and browse','search/'))])
+    out['search']=('Search and browse · Bibliotheca Catholica','Search Bibliotheca Catholica for people and titles, or browse the plain directory of selected reading editions and Catholic authors without JavaScript.',directory,[crumbs(('Search and browse','search/'))])
     extra_pages=ROOT/'tools/static_extra.json'
     if extra_pages.exists():
         for k,v in json.loads(extra_pages.read_text()).items():out[k]=(v['title'],v['desc'],v['body'])
@@ -745,7 +745,7 @@ def main():
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('  <url><loc>'+E(u)+'</loc></url>\n' for u in urls)+'</urlset>\n')
     (ROOT/'robots.txt').write_text('# Bibliotheca Catholica\nUser-agent: *\nAllow: /\nDisallow: /data/texts/\n\nSitemap: '+SITE+'sitemap.xml\n')
     (ROOT/'404.html').write_text('''<!doctype html><html lang="en"><head>
-'''+GA_TAG+'''<meta charset="utf-8"><title>Not found — Bibliotheca Catholica</title><meta name="robots" content="noindex">
+'''+GA_TAG+'''<meta charset="utf-8"><title>Not found · Bibliotheca Catholica</title><meta name="robots" content="noindex">
 <script>(function(){var p=location.pathname.replace(/^\\/+|\\/+$/g,'').replace(/\\/index\\.html$/,'');
 if(p&&/^[A-Za-z0-9._~%\\/-]+$/.test(p)){location.replace('/#/'+p+location.search);return}location.replace('/#/404')})();</script></head>
 <body><p>Page not found. <a href="/">Go to Bibliotheca Catholica</a>.</p></body></html>

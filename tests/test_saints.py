@@ -87,7 +87,7 @@ class SaintStaticTests(unittest.TestCase):
             self.assertEqual(h.count('googletagmanager.com/gtag/js'),1)
             if s['tier']>1:
                 self.assertIn('<link rel="canonical" href="https://bibliothecacatholica.com/saints/%s/">'%s['id'],h)
-                self.assertIn('<title>%s — Saints — Bibliotheca Catholica</title>'%s['name'].replace('&','&amp;'),h)
+                self.assertIn('<title>%s · Saints · Bibliotheca Catholica</title>'%s['name'].replace('&','&amp;'),h)
                 self.assertNotIn('catholicsaints.info',h)
                 if s.get('historicity'):self.assertIn('Tradition and legend' if s['historicity']['flag']=='tradition' else 'legend' if s['historicity']['flag']!='angel' else 'Archangel',h)
         sm=(ROOT/'sitemap.xml').read_text()

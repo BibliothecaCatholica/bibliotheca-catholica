@@ -102,7 +102,7 @@ class Merged(unittest.TestCase):
     def test_day_page_has_no_source_links(self):
         a=lambda h,l,ext=False:'<a href="%s">%s</a>'%(h,l)
         t,d,body,n=SC.day_page('01-28',SC.merged_day('01-28',fixture_doc(),GUIDE,href),a)
-        self.assertEqual(t,'Saints of 28 January — Saints — Bibliotheca Catholica');self.assertEqual(n,1)
+        self.assertEqual(t,'Saints of 28 January · Saints · Bibliotheca Catholica');self.assertEqual(n,1)
         self.assertNotRegex(body,r'(?i)catholicsaints|https?://');self.assertIn('/references/',body);self.assertNotIn('\u2014',body)
         t,d,body,n=SC.day_page('07-04',[],a);self.assertEqual(n,0);self.assertIn('No saints are listed',body)
 class Built(unittest.TestCase):

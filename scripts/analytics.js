@@ -102,7 +102,7 @@ function campaignUrl(route,tags){var r=str(route||'/'),u=new URL(r.charAt(0)==='
 /* pageTitle(path, docTitle): search and Index routes get a fixed title; elsewhere the document title, which on
    those routes is built from catalog data only. */
 var SITE_NAME='Bibliotheca Catholica';
-function pageTitle(path,docTitle){if(path==='/search/')return 'Search — '+SITE_NAME;if(path==='/isidore/')return 'The Isidore Index — '+SITE_NAME;
+function pageTitle(path,docTitle){if(path==='/search/')return 'Search · '+SITE_NAME;if(path==='/isidore/')return 'The Isidore Index · '+SITE_NAME;
   return str(docTitle||SITE_NAME).slice(0,MAX)}
 /* once(key): true the first time a key is seen in a scope; reset(scope) forgets it */
 var SEEN={};

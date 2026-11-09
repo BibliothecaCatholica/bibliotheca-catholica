@@ -17,7 +17,7 @@ class TextArchiveTests(unittest.TestCase):
     def test_export_preserves_every_verified_text_and_its_provenance(self):
         with tempfile.TemporaryDirectory() as directory:
             manifest = archive.export(directory)
-            self.assertEqual(61, len(manifest['documents']))
+            self.assertEqual(62, len(manifest['documents']))
             for entry in manifest['documents']:
                 raw = (Path(directory) / entry['file']).read_bytes()
                 self.assertEqual(entry['sha256'], hashlib.sha256(raw).hexdigest())
@@ -25,7 +25,12 @@ class TextArchiveTests(unittest.TestCase):
                 original = ROOT / 'data/texts' / Path(entry['file']).name
                 self.assertEqual(original.read_bytes(), raw)
                 record = json.loads((Path(directory) / entry['provenance']).read_text())
-                self.assertEqual(['Public domain in the USA.'], record['metadata']['Copyright'])
+                if record.get('kind') == 'ocr-transcription':  # the Summa Supplement, transcribed from pre-1931 scans
+                    self.assertTrue(record['rights'].startswith('Public domain in the USA.'))
+                    self.assertTrue(all(v['year'] < 1931 for v in record['volumes']))
+                    self.assertEqual(record['sha256'], entry['sha256'])
+                else:
+                    self.assertEqual(['Public domain in the USA.'], record['metadata']['Copyright'])
             exported = {e['editionId'] for e in manifest['documents']}
             self.assertTrue({'pg-50040', 'pg-18269', 'pg-5657'}.isdisjoint(exported))
             self.assertEqual('texts.bibliothecacatholica.com\n', (Path(directory) / 'CNAME').read_text())

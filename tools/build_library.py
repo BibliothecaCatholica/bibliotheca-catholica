@@ -40,8 +40,20 @@ def validate(catalog):
                 assert path.is_relative_to(ROOT / 'data/texts')
                 raw = path.read_bytes()
                 assert hashlib.sha256(raw).hexdigest() == edition['sha256'], edition['id']
-                assert b'END OF THE PROJECT GUTENBERG' in raw.upper()
                 source = json.loads((ROOT / ('data/sources/' + edition['id'] + '.json')).read_text())
+                if source.get('kind') == 'ocr-transcription':
+                    # Supplement to the Summa (2026-11-09): our transcription of Internet Archive scans of printings
+                    # before 1931; the source record names every scan, its imprint year, and its OCR file's SHA-256
+                    assert edition['source'].startswith('https://archive.org/details/'), edition['id']
+                    assert b'*** END OF THE TRANSCRIPTION ***' in raw and source['sha256'] == edition['sha256'], edition['id']
+                    assert source['title'] == edition['sourceTitle'] and edition['rights'].startswith('Public domain in the USA.')
+                    scans = source['volumes'] + [source['substitutePages']]
+                    assert edition['source'] in [v['url'] for v in scans], edition['id']
+                    for v in scans:
+                        assert v['url'] == 'https://archive.org/details/' + v['identifier'] and v['year'] < 1931, v['identifier']
+                        assert re.fullmatch(r'[0-9a-f]{64}', v['ocrSha256']), v['identifier']
+                    continue
+                assert b'END OF THE PROJECT GUTENBERG' in raw.upper()
                 assert source['metadata']['Copyright'] == ['Public domain in the USA.']
                 assert source['metadata']['Title'][0] == edition['sourceTitle']
     # Deep-link gaps (2026-11-09): a series lists its books in order; a book from 1931 or later is never a work here

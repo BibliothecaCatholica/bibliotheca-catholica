@@ -1,5 +1,5 @@
 {
- "note": "Known quirks of the Gutenberg Summa files (checked 2026-11-09). tools/build_summa.py numbers questions and articles by position and checks each count against the standard totals (I 119 questions and 584 articles, I-II 114 and 619, II-II 189 and 917, III 90 and 549); these headings are printed irregularly in the files and are left as they are in the hosted text. A new problem fails the build.",
+ "note": "Known quirks of the Gutenberg Summa files (checked 2026-11-09). tools/build_summa.py numbers questions and articles by position and checks each count against the standard totals (I 119 questions and 584 articles, I-II 114 and 619, II-II 189 and 917, III 90 and 549, Supplement 99 and 446); these headings are printed irregularly in the files (for the Supplement, in the 1917 to 1922 printings: Q64's heading says seven articles, and its inquiry list and text have ten) and are left as they are in the hosted text. A new problem fails the build.",
  "problems": [
   "1 Q66 a1: no title line in the text; title from the list of inquiries",
   "1 Q6 a3: heading reads \"THIRD ARTICLE [I. Q. 6, Art. 3]\"",
@@ -59,6 +59,7 @@
   "3 Q48 a4: heading reads \"FOURTH ARTICLE [III, Q. 48, Art. 3]\"",
   "3 Q60 a6: heading reads \"SIXTH ARTICLE [III, Q. 60, Art. 5]\"",
   "3 Q89 a5: heading reads \"FIFTH ARTICLE [III, Q. 86, Art. 5]\"",
-  "3 Q50: heading states no article count"
+  "3 Q50: heading states no article count",
+  "supp Q64: heading says 7 articles, text has 10"
  ]
 }

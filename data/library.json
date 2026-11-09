@@ -1124,7 +1124,7 @@
       "authorId": "thomas-aquinas",
       "category": "Theology",
       "tradition": "Catholic tradition",
-      "description": "The complete English Summa in four parts: God and creation, the moral life in general and in particular, and Christ and the sacraments, read question by question and article by article. The text ends at Part III, question 90; the Supplement is not included.",
+      "description": "The complete English Summa: God and creation, the moral life in general and in particular, and Christ and the sacraments, with the Supplement that completes the Third Part, read question by question and article by article.",
       "reviewStatus": "source-checked",
       "added": "2026-11-09",
       "date": "1265–1274 (this translation 1911–1925)",
@@ -1202,12 +1202,31 @@
           ],
           "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
           "checked": "2026-11-09",
-          "note": "The Third Part of the Summa in the English Dominican translation (first printed 1911 to 1925; second and revised edition from 1920). A sample check on 2026-11-09 against pre-1931 printings at the Internet Archive (first printings of 1915 and 1916 and the second and revised edition of the 1920s) found that the article text matches, with no 1947 introduction, synopsis, or index. The phrase “From the Complete American Edition” in Gutenberg's catalog title is a provenance note only. Question and article numbers were added by the transcriber. The text ends at question 90 of the Third Part; the Supplement is not in the Gutenberg files.",
+          "note": "The Third Part of the Summa in the English Dominican translation (first printed 1911 to 1925; second and revised edition from 1920). A sample check on 2026-11-09 against pre-1931 printings at the Internet Archive (first printings of 1915 and 1916 and the second and revised edition of the 1920s) found that the article text matches, with no 1947 introduction, synopsis, or index. The phrase “From the Complete American Edition” in Gutenberg's catalog title is a provenance note only. Question and article numbers were added by the transcriber. The Gutenberg text ends at question 90 of the Third Part, where Aquinas stopped writing; the Supplement is a separate edition here, transcribed from 1917 to 1922 printings of the same translation.",
           "sourceTitle": "Summa Theologica, Part III (Tertia Pars) From the Complete American Edition",
           "digitalRelease": "Nov 28, 2006",
           "access": "full-text",
           "text": "data/texts/pg-19950.txt",
           "sha256": "4adb238f7c98be1c4c7d71275d29d479d923d2c447d16a692365c79ada81cdb5"
+        },
+        {
+          "id": "ia-summa-supplement",
+          "label": "Supplement to the Third Part (Supplementum Tertiae Partis), transcribed from Internet Archive scans",
+          "source": "https://archive.org/details/summatheologicao0000unse_f4n0",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Fathers of the English Dominican Province"
+            }
+          ],
+          "rights": "Public domain in the USA. Printed in 1917, 1921, and 1922, before 1931. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-09",
+          "note": "The Supplement, compiled after Aquinas’s death from his earlier Commentary on the Sentences, in the same English Dominican translation as the Gutenberg Parts. Transcribed by Bibliotheca Catholica from the OCR of four Internet Archive scans of the pre-1931 printings (Questions 1 to 33 from the 1917 Washbourne and Benziger volume, 34 to 68 from the 1922 volume, 69 to 86 from the 1921 volume, and 87 to 99 from the 1922 Benziger volume), with OCR errors corrected and doubtful passages marked, not rewritten. 99 questions and 446 articles. The two appendices printed after Question 99 are not included. Sources, SHA-256 of each OCR file, and the method are in the source record.",
+          "sourceTitle": "Summa Theologica, Supplement to the Third Part",
+          "access": "full-text",
+          "text": "data/texts/ia-summa-supplement.txt",
+          "sha256": "0b924be164199ec94207cc66fe0e3712f2a0325d09c71ea4da60dd073e2b0586"
         }
       ]
     },

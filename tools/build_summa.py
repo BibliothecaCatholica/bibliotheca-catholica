@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Index the hosted Summa Theologiae (Project Gutenberg #17611, #17897, #18755, #19950) into data/summa.json.
+"""Index the hosted Summa Theologiae (Project Gutenberg #17611, #17897, #18755, #19950, and the Supplement transcribed
+from Internet Archive scans by tools/transcribe_supplement.py) into data/summa.json.
 
 The four Gutenberg files are the Dominican Fathers' translation (Perry/CCEL text corrected by McClamrock). This tool
 splits each file the way the reading room does (blank-line blocks, splitText() in scripts/library.js) and records,
@@ -16,17 +17,19 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 WORK='summa-theologiae';SIZE=35
 # slug, bracket token, English name, Latin name, edition, New Advent prefix, questions; ARTICLES are the standard totals
-ARTICLES={'1':584,'1-2':619,'2-2':917,'3':549}
+ARTICLES={'1':584,'1-2':619,'2-2':917,'3':549,'supp':446}
 PARTS=[('1','I','First Part','Prima Pars','pg-17611',1,119),
        ('1-2','I-II','First Part of the Second Part','Prima Secundae','pg-17897',2,114),
        ('2-2','II-II','Second Part of the Second Part','Secunda Secundae','pg-18755',3,189),
-       ('3','III','Third Part','Tertia Pars','pg-19950',4,90)]
+       ('3','III','Third Part','Tertia Pars','pg-19950',4,90),
+       ('supp','Suppl.','Supplement','Supplementum Tertiae Partis','ia-summa-supplement',5,99)]
+OCR_FLAGS=ROOT/'data/summa-supplement-ocr.json'
 NUM={w:i for i,w in enumerate('zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen'.split())}
 SEP=re.compile(r'(\n_{5,})+$')
 Q_HEAD=re.compile(r'^QUESTION (\d+)$')
 A_HEAD=re.compile(r'^(?:([A-Z]+(?:-[A-Z]+)?) )?ARTICLE(?: *\[(.*)\])?$')
 ORD={w:i+1 for i,w in enumerate('FIRST SECOND THIRD FOURTH FIFTH SIXTH SEVENTH EIGHTH NINTH TENTH ELEVENTH TWELFTH THIRTEENTH FOURTEENTH FIFTEENTH SIXTEENTH SEVENTEENTH'.split())}
-REF=re.compile(r'^\s*(?:([I-]+)[.,]?\s*)?Q[.,]*\s*,?\s*(\d+)[.,]?\s*(?:Art|A)\.?\s*(\d*)\s*$',re.I)
+REF=re.compile(r'^\s*(?:([I-]+|Suppl\.)[.,]?\s*)?Q[.,]*\s*,?\s*(\d+)[.,]?\s*(?:Art|A)\.?\s*(\d*)\s*$',re.I)
 COUNT=re.compile(r'\s*\((?:in )?([a-z]+) articles?\)',re.I)
 TREATISE=re.compile(r'^TREATISE ON .+$')
 SMALL={'a','an','and','as','at','by','for','from','in','into','of','on','or','the','to','with','whether','is','be'}
@@ -72,7 +75,7 @@ def role(p):
 def parse(slug,token,ed,expect_q):
     raw=(ROOT/ed['text']).read_bytes();assert hashlib.sha256(raw).hexdigest()==ed['sha256'],(ed['id'],'text changed')
     B=split_text(raw.decode('utf-8'))
-    end=next(i for i,b in enumerate(B) if re.search(r'\*\*\* ?END OF (THE |THIS )?PROJECT GUTENBERG',b,re.I))
+    end=next(i for i,b in enumerate(B) if re.search(r'\*\*\* ?END OF (THE |THIS )?(PROJECT GUTENBERG|TRANSCRIPTION)',b,re.I))
     # the part's own title block, after the transcriber's contents list: FIRST PART\n["I," "Prima Pars"]
     start=next(i for i,b in enumerate(B) if ('\n["'+token+',"') in b)
     toc={}
@@ -176,12 +179,22 @@ def parse(slug,token,ed,expect_q):
     assert len(questions)==expect_q,(slug,len(questions),'questions, expected',expect_q)
     assert sum(len(x['articles']) for x in questions)==ARTICLES[slug],(slug,'article total')
     return dict(blocks=len(B),start=start,end=end,prologue=prologue,treatises=treatises,questions=questions),problems
+def ocr_flags(ed):
+    """Blocks of the Supplement transcription the OCR clean-up could not settle (data/summa-supplement-ocr.json): block
+    index -> words and scan page. Checked against the text so a re-run of the transcription cannot leave them stale."""
+    F=json.loads(OCR_FLAGS.read_text());assert F['edition']==ed['id'] and F['sha256']==ed['sha256'],'summa-supplement-ocr.json is stale'
+    B=split_text((ROOT/ed['text']).read_text(encoding='utf-8'));out={}
+    for f in F['flags']:
+        assert B[f['block']].startswith(f['starts']),('flag drifted',f['block'])
+        out[str(f['block'])]={'words':f['words'],'scan':f['scan']['url'],'pages':f['scan']['pages'],'identifier':f['scan']['identifier']}
+    return out
 def build():
     lib=json.loads((ROOT/'data/library.json').read_text());w=next(x for x in lib['works'] if x['id']==WORK);eds={e['id']:e for e in w['editions']}
     parts,problems=[],[]
     for slug,token,en,la,edid,na,eq in PARTS:
-        ed=eds[edid];assert 'gutenberg.org' in ed['source'] and ed.get('text'),edid
+        ed=eds[edid];assert ('gutenberg.org' in ed['source'] or slug=='supp' and ed['source'].startswith('https://archive.org/')) and ed.get('text'),edid
         d,p=parse(slug,token,ed,eq);problems+=p
+        if slug=='supp':d['ocrFlags']=ocr_flags(ed)
         parts.append(dict(slug=slug,token=token,name=en,latin=la,edition=edid,newAdvent=na,**d))
     return parts,problems
 def main():

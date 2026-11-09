@@ -641,9 +641,9 @@ function support(){var shop=AFF.bookshopShop||'';
   render(h,'support')}
 /* Deep-link gaps (2026-11-09): chapter and story pages (/work/<id>/ch|story/<slug>/) and the related authors' pages (/author/<id>/ for
    LIBRARY_DATA.relatedAuthors) are static documents built by tools/build_static.py, as are the Summa pages
-   (/summa/, /summa/<part>/, /summa/<part>/q<n>/, /summa/<part>/q<n>/a<m>/, part 1, 1-2, 2-2, or 3).
+   (/summa/, /summa/<part>/, /summa/<part>/q<n>/, /summa/<part>/q<n>/a<m>/, part 1, 1-2, 2-2, 3, or supp for the Supplement).
    On their own static page the pre-rendered text stays as the view; a hash link to one loads the static page. */
-function staticOnly(path){path=String(path||'').replace(/\/+$/,'');var m=/^author\/([a-z0-9-]+)$/.exec(path),L=typeof window!=='undefined'&&window.LIBRARY_DATA;if(m)return !!(L&&(L.relatedAuthors||[]).some(function(r){return r.id===m[1]}));return /^work\/[a-z0-9-]+\/(ch|story)\/\d\d-[a-z0-9-]+$/.test(path)||/^summa(\/(1|1-2|2-2|3)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(path)}
+function staticOnly(path){path=String(path||'').replace(/\/+$/,'');var m=/^author\/([a-z0-9-]+)$/.exec(path),L=typeof window!=='undefined'&&window.LIBRARY_DATA;if(m)return !!(L&&(L.relatedAuthors||[]).some(function(r){return r.id===m[1]}));return /^work\/[a-z0-9-]+\/(ch|story)\/\d\d-[a-z0-9-]+$/.test(path)||/^summa(\/(1|1-2|2-2|3|supp)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(path)}
 function keepStatic(path){path=path.replace(/\/+$/,'');if(!location.hash&&window.BC_BOOT===path&&main.querySelector('.static-prerender')){setNav('library');return}location.replace('/'+path+'/')}
 function route(){var raw=location.hash.replace(/^#\/?/,'');if(!raw&&window.BC_BOOT)raw=window.BC_BOOT;if(raw==='search'&&!location.hash){var lookup=new URLSearchParams(location.search).get('lookup');if(lookup)raw='search/'+encodeURIComponent(lookup.slice(0,300))}var queryAt=raw.indexOf('?');var query=new URLSearchParams(queryAt<0?'':raw.slice(queryAt+1));var path=queryAt<0?raw:raw.slice(0,queryAt);var h;try{h=decodeURIComponent(path)}catch(e){notfound();return}if(staticOnly(h)){keepStatic(h);return}var p=h.split('/');if(p[0]==='search'){searchScope=['curated','isidore','all'].indexOf(query.get('scope'))>=0?query.get('scope'):'all';}
   hideSug();if(p[0]!=='search')gaReset('search');
@@ -677,7 +677,7 @@ var STATIC_SECTIONS=['library','related','authors','doctors','timeline','scriptu
 function canonicalFor(){var raw=(location.hash.replace(/^#\/?/,'')||window.BC_BOOT||'').split('?')[0],p=raw.split('/').filter(Boolean);
   if(!p.length)return SITE;if(p[0]==='search')return SITE+'search/';if(p.length===1&&STATIC_SECTIONS.indexOf(p[0])>=0)return SITE+p[0]+'/';
   if(p.length===2&&/^(author|work)$/.test(p[0])&&/^[a-z0-9-]+$/.test(p[1]))return SITE+p[0]+'/'+p[1]+'/';
-  if(/^summa(\/(1|1-2|2-2|3)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(p.join('/')))return SITE+p.join('/')+'/';
+  if(/^summa(\/(1|1-2|2-2|3|supp)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(p.join('/')))return SITE+p.join('/')+'/';
   if(p.length===4&&p[0]==='work'&&/^[a-z0-9-]+$/.test(p[1])&&/^(ch|story)$/.test(p[2])&&/^\d\d-[a-z0-9-]+$/.test(p[3]))return SITE+p.join('/')+'/';
   if(p.length===2&&p[0]==='editions'&&/^[a-z0-9_-]+$/.test(p[1]))return SITE+'editions/'+p[1]+'/';
   if(p.length===2&&p[0]==='reading'&&/^[a-z0-9-]+$/.test(p[1]))return SITE+'reading/'+p[1]+'/';

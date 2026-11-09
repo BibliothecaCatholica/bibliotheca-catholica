@@ -1,0 +1,110 @@
+{
+  "id": "ia-summa-supplement",
+  "kind": "ocr-transcription",
+  "title": "Summa Theologica, Supplement to the Third Part",
+  "translator": "Fathers of the English Dominican Province",
+  "rights": "Public domain in the USA. Every printing used was published before 1931 (1917, 1921, and 1922).",
+  "volumes": [
+    {
+      "identifier": "summatheologi18thom",
+      "url": "https://archive.org/details/summatheologi18thom",
+      "ocr": "summatheologi18thom_djvu.xml",
+      "ocrSha256": "8ce2f2da60bca9efe139fcceb025bf3f214238fa47f925476efd4a29c2f8e2ce",
+      "year": 1917,
+      "publisher": "R. & T. Washbourne, London; Benziger Brothers, New York",
+      "titlePage": "Third Part, Fourth Number (QQ. LXXXIV to Suppl. XXXIII)",
+      "questions": [
+        1,
+        33
+      ],
+      "endPage": 383,
+      "pages": [
+        110,
+        387
+      ]
+    },
+    {
+      "identifier": "summatheologi19thom",
+      "url": "https://archive.org/details/summatheologi19thom",
+      "ocr": "summatheologi19thom_djvu.xml",
+      "ocrSha256": "10c699d2be122b5f87eca15ca5f4ecf88837d2b599608c882a32e0d931e6f4d4",
+      "year": 1922,
+      "publisher": "Burns Oates & Washbourne, London; Benziger Brothers, New York",
+      "titlePage": "Third Part (Supplement), QQ. XXXIV to LXVIII",
+      "questions": [
+        34,
+        68
+      ],
+      "endPage": 387,
+      "pages": [
+        12,
+        391
+      ]
+    },
+    {
+      "identifier": "summatheologi20thom",
+      "url": "https://archive.org/details/summatheologi20thom",
+      "ocr": "summatheologi20thom_djvu.xml",
+      "ocrSha256": "ab9205e8e4fe61b9e5217ae06e4a27f4533270ed4e02c5a7f31b550efb6a80a5",
+      "year": 1921,
+      "publisher": "Burns Oates & Washbourne, London",
+      "titlePage": "Third Part (Supplement), QQ. LXIX to LXXXVI",
+      "questions": [
+        69,
+        86
+      ],
+      "endPage": 273,
+      "pages": [
+        12,
+        279
+      ]
+    },
+    {
+      "identifier": "summatheologicao0000unse_f4n0",
+      "url": "https://archive.org/details/summatheologicao0000unse_f4n0",
+      "ocr": "summatheologicao0000unse_f4n0_djvu.xml",
+      "ocrSha256": "3fc7794549a89cdc3c8e02ca7e15d1b4c659a1ef692b07893a4630bdc17f087d",
+      "year": 1922,
+      "publisher": "Benziger Brothers, New York",
+      "titlePage": "Third Part (Supplement), QQ. LXXXVII to XCIX and Appendices",
+      "questions": [
+        87,
+        99
+      ],
+      "endPage": 224,
+      "pages": [
+        10,
+        253
+      ]
+    }
+  ],
+  "substitutePages": {
+    "identifier": "summatheologicao0020thom_q5p9",
+    "url": "https://archive.org/details/summatheologicao0020thom_q5p9",
+    "ocr": "summatheologicao0020thom_q5p9_djvu.xml",
+    "ocrSha256": "80441764165a0601b3be26a47828cc6742ac3fb7e218054b5b641e9eb154303b",
+    "year": 1921,
+    "publisher": "Burns Oates & Washbourne, London",
+    "pages": [
+      {
+        "volume": "summatheologi20thom",
+        "page": 78,
+        "substitutePage": 78
+      },
+      {
+        "volume": "summatheologi20thom",
+        "page": 94,
+        "substitutePage": 94
+      }
+    ]
+  },
+  "method": "tools/transcribe_supplement.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, footnotes bracketed after their paragraph, OCR misreadings corrected only where the result is a word the Gutenberg Summa or an English word list has and the OCR form is not; flagged passages are marked, not rewritten. Article counts and titles were checked against the standard structure (99 questions, 446 articles); New Advent was used only to confirm a flagged word that both have, never as a source of text.",
+  "appendices": "The two appendices printed after Question 99 (on the souls of unbaptized children and on purgatory) are not included.",
+  "questions": 99,
+  "articles": 446,
+  "flaggedBlocks": 328,
+  "corrections": 1516,
+  "text": "data/texts/ia-summa-supplement.txt",
+  "sha256": "0b924be164199ec94207cc66fe0e3712f2a0325d09c71ea4da60dd073e2b0586",
+  "checked": "2026-11-09"
+}

@@ -65,3 +65,4 @@ select,input,button{max-width:100%}.reader-tools select,#library-topic,#search-s
 body.has-listen-dock .reader-nav,body.has-listen-dock footer{padding-bottom:64px}
 @media(max-width:600px){.listen-dock{right:8px;bottom:8px;left:8px;align-items:stretch}.ld-panel{width:auto}.ld-toggle{align-self:flex-end}}
 @media print{.listen-dock{display:none}}
+.ocr-flag{border-left:3px solid var(--muted);padding-left:.7em}.ocr-note{color:var(--muted);white-space:normal}.supp-note{max-width:760px}

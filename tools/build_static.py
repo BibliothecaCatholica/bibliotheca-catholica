@@ -302,11 +302,16 @@ def part_pages(out,lib,by_html,author_ld):
     return TPD
 
 # Deep-link gaps 4 (2026-11-09): the Summa Theologiae by question and article (data/summa.json from tools/build_summa.py)
-def summa_para(p):
+def summa_para(p,flag=None):
     """One paragraph: line breaks joined, _italics_ as <em>, a trailing ____ rule dropped. No fragment ids: a bare #id
-    would reach the app's hash router (route(), canonical, and page_view all read location.hash)."""
+    would reach the app's hash router (route(), canonical, and page_view all read location.hash). A Supplement
+    paragraph the OCR clean-up could not settle (flag) is marked, with the doubtful words and a link to its scan page."""
     p=re.sub(r'(\n_{5,})+$','',p).strip()
-    return '<p>'+re.sub(r'_([^_\n]+?)_',r'<em>\1</em>',E(' '.join(p.split())))+'</p>'
+    h=re.sub(r'_([^_\n]+?)_',r'<em>\1</em>',E(' '.join(p.split())))
+    if not flag:return '<p>'+h+'</p>'
+    pages=', '.join(str(n) for n in flag['pages'])
+    return ('<p class="ocr-flag">'+h+' <span class="small ocr-note">[OCR uncertain: '+E(', '.join(w for w in flag['words'] if w!='article title') or 'heading')
+            +'. '+a(flag['scan'],'Check the scan',True)+', image '+E(pages)+'.]</span></p>')
 def summa_pages(out,lib):
     S=json.loads((ROOT/'data/summa.json').read_text());w=next(x for x in lib['works'] if x['id']==S['work']);eds={e['id']:e for e in w['editions']}
     by=a('/author/thomas-aquinas/','Thomas Aquinas')
@@ -316,6 +321,11 @@ def summa_pages(out,lib):
     def blocks(ed):
         if ed not in TEXT:TEXT[ed]=text_split(eds[ed]['text'])
         return TEXT[ed]
+    def para(P,B,i):return summa_para(B[i],P.get('ocrFlags',{}).get(str(i)))
+    def flagged(P,lo,hi):return sum(1 for i in range(lo,hi+1) if str(i) in P.get('ocrFlags',{}))
+    SUPP=next((P for P in S['parts'] if P['slug']=='supp'),None)
+    ABOUT_SUPP=('<p class="supp-note"><b>About the Supplement:</b> Aquinas died in 1274 before finishing Part III. The Supplement completing it was compiled after his death from his earlier Commentary on the Sentences, traditionally attributed to his companion Reginald of Piperno. '
+                'Parts I to III here come from the Project Gutenberg e-text of the English Dominican translation, and the Supplement is transcribed from the 1917, 1921, and 1922 printings of the same translation, so formatting may differ slightly.</p>')
     def qref(P,q):return P['token']+', q. '+str(q['n'])
     def aref(P,q,x):return qref(P,q)+', a. '+str(x['n'])
     def qpath(P,q):return 'summa/'+P['slug']+'/q'+str(q['n'])
@@ -324,12 +334,24 @@ def summa_pages(out,lib):
     def reader(P,i):return '/#/read/'+w['id']+'/'+P['edition']+'/'+str(i//35)+'/'+str(i)
     def edline(P):
         e=eds[P['edition']]
+        if P['slug']=='supp':
+            return ('<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+', translated by the Fathers of the English Dominican Province. '+E(e['note'])+pd_badge(e['rights'])+'</p>')
         return ('<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+', translated by the Fathers of the English Dominican Province. '+E(e['note'])+pd_badge(e['rights'])+'</p>')
     def source(P):
         e=eds[P['edition']]
+        if P['slug']=='supp':
+            src=json.loads((ROOT/'data/sources'/(e['id']+'.json')).read_text())
+            vols=[a(v['url'],v['titlePage']+', '+str(v['year']),True) for v in src['volumes']]
+            return ('<p class="small">Source: Thomas Aquinas. Summa Theologica, Supplement to the Third Part. Internet Archive scans: '+', '.join(vols[:-1])+', and '+vols[-1]
+                    +'; two curled pages of the 1921 volume are read from '+a(src['substitutePages']['url'],'another scan of the same printing',True)+'. '+E(e['rights'])
+                    +' Transcription, OCR file checksums, and method: '+a('https://texts.bibliothecacatholica.com/provenance/'+e['id']+'.json','source record',True)+'.</p>')
         return ('<p class="small">Source: '+E('Thomas Aquinas. Summa Theologica, '+P['name']+'. '+e['label'].split(',')[0]+'.')+' '+a(e['source'],'Project Gutenberg record',True)+'. '+E(e['rights'])+' The full Project Gutenberg license is kept in the hosted text.</p>')
     other=('<p class="small">Also online, linked only: the same translation at '+a(NA,'New Advent',True)+' and the Latin text at '+a(CT,'Corpus Thomisticum',True)+'. Neither is copied here.</p>')
-    notice='<p class="small pg-notice">'+PG_NOTICE+'</p>'
+    pg_notice='<p class="small pg-notice">'+PG_NOTICE+'</p>'
+    tr_notice=('<p class="small ocr-notice">The Supplement is not a Project Gutenberg text. It is Bibliotheca Catholica’s transcription of public-domain scans at the Internet Archive; '
+               'obvious OCR errors were corrected, and passages marked “OCR uncertain” could not be confidently corrected, so check them against the linked scan page.</p>')
+    SUPP_LINE=('<p class="small supp-line">From the Supplement, compiled after Aquinas’s death from his Commentary on the Sentences and transcribed here from the 1917 to 1922 printings. '+a('/summa/supp/','About the Supplement')+'.</p>')
+    def NOTICE(P):return tr_notice if P['slug']=='supp' else pg_notice
     C=[('Discover & Read','library/'),(w['title'],'work/'+w['id']+'/')]
     flat=[(P,q,x) for P in S['parts'] for q in P['questions'] for x in q['articles']]
     qflat=[(P,q) for P in S['parts'] for q in P['questions']]
@@ -337,13 +359,13 @@ def summa_pages(out,lib):
     # /summa/
     parts_ul='<ul class="text-parts">'+''.join('<li>'+a('/summa/'+P['slug']+'/',P['name']+' ('+P['latin']+')')+': '+str(len(P['questions']))+' questions, '+str(sum(len(q['articles']) for q in P['questions']))+' articles</li>' for P in S['parts'])+'</ul>'
     body=(crumb_html(*C,('By question and article',''))+'<div class="page-head"><div class="eyebrow">Thomas Aquinas · Theology</div><h1>Summa Theologiae</h1>'
-          +'<p class="lede">The whole Summa in English, one page for each of its '+str(total_q)+' questions and '+str(total_a)+' articles, from the four Project Gutenberg volumes in the reading room.</p></div>'
+          +'<p class="lede">The whole Summa in English, one page for each of its '+str(total_q)+' questions and '+str(total_a)+' articles, from the four Project Gutenberg volumes in the reading room and a transcription of the Supplement.</p></div>'
           +'<p>Each article page has the objections, the reply “On the contrary,” the answer “I answer that,” and the replies to the objections, with a link into the reading room for notes and highlights. Article pages are at <code>/summa/&lt;part&gt;/q&lt;question&gt;/a&lt;article&gt;/</code>; for example '+a('/summa/1/q2/a3/','First Part, question 2, article 3')+', “Whether God Exists?”</p>'
-          +'<h2>The four parts</h2>'+parts_ul
-          +'<p class="small">The pages end at the Third Part, question 90, where the Gutenberg files end. The Supplement, compiled from Aquinas’s earlier writings after his death, is not in those files and is not included here.</p>'
+          +'<h2>The four parts and the Supplement</h2>'+parts_ul
+          +'<p class="small">Aquinas left the Third Part unfinished at question 90, where the Gutenberg files end. The '+a('/summa/supp/','Supplement')+', compiled from his earlier writings after his death, completes it here in '+str(len(SUPP['questions']))+' questions, transcribed from the 1917, 1921, and 1922 printings of the same translation.</p>'
           +'<p class="small">About this text: the English Dominican translation, first printed 1911 to 1925. A sample check on 2026-11-09 against pre-1931 printings at the Internet Archive found that the article text matches, with no 1947 introduction, synopsis, or index; “From the Complete American Edition” in Gutenberg’s catalog titles is a provenance note only.</p>'
           +'<p class="dl-row"><a class="btn" href="/work/'+w['id']+'/">Work page and editions</a> '+a('/editions/summa/','Edition guide')+'</p>'
-          +''.join(edline(P) for P in S['parts'][:1])+other+notice+'<p>'+a('/author/thomas-aquinas/','Thomas Aquinas')+' · '+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>')
+          +''.join(edline(P) for P in S['parts'][:1])+other+pg_notice+tr_notice+'<p>'+a('/author/thomas-aquinas/','Thomas Aquinas')+' · '+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>')
     out['summa']=('Summa Theologiae by Question and Article — Bibliotheca Catholica',
         fit(['The Summa Theologiae of Thomas Aquinas in English, one free page for each of its %d questions and %d articles.'%(total_q,total_a)],(('Read in the reading room too.',''),)+DESC_EXTRA),
         body,[{'@context':'https://schema.org','@type':'Book','name':'Summa Theologiae','url':SITE+'summa/','author':ld_by,'isAccessibleForFree':True,'inLanguage':'English','hasPart':[{'@type':'Book','name':'Summa Theologiae, '+P['name'],'url':SITE+'summa/'+P['slug']+'/'} for P in S['parts']]},crumbs(*C,('By question and article','summa/'))])
@@ -360,13 +382,14 @@ def summa_pages(out,lib):
             li.append('<li>'+a('/'+qpath(P,q)+'/',q['title'])+' <span class="small">('+str(len(q['articles']))+(' article' if len(q['articles'])==1 else ' articles')+')</span></li>')
         pro=''
         if P.get('prologue'):
-            pro='<h2>Prologue</h2>'+''.join(summa_para(B[i]) for i in range(P['prologue'][0],P['prologue'][1]+1))
-        nav='<nav class="reader-pagination" aria-label="Parts">'+(a('/summa/'+S['parts'][pi-1]['slug']+'/','← '+S['parts'][pi-1]['name']).replace('<a ','<a class="btn ghost" rel="prev" ',1) if pi else '')+'<span>Part '+str(pi+1)+' of 4</span>'+(a('/summa/'+S['parts'][pi+1]['slug']+'/',S['parts'][pi+1]['name']+' →').replace('<a ','<a class="btn" rel="next" ',1) if pi<3 else '')+'</nav>'
+            pro='<h2>Prologue</h2>'+''.join(para(P,B,i) for i in range(P['prologue'][0],P['prologue'][1]+1))
+        nav='<nav class="reader-pagination" aria-label="Parts">'+(a('/summa/'+S['parts'][pi-1]['slug']+'/','← '+S['parts'][pi-1]['name']).replace('<a ','<a class="btn ghost" rel="prev" ',1) if pi else '')+'<span>'+('Part '+str(pi+1)+' of 4' if P['slug']!='supp' else 'Supplement to the Third Part')+'</span>'+(a('/summa/'+S['parts'][pi+1]['slug']+'/',S['parts'][pi+1]['name']+' →').replace('<a ','<a class="btn" rel="next" ',1) if pi<len(S['parts'])-1 else '')+'</nav>'
         na_=sum(len(q['articles']) for q in P['questions'])
         body=(crumb_html(*C,('Summa','summa/'),(P['name'],''))+'<div class="page-head"><div class="eyebrow">Summa Theologiae · '+E(P['token'])+'</div><h1>'+E(P['name'])+' <span class="small">('+E(P['latin'])+')</span></h1>'
               +'<p class="lede">'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>. '+str(len(P['questions']))+' questions, '+str(na_)+' articles.</p></div>'
               +'<p class="dl-row"><a class="btn" href="'+E(reader(P,P['start']))+'">Read in the reading room →</a> '+a('/work/'+w['id']+'/','Work page and editions')+'</p>'
-              +edline(P)+nav+notice+pro+'<h2>Questions</h2><ol class="text-parts">'+''.join(li)+'</ol>'+('<p class="small">The Third Part ends here, at question 90. The Supplement is not in the Gutenberg files and is not included.</p>' if P['slug']=='3' else '')+nav+other+source(P))
+              +(ABOUT_SUPP+'<p class="small">'+str(len(P['ocrFlags']))+' passages in the Supplement are marked “OCR uncertain” where the scan could not be read with confidence; each links to its scan page.</p>' if P['slug']=='supp' else '')
+              +edline(P)+nav+NOTICE(P)+pro+'<h2>Questions</h2><ol class="text-parts">'+''.join(li)+'</ol>'+('<p class="small">Aquinas left the Third Part unfinished here, at question 90, where the Gutenberg files end. The '+a('/summa/supp/','Supplement')+' completes it.</p>' if P['slug']=='3' else '')+nav+other+source(P))
         body=body.replace('<ol class="text-parts"></ol>','')
         out['summa/'+P['slug']]=('Summa Theologiae, '+P['name']+' ('+P['latin']+') — Bibliotheca Catholica',
             fit(['The %s of the Summa Theologiae (%s) by Thomas Aquinas in English: %d questions and %d articles, each on its own free page.'%(P['name'],P['latin'],len(P['questions']),na_)],DESC_EXTRA),
@@ -377,13 +400,13 @@ def summa_pages(out,lib):
         lab=lambda PQ:PQ[0]['token']+', q. '+str(PQ[1]['n'])
         nav=('<nav class="reader-pagination" aria-label="Questions">'+(a('/'+qpath(*pv)+'/','← '+lab(pv)).replace('<a ','<a class="btn ghost" rel="prev" ',1) if pv else '')
              +'<span>'+E(P['token'])+', question '+str(q['n'])+' of '+str(len(P['questions']))+'</span>'+(a('/'+qpath(*nx)+'/',lab(nx)+' →').replace('<a ','<a class="btn" rel="next" ',1) if nx else '')+'</nav>')
-        pro=''.join(summa_para(B[i]) for i in range(q['prologue'][0],q['prologue'][1]+1))
+        pro=''.join(para(P,B,i) for i in range(q['prologue'][0],q['prologue'][1]+1))
         arts='<ol class="text-parts">'+''.join('<li>'+a('/'+apath(P,q,x)+'/',x['title'])+'</li>' for x in q['articles'])+'</ol>'
         body=(crumb_html(*C,('Summa','summa/'),(P['name'],'summa/'+P['slug']+'/'),('Question '+str(q['n']),''))
               +'<div class="page-head"><div class="eyebrow">Summa Theologiae · '+E(qref(P,q))+'</div><h1>Question '+str(q['n'])+'. '+E(q['title'])+'</h1>'
               +'<p class="lede">'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>, '+a('/summa/'+P['slug']+'/',P['name'])+'. '+str(len(q['articles']))+(' article.' if len(q['articles'])==1 else ' articles.')+'</p></div>'
               +'<p class="dl-row"><a class="btn" href="'+E(reader(P,q['heading']))+'">Read in the reading room →</a> '+a(na(P,q),'This question at New Advent',True)+'</p>'
-              +edline(P)+nav+notice+'<article class="reading-text" aria-label="'+E('Question '+str(q['n']))+'">'+pro+'</article>'
+              +(SUPP_LINE if P['slug']=='supp' else '')+edline(P)+nav+NOTICE(P)+'<article class="reading-text" aria-label="'+E('Question '+str(q['n']))+'">'+pro+'</article>'
               +'<h2>Articles</h2>'+arts+nav+other+source(P))
         out[qpath(P,q)]=('Summa Theologiae '+qref(P,q)+': '+q['title']+' — Bibliotheca Catholica',
             fit(['Summa Theologiae, %s, question %d: %s.'%(P['name'],q['n'],q['title'].rstrip('?.')),'The question’s opening and its %d article%s, by Thomas Aquinas, free in English.'%(len(q['articles']),'' if len(q['articles'])==1 else 's')],DESC_EXTRA),
@@ -394,12 +417,13 @@ def summa_pages(out,lib):
         lab=lambda T:T[0]['token']+', q. '+str(T[1]['n'])+', a. '+str(T[2]['n'])
         nav=('<nav class="reader-pagination" aria-label="Articles">'+(a('/'+apath(*pv)+'/','← '+lab(pv)).replace('<a ','<a class="btn ghost" rel="prev" ',1) if pv else '')
              +'<span>Article '+str(x['n'])+' of '+str(len(q['articles']))+'</span>'+(a('/'+apath(*nx)+'/',lab(nx)+' →').replace('<a ','<a class="btn" rel="next" ',1) if nx else '')+'</nav>')
-        text=''.join(summa_para(B[i]) for i in range(x['start'],x['end']+1))
+        text=''.join(para(P,B,i) for i in range(x['start'],x['end']+1));nf=flagged(P,x['heading'],x['end'])
+        fl=('<p class="small ocr-count">'+('One passage' if nf==1 else str(nf)+' passages')+' on this page '+('is' if nf==1 else 'are')+' marked “OCR uncertain”; check '+('it' if nf==1 else 'them')+' against the scan.</p>') if nf else ''
         body=(crumb_html(*C,('Summa','summa/'),(P['name'],'summa/'+P['slug']+'/'),('Question '+str(q['n']),qpath(P,q)+'/'),('Article '+str(x['n']),''))
               +'<div class="page-head"><div class="eyebrow">Summa Theologiae · '+E(aref(P,q,x))+'</div><h1>'+E(x['title'])+'</h1>'
               +'<p class="lede">'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>, '+a('/summa/'+P['slug']+'/',P['name'])+', '+a('/'+qpath(P,q)+'/','question '+str(q['n'])+', '+q['title'])+', article '+str(x['n'])+'. About '+str(max(1,round(x['words']/200)))+' min.</p></div>'
               +'<p class="dl-row"><a class="btn" href="'+E(reader(P,x['heading']))+'">Read in the reading room →</a> '+a(na(P,q,x),'This article at New Advent',True)+'</p>'
-              +edline(P)+nav+notice+'<article class="reading-text" aria-label="'+E(aref(P,q,x))+'">'+text+'</article>'+nav+other+source(P))
+              +(SUPP_LINE if P['slug']=='supp' else '')+edline(P)+nav+NOTICE(P)+fl+'<article class="reading-text" aria-label="'+E(aref(P,q,x))+'">'+text+'</article>'+nav+other+source(P))
         out[apath(P,q,x)]=('Summa Theologiae '+aref(P,q,x)+': '+x['title']+' — Bibliotheca Catholica',
             fit(['Summa Theologiae, %s, question %d, article %d: %s'%(P['name'],q['n'],x['n'],x['title'] if x['title'].endswith(('?','.')) else x['title']+'.'),'The objections, the answer, and the replies by Thomas Aquinas, free in English.'],DESC_EXTRA),
             body,[{'@context':'https://schema.org','@type':'Article','headline':x['title'][:110],'name':aref(P,q,x)+': '+x['title'],'url':SITE+apath(P,q,x)+'/','author':ld_by,'isPartOf':{'@type':'Chapter','name':'Question '+str(q['n'])+'. '+q['title'],'url':SITE+qpath(P,q)+'/'},'isAccessibleForFree':True,'inLanguage':'English'},

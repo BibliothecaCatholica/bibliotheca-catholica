@@ -148,3 +148,30 @@ kbd{font:600 13px ui-monospace,Menlo,monospace;padding:2px 7px;border:1px solid 
 @media(min-width:1100px) and (max-width:1439px){body.notes-open.in-reader .reader-shell{display:block}body.notes-open.in-reader .reader-side{display:none}}
 /* mobile: let the site header scroll away in the reader so only the one-line chip stays pinned */
 @media(max-width:760px){body.in-reader .topbar{position:relative}body.in-reader{--tb-h:0px}body.in-reader .reader-banner{top:env(safe-area-inset-top)}body.in-reader .reading-text p{scroll-margin-top:70px}}
+
+/* Passage lookup pairs a chapter label with the text around each match. */
+.reader-col .passage-search {
+  margin-block: 1rem 1.5rem;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-inline-start: 3px solid var(--rubric);
+  background: var(--card);
+}
+.passage-search summary {padding: .85rem 1.2rem; cursor:pointer; font: 600 1.24rem var(--display)}
+#reader-find {display:flex; flex-wrap:wrap; gap:.5rem; padding:0 1.2rem 1rem}
+#reader-find input, #reader-find button {box-sizing:border-box; min-height:44px; border-radius:.4rem; font:inherit}
+#reader-find input {flex:1 1 13rem; min-width:0; border:1px solid var(--line); background:var(--bg); color:var(--ink); padding:.55rem .8rem}
+#reader-find button {background:var(--rubric); color:var(--on-rubric); border:0; padding:.55rem 1rem; cursor:pointer; font:600 .9rem var(--sans)}
+#reader-hits:not(:empty) {padding:0 1.2rem 1rem}
+#reader-hits ol {list-style:none; padding:0; margin:0; max-height:26rem; overflow:auto}
+#reader-hits li a {display:grid; gap:.35rem; padding:.85rem .45rem; border-top:1px solid var(--line); color:var(--ink); text-decoration:none}
+#reader-hits li a:is(:hover,:focus-visible) {background:var(--bg)}
+#reader-hits strong {font:600 .85rem var(--sans); color:var(--rubric)}
+#reader-hits span {font:1.08rem/1.5 var(--serif)}
+#reader-hits mark {color:var(--ink); background:var(--hl-yellow); border-radius:.15em}
+.reader-col .reader-tools {display:flex; align-items:end; flex-wrap:wrap; gap:.7rem 1.2rem; border-block:1px solid var(--line); padding:.85rem 0}
+.reader-tools label {display:grid; gap:.25rem; font:600 .8rem var(--sans); color:var(--muted)}
+.reader-tools select {font:1rem var(--serif); color:var(--ink); min-height:40px}
+@media(min-width:1100px){.reader-shell .source-headings {display:none}}
+@media(max-width:480px){#reader-find button {flex:1 1 100%}}

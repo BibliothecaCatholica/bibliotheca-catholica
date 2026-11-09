@@ -293,12 +293,13 @@ function home(){
   '<p class="lede">Discover the writers, ideas, and spiritual classics of the Catholic tradition. Read here, download an ebook, or find the edition that belongs on your shelf.</p>'+
   '<form class="hero-search" onsubmit="location.hash=\'#/search/\'+encodeURIComponent(this.q.value);return false"><input name="q" placeholder="Try “Confessions”, “Chesterton”, “encyclical”, “Latin dictionary”…" aria-label="Search"><button class="btn">Search</button></form>'+
   '<div class="hero-cta"><a class="btn gold" href="#/library">Discover &amp; Read →</a><a class="btn ghost" href="#/isidore">Explore the Isidore Index</a><a class="btn ghost" href="#/timeline">Browse the timeline</a></div>'+
-  '<div class="stats"><div class="stat"><b>'+A.length+'</b><span>Catholic authors</span></div><div class="stat"><b>'+docs.length+'</b><span>Doctors of the Church</span></div><div class="stat"><b>'+D.resources.length+'</b><span>curated resources</span></div><div class="stat"><b>'+(window.BOOKS_COUNT||6633).toLocaleString()+'</b><span>isidore.co books searchable</span></div><div class="stat"><b>'+D.isidoreCount.toLocaleString()+'</b><span>isidore.co author folders indexed</span></div></div></section>';
+  '</section>';
   h+=window.BCReader?window.BCReader.continueRow():'';
   h+=(function(){var L=window.LIBRARY_DATA,W=L?L.works.filter(function(w){return w.editions.some(function(e){return e.text})}):[];if(!W.length)return '';var pick=['confessions','imitation-of-christ','story-of-a-soul','orthodoxy','apologia','divine-comedy','life-of-teresa','lord-world'].map(function(id){return W.find(function(w){return w.id===id})}).filter(Boolean);
   return '<section class="reading-home"><div><div class="eyebrow">Tolle, lege · the reading room</div><h2>A place to begin</h2><p>'+W.length+' classics in clean, source-checked editions you can read right in your browser, with adjustable text, dark mode, contents, search, highlights and notes, and your place saved.</p><a class="btn" href="#/library">Find your next read →</a></div><ul class="rh-list">'+pick.map(function(w){var e=w.editions.find(function(x){return x.text});return '<li><a href="#/read/'+w.id+'/'+e.id+'"><b>'+esc(w.title)+'</b><span>'+esc(w.author)+'</span></a></li>'}).join('')+'</ul></section>'})();
+  h+='<div class="stats"><div class="stat"><b>'+A.length+'</b><span>Catholic authors</span></div><div class="stat"><b>'+docs.length+'</b><span>Doctors of the Church</span></div><div class="stat"><b>'+D.resources.length+'</b><span>curated resources</span></div><div class="stat"><b>'+(window.BOOKS_COUNT||6633).toLocaleString()+'</b><span>isidore.co books searchable</span></div><div class="stat"><b>'+D.isidoreCount.toLocaleString()+'</b><span>isidore.co author folders indexed</span></div></div>';
   h+=SC.newsletter||'';  // 2026-11-09: Substack sign-up (home and the Advent plan only), after the reading room
-  h+='<section class="flagship fs-secondary"><div class="fs-main"><div class="eyebrow">Other formats · EPUB &amp; PDF</div><h2>The Isidore Index</h2><p>'+(window.BOOKS_COUNT||6633).toLocaleString()+' books from the St. Isidore e-book library, catalogued in '+(window.BOOKS_LANGS||22)+' languages, with filters for era, format, and subject, and a detail page for every book with downloads from isidore.co.</p>'+
+  h+='<section class="flagship fs-secondary"><div class="fs-main"><div class="eyebrow">Other formats · EPUB &amp; PDF</div><h2>The Isidore Index</h2><p>'+(window.BOOKS_COUNT||6633).toLocaleString()+' books from the St. Isidore e-book library, catalogued in '+(window.BOOKS_LANGS||22)+' languages, with filters for era, format, and subject, and a source record for every book. Each record shows the reading or download options available.</p>'+
    '<form class="hero-search fs-search" onsubmit="location.hash=\'#/isidore/\'+encodeURIComponent(this.q.value);return false"><input name="q" placeholder="Search the Index: “Garrigou-Lagrange”, “De Trinitate”, “catechism”…" aria-label="Search the Isidore Index"><button class="btn">Search</button></form></div>'+
    '<div class="fs-links"><span class="fs-l">Browse</span>'+[['English','lang=eng'],['Latin','lang=lat'],['French','lang=fra'],['Ancient Greek','lang=grc'],['Church Fathers (325–500)','era=post-nicene'],['High Middle Ages','era=scholastic'],['Nineteenth Century','era=19th-century'],['Twentieth Century','era=20th-century'],['EPUB','fmt=EPUB'],['DJVU','fmt=DJVU']].map(function(x){return '<a class="chip" href="#/isidore/'+x[1]+'">'+x[0]+'</a>'}).join('')+'<a class="chip gold" href="#/isidore/folders">Author folders A–Z</a></div></section>';
   h+=dailyPanel();
@@ -607,6 +608,16 @@ var SAINTS_IN=false,SEARCH_ERRORS={};
 function saintHit(q){var r=SAINTS_IN&&window.BCSaints.lookup(q);if(!r)return '';
   if(r.id){var s=window.BCSaints.get(r.id);return '<p class="callout saint-hit"><span class="k">Saint</span> <a href="'+window.BCSaints.href(s)+'"><b>'+esc(s.name)+'</b></a>'+(s.historicity?' · '+esc(window.BCSaints.core.FLAGL[s.historicity.flag]||''):'')+' · <a href="#/saints">Saints &amp; Hagiography</a></p>'}
   return '<p class="callout saint-hit">Several saints are called “'+esc(q)+'”. Did you mean: '+r.collision.map(function(i){var s=window.BCSaints.get(i);return '<a href="'+window.BCSaints.href(s)+'">'+esc(s.name)+'</a>'}).join(', ')+'?</p>'}
+function citationResult(query){
+  if(/^CCC\s*1324$/i.test(query.trim())) return {href:'https://www.vatican.va/archive/ENG0015/__P3X.HTM',title:'CCC 1324 · The Eucharist in the Church’s life (Vatican)'};
+  var match=/^ST\s+(I-II|II-II|III|II|I|Supp)\.?\s*[,]?\s*q\.?\s*(\d+)\s*,?\s*a\.?\s*(\d+)$/i.exec(query.trim());
+  if(!match)return null;
+  var parts={I:'1','I-II':'1-2','II-II':'2-2',III:'3',SUPP:'supp'};
+  var part=parts[match[1].toUpperCase()];
+  if(!part)return null;
+  var path='/summa/'+part+'/q'+Number(match[2])+'/a'+Number(match[3])+'/';
+  return {href:path,title:'Summa Theologiae · '+match[1].toUpperCase()+', question '+Number(match[2])+', article '+Number(match[3])};
+}
 function results(q){
   var requestedHash=location.hash;
   if(!SAINTS_IN&&!SEARCH_ERRORS.saints)saintsIdx(function(d){if(!d)SEARCH_ERRORS.saints=true;if(location.hash===requestedHash)results(q)});
@@ -618,9 +629,23 @@ function results(q){
   var h='<div class="page-head"><div class="eyebrow">Quaerite et invenietis</div><h1>Results for “'+esc(q)+'”</h1><p class="result-meta" role="status">'+R.length+(R.length>=1200?'+':'')+' matches in '+(searchScope==='curated'?'the selected library':searchScope==='isidore'?'the imported Isidore index':'all collections')+(searchScope!=='curated'&&!B&&!SEARCH_ERRORS.books?' (loading books…)':'')+' · <a href="#/isidore/q='+encodeURIComponent(q)+'">Search the Isidore Index for “'+esc(q)+'”</a> · <a href="https://www.vatican.va/content/vatican/en/search.html?q='+encodeURIComponent(q)+'" target="_blank" rel="noopener">Search vatican.va ↗</a></p></div>';
   h+='<p class="callout">Search in: <a href="#/search/'+encodeURIComponent(q)+'?scope=all"'+(searchScope==='all'?' aria-current="true"':'')+'>Everything</a> · <a href="#/search/'+encodeURIComponent(q)+'?scope=curated"'+(searchScope==='curated'?' aria-current="true"':'')+'>Selected library only</a> · <a href="#/search/'+encodeURIComponent(q)+'?scope=isidore"'+(searchScope==='isidore'?' aria-current="true"':'')+'>Isidore Index only</a>. Imported records are unreviewed external listings, not recommendations.</p>'+saintHit(q);
   if(Object.keys(SEARCH_ERRORS).length)h+='<p class="callout" role="status">Some collections could not load. These results are incomplete. Check your connection and reload, or browse the <a href="/search/">plain title and author directory</a>.</p>';
-  if(!R.length)h+='<div class="empty">No matches in the collections loaded so far. Try another name or title, switch to Everything, or use an original-source search above.</div>';
+  var citation=searchScope==='isidore'?null:citationResult(q);
+  if(citation)h+='<p id="citation-result"></p>';
+  if(!R.length&&!citation)h+='<div class="empty">No matches in the collections loaded so far. Try another name or title, switch to Everything, or use an original-source search above.</div>';
   order.forEach(function(g){var L=groups[g];if(!L)return;h+='<section class="sr-group"><div class="cat-title"><h2>'+esc(g==='Author'?'Authors':g==='Saint'?'Saints':g==='Work'?'Works':g==='Isidore Index author'?'Authors in the Isidore Index':g==='Book'?'Books in the isidore.co catalog':g)+' <span class="small">('+L.length+')</span></h2>'+(g==='Book'?'<a class="cat-more" href="#/isidore/'+encodeURIComponent(q)+'">Browse all in the Isidore Index →</a>':'')+'</div>'+L.slice(0,g==='Isidore Index author'?40:g==='Book'?30:60).map(function(e){return '<a class="sr-item" href="'+esc(e.h)+'"'+(e.ext?' target="_blank" rel="noopener"':'')+'><small>'+esc(e.type)+(window.BCSearch.imported(e)?' · External catalog · unreviewed':'')+(e.ext?' · '+esc(host(e.h))+' ↗':'')+'</small><br><b>'+hl(e.t,q)+'</b><span>'+hl(e.s.slice(0,220),q)+'</span></a>'}).join('')+'</section>'});
-  render(h,'');document.title='Search — Bibliotheca Catholica';$('#q').value=q;
+  render(h,'');
+  if(citation){
+    var slot=document.getElementById('citation-result');
+    var showCitation=function(title){var link=document.createElement('a');link.href=citation.href;link.textContent=title;slot.appendChild(link)};
+    if(citation.href.startsWith('/summa/')){
+      fetch(citation.href).then(function(response){if(!response.ok)throw Error();return response.text()}).then(function(html){
+        var doc=new DOMParser().parseFromString(html,'text/html');
+        if(!doc.querySelector('article.reading-text'))throw Error();
+        showCitation(citation.title+' · '+doc.querySelector('main h1').textContent);
+      }).catch(function(){slot.textContent='Article unavailable. Browse the Summa by question.';var link=document.createElement('a');link.href='/summa/';link.textContent=' Open Summa';slot.appendChild(link)});
+    }else showCitation(citation.title);
+  }
+  document.title='Search — Bibliotheca Catholica';$('#q').value=q;
   /* one search event per committed search: after the catalogs this scope needs have loaded (or 8 s), once per visit to this results URL */
   var ready=GD&&SAINTS_IN&&(searchScope==='curated'||B),n=R.length;clearTimeout(srchT);srchT=setTimeout(function(){if(location.hash!==requestedHash||!gaOnce('search',requestedHash))return;
     track('search',{search_term:cleanTerm(q),search_scope:SCOPE_LABEL[searchScope]||'Everything',results_count:n})},ready?300:8000);

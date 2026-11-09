@@ -481,6 +481,7 @@ author/yves-congar/index.html
 author/yves-simon/index.html
 authors/index.html
 data/index.html
+disclosure/index.html
 doctors/index.html
 editions/index.html
 editions/apfathers/index.html

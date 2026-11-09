@@ -49,7 +49,8 @@ function view(render,id){
       '<div class="plan-tools"><span id="plan-progress" role="status">'+esc(progress(plan,read))+'</span>'+(cur?'<a class="btn gold" href="#day-'+cur.day+'" id="plan-jump">Go to today, day '+cur.day+'</a>':'')+'<button type="button" class="btn ghost" id="plan-print">Print the plan</button><button type="button" class="btn ghost" id="plan-reset"'+(list.length?'':' hidden')+'>Clear marks</button></div>'+
       '<p class="small plan-privacy">Your marks are saved only in this browser.</p></div>'+
       '<ol class="plan-days">'+plan.days.map(function(d){return dayHtml(d,state)}).join('')+'</ol>'+
-      '<p class="small plan-foot">Every reading opens in the on-site reader at the start of the passage. The editions are public domain in the United States; each badge links to <a href="#/rights">how rights are determined</a>. <a href="#/reading">All reading lists</a>.</p>';
+      '<p class="small plan-foot">Every reading opens in the on-site reader at the start of the passage. The editions are public domain in the United States; each badge links to <a href="#/rights">how rights are determined</a>. <a href="#/reading">All reading lists</a>.</p>'+
+      (id==='advent-2026'&&root.SITE_COPY&&root.SITE_COPY.newsletter||'');  /* 2026-11-09: the Substack sign-up (tools/site_copy.py newsletter_box) */
     main.innerHTML=h;document.title=plan.t+' '+plan.year+': a daily reading plan — Bibliotheca Catholica';
     function sync(){var L=Object.keys(read).filter(function(k){return read[k]}).map(Number);setRead(id,L);document.getElementById('plan-progress').textContent=progress(plan,read);document.getElementById('plan-reset').hidden=!L.length}
     main.querySelector('.plan-days').addEventListener('change',function(e){var t=e.target;if(!t.matches||!t.matches('input[data-day]'))return;var n=Number(t.dataset.day);read[n]=t.checked;if(!t.checked)delete read[n];t.closest('.plan-day').classList.toggle('is-read',t.checked);sync()});

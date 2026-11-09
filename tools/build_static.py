@@ -163,7 +163,7 @@ def write_home(tpl,counts,snapshot):
       '<p class="hero-sub">Two thousand years of Catholic thought, in one place.</p>'
       '<p class="lede">Discover the writers, ideas, and spiritual classics of the Catholic tradition. Read here, download an ebook, or find the edition that belongs on your shelf.</p>'
       '<div class="hero-cta"><a class="btn gold" href="/library/">Discover &amp; Read →</a><a class="btn ghost" href="/isidore/">Explore the Isidore Index</a><a class="btn ghost" href="/timeline/">Browse the timeline</a></div></section>')
-    home='<!-- static-home:start --><div class="static-prerender">'+hero+about+'</div><!-- static-home:end -->'
+    home='<!-- static-home:start --><div class="static-prerender">'+hero+about+site_copy.newsletter_box()+'</div><!-- static-home:end -->'  # 2026-11-09: Substack sign-up (home and Advent plan only)
     s=tpl
     assert '<!-- static-home:start -->' in s,'index.html <main> must contain the static-home markers'
     s=HOME_RE.sub(lambda m:home,s,count=1)
@@ -175,11 +175,17 @@ def write_home(tpl,counts,snapshot):
     org={'@context':'https://schema.org','@type':'Organization','@id':SITE+'#organization','name':NAME,'url':SITE,'logo':OG_IMAGE,'sameAs':SAME_AS}
     web={'@context':'https://schema.org','@type':'WebSite','@id':SITE+'#website','name':NAME,'url':SITE,'description':HOME_DESC,'inLanguage':'en','publisher':{'@id':SITE+'#organization'}}
     s=LD_RE.sub('',s).replace('</head>','<!-- jsonld:start -->'+ld(web)+ld(org)+'<!-- jsonld:end -->\n</head>',1)
-    js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'home':about,'about':site_copy.about_page(counts)},ensure_ascii=False,separators=(',',':'))+';\n'
+    js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'home':about,'about':site_copy.about_page(counts),'newsletter':site_copy.newsletter_box(),'disclosure':disclosure_html()},ensure_ascii=False,separators=(',',':'))+';\n'
     (ROOT/'data/site-copy.js').write_text(js)
     s=re.sub(r'data/site-copy\.js\?v=[0-9a-f]*','data/site-copy.js?v='+hashlib.sha256(js.encode()).hexdigest()[:10],s)
     s=re.sub(r'data/text-pages\.js\?v=[0-9a-f]*','data/text-pages.js?v='+hashlib.sha256((ROOT/'data/text-pages.js').read_bytes()).hexdigest()[:10],s)  # deep-link gaps: content token
+    s=re.sub(r'data/print-editions\.js\?v=[0-9a-f]*','data/print-editions.js?v='+hashlib.sha256((ROOT/'data/print-editions.js').read_bytes()).hexdigest()[:10],s)  # affiliate preview: content token
     (ROOT/'index.html').write_text(build_info.stamp(s,snapshot))
+# --- Affiliate links (owner-approved preview 2026-11-09): data/print-editions.json from tools/build_print_editions.py
+def print_editions():return json.loads((ROOT/'data/print-editions.json').read_text())
+def ftc_text():
+    m=re.search(r"disclosure:\s*'([^']*)'",(ROOT/'data/affiliates.js').read_text());return re.sub(r'^Affiliate disclosure:\s*','',m.group(1))
+def disclosure_html():return site_copy.disclosure_page(ftc_text())
 # --- v20 dated reading plans: the static page lists every day; scripts/plans.js adds the today highlight and marks.
 PLAN_DESC={'advent-2026':'Advent with the Fathers: 26 daily readings for Advent 2026, November 29 to December 24, from Augustine, Clement, Ignatius, Bede, Aquinas, Julian, and more.'}
 WEEKDAYS=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
@@ -201,7 +207,7 @@ def plan_day_html(d):
 def plan_html(P):
     return (crumb_html(('Reading Lists','reading/'),(P['t'],''))+'<div class="page-head plan-head"><div class="eyebrow">Reading plan · '+E(PLAN_SPAN(P))+'</div><h1>'+E(P['t'])+'</h1><p class="lede">'+E(P['intro'])+'</p></div>'
       '<ol class="plan-days">'+''.join(plan_day_html(d) for d in P['days'])+'</ol>'
-      '<p class="small plan-foot">Every reading opens in the on-site reader at the start of the passage. The editions are public domain in the United States; each badge links to '+a('/rights/','how rights are determined')+'. '+a('/reading/','All reading lists')+'.</p>')
+      '<p class="small plan-foot">Every reading opens in the on-site reader at the start of the passage. The editions are public domain in the United States; each badge links to '+a('/rights/','how rights are determined')+'. '+a('/reading/','All reading lists')+'.</p>'+(site_copy.newsletter_box() if P['id']=='advent-2026' else ''))
 def list_item_title(i,gid,libw):
     """A reading-list entry's title: its edition guide, else its reading-room works (Phase A: the 14 entries
     that carry only `workIds` rendered as ": description"), else its own title and author. Never empty."""
@@ -476,7 +482,7 @@ def main():
     # Phase A item 2: authors with no hosted work get tools/author_pages.py sections instead of the Wikipedia excerpt
     import author_pages as AP
     hosted_auth={w['authorId'] for w in lib['works'] if w.get('authorId') and any(e.get('text') for e in w['editions'])}
-    RJ=json.loads((ROOT/'data/rights.json').read_text());AX=jsvar('data/authorx.js','AUTHORX')['by'];BSID=AP.bookshop_id(ROOT);DISCL=AP.disclosure(ROOT)
+    RJ=json.loads((ROOT/'data/rights.json').read_text());AX=jsvar('data/authorx.js','AUTHORX')['by'];BSID=AP.bookshop_id(ROOT);DISCL=AP.disclosure(ROOT);PE=print_editions()
     fbooks=set((flags.get('books') or {}).keys());books_by={}
     for bk in BK['books']:
         for ai in bk[2]:
@@ -529,6 +535,7 @@ def main():
             body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+intro+AP.books_html(au,E,a)+lib_html+bk_html+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+gd_html+of_html+iso_only+'<p>'+a('/authors/','All authors')+'</p>'
         else:
           body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+wiki_block+(('<h2>Read here</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else '')+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+iso_link+'<p>'+a('/authors/','All authors')+'</p>'
+        if au['id'] in PE['authors']:body=body.replace('<p>'+a('/authors/','All authors')+'</p>',PE['authors'][au['id']]['html']+'<p>'+a('/authors/','All authors')+'</p>')  # affiliate preview: Browse TAN Books
         sa=saints_by_author.get(au['id'])
         if sa:body=body.replace('<p>'+a('/authors/','All authors')+'</p>','<h2>Saint</h2><p>'+E(s_facts(sa))+' '+a('/saints/','Saints & Hagiography')+'</p><p>'+a('/authors/','All authors')+'</p>')
         # v17: facts already in the data (era, century, vocations from tags, Doctor of the Church) and the curated links
@@ -584,7 +591,7 @@ def main():
         hosted=any(e.get('text') for e in w['editions'])
         by=byline(w)
         ra=RA.get(w['id']);ra_note=ra_note_html(ra,libw,True) if ra and w['id'] in ra.get('noteWorks',[]) else ''
-        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p>'+ra_note+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+(summa_work_html(SUMMA) if SUMMA and w['id']==SUMMA['work'] else '')+series_html(w,lib,TPD)+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
+        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p>'+ra_note+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+(summa_work_html(SUMMA) if SUMMA and w['id']==SUMMA['work'] else '')+series_html(w,lib,TPD)+(PE['works'][w['id']]['html'] if w['id'] in PE['works'] else '')+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
         book={'@context':'https://schema.org','@type':'Book','name':w['title'],'url':SITE+'work/'+w['id']+'/','author':{'@type':'Person','name':w['author']},'description':d,'genre':w['category']}
         if w.get('authorId') in auth_ids:book['author']['url']=SITE+'author/'+w['authorId']+'/'
         elif w['id'] in RA:book['author']['url']=SITE+'author/'+RA[w['id']]['id']+'/'
@@ -601,8 +608,10 @@ def main():
         for L in list_guides.get(ed['id'],[]):r.append('Reading list: '+a('/reading/'+L['id']+'/',L['t']))
         return ('<h2>Related</h2><ul>'+''.join('<li>'+x+'</li>' for x in r)+'</ul>') if r else ''
     for ed in guide['editions']:
-        picks=''.join('<li><b>'+E(p.get('lbl',''))+':</b> '+E(p.get('tr',''))+(' ('+E(p['pub'])+')' if p.get('pub') else '')+'</li>' for p in ed.get('picks',[]))
-        body=head('Editions & Translations · '+ed.get('cat',''),ed['t'],(ed.get('a')+'. ' if ed.get('a') else '')+ed.get('why',''))+'<ol>'+picks+'</ol>'+('<p>Also good: '+E(ed['alt'])+'</p>' if ed.get('alt') else '')+ed_related(ed)+'<p>'+a('/editions/','All edition guides')+'</p>'
+        # affiliate preview (2026-11-09): a Bookshop.org link for each pick with a verified ISBN-13 (never an ebook pick), then the disclosure
+        bs=lambda p:p.get('access')!='ebook' and re.fullmatch(r'97[89]\d{10}',p.get('isbn') or '')
+        picks=''.join('<li><b>'+E(p.get('lbl',''))+':</b> '+E(p.get('tr',''))+(' ('+E(p['pub'])+')' if p.get('pub') else '')+(' ISBN '+p['isbn']+'. <a class="buy-b bs" href="https://bookshop.org/a/'+BSID+'/'+p['isbn']+'" target="_blank" rel="noopener sponsored">Bookshop.org ↗</a>' if bs(p) else '')+'</li>' for p in ed.get('picks',[]))
+        body=head('Editions & Translations · '+ed.get('cat',''),ed['t'],(ed.get('a')+'. ' if ed.get('a') else '')+ed.get('why',''))+'<ol class="ed-picks">'+picks+'</ol>'+(PE['disclosure'] if any(bs(p) for p in ed.get('picks',[])) else '')+('<p>Also good: '+E(ed['alt'])+'</p>' if ed.get('alt') else '')+ed_related(ed)+'<p>'+a('/editions/','All edition guides')+'</p>'
         body=crumb_html(('Editions & Translations','editions/'),(ed['t'],''))+body
         md=fit(['Which edition of '+ed['t']+(' by '+ed['a'] if ed.get('a') else '')+' to read:',ed.get('why','').rstrip('.')+'.'],(('Recommended translations, free texts, and print copies.','Translations, free texts, and print copies.','Translations compared.'),('Compare translations at Bibliotheca Catholica.','At Bibliotheca Catholica.')))
         out['editions/'+ed['id']]=(ed['t']+': Editions & Translations — Bibliotheca Catholica',md,body,[crumbs(('Editions & Translations','editions/'),(ed['t'],'editions/'+ed['id']+'/'))])
@@ -673,6 +682,7 @@ def main():
     counts={'authors':len(authors),'saints':len(saints),'books':6633,'hosted':sum(1 for w in lib['works'] if any(e.get('text') for e in w['editions']))}
     m=re.search(r'window\.BOOKS_COUNT=(\d+)',tpl)
     if m:counts['books']=int(m.group(1))
+    out['disclosure']=(site_copy.DISCLOSURE_TITLE+' — Bibliotheca Catholica',site_copy.DISCLOSURE_DESC,disclosure_html(),[crumbs((site_copy.DISCLOSURE_TITLE,'disclosure/'))])
     out['about']=('About the library — Bibliotheca Catholica','About Bibliotheca Catholica: what the free Catholic library holds, where its texts come from, the 1931 rule, rights badges, editorial policy, and goals.',site_copy.about_page(counts),[crumbs(('About the library','about/'))])
     directory=head('Find a text','Search and browse the library','Use the search box for interactive results. Without JavaScript, browse the titles and authors below, or use your browser’s Find command.')
     directory+='<h2>Selected reading editions</h2><ul class="search-browse">'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+' — '+E(w['author'])+'</li>' for w in sorted(lib['works'],key=lambda w:w['title'].casefold()))+'</ul>'

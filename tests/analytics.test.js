@@ -216,3 +216,21 @@ test('2026-11-09: the hash fallback is the existing landing page_view, not a new
  assert.equal(A.EVENTS.length,12);
  const APP=fs.readFileSync('app.js','utf8');assert.match(APP,/if\(landing&&A\.stripHashUtm&&A\.stripHashUtm\(\)\)gaLast=location\.pathname\+location\.hash/);
 });
+
+test('affiliate preview 2026-11-09: lddy.no (TAN Books referral) is link_kind affiliate, checked right after bookshop',()=>{
+ const {A}=load(false);
+ assert.deepEqual(Array.from(A.AFFILIATE_HOSTS),['lddy.no']);
+ assert.equal(A.linkKind('lddy.no'),'affiliate');assert.equal(A.linkKind('go.lddy.no'),'affiliate');assert.equal(A.linkKind('notlddy.no'),'other');
+ assert.equal(A.linkKind('lddy.no',{publisher:'tan'}),'affiliate');assert.equal(A.linkKind('lddy.no',{source:true}),'affiliate');
+ assert.equal(A.linkKind('bookshop.org'),'bookshop');assert.equal(A.linkKind('bookshop.org',{publisher:'tan'}),'bookshop');
+ assert.equal(A.linkKind('bibliothecacatholica.substack.com'),'substack');assert.equal(A.linkKind('tanbooks.com'),'publisher');
+ const kinds=['bookshop','affiliate','publisher','substack','audio','official','source','other'];
+ for(const [href,d,k] of [['https://lddy.no/1qbrw','lddy.no','affiliate'],['https://bookshop.org/a/130222/9780898705522','bookshop.org','bookshop'],['https://bibliothecacatholica.substack.com/subscribe','bibliothecacatholica.substack.com','substack']]){
+  const {A,calls,ctx}=load(true);ctx.location.hash='#/work/orthodoxy';
+  const a={getAttribute:x=>x==='href'?href:null,closest:sel=>sel==='a[href]'?a:null};
+  A.onClick({target:a});
+  const ev=calls.filter(c=>c[0]==='event');assert.deepEqual(ev.map(c=>c[1]),['outbound_click']);assert.deepEqual(ev[0][2],{link_domain:d,link_kind:k});assert.ok(kinds.includes(k));
+ }
+ // no new event names
+ assert.deepEqual(Array.from(A.EVENTS).sort(),['filter_use','listen_complete','listen_play','open_text','outbound_click','page_view','reader_section','listen_open','saint_open','search','support_click','theme_toggle'].sort());
+});

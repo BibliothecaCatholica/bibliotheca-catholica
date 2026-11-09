@@ -534,3 +534,27 @@ mark{background:color-mix(in srgb,var(--gold2) 45%,transparent);color:inherit;bo
 @media(max-width:760px){.searchwrap input{line-height:20px}}
 html.js #main>.static-prerender{min-height:100vh}
 html.app-unavailable #main>.static-prerender{min-height:0}
+/* Affiliate preview (2026-11-09): "Where to buy print editions" sits below the free reading editions and stays modest:
+   outline buttons, small text, the disclosure beside it. Newsletter: the footer sign-up button on every page, and the
+   Substack embed (home and the Advent plan only), responsive and never wider than its column. */
+.buy-print{margin:28px 0 8px;padding:16px 18px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.buy-print h2{font-size:19px;margin:0 0 6px}
+.buy-print>p.small:first-of-type{margin-top:0;color:var(--muted)}
+.buy-list{list-style:none;margin:10px 0;padding:0;display:grid;gap:8px}
+.buy-list li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px;font:400 14px/1.45 var(--sans);color:var(--ink2);padding-bottom:8px;border-bottom:1px dashed var(--line)}
+.buy-list li:last-child{border-bottom:0;padding-bottom:0}
+.buy-print .buy-b.bs,.ed-picks .buy-b.bs{background:transparent;border-color:var(--line);color:var(--rubric)}
+.buy-print .buy-b.bs:hover,.ed-picks .buy-b.bs:hover{background:transparent;border-color:var(--gold);color:var(--rubric)}
+.ed-picks .buy-b{margin-left:4px}
+.buy-tan{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:10px 0 0}
+.buy-tan .small{color:var(--muted)}
+.buy-print .disclosure{margin-top:12px}
+.footer-newsletter{margin:14px 0 4px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px}
+.footer-newsletter .nl-line{margin:0;font:500 14px/1.45 var(--sans);flex:1 1 260px}
+.footer-newsletter .nl-btn{font-size:14px;padding:9px 16px}
+.newsletter-box{margin:30px 0;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.newsletter-box h2{margin:4px 0 6px}
+.newsletter-box .nl-line{margin:0 0 12px;color:var(--ink2)}
+.newsletter-box .nl-embed{display:block;width:100%;max-width:480px;height:320px;border-radius:8px}
+.newsletter-box .nl-fine{color:var(--muted);margin:10px 0 0}
+@media (max-width:720px){.footer-newsletter .nl-btn{width:100%;justify-content:center}.buy-print{padding:14px}}

@@ -26,14 +26,16 @@ function context(){try{var L=root.location;if(!L)return null;var d=root.document
 function domain(url){try{return new URL(url,'https://bibliothecacatholica.com/').hostname.replace(/^www\./,'').toLowerCase()}catch(e){return ''}}
 var PUB_HOSTS=null;
 function pubHosts(){if(PUB_HOSTS)return PUB_HOSTS;PUB_HOSTS={};try{var P=(root.AFFILIATES&&root.AFFILIATES.publishers)||{};Object.keys(P).forEach(function(k){var d=domain(P[k].search||'');if(d)PUB_HOSTS[d]=k})}catch(e){}return PUB_HOSTS}
-/* linkKind(domain, hints): 'bookshop', 'publisher', 'substack', 'audio', 'official', 'source', or 'other', in that order
+/* linkKind(domain, hints): 'bookshop', 'affiliate', 'publisher', 'substack', 'audio', 'official', 'source', or 'other', in that order
    of precedence (analytics spec 2026-11-03). hints: {publisher:key, substack:bool, source:bool (the link has data-open-text)}.
    Each host matches itself and its subdomains. */
-var AUDIO_HOSTS=['librivox.org'],OFFICIAL_HOSTS=['vatican.va','usccb.org','vaticannews.va'],
+/* AFFILIATE_HOSTS: affiliate referral redirectors (lddy.no is the TAN Books LeadDyno link, QA click-tracking plan 2026-11-09) */
+var AFFILIATE_HOSTS=['lddy.no'],AUDIO_HOSTS=['librivox.org'],OFFICIAL_HOSTS=['vatican.va','usccb.org','vaticannews.va'],
   SOURCE_HOSTS=['isidore.co','gutenberg.org','newadvent.org','ccel.org','archive.org','documentacatholicaomnia.eu','tertullian.org','dbu.edu','sourcebooks.fordham.edu'];
 function hostIn(d,list){for(var i=0;i<list.length;i++){var h=list[i];if(d===h||d.slice(-h.length-1)==='.'+h)return true}return false}
 function linkKind(d,hints){hints=hints||{};d=str(d).toLowerCase();
   if(d==='bookshop.org'||/\.bookshop\.org$/.test(d))return 'bookshop';
+  if(hostIn(d,AFFILIATE_HOSTS))return 'affiliate';
   if(hints.publisher||pubHosts()[d])return 'publisher';
   if(hints.substack||d==='substack.com'||/\.substack\.com$/.test(d))return 'substack';
   if(hostIn(d,AUDIO_HOSTS))return 'audio';
@@ -107,7 +109,7 @@ function onClick(e){try{var t=e.target&&e.target.closest?e.target.closest('a[hre
   if(kind==='audio'&&t.classList&&t.classList.contains('listen-btn')){var L=root.location||{},wid=routeWork(L.hash)||routeWork('#/'+str(root.BC_BOOT));
     if(wid&&once('listen_open',wid))track('listen_open',{work_id:wid,listen_source:'librivox'})}
   track('outbound_click',{link_domain:d,link_kind:kind})}catch(err){}}
-var api={utmQuery:utmQuery,hashUtm:hashUtm,campaignUrl:campaignUrl,landingSearch:landingSearch,stripHashUtm:stripHashUtm,hostIn:hostIn,EVENTS:EVENTS,MAX_TERM:MAX,track:track,cleanTerm:cleanTerm,clean:clean,domain:domain,linkKind:linkKind,publisherKey:publisherKey,routeWork:routeWork,pagePath:pagePath,pageLocation:pageLocation,pageTitle:pageTitle,context:context,once:once,reset:reset,onClick:onClick};
+var api={utmQuery:utmQuery,hashUtm:hashUtm,campaignUrl:campaignUrl,landingSearch:landingSearch,stripHashUtm:stripHashUtm,hostIn:hostIn,AFFILIATE_HOSTS:AFFILIATE_HOSTS,EVENTS:EVENTS,MAX_TERM:MAX,track:track,cleanTerm:cleanTerm,clean:clean,domain:domain,linkKind:linkKind,publisherKey:publisherKey,routeWork:routeWork,pagePath:pagePath,pageLocation:pageLocation,pageTitle:pageTitle,context:context,once:once,reset:reset,onClick:onClick};
 root.BCAnalytics=api;
 if(root.document&&root.document.addEventListener)root.document.addEventListener('click',onClick,true);
 if(typeof module!=='undefined'&&module.exports)module.exports=api;

@@ -74,3 +74,38 @@ def about_page(n):
      '<p>To make the Catholic tradition easy to find and pleasant to read: clean editions, honest sources, careful rights checks, and links that lead back to the libraries that did the work. The catalogue is also published as '+a('/data/','open data')+' for anyone to reuse.</p>'
      '<h2>Help the library</h2>'
      '<p>The library is independent and has no ads. You can '+a('/support/','support the library')+', suggest a correction, or offer commentary from the Support page. To follow the project, see '+'<a href="https://x.com/BiblioCatholica" target="_blank" rel="noopener">X</a>'+', '+'<a href="https://bsky.app/profile/bibliothecacatholica.com" target="_blank" rel="noopener">Bluesky</a>'+', and the '+'<a href="https://bibliothecacatholica.substack.com/subscribe" target="_blank" rel="noopener">Newsletter</a>'+' on Substack.</p></section>')
+
+# --- Newsletter sign-up (owner-approved preview 2026-11-09). The Substack embed is third-party content, so it is
+# used only on the home page and /reading/advent-2026/ (lazy-loaded, responsive, titled); every other page has the
+# plain sign-up button in the footer (index.html). No analytics attributes: outbound_click classifies substack.com.
+SUBSTACK='https://bibliothecacatholica.substack.com/'
+SUBSCRIBE=SUBSTACK+'subscribe'
+NEWSLETTER_LINE='Advent with the Fathers: a short reading from the Church Fathers each day, Nov 29 to Dec 24. Free.'
+def newsletter_box():
+    return ('<section class="newsletter-box" aria-label="Newsletter sign-up"><div class="eyebrow">The newsletter</div>'
+     '<h2>Bibliotheca Catholica by email</h2><p class="nl-line">'+E(NEWSLETTER_LINE)+'</p>'
+     '<iframe class="nl-embed" src="'+SUBSTACK+'embed" title="Sign up for the Bibliotheca Catholica newsletter on Substack" width="480" height="320" loading="lazy" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>'
+     '<p class="small nl-fine">Or <a href="'+SUBSCRIBE+'" target="_blank" rel="noopener">subscribe on Substack ↗</a>. The sign-up form is provided by Substack under its own <a href="https://substack.com/privacy" target="_blank" rel="noopener">privacy policy</a>.</p></section>')
+
+# --- /disclosure/ (owner-approved preview 2026-11-09): the affiliate relationships, in plain words.
+DISCLOSURE_TITLE='Affiliate disclosure'
+DISCLOSURE_DESC='How Bibliotheca Catholica uses affiliate links to Bookshop.org and TAN Books, what they earn, and why free reading in the library always comes first here.'
+def disclosure_page(ftc):
+    return ('<div class="page-head"><div class="eyebrow">Support the library</div><h1>'+DISCLOSURE_TITLE+'</h1>'
+     '<p class="lede">'+E(ftc)+'</p></div>'
+     '<section class="panel policy">'
+     '<h2>Reading here is always free</h2>'
+     '<p>The '+a('/library/','reading room')+' comes first. Every hosted text is free to read on this site, and book pages always list the free reading editions before any place to buy a print copy. Purchase links appear in a separate, clearly labeled section, “Where to buy print editions,” with this disclosure beside them.</p>'
+     '<h2>Bookshop.org</h2>'
+     '<p>Bibliotheca Catholica is a Bookshop.org affiliate. Links to Bookshop.org on book pages, '+a('/editions/','edition guides')+', and the '+a('/support/','Support page')+' carry our affiliate ID. When you buy through them, Bookshop.org pays us a small commission at no extra cost to you, and part of each sale supports independent bookstores. We link a specific book only where our edition guide records its ISBN.</p>'
+     '<h2>TAN Books</h2>'
+     '<p>Bibliotheca Catholica is a TAN Books affiliate. The “Browse TAN Books” link on classic Catholic works and their authors’ pages is a referral link (it passes through lddy.no, TAN Books’ referral service, and opens tanbooks.com). If you buy from TAN Books after following it, we may earn a small commission at no extra cost to you. The link opens TAN’s store, not a particular book, and does not mean TAN publishes that title.</p>'
+     '<h2>Other links</h2>'
+     '<p>Links to other publishers, libraries, and bookstores, including the publisher searches in the edition guides, are ordinary links, and we earn nothing from them unless a program is added to this page. We do not use Amazon affiliate links.</p>'
+     '<h2>How we choose</h2>'
+     '<p>Commissions never decide what we recommend. Editions and translations are chosen on their merits, and a book with no affiliate link is listed just the same. Listing is not endorsement; see the '+a('/policy/','Fidelity & Editorial Policy')+'.</p>'
+     '<h2>Privacy</h2>'
+     '<p>Affiliate links are plain links. Our analytics record only that an outside link was clicked, with its domain and a general kind (such as bookshop or affiliate), as the '+a('/policy/','Privacy section')+' explains. Bookshop.org and TAN Books handle your purchase under their own privacy policies.</p>'
+     '<h2>Other ways to help</h2>'
+     '<p>You can also '+a('/support/','support the library')+' directly, or get the free <a href="'+SUBSCRIBE+'" target="_blank" rel="noopener">newsletter</a> on Substack.</p>'
+     '</section>')

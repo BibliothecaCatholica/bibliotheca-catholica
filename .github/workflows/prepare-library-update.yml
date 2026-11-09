@@ -23,11 +23,10 @@ jobs:
       - run: python3 tools/build_static.py
       - run: npm run build:study
       - run: npm test
-      - name: Commit generated output and remove this one-use workflow
+      - name: Commit generated output
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git rm .github/workflows/prepare-library-update.yml
           git add --all
           git commit -m 'Build library research desk and refresh generated pages'
           git push origin HEAD:codex/libraries-saints-recovery-20261109

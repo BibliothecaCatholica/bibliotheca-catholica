@@ -722,5 +722,9 @@ def main():
 if(p&&/^[A-Za-z0-9._~%\\/-]+$/.test(p)){location.replace('/#/'+p+location.search);return}location.replace('/#/404')})();</script></head>
 <body><p>Page not found. <a href="/">Go to Bibliotheca Catholica</a>.</p></body></html>
 ''')
+    study=ROOT/'study/index.html'
+    if study.exists():
+        footer=re.search(r'<footer class="footer">.*?</footer>',(ROOT/'index.html').read_text(),re.S).group(0)
+        study.write_text(re.sub(r'<footer class="footer">.*?</footer>',lambda m:footer,study.read_text(),flags=re.S))
     print(len(out),'pages;',len(urls),'sitemap URLs')
 if __name__=='__main__':main()

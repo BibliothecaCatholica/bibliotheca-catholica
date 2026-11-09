@@ -91,3 +91,5 @@ The Study desk at /study/ provides Pagefind search across all hosted edition sec
 The Roman-calendar snapshot at data/study/calendar.json comes from LiturgicalCalendarAPI, United States, English, civil years 2026 and 2027. Refresh it from the recorded source with year_type=CIVIL and review the returned jurisdiction and date coverage before replacing it. The homepage labels this jurisdiction. Other rites retain their separate existing data.
 
 Mirador fetches IIIF images from iiif.archive.org only when the visitor opens the scan viewer. The original scan remains linked. Bible lookup opens BibleGateway's NRSV Catholic Edition. Citation.js emits the catalog's edition data and does not infer a publication date. Source dependency licenses are retained in assets/study/licenses. The index includes catalog-approved hosted texts only.
+
+The shared footer is maintained in index.html. build_static.py also synchronizes it to the standalone Study desk. Reading links, project links, and policies have separate groups; credits and build information live in the expandable lower row.

@@ -560,3 +560,23 @@ html.app-unavailable #main>.static-prerender{min-height:0}
 @media (max-width:720px){.footer-newsletter .nl-btn{width:100%;justify-content:center}.buy-print{padding:14px}}
 /* Our newsletter at the top of /substacks/ (2026-11-09): the featured-card design, one column, a gap before the featured column */
 .featured.own-substack{grid-template-columns:1fr;margin-bottom:22px}
+
+/* Footer: reading links, project information, and policies in balanced groups. */
+.footer-inner{grid-template-columns:minmax(240px, .9fr) minmax(0, 1.6fr);gap:48px;padding:40px 24px 28px}
+.footer-description{max-width:30ch;margin:12px 0 20px;color:var(--muted);line-height:1.6}
+.footer-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.footer-links{gap:10px;align-items:flex-start}
+.footer-links h2{font:600 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;color:var(--muted)}
+.footer-links a{line-height:1.45;text-decoration:none}
+.footer-links a:hover{text-decoration:underline}
+.footer .footer-newsletter{display:block;padding:0;border:0;margin:0;background:none}
+.footer .footer-newsletter .nl-line{font:14px/1.5 var(--sans);margin:0 0 12px;max-width:34ch}
+.footer .footer-newsletter .nl-btn{width:auto;display:inline-flex;font-size:13px}
+.footer-lower{max-width:1232px;margin:0 auto;padding:20px 0 24px;border-top:1px solid var(--line);font:13px/1.6 var(--sans)}
+.footer .footer-lower .disclosure{margin:0 0 14px;max-width:100ch;color:var(--muted);font:inherit}
+.footer-credits summary{cursor:pointer;color:var(--muted);font:13px/1.5 var(--sans)}
+.footer-credits>div{max-width:105ch;padding-top:8px}
+.footer-credits .small,.footer-credits .build-note{font:12px/1.7 var(--sans);color:var(--muted);margin:10px 0 0;padding:0}
+@media(max-width:1280px){.footer-lower{margin-inline:24px}}
+@media(max-width:900px){.footer-inner{grid-template-columns:1fr;gap:32px}.footer-description{max-width:none}.footer-intro{max-width:40rem}}
+@media(max-width:520px){.footer-inner{padding:28px 20px 24px}.footer-groups{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}.footer-groups nav:last-child{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}.footer-groups nav:last-child h2{grid-column:1/-1}.footer-lower{margin-inline:20px}}

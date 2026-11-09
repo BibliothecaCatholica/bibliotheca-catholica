@@ -42,7 +42,7 @@ test('canonicalFor() gives each chapter and story page its own static URL',()=>{
 });
 test('page views on chapter pages use the plain route and add no event',()=>{
  const A=require('../scripts/analytics.js');
- for(const r of routes)assert.equal(A.pagePath('',r),'/#/'+r,r);
+ for(const r of routes){assert.equal(A.pagePath('',r),'/'+r+'/',r);assert.equal(A.pagePath('#/'+r),'/'+r+'/',r)}
  assert(!/chapter_|story_|text_page/.test(fs.readFileSync('scripts/analytics.js','utf8')));
 });
 test('the work page in the app lists the parts by real path',()=>{

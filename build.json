@@ -1,10 +1,10 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-1fb87ffadcb6",
+  "id": "bc-112d25657af7",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "68dad45456074597f069ad819dd619f73906af303c300ac87aedaaf68ffd1658",
-    "app.js": "432360e71bec390a04d259dcc2bc25a2a76463c4687d3054536ae01e9171045a",
+    "app.js": "7b4e9ee6c92bff89126c6991afd769f83f48dc5d8e2af3e020854203ebfdcec8",
     "data/advent-2026.json": "f591211f0719217e8ef0f5a0136c520dface1f1bf0405c7310acb5576efb6013",
     "data/affiliates.js": "5880de68bd62c81dad52733b2b91d11c45081af9eaca294929890bd5ad64d2be",
     "data/authors-detail.js": "7d06bc11d9d4f7391682814925eea63535abff1192321edc7347fd0c45717fde",
@@ -50,8 +50,8 @@
     "data/summa.json": "9c3b70d71741ba9623fb1808d3bf9945715f036a08ae22ad4fe181194ddc4164",
     "data/text-pages.js": "58a4caba41339e4624a43e3cbecb2d0c29fb84a60ca63ed9215a445a3776943a",
     "data/text-pages.json": "bf34b49176846bdce68ffb6c07b17f4045c9d236ae979d5a31fb0a64ad5314b1",
-    "index.template": "ea9ad7c390fed3f525d053fb418b7ff00696ea15b22006709521f44c9ef1dfe9",
-    "scripts/analytics.js": "4c19c2ef28c2f27857697e5284a658ebeef06bc36433f687d8cb418ce2d68224",
+    "index.template": "992c7b87e3fa9b2f423b12b10763f686a0b45d8c9cc65aafa47a2efd50770060",
+    "scripts/analytics.js": "224f88626dbba98b7eeb463227a4600e2cff5721396a93f5eb51db1303f769b8",
     "scripts/boot.js": "aacd6fd1dbf3b9ba84d2dbe4d0b72d4e7a931fa3ff96da23af94d73e05e5547b",
     "scripts/guides.js": "a77f6dfdeffbef2490b218b6acb671aed8f067f8f1c3d53c40b8d8fdf10629bf",
     "scripts/library.js": "316772b6fdc7a20b1af4ae51cec55c959464e215af0ed546c25d33b0716b8b93",

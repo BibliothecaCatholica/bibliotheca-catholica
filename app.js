@@ -690,7 +690,8 @@ document.addEventListener('click',function(e){if(e.defaultPrevented||e.button||e
    for the first load (index.html, static entry pages, and the /#/ page that 404.html redirects to) and one per later hash route ---------- */
 var gaT=null,gaLast=null,gaLanded=false;
 /* v18: dedupe on the raw URL, but report the normalized route (BCAnalytics.pagePath): never a search term or Index filter,
-   and one path per view whether it was served from / or a static page. Free-text titles are replaced the same way. */
+   and one path per view whether it was served from / or a static page. Since 2026-11-09 that route is a real path
+   (/author/x/, the page's canonical path), not /#/author/x, because GA4 ignores the fragment when it sets Page path. Free-text titles are replaced the same way. */
 function gaPageView(){clearTimeout(gaT);gaT=setTimeout(function(){var raw=location.pathname+location.hash;if(raw===gaLast)return;gaLast=raw;
   var A=window.BCAnalytics;if(!A)return;var path=A.pagePath(location.hash,window.BC_BOOT),title=A.pageTitle(path,document.title);
   /* only the landing view keeps the four utm_ campaign tags (BCAnalytics.utmQuery), from location.search or, for links that

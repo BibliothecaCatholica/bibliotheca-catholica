@@ -220,11 +220,31 @@ def pd_badge(evidence):
     return ' <a class="rights-badge rb-public-domain-us" href="/rights/" data-rights="public_domain_us" title="'+E(evidence)+'"><span class="rb-k">Rights:</span> Public domain (US)</a>'
 def text_split(path):
     return [p.strip() for p in re.split(r'\n\s*\n',(ROOT/path).read_text(encoding='utf-8').replace('\r','')) if p.strip()]
-def part_label(d,x,low=False):return (d['noun'].lower() if low else d['noun'])+' '+x['num']
+def part_label(d,x,low=False):
+    t=(d['noun']+' '+x['num']) if x['num'][:1].isdigit() or d['kind']=='ch' else x['num']
+    return t[0].lower()+t[1:] if low else t
 def part_path(wid,d,x):return 'work/'+wid+'/'+d['kind']+'/'+x['slug']
 def parts_list(wid,d):
     """The contents list a work page shows (static work page; the app mirrors it from data/text-pages.js)."""
     return ('<h2>'+E(d['nouns'])+'</h2><ol class="text-parts">'+''.join('<li>'+a('/'+part_path(wid,d,x)+'/',(x['num']+'. ' if d['kind']=='ch' else '')+x['title'])+'</li>' for x in d['items'])+'</ol>')
+def series_html(w,lib,TPD):
+    """Deep-link gaps: the books of a series in order (data/library.json `series`), mirrored by seriesList() in scripts/library.js."""
+    libw={v['id']:v for v in lib['works']};h=''
+    for S in lib.get('series',[]):
+        if not any(i['workId']==w['id'] for i in S['items']):continue
+        li=[]
+        for i in S['items']:
+            v=libw.get(i['workId']);t=E(i['title'])+' ('+str(i['year'])+')'
+            if v and v['id']==w['id']:t='<b>'+t+'</b>, this book'
+            elif v:t=a('/work/'+v['id']+'/',i['title'])+' ('+str(i['year'])+')'
+            if v and v['id'] in TPD:t+=': read here, '+str(len(TPD[v['id']]['items']))+' '+E(TPD[v['id']]['nouns'].lower())+' on their own pages'
+            elif v and any(e.get('text') for e in v['editions']):t+=': read here'
+            if i.get('note'):t+='. '+E(i['note'])
+            if i.get('contents'):t+=' Stories: '+E(oxford(i['contents']))+'.'
+            if not v:t+=' '+a('https://search.worldcat.org/search?q='+urllib.parse.quote(i['title']+' '+w['author']),'WorldCat',True)+' · '+a('https://openlibrary.org/search?q='+urllib.parse.quote(i['title']+' '+w['author']),'Open Library',True)
+            li.append('<li>'+t+'</li>')
+        h+='<h2>'+E(S['title'])+'</h2><ol class="series-list">'+''.join(li)+'</ol>'
+    return h
 def part_pages(out,lib,by_html,author_ld):
     TPD=json.loads((ROOT/'data/text-pages.json').read_text())['works'];libw={w['id']:w for w in lib['works']}
     for wid,d in TPD.items():
@@ -232,11 +252,11 @@ def part_pages(out,lib,by_html,author_ld):
         for k,x in enumerate(d['items']):
             route=part_path(wid,d,x);prev=d['items'][k-1] if k else None;nxt=d['items'][k+1] if k+1<n else None
             nav=('<nav class="reader-pagination" aria-label="'+E(d['nouns'])+'">'+(a('/'+part_path(wid,d,prev)+'/','← '+prev['title']).replace('<a ','<a class="btn ghost" rel="prev" ',1) if prev else '')
-                 +'<span>'+E(part_label(d,x))+' of '+str(n)+'</span>'+(a('/'+part_path(wid,d,nxt)+'/',nxt['title']+' →').replace('<a ','<a class="btn" rel="next" ',1) if nxt else '')+'</nav>')
+                 +'<span>'+E(part_label(d,x))+(' of '+str(n) if d['kind']=='ch' else ' · '+str(k+1)+' of '+str(n))+'</span>'+(a('/'+part_path(wid,d,nxt)+'/',nxt['title']+' →').replace('<a ','<a class="btn" rel="next" ',1) if nxt else '')+'</nav>')
             reader='/#/read/'+wid+'/'+e['id']+'/'+str(x['section'])+'/'+str(x['heading'])
             body=(crumb_html(('Discover & Read','library/'),(w['title'],'work/'+wid+'/'),(x['title'],''))
               +'<div class="page-head"><div class="eyebrow">'+E(w['title'])+' · '+E(part_label(d,x))+'</div><h1>'+E(x['title'])+'</h1>'
-              +'<p class="lede">'+by_html(w)+', <cite>'+a('/work/'+wid+'/',w['title'])+'</cite>, '+E(part_label(d,x,True))+' of '+str(n)+'. About '+str(max(1,round(x['words']/200)))+' min.</p></div>'
+              +'<p class="lede">'+by_html(w)+', <cite>'+a('/work/'+wid+'/',w['title'])+'</cite>, '+E(part_label(d,x,True))+(' of '+str(sum(1 for y in d['items'] if y['num'][:1].isdigit() or d['kind']=='ch')) if x['num'][:1].isdigit() or d['kind']=='ch' else '')+'. About '+str(max(1,round(x['words']/200)))+' min.</p></div>'
               +'<p class="dl-row"><a class="btn" href="'+E(reader)+'">Read in the reading room →</a> '+a('/work/'+wid+'/','Work page and editions')+'</p>'
               +'<p class="small">The reading room adds highlights, notes, find in work, and saved places. This page shows the same hosted text in one piece.</p>'
               +'<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+'. '+E(d.get('editionLine') or e.get('note',''))+pd_badge(e['rights'])+'</p>'
@@ -395,7 +415,7 @@ def main():
         d=w.get('description') or (w['title']+' by '+w['author']+': free reading edition with source, credits, and rights notes.')
         hosted=any(e.get('text') for e in w['editions'])
         by=a('/author/'+w['authorId']+'/',w['author']) if w.get('authorId') in auth_ids else E(w['author'])
-        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p><h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
+        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p><h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+series_html(w,lib,TPD)+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
         book={'@context':'https://schema.org','@type':'Book','name':w['title'],'url':SITE+'work/'+w['id']+'/','author':{'@type':'Person','name':w['author']},'description':d,'genre':w['category']}
         if w.get('authorId') in auth_ids:book['author']['url']=SITE+'author/'+w['authorId']+'/'
         langs=sorted({e['language'] for e in w['editions'] if e.get('language')})

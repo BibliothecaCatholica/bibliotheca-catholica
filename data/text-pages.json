@@ -110,6 +110,413 @@
      "firstWords": "The last chapter has been concerned with the contention that orthodoxy is"
     }
    ]
+  },
+  "innocence-father-brown": {
+   "edition": "pg-204",
+   "kind": "story",
+   "editionLine": "",
+   "noun": "Story",
+   "nouns": "Stories",
+   "sha256": "77ef9c0c42a6800c5436d8adf3c7d55fab99039bc4c902b3e4d2daae328c120f",
+   "blocks": 1498,
+   "items": [
+    {
+     "slug": "01-the-blue-cross",
+     "num": "1",
+     "title": "The Blue Cross",
+     "heading": 13,
+     "start": 14,
+     "end": 140,
+     "section": 0,
+     "words": 7470,
+     "firstWords": "Between the silver ribbon of morning and the green glittering ribbon of"
+    },
+    {
+     "slug": "02-the-secret-garden",
+     "num": "2",
+     "title": "The Secret Garden",
+     "heading": 141,
+     "start": 142,
+     "end": 293,
+     "section": 4,
+     "words": 7501,
+     "firstWords": "Aristide Valentin, Chief of the Paris Police, was late for his dinner,"
+    },
+    {
+     "slug": "03-the-queer-feet",
+     "num": "3",
+     "title": "The Queer Feet",
+     "heading": 294,
+     "start": 295,
+     "end": 388,
+     "section": 8,
+     "words": 7619,
+     "firstWords": "If you meet a member of that select club, “The Twelve True"
+    },
+    {
+     "slug": "04-the-flying-stars",
+     "num": "4",
+     "title": "The Flying Stars",
+     "heading": 389,
+     "start": 390,
+     "end": 478,
+     "section": 11,
+     "words": 5320,
+     "firstWords": "“The most beautiful crime I ever committed,” Flambeau would say in his"
+    },
+    {
+     "slug": "05-the-invisible-man",
+     "num": "5",
+     "title": "The Invisible Man",
+     "heading": 479,
+     "start": 480,
+     "end": 604,
+     "section": 13,
+     "words": 6476,
+     "firstWords": "In the cool blue twilight of two steep streets in Camden Town,"
+    },
+    {
+     "slug": "06-the-honour-of-israel-gow",
+     "num": "6",
+     "title": "The Honour of Israel Gow",
+     "heading": 605,
+     "start": 606,
+     "end": 713,
+     "section": 17,
+     "words": 5619,
+     "firstWords": "A stormy evening of olive and silver was closing in, as Father"
+    },
+    {
+     "slug": "07-the-wrong-shape",
+     "num": "7",
+     "title": "The Wrong Shape",
+     "heading": 714,
+     "start": 715,
+     "end": 869,
+     "section": 20,
+     "words": 6949,
+     "firstWords": "Certain of the great roads going north out of London continue far"
+    },
+    {
+     "slug": "08-the-sins-of-prince-saradine",
+     "num": "8",
+     "title": "The Sins of Prince Saradine",
+     "heading": 870,
+     "start": 871,
+     "end": 983,
+     "section": 24,
+     "words": 7398,
+     "firstWords": "When Flambeau took his month’s holiday from his office in Westminster he"
+    },
+    {
+     "slug": "09-the-hammer-of-god",
+     "num": "9",
+     "title": "The Hammer of God",
+     "heading": 984,
+     "start": 985,
+     "end": 1121,
+     "section": 28,
+     "words": 6375,
+     "firstWords": "The little village of Bohun Beacon was perched on a hill so"
+    },
+    {
+     "slug": "10-the-eye-of-apollo",
+     "num": "10",
+     "title": "The Eye of Apollo",
+     "heading": 1122,
+     "start": 1123,
+     "end": 1222,
+     "section": 32,
+     "words": 6180,
+     "firstWords": "That singular smoky sparkle, at once a confusion and a transparency, which"
+    },
+    {
+     "slug": "11-the-sign-of-the-broken-sword",
+     "num": "11",
+     "title": "The Sign of the Broken Sword",
+     "heading": 1223,
+     "start": 1224,
+     "end": 1334,
+     "section": 34,
+     "words": 6893,
+     "firstWords": "The thousand arms of the forest were grey, and its million fingers"
+    },
+    {
+     "slug": "12-the-three-tools-of-death",
+     "num": "12",
+     "title": "The Three Tools of Death",
+     "heading": 1335,
+     "start": 1336,
+     "end": 1446,
+     "section": 38,
+     "words": 5017,
+     "firstWords": "Both by calling and conviction Father Brown knew better than most of"
+    }
+   ]
+  },
+  "wisdom-father-brown": {
+   "edition": "pg-223",
+   "kind": "story",
+   "editionLine": "",
+   "noun": "Story",
+   "nouns": "Stories",
+   "sha256": "86a5d9c201d8e4d4504d21676cc7b5dd94fca600dad21562a88bdebbe03500d6",
+   "blocks": 1226,
+   "items": [
+    {
+     "slug": "01-the-absence-of-mr-glass",
+     "num": "1",
+     "title": "The Absence of Mr Glass",
+     "heading": 15,
+     "start": 16,
+     "end": 105,
+     "section": 0,
+     "words": 5699,
+     "firstWords": "THE consulting-rooms of Dr Orion Hood, the eminent criminologist and specialist in"
+    },
+    {
+     "slug": "02-the-paradise-of-thieves",
+     "num": "2",
+     "title": "The Paradise of Thieves",
+     "heading": 106,
+     "start": 107,
+     "end": 217,
+     "section": 3,
+     "words": 6573,
+     "firstWords": "THE great Muscari, most original of the young Tuscan poets, walked swiftly"
+    },
+    {
+     "slug": "03-the-duel-of-dr-hirsch",
+     "num": "3",
+     "title": "The Duel of Dr Hirsch",
+     "heading": 218,
+     "start": 219,
+     "end": 313,
+     "section": 6,
+     "words": 5792,
+     "firstWords": "M. MAURICE BRUN and M. Armand Armagnac were crossing the sunlit Champs"
+    },
+    {
+     "slug": "04-the-man-in-the-passage",
+     "num": "4",
+     "title": "The Man in the Passage",
+     "heading": 314,
+     "start": 315,
+     "end": 413,
+     "section": 8,
+     "words": 6412,
+     "firstWords": "TWO men appeared simultaneously at the two ends of a sort of"
+    },
+    {
+     "slug": "05-the-mistake-of-the-machine",
+     "num": "5",
+     "title": "The Mistake of the Machine",
+     "heading": 414,
+     "start": 415,
+     "end": 503,
+     "section": 11,
+     "words": 5937,
+     "firstWords": "FLAMBEAU and his friend the priest were sitting in the Temple Gardens"
+    },
+    {
+     "slug": "06-the-head-of-caesar",
+     "num": "6",
+     "title": "The Head of Caesar",
+     "heading": 504,
+     "start": 505,
+     "end": 589,
+     "section": 14,
+     "words": 6208,
+     "firstWords": "THERE is somewhere in Brompton or Kensington an interminable avenue of tall"
+    },
+    {
+     "slug": "07-the-purple-wig",
+     "num": "7",
+     "title": "The Purple Wig",
+     "heading": 590,
+     "start": 591,
+     "end": 670,
+     "section": 16,
+     "words": 5402,
+     "firstWords": "MR EDWARD NUTT, the industrious editor of the Daily Reformer, sat at"
+    },
+    {
+     "slug": "08-the-perishing-of-the-pendragons",
+     "num": "8",
+     "title": "The Perishing of the Pendragons",
+     "heading": 671,
+     "start": 672,
+     "end": 776,
+     "section": 19,
+     "words": 7406,
+     "firstWords": "FATHER BROWN was in no mood for adventures. He had lately fallen"
+    },
+    {
+     "slug": "09-the-god-of-the-gongs",
+     "num": "9",
+     "title": "The God of the Gongs",
+     "heading": 777,
+     "start": 778,
+     "end": 896,
+     "section": 22,
+     "words": 5799,
+     "firstWords": "IT was one of those chilly and empty afternoons in early winter,"
+    },
+    {
+     "slug": "10-the-salad-of-colonel-cray",
+     "num": "10",
+     "title": "The Salad of Colonel Cray",
+     "heading": 897,
+     "start": 898,
+     "end": 987,
+     "section": 25,
+     "words": 5265,
+     "firstWords": "FATHER BROWN was walking home from Mass on a white weird morning"
+    },
+    {
+     "slug": "11-the-strange-crime-of-john-boulnois",
+     "num": "11",
+     "title": "The Strange Crime of John Boulnois",
+     "heading": 988,
+     "start": 989,
+     "end": 1099,
+     "section": 28,
+     "words": 5789,
+     "firstWords": "MR CALHOUN KIDD was a very young gentleman with a very old"
+    },
+    {
+     "slug": "12-the-fairy-tale-of-father-brown",
+     "num": "12",
+     "title": "The Fairy Tale of Father Brown",
+     "heading": 1100,
+     "start": 1101,
+     "end": 1174,
+     "section": 31,
+     "words": 5205,
+     "firstWords": "THE picturesque city and state of Heiligwaldenstein was one of those toy"
+    }
+   ]
+  },
+  "secret-father-brown": {
+   "edition": "pg-70175",
+   "kind": "story",
+   "editionLine": "",
+   "noun": "Story",
+   "nouns": "Stories",
+   "sha256": "4b38b49ea7d940aded60d38f97ef8cec77c8fd9c533eb7158d21782722cba875",
+   "blocks": 1299,
+   "items": [
+    {
+     "slug": "00-the-secret-of-father-brown",
+     "num": "Opening frame story",
+     "title": "The Secret of Father Brown",
+     "heading": 30,
+     "start": 31,
+     "end": 69,
+     "section": 0,
+     "words": 3129,
+     "firstWords": "FLAMBEAU, once the most famous criminal in France and later a very"
+    },
+    {
+     "slug": "01-the-mirror-of-the-magistrate",
+     "num": "1",
+     "title": "The Mirror of the Magistrate",
+     "heading": 71,
+     "start": 72,
+     "end": 221,
+     "section": 2,
+     "words": 7300,
+     "firstWords": "JAMES BAGSHAW and Wilfred Underhill were old friends, and were fond of"
+    },
+    {
+     "slug": "02-the-man-with-two-beards",
+     "num": "2",
+     "title": "The Man with Two Beards",
+     "heading": 223,
+     "start": 224,
+     "end": 384,
+     "section": 6,
+     "words": 7347,
+     "firstWords": "THIS tale was told by Father Brown to Professor Crake, the celebrated"
+    },
+    {
+     "slug": "03-the-song-of-the-flying-fish",
+     "num": "3",
+     "title": "The Song of the Flying Fish",
+     "heading": 386,
+     "start": 387,
+     "end": 516,
+     "section": 11,
+     "words": 7250,
+     "firstWords": "THE soul of Mr. Peregrine Smart hovered like a fly round one"
+    },
+    {
+     "slug": "04-the-actor-and-the-alibi",
+     "num": "4",
+     "title": "The Actor and the Alibi",
+     "heading": 518,
+     "start": 519,
+     "end": 651,
+     "section": 14,
+     "words": 7095,
+     "firstWords": "MR. MUNDON MANDEVILLE, the theatrical manager, walked briskly through the passages behind"
+    },
+    {
+     "slug": "05-the-vanishing-of-vaudrey",
+     "num": "5",
+     "title": "The Vanishing of Vaudrey",
+     "heading": 653,
+     "start": 654,
+     "end": 785,
+     "section": 18,
+     "words": 7380,
+     "firstWords": "SIR ARTHUR VAUDREY, in his light-grey summer suit, and wearing on his"
+    },
+    {
+     "slug": "06-the-worst-crime-in-the-world",
+     "num": "6",
+     "title": "The Worst Crime in the World",
+     "heading": 787,
+     "start": 788,
+     "end": 915,
+     "section": 22,
+     "words": 6305,
+     "firstWords": "FATHER BROWN was wandering through a picture gallery with an expression that"
+    },
+    {
+     "slug": "07-the-red-moon-of-meru",
+     "num": "7",
+     "title": "The Red Moon of Meru",
+     "heading": 917,
+     "start": 918,
+     "end": 1049,
+     "section": 26,
+     "words": 6442,
+     "firstWords": "EVERYONE agreed that the bazaar at Mallowood Abbey (by kind permission of"
+    },
+    {
+     "slug": "08-the-chief-mourner-of-marne",
+     "num": "8",
+     "title": "The Chief Mourner of Marne",
+     "heading": 1051,
+     "start": 1052,
+     "end": 1213,
+     "section": 30,
+     "words": 8259,
+     "firstWords": "A BLAZE of lightning blanched the grey woods tracing all the wrinkled"
+    },
+    {
+     "slug": "09-the-secret-of-flambeau",
+     "num": "Closing frame story",
+     "title": "The Secret of Flambeau",
+     "heading": 1214,
+     "start": 1215,
+     "end": 1247,
+     "section": 34,
+     "words": 2397,
+     "firstWords": "\"----the sort of murders in which I played the part of the"
+    }
+   ]
   }
  }
 }

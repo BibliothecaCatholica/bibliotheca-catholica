@@ -852,6 +852,59 @@
       ]
     },
     {
+      "id": "incredulity-father-brown",
+      "title": "The Incredulity of Father Brown",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "The third Father Brown collection, eight stories in which apparent miracles, curses, and oracles are explained. Read the 1926 scan at the Internet Archive; full text here is coming.",
+      "reviewStatus": "source-checked",
+      "date": "1926",
+      "editions": [
+        {
+          "id": "ia-incredulityoffat0000ches",
+          "label": "Internet Archive scan (New York: Dodd, Mead and Company, 1926)",
+          "source": "https://archive.org/details/incredulityoffat0000ches",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published 1926, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-09",
+          "note": "Internet Archive record: Dodd, Mead and Company, New York, 1926, freely readable (not a lending copy). Full text here is coming: it will be hosted only after a clean transcription of a pre-1931 printing is checked.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "secret-father-brown",
+      "title": "The Secret of Father Brown",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "The fourth Father Brown collection, eight mysteries set inside a frame story in which the priest explains his method. This volume does not contain the complete Father Brown series.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-09",
+      "date": "1927",
+      "editions": [
+        {
+          "id": "pg-70175",
+          "label": "Project Gutenberg #70175",
+          "source": "https://www.gutenberg.org/ebooks/70175",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-09",
+          "note": "First published 1927 (London: Cassell and Company; the title page reads “First Published in 1927”). Eight stories between an opening and a closing frame story.",
+          "sourceTitle": "The secret of Father Brown",
+          "digitalRelease": "Mar 1, 2023",
+          "access": "full-text",
+          "text": "data/texts/pg-70175.txt",
+          "sha256": "4b38b49ea7d940aded60d38f97ef8cec77c8fd9c533eb7158d21782722cba875"
+        }
+      ]
+    },
+    {
       "id": "ballad-white-horse",
       "title": "The Ballad of the White Horse",
       "author": "G. K. Chesterton",
@@ -3092,6 +3145,51 @@
           "checked": "2026-10-25",
           "note": "Universal Knowledge Foundation, New York, with the imprimatur of Cardinal Hayes (“Copyright 1929”). Works published in 1929 entered the U.S. public domain on January 1, 2025.",
           "access": "full-text"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "id": "father-brown",
+      "title": "The Father Brown collections",
+      "items": [
+        {
+          "title": "The Innocence of Father Brown",
+          "year": 1911,
+          "workId": "innocence-father-brown"
+        },
+        {
+          "title": "The Wisdom of Father Brown",
+          "year": 1914,
+          "workId": "wisdom-father-brown"
+        },
+        {
+          "title": "The Incredulity of Father Brown",
+          "year": 1926,
+          "workId": "incredulity-father-brown",
+          "note": "Public domain in the US. Read the 1926 scan at the Internet Archive; full text here is coming.",
+          "contents": [
+            "The Resurrection of Father Brown",
+            "The Arrow of Heaven",
+            "The Oracle of the Dog",
+            "The Miracle of Moon Crescent",
+            "The Curse of the Golden Cross",
+            "The Dagger with Wings",
+            "The Doom of the Darnaways",
+            "The Ghost of Gideon Wise"
+          ]
+        },
+        {
+          "title": "The Secret of Father Brown",
+          "year": 1927,
+          "workId": "secret-father-brown"
+        },
+        {
+          "title": "The Scandal of Father Brown",
+          "year": 1935,
+          "workId": null,
+          "note": "Published 1935, after this library’s 1931 cutoff, so it is not hosted or linked as a full text here. Find a library copy."
         }
       ]
     }

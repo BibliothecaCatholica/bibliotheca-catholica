@@ -42,6 +42,18 @@ def validate(catalog):
                 source = json.loads((ROOT / ('data/sources/' + edition['id'] + '.json')).read_text())
                 assert source['metadata']['Copyright'] == ['Public domain in the USA.']
                 assert source['metadata']['Title'][0] == edition['sourceTitle']
+    # Deep-link gaps (2026-11-09): a series lists its books in order; a book from 1931 or later is never a work here
+    for series in catalog.get('series', []):
+        assert series['id'] and series['title'] and series['items'], series
+        years = [item['year'] for item in series['items']]
+        assert years == sorted(years), series['id']
+        for item in series['items']:
+            assert item['title'] and isinstance(item['year'], int)
+            if item['workId']:
+                assert item['workId'] in ids, item
+                assert item['year'] < 1931, item
+            else:
+                assert item.get('note'), item
     return catalog
 
 def main():

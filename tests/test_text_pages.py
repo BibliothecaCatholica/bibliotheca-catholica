@@ -73,4 +73,33 @@ class TextPages(unittest.TestCase):
         self.assertIn("if(staticOnly(h)){keepStatic(h);return}",app)
         self.assertIn('function partsList(w)',lib);self.assertIn('+partsList(w)+',lib)
         self.assertRegex(R('index.html'),r'<script defer src="data/text-pages\.js\?v=[0-9a-f]{10}"></script>')
+    def test_father_brown_story_pages(self):
+        self.assertEqual({k:(TP[k]['edition'],len(TP[k]['items'])) for k in TP if 'father-brown' in k},
+                         {'innocence-father-brown':('pg-204',12),'wisdom-father-brown':('pg-223',12),'secret-father-brown':('pg-70175',10)})
+        self.assertEqual(TP['innocence-father-brown']['items'][0]['slug'],'01-the-blue-cross')
+        self.assertEqual(TP['wisdom-father-brown']['items'][-1]['slug'],'12-the-fairy-tale-of-father-brown')
+        sec=TP['secret-father-brown']['items'];self.assertEqual((sec[0]['slug'],sec[-1]['slug']),('00-the-secret-of-father-brown','09-the-secret-of-flambeau'))
+        self.assertEqual([x['num'] for x in sec],['Opening frame story']+[str(i) for i in range(1,9)]+['Closing frame story'])
+        for wid in ('innocence-father-brown','wisdom-father-brown','secret-father-brown'):
+            d=TP[wid];self.assertEqual(d['kind'],'story')
+            for a,b in zip(d['items'],d['items'][1:]):self.assertLessEqual(b['heading']-a['end'],2)  # at most a bare numeral between stories
+    def test_secret_is_hosted_with_pre_1931_evidence(self):
+        w=LIB['secret-father-brown'];e=w['editions'][0];self.assertEqual(e['id'],'pg-70175')
+        raw=(ROOT/e['text']).read_bytes();self.assertEqual(hashlib.sha256(raw).hexdigest(),e['sha256'])
+        self.assertIn(b'First Published in 1927',raw);self.assertIn('1927',e['note']);self.assertEqual(w['date'],'1927')
+        src=json.loads(R('data/sources/pg-70175.json'));self.assertEqual(src['metadata']['Copyright'],['Public domain in the USA.'])
+        self.assertEqual(src['metadata']['Original Publication'],['United Kingdom: Cassell and Company, 1927.'])
+    def test_incredulity_is_link_only_and_scandal_is_never_a_work(self):
+        w=LIB['incredulity-father-brown'];self.assertNotIn('added',w)
+        self.assertEqual([(e['id'],e.get('text')) for e in w['editions']],[('ia-incredulityoffat0000ches',None)])
+        self.assertNotIn('incredulity-father-brown',TP);self.assertFalse((ROOT/'work/incredulity-father-brown/story').exists())
+        self.assertIn('full text here is coming',main('work/incredulity-father-brown/index.html'))
+        self.assertFalse(any('scandal' in k for k in LIB))
+        S=json.loads(R('data/library.json'))['series'][0]
+        self.assertEqual([(i['title'].split(' of ')[0],i['year'],bool(i['workId'])) for i in S['items']],
+                         [('The Innocence',1911,True),('The Wisdom',1914,True),('The Incredulity',1926,True),('The Secret',1927,True),('The Scandal',1935,False)])
+        for wid in ('innocence-father-brown','wisdom-father-brown','incredulity-father-brown','secret-father-brown'):
+            m=main('work/%s/index.html'%wid);self.assertIn('<h2>The Father Brown collections</h2>',m)
+            self.assertIn('The Scandal of Father Brown (1935)',m);self.assertIn('after this library’s 1931 cutoff',m)
+        for p in PAGES:self.assertNotIn('gutenberg.net.au',R(p),p)
 if __name__=='__main__':unittest.main()

@@ -43,9 +43,24 @@ class TestAnalytics(unittest.TestCase):
         self.assertIn("typeof gtag!=='function'", js)
         self.assertIn("gtag('event',name,", js)
         self.assertIn('try{', js)
+        self.assertIn('allowedHost', js)
+        self.assertIn("!allowedHost()", js)
+        self.assertIn('bibliothecacatholica.com', js)
         self.assertIn('G-HFG445Y1LT', js)  # named only in the comment; no other ID anywhere
         self.assertEqual(re.findall(r'G-[A-Z0-9]{6,}', js), ['G-HFG445Y1LT'])
         self.assertNotIn('googletagmanager', js)
+
+    def test_pages_dev_headers_file(self):
+        # Cloudflare Pages host-scoped noindex only; never a bare /* rule (would noindex production)
+        text = (ROOT / '_headers').read_text()
+        self.assertEqual(text, (
+            'https://:project.pages.dev/*\n'
+            '  X-Robots-Tag: noindex\n'
+            'https://:version.:project.pages.dev/*\n'
+            '  X-Robots-Tag: noindex\n'
+        ))
+        self.assertNotIn('\n/*', text)
+        self.assertNotRegex(text, r'(?m)^/\*')
 
     def test_events_only_via_helper(self):
         for name in ('app.js', 'scripts/library.js', 'scripts/reader.js', 'scripts/guides.js', 'scripts/search.js'):
@@ -73,6 +88,8 @@ class TestAnalytics(unittest.TestCase):
         s = (ROOT / 'policy/index.html').read_text()
         self.assertIn('id="privacy"', s)
         self.assertIn('Google Analytics', s)
+        self.assertIn('pages.dev send nothing', s)
+        self.assertIn('bibliothecacatholica.com (and www) only', s)
         self.assertIn('https://policies.google.com/technologies/partner-sites', s)
         self.assertIn('what people search for', s)
         self.assertIn('which outside links are clicked', s)

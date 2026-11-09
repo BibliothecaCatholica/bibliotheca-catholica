@@ -5,6 +5,7 @@
  * is the search term, trimmed, lowercased, and cut to 100 characters, sent only on the search event. Page views carry a
  * normalized route (pagePath) that never includes a search term or filter, and every event is preceded by
  * gtag('set') with the term-free page_title and page_location for the route (v18.1). See AGENTS.md, "Google Analytics (GA4)".
+ * Host gate: track() is a no-op unless location.hostname is bibliothecacatholica.com or www.bibliothecacatholica.com (pages.dev mirrors send nothing).
  */
 (function(root){
 'use strict';
@@ -16,7 +17,8 @@ function clean(params){var out={};if(!params||typeof params!=='object')return ou
   if(v==null||v==='')return;if(typeof v==='number'){if(isFinite(v))out[k]=v;return}if(typeof v==='boolean'){out[k]=v;return}
   if(k==='page_location'||k==='page_path'){out[k]=str(v).slice(0,500);return}out[k]=str(v).slice(0,MAX)});return out}
 /* track(name, params): the only way the site sends a GA4 event. Returns true when an event was handed to gtag. */
-function track(name,params){try{if(typeof gtag!=='function')return false;if(EVENTS.indexOf(name)<0)return false;if(name==='page_view')reset('listen_open');
+function allowedHost(){try{var h=(root.location&&root.location.hostname||'').toLowerCase();return h==='bibliothecacatholica.com'||h==='www.bibliothecacatholica.com'}catch(e){return false}}
+function track(name,params){try{if(!allowedHost())return false;if(typeof gtag!=='function')return false;if(EVENTS.indexOf(name)<0)return false;if(name==='page_view')reset('listen_open');
   var c=context();if(c)gtag('set',{page_title:c.title,page_location:c.location});gtag('event',name,clean(params));return true}catch(e){return false}}
 /* context(): the term-free page title and location for the current route. Set before every event (v18.1), so the
    search, outbound_click, and GA's own enhanced-measurement events never fall back to a document title or URL that
@@ -109,7 +111,7 @@ function onClick(e){try{var t=e.target&&e.target.closest?e.target.closest('a[hre
   if(kind==='audio'&&t.classList&&t.classList.contains('listen-btn')){var L=root.location||{},wid=routeWork(L.hash)||routeWork('#/'+str(root.BC_BOOT));
     if(wid&&once('listen_open',wid))track('listen_open',{work_id:wid,listen_source:'librivox'})}
   track('outbound_click',{link_domain:d,link_kind:kind})}catch(err){}}
-var api={utmQuery:utmQuery,hashUtm:hashUtm,campaignUrl:campaignUrl,landingSearch:landingSearch,stripHashUtm:stripHashUtm,hostIn:hostIn,AFFILIATE_HOSTS:AFFILIATE_HOSTS,EVENTS:EVENTS,MAX_TERM:MAX,track:track,cleanTerm:cleanTerm,clean:clean,domain:domain,linkKind:linkKind,publisherKey:publisherKey,routeWork:routeWork,pagePath:pagePath,pageLocation:pageLocation,pageTitle:pageTitle,context:context,once:once,reset:reset,onClick:onClick};
+var api={utmQuery:utmQuery,hashUtm:hashUtm,campaignUrl:campaignUrl,landingSearch:landingSearch,stripHashUtm:stripHashUtm,hostIn:hostIn,AFFILIATE_HOSTS:AFFILIATE_HOSTS,EVENTS:EVENTS,MAX_TERM:MAX,allowedHost:allowedHost,track:track,cleanTerm:cleanTerm,clean:clean,domain:domain,linkKind:linkKind,publisherKey:publisherKey,routeWork:routeWork,pagePath:pagePath,pageLocation:pageLocation,pageTitle:pageTitle,context:context,once:once,reset:reset,onClick:onClick};
 root.BCAnalytics=api;
 if(root.document&&root.document.addEventListener)root.document.addEventListener('click',onClick,true);
 if(typeof module!=='undefined'&&module.exports)module.exports=api;

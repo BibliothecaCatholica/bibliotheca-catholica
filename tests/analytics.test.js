@@ -4,7 +4,7 @@ const fs=require('node:fs');
 const vm=require('node:vm');
 const SRC=fs.readFileSync('scripts/analytics.js','utf8');
 // Load the helper in its own realm, optionally with a gtag stub that records calls.
-function load(withGtag,throwing){const calls=[];const ctx={URL,location:{hash:''},AFFILIATES:{publishers:{ignatius:{search:'https://ignatius.com/search.php?search_query={q}'},tan:{search:'https://tanbooks.com/search?q={q}'}}}};
+function load(withGtag,throwing,hostname){const calls=[];const ctx={URL,location:{hash:'',hostname:hostname||'bibliothecacatholica.com',pathname:'/',search:''},AFFILIATES:{publishers:{ignatius:{search:'https://ignatius.com/search.php?search_query={q}'},tan:{search:'https://tanbooks.com/search?q={q}'}}}};
  ctx.window=ctx;ctx.globalThis=ctx;if(withGtag)ctx.gtag=function(){if(throwing)throw new Error('boom');calls.push(JSON.parse(JSON.stringify(Array.from(arguments))))};
  vm.runInNewContext(SRC,ctx);return {A:ctx.BCAnalytics,calls,ctx}}
 test('event names are the agreed GA4 set',()=>{
@@ -197,16 +197,16 @@ test('2026-11-09: utm_ tags after the # are read for the landing view, cut to 10
 test('2026-11-09: stripHashUtm removes the tags from the hash with replaceState and keeps everything else',()=>{
  const {A,ctx}=load(false),seen=[];
  ctx.history={state:null,replaceState:(s,t,u)=>seen.push(u)};
- ctx.location={pathname:'/',search:'?utm_source=real',hash:'#/library?utm_source=x&utm_medium=social'};
+ ctx.location={pathname:'/',search:'?utm_source=real',hash:'#/library?utm_source=x&utm_medium=social',hostname:'bibliothecacatholica.com'};
  assert.equal(A.stripHashUtm(),true);assert.deepEqual([...seen],['/?utm_source=real#/library']);
- ctx.location={pathname:'/work/orthodoxy/',search:'',hash:'#/search/foo?scope=all&utm_campaign=c'};
+ ctx.location={pathname:'/work/orthodoxy/',search:'',hash:'#/search/foo?scope=all&utm_campaign=c',hostname:'bibliothecacatholica.com'};
  assert.equal(A.stripHashUtm(),true);assert.equal(seen[1],'/work/orthodoxy/#/search/foo?scope=all');
- ctx.location={pathname:'/',search:'',hash:'#/library'};assert.equal(A.stripHashUtm(),false);assert.equal(seen.length,2);
- ctx.history={replaceState:()=>{throw new Error('boom')}};ctx.location={pathname:'/',search:'',hash:'#/x?utm_source=1'};assert.equal(A.stripHashUtm(),false);
+ ctx.location={pathname:'/',search:'',hash:'#/library',hostname:'bibliothecacatholica.com'};assert.equal(A.stripHashUtm(),false);assert.equal(seen.length,2);
+ ctx.history={replaceState:()=>{throw new Error('boom')}};ctx.location={pathname:'/',search:'',hash:'#/x?utm_source=1',hostname:'bibliothecacatholica.com'};assert.equal(A.stripHashUtm(),false);
  delete ctx.history;assert.equal(A.stripHashUtm(),false);
 });
 test('2026-11-09: the hash fallback is the existing landing page_view, not a new event',()=>{
- const {A,calls,ctx}=load(true);ctx.location={pathname:'/',search:'',hash:'#/library?utm_source=x&utm_medium=social'};
+ const {A,calls,ctx}=load(true);ctx.location={pathname:'/',search:'',hash:'#/library?utm_source=x&utm_medium=social',hostname:'bibliothecacatholica.com'};
  const seen=[];ctx.history={state:null,replaceState:(s,t,u)=>{seen.push(u);ctx.location.hash=u.slice(u.indexOf('#'))}};
  const path=A.pagePath(ctx.location.hash);A.track('page_view',{page_title:'t',page_location:A.pageLocation(path,A.landingSearch(ctx.location.search,ctx.location.hash)),page_path:path});A.stripHashUtm();
  const ev=calls.filter(c=>c[0]==='event');assert.deepEqual(ev.map(c=>c[1]),['page_view']);
@@ -233,4 +233,25 @@ test('affiliate preview 2026-11-09: lddy.no (TAN Books referral) is link_kind af
  }
  // no new event names
  assert.deepEqual(Array.from(A.EVENTS).sort(),['filter_use','listen_complete','listen_play','open_text','outbound_click','page_view','reader_section','listen_open','saint_open','search','support_click','theme_toggle'].sort());
+});
+
+test('2026-11-09: pages.dev hostname makes track() a no-op (no page_view, no outbound_click)',()=>{
+ const {A,calls,ctx}=load(true,false,'bibliotheca-catholica.pages.dev');
+ assert.equal(A.allowedHost(),false);
+ assert.equal(A.track('page_view',{page_title:'t',page_location:'https://bibliothecacatholica.com/',page_path:'/'}),false);
+ const a={getAttribute:x=>x==='href'?'https://bookshop.org/a/130222/9780141441146':null,closest:sel=>sel==='a[href]'?a:null};
+ A.onClick({target:a});
+ assert.deepEqual(calls,[]);
+});
+test('2026-11-09: production hostname still sends page_view and outbound_click',()=>{
+ const {A,calls}=load(true,false,'bibliothecacatholica.com');
+ assert.equal(A.allowedHost(),true);
+ assert.equal(A.track('page_view',{page_title:'t',page_location:'https://bibliothecacatholica.com/',page_path:'/'}),true);
+ const a={getAttribute:x=>x==='href'?'https://bookshop.org/a/130222/9780141441146':null,closest:sel=>sel==='a[href]'?a:null};
+ A.onClick({target:a});
+ const ev=calls.filter(c=>c[0]==='event').map(c=>c[1]);
+ assert.deepEqual(ev,['page_view','outbound_click']);
+ const {A:A2}=load(true,false,'www.bibliothecacatholica.com');
+ assert.equal(A2.allowedHost(),true);
+ assert.equal(A2.track('page_view',{page_title:'t',page_location:'https://bibliothecacatholica.com/',page_path:'/'}),true);
 });

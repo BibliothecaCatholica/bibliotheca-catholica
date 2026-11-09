@@ -3257,10 +3257,10 @@
       "born": 1794,
       "died": 1860,
       "badge": "Non-Catholic Christian",
-      "tradition": "Protestant",
-      "evidence": "Irish-born British writer and art historian; not Roman Catholic. Dictionary of Art Historians (arthistorians.info/jamesona/, 200) and scholarship on Sacred and Legendary Art describe her as mediating Catholic iconography for a Protestant English readership. Specific parish membership (Church of England vs other Protestant) was not verified from a primary church record this turn; badge uses the confirmed broader tradition.",
+      "tradition": "Anglican",
+      "evidence": "Irish-born British writer and art historian; not Roman Catholic. Married in the Church of England (St George's, Hanover Square, 1825), and her Commonplace Book sets Church of England sermons apart from Roman Catholic and Dissenting ones. Anglican is the best fit; parish records were not checked. Checked 2026-11-09.",
       "bio": "Anna Brownell Jameson (1794–1860) was an Irish-born British writer and one of the nineteenth century's leading interpreters of Christian iconography in art. Her Sacred and Legendary Art series explained saints, monastic legends, and Marian imagery to English readers. She approached the material as an art historian rather than as a Roman Catholic apologist.",
-      "desc": "Anna Brownell Jameson (1794–1860), Protestant writer on Christian art: Sacred and Legendary Art, Legends of the Madonna, and more, with her sources.",
+      "desc": "Anna Brownell Jameson (1794–1860), Anglican writer on Christian art: Sacred and Legendary Art, Legends of the Madonna, and more, with her sources.",
       "workIds": [
         "sacred-legendary-art",
         "legends-of-the-madonna",

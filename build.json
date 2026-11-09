@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-3d296216994a",
+  "id": "bc-737c325e529b",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "776b987e7cf16d17fdafaa2898c558cf8db6f119cfc774db933ef71eedad0c01",
@@ -20,10 +20,10 @@
     "data/isidore-authors.js": "2a1761df2a7c2629de4a4ddb46a9461165563d9600475f63b101b47d46860fb1",
     "data/isidore-matches.js": "a9b01460430d3de569eb425452ce057f8eb3b8762082dc38135da1af36e69fdd",
     "data/isidore-matches.json": "1d1c9f3edb6f5e56479a3174d4f97b7e5755d86f8011d39720b4ab35967395ea",
-    "data/library.js": "5ce3e0f60c315be0adb179a56c4a0b60b5313f707e59403a01146e9dab5f94d3",
-    "data/library.json": "ea2dbcee45d40fab46cb6417a33ff509c8e285ffe08b92bab0632d6e37aa0a9b",
-    "data/librivox.js": "d29c315d1ebd7e1432416a419ce50561bff618f5a4e0ae91590bbac2063b8fef",
-    "data/librivox.json": "52f717452a8bf11e20d5a5fc87a30cd3dc98b3dc2c49cca1bb0f1fc7ce3cc8b2",
+    "data/library.js": "3e1baf451dbf545234b6d7c4f55b6db4867bce1568fae84c1447d78a142dca13",
+    "data/library.json": "12361d86fbfc93ec1596382d6b34c2e510219ffd6d6d675c59aefad48fc5b87e",
+    "data/librivox.js": "f887bf833f7868dd4c5c13145e46a54019de40d43ed93311f9f0b5a933047712",
+    "data/librivox.json": "2b2a8e92a23d1bb7610fc202a05b17a8bca70a9be4098bb3043df08d5a0a5b63",
     "data/modern-authors.json": "6fb646a9680eb473ad2ba6da924b3ee9c2bd8ae2cf95d829204cc8d9c15d0db2",
     "data/open.js": "698f5e718f8e1d38a984b123d9e2ce1994183b7b2c3ca58c0b0ba153238abb01",
     "data/portrait-credits.json": "c79c3d35fc538b5db5f5c97c89e855c7f30cfc4b39105d94f902ad298756007d",

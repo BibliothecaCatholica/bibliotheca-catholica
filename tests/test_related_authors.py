@@ -12,7 +12,7 @@ HUB={a['id'] for a in json.loads(R('data/catholic-hub.json'))['authors']}
 def main(p):s=R(p);return s[s.find('<main'):s.find('</main>')]
 class RelatedAuthors(unittest.TestCase):
     def test_the_four_authors_and_badges(self):
-        self.assertEqual({k:a['tradition'] for k,a in RA.items()},{'sabine-baring-gould':'Anglican','anna-jameson':'Protestant','william-canton':'Protestant','paul-sabatier':'Protestant (French Reformed)'})
+        self.assertEqual({k:a['tradition'] for k,a in RA.items()},{'sabine-baring-gould':'Anglican','anna-jameson':'Anglican','william-canton':'Protestant','paul-sabatier':'Protestant (French Reformed)'})
         for k,a in RA.items():
             self.assertEqual(a['badge'],'Non-Catholic Christian');self.assertNotIn(k,HUB)
             self.assertTrue(a['workIds']);self.assertEqual(a['checked'],'2026-11-09')
@@ -49,4 +49,15 @@ class RelatedAuthors(unittest.TestCase):
         for fn in ('function relatedBy(w)','function relatedNote(w)','function raBadge(r)'):self.assertIn(fn,lib)
         self.assertIn(':relatedBy(w))',lib);self.assertIn('+relatedNote(w)',lib)
         self.assertRegex(app,r'function staticOnly\(path\)\{.*relatedAuthors')
+    def test_jameson_reads_anglican_everywhere(self):
+        a=RA['anna-jameson'];self.assertEqual(a['tradition'],'Anglican');self.assertNotIn('Protestant',a['desc']+a['bio'])
+        for f in ['author/anna-jameson/index.html']+['work/%s/index.html'%w for w in a['workIds']]:
+            m=main(f);self.assertIn('Non-Catholic Christian · Anglican',m,f);self.assertNotIn('Protestant',m,f)
+        for w in a['workIds']:self.assertEqual(W[w]['tradition'],'Anglican writer')
+    def test_secret_father_brown_librivox(self):
+        LV=json.loads(R('data/librivox.json'));h=LV['work']['secret-father-brown']
+        self.assertEqual([x['id'] for x in h],[19151]);self.assertEqual(h[0]['url'],'https://librivox.org/the-secret-of-father-brown-by-g-k-chesterton/')
+        t=json.loads(R('data/librivox/19151.json'));self.assertEqual(len(t['sections']),h[0]['tracks'])
+        self.assertTrue(all(x['mp3'].startswith('https://archive.org/download/') for x in t['sections']))
+        self.assertIn('"secret-father-brown":[{"id":19151',R('data/librivox.js'))
 if __name__=='__main__':unittest.main()

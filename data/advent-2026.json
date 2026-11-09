@@ -196,11 +196,20 @@
    "translation": "E. B. Pusey, trans. (first pub. Oxford: Library of the Fathers, 1838; hosted file names no edition year; Pusey d. 1882)",
    "attribution": "St. Augustine of Hippo (354–430), Father and Doctor, Confessions, Book V, ch. 13–14. E. B. Pusey, trans. (first pub. Oxford: Library of the Fathers, 1838; hosted file names no edition year; Pusey d. 1882).",
    "excerpt": "To Milan I came, to Ambrose the Bishop, known to the whole world as among the best of men, Thy devout servant; whose eloquent discourse did then plentifully dispense unto Thy people the flour of Thy wheat, the gladness of Thy oil, and the sober inebriation of Thy wine. To him was I unknowing led by Thee, that by him I might knowingly be led to Thee. That man of God received me as a father, and showed me an Episcopal kindness on my coming. Thenceforth I began to love him, at first indeed not as a teacher of the truth (which I utterly despaired of in Thy Church), but as a person kind towards myself. … and yet was I drawing nearer by little and little, and unconsciously.",
-   "reflection": "On St. Ambrose's feast, Augustine remembers meeting him. Before Ambrose's teaching won him, his kindness did: 'he received me as a father.' And Augustine was drawing nearer 'by little and little, and unconsciously.' Many people come to Christ that way. Who has God put in your path this Advent to receive kindly?",
+   "reflection": "On St. Ambrose's feast, Augustine remembers meeting him. Before Ambrose's teaching won him, his kindness did: he 'received me as a father.' And Augustine was drawing nearer 'by little and little, and unconsciously.' Many people come to Christ that way. Who has God put in your path this Advent to receive kindly?",
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/confessions/pg-3296/4/150",
     "work": "https://bibliothecacatholica.com/work/confessions/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "Quote word for word (never change words inside quotation marks)",
+     "field": "reflection",
+     "substack": "his kindness did: 'he received me as a father.'",
+     "site": "his kindness did: he 'received me as a father.'",
+     "source": "Confessions, Book V: \"That man of God received me as a father\" (pg-3296)"
+    }
+   ]
   },
   {
    "day": 10,

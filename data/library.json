@@ -3193,5 +3193,184 @@
         }
       ]
     }
+  ],
+  "relatedAuthors": [
+    {
+      "id": "sabine-baring-gould",
+      "name": "Sabine Baring-Gould",
+      "born": 1834,
+      "died": 1924,
+      "badge": "Non-Catholic Christian",
+      "tradition": "Anglican",
+      "evidence": "Anglican priest and rector of Lew Trenchard, Devon; author of the hymn 'Onward, Christian Soldiers'. Checked 2026-11-09 in standard biographical references.",
+      "bio": "Sabine Baring-Gould (1834–1924) was an Anglican priest, antiquarian, and prolific English writer. He is remembered for hymns such as \"Onward, Christian Soldiers,\" for folklore studies, and for a large multi-volume Lives of the Saints. His scholarship mixes parish piety, local history, and Victorian antiquarianism; listing him is not an endorsement of every critical judgment.",
+      "desc": "Sabine Baring-Gould (1834–1924), Anglican priest and author of a many-volume Lives of the Saints: his books in the reading room, other works online, and sources",
+      "workIds": [
+        "baring-gould-lives-january",
+        "baring-gould-lives-february",
+        "baring-gould-lives-march",
+        "baring-gould-lives-scans",
+        "virgin-saints-and-martyrs"
+      ],
+      "otherWorks": [
+        {
+          "title": "The Book of Were-Wolves",
+          "year": 1865,
+          "url": "https://www.gutenberg.org/ebooks/5324"
+        },
+        {
+          "title": "Curious Myths of the Middle Ages",
+          "year": 1866,
+          "url": "https://www.gutenberg.org/ebooks/36127"
+        },
+        {
+          "title": "A Book of Cornwall",
+          "year": 1899,
+          "url": "https://www.gutenberg.org/ebooks/46937"
+        },
+        {
+          "title": "Cornish Characters and Strange Events",
+          "year": 1909,
+          "url": "https://www.gutenberg.org/ebooks/41775"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Project Gutenberg author books (via search/Were-Wolves page)",
+          "url": "https://www.gutenberg.org/ebooks/5324"
+        },
+        {
+          "label": "Wikisource author",
+          "url": "https://en.wikisource.org/wiki/Author:Sabine_Baring-Gould"
+        },
+        {
+          "label": "Online Books / Gutenberg title list",
+          "url": "https://onlinebooks.library.upenn.edu/webbin/gutbook/author?name=Baring-Gould%2C+S.+%28Sabine%29%2C+1834-1924"
+        }
+      ],
+      "checked": "2026-11-09",
+      "research": "research/deep-link-gaps-2026-11-09.json"
+    },
+    {
+      "id": "anna-jameson",
+      "name": "Anna Brownell Jameson",
+      "born": 1794,
+      "died": 1860,
+      "badge": "Non-Catholic Christian",
+      "tradition": "Protestant",
+      "evidence": "Irish-born British writer and art historian; not Roman Catholic. Dictionary of Art Historians (arthistorians.info/jamesona/, 200) and scholarship on Sacred and Legendary Art describe her as mediating Catholic iconography for a Protestant English readership. Specific parish membership (Church of England vs other Protestant) was not verified from a primary church record this turn; badge uses the confirmed broader tradition.",
+      "bio": "Anna Brownell Jameson (1794–1860) was an Irish-born British writer and one of the nineteenth century's leading interpreters of Christian iconography in art. Her Sacred and Legendary Art series explained saints, monastic legends, and Marian imagery to English readers. She approached the material as an art historian rather than as a Roman Catholic apologist.",
+      "desc": "Anna Brownell Jameson (1794–1860), Protestant writer on Christian art: Sacred and Legendary Art, Legends of the Madonna, and more, with her sources.",
+      "workIds": [
+        "sacred-legendary-art",
+        "legends-of-the-madonna",
+        "legends-monastic-orders"
+      ],
+      "otherWorks": [
+        {
+          "title": "Sacred and Legendary Art, vol. 2",
+          "year": 1848,
+          "url": "https://www.gutenberg.org/ebooks/69582"
+        },
+        {
+          "title": "A Commonplace Book of Thoughts, Memories, and Fancies",
+          "year": 1854,
+          "url": "https://www.gutenberg.org/ebooks/39680"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Project Gutenberg author",
+          "url": "https://www.gutenberg.org/ebooks/author/7772"
+        },
+        {
+          "label": "Wikisource author",
+          "url": "https://en.wikisource.org/wiki/Author:Anna_Brownell_Jameson"
+        },
+        {
+          "label": "Dictionary of Art Historians",
+          "url": "https://arthistorians.info/jamesona/"
+        }
+      ],
+      "checked": "2026-11-09",
+      "research": "research/deep-link-gaps-2026-11-09.json"
+    },
+    {
+      "id": "william-canton",
+      "name": "William Canton",
+      "born": 1845,
+      "died": 1926,
+      "badge": "Non-Catholic Christian",
+      "tradition": "Protestant",
+      "evidence": "Raised Catholic and studied toward the priesthood, then left the Catholic Church and became a Protestant; later wrote for religious publishers, including a history of the British and Foreign Bible Society. Checked 2026-11-09 in standard biographical references. The badge reflects his mature Protestant identity.",
+      "bio": "William Canton (1845–1926) was a British poet, journalist, and children's writer. Born into a Catholic family and briefly prepared for the priesthood, he later became a Protestant and worked in religious journalism and publishing. He is best known for The Invisible Playmate and A Child's Book of Saints, gentle imaginative books shaped by his daughter Winifred's short life.",
+      "desc": "William Canton (1845–1926), Protestant poet and author of A Child’s Book of Saints: his book in the reading room, other works online, and sources.",
+      "workIds": [
+        "child-book-of-saints"
+      ],
+      "otherWorks": [
+        {
+          "title": "The Invisible Playmate: A Story of the Unseen",
+          "year": 1894,
+          "url": "https://archive.org/details/invisibleplaymat00cant"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Project Gutenberg author",
+          "url": "https://www.gutenberg.org/ebooks/author/25117"
+        },
+        {
+          "label": "Wikisource author",
+          "url": "https://en.wikisource.org/wiki/Author:William_Canton"
+        },
+        {
+          "label": "IA Child's Book of Saints",
+          "url": "https://archive.org/details/childsbookofsain00cant"
+        }
+      ],
+      "checked": "2026-11-09",
+      "research": "research/deep-link-gaps-2026-11-09.json"
+    },
+    {
+      "id": "paul-sabatier",
+      "name": "Paul Sabatier",
+      "born": 1858,
+      "died": 1928,
+      "badge": "Non-Catholic Christian",
+      "tradition": "Protestant (French Reformed)",
+      "evidence": "French Protestant / Reformed pastor and historian. Confirmed in Catholic historical literature on the reception of his Vie de S. François (e.g. discussions of Index placement and Franciscan scholarship).",
+      "bio": "Paul Sabatier (1858–1928) was a French Protestant pastor and historian whose 1893 Vie de S. François d'Assise reshaped modern Franciscan studies. The English translation by Louise Seymour Houghton circulated widely. Catholics should read him with care: the Holy See placed the Life on the Index in 1894, and later Franciscan scholarship revised several of his source theories, while still acknowledging his role in reopening the critical study of the early legends.",
+      "desc": "Paul Sabatier (1858–1928), French Protestant historian of St Francis: his Life of St. Francis of Assisi in the reading room, with a context note.",
+      "note": "Sabatier's Life is historically important and often moving, but it is not a Catholic hagiography. He tended to cast Francis as a Gospel free spirit later constrained by Rome and the Order. Catholic readers may profit from his source work and narrative gift while also reading Thomas of Celano, St Bonaventure, and later Catholic biographers, Chesterton among them, for an ecclesial reading of the saint.",
+      "noteWorks": [
+        "sabatier-francis"
+      ],
+      "readAlso": [
+        "chesterton-francis",
+        "life-legends-francis",
+        "little-flowers-francis"
+      ],
+      "workIds": [
+        "sabatier-francis"
+      ],
+      "otherWorks": [],
+      "sources": [
+        {
+          "label": "Project Gutenberg #18787",
+          "url": "https://www.gutenberg.org/ebooks/18787"
+        },
+        {
+          "label": "Project Gutenberg author",
+          "url": "https://www.gutenberg.org/ebooks/author/8249"
+        },
+        {
+          "label": "Internet Archive English Life",
+          "url": "https://archive.org/details/lifeofstfranciso00sabauoft"
+        }
+      ],
+      "checked": "2026-11-09",
+      "research": "research/deep-link-gaps-2026-11-09.json"
+    }
   ]
 }

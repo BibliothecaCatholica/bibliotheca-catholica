@@ -24,6 +24,7 @@ author/ambrosiaster/index.html
 author/andrew-of-crete/index.html
 author/angela-of-foligno/index.html
 author/angelus-silesius/index.html
+author/anna-jameson/index.html
 author/anne-catherine-emmerich/index.html
 author/anscar-vonier/index.html
 author/anselm-of-canterbury/index.html
@@ -354,6 +355,7 @@ author/paschasius-radbertus/index.html
 author/patrick-madrid/index.html
 author/paul-claudel/index.html
 author/paul-of-the-cross/index.html
+author/paul-sabatier/index.html
 author/paul-the-deacon/index.html
 author/paulinus-of-nola/index.html
 author/peter-canisius/index.html
@@ -421,6 +423,7 @@ author/ross-douthat/index.html
 author/rufinus-of-aquileia/index.html
 author/rupert-of-deutz/index.html
 author/russell-kirk/index.html
+author/sabine-baring-gould/index.html
 author/scott-hahn/index.html
 author/servais-pinckaers/index.html
 author/sextus-julius-africanus/index.html
@@ -470,6 +473,7 @@ author/warren-h-carroll/index.html
 author/wilfrid-ward/index.html
 author/willa-cather/index.html
 author/william-allen/index.html
+author/william-canton/index.html
 author/william-george-ward/index.html
 author/william-of-ockham/index.html
 author/william-of-saint-thierry/index.html

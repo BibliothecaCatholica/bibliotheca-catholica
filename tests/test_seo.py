@@ -58,6 +58,7 @@ class SEO(unittest.TestCase):
         for k in flags['books']:self.assertNotIn('isidore/book/'+k+'"',s)
     def test_jsonld_parses_and_is_accurate(self):
         hub={a['id']:a for a in json.loads((ROOT/'data/catholic-hub.json').read_text())['authors']}
+        hub.update({a['id']:a for a in json.loads((ROOT/'data/library.json').read_text()).get('relatedAuthors',[])})  # deep-link gaps: related authors' pages
         for r,p in PARSED.items():
             self.assertTrue(p.ld,r)
             for x in p.ld:

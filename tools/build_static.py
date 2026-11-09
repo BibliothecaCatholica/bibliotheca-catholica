@@ -227,6 +227,35 @@ def part_path(wid,d,x):return 'work/'+wid+'/'+d['kind']+'/'+x['slug']
 def parts_list(wid,d):
     """The contents list a work page shows (static work page; the app mirrors it from data/text-pages.js)."""
     return ('<h2>'+E(d['nouns'])+'</h2><ol class="text-parts">'+''.join('<li>'+a('/'+part_path(wid,d,x)+'/',(x['num']+'. ' if d['kind']=='ch' else '')+x['title'])+'</li>' for x in d['items'])+'</ol>')
+def ra_note_html(ra,libw,listing):
+    """The calm context note Research wrote for a related author (Sabatier), in the editorial-note box style, with onward reading."""
+    if not ra.get('note'):return ''
+    also=('<p>Read also: '+oxford([a('/work/'+x+'/',libw[x]['title'])+('' if libw[x]['author'].startswith('Anonymous') else ' by '+E(libw[x]['author'])) for x in ra['readAlso']])+'.</p>') if ra.get('readAlso') else ''
+    return '<div class="ef-box"><div class="ef-h">Context note</div><p>'+E(ra['note'])+'</p>'+also+('<p class="small">Listing is not endorsement. See the '+a('/policy/','Fidelity & Editorial Policy')+'.</p>' if listing else '')+'</div>'
+def related_authors(out,lib,ra_badge):
+    """Deep-link gaps (2026-11-09): /author/<id>/ for writers outside the Catholic communion whose books are in the reading
+    room (data/library.json `relatedAuthors`, from Research). Badge, sourced bio, the works here, and a calm context note
+    in the editorial-note style where Research gave one. The app keeps these static pages as the view (staticOnly())."""
+    libw={w['id']:w for w in lib['works']}
+    for ra in lib.get('relatedAuthors',[]):
+        yrs=' ('+str(ra['born'])+'–'+str(ra['died'])+')'
+        mine=[libw[x] for x in ra['workIds']]
+        li=''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+(' · '+a('/#/read/'+w['id']+'/'+next(e['id'] for e in w['editions'] if e.get('text')),'Read here') if any(e.get('text') for e in w['editions']) else ' (full text at the source)')+'</li>' for w in mine)
+        note=ra_note_html(ra,libw,False)
+        other=''.join('<li>'+a(x['url'],x['title'],True)+(' ('+str(x['year'])+')' if x.get('year') else '')+'</li>' for x in ra.get('otherWorks',[]))
+        body=(crumb_html(('Related Christian writers','related/'),(ra['name'],''))
+          +'<div class="page-head"><div class="eyebrow">Related Christian writer</div><h1>'+E(ra['name']+yrs)+'</h1><p class="lede">'+E(ra['bio'])+'</p></div>'
+          +'<p>'+ra_badge(ra)+'</p>'+note
+          +'<p class="small">Bibliotheca Catholica lists some writers outside the Catholic communion whose books are read alongside the Catholic tradition. Listing is not endorsement; see the '+a('/policy/','Fidelity & Editorial Policy')+'.</p>'
+          +'<h2>In our library</h2><ul>'+li+'</ul>'+(('<h2>Other works online</h2><ul>'+other+'</ul>') if other else '')
+          +'<h2>More sources</h2><ul>'+''.join('<li>'+a(x['url'],x['label'],True)+'</li>' for x in ra['sources'])+'</ul>'
+          +'<h2>At a glance</h2><p>'+E('Born '+str(ra['born'])+', died '+str(ra['died'])+'. '+ra['badge']+': '+ra['tradition']+'. Sources checked '+ra['checked']+'.')+'</p>'
+          +'<p>'+a('/related/','Related Christian writers')+' · '+a('/library/','Selected library')+'</p>')
+        n=len(mine)
+        d=fit([ra['desc']])
+        assert 120<=len(d)<=160,(ra['id'],len(d))
+        person={'@context':'https://schema.org','@type':'Person','name':ra['name'],'url':SITE+'author/'+ra['id']+'/','birthDate':iso_year(ra['born']),'deathDate':iso_year(ra['died'])}
+        out['author/'+ra['id']]=(ra['name']+' — Bibliotheca Catholica',d,body,[person,crumbs(('Related Christian writers','related/'),(ra['name'],'author/'+ra['id']+'/'))])
 def series_html(w,lib,TPD):
     """Deep-link gaps: the books of a series in order (data/library.json `series`), mirrored by seriesList() in scripts/library.js."""
     libw={v['id']:v for v in lib['works']};h=''
@@ -408,16 +437,25 @@ def main():
             cat=[v for v in lib['works'] if v['category']==w['category'] and v['id']!=w['id'] and v not in sa][:6]
             if cat:r.append('More in '+E(w['category'])+': '+', '.join(a('/work/'+v['id']+'/',v['title']) for v in cat))
         return ('<h2>Related</h2><ul>'+''.join('<li>'+x+'</li>' for x in r)+'</ul>') if r else ''
+    RA={x:ra for ra in lib.get('relatedAuthors',[]) for x in ra['workIds']}  # work id -> related author (deep-link gaps)
+    ra_badge=lambda ra:'<span class="ef-badge tradition-badge" title="'+E(ra['evidence'])+'">'+E(ra['badge']+' · '+ra['tradition'])+'</span>'
+    related_authors(out,lib,ra_badge)
+    def byline(w):
+        if w.get('authorId') in auth_ids:return a('/author/'+w['authorId']+'/',w['author'])
+        if w['id'] in RA:return a('/author/'+RA[w['id']]['id']+'/',w['author'])+' '+ra_badge(RA[w['id']])
+        return E(w['author'])
     TPD=part_pages(out,lib,lambda w:(a('/author/'+w['authorId']+'/',w['author']) if w.get('authorId') in auth_ids else E(w['author'])),
                    lambda w:dict({'@type':'Person','name':w['author']},**({'url':SITE+'author/'+w['authorId']+'/'} if w.get('authorId') in auth_ids else {})))
     for w in lib['works']:
         eds=''.join('<li>'+E(e['label'])+(' · '+a('/#/read/'+w['id']+'/'+e['id'],'Read here') if e.get('text') else '')+' · '+a(e['source'],'Source',True)+'</li>' for e in w['editions'])
         d=w.get('description') or (w['title']+' by '+w['author']+': free reading edition with source, credits, and rights notes.')
         hosted=any(e.get('text') for e in w['editions'])
-        by=a('/author/'+w['authorId']+'/',w['author']) if w.get('authorId') in auth_ids else E(w['author'])
-        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p><h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+series_html(w,lib,TPD)+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
+        by=byline(w)
+        ra=RA.get(w['id']);ra_note=ra_note_html(ra,libw,True) if ra and w['id'] in ra.get('noteWorks',[]) else ''
+        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p>'+ra_note+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+series_html(w,lib,TPD)+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
         book={'@context':'https://schema.org','@type':'Book','name':w['title'],'url':SITE+'work/'+w['id']+'/','author':{'@type':'Person','name':w['author']},'description':d,'genre':w['category']}
         if w.get('authorId') in auth_ids:book['author']['url']=SITE+'author/'+w['authorId']+'/'
+        elif w['id'] in RA:book['author']['url']=SITE+'author/'+RA[w['id']]['id']+'/'
         langs=sorted({e['language'] for e in w['editions'] if e.get('language')})
         if langs:book['inLanguage']=langs[0] if len(langs)==1 else langs
         if hosted:book['isAccessibleForFree']=True
@@ -472,6 +510,7 @@ def main():
                 extra+='<h2>'+a('/author/'+au['id']+'/',au['name'])+'</h2><p>'+E(str(au.get('century','Unplaced'))+' century · principal work')+(' · '+E(s_status(sa)) if sa else '')+'</p>'
                 if mine:extra+='<ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>'
             extra+='<h2>Additional saints and traditional figures</h2><ul>'+''.join('<li>'+a(s_href(x),x['name'])+' — '+E(s_status(x))+(' · '+E(FLAGL[x['historicity']['flag']]) if x.get('historicity') else '')+'</li>' for x in saints if not x.get('author_id') and x['id'] not in skip_auth)+'</ul>'
+        elif k=='related':extra='<h2>Writers with their own pages</h2><ul>'+''.join('<li>'+a('/author/'+ra['id']+'/',ra['name']+' ('+str(ra['born'])+'–'+str(ra['died'])+')')+' · '+E(ra['badge']+' · '+ra['tradition'])+'</li>' for ra in lib.get('relatedAuthors',[]))+'</ul>'
         elif k=='authors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors)+'</ul>'
         elif k=='library':extra='<ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title']+' — '+w['author'])+'</li>' for w in lib['works'])+'</ul>'
         elif k=='editions':extra='<ul>'+''.join('<li>'+a('/editions/'+e['id']+'/',e['t'])+'</li>' for e in guide['editions'])+'</ul>'

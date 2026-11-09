@@ -15,6 +15,13 @@ test('every chapter and story route is static-only, and nothing else is',()=>{
  for(const r of routes){assert.equal(ctx.staticOnly(r),true,r);assert.equal(ctx.staticOnly(r+'/'),true,r)}
  for(const r of ['work/orthodoxy','author/g-k-chesterton','read/orthodoxy/pg-16769/1/47','work/orthodoxy/ch','work/orthodoxy/notes/01-x','work/Orthodoxy/ch/01-x','',undefined])assert.equal(ctx.staticOnly(r),false,String(r));
 });
+test('related authors (LIBRARY_DATA.relatedAuthors) are static-only author pages; Catholic authors stay in the app',()=>{
+ const L=JSON.parse(fs.readFileSync('data/library.json','utf8'));const c2={window:{LIBRARY_DATA:L}};vm.runInNewContext(so[0]+';this.staticOnly=staticOnly;',c2);
+ assert.equal(L.relatedAuthors.length,4);
+ for(const a of L.relatedAuthors){assert.equal(c2.staticOnly('author/'+a.id),true,a.id);assert.equal(c2.staticOnly('author/'+a.id+'/'),true,a.id)}
+ for(const r of ['author/g-k-chesterton','author/john-henry-newman','authors','related'])assert.equal(c2.staticOnly(r),false,r);
+ assert.equal(ctx.staticOnly('author/paul-sabatier'),false,'no data loaded: falls back to the app');
+});
 test('canonicalFor() gives each chapter and story page its own static URL',()=>{
  const m=app.match(/^function canonicalFor\(\)[\s\S]*?return SITE\+'#\/'\+raw\}$/m);assert(m);
  const c={location:{hash:''},window:{BC_BOOT:'',BCSaints:{get:()=>null}},STATIC_SECTIONS:[],SITE:'https://bibliothecacatholica.com/'};

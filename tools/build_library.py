@@ -1,6 +1,7 @@
 """Build the browser catalog from versioned metadata; no network or credentials."""
 import hashlib
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -12,6 +13,7 @@ def validate(catalog):
         assert archive['baseUrl'] == 'https://texts.bibliothecacatholica.com/texts/'
         assert isinstance(archive['enabled'], bool)
     ids, editions = set(), set()
+    by_id = {work['id']: work for work in catalog['works']}
     authors = {a['id'] for a in json.loads((ROOT / 'data/catholic-hub.json').read_text())['authors']}
     for work in catalog['works']:
         assert work['id'] not in ids, f"Duplicate work: {work['id']}"
@@ -54,6 +56,21 @@ def validate(catalog):
                 assert item['year'] < 1931, item
             else:
                 assert item.get('note'), item
+    # Deep-link gaps (2026-11-09): author pages for writers outside the Catholic communion whose books are in the
+    # reading room (Research: deep-link-gaps-2026-11-09.json). They are not hub authors and never Catholic Authors.
+    seen = set()
+    for author in catalog.get('relatedAuthors', []):
+        assert re.fullmatch(r'[a-z0-9]+(-[a-z0-9]+)*', author['id']) and author['id'] not in authors and author['id'] not in seen, author['id']
+        seen.add(author['id'])
+        assert author['name'] and isinstance(author['born'], int) and isinstance(author['died'], int)
+        assert author['badge'] == 'Non-Catholic Christian' and author['tradition'] and author['evidence'] and author['bio'] and 120 <= len(author['desc']) <= 160
+        assert author['workIds'] and all(w in ids for w in author['workIds']), author['id']
+        surname = author['name'].split()[-1]
+        assert all(surname in by_id[w]['author'] and not by_id[w].get('authorId') for w in author['workIds']), author['id']
+        assert set(author.get('noteWorks', [])) <= set(author['workIds']) and (not author.get('noteWorks') or author.get('note'))
+        assert all(w in ids for w in author.get('readAlso', [])), author['id']
+        assert all(x['url'].startswith('https://') for x in author.get('otherWorks', []) + author['sources'])
+        assert '\u2014' not in json.dumps(author, ensure_ascii=False), author['id']  # no em-dashes in site text
     return catalog
 
 def main():

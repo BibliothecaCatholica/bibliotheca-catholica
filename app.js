@@ -638,9 +638,10 @@ function support(){var shop=AFF.bookshopShop||'';
    '<li><b>Share the library</b> with a friend, a parish, or a homeschool group.</li></ul>'+
    '<p class="small muted sup-fine">Bibliotheca Catholica is an independent project. Payments are handled by Buy Me a Coffee and PayPal; we never see your card details.</p>'+discl();
   render(h,'support')}
-/* Deep-link gaps (2026-11-09): chapter and story pages (/work/<id>/ch|story/<slug>/) are static documents built by tools/build_static.py.
+/* Deep-link gaps (2026-11-09): chapter and story pages (/work/<id>/ch|story/<slug>/) and the related authors' pages (/author/<id>/ for
+   LIBRARY_DATA.relatedAuthors) are static documents built by tools/build_static.py.
    On their own static page the pre-rendered text stays as the view; a hash link to one loads the static page. */
-function staticOnly(path){path=String(path||'').replace(/\/+$/,'');return /^work\/[a-z0-9-]+\/(ch|story)\/\d\d-[a-z0-9-]+$/.test(path)}
+function staticOnly(path){path=String(path||'').replace(/\/+$/,'');var m=/^author\/([a-z0-9-]+)$/.exec(path),L=typeof window!=='undefined'&&window.LIBRARY_DATA;if(m)return !!(L&&(L.relatedAuthors||[]).some(function(r){return r.id===m[1]}));return /^work\/[a-z0-9-]+\/(ch|story)\/\d\d-[a-z0-9-]+$/.test(path)}
 function keepStatic(path){path=path.replace(/\/+$/,'');if(!location.hash&&window.BC_BOOT===path&&main.querySelector('.static-prerender')){setNav('library');return}location.replace('/'+path+'/')}
 function route(){var raw=location.hash.replace(/^#\/?/,'');if(!raw&&window.BC_BOOT)raw=window.BC_BOOT;if(raw==='search'&&!location.hash){var lookup=new URLSearchParams(location.search).get('lookup');if(lookup)raw='search/'+encodeURIComponent(lookup.slice(0,300))}var queryAt=raw.indexOf('?');var query=new URLSearchParams(queryAt<0?'':raw.slice(queryAt+1));var path=queryAt<0?raw:raw.slice(0,queryAt);var h;try{h=decodeURIComponent(path)}catch(e){notfound();return}if(staticOnly(h)){keepStatic(h);return}var p=h.split('/');if(p[0]==='search'){searchScope=['curated','isidore','all'].indexOf(query.get('scope'))>=0?query.get('scope'):'all';}
   hideSug();if(p[0]!=='search')gaReset('search');

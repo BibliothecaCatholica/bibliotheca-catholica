@@ -1,4 +1,4 @@
-"""v20 dated reading plans: Advent with the Fathers 2026 (tools/reading_plans.py)."""
+"""v20 dated reading plans: Advent with the Fathers 2026 (tools/reading_plans.py anchors, data/advent-2026.json text)."""
 import datetime,html,json,re,sys,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'tools'))
@@ -54,20 +54,33 @@ class ReadingPlans(unittest.TestCase):
             self.assertNotIn(d['edition'].replace('pg-',''),flagged_books)
             e=next(x for x in LIB[d['work']]['editions'] if x['id']==d['edition'])
             self.assertTrue(e['rights'].startswith('Public domain in the USA'))
-    def test_quotes_match_the_source(self):
-        """Each quote is the passage's own first words. Checked against the raw block with a pattern that
-        allows only whitespace, Gutenberg underscores, and footnote markers between the quoted words."""
+    def test_excerpts_match_the_source(self):
+        """Each excerpt is the hosted text word for word. An independent check: each piece between … cuts must
+        match the raw blocks with only whitespace, Gutenberg underscores, footnote markers, and padded verse
+        line numbers allowed between the words."""
+        mark=r'(?:_|\[\d+\]|\(\d+\)|[ \t]{2,}\d{1,4}(?=[ \t]*\n))*'
         for d in PLAN['days']:
             e=next(x for x in LIB[d['work']]['editions'] if x['id']==d['edition'])
-            bl=raw_blocks(e['text']);words=d['quote'].split(' ')
-            self.assertTrue(12<=len(words)<=20,d['day'])
-            mark=r'(?:_|\[\d+\]|\(\d+\))*'
-            pat=''.join(r'\s+'+mark if c==' ' else re.escape(c)+mark for c in d['quote'])
-            hit=[k for k in range(d['start'],d['end']+1) if re.match(r'(?:_|\s)*'+pat,bl[k])]
-            self.assertTrue(hit,(d['day'],d['quote']))
-            if len(words)<20:self.assertEqual(B.display(bl[hit[0]]),d['quote']);self.assertFalse(d['cut'])  # a short opening paragraph is quoted whole
-            self.assertIn(html.escape('“'+d['quote']+('…' if d['cut'] else '')+'”'),PAGE)
-            self.assertEqual(d['cut'],B.display(bl[hit[0]])!=d['quote'])
+            raw='\n\n'.join(raw_blocks(e['text'])[d['start']:d['end']+1])
+            for piece in [x.strip() for x in d['excerpt'].split('…') if x.strip()]:
+                pat=mark.join(r'\s+' if c.isspace() else re.escape(c) for c in re.sub(r'\s+',' ',piece))
+                self.assertRegex(raw,pat,(d['day'],piece[:60]))
+    def test_page_matches_the_advent_data_file(self):
+        """data/advent-2026.json is the one source of truth shared with Substack: every word of it that the page
+        shows must be on the static page and in data/reading-plans.json exactly."""
+        T=json.loads((ROOT/'data/advent-2026.json').read_text(encoding='utf-8'))
+        self.assertEqual(T['canonicalUrl'],'https://bibliothecacatholica.com/data/advent-2026.json')
+        self.assertEqual(len(T['days']),26);self.assertEqual(PLAN['text'],'data/advent-2026.json')
+        self.assertIn(html.escape(T['intro'],quote=False),PAGE)
+        for t,d in zip(T['days'],PLAN['days']):
+            self.assertEqual((t['day'],t['date'],t['liturgicalDay'],t['theme'],t['excerpt'],t['reflection']),(d['day'],d['date'],d['marker'],d['theme'],d['excerpt'],d['reflection']))
+            self.assertEqual(d['attrAuthor']+', '+d['attrWork']+d['attrRest'],t['attribution'])
+            li=re.search(r'<li class="plan-day[^"]*" id="day-%d".*?</li>'%t['day'],PAGE,re.S).group(0)
+            text=html.unescape(re.sub(r'<br>','\n',re.sub(r'</p><p>','\n\n',li)))
+            plain=re.sub(r'<[^>]+>','',text)
+            for k in ('liturgicalDay','theme','excerpt','attribution','reflection'):self.assertIn(t[k],plain,(t['day'],k))
+            self.assertIn('href="/'+t['links']['reader'][len('https://bibliothecacatholica.com/'):]+'"',li)
+            for k in ('liturgicalDay','title','subtitle','theme','attribution','reflection'):self.assertNotIn('\u2014',t[k],(t['day'],k))
     def test_static_page_seo(self):
         t=re.search(r'<title>(.*?)</title>',PAGE).group(1);desc=re.search(r'<meta name="description" content="([^"]*)">',PAGE).group(1)
         self.assertTrue(150<=len(html.unescape(desc))<=160,len(desc))
@@ -80,7 +93,7 @@ class ReadingPlans(unittest.TestCase):
         for f in (ROOT/'docs/static-pages.txt').read_text().split():
             s=(ROOT/f).read_text();titles.setdefault(re.search(r'<title>(.*?)</title>',s).group(1),[]).append(f);descs.setdefault(re.search(r'<meta name="description" content="([^"]*)">',s).group(1),[]).append(f)
         self.assertEqual(titles[t],['reading/advent-2026/index.html']);self.assertEqual(descs[desc],['reading/advent-2026/index.html'])
-        for s in (t,desc,PLAN['intro'],PLAN['sub'])+tuple(x for d in PLAN['days'] for x in (d['note'],d['ref'],d['marker'])):
+        for s in (t,desc,PLAN['intro'],PLAN['sub'])+tuple(x for d in PLAN['days'] for x in (d['reflection'],d['theme'],d['attrRest'],d['marker'])):
             self.assertNotIn('\u2014',s.replace(' — Bibliotheca Catholica',''));self.assertNotIn('tax-deductible',s.lower())
         self.assertNotIn('amazon.',PAGE.lower())
     def test_listed_and_linked(self):

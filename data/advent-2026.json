@@ -1,0 +1,545 @@
+{
+ "schema": 1,
+ "id": "advent-2026",
+ "title": "Advent with the Fathers",
+ "year": 2026,
+ "start": "2026-11-29",
+ "end": "2026-12-24",
+ "canonicalUrl": "https://bibliothecacatholica.com/data/advent-2026.json",
+ "rawUrl": "https://raw.githubusercontent.com/BibliothecaCatholica/bibliotheca-catholica/main/data/advent-2026.json",
+ "about": "The one source of truth for the Advent with the Fathers 2026 texts. The site page https://bibliothecacatholica.com/reading/advent-2026/ is built from this file (tools/build_reading_plans.py), and the Substack posts and any social copy should be read from it. Change the text here first (in the bibliotheca-catholica repo), then copy it to Substack. Each day: liturgicalDay, title, subtitle, theme, attribution, excerpt (verbatim from the hosted edition; line breaks kept, … marks a cut), reflection, and links. siteRuleEdits lists where this file follows a site writing rule and the Substack draft still has the older wording. Substack renders the attribution with a leading em-dash; the site does not use em-dashes.",
+ "updated": "2026-11-09",
+ "sourceNote": "Imported 2026-11-09 from Bibliotheca Substack drafts (posts/dayNN.html and entries.json, the text loaded into the scheduled Substack posts) and the Nov 22 preview after its em-dash edits.",
+ "sub": "Twenty-six short readings for Advent 2026, from the Fathers and the classic Catholic writers in our reading room",
+ "intro": "Advent 2026 begins on Sunday, November 29, and ends on Christmas Eve. This plan gives one short reading for each of its 26 days, drawn only from the public-domain editions in our reading room. The first weeks look toward Christ’s coming at the end of time; from December 17 the readings follow the O Antiphons toward Christmas. Each link opens the reader at the start of the passage.",
+ "footer": "Bibliotheca Catholica is free and always will be. If it has served you, you can help keep it going at https://bibliothecacatholica.com/#/support or https://buymeacoffee.com/bibliothecacatholica . Support is a gift to a sole proprietorship and is not tax-deductible. The library stays free for everyone.",
+ "preview": {
+  "substackPost": "https://bibliothecacatholica.substack.com/publish/post/224169693",
+  "scheduled": "2026-11-22T06:00:00-06:00",
+  "title": "Advent with the Fathers starts November 29",
+  "subtitle": "Twenty-six free daily readings, and a book to begin with",
+  "featuredBook": {
+   "work": "Confessions",
+   "url": "https://bibliothecacatholica.com/work/confessions/"
+  },
+  "quote": "Great art Thou, O Lord, and greatly to be praised; great is Thy power, and Thy wisdom infinite. … Thou awakest us to delight in Thy praise; for Thou madest us for Thyself, and our heart is restless, until it repose in Thee.",
+  "attribution": "(St. Augustine, Confessions, Book I, ch. 1; trans. E. B. Pusey (Project Gutenberg #3296; hosted on the site))",
+  "whatToExpect": [
+   "Daily, Nov 29 – Dec 24: one short excerpt, a plain reflection, and links to the day's passage and the work page.",
+   "After Christmas: a weekly From the Library digest on Saturday mornings, with Book of the Week on Wednesdays (web only), then a January Read-Along in Orthodoxy, and the Confessions again for Lent (Ash Wednesday is February 10, 2027)."
+  ],
+  "closing": "Save the Advent plan, subscribe if you have not, and, if you like, open Book I of the Confessions before the first candle is lit. We will walk the rest of the way together."
+ },
+ "days": [
+  {
+   "day": 1,
+   "date": "2026-11-29",
+   "liturgicalDay": "First Sunday of Advent",
+   "title": "Day 1: He will come, and will not tarry",
+   "subtitle": "Sunday, November 29, 2026 · First Sunday of Advent · St. Clement of Rome, First Epistle to the Corinthians",
+   "theme": "He will come, and will not tarry",
+   "author": "St. Clement of Rome (fl. c. 96), Apostolic Father",
+   "work": "First Epistle to the Corinthians",
+   "location": "ch. XXIII",
+   "translation": "Ante-Nicene Christian Library, vol. I, trans. Roberts, Donaldson & Crombie (Edinburgh: T. & T. Clark, 1870)",
+   "attribution": "St. Clement of Rome (fl. c. 96), Apostolic Father, First Epistle to the Corinthians, ch. XXIII. Ante-Nicene Christian Library, vol. I, trans. Roberts, Donaldson & Crombie (Edinburgh: T. & T. Clark, 1870).",
+   "excerpt": "Ye foolish ones! compare yourselves to a tree: take [for instance] the vine. First of all, it sheds its leaves, then it buds, next it puts forth leaves, and then it flowers; after that comes the sour grape, and then follows the ripened fruit. Ye perceive how in a little time the fruit of a tree comes to maturity. Of a truth, soon and suddenly shall His will be accomplished, as the Scripture also bears witness, saying, “Speedily will He come, and will not tarry;” and, “The Lord shall suddenly come to His temple, even the Holy One, for whom ye look.”",
+   "reflection": "Already in the first century some Christians were tired of waiting: 'we have grown old, and none of them has happened unto us.' Clement answers them with a vine: leaf, bud, flower, sour grape, ripe fruit. God's promises ripen on His schedule, not ours, but they ripen. That is where Advent begins.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/apostolic-fathers/pg-77576/3/117",
+    "work": "https://bibliothecacatholica.com/work/apostolic-fathers/"
+   }
+  },
+  {
+   "day": 2,
+   "date": "2026-11-30",
+   "liturgicalDay": "St. Andrew, Apostle",
+   "title": "Day 2: The last day, and the first coming",
+   "subtitle": "Monday, November 30, 2026 · St. Andrew, Apostle · St. Augustine of Hippo, The City of God",
+   "theme": "The last day, and the first coming",
+   "author": "St. Augustine of Hippo (354–430), Father and Doctor",
+   "work": "The City of God",
+   "location": "Book XX, ch. 1",
+   "translation": "Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871)",
+   "attribution": "St. Augustine of Hippo (354–430), Father and Doctor, The City of God, Book XX, ch. 1. Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871).",
+   "excerpt": "That, therefore, which the whole Church of the true God holds and professes as its creed, that Christ shall come from heaven to judge quick and dead, this we call the last day, or last time, of the divine judgment. … For that day is properly called the day of judgment, because in it there shall be no room left for the ignorant questioning why this wicked person is happy and that righteous man unhappy.",
+   "reflection": "Advent looks two ways: back to Bethlehem and forward to the day Christ 'shall come from heaven to judge quick and dead.' Augustine reminds us that this is simply the creed of the whole Church. It is also a comfort: on that day no one will be left asking why the wicked prosper and the good suffer. St. Andrew, whose feast is today, followed the Lamb at the first word, and he is a good companion for the waiting.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/37/1312",
+    "work": "https://bibliothecacatholica.com/work/city-of-god/"
+   }
+  },
+  {
+   "day": 3,
+   "date": "2026-12-01",
+   "liturgicalDay": "Tuesday, First Week of Advent",
+   "title": "Day 3: The restless heart",
+   "subtitle": "Tuesday, December 1, 2026 · Tuesday, First Week of Advent · St. Augustine of Hippo, Confessions",
+   "theme": "The restless heart",
+   "author": "St. Augustine of Hippo (354–430), Father and Doctor",
+   "work": "Confessions",
+   "location": "Book I, ch. 1",
+   "translation": "E. B. Pusey, trans. (first pub. Oxford: Library of the Fathers, 1838; hosted file names no edition year; Pusey d. 1882)",
+   "attribution": "St. Augustine of Hippo (354–430), Father and Doctor, Confessions, Book I, ch. 1. E. B. Pusey, trans. (first pub. Oxford: Library of the Fathers, 1838; hosted file names no edition year; Pusey d. 1882).",
+   "excerpt": "Great art Thou, O Lord, and greatly to be praised; great is Thy power, and Thy wisdom infinite. And Thee would man praise; man, but a particle of Thy creation; man, that bears about him his mortality, the witness of his sin, the witness that Thou resistest the proud: yet would man praise Thee; he, but a particle of Thy creation. Thou awakest us to delight in Thy praise; for Thou madest us for Thyself, and our heart is restless, until it repose in Thee. … My faith, Lord, shall call on Thee, which Thou hast given me, wherewith Thou hast inspired me, through the Incarnation of Thy Son, through the ministry of the Preacher.",
+   "reflection": "Augustine begins his life story with a longing nothing in this world can settle. The restlessness of a busy December is not a failure to fix with more activity; it is the ache of a heart made for God. Notice where his faith comes from: 'through the Incarnation of Thy Son.' The answer to the restless heart is the Child we are waiting for.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/confessions/pg-3296/0/15",
+    "work": "https://bibliothecacatholica.com/work/confessions/"
+   }
+  },
+  {
+   "day": 4,
+   "date": "2026-12-02",
+   "liturgicalDay": "Wednesday, First Week of Advent",
+   "title": "Day 4: The city of the soul has many gates",
+   "subtitle": "Wednesday, December 2, 2026 · Wednesday, First Week of Advent · St. Catherine of Siena, Letters",
+   "theme": "The city of the soul has many gates",
+   "author": "St. Catherine of Siena (1347–1380), Doctor of the Church",
+   "work": "Letters",
+   "location": "Letter to Stefano Maconi",
+   "translation": "Vida D. Scudder, trans. and ed. (London: J. M. Dent, 1905)",
+   "attribution": "St. Catherine of Siena (1347–1380), Doctor of the Church, Letters, Letter to Stefano Maconi. Vida D. Scudder, trans. and ed. (London: J. M. Dent, 1905).",
+   "excerpt": "with desire to see thee a true guardian of the city of thy soul. Oh, dearest son, this city has many gates! They are three--Memory, Intellect, and Will, and our Creator allows all of them to be battered, and sometimes opened by violence, except one--that is, Will. … Let us strive to hold good and zealous watch, keeping at the side of our Watch Free-will, the dog Conscience, who when anyone comes at the gate must awake Reason by its barking, that she may discern whether it be friend or foe",
+   "reflection": "Catherine wrote this letter in Advent; she mentions arriving 'on the first Sunday in Advent with much peace.' Her picture is of a walled city: memory and intellect can be battered by every passing noise, but the will opens only if we consent. Advent's watchfulness is not anxiety about everything. It is keeping one gate well, with conscience awake beside it.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/catherine-letters/pg-7403/17/625",
+    "work": "https://bibliothecacatholica.com/work/catherine-letters/"
+   }
+  },
+  {
+   "day": 5,
+   "date": "2026-12-03",
+   "liturgicalDay": "St. Francis Xavier",
+   "title": "Day 5: Prepare a worthy mansion",
+   "subtitle": "Thursday, December 3, 2026 · St. Francis Xavier · Thomas à Kempis, The Imitation of Christ",
+   "theme": "Prepare a worthy mansion",
+   "author": "Thomas à Kempis (c. 1380–1471)",
+   "work": "The Imitation of Christ",
+   "location": "Book II, ch. 1, \"Of the inward life\"",
+   "translation": "William Benham, trans. (hosted file names no edition year; Benham d. 1910)",
+   "attribution": "Thomas à Kempis (c. 1380–1471), The Imitation of Christ, Book II, ch. 1, \"Of the inward life\". William Benham, trans. (hosted file names no edition year; Benham d. 1910).",
+   "excerpt": "Christ will come to thee, and show thee His consolation, if thou prepare a worthy mansion for Him within thee. All His glory and beauty is from within, and there it pleaseth Him to dwell. … Go to, faithful soul, prepare thy heart for this bridegroom that he may vouchsafe to come to thee and dwell within thee, for so He saith, if any man loveth me he will keep my words: and my Father will love him, and we will come unto him and make our abode with him. Give, therefore, place to Christ and refuse entrance to all others.",
+   "reflection": "'Christ will come to thee': for Thomas à Kempis, Advent is not only a date on the calendar but a visit to the soul. The preparation is simple and demanding: make room, and keep the room for Him. St. Francis Xavier, whose feast is today, crossed oceans so that others could receive that visit; most of us are asked to cross only the distance into our own hearts.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/imitation-of-christ/pg-1653/5/206",
+    "work": "https://bibliothecacatholica.com/work/imitation-of-christ/"
+   }
+  },
+  {
+   "day": 6,
+   "date": "2026-12-04",
+   "liturgicalDay": "Friday, First Week of Advent",
+   "title": "Day 6: An evangelist before the Gospel",
+   "subtitle": "Friday, December 4, 2026 · Friday, First Week of Advent · St. Augustine of Hippo, The City of God",
+   "theme": "An evangelist before the Gospel",
+   "author": "St. Augustine of Hippo (354–430), Father and Doctor",
+   "work": "The City of God",
+   "location": "Book XVIII, ch. 29",
+   "translation": "Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871)",
+   "attribution": "St. Augustine of Hippo (354–430), Father and Doctor, The City of God, Book XVIII, ch. 29. Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871).",
+   "excerpt": "Isaiah, then, together with his rebukes of wickedness, precepts of righteousness, and predictions of evil, also prophesied much more than the rest about Christ and the Church, that is, about the King and that city which he founded; so that some say he should be called an evangelist rather than a prophet. … But let us now hear what follows about the Church. He says, \"Rejoice, O barren, thou that barest not; break forth and cry, thou that didst not travail with child: for many more are the children of the desolate than of her that has an husband.\"",
+   "reflection": "Isaiah is the prophet of Advent; the Church reads him almost every day of the season. Augustine notes that some called him 'an evangelist rather than a prophet', because he saw the King and His city so clearly. And his word to the barren is joy: the God who comes makes the desolate fruitful.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/28/989",
+    "work": "https://bibliothecacatholica.com/work/city-of-god/"
+   }
+  },
+  {
+   "day": 7,
+   "date": "2026-12-05",
+   "liturgicalDay": "Saturday, First Week of Advent",
+   "title": "Day 7: When the wind rose, he prayed",
+   "subtitle": "Saturday, December 5, 2026 · Saturday, First Week of Advent · St. Bede the Venerable, Ecclesiastical History of the English People",
+   "theme": "When the wind rose, he prayed",
+   "author": "St. Bede the Venerable (673–735), Doctor of the Church",
+   "work": "Ecclesiastical History of the English People",
+   "location": "Book IV, ch. 3 (St. Chad)",
+   "translation": "A. M. Sellar, rev. trans. (London: George Bell and Sons, 1907)",
+   "attribution": "St. Bede the Venerable (673–735), Doctor of the Church, Ecclesiastical History of the English People, Book IV, ch. 3 (St. Chad). A. M. Sellar, rev. trans. (London: George Bell and Sons, 1907).",
+   "excerpt": "It is no wonder that he joyfully beheld the day of his death, or rather the day of the Lord, the coming whereof he had always been mindful to await with earnest expectation. … if it happened that there blew a sudden strong gust of wind, when he was reading or doing any other thing, he forthwith called upon the Lord for mercy, and begged that it might be granted to all mankind.",
+   "reflection": "Bede remembers St. Chad, a bishop who lived 'mindful to await with earnest expectation' the day of the Lord. A gust of wind was enough to turn him to prayer, and he prayed for everyone, not only himself. Today, let ordinary interruptions (a siren, a storm, a notification) become small reminders that the Lord is coming.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/bede-ecclesiastical-history/pg-38326/14/496",
+    "work": "https://bibliothecacatholica.com/work/bede-ecclesiastical-history/"
+   }
+  },
+  {
+   "day": 8,
+   "date": "2026-12-06",
+   "liturgicalDay": "Second Sunday of Advent",
+   "title": "Day 8: Sent to persuade, not to compel",
+   "subtitle": "Sunday, December 6, 2026 · Second Sunday of Advent · Epistle to Diognetus, Epistle to Diognetus",
+   "theme": "Sent to persuade, not to compel",
+   "author": "Epistle to Diognetus (anonymous, 2nd century)",
+   "work": "Epistle to Diognetus",
+   "location": "ch. VII",
+   "translation": "Ante-Nicene Christian Library, vol. I, trans. Roberts, Donaldson & Crombie (Edinburgh: T. & T. Clark, 1870)",
+   "attribution": "Epistle to Diognetus (anonymous, 2nd century), Epistle to Diognetus, ch. VII. Ante-Nicene Christian Library, vol. I, trans. Roberts, Donaldson & Crombie (Edinburgh: T. & T. Clark, 1870).",
+   "excerpt": "Was it then, as one might conceive, for the purpose of exercising tyranny, or of inspiring fear and terror? By no means, but under the influence of clemency and meekness. As a king sends his son, who is also a king, so sent He Him; as God He sent Him; as to men He sent Him; as a Saviour He sent Him, and as seeking to persuade, not to compel us; for violence has no place in the character of God. As calling us He sent Him, not as vengefully pursuing us; as loving us He sent Him, not as judging us. For He will yet send Him to judge us, and who shall endure His appearing?",
+   "reflection": "Why does God come as a child and not as a conqueror? This unknown second-century writer answers: because violence has no place in the character of God. He comes calling, not pursuing; loving, not yet judging. Advent holds both comings together: the gentle one we celebrate, and the one we prepare for.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/apostolic-fathers/pg-77576/111/3885",
+    "work": "https://bibliothecacatholica.com/work/apostolic-fathers/"
+   }
+  },
+  {
+   "day": 9,
+   "date": "2026-12-07",
+   "liturgicalDay": "St. Ambrose",
+   "title": "Day 9: Led by a bishop to God",
+   "subtitle": "Monday, December 7, 2026 · St. Ambrose · St. Augustine of Hippo, Confessions",
+   "theme": "Led by a bishop to God",
+   "author": "St. Augustine of Hippo (354–430), Father and Doctor",
+   "work": "Confessions",
+   "location": "Book V, ch. 13–14",
+   "translation": "E. B. Pusey, trans. (first pub. Oxford: Library of the Fathers, 1838; hosted file names no edition year; Pusey d. 1882)",
+   "attribution": "St. Augustine of Hippo (354–430), Father and Doctor, Confessions, Book V, ch. 13–14. E. B. Pusey, trans. (first pub. Oxford: Library of the Fathers, 1838; hosted file names no edition year; Pusey d. 1882).",
+   "excerpt": "To Milan I came, to Ambrose the Bishop, known to the whole world as among the best of men, Thy devout servant; whose eloquent discourse did then plentifully dispense unto Thy people the flour of Thy wheat, the gladness of Thy oil, and the sober inebriation of Thy wine. To him was I unknowing led by Thee, that by him I might knowingly be led to Thee. That man of God received me as a father, and showed me an Episcopal kindness on my coming. Thenceforth I began to love him, at first indeed not as a teacher of the truth (which I utterly despaired of in Thy Church), but as a person kind towards myself. … and yet was I drawing nearer by little and little, and unconsciously.",
+   "reflection": "On St. Ambrose's feast, Augustine remembers meeting him. Before Ambrose's teaching won him, his kindness did: 'he received me as a father.' And Augustine was drawing nearer 'by little and little, and unconsciously.' Many people come to Christ that way. Who has God put in your path this Advent to receive kindly?",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/confessions/pg-3296/4/150",
+    "work": "https://bibliothecacatholica.com/work/confessions/"
+   }
+  },
+  {
+   "day": 10,
+   "date": "2026-12-08",
+   "liturgicalDay": "Immaculate Conception",
+   "title": "Day 10: Preserved for the second Adam",
+   "subtitle": "Tuesday, December 8, 2026 · Immaculate Conception · St. Alphonsus Liguori, The Glories of Mary",
+   "theme": "Preserved for the second Adam",
+   "author": "St. Alphonsus Liguori (1696–1787), Doctor of the Church",
+   "work": "The Glories of Mary",
+   "location": "Discourse on the Immaculate Conception",
+   "translation": "Anonymous English translation, 2nd American ed. (New York: Edward Dunigan and Brother, 1852); translator not named",
+   "attribution": "St. Alphonsus Liguori (1696–1787), Doctor of the Church, The Glories of Mary, Discourse on the Immaculate Conception. Anonymous English translation, 2nd American ed. (New York: Edward Dunigan and Brother, 1852); translator not named.",
+   "excerpt": "But God ordained that the blessed Virgin should be exempt from this common calamity, for he had destined her to be the mother of the second Adam, Jesus Christ, who was to repair the injury done by the first. Now, let us see how fitting it was that the Three Divine Persons should preserve this Virgin from original sin. We shall see that it was befitting the Father to preserve her from it as his daughter, the Son as his mother, the Holy Spirit as his spouse.",
+   "reflection": "Two years before the dogma was defined in 1854, this American edition of St. Alphonsus was already teaching what the Church believes: Mary was preserved from original sin so that she could be the mother of the One who repairs it. Today's feast is really about how carefully God prepared for His coming, and how He prepares a place in each of us.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/glories-of-mary/pg-72411/17/617",
+    "work": "https://bibliothecacatholica.com/work/glories-of-mary/"
+   }
+  },
+  {
+   "day": 11,
+   "date": "2026-12-09",
+   "liturgicalDay": "St. Juan Diego",
+   "title": "Day 11: O sweet exchange!",
+   "subtitle": "Wednesday, December 9, 2026 · St. Juan Diego · Epistle to Diognetus, Epistle to Diognetus",
+   "theme": "O sweet exchange!",
+   "author": "Epistle to Diognetus (anonymous, 2nd century)",
+   "work": "Epistle to Diognetus",
+   "location": "ch. IX",
+   "translation": "Ante-Nicene Christian Library, vol. I, trans. Roberts, Donaldson & Crombie (Edinburgh: T. & T. Clark, 1870)",
+   "attribution": "Epistle to Diognetus (anonymous, 2nd century), Epistle to Diognetus, ch. IX. Ante-Nicene Christian Library, vol. I, trans. Roberts, Donaldson & Crombie (Edinburgh: T. & T. Clark, 1870).",
+   "excerpt": "He Himself took on Him the burden of our iniquities, He gave His own Son as a ransom for us, the holy One for transgressors, the blameless One for the wicked, the righteous One for the unrighteous, the incorruptible One for the corruptible, the immortal One for them that are mortal. For what other thing was capable of covering our sins than His righteousness? By what other one was it possible that we, the wicked and ungodly, could be justified, than by the only Son of God? O sweet exchange! O unsearchable operation! O benefits surpassing all expectation! that the wickedness of many should be hid in a single righteous One, and that the righteousness of One should justify many transgressors!",
+   "reflection": "'O sweet exchange!' This is one of the earliest Christian hymns to the meaning of the Incarnation: the holy One for transgressors, the immortal for the mortal. God waited until our need was plain, and then gave His own Son. St. Juan Diego, whose feast is today, called himself a nobody; the sweet exchange is meant for exactly such people.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/apostolic-fathers/pg-77576/111/3889",
+    "work": "https://bibliothecacatholica.com/work/apostolic-fathers/"
+   }
+  },
+  {
+   "day": 12,
+   "date": "2026-12-10",
+   "liturgicalDay": "Thursday, Second Week of Advent",
+   "title": "Day 12: Thy kingdom come",
+   "subtitle": "Thursday, December 10, 2026 · Thursday, Second Week of Advent · St. Thomas Aquinas, On Prayer and the Contemplative Life (from the Summa, II-II q. 83)",
+   "theme": "Thy kingdom come",
+   "author": "St. Thomas Aquinas (1225–1274), Doctor of the Church",
+   "work": "On Prayer and the Contemplative Life (from the Summa, II-II q. 83)",
+   "location": "On the seven petitions of the Lord’s Prayer",
+   "translation": "Hugh Pope, O.P., trans. (London: R. & T. Washbourne, 1914)",
+   "attribution": "St. Thomas Aquinas (1225–1274), Doctor of the Church, On Prayer and the Contemplative Life (from the Summa, II-II q. 83), On the seven petitions of the Lord’s Prayer. Hugh Pope, O.P., trans. (London: R. & T. Washbourne, 1914).",
+   "excerpt": "And since prayer is, in a sort, the interpreter of our desires before God, we can only rightly ask in prayer for those things which we can rightly desire. But in the Lord's Prayer not only do we have petitions for all those things which we can rightly desire, but they are set forth in the order in which they are to be desired. Hence this prayer not only teaches us how to pray, but serves as the norm of all our dispositions of mind. … And when we say, Thy kingdom come, it is not as though we meant that God did not reign, but, as S. Augustine says to Proba: \"We stir up our desires for that kingdom, that it may come upon us and that we may reign in it.\"",
+   "reflection": "Advent is a season of desire, and Aquinas says prayer is how desire speaks to God. The Our Father does more than voice our wants; it teaches us what to want, and in what order. When we pray 'Thy kingdom come' we are not informing God of anything; we are stirring up our own longing. Pray it slowly today.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/aquinas-prayer-contemplative/pg-22295/14/494",
+    "work": "https://bibliothecacatholica.com/work/aquinas-prayer-contemplative/"
+   }
+  },
+  {
+   "day": 13,
+   "date": "2026-12-11",
+   "liturgicalDay": "Friday, Second Week of Advent",
+   "title": "Day 13: And thou, Bethlehem",
+   "subtitle": "Friday, December 11, 2026 · Friday, Second Week of Advent · St. Augustine of Hippo, The City of God",
+   "theme": "And thou, Bethlehem",
+   "author": "St. Augustine of Hippo (354–430), Father and Doctor",
+   "work": "The City of God",
+   "location": "Book XVIII, ch. 30 (the prophet Micah)",
+   "translation": "Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871)",
+   "attribution": "St. Augustine of Hippo (354–430), Father and Doctor, The City of God, Book XVIII, ch. 30 (the prophet Micah). Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871).",
+   "excerpt": "This prophet predicts the very place in which Christ was born, saying, \"And thou, Bethlehem, of the house of Ephratah, art the least that can be reckoned among the thousands of Judah; out of thee shall come forth unto me a leader, to be the prince in Israel; and His going forth is from the beginning, even from the days of eternity.",
+   "reflection": "Micah names the town: Bethlehem, 'the least that can be reckoned among the thousands of Judah.' The One whose 'going forth is from the beginning, even from the days of eternity' chooses to be born in the smallest place. Augustine sets this prophecy alongside Christ's birth, and Advent invites us to do the same: to look for God in the least places, including our own.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/28/992",
+    "work": "https://bibliothecacatholica.com/work/city-of-god/"
+   }
+  },
+  {
+   "day": 14,
+   "date": "2026-12-12",
+   "liturgicalDay": "Our Lady of Guadalupe",
+   "title": "Day 14: A simple maid and a meek",
+   "subtitle": "Saturday, December 12, 2026 · Our Lady of Guadalupe · Julian of Norwich, Revelations of Divine Love",
+   "theme": "A simple maid and a meek",
+   "author": "Julian of Norwich (c. 1343–after 1416)",
+   "work": "Revelations of Divine Love",
+   "location": "ch. IV",
+   "translation": "Grace Warrack, ed. (London: Methuen, 1901)",
+   "attribution": "Julian of Norwich (c. 1343–after 1416), Revelations of Divine Love, ch. IV. Grace Warrack, ed. (London: Methuen, 1901).",
+   "excerpt": "In this [Shewing] He brought our blessed Lady to my understanding. I saw her ghostly, in bodily likeness: a simple maid and a meek, young of age and little waxen above a child, in the stature that she was when she conceived. Also God shewed in part the wisdom and the truth of her soul: wherein I understood the reverent beholding in which she beheld her God and Maker, marvelling with great reverence that He would be born of her that was a simple creature of His making. And this wisdom and truth: knowing the greatness of her Maker and the littleness of herself that was made,--caused her to say full meekly to Gabriel: Lo me, God's handmaid!",
+   "reflection": "Julian sees Mary as she was at the Annunciation: young, 'little waxen above a child', marvelling that her Maker would be born of her. On the feast of Our Lady of Guadalupe, who appeared as a young mother to a poor man at Tepeyac, we meet the same humility. Her greatness is that she knows her own littleness, and says yes.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/revelations-divine-love/pg-52958/7/259",
+    "work": "https://bibliothecacatholica.com/work/revelations-divine-love/"
+   }
+  },
+  {
+   "day": 15,
+   "date": "2026-12-13",
+   "liturgicalDay": "Third Sunday of Advent (Gaudete)",
+   "title": "Day 15: Rejoice greatly, O daughter of Sion",
+   "subtitle": "Sunday, December 13, 2026 · Third Sunday of Advent (Gaudete) · St. Augustine of Hippo, The City of God",
+   "theme": "Rejoice greatly, O daughter of Sion",
+   "author": "St. Augustine of Hippo (354–430), Father and Doctor",
+   "work": "The City of God",
+   "location": "Book XVIII, ch. 35 (Haggai and Zechariah)",
+   "translation": "Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871)",
+   "attribution": "St. Augustine of Hippo (354–430), Father and Doctor, The City of God, Book XVIII, ch. 35 (Haggai and Zechariah). Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871).",
+   "excerpt": "So we see all nations moved to the faith; and the fulfilment of what follows, \"And the desired of all nations shall come,\" is looked for at His last coming. For ere men can desire and wait for Him, they must believe and love Him. … Zechariah says of Christ and the Church, \"Rejoice greatly, O daughter of Sion; shout joyfully, O daughter of Jerusalem: behold, thy King shall come unto thee, just and the Saviour; Himself poor, and mounting an ass, and a colt the foal of an ass: and His dominion shall be from sea to sea, and from the river even to the ends of the earth.\"",
+   "reflection": "Gaudete Sunday: rejoice, the Lord is near. Zechariah's 'Rejoice greatly' is the joy of a city whose King is coming, humble and riding on a colt. Augustine adds a quiet line worth keeping all week: 'ere men can desire and wait for Him, they must believe and love Him.' Joy, desire, and faith grow together.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/28/1009",
+    "work": "https://bibliothecacatholica.com/work/city-of-god/"
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "Oxford comma",
+     "field": "reflection",
+     "substack": "Joy, desire and faith grow together.",
+     "site": "Joy, desire, and faith grow together."
+    }
+   ]
+  },
+  {
+   "day": 16,
+   "date": "2026-12-14",
+   "liturgicalDay": "St. John of the Cross",
+   "title": "Day 16: Time and eternity",
+   "subtitle": "Monday, December 14, 2026 · St. John of the Cross · Boethius, The Consolation of Philosophy",
+   "theme": "Time and eternity",
+   "author": "Boethius (c. 477–524)",
+   "work": "The Consolation of Philosophy",
+   "location": "Book V, Prose VI",
+   "translation": "H. R. James, trans. (London: Elliot Stock, 1897)",
+   "attribution": "Boethius (c. 477–524), The Consolation of Philosophy, Book V, Prose VI. H. R. James, trans. (London: Elliot Stock, 1897).",
+   "excerpt": "Now, eternity is the possession of endless life whole and perfect at a single moment. What this is becomes more clear and manifest from a comparison with things temporal. For whatever lives in time is a present proceeding from the past to the future, and there is nothing set in time which can embrace the whole space of its life together. To-morrow's state it grasps not yet, while it has already lost yesterday's; nay, even in the life of to-day ye live no longer than one brief transitory moment.",
+   "reflection": "Written in prison while awaiting execution, this is the classic Christian definition of eternity: all of life, at once, with nothing lost. We live in pieces, one moment at a time; God does not. St. John of the Cross, whose feast is today, also wrote in a prison cell and found God there. The Eternal entering time is what Advent waits for, and why our brief moments matter to Him.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/consolation-philosophy/pg-14328/21/746",
+    "work": "https://bibliothecacatholica.com/work/consolation-philosophy/"
+   }
+  },
+  {
+   "day": 17,
+   "date": "2026-12-15",
+   "liturgicalDay": "Tuesday, Third Week of Advent",
+   "title": "Day 17: The Lord whom ye seek shall suddenly come",
+   "subtitle": "Tuesday, December 15, 2026 · Tuesday, Third Week of Advent · St. Augustine of Hippo, The City of God",
+   "theme": "The Lord whom ye seek shall suddenly come",
+   "author": "St. Augustine of Hippo (354–430), Father and Doctor",
+   "work": "The City of God",
+   "location": "Book XVIII, ch. 35 (Malachi)",
+   "translation": "Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871)",
+   "attribution": "St. Augustine of Hippo (354–430), Father and Doctor, The City of God, Book XVIII, ch. 35 (Malachi). Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871).",
+   "excerpt": "Again he says of Him, \"Behold I will send mine angel, and He will look out the way before my face: and the Lord, whom ye seek, shall suddenly come into His temple, even the Angel of the testament, whom ye desire. Behold, He cometh, saith the Lord Almighty, and who shall abide the day of His entry, or who shall stand at His appearing?\" In this place he has foretold both the first and second advent of Christ:",
+   "reflection": "Malachi is the last page of the Old Testament, and here Augustine finds both advents in one sentence: the Lord coming suddenly into His temple, and the day when 'who shall stand at His appearing?' The temple, he says, is Christ's own flesh. The One we seek is the One who comes to seek us.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/28/1012",
+    "work": "https://bibliothecacatholica.com/work/city-of-god/"
+   }
+  },
+  {
+   "day": 18,
+   "date": "2026-12-16",
+   "liturgicalDay": "Wednesday, Third Week of Advent",
+   "title": "Day 18: The power of the Most High shall overshadow thee",
+   "subtitle": "Wednesday, December 16, 2026 · Wednesday, Third Week of Advent · Jean-Pierre de Caussade, S.J., Abandonment to Divine Providence",
+   "theme": "The power of the Most High shall overshadow thee",
+   "author": "Jean-Pierre de Caussade, S.J. (1675–1751)",
+   "work": "Abandonment to Divine Providence",
+   "location": "Book I, ch. II",
+   "translation": "Ella McMahon, trans., ed. H. Ramière (New York: Benziger Brothers, 1887)",
+   "attribution": "Jean-Pierre de Caussade, S.J. (1675–1751), Abandonment to Divine Providence, Book I, ch. II. Ella McMahon, trans., ed. H. Ramière (New York: Benziger Brothers, 1887).",
+   "excerpt": "This shadow, behind which the power of God effects the entrance and growth of Jesus Christ in our souls, is the form assumed by the duties, attractions, and crosses of each moment. … O bread of angels! Heavenly manna! Pearl of the Gospel! Sacrament of the present moment! Thou givest God under appearances as poor and mean as the manger, the hay, and the straw! But to whom dost thou give Him? Esurientes reples bonis. God reveals Himself to the humble in little things; and the proud, regarding only the exterior, find Him not even in great things.",
+   "reflection": "Caussade reads the Annunciation as a pattern for every day: God overshadows us through the ordinary duties and crosses of the present moment. Mary's life was 'very simple, very ordinary', and God was working great things inside it. ('Esurientes reples bonis', from the Magnificat: 'He hath filled the hungry with good things.') Look for Him today in the manger-plain things in front of you.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/abandonment/pg-52057/4/143",
+    "work": "https://bibliothecacatholica.com/work/abandonment/"
+   }
+  },
+  {
+   "day": 19,
+   "date": "2026-12-17",
+   "liturgicalDay": "O Sapientia",
+   "title": "Day 19: O loving wisdom of our God",
+   "subtitle": "Thursday, December 17, 2026 · O Sapientia · St. John Henry Newman, The Dream of Gerontius",
+   "theme": "O loving wisdom of our God",
+   "author": "St. John Henry Newman (1801–1890), Doctor of the Church",
+   "work": "The Dream of Gerontius",
+   "location": "Fifth Choir of Angelicals",
+   "translation": "Longmans, Green and Co. school edition, 1910 printing (poem first pub. 1865)",
+   "attribution": "St. John Henry Newman (1801–1890), Doctor of the Church, The Dream of Gerontius, Fifth Choir of Angelicals. Longmans, Green and Co. school edition, 1910 printing (poem first pub. 1865).",
+   "excerpt": "Praise to the Holiest in the height,\nAnd in the depth be praise:\nIn all His words most wonderful;\nMost sure in all His ways!\n\nO loving wisdom of our God!\nWhen all was sin and shame,\nA second Adam to the fight\nAnd to the rescue came.\n\nO wisest love! that flesh and blood\nWhich did in Adam fail,\nShould strive afresh against the foe,\nShould strive and should prevail;\n\nAnd that a higher gift than grace\nShould flesh and blood refine,\nGod's Presence and His very Self,\nAnd Essence all divine.",
+   "reflection": "Today the Church begins the O Antiphons, the ancient evening cries of Advent's last week. The first is 'O Wisdom.' Newman's angels sing what that Wisdom did: when all was sin and shame, it sent a second Adam. The plan of salvation is not cold logic. It is 'wisest love.'",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/dream-gerontius/pg-48927/8/288",
+    "work": "https://bibliothecacatholica.com/work/dream-gerontius/"
+   }
+  },
+  {
+   "day": 20,
+   "date": "2026-12-18",
+   "liturgicalDay": "O Adonai",
+   "title": "Day 20: He was seen on the earth",
+   "subtitle": "Friday, December 18, 2026 · O Adonai · St. Augustine of Hippo, The City of God",
+   "theme": "He was seen on the earth",
+   "author": "St. Augustine of Hippo (354–430), Father and Doctor",
+   "work": "The City of God",
+   "location": "Book XVIII, ch. 33 (Jeremiah and Baruch)",
+   "translation": "Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871)",
+   "attribution": "St. Augustine of Hippo (354–430), Father and Doctor, The City of God, Book XVIII, ch. 33 (Jeremiah and Baruch). Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871).",
+   "excerpt": "Also in another place he says, \"This is my God, and there shall none other be accounted of in comparison of Him; who hath found out all the way of prudence, and hath given it to Jacob His servant, and to Israel His beloved: afterward He was seen on the earth, and conversed with men.\" … Again the same prophet says concerning Him, \"Behold the days come, saith the Lord, that I will raise up unto David a righteous shoot, and a King shall reign and shall be wise, and shall do judgment and justice in the earth. In those days Judah shall be saved, and Israel shall dwell confidently: and this is the name which they shall call Him, Our righteous Lord.\"",
+   "reflection": "'O Adonai, Lord and Ruler of the house of Israel, who gave the law on Sinai.' The prophet's line is astonishing: the God who gave the law 'was seen on the earth, and conversed with men.' The righteous shoot of David will be called 'Our righteous Lord.' The Lawgiver comes to walk and talk with us.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/28/1003",
+    "work": "https://bibliothecacatholica.com/work/city-of-god/"
+   }
+  },
+  {
+   "day": 21,
+   "date": "2026-12-19",
+   "liturgicalDay": "O Radix Jesse",
+   "title": "Day 21: Behold the handmaid of the Lord",
+   "subtitle": "Saturday, December 19, 2026 · O Radix Jesse · Thomas à Kempis, The Imitation of Christ",
+   "theme": "Behold the handmaid of the Lord",
+   "author": "Thomas à Kempis (c. 1380–1471)",
+   "work": "The Imitation of Christ",
+   "location": "Book IV, ch. 17",
+   "translation": "William Benham, trans. (hosted file names no edition year; Benham d. 1910)",
+   "attribution": "Thomas à Kempis (c. 1380–1471), The Imitation of Christ, Book IV, ch. 17. William Benham, trans. (hosted file names no edition year; Benham d. 1910).",
+   "excerpt": "O Lord my God, my Creator and Redeemer! with such affection, reverence, praise, and honour, with such gratitude, worthiness, and love, with such faith, hope, and purity do I desire to receive Thee this day, as Thy most blessed Mother, the glorious Virgin Mary, received and desired Thee, when she humbly and devoutly answered the Angel who brought unto her the glad tidings of the mystery of the Incarnation. Behold the handmaid of the Lord; be it unto me according to thy word.",
+   "reflection": "'O Root of Jesse, standing as a sign for the peoples.' The old royal family tree of David had been cut to a stump; from it God raised a shoot through a young woman of Nazareth. Thomas à Kempis asks to receive Christ as Mary did, with faith, hope, and purity, in a single humble yes. That is how the Root flowers in us.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/imitation-of-christ/pg-1653/25/893",
+    "work": "https://bibliothecacatholica.com/work/imitation-of-christ/"
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "Oxford comma",
+     "field": "reflection",
+     "substack": "with faith, hope and purity,",
+     "site": "with faith, hope, and purity,"
+    }
+   ]
+  },
+  {
+   "day": 22,
+   "date": "2026-12-20",
+   "liturgicalDay": "Fourth Sunday of Advent; O Clavis David",
+   "title": "Day 22: Virgin Mother, daughter of thy Son",
+   "subtitle": "Sunday, December 20, 2026 · Fourth Sunday of Advent; O Clavis David · Dante Alighieri, The Divine Comedy: Paradiso",
+   "theme": "Virgin Mother, daughter of thy Son",
+   "author": "Dante Alighieri (1265–1321)",
+   "work": "The Divine Comedy: Paradiso",
+   "location": "Canto XXXIII, lines 1–15 (St. Bernard's prayer to the Virgin)",
+   "translation": "Henry Wadsworth Longfellow, trans. (first pub. Boston: Ticknor and Fields, 1867; hosted file names no edition year)",
+   "attribution": "Dante Alighieri (1265–1321), The Divine Comedy: Paradiso, Canto XXXIII, lines 1–15 (St. Bernard's prayer to the Virgin). Henry Wadsworth Longfellow, trans. (first pub. Boston: Ticknor and Fields, 1867; hosted file names no edition year).",
+   "excerpt": "“Thou Virgin Mother, daughter of thy Son,\nHumble and high beyond all other creature,\nThe limit fixed of the eternal counsel,\n\nThou art the one who such nobility\nTo human nature gave, that its Creator\nDid not disdain to make himself its creature.\n\nWithin thy womb rekindled was the love,\nBy heat of which in the eternal peace\nAfter such wise this flower has germinated.\n\nHere unto us thou art a noonday torch\nOf charity, and below there among mortals\nThou art the living fountain-head of hope.\n\nLady, thou art so great, and so prevailing,\nThat he who wishes grace, nor runs to thee,\nHis aspirations without wings would fly.",
+   "reflection": "On the last Sunday of Advent, Dante gives St. Bernard, the great Advent preacher, the most famous prayer to Mary in literature. 'Daughter of thy Son': the creature who would bear her Creator. Her 'yes' is the key (O Clavis David) that opens the door we could not open ourselves.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/divine-comedy/pg-1004/139/4882",
+    "work": "https://bibliothecacatholica.com/work/divine-comedy/"
+   }
+  },
+  {
+   "day": 23,
+   "date": "2026-12-21",
+   "liturgicalDay": "O Oriens",
+   "title": "Day 23: A star above all stars",
+   "subtitle": "Monday, December 21, 2026 · O Oriens · St. Ignatius of Antioch, Epistle to the Ephesians (shorter version)",
+   "theme": "A star above all stars",
+   "author": "St. Ignatius of Antioch (d. c. 107), Apostolic Father",
+   "work": "Epistle to the Ephesians (shorter version)",
+   "location": "ch. XIX",
+   "translation": "Ante-Nicene Christian Library, vol. I, trans. Roberts, Donaldson & Crombie (Edinburgh: T. & T. Clark, 1870)",
+   "attribution": "St. Ignatius of Antioch (d. c. 107), Apostolic Father, Epistle to the Ephesians (shorter version), ch. XIX. Ante-Nicene Christian Library, vol. I, trans. Roberts, Donaldson & Crombie (Edinburgh: T. & T. Clark, 1870).",
+   "excerpt": "Now the virginity of Mary was hidden from the prince of this world, as was also her offspring, and the death of the Lord; three mysteries of renown, which were wrought in silence by God. How, then, was He manifested to the world? A star shone forth in heaven above all the other stars, the light of which was inexpressible, while its novelty struck men with astonishment. And all the rest of the stars, with the sun and moon, formed a chorus to this star, and its light was exceedingly great above them all. And there was agitation felt as to whence this new spectacle came, so unlike to everything else [in the heavens]. Hence every kind of magic was destroyed, and every bond of wickedness disappeared; ignorance was removed, and the old kingdom abolished, God Himself being manifested in human form for the renewal of eternal life.",
+   "reflection": "'O Dayspring, splendour of light eternal, come and enlighten those who sit in darkness.' On the darkest day of the year in the northern hemisphere, Ignatius, writing barely seventy years after the Resurrection, tells of a star brighter than all the others. Three mysteries were 'wrought in silence by God.' God still prefers to come quietly, and His light still outshines the rest.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/apostolic-fathers/pg-77576/55/1950",
+    "work": "https://bibliothecacatholica.com/work/apostolic-fathers/"
+   }
+  },
+  {
+   "day": 24,
+   "date": "2026-12-22",
+   "liturgicalDay": "O Rex Gentium",
+   "title": "Day 24: The desired of all nations",
+   "subtitle": "Tuesday, December 22, 2026 · O Rex Gentium · St. Augustine of Hippo, The City of God",
+   "theme": "The desired of all nations",
+   "author": "St. Augustine of Hippo (354–430), Father and Doctor",
+   "work": "The City of God",
+   "location": "Book XVIII, ch. 48",
+   "translation": "Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871)",
+   "attribution": "St. Augustine of Hippo (354–430), Father and Doctor, The City of God, Book XVIII, ch. 48. Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871).",
+   "excerpt": "For then \"shall come the desired of all nations,\" as we read in the Hebrew. For before His advent He had not yet been desired by all nations. For they knew not Him whom they ought to desire, in whom they had not believed. Then, also, according to the Septuagint interpretation (for it also is a prophetic meaning), \"shall come those who are elected of the Lord out of all nations.\"",
+   "reflection": "'O King of the nations, and their desired One.' Augustine notices a paradox in Haggai's prophecy: the nations could not desire a Saviour they did not yet know. Advent is God awakening a desire in the world, and in us, that only He can then fulfil. And He gathers His people 'out of all nations.'",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/29/1041",
+    "work": "https://bibliothecacatholica.com/work/city-of-god/"
+   }
+  },
+  {
+   "day": 25,
+   "date": "2026-12-23",
+   "liturgicalDay": "O Emmanuel",
+   "title": "Day 25: God with us",
+   "subtitle": "Wednesday, December 23, 2026 · O Emmanuel · St. Augustine of Hippo, The City of God",
+   "theme": "God with us",
+   "author": "St. Augustine of Hippo (354–430), Father and Doctor",
+   "work": "The City of God",
+   "location": "Book XVIII, ch. 46",
+   "translation": "Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871)",
+   "attribution": "St. Augustine of Hippo (354–430), Father and Doctor, The City of God, Book XVIII, ch. 46. Marcus Dods, ed. and trans., vol. II (Edinburgh: T. & T. Clark, 1871).",
+   "excerpt": "While Herod, therefore, reigned in Judea, and Cæsar Augustus was emperor at Rome, the state of the republic being already changed, and the world being set at peace by him, Christ was born in Bethlehem of Judah, man manifest out of a human virgin, God hidden out of God the Father. For so had the prophet foretold: \"Behold, a virgin shall conceive in the womb, and bring forth a Son, and they shall call His name Immanuel, which, being interpreted, is, God with us.\"",
+   "reflection": "The last O Antiphon is the plainest: Emmanuel, God with us. Augustine sets the birth in real history, under Herod and Caesar Augustus, in a world briefly at peace. 'Man manifest out of a human virgin, God hidden out of God the Father': one sentence holds the whole mystery we will kneel before in two days.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/29/1037",
+    "work": "https://bibliothecacatholica.com/work/city-of-god/"
+   }
+  },
+  {
+   "day": 26,
+   "date": "2026-12-24",
+   "liturgicalDay": "Christmas Eve",
+   "title": "Day 26: Floods of light",
+   "subtitle": "Thursday, December 24, 2026 · Christmas Eve · St. Thérèse of Lisieux, Story of a Soul",
+   "theme": "Floods of light",
+   "author": "St. Thérèse of Lisieux (1873–1897), Doctor of the Church",
+   "work": "Story of a Soul",
+   "location": "ch. V",
+   "translation": "T. N. Taylor, ed. and trans. (London: Burns, Oates & Washbourne, 1912; 8th ed., 1922)",
+   "attribution": "St. Thérèse of Lisieux (1873–1897), Doctor of the Church, Story of a Soul, ch. V. T. N. Taylor, ed. and trans. (London: Burns, Oates & Washbourne, 1912; 8th ed., 1922).",
+   "excerpt": "On that blessed night the sweet Infant Jesus, scarce an hour old, filled the darkness of my soul with floods of light. By becoming weak and little, for love of me, He made me strong and brave; He put His own weapons into my hands, so that I went from victory to victory, beginning, if I may say so, \"to run as a giant.\" The fountain of my tears was dried up, and from that time they flowed neither easily nor often. … But Thérèse was no longer the same--Jesus had changed her heart.",
+   "reflection": "Our last reading is about a Christmas Eve. At thirteen, coming home from Midnight Mass in 1886, Thérèse received what she called her 'complete conversion.' 'By becoming weak and little, for love of me, He made me strong.' Whatever you bring to the manger tonight, He can do the same. Merry Christmas, and thank you for keeping Advent with us.",
+   "links": {
+    "reader": "https://bibliothecacatholica.com/#/read/story-of-a-soul/pg-16772/8/299",
+    "work": "https://bibliothecacatholica.com/work/story-of-a-soul/"
+   }
+  }
+ ]
+}

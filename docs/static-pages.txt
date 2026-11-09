@@ -744,6 +744,15 @@ work/man-thursday/index.html
 work/nepveu-meditations/index.html
 work/new-catholic-dictionary/index.html
 work/orthodoxy/index.html
+work/orthodoxy/ch/01-introduction-in-defence-of-everything-else/index.html
+work/orthodoxy/ch/02-the-maniac/index.html
+work/orthodoxy/ch/03-the-suicide-of-thought/index.html
+work/orthodoxy/ch/04-the-ethics-of-elfland/index.html
+work/orthodoxy/ch/05-the-flag-of-the-world/index.html
+work/orthodoxy/ch/06-the-paradoxes-of-christianity/index.html
+work/orthodoxy/ch/07-the-eternal-revolution/index.html
+work/orthodoxy/ch/08-the-romance-of-orthodoxy/index.html
+work/orthodoxy/ch/09-authority-and-the-adventurer/index.html
 work/paradoxes-catholicism/index.html
 work/pensees/index.html
 work/pictorial-lives-saints/index.html

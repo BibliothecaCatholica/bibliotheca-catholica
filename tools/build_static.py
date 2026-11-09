@@ -178,6 +178,7 @@ def write_home(tpl,counts,snapshot):
     js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'home':about,'about':site_copy.about_page(counts)},ensure_ascii=False,separators=(',',':'))+';\n'
     (ROOT/'data/site-copy.js').write_text(js)
     s=re.sub(r'data/site-copy\.js\?v=[0-9a-f]*','data/site-copy.js?v='+hashlib.sha256(js.encode()).hexdigest()[:10],s)
+    s=re.sub(r'data/text-pages\.js\?v=[0-9a-f]*','data/text-pages.js?v='+hashlib.sha256((ROOT/'data/text-pages.js').read_bytes()).hexdigest()[:10],s)  # deep-link gaps: content token
     (ROOT/'index.html').write_text(build_info.stamp(s,snapshot))
 # --- v20 dated reading plans: the static page lists every day; scripts/plans.js adds the today highlight and marks.
 PLAN_DESC={'advent-2026':'Advent with the Fathers: 26 daily readings for Advent 2026, November 29 to December 24, from Augustine, Clement, Ignatius, Bede, Aquinas, Julian, and more.'}
@@ -210,6 +211,46 @@ def list_item_title(i,gid,libw):
     t=E(i.get('t','')+(' — '+i['a'] if i.get('a') else ''))
     assert t.strip(),'reading-list entry with no title, guide, or work: %r'%i
     return t
+# --- Deep-link gaps (2026-11-09): chapter and story pages for hosted texts (tools/text_pages.py, data/text-pages.json) ---
+PG_NOTICE=('This eBook is for the use of anyone anywhere in the United States and most other parts of the world at no cost and with almost no restrictions whatsoever. '
+  'You may copy it, give it away or re-use it under the terms of the <a href="https://www.gutenberg.org/policy/license.html" target="_blank" rel="noopener">Project Gutenberg License</a> '
+  'included with this eBook or online at <a href="https://www.gutenberg.org" target="_blank" rel="noopener">www.gutenberg.org</a>. If you are not located in the United States, '
+  'you will have to check the laws of the country where you are located before using this eBook.')  # same words as read() in scripts/library.js
+def pd_badge(evidence):
+    return ' <a class="rights-badge rb-public-domain-us" href="/rights/" data-rights="public_domain_us" title="'+E(evidence)+'"><span class="rb-k">Rights:</span> Public domain (US)</a>'
+def text_split(path):
+    return [p.strip() for p in re.split(r'\n\s*\n',(ROOT/path).read_text(encoding='utf-8').replace('\r','')) if p.strip()]
+def part_label(d,x,low=False):return (d['noun'].lower() if low else d['noun'])+' '+x['num']
+def part_path(wid,d,x):return 'work/'+wid+'/'+d['kind']+'/'+x['slug']
+def parts_list(wid,d):
+    """The contents list a work page shows (static work page; the app mirrors it from data/text-pages.js)."""
+    return ('<h2>'+E(d['nouns'])+'</h2><ol class="text-parts">'+''.join('<li>'+a('/'+part_path(wid,d,x)+'/',(x['num']+'. ' if d['kind']=='ch' else '')+x['title'])+'</li>' for x in d['items'])+'</ol>')
+def part_pages(out,lib,by_html,author_ld):
+    TPD=json.loads((ROOT/'data/text-pages.json').read_text())['works'];libw={w['id']:w for w in lib['works']}
+    for wid,d in TPD.items():
+        w=libw[wid];e=next(x for x in w['editions'] if x['id']==d['edition']);B=text_split(e['text']);n=len(d['items'])
+        for k,x in enumerate(d['items']):
+            route=part_path(wid,d,x);prev=d['items'][k-1] if k else None;nxt=d['items'][k+1] if k+1<n else None
+            nav=('<nav class="reader-pagination" aria-label="'+E(d['nouns'])+'">'+(a('/'+part_path(wid,d,prev)+'/','← '+prev['title']).replace('<a ','<a class="btn ghost" rel="prev" ',1) if prev else '')
+                 +'<span>'+E(part_label(d,x))+' of '+str(n)+'</span>'+(a('/'+part_path(wid,d,nxt)+'/',nxt['title']+' →').replace('<a ','<a class="btn" rel="next" ',1) if nxt else '')+'</nav>')
+            reader='/#/read/'+wid+'/'+e['id']+'/'+str(x['section'])+'/'+str(x['heading'])
+            body=(crumb_html(('Discover & Read','library/'),(w['title'],'work/'+wid+'/'),(x['title'],''))
+              +'<div class="page-head"><div class="eyebrow">'+E(w['title'])+' · '+E(part_label(d,x))+'</div><h1>'+E(x['title'])+'</h1>'
+              +'<p class="lede">'+by_html(w)+', <cite>'+a('/work/'+wid+'/',w['title'])+'</cite>, '+E(part_label(d,x,True))+' of '+str(n)+'. About '+str(max(1,round(x['words']/200)))+' min.</p></div>'
+              +'<p class="dl-row"><a class="btn" href="'+E(reader)+'">Read in the reading room →</a> '+a('/work/'+wid+'/','Work page and editions')+'</p>'
+              +'<p class="small">The reading room adds highlights, notes, find in work, and saved places. This page shows the same hosted text in one piece.</p>'
+              +'<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+'. '+E(d.get('editionLine') or e.get('note',''))+pd_badge(e['rights'])+'</p>'
+              +nav+'<p class="small pg-notice">'+PG_NOTICE+'</p>'
+              +'<article class="reading-text" aria-label="'+E(x['title'])+'">'+''.join('<p>'+E(B[i])+'</p>' for i in range(x['start'],x['end']+1))+'</article>'
+              +nav+parts_list(wid,d)
+              +'<p class="small">Source: '+E(w['author']+'. '+w['title']+'. '+e['label']+'.')+' '+a(e['source'],'Project Gutenberg record',True)+'. '+E(e['rights'])+' The full Project Gutenberg license is kept in the hosted text.</p>'
+              +'<p>'+a('/work/'+wid+'/',w['title'])+' · '+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>')
+            what='“'+x['title']+',” '+part_label(d,x,True)+' '+('of '+str(n)+' ' if d['kind']=='ch' else '')+'in '+w['title']+' by '+w['author']+'.'
+            md=fit([what],(('The full text on one page, free, with a link into the reading room for notes and highlights.','The full text on one page, with a link into the reading room.','The full text, free to read.'),)+DESC_EXTRA)
+            ld_part={'@context':'https://schema.org','@type':'Chapter' if d['kind']=='ch' else 'ShortStory','name':x['title'],'url':SITE+route+'/','position':k+1,
+                     'isPartOf':{'@type':'Book','name':w['title'],'url':SITE+'work/'+wid+'/','author':author_ld(w)},'isAccessibleForFree':True,'inLanguage':e.get('language') or 'English'}
+            out[route]=(x['title']+' ('+w['title']+', '+part_label(d,x,True)+') — Bibliotheca Catholica',md,body,[ld_part,crumbs(('Discover & Read','library/'),(w['title'],'work/'+wid+'/'),(x['title'],route+'/'))])
+    return TPD
 def main():
     tpl=(ROOT/'index.html').read_text();global GA_TAG;GA_TAG=ga_tag(tpl);hub=json.loads((ROOT/'data/catholic-hub.json').read_text())
     lib=json.loads((ROOT/'data/library.json').read_text());guide=jsvar('data/guide.js','GUIDE_DATA');flags=load_flags();plans=json.loads((ROOT/'data/reading-plans.json').read_text())['plans']
@@ -347,12 +388,14 @@ def main():
             cat=[v for v in lib['works'] if v['category']==w['category'] and v['id']!=w['id'] and v not in sa][:6]
             if cat:r.append('More in '+E(w['category'])+': '+', '.join(a('/work/'+v['id']+'/',v['title']) for v in cat))
         return ('<h2>Related</h2><ul>'+''.join('<li>'+x+'</li>' for x in r)+'</ul>') if r else ''
+    TPD=part_pages(out,lib,lambda w:(a('/author/'+w['authorId']+'/',w['author']) if w.get('authorId') in auth_ids else E(w['author'])),
+                   lambda w:dict({'@type':'Person','name':w['author']},**({'url':SITE+'author/'+w['authorId']+'/'} if w.get('authorId') in auth_ids else {})))
     for w in lib['works']:
         eds=''.join('<li>'+E(e['label'])+(' · '+a('/#/read/'+w['id']+'/'+e['id'],'Read here') if e.get('text') else '')+' · '+a(e['source'],'Source',True)+'</li>' for e in w['editions'])
         d=w.get('description') or (w['title']+' by '+w['author']+': free reading edition with source, credits, and rights notes.')
         hosted=any(e.get('text') for e in w['editions'])
         by=a('/author/'+w['authorId']+'/',w['author']) if w.get('authorId') in auth_ids else E(w['author'])
-        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p><h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
+        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p><h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
         book={'@context':'https://schema.org','@type':'Book','name':w['title'],'url':SITE+'work/'+w['id']+'/','author':{'@type':'Person','name':w['author']},'description':d,'genre':w['category']}
         if w.get('authorId') in auth_ids:book['author']['url']=SITE+'author/'+w['authorId']+'/'
         langs=sorted({e['language'] for e in w['editions'] if e.get('language')})

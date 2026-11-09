@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""Import the facts-only saints calendar (JSONL) into data/saints-calendar.json.
+"""Import the facts-only saints calendar (JSONL): a private raw copy (.local/, git-ignored) and data/saints-days.json.
 
     python3 tools/import_saints.py --input /path/to/saints-calendar-facts-full-year.jsonl
-    python3 tools/import_saints.py --input tests/fixtures/saints-sample.jsonl --output /tmp/x.json --report /tmp/r.json
+    python3 tools/import_saints.py --input tests/fixtures/saints-sample.jsonl --raw /tmp/raw.json --output /tmp/days.json --report /tmp/r.json
 
 Facts only (see docs/SAINTS-CALENDAR.md). Every input key is checked against a WHITELIST of fact fields;
 anything else (profile, biography, summary, text, notes, and any unknown key) is dropped and counted, so
 no prose can reach the site. Records are deduplicated on slug, merging the days a slug is listed on.
 A name with no slug (and no CatholicSaints URL to take one from) is kept only as a name on its day.
-The site never fetches CatholicSaints.Info; its URLs are kept only as outbound links.
+The site never fetches CatholicSaints.Info. Its URLs stay in the private raw copy (used only to match the guide's
+hand-checked links); the committed per-day file has no URLs, no slugs, and no source names.
 
 Checks: dates are MM-DD (02-29 allowed); slugs are [a-z0-9-]; no em-dashes in any kept text (replaced and
 counted); no Amazon links (value dropped); URLs only on catholicsaints.info or catholicsaints.mobi;
@@ -196,20 +197,35 @@ def dump(data):
     return '\n'.join(L)+'\n'
 def main(argv=None):
     ap=argparse.ArgumentParser(description=__doc__,formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('--input',required=True);ap.add_argument('--output',default=str(ROOT/'data/saints-calendar.json'))
+    ap.add_argument('--input',required=True)
+    ap.add_argument('--raw',default=str(ROOT/'.local/saints-calendar.json'),help='full import with slugs and source URLs (git-ignored; never deployed)')
+    ap.add_argument('--output',default=str(ROOT/'data/saints-days.json'),help='the committed per-day file the site builds from')
     ap.add_argument('--report');ap.add_argument('--source',default='CatholicSaints.Info calendar (catholicsaints.mobi portable calendar), facts only')
     ap.add_argument('--strict',action='store_true',help='exit 1 if any record was rejected')
     a=ap.parse_args(argv)
+    sys.path.insert(0,str(ROOT/'tools'));import saints_calendar as SC
     saints,days,stats,P=import_records(read_records(a.input))
-    data=OrderedDict(note='Facts only, built by tools/import_saints.py from a private-use copy of the CatholicSaints.Info calendar. No prose. CatholicSaints.Info URLs are outbound links only. See docs/SAINTS-CALENDAR.md.',
-                     source=a.source,types=TYPES,stats={k:v for k,v in stats.items() if k!='missing_days'},saints=saints,days=days)
-    Path(a.output).write_text(dump(data),encoding='utf-8')
+    raw=OrderedDict(note='Raw facts-only import (private; never deployed). Built by tools/import_saints.py. See docs/SAINTS-CALENDAR.md.',
+                    source=a.source,types=TYPES,stats={k:v for k,v in stats.items() if k!='missing_days'},saints=saints,days=days)
+    Path(a.raw).parent.mkdir(parents=True,exist_ok=True);Path(a.raw).write_text(dump(raw),encoding='utf-8')
+    guide=json.loads((ROOT/'data/saints.json').read_text())['saints']
+    alias=json.loads((ROOT/'data/saints-aliases.json').read_text())['aliases']
+    doc=SC.make_days(raw,guide,alias)
+    SC.validate(doc,{g['id'] for g in guide})
+    Path(a.output).write_text(dump_days(doc),encoding='utf-8')
+    stats['matched_to_guide']=doc['matched']
     R=report_json(stats,P)
     if a.report:Path(a.report).write_text(json.dumps(R,ensure_ascii=False,indent=1)+'\n',encoding='utf-8')
-    print('import_saints: %d rows -> %d slugs on %d days (%s); %d unlinked names; %d multi-day slugs'%(stats['rows'],stats['slugs'],stats['days'],', '.join('%s %d'%kv for kv in stats['by_type'].items()),stats['unlinked_names'],stats['multi_day_slugs']))
+    print('import_saints: %d rows -> %d slugs on %d days (%s); %d unlinked names; %d multi-day slugs; matched to the guide: %s'%(stats['rows'],stats['slugs'],stats['days'],', '.join('%s %d'%kv for kv in stats['by_type'].items()),stats['unlinked_names'],stats['multi_day_slugs'],json.dumps(doc['matched'])))
     probs={k:(len(v) if isinstance(v,list) else sum(v.values()) if isinstance(v,Counter) else v) for k,v in P.items()}
     print('problems:',json.dumps(probs))
     if stats['missing_days']:print('days with no record:',len(stats['missing_days']),stats['missing_days'][:12])
+    print('wrote',a.raw,'(private) and',a.output)
     rejected=len(P['bad_json'])+len(P['bad_date'])+len(P['missing_name'])
     return 1 if a.strict and rejected else 0
+def dump_days(doc):
+    L=['{"note":'+json.dumps(doc['note'],ensure_ascii=False)+',','"matched":'+json.dumps(doc['matched'])+',','"days":{']
+    items=list(doc['days'].items())
+    L+=[json.dumps(k)+':'+json.dumps(v,ensure_ascii=False,separators=(',',':'))+(',' if i<len(items)-1 else '') for i,(k,v) in enumerate(items)]
+    L.append('}}');return '\n'.join(L)+'\n'
 if __name__=='__main__':sys.exit(main())

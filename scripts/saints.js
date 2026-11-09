@@ -25,12 +25,12 @@
   function years(s){var f=function(y){return y<0?(-y)+' BC':String(y)};var b=s.born&&s.born.year,d=s.died&&s.died.year;
     if(b!=null&&d!=null)return (d<1000?'c. ':'')+f(b)+' – '+f(d);if(d!=null)return 'd. '+(d<1000?'c. ':'')+f(d);if(b!=null)return 'b. '+f(b);return ''}
   var FLAGL={'tradition':'Tradition and legend','tradition-with-historical-core':'Historical core, later legend','angel':'Archangel'};
-  /* Full-year calendar (facts only; docs/SAINTS-CALENDAR.md). D.cal = {n:{MM-DD:count},total} from tools/build_saints.py
-     when data/saints-calendar.json exists. Day pages are static (/saints/calendar/<MM-DD>/), so day links use real paths.
+  /* Full-year calendar (facts only; docs/SAINTS-CALENDAR.md). D.cal = {n:{MM-DD:count},total} (one merged list per day)
+     from tools/build_saints.py when data/saints-days.json exists. No source links per entry. Day pages are static (/saints/calendar/<MM-DD>/), so day links use real paths.
      No analytics event: these are plain links. */
   function calCount(D,md){return D&&D.cal&&D.cal.n?(D.cal.n[md]||0):0}
   function dayHref(D,md){return D&&D.cal?'/saints/calendar/'+md+'/':'#/saints/calendar/'+md}
-  function calLine(D,md){var n=calCount(D,md);return n?'<a href="'+dayHref(D,md)+'">'+n+' saint'+(n>1?'s, blessed, and feasts':'')+' in the full calendar for '+esc(fmtDate(md))+' →</a>':''}
+  function calLine(D,md){var n=calCount(D,md);return n?'<a href="'+dayHref(D,md)+'">'+(n>1?n+' saints, blessed, and feasts':'1 saint')+' kept on '+esc(fmtDate(md))+' →</a>':''}
   var core={key:key,lookup:lookup,fmtDate:fmtDate,mdOf:mdOf,onDay:onDay,href:href,statusLabel:statusLabel,years:years,FLAGL:FLAGL,calCount:calCount,dayHref:dayHref,calLine:calLine};
 
   /* ---------- browser ---------- */
@@ -78,8 +78,8 @@
       '<ul class="saint-list">'+list.map(function(s){var al=s.aliases.filter(function(a){return key(a)!==key(s.name)}).slice(0,4);return srow(s).replace('</li>',al.length?'<span class="saint-aka">Also: '+esc(al.join(' · '))+'</span></li>':'</li>')}).join('')+'</ul>';
     render(h,'saints');document.title='Saints A–Z — Bibliotheca Catholica'}
   function calendar(render){var c={};D.saints.forEach(function(s){(s.feasts.vatican_news||[]).forEach(function(v){c[v.date]=(c[v.date]||0)+1})});var today=mdOf();
-    var h=crumbs()+head('Sancti · the calendar','Saints’ calendar',D.cal?'Every day of the year opens the saints, blessed, and feasts the CatholicSaints.Info calendar lists, with short facts and a link to read each life. Days marked in colour have a saint from our guide listed by Vatican News. '+esc(VN_NOTE):'Days on which Vatican News lists a saint from our guide. '+esc(VN_NOTE));
-    h+='<div class="cal-grid">'+MONTHS.map(function(m,i){var mm=('0'+(i+1)).slice(-2),n=new Date(2024,i+1,0).getDate(),cells='';for(var d=1;d<=n;d++){var md=mm+'-'+('0'+d).slice(-2);var k=calCount(D,md);cells+='<a class="cal-d'+(c[md]?' has':'')+(md===today?' today':'')+'" href="'+dayHref(D,md)+'" aria-label="'+d+' '+m+(c[md]?': '+c[md]+' saint'+(c[md]>1?'s':'')+' in our guide':'')+(k?(c[md]?';':':')+' '+k+' in the full calendar':'')+'">'+d+'</a>'}
+    var h=crumbs()+head('Sancti · the calendar','Saints’ calendar',D.cal?'Every day of the year opens one list of the saints, blessed, and feasts kept on it, with short facts and a note wherever calendars disagree. Days marked in colour have a saint from our guide listed by Vatican News. '+esc(VN_NOTE):'Days on which Vatican News lists a saint from our guide. '+esc(VN_NOTE));
+    h+='<div class="cal-grid">'+MONTHS.map(function(m,i){var mm=('0'+(i+1)).slice(-2),n=new Date(2024,i+1,0).getDate(),cells='';for(var d=1;d<=n;d++){var md=mm+'-'+('0'+d).slice(-2);var k=calCount(D,md);cells+='<a class="cal-d'+(c[md]?' has':'')+(md===today?' today':'')+'" href="'+dayHref(D,md)+'" aria-label="'+d+' '+m+(c[md]?': '+c[md]+' saint'+(c[md]>1?'s':'')+' in our guide':'')+(k?(c[md]?';':':')+' '+k+' in the calendar':'')+'">'+d+'</a>'}
       return '<section class="cal-m"><h2>'+m+'</h2><div class="cal-days">'+cells+'</div></section>'}).join('')+'</div>';
     render(h,'saints');document.title='Saints’ calendar — Bibliotheca Catholica'}
   function day(render,md){if(!/^(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(md)){location.replace('#/saints/calendar');return}

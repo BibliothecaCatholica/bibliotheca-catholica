@@ -45,7 +45,7 @@ Three kinds of date, always labelled:
 
 ## Full-year calendar (review branch)
 
-See `docs/SAINTS-CALENDAR.md`: facts-only day pages for every day of the year, built from `data/saints-calendar.json` when present.
+See `docs/SAINTS-CALENDAR.md`: one merged, facts-only list for every day of the year, built from `data/saints-days.json` when present.
 
 ## Deferred
 

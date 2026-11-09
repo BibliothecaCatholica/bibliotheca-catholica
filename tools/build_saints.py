@@ -107,14 +107,14 @@ def main():
     (ROOT/'data/saints-aliases.json').write_text(json.dumps(A,ensure_ascii=False,indent=1,sort_keys=True)+'\n')
     # compact browser copy: drop fields the UI does not need (sources stay)
     rt={'generated':D['generated'],'shelf_groups':D['shelf_groups'],'saints':D['saints'],'shelf':D['shelf'],'aliases':table,'collisions':coll}
-    # full-year calendar (facts only, optional): validate data/saints-calendar.json and add per-day counts only
+    # full-year calendar (facts only, optional): validate data/saints-days.json and add merged per-day counts only
     import saints_calendar
     cal=saints_calendar.load(ROOT)
     if cal is not None:
-        try:saints_calendar.validate(cal)
-        except saints_calendar.CalendarError as e:fail('data/saints-calendar.json: '+str(e))
-        rt['cal']=saints_calendar.browser_summary(cal)
-        print('calendar:',len(cal['saints']),'slugs,',rt['cal']['total'],'names on',len(rt['cal']['n']),'days')
+        try:saints_calendar.validate(cal,{s['id'] for s in D['saints']})
+        except saints_calendar.CalendarError as e:fail('data/saints-days.json: '+str(e))
+        rt['cal']=saints_calendar.browser_summary(cal,D['saints'])
+        print('calendar:',rt['cal']['total'],'entries on',len(rt['cal']['n']),'days (merged with the guide)')
     (ROOT/'data/saints.js').write_text('window.SAINTS_DATA='+json.dumps(rt,ensure_ascii=False,separators=(',',':'))+';\n')
     print(len(D['saints']),'saints;',len(table),'alias keys;',len(coll),'collisions;',len(D['shelf']),'shelf books')
 if __name__=='__main__':main()

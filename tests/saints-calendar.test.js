@@ -13,8 +13,9 @@ test('calendar helpers: counts, real-path day links, and a Hodie line only when 
  assert.equal(calCount(D,'01-21'),12);assert.equal(calCount(D,'03-03'),0);assert.equal(calCount({},'01-21'),0);
  assert.equal(dayHref(D,'01-21'),'/saints/calendar/01-21/');
  assert.equal(dayHref({},'01-21'),'#/saints/calendar/01-21','no calendar data: the old app view');
- assert.match(calLine(D,'01-21'),/href="\/saints\/calendar\/01-21\/">12 saints, blessed, and feasts in the full calendar for 21 January/);
- assert.match(calLine(D,'02-29'),/1 saint in the full calendar for 29 February/);
+ assert.match(calLine(D,'01-21'),/href="\/saints\/calendar\/01-21\/">12 saints, blessed, and feasts kept on 21 January →/);
+ assert.doesNotMatch(calLine(D,'01-21'),/catholicsaints/i,'no source branding');
+ assert.match(calLine(D,'02-29'),/1 saint kept on 29 February/);
  assert.equal(calLine(D,'03-03'),'');
  assert.doesNotMatch(calLine(D,'01-21'),/data-|track|gtag/,'plain link, no analytics');
 });
@@ -31,7 +32,7 @@ test('saints.js sends no new analytics event for the calendar',()=>{
 });
 test('when the calendar data is built, data/saints.js carries only per-day counts',()=>{
  const ctx={window:{}};vm.runInNewContext(fs.readFileSync('data/saints.js','utf8'),ctx);const cal=ctx.window.SAINTS_DATA.cal;
- if(!fs.existsSync('data/saints-calendar.json')){assert.equal(cal,undefined);return}
- assert.deepEqual(Object.keys(cal).sort(),['n','source','total']);
+ if(!fs.existsSync('data/saints-days.json')){assert.equal(cal,undefined);return}
+ assert.deepEqual(Object.keys(cal).sort(),['n','total']);
  for(const [k,v] of Object.entries(cal.n)){assert.match(k,/^(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/);assert(Number.isInteger(v)&&v>0)}
 });

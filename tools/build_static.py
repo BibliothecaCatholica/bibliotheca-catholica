@@ -485,16 +485,14 @@ def main():
             if x and b.get('work_id') and x not in saints_for.setdefault(b['work_id'],[]):saints_for[b['work_id']].append(x)
     s_href=lambda x:'/author/'+x['author_id']+'/' if x['tier']==1 and x.get('author_id') else '/saints/'+x['id']+'/'
     # Full-year saints calendar (facts only, optional; tools/saints_calendar.py, docs/SAINTS-CALENDAR.md): day pages
-    # /saints/calendar/<MM-DD>/ and day links on matched guide saints. No file, no change.
+    # /saints/calendar/<MM-DD>/ with ONE merged list per day, and day links on guide saints. No file, no change.
     import saints_calendar as SC
-    CAL=SC.load(ROOT);CAL_BY_GUIDE={}
-    if CAL is not None:
-        SC.validate(CAL)
-        CAL_MATCH,_=SC.match_guide(CAL,saints,json.loads((ROOT/'data/saints-aliases.json').read_text())['aliases'])
-        for sl,g_id in CAL_MATCH.items():CAL_BY_GUIDE.setdefault(g_id,[]).append(sl)
+    CAL=SC.load(ROOT)
+    if CAL is not None:SC.validate(CAL,{x['id'] for x in saints})
     def cal_line(saint_id):
-        days=SC.day_links(CAL,CAL_BY_GUIDE.get(saint_id,[])) if CAL else []
-        return '<p>In the CatholicSaints.Info calendar: '+', '.join(a('/saints/calendar/'+d+'/',SC.fmt_day(d)) for d in days)+'.</p>' if days else ''
+        x=next((y for y in saints if y['id']==saint_id),None)
+        days=SC.guide_days(CAL,x) if CAL and x else []
+        return '<p>Saints calendar: '+', '.join(a('/saints/calendar/'+d+'/',SC.fmt_day(d)) for d in days)+'.</p>' if days else ''
     shelf_works={b['work_id'] for b in SD['shelf'] if b.get('work_id') in libw}
     def same_author(w):
         k=w.get('authorId') or w['author']
@@ -668,11 +666,10 @@ def main():
     out['saints/books']=('The hagiography shelf — Saints — Bibliotheca Catholica','Public-domain lives of the saints, with editions and rights checked: Butler, Baring-Gould, the Golden Legend, the Little Flowers of St. Francis, and more.',head('Saints & Hagiography','The hagiography shelf','Public-domain lives of the saints, each with its edition, imprint, and rights evidence.')+'<ul>'+sh+'</ul><p>'+a('/saints/','Saints & Hagiography')+'</p>',[crumbs(('Saints & Hagiography','saints/'),('The hagiography shelf','saints/books/'))])
     out['saints/about']=('Saints: sources and method — Bibliotheca Catholica','Where the Bibliotheca Catholica saints guide gets its facts, how feast dates are labelled by source, and what the CatholicSaints.Info links mean.',head('Saints & Hagiography','Sources & method','Every fact links its source. Feast dates are labelled by where they come from: Vatican News “Saint of the day”, the General Roman Calendar (not yet checked), and other calendars recorded in Wikidata.')+'<p>'+a('/saints/','Saints & Hagiography')+'</p>',[crumbs(('Saints & Hagiography','saints/'),('Sources & method','saints/about/'))])
     if CAL is not None:
-        ghref={x['id']:(s_href(x),'Writer in the library' if x['tier']==1 and x.get('author_id') else 'In our saints guide') for x in saints}
+        CAL_N={}
         for md in SC.ALL_DAYS:
-            gt=[(x,v['title_on_source']) for x in sorted(saints,key=lambda x:x['name']) for v in x['feasts']['vatican_news'] if v['date']==md]
-            t,dc,body,_n=SC.day_page(md,CAL,gt,CAL_MATCH,ghref,a)
-            out['saints/calendar/'+md]=(t,fit([dc,'Short facts from the CatholicSaints.Info calendar, with a link to read each life.'],DESC_EXTRA),crumb_html(('Saints & Hagiography','saints/'),(SC.fmt_day(md),''))+body,[crumbs(('Saints & Hagiography','saints/'),(SC.fmt_day(md),'saints/calendar/'+md+'/'))])
+            t,dc,body,CAL_N[md]=SC.day_page(md,SC.merged_day(md,CAL,saints,s_href),a)
+            out['saints/calendar/'+md]=(t,fit([dc,'One list of the saints kept on this day, with short facts and a note where calendars disagree.'],DESC_EXTRA),crumb_html(('Saints & Hagiography','saints/'),(SC.fmt_day(md),''))+body,[crumbs(('Saints & Hagiography','saints/'),(SC.fmt_day(md),'saints/calendar/'+md+'/'))])
     for k,(t,d) in SECTIONS.items():
         extra=''
         if k in('scripture','magisterium','references','media','libraries','prayers'):
@@ -689,7 +686,7 @@ def main():
         elif k=='authors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors)+'</ul>'
         elif k=='library':extra='<ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title']+' — '+w['author'])+'</li>' for w in lib['works'])+'</ul>'
         elif k=='editions':extra='<ul>'+''.join('<li>'+a('/editions/'+e['id']+'/',e['t'])+'</li>' for e in guide['editions'])+'</ul>'
-        elif k=='saints':extra='<ul>'+''.join('<li>'+a(s_href(x),x['name'])+' — '+E(s_status(x))+(' · Vatican News: '+E(s_vn(x)) if x['feasts']['vatican_news'] else '')+(' · '+E(FLAGL[x['historicity']['flag']]) if x.get('historicity') else '')+'</li>' for x in sorted(saints,key=lambda x:x['name']))+'</ul>'+(SC.months_html(CAL,a) if CAL is not None else '')+'<p>'+a('/saints/books/','The hagiography shelf')+' · '+a('/saints/about/','Sources & method')+'</p>'
+        elif k=='saints':extra='<ul>'+''.join('<li>'+a(s_href(x),x['name'])+' — '+E(s_status(x))+(' · Vatican News: '+E(s_vn(x)) if x['feasts']['vatican_news'] else '')+(' · '+E(FLAGL[x['historicity']['flag']]) if x.get('historicity') else '')+'</li>' for x in sorted(saints,key=lambda x:x['name']))+'</ul>'+(SC.months_html(CAL_N,a) if CAL is not None else '')+'<p>'+a('/saints/books/','The hagiography shelf')+' · '+a('/saints/about/','Sources & method')+'</p>'
         elif k=='reading':extra='<h2>Reading plans</h2><ul>'+''.join('<li>'+a('/reading/'+P['id']+'/',P['t']+' ('+str(len(P['days']))+' days, '+PLAN_SPAN(P)+')')+'</li>' for P in plans)+'</ul><h2>Reading lists</h2><ul>'+''.join('<li>'+a('/reading/'+L['id']+'/',L['t'])+'</li>' for L in guide['lists'])+'</ul>'
         elif k=='substacks':extra=guide['own']['html']  # our own newsletter first (tools/substacks_src.py OWN, 2026-11-09)
         elif k=='doctors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors if x.get('doctor'))+'</ul>'

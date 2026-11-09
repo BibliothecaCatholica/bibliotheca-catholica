@@ -300,6 +300,112 @@ def part_pages(out,lib,by_html,author_ld):
                      'isPartOf':{'@type':'Book','name':w['title'],'url':SITE+'work/'+wid+'/','author':author_ld(w)},'isAccessibleForFree':True,'inLanguage':e.get('language') or 'English'}
             out[route]=(x['title']+' ('+w['title']+', '+part_label(d,x,True)+') — Bibliotheca Catholica',md,body,[ld_part,crumbs(('Discover & Read','library/'),(w['title'],'work/'+wid+'/'),(x['title'],route+'/'))])
     return TPD
+
+# Deep-link gaps 4 (2026-11-09): the Summa Theologiae by question and article (data/summa.json from tools/build_summa.py)
+def summa_para(p):
+    """One paragraph: line breaks joined, _italics_ as <em>, a trailing ____ rule dropped. No fragment ids: a bare #id
+    would reach the app's hash router (route(), canonical, and page_view all read location.hash)."""
+    p=re.sub(r'(\n_{5,})+$','',p).strip()
+    return '<p>'+re.sub(r'_([^_\n]+?)_',r'<em>\1</em>',E(' '.join(p.split())))+'</p>'
+def summa_pages(out,lib):
+    S=json.loads((ROOT/'data/summa.json').read_text());w=next(x for x in lib['works'] if x['id']==S['work']);eds={e['id']:e for e in w['editions']}
+    by=a('/author/thomas-aquinas/','Thomas Aquinas')
+    NA='https://www.newadvent.org/summa/';CT='https://www.corpusthomisticum.org/sth0000.html'
+    ld_by={'@type':'Person','name':'Thomas Aquinas','url':SITE+'author/thomas-aquinas/'}
+    TEXT={}
+    def blocks(ed):
+        if ed not in TEXT:TEXT[ed]=text_split(eds[ed]['text'])
+        return TEXT[ed]
+    def qref(P,q):return P['token']+', q. '+str(q['n'])
+    def aref(P,q,x):return qref(P,q)+', a. '+str(x['n'])
+    def qpath(P,q):return 'summa/'+P['slug']+'/q'+str(q['n'])
+    def apath(P,q,x):return qpath(P,q)+'/a'+str(x['n'])
+    def na(P,q,x=None):return NA+'%d%03d.htm'%(P['newAdvent'],q['n'])+('#article'+str(x['n']) if x else '')
+    def reader(P,i):return '/#/read/'+w['id']+'/'+P['edition']+'/'+str(i//35)+'/'+str(i)
+    def edline(P):
+        e=eds[P['edition']]
+        return ('<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+', translated by the Fathers of the English Dominican Province. '+E(e['note'])+pd_badge(e['rights'])+'</p>')
+    def source(P):
+        e=eds[P['edition']]
+        return ('<p class="small">Source: '+E('Thomas Aquinas. Summa Theologica, '+P['name']+'. '+e['label'].split(',')[0]+'.')+' '+a(e['source'],'Project Gutenberg record',True)+'. '+E(e['rights'])+' The full Project Gutenberg license is kept in the hosted text.</p>')
+    other=('<p class="small">Also online, linked only: the same translation at '+a(NA,'New Advent',True)+' and the Latin text at '+a(CT,'Corpus Thomisticum',True)+'. Neither is copied here.</p>')
+    notice='<p class="small pg-notice">'+PG_NOTICE+'</p>'
+    C=[('Discover & Read','library/'),(w['title'],'work/'+w['id']+'/')]
+    flat=[(P,q,x) for P in S['parts'] for q in P['questions'] for x in q['articles']]
+    qflat=[(P,q) for P in S['parts'] for q in P['questions']]
+    total_a=len(flat);total_q=len(qflat)
+    # /summa/
+    parts_ul='<ul class="text-parts">'+''.join('<li>'+a('/summa/'+P['slug']+'/',P['name']+' ('+P['latin']+')')+': '+str(len(P['questions']))+' questions, '+str(sum(len(q['articles']) for q in P['questions']))+' articles</li>' for P in S['parts'])+'</ul>'
+    body=(crumb_html(*C,('By question and article',''))+'<div class="page-head"><div class="eyebrow">Thomas Aquinas · Theology</div><h1>Summa Theologiae</h1>'
+          +'<p class="lede">The whole Summa in English, one page for each of its '+str(total_q)+' questions and '+str(total_a)+' articles, from the four Project Gutenberg volumes in the reading room.</p></div>'
+          +'<p>Each article page has the objections, the reply “On the contrary,” the answer “I answer that,” and the replies to the objections, with a link into the reading room for notes and highlights. Article pages are at <code>/summa/&lt;part&gt;/q&lt;question&gt;/a&lt;article&gt;/</code>; for example '+a('/summa/1/q2/a3/','First Part, question 2, article 3')+', “Whether God Exists?”</p>'
+          +'<h2>The four parts</h2>'+parts_ul
+          +'<p class="small">The Supplement, completed after Aquinas died, is not included.</p>'
+          +'<p class="dl-row"><a class="btn" href="/work/'+w['id']+'/">Work page and editions</a> '+a('/editions/summa/','Edition guide')+'</p>'
+          +''.join(edline(P) for P in S['parts'][:1])+other+notice+'<p>'+a('/author/thomas-aquinas/','Thomas Aquinas')+' · '+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>')
+    out['summa']=('Summa Theologiae by Question and Article — Bibliotheca Catholica',
+        fit(['The Summa Theologiae of Thomas Aquinas in English, one free page for each of its %d questions and %d articles.'%(total_q,total_a)],(('Read in the reading room too.',''),)+DESC_EXTRA),
+        body,[{'@context':'https://schema.org','@type':'Book','name':'Summa Theologiae','url':SITE+'summa/','author':ld_by,'isAccessibleForFree':True,'inLanguage':'English','hasPart':[{'@type':'Book','name':'Summa Theologiae, '+P['name'],'url':SITE+'summa/'+P['slug']+'/'} for P in S['parts']]},crumbs(*C,('By question and article','summa/'))])
+    for pi,P in enumerate(S['parts']):
+        B=blocks(P['edition']);CP=C+[('Summa',  'summa/'),(P['name'],'summa/'+P['slug']+'/')]
+        tq={}
+        for t in P['treatises']:
+            for n in t['questions']:tq[n]=t
+        li=[];last=None
+        for q in P['questions']:
+            t=tq.get(q['n'])
+            if t is not last and t:li.append('</ol><h3>'+E(t['title'])+'</h3><ol class="text-parts" start="'+str(q['n'])+'">')
+            last=t or last
+            li.append('<li>'+a('/'+qpath(P,q)+'/',q['title'])+' <span class="small">('+str(len(q['articles']))+(' article' if len(q['articles'])==1 else ' articles')+')</span></li>')
+        pro=''
+        if P.get('prologue'):
+            pro='<h2>Prologue</h2>'+''.join(summa_para(B[i]) for i in range(P['prologue'][0],P['prologue'][1]+1))
+        nav='<nav class="reader-pagination" aria-label="Parts">'+(a('/summa/'+S['parts'][pi-1]['slug']+'/','← '+S['parts'][pi-1]['name']).replace('<a ','<a class="btn ghost" rel="prev" ',1) if pi else '')+'<span>Part '+str(pi+1)+' of 4</span>'+(a('/summa/'+S['parts'][pi+1]['slug']+'/',S['parts'][pi+1]['name']+' →').replace('<a ','<a class="btn" rel="next" ',1) if pi<3 else '')+'</nav>'
+        na_=sum(len(q['articles']) for q in P['questions'])
+        body=(crumb_html(*C,('Summa','summa/'),(P['name'],''))+'<div class="page-head"><div class="eyebrow">Summa Theologiae · '+E(P['token'])+'</div><h1>'+E(P['name'])+' <span class="small">('+E(P['latin'])+')</span></h1>'
+              +'<p class="lede">'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>. '+str(len(P['questions']))+' questions, '+str(na_)+' articles.</p></div>'
+              +'<p class="dl-row"><a class="btn" href="'+E(reader(P,P['start']))+'">Read in the reading room →</a> '+a('/work/'+w['id']+'/','Work page and editions')+'</p>'
+              +edline(P)+nav+notice+pro+'<h2>Questions</h2><ol class="text-parts">'+''.join(li)+'</ol>'+nav+other+source(P))
+        body=body.replace('<ol class="text-parts"></ol>','')
+        out['summa/'+P['slug']]=('Summa Theologiae, '+P['name']+' ('+P['latin']+') — Bibliotheca Catholica',
+            fit(['The %s of the Summa Theologiae (%s) by Thomas Aquinas in English: %d questions and %d articles, each on its own free page.'%(P['name'],P['latin'],len(P['questions']),na_)],DESC_EXTRA),
+            body,[{'@context':'https://schema.org','@type':'Book','name':'Summa Theologiae, '+P['name'],'url':SITE+'summa/'+P['slug']+'/','author':ld_by,'isPartOf':{'@type':'Book','name':'Summa Theologiae','url':SITE+'summa/'},'isAccessibleForFree':True,'inLanguage':'English'},crumbs(*CP)])
+    for k,(P,q) in enumerate(qflat):
+        B=blocks(P['edition']);CQ=C+[('Summa','summa/'),(P['name'],'summa/'+P['slug']+'/'),('Question '+str(q['n']),qpath(P,q)+'/')]
+        pv=qflat[k-1] if k else None;nx=qflat[k+1] if k+1<len(qflat) else None
+        lab=lambda PQ:PQ[0]['token']+', q. '+str(PQ[1]['n'])
+        nav=('<nav class="reader-pagination" aria-label="Questions">'+(a('/'+qpath(*pv)+'/','← '+lab(pv)).replace('<a ','<a class="btn ghost" rel="prev" ',1) if pv else '')
+             +'<span>'+E(P['token'])+', question '+str(q['n'])+' of '+str(len(P['questions']))+'</span>'+(a('/'+qpath(*nx)+'/',lab(nx)+' →').replace('<a ','<a class="btn" rel="next" ',1) if nx else '')+'</nav>')
+        pro=''.join(summa_para(B[i]) for i in range(q['prologue'][0],q['prologue'][1]+1))
+        arts='<ol class="text-parts">'+''.join('<li>'+a('/'+apath(P,q,x)+'/',x['title'])+'</li>' for x in q['articles'])+'</ol>'
+        body=(crumb_html(*C,('Summa','summa/'),(P['name'],'summa/'+P['slug']+'/'),('Question '+str(q['n']),''))
+              +'<div class="page-head"><div class="eyebrow">Summa Theologiae · '+E(qref(P,q))+'</div><h1>Question '+str(q['n'])+'. '+E(q['title'])+'</h1>'
+              +'<p class="lede">'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>, '+a('/summa/'+P['slug']+'/',P['name'])+'. '+str(len(q['articles']))+(' article.' if len(q['articles'])==1 else ' articles.')+'</p></div>'
+              +'<p class="dl-row"><a class="btn" href="'+E(reader(P,q['heading']))+'">Read in the reading room →</a> '+a(na(P,q),'This question at New Advent',True)+'</p>'
+              +edline(P)+nav+notice+'<article class="reading-text" aria-label="'+E('Question '+str(q['n']))+'">'+pro+'</article>'
+              +'<h2>Articles</h2>'+arts+nav+other+source(P))
+        out[qpath(P,q)]=('Summa Theologiae '+qref(P,q)+': '+q['title']+' — Bibliotheca Catholica',
+            fit(['Summa Theologiae, %s, question %d: %s.'%(P['name'],q['n'],q['title'].rstrip('?.')),'The question’s opening and its %d article%s, by Thomas Aquinas, free in English.'%(len(q['articles']),'' if len(q['articles'])==1 else 's')],DESC_EXTRA),
+            body,[{'@context':'https://schema.org','@type':'Chapter','name':'Question '+str(q['n'])+'. '+q['title'],'url':SITE+qpath(P,q)+'/','position':q['n'],'isPartOf':{'@type':'Book','name':'Summa Theologiae, '+P['name'],'url':SITE+'summa/'+P['slug']+'/','author':ld_by},'isAccessibleForFree':True,'inLanguage':'English'},crumbs(*CQ)])
+    for k,(P,q,x) in enumerate(flat):
+        B=blocks(P['edition'])
+        pv=flat[k-1] if k else None;nx=flat[k+1] if k+1<len(flat) else None
+        lab=lambda T:T[0]['token']+', q. '+str(T[1]['n'])+', a. '+str(T[2]['n'])
+        nav=('<nav class="reader-pagination" aria-label="Articles">'+(a('/'+apath(*pv)+'/','← '+lab(pv)).replace('<a ','<a class="btn ghost" rel="prev" ',1) if pv else '')
+             +'<span>Article '+str(x['n'])+' of '+str(len(q['articles']))+'</span>'+(a('/'+apath(*nx)+'/',lab(nx)+' →').replace('<a ','<a class="btn" rel="next" ',1) if nx else '')+'</nav>')
+        text=''.join(summa_para(B[i]) for i in range(x['start'],x['end']+1))
+        body=(crumb_html(*C,('Summa','summa/'),(P['name'],'summa/'+P['slug']+'/'),('Question '+str(q['n']),qpath(P,q)+'/'),('Article '+str(x['n']),''))
+              +'<div class="page-head"><div class="eyebrow">Summa Theologiae · '+E(aref(P,q,x))+'</div><h1>'+E(x['title'])+'</h1>'
+              +'<p class="lede">'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>, '+a('/summa/'+P['slug']+'/',P['name'])+', '+a('/'+qpath(P,q)+'/','question '+str(q['n'])+', '+q['title'])+', article '+str(x['n'])+'. About '+str(max(1,round(x['words']/200)))+' min.</p></div>'
+              +'<p class="dl-row"><a class="btn" href="'+E(reader(P,x['heading']))+'">Read in the reading room →</a> '+a(na(P,q,x),'This article at New Advent',True)+'</p>'
+              +edline(P)+nav+notice+'<article class="reading-text" aria-label="'+E(aref(P,q,x))+'">'+text+'</article>'+nav+other+source(P))
+        out[apath(P,q,x)]=('Summa Theologiae '+aref(P,q,x)+': '+x['title']+' — Bibliotheca Catholica',
+            fit(['Summa Theologiae, %s, question %d, article %d: %s'%(P['name'],q['n'],x['n'],x['title'] if x['title'].endswith(('?','.')) else x['title']+'.'),'The objections, the answer, and the replies by Thomas Aquinas, free in English.'],DESC_EXTRA),
+            body,[{'@context':'https://schema.org','@type':'Article','headline':x['title'][:110],'name':aref(P,q,x)+': '+x['title'],'url':SITE+apath(P,q,x)+'/','author':ld_by,'isPartOf':{'@type':'Chapter','name':'Question '+str(q['n'])+'. '+q['title'],'url':SITE+qpath(P,q)+'/'},'isAccessibleForFree':True,'inLanguage':'English'},
+                  crumbs(*C,('Summa','summa/'),(P['name'],'summa/'+P['slug']+'/'),('Question '+str(q['n']),qpath(P,q)+'/'),('Article '+str(x['n']),apath(P,q,x)+'/'))])
+    return S
+def summa_work_html(S):
+    return ('<h2>By question and article</h2><p>'+a('/summa/','The whole Summa, one page per question and article')+': '+', '.join(a('/summa/'+P['slug']+'/',P['name']) for P in S['parts'][:-1])+', and '+a('/summa/'+S['parts'][-1]['slug']+'/',S['parts'][-1]['name'])+'.</p>')
 def main():
     tpl=(ROOT/'index.html').read_text();global GA_TAG;GA_TAG=ga_tag(tpl);hub=json.loads((ROOT/'data/catholic-hub.json').read_text())
     lib=json.loads((ROOT/'data/library.json').read_text());guide=jsvar('data/guide.js','GUIDE_DATA');flags=load_flags();plans=json.loads((ROOT/'data/reading-plans.json').read_text())['plans']
@@ -446,13 +552,14 @@ def main():
         return E(w['author'])
     TPD=part_pages(out,lib,lambda w:(a('/author/'+w['authorId']+'/',w['author']) if w.get('authorId') in auth_ids else E(w['author'])),
                    lambda w:dict({'@type':'Person','name':w['author']},**({'url':SITE+'author/'+w['authorId']+'/'} if w.get('authorId') in auth_ids else {})))
+    SUMMA=summa_pages(out,lib) if (ROOT/'data/summa.json').exists() else None
     for w in lib['works']:
         eds=''.join('<li>'+E(e['label'])+(' · '+a('/#/read/'+w['id']+'/'+e['id'],'Read here') if e.get('text') else '')+' · '+a(e['source'],'Source',True)+'</li>' for e in w['editions'])
         d=w.get('description') or (w['title']+' by '+w['author']+': free reading edition with source, credits, and rights notes.')
         hosted=any(e.get('text') for e in w['editions'])
         by=byline(w)
         ra=RA.get(w['id']);ra_note=ra_note_html(ra,libw,True) if ra and w['id'] in ra.get('noteWorks',[]) else ''
-        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p>'+ra_note+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+series_html(w,lib,TPD)+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
+        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p>'+ra_note+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+(summa_work_html(SUMMA) if SUMMA and w['id']==SUMMA['work'] else '')+series_html(w,lib,TPD)+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
         book={'@context':'https://schema.org','@type':'Book','name':w['title'],'url':SITE+'work/'+w['id']+'/','author':{'@type':'Person','name':w['author']},'description':d,'genre':w['category']}
         if w.get('authorId') in auth_ids:book['author']['url']=SITE+'author/'+w['authorId']+'/'
         elif w['id'] in RA:book['author']['url']=SITE+'author/'+RA[w['id']]['id']+'/'

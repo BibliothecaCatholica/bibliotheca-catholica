@@ -22,6 +22,13 @@ test('related authors (LIBRARY_DATA.relatedAuthors) are static-only author pages
  for(const r of ['author/g-k-chesterton','author/john-henry-newman','authors','related'])assert.equal(c2.staticOnly(r),false,r);
  assert.equal(ctx.staticOnly('author/paul-sabatier'),false,'no data loaded: falls back to the app');
 });
+test('Summa pages are static-only and canonical on their own URLs',()=>{
+ for(const r of ['summa','summa/1','summa/1-2','summa/2-2/q189','summa/1/q2/a3','summa/3/q90/a4/'])assert.equal(ctx.staticOnly(r),true,r);
+ for(const r of ['summa/4','summa/suppl/q1/a1','summa/1/q0','summa/1/q2/a0','summa/1/q2/a3/x','summas'])assert.equal(ctx.staticOnly(r),false,r);
+ const m=app.match(/^function canonicalFor\(\)[\s\S]*?\n  return SITE\+'#\/'\+raw\}/m);assert(m);
+ const c={SITE:'https://bibliothecacatholica.com/',STATIC_SECTIONS:[],location:{hash:'#/summa/1/q2/a3'},window:{}};vm.runInNewContext(m[0]+';this.canonicalFor=canonicalFor;',c);
+ assert.equal(c.canonicalFor(),'https://bibliothecacatholica.com/summa/1/q2/a3/');
+});
 test('canonicalFor() gives each chapter and story page its own static URL',()=>{
  const m=app.match(/^function canonicalFor\(\)[\s\S]*?return SITE\+'#\/'\+raw\}$/m);assert(m);
  const c={location:{hash:''},window:{BC_BOOT:'',BCSaints:{get:()=>null}},STATIC_SECTIONS:[],SITE:'https://bibliothecacatholica.com/'};

@@ -1118,6 +1118,100 @@
       ]
     },
     {
+      "id": "summa-theologiae",
+      "title": "Summa Theologiae",
+      "author": "Thomas Aquinas",
+      "authorId": "thomas-aquinas",
+      "category": "Theology",
+      "tradition": "Catholic tradition",
+      "description": "The complete English Summa in four parts: God and creation, the moral life in general and in particular, and Christ and the sacraments, read question by question and article by article. The Supplement is not included.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-09",
+      "date": "1265–1274 (this translation 1911–1925)",
+      "editions": [
+        {
+          "id": "pg-17611",
+          "label": "Project Gutenberg #17611, First Part (Prima Pars)",
+          "source": "https://www.gutenberg.org/ebooks/17611",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Fathers of the English Dominican Province"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-09",
+          "note": "The First Part of the Summa in the English Dominican translation (first published 1911 to 1925; second and revised edition from 1920). The Gutenberg file names Benziger Brothers, New York, without a year; its catalog title calls it the Complete American Edition (1947), a later reprint whose renewal covers only new matter. This file carries the translation, with question and article numbers added by the transcriber.",
+          "sourceTitle": "Summa Theologica, Part I (Prima Pars) From the Complete American Edition",
+          "digitalRelease": "Jan 26, 2006",
+          "access": "full-text",
+          "text": "data/texts/pg-17611.txt",
+          "sha256": "c9443221a31768991db4bbe37e6ed035b278143a6728af64dc8ba0cf8e79154d"
+        },
+        {
+          "id": "pg-17897",
+          "label": "Project Gutenberg #17897, First Part of the Second Part (Prima Secundae)",
+          "source": "https://www.gutenberg.org/ebooks/17897",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Fathers of the English Dominican Province"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-09",
+          "note": "The First Part of the Second Part of the Summa in the English Dominican translation (first published 1911 to 1925; second and revised edition from 1920). The Gutenberg file names Benziger Brothers, New York, without a year; its catalog title calls it the Complete American Edition (1947), a later reprint whose renewal covers only new matter. This file carries the translation, with question and article numbers added by the transcriber.",
+          "sourceTitle": "Summa Theologica, Part I-II (Pars Prima Secundae) From the Complete American Edition",
+          "digitalRelease": "Mar 1, 2006",
+          "access": "full-text",
+          "text": "data/texts/pg-17897.txt",
+          "sha256": "9722b299e1a91c43f989a282ebd857c92fdde442611035cba002f94b817c2be0"
+        },
+        {
+          "id": "pg-18755",
+          "label": "Project Gutenberg #18755, Second Part of the Second Part (Secunda Secundae)",
+          "source": "https://www.gutenberg.org/ebooks/18755",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Fathers of the English Dominican Province"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-09",
+          "note": "The Second Part of the Second Part of the Summa in the English Dominican translation (first published 1911 to 1925; second and revised edition from 1920). The Gutenberg file names Benziger Brothers, New York, without a year; its catalog title calls it the Complete American Edition (1947), a later reprint whose renewal covers only new matter. This file carries the translation, with question and article numbers added by the transcriber.",
+          "sourceTitle": "Summa Theologica, Part II-II (Secunda Secundae) Translated by Fathers of the English Dominican Province",
+          "digitalRelease": "Jul 4, 2006",
+          "access": "full-text",
+          "text": "data/texts/pg-18755.txt",
+          "sha256": "eeea1030b31e6c5d4b6fb7522770f108902d704cb2eee56bae1b10b1afa57b6f"
+        },
+        {
+          "id": "pg-19950",
+          "label": "Project Gutenberg #19950, Third Part (Tertia Pars)",
+          "source": "https://www.gutenberg.org/ebooks/19950",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Fathers of the English Dominican Province"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-09",
+          "note": "The Third Part of the Summa in the English Dominican translation (first published 1911 to 1925; second and revised edition from 1920). The Gutenberg file names Benziger Brothers, New York, without a year; its catalog title calls it the Complete American Edition (1947), a later reprint whose renewal covers only new matter. This file carries the translation, with question and article numbers added by the transcriber.",
+          "sourceTitle": "Summa Theologica, Part III (Tertia Pars) From the Complete American Edition",
+          "digitalRelease": "Nov 28, 2006",
+          "access": "full-text",
+          "text": "data/texts/pg-19950.txt",
+          "sha256": "4adb238f7c98be1c4c7d71275d29d479d923d2c447d16a692365c79ada81cdb5"
+        }
+      ]
+    },
+    {
       "id": "aquinas-prayer-contemplative",
       "title": "On Prayer and the Contemplative Life",
       "author": "Thomas Aquinas",

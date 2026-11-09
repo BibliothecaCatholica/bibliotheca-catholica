@@ -15,9 +15,11 @@
 .pd-title{font-size:22px;margin:8px 0 2px}
 .pd-title a{color:var(--ink)}
 .pd-title cite{font-style:italic}
-.pd-ref{margin:0;font:500 14px var(--sans);color:var(--ink2)}
+.pd-ref{margin:0 0 10px;font:500 14px var(--sans);color:var(--ink2)}
 .pd-quote{margin:12px 0;padding:2px 0 2px 16px;border-left:2px solid var(--gold-ink);color:var(--ink)}
 .pd-quote p{margin:0;font-size:18px}
+.pd-quote p+p{margin-top:10px}
+.pd-min{font-weight:500}
 .pd-note{margin:0 0 12px;color:var(--ink2);font-size:16px}
 .pd-foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 .pd-check{display:inline-flex;gap:8px;align-items:center;font:500 15px var(--sans);color:var(--ink);min-height:44px;cursor:pointer}

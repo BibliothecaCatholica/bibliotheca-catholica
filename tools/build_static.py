@@ -192,16 +192,20 @@ WEEKDAYS=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'
 def plan_date(iso,weekday=True):
     import datetime;d=datetime.date.fromisoformat(iso);return (WEEKDAYS[d.weekday()]+', ' if weekday else '')+MONTHS[d.month-1]+' '+str(d.day)
 PLAN_SPAN=lambda P:plan_date(P['start'],False)+' to '+plan_date(P['end'],False)+', '+str(P['year'])
+def plan_excerpt_html(x):
+    """The day's excerpt as Substack has it (data/advent-2026.json): blank lines are paragraphs, single newlines are verse line breaks. Mirrors excerptHtml() in scripts/plans.js."""
+    return ''.join('<p>'+'<br>'.join(E(l) for l in p.split('\n'))+'</p>' for p in x.split('\n\n'))
 def plan_day_html(d):
     """Mirrors dayHtml() in scripts/plans.js, without the today highlight and the mark-as-read box."""
-    au=a('/author/'+d['authorId']+'/',d['author']) if d['authorId'] else E(d['author'])
+    au=a('/author/'+d['authorId']+'/',d['attrAuthor']) if d['authorId'] else E(d['attrAuthor'])
     ed=E(d['editionLabel'])+(', tr. '+E(', '.join(d['contributors'])) if d['contributors'] else '')+'. '+('Edition: ' if d['yearKind']=='edition' else 'Translation by ')+str(d['year'])+'.'
     return ('<li class="plan-day'+(' has-marker' if d['marker'] else '')+'" id="day-'+str(d['day'])+'" data-date="'+d['date']+'">'
-      '<div class="pd-head"><span class="pd-num">Day '+str(d['day'])+'</span><time datetime="'+d['date']+'">'+E(plan_date(d['date']))+'</time></div>'
+      '<div class="pd-head"><span class="pd-num">Day '+str(d['day'])+'</span><time datetime="'+d['date']+'">'+E(plan_date(d['date']))+'</time><span class="pd-min">about '+str(d['minutes'])+' min</span></div>'
       +('<p class="pd-marker">'+E(d['marker'])+'</p>' if d['marker'] else '')+
-      '<h2 class="pd-title">'+au+', <cite>'+a('/work/'+d['work']+'/',d['title'])+'</cite></h2>'
-      '<p class="pd-ref">'+E(d['ref'])+' · about '+str(d['minutes'])+' min</p>'
-      '<blockquote class="pd-quote"><p>“'+E(d['quote'])+('…' if d['cut'] else '')+'”</p></blockquote><p class="pd-note">'+E(d['note'])+'</p>'
+      '<h2 class="pd-title">'+E(d['theme'])+'</h2>'
+      '<blockquote class="pd-quote">'+plan_excerpt_html(d['excerpt'])+'</blockquote>'
+      '<p class="pd-ref">'+au+', <cite>'+a('/work/'+d['work']+'/',d['attrWork'])+'</cite>'+E(d['attrRest'])+'</p>'
+      '<p class="pd-note">'+E(d['reflection'])+'</p>'
       '<div class="pd-foot"><a class="btn" href="/'+E(d['href'])+'">Read day '+str(d['day'])+' →</a><span class="pd-print-link">bibliothecacatholica.com/'+E(d['href'])+'</span></div>'
       '<p class="small pd-ed">'+ed+' <a class="rights-badge rb-public-domain-us" href="/rights/" data-rights="public_domain_us" title="'+E(d['yearEvidence'])+'"><span class="rb-k">Rights:</span> Public domain (US)</a></p></li>')
 def plan_html(P):

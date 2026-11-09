@@ -1,6 +1,7 @@
 /* Bibliotheca Catholica: dated reading plans (v20), e.g. #/reading/advent-2026.
  * Data: data/reading-plans.js (window.READING_PLANS), built by tools/build_reading_plans.py from
- * tools/reading_plans.py and lazy-loaded on first use. The static page reading/<id>/ lists every day;
+ * tools/reading_plans.py (passage anchors) and data/advent-2026.json (every word readers see, shared with
+ * the Substack posts) and lazy-loaded on first use. The static page reading/<id>/ lists every day;
  * this view adds two things in the browser only: today's day is highlighted (local date), and each day
  * can be marked as read, saved in localStorage under bc-plan:<id> as {v:1,read:[day numbers]}.
  * Nothing is sent anywhere, and no analytics event is fired.
@@ -21,19 +22,22 @@ function setRead(id,list,store){store=store||root.localStorage;try{if(list.lengt
 function find(id){var P=root.READING_PLANS;return P&&P.plans.filter(function(p){return p.id===id})[0]}
 var LOADING=false,WAIT=[];
 function load(cb){if(root.READING_PLANS){setTimeout(cb,0);return}WAIT.push(cb);if(LOADING)return;LOADING=true;
-  var s=document.createElement('script');s.src='data/reading-plans.js?v=20261026-v20';
+  var s=document.createElement('script');s.src='data/reading-plans.js?v=20261109-advent-sync';
   s.onload=s.onerror=function(){LOADING=false;WAIT.splice(0).forEach(function(f){try{f()}catch(e){}})};document.head.appendChild(s)}
 function edition(d){var L=root.LIBRARY_DATA,w=L&&L.works.filter(function(x){return x.id===d.work})[0];return w&&w.editions.filter(function(e){return e.id===d.edition})[0]}
 function badge(d){var R=root.BCRights,e=edition(d);return R&&e?R.badge(R.edition(e)):''}
+/* The day's excerpt (data/advent-2026.json, word for word as Substack has it): blank lines are paragraphs,
+   single newlines are verse line breaks. Mirrors plan_excerpt_html() in tools/build_static.py. */
+function excerptHtml(x){return String(x||'').split('\n\n').map(function(p){return '<p>'+p.split('\n').map(esc).join('<br>')+'</p>'}).join('')}
 /* dayHtml(d, state): one day of the plan. state = {today:'yyyy-mm-dd', read:{n:true}} */
 function dayHtml(d,state){var isToday=state.today===d.date,done=!!state.read[d.day];
   return '<li class="plan-day'+(d.marker?' has-marker':'')+(isToday?' is-today':'')+(done?' is-read':'')+'" id="day-'+d.day+'"'+(isToday?' aria-current="date"':'')+' data-date="'+d.date+'">'+
-   '<div class="pd-head"><span class="pd-num">Day '+d.day+'</span><time datetime="'+d.date+'">'+esc(longDate(d.date))+'</time>'+(isToday?'<span class="pd-today">Today</span>':'')+'</div>'+
+   '<div class="pd-head"><span class="pd-num">Day '+d.day+'</span><time datetime="'+d.date+'">'+esc(longDate(d.date))+'</time><span class="pd-min">about '+d.minutes+' min</span>'+(isToday?'<span class="pd-today">Today</span>':'')+'</div>'+
    (d.marker?'<p class="pd-marker">'+esc(d.marker)+'</p>':'')+
-   '<h2 class="pd-title">'+(d.authorId?'<a href="#/author/'+esc(d.authorId)+'">'+esc(d.author)+'</a>':esc(d.author))+', <cite><a href="#/work/'+esc(d.work)+'">'+esc(d.title)+'</a></cite></h2>'+
-   '<p class="pd-ref">'+esc(d.ref)+' · about '+d.minutes+' min</p>'+
-   '<blockquote class="pd-quote"><p>“'+esc(d.quote)+(d.cut?'…':'')+'”</p></blockquote>'+
-   '<p class="pd-note">'+esc(d.note)+'</p>'+
+   '<h2 class="pd-title">'+esc(d.theme)+'</h2>'+
+   '<blockquote class="pd-quote">'+excerptHtml(d.excerpt)+'</blockquote>'+
+   '<p class="pd-ref">'+(d.authorId?'<a href="#/author/'+esc(d.authorId)+'">'+esc(d.attrAuthor)+'</a>':esc(d.attrAuthor))+', <cite><a href="#/work/'+esc(d.work)+'">'+esc(d.attrWork)+'</a></cite>'+esc(d.attrRest)+'</p>'+
+   '<p class="pd-note">'+esc(d.reflection)+'</p>'+
    '<div class="pd-foot"><a class="btn" href="'+esc(d.href)+'">Read day '+d.day+' →</a>'+
    '<span class="pd-print-link">bibliothecacatholica.com/'+esc(d.href)+'</span><label class="pd-check"><input type="checkbox" data-day="'+d.day+'" aria-label="Mark day '+d.day+' as read"'+(done?' checked':'')+'> Mark as read</label></div>'+
    '<p class="small pd-ed">'+esc(d.editionLabel)+(d.contributors.length?', tr. '+esc(d.contributors.join(', ')):'')+'. '+(d.yearKind==='edition'?'Edition: ':'Translation by ')+d.year+'.'+badge(d)+'</p></li>'}
@@ -58,6 +62,6 @@ function view(render,id){
     document.getElementById('plan-print').onclick=function(){root.print()};
     var j=document.getElementById('plan-jump');if(j)j.onclick=function(e){e.preventDefault();var el=document.getElementById('day-'+cur.day);if(el){el.scrollIntoView({block:'start'});el.setAttribute('tabindex','-1');el.focus({preventScroll:true})}};
     if(root.BCRights&&root.BCRights.load)root.BCRights.load()})}
-root.BCPlans={IDS:IDS,has:has,view:view,dayHtml:dayHtml,longDate:longDate,todayIso:todayIso,getRead:getRead,setRead:setRead,key:key};
+root.BCPlans={IDS:IDS,has:has,view:view,dayHtml:dayHtml,excerptHtml:excerptHtml,longDate:longDate,todayIso:todayIso,getRead:getRead,setRead:setRead,key:key};
 if(typeof module!=='undefined')module.exports=root.BCPlans;
 })(typeof window!=='undefined'?window:globalThis);

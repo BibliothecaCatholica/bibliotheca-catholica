@@ -71,3 +71,9 @@ For broken links, metadata corrections, search/reader problems, or accessibility
 ## License
 
 This repository contains material under different terms; the root [MIT License](LICENSE) applies to code only. The full [licensing summary](LICENSING.md) explains the scope and exceptions. Do not infer a license for a text, image, dataset, or excerpt from its location in this repository.
+
+### Reading and citation updates (November 9, 2026)
+
+Search accepts Summa references such as `ST I q 2 a 3`. It checks the article page before showing its title. The initial Catechism lookup, `CCC 1324`, opens the Vatican section containing that paragraph. Verify an official destination before adding a Catechism mapping. The first explicit article cross-reference connects I, q. 2, a. 1 to I, q. 3, a. 4.
+
+Hosted edition panels offer Search this book. Search results link to individual paragraphs. For mapped chapters and stories the reader uses the edition and block offsets from the generated text-pages bundle. Update the maintained mapping in tools/text_pages.py, regenerate the catalog and static pages, run both test suites, and commit generated output together. After Pages deploys, compare the live build.json ID with the repository and open a citation, a chapter, and a paragraph search result.

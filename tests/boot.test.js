@@ -20,7 +20,7 @@ test('startup timeout displays recovery and ready cancels the timeout',()=>{
  const y=boot();y.events.DOMContentLoaded();y.window.BCBoot.ready();assert.equal(y.timers.size,0);assert.equal(y.notice.hidden,true);
 });
 test('partial search failures attempt each missing collection once and announce incomplete results',()=>{
- const source=fs.readFileSync('app.js','utf8'),code=source.slice(source.indexOf('function results(q){'),source.indexOf('var srchT=null'));
+ const source=fs.readFileSync('app.js','utf8'),code=source.slice(source.indexOf('function citationResult(query){'),source.indexOf('var srchT=null'));
  const tries={},rendered=[];const attempt=(name,cb,value)=>{tries[name]=(tries[name]||0)+1;if(tries[name]>1)throw Error('unbounded retry: '+name);cb(value)};
  const ctx={location:{hash:'#/search/test'},D:{isidoreV:'t'},SAINTS_IN:false,SEARCH_ERRORS:{},GD:null,B:null,LZ:{},searchScope:'all',
   saintsIdx:cb=>attempt('saints',cb,null),loadGuide:cb=>attempt('guides',cb,true),loadBooks:cb=>attempt('books',cb,true),lazy:(file,name,cb)=>attempt(name,cb,null),

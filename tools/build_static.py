@@ -424,6 +424,9 @@ def summa_pages(out,lib):
               +'<p class="lede">'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>, '+a('/summa/'+P['slug']+'/',P['name'])+', '+a('/'+qpath(P,q)+'/','question '+str(q['n'])+', '+q['title'])+', article '+str(x['n'])+'. About '+str(max(1,round(x['words']/200)))+' min.</p></div>'
               +'<p class="dl-row"><a class="btn" href="'+E(reader(P,x['heading']))+'">Read in the reading room →</a> '+a(na(P,q,x),'This article at New Advent',True)+'</p>'
               +(SUPP_LINE if P['slug']=='supp' else '')+edline(P)+nav+NOTICE(P)+fl+'<article class="reading-text" aria-label="'+E(aref(P,q,x))+'">'+text+'</article>'+nav+other+source(P))
+        if (P['slug'],q['n'],x['n'])==('1',2,1):
+            assert re.search(r'Q\. 3, Art\. 4',text)
+            body+='<aside><h2>References in this article</h2>'+a('/summa/1/q3/a4/','I, q. 3, a. 4 · Whether essence and existence are the same in God?')+'</aside>'
         out[apath(P,q,x)]=('Summa Theologiae '+aref(P,q,x)+': '+x['title']+' — Bibliotheca Catholica',
             fit(['Summa Theologiae, %s, question %d, article %d: %s'%(P['name'],q['n'],x['n'],x['title'] if x['title'].endswith(('?','.')) else x['title']+'.'),'The objections, the answer, and the replies by Thomas Aquinas, free in English.'],DESC_EXTRA),
             body,[{'@context':'https://schema.org','@type':'Article','headline':x['title'][:110],'name':aref(P,q,x)+': '+x['title'],'url':SITE+apath(P,q,x)+'/','author':ld_by,'isPartOf':{'@type':'Chapter','name':'Question '+str(q['n'])+'. '+q['title'],'url':SITE+qpath(P,q)+'/'},'isAccessibleForFree':True,'inLanguage':'English'},
@@ -579,7 +582,7 @@ def main():
                    lambda w:dict({'@type':'Person','name':w['author']},**({'url':SITE+'author/'+w['authorId']+'/'} if w.get('authorId') in auth_ids else {})))
     SUMMA=summa_pages(out,lib) if (ROOT/'data/summa.json').exists() else None
     for w in lib['works']:
-        eds=''.join('<li>'+E(e['label'])+(' · '+a('/#/read/'+w['id']+'/'+e['id'],'Read here') if e.get('text') else '')+' · '+a(e['source'],'Source',True)+'</li>' for e in w['editions'])
+        eds=''.join('<li>'+E(e['label'])+''.join(' · '+E(c['role'])+': '+E(c['name']) for c in e.get('contributors',[]) if 'translat' in c['role'].lower())+(' · '+a('/#/read/'+w['id']+'/'+e['id'],'Read here') if e.get('text') else '')+' · '+a(e['source'],'Source',True)+'</li>' for e in w['editions'])
         d=w.get('description') or (w['title']+' by '+w['author']+': free reading edition with source, credits, and rights notes.')
         hosted=any(e.get('text') for e in w['editions'])
         by=byline(w)

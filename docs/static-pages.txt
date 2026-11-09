@@ -4455,6 +4455,14 @@ work/ignatius-of-antioch-epistle-to-the-ephesians/index.html
 work/ignatius-of-antioch-epistle-to-the-romans/index.html
 work/imitation-of-christ/index.html
 work/incredulity-father-brown/index.html
+work/incredulity-father-brown/story/01-the-resurrection-of-father-brown/index.html
+work/incredulity-father-brown/story/02-the-arrow-of-heaven/index.html
+work/incredulity-father-brown/story/03-the-oracle-of-the-dog/index.html
+work/incredulity-father-brown/story/04-the-miracle-of-moon-crescent/index.html
+work/incredulity-father-brown/story/05-the-curse-of-the-golden-cross/index.html
+work/incredulity-father-brown/story/06-the-dagger-with-wings/index.html
+work/incredulity-father-brown/story/07-the-doom-of-the-darnaways/index.html
+work/incredulity-father-brown/story/08-the-ghost-of-gideon-wise/index.html
 work/innocence-father-brown/index.html
 work/innocence-father-brown/story/01-the-blue-cross/index.html
 work/innocence-father-brown/story/02-the-secret-garden/index.html

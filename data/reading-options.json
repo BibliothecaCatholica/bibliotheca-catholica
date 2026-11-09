@@ -130,10 +130,10 @@
     "orthodoxy": [
       {
         "provider": "Project Gutenberg",
-        "source": "https://www.gutenberg.org/ebooks/16769",
-        "url": "https://www.gutenberg.org/cache/epub/16769/pg16769-images-3.epub",
+        "source": "https://www.gutenberg.org/ebooks/130",
+        "url": "https://www.gutenberg.org/cache/epub/130/pg130-images-3.epub",
         "format": "EPUB",
-        "checked": "2026-10-21"
+        "checked": "2026-11-09"
       },
       {
         "provider": "Standard Ebooks",

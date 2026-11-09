@@ -222,6 +222,16 @@ PG_NOTICE=('This eBook is for the use of anyone anywhere in the United States an
   'You may copy it, give it away or re-use it under the terms of the <a href="https://www.gutenberg.org/policy/license.html" target="_blank" rel="noopener">Project Gutenberg License</a> '
   'included with this eBook or online at <a href="https://www.gutenberg.org" target="_blank" rel="noopener">www.gutenberg.org</a>. If you are not located in the United States, '
   'you will have to check the laws of the country where you are located before using this eBook.')  # same words as read() in scripts/library.js
+SE_NOTICE=('This text comes from the Standard Ebooks edition, which its producers dedicate to the public domain (CC0 1.0); it is not a Project Gutenberg eBook. '
+  'Bibliotheca Catholica corrected it to the wording of the first printings where they differ; each correction is listed in the edition’s provenance record.')  # same words as SE_NOTICE in scripts/library.js
+def is_pg(e):return 'gutenberg.org' in e['source']
+def text_notice(e):
+    """The notice a hosted part page shows: the Gutenberg license notice, or the Standard Ebooks notice (2026-11-09)."""
+    return '<p class="small pg-notice">'+(PG_NOTICE if is_pg(e) else SE_NOTICE)+'</p>'
+def text_source(e):
+    if is_pg(e):return a(e['source'],'Project Gutenberg record',True)+'. '+E(e['rights'])+' The full Project Gutenberg license is kept in the hosted text.'
+    return (a(e['source'],'Standard Ebooks record',True)+'. '+E(e['rights'])+' '
+            +a('https://texts.bibliothecacatholica.com/provenance/'+e['id']+'.json','Provenance record and corrections',True)+'.')
 def pd_badge(evidence):
     return ' <a class="rights-badge rb-public-domain-us" href="/rights/" data-rights="public_domain_us" title="'+E(evidence)+'"><span class="rb-k">Rights:</span> Public domain (US)</a>'
 def text_split(path):
@@ -295,10 +305,10 @@ def part_pages(out,lib,by_html,author_ld):
               +'<p class="dl-row"><a class="btn" href="'+E(reader)+'">Read in the reading room →</a> '+a('/work/'+wid+'/','Work page and editions')+'</p>'
               +'<p class="small">The reading room adds highlights, notes, find in work, and saved places. This page shows the same hosted text in one piece.</p>'
               +'<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+'. '+E(d.get('editionLine') or e.get('note',''))+pd_badge(e['rights'])+'</p>'
-              +nav+'<p class="small pg-notice">'+PG_NOTICE+'</p>'
+              +nav+text_notice(e)
               +'<article class="reading-text" aria-label="'+E(x['title'])+'">'+''.join('<p>'+E(B[i])+'</p>' for i in range(x['start'],x['end']+1))+'</article>'
               +nav+parts_list(wid,d)
-              +'<p class="small">Source: '+E(w['author']+'. '+w['title']+'. '+e['label']+'.')+' '+a(e['source'],'Project Gutenberg record',True)+'. '+E(e['rights'])+' The full Project Gutenberg license is kept in the hosted text.</p>'
+              +'<p class="small">Source: '+E(w['author']+'. '+w['title']+'. '+e['label']+'.')+' '+text_source(e)+'</p>'
               +'<p>'+a('/work/'+wid+'/',w['title'])+' · '+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>')
             what='“'+x['title']+',” '+part_label(d,x,True)+' '+('of '+str(n)+' ' if d['kind']=='ch' else '')+'in '+w['title']+' by '+w['author']+'.'
             md=fit([what],(('The full text on one page, free, with a link into the reading room for notes and highlights.','The full text on one page, with a link into the reading room.','The full text, free to read.'),)+DESC_EXTRA)

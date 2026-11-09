@@ -1,0 +1,300 @@
+{
+  "id": "se-incredulity-father-brown",
+  "kind": "public-domain-text",
+  "title": "The Incredulity of Father Brown",
+  "author": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+  "firstPublished": "1926: London, Cassell and Company (June 1926); New York, Dodd, Mead and Company (June 1926). The stories first appeared in magazines from 1923 (Dodd, Mead copyright 1923, 1924, 1926).",
+  "printBasis": "Standard Ebooks text (CC0 1.0 dedication for its contributions), based on the Faded Page transcription (Distributed Proofreaders Canada, 2012; Faded Page pid 20120749, from the 1947 Cassell omnibus The Father Brown Stories) and the Internet Archive scan of the 1926 Cassell printing. Corrected by Bibliotheca Catholica to the wording of both 1926 printings where they agree against it (see corrections).",
+  "rights": "Public domain in the USA. First published in 1926, before 1931; US copyright in 1926 works expired on January 1, 2022. Standard Ebooks dedicates its own contributions to the public domain (CC0 1.0). Outside the U.S., check local copyright rules.",
+  "sourceUrl": "https://github.com/standardebooks/g-k-chesterton_the-incredulity-of-father-brown/tree/2bbf5020638f5bc0ab765f5f5ba706d28d66142c/src/epub/text",
+  "sourcePage": "https://standardebooks.org/ebooks/g-k-chesterton/the-incredulity-of-father-brown",
+  "sourceCommit": "2bbf5020638f5bc0ab765f5f5ba706d28d66142c",
+  "sourceFiles": [
+    {
+      "file": "src/epub/text/dedication.xhtml",
+      "sha256": "081ab086fcc5d6d67c33069fc93b7120ed42874bc93debb5088835be75d747ed",
+      "bytes": 606
+    },
+    {
+      "file": "src/epub/text/preface.xhtml",
+      "sha256": "cabef63c3a08877a83192a061adff2757328950647671d0d2cfd48c5e5fff8ee",
+      "bytes": 824
+    },
+    {
+      "file": "src/epub/text/the-resurrection-of-father-brown.xhtml",
+      "sha256": "8fa24e769cbc87d6a81690bd006a33db44586f40d74c5a303cf67ea10273322d",
+      "bytes": 41233
+    },
+    {
+      "file": "src/epub/text/the-arrow-of-heaven.xhtml",
+      "sha256": "7eea3eefdd44bec6a320f69bbe35ead3efb737654d6a0497719bf27265a850f8",
+      "bytes": 57777
+    },
+    {
+      "file": "src/epub/text/the-oracle-of-the-dog.xhtml",
+      "sha256": "efe816500c81c18672a68a3ff8575c646be02e9ec546ff67949d98d63abd263b",
+      "bytes": 50893
+    },
+    {
+      "file": "src/epub/text/the-miracle-of-moon-crescent.xhtml",
+      "sha256": "baac8d11fef5a7a918bc74e108b8a09200fc4b335a0c4c1bf1c30277af85d9e2",
+      "bytes": 56476
+    },
+    {
+      "file": "src/epub/text/the-curse-of-the-golden-cross.xhtml",
+      "sha256": "bc59cfbb4b0a7945dcaf4e19c052ae8c4b8cf00a32f847230d1ce034cdabbd3d",
+      "bytes": 60437
+    },
+    {
+      "file": "src/epub/text/the-dagger-with-wings.xhtml",
+      "sha256": "4a79ba6258502871ca36811af10385046e324badeca5d7a38718e2812616863f",
+      "bytes": 52139
+    },
+    {
+      "file": "src/epub/text/the-doom-of-the-darnaways.xhtml",
+      "sha256": "95a7f38523909d2a57c8a68a591386ae811eb563b732404f3c46458bb4f87f9f",
+      "bytes": 57812
+    },
+    {
+      "file": "src/epub/text/the-ghost-of-gideon-wise.xhtml",
+      "sha256": "0ced8d451d20c66b3be791b6b933b6fa2ecefecbf6a9e610e4fc9ea8e632540b",
+      "bytes": 44771
+    }
+  ],
+  "sourceFileSha256": "2bdf4723b35e489101568a7feddac75a77a082c61629cf7a2090f029d91a8ee5",
+  "sha256": "ffa83348a7a49c054b30119cc0ce8afa429ef006fb5b12f361a52f8a1370bd44",
+  "bytes": 401437,
+  "standardEbooksRights": "The source text and artwork in this ebook are believed to be in the United States public domain; that is, they are believed to be free of copyright restrictions in the United States. They may still be copyrighted in other countries, so users located outside of the United States must check their local laws before using this ebook. The creators of, and contributors to, this ebook dedicate their contributions to the worldwide public domain via the terms in the CC0 1.0 Universal Public Domain Dedication.",
+  "standardEbooksSources": [
+    "https://www.fadedpage.com/showbook.php?pid=20120749",
+    "https://archive.org/details/in.ernet.dli.2015.463891"
+  ],
+  "standardEbooksCredits": "Produced for Standard Ebooks by Vince Rice (first release December 4, 2022), proofread by Alex Cabal; transcription by Barbara Watson, Mary Meehan, Mark Akrigg, and Distributed Proofreaders Canada for Faded Page.",
+  "whyNotGutenberg": "Project Gutenberg (US) has no ebook of The Incredulity of Father Brown (catalog checked 2026-11-09). The Project Gutenberg Australia and Faded Page files are not used: Faded Page asks permission for changed or commercial copies, and its file is a 1947 printing; the Standard Ebooks text is CC0.",
+  "iaWitness": {
+    "identifier": "in.ernet.dli.2015.463891",
+    "url": "https://archive.org/details/in.ernet.dli.2015.463891",
+    "title": "The Incredulity Of Father Brown",
+    "year": 1926,
+    "publisher": "London: Cassell and Company, Ltd. (title page verso: \"First published June 1926, Second Impression August 1926\")",
+    "ocr": "2015.463891.The-Incredulity-Of-Father-Brown_djvu.txt",
+    "ocrSha256": "586133a37a043e15a44cf9c5a5d342e335963139c72bf252b2c456bbe4f76710",
+    "note": "Print witness: the Cassell London text of 1926, the base of the Standard Ebooks edition. Digital Library of India scan."
+  },
+  "secondWitness": {
+    "identifier": "incredulityoffat0000ches",
+    "url": "https://archive.org/details/incredulityoffat0000ches",
+    "title": "The Incredulity of Father Brown",
+    "year": 1926,
+    "publisher": "New York: Dodd, Mead and Company (\"First printing, June, 1926; Second printing, August, 1926\")",
+    "ocr": "incredulityoffat0000ches_djvu.txt",
+    "ocrSha256": "19828976b425b55afa7741707e61ea5f9256146302fd230511e0ba26ed93331c",
+    "note": "Freely readable Internet Archive scan (not a lending copy). Used to confirm each correction; where the London and New York printings differ, the London (Cassell) reading is kept."
+  },
+  "collation": "Word-level comparison (2026-11-09) of the hosted text with the OCR of both 1926 scans: 97.8 percent of words align with the Cassell OCR and 99.5 percent with the Dodd, Mead OCR before OCR noise; every remaining difference that is not OCR noise, running heads, or a Standard Ebooks spelling or hyphenation modernization was a place where both 1926 printings agree against the Standard Ebooks text, and each was corrected (corrections). No passage of the 1926 text is missing.",
+  "extraction": {
+    "includes": [
+      "Dedication (To Patricia Burke)",
+      "Note",
+      "I. The Resurrection of Father Brown",
+      "II. The Arrow of Heaven",
+      "III. The Oracle of the Dog",
+      "IV. The Miracle of Moon Crescent",
+      "V. The Curse of the Golden Cross",
+      "VI. The Dagger with Wings",
+      "VII. The Doom of the Darnaways",
+      "VIII. The Ghost of Gideon Wise"
+    ],
+    "omits": [
+      "Standard Ebooks title page, imprint, colophon, Uncopyright, and cover art"
+    ],
+    "method": "tools/import_standard_ebooks.py: downloads the source XHTML at the pinned commit, converts each paragraph to a plain-text block (verse lines kept, italic and abbreviation markup dropped, word joiners removed, scene breaks as * * *), heads the stories with their 1926 numbers (I to VIII), heads the note NOTE as in the 1926 printings, and applies the corrections."
+  },
+  "corrections": [
+    {
+      "standardEbooks": "reproducing any real ones.",
+      "printed1926": "reproducing any real one."
+    },
+    {
+      "standardEbooks": "pink spots; that it, it was Spanish",
+      "printed1926": "pink spots; that is, it was Spanish"
+    },
+    {
+      "standardEbooks": "Red Indians sitting on the veranda",
+      "printed1926": "Red Indians sitting in the veranda"
+    },
+    {
+      "standardEbooks": "it was the longer and lower sank",
+      "printed1926": "it was the lower and lower sank"
+    },
+    {
+      "standardEbooks": "turned away from his effort, he tottered",
+      "printed1926": "turned away from this effort, he tottered"
+    },
+    {
+      "standardEbooks": "I think I began to see.”",
+      "printed1926": "I think I begin to see.”"
+    },
+    {
+      "standardEbooks": "on him out the sky.",
+      "printed1926": "on him out of the sky."
+    },
+    {
+      "standardEbooks": "was only in this case that a",
+      "printed1926": "was only in his case that a"
+    },
+    {
+      "standardEbooks": "I believe, and Brandon Merton must have",
+      "printed1926": "I believe, and Brander Merton must have"
+    },
+    {
+      "standardEbooks": "white man standing on the top",
+      "printed1926": "white man standing at my side on the top"
+    },
+    {
+      "standardEbooks": "with something like jerk:",
+      "printed1926": "with something like a jerk:"
+    },
+    {
+      "standardEbooks": "the present.”\n\nAnd then saluting the other",
+      "printed1926": "the present.”\n\nAnd saluting the other"
+    },
+    {
+      "standardEbooks": "inference except that his murderer threw an",
+      "printed1926": "inference except that this murderer threw an"
+    },
+    {
+      "standardEbooks": "to be a respector of persons.",
+      "printed1926": "to be a respecter of persons."
+    },
+    {
+      "standardEbooks": "hedge my guide stopped and disentangled",
+      "printed1926": "hedge my guide stooped and disentangled"
+    },
+    {
+      "standardEbooks": "a murderer never gets rid of a",
+      "printed1926": "a murderer never got rid of a"
+    },
+    {
+      "standardEbooks": "closely interlaced but separate boughs",
+      "printed1926": "closely interlaced but still separate boughs"
+    },
+    {
+      "standardEbooks": "I may say I am his secretary",
+      "printed1926": "I may say I’m his secretary"
+    },
+    {
+      "standardEbooks": "Because I have a serious, I might say solemn, reason,”",
+      "printed1926": "Because I have serious, I might say solemn, reasons,”"
+    },
+    {
+      "standardEbooks": "Good Lord, you don’t tell me you think",
+      "printed1926": "Good Lord, don’t tell me you think"
+    },
+    {
+      "standardEbooks": "take much stock of the laws of",
+      "printed1926": "take much stock in the laws of"
+    },
+    {
+      "standardEbooks": "window, which looked out from a wall",
+      "printed1926": "window, which looked from a wall"
+    },
+    {
+      "standardEbooks": "the body. A long garden tub was",
+      "printed1926": "the body. A large garden tub was"
+    },
+    {
+      "standardEbooks": "wouldn’t it be as well if you had",
+      "printed1926": "wouldn’t it be well if you had"
+    },
+    {
+      "standardEbooks": "He paused again, tracing plans like",
+      "printed1926": "He paused again, still tracing plans like"
+    },
+    {
+      "standardEbooks": "mere drawing scratched upon the stone",
+      "printed1926": "mere drawing scratched or scrawled upon the stone"
+    },
+    {
+      "standardEbooks": "the last that death would strike",
+      "printed1926": "the last that my death would strike"
+    },
+    {
+      "standardEbooks": "which the great sea itself ran",
+      "printed1926": "which the great grey sea itself ran"
+    },
+    {
+      "standardEbooks": "see why you should have done him",
+      "printed1926": "see why you shouldn’t have done him"
+    },
+    {
+      "standardEbooks": "say made up more casually and",
+      "printed1926": "say made up much more casually and"
+    },
+    {
+      "standardEbooks": "a crack, doubtless accidently left ajar",
+      "printed1926": "a crack, doubtless accidentally left ajar"
+    },
+    {
+      "standardEbooks": "It was by that that Arnold Aylmer",
+      "printed1926": "It was by this that Arnold Aylmer"
+    },
+    {
+      "standardEbooks": "am morally certain you wo",
+      "printed1926": "am mortally certain you wo"
+    },
+    {
+      "standardEbooks": "I think that unconsciousness of mine will",
+      "printed1926": "I think that inconsciousness of mine will"
+    },
+    {
+      "standardEbooks": "melodrama: the heir back from the",
+      "printed1926": "melodrama: the heir coming back from the"
+    },
+    {
+      "standardEbooks": "what sort of man was the",
+      "printed1926": "what sort of a man was the"
+    },
+    {
+      "standardEbooks": "also doesn’t exist. Now, do",
+      "printed1926": "also didn’t exist. Now, do"
+    },
+    {
+      "standardEbooks": "you will excuse me putting it before",
+      "printed1926": "you will excuse my putting it before"
+    },
+    {
+      "standardEbooks": "chambers was that both violated the",
+      "printed1926": "chambers was that they both violated the"
+    },
+    {
+      "standardEbooks": "end of the county. In all three",
+      "printed1926": "end of the country. In all three"
+    },
+    {
+      "standardEbooks": "it’s God truth as well",
+      "printed1926": "it’s God’s truth as well"
+    },
+    {
+      "standardEbooks": "“Why he curses priests from morning",
+      "printed1926": "“Why he cursed priests from morning"
+    },
+    {
+      "standardEbooks": "“He curses priests for failing",
+      "printed1926": "“He cursed priests for failing"
+    },
+    {
+      "standardEbooks": "repeated Byme, mystified.",
+      "printed1926": "repeated Byrne, mystified."
+    },
+    {
+      "standardEbooks": "have the three millionaires in that",
+      "printed1926": "have the three great millionaires in that"
+    },
+    {
+      "standardEbooks": "rivals who were ruining him for standing",
+      "printed1926": "rivals who were running him for standing"
+    }
+  ],
+  "checked": "2026-11-09"
+}

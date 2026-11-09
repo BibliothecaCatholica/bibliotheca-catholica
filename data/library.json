@@ -486,21 +486,22 @@
       "reviewStatus": "source-checked",
       "editions": [
         {
-          "id": "pg-16769",
-          "label": "Project Gutenberg #16769",
-          "source": "https://www.gutenberg.org/ebooks/16769",
+          "id": "pg-130",
+          "label": "Project Gutenberg #130",
+          "source": "https://www.gutenberg.org/ebooks/130",
           "language": "English",
           "contributors": [],
-          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
-          "checked": "2026-10-21",
-          "note": "Published before Chesterton’s reception into the Catholic Church.",
+          "rights": "Public domain in the USA. First published 1908, before 1931. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-09",
+          "note": "The 1908 first edition text (New York: John Lane Company; London: John Lane, The Bodley Head; copyright 1908), with Chesterton’s Preface. Gutenberg names no print source; a word-level check against the 1909 John Lane Company printing at the Internet Archive (orthodoxy1909ches) matched it, with one known slip (“at last” for “at least” in Chapter IX). It replaces an earlier Gutenberg file that was transcribed from a later reprint.",
           "sourceTitle": "Orthodoxy",
-          "digitalRelease": "Sep 28, 2005",
+          "digitalRelease": "May 1, 1994",
           "access": "full-text",
-          "text": "data/texts/pg-16769.txt",
-          "sha256": "05bc190064cbe4415a912a1a03c29b427f6f0c61d723d899391aba67e0a72257"
+          "text": "data/texts/pg-130.txt",
+          "sha256": "ec525c93afddb05465bf6fa0af8f873078b8e42a2a24f9b999582994f054fdf2"
         }
-      ]
+      ],
+      "date": "1908"
     },
     {
       "id": "everlasting-man",
@@ -905,10 +906,24 @@
       "authorId": "g-k-chesterton",
       "category": "Literature",
       "tradition": "Catholic tradition",
-      "description": "The third Father Brown collection, eight stories in which apparent miracles, curses, and oracles are explained. Read the 1926 scan at the Internet Archive; full text here is coming.",
+      "description": "The third Father Brown collection, eight stories in which apparent miracles, curses, and oracles are explained.",
       "reviewStatus": "source-checked",
       "date": "1926",
       "editions": [
+        {
+          "id": "se-incredulity-father-brown",
+          "label": "Standard Ebooks edition, corrected to the 1926 printings",
+          "source": "https://standardebooks.org/ebooks/g-k-chesterton/the-incredulity-of-father-brown",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. First published 1926, before 1931 (US copyright in 1926 works expired on January 1, 2022). Standard Ebooks dedicates its own work to the public domain (CC0 1.0). Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-09",
+          "note": "First published 1926 (London: Cassell and Company; New York: Dodd, Mead and Company). Text from Standard Ebooks (CC0), which is based on the Faded Page transcription and the Internet Archive scan of the Cassell 1926 printing (in.ernet.dli.2015.463891). Project Gutenberg has no US ebook of this book. Checked word by word against the Cassell and the Dodd, Mead 1926 scans, and corrected in 46 places where both printings agree against it; Standard Ebooks’ modernized spelling and hyphenation are kept. Dedication, Note, and all eight stories.",
+          "sourceTitle": "The Incredulity of Father Brown",
+          "access": "full-text",
+          "text": "data/texts/se-incredulity-father-brown.txt",
+          "sha256": "ffa83348a7a49c054b30119cc0ce8afa429ef006fb5b12f361a52f8a1370bd44"
+        },
         {
           "id": "ia-incredulityoffat0000ches",
           "label": "Internet Archive scan (New York: Dodd, Mead and Company, 1926)",
@@ -917,10 +932,11 @@
           "contributors": [],
           "rights": "External scan at the Internet Archive; not hosted here. Published 1926, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
           "checked": "2026-11-09",
-          "note": "Internet Archive record: Dodd, Mead and Company, New York, 1926, freely readable (not a lending copy). Full text here is coming: it will be hosted only after a clean transcription of a pre-1931 printing is checked.",
+          "note": "Internet Archive record: Dodd, Mead and Company, New York, 1926, freely readable (not a lending copy). Link only; one of the two 1926 printings the hosted text was checked against.",
           "access": "full-text"
         }
-      ]
+      ],
+      "added": "2026-11-09"
     },
     {
       "id": "secret-father-brown",
@@ -3327,18 +3343,7 @@
         {
           "title": "The Incredulity of Father Brown",
           "year": 1926,
-          "workId": "incredulity-father-brown",
-          "note": "Public domain in the US. Read the 1926 scan at the Internet Archive; full text here is coming.",
-          "contents": [
-            "The Resurrection of Father Brown",
-            "The Arrow of Heaven",
-            "The Oracle of the Dog",
-            "The Miracle of Moon Crescent",
-            "The Curse of the Golden Cross",
-            "The Dagger with Wings",
-            "The Doom of the Darnaways",
-            "The Ghost of Gideon Wise"
-          ]
+          "workId": "incredulity-father-brown"
         },
         {
           "title": "The Secret of Father Brown",

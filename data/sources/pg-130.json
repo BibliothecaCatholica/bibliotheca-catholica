@@ -1,0 +1,73 @@
+{
+  "id": 130,
+  "metadata": {
+    "Author": [
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936"
+    ],
+    "Title": [
+      "Orthodoxy"
+    ],
+    "Note": [
+      "Companion to Heretics",
+      "There is an improved edition of this title, eBook #16769"
+    ],
+    "Credits": [
+      "This etext was proofread by Martin Ward and compared against a separate copy scanned by Mike Perry"
+    ],
+    "Reading Level": [
+      "Reading ease score: 68.1 (8th & 9th grade). Neither easy nor difficult to read."
+    ],
+    "Language": [
+      "English"
+    ],
+    "LoC Class": [
+      "BR: Philosophy, Psychology, Religion: Christianity"
+    ],
+    "Subject": [
+      "Apologetics",
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+      "Christianity -- Essence, genius, nature"
+    ],
+    "Category": [
+      "Text"
+    ],
+    "eBook-No.": [
+      "130"
+    ],
+    "Release Date": [
+      "May 1, 1994"
+    ],
+    "Most Recently Updated": [
+      "October 29, 2024 (text file header)"
+    ],
+    "Copyright": [
+      "Public domain in the USA."
+    ],
+    "Bookshelves": [
+      "Christianity",
+      "Category: Philosophy & Ethics",
+      "Category: Religion/Spirituality"
+    ]
+  },
+  "textUrl": "https://www.gutenberg.org/cache/epub/130/pg130.txt",
+  "metadataSource": "https://www.gutenberg.org/ebooks/130.rdf (the catalog page https://www.gutenberg.org/ebooks/130 returned HTTP 503 on 2026-11-09, so tools/fetch_gutenberg_edition.py could not run; the text file was downloaded from the same textUrl the tool uses, original bytes)",
+  "sha256": "ec525c93afddb05465bf6fa0af8f873078b8e42a2a24f9b999582994f054fdf2",
+  "checked": "2026-11-09",
+  "editionEvidence": {
+    "edition": "The 1908 first edition text as printed by the John Lane Company, New York (copyright 1908), with the Preface and the byline \"Gilbert K. Chesterton\". The Gutenberg file names no print source; its text was identified by collation.",
+    "printWitness": {
+      "identifier": "orthodoxy1909ches",
+      "url": "https://archive.org/details/orthodoxy1909ches",
+      "year": 1909,
+      "publisher": "New York: John Lane Company; London: John Lane, The Bodley Head, MCMIX. \"Copyright, 1908, by John Lane Company.\" The Plimpton Press, Norwood, Mass.",
+      "ocr": "orthodoxy1909ches_djvu.txt",
+      "ocrSha256": "570538198bd137e1870cc1ea82cc1088d1327d6deea016656e8b6d75205a4995"
+    },
+    "otherWitnesses": [
+      "https://archive.org/details/orthodoxy0000gilb (John Lane Company, MCMIX)",
+      "https://archive.org/details/bwb_S0-DRI-815 (John Lane Company, MCMXI)"
+    ],
+    "collation": "Word-level comparison (2026-11-09) with the OCR of orthodoxy1909ches: 98.9 percent of words align before OCR noise and running heads; no passage is missing. Known differences from the printed plates: the printing reads \"ecstacy\" (Gutenberg \"ecstasy\"), and has two misprints Gutenberg corrects (\"it he goes travelling\" for \"if\", \"if he worked harm\" for \"hard\", as the London printings read). One Gutenberg error: Chapter IX \"I have entered at last the gate of all good philosophy\" where the printings read \"at least\". The file is kept byte for byte.",
+    "whyNot16769": "Gutenberg #16769 (hosted here until 2026-11-09) was transcribed from a 1934 John Lane, The Bodley Head reprint (its title page lists reprints to 1934) and has no Preface. Project Gutenberg calls #16769 an improved edition of #130, but #130 is the 1908 text with the Preface and no post-1931 printing as its base."
+  }
+}

@@ -10,32 +10,32 @@ tools/build_static.py) and data/text-pages.js (window.TEXT_PAGES, the short cont
 work page shows). The static pages live at /work/<work>/<kind>/<NN-slug>/; the app keeps the
 static page as the view (staticOnly() in app.js) and links into the reader for highlights and notes.
 
-Only hosted, rights-checked Gutenberg editions may appear here (content rules 1 and 2). Never add a
+Only hosted, rights-checked editions (Gutenberg, or a public-domain text with a provenance record) may appear here (content rules 1 and 2). Never add a
 flagged title.
 """
 # kind: 'ch' (chapters) or 'story' (stories). Each part: (slug, number label, title, heading block,
 # first words of the first paragraph, last words of the last paragraph). Matching ignores case and
 # runs of whitespace; Gutenberg _italic_ underscores count as text.
 WORKS = {
- 'orthodoxy': dict(edition='pg-16769', kind='ch', noun='Chapter', nouns='Chapters',
-  # Research mapped these boundaries on Gutenberg #130; they are remapped here onto the hosted #16769
-  # (John Lane 1934 reprint of the 1908 text, which has no Preface). Opening and closing words are
-  # Research's, checked against #16769 by the builder.
-  start_after='_ORTHODOXY_',
-  edition_line='Transcribed from a John Lane, The Bodley Head reprint: first published 1908, this printing 1934 (title page). It has no Preface.',
+ 'orthodoxy': dict(edition='pg-130', kind='ch', noun='Chapter', nouns='Chapters',
+  # Research mapped these boundaries on Gutenberg #130, the hosted edition since 2026-11-09 (the 1908 text as printed by
+  # the John Lane Company, New York, with the Preface). Opening and closing words are Research's, checked by the builder.
+  start_after='ORTHODOXY',
+  edition_line='The 1908 first edition text (New York: John Lane Company; London: John Lane, The Bodley Head), with the Preface. Checked against the 1909 John Lane Company printing at the Internet Archive.',
   parts=[
-   ('01-introduction-in-defence-of-everything-else','I','Introduction in Defence of Everything Else','CHAPTER I.--_Introduction in Defence of Everything Else_','The only possible excuse for this book is that it is an answer','I will write him another book.'),
-   ('02-the-maniac','II','The Maniac','CHAPTER II.--_The Maniac_','Thoroughly worldly people never understand even the world;','has given to them all her name.'),
-   ('03-the-suicide-of-thought','III','The Suicide of Thought','CHAPTER III.--_The Suicide of Thought_','The phrases of the street are not only forcible but subtle:','throughout.'),
-   ('04-the-ethics-of-elfland','IV','The Ethics of Elfland','CHAPTER IV--_The Ethics of Elfland_','When the business man rebukes the idealism of his office-boy, it','of Christian theology.'),
-   ('05-the-flag-of-the-world','V','The Flag of the World','CHAPTER V.--_The Flag of the World_','When I was a boy there were two curious men running about','at home.'),
-   ('06-the-paradoxes-of-christianity','VI','The Paradoxes of Christianity','CHAPTER VI.--_The Paradoxes of Christianity_','The real trouble with this world of ours is not that it is an','the wild truth reeling but erect.'),
-   ('07-the-eternal-revolution','VII','The Eternal Revolution','CHAPTER VII.--_The Eternal Revolution_','The following propositions have been urged: First, that some','the steepest adventure is to get there."'),
-   ('08-the-romance-of-orthodoxy','VIII','The Romance of Orthodoxy','CHAPTER VIII.--_The Romance of Orthodoxy_','It is customary to complain of the bustle and strenuousness','but they laid waste the world.'),
-   ('09-authority-and-the-adventurer','IX','Authority and the Adventurer','CHAPTER IX.--_Authority and the Adventurer_','The last chapter has been concerned with the contention that','His mirth.'),
+   ('01-introduction-in-defence-of-everything-else','I','Introduction in Defence of Everything Else','I INTRODUCTION IN DEFENCE OF EVERYTHING ELSE','The only possible excuse for this book is that it is an answer','I will write him another book.'),
+   ('02-the-maniac','II','The Maniac','II THE MANIAC','Thoroughly worldly people never understand even the world;','has given to them all her name.'),
+   ('03-the-suicide-of-thought','III','The Suicide of Thought','III THE SUICIDE OF THOUGHT','The phrases of the street are not only forcible but subtle:','throughout.'),
+   ('04-the-ethics-of-elfland','IV','The Ethics of Elfland','IV THE ETHICS OF ELFLAND','When the business man rebukes the idealism of his office-boy, it','of Christian theology.'),
+   ('05-the-flag-of-the-world','V','The Flag of the World','V THE FLAG OF THE WORLD','When I was a boy there were two curious men running about','at home.'),
+   ('06-the-paradoxes-of-christianity','VI','The Paradoxes of Christianity','VI THE PARADOXES OF CHRISTIANITY','The real trouble with this world of ours is not that it is an','the wild truth reeling but erect.'),
+   ('07-the-eternal-revolution','VII','The Eternal Revolution','VII THE ETERNAL REVOLUTION','The following propositions have been urged: First, that some','the steepest adventure is to get there."'),
+   ('08-the-romance-of-orthodoxy','VIII','The Romance of Orthodoxy','VIII THE ROMANCE OF ORTHODOXY','It is customary to complain of the bustle and strenuousness','but they laid waste the world.'),
+   ('09-authority-and-the-adventurer','IX','Authority and the Adventurer','IX AUTHORITY AND THE ADVENTURER','The last chapter has been concerned with the contention that','His mirth.'),
   ]),
-# Father Brown: the collections published before 1931 and hosted here (Research 2026-11-09). The Incredulity
- # (1926) waits for a checked scan and The Scandal (1935) is after the cutoff: see `series` in data/library.json.
+# Father Brown: the collections published before 1931 and hosted here (Research 2026-11-09; The Incredulity, 1926,
+ # added 2026-11-09 from Standard Ebooks, corrected to the 1926 printings). The Scandal (1935) is after the cutoff: see
+ # `series` in data/library.json.
  'innocence-father-brown': dict(edition='pg-204', kind='story', noun='Story', nouns='Stories',
   start_after='Contents',
   parts=[
@@ -67,6 +67,19 @@ WORKS = {
    ('10-the-salad-of-colonel-cray', '10', 'The Salad of Colonel Cray', 'TEN -- The Salad of Colonel Cray', 'FATHER BROWN was walking home from Mass on a', 'Major?” said the priest. “Well, good-bye.”'),
    ('11-the-strange-crime-of-john-boulnois', '11', 'The Strange Crime of John Boulnois', 'ELEVEN -- The Strange Crime of John Boulnois', 'MR CALHOUN KIDD was a very young gentleman with', '“Being hanged,” said Father Brown.'),
    ('12-the-fairy-tale-of-father-brown', '12', 'The Fairy Tale of Father Brown', 'TWELVE -- The Fairy Tale of Father Brown', 'THE picturesque city and state of Heiligwaldenstein was one', 'the black warning in his eyes.'),
+  ]),
+ 'incredulity-father-brown': dict(edition='se-incredulity-father-brown', kind='story', noun='Story', nouns='Stories',
+  start_after='*** START OF THE HOSTED TEXT: THE INCREDULITY OF FATHER BROWN ***',
+  edition_line='First published 1926 (London: Cassell and Company; New York: Dodd, Mead and Company). Standard Ebooks text, corrected to the wording of the 1926 printings.',
+  parts=[
+   ('01-the-resurrection-of-father-brown', '1', 'The Resurrection of Father Brown', 'I. THE RESURRECTION OF FATHER BROWN', 'There was a brief period during which Father Brown', 'about a bottle of real wine?”'),
+   ('02-the-arrow-of-heaven', '2', 'The Arrow of Heaven', 'II. THE ARROW OF HEAVEN', 'It is to be feared that about a hundred', 'into a blue abyss of sky.'),
+   ('03-the-oracle-of-the-dog', '3', 'The Oracle of the Dog', 'III. THE ORACLE OF THE DOG', '“Yes,” said Father Brown, “I always like a dog,', 'the wolf looked at St. Francis.'),
+   ('04-the-miracle-of-moon-crescent', '4', 'The Miracle of Moon Crescent', 'IV. THE MIRACLE OF MOON CRESCENT', 'Moon Crescent was meant in a sense to be', 'for a man like Warren Wynd.”'),
+   ('05-the-curse-of-the-golden-cross', '5', 'The Curse of the Golden Cross', 'V. THE CURSE OF THE GOLDEN CROSS', 'Six people sat round a small table, seeming almost', 'only fishes who survive the Deluge.”'),
+   ('06-the-dagger-with-wings', '6', 'The Dagger with Wings', 'VI. THE DAGGER WITH WINGS', 'Father Brown, at one period of his life, found', 'knows where to look for it.”'),
+   ('07-the-doom-of-the-darnaways', '7', 'The Doom of the Darnaways', 'VII. THE DOOM OF THE DARNAWAYS', 'Two landscape-painters stood looking at one landscape, which was', 'deserve to be put in it.”'),
+   ('08-the-ghost-of-gideon-wise', '8', 'The Ghost of Gideon Wise', 'VIII. THE GHOST OF GIDEON WISE', 'Father Brown always regarded the case as the queerest', 'history, he is also a poet.”'),
   ]),
  'secret-father-brown': dict(edition='pg-70175', kind='story', noun='Story', nouns='Stories',
   start_after='THE SECRET OF FLAMBEAU',

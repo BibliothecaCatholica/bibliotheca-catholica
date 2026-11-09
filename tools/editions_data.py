@@ -158,7 +158,7 @@ dict(id='orthodoxy',t='Orthodoxy',a='G. K. Chesterton',aid='g-k-chesterton',cat=
  why='Chesterton’s “slovenly autobiography” of how he found the faith.',
  picks=[P('Best overall','Ignatius Press edition','Ignatius Press','ignatius','9780898705522','Sturdy, inexpensive, and from Chesterton’s main U.S. publisher.')],
  alt='Ignatius’s Collected Works vol. 1 binds it with Heretics and The Blatchford Controversies.',
- free=[['Standard Ebooks',SE+'g-k-chesterton/orthodoxy'],['Gutenberg',G+'16769']]),
+ free=[['Standard Ebooks',SE+'g-k-chesterton/orthodoxy'],['Gutenberg',G+'130']]),
 dict(id='everlasting',t='The Everlasting Man',a='G. K. Chesterton',aid='g-k-chesterton',cat='Chesterton & Belloc',orig='1925',
  why='Chesterton’s account of humanity and Christianity.',
  picks=[P('Best overall','Ignatius Press edition','Ignatius Press','ignatius','9780898704440','The standard American edition.')],alt='',

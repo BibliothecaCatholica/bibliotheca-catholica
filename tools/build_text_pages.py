@@ -5,7 +5,7 @@ For each hosted edition: the file's SHA-256 must equal the edition's `sha256` in
 every heading must occur exactly once after `start_after`, in order, and each part's first and last
 paragraphs must start and end with the words Research mapped. A part runs from its heading block to
 the block before the next heading (a bare Roman numeral printed above a heading is left out); the
-last part ends before the Project Gutenberg END marker. Part of `npm run build`.
+last part ends before the Project Gutenberg (or hosted-text) END marker. Part of `npm run build`.
 
     python3 tools/build_text_pages.py
 """
@@ -27,11 +27,13 @@ def build():
     for wid,spec in TP.WORKS.items():
         w=works[wid];e=next(x for x in w['editions'] if x['id']==spec['edition'])
         assert e.get('text') and e.get('sha256'),(wid,'not a hosted edition')
-        assert 'gutenberg.org' in e['source'],(wid,'chapter pages are for Gutenberg editions only')
+        src=json.loads((ROOT/('data/sources/'+e['id']+'.json')).read_text())
+        # Gutenberg editions, or (2026-11-09, The Incredulity of Father Brown) a public-domain text with a provenance record
+        assert 'gutenberg.org' in e['source'] or src.get('kind')=='public-domain-text',(wid,'chapter pages need a Gutenberg or provenance-checked edition')
         assert not w.get('authorId') or w['authorId'] not in flags.get('hubAuthors',[]),wid
         raw=(ROOT/e['text']).read_bytes();assert hashlib.sha256(raw).hexdigest()==e['sha256'],(wid,'text changed')
         B=split_text(raw.decode('utf-8'))
-        end=next(i for i,b in enumerate(B) if re.search(r'\*\*\* ?END OF (THE |THIS )?PROJECT GUTENBERG',b,re.I))
+        end=next(i for i,b in enumerate(B) if re.search(r'\*\*\* ?END OF (THE |THIS )?(PROJECT GUTENBERG|HOSTED TEXT)',b,re.I))
         at=next(i for i,b in enumerate(B) if norm(b)==norm(spec['start_after']))
         heads=[]
         for slug,num,title,head,first,last in spec['parts']:

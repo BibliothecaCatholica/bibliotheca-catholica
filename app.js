@@ -635,6 +635,7 @@ function support(){var shop=AFF.bookshopShop||'';
    (shop?'<li><b>Buy books through our <a data-support="bookshop_shop" href="'+esc(shop)+'" target="_blank" rel="noopener sponsored">Bookshop.org shop ↗</a>.</b> It supports independent bookstores, and the library earns a small commission at no extra cost to you.</li>':'')+
    '<li><b>Write a commentary.</b> We welcome original, human-written commentary on the authors in the library. <a data-support="commentary_email" href="mailto:micahwatson@bibliothecacatholica.com?subject=Commentary">Get in touch ✉</a></li>'+
    '<li><b>Report a broken link or an error.</b> <a data-support="correction_email" href="mailto:micahwatson@bibliothecacatholica.com?subject=Correction">Tell us ✉</a>, and we will fix it.</li>'+
+   '<li><b>Get the newsletter.</b> <a href="https://bibliothecacatholica.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack ↗</a> to hear about new texts and features by email.</li>'+
    '<li><b>Share the library</b> with a friend, a parish, or a homeschool group.</li></ul>'+
    '<p class="small muted sup-fine">Bibliotheca Catholica is an independent project. Payments are handled by Buy Me a Coffee and PayPal; we never see your card details.</p>'+discl();
   render(h,'support')}

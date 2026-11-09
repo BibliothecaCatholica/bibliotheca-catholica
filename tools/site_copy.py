@@ -73,4 +73,4 @@ def about_page(n):
      '<h2>Goals</h2>'
      '<p>To make the Catholic tradition easy to find and pleasant to read: clean editions, honest sources, careful rights checks, and links that lead back to the libraries that did the work. The catalogue is also published as '+a('/data/','open data')+' for anyone to reuse.</p>'
      '<h2>Help the library</h2>'
-     '<p>The library is independent and has no ads. You can '+a('/support/','support the library')+', suggest a correction, or offer commentary from the Support page.</p></section>')
+     '<p>The library is independent and has no ads. You can '+a('/support/','support the library')+', suggest a correction, or offer commentary from the Support page. To follow the project, see '+'<a href="https://x.com/BiblioCatholica" target="_blank" rel="noopener">X</a>'+', '+'<a href="https://bsky.app/profile/bibliothecacatholica.com" target="_blank" rel="noopener">Bluesky</a>'+', and the '+'<a href="https://bibliothecacatholica.substack.com/subscribe" target="_blank" rel="noopener">Newsletter</a>'+' on Substack.</p></section>')

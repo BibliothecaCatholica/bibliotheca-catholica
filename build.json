@@ -1,10 +1,10 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-d21478b98d1a",
+  "id": "bc-3e93cd5adc98",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "5184aaa72c385f99e2ade42af96dba9268a27b450493b9e5416071f1617eb0d9",
-    "app.js": "6b6cf2056185d881e69df033272fade6a2dc0ffd087ec467caeb024090a1c94b",
+    "app.js": "fc822f86c613e2c5aa58f5816bac2502d251d78767d9090c0bdcb3c7247a7894",
     "data/affiliates.js": "1c8f7425b0caf30deaa22fa1b732e36fb8f341180328e35ccd263ad7da7c6030",
     "data/authors-detail.js": "7d06bc11d9d4f7391682814925eea63535abff1192321edc7347fd0c45717fde",
     "data/authorx.js": "33df4d9832532c80e8f6b73806dcd1f4f1e3810a6900d13d1983104f571eebc1",
@@ -45,7 +45,7 @@
     "data/summa.json": "beab5687d3844a5378402d1563422da0510f7bd56ea55533c9b469e64e4dd3f5",
     "data/text-pages.js": "21aa2324cbec066abd8f3593ff437e81c2d5799b1d7abc37849636fc97b1aa30",
     "data/text-pages.json": "9ea359d962261fc2e8787aef67c4116c7eee3cf80d5978ef386dd3d14100e912",
-    "index.template": "fa284cd295cbd0e11a79b6137e3fbd9c6c93679e2d975f7352da0a9755eccfec",
+    "index.template": "7fd579d5e349e4df5371161af9a1c6ace89250767e3dace5bfce151d2fae1537",
     "scripts/analytics.js": "a2af78faff04873d4c0cd53ac5ec4ae99c901cdf7d6ef16f12cb4b40275ec84f",
     "scripts/boot.js": "aacd6fd1dbf3b9ba84d2dbe4d0b72d4e7a931fa3ff96da23af94d73e05e5547b",
     "scripts/guides.js": "a77f6dfdeffbef2490b218b6acb671aed8f067f8f1c3d53c40b8d8fdf10629bf",
@@ -114,7 +114,7 @@
     "tools/rites_geo.py": "d1a93ba5ace2616b1a95b6b95f1689546a8324219cc09c22a943d455ab513af4",
     "tools/rites_pages.py": "cc5178b1ca80ca5d4203e8c071132fa6b30a315a94448d4c9ecba516f0ae5102",
     "tools/serve.py": "bf16673d8781713b31dfae39b37a366788671bb8c4ad156565b63a0383fef1c2",
-    "tools/site_copy.py": "bde088ca9164d300de4532e5e1df1ee2884c435e4e7b5e3f7c68483904c7a7c5",
+    "tools/site_copy.py": "bda4cf260f352827e254d7e1f0591d483034a039808770b58b19e8f5ee1835ab",
     "tools/substacks_src.py": "19ac87dbd3140d881f98ec04221c82468bce3ffef0f4e60e7eb9847925959bbf",
     "tools/text_pages.py": "ea7bf064b57e21624b16fe104b6aae5214b62c85f71f08bade665f5ff71f9132",
     "tools/verify_text_archive.py": "5255fb5783996417d8e145e70e415bb2183393303d0c9916089695766569fd53"

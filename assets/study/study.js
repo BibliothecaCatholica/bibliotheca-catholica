@@ -4,8 +4,8 @@
  const text=(el,value)=>{el.textContent=value};
  try{
   if(window.PagefindUI)new PagefindUI({element:'#passage-search',showSubResults:false,processResult:function(result){
-    const path=result.url.split('/').pop().replace('.html','');
     result.url=result.meta.reader || result.url;
+    for(const section of result.sub_results || []) section.url=result.url;
     delete result.meta.reader;
     return result;
   }});

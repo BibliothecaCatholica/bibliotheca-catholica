@@ -657,9 +657,12 @@ var gaT=null,gaLast=null,gaLanded=false;
    and one path per view whether it was served from / or a static page. Free-text titles are replaced the same way. */
 function gaPageView(){clearTimeout(gaT);gaT=setTimeout(function(){var raw=location.pathname+location.hash;if(raw===gaLast)return;gaLast=raw;
   var A=window.BCAnalytics;if(!A)return;var path=A.pagePath(location.hash,window.BC_BOOT),title=A.pageTitle(path,document.title);
-  /* only the landing view keeps the four utm_ campaign tags (BCAnalytics.utmQuery); later views send the bare route */
-  var loc=A.pageLocation(path,gaLanded?'':location.search);gaLanded=true;
-  track('page_view',{page_title:title,page_location:loc,page_path:path})},400)}
+  /* only the landing view keeps the four utm_ campaign tags (BCAnalytics.utmQuery), from location.search or, for links that
+     put them after the '#', from the hash (landingSearch); later views send the bare route. After the landing view the tags
+     are removed from the hash (stripHashUtm) and gaLast follows, so the same view is not sent twice (2026-11-09). */
+  var landing=!gaLanded,loc=A.pageLocation(path,landing?A.landingSearch(location.search,location.hash):'');gaLanded=true;
+  track('page_view',{page_title:title,page_location:loc,page_path:path});
+  if(landing&&A.stripHashUtm&&A.stripHashUtm())gaLast=location.pathname+location.hash},400)}
 window.addEventListener('hashchange',gaPageView);
 /* ---------- per-route meta (description, canonical, Open Graph, Twitter) ---------- */
 var SITE='https://bibliothecacatholica.com/',DEF_DESC=(document.querySelector('meta[name=description]')||{}).content||'';

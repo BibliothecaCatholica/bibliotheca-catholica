@@ -83,6 +83,9 @@ class TestAnalytics(unittest.TestCase):
         self.assertNotIn('We plan to switch that setting off', s)
         self.assertIn('the first page view records those labels, each cut to 100 characters, and no other part of the address', s)
         self.assertNotIn('utm_term', s)
+        # 2026-11-09: tags after the # are read on the landing view and then removed from the address
+        self.assertIn('whether they come before or after the # in the address', s)
+        self.assertIn('Labels after the # are then removed from the address in your browser.', s)
         agents = (ROOT / 'AGENTS.md').read_text(encoding='utf-8')
         self.assertNotIn('Open owner action', agents)
         for k in ('`listen_open`', '`sections_total`', '`audio`', '`official`', '`source`', '`utm_content`'):

@@ -71,7 +71,7 @@ test('v18: page_path never carries a search term or Index filter, and one view h
 });
 test('v18: gaPageView sends the normalized path and location, never location.href',()=>{
  const app=fs.readFileSync('app.js','utf8');const m=/function gaPageView\(\)\{[\s\S]*?\},400\)\}/.exec(app);assert.ok(m);
- assert.match(m[0],/pagePath\(location\.hash,window\.BC_BOOT\)/);assert.match(m[0],/A\.pageLocation\(path,gaLanded\?'':location\.search\)/);assert.match(m[0],/page_location:loc/);
+ assert.match(m[0],/pagePath\(location\.hash,window\.BC_BOOT\)/);assert.match(m[0],/A\.pageLocation\(path,landing\?A\.landingSearch\(location\.search,location\.hash\):''\)/);assert.match(m[0],/page_location:loc/);
  assert.doesNotMatch(m[0],/location\.href/);
 });
 test('v18: outbound_click carries only link_domain and link_kind',()=>{
@@ -139,10 +139,10 @@ test('spec 2026-11-03: UTM tags on the landing page_view only; never utm_term, l
  // (a) search terms never reach page_location
  assert.equal(A.pageLocation(A.pagePath('','search'),'?lookup=foo'),O+'/#/search');
  assert.equal(A.pageLocation(A.pagePath('#/search/foo'),''),O+'/#/search');
- assert.equal(A.pageLocation(A.pagePath('#/search/foo'),'?lookup=foo&q=foo&utm_source=x'),O+'/#/search?utm_source=x');
+ assert.equal(A.pageLocation(A.pagePath('#/search/foo'),'?lookup=foo&q=foo&utm_source=x'),O+'/?utm_source=x#/search');
  // (b) kept on the landing view
  assert.equal(A.pageLocation('/','?utm_source=substack&utm_medium=email&utm_campaign=x'),O+'/?utm_source=substack&utm_medium=email&utm_campaign=x');
- assert.equal(A.pageLocation('/#/work/x','?utm_content=footer+link&utm_source=bsky'),O+'/#/work/x?utm_source=bsky&utm_content=footer%20link');
+ assert.equal(A.pageLocation('/#/work/x','?utm_content=footer+link&utm_source=bsky'),O+'/?utm_source=bsky&utm_content=footer%20link#/work/x');
  // (c) utm_term and unknown parameters dropped
  assert.equal(A.pageLocation('/','?utm_term=secret&gclid=abc&fbclid=1&ref=x&utm_id=9'),O+'/');
  assert.doesNotMatch(A.pageLocation('/','?utm_source=a&utm_term=secret'),/secret|utm_term/);
@@ -151,6 +151,68 @@ test('spec 2026-11-03: UTM tags on the landing page_view only; never utm_term, l
  assert.equal(u,O+'/?utm_source=s&utm_campaign='+'a'.repeat(100));
  assert.equal(A.pageLocation('/','?utm_source='),O+'/');assert.equal(A.pageLocation('/','?utm_source=%E0%A4%A'),O+'/');
  // app.js passes location.search only on the first page view
- const APP=fs.readFileSync('app.js','utf8');assert.match(APP,/var loc=A\.pageLocation\(path,gaLanded\?'':location\.search\);gaLanded=true;/);
+ const APP=fs.readFileSync('app.js','utf8');assert.match(APP,/var landing=!gaLanded,loc=A\.pageLocation\(path,landing\?A\.landingSearch\(location\.search,location\.hash\):''\);gaLanded=true;/);
  assert.doesNotMatch(SRC,/utm_term'/);
+});
+
+/* ---------- UTM tags before the '#' (QA 2026-11-03 medium; owner-approved fix 2026-11-09) ---------- */
+test('2026-11-09: landing page_location puts the tags in the query string, where GA4 reads them',()=>{
+ const {A}=load(false);
+ for(const [path,hash] of [['/',''],['/#/library','#/library'],['/#/work/orthodoxy','#/work/orthodoxy'],['/#/search','#/search']]){
+  const u=new URL(A.pageLocation(path,'?utm_source=x&utm_medium=social&utm_campaign=advent'));
+  assert.equal(u.origin+u.pathname,'https://bibliothecacatholica.com/',path);assert.equal(u.hash,hash,path);
+  assert.equal(u.searchParams.get('utm_source'),'x');assert.equal(u.searchParams.get('utm_medium'),'social');assert.equal(u.searchParams.get('utm_campaign'),'advent');
+  assert.doesNotMatch(u.hash,/utm_/)}
+ assert.equal(A.pageLocation('/#/library',''),'https://bibliothecacatholica.com/#/library');
+});
+test('2026-11-09: campaignUrl builds links with the tags before the fragment',()=>{
+ const {A}=load(false);
+ const a=new URL(A.campaignUrl('#/library',{utm_source:'x',utm_medium:'social'}));
+ assert.equal(a.href,'https://bibliothecacatholica.com/?utm_source=x&utm_medium=social#/library');
+ assert.equal(a.searchParams.get('utm_source'),'x');assert.equal(a.searchParams.get('utm_medium'),'social');assert.equal(a.hash,'#/library');
+ const b=new URL(A.campaignUrl('/work/orthodoxy/',{utm_source:'substack',utm_medium:'email',utm_campaign:'c'.repeat(150),utm_term:'secret',utm_content:' '}));
+ assert.equal(b.pathname,'/work/orthodoxy/');assert.equal(b.hash,'');assert.equal(b.searchParams.get('utm_campaign').length,100);
+ assert.equal(b.searchParams.has('utm_term'),false);assert.equal(b.searchParams.has('utm_content'),false);
+ // a link that already has tags after the '#' is repaired
+ const c=new URL(A.campaignUrl('https://bibliothecacatholica.com/#/author/g-k-chesterton?utm_source=old',{utm_source:'bsky',utm_medium:'social'}));
+ assert.equal(c.hash,'#/author/g-k-chesterton');assert.equal(c.searchParams.get('utm_source'),'bsky');
+ assert.equal(new URL(A.campaignUrl('/',{utm_source:'x'})).href,'https://bibliothecacatholica.com/?utm_source=x');
+});
+test('2026-11-09: utm_ tags after the # are read for the landing view, cut to 100, and location.search wins',()=>{
+ const {A}=load(false),O='https://bibliothecacatholica.com';
+ assert.deepEqual({...A.hashUtm('#/library?utm_source=x&utm_medium=social')},{query:'?utm_source=x&utm_medium=social',hash:'#/library',changed:true});
+ assert.deepEqual({...A.hashUtm('#/search/foo?scope=isidore&utm_source=x&utm_term=t')},{query:'?utm_source=x&utm_term=t',hash:'#/search/foo?scope=isidore',changed:true});
+ assert.deepEqual({...A.hashUtm('#?utm_source=x')},{query:'?utm_source=x',hash:'',changed:true});
+ assert.deepEqual({...A.hashUtm('#/work/x?scope=all')},{query:'',hash:'#/work/x?scope=all',changed:false});
+ assert.deepEqual({...A.hashUtm('')},{query:'',hash:'',changed:false});
+ const h='#/library?utm_source=x&utm_medium=social&utm_campaign='+'a'.repeat(150)+'&utm_term=secret&gclid=1';
+ const loc=A.pageLocation(A.pagePath(h),A.landingSearch('',h)),u=new URL(loc);
+ assert.equal(u.hash,'#/library');assert.equal(u.searchParams.get('utm_source'),'x');assert.equal(u.searchParams.get('utm_medium'),'social');
+ assert.equal(u.searchParams.get('utm_campaign').length,100);assert.equal(u.searchParams.has('utm_term'),false);assert.doesNotMatch(loc,/secret|gclid/);
+ // a tag in location.search beats the same tag in the hash; others are filled from the hash
+ const v=new URL(A.pageLocation('/#/library',A.landingSearch('?utm_source=real','#/library?utm_source=hash&utm_medium=social')));
+ assert.equal(v.searchParams.get('utm_source'),'real');assert.equal(v.searchParams.get('utm_medium'),'social');
+ assert.equal(A.landingSearch('',''),'');assert.equal(A.pageLocation('/#/library',A.landingSearch('','#/library')),O+'/#/library');
+});
+test('2026-11-09: stripHashUtm removes the tags from the hash with replaceState and keeps everything else',()=>{
+ const {A,ctx}=load(false),seen=[];
+ ctx.history={state:null,replaceState:(s,t,u)=>seen.push(u)};
+ ctx.location={pathname:'/',search:'?utm_source=real',hash:'#/library?utm_source=x&utm_medium=social'};
+ assert.equal(A.stripHashUtm(),true);assert.deepEqual([...seen],['/?utm_source=real#/library']);
+ ctx.location={pathname:'/work/orthodoxy/',search:'',hash:'#/search/foo?scope=all&utm_campaign=c'};
+ assert.equal(A.stripHashUtm(),true);assert.equal(seen[1],'/work/orthodoxy/#/search/foo?scope=all');
+ ctx.location={pathname:'/',search:'',hash:'#/library'};assert.equal(A.stripHashUtm(),false);assert.equal(seen.length,2);
+ ctx.history={replaceState:()=>{throw new Error('boom')}};ctx.location={pathname:'/',search:'',hash:'#/x?utm_source=1'};assert.equal(A.stripHashUtm(),false);
+ delete ctx.history;assert.equal(A.stripHashUtm(),false);
+});
+test('2026-11-09: the hash fallback is the existing landing page_view, not a new event',()=>{
+ const {A,calls,ctx}=load(true);ctx.location={pathname:'/',search:'',hash:'#/library?utm_source=x&utm_medium=social'};
+ const seen=[];ctx.history={state:null,replaceState:(s,t,u)=>{seen.push(u);ctx.location.hash=u.slice(u.indexOf('#'))}};
+ const path=A.pagePath(ctx.location.hash);A.track('page_view',{page_title:'t',page_location:A.pageLocation(path,A.landingSearch(ctx.location.search,ctx.location.hash)),page_path:path});A.stripHashUtm();
+ const ev=calls.filter(c=>c[0]==='event');assert.deepEqual(ev.map(c=>c[1]),['page_view']);
+ assert.equal(ev[0][2].page_location,'https://bibliothecacatholica.com/?utm_source=x&utm_medium=social#/library');assert.equal(ev[0][2].page_path,'/#/library');
+ assert.deepEqual([...seen],['/#/library']);assert.equal(ctx.location.hash,'#/library');
+ assert.deepEqual(calls[0],['set',{page_title:'Bibliotheca Catholica',page_location:'https://bibliothecacatholica.com/#/library'}]);
+ assert.equal(A.EVENTS.length,12);
+ const APP=fs.readFileSync('app.js','utf8');assert.match(APP,/if\(landing&&A\.stripHashUtm&&A\.stripHashUtm\(\)\)gaLast=location\.pathname\+location\.hash/);
 });

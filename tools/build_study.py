@@ -7,8 +7,8 @@ out=ROOT/'.study-index'
 if out.exists():shutil.rmtree(out)
 out.mkdir(parents=True)
 lib=json.loads((ROOT/'data/library.json').read_text())
-for w in lib['works']:
- for e in w['editions']:
+for w in sorted(lib['works'], key=lambda w: w['id']):
+ for e in sorted(w['editions'], key=lambda e: e['id']):
   if not e.get('text'):continue
   blocks=[p.strip() for p in re.split(r'\n\s*\n',(ROOT/e['text']).read_text().replace('\r','')) if p.strip()]
   for start in range(0,len(blocks),35):

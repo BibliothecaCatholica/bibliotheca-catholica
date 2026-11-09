@@ -340,7 +340,8 @@ def summa_pages(out,lib):
           +'<p class="lede">The whole Summa in English, one page for each of its '+str(total_q)+' questions and '+str(total_a)+' articles, from the four Project Gutenberg volumes in the reading room.</p></div>'
           +'<p>Each article page has the objections, the reply “On the contrary,” the answer “I answer that,” and the replies to the objections, with a link into the reading room for notes and highlights. Article pages are at <code>/summa/&lt;part&gt;/q&lt;question&gt;/a&lt;article&gt;/</code>; for example '+a('/summa/1/q2/a3/','First Part, question 2, article 3')+', “Whether God Exists?”</p>'
           +'<h2>The four parts</h2>'+parts_ul
-          +'<p class="small">The Supplement, completed after Aquinas died, is not included.</p>'
+          +'<p class="small">The pages end at the Third Part, question 90, where the Gutenberg files end. The Supplement, compiled from Aquinas’s earlier writings after his death, is not in those files and is not included here.</p>'
+          +'<p class="small">About this text: the English Dominican translation, first printed 1911 to 1925. A sample check on 2026-11-09 against pre-1931 printings at the Internet Archive found that the article text matches, with no 1947 introduction, synopsis, or index; “From the Complete American Edition” in Gutenberg’s catalog titles is a provenance note only.</p>'
           +'<p class="dl-row"><a class="btn" href="/work/'+w['id']+'/">Work page and editions</a> '+a('/editions/summa/','Edition guide')+'</p>'
           +''.join(edline(P) for P in S['parts'][:1])+other+notice+'<p>'+a('/author/thomas-aquinas/','Thomas Aquinas')+' · '+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>')
     out['summa']=('Summa Theologiae by Question and Article — Bibliotheca Catholica',
@@ -365,7 +366,7 @@ def summa_pages(out,lib):
         body=(crumb_html(*C,('Summa','summa/'),(P['name'],''))+'<div class="page-head"><div class="eyebrow">Summa Theologiae · '+E(P['token'])+'</div><h1>'+E(P['name'])+' <span class="small">('+E(P['latin'])+')</span></h1>'
               +'<p class="lede">'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>. '+str(len(P['questions']))+' questions, '+str(na_)+' articles.</p></div>'
               +'<p class="dl-row"><a class="btn" href="'+E(reader(P,P['start']))+'">Read in the reading room →</a> '+a('/work/'+w['id']+'/','Work page and editions')+'</p>'
-              +edline(P)+nav+notice+pro+'<h2>Questions</h2><ol class="text-parts">'+''.join(li)+'</ol>'+nav+other+source(P))
+              +edline(P)+nav+notice+pro+'<h2>Questions</h2><ol class="text-parts">'+''.join(li)+'</ol>'+('<p class="small">The Third Part ends here, at question 90. The Supplement is not in the Gutenberg files and is not included.</p>' if P['slug']=='3' else '')+nav+other+source(P))
         body=body.replace('<ol class="text-parts"></ol>','')
         out['summa/'+P['slug']]=('Summa Theologiae, '+P['name']+' ('+P['latin']+') — Bibliotheca Catholica',
             fit(['The %s of the Summa Theologiae (%s) by Thomas Aquinas in English: %d questions and %d articles, each on its own free page.'%(P['name'],P['latin'],len(P['questions']),na_)],DESC_EXTRA),

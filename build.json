@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-d316e81962eb",
+  "id": "bc-d21478b98d1a",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "5184aaa72c385f99e2ade42af96dba9268a27b450493b9e5416071f1617eb0d9",
@@ -20,8 +20,8 @@
     "data/isidore-authors.js": "2a1761df2a7c2629de4a4ddb46a9461165563d9600475f63b101b47d46860fb1",
     "data/isidore-matches.js": "a9b01460430d3de569eb425452ce057f8eb3b8762082dc38135da1af36e69fdd",
     "data/isidore-matches.json": "1d1c9f3edb6f5e56479a3174d4f97b7e5755d86f8011d39720b4ab35967395ea",
-    "data/library.js": "8fbf1711d120139cc85944df54841a54edd80b7157f67015643ce360b9ecee3f",
-    "data/library.json": "87ffcc0f39d6561bc875ae7131c1e3317d115ca17f7235736009c2c2c16d009c",
+    "data/library.js": "c31be7e331514e6001a0b26ba66d062e2faf15046d0d245f724c7e1521241178",
+    "data/library.json": "70b750e686b961c787c4f280b4579c6aec2b3fd11ebfe1da00ef256e2689c2b3",
     "data/librivox.js": "f887bf833f7868dd4c5c13145e46a54019de40d43ed93311f9f0b5a933047712",
     "data/librivox.json": "2b2a8e92a23d1bb7610fc202a05b17a8bca70a9be4098bb3043df08d5a0a5b63",
     "data/modern-authors.json": "6fb646a9680eb473ad2ba6da924b3ee9c2bd8ae2cf95d829204cc8d9c15d0db2",
@@ -83,7 +83,7 @@
     "tools/build_rights.py": "6ff76fe3ae4ad2e77eed5786d6a35781a7f61ce17ad8b1a25449a6464f0dabd8",
     "tools/build_rites.py": "d8eb28f82fda6b51462f994de5addb12532466348ed3ce213e21d7137d15ebfb",
     "tools/build_saints.py": "4efa770df8d5967b085c227e5feca9924c6abe50e8c4ef9589bff544aae7ae85",
-    "tools/build_static.py": "093dd669b7f268ecb4939333801fce82f6b13a4fab8cb063dc71a5378444b3c1",
+    "tools/build_static.py": "ad16842b1f7f48281e50647d2f0252558fca0a3f375249d81903837c45117fc0",
     "tools/build_summa.py": "183e274c19f061fe2f98d394cf41bde7257d004c5e7174461e2147b161f14268",
     "tools/build_text_archive.py": "1994318f71c09574cd8af50ba4c3a0e9c844fd1432567e7c1dedb2fbbec0f343",
     "tools/build_text_pages.py": "fb881ec23e24185437e1de2a0a266a0a0435a6227e0529677fdeb516e54c2400",

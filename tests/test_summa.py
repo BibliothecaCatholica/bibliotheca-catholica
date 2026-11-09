@@ -14,7 +14,8 @@ class Summa(unittest.TestCase):
         for e in W['editions']:
             self.assertEqual(e['source'],'https://www.gutenberg.org/ebooks/'+e['id'][3:])
             self.assertEqual(hashlib.sha256((ROOT/e['text']).read_bytes()).hexdigest(),e['sha256'])
-            self.assertIn('1947',e['note']);self.assertIn('renewal covers only new matter',e['note'])
+            self.assertIn('sample check',e['note']);self.assertIn('no 1947 introduction, synopsis, or index',e['note'])
+            self.assertEqual('provenance note only' in e['note'],'Complete American Edition' in e['sourceTitle'],e['id'])
             raw=R(e['text']);self.assertNotIn('1947',raw);self.assertNotIn('Complete American Edition',raw)
         self.assertNotIn('newadvent',json.dumps(W));self.assertNotIn('corpusthomisticum',json.dumps(W))
     def test_standard_totals(self):
@@ -61,7 +62,7 @@ class Summa(unittest.TestCase):
         p=main('summa/1-2/index.html');self.assertIn('<h2>Prologue</h2>',p);self.assertIn('<h3>Treatise on Law</h3>',p);self.assertIn('href="/summa/1-2/q90/"',p)
         i=main('summa/index.html')
         for P in S['parts']:self.assertIn('href="/summa/%s/"'%P['slug'],i)
-        self.assertIn('The Supplement',i);self.assertIn('corpusthomisticum.org',i);self.assertIn('newadvent.org/summa/',i)
+        self.assertIn('The Supplement',i);self.assertIn('question 90',i);self.assertIn('sample check',i);self.assertIn('not in the Gutenberg files',main('summa/3/index.html'));self.assertIn('Supplement is not in the Gutenberg files',W['editions'][3]['note']);self.assertIn('corpusthomisticum.org',i);self.assertIn('newadvent.org/summa/',i)
         self.assertIn('href="/summa/"',main('work/summa-theologiae/index.html'))
     def test_app_keeps_summa_static(self):
         app=R('app.js');self.assertRegex(app,r'function staticOnly\(path\)\{.*summa')

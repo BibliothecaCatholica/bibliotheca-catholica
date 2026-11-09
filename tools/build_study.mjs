@@ -12,9 +12,11 @@ execFileSync('python3', ['tools/build_study.py'], {stdio: 'inherit'});
 // Pagefind's CLI directory walk does not sort files, so page numbers (and thus
 // index hashes) follow filesystem readdir order and differ between machines
 // (Pagefind #1395). Index through the JS API in sorted sourcePath order so a
-// rebuild is byte-identical on CI and locally.
+// rebuild is byte-identical on CI and locally. maxFragments: 500 bundles the
+// ~3.8k Study sections into ≤500 .pf_fragment files (Pagefind 1.6.0) so Cloudflare
+// Pages Free stays under the 20k-file deploy cap.
 rmSync('pagefind', {recursive: true, force: true});
-const {index, errors: createErrors} = await createIndex({forceLanguage: 'en'});
+const {index, errors: createErrors} = await createIndex({forceLanguage: 'en', maxFragments: 500});
 if (createErrors?.length) {
   throw new Error(createErrors.join('\n'));
 }
@@ -37,9 +39,23 @@ const lang = entry.languages.en;
 if (!lang || lang.page_count !== files.length) {
   throw new Error('Pagefind indexed ' + (lang && lang.page_count) + ' pages, expected ' + files.length);
 }
+// Pagefind 1.6.0 with maxFragments writes .pf_fragment under pagefind/fragment/.
+function countExt(dir, ext) {
+  let n = 0;
+  for (const name of readdirSync(dir, {withFileTypes: true})) {
+    const p = join(dir, name.name);
+    if (name.isDirectory()) n += countExt(p, ext);
+    else if (name.name.endsWith(ext)) n += 1;
+  }
+  return n;
+}
+const fragmentCount = countExt('pagefind', '.pf_fragment');
+if (fragmentCount > 500 || fragmentCount < 1) {
+  throw new Error('Expected 1–500 .pf_fragment files after maxFragments, got ' + fragmentCount);
+}
 // Stable trailing newline for the JSON entry (Pagefind omits it).
 writeFileSync('pagefind/pagefind-entry.json', JSON.stringify(entry) + '\n');
-console.log('Pagefind deterministic index:', lang.hash, '(' + lang.page_count + ' pages)');
+console.log('Pagefind deterministic index:', lang.hash, '(' + lang.page_count + ' pages, ' + fragmentCount + ' fragments)');
 
 rmSync('.study-index', {recursive: true, force: true});
 rmSync('pagefind-api-test', {recursive: true, force: true});

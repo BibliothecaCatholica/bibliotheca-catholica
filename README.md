@@ -77,3 +77,9 @@ This repository contains material under different terms; the root [MIT License](
 Search accepts Summa references such as `ST I q 2 a 3`. It checks the article page before showing its title. The initial Catechism lookup, `CCC 1324`, opens the Vatican section containing that paragraph. Verify an official destination before adding a Catechism mapping. The first explicit article cross-reference connects I, q. 2, a. 1 to I, q. 3, a. 4.
 
 Hosted edition panels offer Search this book. Search results link to individual paragraphs. For mapped chapters and stories the reader uses the edition and block offsets from the generated text-pages bundle. Update the maintained mapping in tools/text_pages.py, regenerate the catalog and static pages, run both test suites, and commit generated output together. After Pages deploys, compare the live build.json ID with the repository and open a citation, a chapter, and a paragraph search result.
+
+### Passage search and specialist references
+
+The reader uses its existing paragraph and heading offsets to show a chapter, matched phrase, surrounding text, and a link to the paragraph. Search stays on the device. The desktop contents sidebar replaces the duplicate inline contents disclosure. Check a mapped chapter and an unmapped book, punctuation in a query, keyboard focus, and both color themes after reader changes.
+
+Design references: [Noxidsoft’s historical dossier](https://github.com/noxidsoft/all-historical-evidence-of-jesus-christ) pairs source labels with excerpts. [Morals of the Church](https://moralsofthechurch.com/) combines full-text lookup with editorial topic indexes. [Readest](https://github.com/readest/readest) distinguishes book and shelf search. Bibliotheca uses original interface code and links the first two collections as independent resources. Maintain their directory records through tools/hubio.py and regenerate the browser data and static pages.

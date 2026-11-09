@@ -43,6 +43,10 @@ Three kinds of date, always labelled:
 
 `tests/test_saints.py` (schema, counts, no tier 2 or 3 CatholicSaints.Info links, the 12 tradition flags, unique aliases, the alias JSON equal to the JS, the build being current, and static pages with canonicals) and `tests/saints.test.js` (key normalization, alias lookup, collisions, and day lists).
 
+## Full-year calendar (review branch)
+
+See `docs/SAINTS-CALENDAR.md`: facts-only day pages for every day of the year, built from `data/saints-calendar.json` when present.
+
 ## Deferred
 
 - Phase 4: emblems and patronages.

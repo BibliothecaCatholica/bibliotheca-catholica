@@ -5,7 +5,7 @@
    never as the General Roman Calendar. See AGENTS.md and docs/SAINTS.md. */
 (function(root){
   'use strict';
-  var VER='20261025-v15';
+  var VER='20261109-cal';
   var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
   var HON={saint:1,st:1,sts:1,saints:1,blessed:1,bl:1,bd:1,pope:1,the:1};
   /* Same normalization as tools/build_saints.py key(): NFKD, strip diacritics, lowercase, drop apostrophes,
@@ -13,6 +13,7 @@
   function key(s){s=String(s==null?'':s).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[’'`]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
     var w=s?s.split(' '):[];while(w.length>1&&HON[w[0]])w.shift();return w.join(' ')}
   function lookup(D,q){var k=key(q);if(!k||!D)return null;if(D.aliases[k])return {id:D.aliases[k],key:k};if(D.collisions[k])return {collision:D.collisions[k].slice(),key:k};return null}
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
   function fmtDate(md){var m=/^(\d\d)-(\d\d)$/.exec(md||'');return m?(+m[2])+' '+MONTHS[+m[1]-1]:''}
   function mdOf(d){d=d||new Date();return ('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
   function onDay(D,md){var vn=[],other=[];D.saints.forEach(function(s){var f=s.feasts||{};
@@ -24,14 +25,19 @@
   function years(s){var f=function(y){return y<0?(-y)+' BC':String(y)};var b=s.born&&s.born.year,d=s.died&&s.died.year;
     if(b!=null&&d!=null)return (d<1000?'c. ':'')+f(b)+' – '+f(d);if(d!=null)return 'd. '+(d<1000?'c. ':'')+f(d);if(b!=null)return 'b. '+f(b);return ''}
   var FLAGL={'tradition':'Tradition and legend','tradition-with-historical-core':'Historical core, later legend','angel':'Archangel'};
-  var core={key:key,lookup:lookup,fmtDate:fmtDate,mdOf:mdOf,onDay:onDay,href:href,statusLabel:statusLabel,years:years,FLAGL:FLAGL};
+  /* Full-year calendar (facts only; docs/SAINTS-CALENDAR.md). D.cal = {n:{MM-DD:count},total} from tools/build_saints.py
+     when data/saints-calendar.json exists. Day pages are static (/saints/calendar/<MM-DD>/), so day links use real paths.
+     No analytics event: these are plain links. */
+  function calCount(D,md){return D&&D.cal&&D.cal.n?(D.cal.n[md]||0):0}
+  function dayHref(D,md){return D&&D.cal?'/saints/calendar/'+md+'/':'#/saints/calendar/'+md}
+  function calLine(D,md){var n=calCount(D,md);return n?'<a href="'+dayHref(D,md)+'">'+n+' saint'+(n>1?'s, blessed, and feasts':'')+' in the full calendar for '+esc(fmtDate(md))+' →</a>':''}
+  var core={key:key,lookup:lookup,fmtDate:fmtDate,mdOf:mdOf,onDay:onDay,href:href,statusLabel:statusLabel,years:years,FLAGL:FLAGL,calCount:calCount,dayHref:dayHref,calLine:calLine};
 
   /* ---------- browser ---------- */
   var D=null,WAIT=[],LOADING=false;
   function load(cb){if(D){cb&&cb(D);return}if(cb)WAIT.push(cb);if(LOADING)return;LOADING=true;
     function done(){D=root.SAINTS_DATA||null;if(D){D.byId={};D.saints.forEach(function(s){D.byId[s.id]=s})}WAIT.splice(0).forEach(function(f){try{f(D)}catch(e){console.warn(e)}})}
     if(root.SAINTS_DATA){setTimeout(done,0);return}var sc=document.createElement('script');sc.src='data/saints.js?v='+VER;sc.onload=done;sc.onerror=done;document.head.appendChild(sc)}
-  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
   function ext(u,l,cls){return '<a class="'+(cls||'chip')+'" href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(l)+' ↗</a>'}
   function lib(){return (root.LIBRARY_DATA||{works:[]}).works}
   function work(id){return lib().find(function(w){return w.id===id})||null}
@@ -55,7 +61,7 @@
     var h=head('Sancti · the saints','Saints & Hagiography','A small, sourced guide to '+D.saints.length+' saints: the writers already in the library, the saints people look up most, and a few famous figures of legend. Every fact links to its source, and the old lives of the saints are on the hagiography shelf.')+searchBox();
     h+='<section class="saint-today"><div class="eyebrow">Hodie · '+esc(fmtDate(md))+'</div>'+(t.vn.length?'<h2>On this day, as listed by Vatican News</h2><ul class="saint-list">'+t.vn.map(srow).join('')+'</ul>':'<h2>No saint in our guide is listed for today by Vatican News</h2>')+
       (t.other.length?'<h3 class="small-h">Also on this day in other calendars (Wikidata)</h3><ul class="saint-list">'+t.other.map(srow).join('')+'</ul>':'')+
-      '<p class="small muted">'+esc(VN_NOTE)+' <a href="#/saints/calendar/'+md+'">This day in the calendar →</a></p></section>';
+      (calCount(D,md)?'<p class="cal-today">'+calLine(D,md)+'</p>':'')+'<p class="small muted">'+esc(VN_NOTE)+' <a href="'+dayHref(D,md)+'">This day in the calendar →</a></p></section>';
     var tiles=[['#/timeline/saints','T','Historical timeline','Follow saints through the centuries and open their writings, biographies, and sources.',''],
       ['#/saints/calendar','◷','Calendar','The year day by day, with the date each saint is listed by Vatican News, and other calendars labelled.',''],
       ['#/saints/az','A','A–Z','Every saint in the guide by name, with other names and spellings.',D.saints.length],
@@ -72,11 +78,12 @@
       '<ul class="saint-list">'+list.map(function(s){var al=s.aliases.filter(function(a){return key(a)!==key(s.name)}).slice(0,4);return srow(s).replace('</li>',al.length?'<span class="saint-aka">Also: '+esc(al.join(' · '))+'</span></li>':'</li>')}).join('')+'</ul>';
     render(h,'saints');document.title='Saints A–Z — Bibliotheca Catholica'}
   function calendar(render){var c={};D.saints.forEach(function(s){(s.feasts.vatican_news||[]).forEach(function(v){c[v.date]=(c[v.date]||0)+1})});var today=mdOf();
-    var h=crumbs()+head('Sancti · the calendar','Saints’ calendar','Days on which Vatican News lists a saint from our guide. '+esc(VN_NOTE));
-    h+='<div class="cal-grid">'+MONTHS.map(function(m,i){var mm=('0'+(i+1)).slice(-2),n=new Date(2024,i+1,0).getDate(),cells='';for(var d=1;d<=n;d++){var md=mm+'-'+('0'+d).slice(-2);cells+='<a class="cal-d'+(c[md]?' has':'')+(md===today?' today':'')+'" href="#/saints/calendar/'+md+'" aria-label="'+d+' '+m+(c[md]?': '+c[md]+' saint'+(c[md]>1?'s':''):'')+'">'+d+'</a>'}
+    var h=crumbs()+head('Sancti · the calendar','Saints’ calendar',D.cal?'Every day of the year opens the saints, blessed, and feasts the CatholicSaints.Info calendar lists, with short facts and a link to read each life. Days marked in colour have a saint from our guide listed by Vatican News. '+esc(VN_NOTE):'Days on which Vatican News lists a saint from our guide. '+esc(VN_NOTE));
+    h+='<div class="cal-grid">'+MONTHS.map(function(m,i){var mm=('0'+(i+1)).slice(-2),n=new Date(2024,i+1,0).getDate(),cells='';for(var d=1;d<=n;d++){var md=mm+'-'+('0'+d).slice(-2);var k=calCount(D,md);cells+='<a class="cal-d'+(c[md]?' has':'')+(md===today?' today':'')+'" href="'+dayHref(D,md)+'" aria-label="'+d+' '+m+(c[md]?': '+c[md]+' saint'+(c[md]>1?'s':'')+' in our guide':'')+(k?(c[md]?';':':')+' '+k+' in the full calendar':'')+'">'+d+'</a>'}
       return '<section class="cal-m"><h2>'+m+'</h2><div class="cal-days">'+cells+'</div></section>'}).join('')+'</div>';
     render(h,'saints');document.title='Saints’ calendar — Bibliotheca Catholica'}
-  function day(render,md){if(!/^(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(md)){location.replace('#/saints/calendar');return}var t=onDay(D,md),m=+md.slice(0,2),dd=+md.slice(3);
+  function day(render,md){if(!/^(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(md)){location.replace('#/saints/calendar');return}
+    if(D.cal&&!(root.BC_BOOT==='saints/calendar/'+md&&!location.hash)){location.replace(dayHref(D,md));return}var t=onDay(D,md),m=+md.slice(0,2),dd=+md.slice(3);
     var h=crumbs(' · <a class="backlink" href="#/saints/calendar">Calendar</a>')+head('Sancti · '+MONTHS[m-1],fmtDate(md),'');
     h+='<section><h2>Listed by Vatican News</h2>'+(t.vn.length?'<ul class="saint-list">'+t.vn.map(function(s){var v=s.feasts.vatican_news.filter(function(x){return x.date===md})[0];return srow(s).replace('</li>','<span class="saint-src">“'+esc(v.title_on_source)+'” · <a href="'+esc(v.source_url)+'" target="_blank" rel="noopener">Vatican News ↗</a></span></li>')}).join('')+'</ul>':'<p class="muted">No saint in our guide is listed by Vatican News for this day. <a href="https://www.vaticannews.va/en/saints/'+md.replace('-','/')+'.html" target="_blank" rel="noopener">See Vatican News for '+esc(fmtDate(md))+' ↗</a></p>')+'<p class="small muted">'+esc(VN_NOTE)+'</p></section>';
     h+='<section><h2>General Roman Calendar</h2><p class="muted">Not yet checked against the Roman Missal (2002) for this guide, so no rank or official date is shown here.</p></section>';
@@ -133,8 +140,8 @@
   function authorPanel(aid){if(!D)return '';var s=D.byId[aid];if(!s||s.tier!==1)return '';
     return '<section class="saint-panel" aria-label="Saint"><div class="eyebrow">Saint · <a href="#/saints">Saints &amp; Hagiography</a></div>'+statusLine(s)+histBox(s)+feastBlock(s)+
       '<div class="au-key saint-links">'+(s.catholic_encyclopedia?ext(s.catholic_encyclopedia.url,'Catholic Encyclopedia (New Advent)'):'')+(((s.feasts||{}).vatican_news||[])[0]?ext(s.feasts.vatican_news[0].source_url,'Vatican News'):'')+(s.catholicsaints&&s.catholicsaints.url?ext(s.catholicsaints.url,'CatholicSaints.Info')+(s.catholicsaints.wayback_url?ext(s.catholicsaints.wayback_url,'CatholicSaints.Info (archived copy)'):''):'')+'</div>'+livesBlock(s)+'</section>'}
-  function todayLine(){if(!D)return '';var t=onDay(D,mdOf());if(!t.vn.length)return '';
-    return '<p class="hodie-saints"><span class="k">On this feast day</span> '+t.vn.map(function(s){return '<a href="'+href(s)+'">'+esc(s.name)+'</a>'}).join(', ')+' <span class="small muted">(as listed by Vatican News)</span> · <a href="#/saints/calendar/'+mdOf()+'">Saints’ calendar →</a></p>'}
+  function todayLine(){if(!D)return '';var md=mdOf(),t=onDay(D,md),cl=calLine(D,md);if(!t.vn.length)return cl?'<p class="hodie-saints"><span class="k">Saints today</span> '+cl+'</p>':'';
+    return '<p class="hodie-saints"><span class="k">On this feast day</span> '+t.vn.map(function(s){return '<a href="'+href(s)+'">'+esc(s.name)+'</a>'}).join(', ')+' <span class="small muted">(as listed by Vatican News)</span> · '+(cl||'<a href="'+dayHref(D,md)+'">Saints’ calendar →</a>')+'</p>'}
   function searchRows(norm){if(!D)return [];return D.saints.map(function(s){var f=(s.feasts.vatican_news||[]).map(function(v){return fmtDate(v.date)}).join(', ');
     return {type:'Saint',t:s.name,s:statusLabel(s)+(years(s)?' · '+years(s):'')+(f?' · Vatican News: '+f:'')+(s.historicity?' · '+(FLAGL[s.historicity.flag]||''):''),h:href(s),x:norm(s.name+' '+s.aliases.join(' ')+' saint saints'),w:3.2}})}
   function view(render,p){load(function(){if(!D){render('<div class="empty"><h2>The saints guide could not load</h2><p><a href="#/">Return home</a></p></div>','saints');return}

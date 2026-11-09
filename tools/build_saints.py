@@ -13,6 +13,7 @@ saint; they go to `collisions` and the UI shows "Did you mean...". No fuzzy matc
 import json,re,sys,unicodedata
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'tools'))
 HONORIFICS={'saint','st','sts','saints','blessed','bl','bd','pope','the'}
 # Bare names that must never resolve to one saint (spec section 5), whatever the data says.
 BARE={'alexander','richard','maximus','julian','leonard','henry','edmund','raymond','charles','philip','titus','columba','claude','germanus','macarius','methodius','theodore','jean','robert','andrew','dionysius','margaret','anthony','antony','john','gregory','francis','catherine','thomas','james','peter','paul','mary','teresa','theresa','joseph','michael','george','anne','benedict','leo','pius','ignatius','cyril','clement','basil','vincent','dominic','bernard','anthony','antony','augustine','john paul','louis','margaret','elizabeth','bridget','clare','agnes','lucy','martin','nicholas','patrick','stephen','andrew','jude','jerome','ambrose','bede','isidore','lawrence','laurence'}
@@ -106,6 +107,14 @@ def main():
     (ROOT/'data/saints-aliases.json').write_text(json.dumps(A,ensure_ascii=False,indent=1,sort_keys=True)+'\n')
     # compact browser copy: drop fields the UI does not need (sources stay)
     rt={'generated':D['generated'],'shelf_groups':D['shelf_groups'],'saints':D['saints'],'shelf':D['shelf'],'aliases':table,'collisions':coll}
+    # full-year calendar (facts only, optional): validate data/saints-calendar.json and add per-day counts only
+    import saints_calendar
+    cal=saints_calendar.load(ROOT)
+    if cal is not None:
+        try:saints_calendar.validate(cal)
+        except saints_calendar.CalendarError as e:fail('data/saints-calendar.json: '+str(e))
+        rt['cal']=saints_calendar.browser_summary(cal)
+        print('calendar:',len(cal['saints']),'slugs,',rt['cal']['total'],'names on',len(rt['cal']['n']),'days')
     (ROOT/'data/saints.js').write_text('window.SAINTS_DATA='+json.dumps(rt,ensure_ascii=False,separators=(',',':'))+';\n')
     print(len(D['saints']),'saints;',len(table),'alias keys;',len(coll),'collisions;',len(D['shelf']),'shelf books')
 if __name__=='__main__':main()

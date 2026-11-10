@@ -60,6 +60,8 @@ No corpus files were deleted or reclassified by this documentation pass. The inv
 
 Run the procedure in OPERATIONS and use this change's GitHub PR for executed command outcomes. Reproduce inventory with `git ls-files -z` (sum working-file sizes, excluding Git metadata), hosted editions with `data/library.json`, and page totals with `python3 tools/build_static.py`. Recheck open PRs live; the November 9 observation preceded this documentation PR.
 
-## Validation handoff
+## Cleanup follow-up
 
-PR #18: https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/18. Local validation passed 113 Node and 223 Python tests, all maintained browser-script syntax checks, catalog/static/Study builds, and whitespace checks. Static build reports 4,923 pages and 4,924 sitemap URLs. GitHub validation failed at the post-static-build drift check; the baseline build.json contains stale source hashes (including editorial-flags data and its generator). This documentation branch does not modify those sources. Resolve the baseline fingerprint/generated-page drift and rerun CI before merge. Cloudflare preview succeeded; production deployment is not claimed. Missing external evidence and dashboard settings remain unverified.
+Removed contradictory Summa exclusion and setup guidance; archived catalog release descriptions under `docs/archive/`; consolidated validation in OPERATIONS; marked dated counts and audits as historical; clarified the approved saints calendar and unapproved profile-link expansion; added docs/README.md as a navigation map. Four identical Citation.js license notices were retained intentionally for package attribution. No redundant non-license file copies were found by the tracked-file SHA-256 scan.
+
+The stale baseline fingerprint is repaired by regenerated committed output. The one-time branch-only refresh workflow passed all builders, 113 Node tests, 223 Python tests, and whitespace checks, then removed itself. Final normal CI results belong to PR #18. External research files, account dashboards, backups, publication schedules, and corpus-wide textual/legal review remain outside verified scope.

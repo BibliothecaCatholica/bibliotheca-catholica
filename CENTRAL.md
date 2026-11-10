@@ -29,7 +29,7 @@ ChatGPT, Codex, Grok, and other tools can perform assigned responsibilities. Exi
 
 ## Active work and next actions
 
-1. Complete and review the shared-handoff/documentation cleanup on `codex/shared-handoff-audit-20261109`; validation results belong in the PR.
+1. Review the cleaned documentation and refreshed output in PR #18; continue only from its latest validated commit.
 2. Review existing [PR #17](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/17), libraries and offline saints recovery. Observed open November 9; not merged by this documentation task. Check live PR state before continuing it.
 3. Run the [Advent launch checklist](docs/ADVENT-LAUNCH.md) before November 29. Site source is present; Substack/social readiness has not been inspected.
 4. Recover the missing evidence identified in the [repository audit](docs/REPOSITORY-AUDIT-2026-11-09.md), with source locations, hashes, and review scope. Do not fabricate reports.
@@ -53,4 +53,4 @@ When resuming: fetch current main, inspect working tree and open PRs, record tas
 
 ## Validation handoff
 
-See [PR #18](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/18) for command results and CI. The existing baseline has stale build fingerprints; resolve generated-output drift before merge. External evidence, dashboard settings, and publication schedules remain unverified.
+[PR #18](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/18) contains the documentation cleanup and refreshed generated pages. The one-time refresh workflow passed catalog/static/Study builds, all 113 Node and 223 Python tests, and whitespace checks, then committed generated output and removed itself. The previous fingerprint drift is repaired. Required CI on the final commit must pass before merge. External evidence, dashboard settings, and publication schedules remain unverified.

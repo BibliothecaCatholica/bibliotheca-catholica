@@ -1,5 +1,7 @@
 # Original palette and visible navigation
 
+> Dated implementation details and counts below describe their recorded release. Use [CENTRAL](../CENTRAL.md) for current work, [OPERATIONS](OPERATIONS.md) for validation, and the maintained data/code for current counts. Existing content and rights restrictions still apply.
+
 Restores the original shared colors from styles.css by removing the green-tinted replacement variables in refresh.css. Light mode again uses parchment, burgundy, and gold; dark mode uses the original charcoal/navy backgrounds and warm text. Background decoration and gold buttons inherit their original colors as well.
 
 Navigation is organized into two visible groups instead of hiding core collections under a dropdown:

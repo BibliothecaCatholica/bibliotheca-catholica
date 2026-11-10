@@ -7,7 +7,7 @@ Baseline: `757dacaab7fdaa9aeeeb267fb590db99ee40d760`, main checkout. Scope: trac
 | Priority | Observed finding | Action / material needed |
 |---|---|---|
 | High | AGENTS combined 80 KB of rules, architecture, dated changes, and old counts | Implemented short AGENTS plus CENTRAL; retained all original sections in PROJECT-RULES and IMPLEMENTATION-NOTES |
-| High | README claimed no npm installation while CI installs dependencies and builds Study assets | Added correct setup and Study generation command to CONTRIBUTING and OPERATIONS; README wording remains a documented correction to avoid fingerprint-only regeneration of thousands of pages |
+| High | README claimed no npm installation while CI installs dependencies and builds Study assets | Corrected README and CONTRIBUTING; OPERATIONS is the single detailed validation procedure |
 | High | Five cited external files are absent (table below) | Obtain actual artifacts or safe, durable source pointers; never reconstruct evidence from a narrative summary |
 | High | Repository hosting notes call Cloudflare a mirror; owner reports production transition | Documented discrepancy; verify actual binding and DNS in owner-controlled systems before changing config |
 | High | No independent backup or tested recovery evidence found in reviewed docs | Added backup/restore procedure; destination, schedule, and restore test remain owner work |

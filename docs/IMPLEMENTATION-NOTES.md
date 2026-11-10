@@ -113,28 +113,9 @@ Text on gradients (`.btn.gold`, `.sec-card .glyph`, `.avatar`) must also pass ag
 - After any of these, run `python3 tools/build_static.py`.
 
 
-## Before opening a PR
+## Validation and hosting
 
-```sh
-npm run build                         # library.js, guide.js, saints.js, and reading-plans.json/.js must not change afterward (reading plans read data/advent-2026.json)
-python3 tools/build_static.py         # static pages, sitemap, and robots must not change afterward
-git diff --exit-code                  # nothing stale
-npm test                              # node tests (reader, search, rights, rites, plans, robots, and more) plus tests/test_*.py (editorial flags, crawlability, catalog, analytics, saints, rights, rites, reading plans, licensing, SEO)
-node --check app.js && node --check scripts/boot.js && node --check scripts/timeline.js && node --check scripts/saints.js && node --check scripts/analytics.js && node --check scripts/reader.js && node --check scripts/library.js && node --check scripts/guides.js && node --check scripts/search.js && node --check scripts/rights.js && node --check scripts/rites.js && node --check scripts/plans.js && node --check data/site-copy.js
-```
-
-Optional network checks: `python3 tools/check_links.py` (writes `docs/link-health.*`) and `python3 tools/check_library_links.py --output /tmp/source-links.json`. Then preview with `npm run dev` and check the home page (with JavaScript off too), an author page, `/policy/`, a flagged book (for example `#/isidore/book/3895`), and a reading-room work with a Listen button (highlight a passage, reload, and check My notes, Continue reading on the home page, and the print preview).
-
-
-## Hosting limits (checked 2026-11-09)
-
-Production stays on GitHub Pages from `main` with the existing `CNAME` (do not change GitHub Pages settings or DNS here; Business owns DNS). A Cloudflare Pages mirror (`bibliotheca-catholica.pages.dev`) auto-deploys the same `main` root with no build step. The reading-room texts also live in the separate `bibliotheca-texts` repo. Tracked content is ~223 MiB / ~9k files (2026-11-09); Cloudflare Pages Free caps sites at **20,000 files** and 25 MiB per file — keep Pagefind `maxFragments` and avoid another Summa-scale HTML tree without budgeting file count.
-
-- **GitHub Pages:** published site at most 1 GB; source repo recommended at most 1 GB; soft bandwidth limit 100 GB per month; deployments time out after 10 minutes; soft limit of 10 builds per hour (https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits).
-- **Repository files:** warning above 50 MiB, blocked above 100 MiB (25 MiB through the browser); repos ideally under 1 GB, strongly recommended under 5 GB (https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github).
-- **Releases:** up to 1,000 assets per release, each under 2 GiB; no limit on total release size or bandwidth (https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases).
-- So the ~32 GB of isidore.co files cannot go on Pages or in a repo; Releases could hold permitted files one by one, but nothing is hosted until each file is rights-checked and the owner approves.
-
+Use [OPERATIONS](OPERATIONS.md#validation) for the current validation sequence, operational boundaries, and hosting verification. Historical provider limits and the old GitHub-production/Cloudflare-mirror description have been removed from this reference because they are not current deployment evidence. Verify provider limits before a capacity decision.
 
 ## Study desk (2026-11-09)
 

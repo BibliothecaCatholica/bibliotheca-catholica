@@ -4,6 +4,12 @@
 
 Bibliotheca Catholica is a free Catholic **reading room and curated resource index**—a library of libraries. It helps readers find classic texts, compare editions, follow sourced links to original documents, and discover authors, saints, reference works, and media. Coverage is selective, not exhaustive; inclusion is not endorsement.
 
+## Contributor starting point
+
+Read [AGENTS](AGENTS.md) and [CENTRAL](CENTRAL.md), then the relevant [topic documentation](docs/README.md). Use [OPERATIONS](docs/OPERATIONS.md) for the current validation sequence and recovery procedures. Historical reviews describe their dated snapshots.
+
+Cloudflare Pages also deploys this source; the owner has reported a hosting transition. Verify current domain bindings before changing either host. Existing analytics are production-host gated and privacy constrained; affiliate placements use the configured Bookshop/TAN links with disclosures. Detailed boundaries are in [PROJECT-RULES](docs/PROJECT-RULES.md).
+
 ## What readers will find
 
 - **Discover & Read** is the selected reading room: 102 individual work records, including 64 hosted reading editions. A *work* is the title; an *edition* is a particular translation, printing, or source copy. Some works have a text to read here; others point to an external text, scan, or bibliographic reference. The reader provides contents navigation, text search, display controls, saved place, notes, and source/download links.
@@ -36,17 +42,19 @@ The 64 hosted text editions are also published at [texts.bibliothecacatholica.co
 
 ## Develop and validate
 
-Python 3.10+ and Node 18+ are sufficient for the current site build; no npm package installation is required.
+Use Node 22 and Python 3.12 to match CI. Run `npm ci` to install the pinned dependencies, including the Study desk build tools.
 
 ```sh
+npm ci           # install pinned dependencies
 npm run dev      # serve at http://127.0.0.1:4173
 npm run build    # validate and generate the browser data bundles
 python3 tools/build_static.py  # refresh crawlable pages, sitemap, and build fingerprint
+npm run build:study # rebuild the Study desk assets and search index
 npm test         # run JavaScript and Python tests
 git diff --check
 ```
 
-Commit generated output after changing a template, route, application code, or source data. Re-run the builds and tests, then confirm `git diff --exit-code` is clean. CI (the "Validate library" workflow) runs the offline validation on every push and pull request, and GitHub Pages deploys `main`. Optional network checks are separate: they can be blocked or redirected and do not establish that a text is accurate, licensed, or the edition described.
+Commit generated output after changing a template, route, application code, or source data. Re-run the builds and tests, then confirm `git diff --exit-code` is clean. CI (the "Validate library" workflow) runs the offline validation on every push and pull request, and the configured static hosts deploy `main`. Optional network checks are separate: they can be blocked or redirected and do not establish that a text is accurate, licensed, or the edition described.
 
 ## Updating the catalog
 

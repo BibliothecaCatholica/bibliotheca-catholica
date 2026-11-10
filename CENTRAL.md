@@ -29,7 +29,7 @@ ChatGPT, Codex, Grok, and other tools can perform assigned responsibilities. Exi
 
 ## Active work and next actions
 
-1. Complete and review the shared-handoff/documentation audit on `codex/shared-handoff-audit-20261109`; validation results belong in the PR.
+1. Complete and review the shared-handoff/documentation cleanup on `codex/shared-handoff-audit-20261109`; validation results belong in the PR.
 2. Review existing [PR #17](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/17), libraries and offline saints recovery. Observed open November 9; not merged by this documentation task. Check live PR state before continuing it.
 3. Run the [Advent launch checklist](docs/ADVENT-LAUNCH.md) before November 29. Site source is present; Substack/social readiness has not been inspected.
 4. Recover the missing evidence identified in the [repository audit](docs/REPOSITORY-AUDIT-2026-11-09.md), with source locations, hashes, and review scope. Do not fabricate reports.
@@ -39,6 +39,7 @@ ChatGPT, Codex, Grok, and other tools can perform assigned responsibilities. Exi
 
 | Date | Contributor | Change and checks | Next / blockers |
 |---|---|---|---|
+| 2026-11-09 | Codex | Removed contradictory Summa/setup guidance; consolidated validation and archived catalog release notes | Required generated assets and package license notices retained |
 | 2026-11-09 | Codex | Reconciled supplied draft with source, CI, tracked inventory, and open PR; separated entry instructions from retained detailed rules | See documentation PR for final validation; external evidence and dashboard state remain unverified |
 
 ## Reference map
@@ -52,4 +53,4 @@ When resuming: fetch current main, inspect working tree and open PRs, record tas
 
 ## Validation handoff
 
-PR #18: https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/18. Local validation passed 113 Node and 223 Python tests, all maintained browser-script syntax checks, catalog/static/Study builds, and whitespace checks. Static build reports 4,923 pages and 4,924 sitemap URLs. GitHub validation failed at the post-static-build drift check; the baseline build.json contains stale source hashes (including editorial-flags data and its generator). This documentation branch does not modify those sources. Resolve the baseline fingerprint/generated-page drift and rerun CI before merge. Cloudflare preview succeeded; production deployment is not claimed. Missing external evidence and dashboard settings remain unverified.
+See [PR #18](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/18) for command results and CI. The existing baseline has stale build fingerprints; resolve generated-output drift before merge. External evidence, dashboard settings, and publication schedules remain unverified.

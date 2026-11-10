@@ -1,5 +1,7 @@
 # Reading lists and edition guide
 
+> Dated implementation details and counts below describe their recorded release. Use [CENTRAL](../CENTRAL.md) for current work, [OPERATIONS](OPERATIONS.md) for validation, and the maintained data/code for current counts. Existing content and rights restrictions still apply.
+
 The reading-list landing page offers paths rather than rendering every recommendation. Each path has a suggested starting point, book search, and reading-access filters. Church Fathers, Church Documents, and Related Christian Voices reuse source-checked catalog records. Lewis is identified as Anglican, with references rather than hosted texts.
 
 Edition cards put reading options before retailer links. Hosted copies name their translator where recorded; download links distinguish a file from a provider's options page. Print suggestions are expandable. Explicit `workIds` in `tools/editions_data.py` connect guides to catalog records. Multi-work collections identify their available component, and companion works/adaptations are kept in `related`. Interior Castle must not resolve to Teresa's Life; the original Spiritual Exercises must not resolve to Coppens's retreat adaptation.

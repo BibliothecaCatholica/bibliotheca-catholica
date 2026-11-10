@@ -16,6 +16,7 @@ Read [CENTRAL.md](CENTRAL.md) next, then only the detailed documents relevant to
 8. Preserve `CNAME`, `.nojekyll`, `.well-known/atproto-did`, verification files, `_headers`, `robots.txt`, `sitemap.xml`, `404.html`, `assets/og-image.png`, `data/texts/`, and `data/sources/`. Generated files may be regenerated. Never add an unscoped noindex rule.
 9. Preserve accessible keyboard controls, source-linked uncertainty labels, and contrast in both themes. Search defaults to Everything.
 10. Respect the [owner decision boundaries](docs/OPERATIONS.md#owner-decisions), including hosting/DNS, expanded affiliate links, new analytics, and external outreach. Explicit authorization already given for the current task applies.
+11. When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply.
 
 ## Validate and hand off
 

@@ -49,3 +49,7 @@ ChatGPT, Codex, Grok, and other tools can perform assigned responsibilities. Exi
 - Public overview: `README.md`. October 22 review is a historical snapshot, not the backlog.
 
 When resuming: fetch current main, inspect working tree and open PRs, record task scope/branch here, and reconcile conflicts before editing. End with changed paths, commit/PR, executed checks, known failures, and next action. Archive older log rows when approaching the line limit.
+
+## Validation handoff
+
+PR #18: https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/18. Local validation passed 113 Node and 223 Python tests, all maintained browser-script syntax checks, catalog/static/Study builds, and whitespace checks. Static build reports 4,923 pages and 4,924 sitemap URLs. GitHub validation failed at the post-static-build drift check; the baseline build.json contains stale source hashes (including editorial-flags data and its generator). This documentation branch does not modify those sources. Resolve the baseline fingerprint/generated-page drift and rerun CI before merge. Cloudflare preview succeeded; production deployment is not claimed. Missing external evidence and dashboard settings remain unverified.

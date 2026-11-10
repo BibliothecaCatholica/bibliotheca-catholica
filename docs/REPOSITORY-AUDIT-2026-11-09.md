@@ -59,3 +59,7 @@ No corpus files were deleted or reclassified by this documentation pass. The inv
 ## Verification
 
 Run the procedure in OPERATIONS and use this change's GitHub PR for executed command outcomes. Reproduce inventory with `git ls-files -z` (sum working-file sizes, excluding Git metadata), hosted editions with `data/library.json`, and page totals with `python3 tools/build_static.py`. Recheck open PRs live; the November 9 observation preceded this documentation PR.
+
+## Validation handoff
+
+PR #18: https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/18. Local validation passed 113 Node and 223 Python tests, all maintained browser-script syntax checks, catalog/static/Study builds, and whitespace checks. Static build reports 4,923 pages and 4,924 sitemap URLs. GitHub validation failed at the post-static-build drift check; the baseline build.json contains stale source hashes (including editorial-flags data and its generator). This documentation branch does not modify those sources. Resolve the baseline fingerprint/generated-page drift and rerun CI before merge. Cloudflare preview succeeded; production deployment is not claimed. Missing external evidence and dashboard settings remain unverified.

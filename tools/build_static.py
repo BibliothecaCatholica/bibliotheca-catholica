@@ -159,11 +159,9 @@ def write_home(tpl,counts,snapshot):
     inside <main> and the WebSite/Organization JSON-LD) and data/site-copy.js, so hand edits elsewhere in
     index.html survive.  Idempotent: CI reruns this and checks git diff."""
     about=site_copy.home_about(counts)
-    hero=('<section class="hero hero-c"><h1 class="eyebrow hero-name">Bibliotheca Catholica</h1><p class="hero-title">Tolle Lege</p><p class="hero-trans">Take up and read</p>'
-      '<p class="hero-sub">Two thousand years of Catholic thought, in one place.</p>'
-      '<p class="lede">Discover the writers, ideas, and spiritual classics of the Catholic tradition. Read here, download an ebook, or find the edition that belongs on your shelf.</p>'
-      '<div class="hero-cta"><a class="btn gold" href="/library/">Discover &amp; Read →</a><a class="btn ghost" href="/isidore/">Explore the Isidore Index</a><a class="btn ghost" href="/timeline/">Browse the timeline</a></div></section>')
-    home='<!-- static-home:start --><div class="static-prerender">'+hero+about+site_copy.newsletter_box()+'</div><!-- static-home:end -->'  # 2026-11-09: Substack sign-up (home and Advent plan only)
+    hero=site_copy.home_hero()
+    paths=site_copy.home_paths(counts)
+    home='<!-- static-home:start --><div class="static-prerender">'+hero+paths+about+site_copy.newsletter_box()+'</div><!-- static-home:end -->'
     s=tpl
     assert '<!-- static-home:start -->' in s,'index.html <main> must contain the static-home markers'
     s=HOME_RE.sub(lambda m:home,s,count=1)
@@ -175,7 +173,7 @@ def write_home(tpl,counts,snapshot):
     org={'@context':'https://schema.org','@type':'Organization','@id':SITE+'#organization','name':NAME,'url':SITE,'logo':OG_IMAGE,'sameAs':SAME_AS}
     web={'@context':'https://schema.org','@type':'WebSite','@id':SITE+'#website','name':NAME,'url':SITE,'description':HOME_DESC,'inLanguage':'en','publisher':{'@id':SITE+'#organization'}}
     s=LD_RE.sub('',s).replace('</head>','<!-- jsonld:start -->'+ld(web)+ld(org)+'<!-- jsonld:end -->\n</head>',1)
-    js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'home':about,'about':site_copy.about_page(counts),'newsletter':site_copy.newsletter_box(),'disclosure':disclosure_html()},ensure_ascii=False,separators=(',',':'))+';\n'
+    js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'acta':site_copy.acta_source(),'home':about,'hero':hero,'paths':paths,'about':site_copy.about_page(counts),'newsletter':site_copy.newsletter_box(),'disclosure':disclosure_html()},ensure_ascii=False,separators=(',',':'))+';\n'
     (ROOT/'data/site-copy.js').write_text(js)
     s=re.sub(r'data/site-copy\.js\?v=[0-9a-f]*','data/site-copy.js?v='+hashlib.sha256(js.encode()).hexdigest()[:10],s)
     s=re.sub(r'data/text-pages\.js\?v=[0-9a-f]*','data/text-pages.js?v='+hashlib.sha256((ROOT/'data/text-pages.js').read_bytes()).hexdigest()[:10],s)  # deep-link gaps: content token
@@ -663,7 +661,7 @@ def main():
         d=fit([d],DESC_EXTRA)
         out['saints/'+x['id']]=(x['name']+' · Saints · Bibliotheca Catholica',d,crumb_html(('Saints & Hagiography','saints/'),(x['name'],''))+body,[crumbs(('Saints & Hagiography','saints/'),(x['name'],'saints/'+x['id']+'/'))])
     sh=''.join('<li>'+a(b['url'],b['title'],True)+' — '+E(b['author'])+'; '+E(b['edition'] or b['imprint'])+(' (novel)' if b.get('fiction') else '')+'</li>' for b in SD['shelf'])
-    out['saints/books']=('The hagiography shelf · Saints · Bibliotheca Catholica','Public-domain lives of the saints, with editions and rights checked: Butler, Baring-Gould, the Golden Legend, the Little Flowers of St. Francis, and more.',head('Saints & Hagiography','The hagiography shelf','Public-domain lives of the saints, each with its edition, imprint, and rights evidence.')+'<ul>'+sh+'</ul><p>'+a('/saints/','Saints & Hagiography')+'</p>',[crumbs(('Saints & Hagiography','saints/'),('The hagiography shelf','saints/books/'))])
+    out['saints/books']=('The hagiography shelf · Saints · Bibliotheca Catholica','Public-domain lives of the saints, with editions and rights checked: Butler, Baring-Gould, the Golden Legend, the Little Flowers of St. Francis, and more.',head('Saints & Hagiography','The hagiography shelf','Public-domain lives of the saints, each with its edition, imprint, and rights evidence.')+'<ul>'+sh+'</ul>'+site_copy.acta_source()+'<p>'+a('/saints/','Saints & Hagiography')+'</p>',[crumbs(('Saints & Hagiography','saints/'),('The hagiography shelf','saints/books/'))])
     out['saints/about']=('Saints: sources and method · Bibliotheca Catholica','Where the Bibliotheca Catholica saints guide gets its facts, how feast dates are labelled by source, and what the CatholicSaints.Info links mean.',head('Saints & Hagiography','Sources & method','Every fact links its source. Feast dates are labelled by where they come from: Vatican News “Saint of the day”, the General Roman Calendar (not yet checked), and other calendars recorded in Wikidata.')+'<p>'+a('/saints/','Saints & Hagiography')+'</p>',[crumbs(('Saints & Hagiography','saints/'),('Sources & method','saints/about/'))])
     if CAL is not None:
         CAL_N={}
@@ -711,7 +709,7 @@ def main():
         route='rites/'+k if k else 'rites'
         cr=[('Rites & Liturgy','rites/')]+([(pg['h1'] if k!='sources' else 'Sources and method',route+'/')] if k else [])
         out[route]=(pg['title']+' · Bibliotheca Catholica',pg['desc'],rites_pages.expand(pg['html'],rj),[crumbs(*cr)])
-    counts={'authors':len(authors),'saints':len(saints),'books':6633,'hosted':sum(1 for w in lib['works'] if any(e.get('text') for e in w['editions']))}
+    counts={'authors':len(authors),'saints':len(saints),'books':6633,'hosted':sum(1 for w in lib['works'] for e in w['editions'] if e.get('text'))}
     m=re.search(r'window\.BOOKS_COUNT=(\d+)',tpl)
     if m:counts['books']=int(m.group(1))
     out['disclosure']=(site_copy.DISCLOSURE_TITLE+' · Bibliotheca Catholica',site_copy.DISCLOSURE_DESC,disclosure_html(),[crumbs((site_copy.DISCLOSURE_TITLE,'disclosure/'))])

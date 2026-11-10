@@ -2,6 +2,25 @@
 
 > Historical review from October 21, 2026. The 49-work totals below describe that snapshot and have since changed; use the current [README](../README.md) and live catalog for present counts. Lewis preview availability can vary by provider, location, and account.
 
+## Translation collections and discovery
+
+Checked November 10, 2026. The maintained evidence is [translation-collections.json](../data/sources/translation-collections.json). This is a bibliographic and access review, not independent certification of translation fidelity.
+
+| Source | Verified access and scope | Implemented decision |
+|---|---|---|
+| Mind of the Church | Online English works, with PDF and EPUB formats on the inspected Sixtus and Contzen pages | Added library resource and link-only catalog records for *The Holy Library* (1566 Latin source) and *Ten Books of Politics* (1629 Latin source). Translation method and independent review are unverified. |
+| Morals of the Church | Existing resource; linked from its companion site | Retained its single resource record and clarified historical manuals versus modern translations. |
+| Acta Sanctorum | Current homepage and About report January through November 10, the endpoint of the published Bollandist series. Older cached pages are stale. Per-entry HTML/TXT/JSON and bulk JSONL/TXT exports are advertised. | Added the reference resource and a contextual link on the hagiography shelf, including method, known defects, and CC BY-NC 4.0 links. No automatic saint-name matching. |
+| The Faith Received | Protestant-hosted library; PL, PG, and Roman Catholic collection entry points verified. Its transparency policy describes AI labels, original-language comparison, issue histories, and Reviewed / Needs Review statuses. | Added the library and both patristic collection resources, with AI and independent-coverage qualifications. No full-text ingestion or claim of complete PL/PG coverage. |
+
+All seven new resource URLs were checked against the existing resource records before adding them. The two new work identities do not duplicate selected works already in `data/library.json`; different modern translations must remain distinct from their ancient or early modern originals. Collection size and free access do not establish item-level quality or redistribution permission.
+
+**Hosting assessment:** Current project rules limit hosted editions to the pre-1931 selection policy. These modern translations remain at source. Acta's translator and structured edition have an express noncommercial license; compatibility with this affiliate-supported project has not been established. No blanket redistribution grant was verified for The Faith Received or Mind of the Church. An intermediary's recommendation does not establish permission from another project's rights holder. No source text was copied or bulk-downloaded.
+
+**Prioritized additional catalog research:** Bellarmine, Suárez, Cajetan, and Báñez are advertised in The Faith Received's Catholic collection and have no selected work records here. Inspect actual titles, original editions, extent, and each translation's review status before making records. Dynamic collection inventories were not fully available to the research client, so individual holdings and completeness remain unverified. Existing Augustine, Aquinas, and other patristic works should gain a separately credited edition only after a precise match, rather than another duplicate work. Riccioli's *Almagestum Novum*, Book IX is a verified additional source lead, distinct from the whole work.
+
+The homepage now gives reading and choosing a book priority, keeps four starter works and three discovery paths, and puts the full section directory behind a native disclosure. The global navigation keeps five primary routes and exposes the other collections under More sections. The former duplicate section-card wall, stats row, second Index search, author strip, promotional banner, and repeated library links have been removed from the homepage. Shared Python copy generates both the plain HTML and interactive home, retaining crawlable links and the existing reader continuation and daily panel.
+
 ## Why Lewis previously led to a dead end
 
 The initial eight Lewis entries cited the same academic bibliography to establish titles and publication dates. Those were reference records, and the later reading path reused them without adding a reading destination. An author biography or bibliography does not satisfy a reading action.

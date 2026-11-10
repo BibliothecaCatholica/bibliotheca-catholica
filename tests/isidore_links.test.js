@@ -4,10 +4,12 @@ const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
-function fn(src,name){const i=src.indexOf('function '+name+'(');assert(i>=0,name);let d=0,q=null;
- for(let j=src.indexOf('{',i);j<src.length;j++){const c=src[j];
-  if(q){if(c==='\\')j++;else if(c===q)q=null;continue}
-  if(c==="'"||c==='"')q=c;else if(c==='{')d++;else if(c==='}'&&--d===0)return src.slice(i,j+1)}}
+function fn(src,name){const i=src.indexOf('function '+name+'(');assert(i>=0,name);
+ // Let the JavaScript parser distinguish regexes, quoted strings, and comments.
+ // Counting quote characters treated the double quote in predSub's regex as a string opener.
+ for(let j=src.indexOf('{',i);j<src.length;j++){if(src[j]!=='}')continue;
+  const candidate=src.slice(i,j+1);try{new vm.Script('('+candidate+')');return candidate}catch(error){if(!(error instanceof SyntaxError))throw error}}
+ assert.fail('Unterminated function: '+name)}
 const APP=fs.readFileSync('app.js','utf8');
 const line=re=>{const m=re.exec(APP);assert(m,String(re));return m[0]};
 const hub=JSON.parse(fs.readFileSync('data/catholic-hub.json','utf8'));

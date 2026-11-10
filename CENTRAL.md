@@ -30,7 +30,7 @@ Confirmed November 9, 2026: the apex and `www` resolve to Cloudflare (A records 
 
 ## Verified snapshot
 
-- 102 work records; 64 editions with a hosted `text` field in `data/library.json`.
+- 104 work records; 64 editions with a hosted `text` field in `data/library.json`.
 - 6,371 tracked files and 4,924 sitemap URLs at `f46f7bd6` (excludes Git history and installed dependencies). The November 9 repository audit's 6,362-file baseline was taken at `757dacaab7`.
 - Tests: 113 Node and 223 Python, plus GitHub CI on `main` at `f46f7bd6`.
 - Historical 765/766-page notes are stale. Read the current static builder output for page totals.
@@ -38,6 +38,18 @@ Confirmed November 9, 2026: the apex and `www` resolve to Cloudflare (A records 
 ## Handoff log
 
 Newest first. Entry shape: date (America/Chicago), author (bot name or ChatGPT), summary, commits/PRs, and approval source. Current open items are listed once below, not repeated in every entry.
+
+### 2026-11-10, ChatGPT
+
+**Summary:** Applied owner-requested feedback: reduced homepage and navigation clutter; shared plain/interactive landing copy; added seven source resources, two link-only Mind of the Church work records (104 works, 64 hosted editions), and an Acta source panel on the hagiography shelf. Collection evidence and rights/translation limits are in `data/sources/translation-collections.json` and `docs/COLLECTION-REVIEW.md`. Fixed the Isidore test helper to parse functions correctly when regex literals contain quotes. PR #17 remains separate.
+
+**Commits/PRs:** [PR #19](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/19), source commit `1ca960ab8d`. The complete uploaded tree matches the locally tested tree. See the PR for final GitHub checks and merge state. No temporary workflow or additional repository permission was introduced.
+
+**Backlink details prepared:** Name: Bibliotheca Catholica. URL: https://bibliothecacatholica.com/. Description: “A free Catholic reading room and curated guide to authors, saints, Church documents, and digital libraries, with source editions and rights notes.” Intended listing: https://mindofthechurch.com/fellows/. No email or other outreach sent; no claim that a backlink is already published.
+
+**Validation/status:** `codex/braeden-feedback-20261110`: all 113 Node and 227 Python tests pass; library, static, and Study builds pass. Browser checked the home in both themes, section disclosures, Escape dismissal, new-work search and edition notes, and the Acta shelf panel. The Substack iframe was unavailable in the preview browser; its existing direct subscribe link remains. Mobile CSS is responsive, but physical-device testing was not performed. Generated changes were committed and rebuilt for drift verification. Modern translations remain at source under the existing selection policy and unverified reuse compatibility.
+
+**Approval:** Micah in the current chat: “Run through everything on the github and make the stated corrections as you just pointed out,” with everything except sending an email authorized.
 
 ### 2026-11-10, Catholic Repo
 

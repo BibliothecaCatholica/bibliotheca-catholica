@@ -2,7 +2,7 @@
 "name": "authors",
 "description": "Curated Catholic authors (476) in 12 eras, with Wikidata QIDs and cross-links.",
 "license": "CC0-1.0",
-"generated": "2026-10-26",
+"generated": "2026-11-10",
 "count": 476,
 "fields": {
 "id": "stable slug",
@@ -7230,7 +7230,7 @@
 {
 "id": "trent-horn",
 "name": "Trent Horn",
-"born": 1985,
+"born": null,
 "died": null,
 "dates_display": null,
 "era": "contemporary",

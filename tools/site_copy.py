@@ -39,17 +39,44 @@ def home_about(n):
     return ('<section class="home-about" aria-labelledby="home-about-h"><div class="eyebrow">About the library</div>'
      '<h2 id="home-about-h">A Catholic reading room and resource index</h2>'
      '<div class="home-about-text">'
-     '<p><b>Bibliotheca Catholica</b> (bibliothecacatholica.com) is a free Catholic library of libraries: a selected reading room and a curated resource index. '
-     'It gathers Catholic authors from the Apostolic Fathers to today, Sacred Scripture, the documents of the Magisterium, prayers and devotions, reference works, podcasts and media, and a reading room of classic texts. '
-     'Each entry links to its original source, such as vatican.va, New Advent, the Christian Classics Ethereal Library, Project Gutenberg, and the St. Isidore e-book library.</p>'
-     '<p>The '+a('/library/','reading room')+' comes first. Its '+str(n['hosted'])+' hosted texts are older editions listed by their sources as public domain in the United States, chosen under our pre-1931 rule and checked against those sources, and readable right here, with contents, search, highlights, notes, and your place saved in your own browser. '
-     'Every hosted text keeps its source record, its SHA-256 checksum, and its rights evidence. Everything else stays with its publisher, and Bibliotheca Catholica links to it.</p>'
-     '<p>Beyond the reading room, the library indexes '+str(n['authors'])+' '+a('/authors/','Catholic authors')+' with short biographies and works online, '
-     +str(n['saints'])+' '+a('/saints/','saints')+' with sourced feast days, '+a('/editions/','edition guides')+' that compare translations, curated '+a('/reading/','reading lists')+', and the '
-     +a('/isidore/','Isidore Index')+' of '+format(n['books'],',')+' e-books, each with a '+a('/rights/','rights badge')+'. '
-     'Listing a book is not endorsement; the '+a('/policy/','Fidelity & Editorial Policy')+' explains how context notes work.</p>'
-     '<p>Bibliotheca Catholica is independent, free for everyone, and has no ads. Start with a section below, or search everything from the box at the top of any page.</p>'
-     '</div><h3>Sections of the library</h3><ul class="home-sections">'+sec+'</ul><p class="home-info">'+info+'</p></section>')
+     '<p><b>Bibliotheca Catholica</b> (bibliothecacatholica.com) gathers Catholic books and the libraries that preserve them. '
+     'The '+a('/library/','reading room')+' offers '+str(n['hosted'])+' editions to read here for free. Each keeps its source, original notices, and rights evidence. '
+     'Other works open at their original libraries or publishers.</p>'
+     '<p>Explore '+str(n['authors'])+' '+a('/authors/','authors')+', compare '+a('/editions/','translations')+', or browse the '
+     +a('/isidore/','Isidore Index')+' of '+format(n['books'],',')+' e-books. Listing is not endorsement; our '
+     +a('/policy/','editorial policy')+' explains the context notes. Bibliotheca Catholica is independent, free for everyone, and has no ads.</p>'
+     '</div><details class="home-directory"><summary>All sections of the library</summary><ul class="home-sections">'+sec+'</ul></details><p class="home-info">'+info+'</p></section>')
+
+def home_hero():
+    return ('<section class="hero hero-c"><h1 class="eyebrow hero-name">Bibliotheca Catholica</h1>'
+     '<p class="hero-title">Tolle Lege</p><p class="hero-trans">Take up and read</p>'
+     '<p class="hero-sub">Two thousand years of Catholic thought, in one place.</p>'
+     '<p class="lede">Find a book, spend time with its author, and follow the ideas that lead you further into the Catholic tradition.</p>'
+     '<form class="hero-search" action="/search/" onsubmit="location.hash=\'#/search/\'+encodeURIComponent(this.lookup.value);return false">'
+     '<input type="search" name="lookup" placeholder="Search a title, author, or subject" aria-label="Search everything">'
+     '<button class="btn">Search</button></form>'
+     '<div class="hero-cta"><a class="btn gold" href="/library/">Enter the reading room →</a>'
+     '<a class="btn ghost" href="/reading/">Help me choose a book</a></div></section>')
+
+def home_paths(n):
+    paths=[('/authors/','Follow an author','Meet the Fathers, Doctors, theologians, poets, and novelists through their lives and writings.'),
+           ('/saints/','Explore the saints','Find sourced feast days, historical context, and the books that tell their stories.'),
+           ('/libraries/','Search the wider tradition','Visit digital libraries and archives for Scripture, theology, manuscripts, and reference works.')]
+    cards=''.join('<a class="home-path" href="'+u+'"><h3>'+E(t)+'</h3><p>'+E(d)+'</p><span aria-hidden="true">Explore →</span></a>' for u,t,d in paths)
+    picks=[('confessions','Confessions','St. Augustine'),('imitation-of-christ','The Imitation of Christ','Thomas à Kempis'),('story-of-a-soul','Story of a Soul','St. Thérèse of Lisieux'),('orthodoxy','Orthodoxy','G. K. Chesterton')]
+    return ('<section class="reading-home" aria-labelledby="home-reading-h"><div><div class="eyebrow">The reading room</div>'
+     '<h2 id="home-reading-h">A place to begin</h2><p>'+str(n['hosted'])+' source-checked editions to read here, with adjustable text, search, highlights, notes, and your place saved in this browser.</p>'
+     '<a href="/library/">Browse the reading room →</a></div><ul class="rh-list">'+''.join('<li><a href="/work/'+i+'/"><b>'+E(t)+'</b><span>'+E(au)+'</span></a></li>' for i,t,au in picks)+'</ul></section>'
+     '<section aria-labelledby="home-explore-h"><div class="page-head"><h2 id="home-explore-h">Follow your curiosity</h2></div><div class="home-paths">'+cards+'</div></section>')
+
+def acta_source():
+    return ('<section class="panel"><h2>Read the Bollandist sources</h2><p>'
+     '<a href="https://actasanctorum.org/index-saints.html" target="_blank" rel="noopener">Acta Sanctorum: index of saints ↗</a>'
+     ' offers Wilson Pruitt’s AI-assisted English translation alongside source references. The publisher reports coverage of the published series through November 10, not a complete modern liturgical calendar. '
+     'Historical feast dates and hagiographic narratives need their own context.</p><p>'
+     '<a href="https://actasanctorum.org/about.html" target="_blank" rel="noopener">Translation method and known defects ↗</a> · '
+     '<a href="https://actasanctorum.org/rights.html" target="_blank" rel="noopener">Translation license: CC BY-NC 4.0 ↗</a>'
+     '</p><p class="small muted">Read at source. This modern translation is separate from the public-domain editions on this shelf; its fidelity has not been independently reviewed here.</p></section>')
 def about_page(n):
     return ('<div class="page-head"><div class="eyebrow">De bibliotheca</div><h1>About the library</h1>'
      '<p class="lede">A free Catholic library of libraries: a selected reading room and a curated resource index, with links to original Church sources and digital libraries. Coverage is selective, not exhaustive.</p></div>'

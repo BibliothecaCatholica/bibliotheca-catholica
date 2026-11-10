@@ -3323,6 +3323,52 @@
           "access": "full-text"
         }
       ]
+    },
+    {
+      "id": "holy-library-sixtus",
+      "title": "The Holy Library (Bibliotheca Sancta)",
+      "author": "Sixtus of Siena",
+      "category": "Reference",
+      "tradition": "Catholic tradition",
+      "description": "An eight-book survey of Scripture, its interpretation, and its commentators. This modern English translation is offered at Mind of the Church; its translation method and fidelity have not been independently reviewed.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "motc-holy-library-sixtus",
+          "label": "Mind of the Church: modern English translation",
+          "source": "https://mindofthechurch.com/works/the-holy-library/",
+          "language": "English",
+          "contributors": [],
+          "rights": "Link only. Modern English translation; no republication license verified. The original Latin edition date does not establish rights in this translation.",
+          "checked": "2026-11-10",
+          "note": "Source identifies the Latin edition of 1566. Bibliographic identity and online reading options checked; translation method, translator identity, and independent scholarly review not established. Source offers PDF and EPUB formats. This edition remains at source.",
+          "sourceTitle": "The Holy Library (Bibliotheca Sancta)",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "contzen-politics",
+      "title": "Ten Books of Politics",
+      "author": "Adam Contzen",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "A historical Catholic treatment of government, law, education, public religion, and war. The linked modern English translation follows the enlarged 1629 Latin edition; translation fidelity has not been independently reviewed.",
+      "reviewStatus": "source-checked",
+      "editions": [
+        {
+          "id": "motc-contzen-politics",
+          "label": "Mind of the Church: modern English translation",
+          "source": "https://mindofthechurch.com/works/contzen-politics/",
+          "language": "English",
+          "contributors": [],
+          "rights": "Link only. Modern English translation; no republication license verified. The original Latin edition date does not establish rights in this translation.",
+          "checked": "2026-11-10",
+          "note": "Source identifies the Latin edition of 1629. Bibliographic identity and online reading options checked; translation method, translator identity, and independent scholarly review not established. Source offers PDF and EPUB formats. This edition remains at source.",
+          "sourceTitle": "Ten Books of Politics",
+          "access": "full-text"
+        }
+      ]
     }
   ],
   "series": [

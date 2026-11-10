@@ -1,0 +1,72 @@
+{
+  "checked": "2026-11-10",
+  "scope": "Collection discovery, bibliographic checks, and link-only inclusion, including two Mind of the Church work records. No third-party translation files imported or hosted. Source claims are not independent fidelity or completeness certification.",
+  "collections": [
+    {
+      "id": "acta-sanctorum-english",
+      "source": "https://actasanctorum.org/index.html",
+      "methodSource": "https://actasanctorum.org/about.html",
+      "rightsSource": "https://actasanctorum.org/rights.html",
+      "exportSource": "https://actasanctorum.org/export.html",
+      "translator": "Wilson Pruitt",
+      "method": "AI-assisted; source identifies Claude drafting and scripted integrity checks. No independent line-by-line review performed.",
+      "coverage": "Live home and current About report January through November 10, the endpoint of the published Bollandist series. December is not part of that completed series. Older cached pages show incomplete months.",
+      "license": "CC BY-NC 4.0 for the modern English translation, notes, and structured text. Source rights page cautions that later original editorial matter may have territorial restrictions.",
+      "formats": [
+        "HTML",
+        "per-entry TXT",
+        "per-entry JSON",
+        "bulk JSONL gzip",
+        "bulk TXT tar.gz"
+      ],
+      "hostingDecision": "link-only",
+      "hostingReason": "The modern translation falls outside the existing pre-1931 hosted-edition policy. Reuse in the affiliate-supported site also needs an explicit assessment of NC terms; Braeden’s recommendation does not establish rights-holder permission.",
+      "nextStep": "Use the original and source scans to check individual dossiers before any saint-level matching or future hosting proposal."
+    },
+    {
+      "id": "the-faith-received",
+      "source": "https://mereorthodoxy.com/the-faith-received/",
+      "methodSource": "https://mereorthodoxy.com/the-faith-received/transparency/",
+      "collections": [
+        "https://mereorthodoxy.com/the-faith-received/patrologia-latina/",
+        "https://mereorthodoxy.com/the-faith-received/patrologia-graeca/",
+        "https://mereorthodoxy.com/the-faith-received/all-works/?collection=all&tradition=Roman+Catholic"
+      ],
+      "method": "Many translations use AI. Source describes original-language comparison, issue histories, and Reviewed / Needs Review statuses. Individual status must be checked; it is not inherited from the collection.",
+      "coverage": "PL and PG collection landing pages verified; complete item-by-item coverage not independently established.",
+      "license": "No blanket redistribution grant verified on inspected pages; free reading is not permission to mirror.",
+      "formats": [
+        "online reader",
+        "original text and scans where supplied"
+      ],
+      "hostingDecision": "link-only",
+      "priorityAuthors": [
+        "Robert Bellarmine",
+        "Francisco Suárez",
+        "Thomas Cajetan",
+        "Domingo Báñez"
+      ],
+      "nextStep": "Inspect actual titles and translation panels in these Catholic collections. Compare author, work, extent, and translation with existing catalog editions before importing individual records."
+    },
+    {
+      "id": "mind-of-the-church",
+      "source": "https://mindofthechurch.com/",
+      "methodSource": "https://mindofthechurch.com/about/",
+      "companion": "https://moralsofthechurch.com/",
+      "verifiedWorks": [
+        "https://mindofthechurch.com/works/the-holy-library/",
+        "https://mindofthechurch.com/works/contzen-politics/",
+        "https://mindofthechurch.com/works/almagestum-novum-9/"
+      ],
+      "method": "Modern English translations. Inspected pages do not establish whether each translation is AI-assisted or independently reviewed; do not infer either.",
+      "formats": [
+        "online reader",
+        "PDF",
+        "EPUB on inspected Holy Library and Contzen work pages"
+      ],
+      "license": "Linking welcomed by the site operator. No general full-text republication grant established.",
+      "hostingDecision": "link-only",
+      "nextStep": "Preserve exact original-edition and modern translation distinctions; do not label modern translations public domain from the original date."
+    }
+  ]
+}

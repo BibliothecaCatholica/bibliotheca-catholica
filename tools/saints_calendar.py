@@ -89,13 +89,30 @@ def match_guide(raw,guide_saints,alias_table):
             k=key(nm)
             if ' ' in k and k in K:M[slug]=K[k];how['name']+=1;break
     return M,how
+def life_year(v):
+    """The year in a born/died fact ('beheaded c.900' -> 'c. 900', '306 near Saragossa, Spain' -> '306'), or None."""
+    m=re.search(r'\b(c\.\s?)?(\d{3,4})\b',str(v or ''))
+    return (('c. ' if m.group(1) else '')+m.group(2)) if m else None
+def tell_apart(L,src):
+    """Two or more different people with the same name on one day (04-16 St. Lambert of Saragossa, 11-02 St. Ambrose of
+    Agaune): add the death year from the source facts to each name, '(died 306)', or the birth year, '(born 1815)', when
+    every one of them has a different year. Facts only; otherwise the names are left as they are."""
+    groups={}
+    for e,s in zip(L,src):groups.setdefault(key(e['n']),[]).append((e,s))
+    for G in groups.values():
+        if len(G)<2:continue
+        for lab,f in(('died','died_date'),('born','born_date')):
+            ys=[life_year(s.get(f)) for _,s in G]
+            if all(ys) and len(set(ys))==len(ys):
+                for (e,_),y in zip(G,ys):e['n']+=' ('+lab+' '+y+')'
+                break
 def make_days(raw,guide_saints,alias_table):
     """The committed per-day file: names in site style, types, short facts, other days, guide ids. No URLs, no slugs."""
     M,how=match_guide(raw,guide_saints,alias_table);S=raw['saints'];days={}
     for md in ALL_DAYS:
         d=raw['days'].get(md);L=[]
         if d:
-            seen=set()
+            seen=set();src=[]
             for sl in d['slugs']:
                 s=S[sl];e={'n':site_name(s['name']),'t':s['type']}
                 f=facts_line(s)
@@ -104,7 +121,8 @@ def make_days(raw,guide_saints,alias_table):
                 if o:e['o']=o
                 if sl in M:e['g']=M[sl]
                 if (e['n'],e.get('f'),e['t']) in seen:continue  # two source pages, same name and facts: show once
-                seen.add((e['n'],e.get('f'),e['t']));L.append(e)
+                seen.add((e['n'],e.get('f'),e['t']));L.append(e);src.append(s)
+            tell_apart(L,src)
             have={key(x['n']) for x in L}
             for n in d.get('names',[]):
                 e={'n':site_name(n['name']),'t':n['type']}

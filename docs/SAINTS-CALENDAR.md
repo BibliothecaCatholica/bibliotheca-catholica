@@ -81,6 +81,9 @@ missing slugs (unlinked names), conflicts, dropped keys, prose dropped, and days
 - "Also celebrated but no entry yet" rows are page furniture and are dropped.
 - Unlinked names (no page of their own) are kept as names only; a bare name that repeats a full entry on the same
   day is dropped, and two entries with the same name and facts on one day are shown once.
+- Two different people with the same name on one day (04-16 St. Lambert of Saragossa, 11-02 St. Ambrose of Agaune)
+  get the death year from their facts added to the name, "(died 306)", or the birth year when the death years do not
+  tell them apart (`tell_apart()` in tools/saints_calendar.py, so a re-import keeps it).
 - Untyped entries are typed from their name: feasts (`FEAST_NAME`, for example the Assumption or All Saints) and
   St., Blessed, and Pope titles.
 - Born and died keep one short fact (the first part with a year, never a note about relics or burial), cut before

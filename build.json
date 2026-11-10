@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-f18fe1658992",
+  "id": "bc-86fa6010a2f9",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "ab52d8ad9e693af83ed05cd83fb1773f8a2cfcd122d03c4d2a23c905d5a5c335",
@@ -43,7 +43,7 @@
     "data/rites.js": "7bb615d3fa3cabcd339658344aaad83318be4e55c8fead4e7f43a40243af9467",
     "data/rites.json": "71cf8ee5ecb5f1133c6037e5929691e93778844633eb80f8598facc646023624",
     "data/saints-aliases.json": "383954ead9dcb5734c03d1a1330f71a7a2a8286f7f5dbd5724b2978f6b21809e",
-    "data/saints-days.json": "0c1dc4cff3ca4ab6ed56a236eca349a88009974c7c53f136e6b5897d9a0d1655",
+    "data/saints-days.json": "66924a42965334db298c60db661de159f3df2980abb6b0f8b067858e1be2dfa0",
     "data/saints.js": "7fe4d54b150f485abfaf3f91ec7deb1040c07f30fa8ae85ba25131984fb10efa",
     "data/saints.json": "b6a2988437bca324a9716a68a5762b588a1e152533b3e6eb867821b531f02957",
     "data/summa-supplement-ocr.json": "3ea836d689b81bda2a7260ba875c3e25d3ba698143a84868d0d5da03db33f22f",
@@ -123,7 +123,7 @@
     "tools/rights_pages.py": "0f0e7ab8dde9f6f4c235daeb431a7917905a2b21a6fa105551d389ed3e521b2a",
     "tools/rites_geo.py": "d1a93ba5ace2616b1a95b6b95f1689546a8324219cc09c22a943d455ab513af4",
     "tools/rites_pages.py": "cc5178b1ca80ca5d4203e8c071132fa6b30a315a94448d4c9ecba516f0ae5102",
-    "tools/saints_calendar.py": "9266ea14cca9966df318beff097a2b67c4d5a3ec98790f398cf885a129e6faad",
+    "tools/saints_calendar.py": "6d9375e81c92ac6dffc6538b2079f5e34c818ae201430f7f1a9e23d496661a8a",
     "tools/serve.py": "bf16673d8781713b31dfae39b37a366788671bb8c4ad156565b63a0383fef1c2",
     "tools/site_copy.py": "08aa0e1cf28403baf5563bc7e6a08cab12161aeff9a40f22b1dd635f7310f5fc",
     "tools/substacks_src.py": "e02dd1b54559bbc0cf3dda1a747e820c9fc7dff30f8cbf036952f5733b2bda1a",

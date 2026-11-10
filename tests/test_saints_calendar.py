@@ -123,3 +123,23 @@ class Built(unittest.TestCase):
             self.assertNotRegex(body,r'(?i)catholicsaints|href="https?://');self.assertNotIn('\u2014',body)
             self.assertEqual(h.count("gtag('config'"),1);self.assertIn('https://bibliothecacatholica.com/saints/calendar/'+md+'/',sm)
 if __name__=='__main__':unittest.main()
+class SameNameOnOneDay(unittest.TestCase):
+    """Two different people with one name on one day get their death year (or birth year) from the facts (2026-11-10)."""
+    def raw(self,a,b):
+        S={'x-1':dict(slug='x-1',name='Saint Lambert of Saragossa',type='saint',dates=['04-16'],**a),
+           'x-2':dict(slug='x-2',name='Saint Lambert of Saragossa',type='saint',dates=['04-16'],**b)}
+        return {'saints':S,'days':{'04-16':{'slugs':['x-1','x-2'],'names':[]}}}
+    def names(self,a,b):return [e['n'] for e in SC.make_days(self.raw(a,b),[],{})['days']['04-16']]
+    def test_death_years(self):
+        self.assertEqual(self.names({'died_date':'beheaded c.900'},{'died_date':'306 near Saragossa, Spain'}),
+                         ['St. Lambert of Saragossa (died c. 900)','St. Lambert of Saragossa (died 306)'])
+    def test_birth_year_when_death_years_do_not_tell_them_apart(self):
+        self.assertEqual(self.names({'died_date':'martyred','born_date':'1815'},{'born_date':'1820'}),
+                         ['St. Lambert of Saragossa (born 1815)','St. Lambert of Saragossa (born 1820)'])
+    def test_left_alone_without_distinct_years(self):
+        self.assertEqual(self.names({'died_date':'523'},{'died_date':'523 at Agaune'}),['St. Lambert of Saragossa']*2)
+    def test_committed_days(self):
+        D=json.loads((ROOT/'data/saints-days.json').read_text())['days']
+        for md,L in D.items():
+            n=[SC.key(e['n']) for e in L];self.assertEqual(len(n),len(set(n)),md)
+        self.assertIn('St. Ambrose of Agaune (died 523)',[e['n'] for e in D['11-02']])

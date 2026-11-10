@@ -1,5 +1,7 @@
 # Bibliotheca Catholica: project review, October 22, 2026
 
+> Historical snapshot of October 22, 2026. Counts and priorities below are not current. Start with [CENTRAL](../CENTRAL.md) and the [November 9 repository audit](REPOSITORY-AUDIT-2026-11-09.md).
+
 ## Where the project stands
 
 The project has developed from a directory into a reading environment: find a work, understand its edition, read an eligible copy, choose another format, listen where an audio match exists, and continue through a reading path. The selected library and imported Isidore catalog remain distinct. Breadth belongs to the index; stronger edition checks belong to the hosted collection.

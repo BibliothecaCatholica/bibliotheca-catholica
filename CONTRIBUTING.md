@@ -1,5 +1,7 @@
 # Contributing
 
+Start with [AGENTS](AGENTS.md) and [CENTRAL](CENTRAL.md). Use Node 22, Python 3.12, and `npm ci`, then the complete [validation procedure](docs/OPERATIONS.md#validation), including `npm run build:study`. This supersedes the older README claim that no npm installation is needed. Current hosting verification, analytics/affiliate boundaries, and account responsibilities are documented in [OPERATIONS](docs/OPERATIONS.md) and [PROJECT-RULES](docs/PROJECT-RULES.md).
+
 Read [AGENTS.md](AGENTS.md) and [the catalog rules](docs/CATALOG.md) before editing. The owner maintains the catalog and reviews inclusion, source evidence, and rights decisions. Listing an imported record is not endorsement.
 
 Report broken links, search or reader problems, accessibility issues, and sourced corrections through [the issue form](https://github.com/BibliothecaCatholica/bibliotheca-catholica/issues/new?template=site_problem.yml). GitHub requires an account; the correction email on the site's Support page is the alternative. Include the affected URL, expected behavior, source evidence where applicable, and the footer's build ID. Never put private reader notes or credentials in a public issue. Report security concerns privately as described in [SECURITY.md](SECURITY.md).

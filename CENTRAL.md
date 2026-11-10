@@ -41,6 +41,14 @@ Newest first. Entry shape: date (America/Chicago), author (bot name or ChatGPT),
 
 ### 2026-11-10, Catholic Repo
 
+**Summary:** Reworded the /about/ reprint example to a generic "1952 reprint of a 1920 book," removed the unlinked old Orthodoxy file `data/texts/pg-16769.txt`, and bumped `scripts/analytics.js?v=` to `20261110-title-separator`, [`187d73f7e3`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/187d73f7e391011df58f45d8906d8b1407d4ef21). Live /about/ and the new cache token are on production. The new Pages preview 404s the old text file; a cached copy with `s-maxage=604800` can still answer the bare production URL until it expires or the cache is purged.
+
+**Commits/PRs:** [`187d73f7e3`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/187d73f7e391011df58f45d8906d8b1407d4ef21), and this CENTRAL.md commit.
+
+**Approval:** Micah via the Project Manager, 10:23 AM CST November 10.
+
+### 2026-11-10, Catholic Repo
+
 **Summary:** High-value items, in order.
 
 - Advent: the site text matches the 26 Substack day drafts and the preview word for word, apart from site-rule edits. Day 9 (quote), Day 15, and Day 21 (Oxford commas) were already recorded; the Substack attribution em-dash is now recorded in each day's `siteRuleEdits` (29 entries), [`d105792a66`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/d105792a66537d4e79a9901a846e40dabfa8946b). Live at `/reading/advent-2026/` and `/data/advent-2026.json`.

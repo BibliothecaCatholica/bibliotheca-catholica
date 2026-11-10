@@ -4,7 +4,7 @@ Read AGENTS.md and this file at session start. Read detailed references only for
 
 When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply.
 
-Updated November 9, 2026 (America/Chicago). This is the single living coordination file for Grok bots and ChatGPT.
+Updated November 10, 2026 (America/Chicago). This is the single living coordination file for Grok bots and ChatGPT.
 
 ## Project and authority
 
@@ -39,6 +39,18 @@ Confirmed November 9, 2026: the apex and `www` resolve to Cloudflare (A records 
 
 Newest first. Entry shape: date (America/Chicago), author (bot name or ChatGPT), summary, commits/PRs, and approval source. Current open items are listed once below, not repeated in every entry.
 
+### 2026-11-10, Catholic Repo
+
+**Summary:** High-value items, in order.
+
+- Advent: the site text matches the 26 Substack day drafts and the preview word for word, apart from site-rule edits. Day 9 (quote), Day 15, and Day 21 (Oxford commas) were already recorded; the Substack attribution em-dash is now recorded in each day's `siteRuleEdits` (29 entries), [`d105792a66`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/d105792a66537d4e79a9901a846e40dabfa8946b). Live at `/reading/advent-2026/` and `/data/advent-2026.json`.
+- Father Brown and Orthodoxy 1908: verified live, no defects. Work, chapter/story, reader, and text URLs return 200; full text present; notes say 1908; both in the sitemap and the texts manifest with matching SHA-256; one GA4 tag per page.
+- Saints: same-name entries on 04-16 and 11-02 now show death years from the facts ("St. Lambert of Saragossa (died 306)"), set by `tell_apart()` in `tools/saints_calendar.py`, [`b86105694c`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/b86105694c2a6c8c3722bd7b1e3ffff4c27884ec). No other day had the problem.
+
+**Commits/PRs:** [`d105792a66`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/d105792a66537d4e79a9901a846e40dabfa8946b), [`b86105694c`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/b86105694c2a6c8c3722bd7b1e3ffff4c27884ec), and this CENTRAL.md commit.
+
+**Approval:** Micah via the Project Manager, 9:39 AM CST: "Go ahead an move on the high value items first."
+
 ### 2026-11-09, Catholic Repo
 
 **Summary:** Confirmed the live hosting flow and made CENTRAL.md the single living coordination file for Grok bots and ChatGPT. No `GITHUB.md`, and no separate dated handoff reports.
@@ -70,9 +82,8 @@ Newest first. Entry shape: date (America/Chicago), author (bot name or ChatGPT),
 ## Open items
 
 - GitHub Pages shutoff on November 12, 2026, after QA confirms zero traffic. The `CNAME` file stays. texts.bibliothecacatholica.com is untouched.
-- Paused: security headers (`_headers` Report-Only CSP), low-priority npm audit findings, and Father Brown live verification.
+- Paused: security headers (`_headers` Report-Only CSP) and low-priority npm audit findings.
 - Page-audit decisions awaiting Micah: the publish allowlist, and the `study/index.html` sitemap or noindex question.
-- Low priority: two same-name saint entries on 04-16 and 11-02 could show death years to tell them apart.
 - [PR #17](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/17), libraries and offline saints recovery, is still open. Check live PR state before continuing it.
 - Run the [Advent launch checklist](docs/ADVENT-LAUNCH.md) before November 29. Site source is present; Substack and social readiness have not been inspected.
 - Recover the missing evidence identified in the [repository audit](docs/REPOSITORY-AUDIT-2026-11-09.md). Do not fabricate reports.

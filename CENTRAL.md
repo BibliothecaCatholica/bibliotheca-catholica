@@ -2,6 +2,8 @@
 
 Read AGENTS.md and this file at session start. Read detailed references only for the task at hand. Update this file in place at handoff; keep under 150 lines. No separate dated report files for handoffs. No secrets, reader notes, or private account records here.
 
+When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply.
+
 Updated November 9, 2026 (America/Chicago). This is the single living coordination file for Grok bots and ChatGPT.
 
 ## Project and authority

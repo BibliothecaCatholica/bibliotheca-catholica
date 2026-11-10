@@ -1,11 +1,11 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-c51a127e80f9",
+  "id": "bc-f18fe1658992",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "ab52d8ad9e693af83ed05cd83fb1773f8a2cfcd122d03c4d2a23c905d5a5c335",
     "app.js": "c4aad647d15e09321baea4785662ad9b1ca821d7ed7037f497e915bf3e3d81c4",
-    "data/advent-2026.json": "f591211f0719217e8ef0f5a0136c520dface1f1bf0405c7310acb5576efb6013",
+    "data/advent-2026.json": "7bbe95bb4175037c2ae876695e142be071dd9356a5ee928a4301dd8dcc4e32fa",
     "data/affiliates.js": "5880de68bd62c81dad52733b2b91d11c45081af9eaca294929890bd5ad64d2be",
     "data/authors-detail.js": "7d06bc11d9d4f7391682814925eea63535abff1192321edc7347fd0c45717fde",
     "data/authorx.js": "33df4d9832532c80e8f6b73806dcd1f4f1e3810a6900d13d1983104f571eebc1",

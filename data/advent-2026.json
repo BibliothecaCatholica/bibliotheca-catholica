@@ -7,8 +7,8 @@
  "end": "2026-12-24",
  "canonicalUrl": "https://bibliothecacatholica.com/data/advent-2026.json",
  "rawUrl": "https://raw.githubusercontent.com/BibliothecaCatholica/bibliotheca-catholica/main/data/advent-2026.json",
- "about": "The one source of truth for the Advent with the Fathers 2026 texts. The site page https://bibliothecacatholica.com/reading/advent-2026/ is built from this file (tools/build_reading_plans.py), and the Substack posts and any social copy should be read from it. Change the text here first (in the bibliotheca-catholica repo), then copy it to Substack. Each day: liturgicalDay, title, subtitle, theme, attribution, excerpt (verbatim from the hosted edition; line breaks kept, … marks a cut), reflection, and links. siteRuleEdits lists where this file follows a site writing rule and the Substack draft still has the older wording. Substack renders the attribution with a leading em-dash; the site does not use em-dashes.",
- "updated": "2026-11-09",
+ "about": "The one source of truth for the Advent with the Fathers 2026 texts. The site page https://bibliothecacatholica.com/reading/advent-2026/ is built from this file (tools/build_reading_plans.py), and the Substack posts and any social copy should be read from it. Change the text here first (in the bibliotheca-catholica repo), then copy it to Substack. Each day: liturgicalDay, title, subtitle, theme, attribution, excerpt (verbatim from the hosted edition; line breaks kept, … marks a cut), reflection, and links. siteRuleEdits lists where this file follows a site writing rule and the Substack draft still has the older wording. The Substack day drafts render the attribution with a leading em-dash; the site does not use em-dashes, and each day's siteRuleEdits records it.",
+ "updated": "2026-11-10",
  "sourceNote": "Imported 2026-11-09 from Bibliotheca Substack drafts (posts/dayNN.html and entries.json, the text loaded into the scheduled Substack posts) and the Nov 22 preview after its em-dash edits.",
  "sub": "Twenty-six short readings for Advent 2026, from the Fathers and the classic Catholic writers in our reading room",
  "intro": "Advent 2026 begins on Sunday, November 29, and ends on Christmas Eve. This plan gives one short reading for each of its 26 days, drawn only from the public-domain editions in our reading room. The first weeks look toward Christ’s coming at the end of time; from December 17 the readings follow the O Antiphons toward Christmas. Each link opens the reader at the start of the passage.",
@@ -48,7 +48,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/apostolic-fathers/pg-77576/3/117",
     "work": "https://bibliothecacatholica.com/work/apostolic-fathers/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Clement of Rome (fl. c. 96)",
+     "site": "St. Clement of Rome (fl. c. 96)"
+    }
+   ]
   },
   {
    "day": 2,
@@ -67,7 +75,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/37/1312",
     "work": "https://bibliothecacatholica.com/work/city-of-god/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Augustine of Hippo (354–430)",
+     "site": "St. Augustine of Hippo (354–430)"
+    }
+   ]
   },
   {
    "day": 3,
@@ -86,7 +102,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/confessions/pg-3296/0/15",
     "work": "https://bibliothecacatholica.com/work/confessions/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Augustine of Hippo (354–430)",
+     "site": "St. Augustine of Hippo (354–430)"
+    }
+   ]
   },
   {
    "day": 4,
@@ -105,7 +129,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/catherine-letters/pg-7403/17/625",
     "work": "https://bibliothecacatholica.com/work/catherine-letters/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Catherine of Siena (1347–1380)",
+     "site": "St. Catherine of Siena (1347–1380)"
+    }
+   ]
   },
   {
    "day": 5,
@@ -124,7 +156,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/imitation-of-christ/pg-1653/5/206",
     "work": "https://bibliothecacatholica.com/work/imitation-of-christ/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: Thomas à Kempis (c. 1380–1471)",
+     "site": "Thomas à Kempis (c. 1380–1471)"
+    }
+   ]
   },
   {
    "day": 6,
@@ -143,7 +183,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/28/989",
     "work": "https://bibliothecacatholica.com/work/city-of-god/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Augustine of Hippo (354–430)",
+     "site": "St. Augustine of Hippo (354–430)"
+    }
+   ]
   },
   {
    "day": 7,
@@ -162,7 +210,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/bede-ecclesiastical-history/pg-38326/14/496",
     "work": "https://bibliothecacatholica.com/work/bede-ecclesiastical-history/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Bede the Venerable (673–735)",
+     "site": "St. Bede the Venerable (673–735)"
+    }
+   ]
   },
   {
    "day": 8,
@@ -181,7 +237,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/apostolic-fathers/pg-77576/111/3885",
     "work": "https://bibliothecacatholica.com/work/apostolic-fathers/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: Epistle to Diognetus (anonymous, 2nd century)",
+     "site": "Epistle to Diognetus (anonymous, 2nd century)"
+    }
+   ]
   },
   {
    "day": 9,
@@ -208,6 +272,12 @@
      "substack": "his kindness did: 'he received me as a father.'",
      "site": "his kindness did: he 'received me as a father.'",
      "source": "Confessions, Book V: \"That man of God received me as a father\" (pg-3296)"
+    },
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Augustine of Hippo (354–430)",
+     "site": "St. Augustine of Hippo (354–430)"
     }
    ]
   },
@@ -228,7 +298,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/glories-of-mary/pg-72411/17/617",
     "work": "https://bibliothecacatholica.com/work/glories-of-mary/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Alphonsus Liguori (1696–1787)",
+     "site": "St. Alphonsus Liguori (1696–1787)"
+    }
+   ]
   },
   {
    "day": 11,
@@ -247,7 +325,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/apostolic-fathers/pg-77576/111/3889",
     "work": "https://bibliothecacatholica.com/work/apostolic-fathers/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: Epistle to Diognetus (anonymous, 2nd century)",
+     "site": "Epistle to Diognetus (anonymous, 2nd century)"
+    }
+   ]
   },
   {
    "day": 12,
@@ -266,7 +352,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/aquinas-prayer-contemplative/pg-22295/14/494",
     "work": "https://bibliothecacatholica.com/work/aquinas-prayer-contemplative/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Thomas Aquinas (1225–1274)",
+     "site": "St. Thomas Aquinas (1225–1274)"
+    }
+   ]
   },
   {
    "day": 13,
@@ -285,7 +379,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/28/992",
     "work": "https://bibliothecacatholica.com/work/city-of-god/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Augustine of Hippo (354–430)",
+     "site": "St. Augustine of Hippo (354–430)"
+    }
+   ]
   },
   {
    "day": 14,
@@ -304,7 +406,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/revelations-divine-love/pg-52958/7/259",
     "work": "https://bibliothecacatholica.com/work/revelations-divine-love/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: Julian of Norwich (c. 1343–after 1416)",
+     "site": "Julian of Norwich (c. 1343–after 1416)"
+    }
+   ]
   },
   {
    "day": 15,
@@ -330,6 +440,12 @@
      "field": "reflection",
      "substack": "Joy, desire and faith grow together.",
      "site": "Joy, desire, and faith grow together."
+    },
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Augustine of Hippo (354–430)",
+     "site": "St. Augustine of Hippo (354–430)"
     }
    ]
   },
@@ -350,7 +466,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/consolation-philosophy/pg-14328/21/746",
     "work": "https://bibliothecacatholica.com/work/consolation-philosophy/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: Boethius (c. 477–524)",
+     "site": "Boethius (c. 477–524)"
+    }
+   ]
   },
   {
    "day": 17,
@@ -369,7 +493,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/28/1012",
     "work": "https://bibliothecacatholica.com/work/city-of-god/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Augustine of Hippo (354–430)",
+     "site": "St. Augustine of Hippo (354–430)"
+    }
+   ]
   },
   {
    "day": 18,
@@ -388,7 +520,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/abandonment/pg-52057/4/143",
     "work": "https://bibliothecacatholica.com/work/abandonment/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: Jean-Pierre de Caussade, S.J. (1675–1751)",
+     "site": "Jean-Pierre de Caussade, S.J. (1675–1751)"
+    }
+   ]
   },
   {
    "day": 19,
@@ -407,7 +547,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/dream-gerontius/pg-48927/8/288",
     "work": "https://bibliothecacatholica.com/work/dream-gerontius/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. John Henry Newman (1801–1890)",
+     "site": "St. John Henry Newman (1801–1890)"
+    }
+   ]
   },
   {
    "day": 20,
@@ -426,7 +574,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/28/1003",
     "work": "https://bibliothecacatholica.com/work/city-of-god/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Augustine of Hippo (354–430)",
+     "site": "St. Augustine of Hippo (354–430)"
+    }
+   ]
   },
   {
    "day": 21,
@@ -452,6 +608,12 @@
      "field": "reflection",
      "substack": "with faith, hope and purity,",
      "site": "with faith, hope, and purity,"
+    },
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: Thomas à Kempis (c. 1380–1471)",
+     "site": "Thomas à Kempis (c. 1380–1471)"
     }
    ]
   },
@@ -472,7 +634,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/divine-comedy/pg-1004/139/4882",
     "work": "https://bibliothecacatholica.com/work/divine-comedy/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: Dante Alighieri (1265–1321)",
+     "site": "Dante Alighieri (1265–1321)"
+    }
+   ]
   },
   {
    "day": 23,
@@ -491,7 +661,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/apostolic-fathers/pg-77576/55/1950",
     "work": "https://bibliothecacatholica.com/work/apostolic-fathers/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Ignatius of Antioch (d. c. 107)",
+     "site": "St. Ignatius of Antioch (d. c. 107)"
+    }
+   ]
   },
   {
    "day": 24,
@@ -510,7 +688,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/29/1041",
     "work": "https://bibliothecacatholica.com/work/city-of-god/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Augustine of Hippo (354–430)",
+     "site": "St. Augustine of Hippo (354–430)"
+    }
+   ]
   },
   {
    "day": 25,
@@ -529,7 +715,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/city-of-god/pg-45305/29/1037",
     "work": "https://bibliothecacatholica.com/work/city-of-god/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Augustine of Hippo (354–430)",
+     "site": "St. Augustine of Hippo (354–430)"
+    }
+   ]
   },
   {
    "day": 26,
@@ -548,7 +742,15 @@
    "links": {
     "reader": "https://bibliothecacatholica.com/#/read/story-of-a-soul/pg-16772/8/299",
     "work": "https://bibliothecacatholica.com/work/story-of-a-soul/"
-   }
+   },
+   "siteRuleEdits": [
+    {
+     "rule": "No em-dashes in site text",
+     "field": "attribution",
+     "substack": "a leading em-dash (U+2014) and a space, then: St. Thérèse of Lisieux (1873–1897)",
+     "site": "St. Thérèse of Lisieux (1873–1897)"
+    }
+   ]
   }
  ]
 }

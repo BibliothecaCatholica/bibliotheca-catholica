@@ -133,7 +133,7 @@ class V182(unittest.TestCase):
                 self.assertNotRegex(r['artist'],r'(?i)\b(\w[\w.]*(?: \w[\w.]*){0,4}) \1\b')
         self.assertEqual(sum(1 for r in pc['files'].values() if r['shown'] and r['artist']=='Author unknown'),87)
         self.assertEqual(pc['files']['mary-ann-glendon']['artist'],'United States Department of State')
-        self.assertIn('`artistRaw`',R('LICENSING.md'));self.assertIn('87',R('AGENTS.md'))
+        self.assertIn('`artistRaw`',R('LICENSING.md'));self.assertIn('87',R('docs/PROJECT-RULES.md'))
     def test_era_shown_once(self):
         self.assertIn("a.era!==ord(a.century)+'-century'",R('app.js'))
         s=R('author/john-paul-ii/index.html')

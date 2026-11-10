@@ -21,6 +21,6 @@ Read [CENTRAL.md](CENTRAL.md) next, then only the detailed documents relevant to
 
 Use the [current validation procedure](docs/OPERATIONS.md#validation), matching `.github/workflows/validate.yml`. Commit generated changes, rerun generators, and verify no new drift. Report failures honestly.
 
-Update CENTRAL with the branch, changes, checks, blockers, and next action. Keep it under 150 lines; move old handoffs to `docs/HANDOFF-ARCHIVE.md`. Check live PR state before acting. Do not overwrite another contributor's work.
+Update [CENTRAL.md](CENTRAL.md) in place with significant updates, handoffs, decisions, and status notes, newest first. Keep it under 150 lines. No separate dated report files for handoffs. Check live PR state before acting. Do not overwrite another contributor's work.
 
 Details: [project rules](docs/PROJECT-RULES.md), [implementation reference](docs/IMPLEMENTATION-NOTES.md), [catalog](docs/CATALOG.md), [rights](docs/RIGHTS.md), [saints](docs/SAINTS.md), [calendar](docs/SAINTS-CALENDAR.md), [rites](docs/RITES.md), [SEO](docs/SEO.md), [reading plans](docs/READING-GUIDES.md).

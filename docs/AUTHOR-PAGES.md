@@ -1,5 +1,7 @@
 # Author pages without a hosted work (Phase A item 2, 2026-11-03)
 
+> Dated implementation details and counts below describe their recorded release. Use [CENTRAL](../CENTRAL.md) for current work, [OPERATIONS](OPERATIONS.md) for validation, and the maintained data/code for current counts. Existing content and rights restrictions still apply.
+
 454 of the 476 hub authors (editorially flagged hub authors excluded) have no work with a hosted text. Their pages no
 longer show the Wikipedia excerpt. They show our own intro, then link-only lists with rights badges. See AGENTS.md,
 "Author pages without a hosted work", for the template and rules.

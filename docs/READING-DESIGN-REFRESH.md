@@ -1,5 +1,7 @@
 # Reading options and visual refresh
 
+> Dated implementation details and counts below describe their recorded release. Use [CENTRAL](../CENTRAL.md) for current work, [OPERATIONS](OPERATIONS.md) for validation, and the maintained data/code for current counts. Existing content and rights restrictions still apply.
+
 Built on main after PR #1 and its review fixes were merged. Existing source notices, the pre-1931 local hosting rule, Isidore matches, donation links, and affiliate settings are preserved.
 
 - “Which Edition?” is now “Editions & Translations”; reading links precede print recommendations.

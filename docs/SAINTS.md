@@ -34,9 +34,9 @@ Three kinds of date, always labelled:
 
 ## Rights
 
-- **CatholicSaints.Info is link-only.** Its robots.txt bars crawling and its terms forbid copying. Nothing is copied, nothing is fetched at build or run time, and links appear only for the 139 hand-checked tier 1 matches (138 high confidence, plus Hippolytus at medium), after New Advent and Vatican News, with an archived copy link. No outreach to its author.
+- **CatholicSaints.Info is link-only.** Its robots.txt bars crawling and its terms forbid copying. No biographies are copied or fetched at build or run time. The separate approved facts-only calendar is documented in [SAINTS-CALENDAR](SAINTS-CALENDAR.md). Profile links appear only for the 139 hand-checked tier 1 matches (138 high confidence, plus Hippolytus at medium), after New Advent and Vatican News, with an archived copy link. No outreach to its author.
 - No biographies are written in phase 1. Profiles show only sourced fields (status, dates, and the historicity note from the spec).
-- The shelf links out to public-domain editions (all imprints 1931 or earlier); nothing new is hosted.
+- The shelf connects hosted reading copies and external editions. Hosting follows the project’s pre-1931 rule and edition-specific evidence; see [CATALOG](CATALOG.md).
 - Flagged authors (`hubAuthors` in `data/editorial-flags.json`) can never be saints in the guide; `build_saints.py` fails if one is.
 
 ## Tests
@@ -45,12 +45,12 @@ Three kinds of date, always labelled:
 
 ## Full-year calendar
 
-See `docs/SAINTS-CALENDAR.md`: one merged, facts-only list for every day of the year, built from `data/saints-days.json` when present.
+See [SAINTS-CALENDAR](SAINTS-CALENDAR.md): one merged, facts-only list for every day of the year, built from `data/saints-days.json` when present.
 
 ## Deferred
 
 - Phase 4: emblems and patronages.
-- Phase 5: growth beyond the pilot and a saint-of-the-day feature.
+- Further profile growth beyond the pilot. The full-year facts calendar and Hodie feature already exist; see [SAINTS-CALENDAR](SAINTS-CALENDAR.md).
 - General Roman Calendar dates and ranks (Roman Missal check), and Dicastery for the Causes of Saints status checks.
 - Roman Martyrology dates per saint, images, and short original biographies.
-- CatholicSaints.Info links for tiers 2 and 3 (only after a hand check of each match).
+- CatholicSaints.Info links for tiers 2 and 3 remain unapproved; a hand check alone does not authorize publication.

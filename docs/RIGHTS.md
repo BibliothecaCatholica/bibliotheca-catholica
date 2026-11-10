@@ -1,5 +1,7 @@
 # Rights badges (v16)
 
+> Dated implementation details and counts below describe their recorded release. Use [CENTRAL](../CENTRAL.md) for current work, [OPERATIONS](OPERATIONS.md) for validation, and the maintained data/code for current counts. Existing content and rights restrictions still apply.
+
 Not legal advice. This explains how the site labels and links books.
 
 | Status | Badge | Downloads / reader | Source of the status |

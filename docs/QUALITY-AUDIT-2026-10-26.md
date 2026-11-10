@@ -1,5 +1,7 @@
 # Verified quality review — October 26, 2026
 
+> Dated implementation details and counts below describe their recorded release. Use [CENTRAL](../CENTRAL.md) for current work, [OPERATIONS](OPERATIONS.md) for validation, and the maintained data/code for current counts. Existing content and rights restrictions still apply.
+
 This review reconciles the owner-supplied Copilot/Claude assessment (`bibliotheca_catholica_end_to_end_assessment_20261026_175410.pdf`) and its follow-up with actual repository files and current production responses. The assessment relied on an October 21 homepage capture and expressly could not inspect the repository. Its unknowns are questions to verify, not confirmed defects.
 
 ## Evidence and findings

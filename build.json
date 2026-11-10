@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-86fa6010a2f9",
+  "id": "bc-22cbb5de33e5",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "ab52d8ad9e693af83ed05cd83fb1773f8a2cfcd122d03c4d2a23c905d5a5c335",
@@ -50,7 +50,7 @@
     "data/summa.json": "9c3b70d71741ba9623fb1808d3bf9945715f036a08ae22ad4fe181194ddc4164",
     "data/text-pages.js": "58a4caba41339e4624a43e3cbecb2d0c29fb84a60ca63ed9215a445a3776943a",
     "data/text-pages.json": "bf34b49176846bdce68ffb6c07b17f4045c9d236ae979d5a31fb0a64ad5314b1",
-    "index.template": "861888b4c6f6b97fc96a65fc0b232616d6b6d51624a67f5a35a83dbe4edb2463",
+    "index.template": "dd0e3173b6eb7ea3a6df9270fb53d5345428bace903607029afa989b0a46a89f",
     "scripts/analytics.js": "7a93668483024b8a697dda164ca0d676e79f4dde90aea59b6d6312427c70df50",
     "scripts/boot.js": "aacd6fd1dbf3b9ba84d2dbe4d0b72d4e7a931fa3ff96da23af94d73e05e5547b",
     "scripts/guides.js": "a77f6dfdeffbef2490b218b6acb671aed8f067f8f1c3d53c40b8d8fdf10629bf",
@@ -125,7 +125,7 @@
     "tools/rites_pages.py": "cc5178b1ca80ca5d4203e8c071132fa6b30a315a94448d4c9ecba516f0ae5102",
     "tools/saints_calendar.py": "6d9375e81c92ac6dffc6538b2079f5e34c818ae201430f7f1a9e23d496661a8a",
     "tools/serve.py": "bf16673d8781713b31dfae39b37a366788671bb8c4ad156565b63a0383fef1c2",
-    "tools/site_copy.py": "08aa0e1cf28403baf5563bc7e6a08cab12161aeff9a40f22b1dd635f7310f5fc",
+    "tools/site_copy.py": "7aaf4f46178b7dd45d1a1c4661b703745149dd9238adea7231bb1cc63d23da9e",
     "tools/substacks_src.py": "e02dd1b54559bbc0cf3dda1a747e820c9fc7dff30f8cbf036952f5733b2bda1a",
     "tools/text_pages.py": "41b757d1a077a54d64243c7b9731e8735f1605be744062308728f6d190c7edd3",
     "tools/transcribe_supplement.py": "f574af64df26a17dd0c2664b9345a3537ae94b92ada43fe30b4f5279abd5f2e6",

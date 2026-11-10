@@ -4798,6 +4798,7 @@ work/city-of-god/index.html
 work/come-rack/index.html
 work/confessions/index.html
 work/consolation-philosophy/index.html
+work/contzen-politics/index.html
 work/crown-of-sorrow/index.html
 work/dei-verbum/index.html
 work/deus-caritas-est/index.html
@@ -4815,6 +4816,7 @@ work/golden-legend/index.html
 work/grammar-assent/index.html
 work/heretics/index.html
 work/holy-angels-okennedy/index.html
+work/holy-library-sixtus/index.html
 work/hopkins-poems/index.html
 work/idea-university/index.html
 work/ignatius-of-antioch-epistle-to-the-ephesians/index.html

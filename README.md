@@ -12,7 +12,7 @@ Cloudflare Pages also deploys this source; the owner has reported a hosting tran
 
 ## What readers will find
 
-- **Discover & Read** is the selected reading room: 102 individual work records, including 64 hosted reading editions. A *work* is the title; an *edition* is a particular translation, printing, or source copy. Some works have a text to read here; others point to an external text, scan, or bibliographic reference. The reader provides contents navigation, text search, display controls, saved place, notes, and source/download links.
+- **Discover & Read** is the selected reading room: 104 individual work records, including 64 hosted reading editions. A *work* is the title; an *edition* is a particular translation, printing, or source copy. Some works have a text to read here; others point to an external text, scan, or bibliographic reference. The reader provides contents navigation, text search, display controls, saved place, notes, and source/download links.
 - **Saints & Hagiography** has sourced profiles, a calendar, and the hagiography shelf at [/saints/](https://bibliothecacatholica.com/saints/).
 - **Authors, Saints, Timeline, Editions & Translations, and Reading Lists** connect people, writings, editions, and paths through the collection. An author or saint page can point to a work without claiming that the work is hosted here.
 - **Rites & Liturgy** ([/rites/](https://bibliothecacatholica.com/rites/)) offers sourced pages for 24 Churches sui iuris and seven Latin rites and uses, with an interactive map and visible source and uncertainty notes.

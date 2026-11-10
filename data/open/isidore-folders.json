@@ -2,7 +2,7 @@
 "name": "isidore-folders",
 "description": "Every author name in the isidore.co catalog, with a link to its Isidore Index search and to curated author pages where confident. Raw folder listings are not linked.",
 "license": "CC0-1.0",
-"generated": "2026-10-26",
+"generated": "2026-11-10",
 "count": 3352,
 "fields": {
 "name": "author name as catalogued on isidore.co",

@@ -4,7 +4,7 @@ Read AGENTS.md and this file at session start. Read detailed references only for
 
 When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply.
 
-Updated November 10, 2026 (America/Chicago). This is the single living coordination file for Grok bots and ChatGPT.
+Updated November 11, 2026 (America/Chicago). This is the single living coordination file for Grok bots and ChatGPT.
 
 ## Project and authority
 
@@ -38,6 +38,16 @@ Confirmed November 9, 2026: the apex and `www` resolve to Cloudflare (A records 
 ## Handoff log
 
 Newest first. Entry shape: date (America/Chicago), author (bot name or ChatGPT), summary, commits/PRs, and approval source. Current open items are listed once below, not repeated in every entry.
+
+### 2026-11-11, Catholic Repo
+
+**Summary:** Replaced the plain TAN Books link on `/libraries/` with the existing LeadDyno referral link `https://lddy.no/1qbrw`. The publishers entry is still named TAN Books. The link text is "Browse TAN Books ↗", with `rel="noopener sponsored"` and the FTC disclosure in `<main>`, on both the static page and in the app. Cache tokens: `data/data.js?v=` and `app.js?v=` are now `20261111-tan-libraries`. Tests: 113 Node and 228 Python (one new libraries-page assertion).
+
+**Commits/PRs:** [`4165841b42`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/4165841b42341dd1271cd485bd78b1d33b607d85), and this CENTRAL.md commit.
+
+**Validation/status:** All five GitHub check-runs on that commit passed (validate, build, deploy, report-build-status, Cloudflare Pages). Live at https://bibliothecacatholica.com/libraries/?v=20261111-tan-libraries: the TAN link is the referral URL with `rel="noopener sponsored"` and the disclosure is shown (verified 8:22 AM CST).
+
+**Approval:** Micah in Catholic Repo's chat, 8:13 AM CST November 11: "Yes, add the TAN affiliate link today."
 
 ### 2026-11-10, ChatGPT
 

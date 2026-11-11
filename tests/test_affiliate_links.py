@@ -85,6 +85,20 @@ class AffiliateLinkTests(unittest.TestCase):
                 self.assertIn('rel="noopener sponsored"', a, name)
                 self.assertNotRegex(a, r'data-(support|ga|track|event)', name)
 
+    def test_libraries_page_uses_tan_referral_link(self):
+        m = main_of(self.pages['libraries/index.html'])
+        self.assertIn('TAN Books', m)
+        texts = re.findall(r'<a [^>]*href="https://lddy\.no/1qbrw"[^>]*>([^<]*)</a>', m)
+        self.assertEqual(texts, ['Browse TAN Books ↗'])
+        self.assertIn('rel="noopener sponsored"', re.search(r'<a [^>]*href="https://lddy\.no/1qbrw"[^>]*>', m).group(0))
+        self.assertIn(FTC, m)
+        self.assertIn('href="/disclosure/"', m)
+        self.assertNotIn('https://tanbooks.com/', m)
+        hub = json.loads((ROOT / 'data/catholic-hub.json').read_text())
+        tan = [r for r in hub['resources'] if r['name'] == 'TAN Books' and r['category'] == 'Publishers']
+        self.assertEqual(len(tan), 1)
+        self.assertEqual(tan[0]['url'], TAN)
+
     def test_disclosure_page(self):
         html = self.pages['disclosure/index.html']
         self.assertIn('<h1>Affiliate disclosure</h1>', html)

@@ -125,7 +125,7 @@ add(B,'Learning','Augustine Institute','https://www.augustineinstitute.org/','Gr
 add(B,'Learning','FORMED','https://formed.org/','Catholic streaming: films, studies, audio, e-books.','streaming')
 add(B,'Learning','Word on Fire','https://www.wordonfire.org/','Bishop Barron\'s media ministry: articles, films, Word on Fire Institute.','media')
 add(B,'Publishers','Ignatius Press','https://www.ignatius.com/','Major orthodox Catholic publisher.','publisher')
-add(B,'Publishers','TAN Books','https://tanbooks.com/','Traditional Catholic classics.','publisher')
+add(B,'Publishers','TAN Books','https://lddy.no/1qbrw','Traditional Catholic classics.','publisher')  # TAN LeadDyno referral link
 add(B,'Publishers','Sophia Institute Press','https://www.sophiainstitute.com/','Catholic classics and contemporary works.','publisher')
 add(B,'Publishers','Angelico Press','https://angelicopress.com/','Catholic philosophy, theology, and literature.','publisher')
 add(B,'Publishers','Catholic University of America Press','https://www.cuapress.org/','Academic theology, incl. the Fathers of the Church series.','publisher,scholarly')

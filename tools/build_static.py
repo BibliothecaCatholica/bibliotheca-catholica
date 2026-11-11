@@ -149,6 +149,13 @@ def page(tpl,route,title,desc,body,noindex=False,jsonld=()):
 CC_BY_SA='https://creativecommons.org/licenses/by-sa/4.0/'
 def a(href,label,ext=False):
     return '<a href="'+E(href)+'"'+(' target="_blank" rel="noopener"' if ext else '')+'>'+E(label)+'</a>'
+TAN_REFERRAL='https://lddy.no/1qbrw'
+def resource_li(r):
+    # Affiliate preview: the libraries Publishers entry uses the TAN LeadDyno referral link, with the same
+    # "Browse TAN Books" label, rel="noopener sponsored", as work pages (tools/build_print_editions.py).
+    if r.get('url')==TAN_REFERRAL:
+        return '<li>'+E(r['name'])+': <a href="'+E(r['url'])+'" target="_blank" rel="noopener sponsored">Browse TAN Books ↗</a> — '+E(r.get('desc',''))+'</li>'
+    return '<li>'+a(r['url'],r['name'],True)+' — '+E(r.get('desc',''))+'</li>'
 def years(au):
     b,d=au.get('born'),au.get('died')
     f=lambda y:(str(-y)+' BC' if y<0 else str(y)) if isinstance(y,int) else ''
@@ -671,7 +678,9 @@ def main():
     for k,(t,d) in SECTIONS.items():
         extra=''
         if k in('scripture','magisterium','references','media','libraries','prayers'):
-            extra='<ul>'+''.join('<li>'+a(r['url'],r['name'],True)+' — '+E(r.get('desc',''))+'</li>' for r in hub['resources'] if r['section']==k)+'</ul>'
+            rows=[r for r in hub['resources'] if r['section']==k]
+            extra='<ul>'+''.join(resource_li(r) for r in rows)+'</ul>'
+            if any(r.get('url')==TAN_REFERRAL for r in rows):extra+=PE['disclosure']
         elif k=='timeline':
             extra='<p>Authors are placed by their principal-work century; additional saints use sourced life dates. Undated and legendary figures remain outside the dated sequence. Writings by a person and biographies about them are listed separately in the interactive timeline.</p><p>'+a('/saints/','Saints & Hagiography')+' · '+a('/library/','Reading room')+'</p>'
             for au in sorted(authors,key=lambda x:(x.get('century') or 999,x['name'])):

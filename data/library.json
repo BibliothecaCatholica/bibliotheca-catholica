@@ -493,12 +493,46 @@
           "contributors": [],
           "rights": "Public domain in the USA. First published 1908, before 1931. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
           "checked": "2026-11-09",
-          "note": "The 1908 first edition text (New York: John Lane Company; London: John Lane, The Bodley Head; copyright 1908), with Chesterton’s Preface. Gutenberg names no print source; a word-level check against the 1909 John Lane Company printing at the Internet Archive (orthodoxy1909ches) matched it, with one known slip (“at last” for “at least” in Chapter IX). It replaces an earlier Gutenberg file that was transcribed from a later reprint.",
+          "note": "The 1908 first edition text (New York: John Lane Company; London: John Lane, The Bodley Head; copyright 1908), with Chesterton’s Preface. Gutenberg names no print source; an earlier automated word-level comparison against OCR of the 1909 John Lane Company printing at the Internet Archive (orthodoxy1909ches) recorded no missing passage, with one known slip (“at last” for “at least” in Chapter IX). It replaces an earlier Gutenberg file that was transcribed from a later reprint. This was not a manual line-by-line proofread.",
           "sourceTitle": "Orthodoxy",
           "digitalRelease": "May 1, 1994",
           "access": "full-text",
           "text": "data/texts/pg-130.txt",
-          "sha256": "ec525c93afddb05465bf6fa0af8f873078b8e42a2a24f9b999582994f054fdf2"
+          "sha256": "ec525c93afddb05465bf6fa0af8f873078b8e42a2a24f9b999582994f054fdf2",
+          "readerFormatting": {
+            "sha256": "ec525c93afddb05465bf6fa0af8f873078b8e42a2a24f9b999582994f054fdf2",
+            "proseRanges": [
+              [
+                77,
+                110
+              ]
+            ],
+            "verse": [
+              {
+                "block": 93,
+                "lineStarts": [
+                  0,
+                  49
+                ]
+              }
+            ],
+            "note": "Formatting pilot: Chapter IV only. Prose reflows to the screen, and two italicized instances of “if” and the two-line Yeats quotation follow page 99 of the 1909 John Lane Company printing. Source wording, punctuation, paragraph order, and downloadable TXT are unchanged. This is not a full manual proofread.",
+            "evidence": "https://archive.org/details/orthodoxy1909ches/page/n106/mode/1up",
+            "emphasis": [
+              {
+                "block": 92,
+                "start": 373,
+                "end": 375,
+                "text": "if"
+              },
+              {
+                "block": 92,
+                "start": 459,
+                "end": 461,
+                "text": "if"
+              }
+            ]
+          }
         }
       ],
       "date": "1908"
@@ -918,7 +952,7 @@
           "contributors": [],
           "rights": "Public domain in the USA. First published 1926, before 1931 (US copyright in 1926 works expired on January 1, 2022). Standard Ebooks dedicates its own work to the public domain (CC0 1.0). Outside the U.S., check local copyright rules.",
           "checked": "2026-11-09",
-          "note": "First published 1926 (London: Cassell and Company; New York: Dodd, Mead and Company). Text from Standard Ebooks (CC0), which is based on the Faded Page transcription and the Internet Archive scan of the Cassell 1926 printing (in.ernet.dli.2015.463891). Project Gutenberg has no US ebook of this book. Checked word by word against the Cassell and the Dodd, Mead 1926 scans, and corrected in 46 places where both printings agree against it; Standard Ebooks’ modernized spelling and hyphenation are kept. Dedication, Note, and all eight stories.",
+          "note": "First published 1926 (London: Cassell and Company; New York: Dodd, Mead and Company). Text from Standard Ebooks (CC0), which is based on the Faded Page transcription and the Internet Archive scan of the Cassell 1926 printing (in.ernet.dli.2015.463891). Project Gutenberg has no US ebook of this book. The provenance record reports an automated word-level comparison against OCR from the Cassell and Dodd, Mead 1926 scans and 46 corrections where both readings agree against it; this does not establish a manual line-by-line proofread of the print images; Standard Ebooks’ modernized spelling and hyphenation are kept. Dedication, Note, and all eight stories.",
           "sourceTitle": "The Incredulity of Father Brown",
           "access": "full-text",
           "text": "data/texts/se-incredulity-father-brown.txt",

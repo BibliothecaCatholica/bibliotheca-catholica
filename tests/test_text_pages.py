@@ -57,10 +57,9 @@ class TextPages(unittest.TestCase):
                 if k+1<n:self.assertIn('rel="next" href="/'+path(wid,d,d['items'][k+1])+'"',m)
                 else:self.assertNotIn('rel="next"',m)
                 art=m[m.index('<article class="reading-text"'):m.index('</article>')]
-                self.assertEqual(art.count('<p>'),x['end']-x['start']+1,f)
                 import html as H
-                self.assertIn('<p>'+H.escape(B[x['start']])+'</p>',art);self.assertIn('<p>'+H.escape(B[x['end']])+'</p>',art)
-                self.assertNotIn('<p>'+H.escape(B[x['end']+1])+'</p>',art)
+                paragraphs=[H.unescape(re.sub(r'<[^>]*>', '', p)) for p in re.findall(r'<p(?:\s[^>]*)?>(.*?)</p>',art,re.S)]
+                self.assertEqual(paragraphs,B[x['start']:x['end']+1],f)
                 self.assertNotIn('data-ga',m);self.assertNotIn('amazon.',m)
                 self.assertIn('href="/'+p+'"',wm,'work page lists '+p)
                 ld=[json.loads(j) for j in re.findall(r'<script type="application/ld\+json">(.*?)</script>',s)]

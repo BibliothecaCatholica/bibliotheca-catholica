@@ -4,7 +4,7 @@ Read AGENTS.md and this file at session start. Read detailed references only for
 
 When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply.
 
-Updated November 11, 2026 (America/Chicago). This is the single living coordination file for Grok bots and ChatGPT.
+Updated November 12, 2026 (America/Chicago). This is the single living coordination file for Grok bots and ChatGPT.
 
 ## Project and authority
 
@@ -38,6 +38,16 @@ Confirmed November 9, 2026: the apex and `www` resolve to Cloudflare (A records 
 ## Handoff log
 
 Newest first. Entry shape: date (America/Chicago), author (bot name or ChatGPT), summary, commits/PRs, and approval source. Current open items are listed once below, not repeated in every entry.
+
+### 2026-11-12, ChatGPT
+
+**Summary:** Hosted-text quality inventory: 59 works, 64 editions, 104 selected work records; original files/hashes preserved. See [inventory](docs/HOSTED-TEXT-INVENTORY.md) and [editorial assessment](docs/HOSTED-TEXT-QUALITY.md). Added opt-in, checksum-bound layout support; ordinary hosted Orthodoxy Chapter IV reflows prose, restores the two-line Yeats quote, and two italic “if” words. Visually verified those features on the 1909 John Lane printing, p. 99 (leaf n106); provenance records scope and zero wording corrections. Narrowed existing Orthodoxy/Incredulity verification descriptions to distinguish automated OCR comparison from manual proofreading. The separate illuminated prototype was not accessed or changed. No external books imported; no delivery TXT changes.
+
+**Commits/PRs:** Branch `codex/hosted-text-quality-20261112`; PR linked at completion.
+
+**Validation/status:** Browser inspected chapter layout in light mode and section reader in dark mode. Full-book Python/browser renderer parity and character/order checks pass; all 34 chapter body blocks retained, anchors unchanged. All 113 Node and 231 Python tests pass with Node 22.23.5 and Python 3.12.14; library, static, and Study builds pass. All 64 originals checksum-match. Post-commit generator drift check pending. First test run overlapped Study index generation and encountered temporary-file analytics failures, plus a bare-paragraph-tag assertion; the assertion now checks exact paragraph text with inline markup allowed. No production deployment yet.
+
+**Approval:** Micah's current request to inventory hosted works and carry out an initial faithful cleanup. No permission inferred for external imports, mirroring, or the separate illustrated Site.
 
 ### 2026-11-11, Catholic Repo
 

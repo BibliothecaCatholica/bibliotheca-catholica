@@ -66,3 +66,8 @@ body.has-listen-dock .reader-nav,body.has-listen-dock footer{padding-bottom:64px
 @media(max-width:600px){.listen-dock{right:8px;bottom:8px;left:8px;align-items:stretch}.ld-panel{width:auto}.ld-toggle{align-self:flex-end}}
 @media print{.listen-dock{display:none}}
 .ocr-flag{border-left:3px solid var(--muted);padding-left:.7em}.ocr-note{color:var(--muted);white-space:normal}.supp-note{max-width:760px}
+
+/* Reviewed block-level presentation; other editions keep source layout. */
+.reading-text p.reading-prose,#print-all p.reading-prose{white-space:normal}
+.reading-text p.reading-verse,#print-all p.reading-verse{white-space:normal;padding-inline-start:1.25em}
+.reading-verse .verse-line{display:block;white-space:normal}

@@ -2,3 +2,70 @@
 data/texts/*.txt -text linguist-vendored whitespace=-blank-at-eol,-blank-at-eof
 # CSV exports use the csv module's standard CRLF records.
 *.csv whitespace=cr-at-eol
+
+# Generated output (tools/build_static.py, npm run build, npm run build:study).
+# Review the sources; confirm these with the drift check in docs/OPERATIONS.md.
+# Root index.html, study/index.html, and styles/rites.css are templates rewritten
+# in place, so they stay unmarked.
+about/**/index.html linguist-generated=true
+author/**/index.html linguist-generated=true
+authors/**/index.html linguist-generated=true
+data/index.html linguist-generated=true
+disclosure/**/index.html linguist-generated=true
+doctors/**/index.html linguist-generated=true
+editions/**/index.html linguist-generated=true
+guides/**/index.html linguist-generated=true
+isidore/**/index.html linguist-generated=true
+libraries/**/index.html linguist-generated=true
+library/**/index.html linguist-generated=true
+licensing/**/index.html linguist-generated=true
+magisterium/**/index.html linguist-generated=true
+media/**/index.html linguist-generated=true
+policy/**/index.html linguist-generated=true
+prayers/**/index.html linguist-generated=true
+projects/**/index.html linguist-generated=true
+rare/**/index.html linguist-generated=true
+reading/**/index.html linguist-generated=true
+references/**/index.html linguist-generated=true
+related/**/index.html linguist-generated=true
+rights/**/index.html linguist-generated=true
+rites/**/index.html linguist-generated=true
+saints/**/index.html linguist-generated=true
+scripture/**/index.html linguist-generated=true
+search/**/index.html linguist-generated=true
+substacks/**/index.html linguist-generated=true
+summa/**/index.html linguist-generated=true
+support/**/index.html linguist-generated=true
+takedown/**/index.html linguist-generated=true
+timeline/**/index.html linguist-generated=true
+work/**/index.html linguist-generated=true
+/404.html linguist-generated=true
+/build.json linguist-generated=true
+/robots.txt linguist-generated=true
+/sitemap.xml linguist-generated=true
+docs/static-pages.txt linguist-generated=true
+data/site-copy.js linguist-generated=true
+data/library.js linguist-generated=true
+data/guide.js linguist-generated=true
+data/guides.js linguist-generated=true
+data/saints.js linguist-generated=true
+data/saints-aliases.json linguist-generated=true
+data/rights.js linguist-generated=true
+data/rights-pages.js linguist-generated=true
+data/isidore-matches.js linguist-generated=true
+data/isidore-matches.json linguist-generated=true
+data/rites.js linguist-generated=true
+data/rites.json linguist-generated=true
+data/reading-plans.js linguist-generated=true
+data/reading-plans.json linguist-generated=true
+data/text-pages.js linguist-generated=true
+data/text-pages.json linguist-generated=true
+data/summa.json linguist-generated=true
+data/print-editions.js linguist-generated=true
+data/print-editions.json linguist-generated=true
+data/library-desk.js linguist-generated=true
+assets/study/tools.js linguist-generated=true
+assets/study/mirador.js linguist-generated=true
+assets/libraries/desk.js linguist-generated=true
+assets/libraries/Fuse-LICENSE linguist-generated=true
+pagefind/** linguist-generated=true

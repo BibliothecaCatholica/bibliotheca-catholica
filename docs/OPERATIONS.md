@@ -31,7 +31,7 @@ Existing explicit authorization for a task applies; do not ask twice. Otherwise 
 - Nostra Aetate quotations, expanded CatholicSaints.Info linking/copying, unapproved Rites phases/population layers, additional newsletter embed placements, or new verified social `sameAs` profiles.
 - Publishing or contacting others on the owner's behalf, unless explicitly authorized in the task. A role label does not authorize sending.
 
-Read PROJECT-RULES for exact existing restrictions and exceptions. Nothing in this document authorizes new ingestion or expands rights.
+Read PROJECT-RULES and ANALYTICS for exact existing restrictions and exceptions. Nothing in this document authorizes new ingestion or expands rights.
 
 ## Failed CI or broken deployment
 

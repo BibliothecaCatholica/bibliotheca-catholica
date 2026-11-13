@@ -69,5 +69,43 @@
     ],
     "collation": "Word-level comparison (2026-11-09) with the OCR of orthodoxy1909ches: 98.9 percent of words align before OCR noise and running heads; no passage is missing. Known differences from the printed plates: the printing reads \"ecstacy\" (Gutenberg \"ecstasy\"), and has two misprints Gutenberg corrects (\"it he goes travelling\" for \"if\", \"if he worked harm\" for \"hard\", as the London printings read). One Gutenberg error: Chapter IX \"I have entered at last the gate of all good philosophy\" where the printings read \"at least\". The file is kept byte for byte.",
     "whyNot16769": "Gutenberg #16769 (hosted here until 2026-11-09) was transcribed from a 1934 John Lane, The Bodley Head reprint (its title page lists reprints to 1934) and has no Preface. Project Gutenberg calls #16769 an improved edition of #130, but #130 is the 1908 text with the Preface and no post-1931 printing as its base."
+  },
+  "formattingReview": {
+    "date": "2026-11-12",
+    "scope": "Chapter IV only, splitText blocks 77 to 110; indexes and characters retained.",
+    "changes": [
+      {
+        "kind": "presentation",
+        "blocks": [
+          77,
+          110
+        ],
+        "description": "Let prose wrap to the viewport instead of the TXT line width."
+      },
+      {
+        "kind": "verified-formatting",
+        "block": 93,
+        "description": "Two verse lines, second beginning And dance; no inserted or deleted source characters.",
+        "witness": "orthodoxy1909ches, printed page 99, scan leaf n106"
+      },
+      {
+        "kind": "verified-formatting",
+        "block": 92,
+        "description": "Restore italic emphasis on if after sapphire and after daughter. Other emphasis in this chapter remains unchecked.",
+        "witness": "orthodoxy1909ches, printed page 99, scan leaf n106"
+      }
+    ],
+    "witnessUrl": "https://archive.org/details/orthodoxy1909ches/page/n106/mode/1up",
+    "witnessImageSha256": "1b18cf5ad44a1b07261d1a599f2527813a64ca403c79462ea81565bff1115824",
+    "verification": "Page 99 image visually inspected for these two italic spans and the Yeats line division. This is not a manual line-by-line proofread of the chapter or book. Earlier OCR comparison claims remain separately recorded above.",
+    "textualCorrections": [],
+    "pending": [
+      {
+        "location": "Chapter IX",
+        "sourceReading": "at last the gate of all good philosophy",
+        "printReading": "at least the gate of all good philosophy",
+        "status": "Previously recorded substantive difference; not changed by this formatting pilot. Scan OCR located on printed page 293, leaf n300; visual confirmation still required before correction."
+      }
+    ]
   }
 }

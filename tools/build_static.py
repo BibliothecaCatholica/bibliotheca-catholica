@@ -15,6 +15,7 @@ import hashlib,html,json,re,shutil,sys,urllib.parse
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE='https://bibliothecacatholica.com/';E=html.escape
 sys.path.insert(0,str(ROOT/'tools'));import site_copy,build_info
+from reader_formatting import reading_block, formatting_note
 # --- v17 SEO: see docs/SEO.md ---------------------------------------------------------------------
 NAME='Bibliotheca Catholica';OG_IMAGE=SITE+'assets/og-image.png'
 # Profiles we can verify belong to the project: the GitHub organization (this repo) and the Bluesky
@@ -315,7 +316,8 @@ def part_pages(out,lib,by_html,author_ld):
               +'<p class="small">The reading room adds highlights, notes, find in work, and saved places. This page shows the same hosted text in one piece.</p>'
               +'<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+'. '+E(d.get('editionLine') or e.get('note',''))+pd_badge(e['rights'])+'</p>'
               +nav+text_notice(e)
-              +'<article class="reading-text" aria-label="'+E(x['title'])+'">'+''.join('<p>'+E(B[i])+'</p>' for i in range(x['start'],x['end']+1))+'</article>'
+              +(formatting_note(e) if any(lo <= x['end'] and hi >= x['start'] for lo,hi in e.get('readerFormatting',{}).get('proseRanges',[])) else '')
+              +'<article class="reading-text" aria-label="'+E(x['title'])+'">'+''.join(reading_block(e,B[i],i) for i in range(x['start'],x['end']+1))+'</article>'
               +nav+parts_list(wid,d)
               +'<p class="small">Source: '+E(w['author']+'. '+w['title']+'. '+e['label']+'.')+' '+text_source(e)+'</p>'
               +'<p>'+a('/work/'+wid+'/',w['title'])+' · '+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>')

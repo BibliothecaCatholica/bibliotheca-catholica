@@ -30,11 +30,11 @@ Last confirmed November 9, 2026: the apex and `www` resolve to Cloudflare, and h
 
 ## Verified snapshot
 
-At `main` after the small-logo follow-up (November 13, 2026):
+As of November 13, 2026, with PR #20:
 
 - 104 work records; 64 hosted editions of 59 works in `data/library.json`.
 - 4,925 static pages and 4,926 sitemap URLs from `tools/build_static.py`; about 6,370 tracked files.
-- Tests: 113 Node and 228 Python on `main` (PR #20 adds three Python tests, for 231).
+- Tests: 113 Node and 231 Python.
 - Historical 765/766-page notes are stale. Read the current static builder output for page totals.
 
 ## Handoff log
@@ -50,6 +50,16 @@ Newest first. Entry shape: date (America/Chicago), author, summary, commits/PRs,
 **Validation/status:** PR #21 before merge: two `validate` runs and the Cloudflare Pages preview passed; local tests, library build, and static regeneration showed no drift; desktop and phone, both themes, no script errors. Follow-up: library, static, and Study builds pass; 113 Node and 228 Python tests pass; header and icon checked in a browser at 16, 32, and 64 px with no script errors. Live-site checks could not be run from this session (outbound proxy blocked); confirm the live build ID after merge.
 
 **Approval:** Micah in the current chat, November 13: "Merge #21," and "the Alpha and Omega at small sizes can be removed that is fine." The cross itself: Micah's November 12 request, recorded in PR #21's handoff, to use the cross throughout the website while retaining its existing colors.
+
+### 2026-11-12, ChatGPT
+
+**Summary:** Hosted-text quality inventory and a first faithful-formatting pilot. The hosted scope is 59 works in 64 local editions, distinct from the 104 selected work records and the external Isidore index; see the [inventory](docs/HOSTED-TEXT-INVENTORY.md) and [editorial assessment](docs/HOSTED-TEXT-QUALITY.md). Added opt-in, checksum-bound layout support. Ordinary hosted Orthodoxy Chapter IV now reflows its prose, shows the Yeats quotation in two lines, and restores two italic “if” words, each verified against the 1909 John Lane printing, p. 99 (Internet Archive `orthodoxy1909ches`, leaf n106). The provenance record lists the pilot scope and zero wording corrections. Orthodoxy and Incredulity verification notes now distinguish automated OCR comparison from manual proofreading. All 64 original TXT files and hashes are unchanged; no imports, no text-mirror changes, and the separate illuminated Orthodoxy prototype is untouched.
+
+**Commits/PRs:** [PR #20](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/20), source commit `624db3ee16`. Brought up to date with `main` (PR #21 and the small-logo follow-up) on November 13 by Claude.
+
+**Validation/status:** Python and browser renderers match the full Orthodoxy text character by character; all 34 chapter body blocks retained in order, anchors unchanged. 113 Node and 231 Python tests pass; library, static, and Study builds pass with no post-commit drift; all 64 originals checksum-match. Browser checks: the chapter in light mode and the section reader in dark mode. Mobile QA and manual whole-chapter proofreading are outstanding.
+
+**Approval:** Micah's November 12 request to inventory hosted works and carry out an initial faithful cleanup. No permission inferred for external imports, mirroring, or the separate illustrated site.
 
 ### 2026-11-11, Catholic Repo
 
@@ -89,7 +99,7 @@ Newest first. Entry shape: date (America/Chicago), author, summary, commits/PRs,
 
 ## Open items
 
-- [PR #20](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/20), hosted-text inventory and the Orthodoxy Chapter IV formatting pilot: up to date with `main`, awaiting Micah's merge decision. Mobile QA and manual whole-chapter proofreading remain outstanding.
+- Hosted-text quality (PR #20): mobile QA and a manual proofread of Orthodoxy Chapter IV. Next editorial batches: the remaining Orthodoxy chapters one at a time; scan review of Supplement Q1 (three articles), including earlier automatic substitutions; then one Hopkins poem and its notes.
 - [PR #17](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/17), libraries and offline saints recovery: about 25 commits behind `main` with conflicts in `tools/build_static.py`, `data/catholic-hub.json`, `data/data.js`, and `AGENTS.md`. Rebuild on current `main` or close; do not merge as is.
 - Advent launches November 29. `data/advent-2026.json` checked November 13: 26 days, November 29 to December 24, weekdays and 2026 liturgical labels correct, no em-dashes or empty fields, all links resolve to catalog works. Still to do from the [Advent launch checklist](docs/ADVENT-LAUNCH.md): excerpt-to-source comparison, and Substack and social readiness.
 - The takedown page still shows "PLACEHOLDER: designated takedown agent." Micah to decide the name, postal address, and email.

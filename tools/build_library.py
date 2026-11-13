@@ -3,6 +3,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from reader_formatting import validate_formatting
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -40,6 +41,7 @@ def validate(catalog):
                 assert path.is_relative_to(ROOT / 'data/texts')
                 raw = path.read_bytes()
                 assert hashlib.sha256(raw).hexdigest() == edition['sha256'], edition['id']
+                validate_formatting(edition, [p.strip() for p in re.split(r'\n\s*\n', raw.decode('utf-8').replace('\r', '')) if p.strip()])
                 source = json.loads((ROOT / ('data/sources/' + edition['id'] + '.json')).read_text())
                 if source.get('kind') == 'ocr-transcription':
                     # Supplement to the Summa (2026-11-09): our transcription of Internet Archive scans of printings

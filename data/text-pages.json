@@ -4,7 +4,7 @@
   "orthodoxy": {
    "edition": "pg-130",
    "kind": "ch",
-   "editionLine": "The 1908 first edition text (New York: John Lane Company; London: John Lane, The Bodley Head), with the Preface. Checked against the 1909 John Lane Company printing at the Internet Archive.",
+   "editionLine": "The 1908 first edition text (New York: John Lane Company; London: John Lane, The Bodley Head), with the Preface. An earlier automated word-level comparison used OCR of the 1909 John Lane Company printing at the Internet Archive; it was not a manual line-by-line proofread.",
    "noun": "Chapter",
    "nouns": "Chapters",
    "sha256": "ec525c93afddb05465bf6fa0af8f873078b8e42a2a24f9b999582994f054fdf2",

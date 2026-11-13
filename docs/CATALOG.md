@@ -38,6 +38,10 @@ The 6,633-book Isidore import is preserved separately and is **unreviewed**, inc
 
 The reading interface renders escaped plain text, not third-party HTML or iframes. It loads one edition on demand, offers full-text paragraph search, source heading links when recognizable, section navigation, local reading-position persistence, typography settings, and original-source/download fallbacks. Sections are navigation chunks, not scholarly chapter or paragraph numbers. Scans, footnote formatting, images, and modern scholarly apparatus are best consulted at source. No account or tracking service was added.
 
+## Hosted-text quality
+
+The [hosted inventory](HOSTED-TEXT-INVENTORY.md) distinguishes the actual local editions from external links and records their scope. The [editorial assessment and procedure](HOSTED-TEXT-QUALITY.md) separates demonstrated defects from review leads and documents the bounded Orthodoxy Chapter IV formatting pilot. Source and rights checks do not establish a manual proofread.
+
 ## Follow-up editorial work
 
 This release establishes the model rather than claiming a complete scholarly catalog. Expand the reviewed collections by topic, give each edition a human editorial pass, add exact translation/publication dates when established, and audit the older guide's remaining outbound links and attributions. PDF/EPUB rendering and account-synchronized annotations are not part of this release.

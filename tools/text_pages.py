@@ -21,7 +21,7 @@ WORKS = {
   # Research mapped these boundaries on Gutenberg #130, the hosted edition since 2026-11-09 (the 1908 text as printed by
   # the John Lane Company, New York, with the Preface). Opening and closing words are Research's, checked by the builder.
   start_after='ORTHODOXY',
-  edition_line='The 1908 first edition text (New York: John Lane Company; London: John Lane, The Bodley Head), with the Preface. Checked against the 1909 John Lane Company printing at the Internet Archive.',
+  edition_line='The 1908 first edition text (New York: John Lane Company; London: John Lane, The Bodley Head), with the Preface. An earlier automated word-level comparison used OCR of the 1909 John Lane Company printing at the Internet Archive; it was not a manual line-by-line proofread.',
   parts=[
    ('01-introduction-in-defence-of-everything-else','I','Introduction in Defence of Everything Else','I INTRODUCTION IN DEFENCE OF EVERYTHING ELSE','The only possible excuse for this book is that it is an answer','I will write him another book.'),
    ('02-the-maniac','II','The Maniac','II THE MANIAC','Thoroughly worldly people never understand even the world;','has given to them all her name.'),

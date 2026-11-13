@@ -1,0 +1,37 @@
+{
+  "id": 16769,
+  "url": "https://www.gutenberg.org/cache/epub/16769/pg16769-images.html",
+  "file": "data/sources/gutenberg-html/pg16769-images.html.gz",
+  "sha256": "e12634bcfb8d984aeaba6cf1bff55ade5a8bb689c29dc9eecdbd21241fe45a1c",
+  "bytes": 390971,
+  "retrieved": "2026-11-13T05:26:57Z",
+  "retrievedLocalDate": "2026-11-12 (America/Chicago)",
+  "retrievedWith": "curl, User-Agent BibliothecaCatholica-catalog/1.0",
+  "contentType": "text/html; charset=utf-8",
+  "edition": "pg-16769 (not hosted; its TXT was removed from data/texts on 2026-11-10 in 187d73f7e3)",
+  "survey": {
+    "bodyParagraphs": 242,
+    "headings": {
+      "h1": 1,
+      "h2": 11,
+      "h3": 2,
+      "h4": 2,
+      "note": "Title page, TO MY MOTHER, CONTENTS, and nine chapter headings (h2); no Preface"
+    },
+    "italics": 115,
+    "italicsInChapters": 92,
+    "bold": 9,
+    "verseBlocks": 4,
+    "verseLines": 13,
+    "blockquotes": 1,
+    "footnotes": 0,
+    "pageNumbers": 0,
+    "imprint": "JOHN LANE THE BODLEY HEAD LTD. First published 1908; reprinted 1908, 1909, 1911, 1915, 1919, 1921, 1924, 1926; first published in \"The Week-End Library\" in 1927; reprinted 1934. Made and printed in Great Britain by William Clowes and Sons, Limited, London and Beccles.",
+    "wordAlignmentWithTxt": "Differs from data/texts/pg-130.txt at 114 word-level places (difflib ratio 0.9963): British spellings and ligatures (civilisation, mediæval), compounds (cross roads), substantive readings (praise/raise, the man who/he, was/is, of/or), source typos (arbitary, J sus), and no Preface."
+  },
+  "assessment": "Richer markup (emphasis and verse) but a different printing: the 1934 London Week-End Library reprint, not the 1908 John Lane New York text that pg-130 represents.",
+  "use": "Survey and structure source for the Orthodoxy structured-text pilot. Original bytes retained unchanged; Gutenberg license and credits included.",
+  "storage": "Original HTML bytes stored gzip-compressed (deterministic: mtime 0, no stored filename) so the repository does not publish them as untagged site pages. sha256 and bytes describe the decompressed original; gzipSha256 describes the stored file.",
+  "gzipSha256": "839cd3cb1822d2ce5ef14442f2f0bbb49733200b6d4f24db7cd13135c7f5c520",
+  "gzipBytes": 144282
+}

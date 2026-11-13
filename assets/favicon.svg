@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#8b1e2d"/>
+  <g fill="#e9c46a">
+    <rect x="28" y="11" width="8" height="43" rx="4"/>
+    <rect x="11" y="26" width="42" height="8" rx="4"/>
+    <circle cx="32" cy="8" r="4"/><circle cx="27.5" cy="12" r="3.2"/><circle cx="36.5" cy="12" r="3.2"/>
+    <circle cx="32" cy="56" r="4"/><circle cx="27.5" cy="52" r="3.2"/><circle cx="36.5" cy="52" r="3.2"/>
+    <circle cx="8" cy="30" r="4"/><circle cx="12" cy="25.5" r="3.2"/><circle cx="12" cy="34.5" r="3.2"/>
+    <circle cx="56" cy="30" r="4"/><circle cx="52" cy="25.5" r="3.2"/><circle cx="52" cy="34.5" r="3.2"/>
+  </g>
+  <g fill="#faf6ee" font-family="Georgia,serif" font-size="8" text-anchor="middle">
+    <text x="19.5" y="42">Α</text><text x="44.5" y="42">Ω</text>
+  </g>
+</svg>

@@ -43,8 +43,7 @@ def home_about(n):
      'The '+a('/library/','reading room')+' offers '+str(n['hosted'])+' editions to read here for free. Each keeps its source, original notices, and rights evidence. '
      'Other works open at their original libraries or publishers.</p>'
      '<p>Explore '+str(n['authors'])+' '+a('/authors/','authors')+', compare '+a('/editions/','translations')+', or browse the '
-     +a('/isidore/','Isidore Index')+' of '+format(n['books'],',')+' e-books. Listing is not endorsement; our '
-     +a('/policy/','editorial policy')+' explains the context notes. Bibliotheca Catholica is independent, free for everyone, and has no ads.</p>'
+     +a('/isidore/','Isidore Index')+' of '+format(n['books'],',')+' e-books. Bibliotheca Catholica is independent, free for everyone, and has no ads.</p>'
      '</div><details class="home-directory"><summary>All sections of the library</summary><ul class="home-sections">'+sec+'</ul></details><p class="home-info">'+info+'</p></section>')
 
 def home_hero():
@@ -88,6 +87,10 @@ def about_page(n):
      '<h2>Where the texts come from</h2>'
      '<p>Every hosted text is a public-domain edition from a known source, usually Project Gutenberg. We keep the original file, a snapshot of its catalogue record, and its SHA-256 checksum, so anyone can check that the text has not been changed, and each reader page shows the source edition, its translator where known, and its license notice. '
      'Our rule is to host only texts first published before 1931, in an edition or translation its source lists as public domain in the United States. The rule applies to the text, not always to the printing that was transcribed: a file can come from a later reprint of an earlier text, for example a 1952 reprint of a 1920 book. For some hosted editions our records do not yet note the year of the specific translation; we are adding that evidence. Later works are linked at their publishers or libraries, never copied.</p>'
+     '<h2>Dates, files, and sections</h2>'
+     '<p>Dates for a work, its translation, and a digital release are distinct, and source editions retain their own notices and credits. '
+     'Ebook files, Isidore Index files, and library-copy searches are served by the original libraries; their formatting and editorial details may differ from the online text, and holdings, borrowing, and digital availability depend on the library and edition. '
+     'In the reader, sections divide a source into manageable reading lengths; they are navigation aids, not editorial chapters or scholarly paragraph numbers.</p>'
      '<h2>Licensing and credits</h2>'
      '<p>The site’s code is under the MIT License, the '+a('/data/','open data')+' is dedicated to the public domain under CC0, and the writing on these pages is under CC BY 4.0. Hosted texts carry no license from us: they are public domain in the United States, and each keeps its source’s notice. Author excerpts from Wikipedia are shortened and shared under CC BY-SA 4.0, and each portrait is credited on its author page. The details are in our <a href="'+LICENSING_URL+'">licensing note</a>, a summary rather than legal advice.</p>'
      '<h2>Our name</h2>'
@@ -104,15 +107,15 @@ def about_page(n):
 
 # --- Newsletter sign-up (owner-approved preview 2026-11-09). The Substack embed is third-party content, so it is
 # used only on the home page and /reading/advent-2026/ (lazy-loaded, responsive, titled); every other page has the
-# plain sign-up button in the footer (index.html). No analytics attributes: outbound_click classifies substack.com.
+# plain sign-up link in the footer (index.html). The pitch line (NEWSLETTER_LINE) appears once per page, in the footer. No analytics attributes: outbound_click classifies substack.com.
 SUBSTACK='https://bibliothecacatholica.substack.com/'
 SUBSCRIBE=SUBSTACK+'subscribe'
 NEWSLETTER_LINE='Advent with the Fathers: a short reading from the Church Fathers each day, Nov 29 to Dec 24. Free.'
 def newsletter_box():
     return ('<section class="newsletter-box" aria-label="Newsletter sign-up"><div class="eyebrow">The newsletter</div>'
-     '<h2>Bibliotheca Catholica by email</h2><p class="nl-line">'+E(NEWSLETTER_LINE)+'</p>'
+     '<h2>Bibliotheca Catholica by email</h2>'
      '<iframe class="nl-embed" src="'+SUBSTACK+'embed" title="Sign up for the Bibliotheca Catholica newsletter on Substack" width="480" height="320" loading="lazy" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>'
-     '<p class="small nl-fine">Or <a href="'+SUBSCRIBE+'" target="_blank" rel="noopener">subscribe on Substack ↗</a>. The sign-up form is provided by Substack under its own <a href="https://substack.com/privacy" target="_blank" rel="noopener">privacy policy</a>.</p></section>')
+     '<p class="small nl-fine">The sign-up form is provided by Substack under its own <a href="https://substack.com/privacy" target="_blank" rel="noopener">privacy policy</a>.</p></section>')
 
 # --- /disclosure/ (owner-approved preview 2026-11-09): the affiliate relationships, in plain words.
 DISCLOSURE_TITLE='Affiliate disclosure'
@@ -122,7 +125,7 @@ def disclosure_page(ftc):
      '<p class="lede">'+E(ftc)+'</p></div>'
      '<section class="panel policy">'
      '<h2>Reading here is always free</h2>'
-     '<p>The '+a('/library/','reading room')+' comes first. Every hosted text is free to read on this site, and book pages always list the free reading editions before any place to buy a print copy. Purchase links appear in a separate, clearly labeled section, “Where to buy print editions,” with this disclosure beside them.</p>'
+     '<p>The '+a('/library/','reading room')+' comes first. Every hosted text is free to read on this site, and book pages always list the free reading editions before any place to buy a print copy. Purchase links appear in a separate, clearly labeled section, “Buy in print,” with this disclosure beside them.</p>'
      '<h2>Bookshop.org</h2>'
      '<p>Bibliotheca Catholica is a Bookshop.org affiliate. Links to Bookshop.org on book pages, '+a('/editions/','edition guides')+', and the '+a('/support/','Support page')+' carry our affiliate ID. When you buy through them, Bookshop.org pays us a small commission at no extra cost to you, and part of each sale supports independent bookstores. We link a specific book only where our edition guide records its ISBN.</p>'
      '<h2>TAN Books</h2>'

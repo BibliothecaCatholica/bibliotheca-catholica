@@ -4,7 +4,7 @@ Read AGENTS.md and this file at session start. Read detailed references only for
 
 When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply.
 
-Updated November 13, 2026 (America/Chicago). This is the single living coordination file for every contributor (Grok bots, ChatGPT, Codex, Claude, and others).
+Updated November 13, 2026 (America/Chicago), design pass part 1. This is the single living coordination file for every contributor (Grok bots, ChatGPT, Codex, Claude, and others).
 
 ## Project and authority
 
@@ -34,12 +34,20 @@ As of November 13, 2026, with PRs #20 and #23:
 
 - 104 work records; 64 hosted editions of 59 works in `data/library.json`.
 - 4,925 static pages and 4,926 sitemap URLs from `tools/build_static.py`; about 6,370 tracked files.
-- Tests: 115 Node and 231 Python.
+- Tests: 119 Node and 231 Python (4 Node design-budget tests added in the design pass).
 - Historical 765/766-page notes are stale. Read the current static builder output for page totals.
 
 ## Handoff log
 
 Newest first. Entry shape: date (America/Chicago), author, summary, commits/PRs, validation, and approval source. Open items are listed once below, not repeated in every entry.
+
+### 2026-11-13, Claude (Claude Code): design pass, part 1 (Steps 0, 1, 5, 6)
+
+**Summary:** First of two PRs for the owner's "calm, high-class library" brief. Added `docs/DESIGN.md` (type, three control styles, containers, notices) and a pointer in AGENTS.md. Trimmed notices: the footer FTC paragraph is gone (the FTC line stays beside every affiliate block, plus `/disclosure/` and its footer link); the newsletter pitch appears once per page (footer only; the home and Advent sign-up boxes keep the embed and the Substack privacy line); site-wide caveats ("dates are distinct", "files are served by the original library", library-copy holdings, reader sections) moved to `/about/` ("Dates, files, and sections"); the home and library "not endorsement" caveats removed from primary surfaces (kept on `/policy/`, `/about/`, `/disclosure/`, and in context notes). Work page (app): title, author, one sentence, one filled "Read here", chapters, one summary row per edition with "Source and rights details" behind a disclosure, then "Other ways to read" rows (Listen, Download, Buy in print, Find in a library) as text links. Purchase block heading is now "Buy in print", with text links. Reader: compact head, one quiet toolbar (Contents, Aa, Notes, Find, Print, Listen, ?), settings in the "Aa" menu with the same control IDs and storage keys, and Gutenberg, source, and formatting notices at the end of every section. The header Support pill is now a text link. Cache tokens `20261113-design`. Home, navigation, portraits, catalogue shelves, and the CSS consolidation are part 2.
+
+**Validation/status:** Three builds pass; 119 Node and 231 Python tests pass; post-commit rebuild shows no drift. Budgets (tests/design-budgets.test.js): every one of 104 work pages has at most one filled button and at most six buttons, and no bordered card inside a bordered panel. Reader first paragraph at 361 px of an 800 px viewport (1280 wide) and 374 px of 787 px visible (390 wide, above the mobile bar), both themes. CSS 136,183 bytes before, 136,184 after.
+
+**Approval:** Micah, November 12, 2026, approved the hero art, the one-line Today panel, portraits of the saints, and trimming the disclosures, and pasted the design-pass brief as the instruction.
 
 ### 2026-11-13, Claude (Claude Code): PRs #20 and #17 landed
 
@@ -109,6 +117,7 @@ Newest first. Entry shape: date (America/Chicago), author, summary, commits/PRs,
 
 ## Open items
 
+- Design pass part 2 (Steps 2, 3, 4, 7, 8 of the November 12 brief): portraits, home, navigation, catalogue shelves, CSS consolidation; the owner chooses one of three proposed hero engravings and decides on portrait self-hosting.
 - Hosted-text quality: a manual proofread of Orthodoxy Chapter IV. Next editorial batches: the remaining Orthodoxy chapters one at a time; scan review of Supplement Q1 (three articles), including earlier automatic substitutions; then one Hopkins poem and its notes.
 - Libraries research candidates in `docs/LIBRARIES-AND-ARCHIVES.md` (CRMEDR, Torch data, an opt-in Open Library edition finder) need rights and provenance review before any import.
 - Advent launches November 29. `data/advent-2026.json` checked November 13: 26 days, November 29 to December 24, weekdays and 2026 liturgical labels correct, no em-dashes or empty fields, all links resolve to catalog works. Still to do from the [Advent launch checklist](docs/ADVENT-LAUNCH.md): excerpt-to-source comparison, and Substack and social readiness.

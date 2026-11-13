@@ -58,7 +58,7 @@ class AffiliateLinkTests(unittest.TestCase):
         for wid, v in works.items():
             html = main_of(self.pages['work/%s/index.html' % wid])
             self.assertIn(v['html'], html, wid)
-            self.assertLess(html.index('Reading editions &amp; sources'), html.index('Where to buy print editions'), wid)
+            self.assertLess(html.index('Reading editions &amp; sources'), html.index('<h2>Buy in print</h2>'), wid)
         # never on related (non-Catholic) writers' books, Magisterium documents, or reference works
         lib = json.loads((ROOT / 'data/library.json').read_text())
         rel = {w for ra in lib['relatedAuthors'] for w in ra['workIds']}
@@ -113,8 +113,10 @@ class AffiliateLinkTests(unittest.TestCase):
         for name, html in self.pages.items():
             foot = html[html.index('<footer'):]
             self.assertIn('<a href="/disclosure/">Affiliate disclosure</a>', foot, name)
-            self.assertIn(FTC, foot, name)
-            self.assertIn('<a class="btn nl-btn" href="' + SUBSCRIBE + '"', foot, name)
+            # design pass (owner-approved 2026-11-12): the FTC line sits only beside affiliate links, not in the footer
+            self.assertNotIn(FTC, foot, name)
+            self.assertIn('<a class="nl-btn" href="' + SUBSCRIBE + '"', foot, name)
+            self.assertEqual(html.count(LINE), 1, name)  # the newsletter pitch appears once per page
             self.assertIn(LINE, foot, name)
             self.assertIn('data-support="footer"', foot, name)  # donation link
             self.assertIn('href="/support/"', foot, name)

@@ -4,7 +4,7 @@ Read AGENTS.md and this file at session start. Read detailed references only for
 
 When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply.
 
-Updated November 12, 2026 (America/Chicago). This is the single living coordination file for Grok bots and ChatGPT.
+Updated November 13, 2026 (America/Chicago). This is the single living coordination file for every contributor (Grok bots, ChatGPT, Codex, Claude, and others).
 
 ## Project and authority
 
@@ -20,114 +20,94 @@ Owner: Micah Watson. Responsibility follows the assigned task, not the AI provid
 | QA | Reproducible checks tied to a commit | Reports failures; does not infer approval |
 | Business / publishing | Owner-authorized account and publication work | No account changes or outreach from a role name alone |
 
-ChatGPT, Codex, Grok, and other tools can perform assigned responsibilities. Existing references to Research, QA, and Business describe responsibilities or historical reports, not independently verified identities or grants of access. Only Micah's own words count as approval, and an entry should quote or cite where he gave it.
+Any tool can perform an assigned responsibility. References to Research, QA, and Business describe responsibilities or historical reports, not verified identities or grants of access. Only Micah's own words count as approval, and an entry should quote or cite where he gave it.
 
 ## Hosting and data flow
 
-GitHub repository `main` is the source of truth. Cloudflare Pages deploys automatically on push to `main` and serves https://bibliothecacatholica.com. GitHub Pages is a fallback until the planned shutoff on November 12, 2026, after which Cloudflare is primary. The `CNAME` file stays. texts.bibliothecacatholica.com is served from the `bibliotheca-texts` repo. DNS and the Cloudflare zone belong to Business.
+GitHub repository `main` is the source of truth. Cloudflare Pages deploys automatically on push to `main` and serves https://bibliothecacatholica.com; every PR also gets a Cloudflare Pages preview check. The `CNAME` file stays. texts.bibliothecacatholica.com is served from the `bibliotheca-texts` repo. DNS and the Cloudflare zone belong to Business.
 
-Confirmed November 9, 2026: the apex and `www` resolve to Cloudflare (A records 104.21.47.225 and 172.67.173.207; response headers include `server: cloudflare` and `cf-ray`). The live site and https://bibliotheca-catholica.pages.dev match `origin/main` at `f46f7bd6`. A push to `main` produced a successful Cloudflare Pages check within a minute (preview https://d1220d47.bibliotheca-catholica.pages.dev). Custom-domain DNS no longer points at GitHub Pages; https://bibliothecacatholica.github.io/bibliotheca-catholica/ redirects to the custom domain.
+Last confirmed November 9, 2026: the apex and `www` resolve to Cloudflare, and https://bibliothecacatholica.github.io/bibliotheca-catholica/ redirects to the custom domain. GitHub Pages was a fallback until the planned November 12 shutoff; completion of that shutoff has not been recorded here.
 
 ## Verified snapshot
 
-- 104 work records; 64 editions with a hosted `text` field in `data/library.json`.
-- 6,371 tracked files and 4,924 sitemap URLs at `f46f7bd6` (excludes Git history and installed dependencies). The November 9 repository audit's 6,362-file baseline was taken at `757dacaab7`.
-- Tests: 113 Node and 223 Python, plus GitHub CI on `main` at `f46f7bd6`.
+As of November 13, 2026, with PR #20:
+
+- 104 work records; 64 hosted editions of 59 works in `data/library.json`.
+- 4,925 static pages and 4,926 sitemap URLs from `tools/build_static.py`; about 6,370 tracked files.
+- Tests: 113 Node and 231 Python.
 - Historical 765/766-page notes are stale. Read the current static builder output for page totals.
 
 ## Handoff log
 
-Newest first. Entry shape: date (America/Chicago), author (bot name or ChatGPT), summary, commits/PRs, and approval source. Current open items are listed once below, not repeated in every entry.
+Newest first. Entry shape: date (America/Chicago), author, summary, commits/PRs, validation, and approval source. Open items are listed once below, not repeated in every entry.
+
+### 2026-11-13, Claude (Claude Code)
+
+**Summary:** Merged the Spanish Victory cross (PR #21) and followed up on small sizes. The cross with trefoil terminals replaces the plain cross in the shared header, the browser icon (`assets/favicon.svg`, replacing the inline data-URI icon), and the social preview (`tools/make_og_image.py` regenerates `assets/og-image.png`), in the existing burgundy, gold, and cream palette. The Alpha and Omega stay in the social preview image only: at the 32 px header and the 16 px tab icon they rendered as specks, so the follow-up removes them there. Also brought PR #20 up to date with this `main`.
+
+**Commits/PRs:** [PR #21](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/21), squash-merged as [`ef634a1c0b`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/ef634a1c0b35200d7fc3ecd971b906114a752c45). Follow-up on branch `claude/epic-franklin-hbdr1c`, which also carries this CENTRAL.md consolidation.
+
+**Validation/status:** PR #21 before merge: two `validate` runs and the Cloudflare Pages preview passed; local tests, library build, and static regeneration showed no drift; desktop and phone, both themes, no script errors. Follow-up: library, static, and Study builds pass; 113 Node and 228 Python tests pass; header and icon checked in a browser at 16, 32, and 64 px with no script errors. Live-site checks could not be run from this session (outbound proxy blocked); confirm the live build ID after merge.
+
+**Approval:** Micah in the current chat, November 13: "Merge #21," and "the Alpha and Omega at small sizes can be removed that is fine." The cross itself: Micah's November 12 request, recorded in PR #21's handoff, to use the cross throughout the website while retaining its existing colors.
 
 ### 2026-11-12, ChatGPT
 
-**Summary:** Hosted-text quality inventory: 59 works, 64 editions, 104 selected work records; original files/hashes preserved. See [inventory](docs/HOSTED-TEXT-INVENTORY.md) and [editorial assessment](docs/HOSTED-TEXT-QUALITY.md). Added opt-in, checksum-bound layout support; ordinary hosted Orthodoxy Chapter IV reflows prose, restores the two-line Yeats quote, and two italic “if” words. Visually verified those features on the 1909 John Lane printing, p. 99 (leaf n106); provenance records scope and zero wording corrections. Narrowed existing Orthodoxy/Incredulity verification descriptions to distinguish automated OCR comparison from manual proofreading. The separate illuminated prototype was not accessed or changed. No external books imported; no delivery TXT changes.
+**Summary:** Hosted-text quality inventory and a first faithful-formatting pilot. The hosted scope is 59 works in 64 local editions, distinct from the 104 selected work records and the external Isidore index; see the [inventory](docs/HOSTED-TEXT-INVENTORY.md) and [editorial assessment](docs/HOSTED-TEXT-QUALITY.md). Added opt-in, checksum-bound layout support. Ordinary hosted Orthodoxy Chapter IV now reflows its prose, shows the Yeats quotation in two lines, and restores two italic “if” words, each verified against the 1909 John Lane printing, p. 99 (Internet Archive `orthodoxy1909ches`, leaf n106). The provenance record lists the pilot scope and zero wording corrections. Orthodoxy and Incredulity verification notes now distinguish automated OCR comparison from manual proofreading. All 64 original TXT files and hashes are unchanged; no imports, no text-mirror changes, and the separate illuminated Orthodoxy prototype is untouched.
 
-**Commits/PRs:** [PR #20](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/20), source commit `624db3ee161f42d9d9429146b29cead8c2daa214`. The uploaded source tree exactly matches local tested tree `45f9c76788121ac610968e9e42dbeeed4e1678cf` before this coordination-only update.
+**Commits/PRs:** [PR #20](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/20), source commit `624db3ee16`. Brought up to date with `main` (PR #21 and the small-logo follow-up) on November 13 by Claude.
 
-**Validation/status:** Browser inspected chapter layout in light mode and section reader in dark mode. Full-book Python/browser renderer parity and character/order checks pass; all 34 chapter body blocks retained, anchors unchanged. All 113 Node and 231 Python tests pass with Node 22.23.5 and Python 3.12.14; library, static, and Study builds pass. All 64 originals checksum-match. Post-commit library/static/Study builds and inventory regeneration produce a clean diff, with no untracked output. GitHub CI status is recorded on the PR. First test run overlapped Study index generation and encountered temporary-file analytics failures, plus a bare-paragraph-tag assertion; the assertion now checks exact paragraph text with inline markup allowed. No production deployment yet.
+**Validation/status:** Python and browser renderers match the full Orthodoxy text character by character; all 34 chapter body blocks retained in order, anchors unchanged. 113 Node and 231 Python tests pass; library, static, and Study builds pass with no post-commit drift; all 64 originals checksum-match. Browser checks: the chapter in light mode and the section reader in dark mode. Mobile QA and manual whole-chapter proofreading are outstanding.
 
-**Approval:** Micah's current request to inventory hosted works and carry out an initial faithful cleanup. No permission inferred for external imports, mirroring, or the separate illustrated Site.
+**Approval:** Micah's November 12 request to inventory hosted works and carry out an initial faithful cleanup. No permission inferred for external imports, mirroring, or the separate illustrated site.
 
 ### 2026-11-11, Catholic Repo
 
-**Summary:** Replaced the plain TAN Books link on `/libraries/` with the existing LeadDyno referral link `https://lddy.no/1qbrw`. The publishers entry is still named TAN Books. The link text is "Browse TAN Books ↗", with `rel="noopener sponsored"` and the FTC disclosure in `<main>`, on both the static page and in the app. Cache tokens: `data/data.js?v=` and `app.js?v=` are now `20261111-tan-libraries`. Tests: 113 Node and 228 Python (one new libraries-page assertion).
+**Summary:** Replaced the plain TAN Books link on `/libraries/` with the existing LeadDyno referral link `https://lddy.no/1qbrw`, link text "Browse TAN Books ↗", with `rel="noopener sponsored"` and the FTC disclosure in `<main>`, on both the static page and in the app. Cache tokens: `data/data.js?v=` and `app.js?v=` are `20261111-tan-libraries`. Added one libraries-page test.
 
-**Commits/PRs:** [`4165841b42`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/4165841b42341dd1271cd485bd78b1d33b607d85), and this CENTRAL.md commit.
+**Commits/PRs:** [`4165841b42`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/4165841b42341dd1271cd485bd78b1d33b607d85).
 
-**Validation/status:** All five GitHub check-runs on that commit passed (validate, build, deploy, report-build-status, Cloudflare Pages). Live at https://bibliothecacatholica.com/libraries/?v=20261111-tan-libraries: the TAN link is the referral URL with `rel="noopener sponsored"` and the disclosure is shown (verified 8:22 AM CST).
+**Validation/status:** All five GitHub check runs passed. Verified live at 8:22 AM CST.
 
 **Approval:** Micah in Catholic Repo's chat, 8:13 AM CST November 11: "Yes, add the TAN affiliate link today."
 
 ### 2026-11-10, ChatGPT
 
-**Summary:** Applied owner-requested feedback: reduced homepage and navigation clutter; shared plain/interactive landing copy; added seven source resources, two link-only Mind of the Church work records (104 works, 64 hosted editions), and an Acta source panel on the hagiography shelf. Collection evidence and rights/translation limits are in `data/sources/translation-collections.json` and `docs/COLLECTION-REVIEW.md`. Fixed the Isidore test helper to parse functions correctly when regex literals contain quotes. PR #17 remains separate.
+**Summary:** Owner-requested feedback: reduced homepage and navigation clutter; shared plain/interactive landing copy; added seven source resources, two link-only Mind of the Church work records, and an Acta source panel on the hagiography shelf. Collection evidence and rights/translation limits are in `data/sources/translation-collections.json` and `docs/COLLECTION-REVIEW.md`. Fixed the Isidore test helper's function parsing. Modern translations remain at source under the existing selection policy.
 
-**Commits/PRs:** [PR #19](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/19), source commit `1ca960ab8d`. The complete uploaded tree matches the locally tested tree. See the PR for final GitHub checks and merge state. No temporary workflow or additional repository permission was introduced.
+**Commits/PRs:** [PR #19](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/19), merged as [`67ca66a2cc`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/67ca66a2cc).
 
-**Backlink details prepared:** Name: Bibliotheca Catholica. URL: https://bibliothecacatholica.com/. Description: “A free Catholic reading room and curated guide to authors, saints, Church documents, and digital libraries, with source editions and rights notes.” Intended listing: https://mindofthechurch.com/fellows/. No email or other outreach sent; no claim that a backlink is already published.
+**Backlink prepared, not sent:** Name: Bibliotheca Catholica. URL: https://bibliothecacatholica.com/. Description: “A free Catholic reading room and curated guide to authors, saints, Church documents, and digital libraries, with source editions and rights notes.” Intended listing: https://mindofthechurch.com/fellows/. No outreach sent; no backlink claimed.
 
-**Validation/status:** `codex/braeden-feedback-20261110`: all 113 Node and 227 Python tests pass; library, static, and Study builds pass. Browser checked the home in both themes, section disclosures, Escape dismissal, new-work search and edition notes, and the Acta shelf panel. The Substack iframe was unavailable in the preview browser; its existing direct subscribe link remains. Mobile CSS is responsive, but physical-device testing was not performed. Generated changes were committed and rebuilt for drift verification. Modern translations remain at source under the existing selection policy and unverified reuse compatibility.
+**Validation/status:** Tests and all three builds passed; home checked in both themes. Physical-device testing was not performed.
 
-**Approval:** Micah in the current chat: “Run through everything on the github and make the stated corrections as you just pointed out,” with everything except sending an email authorized.
-
-### 2026-11-10, Catholic Repo
-
-**Summary:** Reworded the /about/ reprint example to a generic "1952 reprint of a 1920 book," removed the unlinked old Orthodoxy file `data/texts/pg-16769.txt`, and bumped `scripts/analytics.js?v=` to `20261110-title-separator`, [`187d73f7e3`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/187d73f7e391011df58f45d8906d8b1407d4ef21). Live /about/ and the new cache token are on production. The new Pages preview 404s the old text file; a cached copy with `s-maxage=604800` can still answer the bare production URL until it expires or the cache is purged.
-
-**Commits/PRs:** [`187d73f7e3`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/187d73f7e391011df58f45d8906d8b1407d4ef21), and this CENTRAL.md commit.
-
-**Approval:** Micah via the Project Manager, 10:23 AM CST November 10.
+**Approval:** Micah in ChatGPT's chat: “Run through everything on the github and make the stated corrections as you just pointed out,” with everything except sending an email authorized.
 
 ### 2026-11-10, Catholic Repo
 
-**Summary:** High-value items, in order.
+**Summary:** Reworded the /about/ reprint example to a generic "1952 reprint of a 1920 book," removed the unlinked old Orthodoxy file `data/texts/pg-16769.txt`, and bumped `scripts/analytics.js?v=` to `20261110-title-separator`. A cached copy of the removed file may answer the bare production URL until its `s-maxage=604800` expires or the cache is purged. Advent: site text matches the 26 Substack day drafts apart from recorded site-rule edits (29 `siteRuleEdits` entries). Father Brown and Orthodoxy 1908 verified live. Same-name saints on 04-16 and 11-02 now show death years, set by `tell_apart()` in `tools/saints_calendar.py`.
 
-- Advent: the site text matches the 26 Substack day drafts and the preview word for word, apart from site-rule edits. Day 9 (quote), Day 15, and Day 21 (Oxford commas) were already recorded; the Substack attribution em-dash is now recorded in each day's `siteRuleEdits` (29 entries), [`d105792a66`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/d105792a66537d4e79a9901a846e40dabfa8946b). Live at `/reading/advent-2026/` and `/data/advent-2026.json`.
-- Father Brown and Orthodoxy 1908: verified live, no defects. Work, chapter/story, reader, and text URLs return 200; full text present; notes say 1908; both in the sitemap and the texts manifest with matching SHA-256; one GA4 tag per page.
-- Saints: same-name entries on 04-16 and 11-02 now show death years from the facts ("St. Lambert of Saragossa (died 306)"), set by `tell_apart()` in `tools/saints_calendar.py`, [`b86105694c`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/b86105694c2a6c8c3722bd7b1e3ffff4c27884ec). No other day had the problem.
+**Commits/PRs:** [`187d73f7e3`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/187d73f7e391011df58f45d8906d8b1407d4ef21), [`d105792a66`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/d105792a66537d4e79a9901a846e40dabfa8946b), [`b86105694c`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/b86105694c2a6c8c3722bd7b1e3ffff4c27884ec).
 
-**Commits/PRs:** [`d105792a66`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/d105792a66537d4e79a9901a846e40dabfa8946b), [`b86105694c`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/b86105694c2a6c8c3722bd7b1e3ffff4c27884ec), and this CENTRAL.md commit.
+**Approval:** Micah via the Project Manager, 9:39 AM CST ("Go ahead an move on the high value items first") and 10:23 AM CST, November 10.
 
-**Approval:** Micah via the Project Manager, 9:39 AM CST: "Go ahead an move on the high value items first."
+### 2026-11-09, ChatGPT and Catholic Repo
 
-### 2026-11-09, Catholic Repo
+**Summary:** [PR #18](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/18) documentation cleanup, squash-merged as [`f46f7bd6`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/f46f7bd6a69e3cceff3bb844445949fcb4e2c647): AGENTS.md cut to its rules with details in linked docs; added this file, the Advent launch checklist, operations guidance, and the repository audit; all 64 hosted texts checksum-verified; five missing evidence/import files documented. CENTRAL.md became the single coordination file, with no `GITHUB.md` and no dated handoff reports. Same day, live: GA4 real page paths ([`c6a740eaf4`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/c6a740eaf4c62e485e5e3688134faac5e891a277)); the saints calendar, 366 day pages from 12,136 entries with one CatholicSaints.Info credit on `/references/` ([`c33eaf38f2`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/c33eaf38f2b078ff892f6b314bef0b40b26f8a45), [`fe953d60fb`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/fe953d60fbfece07eb8e1ce8452f7cc7272a62d9)); the " · " title separator ([`2ace5d1c4e`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/2ace5d1c4e141a306ed7d04f2de903bd0be8859f)); privacy wording ([`757dacaab7`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/757dacaab7fdaa9aeeeb267fb590db99ee40d760)); and Father Brown and Orthodoxy 1908 hosted ([`3f9820fe95`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/3f9820fe95f289f3a76d4278bbca95b6fe129a53), [`459551a722`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/459551a722cc2bcf765b4dd5f03ef84f91225862)).
 
-**Summary:** Confirmed the live hosting flow and made CENTRAL.md the single living coordination file for Grok bots and ChatGPT. No `GITHUB.md`, and no separate dated handoff reports.
-
-**Commits/PRs:** this documentation commit on `main`.
-
-**Approval:** Micah in Catholic Repo's chat, 8:45 PM CST: "Rather than making individual reports and requiring a reread of the github everytime there needs to be an update to the central.md this will be the focus of communication between you and chatgpt." Earlier that evening, 8:38 PM CST, he confirmed that GitHub remains the source of truth and that Cloudflare Pages serves the live site, with GitHub Pages as a fallback until the November 12 shutoff.
-
-### 2026-11-09, ChatGPT
-
-**Summary:** [PR #18](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/18) documentation cleanup, merged to `main` as squash [`f46f7bd6`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/f46f7bd6a69e3cceff3bb844445949fcb4e2c647) at 8:30 PM CST. AGENTS.md cut to 26 lines, with the rules moved to linked docs. Added CENTRAL.md, the Advent launch checklist, operations guidance, the repository audit, the documentation map, and the original shared handoff. All 64 hosted texts checksum-verified. Five missing evidence/import files documented. Conflicting setup instructions removed and validation guidance consolidated. The Summa hosting statement was fixed. Dated catalog notes were archived. Stale build fingerprints were repaired. Tests: 113 Node and 223 Python passed, plus CI and the Cloudflare preview.
-
-**Commits/PRs:** [`f46f7bd6`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/f46f7bd6a69e3cceff3bb844445949fcb4e2c647).
-
-**Approval:** Merged to `main` by the repository owner on November 9, 2026. Recorded here at Micah's request in the Catholic Repo chat that evening.
-
-### 2026-11-09, Catholic Repo
-
-**Summary:** Today's site updates.
-
-- GA4 real page paths, [`c6a740eaf4`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/c6a740eaf4c62e485e5e3688134faac5e891a277). QA passed all 12 hit-level checks.
-- Saints calendar live, [`c33eaf38f2`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/c33eaf38f2b078ff892f6b314bef0b40b26f8a45) and [`fe953d60fb`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/fe953d60fbfece07eb8e1ce8452f7cc7272a62d9). 366 `/saints/calendar/MM-DD/` day pages from 12,136 entries, one combined list per day with neutral notes where sources disagree, a single CatholicSaints.Info credit on `/references/`, and the raw import not deployed. QA passed.
-- Title separator " · ", [`2ace5d1c4e`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/2ace5d1c4e141a306ed7d04f2de903bd0be8859f), plus texts [`b11828a4ab`](https://github.com/BibliothecaCatholica/bibliotheca-texts/commit/b11828a4abf3d92358707217ef8b1fac16cab1ca).
-- Privacy page wording, [`757dacaab7`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/757dacaab7fdaa9aeeeb267fb590db99ee40d760).
-- Father Brown and Orthodoxy 1908 hosted, [`3f9820fe95`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/3f9820fe95f289f3a76d4278bbca95b6fe129a53) / [`459551a722`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/459551a722cc2bcf765b4dd5f03ef84f91225862). Live verification paused.
-
-**Approval:** Micah via the Project Manager, 3:57 PM CST, for the analytics fix and the saints calendar; 4:00 PM and 4:02 PM CST for one CatholicSaints credit on Resources and one combined list with a note where sources disagree ("ship it as catholic repo is doing it"); 4:22 PM CST for the title-separator change ("Run an aesthic analysis and make the change"). Father Brown hosting was earlier work; live verification remains paused.
+**Approval:** PR #18 merged by the repository owner, November 9. Micah in Catholic Repo's chat, 8:45 PM CST: CENTRAL.md "will be the focus of communication between you and chatgpt"; 8:38 PM CST: GitHub stays the source of truth with Cloudflare Pages serving the site. Via the Project Manager: 3:57 PM CST (analytics, saints calendar), 4:00 and 4:02 PM CST (one credit, one combined list), 4:22 PM CST (title separator).
 
 ## Open items
 
-- GitHub Pages shutoff on November 12, 2026, after QA confirms zero traffic. The `CNAME` file stays. texts.bibliothecacatholica.com is untouched.
+- Hosted-text quality (PR #20): mobile QA and a manual proofread of Orthodoxy Chapter IV. Next editorial batches: the remaining Orthodoxy chapters one at a time; scan review of Supplement Q1 (three articles), including earlier automatic substitutions; then one Hopkins poem and its notes.
+- [PR #17](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/17), libraries and offline saints recovery: about 25 commits behind `main` with conflicts in `tools/build_static.py`, `data/catholic-hub.json`, `data/data.js`, and `AGENTS.md`. Rebuild on current `main` or close; do not merge as is.
+- Advent launches November 29. `data/advent-2026.json` checked November 13: 26 days, November 29 to December 24, weekdays and 2026 liturgical labels correct, no em-dashes or empty fields, all links resolve to catalog works. Still to do from the [Advent launch checklist](docs/ADVENT-LAUNCH.md): excerpt-to-source comparison, and Substack and social readiness.
+- The takedown page still shows "PLACEHOLDER: designated takedown agent." Micah to decide the name, postal address, and email.
+- Record whether the November 12 GitHub Pages shutoff happened. The `CNAME` file stays; texts.bibliothecacatholica.com is untouched.
 - Paused: security headers (`_headers` Report-Only CSP) and low-priority npm audit findings.
 - Page-audit decisions awaiting Micah: the publish allowlist, and the `study/index.html` sitemap or noindex question.
-- [PR #17](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/17), libraries and offline saints recovery, is still open. Check live PR state before continuing it.
-- Run the [Advent launch checklist](docs/ADVENT-LAUNCH.md) before November 29. Site source is present; Substack and social readiness have not been inspected.
 - Recover the missing evidence identified in the [repository audit](docs/REPOSITORY-AUDIT-2026-11-09.md). Do not fabricate reports.
-- Confirm independent backups, the takedown contact decision, and account responsibilities using [OPERATIONS](docs/OPERATIONS.md).
+- Confirm independent backups and account responsibilities using [OPERATIONS](docs/OPERATIONS.md).
 
 ## Reference map
 

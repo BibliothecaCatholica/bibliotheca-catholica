@@ -17,11 +17,17 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--fonts',default='/usr/share/fonts/truetype/sand-box/google');ap.add_argument('--out',default=str(ROOT/'assets/og-image.png'));a=ap.parse_args()
     W,H=1200,630;im=Image.new('RGB',(W,H),RUBRIC);d=ImageDraw.Draw(im)
     d.rectangle([28,28,W-29,H-29],outline=GOLD,width=3);d.rectangle([40,40,W-41,H-41],outline=(196,150,80),width=1)
-    # cross mark from the site logo (same geometry as the favicon path, scaled)
-    cx,cy,s=W//2,150,2.2
+    # The Spanish Victory cross, with its trefoil terminals and Alpha/Omega,
+    # adapted from the shared site mark and rendered in the existing palette.
+    cx,cy=W//2,150
     d.ellipse([cx-66,cy-66,cx+66,cy+66],outline=GOLD,width=4)
-    pts=[(29,12),(35,12),(35,26),(49,26),(49,32),(35,32),(35,52),(29,52),(29,32),(15,32),(15,26),(29,26)]
-    d.polygon([(cx+(x-32)*s,cy+(y-32)*s) for x,y in pts],fill=GOLD)
+    d.rounded_rectangle([cx-8,cy-47,cx+8,cy+44],radius=8,fill=GOLD)
+    d.rounded_rectangle([cx-48,cy-13,cx+48,cy+3],radius=8,fill=GOLD)
+    for x,y,r in ((0,-53,8),(-9,-45,6),(9,-45,6),(0,50,8),(-9,42,6),(9,42,6),(-53,-5,8),(-45,-14,6),(-45,4,6),(53,-5,8),(45,-14,6),(45,4,6)):
+        d.ellipse([cx+x-r,cy+y-r,cx+x+r,cy+y+r],fill=GOLD)
+    greek=font(a.fonts,'EBGaramond-VariableFont_wght.ttf',24,600)
+    d.text((cx-34,cy+8),'Α',font=greek,fill=CREAM)
+    d.text((cx+17,cy+8),'Ω',font=greek,fill=CREAM)
     title=font(a.fonts,'CormorantGaramond-VariableFont_wght.ttf',92,700);sub=font(a.fonts,'EBGaramond-Italic-VariableFont_wght.ttf',38,400);small=font(a.fonts,'EBGaramond-VariableFont_wght.ttf',28,500)
     def centre(y,t,f,fill):
         w=d.textlength(t,font=f);d.text(((W-w)/2,y),t,font=f,fill=fill)

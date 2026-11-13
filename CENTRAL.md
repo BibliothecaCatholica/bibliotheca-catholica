@@ -39,6 +39,14 @@ Confirmed November 9, 2026: the apex and `www` resolve to Cloudflare (A records 
 
 Newest first. Entry shape: date (America/Chicago), author (bot name or ChatGPT), summary, commits/PRs, and approval source. Current open items are listed once below, not repeated in every entry.
 
+### 2026-11-12, ChatGPT
+
+**Summary:** Replaced the plain cross throughout the shared site shell with a Spanish Victory cross, preserving the burgundy, gold, and cream palette. Updated the SVG browser icon and social preview artwork; regenerated all 4,925 static pages from `index.html` with `tools/build_static.py`. Branch: `codex/spanish-victory-cross-20261113`.
+
+**Validation/status:** Static generation completed (4,925 pages; 4,926 sitemap URLs). `git diff --check` passed; the previous plain-cross path and data-URI favicon no longer appear in generated HTML. Not merged or deployed.
+
+**Approval:** Micah in the current chat requested the cross be used throughout the website while retaining its existing colors.
+
 ### 2026-11-11, Catholic Repo
 
 **Summary:** Replaced the plain TAN Books link on `/libraries/` with the existing LeadDyno referral link `https://lddy.no/1qbrw`. The publishers entry is still named TAN Books. The link text is "Browse TAN Books ↗", with `rel="noopener sponsored"` and the FTC disclosure in `<main>`, on both the static page and in the app. Cache tokens: `data/data.js?v=` and `app.js?v=` are now `20261111-tan-libraries`. Tests: 113 Node and 228 Python (one new libraries-page assertion).

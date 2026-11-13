@@ -41,6 +41,14 @@ As of November 13, 2026, with PRs #20 and #23:
 
 Newest first. Entry shape: date (America/Chicago), author, summary, commits/PRs, validation, and approval source. Open items are listed once below, not repeated in every entry.
 
+### 2026-11-13, Claude (Claude Code): Orthodoxy structured-text pilot, Step 1 survey
+
+**Summary:** Surveyed Project Gutenberg's HTML for Orthodoxy before building the structured-text and EPUB pipeline. Pinned both files, with original bytes and records (URL, retrieval time, SHA-256, size, and markup counts), in `data/sources/gutenberg-html/`. #130 HTML has the same words as `data/texts/pg-130.txt` but no structure beyond the TXT: 244 paragraphs, headings, and no italics, verse, or notes. #16769 HTML has 92 italic spans in the chapters (including both page-99 "if" words) and 4 verse passages (13 lines). However, it transcribes the 1934 London "Week-End Library" reprint (Bodley Head; printed by William Clowes), has no Preface, and differs from pg-130 at 114 word-level places. Stopped for Micah's decision, as the task requires; no converter, renderer, or EPUB code yet. The hosted edition stays pg-130.
+
+**Commits/PRs:** branch `claude/orthodoxy-structured-epub`, draft PR. `data/texts/pg-130.txt` is unchanged.
+
+**Approval:** Micah, November 12: "Yes and have the first book be orthodoxy as the test for this." Network: Micah approved a personal `bibliotheca-catholica` cloud environment allowing gutenberg.org on November 13.
+
 ### 2026-11-13, Claude (Claude Code): PRs #20 and #17 landed
 
 **Summary:** Merged PR #20 (hosted-text inventory and Orthodoxy Chapter IV formatting pilot) after mobile QA. Rebuilt PR #17 (Great Libraries research desk and offline saints recovery tool) on current `main` as PR #23. Ported its sources unchanged: `tools/library_desk.py`, `src/libraries/`, `styles/library-desk.css`, `tools/recover_saints_archive.py`, the pinned `fuse.js` 7.1.0, the two Libraries resources (Open Library, plus Corpus Thomisticum under Libraries), and the CI drift check for `assets/libraries`. Resolved the `tools/build_static.py` conflict by keeping the TAN referral disclosure in the resource list and adding the desk above it. #17's AGENTS.md note moved to `docs/IMPLEMENTATION-NOTES.md`, since AGENTS.md now holds rules only. Corrected the Fuse.js license in `docs/LIBRARIES-AND-ARCHIVES.md` from MIT to Apache-2.0. Cache tokens `data/data.js?v=` and `app.js?v=` are `20261113-libraries`.
@@ -109,6 +117,7 @@ Newest first. Entry shape: date (America/Chicago), author, summary, commits/PRs,
 
 ## Open items
 
+- Orthodoxy structured-text pilot: Micah to choose the markup source (see the Step 1 survey entry): #130 HTML (structure only), #16769 markup as cited evidence over pg-130's own words, or #130 plus manual scan-verified emphasis and verse.
 - Hosted-text quality: a manual proofread of Orthodoxy Chapter IV. Next editorial batches: the remaining Orthodoxy chapters one at a time; scan review of Supplement Q1 (three articles), including earlier automatic substitutions; then one Hopkins poem and its notes.
 - Libraries research candidates in `docs/LIBRARIES-AND-ARCHIVES.md` (CRMEDR, Torch data, an opt-in Open Library edition finder) need rights and provenance review before any import.
 - Advent launches November 29. `data/advent-2026.json` checked November 13: 26 days, November 29 to December 24, weekdays and 2026 liturgical labels correct, no em-dashes or empty fields, all links resolve to catalog works. Still to do from the [Advent launch checklist](docs/ADVENT-LAUNCH.md): excerpt-to-source comparison, and Substack and social readiness.

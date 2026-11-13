@@ -683,7 +683,10 @@ def main():
             rows=[r for r in hub['resources'] if r['section']==k]
             extra='<ul>'+''.join(resource_li(r) for r in rows)+'</ul>'
             if any(r.get('url')==TAN_REFERRAL for r in rows):extra+=PE['disclosure']
-        elif k=='timeline':
+        if k=='libraries':
+            from library_desk import desk_html
+            extra=desk_html()+extra
+        if k=='timeline':
             extra='<p>Authors are placed by their principal-work century; additional saints use sourced life dates. Undated and legendary figures remain outside the dated sequence. Writings by a person and biographies about them are listed separately in the interactive timeline.</p><p>'+a('/saints/','Saints & Hagiography')+' · '+a('/library/','Reading room')+'</p>'
             for au in sorted(authors,key=lambda x:(x.get('century') or 999,x['name'])):
                 mine=[w for w in lib['works'] if w.get('authorId')==au['id']]

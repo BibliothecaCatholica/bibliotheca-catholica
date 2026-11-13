@@ -1,6 +1,6 @@
 # Contributing
 
-Start with [AGENTS](AGENTS.md) and [CENTRAL](CENTRAL.md). Use Node 22, Python 3.12, and `npm ci`, then the complete [validation procedure](docs/OPERATIONS.md#validation), including `npm run build:study`. Current hosting verification, analytics/affiliate boundaries, and account responsibilities are documented in [OPERATIONS](docs/OPERATIONS.md) and [PROJECT-RULES](docs/PROJECT-RULES.md).
+Start with [AGENTS](AGENTS.md) and [CENTRAL](CENTRAL.md). Use Node 22, Python 3.12, and `npm ci`, then the complete [validation procedure](docs/OPERATIONS.md#validation), including `npm run build:study`. Current hosting verification, analytics/affiliate boundaries, and account responsibilities are documented in [OPERATIONS](docs/OPERATIONS.md), [PROJECT-RULES](docs/PROJECT-RULES.md), and [ANALYTICS](docs/ANALYTICS.md).
 
 Read [the catalog rules](docs/CATALOG.md) before editing catalog content. The owner maintains the catalog and reviews inclusion, source evidence, and rights decisions. Listing an imported record is not endorsement.
 

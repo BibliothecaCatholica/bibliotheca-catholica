@@ -30,18 +30,28 @@ Last confirmed November 9, 2026: the apex and `www` resolve to Cloudflare, and h
 
 ## Verified snapshot
 
-As of November 13, 2026, with PR #20:
+As of November 13, 2026, with PRs #20 and #23:
 
 - 104 work records; 64 hosted editions of 59 works in `data/library.json`.
 - 4,925 static pages and 4,926 sitemap URLs from `tools/build_static.py`; about 6,370 tracked files.
-- Tests: 113 Node and 231 Python.
+- Tests: 115 Node and 231 Python.
 - Historical 765/766-page notes are stale. Read the current static builder output for page totals.
 
 ## Handoff log
 
 Newest first. Entry shape: date (America/Chicago), author, summary, commits/PRs, validation, and approval source. Open items are listed once below, not repeated in every entry.
 
-### 2026-11-13, Claude (Claude Code)
+### 2026-11-13, Claude (Claude Code): PRs #20 and #17 landed
+
+**Summary:** Merged PR #20 (hosted-text inventory and Orthodoxy Chapter IV formatting pilot) after mobile QA. Rebuilt PR #17 (Great Libraries research desk and offline saints recovery tool) on current `main` as PR #23. Ported its sources unchanged: `tools/library_desk.py`, `src/libraries/`, `styles/library-desk.css`, `tools/recover_saints_archive.py`, the pinned `fuse.js` 7.1.0, the two Libraries resources (Open Library, plus Corpus Thomisticum under Libraries), and the CI drift check for `assets/libraries`. Resolved the `tools/build_static.py` conflict by keeping the TAN referral disclosure in the resource list and adding the desk above it. #17's AGENTS.md note moved to `docs/IMPLEMENTATION-NOTES.md`, since AGENTS.md now holds rules only. Corrected the Fuse.js license in `docs/LIBRARIES-AND-ARCHIVES.md` from MIT to Apache-2.0. Cache tokens `data/data.js?v=` and `app.js?v=` are `20261113-libraries`.
+
+**Commits/PRs:** [PR #20](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/20), squash-merged as [`56b71d0e8c`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/56b71d0e8cab26169de82cf7dfa0a59d243d65b9). [PR #23](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/23) replaces [PR #17](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/17), which is closed.
+
+**Validation/status:** #20: all GitHub checks passed. Chapter IV checked at iPhone 13 width in both themes: no overflow, Yeats lines set apart, both italic “if” words present, no script errors or missing files. #23: all three builds pass with no post-commit drift; 115 Node and 231 Python tests pass; the generated `assets/libraries/desk.js`, its license file, and `data/library-desk.js` are byte-identical to #17's. In a browser, `/libraries/` at desktop and phone, both themes: six research paths, the Fuse bundle loads, "intrnet archve" finds Internet Archive, the TAN referral link is intact, no overflow, no script errors. The desk sends no analytics events.
+
+**Approval:** Micah, November 13: "Main concern is the features and additions of each being #20 and #17 being on the website." The saints recovery tool keeps #17's November 9 owner authorization; recovered outputs stay outside the repository.
+
+### 2026-11-13, Claude (Claude Code): cross logo
 
 **Summary:** Merged the Spanish Victory cross (PR #21) and followed up on small sizes. The cross with trefoil terminals replaces the plain cross in the shared header, the browser icon (`assets/favicon.svg`, replacing the inline data-URI icon), and the social preview (`tools/make_og_image.py` regenerates `assets/og-image.png`), in the existing burgundy, gold, and cream palette. The Alpha and Omega stay in the social preview image only: at the 32 px header and the 16 px tab icon they rendered as specks, so the follow-up removes them there. Also brought PR #20 up to date with this `main`.
 
@@ -99,8 +109,8 @@ Newest first. Entry shape: date (America/Chicago), author, summary, commits/PRs,
 
 ## Open items
 
-- Hosted-text quality (PR #20): mobile QA and a manual proofread of Orthodoxy Chapter IV. Next editorial batches: the remaining Orthodoxy chapters one at a time; scan review of Supplement Q1 (three articles), including earlier automatic substitutions; then one Hopkins poem and its notes.
-- [PR #17](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/17), libraries and offline saints recovery: about 25 commits behind `main` with conflicts in `tools/build_static.py`, `data/catholic-hub.json`, `data/data.js`, and `AGENTS.md`. Rebuild on current `main` or close; do not merge as is.
+- Hosted-text quality: a manual proofread of Orthodoxy Chapter IV. Next editorial batches: the remaining Orthodoxy chapters one at a time; scan review of Supplement Q1 (three articles), including earlier automatic substitutions; then one Hopkins poem and its notes.
+- Libraries research candidates in `docs/LIBRARIES-AND-ARCHIVES.md` (CRMEDR, Torch data, an opt-in Open Library edition finder) need rights and provenance review before any import.
 - Advent launches November 29. `data/advent-2026.json` checked November 13: 26 days, November 29 to December 24, weekdays and 2026 liturgical labels correct, no em-dashes or empty fields, all links resolve to catalog works. Still to do from the [Advent launch checklist](docs/ADVENT-LAUNCH.md): excerpt-to-source comparison, and Substack and social readiness.
 - The takedown page still shows "PLACEHOLDER: designated takedown agent." Micah to decide the name, postal address, and email.
 - Record whether the November 12 GitHub Pages shutoff happened. The `CNAME` file stays; texts.bibliothecacatholica.com is untouched.

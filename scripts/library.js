@@ -149,7 +149,11 @@ function related(render){render('<div class="page-head"><div class="eyebrow">Exp
 var SE_NOTICE='This text comes from the Standard Ebooks edition, which its producers dedicate to the public domain (CC0 1.0); it is not a Project Gutenberg eBook. Bibliotheca Catholica corrected it to the wording of the first printings where they differ; each correction is listed in the edition’s provenance record.';
 // Opt-in source-bound presentation. Keep textContent and block indexes exact for saved notes.
 function renderReadingBlock(e,p,i,anchor){
- var f=e.readerFormatting,active=f&&f.sha256===e.sha256,v=active&&f.verse.find(function(x){return x.block===i}),prose=active&&f.proseRanges.some(function(r){return i>=r[0]&&i<=r[1]}),cls=v?'reading-verse':prose?'reading-prose':'',content=esc(p);
+ // Structured-text pilot (PR #24): a role class (title, byline, heading, chapter, contents) from data/structured/*.json,
+ // shipped in data/text-pages.js (or attached as e.structure by the static builder); only for this exact TXT.
+ var S=e.structure||(function(){var T=typeof window!=='undefined'&&window.TEXT_PAGES||{};for(var k in T)if(T[k].edition===e.id&&T[k].s)return {sha256:T[k].s.sha256,roles:T[k].s.r};return null})();
+ var st=S&&S.sha256===e.sha256?S.roles.find(function(x){return x[0]===i}):null;
+ var f=e.readerFormatting,active=f&&f.sha256===e.sha256,v=active&&f.verse.find(function(x){return x.block===i}),prose=active&&f.proseRanges.some(function(r){return i>=r[0]&&i<=r[1]}),cls=[st?'reading-'+st[1]:'',v?'reading-verse':prose?'reading-prose':''].filter(Boolean).join(' '),content=esc(p);
  if(active&&!v){var at=0,parts=[];(f.emphasis||[]).forEach(function(x){if(x.block===i){parts.push(esc(p.slice(at,x.start)),'<em>'+esc(p.slice(x.start,x.end))+'</em>');at=x.end}});content=parts.join('')+esc(p.slice(at))}
  if(v){var starts=v.lineStarts.concat([p.length]);content=v.lineStarts.map(function(a,k){return '<span class="verse-line">'+esc(p.slice(a,starts[k+1]))+'</span>'}).join('')}
  return '<p'+(anchor?' id="reading-p-'+i+'"':'')+(cls?' class="'+cls+'"':'')+'>'+content+'</p>';

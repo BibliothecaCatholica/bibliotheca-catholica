@@ -15,7 +15,7 @@ import hashlib,html,json,re,shutil,sys,urllib.parse
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE='https://bibliothecacatholica.com/';E=html.escape
 sys.path.insert(0,str(ROOT/'tools'));import site_copy,build_info
-from reader_formatting import reading_block, formatting_note
+from reader_formatting import reading_block, formatting_note, with_structure
 # --- v17 SEO: see docs/SEO.md ---------------------------------------------------------------------
 NAME='Bibliotheca Catholica';OG_IMAGE=SITE+'assets/og-image.png'
 # Profiles we can verify belong to the project: the GitHub organization (this repo) and the Bluesky
@@ -314,7 +314,7 @@ def series_html(w,lib,TPD):
 def part_pages(out,lib,by_html,author_ld):
     TPD=json.loads((ROOT/'data/text-pages.json').read_text())['works'];libw={w['id']:w for w in lib['works']}
     for wid,d in TPD.items():
-        w=libw[wid];e=next(x for x in w['editions'] if x['id']==d['edition']);B=text_split(e['text']);n=len(d['items'])
+        w=libw[wid];e=with_structure(next(x for x in w['editions'] if x['id']==d['edition']));B=text_split(e['text']);n=len(d['items'])
         for k,x in enumerate(d['items']):
             route=part_path(wid,d,x);prev=d['items'][k-1] if k else None;nxt=d['items'][k+1] if k+1<n else None
             nav=('<nav class="reader-pagination" aria-label="'+E(d['nouns'])+'">'+(a('/'+part_path(wid,d,prev)+'/','← '+prev['title']).replace('<a ','<a class="btn ghost" rel="prev" ',1) if prev else '')

@@ -28,12 +28,23 @@ As of November 14, 2026, `main` at `67b68fabbe` (PR #25) plus the design-pass br
 
 - 104 work records; 64 hosted editions of 59 works in `data/library.json`.
 - 4,925 static pages and 4,926 sitemap URLs from `tools/build_static.py`; 6,389 tracked files, 5,923 of them generated and marked `linguist-generated` in `.gitattributes`.
-- Tests: 122 Node and 231 Python with the design-pass branches (7 Node design-budget tests).
-- Landed: PRs #17 (as #23), #20, #21, #22, and #25. Merged: #26 (design pass part 1). Open: [PR #27](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/27), design pass part 2; [PR #24](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/24), Orthodoxy structured-text and EPUB pilot.
+- Tests: 124 Node and 238 Python (with PR #24).
+- Landed: PRs #17 (as #23), #20, #21, #22, and #25. Merged: #26 and #27 (design pass parts 1 and 2). Open: [PR #24](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/24), Orthodoxy structured-text and EPUB pilot.
 
 ## Handoff log
 
 Newest first. Entry shape: date (America/Chicago), author, summary, commits/PRs, validation, and approval source. Open items are listed once below, not repeated in every entry. Older entries are in Git history: `git log -p -- CENTRAL.md`.
+
+### 2026-11-14, Claude (Claude Code): Orthodoxy structured-text pilot, Steps 2 to 6 (Part C)
+
+- **Summary:** Following Micah's decision (the hosted edition's own HTML, #130, structure only; #16769 kept as reference evidence only), `tools/structure_text.py` converts the pinned #130 HTML into `data/structured/orthodoxy-pg-130.json`: structure only (title, byline, headings, contents, nine chapters, paragraphs), keyed to the TXT's block indexes, holding no body text. Fidelity gate (in `npm run build` and `tests/test_structured_text.py`): TXT and HTML checksums; all 257 TXT body blocks covered in order, word for word (the only accepted difference is the HTML's em dash for the TXT's two hyphens, 103 times; the credits line is split in two in the HTML); chapter map identical to `data/text-pages.json`; the Chapter IV pilot carried over unchanged. Rendering: roles ship in `data/text-pages.js`, and the reader and static pages add a role class while every character still comes from the TXT; `data/library.json` and `data/library.js` are unchanged. EPUB: `tools/build_epub.py` builds a deterministic EPUB 3 from the TXT and the intermediate (Chapter IV verse and emphasis, the full Gutenberg header and license, a colophon); CI uploads it as a PR artifact (`.github/workflows/epub-pilot.yml`); it is not published or linked. Story of a Soul (pg-16772) surveyed and pinned (`data/sources/gutenberg-html/pg16772-images.*`), not built.
+- **Commits/PRs:** [PR #24](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/24), branch `claude/orthodoxy-structured-epub`, brought up to date with `main`.
+- **Validation/status:** Three builds pass; 124 Node and 238 Python tests pass; no drift after commit. `pg-130.txt` and `pg-16772.txt` checksums unchanged. Browser: reader roles on desktop and phone, Chapter IV keeps its two italic "if" words and two verse lines, no script errors.
+- **Approval:** Micah, November 14, 2026: the Part A to C brief with the DECISION "use the hosted edition's own HTML (#130), structure only," and "continue with Part C ... stop for my review when its PR is ready. Do not merge Part C or start Part D without me."
+
+### 2026-11-14, Claude (Claude Code): design pass part 2 merged and deployed
+
+- PR #27 squash-merged as [`d7943291`](https://github.com/BibliothecaCatholica/bibliotheca-catholica/commit/d7943291f0534244be7a641e14cb0b8eae65e08f) after its checks passed on `e87d218`. Cloudflare deploy confirmed: https://bibliothecacatholica.com/build.json served `bc-bab55b05a928`, the build ID of `main` at that commit; the live home page has the portrait row and the phone search button, and `/assets/portraits/augustine-of-hippo.webp` is served (image/webp).
 
 ### 2026-11-14, Claude (Claude Code): design pass, part 2 (Steps 2, 3, 4, 7, 8 and review fixes)
 
@@ -74,8 +85,8 @@ Newest first. Entry shape: date (America/Chicago), author, summary, commits/PRs,
 
 ## Open items
 
-- Design pass part 2 is in review, stacked on PR #26. Micah to choose a hero engraving (proposals in its PR).
-- Hosted-text quality: a manual proofread of Orthodoxy Chapter IV. Next editorial batches: the remaining Orthodoxy chapters one at a time; scan review of Supplement Q1 (three articles), including earlier automatic substitutions; then one Hopkins poem and its notes. PR #24 (Orthodoxy structured text and EPUB) continues after design part 2; decided November 14: use the hosted edition's own HTML (#130), structure only.
+- Micah to choose a hero engraving (three proposals in PR #27). Part D (beautiful editions) waits for Micah after Part C.
+- Hosted-text quality: a manual proofread of Orthodoxy Chapter IV. Next editorial batches: the remaining Orthodoxy chapters one at a time; scan review of Supplement Q1 (three articles); then one Hopkins poem and its notes. PR #24 (structured text and review EPUB) awaits Micah's review.
 - Libraries research candidates in `docs/LIBRARIES-AND-ARCHIVES.md` (CRMEDR, Torch data, an opt-in Open Library edition finder) need rights and provenance review before any import.
 - Advent launches November 29. Still to do from the [Advent launch checklist](docs/ADVENT-LAUNCH.md): excerpt-to-source comparison, and Substack and social readiness.
 - The takedown page still shows "PLACEHOLDER: designated takedown agent." Micah to decide the name, postal address, and email.

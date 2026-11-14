@@ -35,12 +35,40 @@ def validate_formatting(edition, blocks):
         assert not any(v['block'] == i for v in f['verse']), 'Separate verse/emphasis in this pilot'
 
 
+def structure_for(edition):
+    """The structured-text pilot's roles for this edition (data/structured/*.json from tools/structure_text.py),
+    only when built from this exact TXT. Roles are presentation only: the text still comes from the TXT."""
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parents[1]
+    for p in sorted((root / 'data/structured').glob('*.json')):
+        d = json.loads(p.read_text())
+        if d.get('edition') == edition.get('id') and d['txt']['sha256'] == edition.get('sha256') and d['gate']['passed']:
+            return {'sha256': d['txt']['sha256'], 'source': 'data/structured/' + p.name,
+                    'roles': [[b['block'], b['role']] for b in d['blocks'] if b['role'] != 'paragraph']}
+    return None
+
+
+def with_structure(edition):
+    """A copy of the edition with its structure roles attached (for data/library.js and the static pages)."""
+    s = structure_for(edition)
+    return dict(edition, structure=s) if s else edition
+
+
+def block_role(edition, index):
+    s = edition.get('structure')
+    if not s or s['sha256'] != edition.get('sha256'):
+        return ''
+    return next((r for b, r in s['roles'] if b == index), '')
+
+
 def reading_block(edition, text, index, anchor=False):
     f = edition.get('readerFormatting')
     active = f and f['sha256'] == edition['sha256']
     verse = next((v for v in f['verse'] if v['block'] == index), None) if active else None
     prose = active and any(lo <= index <= hi for lo, hi in f['proseRanges'])
-    cls = 'reading-verse' if verse else 'reading-prose' if prose else ''
+    role = block_role(edition, index)
+    cls = ' '.join(x for x in (('reading-' + role) if role else '', 'reading-verse' if verse else 'reading-prose' if prose else '') if x)
     content = html.escape(text)
     if active and not verse:
         at, parts = 0, []

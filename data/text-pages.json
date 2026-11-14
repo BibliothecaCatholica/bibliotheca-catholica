@@ -109,7 +109,73 @@
      "words": 8524,
      "firstWords": "The last chapter has been concerned with the contention that orthodoxy is"
     }
-   ]
+   ],
+   "structure": {
+    "sha256": "ec525c93afddb05465bf6fa0af8f873078b8e42a2a24f9b999582994f054fdf2",
+    "source": "data/structured/orthodoxy-pg-130.json",
+    "roles": [
+     [
+      10,
+      "title"
+     ],
+     [
+      12,
+      "byline"
+     ],
+     [
+      13,
+      "heading"
+     ],
+     [
+      16,
+      "heading"
+     ],
+     [
+      17,
+      "contents"
+     ],
+     [
+      18,
+      "heading"
+     ],
+     [
+      19,
+      "chapter"
+     ],
+     [
+      27,
+      "chapter"
+     ],
+     [
+      48,
+      "chapter"
+     ],
+     [
+      76,
+      "chapter"
+     ],
+     [
+      111,
+      "chapter"
+     ],
+     [
+      138,
+      "chapter"
+     ],
+     [
+      171,
+      "chapter"
+     ],
+     [
+      210,
+      "chapter"
+     ],
+     [
+      238,
+      "chapter"
+     ]
+    ]
+   }
   },
   "innocence-father-brown": {
    "edition": "pg-204",

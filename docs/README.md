@@ -12,6 +12,7 @@ Start with [AGENTS](../AGENTS.md) and [CENTRAL](../CENTRAL.md). CENTRAL is the o
 | [ADVENT-LAUNCH](ADVENT-LAUNCH.md) | Launch checklist; external publication state must be checked |
 | [Repository audit](REPOSITORY-AUDIT-2026-11-09.md) | Dated inventory, missing evidence, and retention decisions |
 | SAINTS, SAINTS-CALENDAR, RITES, SEO, TIMELINE, READING-GUIDES | Topic-specific implementation and rules; check dates before trusting counts |
+| [HOSTED-EDITIONS](HOSTED-EDITIONS.md) | Required before any hosted-book task: the structure, gate, rendering, and EPUB pipeline, the presentation standard, and each edition's status |
 | [COLLECTION-REVIEW](COLLECTION-REVIEW.md) | Dated collection assessment; not the current backlog |
 | HOSTED-TEXT-INVENTORY, HOSTED-TEXT-QUALITY, LIBRARIES-AND-ARCHIVES, AUTHOR-PAGES, PALETTE-NAVIGATION, READING-DESIGN-REFRESH | Topic references; search the inventory with grep rather than reading it whole |
 | `static-pages.txt` | Generated list of static pages; search with grep, never edit by hand |

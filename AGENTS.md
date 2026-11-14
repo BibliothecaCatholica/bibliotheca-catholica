@@ -28,4 +28,6 @@ Update [CENTRAL.md](CENTRAL.md) in place with significant updates, handoffs, dec
 
 Visual and layout changes follow the [design rules](docs/DESIGN.md).
 
+Before any task that touches a hosted book (its text, reader, chapter pages, EPUB, cover, or work page), read [hosted editions](docs/HOSTED-EDITIONS.md): how books are prepared and presented, and what must never change.
+
 Details: [project rules](docs/PROJECT-RULES.md), [analytics](docs/ANALYTICS.md), [implementation reference](docs/IMPLEMENTATION-NOTES.md), [catalog](docs/CATALOG.md), [rights](docs/RIGHTS.md), [saints](docs/SAINTS.md), [calendar](docs/SAINTS-CALENDAR.md), [rites](docs/RITES.md), [SEO](docs/SEO.md), [reading plans](docs/READING-GUIDES.md).

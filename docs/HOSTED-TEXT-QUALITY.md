@@ -1,5 +1,7 @@
 # Hosted-text quality
 
+For how hosted books are prepared and presented (structure files, the fidelity gate, rendering, and EPUBs), see [HOSTED-EDITIONS.md](HOSTED-EDITIONS.md). This document is the editorial assessment and correction procedure.
+
 This is the living editorial assessment and work procedure, not a claim that the collection has been proofread. The [generated inventory](HOSTED-TEXT-INVENTORY.md) enumerates every hosted edition, its file, source record, checksum, existing bibliographic note, and mechanical review indicators. Rebuild it with `python3 tools/audit_hosted_texts.py`. Snapshot inspected: main `25e6276`, November 12, 2026. The separate illuminated Orthodoxy Site is outside this project and was not modified.
 
 ## Actual scope

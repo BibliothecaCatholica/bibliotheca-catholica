@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE='https://bibliothecacatholica.com/'
 sys.path.insert(0,str(ROOT/'tools'))
 import build_text_pages as BTP
+from notices import PG_LINE  # noqa: E402
 R=lambda p:(ROOT/p).read_text()
 TP=json.loads(R('data/text-pages.json'))['works'];LIB={w['id']:w for w in json.loads(R('data/library.json'))['works']}
 SITEMAP=R('sitemap.xml');PAGES=set(R('docs/static-pages.txt').split())
@@ -48,11 +49,10 @@ class TextPages(unittest.TestCase):
                 self.assertIn('<link rel="canonical" href="'+SITE+p+'">',s);self.assertIn('<meta name="robots" content="index,follow">',s)
                 self.assertIn('window.BC_BOOT='+json.dumps(p.rstrip('/')),s)
                 self.assertEqual(m.count('<h1>'),1);self.assertIn('<h1>'+x['title'].replace('&','&amp;')+'</h1>',m)
-                # rule 2 (owner, November 14, 2026): one sentence and a licence link, once after the text and in the edition details
+                # rule 2 (owner, November 14, 2026): the licence's own 1.E.1 sentence, verbatim, once per page after the text
                 if 'gutenberg.org' in e['source']:
-                    self.assertEqual(m.count('class="small pg-notice">From Project Gutenberg: free for anyone in the United States and most other parts of the world under the <a href="https://www.gutenberg.org/policy/license.html"'),2,f)
-                    self.assertNotIn('This eBook is for the use of anyone',m,f)
-                else:self.assertEqual(m.count('class="small pg-notice">This text comes from the Standard Ebooks edition'),2,f);self.assertNotIn('Project Gutenberg License',m,f)
+                    self.assertEqual(m.count('class="small pg-notice">'+PG_LINE+'</p>'),1,f)  # verbatim 1.E.1, once per page
+                else:self.assertEqual(m.count('class="small pg-notice">This text comes from the Standard Ebooks edition'),1,f);self.assertNotIn('Project Gutenberg™ License',m,f)
                 self.assertGreater(m.index('pg-notice'),m.index('</article>'),f)
                 self.assertGreater(m.index('<details class="edition-details">'),m.index('</article>'),f)
                 for label in ('text-formatting','text-auto-layout','text-edition'):  # quality labels only in the edition details
@@ -116,3 +116,19 @@ class TextPages(unittest.TestCase):
             self.assertIn('The Scandal of Father Brown (1935)',m);self.assertIn('after this library’s 1931 cutoff',m)
         for p in PAGES:self.assertNotIn('gutenberg.net.au',R(p),p)
 if __name__=='__main__':unittest.main()
+
+
+class LicenceSentence(unittest.TestCase):
+    def test_pg_line_is_the_licence_clause_1e1_verbatim(self):
+        import sys, html as H
+        sys.path.insert(0, str(ROOT / 'tools'))
+        from notices import PG_LINE as P
+        raw = (ROOT / 'data/texts/pg-130.txt').read_text(encoding='utf-8-sig').replace('\r', '')
+        i = raw.index('1.E.1.'); a = raw.index('This eBook is for the use of anyone', i); b = raw.index('before using this eBook.', a) + len('before using this eBook.')
+        clause = ' '.join(raw[a:b].split())
+        shown = ' '.join(H.unescape(re.sub(r'<[^>]+>', '', P)).split())
+        self.assertEqual(shown, clause)
+        self.assertIn('>Project Gutenberg™ License</a>', P)
+        js = (ROOT / 'scripts/library.js').read_text()
+        self.assertIn("var PG_LINE='" + P.replace('"', '\\"') + "';", js)
+        self.assertIn(clause.replace('Project Gutenberg™ License', 'Project Gutenberg™ License'), (ROOT / 'scripts/reader.js').read_text())

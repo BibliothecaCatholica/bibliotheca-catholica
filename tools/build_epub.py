@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 from reader_formatting import reading_block, with_structure  # noqa: E402
 import structure_text as ST  # noqa: E402
+from notices import PG_LINE  # noqa: E402
 
 E = html.escape
 STAMP = (2026, 11, 14, 0, 0, 0)
@@ -39,6 +40,7 @@ p{margin:0 0 .9em;text-indent:0}
 .reading-verse{margin-left:1.5em}.verse-line{display:block}
 .notice p,.notice pre{font-size:.85em}.notice pre{white-space:pre-wrap;font-family:serif}
 .colophon{font-size:.85em}
+.pg-line{font-size:.8em;margin-top:2em}
 """
 
 
@@ -80,6 +82,8 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
         title = c['num'] + '. ' + TITLES[c['heading']]  # the site's chapter titles (data/text-pages.json)
         body = ('<section epub:type="chapter" aria-labelledby="h"><h2 id="h">' + E(title) + '</h2>'
                 + ''.join(to_xml(reading_block(e, B[i], i)) for i in ids) + '</section>')
+        if n == len(S['chapters']) - 1:  # rule 2: the licence's own 1.E.1 sentence once, at the end of the text
+            body = body[:-len('</section>')] + '<div class="pg-line">' + PG_LINE.replace(' target="_blank" rel="noopener"', '') + '</div></section>'
         docs.append(('ch%02d' % (n + 1), 'ch%02d.xhtml' % (n + 1), title, xhtml(title, body), ids))
 
     # Gutenberg header and license, verbatim (content rule 2)

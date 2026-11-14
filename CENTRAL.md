@@ -32,7 +32,7 @@ As of November 14, 2026, `main` at `6acc7bae4f` (PR #24) plus branch `claude/not
 
 ## Standing owner decisions
 
-- **Rule changes of November 14, 2026** (Micah's message pasted as the instruction "including every rule change below", items 1 to 5): one-sentence Gutenberg notice, quality labels in edition details only, one-line affiliate disclosure, badges only on a record's own page, one-line Wikipedia credit and a Credits toggle for public-domain portraits, the standing approval below, and this file's cap. Recorded here once; the rules cite it as "owner rule change, November 14, 2026". Details: `docs/PROJECT-RULES.md` rules 2, 7, 10, 11, 14, and 15.
+- **Rule changes of November 14, 2026** (Micah's message pasted as the instruction "including every rule change below", items 1 to 5): the Gutenberg notice once per page after the text (wording decision, Micah's follow-up message the same day: the licence's own 1.E.1 sentence, verbatim), quality labels in edition details only, one-line affiliate disclosure, badges only on a record's own page, one-line Wikipedia credit and a Credits toggle for public-domain portraits, the standing approval below, and this file's cap. Recorded here once; the rules cite it as "owner rule change, November 14, 2026". Details: `docs/PROJECT-RULES.md` rules 2, 7, 10, 11, 14, and 15.
 - **Standing approval:** presentation, docs, tests, and tooling may merge on green CI without Micah's review; his review is still required for new hosted texts, hosted-text wording, rights or licence statements, affiliate placements, analytics, hosting or DNS, takedown identity, and outreach ([OPERATIONS](docs/OPERATIONS.md#owner-decisions)).
 
 ## Handoff log
@@ -41,8 +41,8 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 ### 2026-11-14, Claude (Claude Code): notice rules applied site-wide
 
-- Chapter and Summa pages: text first, then the one-line notice, then an "Edition details" toggle (edition, source, quality labels, OCR notes); no badges. Reader: notice at the end of the last section and in "Source, rights, and downloads". Affiliate line once per page; badges off lists, author pages, the Advent plan, and rites resource lists (status kept as `data-rights`); one-line Wikipedia credit; Credits toggle for public-domain portraits; footer of two columns and one credits line.
-- [PR #28](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/28), branch `claude/notice-rules`: open for Micah's review, since it changes licence wording (outside the standing approval). Builds pass, 124 Node and 247 Python tests pass, no drift.
+- Chapter and Summa pages: text first, then the verbatim 1.E.1 licence sentence, then an "Edition details" toggle (edition, source, quality labels, OCR notes); no badges. Reader and EPUB: the same sentence at the end of the last section or chapter. Affiliate line once per page; badges off lists, author pages, the Advent plan, and rites resource lists (status kept as `data-rights`); one-line Wikipedia credit; Credits toggle for public-domain portraits; footer of two columns and one credits line.
+- [PR #28](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/28), branch `claude/notice-rules`: merged on green checks per Micah's follow-up (item 1), which settled the licence wording.
 
 ### 2026-11-14, Claude (Claude Code): PR #24 merged and deployed
 

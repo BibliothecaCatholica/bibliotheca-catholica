@@ -247,15 +247,15 @@ def list_item_title(i,gid,libw):
     assert t.strip(),'reading-list entry with no title, guide, or work: %r'%i
     return t
 # --- Deep-link gaps (2026-11-09): chapter and story pages for hosted texts (tools/text_pages.py, data/text-pages.json) ---
-# Notice rule 2 (owner, November 14, 2026): one sentence with a link to the full licence, in the edition details and
-# once at the end of the text or page; never above the text or per section. The hosted TXT and downloads keep the
-# full license. Same words as PG_LINE in scripts/library.js.
-PG_LINE=('From Project Gutenberg: free for anyone in the United States and most other parts of the world under the '
-  '<a href="https://www.gutenberg.org/policy/license.html" target="_blank" rel="noopener">Project Gutenberg License</a>.')
+# Notice rule 2 (owner, November 14, 2026; wording decision of the same day): the Project Gutenberg License's own
+# sentence (clause 1.E.1), verbatim, never paraphrased, once per page at the end of the text in small type, with
+# "Project Gutenberg License" linked to the full licence. tests/test_text_pages.py checks it against the licence
+# text in data/texts/pg-130.txt. Same words as PG_LINE in scripts/library.js and tools/build_epub.py.
+from notices import PG_LINE  # noqa: E402  (verbatim 1.E.1 sentence)
 SE_NOTICE=('This text comes from the Standard Ebooks edition, which its producers dedicate to the public domain (CC0 1.0); it is not a Project Gutenberg eBook. '
   'Bibliotheca Catholica corrected it to the wording of the first printings where they differ; each correction is listed in the edition’s provenance record.')  # same words as SE_NOTICE in scripts/library.js
 def edition_details(*rows):
-    """Edition details (rules 2, 7, and 10 of November 14, 2026): source, notice, and quality labels, collapsed."""
+    """Edition details (rules 2 and 10 of November 14, 2026): source and quality labels, collapsed. The licence notice is not repeated here (once per page)."""
     return '<details class="edition-details"><summary>Edition details</summary>'+''.join(r for r in rows if r)+'</details>'
 def is_pg(e):return 'gutenberg.org' in e['source']
 def text_notice(e):
@@ -338,7 +338,6 @@ def part_pages(out,lib,by_html,author_ld):
               +text_notice(e)+nav+parts_list(wid,d)
               +edition_details('<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+'. '+E(d.get('editionLine') or e.get('note',''))+'</p>',
                   '<p class="small">Source: '+E(w['author']+'. '+w['title']+'. '+e['label']+'.')+' '+text_source(e)+' '+a('/rights/','How rights are checked')+'.</p>',
-                  text_notice(e),
                   (formatting_note(e) if any(lo <= x['end'] and hi >= x['start'] for lo,hi in e.get('readerFormatting',{}).get('proseRanges',[])) else ''),
                   ('<p class="small text-auto-layout">'+E(AUTO_LABEL)+'</p>' if e.get('autoLayout') else ''),
                   '<p class="small">The reading room adds highlights, notes, find in work, and saved places. This page shows the same hosted text in one piece.</p>')
@@ -401,7 +400,7 @@ def summa_pages(out,lib):
                'obvious OCR errors were corrected, and passages marked “OCR uncertain” could not be confidently corrected, so check them against the linked scan page.</p>')
     SUPP_LINE=('<p class="small supp-line">From the Supplement, compiled after Aquinas’s death from his Commentary on the Sentences and transcribed here from the 1917 to 1922 printings. '+a('/summa/supp/','About the Supplement')+'.</p>')
     def NOTICE(P):return '' if P['slug']=='supp' else pg_notice  # end of page; the Supplement's notice is a quality label (details only)
-    def DETAILS(P,extra=''):return edition_details(edline(P),source(P),tr_notice if P['slug']=='supp' else pg_notice,extra,other)
+    def DETAILS(P,extra=''):return edition_details(edline(P),source(P),tr_notice if P['slug']=='supp' else '',extra,other)
     C=[('Discover & Read','library/'),(w['title'],'work/'+w['id']+'/')]
     flat=[(P,q,x) for P in S['parts'] for q in P['questions'] for x in q['articles']]
     qflat=[(P,q) for P in S['parts'] for q in P['questions']]

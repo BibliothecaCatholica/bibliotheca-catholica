@@ -363,12 +363,12 @@ document.addEventListener('keydown',function(ev){
  ev.preventDefault();ev.stopImmediatePropagation();act(a,document.activeElement);
 });
 // ---------- print ----------
-var PG_NOTICE='This eBook is for the use of anyone anywhere in the United States and most other parts of the world at no cost and with almost no restrictions whatsoever. You may copy it, give it away or re-use it under the terms of the Project Gutenberg License included with this eBook or online at www.gutenberg.org. If you are not located in the United States, you will have to check the laws of the country where you are located before using this eBook.';
+var PG_NOTICE='This eBook is for the use of anyone anywhere in the United States and most other parts of the world at no cost and with almost no restrictions whatsoever. You may copy it, give it away or re-use it under the terms of the Project Gutenberg™ License included with this eBook or online at www.gutenberg.org. If you are not located in the United States, you will have to check the laws of the country where you are located before using this eBook.';
 function printNow(all){
  var old=document.getElementById('print-all');if(old)old.remove();
  if(all){
   var pg=/gutenberg\.org/.test(R.e.source),d=document.createElement('div');d.id='print-all';
-  var notice=pg?'<p class="pa-notice">'+esc(PG_NOTICE)+' Project Gutenberg License: https://www.gutenberg.org/policy/license.html</p>':'';
+  var notice=pg?'<p class="pa-notice">'+esc(PG_NOTICE)+' Full licence: https://www.gutenberg.org/policy/license.html</p>':'';
   d.innerHTML='<h1>'+esc(R.w.title)+'</h1><p class="pa-ed">'+esc(R.w.author)+'. Reading: '+esc(editionLine(R.w,R.e))+'. Printed from bibliothecacatholica.com/'+esc(R.base)+'</p>'+notice+R.blocks.map(function(p,i){return W.BCReadingBlock?W.BCReadingBlock(R.e,p,i,false):'<p>'+esc(p)+'</p>'}).join('')+notice;
   document.body.appendChild(d);document.body.classList.add('print-all');
  }

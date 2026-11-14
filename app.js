@@ -33,7 +33,16 @@ function initial(n){var s=n.replace(/^(St\.|Pope|Bishop|Fr\.|Dr\.|Mother|Dom|Bl\
 /* v18 portraits: shown only with a credit from the file page (tools/fetch_portrait_credits.py). The author page shows every
    credited portrait with its credit line; list thumbnails show only those that need no attribution (imgCredit.pd). */
 function portraitOk(a,full){return !!(a.img&&a.imgCredit&&(full||a.imgCredit.pd))}
-function avatar(a,cls,full){var ok=portraitOk(a,full);return '<span class="'+(cls||'avatar')+'">'+(ok?'<img loading="lazy" alt="" src="'+esc(a.img)+'" onerror="this.remove()">':esc(initial(a.name)))+'</span>'}
+/* Design part 2 (owner decision 2026-11-14): list thumbnails come from the self-hosted public-domain set
+   (tools/fetch_portraits.py, data/portraits.json, ids in SITE_COPY.portraits); person pages keep the larger
+   Wikimedia image with its credit. Fixed width and height so lists never jump; an initial otherwise. */
+var PORTRAITS={};((window.SITE_COPY||{}).portraits||[]).forEach(function(id){PORTRAITS[id]=1});
+function thumb(id,name,px,cls){px=px||48;return '<span class="'+(cls||'pt')+'" style="--pt:'+px+'px" aria-hidden="true">'+(id&&PORTRAITS[id]?'<img src="/assets/portraits/'+esc(id)+'.webp" width="'+px+'" height="'+px+'" loading="lazy" decoding="async" alt="">':'<span class="pt-i">'+esc(initial(name||'?'))+'</span>')+'</span>'}
+window.BCPortrait=thumb;
+/* Person pages: the self-hosted thumbnail (or the initial) shows at once; the larger credited Wikimedia image is laid
+   over it and fades in only once it has loaded, so the portrait is never an empty circle. */
+function avatar(a,cls,full){if(!full)return thumb(a.id,a.name,62,cls||'avatar');var ok=portraitOk(a,full);
+  return '<span class="'+(cls||'avatar')+' av-full">'+(PORTRAITS[a.id]?'<img class="av-base" src="/assets/portraits/'+esc(a.id)+'.webp" width="160" height="160" alt="">':'<span class="pt-i">'+esc(initial(a.name))+'</span>')+(ok?'<img class="av-hi" alt="" width="160" height="160" decoding="async" src="'+esc(a.img)+'" onload="this.classList.add(\'on\')" onerror="this.remove()">':'')+'</span>'}
 function portraitCredit(a){if(!portraitOk(a,1))return '';var c=a.imgCredit,lic=c.licenseUrl?'<a href="'+esc(c.licenseUrl)+'" target="_blank" rel="noopener">'+esc(c.license)+'</a>':esc(c.license),
   src=/commons\.wikimedia\.org/.test(c.page)?'Wikimedia Commons':'Wikipedia';
   return '<p class="small muted au-credit">Portrait: '+(c.artist?esc(c.artist)+', ':'')+lic+', via <a href="'+esc(c.page)+'" target="_blank" rel="noopener">'+src+'</a>.</p>'}
@@ -47,12 +56,12 @@ var ISO_NOTE='Bibliotheca Catholica does not host, and does not vouch for, any f
 function host(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
 function fav(u){var h=host(u);return h?'<img class="fav" loading="lazy" alt="" src="https://www.google.com/s2/favicons?domain='+encodeURIComponent(h)+'&sz=64" onerror="this.style.visibility=\'hidden\'">':''}
 function badges(a,max){var t=a.tags.filter(function(x){return TAGL[x]});t.sort(function(x,y){return TAGF.indexOf(x)-TAGF.indexOf(y)});return '<div class="badges">'+t.slice(0,max||4).map(function(x){return '<span class="badge '+x+'">'+esc(x==='doctor'?'Doctor':TAGL[x])+'</span>'}).join('')+'</div>'}
-function acard(a){return '<a class="acard" href="#/author/'+a.id+'">'+avatar(a)+'<div><h3>'+esc(a.name)+'</h3><div class="dates">'+esc(dates(a))+' · '+esc(ERA[a.era].label)+'</div><p>'+esc(a.desc)+'</p>'+badges(a)+'</div></a>'}
+function acard(a){return '<li class="arow"><a href="#/author/'+a.id+'">'+thumb(a.id,a.name,48)+'<span class="arow-t"><b>'+esc(a.name)+'</b><span class="arow-d">'+esc(dates(a))+' · '+esc(ERA[a.era].label)+'</span><span class="arow-p">'+esc(a.desc)+'</span></span></a></li>'}
 var TAN_REFERRAL='https://lddy.no/1qbrw';
 function extRel(u){return u===TAN_REFERRAL?'noopener sponsored':'noopener'}
 function rcard(r){if(r.url===TAN_REFERRAL)return '<div class="rcard"><div class="rc-top">'+fav('https://tanbooks.com/')+'<h3>'+esc(r.name)+'</h3></div><p>'+esc(r.desc)+'</p><p class="buy-tan"><a class="buy-b" href="'+esc(r.url)+'" target="_blank" rel="noopener sponsored">Browse TAN Books ↗</a></p></div>';
  return '<a class="rcard" href="'+esc(r.url)+'" target="_blank" rel="noopener"><div class="rc-top">'+fav(r.url)+'<h3>'+esc(r.name)+'</h3></div><p>'+esc(r.desc)+'</p><div class="host">'+esc(host(r.url))+' ↗</div></a>'}
-function setNav(k){var more=$('.nav-more');if(more)more.open=false;document.querySelectorAll('.mainnav a').forEach(function(a){var active=a.dataset.nav===k;a.classList.toggle('on',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});$('#mainnav').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false');$('#menuBtn').setAttribute('aria-label','Open menu')}
+function setNav(k){document.querySelectorAll('.mainnav a').forEach(function(a){var active=a.dataset.nav===k;a.classList.toggle('on',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});$('#mainnav').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false');$('#menuBtn').setAttribute('aria-label','Open menu')}
 
 function render(html,k){main.innerHTML=html;setNav(k);window.scrollTo(0,0);document.title=(k?($('.page-head h1')||{}).textContent||'':'')+(k?' · ':'')+'Bibliotheca Catholica'}
 
@@ -131,7 +140,7 @@ function books(arg){
    '<label>Language<select id="bk-lang"><option value="">All languages</option></select></label>'+
    '<label>Subject<select id="bk-tag"><option value="">All subjects</option></select></label></div>'+
    '<div class="filter-row"><label>Format</label><div class="chips" id="bk-fmt"></div></div>'+
-   '<div class="filter-row"><label>Show</label><div class="chips"><button class="chip gold'+(BF.ontopic?' on':'')+'" id="bk-ontopic" title="Hide maths, computing, cooking, and other off-topic books that share the isidore.co shelves">Catholic &amp; related subjects only</button><button class="chip gold'+(BF.linked?' on':'')+'" id="bk-linked" title="Only books by authors who have a page on this site">Authors with a page here</button><button class="chip" id="bk-clear">Clear filters</button></div></div></div>'+
+   '<div class="filter-row"><label>Show</label><div class="chips"><button class="chip'+(BF.ontopic?' on':'')+'" id="bk-ontopic" title="Hide maths, computing, cooking, and other off-topic books that share the isidore.co shelves">Catholic &amp; related subjects only</button><button class="chip'+(BF.linked?' on':'')+'" id="bk-linked" title="Only books by authors who have a page on this site">Authors with a page here</button><button class="chip" id="bk-clear">Clear filters</button></div></div></div>'+
    '<div class="result-meta" id="bk-meta">Loading the catalog…</div><div class="blist" id="bk-out"></div><div class="bk-more-wrap"><button class="btn ghost" id="bk-more" hidden>Show more</button></div>'+
    '<p class="small muted isx-note">Era comes from the author’s page on this site, or else from life dates in the catalog’s author name (marked “inferred”); it is blank when neither is known. Catalog dates are often scan or reprint dates, so they say nothing about copyright. Data: <a href="#/data">Open Data</a>.</p>';
   render(h,'isidore');
@@ -189,7 +198,7 @@ function bookDetail(id){
      RT.line(rightsOf(b))+'<dl class="bk-dl">'+(b.y?'<dt>Catalog date</dt><dd>'+b.y+' <span class="muted small">(often a scan or reprint date)</span></dd>':'')+(b.er?'<dt>Era</dt><dd><a href="#/isidore/era='+b.er+'">'+esc(eraLabel(b.er))+'</a>'+(b.eri?' <span class="muted small">(inferred from the author’s life dates)</span>':'')+'</dd>':'')+
      (b.lg.length?'<dt>Language</dt><dd>'+b.lg.map(function(l){return '<a href="#/isidore/lang='+l+'">'+esc(LANGN[l]||l)+'</a>'}).join(', ')+'</dd>':'')+(b.se?'<dt>Series</dt><dd>'+esc(b.se)+(b.si?' #'+b.si:'')+'</dd>':'')+(b.pub?'<dt>Publisher</dt><dd>'+esc(b.pub)+'</dd>':'')+
      (b.tg.length?'<dt>Subjects</dt><dd class="b-tags">'+b.tg.map(function(t){return '<a class="b-tag" href="#/isidore/tag='+encodeURIComponent(t)+'">'+esc(t)+'</a>'}).join('')+'</dd>':'')+'</dl>'+
-     '<p class="callout"><b>External catalog · unreviewed.</b> Contributor names and dates are imported as supplied. Names may include editors or translators; author links are automated associations. Inclusion does not imply a recommendation (<a href="#/policy">editorial policy</a>).</p><h3>'+(b.f.length&&canHost(b)?'Download from isidore.co':'Check the source catalog')+'</h3><div class="dl-row">'+(!canHost(b)?'<a class="btn gold" href="'+esc(bookUrl(b))+'" target="_blank" rel="noopener">Book page on isidore.co ↗</a></div><p class="small muted rights-hold">Rights: '+esc(RT.STATUSES[rightsOf(b).status].label)+'. We show download buttons only for books marked public domain (US), open license, or permission granted (<a href="#/rights">why</a>).</p><div>':b.f.length?b.f.map(function(f){return '<a class="btn'+(f==='PDF'||f==='EPUB'?' gold':' ghost')+'" href="'+esc(dlUrl(b,f))+'" target="_blank" rel="noopener">'+esc(f.replace('_',' '))+' ↓</a>'}).join(''):'<span class="muted">No files listed.</span>')+'</div>'+
+     '<p class="callout"><b>External catalog · unreviewed.</b> Contributor names and dates are imported as supplied. Names may include editors or translators; author links are automated associations. Inclusion does not imply a recommendation (<a href="#/policy">editorial policy</a>).</p><h3>'+(b.f.length&&canHost(b)?'Download from isidore.co':'Check the source catalog')+'</h3><div class="dl-row">'+(!canHost(b)?'<a class="btn ghost" href="'+esc(bookUrl(b))+'" target="_blank" rel="noopener">Book page on isidore.co ↗</a></div><p class="small muted rights-hold">Rights: '+esc(RT.STATUSES[rightsOf(b).status].label)+'. We show download buttons only for books marked public domain (US), open license, or permission granted (<a href="#/rights">why</a>).</p><div>':b.f.length?b.f.map(function(f){return '<a class="btn'+' ghost'+'" href="'+esc(dlUrl(b,f))+'" target="_blank" rel="noopener">'+esc(f.replace('_',' '))+' ↓</a>'}).join(''):'<span class="muted">No files listed.</span>')+'</div>'+
      '<ul class="linklist">'+[['Book page on isidore.co',bookUrl(b),'read'],['Folder of files on isidore.co',bookFiles(b),'site'],['Open in the Calibre viewer',bookAppUrl(b),'site']].filter(function(x){return canHost(b)?(b.f.length||x[0]!=='Open in the Calibre viewer'):x[0]==='Book page on isidore.co'}).map(function(x){return '<li><a href="'+esc(x[1])+'" target="_blank" rel="noopener"><span class="k '+x[2]+'">'+x[2]+'</span>'+x[0]+' ↗</a></li>'}).join('')+'</ul>'+
      (canHost(b)&&b.f.length?'<p class="small guide-link">Help opening these files on a Kindle, Kobo, phone, tablet, or computer: <a href="/guides/epub-on-your-device/">Read an EPUB on your device</a>.</p>':'')+'<p class="small muted">Files are served by isidore.co. '+ISO_NOTE+' The rights badge is a research aid, not legal advice; check an edition’s rights before reusing it.</p></article>'+
      '<aside class="side">'+(same.length?'<div class="panel"><h3>More by '+esc(b.a[0][0])+'</h3><ul class="linklist">'+same.slice(0,12).map(function(o){return '<li><a href="#/isidore/book/'+o.id+'">'+esc(o.t)+'</a></li>'}).join('')+'</ul></div>':'')+
@@ -288,11 +297,14 @@ function authorEditions(a){loadGuide(function(err){if(err)return;var box=$('#au-
 /* ---------- views ---------- */
 var SC=window.SITE_COPY||{};
 function home(){
-  var h=(SC.hero||'')+(window.BCReader?window.BCReader.continueRow():'')+(SC.paths||'');
-  h+=dailyPanel();
-  h+=(SC.home||'')+(SC.newsletter||'');
-  render(h,'');document.title=SC.homeTitle||'Bibliotheca Catholica';hsInit();
-  window.BCSaints.load(function(){var el=$('#hodie-saints');if(el)el.innerHTML=window.BCSaints.todayLine()});
+  var h=(SC.hero||'')+(window.BCReader?window.BCReader.continueRow():'')+(SC.paths||'')+(SC.home||'')+(SC.newsletter||'');
+  render(h,'');document.title=SC.homeTitle||'Bibliotheca Catholica';hsInit();todayLine($('#home-today'));
+}
+/* Design part 2: Today is one line (date, feast or season, and a link). The daily outbound links live on the Prayers page.
+   The feast comes from the same LitCal snapshot the Prayers page uses (data/study/calendar.json); the season otherwise. */
+function todayLine(el){if(!el)return;var d=new Date(),s=season(d),ds=d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
+  function put(feast){el.innerHTML='<span class="k">Today</span> '+esc(ds)+' · '+esc(feast||s.n)+' · <a href="/prayers/">Today’s readings and prayers</a>';el.hidden=false}
+  put('');try{fetch('/data/study/calendar.json').then(function(r){return r.json()}).then(function(data){var k=[d.getFullYear(),('0'+(d.getMonth()+1)).slice(-2),('0'+d.getDate()).slice(-2)].join('-'),ev=(data.days||{})[k];if(ev&&ev.length&&document.body.contains(el))put(ev.slice().sort(function(a,b){return b.rank-a.rank})[0].name)}).catch(function(){})}catch(e){}
 }
 // v21: horizontal scrollers (.hscroll) show a soft edge fade only on a side that has more to scroll.
 function hsUpdate(el){var max=el.scrollWidth-el.clientWidth;el.classList.toggle('hs-l',el.scrollLeft>2);el.classList.toggle('hs-r',max-el.scrollLeft>2)}
@@ -304,7 +316,7 @@ function authors(opts){
   opts=opts||{};var doctorsOnly=opts.doctors;
   var h='<div class="page-head"><div class="eyebrow">'+(doctorsOnly?'Doctores Ecclesiae':'Auctores')+'</div><h1>'+(doctorsOnly?'Doctors of the Church':'Catholic Authors')+'</h1><p class="lede">'+(doctorsOnly?'The saints proclaimed Doctors of the Church for their eminent learning and holiness — from St. Athanasius to St. John Henry Newman (2025).':'From the Apostolic Fathers to the present day. Filter by era or vocation, or type to narrow instantly.')+'</p></div>';
   h+='<div class="toolbar"><input type="search" id="af-q" placeholder="Filter by name, work, keyword…" value="'+esc(AF.q)+'"><select id="af-sort" aria-label="Sort"><option value="chron">Chronological</option><option value="az">A → Z</option></select>'+
-   '<div class="filter-row"><label>Era</label><div class="chips" id="af-eras">'+D.eras.map(function(e){return '<button class="chip gold'+(AF.eras[e.id]?' on':'')+'" data-era="'+e.id+'" title="'+esc(e.range)+'">'+esc(e.label)+'</button>'}).join('')+'</div></div>'+
+   '<div class="filter-row"><label>Era</label><div class="chips" id="af-eras">'+D.eras.map(function(e){return '<button class="chip'+(AF.eras[e.id]?' on':'')+'" data-era="'+e.id+'" title="'+esc(e.range)+'">'+esc(e.label)+'</button>'}).join('')+'</div></div>'+
    (doctorsOnly?'':'<div class="filter-row"><label>Type</label><div class="chips" id="af-tags">'+TAGF.map(function(t){return '<button class="chip'+(AF.tags[t]?' on':'')+'" data-tag="'+t+'">'+esc(TAGL[t])+'</button>'}).join('')+'</div></div>')+'</div><div class="result-meta" id="af-meta"></div><div id="af-out"></div>';
   render(h,doctorsOnly?'doctors':'authors');
   $('#af-sort').value=AF.sort;
@@ -313,8 +325,8 @@ function authors(opts){
       if(q){var x=norm(a.name+' '+a.desc+' '+a.wikiDesc+' '+a.tags.join(' ')+' '+a.works.map(function(w){return w.title}).join(' '));return q.split(/\s+/).every(function(t){return x.indexOf(t)>=0})}return true});
     $('#af-meta').textContent=L.length+' of '+(doctorsOnly?A.filter(function(a){return a.doctor}).length:A.length)+' authors';
     var out='';
-    if(AF.sort==='az'){L=L.slice().sort(function(a,b){return a.name.localeCompare(b.name)});out='<div class="grid g-authors">'+L.map(acard).join('')+'</div>'}
-    else{var cur=null;D.eras.forEach(function(e){var g=L.filter(function(a){return a.era===e.id});if(!g.length)return;out+='<div class="era-block"><h2>'+esc(e.label)+'</h2><span>'+esc(e.range)+' · '+g.length+'</span></div><div class="grid g-authors">'+g.map(acard).join('')+'</div>'})}
+    if(AF.sort==='az'){L=L.slice().sort(function(a,b){return a.name.localeCompare(b.name)});out='<ul class="rows arows">'+L.map(acard).join('')+'</ul>'}
+    else{var cur=null;D.eras.forEach(function(e){var g=L.filter(function(a){return a.era===e.id});if(!g.length)return;out+='<div class="era-block"><h2>'+esc(e.label)+'</h2><span>'+esc(e.range)+' · '+g.length+'</span></div><ul class="rows arows">'+g.map(acard).join('')+'</ul>'})}
     $('#af-out').innerHTML=out||'<div class="empty">No authors match. Try clearing a filter.</div>'}
   draw();
   $('#af-q').addEventListener('input',function(e){AF.q=e.target.value;draw()});
@@ -405,15 +417,17 @@ function auWorks(a,X,DR){var p=$('#tp-works'),n=window.LIBRARY_DATA.works.filter
   if(rd.length)h+='<h3>Read free online</h3>'+auLinkList(rd);
   if(X.own){n+=X.own.length;h+='<h3>Writing &amp; media by '+esc(a.name)+'</h3>'+auLinkList(X.own.map(function(o){return {k:o.k==='substack'?'read':'site',kl:o.k,t:o.t,u:o.u,n:o.n}}))}
   var L=(B&&B.by[a.id]||[]).slice().sort(function(x,y){return x.tn.localeCompare(y.tn)});n+=L.length;
-  if(L.length){var fm={};L.forEach(function(b){b.f.forEach(function(f){fm[f]=(fm[f]||0)+1})});var fk=Object.keys(fm).sort(function(x,y){return fm[y]-fm[x]});
-    h+='<div class="rule"></div><h3>Books in the Isidore Index <span class="small">('+L.length+')</span></h3><div class="chips au-fmt" id="au-fmt"><button class="chip on" data-f="">All '+L.length+'</button>'+fk.map(function(f){return '<button class="chip" data-f="'+esc(f)+'">'+esc(f)+' '+fm[f]+'</button>'}).join('')+'</div><div class="blist compact" id="au-bl"></div><div id="au-blm"></div>'}
+  if(L.length){
+    h+='<h3>Books in the Isidore Index <span class="small">('+L.length+')</span></h3><ul class="rows au-books" id="au-bl"></ul><div id="au-blm"></div>'}
   if(more.length)h+='<h3>Search &amp; data</h3>'+auLinkList(more);
   p.innerHTML=h||'<div class="empty">No free texts are linked yet.</div>';auCount('works',n);
   if(DR)readFree(a);
-  if(L.length){var cur='',lim=40;function draw(){var M=cur?L.filter(function(b){return b.f.indexOf(cur)>=0}):L;$('#au-bl').innerHTML=M.slice(0,lim).map(function(b){return brow(b)}).join('');
-      $('#au-blm').innerHTML=M.length>lim?'<button class="btn ghost" id="au-more">Show all '+M.length+'</button>':''}
-    draw();$('#au-fmt').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;cur=b.dataset.f;lim=40;$('#au-fmt').querySelectorAll('.chip').forEach(function(x){x.classList.toggle('on',x===b)});draw()});
-    p.addEventListener('click',function(e){if(e.target.id==='au-more'){lim=1e9;draw()}var t=e.target.closest('.b-tag');if(t){bfReset();BF.tag=t.dataset.tag;track('filter_use',{filter_name:'Tag',filter_value:BF.tag,filter_scope:'isidore'});location.hash='#/isidore'}})}}
+  if(L.length){var lim=20;function draw(){$('#au-bl').innerHTML=L.slice(0,lim).map(auBook).join('');
+      $('#au-blm').innerHTML=L.length>lim?'<button class="btn ghost" id="au-more">Show all '+L.length+'</button>':''}
+    draw();p.addEventListener('click',function(e){if(e.target.id==='au-more'){lim=1e9;draw()}})}}
+/* Design part 2 fix: on author pages each Isidore Index book is one row (title, rights badge, year and publisher, one
+   text link). No format or tag chips; the record page shows formats and gates every file link by its badge (rule 10). */
+function auBook(b){return '<li class="au-book"><a class="au-book-t" href="#/isidore/book/'+b.id+'">'+esc(b.t)+'</a>'+efBadge(b.id)+RT.badge(rightsOf(b))+'<span class="au-book-m">'+[b.y,b.pub].filter(Boolean).map(esc).join(' · ')+'</span> <a class="au-book-l" href="'+esc(bookUrl(b))+'" target="_blank" rel="noopener">isidore.co book page ↗</a></li>'}
 var WOF={k:'podcast',t:'Way of the Fathers (Catholic Culture podcast)',u:'https://www.catholicculture.org/commentary/category/way-fathers/',n:'A podcast on the Fathers and Doctors of the Church.'};
 function auComm(a,X,DR){var p=$('#tp-commentaries'),n=0,h='';var cm=(X.comm||[]).slice();
   var feat=cm.filter(function(c){return c.feat});cm=cm.filter(function(c){return !c.feat});
@@ -522,7 +536,7 @@ function openData(){
   h+='<section class="panel"><h2>Selected reading catalog</h2><p>'+libCount('works')+' work records ('+libCount('editions')+' editions, '+libCount('hosted')+' hosted here) with edition sources, contributor roles, access labels, and hosted-copy checksums. Rights notices for texts remain separate from catalog metadata.</p><a class="btn ghost" href="data/library.json" download>Download catalog JSON</a> · <a href="docs/CATALOG.md" target="_blank" rel="noopener">Sources &amp; editorial notes</a></section>';
   render(h,'data');
   lazy('open.js','OPEN_MANIFEST',function(M){if(!$('#od-out'))return;if(!M){$('#od-out').innerHTML='<div class="empty">Manifest failed to load.</div>';return}
-    $('#od-out').innerHTML='<div class="od-grid">'+M.datasets.map(function(d){var f=Object.keys(d.fields);return '<div class="od"><h3>'+esc(d.name)+' <span class="small muted">'+d.count.toLocaleString()+' records</span></h3><p>'+esc(d.description)+'</p><div class="dl-row"><a class="btn gold" href="'+odUrl(d.json)+'" download>JSON ↓</a><a class="btn ghost" href="'+odUrl(d.csv)+'" download>CSV ↓</a></div><details><summary>'+f.length+' fields</summary><dl class="od-f">'+f.map(function(k){return '<dt>'+esc(k)+'</dt><dd>'+esc(d.fields[k])+'</dd>'}).join('')+'</dl></details></div>'}).join('')+'</div><p class="small muted">Generated '+esc(M.generated)+'.</p>'})}
+    $('#od-out').innerHTML='<div class="od-grid">'+M.datasets.map(function(d){var f=Object.keys(d.fields);return '<div class="od"><h3>'+esc(d.name)+' <span class="small muted">'+d.count.toLocaleString()+' records</span></h3><p>'+esc(d.description)+'</p><div class="dl-row"><a class="btn ghost" href="'+odUrl(d.json)+'" download>JSON ↓</a><a class="btn ghost" href="'+odUrl(d.csv)+'" download>CSV ↓</a></div><details><summary>'+f.length+' fields</summary><dl class="od-f">'+f.map(function(k){return '<dt>'+esc(k)+'</dt><dd>'+esc(d.fields[k])+'</dd>'}).join('')+'</dl></details></div>'}).join('')+'</div><p class="small muted">Generated '+esc(M.generated)+'.</p>'})}
 /* v18: counts come from the catalog itself, never typed into copy */
 function libCount(k){var W=(window.LIBRARY_DATA&&window.LIBRARY_DATA.works)||[];if(k==='works')return W.length;var n=0;W.forEach(function(w){w.editions.forEach(function(e){if(k==='editions'||e.text)n++})});return n}
 var LICENSING_URL='/licensing/';
@@ -536,7 +550,7 @@ function season(d){d=d||new Date();var y=d.getFullYear();function easter(Y){var 
   if(t>=E&&t<=pent)return {n:'Eastertide',c:'white'};return {n:'Ordinary Time',c:'green'}}
 function dailyPanel(){var d=new Date(),s=season(d);var ds=d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
   var L=[['Today’s Mass readings','USCCB','https://bible.usccb.org/daily-bible-reading'],['Readings & Liturgy of the Hours','Universalis','https://universalis.com/'],['The Divine Office, with audio','divineoffice.org','https://divineoffice.org/'],['Saint of the day','Franciscan Media','https://www.franciscanmedia.org/saint-of-the-day/'],['Word of the day','Vatican News','https://www.vaticannews.va/en/word-of-the-day.html'],['Liturgical calendar','GCatholic','https://gcatholic.org/calendar/'],['This day in the liturgical year','Catholic Culture','https://www.catholicculture.org/culture/liturgicalyear/calendar/day.cfm?date='+d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)]];
-  return '<section class="daily"><div class="daily-head"><div><div class="eyebrow">Hodie · today</div><h2>'+esc(ds)+'</h2><p class="season"><span class="sw sw-'+s.c+'"></span>'+esc(s.n)+'</p></div><a class="btn ghost" href="#/prayers">Prayers &amp; devotions →</a></div><div id="hodie-saints"></div><div class="daily-grid">'+L.map(function(x){return '<a href="'+x[2]+'" target="_blank" rel="noopener"><b>'+esc(x[0])+' ↗</b><span>'+esc(x[1])+'</span></a>'}).join('')+'</div></section>'}
+  return '<section class="daily"><div class="daily-head"><div><div class="eyebrow">Hodie · today</div><h2>'+esc(ds)+'</h2><p class="season"><span class="sw sw-'+s.c+'"></span>'+esc(s.n)+'</p></div></div><div id="hodie-saints"></div><ul class="rows daily-links">'+L.map(function(x){return '<li><a href="'+x[2]+'" target="_blank" rel="noopener">'+esc(x[0])+' ↗</a> <span class="muted">'+esc(x[1])+'</span></li>'}).join('')+'</ul></section>'}
 function prayerText(t){return esc(t).split('\n').map(function(l){return '<p>'+l.replace(/^(V\.|R\.)/,'<b class="vr">$1</b>')+'</p>'}).join('')}
 function prayersBlock(){if(!PR)return '';var dow=new Date().getDay();var today={1:0,6:0,4:1,2:2,5:2,3:3,0:3}[dow];
   var h='<div class="callout">'+esc(PR.note)+' Tap a prayer to open it; tap <b>Latin</b> to see the Latin text.</div><div class="pr-wrap">';
@@ -552,14 +566,14 @@ function section(k,focus){
   var h='<div class="page-head"><div class="eyebrow">'+esc(s.e)+'</div><h1>'+esc(s.t)+'</h1><p class="lede">'+esc(s.d)+'</p></div>';
   if(k==='magisterium')h+='<p><a class="btn" href="#/library/Magisterium">Read individual Church documents →</a></p>';
   if(k==='magisterium')h+='<div class="callout">For the authoritative text of any papal or curial document, <a href="https://www.vatican.va/content/vatican/en.html" target="_blank" rel="noopener">vatican.va</a> is always the primary source; the other links here are convenient mirrors and finding aids.</div>';
-  if(k==='prayers')h+=prayersBlock();
+  if(k==='prayers')h+=dailyPanel()+prayersBlock();
   if(k==='libraries')h+='<div class="callout">This hub is built to complement the <a href="https://isidore.co/calibre" target="_blank" rel="noopener">St. Isidore e-book library</a>. Browse its authors in a readable A–Z on the <a href="#/isidore">Isidore Index</a> page. For forgotten scans, see <a href="#/rare">Rare &amp; Obscure</a>; for new translation efforts, see <a href="#/projects">Projects &amp; Translations</a>.</div>';
   h+='<div class="toolbar"><input type="search" id="rs-q" placeholder="Filter '+esc(s.t)+'…"><div class="chips" id="rs-c"><button class="chip on" data-c="">All</button>'+cats.map(function(c){return '<button class="chip" data-c="'+esc(c)+'">'+esc(c)+'</button>'}).join('')+'</div></div><div id="rs-out"></div>'+(R.some(function(r){return r.url===TAN_REFERRAL})?discl():'');
   render(h,k);var cur='',q='';
   if(k==='libraries')lazy('library-desk.js','LIBRARY_DESK',function(d){if(!d||!$('#rs-out')||!main.querySelector('h1')||main.querySelector('h1').textContent!==s.t)return;var box=document.createElement('div');box.innerHTML=d.html;$('#rs-q').closest('.toolbar').before(box);libraryDeskLoad(function(){if(window.BCLibraryDesk)window.BCLibraryDesk.mount();draw()})},'20261109');
   function draw(){var out='';cats.forEach(function(c){if(cur&&c!==cur)return;var ranked=k==='libraries'&&window.BCLibraryDesk?window.BCLibraryDesk.rank(R,q):R.filter(function(r){return !q||norm(r.name+' '+r.desc+' '+r.tags.join(' ')).indexOf(norm(q))>=0});var L=ranked.filter(function(r){return r.category===c});if(!L.length)return;out+='<div class="cat-title"><h2>'+esc(c)+'</h2></div><div class="grid g-res">'+L.map(rcard).join('')+'</div>'});$('#rs-out').innerHTML=out||'<div class="empty">Nothing matches.</div>'}
   draw();$('#rs-q').addEventListener('input',function(e){q=e.target.value;draw()});
-  if(k==='prayers')prayersWire(focus);
+  if(k==='prayers'){prayersWire(focus);window.BCSaints.load(function(){var el=$('#hodie-saints');if(el)el.innerHTML=window.BCSaints.todayLine()})}
   $('#rs-c').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;cur=b.dataset.c;document.querySelectorAll('#rs-c .chip').forEach(function(x){x.classList.toggle('on',x===b)});draw()});
 }
 function isidore(){
@@ -714,10 +728,16 @@ qi.addEventListener('keydown',function(e){var items=sg.querySelectorAll('a');
   if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();if(!items.length)return;act=(act+(e.key==='ArrowDown'?1:-1)+items.length)%items.length;items.forEach(function(x,i){x.classList.toggle('active',i===act);x.setAttribute('aria-selected',String(i===act))});qi.setAttribute('aria-activedescendant',items[act].id);items[act].scrollIntoView({block:'nearest'})}
   else if(e.key==='Enter'){e.preventDefault();if(act>=0&&items[act]){items[act].click()}else if(qi.value.trim()){location.hash=searchHref(qi.value.trim())}hideSug();qi.blur()}
   else if(e.key==='Escape'){hideSug();qi.blur()}});
-document.addEventListener('click',function(e){if(!e.target.closest('.searchwrap'))hideSug();var more=$('.nav-more');if(more&&!e.target.closest('.nav-more'))more.open=false});
-document.addEventListener('keydown',function(e){var more=$('.nav-more');if(e.key==='Escape'&&more&&more.open){more.open=false;more.querySelector('summary').focus()}});
+document.addEventListener('click',function(e){if(!e.target.closest('.searchwrap'))hideSug();});
 sg.addEventListener('click',function(e){if(e.target.closest('a'))setTimeout(hideSug,0)});
-document.addEventListener('keydown',function(e){if(e.key==='/'&&!/input|textarea|select/i.test(document.activeElement.tagName)){e.preventDefault();qi.focus()}});
+/* Design part 2 fix: below about 600 px the header search sits behind a search button, so the header is one row.
+   The form, its Everything default, and the "/" shortcut are unchanged; "/" opens the form first when it is collapsed. */
+var TB=$('.topbar'),SB=$('#searchBtn');
+function searchOpen(open){if(!TB||!SB)return;TB.classList.toggle('search-open',open);SB.setAttribute('aria-expanded',String(open));SB.setAttribute('aria-label',open?'Close search':'Search');if(open)qi.focus()}
+function searchCollapsed(){return !!(SB&&getComputedStyle(SB).display!=='none')}
+if(SB)SB.addEventListener('click',function(){searchOpen(!TB.classList.contains('search-open'))});
+qi.addEventListener('keydown',function(e){if(e.key==='Escape'&&searchCollapsed()&&TB.classList.contains('search-open')&&!qi.value){searchOpen(false);SB.focus()}});
+document.addEventListener('keydown',function(e){if(e.key==='/'&&!/input|textarea|select/i.test(document.activeElement.tagName)){e.preventDefault();if(searchCollapsed())searchOpen(true);else qi.focus()}});
 $('#themeBtn').addEventListener('click',function(){var t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('hub-theme',t)}catch(e){}track('theme_toggle',{theme:t})});
 $('#menuBtn').addEventListener('click',function(){var open=$('#mainnav').classList.toggle('open');this.setAttribute('aria-expanded',String(open));this.setAttribute('aria-label',open?'Close menu':'Open menu')});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&$('#mainnav').classList.contains('open')){$('#mainnav').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false');$('#menuBtn').setAttribute('aria-label','Open menu');$('#menuBtn').focus()}});

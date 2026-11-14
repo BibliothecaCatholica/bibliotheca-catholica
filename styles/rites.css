@@ -89,5 +89,3 @@
 .rites-record .rmap-insets{max-width:600px}
 
 /* Nav: the second row must not wrap more than it did before v19 */
-@media (min-width:721px) and (max-width:1199px){.nav-secondary .nav-long{display:none}}
-@media (min-width:721px) and (max-width:1040px){.nav-secondary{column-gap:3px}.nav-secondary a{padding-left:3px;padding-right:3px}}

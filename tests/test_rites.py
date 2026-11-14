@@ -143,8 +143,8 @@ class RitesPages(unittest.TestCase):
             self.assertNotIn('href="#/',h,k)
         self.assertNotIn('—',text(J['tpl']['full']+J['options']+''.join(J['info'].values())))
     def test_nav_link_and_app_route(self):
-        idx=R('index.html');sec=idx.split('nav-secondary',1)[1].split('</div>',1)[0]
-        self.assertIn('<a href="/rites/" data-nav="rites">Rites<span class="nav-long">&nbsp;&amp; Liturgy</span></a>',sec)
+        idx=R('index.html');foot=idx[idx.index('<footer'):]  # design part 2: Rites is linked from the footer's Explore group
+        self.assertIn('<a href="/rites/">Rites &amp; Liturgy</a>',foot)
         self.assertEqual(idx.count('scripts/rites.js'),1);self.assertNotIn('data/rites.js',idx)  # lazy-loaded
         app=R('app.js');self.assertIn("case 'rites':if(window.BCRites)window.BCRites.view(render,p.slice(1));else notfound()",app)
         self.assertIn("saints|rites|guides)$/.test(s[0])",app);self.assertIn("p[0]==='rites'",app)

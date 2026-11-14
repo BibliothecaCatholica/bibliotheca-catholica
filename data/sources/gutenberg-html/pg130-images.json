@@ -1,0 +1,34 @@
+{
+  "id": 130,
+  "url": "https://www.gutenberg.org/cache/epub/130/pg130-images.html",
+  "file": "data/sources/gutenberg-html/pg130-images.html.gz",
+  "sha256": "975f7930d996fd3af9620c078ab6b3679414f7f40b0ef470dc2d37bfa9cb3af9",
+  "bytes": 396554,
+  "retrieved": "2026-11-13T05:26:57Z",
+  "retrievedLocalDate": "2026-11-12 (America/Chicago)",
+  "retrievedWith": "curl, User-Agent BibliothecaCatholica-catalog/1.0",
+  "contentType": "text/html; charset=utf-8",
+  "edition": "pg-130 (hosted reading-room edition; data/texts/pg-130.txt)",
+  "survey": {
+    "bodyParagraphs": 244,
+    "headings": {
+      "h1": 3,
+      "h3": 10,
+      "h5": 1,
+      "note": "Title, author, PREFACE, CONTENTS, ORTHODOXY, and nine chapter headings (h3)"
+    },
+    "italics": 0,
+    "bold": 0,
+    "verseBlocks": 0,
+    "blockquotes": 0,
+    "footnotes": 0,
+    "pageNumbers": 0,
+    "lineBreaks": "9, all in the contents list",
+    "wordAlignmentWithTxt": "Same words as data/texts/pg-130.txt (64,207 words, difflib ratio 0.9998); the only difference is the credits line, which the HTML repeats in the body."
+  },
+  "assessment": "Paragraph boundaries and headings only. No emphasis, verse, or note markup beyond what the TXT already gives.",
+  "use": "Survey and structure source for the Orthodoxy structured-text pilot. Original bytes retained unchanged; Gutenberg license and credits included.",
+  "storage": "Original HTML bytes stored gzip-compressed (deterministic: mtime 0, no stored filename) so the repository does not publish them as untagged site pages. sha256 and bytes describe the decompressed original; gzipSha256 describes the stored file.",
+  "gzipSha256": "f55cb4ba469959d323cbc714a6a6906d83af33d02b33e9b2830fedea8d8f4d5e",
+  "gzipBytes": 145218
+}

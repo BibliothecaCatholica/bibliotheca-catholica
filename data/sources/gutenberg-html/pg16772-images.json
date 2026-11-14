@@ -1,0 +1,34 @@
+{
+ "id": 16772,
+ "url": "https://www.gutenberg.org/cache/epub/16772/pg16772-images.html",
+ "file": "data/sources/gutenberg-html/pg16772-images.html.gz",
+ "sha256": "ef04a8dc30f85d61cc34a48372e6c307664df79ea3b8911bac37829968c6bf98",
+ "bytes": 655612,
+ "retrieved": "2026-11-14T19:02:04Z",
+ "retrievedLocalDate": "2026-11-14 (America/Chicago)",
+ "retrievedWith": "curl, User-Agent BibliothecaCatholica-catalog/1.0",
+ "contentType": "text/html; charset=utf-8",
+ "edition": "pg-16772 (hosted reading-room edition; data/texts/pg-16772.txt)",
+ "survey": {
+  "bodyParagraphs": 1627,
+  "headings": {
+   "h1": 1,
+   "h4": 83,
+   "h5": 32,
+   "note": "Chapters are marked with h4 or h5 inconsistently (Chapters I to IV and VI are h5; V and VII to XI are h4); front matter, epilogue, counsels, letters, prayers, and poems also use h4/h5."
+  },
+  "italics": 145,
+  "italicsInTxt": "112 spans marked with _underscores_ in data/texts/pg-16772.txt",
+  "verse": "No verse markup or classes. Poems and quoted verse are paragraphs whose lines end in <br> (about 49 such passages, besides 7 list-like paragraphs); line breaks only, no stanza or indent information.",
+  "notes": "No note markup. 611 bracketed note markers such as [1] appear as plain text, the same 611 as in the TXT; note texts are plain paragraphs at the end of each chapter. The transcriber's note in both files says footnotes were renumbered and a few modified or omitted.",
+  "blockquotes": 0,
+  "pageNumbers": 0,
+  "lineBreaks": 271,
+  "images": 0,
+  "wordAlignmentWithTxt": "107,466 words in each. Every word matches once accents are folded: the HTML drops accents and ligatures that the TXT keeps (Therese for Thérèse, Ame for Âme, anaemia for anæmia, haemorrhage for hæmorrhage). Difflib ratio 0.9966 before folding."
+ },
+ "assessment": "Richer than #130 for Orthodoxy: italics and line-broken verse are present, but notes are plain text and heading levels are inconsistent. Structure (headings, paragraphs, verse line breaks) could be taken from it with an accent-folding alignment rule; italics would need a decision, since the TXT already carries most of them as underscores. Survey only; not built.",
+ "use": "Survey for the structured-text pilot (Part C). Original bytes retained unchanged; Gutenberg license and credits included.",
+ "storage": "Original HTML bytes stored gzip-compressed (deterministic: mtime 0, no stored filename) so the repository does not publish them as untagged site pages. sha256 and bytes describe the decompressed original; gzipSha256 describes the stored file.",
+ "gzipSha256": "66bb23f3d3ae8424fc344b5e8986a4f206014e9f5f961509abed3f30c32d306e"
+}

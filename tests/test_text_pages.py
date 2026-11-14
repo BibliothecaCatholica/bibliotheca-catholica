@@ -48,8 +48,16 @@ class TextPages(unittest.TestCase):
                 self.assertIn('<link rel="canonical" href="'+SITE+p+'">',s);self.assertIn('<meta name="robots" content="index,follow">',s)
                 self.assertIn('window.BC_BOOT='+json.dumps(p.rstrip('/')),s)
                 self.assertEqual(m.count('<h1>'),1);self.assertIn('<h1>'+x['title'].replace('&','&amp;')+'</h1>',m)
-                if 'gutenberg.org' in e['source']:self.assertIn('class="small pg-notice">This eBook is for the use of anyone anywhere in the United States',m,f)
-                else:self.assertIn('class="small pg-notice">This text comes from the Standard Ebooks edition',m,f);self.assertNotIn('Project Gutenberg License',m,f)
+                # rule 2 (owner, November 14, 2026): one sentence and a licence link, once after the text and in the edition details
+                if 'gutenberg.org' in e['source']:
+                    self.assertEqual(m.count('class="small pg-notice">From Project Gutenberg: free for anyone in the United States and most other parts of the world under the <a href="https://www.gutenberg.org/policy/license.html"'),2,f)
+                    self.assertNotIn('This eBook is for the use of anyone',m,f)
+                else:self.assertEqual(m.count('class="small pg-notice">This text comes from the Standard Ebooks edition'),2,f);self.assertNotIn('Project Gutenberg License',m,f)
+                self.assertGreater(m.index('pg-notice'),m.index('</article>'),f)
+                self.assertGreater(m.index('<details class="edition-details">'),m.index('</article>'),f)
+                for label in ('text-formatting','text-auto-layout','text-edition'):  # quality labels only in the edition details
+                    if label in m:self.assertGreater(m.index(label),m.index('<details class="edition-details">'),f)
+                self.assertNotIn('rights-badge',m,f)  # rule 10: badges only on the record's own page
                 self.assertIn('href="/#/read/%s/%s/%d/%d"'%(wid,e['id'],x['heading']//35,x['heading']),m)
                 self.assertIn('href="/work/%s/"'%wid,m);self.assertIn('href="/rights/"',m)
                 if k:self.assertIn('rel="prev" href="/'+path(wid,d,d['items'][k-1])+'"',m)

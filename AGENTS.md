@@ -15,7 +15,7 @@ Read [CENTRAL.md](CENTRAL.md) next, then only the detailed documents relevant to
 7. Preserve the one GA4 tag, production-host gate, sanitized real-path page views, and `BCAnalytics.track`. No personal data, notes, quotations, or full outbound URLs. The existing bounded `search_term` exception applies only to the search event. Read the [analytics rules](docs/ANALYTICS.md) before analytics changes.
 8. Preserve `CNAME`, `.nojekyll`, `.well-known/atproto-did`, verification files, `_headers`, `robots.txt`, `sitemap.xml`, `404.html`, `assets/og-image.png`, `data/texts/`, and `data/sources/`. Generated files may be regenerated. Never add an unscoped noindex rule.
 9. Preserve accessible keyboard controls, source-linked uncertainty labels, and contrast in both themes. Search defaults to Everything.
-10. Respect the [owner decision boundaries](docs/OPERATIONS.md#owner-decisions), including hosting/DNS, expanded affiliate links, new analytics, and external outreach. Explicit authorization already given for the current task applies.
+10. Respect the [owner decision boundaries](docs/OPERATIONS.md#owner-decisions), including hosting/DNS, expanded affiliate links, new analytics, and external outreach. Explicit authorization already given for the current task applies. Changes limited to presentation, docs, tests, and tooling may merge on green CI under the standing approval described there.
 11. When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply.
 
 ## Validate and hand off
@@ -24,7 +24,7 @@ Use the [current validation procedure](docs/OPERATIONS.md#validation), matching 
 
 Review source changes only: `git diff origin/main -- . ':(exclude,attr:linguist-generated=true)'` (generated paths are marked in `.gitattributes`). Confirm generated output with the drift check in [OPERATIONS](docs/OPERATIONS.md#validation), never by reading generated pages. Search `docs/static-pages.txt` and `docs/HOSTED-TEXT-INVENTORY.md` with grep; do not open them whole.
 
-Update [CENTRAL.md](CENTRAL.md) in place with significant updates, handoffs, decisions, and status notes, newest first. Keep it under 150 lines. No separate dated report files for handoffs. Check live PR state before acting. Do not overwrite another contributor's work.
+Update [CENTRAL.md](CENTRAL.md) in place with significant updates, handoffs, decisions, and status notes, newest first. Handoff entries are at most 5 lines, only the 3 newest are kept, and the file stays under 80 lines (`tests/test_central.py`). No separate dated report files for handoffs. Check live PR state before acting. Do not overwrite another contributor's work.
 
 Visual and layout changes follow the [design rules](docs/DESIGN.md).
 

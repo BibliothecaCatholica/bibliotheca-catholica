@@ -6,7 +6,9 @@
  *  partners    Affiliate referral links that are not tied to one book (owner-approved preview 2026-11-09).
  *              tan.url is TAN Books' LeadDyno referral link; it redirects to tanbooks.com (checked 2026-11-09).
  *              Shown only as a general "Browse TAN Books" link (tools/build_print_editions.py).
- *  disclosure  The FTC disclosure shown next to every block of affiliate links, with a link to /disclosure/.
+ *  line        The one-line FTC disclosure beside affiliate links, once per page, followed by a "Details" link to
+ *              /disclosure/ (owner rule 7, November 14, 2026).
+ *  disclosure  The fuller statement on the /disclosure/ page.
  *  publishers[key].wrap
  *              Optional deep-link template from the publisher's affiliate network. Use {url} for the
  *              encoded destination URL, e.g. a CJ link for Ignatius:
@@ -18,6 +20,7 @@
 window.AFFILIATES = {
   bookshopId: '130222',
   bookshopShop: 'https://bookshop.org/shop/bibliotheca-catholica', // confirmed by the owner, 2026-11-03
+  line: 'Affiliate links: we may earn a commission.',
   disclosure: 'Affiliate disclosure: Some links are affiliate links. If you buy through them, Bibliotheca Catholica may earn a small commission at no extra cost to you. It helps keep the library free.',
   partners: {
     tan: { name: 'TAN Books', url: 'https://lddy.no/1qbrw', lands: 'tanbooks.com', program: 'LeadDyno', checked: '2026-11-09' }

@@ -12,7 +12,7 @@ Each hosted book should read as a designed edition, not a text file in a web pag
 2. **Structure, not text, is added.** Structure lives in separate files keyed to the TXT's block numbers (blank-line blocks, the same as `splitText()` in `scripts/library.js`). Those files hold no body text.
 3. **Never infer, with one approved exception.** Verse, notes, and headings come only from what a source marks: the edition's own HTML, or a page of a named printing that was checked visually. Do not guess them from capitals, indentation, line length, or importance. If the source does not mark something, leave it plain. On Orthodoxy's title page, "by" stays an ordinary paragraph because the HTML marks it as one. **The exception is automatic, display-only layout** (below): wrapped prose may reflow on screen and paired `_underscores_` may show as italics, under fixed safeguards. Owner approval: "Rule change: automatic, display-only prose reflow and underscore italics are now allowed on hosted editions, under the safeguards listed here." (Micah, November 14, 2026).
 4. **Anchors and reader data survive.** Every block keeps its `<p id="reading-p-N">` element and its exact text, so saved notes, highlights, reading positions, and links keep working. Add classes; do not re-split, merge, or re-wrap blocks.
-5. **Notices stay.** The Project Gutenberg (or other source) notice, rights line, and source credit stay reachable from every edition, and EPUBs carry the full original license verbatim.
+5. **Notices stay.** The Project Gutenberg (or other source) notice, rights line, and source credit stay reachable from every edition, and EPUBs carry the full original license verbatim. On screen the notice is one sentence with a licence link, once at the end of the text and in the edition details; quality labels sit only in the edition details ([PROJECT-RULES](PROJECT-RULES.md) rule 2, owner rule change of November 14, 2026).
 6. **Every claim is checked.** A gate compares the structure with the TXT word for word, and tests compare the Python (static) and browser renderers character for character. "Builds" does not mean "proofread."
 7. **Owner decisions are recorded.** The choice of markup source, any typographic equivalence the gate accepts, and every new hosted work need Micah's own words, quoted in CENTRAL.md.
 
@@ -25,7 +25,7 @@ Each hosted book should read as a designed edition, not a text file in a web pag
 | 3. Gate | Check that both checksums match. Check that every TXT body block is matched, in order, with the same words. Check that the chapter map equals the existing chapter pages, and that any scan-verified formatting is carried over unchanged. List each accepted typographic difference by name and count it. Orthodoxy has one: the HTML's em dash for the TXT's "--", 103 times. The gate runs at the start of `npm run build`. | `tools/structure_text.py --check`, `tests/test_structured_text.py` |
 | 4. Render | Roles travel in `data/text-pages.js` (`s.r`) and are applied only when the structure was built from this exact TXT. The reader and static pages add a `reading-<role>` class; the text is unchanged. `data/library.json` and `data/library.js` stay identical (an existing test requires this). | `tools/build_text_pages.py`, `renderReadingBlock()` in `scripts/library.js`, `tools/reader_formatting.py`, `styles/library.css` |
 | 5. EPUB | Build an EPUB 3 from the TXT and the structure with the same block renderer: front matter, chapters, the full source notice and license, and a colophon. It re-checks its own text against the TXT and is deterministic (same inputs, same SHA-256). CI attaches it to the PR as a review artifact; it is **not published or linked** until the owner says so. | `tools/build_epub.py`, `.github/workflows/epub-pilot.yml` |
-| 6. Review | Screenshots (reader title page, a chapter, phone and desktop), gate and test counts, drift check, and CENTRAL.md entry. Stop for the owner's review; do not merge a book's PR without it. | the PR |
+| 6. Review | Screenshots (reader title page, a chapter, phone and desktop), gate and test counts, drift check, and CENTRAL.md entry. Presentation-only work (structure roles, layout, covers, print) may merge on green CI under the standing approval (November 14, 2026); a new hosted text, any wording change, or a rights statement still needs the owner's review. | the PR |
 
 Scan-verified features (verse lines and exact emphasis spans checked on a named printing's page) are a separate layer: `readerFormatting` in `data/library.json`, bound to the TXT checksum and validated by `tools/reader_formatting.py`. Orthodoxy Chapter IV is the only one so far (page 99 of the 1909 John Lane printing). The structure pipeline carries this layer over unchanged and never invents more.
 
@@ -44,13 +44,13 @@ Scan-verified features (verse lines and exact emphasis spans checked on a named 
 
 ## How the books should look
 
-These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The second is the owner's approved direction for the "Beautiful editions" brief (Part D), which starts only when Micah says so.
+These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The second is the owner's approved direction for the "Beautiful editions" brief (Part D), which proceeds under the standing approval for presentation (November 14, 2026).
 
 **Now (Orthodoxy):**
 - Reading measure of 60 to 70 characters (the reader's text column is `26em`), serif text, and generous leading.
 - Title centred; byline and section headings in small caps; each chapter heading set apart with a hairline above.
 - Chapter IV's two italic words and two-line Yeats quotation, from the scan-verified layer.
-- One quiet toolbar (Contents, Aa, Notes, Find, Print, Listen); the source and licence notices at the end of each section.
+- One quiet toolbar (Contents, Aa, Notes, Find, Print, Listen); the one-line licence notice at the end of the text, with the full source details in "Source, rights, and downloads".
 - Chapter pages (`/work/<id>/ch/<slug>/`) and a work page with one filled "Read here".
 
 **Next (Part D, pilot on Orthodoxy, then all 64 editions where noted):**

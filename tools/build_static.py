@@ -132,6 +132,13 @@ HOME_RE=re.compile(r'<!-- static-home:start -->.*?<!-- static-home:end -->',re.S
 LD_RE=re.compile(r'<!-- jsonld:start -->.*?<!-- jsonld:end -->\n',re.S)
 import hubio as _hubio
 DETAIL_V=_hubio.split(_hubio.load())[0]['detailV']
+DISCL_RE=re.compile(r'<p class="disclosure[^"]*">.*?</p>',re.S)
+def one_disclosure(body):
+    """Rule 7 (owner, November 14, 2026): the affiliate line appears once per page, beside the first affiliate links."""
+    n=[0]
+    def keep(m):
+        n[0]+=1;return m.group(0) if n[0]==1 else ''
+    return DISCL_RE.sub(keep,body)
 def page(tpl,route,title,desc,body,noindex=False,jsonld=()):
     url=SITE+(route+'/' if route else '');t=E(title);d=E(desc)
     s=LD_RE.sub('',tpl)
@@ -146,6 +153,7 @@ def page(tpl,route,title,desc,body,noindex=False,jsonld=()):
         s=sub(r'<meta property="%s" content="[^"]*">'%prop,'<meta property="%s" content="%s">'%(prop,val),s)
     for nm,val in (('twitter:title',t),('twitter:description',d)):
         s=sub(r'<meta name="%s" content="[^"]*">'%nm,'<meta name="%s" content="%s">'%(nm,val),s)
+    body=one_disclosure(body)
     s=sub(r'<main id="main" tabindex="-1">.*?</main>','<main id="main" tabindex="-1"><div class="static-prerender">'+body+'</div></main>',s)
     s=re.sub(r'<script (?:defer )?src="data/data\.js(\?[^"]*)?"></script>',lambda m:'<script>window.BC_BOOT='+json.dumps(route)+'</script>\n'+m.group(0),s,count=1)
     assert 'window.BC_BOOT' in s,'data/data.js script tag not found in index.html'
@@ -216,7 +224,6 @@ def plan_excerpt_html(x):
 def plan_day_html(d):
     """Mirrors dayHtml() in scripts/plans.js, without the today highlight and the mark-as-read box."""
     au=a('/author/'+d['authorId']+'/',d['attrAuthor']) if d['authorId'] else E(d['attrAuthor'])
-    ed=E(d['editionLabel'])+(', tr. '+E(', '.join(d['contributors'])) if d['contributors'] else '')+'. '+('Edition: ' if d['yearKind']=='edition' else 'Translation by ')+str(d['year'])+'.'
     return ('<li class="plan-day'+(' has-marker' if d['marker'] else '')+'" id="day-'+str(d['day'])+'" data-date="'+d['date']+'">'
       '<div class="pd-head"><span class="pd-num">Day '+str(d['day'])+'</span><time datetime="'+d['date']+'">'+E(plan_date(d['date']))+'</time><span class="pd-min">about '+str(d['minutes'])+' min</span></div>'
       +('<p class="pd-marker">'+E(d['marker'])+'</p>' if d['marker'] else '')+
@@ -224,12 +231,12 @@ def plan_day_html(d):
       '<blockquote class="pd-quote">'+plan_excerpt_html(d['excerpt'])+'</blockquote>'
       '<p class="pd-ref">'+au+', <cite>'+a('/work/'+d['work']+'/',d['attrWork'])+'</cite>'+E(d['attrRest'])+'</p>'
       '<p class="pd-note">'+E(d['reflection'])+'</p>'
-      '<div class="pd-foot"><a class="btn" href="/'+E(d['href'])+'">Read day '+str(d['day'])+' →</a><span class="pd-print-link">bibliothecacatholica.com/'+E(d['href'])+'</span></div>'
-      '<p class="small pd-ed">'+ed+' <a class="rights-badge rb-public-domain-us" href="/rights/" data-rights="public_domain_us" title="'+E(d['yearEvidence'])+'"><span class="rb-k">Rights:</span> Public domain (US)</a></p></li>')
+      '<div class="pd-foot"><a class="btn" href="/'+E(d['href'])+'" data-rights="public_domain_us" title="'+E(d['yearEvidence'])+'">Read day '+str(d['day'])+' →</a><span class="pd-print-link">bibliothecacatholica.com/'+E(d['href'])+'</span></div>'
+      '</li>')
 def plan_html(P):
     return (crumb_html(('Reading Lists','reading/'),(P['t'],''))+'<div class="page-head plan-head"><div class="eyebrow">Reading plan · '+E(PLAN_SPAN(P))+'</div><h1>'+E(P['t'])+'</h1><p class="lede">'+E(P['intro'])+'</p></div>'
       '<ol class="plan-days">'+''.join(plan_day_html(d) for d in P['days'])+'</ol>'
-      '<p class="small plan-foot">Every reading opens in the on-site reader at the start of the passage. The editions are public domain in the United States; each badge links to '+a('/rights/','how rights are determined')+'. '+a('/reading/','All reading lists')+'.</p>'+(site_copy.newsletter_box() if P['id']=='advent-2026' else ''))
+      '<p class="small plan-foot">Every reading opens in the on-site reader at the start of the passage. The editions are public domain in the United States ('+a('/rights/','how rights are determined')+'). '+a('/reading/','All reading lists')+'.</p>'+(site_copy.newsletter_box() if P['id']=='advent-2026' else ''))
 def list_item_title(i,gid,libw):
     """A reading-list entry's title: its edition guide, else its reading-room works (Phase A: the 14 entries
     that carry only `workIds` rendered as ": description"), else its own title and author. Never empty."""
@@ -240,22 +247,24 @@ def list_item_title(i,gid,libw):
     assert t.strip(),'reading-list entry with no title, guide, or work: %r'%i
     return t
 # --- Deep-link gaps (2026-11-09): chapter and story pages for hosted texts (tools/text_pages.py, data/text-pages.json) ---
-PG_NOTICE=('This eBook is for the use of anyone anywhere in the United States and most other parts of the world at no cost and with almost no restrictions whatsoever. '
-  'You may copy it, give it away or re-use it under the terms of the <a href="https://www.gutenberg.org/policy/license.html" target="_blank" rel="noopener">Project Gutenberg License</a> '
-  'included with this eBook or online at <a href="https://www.gutenberg.org" target="_blank" rel="noopener">www.gutenberg.org</a>. If you are not located in the United States, '
-  'you will have to check the laws of the country where you are located before using this eBook.')  # same words as read() in scripts/library.js
+# Notice rule 2 (owner, November 14, 2026): one sentence with a link to the full licence, in the edition details and
+# once at the end of the text or page; never above the text or per section. The hosted TXT and downloads keep the
+# full license. Same words as PG_LINE in scripts/library.js.
+PG_LINE=('From Project Gutenberg: free for anyone in the United States and most other parts of the world under the '
+  '<a href="https://www.gutenberg.org/policy/license.html" target="_blank" rel="noopener">Project Gutenberg License</a>.')
 SE_NOTICE=('This text comes from the Standard Ebooks edition, which its producers dedicate to the public domain (CC0 1.0); it is not a Project Gutenberg eBook. '
   'Bibliotheca Catholica corrected it to the wording of the first printings where they differ; each correction is listed in the edition’s provenance record.')  # same words as SE_NOTICE in scripts/library.js
+def edition_details(*rows):
+    """Edition details (rules 2, 7, and 10 of November 14, 2026): source, notice, and quality labels, collapsed."""
+    return '<details class="edition-details"><summary>Edition details</summary>'+''.join(r for r in rows if r)+'</details>'
 def is_pg(e):return 'gutenberg.org' in e['source']
 def text_notice(e):
     """The notice a hosted part page shows: the Gutenberg license notice, or the Standard Ebooks notice (2026-11-09)."""
-    return '<p class="small pg-notice">'+(PG_NOTICE if is_pg(e) else SE_NOTICE)+'</p>'
+    return '<p class="small pg-notice">'+(PG_LINE if is_pg(e) else SE_NOTICE)+'</p>'
 def text_source(e):
-    if is_pg(e):return a(e['source'],'Project Gutenberg record',True)+'. '+E(e['rights'])+' The full Project Gutenberg license is kept in the hosted text.'
+    if is_pg(e):return a(e['source'],'Project Gutenberg record',True)+'. '+E(e['rights'])+' The full Project Gutenberg license is kept in the hosted text and its download.'
     return (a(e['source'],'Standard Ebooks record',True)+'. '+E(e['rights'])+' '
             +a('https://texts.bibliothecacatholica.com/provenance/'+e['id']+'.json','Provenance record and corrections',True)+'.')
-def pd_badge(evidence):
-    return ' <a class="rights-badge rb-public-domain-us" href="/rights/" data-rights="public_domain_us" title="'+E(evidence)+'"><span class="rb-k">Rights:</span> Public domain (US)</a>'
 def text_split(path):
     return [p.strip() for p in re.split(r'\n\s*\n',(ROOT/path).read_text(encoding='utf-8').replace('\r','')) if p.strip()]
 def part_label(d,x,low=False):
@@ -325,15 +334,15 @@ def part_pages(out,lib,by_html,author_ld):
               +'<div class="page-head"><div class="eyebrow">'+E(w['title'])+' · '+E(part_label(d,x))+'</div><h1>'+E(x['title'])+'</h1>'
               +'<p class="lede">'+by_html(w)+', <cite>'+a('/work/'+wid+'/',w['title'])+'</cite>, '+E(part_label(d,x,True))+(' of '+str(sum(1 for y in d['items'] if y['num'][:1].isdigit() or d['kind']=='ch')) if x['num'][:1].isdigit() or d['kind']=='ch' else '')+'. About '+str(max(1,round(x['words']/200)))+' min.</p></div>'
               +'<p class="dl-row"><a class="btn" href="'+E(reader)+'">Read in the reading room →</a> '+a('/work/'+wid+'/','Work page and editions')+'</p>'
-              +'<p class="small">The reading room adds highlights, notes, find in work, and saved places. This page shows the same hosted text in one piece.</p>'
-              +'<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+'. '+E(d.get('editionLine') or e.get('note',''))+pd_badge(e['rights'])+'</p>'
-              +nav+text_notice(e)
-              +(formatting_note(e) if any(lo <= x['end'] and hi >= x['start'] for lo,hi in e.get('readerFormatting',{}).get('proseRanges',[])) else '')
               +'<article class="reading-text" aria-label="'+E(x['title'])+'">'+''.join(reading_block(e,B[i],i) for i in range(x['start'],x['end']+1))+'</article>'
-              +nav+parts_list(wid,d)
-              +'<p class="small">Source: '+E(w['author']+'. '+w['title']+'. '+e['label']+'.')+' '+text_source(e)+'</p>'
-              +('<p class="small text-auto-layout">'+E(AUTO_LABEL)+'</p>' if e.get('autoLayout') else '')
-              +'<p>'+a('/work/'+wid+'/',w['title'])+' · '+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>')
+              +text_notice(e)+nav+parts_list(wid,d)
+              +edition_details('<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+'. '+E(d.get('editionLine') or e.get('note',''))+'</p>',
+                  '<p class="small">Source: '+E(w['author']+'. '+w['title']+'. '+e['label']+'.')+' '+text_source(e)+' '+a('/rights/','How rights are checked')+'.</p>',
+                  text_notice(e),
+                  (formatting_note(e) if any(lo <= x['end'] and hi >= x['start'] for lo,hi in e.get('readerFormatting',{}).get('proseRanges',[])) else ''),
+                  ('<p class="small text-auto-layout">'+E(AUTO_LABEL)+'</p>' if e.get('autoLayout') else ''),
+                  '<p class="small">The reading room adds highlights, notes, find in work, and saved places. This page shows the same hosted text in one piece.</p>')
+              +'<p>'+a('/work/'+wid+'/',w['title'])+' · '+a('/library/','Selected library')+'</p>')
             what='“'+x['title']+',” '+part_label(d,x,True)+' '+('of '+str(n)+' ' if d['kind']=='ch' else '')+'in '+w['title']+' by '+w['author']+'.'
             md=fit([what],(('The full text on one page, free, with a link into the reading room for notes and highlights.','The full text on one page, with a link into the reading room.','The full text, free to read.'),)+DESC_EXTRA)
             ld_part={'@context':'https://schema.org','@type':'Chapter' if d['kind']=='ch' else 'ShortStory','name':x['title'],'url':SITE+route+'/','position':k+1,
@@ -375,8 +384,8 @@ def summa_pages(out,lib):
     def edline(P):
         e=eds[P['edition']]
         if P['slug']=='supp':
-            return ('<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+', translated by the Fathers of the English Dominican Province. '+E(e['note'])+pd_badge(e['rights'])+'</p>')
-        return ('<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+', translated by the Fathers of the English Dominican Province. '+E(e['note'])+pd_badge(e['rights'])+'</p>')
+            return ('<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+', translated by the Fathers of the English Dominican Province. '+E(e['note'])+'</p>')
+        return ('<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+', translated by the Fathers of the English Dominican Province. '+E(e['note'])+'</p>')
     def source(P):
         e=eds[P['edition']]
         if P['slug']=='supp':
@@ -387,11 +396,12 @@ def summa_pages(out,lib):
                     +' Transcription, OCR file checksums, and method: '+a('https://texts.bibliothecacatholica.com/provenance/'+e['id']+'.json','source record',True)+'.</p>')
         return ('<p class="small">Source: '+E('Thomas Aquinas. Summa Theologica, '+P['name']+'. '+e['label'].split(',')[0]+'.')+' '+a(e['source'],'Project Gutenberg record',True)+'. '+E(e['rights'])+' The full Project Gutenberg license is kept in the hosted text.</p>')
     other=('<p class="small">Also online, linked only: the same translation at '+a(NA,'New Advent',True)+' and the Latin text at '+a(CT,'Corpus Thomisticum',True)+'. Neither is copied here.</p>')
-    pg_notice='<p class="small pg-notice">'+PG_NOTICE+'</p>'
+    pg_notice='<p class="small pg-notice">'+PG_LINE+'</p>'
     tr_notice=('<p class="small ocr-notice">The Supplement is not a Project Gutenberg text. It is Bibliotheca Catholica’s transcription of public-domain scans at the Internet Archive; '
                'obvious OCR errors were corrected, and passages marked “OCR uncertain” could not be confidently corrected, so check them against the linked scan page.</p>')
     SUPP_LINE=('<p class="small supp-line">From the Supplement, compiled after Aquinas’s death from his Commentary on the Sentences and transcribed here from the 1917 to 1922 printings. '+a('/summa/supp/','About the Supplement')+'.</p>')
-    def NOTICE(P):return tr_notice if P['slug']=='supp' else pg_notice
+    def NOTICE(P):return '' if P['slug']=='supp' else pg_notice  # end of page; the Supplement's notice is a quality label (details only)
+    def DETAILS(P,extra=''):return edition_details(edline(P),source(P),tr_notice if P['slug']=='supp' else pg_notice,extra,other)
     C=[('Discover & Read','library/'),(w['title'],'work/'+w['id']+'/')]
     flat=[(P,q,x) for P in S['parts'] for q in P['questions'] for x in q['articles']]
     qflat=[(P,q) for P in S['parts'] for q in P['questions']]
@@ -405,7 +415,7 @@ def summa_pages(out,lib):
           +'<p class="small">Aquinas left the Third Part unfinished at question 90, where the Gutenberg files end. The '+a('/summa/supp/','Supplement')+', compiled from his earlier writings after his death, completes it here in '+str(len(SUPP['questions']))+' questions, transcribed from the 1917, 1921, and 1922 printings of the same translation.</p>'
           +'<p class="small">About this text: the English Dominican translation, first printed 1911 to 1925. A sample check on 2026-11-09 against pre-1931 printings at the Internet Archive found that the article text matches, with no 1947 introduction, synopsis, or index; “From the Complete American Edition” in Gutenberg’s catalog titles is a provenance note only.</p>'
           +'<p class="dl-row"><a class="btn" href="/work/'+w['id']+'/">Work page and editions</a> '+a('/editions/summa/','Edition guide')+'</p>'
-          +''.join(edline(P) for P in S['parts'][:1])+other+pg_notice+tr_notice+'<p>'+a('/author/thomas-aquinas/','Thomas Aquinas')+' · '+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>')
+          +pg_notice+edition_details(edline(S['parts'][0]),other,tr_notice)+'<p>'+a('/author/thomas-aquinas/','Thomas Aquinas')+' · '+a('/library/','Selected library')+'</p>')
     out['summa']=('Summa Theologiae by Question and Article · Bibliotheca Catholica',
         fit(['The Summa Theologiae of Thomas Aquinas in English, one free page for each of its %d questions and %d articles.'%(total_q,total_a)],(('Read in the reading room too.',''),)+DESC_EXTRA),
         body,[{'@context':'https://schema.org','@type':'Book','name':'Summa Theologiae','url':SITE+'summa/','author':ld_by,'isAccessibleForFree':True,'inLanguage':'English','hasPart':[{'@type':'Book','name':'Summa Theologiae, '+P['name'],'url':SITE+'summa/'+P['slug']+'/'} for P in S['parts']]},crumbs(*C,('By question and article','summa/'))])
@@ -429,7 +439,7 @@ def summa_pages(out,lib):
               +'<p class="lede">'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>. '+str(len(P['questions']))+' questions, '+str(na_)+' articles.</p></div>'
               +'<p class="dl-row"><a class="btn" href="'+E(reader(P,P['start']))+'">Read in the reading room →</a> '+a('/work/'+w['id']+'/','Work page and editions')+'</p>'
               +(ABOUT_SUPP+'<p class="small">'+str(len(P['ocrFlags']))+' passages in the Supplement are marked “OCR uncertain” where the scan could not be read with confidence; each links to its scan page.</p>' if P['slug']=='supp' else '')
-              +edline(P)+nav+NOTICE(P)+pro+'<h2>Questions</h2><ol class="text-parts">'+''.join(li)+'</ol>'+('<p class="small">Aquinas left the Third Part unfinished here, at question 90, where the Gutenberg files end. The '+a('/summa/supp/','Supplement')+' completes it.</p>' if P['slug']=='3' else '')+nav+other+source(P))
+              +nav+pro+'<h2>Questions</h2><ol class="text-parts">'+''.join(li)+'</ol>'+('<p class="small">Aquinas left the Third Part unfinished here, at question 90, where the Gutenberg files end. The '+a('/summa/supp/','Supplement')+' completes it.</p>' if P['slug']=='3' else '')+NOTICE(P)+nav+DETAILS(P))
         body=body.replace('<ol class="text-parts"></ol>','')
         out['summa/'+P['slug']]=('Summa Theologiae, '+P['name']+' ('+P['latin']+') · Bibliotheca Catholica',
             fit(['The %s of the Summa Theologiae (%s) by Thomas Aquinas in English: %d questions and %d articles, each on its own free page.'%(P['name'],P['latin'],len(P['questions']),na_)],DESC_EXTRA),
@@ -446,8 +456,8 @@ def summa_pages(out,lib):
               +'<div class="page-head"><div class="eyebrow">Summa Theologiae · '+E(qref(P,q))+'</div><h1>Question '+str(q['n'])+'. '+E(q['title'])+'</h1>'
               +'<p class="lede">'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>, '+a('/summa/'+P['slug']+'/',P['name'])+'. '+str(len(q['articles']))+(' article.' if len(q['articles'])==1 else ' articles.')+'</p></div>'
               +'<p class="dl-row"><a class="btn" href="'+E(reader(P,q['heading']))+'">Read in the reading room →</a> '+a(na(P,q),'This question at New Advent',True)+'</p>'
-              +(SUPP_LINE if P['slug']=='supp' else '')+edline(P)+nav+NOTICE(P)+'<article class="reading-text" aria-label="'+E('Question '+str(q['n']))+'">'+pro+'</article>'
-              +'<h2>Articles</h2>'+arts+nav+other+source(P))
+              +(SUPP_LINE if P['slug']=='supp' else '')+'<article class="reading-text" aria-label="'+E('Question '+str(q['n']))+'">'+pro+'</article>'
+              +'<h2>Articles</h2>'+arts+NOTICE(P)+nav+DETAILS(P))
         out[qpath(P,q)]=('Summa Theologiae '+qref(P,q)+': '+q['title']+' · Bibliotheca Catholica',
             fit(['Summa Theologiae, %s, question %d: %s.'%(P['name'],q['n'],q['title'].rstrip('?.')),'The question’s opening and its %d article%s, by Thomas Aquinas, free in English.'%(len(q['articles']),'' if len(q['articles'])==1 else 's')],DESC_EXTRA),
             body,[{'@context':'https://schema.org','@type':'Chapter','name':'Question '+str(q['n'])+'. '+q['title'],'url':SITE+qpath(P,q)+'/','position':q['n'],'isPartOf':{'@type':'Book','name':'Summa Theologiae, '+P['name'],'url':SITE+'summa/'+P['slug']+'/','author':ld_by},'isAccessibleForFree':True,'inLanguage':'English'},crumbs(*CQ)])
@@ -463,7 +473,7 @@ def summa_pages(out,lib):
               +'<div class="page-head"><div class="eyebrow">Summa Theologiae · '+E(aref(P,q,x))+'</div><h1>'+E(x['title'])+'</h1>'
               +'<p class="lede">'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>, '+a('/summa/'+P['slug']+'/',P['name'])+', '+a('/'+qpath(P,q)+'/','question '+str(q['n'])+', '+q['title'])+', article '+str(x['n'])+'. About '+str(max(1,round(x['words']/200)))+' min.</p></div>'
               +'<p class="dl-row"><a class="btn" href="'+E(reader(P,x['heading']))+'">Read in the reading room →</a> '+a(na(P,q,x),'This article at New Advent',True)+'</p>'
-              +(SUPP_LINE if P['slug']=='supp' else '')+edline(P)+nav+NOTICE(P)+fl+'<article class="reading-text" aria-label="'+E(aref(P,q,x))+'">'+text+'</article>'+nav+other+source(P))
+              +(SUPP_LINE if P['slug']=='supp' else '')+'<article class="reading-text" aria-label="'+E(aref(P,q,x))+'">'+text+'</article>'+NOTICE(P)+nav+DETAILS(P,fl))
         if (P['slug'],q['n'],x['n'])==('1',2,1):
             assert re.search(r'Q\. 3, Art\. 4',text)
             body+='<aside><h2>References in this article</h2>'+a('/summa/1/q3/a4/','I, q. 3, a. 4 · Whether essence and existence are the same in God?')+'</aside>'
@@ -543,7 +553,7 @@ def main():
         if au.get('extract') and au['extract'] not in desc:
             wt=urllib.parse.unquote(wk.split('/wiki/')[1]).replace('_',' ') if wk else au['name']
             wiki_block=('<blockquote class="extract"><p>'+E(au['extract']+('…' if len(au['extract'])>=595 else ''))+'</p></blockquote>'
-              '<p class="small wiki-credit">Shortened excerpt from the Wikipedia article '+(a(wk,'“'+wt+'”',True) if wk else '“'+E(wt)+'”')+', available under '+a(CC_BY_SA,'CC BY-SA 4.0',True)+'.</p>')
+              '<p class="small wiki-credit">From Wikipedia, '+(a(wk,'“'+wt+'”',True) if wk else '“'+E(wt)+'”')+' (shortened), '+a(CC_BY_SA,'CC BY-SA 4.0',True)+'.</p>')  # rule 11: one line
         works=''.join('<li>'+a(w['url'],w['title'],True)+'</li>' for w in au.get('works') or [] if w.get('url'))
         mine=[w for w in lib['works'] if w.get('authorId')==au['id']]
         # v18.1: the 211 former isidore.co folder links became internal Isidore Index searches (#/isidore/<catalog name>)
@@ -560,10 +570,8 @@ def main():
             bks=sorted(books_by.get(au['id'],[]),key=lambda b:(re.sub(r'^(the|a|an) ','',b[1].casefold()),b[0]))
             n_online=sum(1 for w in au.get('works') or [] if w.get('url'))
             intro='<p class="au-intro">'+E(AP.intro(au,eras.get(au.get('era'),''),len(bks),len(au_guides),n_online))+'</p>'
-            def ed_badge(w):
-                return AP.badge(next((x for x in (AP.edition(e) for e in w['editions']) if x),None))
-            lib_html=('<h2>In our library (read at the source)</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+ed_badge(w)+'</li>' for w in mine)+'</ul>') if mine else ''
-            bk_html=('<h2>Books in the Isidore Index</h2><p class="small">Each title opens its catalog record on isidore.co. We do not host these books; the badge says what the record allows.</p><ul class="au-books">'+''.join('<li>'+a(BK['server']+'legacy/book/'+str(b[0])+'/CalibreLibrary',b[1],True)+(' ('+str(b[3])+')' if b[3] else '')+AP.badge(AP.resolve(RJ,b[0]))+'</li>' for b in bks)+'</ul>') if bks else ''
+            lib_html=('<h2>In our library (read at the source)</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else ''
+            bk_html=('<h2>Books in the Isidore Index</h2><p class="small">Each title opens its catalog record on isidore.co. We do not host these books.</p><ul class="au-books">'+''.join('<li>'+a(BK['server']+'legacy/book/'+str(b[0])+'/CalibreLibrary',b[1],True)+(' ('+str(b[3])+')' if b[3] else '')+'</li>' for b in bks)+'</ul>') if bks else ''
             gd_html=''
             if au_guides:
                 buys=0;li=[]

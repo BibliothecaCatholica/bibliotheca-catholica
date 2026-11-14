@@ -31,11 +31,11 @@ test('missing data, missing ids, and hostable codes without evidence fall back t
  ['1','2','3'].forEach(i=>assert.equal(RT.resolve(fake,i).status,'unknown'))});
 test('every hostable record carries written evidence and a checked date',()=>{
  for(const i of RT.ORDER.filter(RT.hostable).flatMap(idsBy)){const x=RT.resolve(RD,i);assert(x.evidence.length>40,i);assert.match(x.checked,/^\d{4}-\d{2}-\d{2}$/);assert(!/^Lead, not confirmed/.test(x.evidence),i)}});
-test('list rows: link only and unknown records get the book page and no file links; hostable rows keep them',()=>{
+test('list rows (no badge, rule 10): link only and unknown records get the book page and no file links; hostable rows keep them',()=>{
  const c=appCtx();
  for(const st of ['link_only','unknown']){const i=idsBy(st)[0];const h=c.brow(book(i));
-  assert(h.includes('rb-'+st.replace('_','-')),st);assert(!RAW.test(h),st+': '+h);assert(h.includes('legacy/book/'+i+'/CalibreLibrary'));assert(!/download/i.test(h))}
- const p=idsBy('public_domain_us')[0];const h=c.brow(book(p));assert(h.includes('rb-public-domain-us'));assert(RAW.test(h))});
+  assert(h.includes('data-rights="'+st+'"'),st);assert(!h.includes('rights-badge'),st);assert(!RAW.test(h),st+': '+h);assert(h.includes('legacy/book/'+i+'/CalibreLibrary'));assert(!/download/i.test(h))}
+ const p=idsBy('public_domain_us')[0];const h=c.brow(book(p));assert(h.includes('data-rights="public_domain_us"'));assert(!h.includes('rights-badge'),'rule 10: no badge in list rows');assert(RAW.test(h))});
 test('record pages: download buttons only for hostable records, with evidence and checked date shown',()=>{
  for(const st of ['link_only','unknown','public_domain_us']){const c=appCtx();const i=idsBy(st)[0];c.B.ids[i]=book(i);c.B.list=[c.B.ids[i]];c.bookDetail(+i);
   const x=RT.resolve(RD,i);assert(c.out.includes(esc(x.evidence)),st);assert(c.out.includes('Checked '+x.checked));

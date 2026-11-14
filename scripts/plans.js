@@ -24,8 +24,6 @@ var LOADING=false,WAIT=[];
 function load(cb){if(root.READING_PLANS){setTimeout(cb,0);return}WAIT.push(cb);if(LOADING)return;LOADING=true;
   var s=document.createElement('script');s.src='data/reading-plans.js?v=20261109-advent-sync';
   s.onload=s.onerror=function(){LOADING=false;WAIT.splice(0).forEach(function(f){try{f()}catch(e){}})};document.head.appendChild(s)}
-function edition(d){var L=root.LIBRARY_DATA,w=L&&L.works.filter(function(x){return x.id===d.work})[0];return w&&w.editions.filter(function(e){return e.id===d.edition})[0]}
-function badge(d){var R=root.BCRights,e=edition(d);return R&&e?R.badge(R.edition(e)):''}
 /* The day's excerpt (data/advent-2026.json, word for word as Substack has it): blank lines are paragraphs,
    single newlines are verse line breaks. Mirrors plan_excerpt_html() in tools/build_static.py. */
 function excerptHtml(x){return String(x||'').split('\n\n').map(function(p){return '<p>'+p.split('\n').map(esc).join('<br>')+'</p>'}).join('')}
@@ -38,9 +36,8 @@ function dayHtml(d,state){var isToday=state.today===d.date,done=!!state.read[d.d
    '<blockquote class="pd-quote">'+excerptHtml(d.excerpt)+'</blockquote>'+
    '<p class="pd-ref">'+(d.authorId?'<a href="#/author/'+esc(d.authorId)+'">'+esc(d.attrAuthor)+'</a>':esc(d.attrAuthor))+', <cite><a href="#/work/'+esc(d.work)+'">'+esc(d.attrWork)+'</a></cite>'+esc(d.attrRest)+'</p>'+
    '<p class="pd-note">'+esc(d.reflection)+'</p>'+
-   '<div class="pd-foot"><a class="btn" href="'+esc(d.href)+'">Read day '+d.day+' →</a>'+
-   '<span class="pd-print-link">bibliothecacatholica.com/'+esc(d.href)+'</span><label class="pd-check"><input type="checkbox" data-day="'+d.day+'" aria-label="Mark day '+d.day+' as read"'+(done?' checked':'')+'> Mark as read</label></div>'+
-   '<p class="small pd-ed">'+esc(d.editionLabel)+(d.contributors.length?', tr. '+esc(d.contributors.join(', ')):'')+'. '+(d.yearKind==='edition'?'Edition: ':'Translation by ')+d.year+'.'+badge(d)+'</p></li>'}
+   '<div class="pd-foot"><a class="btn" href="'+esc(d.href)+'" data-rights="public_domain_us">Read day '+d.day+' →</a>'+
+   '<span class="pd-print-link">bibliothecacatholica.com/'+esc(d.href)+'</span><label class="pd-check"><input type="checkbox" data-day="'+d.day+'" aria-label="Mark day '+d.day+' as read"'+(done?' checked':'')+'> Mark as read</label></div></li>'}
 function progress(plan,read){var n=plan.days.filter(function(d){return read[d.day]}).length;return n+' of '+plan.days.length+' days marked as read'}
 function view(render,id){
   render('<div class="page-head"><div class="eyebrow">Reading plan</div><h1>Advent with the Fathers</h1><p class="lede">Loading the plan…</p></div>','reading');
@@ -53,7 +50,7 @@ function view(render,id){
       '<div class="plan-tools"><span id="plan-progress" role="status">'+esc(progress(plan,read))+'</span>'+(cur?'<a class="btn ghost" href="#day-'+cur.day+'" id="plan-jump">Go to today, day '+cur.day+'</a>':'')+'<button type="button" class="btn ghost" id="plan-print">Print the plan</button><button type="button" class="btn ghost" id="plan-reset"'+(list.length?'':' hidden')+'>Clear marks</button></div>'+
       '<p class="small plan-privacy">Your marks are saved only in this browser.</p></div>'+
       '<ol class="plan-days">'+plan.days.map(function(d){return dayHtml(d,state)}).join('')+'</ol>'+
-      '<p class="small plan-foot">Every reading opens in the on-site reader at the start of the passage. The editions are public domain in the United States; each badge links to <a href="#/rights">how rights are determined</a>. <a href="#/reading">All reading lists</a>.</p>'+
+      '<p class="small plan-foot">Every reading opens in the on-site reader at the start of the passage. The editions are public domain in the United States (<a href="#/rights">how rights are determined</a>). <a href="#/reading">All reading lists</a>.</p>'+
       (id==='advent-2026'&&root.SITE_COPY&&root.SITE_COPY.newsletter||'');  /* 2026-11-09: the Substack sign-up (tools/site_copy.py newsletter_box) */
     main.innerHTML=h;document.title=plan.t+' '+plan.year+': a daily reading plan · Bibliotheca Catholica';
     function sync(){var L=Object.keys(read).filter(function(k){return read[k]}).map(Number);setRead(id,L);document.getElementById('plan-progress').textContent=progress(plan,read);document.getElementById('plan-reset').hidden=!L.length}

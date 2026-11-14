@@ -28,8 +28,8 @@ test('a hosted work leads with one "Read here" and keeps its rights evidence beh
  const e=W.LIBRARY_DATA.works.find(w=>w.id==='confessions').editions[0];
  assert.ok(h.includes(e.checked)&&h.includes('Source checked'),'checked date stays on the page');
  for(const way of ['Listen','Download','Buy in print','Find in a library'])assert.ok(h.includes('<h3>'+way+'</h3>'),way);
- // the FTC line appears once, inside the purchase block, beside the affiliate links
- assert.equal(count(h,/Some links are affiliate links/g),1);
+ // rule 7 (owner, November 14, 2026): the one-line disclosure appears once, beside the affiliate links, with Details
+ assert.equal(count(h,/Affiliate links: we may earn a commission\. <a href="\/disclosure\/">Details<\/a>\./g),1);
 });
 test('no bordered card inside a bordered panel on work pages',()=>{
  // rows use hairline dividers; the only bordered boxes left are context notes (.ef-box) and the

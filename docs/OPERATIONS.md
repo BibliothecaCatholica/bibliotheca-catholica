@@ -21,6 +21,19 @@ Review and commit intended source and generated changes. Rerun the three build c
 
 ## Owner decisions
 
+**Standing approval (owner rule change, November 14, 2026; recorded in CENTRAL.md).** Changes limited to presentation, docs, tests, and tooling may merge on green CI without the owner's review. His review is still required for:
+
+- new hosted texts;
+- any wording change in a hosted text;
+- rights or licence statements;
+- affiliate placements;
+- analytics;
+- hosting or DNS;
+- takedown identity;
+- outreach.
+
+After a merge under this approval, confirm the Cloudflare deploy (live `/build.json` `id` equals `main`'s) and record it in CENTRAL.md.
+
 Existing explicit authorization for a task applies; do not ask twice. Otherwise obtain owner direction before:
 
 - New hosting or mirroring of files; new text eligibility cannot be inferred from a rights badge.

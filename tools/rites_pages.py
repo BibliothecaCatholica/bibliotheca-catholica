@@ -173,7 +173,7 @@ def record_page(D,r):
     if r['milestones']:
         h+='<section class="panel"><h2>History</h2><ol class="rites-ms">'+''.join('<li><span class="rites-when">'+E(m['when'])+'</span> '+E(m['event'])+srcs(m['s'])+'</li>' for m in r['milestones'])+'</ol><p class="small">Dates are given as ranges or centuries where the sources give no single date.</p></section>'
     if r['resources']:
-        h+='<section class="panel"><h2>Texts and resources</h2><p class="small">Every resource is an outside link; nothing here is hosted by Bibliotheca Catholica. <a href="/rights/">What the badges mean</a>.</p><ul class="rites-res">'+''.join('<li>'+ext(x['url'],x['title'])+' '+badge(x)+'<br><span class="small">'+E(x['evidence'])+'</span></li>' for x in r['resources'])+'</ul></section>'
+        h+='<section class="panel"><h2>Texts and resources</h2><p class="small">Every resource is an outside link; nothing here is hosted by Bibliotheca Catholica. <a href="/rights/">How rights are checked</a>.</p><ul class="rites-res">'+''.join('<li>'+ext(x['url'],x['title']).replace('<a ','<a data-rights="'+x['rights']+'" title="'+E(RLABEL[x['rights']])+'" ',1)+'<br><span class="small">'+E(x['evidence'])+'</span></li>' for x in r['resources'])+'</ul></section>'
     if r['related']:
         pre={'author':'/author/','work':'/work/','saint':'/saints/'}
         h+='<section class="panel"><h2>In the library</h2><ul>'+''.join('<li><a href="'+pre[x['kind']]+x['id']+'/">'+E(x['label'])+'</a> <span class="small">'+E(x['why'])+'</span></li>' for x in r['related'])+'</ul></section>'

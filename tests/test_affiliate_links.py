@@ -1,5 +1,5 @@
 """Affiliate preview (owner-approved for a preview, Business 2026-11-09): Bookshop.org ID 130222 links only for real
-edition-guide ISBNs, "Browse TAN Books" through the referral link, the FTC disclosure beside every affiliate link,
+edition-guide ISBNs, "Browse TAN Books" through the referral link, the one-line FTC disclosure once per page beside the links,
 the /disclosure/ page, no Amazon, the Substack sign-up on every page (the embed only on the home page and the Advent
 plan), and no new analytics."""
 import json, pathlib, re, unittest
@@ -8,6 +8,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 FTC = 'Some links are affiliate links. If you buy through them, Bibliotheca Catholica may earn a small commission at no extra cost to you. It helps keep the library free.'
 SUBSCRIBE = 'https://bibliothecacatholica.substack.com/subscribe'
 TAN = 'https://lddy.no/1qbrw'
+DLINE = '<p class="disclosure small">Affiliate links: we may earn a commission. <a href="/disclosure/">Details</a>.</p>'  # rule 7, November 14, 2026
 LINE = 'Advent with the Fathers: a short reading from the Church Fathers each day, Nov 29 to Dec 24. Free.'
 
 
@@ -38,7 +39,8 @@ class AffiliateLinkTests(unittest.TestCase):
     def test_config(self):
         self.assertRegex(self.aff, r"bookshopId:\s*'130222'")
         self.assertIn("tan: { name: 'TAN Books', url: '" + TAN + "'", self.aff)
-        self.assertIn("disclosure: 'Affiliate disclosure: " + FTC + "'", self.aff)
+        self.assertIn("disclosure: 'Affiliate disclosure: " + FTC + "'", self.aff)  # the fuller statement on /disclosure/
+        self.assertIn("line: 'Affiliate links: we may earn a commission.'", self.aff)
         self.assertEqual(self.pe['bookshopId'], '130222')
 
     def test_bookshop_links_carry_the_id_and_a_real_isbn(self):
@@ -69,12 +71,15 @@ class AffiliateLinkTests(unittest.TestCase):
         self.assertIn(TAN, main_of(self.pages['author/g-k-chesterton/index.html']))
 
     def test_disclosure_beside_every_affiliate_link(self):
+        # rule 7 (owner, November 14, 2026): one line beside the links, "Details" to /disclosure/, once per page
         for name, html in self.pages.items():
             m = main_of(html)
-            for sec in re.findall(r'<section class="buy-print">.*?</section>', m):
-                self.assertIn(FTC, sec, name); self.assertIn('href="/disclosure/"', sec, name)
-            if re.search(r'bookshop\.org/a/|lddy\.no', m):
-                self.assertIn(FTC, m, name)
+            if name != 'disclosure/index.html' and re.search(r'href="https://(?:bookshop\.org/a/|lddy\.no)', m):
+                self.assertEqual(m.count(DLINE), 1, name)
+                first = re.search(r'href="https://(?:bookshop\.org/a/|lddy\.no)', m).start()
+                self.assertLess(abs(m.index(DLINE) - first), 6000, name + ': the line sits beside the links')
+            self.assertLessEqual(m.count('class="disclosure'), 1, name)
+            self.assertNotIn(FTC, m if name != 'disclosure/index.html' else '', name)
             # the TAN link is only the general store link, never a claim about a title
             for t in re.findall(r'<a [^>]*href="https://lddy\.no/1qbrw"[^>]*>([^<]*)</a>', m):
                 self.assertEqual(t, 'Browse TAN Books ↗', name)
@@ -91,8 +96,7 @@ class AffiliateLinkTests(unittest.TestCase):
         texts = re.findall(r'<a [^>]*href="https://lddy\.no/1qbrw"[^>]*>([^<]*)</a>', m)
         self.assertEqual(texts, ['Browse TAN Books ↗'])
         self.assertIn('rel="noopener sponsored"', re.search(r'<a [^>]*href="https://lddy\.no/1qbrw"[^>]*>', m).group(0))
-        self.assertIn(FTC, m)
-        self.assertIn('href="/disclosure/"', m)
+        self.assertIn(DLINE, m)
         self.assertNotIn('https://tanbooks.com/', m)
         hub = json.loads((ROOT / 'data/catholic-hub.json').read_text())
         tan = [r for r in hub['resources'] if r['name'] == 'TAN Books' and r['category'] == 'Publishers']

@@ -179,5 +179,6 @@ def bookshop_id(root):
     m=re.search(r"bookshopId:\s*'(\d+)'",(root/'data/affiliates.js').read_text());assert m and m.group(1)=='130222','Bookshop id must be 130222'
     return m.group(1)
 def disclosure(root):
-    m=re.search(r"disclosure:\s*'([^']*)'",(root/'data/affiliates.js').read_text());t=m.group(1)
-    return '<p class="disclosure small"><b>Affiliate disclosure:</b> '+E(re.sub(r'^Affiliate disclosure:\s*','',t))+'</p>'
+    """Rule 7 (owner, November 14, 2026): one line beside the links, once per page, with a Details link."""
+    m=re.search(r"\bline:\s*'([^']*)'",(root/'data/affiliates.js').read_text())
+    return '<p class="disclosure small">'+E(m.group(1))+' <a href="/disclosure/">Details</a>.</p>'

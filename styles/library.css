@@ -15,6 +15,7 @@ select,input,button{max-width:100%}.reader-tools select,#library-topic{backgroun
 .rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}.rows>li{padding:12px 0;border-bottom:1px solid var(--line)}
 .work-editions,.other-ways{margin:32px 0 0;max-width:820px}.work-editions h2,.other-ways h2{font-size:26px;margin:0 0 8px}
 .ed-row p{margin:0}.ed-sum b{font-weight:600}.ed-acts{font:14px/1.6 var(--sans);margin-top:4px!important}
+.edition-details{max-width:760px;margin:18px auto 0;font-size:15px;color:var(--ink2)}.edition-details summary{cursor:pointer;font:14px var(--sans);color:var(--muted)}.edition-details p{margin:6px 0 0}
 .ed-details,.work-refs{margin-top:6px;font-size:15px;color:var(--ink2)}.ed-details summary,.work-refs summary{cursor:pointer;font:14px var(--sans);color:var(--muted)}.ed-details p{margin:6px 0 0;max-width:66ch}
 .way{display:grid;grid-template-columns:150px minmax(0,1fr);gap:4px 16px;align-items:baseline}.way h3{font:400 17px var(--serif);font-variant-caps:all-small-caps;letter-spacing:.06em;color:var(--ink2);margin:0}
 .way-body p{margin:0 0 4px}.way-body .rows{border-top:0}.way-body .rows>li{padding:6px 0;border-bottom:0}

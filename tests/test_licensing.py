@@ -35,7 +35,7 @@ class Licensing(unittest.TestCase):
         self.assertNotIn('We host only works published before 1931',m)
         self.assertNotIn('public-domain editions published before 1931',main(R('index.html')))
     def test_wikipedia_credit_on_author_pages(self):
-        app=R('app.js');self.assertIn('Shortened excerpt from the Wikipedia article',app);self.assertIn("CC_BY_SA='https://creativecommons.org/licenses/by-sa/4.0/'",app)
+        app=R('app.js');self.assertIn('wiki-credit">From Wikipedia, ',app);self.assertIn(' (shortened), <a href="\'+CC_BY_SA+\'"',app);self.assertIn("CC_BY_SA='https://creativecommons.org/licenses/by-sa/4.0/'",app)
         hub=json.loads(R('data/catholic-hub.json'))
         # Phase A item 2: only authors with a hosted work show the excerpt (the others show our intro; tests/test_author_pages.py)
         lib=json.loads(R('data/library.json'));hosted={w['authorId'] for w in lib['works'] if w.get('authorId') and any(e.get('text') for e in w['editions'])}
@@ -46,7 +46,8 @@ class Licensing(unittest.TestCase):
             if not f.exists():continue
             s=main(f.read_text());n+=1
             with self.subTest(i):
-                self.assertIn('Shortened excerpt from the Wikipedia article',s)
+                line=re.search(r'<p class="small wiki-credit">(.*?)</p>',s).group(1)  # rule 11: one line, source and licence link
+                self.assertTrue(line.startswith('From Wikipedia, '));self.assertIn(' (shortened), ',line)
                 self.assertIn('href="https://creativecommons.org/licenses/by-sa/4.0/"',s)
                 self.assertRegex(s,r'<a href="https://en\.wikipedia\.org/wiki/[^"]+" target="_blank" rel="noopener">“')
                 lede=re.search(r'<p class="lede">(.*?)</p>',s).group(1)

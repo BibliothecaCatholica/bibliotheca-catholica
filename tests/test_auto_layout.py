@@ -60,11 +60,15 @@ class AutoLayout(unittest.TestCase):
                 if w['id'] == wid:
                     self.assertIn(k, REPORT['excluded'])
                     self.assertFalse((ROOT / 'data/auto-layout' / (k + '.json')).exists(), k)
-        for k, row in REPORT['underHalf'].items():
-            self.assertLess(row['share'], 0.5, k)
-            self.assertFalse((ROOT / 'data/auto-layout' / (k + '.json')).exists(), k)
-        for k, row in REPORT['editions'].items():
-            self.assertGreaterEqual(row['share'], 0.5, k)
+        self.assertNotIn('underHalf', REPORT)  # the 50% cut-off was dropped (owner, November 14); coverage is listed
+        on = set(REPORT['editions'])
+        self.assertEqual(on | set(REPORT['excluded']), set(EDITIONS))
+        for k in ('pg-38326', 'pg-45305'):  # Bede and City of God XIV-XXII switched on
+            self.assertIn(k, on)
+        for (ed, i) in A.KEEP:  # known verse keeps the file's own line breaks
+            lay = json.loads((ROOT / 'data/auto-layout' / (ed + '.json')).read_text())
+            self.assertFalse(any(lo <= i <= hi for lo, hi in lay['reflow']), (ed, i))
+        self.assertEqual(set(A.KEEP), {('pg-130', 123), ('pg-1695', 22)})
 
     def test_scan_verified_blocks_and_pinned_html_constraints(self):
         lay = json.loads((ROOT / 'data/auto-layout/pg-130.json').read_text())

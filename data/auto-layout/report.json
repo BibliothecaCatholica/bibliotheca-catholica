@@ -4,7 +4,10 @@
  "rule": {
   "wrapWidth": "98th percentile of the file's non-blank line lengths",
   "margin": 14,
-  "minShare": 0.5
+  "keep": [
+   "pg-130 block 123: known verse (quoted stanza)",
+   "pg-1695 block 22: known verse (last stanza of the dedication)"
+  ]
  },
  "label": "Automatic layout: wrapped lines are joined and _underscored_ words shown in italics for easier reading. The text is unchanged; turn on Original line breaks in the Aa menu to see the file as it is.",
  "editions": {
@@ -19,6 +22,16 @@
    "keptBecause": {
     "indented line": 5
    }
+  },
+  "ccel-npnf102-doctrine": {
+   "work": "On Christian Doctrine",
+   "multiLineBlocks": 0,
+   "reflowed": 0,
+   "kept": 0,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {}
   },
   "pg-1653": {
    "work": "The Imitation of Christ",
@@ -156,13 +169,14 @@
   "pg-130": {
    "work": "Orthodoxy",
    "multiLineBlocks": 241,
-   "reflowed": 204,
-   "kept": 37,
-   "share": 0.846,
+   "reflowed": 203,
+   "kept": 38,
+   "share": 0.842,
    "emphasisSpans": 0,
    "pinnedHtml": true,
    "keptBecause": {
     "indented line": 1,
+    "known verse (quoted stanza)": 1,
     "not an ordinary paragraph in the pinned HTML": 1,
     "run of spaces": 1,
     "scan-verified formatting": 34
@@ -195,14 +209,15 @@
   "pg-1695": {
    "work": "The Man Who Was Thursday",
    "multiLineBlocks": 933,
-   "reflowed": 910,
-   "kept": 23,
-   "share": 0.975,
+   "reflowed": 909,
+   "kept": 24,
+   "share": 0.974,
    "emphasisSpans": 28,
    "pinnedHtml": false,
    "keptBecause": {
     "all-capitals line": 17,
     "indented line": 3,
+    "known verse (last stanza of the dedication)": 1,
     "short line": 3
    }
   },
@@ -316,6 +331,18 @@
    "keptBecause": {
     "all-capitals line": 1,
     "indented line": 23
+   }
+  },
+  "se-incredulity-father-brown": {
+   "work": "The Incredulity of Father Brown",
+   "multiLineBlocks": 2,
+   "reflowed": 0,
+   "kept": 2,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "short line": 2
    }
   },
   "pg-70175": {
@@ -454,6 +481,18 @@
     "short line": 242
    }
   },
+  "ia-summa-supplement": {
+   "work": "Summa Theologiae",
+   "multiLineBlocks": 99,
+   "reflowed": 0,
+   "kept": 99,
+   "share": 0.0,
+   "emphasisSpans": 831,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 99
+   }
+  },
   "pg-22295": {
    "work": "On Prayer and the Contemplative Life",
    "multiLineBlocks": 873,
@@ -478,6 +517,31 @@
    "pinnedHtml": false,
    "keptBecause": {
     "indented line": 392
+   }
+  },
+  "pg-45305": {
+   "work": "The City of God",
+   "multiLineBlocks": 1218,
+   "reflowed": 604,
+   "kept": 614,
+   "share": 0.496,
+   "emphasisSpans": 657,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 614
+   }
+  },
+  "pg-38326": {
+   "work": "Ecclesiastical History of the English People",
+   "multiLineBlocks": 1759,
+   "reflowed": 770,
+   "kept": 989,
+   "share": 0.438,
+   "emphasisSpans": 926,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 18,
+    "indented line": 971
    }
   },
   "pg-7403": {
@@ -726,139 +790,78 @@
   "pg-48927": "The Dream of Gerontius (verse)",
   "pg-7165": "The Legends of Saint Patrick (verse)"
  },
- "underHalf": {
-  "ccel-npnf102-doctrine": {
-   "work": "On Christian Doctrine",
-   "multiLineBlocks": 0,
-   "reflowed": 0,
-   "kept": 0,
-   "share": 0.0,
-   "emphasisSpans": 0,
-   "pinnedHtml": false,
-   "keptBecause": {}
-  },
-  "se-incredulity-father-brown": {
-   "work": "The Incredulity of Father Brown",
-   "multiLineBlocks": 2,
-   "reflowed": 0,
-   "kept": 2,
-   "share": 0.0,
-   "emphasisSpans": 0,
-   "pinnedHtml": false,
-   "keptBecause": {
-    "short line": 2
-   }
-  },
-  "ia-summa-supplement": {
-   "work": "Summa Theologiae",
-   "multiLineBlocks": 99,
-   "reflowed": 0,
-   "kept": 99,
-   "share": 0.0,
-   "emphasisSpans": 831,
-   "pinnedHtml": false,
-   "keptBecause": {
-    "all-capitals line": 99
-   }
-  },
-  "pg-45305": {
-   "work": "The City of God",
-   "multiLineBlocks": 1218,
-   "reflowed": 604,
-   "kept": 614,
-   "share": 0.496,
-   "emphasisSpans": 657,
-   "pinnedHtml": false,
-   "keptBecause": {
-    "indented line": 614
-   }
-  },
-  "pg-38326": {
-   "work": "Ecclesiastical History of the English People",
-   "multiLineBlocks": 1759,
-   "reflowed": 770,
-   "kept": 989,
-   "share": 0.438,
-   "emphasisSpans": 926,
-   "pinnedHtml": false,
-   "keptBecause": {
-    "all-capitals line": 18,
-    "indented line": 971
-   }
-  }
- },
  "spotCheck": [
   {
-   "edition": "pg-15992",
-   "block": 2456
+   "edition": "pg-12047",
+   "block": 447
   },
   {
-   "edition": "pg-16309",
-   "block": 103
+   "edition": "pg-15992",
+   "block": 2459
   },
   {
    "edition": "pg-17611",
-   "block": 6344
+   "block": 6346
   },
   {
    "edition": "pg-17897",
-   "block": 1426
+   "block": 1428
   },
   {
    "edition": "pg-17897",
-   "block": 1839
+   "block": 1841
   },
   {
    "edition": "pg-17897",
-   "block": 2225
+   "block": 2227
   },
   {
    "edition": "pg-17897",
-   "block": 7547
+   "block": 7551
   },
   {
    "edition": "pg-18787",
-   "block": 2560
+   "block": 1918
   },
   {
    "edition": "pg-19950",
-   "block": 6399
+   "block": 6401
   },
   {
    "edition": "pg-20450",
-   "block": 2066
+   "block": 1230
   },
   {
    "edition": "pg-22112",
-   "block": 589
+   "block": 944
   },
   {
    "edition": "pg-223",
-   "block": 657
+   "block": 659
   },
   {
    "edition": "pg-24526",
    "block": 681
   },
   {
-   "edition": "pg-46947",
-   "block": 862
+   "edition": "pg-45305",
+   "block": 1320
   },
   {
-   "edition": "pg-48395",
-   "block": 1737
-  },
-  {
-   "edition": "pg-6367",
-   "block": 993
+   "edition": "pg-45604",
+   "block": 592
   },
   {
    "edition": "pg-70175",
-   "block": 199
+   "block": 201
   },
   {
-   "edition": "pg-7403",
-   "block": 532
+   "edition": "pg-72411",
+   "block": 1025
+  },
+  {
+   "edition": "pg-72411",
+   "block": 2939
   },
   {
    "edition": "pg-8120",

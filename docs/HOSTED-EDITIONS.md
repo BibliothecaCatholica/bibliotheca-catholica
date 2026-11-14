@@ -39,8 +39,8 @@ Scan-verified features (verse lines and exact emphasis spans checked on a named 
 - **Italics:** paired `_underscores_` inside one block show as italics. The underscores stay in the TXT, the download, and the page text (hidden on screen), so anchors and notes are unaffected. A block whose underscores do not pair cleanly gets no italics.
 - **Scan-verified formatting wins** (Orthodoxy Chapter IV keeps its own note). Automatic layout is labelled only in the edition details ("Source, rights, and downloads" in the reader, and under the text on chapter pages), never above the text.
 - **Original line breaks:** a switch in the reader's Aa menu (`bc:reader-breaks`) shows every reflowed block as the file breaks it.
-- **Off:** five verse works by name (Divine Comedy, The Ballad of the White Horse, Hopkins's Poems, The Dream of Gerontius, The Legends of Saint Patrick), and any edition the rule reflows under 50% (listed in the report as `underHalf`), until Micah decides.
-- **Known misses** (the rule cannot tell verse with long lines from prose): Orthodoxy block 123 (a quoted stanza, reflowed); Orthodoxy block 227 (kept, but the TXT itself runs its verse lines together); The Man Who Was Thursday block 22 (the last stanza of the dedication, reflowed while the first two are kept). Fix misses with a scan-verified `readerFormatting` entry or an exclusion, never by editing the TXT.
+- **Off:** five verse works by name (Divine Comedy, The Ballad of the White Horse, Hopkins's Poems, The Dream of Gerontius, The Legends of Saint Patrick). Every other edition is on; the report lists each edition's coverage. The 50% cut-off was dropped on November 14.
+- **Known misses** (the rule cannot tell verse with long lines from prose): Orthodoxy block 123 and The Man Who Was Thursday block 22 are now kept with their own line breaks (`KEEP` in the tool). Orthodoxy block 227 stays as the file has it: the TXT itself runs its verse lines together. Fix other misses the same way, by adding a block to `KEEP`, by a scan-verified `readerFormatting` entry, or by an exclusion; never by editing the TXT.
 
 ## How the books should look
 
@@ -64,7 +64,7 @@ These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The
 
 | Edition | Structure | Notes |
 |---|---|---|
-| All hosted editions | Automatic display-only layout where the rule allows (step 2a): see the report for each edition | 54 on, 5 excluded by name, 5 off pending a decision (`underHalf`) |
+| All hosted editions | Automatic display-only layout where the rule allows (step 2a): see the report for each edition | 59 on, 5 verse works excluded by name; coverage listed per edition |
 | Orthodoxy (pg-130) | **Full pipeline**: structure from #130 HTML, gate, rendering, review EPUB | Chapter IV scan-verified verse and emphasis. #16769 (1934 reprint) is reference evidence only. |
 | Father Brown: Innocence (pg-204), Wisdom (pg-223), Secret (pg-70175), Incredulity (se-incredulity-father-brown) | Story maps in `tools/text_pages.py` | Would need steps 1 to 5 for roles and EPUBs. Incredulity comes from Standard Ebooks (CC0), not Gutenberg HTML. |
 | Summa Theologiae (four parts and the Supplement) | Question and article map (`tools/build_summa.py`) | Its own renderer, `summa_para()`; the Supplement has OCR flags to adjudicate first. |

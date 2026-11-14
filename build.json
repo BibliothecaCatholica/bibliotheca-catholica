@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-7b2e7cd06eba",
+  "id": "bc-29cc90930dce",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "756c80a6c03691af6f9036bf3a30f6f4e0120b44fe31e9c54c342382a202f75d",
@@ -81,7 +81,7 @@
     "tools/audit_collection.py": "6e580e4a1d41313cd132f318121973f6327ea2b2bdef8d12e6523773322ee3ea",
     "tools/audit_hosted_texts.py": "d6b454b3304ef82faf254d78018cbed94941e6c7bb0140a507f4fe534201a9f8",
     "tools/author_pages.py": "16af08818b01e5b3a99cdf1bfea9fefe62c6a750df124870272b0f5eb3b96120",
-    "tools/auto_layout.py": "8cb98f91f52d8a588c19040f44eb392d15f69dc2352fd0ef97a2975104d3a70f",
+    "tools/auto_layout.py": "cfe97e3806dbdc57b93520d2c8a63dfa183349f148d9c8cd495671990a1811da",
     "tools/build_books.py": "15387c91c94b6fc469566dba8b83d69413c4841144b8cca3277688b89af6f9ad",
     "tools/build_data.py": "77d085429577d0948ccb0b0107b9cd6fc14052d59a2491aac2ead825b9f40bf9",
     "tools/build_editorial_flags.py": "8373a04b5e1d5fa7f93e743eb3943ee4bd6b9edf8cae32b929193a073275cd81",

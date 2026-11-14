@@ -152,9 +152,9 @@ class AffiliateLinkTests(unittest.TestCase):
         self.assertIn('affiliate (a referral link', pol)
 
     def test_agents_md_rules(self):
-        t = (ROOT / 'docs/IMPLEMENTATION-NOTES.md').read_text() + (ROOT / 'docs/PROJECT-RULES.md').read_text()
+        t = ''.join((ROOT / f).read_text() for f in ('docs/IMPLEMENTATION-NOTES.md', 'docs/PROJECT-RULES.md', 'docs/ANALYTICS.md'))
         self.assertIn('docs/PROJECT-RULES.md', (ROOT / 'AGENTS.md').read_text())
-        self.assertIn('Affiliate links (2026-11-09', t)
+        self.assertIn('**Affiliate links (owner-approved).**', t)
         self.assertIn('`affiliate` (lddy.no', t)
 
 

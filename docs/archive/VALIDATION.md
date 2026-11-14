@@ -1,6 +1,6 @@
 # Historical validation snapshot — October 21, 2026
 
-This records checks from the reading-and-discovery release when the catalog had 49 work records and the test suite had 11 checks. Those counts and browser observations describe that historical build, not the current site. For current setup and validation commands, see the [README](../README.md) and the [validation procedure](OPERATIONS.md#validation); CI runs the current test suite on each pull request.
+This records checks from the reading-and-discovery release when the catalog had 49 work records and the test suite had 11 checks. Those counts and browser observations describe that historical build, not the current site. For current setup and validation commands, see the [README](../../README.md) and the [validation procedure](../OPERATIONS.md#validation); CI runs the current test suite on each pull request.
 
 - `npm run build`: 49 work records validated; deterministic browser bundle generated.
 - `npm test`: 11 passing checks, including actual imported-catalog search isolation, accent/multiple-token queries, bundle/source agreement, local-text checksums, duplicate rejection, missing-author rejection, path containment, and external-only copyrighted/Anglican entries.

@@ -40,7 +40,10 @@ class Summa(unittest.TestCase):
             s=R(r+'/index.html');m=main(r+'/index.html')
             self.assertEqual(s.count('googletagmanager.com/gtag/js'),1,r)
             self.assertIn('<link rel="canonical" href="%s%s/">'%(SITE,r),s)
-            self.assertIn('class="small ocr-notice"' if r.startswith('summa/supp') else 'class="small pg-notice"',m,r);self.assertIn('rb-public-domain-us',m,r)
+            self.assertIn('class="small ocr-notice"' if r.startswith('summa/supp') else 'class="small pg-notice"',m,r);self.assertNotIn('rights-badge',m,r)  # rules 2 and 10, November 14, 2026
+            if '<article' in m:
+                self.assertNotIn('pg-notice',m[:m.index('</article>')],r);self.assertNotIn('ocr-notice',m[:m.index('</article>')],r);self.assertNotIn('text-edition',m[:m.index('</article>')],r)
+            if not r.startswith('summa/supp'):self.assertEqual(m.count('This eBook is for the use of anyone anywhere'),1,r)  # verbatim 1.E.1, once per page
             if r.startswith('summa/supp'):self.assertNotIn('pg-notice',m,r)  # the Gutenberg notice only where the source is Gutenberg
             self.assertNotIn('—',m,r);self.assertNotIn('amazon.',m);self.assertNotIn('data-ga',m);self.assertNotIn('href="#',m,r)
             d=re.search(r'<meta name="description" content="([^"]*)">',s).group(1);self.assertTrue(100<=len(d)<=160,(r,len(d)))

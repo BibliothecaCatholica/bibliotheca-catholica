@@ -127,13 +127,13 @@ class RitesPages(unittest.TestCase):
         self.assertEqual(len(titles),33);self.assertEqual(len(descs),33)
     def test_app_description_is_the_lede(self):
         for k,pg in J['pages'].items():self.assertIn('<p class="lede">'+RP.E(pg['desc'])+'</p>',pg['html'],k)
-    def test_resources_have_rights_badges(self):
+    def test_resources_carry_rights_status(self):
         n=0
         for r in D['records']:
             h=J['pages'][r['id']]['html']
             for x in r['resources']:
                 n+=1;self.assertIn('data-rights="'+x['rights']+'"',h);self.assertIn(RP.E(x['url']),h)
-            self.assertEqual(h.count('class="rights-badge'),len(r['resources']),r['id'])
+            self.assertEqual(h.count('class="rights-badge'),0,r['id'])  # rule 10 (November 14, 2026): status stays on the link, no badge in lists
         self.assertGreater(n,20)
     def test_wording_rules(self):
         for k,pg in J['pages'].items():

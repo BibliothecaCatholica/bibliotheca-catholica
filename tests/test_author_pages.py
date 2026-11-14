@@ -28,13 +28,13 @@ class AuthorPages(unittest.TestCase):
         for a in AUTH:
             if a['id'] in HOSTED and a.get('extract') and a['extract'] not in (a.get('desc') or a.get('wikiDesc') or ''):
                 m=main(page(a['id']));self.assertIn('class="extract"',m);self.assertIn('CC BY-SA 4.0',m)
-    def test_works_lists_are_link_only_with_badges(self):
+    def test_works_lists_are_link_only_without_badges(self):  # rule 10 (owner, November 14, 2026): no badges in lists
         n=0
         for a in NOH:
             m=main(page(a['id']))
             for sec in re.findall(r'<h2>(?:Books in the Isidore Index|In our library \(read at the source\))</h2>.*?</ul>',m):
                 for li in re.findall(r'<li>(.*?)</li>',sec):
-                    n+=1;self.assertIn('class="rights-badge rb-',li,a['id']);self.assertIn('href="/rights/"',li)
+                    n+=1;self.assertNotIn('rights-badge',li,a['id'])
                     for h in re.findall(r'href="([^"]+)"',li):
                         self.assertRegex(h,r'^(https://isidore\.co/calibre/legacy/book/\d+/CalibreLibrary|/work/[a-z0-9-]+/|/rights/)$',a['id'])
             self.assertNotRegex(m,r'/get/|calibre/mobile|CalibreLibrary/[^"]|#book_id=|>Download|>Read here<',a['id'])

@@ -28,16 +28,16 @@ def affiliates():
     bid=re.search(r"bookshopId:\s*'(\d+)'",s).group(1);assert bid=='130222','Bookshop id must be 130222'
     tan=re.search(r"tan:\s*\{\s*name:\s*'([^']+)',\s*url:\s*'([^']+)'",s[s.index('partners'):])
     assert tan and tan.group(2)=='https://lddy.no/1qbrw','TAN Books referral link must be https://lddy.no/1qbrw'
-    d=re.search(r"disclosure:\s*'([^']*)'",s).group(1)
+    d=re.search(r"\bline:\s*'([^']*)'",s).group(1)
     assert not re.search(r'amazon\.|amzn\.',s.lower()),'no Amazon links'
-    return bid,tan.group(1),tan.group(2),re.sub(r'^Affiliate disclosure:\s*','',d)
+    return bid,tan.group(1),tan.group(2),d
 
 def jsvar(path,var):
     s=(ROOT/path).read_text(encoding='utf-8');p='window.%s='%var;return json.loads(s[s.index(p)+len(p):].rstrip().rstrip(';'))
 
 HEADING='Buy in print'
 def disclosure_html(text):
-    return '<p class="disclosure small"><b>Affiliate disclosure:</b> '+E(text)+' <a href="/disclosure/">How our affiliate links work</a>.</p>'
+    return '<p class="disclosure small">'+E(text)+' <a href="/disclosure/">Details</a>.</p>'  # rule 7 (owner, November 14, 2026)
 
 # Design pass (owner-approved 2026-11-12, docs/DESIGN.md): text links in rows, a short heading, and the one FTC line.
 def tan_html(name,url):

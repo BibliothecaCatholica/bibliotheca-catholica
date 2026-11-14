@@ -41,6 +41,12 @@ a:hover{color:var(--rubric2)}
 .suggest a small{color:var(--muted);margin-left:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:45%}
 .suggest .sg-all{justify-content:center;color:var(--rubric);font-weight:600}
 .top-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+/* phone header (design part 2 fix): one row below 600 px; the search form opens from the search button */
+.iconbtn.search-btn{display:none}
+@media(max-width:600px){html.js .iconbtn.search-btn{display:grid}html.js .topbar-inner{flex-wrap:nowrap;gap:8px;padding-left:12px;padding-right:12px}html.js .topbar:not(.search-open) .searchwrap{display:none}
+ html.js .topbar.search-open .topbar-inner{flex-wrap:wrap}html.js .topbar.search-open .searchwrap{order:3;flex-basis:100%}html.js .topbar.search-open .search-btn{color:var(--rubric)}
+ html.js .brand{min-width:0;gap:8px}html.js .brand-mark{width:28px;height:28px}html.js .brand-name{font-size:18px}html.js .top-actions{gap:4px;margin-left:auto}html.js .top-actions .iconbtn{width:36px;height:36px}}
+@media(max-width:360px){html.js .brand-name{font-size:16px}}
 .pill{font:600 13px var(--sans);padding:7px 12px;border-radius:999px;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--card);white-space:nowrap}
 .pill:hover{border-color:var(--rubric);color:var(--rubric)}
 .iconbtn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);display:grid;place-items:center;cursor:pointer}
@@ -104,6 +110,8 @@ h1{font-size:clamp(34px,5vw,56px)} h2{font-size:clamp(26px,3.2vw,36px)} h3{font-
 .pt{--pt:48px;flex:none;width:var(--pt);height:var(--pt);border-radius:50%;overflow:hidden;display:inline-grid;place-items:center;background:var(--bg2);box-shadow:inset 0 0 0 1px var(--line)}
 .pt img,.avatar img{display:block;width:100%;height:100%;object-fit:cover}
 .pt-i{font:600 calc(var(--pt) * .45)/1 var(--display);color:var(--rubric)}
+.av-full{position:relative}.av-full .pt-i{font-size:inherit}.av-full .av-hi{position:absolute;inset:0;opacity:0;transition:opacity .25s}.av-full .av-hi.on{opacity:1}
+@media(prefers-reduced-motion:reduce){.av-full .av-hi{transition:none}}
 .avatar{flex-shrink:0;width:62px;height:62px;border-radius:50%;overflow:hidden;display:grid;place-items:center;background:var(--bg2);box-shadow:inset 0 0 0 1px var(--line);color:var(--rubric);font:600 30px/1 var(--display)}
 /* author rows: portrait, name, dates and era, one-line description */
 .arows>li{padding:0}
@@ -141,7 +149,7 @@ h1{font-size:clamp(34px,5vw,56px)} h2{font-size:clamp(26px,3.2vw,36px)} h3{font-
 [data-theme=dark] .linklist .k.site{color:var(--gold2)}
 .works{columns:2 260px;column-gap:28px;padding-left:1.1em;margin:8px 0 0}
 .works li{break-inside:avoid;margin:3px 0}
-.backlink{font:500 14px var(--sans);display:inline-block;margin-bottom:14px;text-decoration:none}
+.backlink{font:500 14px/24px var(--sans);display:inline-block;min-height:24px;margin:0 12px 14px 0;text-decoration:none}
 .related{display:flex;flex-wrap:wrap;gap:6px}
 .related a{font:500 13px var(--sans);padding:5px 10px;border-radius:999px;background:var(--bg2);text-decoration:none;color:var(--ink)}
 /* resource lists */
@@ -442,6 +450,9 @@ mark{background:color-mix(in srgb,var(--gold2) 45%,transparent);color:inherit;bo
 .au-tabs a.on .tc{background:var(--rubric);color:var(--on-rubric)}
 .au-tabs a.empty .tc{background:transparent;border:1px dashed var(--line)}
 .au-panel{padding:22px 0 34px;min-height:240px}
+/* author Works tab (design part 2 fix): book rows, and every list link or control at least 24 px tall (WCAG 2.5.8) */
+.au-book{padding:8px 0}.au-book-t{font:600 18px/1.35 var(--serif)}.au-book-m{display:block;font-size:15px;color:var(--muted)}.au-book-l{font:14px var(--sans)}
+.au-panel li a,.saint-panel li a,.au-panel button,.au-panel summary,.au-tabs a,.au-head a,.au-panel .linklist a,.au-panel .rf-w a{display:inline-block;min-height:24px;line-height:24px}
 .au-panel h3{margin:22px 0 10px}
 .au-panel>h3:first-child,.au-panel>#au-free:first-child .rule:first-child+h3{margin-top:6px}
 .au-panel #au-free>.rule:first-child{display:none}

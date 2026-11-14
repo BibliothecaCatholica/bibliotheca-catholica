@@ -39,7 +39,10 @@ function portraitOk(a,full){return !!(a.img&&a.imgCredit&&(full||a.imgCredit.pd)
 var PORTRAITS={};((window.SITE_COPY||{}).portraits||[]).forEach(function(id){PORTRAITS[id]=1});
 function thumb(id,name,px,cls){px=px||48;return '<span class="'+(cls||'pt')+'" style="--pt:'+px+'px" aria-hidden="true">'+(id&&PORTRAITS[id]?'<img src="/assets/portraits/'+esc(id)+'.webp" width="'+px+'" height="'+px+'" loading="lazy" decoding="async" alt="">':'<span class="pt-i">'+esc(initial(name||'?'))+'</span>')+'</span>'}
 window.BCPortrait=thumb;
-function avatar(a,cls,full){if(!full)return thumb(a.id,a.name,62,cls||'avatar');var ok=portraitOk(a,full);return '<span class="'+(cls||'avatar')+'">'+(ok?'<img loading="lazy" alt="" width="160" height="160" src="'+esc(a.img)+'" onerror="this.remove()">':esc(initial(a.name)))+'</span>'}
+/* Person pages: the self-hosted thumbnail (or the initial) shows at once; the larger credited Wikimedia image is laid
+   over it and fades in only once it has loaded, so the portrait is never an empty circle. */
+function avatar(a,cls,full){if(!full)return thumb(a.id,a.name,62,cls||'avatar');var ok=portraitOk(a,full);
+  return '<span class="'+(cls||'avatar')+' av-full">'+(PORTRAITS[a.id]?'<img class="av-base" src="/assets/portraits/'+esc(a.id)+'.webp" width="160" height="160" alt="">':'<span class="pt-i">'+esc(initial(a.name))+'</span>')+(ok?'<img class="av-hi" alt="" width="160" height="160" decoding="async" src="'+esc(a.img)+'" onload="this.classList.add(\'on\')" onerror="this.remove()">':'')+'</span>'}
 function portraitCredit(a){if(!portraitOk(a,1))return '';var c=a.imgCredit,lic=c.licenseUrl?'<a href="'+esc(c.licenseUrl)+'" target="_blank" rel="noopener">'+esc(c.license)+'</a>':esc(c.license),
   src=/commons\.wikimedia\.org/.test(c.page)?'Wikimedia Commons':'Wikipedia';
   return '<p class="small muted au-credit">Portrait: '+(c.artist?esc(c.artist)+', ':'')+lic+', via <a href="'+esc(c.page)+'" target="_blank" rel="noopener">'+src+'</a>.</p>'}
@@ -414,15 +417,17 @@ function auWorks(a,X,DR){var p=$('#tp-works'),n=window.LIBRARY_DATA.works.filter
   if(rd.length)h+='<h3>Read free online</h3>'+auLinkList(rd);
   if(X.own){n+=X.own.length;h+='<h3>Writing &amp; media by '+esc(a.name)+'</h3>'+auLinkList(X.own.map(function(o){return {k:o.k==='substack'?'read':'site',kl:o.k,t:o.t,u:o.u,n:o.n}}))}
   var L=(B&&B.by[a.id]||[]).slice().sort(function(x,y){return x.tn.localeCompare(y.tn)});n+=L.length;
-  if(L.length){var fm={};L.forEach(function(b){b.f.forEach(function(f){fm[f]=(fm[f]||0)+1})});var fk=Object.keys(fm).sort(function(x,y){return fm[y]-fm[x]});
-    h+='<div class="rule"></div><h3>Books in the Isidore Index <span class="small">('+L.length+')</span></h3><div class="chips au-fmt" id="au-fmt"><button class="chip on" data-f="">All '+L.length+'</button>'+fk.map(function(f){return '<button class="chip" data-f="'+esc(f)+'">'+esc(f)+' '+fm[f]+'</button>'}).join('')+'</div><div class="blist compact" id="au-bl"></div><div id="au-blm"></div>'}
+  if(L.length){
+    h+='<h3>Books in the Isidore Index <span class="small">('+L.length+')</span></h3><ul class="rows au-books" id="au-bl"></ul><div id="au-blm"></div>'}
   if(more.length)h+='<h3>Search &amp; data</h3>'+auLinkList(more);
   p.innerHTML=h||'<div class="empty">No free texts are linked yet.</div>';auCount('works',n);
   if(DR)readFree(a);
-  if(L.length){var cur='',lim=40;function draw(){var M=cur?L.filter(function(b){return b.f.indexOf(cur)>=0}):L;$('#au-bl').innerHTML=M.slice(0,lim).map(function(b){return brow(b)}).join('');
-      $('#au-blm').innerHTML=M.length>lim?'<button class="btn ghost" id="au-more">Show all '+M.length+'</button>':''}
-    draw();$('#au-fmt').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;cur=b.dataset.f;lim=40;$('#au-fmt').querySelectorAll('.chip').forEach(function(x){x.classList.toggle('on',x===b)});draw()});
-    p.addEventListener('click',function(e){if(e.target.id==='au-more'){lim=1e9;draw()}var t=e.target.closest('.b-tag');if(t){bfReset();BF.tag=t.dataset.tag;track('filter_use',{filter_name:'Tag',filter_value:BF.tag,filter_scope:'isidore'});location.hash='#/isidore'}})}}
+  if(L.length){var lim=20;function draw(){$('#au-bl').innerHTML=L.slice(0,lim).map(auBook).join('');
+      $('#au-blm').innerHTML=L.length>lim?'<button class="btn ghost" id="au-more">Show all '+L.length+'</button>':''}
+    draw();p.addEventListener('click',function(e){if(e.target.id==='au-more'){lim=1e9;draw()}})}}
+/* Design part 2 fix: on author pages each Isidore Index book is one row (title, rights badge, year and publisher, one
+   text link). No format or tag chips; the record page shows formats and gates every file link by its badge (rule 10). */
+function auBook(b){return '<li class="au-book"><a class="au-book-t" href="#/isidore/book/'+b.id+'">'+esc(b.t)+'</a>'+efBadge(b.id)+RT.badge(rightsOf(b))+'<span class="au-book-m">'+[b.y,b.pub].filter(Boolean).map(esc).join(' · ')+'</span> <a class="au-book-l" href="'+esc(bookUrl(b))+'" target="_blank" rel="noopener">isidore.co book page ↗</a></li>'}
 var WOF={k:'podcast',t:'Way of the Fathers (Catholic Culture podcast)',u:'https://www.catholicculture.org/commentary/category/way-fathers/',n:'A podcast on the Fathers and Doctors of the Church.'};
 function auComm(a,X,DR){var p=$('#tp-commentaries'),n=0,h='';var cm=(X.comm||[]).slice();
   var feat=cm.filter(function(c){return c.feat});cm=cm.filter(function(c){return !c.feat});
@@ -725,7 +730,14 @@ qi.addEventListener('keydown',function(e){var items=sg.querySelectorAll('a');
   else if(e.key==='Escape'){hideSug();qi.blur()}});
 document.addEventListener('click',function(e){if(!e.target.closest('.searchwrap'))hideSug();});
 sg.addEventListener('click',function(e){if(e.target.closest('a'))setTimeout(hideSug,0)});
-document.addEventListener('keydown',function(e){if(e.key==='/'&&!/input|textarea|select/i.test(document.activeElement.tagName)){e.preventDefault();qi.focus()}});
+/* Design part 2 fix: below about 600 px the header search sits behind a search button, so the header is one row.
+   The form, its Everything default, and the "/" shortcut are unchanged; "/" opens the form first when it is collapsed. */
+var TB=$('.topbar'),SB=$('#searchBtn');
+function searchOpen(open){if(!TB||!SB)return;TB.classList.toggle('search-open',open);SB.setAttribute('aria-expanded',String(open));SB.setAttribute('aria-label',open?'Close search':'Search');if(open)qi.focus()}
+function searchCollapsed(){return !!(SB&&getComputedStyle(SB).display!=='none')}
+if(SB)SB.addEventListener('click',function(){searchOpen(!TB.classList.contains('search-open'))});
+qi.addEventListener('keydown',function(e){if(e.key==='Escape'&&searchCollapsed()&&TB.classList.contains('search-open')&&!qi.value){searchOpen(false);SB.focus()}});
+document.addEventListener('keydown',function(e){if(e.key==='/'&&!/input|textarea|select/i.test(document.activeElement.tagName)){e.preventDefault();if(searchCollapsed())searchOpen(true);else qi.focus()}});
 $('#themeBtn').addEventListener('click',function(){var t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('hub-theme',t)}catch(e){}track('theme_toggle',{theme:t})});
 $('#menuBtn').addEventListener('click',function(){var open=$('#mainnav').classList.toggle('open');this.setAttribute('aria-expanded',String(open));this.setAttribute('aria-label',open?'Close menu':'Open menu')});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&$('#mainnav').classList.contains('open')){$('#mainnav').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false');$('#menuBtn').setAttribute('aria-label','Open menu');$('#menuBtn').focus()}});

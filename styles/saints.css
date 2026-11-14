@@ -1,9 +1,7 @@
 /* Saints & Hagiography (v15). Text colors use palette tokens only (>= 4.5:1 in both themes; see AGENTS.md). */
 .saint-search{margin:0 0 6px}
 .saint-search-out .callout{margin-top:10px}
-.saint-today{margin:22px 0 26px;padding:20px 22px;background:var(--bg2);border-radius:6px}
-.saint-today h2{margin:4px 0 10px;font-size:clamp(22px,2.4vw,28px)}
-.saint-today .small-h{font:600 13px var(--sans);color:var(--ink2);margin:14px 0 6px}
+.saint-today{margin:24px 0 8px;max-width:860px}.saint-today-l{margin:0 0 8px;font-size:17px}.saint-today-l .k{font-variant-caps:all-small-caps;letter-spacing:.06em;color:var(--gold-ink);margin-right:8px}
 .saint-list{list-style:none;margin:0 0 10px;padding:0;font-size:16px}
 .saint-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:10px 0;border-top:1px solid var(--line)}
 .saint-row-t{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;flex:1 1 300px;min-width:0}.saint-row-t>a{text-decoration:none;font-size:19px}

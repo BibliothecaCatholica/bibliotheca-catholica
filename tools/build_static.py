@@ -100,6 +100,10 @@ SECTIONS={
 MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December']
 FLAGL={'tradition':'Tradition and legend','tradition-with-historical-core':'Historical core, later legend','angel':'Archangel'}
 def s_date(md):m,d=md.split('-');return str(int(d))+' '+MONTHS[int(m)-1]
+def s_thumb(s):  # design part 2: the self-hosted public-domain portrait of a writer-saint, an initial otherwise
+    i=s.get('author_id') if s.get('tier')==1 else None
+    if i and i in PORTRAIT_SET:return '<span class="pt" style="--pt:40px" aria-hidden="true"><img src="/assets/portraits/'+E(i)+'.webp" width="40" height="40" loading="lazy" decoding="async" alt=""></span>'
+    return '<span class="pt" style="--pt:40px" aria-hidden="true"><span class="pt-i">'+E(re.sub(r'^(St\.|Pope|Bl\.)\s+','',s['name'])[:1])+'</span></span>'
 def s_status(s):return {'archangel':'Archangel','saint':'Saint','blessed':'Blessed','venerable':'Venerable'}.get(s['status']['value'],'Status not recorded')
 def s_years(s):  # mirrors years() in scripts/saints.js
     f=lambda y:str(-y)+' BC' if y<0 else str(y)
@@ -165,6 +169,7 @@ TAGL={'saint':'saint','theologian':'theologian','philosopher':'philosopher','con
 def portrait_ids():  # design part 2: self-hosted public-domain list thumbnails (tools/fetch_portraits.py)
     p=ROOT/'data/portraits.json'
     return sorted(json.loads(p.read_text())['portraits']) if p.exists() else []
+PORTRAIT_SET=set(portrait_ids())
 def write_home(tpl,counts,snapshot):
     """v17: the home page IS index.html.  Rewrite only its marked regions (the crawlable landing content
     inside <main> and the WebSite/Organization JSON-LD) and data/site-copy.js, so hand edits elsewhere in
@@ -704,7 +709,7 @@ def main():
         elif k=='authors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors)+'</ul>'
         elif k=='library':extra='<ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title']+' — '+w['author'])+'</li>' for w in lib['works'])+'</ul>'
         elif k=='editions':extra='<ul>'+''.join('<li>'+a('/editions/'+e['id']+'/',e['t'])+'</li>' for e in guide['editions'])+'</ul>'
-        elif k=='saints':extra='<ul>'+''.join('<li>'+a(s_href(x),x['name'])+' — '+E(s_status(x))+(' · Vatican News: '+E(s_vn(x)) if x['feasts']['vatican_news'] else '')+(' · '+E(FLAGL[x['historicity']['flag']]) if x.get('historicity') else '')+'</li>' for x in sorted(saints,key=lambda x:x['name']))+'</ul>'+(SC.months_html(CAL_N,a) if CAL is not None else '')+'<p>'+a('/saints/books/','The hagiography shelf')+' · '+a('/saints/about/','Sources & method')+'</p>'
+        elif k=='saints':extra='<ul class="saint-list">'+''.join('<li class="saint-row">'+s_thumb(x)+a(s_href(x),x['name'])+' — '+E(s_status(x))+(' · Vatican News: '+E(s_vn(x)) if x['feasts']['vatican_news'] else '')+(' · '+E(FLAGL[x['historicity']['flag']]) if x.get('historicity') else '')+'</li>' for x in sorted(saints,key=lambda x:x['name']))+'</ul>'+(SC.months_html(CAL_N,a) if CAL is not None else '')+'<p>'+a('/saints/books/','The hagiography shelf')+' · '+a('/saints/about/','Sources & method')+'</p>'
         elif k=='reading':extra='<h2>Reading plans</h2><ul>'+''.join('<li>'+a('/reading/'+P['id']+'/',P['t']+' ('+str(len(P['days']))+' days, '+PLAN_SPAN(P)+')')+'</li>' for P in plans)+'</ul><h2>Reading lists</h2><ul>'+''.join('<li>'+a('/reading/'+L['id']+'/',L['t'])+'</li>' for L in guide['lists'])+'</ul>'
         elif k=='substacks':extra=guide['own']['html']  # our own newsletter first (tools/substacks_src.py OWN, 2026-11-09)
         elif k=='doctors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors if x.get('doctor'))+'</ul>'

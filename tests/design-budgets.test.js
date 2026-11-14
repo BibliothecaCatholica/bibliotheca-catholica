@@ -64,3 +64,24 @@ test('portraits: every self-hosted file matches its manifest checksum and is a p
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync(r.file)).digest('hex'),r.sha256,id);assert.ok(r.page&&r.license,id)}
  assert.deepEqual(fs.readdirSync('assets/portraits').sort(),Object.values(m.portraits).map(r=>r.file.split('/').pop()).sort());
 });
+// Design part 2 fix (owner review, November 14, 2026): author pages on phones.
+test('author pages: works are rows without format chips, and list links and controls are at least 24 px tall',()=>{
+ const app=fs.readFileSync('app.js','utf8'),css=fs.readFileSync('styles.css','utf8');
+ const fn=name=>{const i=app.indexOf('function '+name+'(');assert.ok(i>=0,name);return app.slice(i,app.indexOf('\nfunction ',i+1))};
+ const works=fn('auWorks'),book=fn('auBook');
+ assert.ok(works.includes('auBook')&&!works.includes('brow(')&&!works.includes('au-fmt'),'author works use book rows, no format filter');
+ assert.ok(!/fmt fmt-|b-fmts|b-tag/.test(book),'no format or tag chips in author book rows');
+ // the CSS guarantee measured in the browser (0 targets under 24 px on emulated iPhone 13 author pages)
+ const rule=css.match(/\.au-panel li a,[^{]*\{[^}]*\}/);assert.ok(rule,'tap-target rule');
+ for(const sel of ['.au-panel li a','.saint-panel li a','.au-panel button','.au-tabs a','.au-panel .linklist a'])assert.ok(rule[0].includes(sel),sel);
+ assert.match(rule[0],/min-height:24px/);assert.match(css,/\.backlink\{[^}]*min-height:24px/);
+});
+test('phone header: search collapses behind a search button below 600 px; the form and its "/" shortcut are unchanged',()=>{
+ const html=fs.readFileSync('index.html','utf8'),css=fs.readFileSync('styles.css','utf8'),app=fs.readFileSync('app.js','utf8');
+ assert.match(html,/<button id="searchBtn" class="iconbtn search-btn" type="button" aria-label="Search" aria-controls="site-search" aria-expanded="false">/);
+ assert.match(html,/<form class="searchwrap" id="site-search" role="search" action="\/search\/" method="get">/);
+ assert.match(css,/\.iconbtn\.search-btn\{display:none\}/);
+ assert.match(css,/@media\(max-width:600px\)\{html\.js \.iconbtn\.search-btn\{display:grid\}[^@]*html\.js \.topbar:not\(\.search-open\) \.searchwrap\{display:none\}/);
+ assert.ok(app.includes("if(e.key==='/'&&")&&app.includes('if(searchCollapsed())searchOpen(true);else qi.focus()'));
+ assert.ok(!/scope=(library|isidore)/.test(html.slice(html.indexOf('<form class="searchwrap"'),html.indexOf('</form>'))),'header search keeps the Everything default');
+});

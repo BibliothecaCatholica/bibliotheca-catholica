@@ -61,7 +61,8 @@
 
   function landing(render){var md=mdOf(),t=onDay(D,md),n={1:0,2:0,3:0};D.saints.forEach(function(s){n[s.tier]++});
     var h=head('Sancti · the saints','Saints & Hagiography','A small, sourced guide to '+D.saints.length+' saints: the writers already in the library, the saints people look up most, and a few famous figures of legend. Every fact links to its source, and the old lives of the saints are on the hagiography shelf.')+searchBox();
-    h+='<section class="saint-today"><div class="eyebrow">Hodie · '+esc(fmtDate(md))+'</div>'+(t.vn.length?'<h2>On this day, as listed by Vatican News</h2><ul class="saint-list">'+t.vn.map(srow).join('')+'</ul>':'<h2>No saint in our guide is listed for today by Vatican News</h2>')+
+    // Design part 2 fix: today is one plain line, or a short list with portraits; the Vatican News caveat lives on the calendar page.
+    h+='<section class="saint-today" aria-labelledby="saint-today-h"><h2 id="saint-today-h" class="sr-only">Today</h2>'+(t.vn.length?'<p class="saint-today-l"><span class="k">Today, '+esc(fmtDate(md))+'</span> as listed by Vatican News:</p><ul class="saint-list">'+t.vn.map(srow).join('')+'</ul>':'<p class="saint-today-l"><span class="k">Today, '+esc(fmtDate(md))+'</span> No saint in this guide is listed by Vatican News.'+(calCount(D,md)?' '+calLine(D,md):' <a href="'+dayHref(D,md)+'">This day in the calendar →</a>')+'</p>')+(t.vn.length&&calCount(D,md)?'<p class="saint-today-l">'+calLine(D,md)+'</p>':'')+'</section>';
       (t.other.length?'<h3 class="small-h">Also on this day in other calendars (Wikidata)</h3><ul class="saint-list">'+t.other.map(srow).join('')+'</ul>':'')+
       (calCount(D,md)?'<p class="cal-today">'+calLine(D,md)+'</p>':'')+'<p class="small muted">'+esc(VN_NOTE)+' <a href="'+dayHref(D,md)+'">This day in the calendar →</a></p></section>';
     var tiles=[['#/timeline/saints','T','Historical timeline','Follow saints through the centuries and open their writings, biographies, and sources.',''],
@@ -72,6 +73,8 @@
       ['#/saints/legend','?','Saints of legend','Saints whose stories come mostly from tradition, and what that does and does not mean.',n[3]],
       ['#/saints/about','i','Sources & method','Where every date and status comes from, calendars explained, and our rights rules.','']];
     h+='<h2 class="saint-ways-h">Ways into the saints</h2><ul class="rows saint-ways">'+tiles.map(function(x){return '<li><a href="'+x[0]+'">'+esc(x[2])+'</a>'+(x[4]!==''?' <span class="muted">'+x[4]+'</span>':'')+'<span class="way-p">'+esc(x[3])+'</span></li>'}).join('')+'</ul>';
+    var all=D.saints.slice().sort(function(a,b){return a.name.localeCompare(b.name)});
+    h+='<h2 class="saint-ways-h">All saints in the guide <span class="shelf-n">'+all.length+'</span></h2><ul class="saint-list">'+all.map(srow).join('')+'</ul>';
     render(h,'saints');wireSearch()}
   function az(render,letter){var L={};D.saints.forEach(function(s){var c=key(s.name).charAt(0).toUpperCase();(L[c]=L[c]||[]).push(s)});var ks=Object.keys(L).sort();letter=(letter||'').toUpperCase();
     var list=(letter&&L[letter]?L[letter]:D.saints).slice().sort(function(a,b){return a.name.localeCompare(b.name)});

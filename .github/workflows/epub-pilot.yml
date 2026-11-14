@@ -1,6 +1,7 @@
 name: epub-pilot
 # Structured-text and EPUB pilot (PR #24). Builds the review EPUB from the hosted TXT and data/structured/, runs the
-# fidelity gate, and attaches the file to the workflow run as an artifact. It is not published or linked from the site.
+# fidelity gate, and attaches the file to the workflow run as an artifact (built into epub-review/: upload-artifact
+# skips hidden directories such as .epub-build/). It is not published or linked from the site.
 on:
   pull_request:
     paths:
@@ -22,10 +23,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: python3 tools/structure_text.py --check
-      - run: python3 tools/build_epub.py --out .epub-build
+      - run: python3 tools/build_epub.py --out epub-review
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: orthodoxy-pg-130-epub-review
-          path: .epub-build/
+          path: epub-review/
           retention-days: 30
           if-no-files-found: error

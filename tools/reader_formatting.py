@@ -55,6 +55,35 @@ def with_structure(edition):
     return dict(edition, structure=s) if s else edition
 
 
+def auto_layout_for(edition):
+    """Automatic display-only layout (tools/auto_layout.py) for this edition, only when built from this exact TXT."""
+    import json
+    from pathlib import Path
+    p = Path(__file__).resolve().parents[1] / 'data/auto-layout' / (str(edition.get('id')) + '.json')
+    if not p.exists():
+        return None
+    d = json.loads(p.read_text())
+    return d if d.get('sha256') == edition.get('sha256') else None
+
+
+def with_auto_layout(edition):
+    a = auto_layout_for(edition)
+    return dict(edition, autoLayout=a) if a else edition
+
+
+def _emphasis_html(text, spans, marked):
+    """Escape text with <em> spans. marked=True keeps the source's underscores inside the span, hidden on screen."""
+    at, parts = 0, []
+    for a, b in spans:
+        parts.append(html.escape(text[at:a]))
+        if marked:
+            parts.append('<em class="u"><span class="us">_</span>' + html.escape(text[a + 1:b - 1]) + '<span class="us">_</span></em>')
+        else:
+            parts.append('<em>' + html.escape(text[a:b]) + '</em>')
+        at = b
+    return ''.join(parts) + html.escape(text[at:])
+
+
 def block_role(edition, index):
     s = edition.get('structure')
     if not s or s['sha256'] != edition.get('sha256'):
@@ -63,25 +92,29 @@ def block_role(edition, index):
 
 
 def reading_block(edition, text, index, anchor=False):
+    """Mirror of renderReadingBlock() in scripts/library.js. Precedence: scan-verified readerFormatting for the blocks
+    it covers, then automatic layout (autoLayout); every character of the block is kept, in order."""
     f = edition.get('readerFormatting')
-    active = f and f['sha256'] == edition['sha256']
+    active = bool(f) and f['sha256'] == edition['sha256']
     verse = next((v for v in f['verse'] if v['block'] == index), None) if active else None
     prose = active and any(lo <= index <= hi for lo, hi in f['proseRanges'])
+    vem = [(x['start'], x['end']) for x in (f.get('emphasis', []) if active else []) if x['block'] == index]
+    verified = bool(verse or prose or vem)
+    a = edition.get('autoLayout')
+    auto = bool(a) and not verified and a['sha256'] == edition['sha256']
+    if auto:
+        prose = any(lo <= index <= hi for lo, hi in a['reflow'])
     role = block_role(edition, index)
     cls = ' '.join(x for x in (('reading-' + role) if role else '', 'reading-verse' if verse else 'reading-prose' if prose else '') if x)
-    content = html.escape(text)
-    if active and not verse:
-        at, parts = 0, []
-        for item in f.get('emphasis', []):
-            if item['block'] == index:
-                a, b = item['start'], item['end']
-                parts += [html.escape(text[at:a]), '<em>'+html.escape(text[a:b])+'</em>']
-                at = b
-        content = ''.join(parts)+html.escape(text[at:])
     if verse:
         starts = verse['lineStarts'] + [len(text)]
-        content = ''.join('<span class="verse-line">'+html.escape(text[a:b])+'</span>'
-                          for a, b in zip(starts, starts[1:]))
+        content = ''.join('<span class="verse-line">'+html.escape(text[a:b])+'</span>' for a, b in zip(starts, starts[1:]))
+    elif vem:
+        content = _emphasis_html(text, vem, False)
+    elif auto:
+        content = _emphasis_html(text, [(s, e) for b, s, e in a['em'] if b == index], True)
+    else:
+        content = html.escape(text)
     return '<p'+(' id="reading-p-'+str(index)+'"' if anchor else '')+(' class="'+cls+'"' if cls else '')+'>'+content+'</p>'
 
 

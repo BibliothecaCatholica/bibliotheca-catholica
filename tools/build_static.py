@@ -15,7 +15,8 @@ import hashlib,html,json,re,shutil,sys,urllib.parse
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE='https://bibliothecacatholica.com/';E=html.escape
 sys.path.insert(0,str(ROOT/'tools'));import site_copy,build_info
-from reader_formatting import reading_block, formatting_note, with_structure
+from reader_formatting import reading_block, formatting_note, with_structure, with_auto_layout
+from auto_layout import LABEL as AUTO_LABEL
 # --- v17 SEO: see docs/SEO.md ---------------------------------------------------------------------
 NAME='Bibliotheca Catholica';OG_IMAGE=SITE+'assets/og-image.png'
 # Profiles we can verify belong to the project: the GitHub organization (this repo) and the Bluesky
@@ -314,7 +315,7 @@ def series_html(w,lib,TPD):
 def part_pages(out,lib,by_html,author_ld):
     TPD=json.loads((ROOT/'data/text-pages.json').read_text())['works'];libw={w['id']:w for w in lib['works']}
     for wid,d in TPD.items():
-        w=libw[wid];e=with_structure(next(x for x in w['editions'] if x['id']==d['edition']));B=text_split(e['text']);n=len(d['items'])
+        w=libw[wid];e=with_auto_layout(with_structure(next(x for x in w['editions'] if x['id']==d['edition'])));B=text_split(e['text']);n=len(d['items'])
         for k,x in enumerate(d['items']):
             route=part_path(wid,d,x);prev=d['items'][k-1] if k else None;nxt=d['items'][k+1] if k+1<n else None
             nav=('<nav class="reader-pagination" aria-label="'+E(d['nouns'])+'">'+(a('/'+part_path(wid,d,prev)+'/','← '+prev['title']).replace('<a ','<a class="btn ghost" rel="prev" ',1) if prev else '')
@@ -331,6 +332,7 @@ def part_pages(out,lib,by_html,author_ld):
               +'<article class="reading-text" aria-label="'+E(x['title'])+'">'+''.join(reading_block(e,B[i],i) for i in range(x['start'],x['end']+1))+'</article>'
               +nav+parts_list(wid,d)
               +'<p class="small">Source: '+E(w['author']+'. '+w['title']+'. '+e['label']+'.')+' '+text_source(e)+'</p>'
+              +('<p class="small text-auto-layout">'+E(AUTO_LABEL)+'</p>' if e.get('autoLayout') else '')
               +'<p>'+a('/work/'+wid+'/',w['title'])+' · '+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>')
             what='“'+x['title']+',” '+part_label(d,x,True)+' '+('of '+str(n)+' ' if d['kind']=='ch' else '')+'in '+w['title']+' by '+w['author']+'.'
             md=fit([what],(('The full text on one page, free, with a link into the reading room for notes and highlights.','The full text on one page, with a link into the reading room.','The full text, free to read.'),)+DESC_EXTRA)

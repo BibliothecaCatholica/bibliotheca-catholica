@@ -10,7 +10,7 @@ Each hosted book should read as a designed edition, not a text file in a web pag
 
 1. **The TXT is the text.** Every character a reader sees, prints, or downloads comes from `data/texts/<file>.txt`, whose SHA-256 is pinned in `data/library.json`. Never edit those files. Do not change their wording, spelling, punctuation, or block order.
 2. **Structure, not text, is added.** Structure lives in separate files keyed to the TXT's block numbers (blank-line blocks, the same as `splitText()` in `scripts/library.js`). Those files hold no body text.
-3. **Never infer.** Verse, emphasis, notes, and headings come only from what a source marks: the edition's own HTML, or a page of a named printing that was checked visually. Do not guess them from capitals, indentation, line length, or importance. If the source does not mark something, leave it plain. On Orthodoxy's title page, "by" stays an ordinary paragraph because the HTML marks it as one.
+3. **Never infer, with one approved exception.** Verse, notes, and headings come only from what a source marks: the edition's own HTML, or a page of a named printing that was checked visually. Do not guess them from capitals, indentation, line length, or importance. If the source does not mark something, leave it plain. On Orthodoxy's title page, "by" stays an ordinary paragraph because the HTML marks it as one. **The exception is automatic, display-only layout** (below): wrapped prose may reflow on screen and paired `_underscores_` may show as italics, under fixed safeguards. Owner approval: "Rule change: automatic, display-only prose reflow and underscore italics are now allowed on hosted editions, under the safeguards listed here." (Micah, November 14, 2026).
 4. **Anchors and reader data survive.** Every block keeps its `<p id="reading-p-N">` element and its exact text, so saved notes, highlights, reading positions, and links keep working. Add classes; do not re-split, merge, or re-wrap blocks.
 5. **Notices stay.** The Project Gutenberg (or other source) notice, rights line, and source credit stay reachable from every edition, and EPUBs carry the full original license verbatim.
 6. **Every claim is checked.** A gate compares the structure with the TXT word for word, and tests compare the Python (static) and browser renderers character for character. "Builds" does not mean "proofread."
@@ -28,6 +28,19 @@ Each hosted book should read as a designed edition, not a text file in a web pag
 | 6. Review | Screenshots (reader title page, a chapter, phone and desktop), gate and test counts, drift check, and CENTRAL.md entry. Stop for the owner's review; do not merge a book's PR without it. | the PR |
 
 Scan-verified features (verse lines and exact emphasis spans checked on a named printing's page) are a separate layer: `readerFormatting` in `data/library.json`, bound to the TXT checksum and validated by `tools/reader_formatting.py`. Orthodoxy Chapter IV is the only one so far (page 99 of the 1909 John Lane printing). The structure pipeline carries this layer over unchanged and never invents more.
+
+## Automatic display-only layout (all hosted editions)
+
+`tools/auto_layout.py` runs in `npm run build` and writes `data/auto-layout/<edition>.json` (bound to the TXT checksum) and `data/auto-layout/report.json`. The reader fetches the edition's file with its text; the static chapter pages use the same data. Rules:
+
+- **Reflow** only when every line break in a block is a wrap: the line, as it stands in the file (first-line indent included), plus one space plus the next line's first word reaches the file's wrap width (98th percentile of its line lengths) minus 14.
+- **Leave the block exactly as it is** if any non-first line is indented, any line is all capitals, or it has a run of three or more spaces between words. Single-line blocks are untouched.
+- **Pinned HTML wins:** where the edition has a pinned Gutenberg HTML, only blocks the HTML marks as ordinary paragraphs reflow.
+- **Italics:** paired `_underscores_` inside one block show as italics. The underscores stay in the TXT, the download, and the page text (hidden on screen), so anchors and notes are unaffected. A block whose underscores do not pair cleanly gets no italics.
+- **Scan-verified formatting wins** (Orthodoxy Chapter IV keeps its own note). Automatic layout is labelled only in the edition details ("Source, rights, and downloads" in the reader, and under the text on chapter pages), never above the text.
+- **Original line breaks:** a switch in the reader's Aa menu (`bc:reader-breaks`) shows every reflowed block as the file breaks it.
+- **Off:** five verse works by name (Divine Comedy, The Ballad of the White Horse, Hopkins's Poems, The Dream of Gerontius, The Legends of Saint Patrick), and any edition the rule reflows under 50% (listed in the report as `underHalf`), until Micah decides.
+- **Known misses** (the rule cannot tell verse with long lines from prose): Orthodoxy block 123 (a quoted stanza, reflowed); Orthodoxy block 227 (kept, but the TXT itself runs its verse lines together); The Man Who Was Thursday block 22 (the last stanza of the dedication, reflowed while the first two are kept). Fix misses with a scan-verified `readerFormatting` entry or an exclusion, never by editing the TXT.
 
 ## How the books should look
 
@@ -51,6 +64,7 @@ These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The
 
 | Edition | Structure | Notes |
 |---|---|---|
+| All hosted editions | Automatic display-only layout where the rule allows (step 2a): see the report for each edition | 54 on, 5 excluded by name, 5 off pending a decision (`underHalf`) |
 | Orthodoxy (pg-130) | **Full pipeline**: structure from #130 HTML, gate, rendering, review EPUB | Chapter IV scan-verified verse and emphasis. #16769 (1934 reprint) is reference evidence only. |
 | Father Brown: Innocence (pg-204), Wisdom (pg-223), Secret (pg-70175), Incredulity (se-incredulity-father-brown) | Story maps in `tools/text_pages.py` | Would need steps 1 to 5 for roles and EPUBs. Incredulity comes from Standard Ebooks (CC0), not Gutenberg HTML. |
 | Summa Theologiae (four parts and the Supplement) | Question and article map (`tools/build_summa.py`) | Its own renderer, `summa_para()`; the Supplement has OCR flags to adjudicate first. |

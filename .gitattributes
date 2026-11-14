@@ -69,3 +69,4 @@ assets/study/mirador.js linguist-generated=true
 assets/libraries/desk.js linguist-generated=true
 assets/libraries/Fuse-LICENSE linguist-generated=true
 pagefind/** linguist-generated=true
+data/auto-layout/*.json linguist-generated=true

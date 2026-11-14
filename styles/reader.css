@@ -16,7 +16,7 @@ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-ri
  body.notes-open.in-reader main{padding-right:384px}
 }
 .rs-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.reader-side h2{font-size:21px;margin:0 0 6px}.rs-sub{font:600 11.5px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+.reader-side h2{font-size:21px;margin:0 0 6px}.rs-sub{font-family:var(--serif);font-weight:500;font-size:16px;line-height:1.3;font-variant-caps:all-small-caps;font-variant-numeric:oldstyle-nums;letter-spacing:.06em;color:var(--muted);margin:14px 0 6px}
 .rs-heads{list-style:none;margin:0;padding:0}.rs-heads a{display:block;padding:5px 8px;border-radius:8px;color:var(--ink2);text-decoration:none}
 .rs-heads a:hover{background:var(--bg2);color:var(--ink)}.rs-heads li.here a{color:var(--ink)}.rs-heads a[aria-current]{background:var(--bg2);font-weight:600;color:var(--rubric)}
 .rs-secs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:4px}
@@ -49,7 +49,7 @@ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-ri
 .reader-shell .source-headings,.reader-shell .passage-search:not([open]),.reader-shell .reader-head .rb-listen{display:none}
 .reader-shell .passage-search{margin:8px 0}
 body.in-reader .ld-toggle{display:none}body.in-reader .listen-dock:not(.open){display:none}
-.reader-notices{max-width:760px;margin:0 auto;padding-top:12px;border-top:1px solid var(--line)}.reader-notices p,.reader-notices .pg-notice{margin:0 0 8px;font-size:14px;color:var(--muted)}
+.reader-notices{max-width:42rem;margin:0 auto;padding-top:12px;border-top:1px solid var(--line)}.reader-notices p,.reader-notices .pg-notice{margin:0 0 8px;font-size:14px;color:var(--muted)}
 /* highlights */
 mark.bc-hl{color:inherit;border-radius:2px;padding:0;cursor:pointer;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .hl-yellow{background:var(--hl-yellow)}.hl-green{background:var(--hl-green)}.hl-blue{background:var(--hl-blue)}.hl-pink{background:var(--hl-pink)}
@@ -89,13 +89,13 @@ mark.hl-flash{outline:3px solid var(--rubric);outline-offset:2px;transition:outl
 .kb-list{margin:12px 0}.kb-list div{display:flex;justify-content:space-between;gap:16px;padding:6px 0;border-bottom:1px solid var(--line)}.kb-list dt,.kb-list dd{margin:0}
 kbd{font:600 13px ui-monospace,Menlo,monospace;padding:2px 7px;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;background:var(--bg2)}
 /* Continue reading */
-.continue-reading{margin:26px 0;padding:22px 24px;background:var(--card);border:1px solid var(--line);border-radius:var(--r)}
+.continue-reading{margin:32px 0 0;max-width:1000px}
 .cr-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}.cr-head h2{margin:0}
 .cr-clear{min-height:44px;font-size:14px;padding:8px 16px}
 .cr-list{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
 .cr-list li{position:relative}
-.cr-list a{display:flex;flex-direction:column;gap:3px;height:100%;box-sizing:border-box;padding:12px 44px 14px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);text-decoration:none}
-.cr-list a:hover{border-color:var(--rubric)}.cr-list b{font:700 20px/1.2 var(--display)}.cr-list span{font:14px var(--sans);color:var(--ink2)}.cr-list .cr-pos{color:var(--muted);font-size:13px;margin-top:4px}
+.cr-list a{display:flex;flex-direction:column;gap:3px;height:100%;box-sizing:border-box;padding:12px 44px 14px 14px;border-radius:6px;background:var(--bg2);color:var(--ink);text-decoration:none}
+.cr-list a:hover b{color:var(--rubric)}.cr-list b{font:700 20px/1.2 var(--display)}.cr-list span{font:14px var(--sans);color:var(--ink2)}.cr-list .cr-pos{color:var(--muted);font-size:13px;margin-top:4px}
 .cr-list .bc-bar{margin-top:4px}
 .cr-x{position:absolute;top:4px;right:4px;width:44px;height:44px;border:0;background:none;color:var(--muted);font-size:20px;cursor:pointer;border-radius:50%}.cr-x:hover{color:var(--rubric)}
 .cr-note{margin:10px 0 0;color:var(--muted)}

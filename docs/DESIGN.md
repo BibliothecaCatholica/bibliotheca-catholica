@@ -5,8 +5,8 @@ The site should read as a calm reading library: few choices per screen, type doi
 ## Type
 
 - **Serif for reading.** Everything a reader reads (titles, headings, descriptions, notes, rows, the hosted texts) is set in the existing serifs: `--display` (Cormorant Garamond) for headings and `--serif` (EB Garamond) for text. Sans-serif (`--sans`) is only for small controls: buttons, form fields, the toolbar, and the navigation.
-- **Measure.** Running text sits at 60 to 70 characters a line (`max-width: 66ch` on prose, about 34em for the reader).
-- **Labels** are small caps (`font-variant-caps: all-small-caps; letter-spacing: .06em`), not tracked uppercase sans.
+- **Measure.** Running text sits at 60 to 70 characters a line (`max-width: 66ch` on prose). The reader's text column is `26em`, measured at a median of 67 characters a line in EB Garamond at every text size; because it is in em, it holds when the reader changes the size.
+- **Labels** (section labels, footer headings, filter labels) are serif small caps (`font-variant-caps: all-small-caps; letter-spacing: .06em`), not tracked uppercase sans. Status badges and rights chips are indicators, not labels: they stay small sans.
 - **Numerals** in running text are old-style (`font-variant-numeric: oldstyle-nums`); tables and counters may use lining figures.
 - **One type scale:** 14, 16, 18, 21, 26, 34, 48 px (`--t-xs` to `--t-3xl`). **One spacing scale:** 4, 8, 12, 16, 24, 32, 48, 64 px (`--s-1` to `--s-8`). No other sizes in new rules.
 - No new fonts.
@@ -20,6 +20,10 @@ Exactly three styles:
 3. **Text link**: underlined serif or small sans, rubric. Use this for everything else, including rows of actions.
 
 Gold buttons (`.btn.gold`) and pill buttons are retired. Buttons have 6 px corners, not pills. Icon buttons (theme, menu) keep their square shape.
+
+## Portraits
+
+List thumbnails (home row, author and saint rows) are the self-hosted public-domain set in `assets/portraits/` (160 px WebP, `data/portraits.json` with checksums and credits, from `tools/fetch_portraits.py`), drawn at a fixed size with lazy loading; anything else shows a quiet initial. Person pages show the larger Wikimedia image with its credit line beneath.
 
 ## Containers
 

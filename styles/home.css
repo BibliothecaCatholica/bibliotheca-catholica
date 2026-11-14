@@ -1,41 +1,21 @@
-/* v17: crawlable home text (About the library), breadcrumbs, and section intros. Colors use the contrast tokens. */
-h1.hero-name{margin:0;line-height:inherit}
-.home-about{margin:34px 0 10px;padding:28px 0 6px;border-top:1px solid var(--line)}
-.home-about h2{font-size:clamp(26px,3.2vw,36px);margin:8px 0 14px}
-.home-about-text{columns:2 340px;column-gap:44px}
-.home-about-text p{margin:0 0 14px;font-size:17px;line-height:1.6;color:var(--ink2);break-inside:avoid}
-.home-about-text b{color:var(--ink)}
-.home-about h3{font:600 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);margin:18px 0 10px}
-.home-sections{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:8px 26px}
-.home-sections li{font-size:15.5px;line-height:1.45;padding:6px 0;border-bottom:1px solid var(--line)}
-.home-sections a{font-weight:600;text-decoration:none}
-.home-sections span{display:block;color:var(--muted);font-size:14px}
-.home-info{margin:16px 0 0;font:14px var(--sans);color:var(--muted)}
-.home-paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:20px 0 36px}
-.home-path{display:block;padding:24px;border:1px solid var(--line);border-radius:12px;text-decoration:none;background:var(--paper,var(--bg))}
-.home-path h3{margin:0 0 10px;font-size:24px}
-.home-path p{color:var(--ink2);line-height:1.6;margin:0 0 16px}
-.home-path span{color:var(--gold-ink);font:600 14px var(--sans)}
-.home-path:hover{border-color:var(--gold-ink)}
-.home-directory{margin-top:20px;border-block:1px solid var(--line);padding:16px 0}
-.home-directory summary{cursor:pointer;font:600 16px var(--sans);color:var(--ink)}
-.home-directory[open] summary{margin-bottom:18px}
-.home-about-text{columns:auto;max-width:780px}
-.hero-c .hero-sub{margin-top:20px}
-.home-path:focus-visible,.home-directory summary:focus-visible{outline:3px solid var(--gold-ink);outline-offset:4px}
-.mainnav{position:relative;justify-content:flex-start}
-.mainnav .nav-primary{width:auto}
-.nav-more{font:500 14px var(--sans)}
-.nav-more>summary{cursor:pointer;color:var(--ink2);padding:12px 10px;min-height:44px;box-sizing:border-box;border-radius:6px}
-.nav-more>summary:hover{background:var(--bg2)}
-.nav-more>summary:focus-visible{outline:3px solid var(--gold-ink);outline-offset:2px}
-.nav-more .nav-secondary{position:absolute;top:100%;left:18px;right:18px;width:auto;padding:16px;background:var(--card);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);font-size:14px}
-@media(min-width:721px){.mainnav{display:flex;align-items:center;gap:12px}}
-@media(max-width:720px){.mainnav .nav-primary,.nav-more{width:100%}.nav-more .nav-secondary{position:static;margin:8px 0 0;box-shadow:none}.nav-more>summary{padding-left:10px}}
-@media(max-width:720px){.home-paths{grid-template-columns:1fr;gap:12px}.home-path{padding:20px}}
+/* Home (design part 2, docs/DESIGN.md): hero, portrait row, Start here, three links, one-line Today, About. */
+.hero.hero-c{padding:40px 0 32px;border-bottom:1px solid var(--line)}
+h1.hero-name{margin:0 0 4px;line-height:1.3}
+.hero-c .hero-title{font:700 clamp(56px,8vw,96px)/1 var(--display);letter-spacing:-.03em;margin:0;color:var(--ink)}
+.hero-c .hero-trans{font:italic 21px/1.45 var(--serif);color:var(--ink2);margin:12px 0 24px;max-width:36em}
+.hero-c .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
+.hero-link{font:500 16px var(--sans)}
+.home-people,.home-start,.home-links,.home-about{margin:40px 0 0;max-width:1000px}.home-people{max-width:none}
+.home-people h2,.home-start h2,.home-about h2{font-size:26px;margin:0 0 12px}
+.people-row{list-style:none;margin:0;padding:4px 2px 14px;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(108px,1fr);gap:12px}
+.people-row a{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;text-decoration:none;color:var(--ink)}
+.people-row b{font:600 16px/1.25 var(--serif);margin-top:6px}.people-row span:not(.pt){font-size:14px;color:var(--muted)}
+.people-row a:hover b{color:var(--rubric)}
+.home-start .rows li,.home-links .rows li{padding:10px 0}.home-start a{font-size:19px}.home-links a{font:600 19px var(--serif)}
+.home-today{margin:32px 0 0;padding:12px 0;border-block:1px solid var(--line);font-size:17px}.home-today .k{font-variant-caps:all-small-caps;letter-spacing:.06em;color:var(--gold-ink);margin-right:6px}
+.home-about p{max-width:66ch;color:var(--ink2);margin:0 0 8px}
 .crumbs{margin:0 0 10px;color:var(--muted);font-family:var(--sans)}
 .section-intro{max-width:760px;color:var(--ink2);font-size:17px;line-height:1.6;margin:0 0 18px}
-.static-prerender .hero-orn{display:none}
 /* v21: horizontal scrollers (.hscroll; the home page "Beloved voices" strip). A slim gold scrollbar on a faint track, a soft
    edge fade only on a side with more to scroll (app.js hsUpdate sets .hs-l and .hs-r), and proximity snapping.
    Thumb against track is at least 3:1 in both themes (light #80601a on about #e7dcc5, dark about #a28849 on about #272b35). */

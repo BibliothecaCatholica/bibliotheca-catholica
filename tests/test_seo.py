@@ -47,10 +47,13 @@ class SEO(unittest.TestCase):
             self.assertEqual(p.meta['robots'],['index,follow'],r)
     def test_home_is_a_real_landing_page(self):
         p=PARSED['index.html'];self.assertIn('Bibliotheca Catholica',p.h1t)
-        words=len(' '.join(p.text).split());self.assertGreaterEqual(words,200)
-        s=(ROOT/'index.html').read_text();main=s[s.index('<main'):s.index('</main>')]
+        # Design part 2 (owner's brief, November 12, 2026): a short home (two sentences about the library, at most 25 links
+        # before the footer). Every section is still linked from the home page, through the main content or the footer.
+        words=len(' '.join(p.text).split());self.assertGreaterEqual(words,120)
+        s=(ROOT/'index.html').read_text();main=s[s.index('<main'):s.index('</main>')];page=main+s[s.index('<footer'):]
         self.assertNotIn('class="loading"',main)
-        for href in('/library/','/authors/','/saints/','/editions/','/reading/','/isidore/','/about/','/policy/','/rights/','/takedown/','/support/','/timeline/','/doctors/','/data/'):self.assertIn('href="'+href+'"',main,href)
+        for href in('/library/','/authors/','/saints/','/reading/','/about/'):self.assertIn('href="'+href+'"',main,href)
+        for href in('/editions/','/isidore/','/policy/','/rights/','/takedown/','/support/','/timeline/','/doctors/','/data/'):self.assertIn('href="'+href+'"',page,href)
         self.assertIn('bibliothecacatholica.com',main)
     def test_home_never_features_flagged_titles(self):
         flags=json.loads((ROOT/'data/editorial-flags.json').read_text())

@@ -32,41 +32,31 @@ SECTION_LINKS=[
 INFO_LINKS=[('/about/','About the library'),('/policy/','Fidelity & Editorial Policy'),('/rights/','Rights & Permissions'),('/takedown/','Takedown requests'),('/support/','Support the Library')]
 LICENSING_URL='/licensing/'
 def a(href,label):return '<a href="'+E(href)+'">'+E(label)+'</a>'
+# Design part 2 (owner-approved brief, November 12, 2026): a calm home. One search (the header), a hero with one
+# filled button and one text link, a row of portraits, a short Start here shelf, three plain links, a one-line
+# Today (filled in by app.js), and two sentences about the library. Budget: at most 25 links before the footer.
+HOME_PEOPLE=['augustine-of-hippo','thomas-aquinas','catherine-of-siena','thomas-a-kempis','teresa-of-avila','john-henry-newman','therese-of-lisieux','g-k-chesterton']
+HOME_SHELF=['confessions','imitation-of-christ','story-of-a-soul','apologia','orthodoxy']
+HOME_LINKS=[('/authors/','Authors','Fathers, Doctors, theologians, poets, and novelists'),('/saints/','Saints','sourced feast days and the old lives of the saints'),('/libraries/','Libraries','the great Catholic archives and digital libraries')]
 def home_about(n):
     """The descriptive block on the home page (static HTML and the app). n: dict of counts."""
-    sec=''.join('<li>'+a(h,l)+' <span>'+E(d)+'</span></li>' for h,l,d in SECTION_LINKS)
-    info=' · '.join(a(h,l) for h,l in INFO_LINKS)
-    return ('<section class="home-about" aria-labelledby="home-about-h"><div class="eyebrow">About the library</div>'
-     '<h2 id="home-about-h">A Catholic reading room and resource index</h2>'
-     '<div class="home-about-text">'
-     '<p><b>Bibliotheca Catholica</b> (bibliothecacatholica.com) gathers Catholic books and the libraries that preserve them. '
-     'The '+a('/library/','reading room')+' offers '+str(n['hosted'])+' editions to read here for free. Each keeps its source, original notices, and rights evidence. '
-     'Other works open at their original libraries or publishers.</p>'
-     '<p>Explore '+str(n['authors'])+' '+a('/authors/','authors')+', compare '+a('/editions/','translations')+', or browse the '
-     +a('/isidore/','Isidore Index')+' of '+format(n['books'],',')+' e-books. Bibliotheca Catholica is independent, free for everyone, and has no ads.</p>'
-     '</div><details class="home-directory"><summary>All sections of the library</summary><ul class="home-sections">'+sec+'</ul></details><p class="home-info">'+info+'</p></section>')
-
+    return ('<section class="home-about" aria-labelledby="home-about-h"><h2 id="home-about-h">About the library</h2>'
+     '<p>Bibliotheca Catholica (bibliothecacatholica.com) is an independent, free reading room for the Catholic tradition, with '+str(n['hosted'])+' public-domain editions to read here and '+str(n['authors'])+' authors to explore. '
+     'Every hosted text keeps its source, original notices, and rights evidence.</p><p>'+a('/about/','How the library works')+'</p></section>')
 def home_hero():
-    return ('<section class="hero hero-c"><h1 class="eyebrow hero-name">Bibliotheca Catholica</h1>'
-     '<p class="hero-title">Tolle Lege</p><p class="hero-trans">Take up and read</p>'
-     '<p class="hero-sub">Two thousand years of Catholic thought, in one place.</p>'
-     '<p class="lede">Find a book, spend time with its author, and follow the ideas that lead you further into the Catholic tradition.</p>'
-     '<form class="hero-search" action="/search/" onsubmit="location.hash=\'#/search/\'+encodeURIComponent(this.lookup.value);return false">'
-     '<input type="search" name="lookup" placeholder="Search a title, author, or subject" aria-label="Search everything">'
-     '<button class="btn">Search</button></form>'
-     '<div class="hero-cta"><a class="btn gold" href="/library/">Enter the reading room →</a>'
-     '<a class="btn ghost" href="/reading/">Help me choose a book</a></div></section>')
-
-def home_paths(n):
-    paths=[('/authors/','Follow an author','Meet the Fathers, Doctors, theologians, poets, and novelists through their lives and writings.'),
-           ('/saints/','Explore the saints','Find sourced feast days, historical context, and the books that tell their stories.'),
-           ('/libraries/','Search the wider tradition','Visit digital libraries and archives for Scripture, theology, manuscripts, and reference works.')]
-    cards=''.join('<a class="home-path" href="'+u+'"><h3>'+E(t)+'</h3><p>'+E(d)+'</p><span aria-hidden="true">Explore →</span></a>' for u,t,d in paths)
-    picks=[('confessions','Confessions','St. Augustine'),('imitation-of-christ','The Imitation of Christ','Thomas à Kempis'),('story-of-a-soul','Story of a Soul','St. Thérèse of Lisieux'),('orthodoxy','Orthodoxy','G. K. Chesterton')]
-    return ('<section class="reading-home" aria-labelledby="home-reading-h"><div><div class="eyebrow">The reading room</div>'
-     '<h2 id="home-reading-h">A place to begin</h2><p>'+str(n['hosted'])+' source-checked editions to read here, with adjustable text, search, highlights, notes, and your place saved in this browser.</p>'
-     '<a href="/library/">Browse the reading room →</a></div><ul class="rh-list">'+''.join('<li><a href="/work/'+i+'/"><b>'+E(t)+'</b><span>'+E(au)+'</span></a></li>' for i,t,au in picks)+'</ul></section>'
-     '<section aria-labelledby="home-explore-h"><div class="page-head"><h2 id="home-explore-h">Follow your curiosity</h2></div><div class="home-paths">'+cards+'</div></section>')
+    # The current site mark stays as the hero's ornament until the owner chooses one of the proposed engravings.
+    return ('<section class="hero hero-c"><h1 class="eyebrow hero-name">Bibliotheca Catholica</h1><p class="hero-title">Tolle Lege</p>'
+     '<p class="hero-trans">Take up and read: two thousand years of Catholic books, free to read here.</p>'
+     '<div class="hero-cta"><a class="btn" href="/library/">Enter the reading room</a><a class="hero-link" href="/reading/">Help me choose a book</a></div></section>')
+def home_paths(n,people=(),works=()):
+    """people: [(id, name, dates)] with self-hosted portraits; works: [(id, title, author)]."""
+    row=''.join('<li><a href="/author/'+E(i)+'/"><span class="pt" style="--pt:96px" aria-hidden="true"><img src="/assets/portraits/'+E(i)+'.webp" width="96" height="96" loading="lazy" decoding="async" alt=""></span><b>'+E(nm)+'</b><span>'+E(d)+'</span></a></li>' for i,nm,d in people)
+    shelf=''.join('<li><a href="/work/'+E(i)+'/">'+E(t)+'</a> <span class="muted">'+E(au)+'</span></li>' for i,t,au in works)
+    links=''.join('<li>'+a(h,l)+' <span class="muted">'+E(d)+'</span></li>' for h,l,d in HOME_LINKS)
+    return ('<section class="home-people" aria-labelledby="home-people-h"><h2 id="home-people-h">Saints and authors</h2><ul class="people-row hscroll">'+row+'</ul></section>'
+     '<section class="home-start" aria-labelledby="home-start-h"><h2 id="home-start-h">Start here</h2><ul class="rows">'+shelf+'</ul></section>'
+     '<nav class="home-links" aria-label="Explore"><ul class="rows">'+links+'</ul></nav>'
+     '<p class="home-today" id="home-today" hidden></p>')
 
 def acta_source():
     return ('<section class="panel"><h2>Read the Bollandist sources</h2><p>'

@@ -28,12 +28,19 @@ As of November 14, 2026, `main` at `67b68fabbe` (PR #25) plus the design-pass br
 
 - 104 work records; 64 hosted editions of 59 works in `data/library.json`.
 - 4,925 static pages and 4,926 sitemap URLs from `tools/build_static.py`; 6,389 tracked files, 5,923 of them generated and marked `linguist-generated` in `.gitattributes`.
-- Tests: 119 Node and 231 Python (4 Node design-budget tests added by PR #26).
+- Tests: 122 Node and 231 Python with the design-pass branches (7 Node design-budget tests).
 - Landed: PRs #17 (as #23), #20, #21, #22, and #25. Open: [PR #26](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/26), design pass part 1, awaiting Micah's phone check; [PR #24](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/24), Orthodoxy structured-text and EPUB pilot.
 
 ## Handoff log
 
 Newest first. Entry shape: date (America/Chicago), author, summary, commits/PRs, validation, and approval source. Open items are listed once below, not repeated in every entry. Older entries are in Git history: `git log -p -- CENTRAL.md`.
+
+### 2026-11-14, Claude (Claude Code): design pass, part 2 (Steps 2, 3, 4, 7, 8 and review fixes)
+
+- **Summary:** Portraits: the 286 public-domain portraits are self-hosted at list size (`assets/portraits/`, 160 px WebP, 1.4 MB) with credits and SHA-256 checksums in `data/portraits.json` (`tools/fetch_portraits.py`); person pages keep the Wikimedia image and credit. Home: hero with one filled button and one text link (hero search removed), a portrait row, a Start here shelf of five works, three links, a one-line Today, and two sentences about the library; the daily outbound links moved to Prayers. Navigation: seven items, no drawer, the rest in four footer groups (Advent plan linked there). Library: category shelves of rows, six recent additions with See all, no format chips or New badges; authors and saints listings are rows with portraits or initials. Review fixes: reader measure 26em (median 67 characters), the work page's Isidore record is one text link, labels are serif small caps with old-style numerals. Gold and pill buttons retired; panels, callouts, and toolbars follow border-or-tint. CSS 136,184 to 127,347 bytes after deleting superseded rules; no new stylesheet. Hero art: one verified and two candidate public-domain engravings proposed in the PR; the current mark stays.
+- **Commits/PRs:** branch `claude/design-part-2`, stacked on PR #26; see its PR.
+- **Validation/status:** Three builds pass; 122 Node and 231 Python tests pass; no drift after commit. Budgets in the browser: one filled button per screen and no nested bordered elements on home, work, reader, library, authors, author, saints, and prayers pages; 21 home links before the footer. SEO test and docs/SEO.md updated for the shorter home (owner's brief).
+- **Approval:** Micah, November 14, 2026 ("Start on Plan B"), with the portrait decision (self-host the 286 at list size) and the affiliate decision (wording unchanged) from the Part A to C brief.
 
 ### 2026-11-14, Claude (Claude Code): design pass, part 1 (Steps 0, 1, 5, 6)
 
@@ -65,7 +72,7 @@ Newest first. Entry shape: date (America/Chicago), author, summary, commits/PRs,
 
 ## Open items
 
-- Design pass part 2 (Steps 2, 3, 4, 7, 8 of the November 12 brief, plus three review fixes), after PR #26 merges. Decided November 14: self-host the 286 public-domain portraits at list size with credits and a checksum manifest; leave the affiliate sentence as is. Micah still chooses one of three proposed hero engravings.
+- Design pass part 2 is in review, stacked on PR #26. Micah to choose a hero engraving (proposals in its PR).
 - Hosted-text quality: a manual proofread of Orthodoxy Chapter IV. Next editorial batches: the remaining Orthodoxy chapters one at a time; scan review of Supplement Q1 (three articles), including earlier automatic substitutions; then one Hopkins poem and its notes. PR #24 (Orthodoxy structured text and EPUB) continues after design part 2; decided November 14: use the hosted edition's own HTML (#130), structure only.
 - Libraries research candidates in `docs/LIBRARIES-AND-ARCHIVES.md` (CRMEDR, Torch data, an opt-in Open Library edition finder) need rights and provenance review before any import.
 - Advent launches November 29. Still to do from the [Advent launch checklist](docs/ADVENT-LAUNCH.md): excerpt-to-source comparison, and Substack and social readiness.

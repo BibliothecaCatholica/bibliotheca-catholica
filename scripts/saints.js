@@ -48,8 +48,10 @@
   function statusChip(s){var v=(s.status||{}).value;return '<span class="saint-status s-'+esc(v||'unknown')+'">'+esc(statusLabel(s))+'</span>'}
   function head(eyebrow,h1,lede){return '<div class="page-head"><div class="eyebrow">'+esc(eyebrow)+'</div><h1>'+esc(h1)+'</h1>'+(lede?'<p class="lede">'+lede+'</p>':'')+'</div>'}
   function crumbs(extra){return '<a class="backlink" href="#/saints">← Saints &amp; Hagiography</a> <a class="backlink" href="#/timeline/saints">Saints on the timeline →</a>'+(extra||'')}
-  function srow(s){var f=(s.feasts||{}).vatican_news||[];return '<li class="saint-row"><a href="'+href(s)+'"><b>'+esc(s.name)+'</b></a> '+statusChip(s)+flagBadge(s)+
-    '<span class="saint-meta">'+esc(years(s))+(f.length?(years(s)?' · ':'')+'Vatican News: '+esc(f.map(function(v){return fmtDate(v.date)}).join(', ')):'')+(s.tier===1?' · Writer in the library':'')+'</span></li>'}
+  // Design part 2: a portrait beside each name where the linked author has a self-hosted public-domain one, an initial otherwise.
+  function pt(s){return root.BCPortrait?root.BCPortrait(s.tier===1?s.author_id:null,s.name,40):''}
+  function srow(s){var f=(s.feasts||{}).vatican_news||[];return '<li class="saint-row">'+pt(s)+'<span class="saint-row-t"><a href="'+href(s)+'"><b>'+esc(s.name)+'</b></a> '+statusChip(s)+flagBadge(s)+
+    '<span class="saint-meta">'+esc(years(s))+(f.length?(years(s)?' · ':'')+'Vatican News: '+esc(f.map(function(v){return fmtDate(v.date)}).join(', ')):'')+(s.tier===1?' · Writer in the library':'')+'</span></span></li>'}
   function searchBox(){return '<form class="hero-search saint-search" role="search" data-saint-search><input name="q" placeholder="Find a saint: “Little Flower”, “Aquinas”, “Laurence”…" aria-label="Find a saint by name"><button class="btn">Find</button></form><div class="saint-search-out" aria-live="polite"></div>'}
   function wireSearch(){var f=document.querySelector('[data-saint-search]');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var q=f.q.value.trim(),out=document.querySelector('.saint-search-out');if(!q)return;var r=lookup(D,q);
       if(r&&r.id){location.hash=href(D.byId[r.id]);return}
@@ -69,7 +71,7 @@
       ['#/saints/books','❦','The hagiography shelf','Butler, Baring-Gould, the Golden Legend, the Roman Martyrology (1897), and more, all public domain.',D.shelf.length],
       ['#/saints/legend','?','Saints of legend','Saints whose stories come mostly from tradition, and what that does and does not mean.',n[3]],
       ['#/saints/about','i','Sources & method','Where every date and status comes from, calendars explained, and our rights rules.','']];
-    h+='<div class="grid g-sections saint-tiles">'+tiles.map(function(x){return '<a class="sec-card" href="'+x[0]+'">'+(x[4]!==''?'<span class="count">'+x[4]+'</span>':'')+'<div class="glyph">'+x[1]+'</div><h3>'+esc(x[2])+'</h3><p>'+esc(x[3])+'</p></a>'}).join('')+'</div>';
+    h+='<h2 class="saint-ways-h">Ways into the saints</h2><ul class="rows saint-ways">'+tiles.map(function(x){return '<li><a href="'+x[0]+'">'+esc(x[2])+'</a>'+(x[4]!==''?' <span class="muted">'+x[4]+'</span>':'')+'<span class="way-p">'+esc(x[3])+'</span></li>'}).join('')+'</ul>';
     render(h,'saints');wireSearch()}
   function az(render,letter){var L={};D.saints.forEach(function(s){var c=key(s.name).charAt(0).toUpperCase();(L[c]=L[c]||[]).push(s)});var ks=Object.keys(L).sort();letter=(letter||'').toUpperCase();
     var list=(letter&&L[letter]?L[letter]:D.saints).slice().sort(function(a,b){return a.name.localeCompare(b.name)});

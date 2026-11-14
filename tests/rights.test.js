@@ -40,11 +40,11 @@ test('record pages: download buttons only for hostable records, with evidence an
  for(const st of ['link_only','unknown','public_domain_us']){const c=appCtx();const i=idsBy(st)[0];c.B.ids[i]=book(i);c.B.list=[c.B.ids[i]];c.bookDetail(+i);
   const x=RT.resolve(RD,i);assert(c.out.includes(esc(x.evidence)),st);assert(c.out.includes('Checked '+x.checked));
   if(RT.hostable(st)){assert(c.out.includes('calibre/get/PDF/'+i))}else{assert(!RAW.test(c.out),st);assert(!c.out.includes(' ↓</a>'));assert(c.out.includes('legacy/book/'+i+'/CalibreLibrary'))}}});
-test('work pages: the Other formats panel links files only for hostable matches',()=>{
+test('work pages: the Download row links only the Isidore record page or Index search, never files',()=>{
  const ctx={esc,window:{BCRights:RT,EDITORIAL_FLAGS:{books:{}}},IM:{server:'https://isidore.co/calibre/',rightsChecked:'2026-10-25',matches:{w:[{id:1,t:'a',a:[],f:['EPUB'],r:'link_only'},{id:2,t:'b',a:[],f:['EPUB'],r:'unknown'},{id:3,t:'c',a:[],f:['EPUB']}]}},unflagged:()=>true};
- vm.runInNewContext(['isidoreDl','otherFormats','rightsFor','canHostB'].map(n=>fn(LIB,n)).join('\n'),ctx);
- let h=ctx.otherFormats({id:'w'});assert(!RAW.test(h));assert.equal((h.match(/Book page on isidore\.co/g)||[]).length,3);
- ctx.IM.matches.w=[{id:4,t:'d',a:[],f:['EPUB'],r:'public_domain_us'}];h=ctx.otherFormats({id:'w'});assert(h.includes('calibre/get/EPUB/4'))});
+ vm.runInNewContext(['otherFormats'].map(n=>fn(LIB,n)).join('\n'),ctx);
+ let h=ctx.otherFormats({id:'w',title:'Some Title'});assert(!RAW.test(h));assert.equal(h,'<a href="#/isidore/q=Some%20Title">3 records in the Isidore Index</a>');
+ ctx.IM.matches.w=[{id:4,t:'d',a:[],f:['EPUB'],r:'public_domain_us'}];h=ctx.otherFormats({id:'w',title:'x'});assert(!RAW.test(h));assert.equal(h,'<a href="#/isidore/book/4">Isidore Index record</a>')});
 test('every match in isidore-matches carries the status from rights.json',()=>{
  const im=JSON.parse(fs.readFileSync('data/isidore-matches.json','utf8'));
  for(const L of Object.values(im.matches))for(const b of L)assert.equal(b.r,RT.resolve(RD,b.id).status,b.id)});

@@ -6,7 +6,7 @@ Bibliotheca Catholica (https://bibliothecacatholica.com) is a static site. Googl
 
 | Page type | Title | Description | H1 | JSON-LD | Visible extras |
 |---|---|---|---|---|---|
-| Home (`index.html`) | `HOME_TITLE` | `HOME_DESC` (150–160 chars) | "Bibliotheca Catholica" | WebSite, Organization | about text (about 300 words) and links to every section |
+| Home (`index.html`) | `HOME_TITLE` | `HOME_DESC` (150–160 chars) | "Bibliotheca Catholica" | WebSite, Organization | a short landing (design part 2, owner-approved): two sentences about the library and at most 25 links before the footer; every section is linked through the footer |
 | Section index (`/authors/`, `/saints/`, …) | section name + site name | fitted, 120–160 chars | section name | BreadcrumbList | intro paragraph (`INTRO`) and breadcrumb |
 | Author (`/author/<id>/`) | name + site name | fitted from the bio, era, and tags | author name | Person, BreadcrumbList | At a glance, More sources, breadcrumb |
 | Work (`/work/<id>/`) | title + site name | fitted | work title | Book, BreadcrumbList | "By <author>", editions count, Rights link |

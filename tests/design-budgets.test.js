@@ -43,3 +43,24 @@ test('the reader keeps its storage keys and anchors',()=>{
  for(const k of ["'bc-reading:'","'bc:'+setting[0]",'id="reader-size"','id="reader-spacing"','id="reader-part"',"' id=\"reading-p-'+i+'\"'"])assert.ok(lib.includes(k),k);
  for(const k of ["NOTES_PREFIX='bc-notes:'","RECENT_KEY='bc-recent'",'rb-aa-menu'])assert.ok(rd.includes(k),k);
 });
+// Design part 2 budgets (home, navigation, portraits).
+test('home page: one search (the header), one filled button, and at most 25 links before the footer',()=>{
+ const html=fs.readFileSync('index.html','utf8'),main=html.slice(html.indexOf('<main'),html.indexOf('</main>'));
+ assert.ok(count(main,/<a\s/g)<=25,'links: '+count(main,/<a\s/g));
+ assert.equal(count(html,/type="search"/g),1);assert.ok(!main.includes('hero-search'));
+ assert.equal(filled(main),1);
+});
+test('navigation: six or seven visible sections and no drawer; everything else is in the footer',()=>{
+ const html=fs.readFileSync('index.html','utf8'),nav=html.slice(html.indexOf('<nav class="mainnav"'),html.indexOf('</nav>',html.indexOf('<nav class="mainnav"')));
+ const items=(nav.match(/<a [^>]*data-nav="[^"]+"[^>]*>/g)||[]).filter(a=>!a.includes('nav-m'));
+ assert.ok(items.length>=6&&items.length<=7,String(items.length));assert.ok(!html.includes('nav-more'));
+ const foot=html.slice(html.indexOf('<footer'));
+ for(const p of ['/timeline/','/editions/','/isidore/','/scripture/','/doctors/','/rites/','/references/','/media/','/rare/','/substacks/','/projects/'])assert.ok(foot.includes('href="'+p+'"'),p);
+});
+test('portraits: every self-hosted file matches its manifest checksum and is a public-domain credited portrait',()=>{
+ const crypto=require('crypto'),m=JSON.parse(fs.readFileSync('data/portraits.json','utf8')),hub=JSON.parse(fs.readFileSync('data/catholic-hub.json','utf8'));
+ const byId=Object.fromEntries(hub.authors.map(a=>[a.id,a]));assert.ok(Object.keys(m.portraits).length>=280);
+ for(const [id,r] of Object.entries(m.portraits)){const a=byId[id];assert.ok(a&&a.imgCredit&&a.imgCredit.pd,id);
+  assert.equal(crypto.createHash('sha256').update(fs.readFileSync(r.file)).digest('hex'),r.sha256,id);assert.ok(r.page&&r.license,id)}
+ assert.deepEqual(fs.readdirSync('assets/portraits').sort(),Object.values(m.portraits).map(r=>r.file.split('/').pop()).sort());
+});

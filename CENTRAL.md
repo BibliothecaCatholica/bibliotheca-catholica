@@ -42,7 +42,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 ### 2026-11-14, Claude (Claude Code): notice rules applied site-wide
 
 - Chapter and Summa pages: text first, then the one-line notice, then an "Edition details" toggle (edition, source, quality labels, OCR notes); no badges. Reader: notice at the end of the last section and in "Source, rights, and downloads". Affiliate line once per page; badges off lists, author pages, the Advent plan, and rites resource lists (status kept as `data-rights`); one-line Wikipedia credit; Credits toggle for public-domain portraits; footer of two columns and one credits line.
-- Branch `claude/notice-rules`; merged on green CI under the standing approval (see its PR). Validation: builds, tests, and drift check in the PR.
+- [PR #28](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/28), branch `claude/notice-rules`: open for Micah's review, since it changes licence wording (outside the standing approval). Builds pass, 124 Node and 247 Python tests pass, no drift.
 
 ### 2026-11-14, Claude (Claude Code): PR #24 merged and deployed
 

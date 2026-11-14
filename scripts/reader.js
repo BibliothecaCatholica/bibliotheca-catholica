@@ -164,10 +164,14 @@ function enhance(ctx){
  // Banner
  var line=editionLine(w,e),banner=document.createElement('div');banner.className='reader-banner';banner.setAttribute('role','region');banner.setAttribute('aria-label','Edition and progress');banner.style.setProperty('--rb-pct',pr.percent+'%');
  banner.innerHTML='<button type="button" class="rb-chip" aria-expanded="false" aria-controls="rb-full" title="Show the full edition line"><span class="rb-chip-t">'+esc(w.title)+'</span><span class="rb-chip-p">§'+pr.section+'/'+pr.total+'</span></button>'+
-  '<div class="rb-full" id="rb-full"><span class="rb-ed"><span class="rb-lbl">Reading:</span> '+esc(line)+'</span>'+
-  '<span class="rb-prog"><span class="rb-sec">Section '+pr.section+' of '+pr.total+' · '+pr.percent+'%</span><span class="bc-bar" role="progressbar" aria-label="Progress through this work" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+pr.percent+'" aria-valuetext="Section '+pr.section+' of '+pr.total+', '+pr.percent+' percent"><i style="width:'+pr.percent+'%"></i></span></span></div>'+
-  '<div class="rb-actions" role="toolbar" aria-label="Reader tools"><button type="button" class="rb-btn rb-toc" data-act="toc" aria-controls="reader-side" aria-keyshortcuts="t">Contents</button><button type="button" class="rb-btn" data-act="notes" aria-controls="bc-notes" aria-keyshortcuts="n">My notes <span class="rb-count">'+R.items.length+'</span></button><button type="button" class="rb-btn" data-act="find" aria-keyshortcuts="/">Find</button>'+
-  '<details class="rb-print"><summary class="rb-btn">Print / save as PDF</summary><div class="rb-menu"><button type="button" data-act="print-section">This section</button><button type="button" data-act="print-work">Whole work</button></div></details><button type="button" class="rb-btn rb-help" data-act="help" aria-label="Keyboard shortcuts" aria-keyshortcuts="?">?</button></div>'+
+  '<div class="rb-full" id="rb-full"><span class="rb-ed">'+esc(line)+'</span>'+
+  '<span class="rb-prog"><span class="rb-sec">§'+pr.section+' of '+pr.total+'</span><span class="bc-bar" role="progressbar" aria-label="Progress through this work" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+pr.percent+'" aria-valuetext="Section '+pr.section+' of '+pr.total+', '+pr.percent+' percent"><i style="width:'+pr.percent+'%"></i></span></span></div>'+
+  // Design pass (2026-11-12): one quiet toolbar. Display settings sit in the "Aa" menu (the same #reader-size,
+  // #reader-spacing, and #reader-part controls, moved here below); Listen joins when the work has audio.
+  '<div class="rb-actions" role="toolbar" aria-label="Reader tools"><button type="button" class="rb-btn rb-toc" data-act="toc" aria-controls="reader-side" aria-keyshortcuts="t">Contents</button>'+
+  '<details class="rb-aa"><summary class="rb-btn" aria-label="Text settings: size, spacing, and section" title="Text settings">Aa</summary><div class="rb-menu rb-aa-menu"></div></details>'+
+  '<button type="button" class="rb-btn" data-act="notes" aria-controls="bc-notes" aria-keyshortcuts="n">Notes <span class="rb-count">'+R.items.length+'</span></button><button type="button" class="rb-btn rb-find" data-act="find" aria-controls="reader-find-panel" aria-keyshortcuts="/">Find</button>'+
+  '<details class="rb-print"><summary class="rb-btn">Print</summary><div class="rb-menu"><button type="button" data-act="print-section">This section</button><button type="button" data-act="print-work">Whole work</button></div></details><button type="button" class="rb-btn rb-help" data-act="help" aria-label="Keyboard shortcuts" aria-keyshortcuts="?">?</button></div>'+
   '<div class="print-edition">'+esc(w.author)+'. Reading: '+esc(line)+'. Section '+pr.section+' of '+pr.total+'. bibliothecacatholica.com/'+esc(ctx.base)+'</div>';
  var head=col.querySelector('.page-head');col.insertBefore(banner,head?head.nextSibling:col.firstChild);
  banner.querySelector('.rb-chip').onclick=function(){var o=banner.classList.toggle('expanded');this.setAttribute('aria-expanded',o?'true':'false')};
@@ -175,7 +179,8 @@ function enhance(ctx){
  // Pagination a11y
  Array.prototype.forEach.call(col.querySelectorAll('.reader-pagination a'),function(a){a.setAttribute('aria-label',/Previous/.test(a.textContent)?'Previous section':'Next section');a.setAttribute('rel',/Previous/.test(a.textContent)?'prev':'next')});
  var find=col.querySelector('#reader-find');if(find){var fd=find.closest('details');if(fd)fd.id='reader-find-panel'}
- var tools=col.querySelector('.reader-tools');if(tools)tools.setAttribute('aria-label','Display settings');
+ var tools=col.querySelector('.reader-tools');if(tools){tools.setAttribute('aria-label','Display settings');banner.querySelector('.rb-aa-menu').appendChild(tools)}else{var aa=banner.querySelector('.rb-aa');aa.parentNode.removeChild(aa)}
+ var lb=col.querySelector('#reader-listen');if(lb)banner.querySelector('.rb-actions').insertBefore(lb,banner.querySelector('.rb-help'));
  article.setAttribute('aria-label','Reading text, section '+pr.section+' of '+pr.total);
  // Highlights
  paintAll();
@@ -335,7 +340,9 @@ function openHelp(){
 function closeHelp(){if(!UI.help||UI.help.hidden)return false;UI.help.hidden=true;if(UI.helpOpener&&document.body.contains(UI.helpOpener))UI.helpOpener.focus();return true}
 // ---------- actions ----------
 function go(delta){var n=R.page+delta;if(n<0||n>=R.total)return;location.hash=R.base+'/'+n}
-function openFind(){var d=document.getElementById('reader-find-panel'),i=document.getElementById('reader-term');if(d)d.open=true;if(i){i.focus();i.scrollIntoView({block:'center'})}}
+function openFind(){var d=document.getElementById('reader-find-panel'),i=document.getElementById('reader-term');if(d)d.open=true;setExpanded('find',true);if(i){i.focus();i.scrollIntoView({block:'center'})}}
+// close an open toolbar menu (Aa, Print) when the reader clicks elsewhere
+document.addEventListener('click',function(ev){Array.prototype.forEach.call(document.querySelectorAll('.reader-banner details[open]'),function(d){if(!d.contains(ev.target))d.open=false})});
 function act(a,opener){
  if(!inReader())return;
  if(a==='prev')go(-1);else if(a==='next')go(1);
@@ -347,7 +354,7 @@ function act(a,opener){
  else if(a==='print-work')printNow(true);
  else if(a==='close')closeAll();
 }
-function closeAll(){if(closeHelp())return true;if(document.body.classList.contains('toc-open')){closeToc(true);return true}if(UI.panel&&!UI.panel.hidden){hidePanel(true);return true}if(UI.tool&&!UI.tool.hidden){hideTool();return true}var d=document.getElementById('reader-find-panel');if(d&&d.open&&d.contains(document.activeElement)){d.open=false;d.querySelector('summary').focus();return true}return false}
+function closeAll(){if(closeHelp())return true;if(document.body.classList.contains('toc-open')){closeToc(true);return true}if(UI.panel&&!UI.panel.hidden){hidePanel(true);return true}if(UI.tool&&!UI.tool.hidden){hideTool();return true}var m=document.querySelector('.reader-banner details[open]');if(m){m.open=false;m.querySelector('summary').focus();return true}var d=document.getElementById('reader-find-panel');if(d&&d.open&&d.contains(document.activeElement)){d.open=false;var fb=document.querySelector('.rb-find');(fb||d.querySelector('summary')).focus();setExpanded('find',false);return true}return false}
 document.addEventListener('keydown',function(ev){
  if(!inReader())return;
  if(UI.help&&!UI.help.hidden){if(ev.key==='Escape'||ev.key==='?'){ev.preventDefault();closeHelp()}return}

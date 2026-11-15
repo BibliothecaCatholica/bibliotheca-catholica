@@ -1,0 +1,201 @@
+{
+  "id": "pga-0900441",
+  "kind": "public-domain-text",
+  "title": "William Cobbett",
+  "author": "G. K. Chesterton",
+  "firstPublished": "1925",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "Project Gutenberg Australia",
+  "sourceUrl": "https://gutenberg.net.au/ebooks09/0900441.txt",
+  "sourcePage": "https://gutenberg.net.au/ebooks09/0900441h.html",
+  "sourceNotice": "Project Gutenberg Australia\n\nTitle: William Cobbett\nAuthor: G.K.Chesterton\n* A Project Gutenberg Australia eBook *\neBook No.: 0900441.txt\nLanguage: English\nDate first posted: June 2009\nDate most recently updated: June 2009\n\n\nProject Gutenberg Australia eBooks are created from printed editions\nwhich are in the public domain in Australia, unless a copyright notice\nis included. We do NOT keep any eBooks in compliance with a particular\npaper edition.\n\nCopyright laws are changing all over the world. Be sure to check the\ncopyright laws for your country before downloading or redistributing this\nfile.\n\nThis eBook is made available at no cost and with almost no restrictions\nwhatsoever. You may copy it, give it away or re-use it under the terms\nof the Project Gutenberg Australia License which may be viewed online at\nhttp://gutenberg.net.au/licence.html\n\nTo contact Project Gutenberg Australia go to http://gutenberg.net.au\n\n------------------------------------------------------------------------\n\nTitle: William Cobbett\nAuthor: G.K.Chesterton\n\n\nFirst published 1925\n\n\n\nCONTENTS\n\nCHAPTER I THE REVIVAL OF COBBETT\nCHAPTER II A SELF-MADE MAN\nCHAPTER III THE TRAGEDY OF THE PATRIOT\nCHAPTER IV REVOLUTION AND THE BONES OF PAINE\nCHAPTER V THE AMATEUR HISTORIAN\nCHAPTER VI THE RURAL RIDER\nCHAPTER VII LAST DAYS AND DEATH\n\n\n\nCHAPTER I - THE REVIVAL OF COBBETT\n\n\nThis chapter is here called 'The Revival of Cobbett.' As originally\nplanned, only a little while ago, it was to have been called 'The\nNeglect o",
+  "sourceFileSha256": "301366dc0594288fbc017a44b2334d28db3dc054dce55c118e4e5698a9bbae81",
+  "iaWitness": {
+    "identifier": "williamcobbett0000unse",
+    "url": "https://archive.org/details/williamcobbett0000unse",
+    "year": 1925,
+    "publisher": "London, Hodder and Stoughton limited",
+    "ocr": "williamcobbett0000unse_djvu.txt",
+    "ocrSha256": "6234436ba035b58beecad049bbe260f769efdfe93887e4218617a8bf73dd91f4",
+    "ocrNote": "SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)"
+  },
+  "collation": {
+    "sourceWords": 46759,
+    "scanWords": 49933,
+    "matchedWords": 45913,
+    "agreement": 0.9819,
+    "sampleDifferences": [
+      {
+        "source": "title william cobbett author g k chesterton",
+        "scan": "en william cobbett ate i ee worrks by g k chesterton"
+      },
+      {
+        "source": "revival of cobbett this chapter is here",
+        "scan": "revival of cobbett tus chapter is here"
+      },
+      {
+        "source": "reading a paper an the subject to",
+        "scan": "reading a paper on the subject to"
+      },
+      {
+        "source": "literature on my admission to that body",
+        "scan": "literature on my admis sion to that body"
+      },
+      {
+        "source": "body which certainly consists almost entirely of",
+        "scan": "body which certainly con sists almost entirely of"
+      },
+      {
+        "source": "in others besides myself but it is",
+        "scan": "in others besides my self but it is"
+      },
+      {
+        "source": "to the academic admirer now i mean",
+        "scan": "to the academic ad mirer now i mean"
+      },
+      {
+        "source": "the yeoman and so on many of the",
+        "scan": "the yeoman and soon many of the"
+      },
+      {
+        "source": "to my own eccentric enthusiasm would even",
+        "scan": "to my own eccen tric enthusiasm would even"
+      },
+      {
+        "source": "abruptly receive an unwelcome invitation to give",
+        "scan": "abruptly receive an un welcome invitation to give"
+      },
+      {
+        "source": "over the lapidary babylonian jests and vast",
+        "scan": "over the lapidary baby lonian jests and vast"
+      },
+      {
+        "source": "few have modelled themselves upon their model",
+        "scan": "few have modelled them selves upon their model"
+      },
+      {
+        "source": "good it is precisely the passages that",
+        "scan": "good it is pre cisely the passages that"
+      },
+      {
+        "source": "and it is precisely these violent passages",
+        "scan": "and it is pre cisely these violent passages"
+      },
+      {
+        "source": "that make it extraordinarily effective for the",
+        "scan": "that make it extra ordinarily effective for the"
+      },
+      {
+        "source": "the suggestion of comparative peace french has",
+        "scan": "the suggestion of com parative peace french has"
+      },
+      {
+        "source": "beauty of his incessant abuse is a",
+        "scan": "beauty of his iricessant abuse is a"
+      },
+      {
+        "source": "duchess an old eat or a bishop",
+        "scan": "duchess an old cat or a bishop"
+      },
+      {
+        "source": "dog is almost onomatopoeic in its love",
+        "scan": "dog is almost onomatopeeic in its love"
+      },
+      {
+        "source": "the liberty of mentioning because they exactly",
+        "scan": "the liberty of men tioning because they exactly"
+      },
+      {
+        "source": "secret of such language should be in",
+        "scan": "secret of such lan guage should be in"
+      },
+      {
+        "source": "guardians of english literature responsible for the",
+        "scan": "guardians of english litera ture responsible for the"
+      },
+      {
+        "source": "was received with heartless laughter and was",
+        "scan": "was received with heart less laughter and was"
+      },
+      {
+        "source": "both been heard talking like men in",
+        "scan": "both been heard talk ing like men in"
+      },
+      {
+        "source": "the heritage of english culture and mr",
+        "scan": "the heritage of eng lish culture and mr"
+      },
+      {
+        "source": "only mentioned my premature lament over the",
+        "scan": "only mentioned my prema ture lament over the"
+      },
+      {
+        "source": "the bargee that disreputable tom bowling because",
+        "scan": "the bargee that disreput able tom bowling because"
+      },
+      {
+        "source": "reason why i originally agreed to write",
+        "scan": "reason why i origin ally agreed to write"
+      },
+      {
+        "source": "back like a boomerang and the common",
+        "scan": "back like a boomer ang and the common"
+      },
+      {
+        "source": "wrong about cobbett i mean they were",
+        "scan": "wrong about cobbett j mean they were"
+      },
+      {
+        "source": "return whether we understand them or not",
+        "scan": "return whether we under stand them or not"
+      },
+      {
+        "source": "saw was the perishing of the whole",
+        "scan": "saw was the perish ing of the whole"
+      },
+      {
+        "source": "over men the sprawling omnipotence of financiers",
+        "scan": "over men the sprawl ing omnipotence of financiers"
+      },
+      {
+        "source": "carnage and classical quotations of greek names",
+        "scan": "carnage and classical quota 16 william cobbett tions of greek names"
+      },
+      {
+        "source": "past some were dreaming of a remote",
+        "scan": "past some were dream ing of a remote"
+      },
+      {
+        "source": "ideal democracy what democracy would have been",
+        "scan": "ideal democracy what demo cracy would have been"
+      },
+      {
+        "source": "generally not really discovered until they have",
+        "scan": "generally not really dis covered until they have"
+      },
+      {
+        "source": "of naseby and newbury over again and",
+        "scan": "of naseby and new bury over again and"
+      },
+      {
+        "source": "made unless the operation could be stopped",
+        "scan": "made unless the opera tion could be stopped"
+      },
+      {
+        "source": "if you had confronted carnot with caillaux",
+        "scan": "if you had con fronted carnot with caillaux"
+      }
+    ],
+    "method": "difflib word alignment, lower case, letters and digits only; OCR noise counts as disagreement"
+  },
+  "sha256": "5b3dc722b44a2beb893d1b29359ced28eea6d871791e252ccec457973c43fd20",
+  "bytes": 260492,
+  "checked": "2026-11-15",
+  "editionEvidence": {
+    "firstPublished": 1925,
+    "firstPublishedSource": "https://en.wikipedia.org/w/index.php?title=G._K._Chesterton_bibliography&oldid=1361105335",
+    "rightsBasis": "pd-date",
+    "checked": "2026-11-15"
+  }
+}

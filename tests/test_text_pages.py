@@ -114,7 +114,11 @@ class TextPages(unittest.TestCase):
         for wid in ('innocence-father-brown','wisdom-father-brown','incredulity-father-brown','secret-father-brown'):
             m=main('work/%s/index.html'%wid);self.assertIn('<h2>The Father Brown collections</h2>',m)
             self.assertIn('The Scandal of Father Brown (1935)',m);self.assertIn('enters the public domain on January 1, 2031',m)
-        for p in PAGES:self.assertNotIn('gutenberg.net.au',R(p),p)
+        # Project Gutenberg Australia also holds books still in US copyright (The Scandal of Father Brown, 1935), so pages
+        # link only to its pages for editions hosted here, each checked as US public domain (hosting rule, 2026-11-15).
+        ok={e['source'] for w in json.loads(R('data/library.json'))['works'] for e in w['editions'] if e.get('text') and 'gutenberg.net.au' in e['source']}
+        for p in PAGES:
+            for u in re.findall(r'https?://(?:www\.)?gutenberg\.net\.au[^"\'<>\s]*',R(p)):self.assertIn(u,ok,p)
 if __name__=='__main__':unittest.main()
 
 

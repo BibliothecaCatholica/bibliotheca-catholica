@@ -1,0 +1,201 @@
+{
+  "id": "pga-0900401",
+  "kind": "public-domain-text",
+  "title": "The Return of Don Quixote",
+  "author": "G. K. Chesterton",
+  "firstPublished": "1927",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "Project Gutenberg Australia",
+  "sourceUrl": "https://gutenberg.net.au/ebooks09/0900401.txt",
+  "sourcePage": "https://gutenberg.net.au/ebooks09/0900401h.html",
+  "sourceNotice": "Project Gutenberg Australia\n\nTitle: The Return of Don Quixote\nAuthor: G K Chesterton\n* A Project Gutenberg Australia eBook *\neBook No.: 0900401.txt\nLanguage: English\nDate first posted: June 2009\nDate most recently updated: June 2009\n\nProject Gutenberg Australia eBooks are created from printed editions\nwhich are in the public domain in Australia, unless a copyright notice\nis included. We do NOT keep any eBooks in compliance with a particular\npaper edition.\n\nCopyright laws are changing all over the world. Be sure to check the\ncopyright laws for your country before downloading or redistributing this\nfile.\n\nThis eBook is made available at no cost and with almost no restrictions\nwhatsoever. You may copy it, give it away or re-use it under the terms\nof the Project Gutenberg Australia License which may be viewed online at\nhttp://gutenberg.net.au/licence.html\n\nTo contact Project Gutenberg Australia go to http://gutenberg.net.au\n\n------------------------------------------------------------------------\n\nTitle: The Return of Don Quixote\nAuthor: G K Chesterton\n\nDODD, MEAD & COMPANY\nNEW YORK 1927\n\n\n\nTO W. R. TITTERTON\n\nMY DEAR TITTERTON,\n\nThis parable for social reformers, as you know, was planned and partly\nwritten long before the War; so that touching some things, from Fascism\nto nigger dances, it was a quite unintentional prophecy. It was your too\ngenerous confidence that dragged it from its dusty drawer; whether the\nworld has any reason to thank you I doubt; but I have so many reasons",
+  "sourceFileSha256": "3b2bcea34e0a313bbff575d9fff0454d8b97311eeb804695b56547dc55a97c2b",
+  "iaWitness": {
+    "identifier": "returnofdonquixo0000ches_i3m2",
+    "url": "https://archive.org/details/returnofdonquixo0000ches_i3m2",
+    "year": 1927,
+    "publisher": "New York, Dodd, Mead & Company",
+    "ocr": "returnofdonquixo0000ches_i3m2_djvu.txt",
+    "ocrSha256": "afc867538acf07bbc9b9d52e33d50c04d52dc64168e12d35efbf74dd03ace179",
+    "ocrNote": "SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)"
+  },
+  "collation": {
+    "sourceWords": 73789,
+    "scanWords": 76437,
+    "matchedWords": 72519,
+    "agreement": 0.9828,
+    "sampleDifferences": [
+      {
+        "source": "project gutenberg australia title the return of",
+        "scan": "tl return of f the return of"
+      },
+      {
+        "source": "of don quixote author g k chesterton dodd mead company",
+        "scan": "of don quixote dodd mead company"
+      },
+      {
+        "source": "nigger dances it was a quite unintentional",
+        "scan": "nigger dances it wras a quite unintentional"
+      },
+      {
+        "source": "was your too generous confidence that dragged",
+        "scan": "was your too gener ous confidence that dragged"
+      },
+      {
+        "source": "thanking you and recognising all you have",
+        "scan": "thanking you and recog nising all you have"
+      },
+      {
+        "source": "k chesterton contents chapter i a hole",
+        "scan": "k chesterton contents chaptbb page i a hole"
+      },
+      {
+        "source": "of don quixote xix the return of",
+        "scan": "of don quixote 290 the return of"
+      },
+      {
+        "source": "an almost cloudless morning murrel called monkey",
+        "scan": "an almost cloudless morn ing murrel called monkey"
+      },
+      {
+        "source": "on a very small scale and he",
+        "scan": "on a very sjmall scale and he"
+      },
+      {
+        "source": "one she was laying out peculiar pigments",
+        "scan": "one she was lay ing out peculiar pigments"
+      },
+      {
+        "source": "of the flat jewellery of medieval illumination",
+        "scan": "of the flat jewelry of medieval illumination"
+      },
+      {
+        "source": "hand was highly modern and was occupied",
+        "scan": "hand was highly modem and was occupied"
+      },
+      {
+        "source": "with several pails full of very crude",
+        "scan": "with several pails ful of very crude"
+      },
+      {
+        "source": "in some private theatricals then in preparation",
+        "scan": "in some private theatri cals then in preparation"
+      },
+      {
+        "source": "of bohemian had something akin to the",
+        "scan": "of bohemian had some thing akin to the"
+      },
+      {
+        "source": "young it was noticeable that though the",
+        "scan": "young it was no ticeable that though the"
+      },
+      {
+        "source": "had never been necessary to adjure her",
+        "scan": "had never been neces sary to adjure her"
+      },
+      {
+        "source": "see an irishman pummelling a black man",
+        "scan": "see an irishman pummeling a black man"
+      },
+      {
+        "source": "church through any window at present observed",
+        "scan": "church through any win dow at present observed"
+      },
+      {
+        "source": "nor has it occurred to you even",
+        "scan": "nor has it oc curred to you even"
+      },
+      {
+        "source": "he said and proceeded to splash away",
+        "scan": "he said and pro ceeded to splash away"
+      },
+      {
+        "source": "throne room of richard coeur de lion which",
+        "scan": "throne room of rich ard cceur de lion which"
+      },
+      {
+        "source": "troubadour who serenaded coeur de lion and",
+        "scan": "troubadour who serenaded cceur de lion and"
+      },
+      {
+        "source": "many other people including the daughter of",
+        "scan": "many other people in cluding the daughter of"
+      },
+      {
+        "source": "scene painting having succeeded equally ill in",
+        "scan": "scene painting having suxeeded equally ill in"
+      },
+      {
+        "source": "man of wide culture and had failed",
+        "scan": "man of wide cul ture and had failed"
+      },
+      {
+        "source": "seize the logical connection between the principle",
+        "scan": "seize the logical con nection between the principle"
+      },
+      {
+        "source": "rifle for the indian army and the",
+        "scan": "rifle for the in dian army and the"
+      },
+      {
+        "source": "older than his companion his face which",
+        "scan": "older than his com panion his face which"
+      },
+      {
+        "source": "name no historical characters except toussaint louverture",
+        "scan": "name no historical char acters except toussaint louverture"
+      },
+      {
+        "source": "sky i rather wonder sometimes she said",
+        "scan": "sky i rather won der sometimes she said"
+      },
+      {
+        "source": "gone too she proceeded i was looking",
+        "scan": "gone too she pro ceeded i was looking"
+      },
+      {
+        "source": "in a great many places at once",
+        "scan": "in a great rnany places at once"
+      },
+      {
+        "source": "in the various examinations or responsibilities which",
+        "scan": "in the various examina tions or responsibilities which"
+      },
+      {
+        "source": "dr saleeby lord dawson of penn and",
+        "scan": "dr saleeby lord daw son of penn and"
+      },
+      {
+        "source": "theatre or a shakespeare memorial and speeches",
+        "scan": "theatre or a shake speare memorial and speeches"
+      },
+      {
+        "source": "to take the leading part in the",
+        "scan": "to take the lead ing part in the"
+      },
+      {
+        "source": "indulgence in personal immortality but his temperate",
+        "scan": "indulgence in personal im mortality but his temperate"
+      },
+      {
+        "source": "his voice went before him everywhere as",
+        "scan": "his voice went be fore him everywhere as"
+      },
+      {
+        "source": "worn by mr snodgrass in being more",
+        "scan": "worn by mr snod grass in being more"
+      }
+    ],
+    "method": "difflib word alignment, lower case, letters and digits only; OCR noise counts as disagreement"
+  },
+  "sha256": "0d51a9c5f00679e3a99e4cbf18e31da10db4d6d84b4264f400ca34d817e2b780",
+  "bytes": 409276,
+  "checked": "2026-11-15",
+  "editionEvidence": {
+    "firstPublished": 1927,
+    "firstPublishedSource": "https://en.wikipedia.org/w/index.php?title=G._K._Chesterton_bibliography&oldid=1361105335",
+    "rightsBasis": "pd-date",
+    "checked": "2026-11-15"
+  }
+}

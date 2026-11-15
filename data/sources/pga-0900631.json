@@ -1,0 +1,201 @@
+{
+  "id": "pga-0900631",
+  "kind": "public-domain-text",
+  "title": "Robert Louis Stevenson",
+  "author": "G. K. Chesterton",
+  "firstPublished": "1927",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "Project Gutenberg Australia",
+  "sourceUrl": "https://gutenberg.net.au/ebooks09/0900631.txt",
+  "sourcePage": "https://gutenberg.net.au/ebooks09/0900631h.html",
+  "sourceNotice": "Project Gutenberg Australia\n\nTitle: Robert Louis Stevenson\nAuthor: G. K. Chesterton\n* A Project Gutenberg Australia eBook *\neBook No.: 0900631.txt\nLanguage: English\nDate first posted: August 2009\nDate most recently updated: August 2009\n\nProject Gutenberg Australia eBooks are created from printed editions\nwhich are in the public domain in Australia, unless a copyright notice\nis included. We do NOT keep any eBooks in compliance with a particular\npaper edition.\n\nCopyright laws are changing all over the world. Be sure to check the\ncopyright laws for your country before downloading or redistributing this\nfile.\n\nThis eBook is made available at no cost and with almost no restrictions\nwhatsoever. You may copy it, give it away or re-use it under the terms\nof the Project Gutenberg Australia License which may be viewed online at\nhttp://gutenberg.net.au/licence.html\n\nTo contact Project Gutenberg Australia go to http://gutenberg.net.au\n\n------------------------------------------------------------------------\n\nTitle: Robert Louis Stevenson\nAuthor: G. K. Chesterton\n\nNEW YORK\nDODD, MEAD & COMPANY\n1928\n\n\n\n\nCONTENTS\n\n   I \"THE MYTH OF STEVENSON\"\n  II IN THE COUNTRY OF SKELT\n III YOUTH AND EDINBURGH\n  IV THE REACTION TO ROMANCE\n   V THE SCOTTISH STORIES\n  VI THE STYLE OF STEVENSON\n VII EXPERIMENT AND RANGE\nVIII THE LIMITS OF A CRAFT\n  IX THE PHILOSOPHY OF GESTURE\n   X THE MORAL OF STEVENSON\n\n\n\n\nCHAPTER I # \"THE MYTH OF STEVENSON\"\n\n\nIn this brief study of Stevenson I propose to follow a somewhat",
+  "sourceFileSha256": "b3bb6985328a0d1b2a4035d5f4d5327d710a6a54a90f62942173da4da9db4d10",
+  "iaWitness": {
+    "identifier": "robertlouissteve0000ches",
+    "url": "https://archive.org/details/robertlouissteve0000ches",
+    "year": 1927,
+    "publisher": "London : Hodder and Stoughton",
+    "ocr": "robertlouissteve0000ches_djvu.txt",
+    "ocrSha256": "6f2f9334c54e3e443841568a342c175a1170b4d74441395182697454dd2b9d65",
+    "ocrNote": "SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)"
+  },
+  "collation": {
+    "sourceWords": 43004,
+    "scanWords": 44495,
+    "matchedWords": 42286,
+    "agreement": 0.9833,
+    "sampleDifferences": [
+      {
+        "source": "robert louis stevenson author g k chesterton",
+        "scan": "robert louis stevenson works by g k chesterton"
+      },
+      {
+        "source": "all over the world be sure to check the copyright laws",
+        "scan": "i on the creature called man part ii on the man called"
+      },
+      {
+        "source": "robert louis stevenson author g k chesterton",
+        "scan": "robert louis stevenson g k chesterton"
+      },
+      {
+        "source": "not adopted it without considerable thought and",
+        "scan": "not adopted it with out considerable thought and"
+      },
+      {
+        "source": "so before it collapses completely in practice",
+        "scan": "so before it col lapses completely in practice"
+      },
+      {
+        "source": "the joy of justifying it in principle",
+        "scan": "the joy of justify ing it in principle"
+      },
+      {
+        "source": "and laborious articles full of biographical detail",
+        "scan": "and laborious articles fidl of biographical detail"
+      },
+      {
+        "source": "the subject is unworthy of attention and",
+        "scan": "the subject is un worthy of attention and"
+      },
+      {
+        "source": "very clear or satisfactory if it be",
+        "scan": "very clear or satis factory if it be"
+      },
+      {
+        "source": "least against stevensonians perhaps it would be",
+        "scan": "least against stevensonians per haps it would be"
+      },
+      {
+        "source": "heard stevensonian sentiments repeated in violation of",
+        "scan": "heard stevensonian sentiments re peated in violation of"
+      },
+      {
+        "source": "be unnecessary and sometimes unamiable to discuss",
+        "scan": "be unnecessary and some times unamiable to discuss"
+      },
+      {
+        "source": "their interest was overdone it was sometimes",
+        "scan": "their interest was over done it was sometimes"
+      },
+      {
+        "source": "called across the plain a work vaguely",
+        "scan": "called across the plains a work vaguely"
+      },
+      {
+        "source": "it records the subconscious blank and sense",
+        "scan": "it records the sub conscious blank and sense"
+      },
+      {
+        "source": "letters is his innumerable changes of domicile",
+        "scan": "letters is his in numerable changes of domicile"
+      },
+      {
+        "source": "michael finsbury and refused to learn more",
+        "scan": "michael finsbury and re fused to learn more"
+      },
+      {
+        "source": "have left his correspondence very far behind",
+        "scan": "have left his corre spondence very far behind"
+      },
+      {
+        "source": "and then to fontainebleau and then to",
+        "scan": "and then to fontaine bleau and then to"
+      },
+      {
+        "source": "a covered waggon he went where he",
+        "scan": "a covered waggon fie went where he"
+      },
+      {
+        "source": "vagabond with blue fingers on the winter",
+        "scan": "vagabond with blue lingers on the winter"
+      },
+      {
+        "source": "to be a deathbed broadly speaking therefore",
+        "scan": "to be a death bed broadly speaking therefore"
+      },
+      {
+        "source": "speaking therefore his biography would consist of",
+        "scan": "speaking therefore his bio graphy would consist of"
+      },
+      {
+        "source": "a story but he made that the",
+        "scan": "a story but lie made that the"
+      },
+      {
+        "source": "but it was admittedly at least unconventional",
+        "scan": "but it was ad mittedly at least unconventional"
+      },
+      {
+        "source": "somewhat unsatisfactory american gentleman against whom she",
+        "scan": "somewhat unsatisfactory american gentle man against whom she"
+      },
+      {
+        "source": "forefathers might have described as the cannibal",
+        "scan": "forefathers might have de scribed as the cannibal"
+      },
+      {
+        "source": "among the crags and castellations of the",
+        "scan": "among the crags arid castellations of the"
+      },
+      {
+        "source": "been permitted to inhabit and as it",
+        "scan": "been permitted to in habit and as it"
+      },
+      {
+        "source": "much of a simplification he was not",
+        "scan": "much of a simplifica tion he was not"
+      },
+      {
+        "source": "alas with sordid surroundings oscar wilde said",
+        "scan": "alas with sordid surround ings oscar wilde said"
+      },
+      {
+        "source": "into a romance he himself deliberately turned",
+        "scan": "into a romance pie himself deliberately turned"
+      },
+      {
+        "source": "then came the reaction a reaction which",
+        "scan": "then came the re action a reaction which"
+      },
+      {
+        "source": "telling slowly and systematically the tale that",
+        "scan": "telling slowly and system atically the tale that"
+      },
+      {
+        "source": "stevenson except what has been said a",
+        "scan": "stevenson except what lias been said a"
+      },
+      {
+        "source": "romance is like reprinting the scarlet pimpernel",
+        "scan": "romance is like re printing the scarlet pimpernel"
+      },
+      {
+        "source": "journalism stevensons picturesque attitude and career are",
+        "scan": "journalism stevensons picturesque atti 26 robert louis stevenson tude and career are"
+      },
+      {
+        "source": "eyes are turned inward he lives for",
+        "scan": "eyes are turned in ward he lives for"
+      },
+      {
+        "source": "attempt the conjectural description of certain states",
+        "scan": "attempt the conjectural descrip tion of certain states"
+      },
+      {
+        "source": "of balfour more stevensonian than the wanderings",
+        "scan": "of balfour more steven sonian than the wanderings"
+      }
+    ],
+    "method": "difflib word alignment, lower case, letters and digits only; OCR noise counts as disagreement"
+  },
+  "sha256": "ead0c20109391c59e45974227730e122ee1f29f15bec8a0eab598a5cab4afed0",
+  "bytes": 239723,
+  "checked": "2026-11-15",
+  "editionEvidence": {
+    "firstPublished": 1927,
+    "firstPublishedSource": "https://en.wikipedia.org/w/index.php?title=G._K._Chesterton_bibliography&oldid=1361105335",
+    "rightsBasis": "pd-date",
+    "checked": "2026-11-15"
+  }
+}

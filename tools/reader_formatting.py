@@ -110,6 +110,9 @@ def _emphasis_html(text, spans, marked):
     return ''.join(parts) + html.escape(text[at:])
 
 
+NAMED = re.compile(r'_?(chapter|book|part|discourse|lecture)\b', re.I)
+
+
 def block_role(edition, index):
     s = edition.get('structure')
     if not s or s['sha256'] != edition.get('sha256'):
@@ -132,7 +135,9 @@ def reading_block(edition, text, index, anchor=False):
         prose = any(lo <= index <= hi for lo, hi in a['reflow'])
     sem = [] if verified else structure_em(edition, index)
     role = block_role(edition, index)
-    cls = ' '.join(x for x in (('reading-' + role) if role else '', 'reading-verse' if verse else 'reading-prose' if prose else '') if x)
+    cls = ' '.join(x for x in (('reading-' + role) if role else '', 'reading-verse' if verse else 'reading-prose' if prose else '',
+                               # a heading that already names itself ("CHAPTER I.", "Part I") gets no second label
+                               'ch-named' if role == 'chapter' and NAMED.match(text) else '') if x)
     if verse:
         starts = verse['lineStarts'] + [len(text)]
         content = ''.join('<span class="verse-line">'+html.escape(text[a:b])+'</span>' for a, b in zip(starts, starts[1:]))

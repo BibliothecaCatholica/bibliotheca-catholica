@@ -31,33 +31,54 @@ PART_D={
     'wisdom-father-brown':{'about':'Project Gutenberg #223: the second collection, first published in 1914 (London: Cassell), twelve stories. Story divisions follow the site’s map of the hosted text; no words were changed.'},
     'secret-father-brown':{'about':'Project Gutenberg #70175: first published in 1927 (London: Cassell and Company), eight stories between an opening and a closing frame story. Story divisions follow the site’s map of the hosted text; no words were changed.'},
     'incredulity-father-brown':{'about':'The Standard Ebooks text (CC0), corrected to the wording of the 1926 Cassell printings, eight stories. Each correction is listed in the edition’s provenance record. Story divisions follow the site’s map of the hosted text.'},
+    # Batch 2 (November 15, 2026). Each sentence restates the edition's record in data/library.json and its map.
+    'heretics':{'about':'Project Gutenberg #470: first published in 1905 (John Lane); the transcription follows the twelfth edition (John Lane Company, New York, 1919). Twenty chapters, divided as the hosted text heads them; no words were changed.'},
+    'ball-and-cross':{'about':'Project Gutenberg #5265: first published in 1909 (New York: John Lane; London: Wells Gardner, Darton, 1910). Twenty chapters, divided as the hosted text heads them; no words were changed.'},
+    'man-thursday':{'about':'Project Gutenberg #1695: The Man Who Was Thursday: A Nightmare. Fifteen chapters, divided as the hosted text heads them; no words were changed.'},
+    'chesterton-francis':{'about':'Project Gutenberg #63084: St. Francis of Assisi. Ten chapters, divided as the hosted text heads them; the publisher’s list that follows stays in the reader. No words were changed.'},
+    'grammar-assent':{'about':'Project Gutenberg #34022: ten chapters in two parts, divided as the hosted text heads them; the notes at the end stay with the last chapter. No words were changed.'},
+    'development-doctrine':{'about':'Project Gutenberg #35110: twelve chapters in two parts, divided as the hosted text heads them; the introduction stays in the reader. No words were changed.'},
+    'paradoxes-catholicism':{'about':'Project Gutenberg #16309: sermons preached in England, New York (Lent 1912), and Rome (Lent 1913), published in 1913 (London: Longmans, Green). Eleven chapters, divided as the hosted text heads them; the introduction stays in the reader. No words were changed.'},
+    'life-of-teresa':{'about':'Project Gutenberg #8120: the autobiography in David Lewis’s translation. Forty chapters, divided as the hosted text heads them, each titled by the first line of its summary; the prologue and the Relations stay in the reader. No words were changed.'},
+    'apologia':{'about':'Project Gutenberg #19690: seven parts, divided as the hosted text heads them; the Postscriptum stays in the reader. No words were changed.'},
+    'virgin-saints-and-martyrs':{'about':'Project Gutenberg #53841: Gutenberg’s title page names Thomas Y. Crowell & Co., New York, 1901; illustrations by F. Anger. Eighteen lives, divided as the hosted text heads them; each plate caption stays in the reader. No words were changed.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""
     wc=sum(x['words'] for x in d['items'])
     return dict(PART_D[wid],words=wc,minutes=round(wc/230))
 def items_for(wid,spec,B):
-    """The parts of one mapped work: heading, body range, and words (also used by tools/structure_text.py map mode)."""
+    """The parts of one mapped work: heading, body range, and words (also used by tools/structure_text.py map mode).
+
+    A heading is one block, or a tuple of consecutive blocks (a numeral line and a title line); the whole tuple must occur
+    once. `divisions` (optional) are exact texts of headings that stand between parts ("PART II.", a plate caption printed
+    before the next chapter): they are left out of the part before them, recorded as that next part's `before` blocks,
+    and kept in the reader and the EPUB."""
     end=next(i for i,b in enumerate(B) if re.search(r'\*\*\* ?END OF (THE |THIS )?(PROJECT GUTENBERG|HOSTED TEXT)',b,re.I))
     if spec.get('end_before'):end=next(i for i in range(len(B)) if norm(B[i])==norm(spec['end_before']))  # back matter after the last part
     at=next(i for i,b in enumerate(B) if norm(b)==norm(spec['start_after']))
+    div={norm(x) for x in spec.get('divisions',())}
     heads=[]
     for slug,num,title,head,first,last in spec['parts']:
-        assert SLUG.match(slug),slug
-        hits=[i for i in range(at+1,end) if norm(B[i])==norm(head)]
+        assert SLUG.match(slug) and len(slug)<=60,slug  # page paths keep each segment under 80 characters
+        hs=head if isinstance(head,tuple) else (head,)
+        hits=[i for i in range(at+1,end) if all(i+j<end and norm(B[i+j])==norm(x) for j,x in enumerate(hs))]
         assert len(hits)==1,(wid,slug,'heading must occur once',hits)
-        assert not heads or hits[0]>heads[-1],(wid,slug,'out of order')
-        heads.append(hits[0])
-    items=[]
+        assert not heads or hits[0]>heads[-1][0],(wid,slug,'out of order')
+        heads.append((hits[0],len(hs)))
+    items=[];prev_end=None
     for k,(slug,num,title,head,first,last) in enumerate(spec['parts']):
-        h=heads[k];stop=(heads[k+1] if k+1<len(heads) else end)-1
-        while stop>h and re.fullmatch(r'[IVXLC]+\.?',B[stop]):stop-=1  # a numeral printed above the next heading
-        body=list(range(h+1,stop+1))
+        h,n=heads[k];stop=(heads[k+1][0] if k+1<len(heads) else end)-1
+        while stop>h and (re.fullmatch(r'[IVXLC]+\.?',B[stop]) or norm(B[stop]) in div):stop-=1  # a numeral or a division printed above the next heading
+        body=list(range(h+n,stop+1))
         assert body,(wid,slug,'empty part')
         assert norm(B[body[0]]).startswith(norm(first)),(wid,slug,'first words do not match',B[body[0]][:80])
         assert norm(B[body[-1]]).endswith(norm(last)),(wid,slug,'last words do not match',B[body[-1]][-80:])
+        before=[i for i in range(prev_end+1,h) if norm(B[i]) in div] if prev_end is not None and div else []
         items.append(dict(slug=slug,num=num,title=title,heading=h,start=body[0],end=body[-1],section=h//SIZE,
-                          words=sum(words(B[i]) for i in body),firstWords=' '.join(re.sub(r'[_]','',B[body[0]]).split()[:12])))
+                          words=sum(words(B[i]) for i in body),firstWords=' '.join(re.sub(r'[_]','',B[body[0]]).split()[:12]),
+                          **({'titleBlocks':list(range(h+1,h+n))} if n>1 else {}),**({'before':before} if before else {})))
+        prev_end=body[-1]
     return items
 def build():
     lib=json.loads((ROOT/'data/library.json').read_text());works={w['id']:w for w in lib['works']}

@@ -5,7 +5,7 @@ Orthodoxy's nine chapters are mapped onto the hosted Project Gutenberg #130 file
 Gutenberg notice (the Standard Ebooks notice for The Incredulity of Father Brown), the hosted text of exactly
 that part, a link into the reader at the part's heading, and links back to the work and to the
 previous and next parts. The work page lists every part."""
-import hashlib,json,re,sys,unittest
+import hashlib,html,json,re,sys,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE='https://bibliothecacatholica.com/'
 sys.path.insert(0,str(ROOT/'tools'))
@@ -48,7 +48,7 @@ class TextPages(unittest.TestCase):
                 self.assertEqual(s.count('googletagmanager.com/gtag/js'),1,f)
                 self.assertIn('<link rel="canonical" href="'+SITE+p+'">',s);self.assertIn('<meta name="robots" content="index,follow">',s)
                 self.assertIn('window.BC_BOOT='+json.dumps(p.rstrip('/')),s)
-                self.assertEqual(m.count('<h1>'),1);self.assertIn('<h1>'+x['title'].replace('&','&amp;')+'</h1>',m)
+                self.assertEqual(m.count('<h1>'),1);self.assertIn('<h1>'+html.escape(x['title'])+'</h1>',m)
                 # rule 2 (owner, November 14, 2026): the licence's own 1.E.1 sentence, verbatim, once per page after the text
                 if 'gutenberg.org' in e['source']:
                     self.assertEqual(m.count('class="small pg-notice">'+PG_LINE+'</p>'),1,f)  # verbatim 1.E.1, once per page

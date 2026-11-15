@@ -89,7 +89,7 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
     docs.append(('front', 'front.xhtml', w['title'],
                  xhtml(w['title'], '<section epub:type="frontmatter">' + ''.join(to_xml(reading_block(e, B[i], i)) for i in front) + '</section>'), front))
     for n, c in enumerate(S['chapters']):
-        ids = list(range(c['start'], c['end'] + 1))
+        ids = c.get('before', []) + list(range(c['start'], c['end'] + 1))  # a division heading or plate printed before it
         title = c['num'] + '. ' + TITLES.get(c['heading'], c['title'])
         body = ('<section epub:type="chapter" aria-labelledby="h"><h2 id="h">' + E(title) + '</h2>'
                 + ''.join(to_xml(reading_block(e, B[i], i)) for i in ids) + '</section>')

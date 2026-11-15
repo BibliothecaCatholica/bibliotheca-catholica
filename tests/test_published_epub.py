@@ -40,7 +40,7 @@ class PublishedEpub(unittest.TestCase):
                 from notices import SE_NOTICE
                 self.assertIn(' '.join(SE_NOTICE.split()), text, ed)
                 self.assertIn('CC0', text, ed)
-            self.assertNotIn('not published', text, ed)
+            self.assertNotIn('review copy', text.lower(), ed)  # the pilot's review-copy marker (the phrase "not published" occurs in Newman's text)
 
     def test_linked_ahead_of_external_epubs(self):
         lib = (ROOT / 'scripts/library.js').read_text()

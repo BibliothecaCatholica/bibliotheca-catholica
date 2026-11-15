@@ -42,6 +42,17 @@ PART_D={
     'life-of-teresa':{'about':'Project Gutenberg #8120: the autobiography in David Lewis’s translation. Forty chapters, divided as the hosted text heads them, each titled by the first line of its summary; the prologue and the Relations stay in the reader. No words were changed.'},
     'apologia':{'about':'Project Gutenberg #19690: seven parts, divided as the hosted text heads them; the Postscriptum stays in the reader. No words were changed.'},
     'virgin-saints-and-martyrs':{'about':'Project Gutenberg #53841: Gutenberg’s title page names Thomas Y. Crowell & Co., New York, 1901; illustrations by F. Anger. Eighteen lives, divided as the hosted text heads them; each plate caption stays in the reader. No words were changed.'},
+    # Chesterton editions (November 15, 2026). Each sentence restates the edition's record and its map.
+    'catholic-church-conversion':{'about':'Project Gutenberg #76305: the Macmillan, New York printing of 1927 in the Calvert Series. Six chapters, divided as the hosted text heads them; no words were changed.'},
+    'ballad-white-horse':{'about':'Project Gutenberg #1719: first published in 1911 (London: Methuen). Eight books, divided as the hosted text heads them; the dedication stays in the reader. No words were changed.'},
+    'whats-wrong-world':{'about':'Project Gutenberg #1717: first published in 1910. Forty-six chapters in five parts and three closing notes, divided as the hosted text heads them; the dedication stays in the reader. No words were changed.'},
+    'manalive':{'about':'Project Gutenberg #1718: the Thomas Nelson and Sons text of 1912. Ten chapters in two parts, divided as the hosted text heads them; no words were changed.'},
+    'club-queer-trades':{'about':'Project Gutenberg #1696: first published in 1905. Six stories, divided as the hosted text heads them; no words were changed.'},
+    'short-history-england':{'about':'Project Gutenberg #20897: first published in 1917; transcribed from a Chatto & Windus, London printing. Eighteen chapters, divided as the hosted text heads them; no words were changed.'},
+    'man-who-knew-too-much':{'about':'Project Gutenberg #1720: first published in 1922. Eight Horne Fisher stories, divided as the hosted text heads them; no words were changed.'},
+    'flying-inn':{'about':'Project Gutenberg #59239: the John Lane Company, New York printing (copyright 1914). Twenty-five chapters, divided as the hosted text heads them; no words were changed.'},
+    'trees-of-pride':{'about':'Project Gutenberg #1721: first published in 1922. Four chapters, divided as the hosted text heads them; no words were changed.'},
+    'everlasting-man':{'about':'Project Gutenberg #65688: the Hodder and Stoughton, London text. An introduction, fourteen chapters in two parts, and a conclusion, divided as the hosted text heads them; the two appendices stay in the reader. No words were changed.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

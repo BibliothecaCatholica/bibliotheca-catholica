@@ -22,7 +22,11 @@ class PartD(unittest.TestCase):
         self.assertEqual(set(BTP.PART_D), {'orthodoxy', 'story-of-a-soul', 'innocence-father-brown', 'wisdom-father-brown',
                                            'secret-father-brown', 'incredulity-father-brown', 'heretics', 'ball-and-cross',
                                            'man-thursday', 'chesterton-francis', 'grammar-assent', 'development-doctrine',
-                                           'paradoxes-catholicism', 'life-of-teresa', 'apologia', 'virgin-saints-and-martyrs'})
+                                           'paradoxes-catholicism', 'life-of-teresa', 'apologia', 'virgin-saints-and-martyrs',
+                                           # Chesterton editions, November 15, 2026
+                                           'everlasting-man', 'catholic-church-conversion', 'ballad-white-horse',
+                                           'whats-wrong-world', 'short-history-england', 'man-who-knew-too-much', 'flying-inn',
+                                           'trees-of-pride', 'manalive', 'club-queer-trades'})
         for wid, d in TP.items():
             self.assertIn('partD', d, wid)
             self.assertEqual(d['partD']['words'], sum(x['words'] for x in d['items']))

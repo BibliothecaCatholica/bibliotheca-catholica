@@ -13,17 +13,47 @@
    "sha256": "ae7fe218b8823474407aeb4069f4411f89452ca73299a437843039c6417cb527",
    "size": 507175
   },
+  "pg-1719": {
+   "work": "ballad-white-horse",
+   "path": "downloads/epub/ballad-white-horse-pg-1719.bfd2c0106ffc.epub",
+   "sha256": "bfd2c0106ffcc61191a9de185530bdc44dabb4c5cbfcf9b5c8c0477ccd284bf5",
+   "size": 159568
+  },
+  "pg-76305": {
+   "work": "catholic-church-conversion",
+   "path": "downloads/epub/catholic-church-conversion-pg-76305.179708dce392.epub",
+   "sha256": "179708dce392787051b383183749ba500c7045a440888a7dc78cf1cbfe8838d5",
+   "size": 182205
+  },
   "pg-63084": {
    "work": "chesterton-francis",
    "path": "downloads/epub/chesterton-francis-pg-63084.c40e71bc560d.epub",
    "sha256": "c40e71bc560d6b0b71e44b536f6e6f546ae72aedddf1dc2a09ad931beb3a22cf",
    "size": 290298
   },
+  "pg-1696": {
+   "work": "club-queer-trades",
+   "path": "downloads/epub/club-queer-trades-pg-1696.86aa1e31142b.epub",
+   "sha256": "86aa1e31142b546ee1535e9813a1acdf67d45c38896365a3e2886d02ee491adc",
+   "size": 298518
+  },
   "pg-35110": {
    "work": "development-doctrine",
    "path": "downloads/epub/development-doctrine-pg-35110.1fac4092caa4.epub",
    "sha256": "1fac4092caa42feacab8cc781825a70fe259917436fa7973115abee06b1359d1",
    "size": 882501
+  },
+  "pg-65688": {
+   "work": "everlasting-man",
+   "path": "downloads/epub/everlasting-man-pg-65688.a1991618d852.epub",
+   "sha256": "a1991618d85297a18249fed638670bf5f854935fbb37b3090854859c69cd3214",
+   "size": 645240
+  },
+  "pg-59239": {
+   "work": "flying-inn",
+   "path": "downloads/epub/flying-inn-pg-59239.bef98cf3f8a9.epub",
+   "sha256": "bef98cf3f8a9ba1021c1576efd799bd0ffded529ef79c848d0d91b1808976ec5",
+   "size": 570552
   },
   "pg-34022": {
    "work": "grammar-assent",
@@ -61,6 +91,18 @@
    "sha256": "809c613cc67cc2f369c297535750119d4f914a8461a24094ca489ee9bd0665eb",
    "size": 381208
   },
+  "pg-1720": {
+   "work": "man-who-knew-too-much",
+   "path": "downloads/epub/man-who-knew-too-much-pg-1720.eef7e03d242e.epub",
+   "sha256": "eef7e03d242e3e6de85b85e75a017a472cb43695a33b6bb598bfd58d02b1bbea",
+   "size": 390727
+  },
+  "pg-1718": {
+   "work": "manalive",
+   "path": "downloads/epub/manalive-pg-1718.656128e12fef.epub",
+   "sha256": "656128e12fef7806108222b065682c492057b7ec9255181ac5d8a0348e5063dd",
+   "size": 375676
+  },
   "pg-130": {
    "work": "orthodoxy",
    "path": "downloads/epub/orthodoxy-pg-130.64ae296bc11e.epub",
@@ -79,17 +121,35 @@
    "sha256": "ec6dc658fba4d2a43c2ae0b1f5ce775480b038fa1e28fef0d8135695b14afa64",
    "size": 418615
   },
+  "pg-20897": {
+   "work": "short-history-england",
+   "path": "downloads/epub/short-history-england-pg-20897.c81f71a76a6b.epub",
+   "sha256": "c81f71a76a6bd4ecf8de3d4cde0d5dd17ec6192de9de49349bfc439b956cb5b7",
+   "size": 396018
+  },
   "pg-16772": {
    "work": "story-of-a-soul",
    "path": "downloads/epub/story-of-a-soul-pg-16772.0ec84c22044c.epub",
    "sha256": "0ec84c22044c09391791200ab60b77a34c34cfe87198d56979aab85c2a9787ad",
    "size": 640197
   },
+  "pg-1721": {
+   "work": "trees-of-pride",
+   "path": "downloads/epub/trees-of-pride-pg-1721.08dda6e9dc92.epub",
+   "sha256": "08dda6e9dc9263b1d1cfcbc7826e03175ff935268346ff8ac686d634fc240023",
+   "size": 178192
+  },
   "pg-53841": {
    "work": "virgin-saints-and-martyrs",
    "path": "downloads/epub/virgin-saints-and-martyrs-pg-53841.a8e5ca110315.epub",
    "sha256": "a8e5ca1103159fe496371f7a5b8b74b0e868a4574727faabae5dda8d0aec7070",
    "size": 428339
+  },
+  "pg-1717": {
+   "work": "whats-wrong-world",
+   "path": "downloads/epub/whats-wrong-world-pg-1717.01af330b7045.epub",
+   "sha256": "01af330b70459f82d2953c6c034d63a5cf0eb69dac8680456e4840561329b126",
+   "size": 409025
   },
   "pg-223": {
    "work": "wisdom-father-brown",

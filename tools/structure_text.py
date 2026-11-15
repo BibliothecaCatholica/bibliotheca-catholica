@@ -69,7 +69,12 @@ for _wid, _ed in (('innocence-father-brown', 'pg-204'), ('wisdom-father-brown', 
                   ('heretics', 'pg-470'), ('ball-and-cross', 'pg-5265'), ('man-thursday', 'pg-1695'),
                   ('chesterton-francis', 'pg-63084'), ('grammar-assent', 'pg-34022'), ('development-doctrine', 'pg-35110'),
                   ('paradoxes-catholicism', 'pg-16309'), ('life-of-teresa', 'pg-8120'), ('apologia', 'pg-19690'),
-                  ('virgin-saints-and-martyrs', 'pg-53841')):
+                  ('virgin-saints-and-martyrs', 'pg-53841'),
+                  # Chesterton editions (November 15, 2026)
+                  ('catholic-church-conversion', 'pg-76305'), ('ballad-white-horse', 'pg-1719'), ('whats-wrong-world', 'pg-1717'),
+                  ('manalive', 'pg-1718'), ('club-queer-trades', 'pg-1696'), ('short-history-england', 'pg-20897'),
+                  ('man-who-knew-too-much', 'pg-1720'), ('flying-inn', 'pg-59239'), ('trees-of-pride', 'pg-1721'),
+                  ('everlasting-man', 'pg-65688')):
     EDITIONS[(_wid, _ed)] = {'mode': 'map', 'out': 'data/structured/%s-%s.json' % (_wid, _ed)}
 
 

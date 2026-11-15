@@ -17,6 +17,8 @@ find scripts -name '*.js' -exec node --check {} \;
 node --check data/site-copy.js
 ```
 
+`npm run validate` (`tools/validate.sh`) runs the same steps plus `tools/hosted_counts.py --check`, writes each step's output to `.validate/<step>.log` (ignored), and prints one line per step; `npm run validate -- --drift` rebuilds and fails on any tracked change or untracked file. The commands above stay authoritative.
+
 Review and commit intended source and generated changes. Rerun the three build commands after committing, then `git diff --exit-code` and `git status --short` to detect tracked drift and untracked output. A clean diff before committing is not expected. CI is authoritative for required checks; do not skip a failure because a change is documentation-only. Network link checks are optional and do not prove textual fidelity or rights.
 
 ## Owner decisions

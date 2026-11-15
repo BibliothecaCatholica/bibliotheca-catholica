@@ -34,9 +34,26 @@ def metadata(n):
     return meta
 
 
+def reachable():
+    """One request to robots.txt. Gutenberg sometimes refuses every path (seen 2026-11-15: HTTP 403 site-wide);
+    report it once and let the caller move on to another source instead of retrying or using a mirror."""
+    try:
+        get('https://www.gutenberg.org/robots.txt')
+        return None
+    except Exception as err:
+        return str(err)
+
+
 def main(ids):
+    down = reachable()
+    if down:
+        print(f'gutenberg.org unreachable ({down}); skipped {len(ids)} ebook(s). Use another source; never a mirror.')
+        sys.exit(3)
     for n in ids:
         url = f'https://www.gutenberg.org/cache/epub/{n}/pg{n}.txt'
+        if (ROOT / f'data/texts/pg-{n}.txt').exists():
+            print(f'pg-{n}: already hosted; left unchanged (a pinned checksum never changes)')
+            continue
         try:
             meta = metadata(n)
             raw = get(url)
@@ -44,6 +61,9 @@ def main(ids):
             print(f'pg-{n}: skipped ({err})')
             continue
         assert b'END OF THE PROJECT GUTENBERG' in raw.upper(), f'{n}: license/end marker missing'
+        if meta.get('Copyright') != ['Public domain in the USA.']:
+            print(f'pg-{n}: rights statement is {meta.get("Copyright")}, not "Public domain in the USA."; not saved')
+            continue
         (ROOT / f'data/texts/pg-{n}.txt').write_bytes(raw)
         rec = {'id': int(n), 'metadata': meta, 'textUrl': url, 'checked': time.strftime('%Y-%m-%d')}
         (ROOT / f'data/sources/pg-{n}.json').write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')

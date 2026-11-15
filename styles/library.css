@@ -98,3 +98,12 @@ body.has-listen-dock footer{padding-bottom:64px}
 .work-choices .choice{font:600 15px var(--sans);color:var(--rubric);background:none;border:0;padding:10px 4px;min-height:44px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .about-edition{max-width:66ch;margin:26px 0 30px}.about-edition h2{margin:0 0 6px}.about-edition p{margin:0;color:var(--ink2)}
 @media print{.edition-designed p.reading-chapter{break-before:page}.ch-end a{display:none}}
+/* Edition covers (design C, chosen 2026-11-15; tools/covers.py): beside the title on work pages, small in rows and lists. */
+.work-head.has-cover::after{content:"";display:block;clear:both}
+.work-cover{float:right;width:220px;height:auto;margin:0 0 20px 36px;box-shadow:0 1px 2px rgba(42,33,24,.2),0 10px 26px rgba(42,33,24,.16)}
+.wrow.has-cover{flex-wrap:nowrap;align-items:flex-start;gap:4px 16px}.wrow.has-cover .wrow-main{flex:1 1 auto}
+.wrow-cover,.list-cover{flex:0 0 auto;width:48px;height:72px;box-shadow:0 1px 3px rgba(42,33,24,.22)}
+.wrow.has-cover .wrow-acts{align-self:center}
+.cover-list{list-style:none;padding:0;display:grid;gap:12px}.cover-list li{display:flex;align-items:center;gap:14px}
+@media(max-width:600px){.work-cover{width:112px;margin:0 0 12px 16px}.wrow.has-cover{flex-wrap:wrap}.wrow.has-cover .wrow-main{flex:1 1 calc(100% - 64px)}.wrow.has-cover .wrow-acts{flex-basis:100%;padding-left:64px}}
+#print-all .pa-cover{display:block;break-after:page;text-align:center}#print-all .pa-cover img{width:70%;height:auto}

@@ -1,6 +1,6 @@
 """Part D, beautiful editions (Orthodoxy pilot): title-page work page, chapter openers and endings, book paragraphs.
 Owner brief, with Micah's follow-up of November 14, 2026: "Include the chapter pages: the chapter opener replaces what
-remains above the text." Covers wait for the owner's choice of design (tools/covers.py contact sheet)."""
+remains above the text." Covers: design C, chosen November 15 (tests/test_covers.py)."""
 import json, re, subprocess, sys, unittest
 from pathlib import Path
 
@@ -66,15 +66,10 @@ class PartD(unittest.TestCase):
         for rule in ('.edition-designed p.reading-chapter::before{content:"Chapter"', '::first-letter', 'text-indent:1.5em', 'break-before:page'):
             self.assertIn(rule, css)
 
-    def test_covers_wait_for_the_owner(self):
+    def test_cover_design_chosen(self):
         import covers
         self.assertEqual(set(covers.DESIGNS), {'A', 'B', 'C'})
-        svg = covers.cover_svg('A', 'Orthodoxy', 'G. K. Chesterton', 'Apologetics')
-        self.assertTrue(svg.startswith('<svg xmlns="http://www.w3.org/2000/svg"'))
-        self.assertIn('ORTHODOXY', svg)
-        for p in ('index.html', 'work/orthodoxy/index.html', 'scripts/library.js', 'tools/build_static.py'):
-            self.assertNotIn('covers.', (ROOT / p).read_text(), p)  # not applied until a design is chosen
-
+        self.assertEqual(covers.CHOSEN, 'C')  # Micah, November 15, 2026; tests/test_covers.py checks the files
 
 if __name__ == '__main__':
     unittest.main()

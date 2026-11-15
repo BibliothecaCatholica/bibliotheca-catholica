@@ -56,7 +56,7 @@ These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The
 - Chapter pages (`/work/<id>/ch/<slug>/`) and a work page with one filled "Read here".
 
 **Next (Part D, pilot on Orthodoxy, then all 64 editions where noted):**
-- **Covers:** a typographic cover for every hosted edition (title, author, the site's cross mark, in burgundy, cream, and gold), one series design with a small variation by category. It is used on the work page, the shelves, author pages, the EPUB, and as a PNG social image. No photographs or third-party art.
+- **Covers (done, design C, chosen November 15):** a typographic cover for every hosted edition (title, author, the site's cross mark, in burgundy, cream, and gold), one series design with a small variation by category. It is used on the work page, the shelves, author pages, the EPUB, and as a PNG social image. No photographs or third-party art.
 - **Work page as a title page:** cover beside the title; a facts line computed from the TXT (year, word count, reading time); three choices: Read, Listen, Download; and a short "About this edition" block. Full source and rights details stay behind the existing toggle.
 - **Chapter openers and endings** for editions with chapter structure: a large numeral, a small-caps "Chapter" label, the title, a drop cap, one ornament or rule, then a centred ornament, "End of Chapter N", and a link to the next chapter. Reading position is still saved.
 - **Text:** one paragraph style (first-line indents or spaced paragraphs, recorded in DESIGN.md), with verse, block quotations, and notes styled distinctly **only where the structure marks them**.
@@ -67,7 +67,7 @@ These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The
 | Edition | Structure | Notes |
 |---|---|---|
 | All hosted editions | Automatic display-only layout where the rule allows (step 2a): see the report for each edition | 59 on, 5 verse works excluded by name; coverage listed per edition |
-| Orthodoxy (pg-130) | **Full pipeline**: structure from #130 HTML, gate, rendering, review EPUB; **Part D pilot**: title-page work page, chapter openers and endings, book paragraphs, print (covers wait for the owner's choice) | Chapter IV scan-verified verse and emphasis. #16769 (1934 reprint) is reference evidence only. |
+| Orthodoxy (pg-130) | **Full pipeline**: structure from #130 HTML, gate, rendering, review EPUB; **Part D pilot**: title-page work page, chapter openers and endings, book paragraphs, print (covers: design C on all 64 editions) | Chapter IV scan-verified verse and emphasis. #16769 (1934 reprint) is reference evidence only. |
 | Father Brown: Innocence (pg-204), Wisdom (pg-223), Secret (pg-70175), Incredulity (se-incredulity-father-brown) | Story maps in `tools/text_pages.py` | Would need steps 1 to 5 for roles and EPUBs. Incredulity comes from Standard Ebooks (CC0), not Gutenberg HTML. |
 | Summa Theologiae (four parts and the Supplement) | Question and article map (`tools/build_summa.py`) | Its own renderer, `summa_para()`; the Supplement has OCR flags to adjudicate first. |
 | Story of a Soul (pg-16772) | **Surveyed, not built** (HTML pinned November 14) | 145 italic spans; verse only as line breaks; notes as plain bracketed text (611); inconsistent heading levels; the HTML drops accents the TXT keeps. Building it needs owner decisions: an accent-folding rule for the gate, and whether to use the HTML's italics. |

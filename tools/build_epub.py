@@ -40,6 +40,7 @@ p{margin:0 0 .9em;text-indent:0}
 .reading-verse{margin-left:1.5em}.verse-line{display:block}
 .notice p,.notice pre{font-size:.85em}.notice pre{white-space:pre-wrap;font-family:serif}
 .colophon{font-size:.85em}
+.cover{text-align:center;margin:0}.cover img{max-width:100%;max-height:100%}
 .pg-line{font-size:.8em;margin-top:2em}
 """
 
@@ -73,6 +74,10 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
     TITLES = {x['heading']: x['title'] for x in json.loads((ROOT / 'data/text-pages.json').read_text())['works'][work]['items']}
 
     docs = []  # (id, file, title, xhtml, blocks it carries)
+    # The edition cover (design C, chosen by Micah on November 15, 2026; tools/covers.py), first in the book.
+    cover = (ROOT / 'assets/covers' / (edition + '.webp')).read_bytes()
+    docs.append(('cover', 'cover.xhtml', 'Cover', xhtml('Cover', '<section epub:type="cover" class="cover"><img src="cover.webp" alt="Cover of '
+                 + E(w['title']) + ' by ' + E(w['author']) + '"/></section>'), []))
     first_ch = S['chapters'][0]['heading']
     moved = (S.get('presentation') or {}).get('front', [])  # step 2b: e.g. the proofreader's credit, with the notices
     front = [i for i in range(lo, first_ch) if i not in moved]
@@ -124,6 +129,7 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
            '<meta property="dcterms:modified">2026-11-14T00:00:00Z</meta></metadata><manifest>'
            '<item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>'
            '<item id="css" href="style.css" media-type="text/css"/>'
+           '<item id="cover-image" href="cover.webp" media-type="image/webp" properties="cover-image"/>'
            + ''.join('<item id="%s" href="%s" media-type="application/xhtml+xml"/>' % (did, fn) for did, fn, t, d, i in docs)
            + '</manifest><spine>' + ''.join('<itemref idref="%s"/>' % did for did, fn, t, d, i in docs) + '</spine></package>\n')
     ET.fromstring(opf.encode('utf-8'))
@@ -142,6 +148,7 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
         put('OEBPS/content.opf', opf)
         put('OEBPS/nav.xhtml', navdoc)
         put('OEBPS/style.css', CSS)
+        put('OEBPS/cover.webp', cover, store=True)
         for did, fn, t, doc, ids in docs:
             put('OEBPS/' + fn, doc)
     data = buf.getvalue()

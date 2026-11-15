@@ -4905,6 +4905,17 @@ work/secret-father-brown/story/09-the-secret-of-flambeau/index.html
 work/servile-state/index.html
 work/spiritual-exercises-adapted/index.html
 work/story-of-a-soul/index.html
+work/story-of-a-soul/ch/01-earliest-memories/index.html
+work/story-of-a-soul/ch/02-a-catholic-household/index.html
+work/story-of-a-soul/ch/03-pauline-enters-the-carmel/index.html
+work/story-of-a-soul/ch/04-first-communion-and-confirmation/index.html
+work/story-of-a-soul/ch/05-vocation-of-therese/index.html
+work/story-of-a-soul/ch/06-a-pilgrimage-to-rome/index.html
+work/story-of-a-soul/ch/07-the-little-flower-enters-the-carmel/index.html
+work/story-of-a-soul/ch/08-profession-of-soeur-therese/index.html
+work/story-of-a-soul/ch/09-the-night-of-the-soul/index.html
+work/story-of-a-soul/ch/10-the-new-commandment/index.html
+work/story-of-a-soul/ch/11-a-canticle-of-love/index.html
 work/summa-theologiae/index.html
 work/veritatis-splendor/index.html
 work/virgin-saints-and-martyrs/index.html

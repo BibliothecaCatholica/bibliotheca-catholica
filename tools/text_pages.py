@@ -33,7 +33,27 @@ WORKS = {
    ('08-the-romance-of-orthodoxy','VIII','The Romance of Orthodoxy','VIII THE ROMANCE OF ORTHODOXY','It is customary to complain of the bustle and strenuousness','but they laid waste the world.'),
    ('09-authority-and-the-adventurer','IX','Authority and the Adventurer','IX AUTHORITY AND THE ADVENTURER','The last chapter has been concerned with the contention that','His mirth.'),
   ]),
-# Father Brown: the collections published before 1931 and hosted here (Research 2026-11-09; The Incredulity, 1926,
+# Story of a Soul (November 15, 2026): the eleven chapters of the autobiography as its own Gutenberg HTML (#16772) marks
+ # them (data/structured/story-of-a-soul-pg-16772.json, owner decision of November 14). The last chapter ends before
+ # "END OF THE AUTOBIOGRAPHY"; the epilogue, counsels, letters, prayers, and poems stay in the reader.
+ 'story-of-a-soul': dict(edition='pg-16772', kind='ch', noun='Chapter', nouns='Chapters',
+  start_after='THE AUTOBIOGRAPHY OF SOEUR THÉRÈSE OF LISIEUX, ENTITLED BY HERSELF: "THE STORY OF THE SPRINGTIME OF A LITTLE WHITE FLOWER"',
+  end_before='END OF THE AUTOBIOGRAPHY',
+  edition_line='Project Gutenberg #16772, from Soeur Thérèse of Lisieux, edited by T. N. Taylor (London: Burns, Oates & Washbourne, 1912; 8th ed., 1922), as the note to the electronic edition states.',
+  parts=[
+   ('01-earliest-memories','I','Earliest Memories','CHAPTER I EARLIEST MEMORIES','It is to you, dear Mother, that I am about','______________________________'),
+   ('02-a-catholic-household','II','A Catholic Household','CHAPTER II A CATHOLIC HOUSEHOLD',"All the details of my Mother's illness are still fresh",'______________________________'),
+   ('03-pauline-enters-the-carmel','III','Pauline Enters the Carmel','CHAPTER III PAULINE ENTERS THE CARMEL','I was eight and a half when Léonie left school,','______________________________'),
+   ('04-first-communion-and-confirmation','IV','First Communion and Confirmation','CHAPTER IV FIRST COMMUNION AND CONFIRMATION','While describing this visit to the Carmel, my thoughts are','______________________________'),
+   ('05-vocation-of-therese','V','Vocation of Thérèse','CHAPTER V VOCATION OF THÉRÈSE','I was far from meriting all the graces which Our','______________________________'),
+   ('06-a-pilgrimage-to-rome','VI','A Pilgrimage to Rome','CHAPTER VI A PILGRIMAGE TO ROME','Three days after the journey to Bayeux, I started on','______________________________'),
+   ('07-the-little-flower-enters-the-carmel','VII','The Little Flower Enters the Carmel','CHAPTER VII THE LITTLE FLOWER ENTERS THE CARMEL','Monday, April 9, 1888, being the Feast of the Annunciation,','______________________________'),
+   ('08-profession-of-soeur-therese','VIII','Profession of Soeur Thérèse','CHAPTER VIII PROFESSION OF SOEUR THÉRÈSE','Need I tell you, dear Mother, about the retreat before','______________________________'),
+   ('09-the-night-of-the-soul','IX','The Night of the Soul','CHAPTER IX THE NIGHT OF THE SOUL','Dear Mother, I thought I had written enough, and now','______________________________'),
+   ('10-the-new-commandment','X','The New Commandment','CHAPTER X THE NEW COMMANDMENT','Dear Mother, God in His infinite goodness has given me','______________________________'),
+   ('11-a-canticle-of-love','XI','A Canticle of Love','CHAPTER XI A CANTICLE OF LOVE','It is not only when He is about to send','_____________________________'),
+  ]),
+ # Father Brown: the collections published before 1931 and hosted here (Research 2026-11-09; The Incredulity, 1926,
  # added 2026-11-09 from Standard Ebooks, corrected to the 1926 printings). The Scandal (1935) is after the cutoff: see
  # `series` in data/library.json.
  'innocence-father-brown': dict(edition='pg-204', kind='story', noun='Story', nouns='Stories',

@@ -261,8 +261,7 @@ def list_item_title(i,gid,libw):
 # "Project Gutenberg License" linked to the full licence. tests/test_text_pages.py checks it against the licence
 # text in data/texts/pg-130.txt. Same words as PG_LINE in scripts/library.js and tools/build_epub.py.
 from notices import PG_LINE  # noqa: E402  (verbatim 1.E.1 sentence)
-SE_NOTICE=('This text comes from the Standard Ebooks edition, which its producers dedicate to the public domain (CC0 1.0); it is not a Project Gutenberg eBook. '
-  'Bibliotheca Catholica corrected it to the wording of the first printings where they differ; each correction is listed in the edition’s provenance record.')  # same words as SE_NOTICE in scripts/library.js
+from notices import SE_NOTICE  # noqa: E402  (Standard Ebooks notice; same words as SE_NOTICE in scripts/library.js)
 def edition_details(*rows):
     """Edition details (rules 2 and 10 of November 14, 2026): source and quality labels, collapsed. The licence notice is not repeated here (once per page)."""
     return '<details class="edition-details"><summary>Edition details</summary>'+''.join(r for r in rows if r)+'</details>'
@@ -341,7 +340,8 @@ def part_pages(out,lib,by_html,author_ld):
             reader='/#/read/'+wid+'/'+e['id']+'/'+str(x['section'])+'/'+str(x['heading'])
             pd=d.get('partD')
             if pd:  # Part D chapter opener (Orthodoxy pilot): it replaces the page head and buttons above the text
-                head_html=('<header class="ch-opener"><p class="ch-label">'+E(d['noun'])+'</p><p class="ch-num">'+E(x['num'])+'</p><h1>'+E(x['title'])+'</h1>'
+                numeral=bool(re.fullmatch(r'[0-9]+|[IVXLC]+',x['num']))  # a frame story's label ("Opening frame story") is not a numeral
+                head_html=('<header class="ch-opener"><p class="ch-label">'+E(d['noun'] if numeral else x['num'])+'</p>'+('<p class="ch-num">'+E(x['num'])+'</p>' if numeral else '')+'<h1>'+E(x['title'])+'</h1>'
                            +'<p class="ch-orn" aria-hidden="true">❦</p></header>')
             else:
                 head_html=(''+'<div class="page-head"><div class="eyebrow">'+E(w['title'])+' · '+E(part_label(d,x))+'</div><h1>'+E(x['title'])+'</h1>'

@@ -83,6 +83,7 @@ body.has-listen-dock footer{padding-bottom:64px}
 .edition-designed>p:first-child,.edition-designed p.reading-chapter+p,.edition-designed p.reading-heading+p,.edition-designed .ch-end+p{text-indent:0}
 .edition-designed p.reading-chapter{border-top:0;padding-top:0;margin:3.2em 0 1.6em;font-variant-caps:normal;letter-spacing:0}
 .edition-designed p.reading-chapter::before{content:"Chapter";display:block;font:500 .62em/1 var(--serif);font-variant-caps:all-small-caps;letter-spacing:.18em;color:var(--muted)}
+.edition-designed.noun-story p.reading-chapter::before{content:"Story"}
 .edition-designed p.reading-chapter .ch-n{display:block;font:500 2.6em/1.05 var(--display);color:var(--rubric);margin:.12em 0 .1em}
 .edition-designed p.reading-chapter .ch-t{display:block;font-variant-caps:all-small-caps;letter-spacing:.05em}
 .edition-designed p.reading-chapter::after{content:"❦";display:block;font-size:.8em;color:var(--gold);margin-top:.5em}

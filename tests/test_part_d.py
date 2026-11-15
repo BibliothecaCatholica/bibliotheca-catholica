@@ -18,17 +18,19 @@ def main(p):
 
 
 class PartD(unittest.TestCase):
-    def test_only_the_pilot_is_designed(self):
-        self.assertEqual(set(BTP.PART_D), {'orthodoxy'})
-        d = TP['orthodoxy']['partD']
-        self.assertEqual(d['words'], sum(x['words'] for x in TP['orthodoxy']['items']))
-        self.assertEqual(d['minutes'], round(d['words'] / 230))
-        for wid in TP:
-            if wid != 'orthodoxy':
-                self.assertNotIn('partD', TP[wid])
-                m = main('work/%s/%s/%s/index.html' % (wid, 'story' if TP[wid]['kind'] != 'ch' else 'ch', TP[wid]['items'][0]['slug']))
-                self.assertIn('<div class="page-head">', m)
-                self.assertNotIn('ch-opener', m)
+    def test_designed_editions(self):
+        # Orthodoxy pilot, then batch 1 (November 15, 2026): Story of a Soul and the four Father Brown collections
+        self.assertEqual(set(BTP.PART_D), {'orthodoxy', 'story-of-a-soul', 'innocence-father-brown', 'wisdom-father-brown',
+                                           'secret-father-brown', 'incredulity-father-brown'})
+        for wid, d in TP.items():
+            self.assertIn('partD', d, wid)
+            self.assertEqual(d['partD']['words'], sum(x['words'] for x in d['items']))
+            self.assertEqual(d['partD']['minutes'], round(d['partD']['words'] / 230))
+            x = d['items'][0]
+            m = main('work/%s/%s/%s/index.html' % (wid, d['kind'], x['slug']))
+            self.assertIn('<header class="ch-opener"><p class="ch-label">', m)
+            self.assertIn('<p>End of %s</p>' % BS.part_label(d, x).replace('&', '&amp;'), m)
+            self.assertNotIn('<div class="page-head">', m[:m.index('<article')])
 
     def test_chapter_pages_open_and_end_like_a_book(self):
         items = TP['orthodoxy']['items']

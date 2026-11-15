@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "python3 tools/serve.py",
-    "build": "python3 tools/structure_text.py --check && python3 tools/build_library.py && python3 tools/auto_layout.py && python3 tools/build_text_pages.py && python3 tools/build_epub.py --publish && python3 tools/build_summa.py && python3 tools/build_v3_data.py --catalog-only && python3 tools/build_saints.py && python3 tools/build_rights.py && python3 tools/build_rites.py && python3 tools/build_reading_plans.py && python3 tools/build_guides.py && python3 tools/build_print_editions.py && python3 tools/library_desk.py",
+    "build": "python3 tools/structure_text.py --check && python3 tools/build_library.py && python3 tools/auto_layout.py && python3 tools/build_text_pages.py && python3 tools/build_epub.py --publish && python3 tools/edition_status.py && python3 tools/build_summa.py && python3 tools/build_v3_data.py --catalog-only && python3 tools/build_saints.py && python3 tools/build_rights.py && python3 tools/build_rites.py && python3 tools/build_reading_plans.py && python3 tools/build_guides.py && python3 tools/build_print_editions.py && python3 tools/library_desk.py",
     "test": "node --test tests/*.test.js && python3 -m unittest discover -s tests -p 'test_*.py'",
     "build:study": "node tools/build_study.mjs"
   },

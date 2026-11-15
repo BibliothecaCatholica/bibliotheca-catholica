@@ -67,9 +67,11 @@ class CatalogTests(unittest.TestCase):
         for f in re.findall(r'href="/fonts/([^"]+)"',idx)+re.findall(r'url\(/fonts/([^)]+)\)',(ROOT/'styles/fonts.css').read_text()):self.assertTrue((ROOT/'fonts'/f).exists(),f)
         for f in('cormorantgaramond','ebgaramond','inter'):self.assertIn('SIL Open Font License',(ROOT/'fonts'/('OFL-'+f+'.txt')).read_text())
         # static author and timeline pages preload the lazy author detail with the token data.js carries
-        pre='<link rel="preload" as="script" href="data/authors-detail.js?v='+js['detailV']+'">'
+        pre='<link rel="preload" as="script" href="/data/authors-detail.js?v='+js['detailV']+'">'
         self.assertIn(pre,(ROOT/'author/trent-horn/index.html').read_text());self.assertIn(pre,(ROOT/'timeline/index.html').read_text())
         self.assertNotIn('authors-detail',(ROOT/'work/confessions/index.html').read_text())
+        aug=(ROOT/'author/augustine-of-hippo/index.html').read_text()
+        self.assertIn(pre,aug);self.assertNotIn('href="data/authors-detail.js',aug)  # root-absolute, so it never 404s under /author/<slug>/
 
 class IsidoreMatchTests(unittest.TestCase):
     def test_matches_point_to_real_books_and_works(self):

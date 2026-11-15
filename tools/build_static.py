@@ -166,7 +166,7 @@ def page(tpl,route,title,desc,body,noindex=False,jsonld=()):
     s=re.sub(r'<script (?:defer )?src="data/data\.js(\?[^"]*)?"></script>',lambda m:'<script>window.BC_BOOT='+json.dumps(route)+'</script>\n'+m.group(0),s,count=1)
     assert 'window.BC_BOOT' in s,'data/data.js script tag not found in index.html'
     if route.startswith('author/') or route=='timeline':  # Phase B item 5: these routes wait for the lazy author detail; fetch it with the core
-        s=s.replace('</head>','<link rel="preload" as="script" href="data/authors-detail.js?v='+DETAIL_V+'">\n</head>',1)
+        s=s.replace('</head>','<link rel="preload" as="script" href="/data/authors-detail.js?v='+DETAIL_V+'">\n</head>',1)
     return s
 CC_BY_SA='https://creativecommons.org/licenses/by-sa/4.0/'
 def a(href,label,ext=False):

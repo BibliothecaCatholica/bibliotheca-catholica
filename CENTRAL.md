@@ -2,7 +2,7 @@
 
 Read AGENTS.md and this file at session start. Read detailed references only for the task at hand. Update this file in place at handoff. Cap (owner rule change, November 14, 2026): handoff entries of at most 5 lines, the 3 newest only, and under 80 lines in all (`tests/test_central.py`). No separate dated report files for handoffs. No secrets, reader notes, or private account records here.
 
-When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply. Updated November 14, 2026 (America/Chicago). This is the single living coordination file for every contributor (Grok bots, ChatGPT, Codex, Claude, and others).
+When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply. Updated November 14, 2026 (America/Chicago). This is the single living coordination file for every contributor: the Grok bots, ChatGPT (and Codex), Claude (and Claude Code), and anyone else.
 
 ## Project and authority
 
@@ -22,13 +22,15 @@ Any tool can perform an assigned responsibility. References to Research, QA, and
 
 GitHub `main` is the source of truth. Cloudflare Pages deploys it automatically to https://bibliothecacatholica.com (every PR gets a preview check); confirm a deploy by comparing the live `/build.json` `id` with `git show origin/main:build.json`. The `CNAME` file stays. texts.bibliothecacatholica.com is served from `bibliotheca-texts`. DNS and the Cloudflare zone belong to Business. GitHub Pages for this repo was turned off on November 15, 2026, so Cloudflare is the only host; the texts repo keeps its own Pages site.
 
+Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, provenance, and the original TXT files in `data/texts/`. (2) `bibliotheca-texts` is a delivery copy exported from here by `tools/build_text_archive.py` (texts, `manifest.json`, `provenance/`) and served by its own GitHub Pages at texts.bibliothecacatholica.com; the reader fetches `textArchive.baseUrl` first and falls back to the local copy. Never edit texts there by hand. (3) `aquinas` (new, November 14 and 15) is a separate local study tool: SQLite search over Summa I and I-II (Project Gutenberg 17611 and 17897) plus an experimental LFM3-1.7B model, the "Aquinas Neuron", released as GitHub prereleases for Ollama. It has no website or domain and does not feed this site; the site's `/summa/` pages are built here by `tools/build_summa.py`.
+
 ## Verified snapshot
 
-As of November 15, 2026, `main` at `54c17291c1` (PR #37):
+As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
 
-- 157 work records; 117 hosted editions of 112 works in `data/library.json`.
-- 4,936 static pages and 4,937 sitemap URLs; about 6,800 tracked files, most generated (`linguist-generated` in `.gitattributes`).
-- Tests: 124 Node and 270 Python.
+- 157 work records; 117 hosted editions of 112 works in `data/library.json` (184 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 5,153 sitemap URLs; 7,629 tracked files, most generated (`linguist-generated` in `.gitattributes`).
+- Tests: 124 Node and 282 Python.
 
 ## Standing decisions
 
@@ -41,6 +43,12 @@ As of November 15, 2026, `main` at `54c17291c1` (PR #37):
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-15, Catholic Repo (Grok): QA fixes; repo survey
+
+- QA low items fixed: Privacy now names the Libraries "Search another collection" form (Open Library only); author pages preload `/data/authors-detail.js` (root-absolute); stale counts and wording updated here and in PROJECT-RULES.
+- Survey of PRs #19 to #47 (Nov 10 to 15): discovery and translation sources; Spanish Victory cross; libraries desk; two design passes and notice rules; structured editions with chapter pages and EPUBs (16); covers C; Summa Design A; hero and takedown email; hosting rule by recorded basis (#40); counts and validation tooling (#41); approval statements removed (#38); 53 Chesterton and other pre-1931 books hosted (#39, #42 to #47).
+- `bibliotheca-texts` main was last exported November 9 (64 texts). The 53 new texts exist only on its unmerged branch `claude/sweet-goldberg-yrlrud`, so the reader falls back to local copies for them. `aquinas` is described under Hosting and data flow.
+
 ### 2026-11-15, Catholic Repo (Grok): GitHub Pages turned off
 
 - GitHub Pages disabled for `bibliotheca-catholica` (Micah, Nov 15). `CNAME` kept; texts.bibliothecacatholica.com untouched. Live site checked afterward: 200 from Cloudflare. Pages can be re-enabled in repo settings if ever needed.
@@ -49,10 +57,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - Ten more editions with chapter pages, openers, structure files, and EPUBs: Heretics, The Ball and the Cross, The Man Who Was Thursday, Chesterton's Saint Francis, Grammar of Assent, Development of Christian Doctrine, Paradoxes of Catholicism, Life of St. Teresa, Apologia, Virgin Saints and Martyrs.
 - Map tooling: two-block headings, division lines carried into the EPUB, slugs capped at 60 characters, no second "Chapter" label on headings that name themselves.
-
-### 2026-11-15, Claude (Claude Code): approval statements removed; Summa Design A
-
-- Approval statements removed from the repository (PR #38); Summa Design A on all 3,726 question and article pages (PR #37).
 
 ## Open items
 
@@ -65,6 +69,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 ## Reference map
 
+- Repos: this one (source of truth); `BibliothecaCatholica/bibliotheca-texts` (exported delivery copy, see PROJECT-RULES "Document archive"); `BibliothecaCatholica/aquinas` (separate tool; read its own README and AGENTS.md).
 - Rules: `docs/PROJECT-RULES.md` and `docs/ANALYTICS.md`. Technical reference: `docs/IMPLEMENTATION-NOTES.md`; history in `docs/archive/`; map in `docs/README.md`. Operations and approvals: `docs/OPERATIONS.md`.
 
 When resuming: fetch `main`, inspect open PRs, record the task here, and reconcile conflicts before editing. End with changed paths, the commit or PR, checks run, known failures, and the next action.

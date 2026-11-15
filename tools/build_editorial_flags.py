@@ -74,7 +74,8 @@ def policy_html(counts,total):
      'The site itself has no accounts, collects no personal data such as your name, email address, or location, and runs no ads. '
      'See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from sites that use its services</a>.</p>'
      '<p>Some links to Bookshop.org and TAN Books are affiliate links; the <a href="/disclosure/">affiliate disclosure</a> explains them. They are plain links, and the stores handle any purchase under their own privacy policies. '
-     'The newsletter sign-up form on the home page and the Advent reading plan is provided by Substack under its own <a href="https://substack.com/privacy" target="_blank" rel="noopener">privacy policy</a>; it loads from Substack only when you scroll to it, and what you enter there goes to Substack, not to this site.</p>'
+     'The newsletter sign-up form on the home page and the Advent reading plan is provided by Substack under its own <a href="https://substack.com/privacy" target="_blank" rel="noopener">privacy policy</a>; it loads from Substack only when you scroll to it, and what you enter there goes to Substack, not to this site. '
+     'The “Search another collection” form on the <a href="/libraries/">Libraries</a> page sends what you type to Open Library, in a new tab, only when you submit it; this site does not receive it.</p>'
      '<p>In the reading room, your highlights, notes, reading progress, Continue reading list, and display preferences stay in your browser’s local storage on this device. They are never sent to this site, to Google, or to anyone else, and you can export, back up, or clear them yourself.</p>'
      '</section>')
 def main():

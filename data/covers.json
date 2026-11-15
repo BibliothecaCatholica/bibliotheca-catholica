@@ -26,6 +26,24 @@
    "webp": "f550b3237c9887720b47d54eb49835a5ae30f2151f05bd36aa39a102076dc0f6",
    "og": "b69c0f9bac8fd2a8f3ae68b03e96302fc1d24143b101f190773bf049f77212c8"
   },
+  "pg-11554": {
+   "work": "crimes-of-england",
+   "svg": "8283d2918f290a0a6694e0ff9c97c8ea1033662350d6a1ec37c007a9983dc3cd",
+   "webp": "e6a3eeaaeae191a7c7877cb82bb3e2847b3c4dddacf94006882de4d04bbb756e",
+   "og": "5e81d1efb7f115a5fd270cf50452b7171df01a3670c0a5eabcf9db30ff37cca9"
+  },
+  "pg-11560": {
+   "work": "barbarism-of-berlin",
+   "svg": "ce2227ae92839fca0998224c3b95d02a28b46ee24f0b419b07de81a481a07bcf",
+   "webp": "6e0b1b14f7ee5d03255b8a15af6f8704780b89246738172af4e3ed0878f3e726",
+   "og": "3c0c5115634cefa828bf086d24e2ef5954a6a85ef8b2ee676c1d8a6872049c32"
+  },
+  "pg-11605": {
+   "work": "appetite-of-tyranny",
+   "svg": "f37db317430b62809d7b3ec112db01e9ab21922070383d219486915c6803828d",
+   "webp": "e7589b3d24a667c8afd016100b46ef28e0748e405b147294f1e8a581cce2962b",
+   "og": "fd1b4d976003a0e4ae1b9185d26bc0df2fef3788fabafa62c2d02f89ccba90dd"
+  },
   "pg-12047": {
    "work": "legends-of-the-madonna",
    "svg": "f629caee15e8b5ca166ba2b5c899bdcd036a27e8e7b6fe5e8319550681e4b646",
@@ -170,6 +188,12 @@
    "webp": "f98009e36f1eab2f3de141a127c1ec984a9039e9722bb3e300ff42c8f4cf28bc",
    "og": "1c98c931f581bcbca5080d0310091db9bd0f6375ea5ac7309f8e7a4316ab834c"
   },
+  "pg-19094": {
+   "work": "magic-fantastic-comedy",
+   "svg": "53f461484c0d28fd1ae16deff3be33ab53805740234d4ccfb801d0e9f663df28",
+   "webp": "fb45661a74f338457429c129b8403afb3b25ada41e6b7f731aa05a4448c464db",
+   "og": "46f79b0838601815e8d5461ff32b3875f84c5445cabcf9653ad349c92db4b928"
+  },
   "pg-19535": {
    "work": "george-bernard-shaw",
    "svg": "4defcd8430f75fab1f28d2fcee443fd4d691a6ae281c21b67c7bff21a7e8f91e",
@@ -272,6 +296,12 @@
    "webp": "171c0ef600de26e57b00fd4a1445b9391fcf3e794e0c614df33ef4d4a4cbe9a4",
    "og": "7e7346e50e0b1bf13db8484efe47856bc1df54ba6b38aceba5254f43572c2f89"
   },
+  "pg-25795": {
+   "work": "lord-kitchener",
+   "svg": "ecbbf39f9736dbc7fdf68b70fd347a1630c403063533fe3b3e77e6d226cd4ee9",
+   "webp": "f471cf3a23f487915d1a3c923cedea87969ab8cad4699dafb478019a5c5cc97b",
+   "og": "542166bf5f3ccb7090ff52a893eb3d224dc24e2599715c1b910bff584bd1146b"
+  },
   "pg-27250": {
    "work": "what-i-saw-america",
    "svg": "5bf0facdb15f28f666ab6c9b4f264b71ab97739a6ad52581e8148f97aa28995c",
@@ -283,6 +313,18 @@
    "svg": "2114462455219213006521bdf1b556986b5c899cd0a1e8541cf3206a446f0fba",
    "webp": "91a751e3671858e98cf0f549e070069bab8231c3818295e22dd2d256e405cb3c",
    "og": "7122653902fbf28c39314f0b7df5d8956b802389ddbd11134f0f1a38199269c2"
+  },
+  "pg-31184": {
+   "work": "poems-1915",
+   "svg": "c585e27528c7498bd731a99ad80e381be34c6636689048c6f717af4de973e5d9",
+   "webp": "ef2744bea781857fdf4c005e3366dd4504045e3e2dded1c877f644b5ece059a8",
+   "og": "564dfc9059d1de8b7700683c0a86d268532d7b41e6a005ffc79adbdc32df2ac7"
+  },
+  "pg-32167": {
+   "work": "ballad-st-barbara",
+   "svg": "e25e432b807b6b36f17ee7469745862f3f0876a63d343b1f6057b1f0704a69bf",
+   "webp": "5fc5f6eb0525b200dd525a85753ada7a956a8151d520c5337390b2fc843592dc",
+   "og": "67a172140e6e544aaea55b2ddea4db35eb0ae47ad5520fe23a05c38edc9cce07"
   },
   "pg-3296": {
    "work": "confessions",
@@ -416,6 +458,12 @@
    "webp": "cd2251cd96e6d6e0af821a439a009c6edc59b7b56b4a46689fd33272769ccd2d",
    "og": "f7f86f597e2e66e9d398d9b1939b9002a8c213d13ee628977df8e691257a7d59"
   },
+  "pg-61764": {
+   "work": "tennyson-bookman",
+   "svg": "0c87f74f863a27b83121660fbbe636b925514298cd8e39ad64d47865574047fb",
+   "webp": "718ebc91829c30d219d600baa652d97b22dc6b9c3226890b340c7c3808547865",
+   "og": "982a99b57ae3aa774173d75c9c0fb2f783f754c1847077131e44d8de18576b24"
+  },
   "pg-62045": {
    "work": "leo-tolstoy-bookman",
    "svg": "53708e4995165936607622a6ab0413a6a6a28f27cfd27143ec8ae14257e2c794",
@@ -427,6 +475,12 @@
    "svg": "4531273069f26be8cc427a4c16e283e941bf6d63a1091bb6786d3a04595c86eb",
    "webp": "a14737e737662cd19631ddc3e3a5ac2cf28a25a5203cb15019714c24018bd0ad",
    "og": "9df573cc8835eaf5a1d3ee2d1d286160017c1d9a00e0ce38cc8a3cbcd28bd251"
+  },
+  "pg-62086": {
+   "work": "thackeray-bookman",
+   "svg": "72bf592e6f8b555e571a6cbda9a474336f3734ef7780660e629929d6111ba0f4",
+   "webp": "ace0d63d2ed3548fd3c240baa0f0ea6025ec870568aa87990955e9b74e30ad8b",
+   "og": "9f3d804da52ecd46a2c5a231656c3b697ec0c1efc4c79856e154a5896ee38999"
   },
   "pg-62254": {
    "work": "fabiola",
@@ -481,6 +535,12 @@
    "svg": "4f51dd6331fb8fd0edf091310387b8821fdfbf4b248e975059dededac6e34eb2",
    "webp": "37323bc096c02784bf098206f41c80cd44b84d30eb053b2fe14f0809ddf7596c",
    "og": "b42a70c25554d1778fa4f0adb8d77742a16a5b7ac3253b1c654a8b747c14ea66"
+  },
+  "pg-69185": {
+   "work": "tales-long-bow",
+   "svg": "efc6c1d43007d2bd4306fdd8ea87f6e7aedb54adff9d523f1f5eb3971bedf4ac",
+   "webp": "e84d321a5071659112f73c9b5756b383e600a16caf45b73d961d758e5fbdc970",
+   "og": "1f946dd9b2db89e80f57dcbe6843965a4b8e37bc05b63009399519e14c4b220d"
   },
   "pg-69581": {
    "work": "sacred-legendary-art",

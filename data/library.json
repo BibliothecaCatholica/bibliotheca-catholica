@@ -4327,6 +4327,316 @@
           "rightsBasis": "pd-date"
         }
       ]
+    },
+    {
+      "id": "lord-kitchener",
+      "title": "Lord Kitchener",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "A short memoir of Lord Kitchener, the British war minister, written after his death.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1917",
+      "editions": [
+        {
+          "id": "pg-25795",
+          "label": "Project Gutenberg #25795",
+          "source": "https://www.gutenberg.org/ebooks/25795",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1917. The file names London, 1917.",
+          "sourceTitle": "Lord Kitchener",
+          "digitalRelease": "Jun 15, 2008",
+          "access": "full-text",
+          "text": "data/texts/pg-25795.txt",
+          "sha256": "d73428eefa91eff426fdd3ad5e0b092832d66fc565c13da9532d448c721c985b",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "magic-fantastic-comedy",
+      "title": "Magic: A Fantastic Comedy",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's first play, a comedy about a conjuror at a country house and a household divided over the supernatural.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1913",
+      "editions": [
+        {
+          "id": "pg-19094",
+          "label": "Project Gutenberg #19094",
+          "source": "https://www.gutenberg.org/ebooks/19094",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1913. The transcribed copy is a New York and London printing of 1913 (The Knickerbocker Press, New York), copyright 1913, with the cast of the first performance at the Little Theatre, London, on November 7, 1913.",
+          "sourceTitle": "Magic A Fantastic Comedy",
+          "digitalRelease": "Aug 21, 2006",
+          "access": "full-text",
+          "text": "data/texts/pg-19094.txt",
+          "sha256": "b9a1552385f05afe4235cbe0905054a3ba4a11bc8982a4232868f0ac1a4f48b4",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "poems-1915",
+      "title": "Poems",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "A collection of Chesterton's poems, including verses on war, religion, and English history.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1915",
+      "editions": [
+        {
+          "id": "pg-31184",
+          "label": "Project Gutenberg #31184",
+          "source": "https://www.gutenberg.org/ebooks/31184",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1915. The transcribed copy is the John Lane Company, New York printing of 1916.",
+          "sourceTitle": "Poems",
+          "digitalRelease": "Feb 5, 2010",
+          "access": "full-text",
+          "text": "data/texts/pg-31184.txt",
+          "sha256": "fae94330f05b87ea7f6af453bde13ebad351df7cdb2ca7bf003270cba7a7083c",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "tales-long-bow",
+      "title": "Tales of the Long Bow",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Eight linked stories in which each member of the League of the Long Bow makes a figure of speech literally true.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1925",
+      "editions": [
+        {
+          "id": "pg-69185",
+          "label": "Project Gutenberg #69185",
+          "source": "https://www.gutenberg.org/ebooks/69185",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1925. The transcribed copy is the Dodd, Mead and Company, New York printing, copyright 1925.",
+          "sourceTitle": "Tales of the Long Bow",
+          "digitalRelease": "Oct 20, 2022",
+          "access": "full-text",
+          "text": "data/texts/pg-69185.txt",
+          "sha256": "fa7d84238985eac7f6d79b5346ea0ea7e8d154e0b642ed8b67927846943b6613",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "tennyson-bookman",
+      "title": "Tennyson (Bookman Booklets)",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "A short illustrated booklet on Tennyson, with contributions by Chesterton and Richard Garnett.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1903",
+      "editions": [
+        {
+          "id": "pg-61764",
+          "label": "Project Gutenberg #61764",
+          "source": "https://www.gutenberg.org/ebooks/61764",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "co-author",
+              "name": "Richard Garnett"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1903. The transcribed copy is a Hodder and Stoughton, New York and London printing; the file does not give its year.",
+          "sourceTitle": "Tennyson",
+          "digitalRelease": "Apr 6, 2020",
+          "access": "full-text",
+          "text": "data/texts/pg-61764.txt",
+          "sha256": "9011836ddae574c081465c55bbd1984f7654c0bfa89b0cda16e7361bd6eaff74",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "thackeray-bookman",
+      "title": "Thackeray (Bookman Booklets)",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "A short illustrated booklet on Thackeray, with contributions by Chesterton and Lewis Melville.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1903",
+      "editions": [
+        {
+          "id": "pg-62086",
+          "label": "Project Gutenberg #62086",
+          "source": "https://www.gutenberg.org/ebooks/62086",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "co-author",
+              "name": "Lewis Melville"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1903. The transcribed copy is a Hodder and Stoughton, New York and London printing; the file does not give its year.",
+          "sourceTitle": "Thackeray",
+          "digitalRelease": "May 10, 2020",
+          "access": "full-text",
+          "text": "data/texts/pg-62086.txt",
+          "sha256": "f632fd1853fc25750e4c2c0605a05a1c39a45eb944a35c59578e289857772af8",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "appetite-of-tyranny",
+      "title": "The Appetite of Tyranny",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's wartime essays against Prussian militarism, with his Letters to an Old Garibaldian.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1915",
+      "editions": [
+        {
+          "id": "pg-11605",
+          "label": "Project Gutenberg #11605",
+          "source": "https://www.gutenberg.org/ebooks/11605",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1915. The file does not name the printing it follows.",
+          "sourceTitle": "The Appetite of Tyranny: Including Letters to an Old Garibaldian",
+          "digitalRelease": "Mar 1, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-11605.txt",
+          "sha256": "19189e86433d9d9d13bd309c75a02468652a2d6cb92779088d0e66e62abadadc",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "ballad-st-barbara",
+      "title": "The Ballad of St. Barbara and Other Verses",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "A collection of Chesterton's poems, opening with a ballad of St. Barbara set at the Battle of the Marne.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1922",
+      "editions": [
+        {
+          "id": "pg-32167",
+          "label": "Project Gutenberg #32167",
+          "source": "https://www.gutenberg.org/ebooks/32167",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1922. The title page names Cecil Palmer, London, 1922.",
+          "sourceTitle": "The Ballad of St. Barbara, and Other Verses",
+          "digitalRelease": "Apr 28, 2010",
+          "access": "full-text",
+          "text": "data/texts/pg-32167.txt",
+          "sha256": "560e7c00f367003fd3d4a634262c802fbfba51a9124a1096ce28e5d95d6a24f5",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "barbarism-of-berlin",
+      "title": "The Barbarism of Berlin",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's wartime argument that Prussia rejected the ideas of the promise and of reciprocity on which Europe depends.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1914",
+      "editions": [
+        {
+          "id": "pg-11560",
+          "label": "Project Gutenberg #11560",
+          "source": "https://www.gutenberg.org/ebooks/11560",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1914. The file records first publication in 1914.",
+          "sourceTitle": "The Barbarism of Berlin",
+          "digitalRelease": "Mar 1, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-11560.txt",
+          "sha256": "89b8284f8e2be4c225648d1d5d94d36a5b266b1e673e67b80b1fbc9579655830",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "crimes-of-england",
+      "title": "The Crimes of England",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's wartime survey of English foreign policy since the eighteenth century, arguing that England's great mistake was its alliance with Prussia.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1915",
+      "editions": [
+        {
+          "id": "pg-11554",
+          "label": "Project Gutenberg #11554",
+          "source": "https://www.gutenberg.org/ebooks/11554",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1915. The file names MCMXVI (1916).",
+          "sourceTitle": "The Crimes of England",
+          "digitalRelease": "Mar 1, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-11554.txt",
+          "sha256": "1a7de2ec1e72febe169bb48d8489012cedd90310e13c8a3de64bbb369eee32ce",
+          "rightsBasis": "pd-date"
+        }
+      ]
     }
   ],
   "series": [

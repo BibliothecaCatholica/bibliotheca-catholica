@@ -4781,6 +4781,7 @@ work/apologia/ch/05-history-of-my-religious-opinions-1839-1841/index.html
 work/apologia/ch/06-history-of-my-religious-opinions-1841-1845/index.html
 work/apologia/ch/07-general-answer-to-mr-kingsley/index.html
 work/apostolic-fathers/index.html
+work/appetite-of-tyranny/index.html
 work/aquinas-prayer-contemplative/index.html
 work/athanasius-of-alexandria-on-the-incarnation-of-the-word/index.html
 work/ball-and-cross/index.html
@@ -4804,7 +4805,9 @@ work/ball-and-cross/ch/17-the-idiot/index.html
 work/ball-and-cross/ch/18-a-riddle-of-faces/index.html
 work/ball-and-cross/ch/19-the-last-parley/index.html
 work/ball-and-cross/ch/20-dies-irae/index.html
+work/ballad-st-barbara/index.html
 work/ballad-white-horse/index.html
+work/barbarism-of-berlin/index.html
 work/baring-gould-lives-february/index.html
 work/baring-gould-lives-january/index.html
 work/baring-gould-lives-march/index.html
@@ -4842,6 +4845,7 @@ work/come-rack/index.html
 work/confessions/index.html
 work/consolation-philosophy/index.html
 work/contzen-politics/index.html
+work/crimes-of-england/index.html
 work/crown-of-sorrow/index.html
 work/dei-verbum/index.html
 work/deus-caritas-est/index.html
@@ -4999,9 +5003,11 @@ work/life-of-teresa/ch/39-other-graces-bestowed-on-the-saint/index.html
 work/life-of-teresa/ch/40-visions-revelations-and-locutions/index.html
 work/little-flowers-francis/index.html
 work/london-chesterton/index.html
+work/lord-kitchener/index.html
 work/lord-world/index.html
 work/loss-and-gain/index.html
 work/lumen-gentium/index.html
+work/magic-fantastic-comedy/index.html
 work/man-thursday/index.html
 work/man-thursday/ch/01-the-two-poets-of-saffron-park/index.html
 work/man-thursday/ch/02-the-secret-of-gabriel-syme/index.html
@@ -5050,6 +5056,7 @@ work/paradoxes-catholicism/ch/10-the-seven-words/index.html
 work/paradoxes-catholicism/ch/11-life-and-death/index.html
 work/pensees/index.html
 work/pictorial-lives-saints/index.html
+work/poems-1915/index.html
 work/practice-presence/index.html
 work/rerum-novarum/index.html
 work/revelations-divine-love/index.html
@@ -5087,6 +5094,9 @@ work/story-of-a-soul/ch/10-the-new-commandment/index.html
 work/story-of-a-soul/ch/11-a-canticle-of-love/index.html
 work/summa-theologiae/index.html
 work/superstition-divorce/index.html
+work/tales-long-bow/index.html
+work/tennyson-bookman/index.html
+work/thackeray-bookman/index.html
 work/the-defendant/index.html
 work/tremendous-trifles/index.html
 work/utopia-usurers/index.html

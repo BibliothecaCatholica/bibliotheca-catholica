@@ -1,0 +1,201 @@
+{
+  "id": "pga-0300781",
+  "kind": "public-domain-text",
+  "title": "Four Faultless Felons",
+  "author": "G. K. Chesterton",
+  "firstPublished": "1930",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "Project Gutenberg Australia",
+  "sourceUrl": "https://gutenberg.net.au/ebooks03/0300781.txt",
+  "sourcePage": "https://gutenberg.net.au/ebooks03/0300781h.html",
+  "sourceNotice": "Project Gutenberg Australia\n\n\n\nTitle: Four Faultless Felons\nAuthor: G.K. Chesterton\n* A Project Gutenberg of Australia eBook *\neBook No.:  0300781.txt\nLanguage:   English\nDate first posted:          May 2003\nDate most recently updated: January 2006\n\nProject Gutenberg of Australia eBooks are created from printed editions\nwhich are in the public domain in Australia, unless a copyright notice\nis included. We do NOT keep any eBooks in compliance with a particular\npaper edition.\n\nCopyright laws are changing all over the world. Be sure to check the\ncopyright laws for your country before downloading or redistributing this\nfile.\n\nThis eBook is made available at no cost and with almost no restrictions\nwhatsoever. You may copy it, give it away or re-use it under the terms\nof the Project Gutenberg of Australia License which may be viewed online at\nhttp://gutenberg.net.au/licence.html\n\n---------------------------------------------------------------------------\n\nTitle: Four Faultless Felons\nAuthor: G.K. Chesterton\n\n\n\nCLUE OF THE PRESSMAN\n\nI PROLOGUE OF THE PRESSMAN\n\nMR. ASA LEE PINION, of the Chicago Comet, had crossed half of America,\nthe whole of the Atlantic, and eventually even Piccadilly Circus, in\npursuit of the notable, if not notorious figure of Count Raoul de\nMarillac. Mr. Pinion wanted to get what is called \"a story\"; a story to\nput in his paper. He did get a story, but he did not put it in his paper.\nIt was too tall a story, even for the Comet. Perhaps the metaphor is true\nin m",
+  "sourceFileSha256": "15b813e8627bdea9fdce3c5b539c0bfbc19003cad3c89c063d4ef9aff70cf061",
+  "iaWitness": {
+    "identifier": "fourfaultlessfel0000gkch_i5f3",
+    "url": "https://archive.org/details/fourfaultlessfel0000gkch_i5f3",
+    "year": 1930,
+    "publisher": null,
+    "ocr": "fourfaultlessfel0000gkch_i5f3_djvu.txt",
+    "ocrSha256": "f21155b73af2404529d3b1f553d6d3126362c749ec3b1707ec482b7cf869f1fa",
+    "ocrNote": "SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)"
+  },
+  "collation": {
+    "sourceWords": 71012,
+    "scanWords": 73133,
+    "matchedWords": 69658,
+    "agreement": 0.9809,
+    "sampleDifferences": [
+      {
+        "source": "project gutenberg of australia ebook ebook no",
+        "scan": "no part of this ebook may be"
+      },
+      {
+        "source": "created from printed editions which are in the public",
+        "scan": "october 1930 printed in the untted"
+      },
+      {
+        "source": "all over the world be sure to check the copyright laws",
+        "scan": "257 ii the burglar and the brooch 167"
+      },
+      {
+        "source": "terms of the project gutenberg of australia license",
+        "scan": "a traitor the speaking of the worrd"
+      },
+      {
+        "source": "the atlantic and eventually even piccadilly circus",
+        "scan": "the atlantic and eventu ally even piccadilly circus"
+      },
+      {
+        "source": "well as belief anyhow mr pinion decided",
+        "scan": "well as belief any how mr pinion decided"
+      },
+      {
+        "source": "risk his readers comments but that is",
+        "scan": "risk his readers comment but that is"
+      },
+      {
+        "source": "to anybody but himself and if he",
+        "scan": "to anybody but him self and if he"
+      },
+      {
+        "source": "point of feeble mindedness he supposed it",
+        "scan": "point of feeble minded he supposed it"
+      },
+      {
+        "source": "put forth as parallels to his own",
+        "scan": "put forth as parallel to his own"
+      },
+      {
+        "source": "only spare ten minutes at his london",
+        "scan": "only spare ten min utes at his london"
+      },
+      {
+        "source": "of those plays assented the other praps",
+        "scan": "of those plays as sented the other praps"
+      },
+      {
+        "source": "wont be a second night if the",
+        "scan": "wont be a sec ond night if the"
+      },
+      {
+        "source": "more restless and haggard than his handsome",
+        "scan": "more restless and hag gard than his handsome"
+      },
+      {
+        "source": "he had a cleanshaven regular and very",
+        "scan": "he had a clean shaven regular and very"
+      },
+      {
+        "source": "the stranger but something in the bow",
+        "scan": "the stranger but some thing in the bow"
+      },
+      {
+        "source": "was that indescribable suggestion of dust or",
+        "scan": "was that indescribable sug gestion of dust or"
+      },
+      {
+        "source": "was hard to imagine a more complete",
+        "scan": "was hard to im agine a more complete"
+      },
+      {
+        "source": "he was an ordinary busy suburban general",
+        "scan": "he was an or dinary busy suburban general"
+      },
+      {
+        "source": "on his lean figure and his dark",
+        "scan": "on his lean fig ure and his dark"
+      },
+      {
+        "source": "the gourmets of europe reverenced his reputation",
+        "scan": "the gourmets of eu rope reverenced his reputation"
+      },
+      {
+        "source": "pinion he said youd have had a",
+        "scan": "pinion he said yovd have had a"
+      },
+      {
+        "source": "a much more carefully selected menu if",
+        "scan": "a much more care fully selected menu if"
+      },
+      {
+        "source": "ensuing silence he suddenly intervened everybody knows",
+        "scan": "ensuing silence he sud denly intervened everybody knows"
+      },
+      {
+        "source": "man in a million knows the principle",
+        "scan": "man in a billion knows the principle"
+      },
+      {
+        "source": "am a journalist and i should like",
+        "scan": "am a journalist i should like"
+      },
+      {
+        "source": "man in a million the man opposite",
+        "scan": "man in a billion the man opposite"
+      },
+      {
+        "source": "even if the million never knew oh",
+        "scan": "even if the bil lion never knew oh"
+      },
+      {
+        "source": "mind said the american but i should",
+        "scan": "mind said the ameri can but i should"
+      },
+      {
+        "source": "few moments into profound silence and then",
+        "scan": "few moments into pro found silence and then"
+      },
+      {
+        "source": "asia there men hack themselves with knives",
+        "scan": "asia there men back themselves with knives"
+      },
+      {
+        "source": "for its real existence in rare but",
+        "scan": "for its real ex istence in rare but"
+      },
+      {
+        "source": "extraordinary difficulties and misunderstandings in modern society",
+        "scan": "extraordinary difficulties and mis understandings in modern society"
+      },
+      {
+        "source": "society society can understand some particular puritan",
+        "scan": "society society can under stand some particular puritan"
+      },
+      {
+        "source": "fad like prohibition especially if it is",
+        "scan": "fad like prohibition es pecially if it is"
+      },
+      {
+        "source": "marillac imposing on himself not abstinence from",
+        "scan": "marillac imposing on him self not abstinence from"
+      },
+      {
+        "source": "suggest that you have gone mad so",
+        "scan": "suggest that you had gone mad so"
+      },
+      {
+        "source": "hides his hermits ideal by pretending to",
+        "scan": "hides his hermits idea by pretending to"
+      },
+      {
+        "source": "friend is a christian anchorite and understands",
+        "scan": "friend is a chris tian anchorite and understands"
+      },
+      {
+        "source": "quick and had already guessed the joke",
+        "scan": "quick and had al ready guessed the joke"
+      }
+    ],
+    "method": "difflib word alignment, lower case, letters and digits only; OCR noise counts as disagreement"
+  },
+  "sha256": "d4d233bc4f5997aafa719574d723ad825b843ea3f2f0f88cf795e6bb0c75e0bd",
+  "bytes": 393655,
+  "checked": "2026-11-15",
+  "editionEvidence": {
+    "firstPublished": 1930,
+    "firstPublishedSource": "https://en.wikipedia.org/w/index.php?title=G._K._Chesterton_bibliography&oldid=1361105335",
+    "rightsBasis": "pd-date",
+    "checked": "2026-11-15"
+  }
+}

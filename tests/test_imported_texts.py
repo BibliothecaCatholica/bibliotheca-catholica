@@ -1,0 +1,32 @@
+"""Texts imported from sources other than Project Gutenberg (tools/import_plain_text.py; hosting rule, Nov 15, 2026)."""
+import hashlib, json, sys, unittest
+from pathlib import Path
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'tools'))
+from rights_rule import pd_by_date  # noqa: E402
+
+LIB = json.loads((ROOT / 'data/library.json').read_text())
+IMPORTED = [(w, e, json.loads((ROOT / 'data/sources' / (e['id'] + '.json')).read_text()))
+            for w in LIB['works'] for e in w['editions'] if e.get('text')
+            if json.loads((ROOT / 'data/sources' / (e['id'] + '.json')).read_text()).get('sourceName')]
+
+
+class ImportedTexts(unittest.TestCase):
+    def test_each_import_keeps_its_source_notice_and_names_a_dated_scan(self):
+        for w, e, r in IMPORTED:
+            raw = (ROOT / e['text']).read_bytes()
+            self.assertEqual(hashlib.sha256(raw).hexdigest(), r['sha256'], e['id'])
+            text = raw.decode('utf-8')
+            self.assertIn(r['sourceNotice'].strip()[:400], text, e['id'])  # the source's own header, unchanged
+            self.assertIn('*** START OF THE HOSTED TEXT', text, e['id'])
+            self.assertTrue(text.rstrip().endswith('***'), e['id'])
+            self.assertEqual(r['rightsBasis'], 'pd-date', e['id'])
+            self.assertTrue(pd_by_date(r['iaWitness']['year']), e['id'])
+            self.assertEqual(r['iaWitness']['url'], 'https://archive.org/details/' + r['iaWitness']['identifier'])
+            self.assertGreaterEqual(r['collation']['agreement'], 0.95, e['id'])  # OCR noise allowed; a wrong book is not
+            self.assertTrue(e['rights'].startswith('Public domain in the USA.'), e['id'])
+            self.assertIn(r['sourceName'], e['rights'], e['id'])
+
+
+if __name__ == '__main__':
+    unittest.main()

@@ -4882,6 +4882,156 @@
           "rightsBasis": "pd-date"
         }
       ]
+    },
+    {
+      "id": "poet-and-lunatics",
+      "title": "The Poet and the Lunatics",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Eight stories of Gabriel Gale, a poet and painter whose sympathy with madness lets him solve or prevent crimes.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1929",
+      "editions": [
+        {
+          "id": "pga-0900711",
+          "label": "Project Gutenberg Australia #0900711",
+          "source": "https://gutenberg.net.au/ebooks09/0900711h.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1929. Project Gutenberg Australia does not tie its texts to a printing; the text was compared word by word with the Internet Archive scan of the 1929 printing (New York : Dodd, Mead & Co.): 98% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record.",
+          "sourceTitle": "The Poet and The Lunatics: Episodes in the Life of Gabriel Gale",
+          "digitalRelease": "September 2009",
+          "access": "full-text",
+          "text": "data/texts/pga-0900711.txt",
+          "sha256": "3fcdfd21c7b4ed800c096adfbc7b47566ffcc16d260203f154c344e4070e7d46",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "return-don-quixote",
+      "title": "The Return of Don Quixote",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A novel that grows from country-house theatricals on a medieval subject into a movement to revive the Middle Ages in England.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1927",
+      "editions": [
+        {
+          "id": "pga-0900401",
+          "label": "Project Gutenberg Australia #0900401",
+          "source": "https://gutenberg.net.au/ebooks09/0900401h.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1927. Project Gutenberg Australia does not tie its texts to a printing; the text was compared word by word with the Internet Archive scan of the 1927 printing (New York, Dodd, Mead & Company): 98% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record.",
+          "sourceTitle": "The Return of Don Quixote",
+          "digitalRelease": "June 2009",
+          "access": "full-text",
+          "text": "data/texts/pga-0900401.txt",
+          "sha256": "0d51a9c5f00679e3a99e4cbf18e31da10db4d6d84b4264f400ca34d817e2b780",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "four-faultless-felons",
+      "title": "Four Faultless Felons",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Four stories of men who seem to be criminals and are not: a moderate murderer, an honest quack, an ecstatic thief, and a loyal traitor.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1930",
+      "editions": [
+        {
+          "id": "pga-0300781",
+          "label": "Project Gutenberg Australia #0300781",
+          "source": "https://gutenberg.net.au/ebooks03/0300781h.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1930. Project Gutenberg Australia does not tie its texts to a printing; the text was compared word by word with the Internet Archive scan of the 1930 printing: 98% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record.",
+          "sourceTitle": "Four Faultless Felons",
+          "digitalRelease": "May 2003",
+          "access": "full-text",
+          "text": "data/texts/pga-0300781.txt",
+          "sha256": "d4d233bc4f5997aafa719574d723ad825b843ea3f2f0f88cf795e6bb0c75e0bd",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "william-cobbett",
+      "title": "William Cobbett",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's short biography of the English radical writer William Cobbett.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1925",
+      "editions": [
+        {
+          "id": "pga-0900441",
+          "label": "Project Gutenberg Australia #0900441",
+          "source": "https://gutenberg.net.au/ebooks09/0900441h.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1925. Project Gutenberg Australia does not tie its texts to a printing; the text was compared word by word with the Internet Archive scan of the 1925 printing (London, Hodder and Stoughton limited): 98% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record.",
+          "sourceTitle": "William Cobbett",
+          "digitalRelease": "June 2009",
+          "access": "full-text",
+          "text": "data/texts/pga-0900441.txt",
+          "sha256": "5b3dc722b44a2beb893d1b29359ced28eea6d871791e252ccec457973c43fd20",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "robert-louis-stevenson-1927",
+      "title": "Robert Louis Stevenson",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's study of the life and fiction of Robert Louis Stevenson.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1927",
+      "editions": [
+        {
+          "id": "pga-0900631",
+          "label": "Project Gutenberg Australia #0900631",
+          "source": "https://gutenberg.net.au/ebooks09/0900631h.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1927. Project Gutenberg Australia does not tie its texts to a printing; the text was compared word by word with the Internet Archive scan of the 1927 printing (London : Hodder and Stoughton): 98% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record.",
+          "sourceTitle": "Robert Louis Stevenson",
+          "digitalRelease": "August 2009",
+          "access": "full-text",
+          "text": "data/texts/pga-0900631.txt",
+          "sha256": "ead0c20109391c59e45974227730e122ee1f29f15bec8a0eab598a5cab4afed0",
+          "rightsBasis": "pd-date"
+        }
+      ]
     }
   ],
   "series": [

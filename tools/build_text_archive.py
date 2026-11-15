@@ -20,7 +20,7 @@ def export(output):
         raise ValueError('Export into the separate document repository, outside the website checkout.')
     catalog = validate(json.loads((ROOT / 'data/library.json').read_text()))
     output.mkdir(parents=True, exist_ok=True)
-    entries = []
+    entries, converted = [], []
     for work in catalog['works']:
         for edition in work['editions']:
             if not edition.get('text'):
@@ -35,6 +35,9 @@ def export(output):
                 destination = output / relative
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 destination.write_bytes(content)
+            record = json.loads((ROOT / 'data/sources' / (edition['id'] + '.json')).read_text())
+            if record.get('sourceName'):  # imported by tools/import_plain_text.py: converted, header added
+                converted.append(f"`{filename}` ({record['sourceName']}; see `provenance/{edition['id']}.json`)")
             entries.append({
                 'workId': work['id'], 'editionId': edition['id'],
                 'title': work['title'], 'author': work['author'],
@@ -107,11 +110,14 @@ input.addEventListener('input',()=>{const terms=norm(input.value).trim().split(/
 This repository holds copies of texts whose basis for hosting Bibliotheca Catholica (https://bibliothecacatholica.com) checked and recorded, edition by edition: usually public domain in the United States, otherwise an open license or the holder's written permission. This notice is a summary, not legal advice.
 
 - **No license from us.** Bibliotheca Catholica claims no rights in these texts and adds no license. There is no blanket license over this repository; it is not MIT and not CC0.
-- **Source notices apply.** Each file is kept byte for byte as its source published it, except `ia-summa-supplement.txt` (Bibliotheca Catholica's own transcription of public-domain Internet Archive scans; see `provenance/ia-summa-supplement.json`) `ccel-npnf102-doctrine.txt` (Shaw translation extracted from the CCEL NPNF1-02 Public Domain plain text; see `provenance/ccel-npnf102-doctrine.json`), and `se-incredulity-father-brown.txt` (converted from the Standard Ebooks source files, which Standard Ebooks dedicates to the public domain under CC0 1.0, with word-level corrections to the 1926 printings; see `provenance/se-incredulity-father-brown.json`). Project Gutenberg files keep their full Project Gutenberg License and credits, and those terms apply to them as distributed (https://www.gutenberg.org/policy/license.html). "Project Gutenberg" is a registered trademark of the Project Gutenberg Literary Archive Foundation.
+- **Source notices apply.** Each file is kept byte for byte as its source published it, except `ia-summa-supplement.txt` (Bibliotheca Catholica's own transcription of public-domain Internet Archive scans; see `provenance/ia-summa-supplement.json`) `ccel-npnf102-doctrine.txt` (Shaw translation extracted from the CCEL NPNF1-02 Public Domain plain text; see `provenance/ccel-npnf102-doctrine.json`), and `se-incredulity-father-brown.txt` (converted from the Standard Ebooks source files, which Standard Ebooks dedicates to the public domain under CC0 1.0, with word-level corrections to the 1926 printings; see `provenance/se-incredulity-father-brown.json`).__CONVERTED__ Project Gutenberg files keep their full Project Gutenberg License and credits, and those terms apply to them as distributed (https://www.gutenberg.org/policy/license.html). "Project Gutenberg" is a registered trademark of the Project Gutenberg Literary Archive Foundation.
 - **United States only.** Public-domain status is a United States designation for each edition. An edition with unresolved rights is not hosted. Outside the United States, check your local law before reusing a text.
 - **Records.** `manifest.json` lists each file's rights statement and SHA-256 checksum, and `provenance/` holds the source catalog snapshots. In the main repository, only the open data in `data/open/` and the reading catalog metadata in `data/library.json` are CC0; its code is MIT, and its other files carry the terms set out in https://github.com/BibliothecaCatholica/bibliotheca-catholica/blob/main/LICENSING.md.
 - **Concerns.** A rights holder can follow https://bibliothecacatholica.com/takedown/.
-''')
+'''.replace('__CONVERTED__', (' Texts imported from other sources are converted to UTF-8 plain text with no words '
+                               'changed; each keeps its source\'s own header, licence, and notices unchanged below a short '
+                               'header of ours, and its provenance record gives the source file\'s SHA-256 and a word-by-word '
+                               'comparison with a dated scan: ' + ', '.join(converted) + '.') if converted else ''))
     print(f"Exported {len(entries)} texts, {manifest['totalBytes']:,} bytes, to {output}")
     return manifest
 

@@ -1,4 +1,4 @@
-"""v18 licensing, attribution, credits, Isidore folder links, non-affiliation, and 1931 wording."""
+"""v18 licensing, attribution, credits, Isidore folder links, non-affiliation, and hosting-rule wording."""
 import json,re,unittest,pathlib
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 R=lambda p:(ROOT/p).read_text(encoding='utf-8')
@@ -34,6 +34,8 @@ class Licensing(unittest.TestCase):
         for k in('IntraText','Bibliotheca Catholica” collection','Minha Biblioteca Católica','bibliotecacatolica.com.br','intratext.com','not affiliated','later reprint','not legal advice'.replace('not legal advice','summary rather than legal advice')):self.assertIn(k,m)
         self.assertNotIn('We host only works published before 1931',m)
         self.assertNotIn('public-domain editions published before 1931',main(R('index.html')))
+        self.assertNotIn('Our rule is to host only texts first published before 1931',m)
+        self.assertIn('Unknown rights fail closed',m)
     def test_wikipedia_credit_on_author_pages(self):
         app=R('app.js');self.assertIn('wiki-credit">From Wikipedia, ',app);self.assertIn(' (shortened), <a href="\'+CC_BY_SA+\'"',app);self.assertIn("CC_BY_SA='https://creativecommons.org/licenses/by-sa/4.0/'",app)
         hub=json.loads(R('data/catholic-hub.json'))

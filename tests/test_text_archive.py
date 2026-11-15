@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
+from rights_rule import pd_by_date  # noqa: E402
 spec = importlib.util.spec_from_file_location('build_text_archive', ROOT / 'tools/build_text_archive.py')
 archive = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(archive)
@@ -25,14 +26,15 @@ class TextArchiveTests(unittest.TestCase):
                 original = ROOT / 'data/texts' / Path(entry['file']).name
                 self.assertEqual(original.read_bytes(), raw)
                 record = json.loads((Path(directory) / entry['provenance']).read_text())
-                if record.get('kind') == 'ocr-transcription':  # the Summa Supplement, transcribed from pre-1931 scans
+                if record.get('kind') == 'ocr-transcription':  # the Summa Supplement, transcribed from public-domain scans
                     self.assertTrue(record['rights'].startswith('Public domain in the USA.'))
-                    self.assertTrue(all(v['year'] < 1931 for v in record['volumes']))
+                    self.assertTrue(all(pd_by_date(v['year']) for v in record['volumes']))
                     self.assertEqual(record['sha256'], entry['sha256'])
                 elif record.get('kind') == 'public-domain-text':  # On Christian Doctrine from CCEL NPNF1-02
-                    self.assertTrue(record['rights'].startswith('Public domain in the USA.'))
+                    self.assertTrue(record['rights'].startswith(('Public domain in the USA.', 'Open license', 'Permission granted')))
                     self.assertEqual(record['sha256'], entry['sha256'])
-                    self.assertLess(record['iaWitness']['year'], 1931)
+                    if record['rights'].startswith('Public domain in the USA.') and record.get('rightsBasis', 'pd-date') == 'pd-date':
+                        self.assertTrue(pd_by_date(record['iaWitness']['year']))
                 else:
                     self.assertEqual(['Public domain in the USA.'], record['metadata']['Copyright'])
             exported = {e['editionId'] for e in manifest['documents']}

@@ -6,7 +6,7 @@ Read [CENTRAL.md](CENTRAL.md) next, then only the detailed documents relevant to
 
 ## Rules to retain
 
-1. Host new texts only with owner authorization and edition-specific rights evidence under the project's pre-1931 selection rule. Rights badges permit eligible links, not automatic hosting. Unknown rights fail closed.
+1. Host new texts only with owner authorization and a recorded, edition-specific basis ([hosting rule](docs/PROJECT-RULES.md), stated once in `tools/rights_rule.py`): public domain in the US by date (in 2026, first published 1930 or earlier; the line moves each January 1), or written evidence of no renewal, a defective notice, an open license, or permission. Texts may come from any source; the edition, not the website, carries the rights. Rights badges permit eligible links, not automatic hosting. Unknown rights fail closed.
 2. Retain source notices, original text bytes, checksums, provenance, and local fallback texts. Read the [detailed rules](docs/PROJECT-RULES.md) before content or rights changes.
 3. Reading here stays primary; downloads and affiliate purchases stay secondary. Flagged titles are never featured or indexed; listing is not endorsement.
 4. Preserve the licensing boundaries, Wikipedia attribution, portrait credits, and editorial source requirements. Never invent rights evidence or source facts.

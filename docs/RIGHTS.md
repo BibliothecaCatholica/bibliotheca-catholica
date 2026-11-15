@@ -6,9 +6,9 @@ Not legal advice. This explains how the site labels and links books.
 
 | Status | Badge | Downloads / reader | Source of the status |
 |---|---|---|---|
-| `public_domain_us` | Public domain (US) | yes | hosted reading-room editions checked under the pre-1931 rule; Index records only via `P1` (same PG ebook as a hosted edition, no modern ISBN edition) or a hand-checked `MANUAL` entry |
-| `open_license` | Open license | yes | `MANUAL` entry naming the license (none yet) |
-| `permission_granted` | Permission granted | yes | `MANUAL` entry citing written permission (none yet) |
+| `public_domain_us` | Public domain (US) | yes | hosted reading-room editions whose basis was checked under the hosting rule (PROJECT-RULES rule 1); Index records only via `P1` (same PG ebook as a hosted edition, no modern ISBN edition) or a hand-checked `MANUAL` entry |
+| `open_license` | Open license | yes | `MANUAL` entry naming the license (none yet); hosted editions whose `rights` begins "Open license" |
+| `permission_granted` | Permission granted | yes | `MANUAL` entry citing written permission (none yet); hosted editions whose `rights` begins "Permission granted" |
 | `link_only` | Link only | no; link to the isidore.co book page | research codes L1–L6 (1978+, ISBN, renewed, post-1930 Church texts, and similar) |
 | `unknown` | Unknown | no; link to the isidore.co book page | research codes H1–H3 and U1a–U4, including every "likely hostable" lead |
 

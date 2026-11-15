@@ -7,6 +7,7 @@ reviews, or claims we cannot check.  Oxford commas; follow the money rules in AG
 """
 import html
 E=html.escape
+from rights_rule import RULE_SENTENCE
 # (path, label, one-line description) for the home page's "Sections of the library" list
 SECTION_LINKS=[
  ('/library/','Reading Room: Discover & Read','classic texts to read here, with source editions and rights notes'),
@@ -81,8 +82,8 @@ def about_page(n):
      'The '+a('/isidore/','Isidore Index')+' catalogues '+format(n['books'],',')+' books in the St. Isidore e-book library (isidore.co). '
      'The section pages, such as '+a('/scripture/','Scripture')+', '+a('/magisterium/','Church Documents')+', and '+a('/libraries/','Digital Libraries')+', point to the Church’s own documents and the great Catholic digital libraries.</p>'
      '<h2>Where the texts come from</h2>'
-     '<p>Every hosted text is a public-domain edition from a known source, usually Project Gutenberg. We keep the original file, a snapshot of its catalogue record, and its SHA-256 checksum, so anyone can check that the text has not been changed, and each reader page shows the source edition, its translator where known, and its license notice. '
-     'Our rule is to host only texts first published before 1931, in an edition or translation its source lists as public domain in the United States. The rule applies to the text, not always to the printing that was transcribed: a file can come from a later reprint of an earlier text, for example a 1952 reprint of a 1920 book. For some hosted editions our records do not yet note the year of the specific translation; we are adding that evidence. Later works are linked at their publishers or libraries, never copied.</p>'
+     '<p>Every hosted text is an edition from a named source, usually Project Gutenberg, with its basis for hosting recorded. We keep the original file, a snapshot of its catalogue record, and its SHA-256 checksum, so anyone can check that the text has not been changed, and each reader page shows the source edition, its translator where known, and its license notice. '
+     +E(RULE_SENTENCE)+' The rule applies to the text, not always to the printing that was transcribed: a file can come from a later reprint of an earlier text, for example a 1952 reprint of a 1920 book. For some hosted editions our records do not yet note the year of the specific translation; we are adding that evidence. Works without a recorded basis are linked at their publishers or libraries, never copied.</p>'
      '<h2>Dates, files, and sections</h2>'
      '<p>Dates for a work, its translation, and a digital release are distinct, and source editions retain their own notices and credits. '
      'Ebook files, Isidore Index files, and library-copy searches are served by the original libraries; their formatting and editorial details may differ from the online text, and holdings, borrowing, and digital availability depend on the library and edition. '

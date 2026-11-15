@@ -31,10 +31,13 @@ function resolve(R,id){
   return {status:status,evidence:ev,checked:r[0]==='M'?r[2]:(R.checked||'')}}
 function record(id){return resolve(data(),id)}
 /* edition(e): a reading-room edition in data/library.json. Hosted texts were checked under the
-   pre-1931 rule before they were added; everything else on a work page is a link to its source. */
+   hosting rule (docs/PROJECT-RULES.md rule 1) before they were added; the rights line names the basis.
+   Everything else on a work page is a link to its source. */
 function edition(e){
   if(!e||e.access==='reference')return null;
   if(e.text&&/^Public domain in the USA/.test(e.rights||'')&&e.checked)return {status:'public_domain_us',evidence:(e.note?e.note+' ':'')+e.rights,checked:e.checked};
+  if(e.text&&/^Open license/.test(e.rights||'')&&e.checked)return {status:'open_license',evidence:(e.note?e.note+' ':'')+e.rights,checked:e.checked};
+  if(e.text&&/^Permission granted/.test(e.rights||'')&&e.checked)return {status:'permission_granted',evidence:(e.note?e.note+' ':'')+e.rights,checked:e.checked};
   return {status:'link_only',evidence:(e.rights||'')+' Read it at the source.',checked:e.checked||''}}
 function title(x){return STATUSES[x.status].label+'. '+x.evidence+(x.checked?' Checked '+x.checked+'.':'')+' Not legal advice.'}
 /* badge(x): calm, factual pill linking to #/rights, with the evidence and the checked date in its tooltip. */

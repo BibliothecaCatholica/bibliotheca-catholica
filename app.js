@@ -362,7 +362,7 @@ function auIntro(a,era,nb,ng,no){if(a.intro)return a.intro;
   return s+' '+(parts.length?'This page lists '+auOxford(parts)+'.':'This page links outside sources about '+a.name+'.')}
 /* hub books[] (tools/import_modern_authors.py): link-only, rights badge, ISBN as text; no Bookshop button (disabled hook,
    tools/author_pages.py RESEARCH_BOOKSHOP_BUTTONS) */
-function auBooks(a){if(!a.books||!a.books.length)return '';var X={status:'link_only',evidence:'Published after 1931 and in copyright: we link to it and host nothing.',checked:'2026-11-03'};
+function auBooks(a){if(!a.books||!a.books.length)return '';var X={status:'link_only',evidence:'In copyright in the United States: we link to it and host nothing.',checked:'2026-11-03'};
   return '<section class="au-sel"><h2>Selected books</h2><p class="small">These books are in copyright. Each title links to its publisher or library record; we host none of them.</p><ul class="au-books">'+a.books.map(function(b){var m=[b.pub,b.y?String(b.y):''].filter(Boolean).join(', ');
   return '<li data-isbn="'+esc(b.isbn)+'">'+(b.url?'<a href="'+esc(b.url)+'" target="_blank" rel="noopener">'+esc(b.t)+'</a>':esc(b.t))+(m?' ('+esc(m)+')':'')+(b.note?', '+esc(b.note):'')+'. <span class="small">ISBN '+esc(b.isbn)+'</span>'+RT.badge(X)+'</li>'}).join('')+'</ul></section>'}
 function author(id,tab){
@@ -497,14 +497,14 @@ var LZIDX={HUB_ISIDORE:function(L){D.isidore=L;isoIdx(L)},
 var PDL={pd:['pd','Public domain'],orig:['pd','PD · original language'],free:['free','Free to read · not PD'],cr:['cr','Copyrighted'],unc:['unc','Rights uncertain']};
 function readFree(a){var box=$('#au-free');if(!box)return;lazy('doctors.js','DOCTORS_DATA',function(R){box=$('#au-free');if(!box||!R)return;var d=R.doctors[a.id];if(!d){box.innerHTML='';return}
   var meta='<p class="dr-meta"><b>Feast:</b> '+esc(d.feast)+' · <b>Declared a Doctor:</b> '+esc(d.decl)+' by '+esc(d.by)+'</p>'+(d.feastNote?'<p class="dr-meta">'+esc(d.feastNote)+' <a href="'+esc(d.feastSrc)+'" target="_blank" rel="noopener">Decree ↗</a></p>':'');
-  var h='<div class="rule"></div><h3>Read free: key works</h3>'+meta+'<p class="small muted">Every link goes out to the library that holds the text; Bibliotheca Catholica hosts none of them. Rights are judged by the specific edition linked (US public domain = published before 1931).</p><div class="rf">';
+  var h='<div class="rule"></div><h3>Read free: key works</h3>'+meta+'<p class="small muted">Every link goes out to the library that holds the text; Bibliotheca Catholica hosts none of them. Rights are judged by the specific edition linked (US public domain by date: first published '+(new Date().getFullYear()-96)+' or earlier).</p><div class="rf">';
   d.works.forEach(function(w){h+='<div class="rf-w"><h4>'+esc(w.t)+'</h4>';if(!w.links.length){h+='<p class="rf-gap">'+esc(w.gap||'No free full text found yet.')+'</p></div>';return}
     if(w.gap)h+='<p class="rf-gap">'+esc(w.gap)+'</p>';
     h+='<ul>'+w.links.map(function(l){var p=PDL[l.pd]||PDL.unc;return '<li><a href="'+esc(l.u)+'" target="_blank" rel="noopener">'+esc(l.s)+' ↗</a><span class="rf-d">'+esc([l.tr,l.y].filter(Boolean).join(', '))+'</span><span class="pdb pdb-'+p[0]+'" title="'+esc(l.pds)+'">'+p[1]+'</span>'+(l.fl?'<span class="rf-fl">'+esc(l.fl)+'</span>':'')+'</li>'}).join('')+'</ul></div>'});
   box.innerHTML=h+'</div>'})}
 function rare(focus){
   var h='<div class="page-head"><div class="eyebrow">Thesauri absconditi</div><h1>Rare &amp; Obscure</h1><p class="lede">Forgotten Catholic books in the digital archives: recusant tracts, Baroque scholastics, Counter-Reformation polemic, incunabula, and old periodicals, with new English translations, grouped by theme.</p></div>'+
-   '<div class="callout">Almost every item is a pre-1931 scan and in the US public domain; it opens on the Internet Archive. The ten <b>modern community translations</b> carry no license, so we link only to their archive pages. Two items are <b>non-Catholic replies</b>, labeled and kept only for context.</div>'+
+   '<div class="callout">Almost every item is an early scan in the US public domain; it opens on the Internet Archive. The ten <b>modern community translations</b> carry no license, so we link only to their archive pages. Two items are <b>non-Catholic replies</b>, labeled and kept only for context.</div>'+
    '<div class="toolbar"><input type="search" id="rr-q" placeholder="Filter by title, author, language…"><div class="chips" id="rr-c"></div></div><div id="rr-out"><div class="loading">Loading the collection…</div></div>';
   render(h,'rare');
   lazy('rare.js','RARE_DATA',function(R){if(!$('#rr-out'))return;if(!R){$('#rr-out').innerHTML='<div class="empty">The collection failed to load.</div>';return}

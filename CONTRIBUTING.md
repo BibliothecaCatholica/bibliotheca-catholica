@@ -10,6 +10,6 @@ For installation, generation, tests, and drift checks, use the single [validatio
 
 Keep stable IDs and existing URLs. Edit source JSON and generators rather than generated copies. Dates must distinguish original publication, translation, digital release, original catalog snapshot, and source review. Never turn an inferred date into a reviewed fact.
 
-Host no new text without the owner's approval and edition-specific rights evidence. Keep source records, checksums, and notices. CatholicSaints.Info remains link-only; never copy or crawl it. No unrequested outreach to outside libraries. Existing licensing terms in [LICENSING.md](LICENSING.md) remain unchanged.
+Host no new text without the owner's approval and a recorded, edition-specific basis under the hosting rule ([PROJECT-RULES](docs/PROJECT-RULES.md) rule 1; no fixed date cutoff, unknown fails closed). Keep source records, checksums, and notices. CatholicSaints.Info remains link-only; never copy or crawl it. No unrequested outreach to outside libraries. Existing licensing terms in [LICENSING.md](LICENSING.md) remain unchanged.
 
 Treat contributors and readers respectfully. Critique claims with sources and report editorial concerns calmly. Network link checks are optional maintenance tools, separate from offline CI; a blocked automated request alone does not prove a dead link.

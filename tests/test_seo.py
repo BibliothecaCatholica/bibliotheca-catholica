@@ -1,5 +1,5 @@
 """v17 SEO checks on the pre-rendered pages (what a crawler sees without JavaScript). See docs/SEO.md."""
-import json,re,unittest,collections
+import json,re,sys,unittest,collections
 from html.parser import HTMLParser
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE='https://bibliothecacatholica.com/'
@@ -89,7 +89,8 @@ class SEO(unittest.TestCase):
             s=(ROOT/k/'index.html').read_text();self.assertIn('class="section-intro"',s,k)
     def test_about_page(self):
         s=(ROOT/'about/index.html').read_text();main=s[s.index('<main'):s.index('</main>')]
-        for k in('href="/rights/"','href="/takedown/"','href="/policy/"','href="/support/"','1931','SHA-256','rights badges'):self.assertIn(k,main)
+        sys.path.insert(0,str(ROOT/'tools'));import rights_rule
+        for k in('href="/rights/"','href="/takedown/"','href="/policy/"','href="/support/"','first published in %d or earlier'%rights_rule.pd_last_year(),'SHA-256','rights badges'):self.assertIn(k,main)
         self.assertIn(SITE+'about/',(ROOT/'sitemap.xml').read_text());self.assertIn('href="/about/"',(ROOT/'index.html').read_text())
         app=(ROOT/'app.js').read_text();self.assertIn("case 'about':",app);self.assertRegex(app,r"STATIC_SECTIONS=\[[^\]]*'about'")
     def test_nav_links_are_crawlable_paths(self):

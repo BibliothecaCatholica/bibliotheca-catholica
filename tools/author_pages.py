@@ -152,7 +152,7 @@ RESEARCH_BOOKSHOP_BUTTONS=False
 # The edition-guide Bookshop buttons that commit 937ddf5a added to author pages are switched off the same way (they were
 # new links on author pages; the edition-guide pages keep theirs). True restores them, with the affiliate disclosure.
 AUTHOR_GUIDE_BOOKSHOP_BUTTONS=False
-LINK_ONLY={'status':'link_only','evidence':'Published after 1931 and in copyright: we link to it and host nothing.','checked':'2026-11-03'}
+LINK_ONLY={'status':'link_only','evidence':'In copyright in the United States: we link to it and host nothing.','checked':'2026-11-03'}
 def books_html(au,E,a):
     """'Selected books' from hub books[] (data/modern-authors.json via tools/import_modern_authors.py): link-only, rights badge,
     verified ISBN-13 as text. The ISBN is the disabled Bookshop hook (RESEARCH_BOOKSHOP_BUTTONS); nothing is linked to Bookshop."""

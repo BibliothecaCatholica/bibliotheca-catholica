@@ -190,7 +190,628 @@
     "em": []
    }
   },
+  "story-of-a-soul": {
+   "partD": {
+    "about": "Project Gutenberg #16772: the Thomas N. Taylor translation, with the additional writings and sayings of his edition. The eleven chapters of the autobiography follow Gutenberg’s own HTML for the same eBook, matched with the hosted text; no words were changed.",
+    "words": 60324,
+    "minutes": 262
+   },
+   "edition": "pg-16772",
+   "kind": "ch",
+   "editionLine": "Project Gutenberg #16772, from Soeur Thérèse of Lisieux, edited by T. N. Taylor (London: Burns, Oates & Washbourne, 1912; 8th ed., 1922), as the note to the electronic edition states.",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "7a213de2d7d613e9040bd1463ee14d278c051a7b385e7333cbe6b9e294c4dadf",
+   "blocks": 1805,
+   "items": [
+    {
+     "slug": "01-earliest-memories",
+     "num": "I",
+     "title": "Earliest Memories",
+     "heading": 105,
+     "start": 106,
+     "end": 154,
+     "section": 3,
+     "words": 4385,
+     "firstWords": "It is to you, dear Mother, that I am about to confide"
+    },
+    {
+     "slug": "02-a-catholic-household",
+     "num": "II",
+     "title": "A Catholic Household",
+     "heading": 155,
+     "start": 156,
+     "end": 197,
+     "section": 4,
+     "words": 4924,
+     "firstWords": "All the details of my Mother's illness are still fresh in my"
+    },
+    {
+     "slug": "03-pauline-enters-the-carmel",
+     "num": "III",
+     "title": "Pauline Enters the Carmel",
+     "heading": 198,
+     "start": 199,
+     "end": 235,
+     "section": 5,
+     "words": 4041,
+     "firstWords": "I was eight and a half when Léonie left school, and I"
+    },
+    {
+     "slug": "04-first-communion-and-confirmation",
+     "num": "IV",
+     "title": "First Communion and Confirmation",
+     "heading": 236,
+     "start": 237,
+     "end": 298,
+     "section": 6,
+     "words": 5632,
+     "firstWords": "While describing this visit to the Carmel, my thoughts are carried back"
+    },
+    {
+     "slug": "05-vocation-of-therese",
+     "num": "V",
+     "title": "Vocation of Thérèse",
+     "heading": 299,
+     "start": 300,
+     "end": 368,
+     "section": 8,
+     "words": 5661,
+     "firstWords": "I was far from meriting all the graces which Our Lord showered"
+    },
+    {
+     "slug": "06-a-pilgrimage-to-rome",
+     "num": "VI",
+     "title": "A Pilgrimage to Rome",
+     "heading": 369,
+     "start": 370,
+     "end": 439,
+     "section": 10,
+     "words": 6160,
+     "firstWords": "Three days after the journey to Bayeux, I started on a much"
+    },
+    {
+     "slug": "07-the-little-flower-enters-the-carmel",
+     "num": "VII",
+     "title": "The Little Flower Enters the Carmel",
+     "heading": 440,
+     "start": 441,
+     "end": 488,
+     "section": 12,
+     "words": 4075,
+     "firstWords": "Monday, April 9, 1888, being the Feast of the Annunciation, transferred from"
+    },
+    {
+     "slug": "08-profession-of-soeur-therese",
+     "num": "VIII",
+     "title": "Profession of Soeur Thérèse",
+     "heading": 489,
+     "start": 490,
+     "end": 558,
+     "section": 13,
+     "words": 5531,
+     "firstWords": "Need I tell you, dear Mother, about the retreat before my profession?"
+    },
+    {
+     "slug": "09-the-night-of-the-soul",
+     "num": "IX",
+     "title": "The Night of the Soul",
+     "heading": 559,
+     "start": 560,
+     "end": 653,
+     "section": 15,
+     "words": 7281,
+     "firstWords": "Dear Mother, I thought I had written enough, and now you wish"
+    },
+    {
+     "slug": "10-the-new-commandment",
+     "num": "X",
+     "title": "The New Commandment",
+     "heading": 654,
+     "start": 655,
+     "end": 725,
+     "section": 18,
+     "words": 5915,
+     "firstWords": "Dear Mother, God in His infinite goodness has given me a clear"
+    },
+    {
+     "slug": "11-a-canticle-of-love",
+     "num": "XI",
+     "title": "A Canticle of Love",
+     "heading": 726,
+     "start": 727,
+     "end": 801,
+     "section": 20,
+     "words": 6719,
+     "firstWords": "It is not only when He is about to send me some"
+    }
+   ],
+   "structure": {
+    "sha256": "7a213de2d7d613e9040bd1463ee14d278c051a7b385e7333cbe6b9e294c4dadf",
+    "source": "data/structured/story-of-a-soul-pg-16772.json",
+    "roles": [
+     [
+      11,
+      "title"
+     ],
+     [
+      12,
+      "heading"
+     ],
+     [
+      13,
+      "heading"
+     ],
+     [
+      15,
+      "heading"
+     ],
+     [
+      20,
+      "heading"
+     ],
+     [
+      21,
+      "heading"
+     ],
+     [
+      22,
+      "heading"
+     ],
+     [
+      24,
+      "heading"
+     ],
+     [
+      30,
+      "heading"
+     ],
+     [
+      32,
+      "heading"
+     ],
+     [
+      33,
+      "heading"
+     ],
+     [
+      34,
+      "heading"
+     ],
+     [
+      35,
+      "heading"
+     ],
+     [
+      36,
+      "heading"
+     ],
+     [
+      37,
+      "heading"
+     ],
+     [
+      38,
+      "heading"
+     ],
+     [
+      41,
+      "heading"
+     ],
+     [
+      49,
+      "heading"
+     ],
+     [
+      51,
+      "heading"
+     ],
+     [
+      103,
+      "heading"
+     ],
+     [
+      105,
+      "chapter"
+     ],
+     [
+      155,
+      "chapter"
+     ],
+     [
+      198,
+      "chapter"
+     ],
+     [
+      236,
+      "chapter"
+     ],
+     [
+      299,
+      "chapter"
+     ],
+     [
+      369,
+      "chapter"
+     ],
+     [
+      440,
+      "chapter"
+     ],
+     [
+      489,
+      "chapter"
+     ],
+     [
+      559,
+      "chapter"
+     ],
+     [
+      654,
+      "chapter"
+     ],
+     [
+      726,
+      "chapter"
+     ],
+     [
+      802,
+      "heading"
+     ],
+     [
+      804,
+      "heading"
+     ],
+     [
+      874,
+      "heading"
+     ],
+     [
+      879,
+      "heading"
+     ],
+     [
+      882,
+      "heading"
+     ],
+     [
+      947,
+      "heading"
+     ],
+     [
+      1145,
+      "heading"
+     ],
+     [
+      1245,
+      "heading"
+     ],
+     [
+      1247,
+      "heading"
+     ],
+     [
+      1248,
+      "heading"
+     ],
+     [
+      1249,
+      "heading"
+     ],
+     [
+      1254,
+      "heading"
+     ],
+     [
+      1258,
+      "heading"
+     ],
+     [
+      1263,
+      "heading"
+     ],
+     [
+      1267,
+      "heading"
+     ],
+     [
+      1272,
+      "heading"
+     ],
+     [
+      1277,
+      "heading"
+     ],
+     [
+      1281,
+      "heading"
+     ],
+     [
+      1287,
+      "heading"
+     ],
+     [
+      1293,
+      "heading"
+     ],
+     [
+      1297,
+      "heading"
+     ],
+     [
+      1302,
+      "heading"
+     ],
+     [
+      1309,
+      "heading"
+     ],
+     [
+      1315,
+      "heading"
+     ],
+     [
+      1322,
+      "heading"
+     ],
+     [
+      1329,
+      "heading"
+     ],
+     [
+      1335,
+      "heading"
+     ],
+     [
+      1343,
+      "heading"
+     ],
+     [
+      1351,
+      "heading"
+     ],
+     [
+      1357,
+      "heading"
+     ],
+     [
+      1417,
+      "heading"
+     ],
+     [
+      1419,
+      "heading"
+     ],
+     [
+      1424,
+      "heading"
+     ],
+     [
+      1430,
+      "heading"
+     ],
+     [
+      1434,
+      "heading"
+     ],
+     [
+      1444,
+      "heading"
+     ],
+     [
+      1447,
+      "heading"
+     ],
+     [
+      1450,
+      "heading"
+     ],
+     [
+      1455,
+      "heading"
+     ],
+     [
+      1467,
+      "heading"
+     ],
+     [
+      1468,
+      "heading"
+     ],
+     [
+      1473,
+      "heading"
+     ],
+     [
+      1478,
+      "heading"
+     ],
+     [
+      1484,
+      "heading"
+     ],
+     [
+      1489,
+      "heading"
+     ],
+     [
+      1493,
+      "heading"
+     ],
+     [
+      1509,
+      "heading"
+     ],
+     [
+      1510,
+      "heading"
+     ],
+     [
+      1516,
+      "heading"
+     ],
+     [
+      1522,
+      "heading"
+     ],
+     [
+      1531,
+      "heading"
+     ],
+     [
+      1544,
+      "heading"
+     ],
+     [
+      1545,
+      "heading"
+     ],
+     [
+      1552,
+      "heading"
+     ],
+     [
+      1564,
+      "heading"
+     ],
+     [
+      1569,
+      "heading"
+     ],
+     [
+      1570,
+      "heading"
+     ],
+     [
+      1574,
+      "heading"
+     ],
+     [
+      1578,
+      "heading"
+     ],
+     [
+      1583,
+      "heading"
+     ],
+     [
+      1586,
+      "heading"
+     ],
+     [
+      1591,
+      "heading"
+     ],
+     [
+      1600,
+      "heading"
+     ],
+     [
+      1605,
+      "heading"
+     ],
+     [
+      1611,
+      "heading"
+     ],
+     [
+      1616,
+      "heading"
+     ],
+     [
+      1630,
+      "heading"
+     ],
+     [
+      1632,
+      "heading"
+     ],
+     [
+      1645,
+      "heading"
+     ],
+     [
+      1647,
+      "heading"
+     ],
+     [
+      1650,
+      "heading"
+     ],
+     [
+      1658,
+      "heading"
+     ],
+     [
+      1663,
+      "heading"
+     ],
+     [
+      1665,
+      "heading"
+     ],
+     [
+      1667,
+      "heading"
+     ],
+     [
+      1672,
+      "heading"
+     ],
+     [
+      1694,
+      "heading"
+     ],
+     [
+      1696,
+      "heading"
+     ],
+     [
+      1698,
+      "heading"
+     ],
+     [
+      1702,
+      "heading"
+     ],
+     [
+      1703,
+      "heading"
+     ],
+     [
+      1709,
+      "heading"
+     ],
+     [
+      1723,
+      "heading"
+     ],
+     [
+      1737,
+      "heading"
+     ],
+     [
+      1745,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": [
+     [
+      1566,
+      221,
+      230,
+      1
+     ]
+    ]
+   }
+  },
   "innocence-father-brown": {
+   "partD": {
+    "about": "Project Gutenberg #204: the first Father Brown collection, twelve stories. Story divisions follow the site’s map of the hosted text; no words were changed.",
+    "words": 78817,
+    "minutes": 343
+   },
    "edition": "pg-204",
    "kind": "story",
    "editionLine": "",
@@ -331,9 +952,70 @@
      "words": 5017,
      "firstWords": "Both by calling and conviction Father Brown knew better than most of"
     }
-   ]
+   ],
+   "structure": {
+    "sha256": "77ef9c0c42a6800c5436d8adf3c7d55fab99039bc4c902b3e4d2daae328c120f",
+    "source": "data/structured/innocence-father-brown-pg-204.json",
+    "roles": [
+     [
+      13,
+      "chapter"
+     ],
+     [
+      141,
+      "chapter"
+     ],
+     [
+      294,
+      "chapter"
+     ],
+     [
+      389,
+      "chapter"
+     ],
+     [
+      479,
+      "chapter"
+     ],
+     [
+      605,
+      "chapter"
+     ],
+     [
+      714,
+      "chapter"
+     ],
+     [
+      870,
+      "chapter"
+     ],
+     [
+      984,
+      "chapter"
+     ],
+     [
+      1122,
+      "chapter"
+     ],
+     [
+      1223,
+      "chapter"
+     ],
+     [
+      1335,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   },
   "wisdom-father-brown": {
+   "partD": {
+    "about": "Project Gutenberg #223: the second collection, first published in 1914 (London: Cassell), twelve stories. Story divisions follow the site’s map of the hosted text; no words were changed.",
+    "words": 71487,
+    "minutes": 311
+   },
    "edition": "pg-223",
    "kind": "story",
    "editionLine": "",
@@ -474,9 +1156,70 @@
      "words": 5205,
      "firstWords": "THE picturesque city and state of Heiligwaldenstein was one of those toy"
     }
-   ]
+   ],
+   "structure": {
+    "sha256": "86a5d9c201d8e4d4504d21676cc7b5dd94fca600dad21562a88bdebbe03500d6",
+    "source": "data/structured/wisdom-father-brown-pg-223.json",
+    "roles": [
+     [
+      15,
+      "chapter"
+     ],
+     [
+      106,
+      "chapter"
+     ],
+     [
+      218,
+      "chapter"
+     ],
+     [
+      314,
+      "chapter"
+     ],
+     [
+      414,
+      "chapter"
+     ],
+     [
+      504,
+      "chapter"
+     ],
+     [
+      590,
+      "chapter"
+     ],
+     [
+      671,
+      "chapter"
+     ],
+     [
+      777,
+      "chapter"
+     ],
+     [
+      897,
+      "chapter"
+     ],
+     [
+      988,
+      "chapter"
+     ],
+     [
+      1100,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   },
   "incredulity-father-brown": {
+   "partD": {
+    "about": "The Standard Ebooks text (CC0), corrected to the wording of the 1926 Cassell printings, eight stories. Each correction is listed in the edition’s provenance record. Story divisions follow the site’s map of the hosted text.",
+    "words": 71146,
+    "minutes": 309
+   },
    "edition": "se-incredulity-father-brown",
    "kind": "story",
    "editionLine": "First published 1926 (London: Cassell and Company; New York: Dodd, Mead and Company). Standard Ebooks text, corrected to the wording of the 1926 printings.",
@@ -573,9 +1316,54 @@
      "words": 7386,
      "firstWords": "Father Brown always regarded the case as the queerest example of the"
     }
-   ]
+   ],
+   "structure": {
+    "sha256": "ffa83348a7a49c054b30119cc0ce8afa429ef006fb5b12f361a52f8a1370bd44",
+    "source": "data/structured/incredulity-father-brown-se-incredulity-father-brown.json",
+    "roles": [
+     [
+      8,
+      "chapter"
+     ],
+     [
+      107,
+      "chapter"
+     ],
+     [
+      305,
+      "chapter"
+     ],
+     [
+      423,
+      "chapter"
+     ],
+     [
+      575,
+      "chapter"
+     ],
+     [
+      724,
+      "chapter"
+     ],
+     [
+      848,
+      "chapter"
+     ],
+     [
+      1019,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   },
   "secret-father-brown": {
+   "partD": {
+    "about": "Project Gutenberg #70175: first published in 1927 (London: Cassell and Company), eight stories between an opening and a closing frame story. Story divisions follow the site’s map of the hosted text; no words were changed.",
+    "words": 62904,
+    "minutes": 273
+   },
    "edition": "pg-70175",
    "kind": "story",
    "editionLine": "",
@@ -694,7 +1482,55 @@
      "words": 2397,
      "firstWords": "\"----the sort of murders in which I played the part of the"
     }
-   ]
+   ],
+   "structure": {
+    "sha256": "4b38b49ea7d940aded60d38f97ef8cec77c8fd9c533eb7158d21782722cba875",
+    "source": "data/structured/secret-father-brown-pg-70175.json",
+    "roles": [
+     [
+      30,
+      "chapter"
+     ],
+     [
+      71,
+      "chapter"
+     ],
+     [
+      223,
+      "chapter"
+     ],
+     [
+      386,
+      "chapter"
+     ],
+     [
+      518,
+      "chapter"
+     ],
+     [
+      653,
+      "chapter"
+     ],
+     [
+      787,
+      "chapter"
+     ],
+     [
+      917,
+      "chapter"
+     ],
+     [
+      1051,
+      "chapter"
+     ],
+     [
+      1214,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

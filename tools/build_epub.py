@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 from reader_formatting import reading_block, with_structure  # noqa: E402
 import structure_text as ST  # noqa: E402
-from notices import PG_LINE  # noqa: E402
+from notices import PG_LINE, SE_NOTICE  # noqa: E402
 
 E = html.escape
 STAMP = (2026, 11, 14, 0, 0, 0)
@@ -98,9 +98,11 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
     if back:  # what follows the last chapter (Story of a Soul: the epilogue, counsels, letters, prayers, and poems)
         docs.append(('back', 'back.xhtml', 'After the last chapter', xhtml(w['title'], '<section epub:type="backmatter">'
                      + ''.join(to_xml(reading_block(e, B[i], i)) for i in back) + '</section>'), back))
-    if pg:  # rule 2: the licence's own 1.E.1 sentence once, at the end of the text
+    end_notice = (PG_LINE.replace(' target="_blank" rel="noopener"', '') if pg
+                  else E(SE_NOTICE) if 'standardebooks.org' in e['source'] else '')
+    if end_notice:  # rule 2: the source's own notice once, at the end of the text (Gutenberg: the 1.E.1 sentence verbatim)
         did, fn, t, doc, ids = docs[-1]
-        doc = doc.replace('</section></body>', '<div class="pg-line">' + PG_LINE.replace(' target="_blank" rel="noopener"', '') + '</div></section></body>')
+        doc = doc.replace('</section></body>', '<div class="pg-line">' + end_notice + '</div></section></body>')
         docs[-1] = (did, fn, t, doc, ids)
 
     # The source's header and license, verbatim (content rule 2)
@@ -115,8 +117,10 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
     colophon = ('<section class="colophon"><h1>About this edition</h1>'
                 '<p>' + E(w['author']) + ', <i>' + E(w['title']) + '</i>. ' + E(e['label']) + '. Source: ' + E(e['source']) + '.</p>'
                 '<p>' + E(e['rights']) + '</p>'
-                '<p>Prepared by Bibliotheca Catholica from the hosted text (SHA-256 ' + e['sha256'] + '), with chapter structure from '
-                'Project Gutenberg\'s HTML for the same eBook, matched word for word with the hosted text. No words were changed.</p>'
+                '<p>Prepared by Bibliotheca Catholica from the hosted text (SHA-256 ' + e['sha256'] + '), with '
+                + ('divisions from the site\'s map of the hosted text' if S['gate'].get('mode') == 'map'
+                   else 'chapter structure from Project Gutenberg\'s HTML for the same eBook, matched word for word with the hosted text')
+                + '. No words were changed.</p>'
                 + ('<p>' + E(f['note']) + ' Witness: ' + E(f['evidence']) + '.</p>' if f and f.get('sha256') == e['sha256'] else '')
                 + '<p>Published by Bibliotheca Catholica, bibliothecacatholica.com.</p></section>')
     docs.append(('colophon', 'colophon.xhtml', 'About this edition', xhtml('About this edition', colophon), []))

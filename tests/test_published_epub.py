@@ -32,9 +32,14 @@ class PublishedEpub(unittest.TestCase):
             self.assertEqual(z.namelist()[0], 'mimetype')
             self.assertTrue(all(i.compress_type == zipfile.ZIP_STORED for i in z.infolist()), ed)
             text = ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', b''.join(z.read(n) for n in z.namelist() if n.endswith('.xhtml')).decode())).split())
-            self.assertIn(sentence, text, ed)  # the 1.E.1 sentence, verbatim, at the end of the text
-            self.assertIn('START: FULL LICENSE', text, ed)
-            self.assertIn('1.E.1. The following sentence', text, ed)
+            if ed.startswith('pg-'):
+                self.assertIn(sentence, text, ed)  # the 1.E.1 sentence, verbatim, at the end of the text
+                self.assertIn('START: FULL LICENSE', text, ed)
+                self.assertIn('1.E.1. The following sentence', text, ed)
+            else:  # Standard Ebooks: its own notice at the end and its CC0 dedication from the source file
+                from notices import SE_NOTICE
+                self.assertIn(' '.join(SE_NOTICE.split()), text, ed)
+                self.assertIn('CC0', text, ed)
             self.assertNotIn('not published', text, ed)
 
     def test_linked_ahead_of_external_epubs(self):
@@ -47,6 +52,13 @@ class PublishedEpub(unittest.TestCase):
         idx = (ROOT / 'index.html').read_text()
         tok = hashlib.sha256((ROOT / 'data/epubs.js').read_bytes()).hexdigest()[:10]
         self.assertIn('data/epubs.js?v=' + tok, idx)
+
+
+
+class EditionStatus(unittest.TestCase):
+    def test_status_table_is_current(self):
+        import subprocess
+        self.assertEqual(subprocess.run([sys.executable, str(ROOT / 'tools/edition_status.py'), '--check']).returncode, 0)
 
 
 if __name__ == '__main__':

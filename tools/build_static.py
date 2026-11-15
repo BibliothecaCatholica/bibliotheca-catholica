@@ -139,6 +139,7 @@ def one_disclosure(body):
     def keep(m):
         n[0]+=1;return m.group(0) if n[0]==1 else ''
     return DISCL_RE.sub(keep,body)
+COVER_OG={}  # work id -> (edition id, alt text), filled in main() for hosted works with a rendered cover
 def page(tpl,route,title,desc,body,noindex=False,jsonld=()):
     url=SITE+(route+'/' if route else '');t=E(title);d=E(desc)
     s=LD_RE.sub('',tpl)
@@ -149,6 +150,12 @@ def page(tpl,route,title,desc,body,noindex=False,jsonld=()):
     s=sub(r'<meta name="description" content="[^"]*">','<meta name="description" content="'+d+'">',s)
     s=sub(r'<link rel="canonical" href="[^"]*">','<link rel="canonical" href="'+url+'">',s)
     if noindex:s=s.replace('<meta name="robots" content="index,follow">','<meta name="robots" content="noindex,follow">',1)
+    cm=re.match(r'work/([a-z0-9-]+)(/|$)',route)
+    if cm and cm.group(1) in COVER_OG:  # a hosted work's pages share its cover as the social image (design C, 2026-11-15)
+        ed,alt=COVER_OG[cm.group(1)]
+        s=sub(r'<meta property="og:image" content="[^"]*">','<meta property="og:image" content="'+SITE+'assets/covers/'+ed+'-og.jpg">',s)
+        s=sub(r'<meta property="og:image:alt" content="[^"]*">','<meta property="og:image:alt" content="'+E(alt)+'">',s)
+        s=re.sub(r'<meta name="twitter:image" content="[^"]*">','<meta name="twitter:image" content="'+SITE+'assets/covers/'+ed+'-og.jpg">',s,count=1)
     for prop,val in (('og:title',t),('og:description',d),('og:url',url)):
         s=sub(r'<meta property="%s" content="[^"]*">'%prop,'<meta property="%s" content="%s">'%(prop,val),s)
     for nm,val in (('twitter:title',t),('twitter:description',d)):
@@ -489,6 +496,11 @@ def summa_pages(out,lib):
             body,[{'@context':'https://schema.org','@type':'Article','headline':x['title'][:110],'name':aref(P,q,x)+': '+x['title'],'url':SITE+apath(P,q,x)+'/','author':ld_by,'isPartOf':{'@type':'Chapter','name':'Question '+str(q['n'])+'. '+q['title'],'url':SITE+qpath(P,q)+'/'},'isAccessibleForFree':True,'inLanguage':'English'},
                   crumbs(*C,('Summa','summa/'),(P['name'],'summa/'+P['slug']+'/'),('Question '+str(q['n']),qpath(P,q)+'/'),('Article '+str(x['n']),apath(P,q,x)+'/'))])
     return S
+# Edition covers (design C, chosen by Micah on November 15, 2026; tools/covers.py, data/covers.json)
+def hosted_ed(w):return next((e for e in w['editions'] if e.get('text')),None)
+def cover_img(e,cls,wd,lazy=True):
+    if not e or not (ROOT/'assets/covers'/(e['id']+'.webp')).exists():return ''
+    return '<img class="'+cls+'" src="/assets/covers/'+E(e['id'])+'.webp" width="'+str(wd)+'" height="'+str(round(wd*1.5))+'"'+(' loading="lazy"' if lazy else '')+' decoding="async" alt="">'
 def facts_words(n):return 'about '+format(int(n/1000+0.5)*1000,',')+' words'
 def facts_time(m):
     m=int(m/10+0.5)*10;h,r=divmod(m,60)  # half up, as Math.round in scripts/library.js
@@ -502,7 +514,10 @@ def summa_work_html(S):
     return ('<h2>By question and article</h2><p>'+a('/summa/','The whole Summa, one page per question and article')+': '+', '.join(a('/summa/'+P['slug']+'/',P['name']) for P in S['parts'][:-1])+', and '+a('/summa/'+S['parts'][-1]['slug']+'/',S['parts'][-1]['name'])+'.</p>')
 def main():
     tpl=(ROOT/'index.html').read_text();global GA_TAG;GA_TAG=ga_tag(tpl);hub=json.loads((ROOT/'data/catholic-hub.json').read_text())
-    lib=json.loads((ROOT/'data/library.json').read_text());guide=jsvar('data/guide.js','GUIDE_DATA');flags=load_flags();plans=json.loads((ROOT/'data/reading-plans.json').read_text())['plans']
+    lib=json.loads((ROOT/'data/library.json').read_text());guide=jsvar('data/guide.js','GUIDE_DATA')
+    for w in lib['works']:
+        e=hosted_ed(w)
+        if e and (ROOT/'assets/covers'/(e['id']+'-og.jpg')).exists():COVER_OG[w['id']]=(e['id'],'Cover of '+w['title']+' by '+w['author']);flags=load_flags();plans=json.loads((ROOT/'data/reading-plans.json').read_text())['plans']
     skip_auth=set(flags.get('hubAuthors',[]))
     eras={e['id']:e['label'] for e in hub['eras']}
     out={}  # route -> html
@@ -604,7 +619,7 @@ def main():
             iso_only=('<p>'+a('/#/isidore/author='+urllib.parse.quote(iso_n,safe=''),'All their books in the Isidore Index')+' · '+a('/isidore/','Browse the Isidore Index')+'</p>') if iso_n else ''
             body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+intro+AP.books_html(au,E,a)+lib_html+bk_html+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+gd_html+of_html+iso_only+'<p>'+a('/authors/','All authors')+'</p>'
         else:
-          body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+wiki_block+(('<h2>Read here</h2><ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else '')+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+iso_link+'<p>'+a('/authors/','All authors')+'</p>'
+          body=head(eras.get(au.get('era'),'Catholic author'),au['name']+years(au),lede)+wiki_block+(('<h2>Read here</h2><ul class="cover-list">'+''.join('<li>'+cover_img(hosted_ed(w),'list-cover',48)+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>') if mine else '')+(('<h2>Works online</h2><ul>'+works+'</ul>') if works else '')+iso_link+'<p>'+a('/authors/','All authors')+'</p>'
         if au['id'] in PE['authors']:body=body.replace('<p>'+a('/authors/','All authors')+'</p>',PE['authors'][au['id']]['html']+'<p>'+a('/authors/','All authors')+'</p>')  # affiliate preview: Browse TAN Books
         sa=saints_by_author.get(au['id'])
         if sa:body=body.replace('<p>'+a('/authors/','All authors')+'</p>','<h2>Saint</h2><p>'+E(s_facts(sa))+' '+a('/saints/','Saints & Hagiography')+'</p>'+cal_line(sa['id'])+'<p>'+a('/authors/','All authors')+'</p>')
@@ -661,7 +676,7 @@ def main():
         hosted=any(e.get('text') for e in w['editions'])
         by=byline(w)
         ra=RA.get(w['id']);ra_note=ra_note_html(ra,libw,True) if ra and w['id'] in ra.get('noteWorks',[]) else ''
-        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p>'+ra_note+part_d_html(w,TPD.get(w['id'],{}).get('partD'))+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+(summa_work_html(SUMMA) if SUMMA and w['id']==SUMMA['work'] else '')+series_html(w,lib,TPD)+(PE['works'][w['id']]['html'] if w['id'] in PE['works'] else '')+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
+        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d).replace('<div class="page-head">','<div class="page-head work-head has-cover">'+cover_img(hosted_ed(w),'work-cover',220,False),1 if hosted else 0)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p>'+ra_note+part_d_html(w,TPD.get(w['id'],{}).get('partD'))+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+(summa_work_html(SUMMA) if SUMMA and w['id']==SUMMA['work'] else '')+series_html(w,lib,TPD)+(PE['works'][w['id']]['html'] if w['id'] in PE['works'] else '')+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
         book={'@context':'https://schema.org','@type':'Book','name':w['title'],'url':SITE+'work/'+w['id']+'/','author':{'@type':'Person','name':w['author']},'description':d,'genre':w['category']}
         if w.get('authorId') in auth_ids:book['author']['url']=SITE+'author/'+w['authorId']+'/'
         elif w['id'] in RA:book['author']['url']=SITE+'author/'+RA[w['id']]['id']+'/'

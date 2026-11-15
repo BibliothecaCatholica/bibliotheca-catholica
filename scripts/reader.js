@@ -369,7 +369,7 @@ function printNow(all){
  if(all){
   var pg=/gutenberg\.org/.test(R.e.source),d=document.createElement('div');d.id='print-all';if(W.TEXT_PAGES&&W.TEXT_PAGES[R.w.id]&&W.TEXT_PAGES[R.w.id].d)d.className='edition-designed';
   var notice=pg?'<p class="pa-notice">'+esc(PG_NOTICE)+' Full licence: https://www.gutenberg.org/policy/license.html</p>':'';
-  d.innerHTML='<h1>'+esc(R.w.title)+'</h1><p class="pa-ed">'+esc(R.w.author)+'. Reading: '+esc(editionLine(R.w,R.e))+'. Printed from bibliothecacatholica.com/'+esc(R.base)+'</p>'+notice+R.blocks.map(function(p,i){return W.BCReadingBlock?W.BCReadingBlock(R.e,p,i,false):'<p>'+esc(p)+'</p>'}).join('')+notice;
+  d.innerHTML=(R.e.text?'<div class="pa-cover"><img src="/assets/covers/'+esc(R.e.id)+'.webp" alt="Cover of '+esc(R.w.title)+'"></div>':'')+'<h1>'+esc(R.w.title)+'</h1><p class="pa-ed">'+esc(R.w.author)+'. Reading: '+esc(editionLine(R.w,R.e))+'. Printed from bibliothecacatholica.com/'+esc(R.base)+'</p>'+notice+R.blocks.map(function(p,i){return W.BCReadingBlock?W.BCReadingBlock(R.e,p,i,false):'<p>'+esc(p)+'</p>'}).join('')+notice;
   document.body.appendChild(d);document.body.classList.add('print-all');
  }
  var done=function(){document.body.classList.remove('print-all');var x=document.getElementById('print-all');if(x)x.remove();removeEventListener('afterprint',done)};

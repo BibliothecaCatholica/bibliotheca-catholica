@@ -39,10 +39,10 @@ As of November 15, 2026, `main` at `a6c9ef639c` (PR #29):
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
-### 2026-11-15, Claude (Claude Code): Part D on Orthodoxy (covers pending)
+### 2026-11-15, Claude (Claude Code): Part D on Orthodoxy and covers
 
 - Work page as a title page (facts line from the TXT, Read, Listen, Download, About this edition); on chapter pages the chapter opener replaces everything above the text, and it opens each chapter in the reader; chapter endings link the next chapter; book paragraphs with a drop cap; print starts each chapter on a new page. No characters change.
-- Covers: three designs on the [contact sheet](https://claude.ai/artifact/J29rrziSRPCUzYqzpEZNkT) (private; `tools/covers.py`). Stopped for Micah's choice before applying them to all 64 editions.
+- Covers: Micah chose design C, "Banded" (November 15: "Banded (C) is the best looking cover page for the books"); applied to all 64 editions on branch `claude/covers-c` (see its PR).
 - Branch `claude/part-d-orthodoxy` (see its PR), under the standing approval. Story of a Soul is [PR #30](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/30), waiting on one gate equivalence. Approval: Micah, November 14 (follow-up, items 3 and 4).
 
 ### 2026-11-15, Claude (Claude Code): Orthodoxy steps 2b and 2c
@@ -59,7 +59,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 ## Open items
 
 - Micah: a hero engraving (three proposals in PR #27); the takedown agent's name, address, and email (page shows a PLACEHOLDER).
-- Hosted texts: Micah to choose a cover design (A, B, or C) and confirm the Story of a Soul gate rule (PR #30); manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
+- Hosted texts: Micah to confirm the Story of a Soul gate rule (PR #30); manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
 - Advent launches November 29: excerpt-to-source comparison, Substack and social readiness ([checklist](docs/ADVENT-LAUNCH.md)).
 - Libraries research candidates need rights and provenance review before import. Paused: `_headers` Report-Only CSP, low-priority npm audit findings.
 - Page-audit decisions: the publish allowlist and the `study/index.html` sitemap or noindex question. CI's Study drift check names the missing `study/passages` (harmless).

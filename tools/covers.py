@@ -2,11 +2,15 @@
 """Typographic covers for hosted editions (Part D, "Beautiful editions"): title, author, and the site's cross mark,
 in burgundy, cream, and gold, one series design with a small variation by category. No photographs or third-party art.
 
-Three candidate designs are drawn for the owner's choice (Micah, November 14, 2026: "Post the cover contact sheet and
-stop for my choice of cover design before applying covers to all 64 editions"). Nothing here is applied to the site
-until a design is chosen.
+Three candidate designs were drawn for the owner's choice (Micah, November 14, 2026: "Post the cover contact sheet and
+stop for my choice of cover design before applying covers to all 64 editions"). Chosen: design C, "Banded" (Micah,
+November 15, 2026: "Banded (C) is the best looking cover page for the books"). `--build` writes the C cover of every
+hosted edition: assets/covers/<edition>.svg (deterministic, checked by tests/test_covers.py), and, rendered in a
+browser with the site's own fonts (tools/render_covers.js, Playwright), <edition>.webp (480 by 720) and
+<edition>-og.jpg (1200 by 630, the social image), with SHA-256 checksums in data/covers.json.
 
   python3 tools/covers.py --sheet OUT.html   # contact sheet: every design for a sample of editions
+  python3 tools/covers.py --build            # the chosen design for every hosted edition (needs Node and Playwright)
 """
 import argparse, html, json, re
 from pathlib import Path
@@ -63,7 +67,7 @@ def short_title(t):
     return re.sub(r':.*$', '', t).strip()
 
 
-def cover_svg(design, title, author, category):
+def cover_svg(design, title, author, category, volume=''):
     t, a, orn = short_title(title), author, ORNAMENT.get(category, '✦')
     cat = html.escape(category.upper())
     head = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" width="%d" height="%d" role="img" aria-label="%s">' % (W, H, W, H, html.escape(t + ' by ' + a))
@@ -102,7 +106,15 @@ def cover_svg(design, title, author, category):
                 '<rect y="610" width="600" height="8" fill="%s"/>' % GOLD,
                 txt(300, 92, 17, GOLD, orn + '  ' + category.upper(), letter_spacing=5),
                 title_svg(lines, size, lh, 300, top + size, CREAM),
-                txt(300, 702, 28, INK, a.upper(), letter_spacing=3), cross(300, 795, 64, BURGUNDY)]
+                cross(300, 795, 64, BURGUNDY)]
+        al = wrap(a.upper(), 30)  # a long author line (The Writings of the Apostolic Fathers) wraps to two smaller lines
+        if len(al) == 1:
+            body.append(txt(300, 702, 28, INK, al[0], letter_spacing=3))
+        else:
+            body += [txt(300, 684 + 32 * n, 22, INK, l, letter_spacing=2) for n, l in enumerate(al[:2])]
+        if volume:  # multi-volume works: the part or volume in gold small capitals under the title
+            y = top + size + (len(lines) - 1) * lh
+            body.append(txt(300, min(y + 58, 588), 22, GOLD, volume.upper(), letter_spacing=4))
     return head + ''.join(body) + '</svg>'
 
 
@@ -130,10 +142,66 @@ def sheet():
     return picks, rows
 
 
+CHOSEN = 'C'
+# Editions of one work that need telling apart on the cover (from each edition's label in data/library.json).
+VOLUMES = {'pg-17611': 'First Part', 'pg-17897': 'First Part of the Second Part', 'pg-18755': 'Second Part of the Second Part',
+           'pg-19950': 'Third Part', 'ia-summa-supplement': 'Supplement', 'pg-45304': 'Volume I', 'pg-45305': 'Volume II'}
+OUT = ROOT / 'assets/covers'
+
+
+def edition_cover(w, e, shared=()):
+    """Where several hosted works share a short title (The Lives of the Saints), the subtitle becomes the volume line."""
+    vol = VOLUMES.get(e['id'], '')
+    if not vol and short_title(w['title']) in shared and ':' in w['title']:
+        vol = w['title'].split(':', 1)[1].strip()
+    return cover_svg(CHOSEN, w['title'], w['author'], w['category'], vol)
+
+
+def shared_titles():
+    from collections import Counter
+    c = Counter(short_title(w['title']) for w in {w['id']: w for w, e in hosted()}.values())
+    return {t for t, n in c.items() if n > 1}
+
+
+def build_svgs():
+    import hashlib
+    OUT.mkdir(parents=True, exist_ok=True)
+    rows, shared = {}, shared_titles()
+    for w, e in hosted():
+        svg = edition_cover(w, e, shared) + '\n'
+        (OUT / (e['id'] + '.svg')).write_text(svg)
+        rows[e['id']] = {'work': w['id'], 'svg': hashlib.sha256(svg.encode()).hexdigest()}
+    return rows
+
+
+def build():
+    import hashlib, subprocess
+    rows = build_svgs()
+    subprocess.run(['node', str(ROOT / 'tools/render_covers.js'), str(OUT)] + sorted(rows), check=True, cwd=ROOT)
+    from PIL import Image
+    for k, r in rows.items():
+        png = OUT / (k + '.png')
+        im = Image.open(png).convert('RGB')
+        im.resize((480, 720), Image.LANCZOS).save(OUT / (k + '.webp'), 'WEBP', quality=86, method=6)
+        png.unlink()
+        for kind, f in (('webp', k + '.webp'), ('og', k + '-og.jpg')):
+            r[kind] = hashlib.sha256((OUT / f).read_bytes()).hexdigest()
+    manifest = {'note': 'Generated by tools/covers.py --build. Design C ("Banded"), chosen by Micah on November 15, 2026. '
+                        'The SVG is the source; the WebP (480x720) and the social JPEG (1200x630) are rendered from it with the site fonts.',
+                'design': CHOSEN, 'covers': dict(sorted(rows.items()))}
+    (ROOT / 'data/covers.json').write_text(json.dumps(manifest, indent=1) + '\n')
+    return manifest
+
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--sheet')
+    ap.add_argument('--build', action='store_true')
     a = ap.parse_args()
+    if a.build:
+        m = build()
+        print('%d covers (design %s) -> assets/covers/' % (len(m['covers']), m['design']))
+        raise SystemExit(0)
     picks, rows = sheet()
     if a.sheet:
         Path(a.sheet).write_text('\n'.join(rows))

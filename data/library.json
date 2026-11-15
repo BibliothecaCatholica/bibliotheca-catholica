@@ -52,6 +52,7 @@
         {
           "id": "ccel-npnf102-doctrine",
           "label": "Shaw translation (NPNF Series I, Vol. II)",
+          "translationYear": 1873,
           "source": "https://www.ccel.org/ccel/schaff/npnf102.html",
           "language": "English",
           "contributors": [
@@ -101,6 +102,7 @@
         {
           "id": "pg-50040",
           "label": "Project Gutenberg #50040",
+          "translationYear": 1948,
           "source": "https://www.gutenberg.org/ebooks/50040",
           "language": "English",
           "contributors": [
@@ -1378,6 +1380,7 @@
         {
           "id": "pg-45304",
           "label": "Project Gutenberg #45304 · Volume I",
+          "translationYear": 1871,
           "source": "https://www.gutenberg.org/ebooks/45304",
           "language": "English",
           "contributors": [
@@ -1406,6 +1409,7 @@
         {
           "id": "pg-45305",
           "label": "Project Gutenberg #45305 · Volume II",
+          "translationYear": 1871,
           "source": "https://www.gutenberg.org/ebooks/45305",
           "language": "English",
           "contributors": [
@@ -1483,6 +1487,7 @@
         {
           "id": "pg-7403",
           "label": "Project Gutenberg #7403",
+          "translationYear": 1905,
           "source": "https://www.gutenberg.org/ebooks/7403",
           "language": "English",
           "contributors": [

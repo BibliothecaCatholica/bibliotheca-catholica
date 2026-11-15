@@ -39,6 +39,11 @@ def validate(catalog):
             assert edition['rights'] and edition['checked'] and edition['access'] in ['full-text', 'reference']
             for contributor in edition.get('contributors', []):
                 assert contributor['role'] and contributor['name']
+            if 'translationYear' in edition:
+                # Optional (2026-11-15): the year the named translation was first published, only when the record states it
+                # (for example Benham 1874 vs 1886); used by the EPUB title page. Never inferred from a file or a translator's dates.
+                assert isinstance(edition['translationYear'], int) and not isinstance(edition['translationYear'], bool), edition['id']
+                assert 1400 <= edition['translationYear'] <= 2100, edition['id']
             if edition.get('rightsBasis'):
                 # Hosting rule (2026-11-15): a basis other than date needs its written evidence on the record
                 assert edition['rightsBasis'] in BASES, edition['id']

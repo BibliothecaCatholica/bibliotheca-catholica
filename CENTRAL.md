@@ -30,7 +30,7 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 - 157 work records; 117 hosted editions of 112 works in `data/library.json` (184 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,153 sitemap URLs; 7,629 tracked files, most generated (`linguist-generated` in `.gitattributes`).
-- Tests: 124 Node and 282 Python.
+- Tests: 124 Node and 284 Python.
 
 ## Standing decisions
 
@@ -47,7 +47,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - QA low items fixed: Privacy now names the Libraries "Search another collection" form (Open Library only); author pages preload `/data/authors-detail.js` (root-absolute); stale counts and wording updated here and in PROJECT-RULES.
 - Survey of PRs #19 to #47 (Nov 10 to 15): discovery and translation sources; Spanish Victory cross; libraries desk; two design passes and notice rules; structured editions with chapter pages and EPUBs (16); covers C; Summa Design A; hero and takedown email; hosting rule by recorded basis (#40); counts and validation tooling (#41); approval statements removed (#38); 53 Chesterton and other pre-1931 books hosted (#39, #42 to #47).
-- `bibliotheca-texts` main was last exported November 9 (64 texts). The 53 new texts exist only on its unmerged branch `claude/sweet-goldberg-yrlrud`, so the reader falls back to local copies for them. `aquinas` is described under Hosting and data flow.
+- `bibliotheca-texts` re-exported (117 texts; the 53 new ones were missing since the November 9 export). New optional edition field `translationYear`, set only where a record states the year (`docs/CATALOG.md`). `aquinas` is described under Hosting and data flow.
 
 ### 2026-11-15, Catholic Repo (Grok): GitHub Pages turned off
 

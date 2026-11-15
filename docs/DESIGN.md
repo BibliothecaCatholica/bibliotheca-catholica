@@ -39,6 +39,16 @@ List thumbnails (home row, author and saint rows) are the self-hosted public-dom
 - Required notices (the FTC affiliate line beside affiliate links, Project Gutenberg notices, Wikipedia and portrait credits, rights badges, editorial context notes on flagged titles) are never removed; they are made small and placed beside what they concern.
 - Placement since the owner rule change of November 14, 2026 ([PROJECT-RULES](PROJECT-RULES.md) rules 2, 7, 10, and 11): the Gutenberg notice is the licence's own 1.E.1 sentence, verbatim, once per page after the text; quality labels only in the edition details; the affiliate line "Affiliate links: we may earn a commission. Details." once per page; rights badges only on a record's or edition's own page; the Wikipedia credit on one line; public-domain portrait credits behind a "Credits" toggle; the footer in two link columns with one line of credits.
 
+## Editions
+
+Designed editions (Part D; the Orthodoxy pilot, November 15, 2026) read as books. The parts below come from `PART_D` in `tools/build_text_pages.py` and `.edition-designed` in `styles/library.css`.
+- **Paragraphs:** first-line indents of 1.5em and no space between paragraphs. The first paragraph after a heading is not indented and carries a drop cap. Verse, headings, and the title page keep their own spacing.
+- **Chapter opener:** a small-caps "Chapter" label, a large burgundy numeral, the title, and one gold ornament (❦). On static chapter pages it replaces the page head and buttons above the text. In the reader the label and ornament are CSS, so the text still comes only from the TXT.
+- **Chapter ending:** the ornament, "End of Chapter N", and a link to the next chapter (and, on chapter pages, to the reading room).
+- **Work page as a title page:** a facts line computed from the TXT (words and reading time at 230 words a minute), three choices (Read, Listen, Download), and "About this edition". Full source and rights stay behind the edition row's toggle.
+- **Print:** each chapter starts a new page.
+- **Covers:** three designs are on a contact sheet for the owner's choice (`tools/covers.py`); none is applied yet.
+
 ## Accessibility
 
 Visible focus on every control, keyboard access, and contrast of at least 4.5:1 for text in both themes. Fixed image dimensions so nothing jumps while loading.

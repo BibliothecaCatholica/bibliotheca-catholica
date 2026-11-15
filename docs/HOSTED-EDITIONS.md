@@ -67,7 +67,7 @@ These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The
 | Edition | Structure | Notes |
 |---|---|---|
 | All hosted editions | Automatic display-only layout where the rule allows (step 2a): see the report for each edition | 59 on, 5 verse works excluded by name; coverage listed per edition |
-| Orthodoxy (pg-130) | **Full pipeline**: structure from #130 HTML, gate, rendering, review EPUB | Chapter IV scan-verified verse and emphasis. #16769 (1934 reprint) is reference evidence only. |
+| Orthodoxy (pg-130) | **Full pipeline**: structure from #130 HTML, gate, rendering, review EPUB; **Part D pilot**: title-page work page, chapter openers and endings, book paragraphs, print (covers wait for the owner's choice) | Chapter IV scan-verified verse and emphasis. #16769 (1934 reprint) is reference evidence only. |
 | Father Brown: Innocence (pg-204), Wisdom (pg-223), Secret (pg-70175), Incredulity (se-incredulity-father-brown) | Story maps in `tools/text_pages.py` | Would need steps 1 to 5 for roles and EPUBs. Incredulity comes from Standard Ebooks (CC0), not Gutenberg HTML. |
 | Summa Theologiae (four parts and the Supplement) | Question and article map (`tools/build_summa.py`) | Its own renderer, `summa_para()`; the Supplement has OCR flags to adjudicate first. |
 | Story of a Soul (pg-16772) | **Surveyed, not built** (HTML pinned November 14) | 145 italic spans; verse only as line breaks; notes as plain bracketed text (611); inconsistent heading levels; the HTML drops accents the TXT keeps. Building it needs owner decisions: an accent-folding rule for the gate, and whether to use the HTML's italics. |

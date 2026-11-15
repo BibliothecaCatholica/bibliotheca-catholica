@@ -3,6 +3,7 @@
 Mirror renderReadingBlock() in scripts/library.js. No inferred prose/verse rules.
 """
 import html
+import re
 
 
 def validate_formatting(edition, blocks):
@@ -110,6 +111,10 @@ def reading_block(edition, text, index, anchor=False):
     if verse:
         starts = verse['lineStarts'] + [len(text)]
         content = ''.join('<span class="verse-line">'+html.escape(text[a:b])+'</span>' for a, b in zip(starts, starts[1:]))
+    elif role == 'chapter' and re.match(r'^[IVXLC]+ \S', text):
+        # Part D chapter opener: the numeral and the title in their own spans; every character is kept, in order
+        n = text.index(' ')
+        content = '<span class="ch-n">' + html.escape(text[:n]) + '</span> <span class="ch-t">' + html.escape(text[n + 1:]) + '</span>'
     elif vem:
         content = _emphasis_html(text, vem, False)
     elif auto:

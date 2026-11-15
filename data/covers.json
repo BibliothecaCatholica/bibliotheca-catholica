@@ -32,6 +32,12 @@
    "webp": "269496bac127148887c8ee80209552999219d9e842777fe2b7c9a3d3c209dc87",
    "og": "402d43a78a95a3b22fa72abb0f10e96f2318c981a4093b8c9006f6403ec8e19c"
   },
+  "pg-13468": {
+   "work": "new-jerusalem",
+   "svg": "2cf43fb44c896df1146c36a942daa7fcdac5a3847b4f3d67158f79bfff140423",
+   "webp": "4551dc3f2019eb0251a98395b1c544ee081f9a19299594dfa1d1bd40bd1d4963",
+   "og": "d54d0af5b0ae554ed47d0ecf17247b72abb3145025c5824aa7cf894e5b217a6c"
+  },
   "pg-14021": {
    "work": "lord-world",
    "svg": "eb849915276ba87829f6b9a7ef811805b3fbb8a97fa6a51cdc283c83bc9de524",
@@ -74,11 +80,23 @@
    "webp": "3b6885fb7dc450454fb1e712e86d76aa8b072ed790adac602b6eff9034190a57",
    "og": "87873366eec329343d5d3470702ff9eb7e32dcb579d6b40a09a104dd7e02fa7b"
   },
+  "pg-1696": {
+   "work": "club-queer-trades",
+   "svg": "9e5648df071dea272db47904021de7f047930a8d0a5373fba4bd7a5d379310bf",
+   "webp": "771189607daf462999f81aa5a53d0966fa06440a2732643a9effcb46fef0bdea",
+   "og": "8dd1bece9d804332020691c4a30ad32abda9513d94aa4436e44815d535145a21"
+  },
   "pg-1717": {
    "work": "whats-wrong-world",
    "svg": "67fc9028cc7c5f5b2b2c921edeec8ab5e5161cfaab0f7879730dabf7b1813a60",
    "webp": "0e6113a10b8d2a3d0754a55d626b868752fea1982ffcc4cc951b6d74ece9e4d1",
    "og": "530d44f8ecf87dc031c6f879acc17dc910472705e2aa250520d731cd1b4825df"
+  },
+  "pg-1718": {
+   "work": "manalive",
+   "svg": "ed59bea39b9af33e2df4766837d80aca8ffb9602ded527d4b3627f386641efe8",
+   "webp": "94279835ed6f7b57b8c4714a86c249d538471419d84e96da781d801a01e9ff16",
+   "og": "2b86827cf83fd4b14628ed3656665ffcbb5a561c3bc096a8e02767e19b50bcad"
   },
   "pg-1719": {
    "work": "ballad-white-horse",
@@ -128,6 +146,12 @@
    "webp": "174d913c07f0fd27ab524a31ca0c69e315b654a9b67551836280ff92dfd460d0",
    "og": "887eb00022c8c999eec5cc34fccb00295b9fca4911ee23f774cb4ce312e9b824"
   },
+  "pg-20058": {
+   "work": "napoleon-notting-hill",
+   "svg": "bb6ba34247fb31178e434eba69a5f1e94398ae8de7d2eacc7534f6267effbceb",
+   "webp": "4d1463d7129e076edb8e2ac89c1d86385b43441b45ec905c6e2408e2f6813bf0",
+   "og": "639003331edb94ad84bd4e04445bb5d8629aae9fb0d1bfd1465eb775ef5d94a5"
+  },
   "pg-204": {
    "work": "innocence-father-brown",
    "svg": "3d201db628083c82513780343a72682a846f9cdc9cc559812e3b4e806c8675dc",
@@ -139,6 +163,18 @@
    "svg": "ae64942b443ce82531aabaefd9d9cde74bf3b9a99eca886a5c9e55f4a17fe17a",
    "webp": "89fba60ece5c96ee0e4c751f0a3ccafdf68a5ca62f5ad1e7a6c66c66bce22857",
    "og": "45f0a3c253216984c6b1612834371eccd2f31eda52ab0a6dfae18261a1cacca0"
+  },
+  "pg-20897": {
+   "work": "short-history-england",
+   "svg": "364a8700b755c356db4a1f854b34188cbf5924437fd1a9ee889d624d2f77fc6c",
+   "webp": "cf2b6cb333f27557eb457f66145e034d6960ca9e3b75cb682bf63616bf8e1715",
+   "og": "7349edd7cdd218c8265a9a4bc5b6c9cd7d8c002dc5bffeb50e51c242d54f4d45"
+  },
+  "pg-2134": {
+   "work": "utopia-usurers",
+   "svg": "485dec91ad769a92f113a563feca14e08e6169d4c0c4c325412194a7ecec30c8",
+   "webp": "937832fdfd804219fca74cd1431cab38f7b17463c76eabf4f3319c4316ae4116",
+   "og": "3ea1a465d00791309db2a81128aef61827fbc362ff4a87d270068c579942a8a6"
   },
   "pg-22112": {
    "work": "child-book-of-saints",
@@ -175,6 +211,18 @@
    "svg": "c267f3da1aaa85e864fcc4d371c7d7db91a9115d4ec213cdb6f10b67031bb989",
    "webp": "e81e4a0721a871484a2b24d40c24570b404e50e840d2485f08cd0f03051691db",
    "og": "217c56d93439f5bf770387b7f6ae660469685094ffc7f02b35a40867f78d9287"
+  },
+  "pg-25308": {
+   "work": "eugenics-other-evils",
+   "svg": "0d76a66048f37d0f66ca6d3e47badc0f6d47643e667cfb3b45bb0e0d0e83823a",
+   "webp": "171c0ef600de26e57b00fd4a1445b9391fcf3e794e0c614df33ef4d4a4cbe9a4",
+   "og": "7e7346e50e0b1bf13db8484efe47856bc1df54ba6b38aceba5254f43572c2f89"
+  },
+  "pg-27250": {
+   "work": "what-i-saw-america",
+   "svg": "5bf0facdb15f28f666ab6c9b4f264b71ab97739a6ad52581e8148f97aa28995c",
+   "webp": "4ab7ac43024666b9b9a946b6cd7bb08f89f8bc14aae21e3207ba2201a7ecf7e7",
+   "og": "70360475508edb2d7ba2e24e0a1790fff002cbef1a452e65b2d14aafce8b917a"
   },
   "pg-30664": {
    "work": "callista",
@@ -284,11 +332,23 @@
    "webp": "f23001b005af1e2fc7c8e83ee8209e5b73975c17cd1f73311e04859d3d17f93e",
    "og": "cd95e79896437921ae07d922e582f172a94781e4c5e5d56c5c71955661007c41"
   },
+  "pg-59239": {
+   "work": "flying-inn",
+   "svg": "f49e8e605f63bf13d62283a5b3785d40295a1eb683aecaf7f4dea93573647c79",
+   "webp": "10314838f335878fb75a38bdc435f362308a6b7c48e71b15bf690ecd07c81e5e",
+   "og": "7012511f7c9e0e750839f8ca854b5093749891be2055a0d37754627b8513d2a3"
+  },
   "pg-62254": {
    "work": "fabiola",
    "svg": "705f274259a6256c19be31cb519ad2f3721f963b6996bc9b76dbe8df6f8670b2",
    "webp": "3f864884dd1276c90a337ea642d702623f378281141cc70c508c8d5711c51cf3",
    "og": "4e6b6899aa48b311d099c4c05831ca849a940661b25ab8c792a90ba39708de98"
+  },
+  "pg-62680": {
+   "work": "superstition-divorce",
+   "svg": "d5e011902e36c9b4e0f3f655e0ddbeeed69d3ec9c7c7fc0a2309c52e791bd8a1",
+   "webp": "16a2367921f6420e3903bb8a8a10282f5d854908b3344baffd3fd9b401dbccb3",
+   "og": "f4a97125b62a2f92fc4f35bbe1ddcedb8f7d43d1d414309f79ca810cdf5709f7"
   },
   "pg-63084": {
    "work": "chesterton-francis",

@@ -22,7 +22,10 @@ def count():
     lib = json.loads((ROOT / 'data/library.json').read_text())
     eds = [e for w in lib['works'] for e in w['editions']]
     import text_pages
+    pg = [e for e in eds if 'gutenberg.org' in json.dumps(e['source'])]
     return {
+        'pg': len(pg),
+        'pg_hosted': sum(1 for e in pg if e.get('text')),
         'works': len(lib['works']),
         'editions': len(eds),
         'hosted': sum(1 for e in eds if e.get('text')),
@@ -40,6 +43,7 @@ STATED = [
     ('README.md', r'The (?P<hosted>\d+) hosted text editions', None),
     ('CENTRAL.md', r'(?P<works>\d+) work records; (?P<hosted>\d+) hosted editions of (?P<hosted_works>\d+) works', None),
     ('docs/CATALOG.md', r'The (?P<hosted>\d+) hosted TXT editions', None),
+    ('docs/CATALOG.md', r'(?P<pg>\d+) Gutenberg editions in the catalog, (?P<pg_hosted>\d+) hosted', None),
     ('docs/HOSTED-TEXT-QUALITY.md', r'has (?P<works>\d+) works and (?P<editions>\d+) edition records\. Only (?P<hosted>\d+) editions, belonging to (?P<hosted_works>\d+) works', None),
     ('docs/HOSTED-TEXT-QUALITY.md', r'for each of the (?P<hosted>\d+) editions', None),
     ('docs/HOSTED-EDITIONS.md', r'(?P<hosted>\d+) hosted editions: (?P<structured>\d+) with a structure file, (?P<openers>\d+) with chapter openers, (?P<hosted__cover>\d+) with a cover, (?P<epubs>\d+) with a published EPUB', None),

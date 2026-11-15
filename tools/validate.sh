@@ -16,8 +16,8 @@ step() {  # step <name> <command...>
     printf 'ok    %-12s %3ss  %s\n' "$name" $((SECONDS-t0)) "$(grep -v '^\s*$' "$LOG/$name.log" | tail -1 | cut -c1-90)"
   else
     printf 'FAIL  %-12s %3ss  (%s)\n' "$name" $((SECONDS-t0)) "$LOG/$name.log"
-    grep -E '^(FAIL|ERROR|not ok|AssertionError|Traceback)|Error:' "$LOG/$name.log" | head -15
-    tail -5 "$LOG/$name.log"; FAIL=1
+    grep -E '^(FAIL|ERROR|not ok|AssertionError|Traceback)|Error:' "$LOG/$name.log" | head -15 | cut -c1-300
+    tail -5 "$LOG/$name.log" | cut -c1-300; FAIL=1
   fi
 }
 step build    npm run build

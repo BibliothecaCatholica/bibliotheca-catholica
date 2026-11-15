@@ -4832,6 +4832,7 @@ work/chesterton-francis/ch/09-miracles-and-death/index.html
 work/chesterton-francis/ch/10-the-testament-of-st-francis/index.html
 work/child-book-of-saints/index.html
 work/city-of-god/index.html
+work/club-queer-trades/index.html
 work/come-rack/index.html
 work/confessions/index.html
 work/consolation-philosophy/index.html
@@ -4855,10 +4856,12 @@ work/development-doctrine/ch/12-application-of-the-seventh-note-of-a-true-develo
 work/dictionary-saintly-women/index.html
 work/divine-comedy/index.html
 work/dream-gerontius/index.html
+work/eugenics-other-evils/index.html
 work/europe-faith/index.html
 work/everlasting-man/index.html
 work/fabiola/index.html
 work/fides-ratio/index.html
+work/flying-inn/index.html
 work/gaudium-spes/index.html
 work/glories-of-mary/index.html
 work/golden-legend/index.html
@@ -5001,8 +5004,11 @@ work/man-thursday/ch/12-the-earth-in-anarchy/index.html
 work/man-thursday/ch/13-the-pursuit-of-the-president/index.html
 work/man-thursday/ch/14-the-six-philosophers/index.html
 work/man-thursday/ch/15-the-accuser/index.html
+work/manalive/index.html
+work/napoleon-notting-hill/index.html
 work/nepveu-meditations/index.html
 work/new-catholic-dictionary/index.html
+work/new-jerusalem/index.html
 work/on-christian-doctrine/index.html
 work/orthodoxy/index.html
 work/orthodoxy/ch/01-introduction-in-defence-of-everything-else/index.html
@@ -5048,6 +5054,7 @@ work/secret-father-brown/story/07-the-red-moon-of-meru/index.html
 work/secret-father-brown/story/08-the-chief-mourner-of-marne/index.html
 work/secret-father-brown/story/09-the-secret-of-flambeau/index.html
 work/servile-state/index.html
+work/short-history-england/index.html
 work/spiritual-exercises-adapted/index.html
 work/story-of-a-soul/index.html
 work/story-of-a-soul/ch/01-earliest-memories/index.html
@@ -5062,6 +5069,8 @@ work/story-of-a-soul/ch/09-the-night-of-the-soul/index.html
 work/story-of-a-soul/ch/10-the-new-commandment/index.html
 work/story-of-a-soul/ch/11-a-canticle-of-love/index.html
 work/summa-theologiae/index.html
+work/superstition-divorce/index.html
+work/utopia-usurers/index.html
 work/veritatis-splendor/index.html
 work/virgin-saints-and-martyrs/index.html
 work/virgin-saints-and-martyrs/ch/01-blandina-the-slave/index.html
@@ -5082,6 +5091,7 @@ work/virgin-saints-and-martyrs/ch/15-a-prophetess/index.html
 work/virgin-saints-and-martyrs/ch/16-s-clara/index.html
 work/virgin-saints-and-martyrs/ch/17-s-theresa/index.html
 work/virgin-saints-and-martyrs/ch/18-sister-dora/index.html
+work/what-i-saw-america/index.html
 work/whats-wrong-world/index.html
 work/wisdom-father-brown/index.html
 work/wisdom-father-brown/story/01-the-absence-of-mr-glass/index.html

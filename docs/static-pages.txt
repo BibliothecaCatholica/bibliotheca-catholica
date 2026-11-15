@@ -4769,6 +4769,8 @@ support/index.html
 takedown/index.html
 timeline/index.html
 work/abandonment/index.html
+work/alarms-discursions/index.html
+work/all-things-considered/index.html
 work/ancient-lives-saint-patrick/index.html
 work/apologia/index.html
 work/apologia/ch/01-mr-kingsleys-method-of-disputation/index.html
@@ -4819,6 +4821,7 @@ work/catherine-dialogue/index.html
 work/catherine-letters/index.html
 work/catholic-church-conversion/index.html
 work/catholic-church-history/index.html
+work/charles-dickens-critical-study/index.html
 work/chesterton-francis/index.html
 work/chesterton-francis/ch/01-the-problem-of-st-francis/index.html
 work/chesterton-francis/ch/02-the-world-st-francis-found/index.html
@@ -4863,6 +4866,7 @@ work/fabiola/index.html
 work/fides-ratio/index.html
 work/flying-inn/index.html
 work/gaudium-spes/index.html
+work/george-bernard-shaw/index.html
 work/glories-of-mary/index.html
 work/golden-legend/index.html
 work/grammar-assent/index.html
@@ -5004,7 +5008,9 @@ work/man-thursday/ch/12-the-earth-in-anarchy/index.html
 work/man-thursday/ch/13-the-pursuit-of-the-president/index.html
 work/man-thursday/ch/14-the-six-philosophers/index.html
 work/man-thursday/ch/15-the-accuser/index.html
+work/man-who-knew-too-much/index.html
 work/manalive/index.html
+work/miscellany-of-men/index.html
 work/napoleon-notting-hill/index.html
 work/nepveu-meditations/index.html
 work/new-catholic-dictionary/index.html
@@ -5037,6 +5043,7 @@ work/pictorial-lives-saints/index.html
 work/practice-presence/index.html
 work/rerum-novarum/index.html
 work/revelations-divine-love/index.html
+work/robert-browning/index.html
 work/roman-martyrology/index.html
 work/rule-of-benedict/index.html
 work/sabatier-francis/index.html
@@ -5070,8 +5077,11 @@ work/story-of-a-soul/ch/10-the-new-commandment/index.html
 work/story-of-a-soul/ch/11-a-canticle-of-love/index.html
 work/summa-theologiae/index.html
 work/superstition-divorce/index.html
+work/the-defendant/index.html
+work/tremendous-trifles/index.html
 work/utopia-usurers/index.html
 work/veritatis-splendor/index.html
+work/victorian-age-literature/index.html
 work/virgin-saints-and-martyrs/index.html
 work/virgin-saints-and-martyrs/ch/01-blandina-the-slave/index.html
 work/virgin-saints-and-martyrs/ch/02-s-c-cilia/index.html

@@ -1166,6 +1166,132 @@
     "all-capitals line": 2,
     "indented line": 3
    }
+  },
+  "pg-25795": {
+   "work": "Lord Kitchener",
+   "multiLineBlocks": 26,
+   "reflowed": 25,
+   "kept": 1,
+   "share": 0.962,
+   "emphasisSpans": 4,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 1
+   }
+  },
+  "pg-19094": {
+   "work": "Magic: A Fantastic Comedy",
+   "multiLineBlocks": 372,
+   "reflowed": 309,
+   "kept": 63,
+   "share": 0.831,
+   "emphasisSpans": 444,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 15,
+    "indented line": 42,
+    "short line": 6
+   }
+  },
+  "pg-31184": {
+   "work": "Poems",
+   "multiLineBlocks": 314,
+   "reflowed": 1,
+   "kept": 313,
+   "share": 0.003,
+   "emphasisSpans": 44,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 7,
+    "indented line": 306
+   }
+  },
+  "pg-69185": {
+   "work": "Tales of the Long Bow",
+   "multiLineBlocks": 815,
+   "reflowed": 787,
+   "kept": 28,
+   "share": 0.966,
+   "emphasisSpans": 29,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 28
+   }
+  },
+  "pg-61764": {
+   "work": "Tennyson (Bookman Booklets)",
+   "multiLineBlocks": 110,
+   "reflowed": 90,
+   "kept": 20,
+   "share": 0.818,
+   "emphasisSpans": 71,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 19,
+    "short line": 1
+   }
+  },
+  "pg-62086": {
+   "work": "Thackeray (Bookman Booklets)",
+   "multiLineBlocks": 101,
+   "reflowed": 83,
+   "kept": 18,
+   "share": 0.822,
+   "emphasisSpans": 82,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 5,
+    "indented line": 11,
+    "run of spaces": 2
+   }
+  },
+  "pg-11605": {
+   "work": "The Appetite of Tyranny",
+   "multiLineBlocks": 71,
+   "reflowed": 68,
+   "kept": 3,
+   "share": 0.958,
+   "emphasisSpans": 18,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 3
+   }
+  },
+  "pg-32167": {
+   "work": "The Ballad of St. Barbara and Other Verses",
+   "multiLineBlocks": 209,
+   "reflowed": 1,
+   "kept": 208,
+   "share": 0.005,
+   "emphasisSpans": 17,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 208
+   }
+  },
+  "pg-11560": {
+   "work": "The Barbarism of Berlin",
+   "multiLineBlocks": 48,
+   "reflowed": 48,
+   "kept": 0,
+   "share": 1.0,
+   "emphasisSpans": 5,
+   "pinnedHtml": false,
+   "keptBecause": {}
+  },
+  "pg-11554": {
+   "work": "The Crimes of England",
+   "multiLineBlocks": 117,
+   "reflowed": 102,
+   "kept": 15,
+   "share": 0.872,
+   "emphasisSpans": 45,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 2,
+    "indented line": 3,
+    "short line": 10
+   }
   }
  },
  "excluded": {
@@ -1187,10 +1313,6 @@
   {
    "edition": "pg-15992",
    "block": 2459
-  },
-  {
-   "edition": "pg-17611",
-   "block": 6346
   },
   {
    "edition": "pg-17897",
@@ -1235,6 +1357,10 @@
   {
    "edition": "pg-45305",
    "block": 1320
+  },
+  {
+   "edition": "pg-61764",
+   "block": 304
   },
   {
    "edition": "pg-70175",

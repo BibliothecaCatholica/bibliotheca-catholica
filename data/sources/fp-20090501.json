@@ -1,0 +1,200 @@
+{
+  "id": "fp-20090501",
+  "kind": "public-domain-text",
+  "title": "The Footsteps at the Lock",
+  "author": "Ronald A. Knox",
+  "firstPublished": "1928",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Faded Page notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "Faded Page",
+  "sourceUrl": "https://www.fadedpage.com/books/20090501/20090501.txt",
+  "sourcePage": "https://www.fadedpage.com/showbook.php?pid=20090501",
+  "sourceNotice": "* A Distributed Proofreaders Canada Ebook *\n\nThis ebook is made available at no cost and with very few\nrestrictions. These restrictions apply only if (1) you make\na change in the ebook (other than alteration for different\ndisplay devices), or (2) you are making commercial use of\nthe ebook. If either of these conditions applies, please\ncontact a https://www.fadedpage.com administrator before proceeding.\nThousands more FREE eBooks are available at https://www.fadedpage.com.\n\nThis work is in the Canadian public domain, but may be\nunder copyright in some countries. If you live outside Canada,\ncheck your country's copyright laws. IF THE BOOK IS UNDER\nCOPYRIGHT IN YOUR COUNTRY, DO NOT DOWNLOAD\nOR REDISTRIBUTE THIS FILE.\n\nTitle: The Footsteps at the Lock\nAuthor: Knox, Ronald Arbuthnott (1888-1957)\nDate of first publication: April 12, 1928\nEdition used as base for this ebook:\n   London: Methuen, 1950\n   (fifth edition)\nDate first posted: 2 May 2009\nDate last updated: 19 Mar. 2019\nFaded Page ebook#20090501\n\nThis ebook was produced by:\nIona Vaughan, David T. Jones, Mark Akrigg\n& the Online Distributed Proofreading Team\nat https://www.pgdpcanada.net\n\nThe printed edition used as the base for this ebook contains\nas frontispiece a map by cartographer A. E. Taylor, who is\nknown to have been active as early as 1930.  However, we\nhave been unable to determine Taylor's life dates, which\nmeans that we cannot confirm that the frontispiece is in the\nCanadian public domain: it has therefore been o",
+  "sourceFileSha256": "f66d171bd626158e3264983964b93a3d19f3b582fdbd42a8c1e7a70c8c048222",
+  "iaWitness": {
+    "identifier": "dli.ernet.531861",
+    "url": "https://archive.org/details/dli.ernet.531861",
+    "year": 1928,
+    "publisher": "Methun and Co. Ltd, London",
+    "ocr": "531861-The Footsteps At The Lock_djvu.txt",
+    "ocrSha256": "49a47d18ec96f19ba843e711176809d3366491ff565d14bdc28ab397703bc546",
+    "ocrNote": "SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)"
+  },
+  "collation": {
+    "sourceWords": 66576,
+    "scanWords": 69304,
+    "matchedWords": 62018,
+    "agreement": 0.9315,
+    "sampleDifferences": [
+      {
+        "source": "the book is under copyright in your country",
+        "scan": "the book is disfigured marked or written on while in your possession"
+      },
+      {
+        "source": "country do not download or redistribute this file title the footsteps at",
+        "scan": "volume is not available the price of"
+      },
+      {
+        "source": "a knox methuen co ltd london 36",
+        "scan": "fourth edition methuen go ltd 56 essex"
+      },
+      {
+        "source": "methuen co ltd london 36 essex street strand",
+        "scan": "methuen go ltd 56 essex street w"
+      },
+      {
+        "source": "36 essex street strand w c 2",
+        "scan": "56 essex street w c london"
+      },
+      {
+        "source": "and london contents chapter page i two cousins",
+        "scan": "c c contents chap i ii iii"
+      },
+      {
+        "source": "i two cousins 7 ii shipcote lock 15",
+        "scan": "xxi two cousins shipcote lock the"
+      },
+      {
+        "source": "ii shipcote lock 15 iii the canoe adrift",
+        "scan": "cousins shipcote lock the canoe adrift"
+      },
+      {
+        "source": "the canoe adrift 20 iv the indescribable has",
+        "scan": "the canoe adrift the indescribable has"
+      },
+      {
+        "source": "has its doubts 26 v mr burgess expands",
+        "scan": "has its doubts mr burgess expands"
+      },
+      {
+        "source": "mr burgess expands 32 vi the archimedes touch",
+        "scan": "mr burgess expands the archimedes touch"
+      },
+      {
+        "source": "the archimedes touch 39 vii the camera cannot",
+        "scan": "the archimedes touch the camera cannot"
+      },
+      {
+        "source": "camera cannot lie 45 viii a common room",
+        "scan": "camera cannot lie a common room"
+      },
+      {
+        "source": "common room dinner 51 ix nigel goes down",
+        "scan": "common room dinner nigel goes down"
+      },
+      {
+        "source": "nigel goes down 57 x discordant notes 64",
+        "scan": "nigel goes down discordant notes mr"
+      },
+      {
+        "source": "x discordant notes 64 xi mr erasmus quirk",
+        "scan": "down discordant notes mr erasmus quirk"
+      },
+      {
+        "source": "mr erasmus quirk 71 xii the secret of",
+        "scan": "mr erasmus quirk the secret of"
+      },
+      {
+        "source": "of the island 76 xiii pursued 83 xiv",
+        "scan": "of the island pursued the man"
+      },
+      {
+        "source": "76 xiii pursued 83 xiv the man in",
+        "scan": "the island pursued the man in"
+      },
+      {
+        "source": "in the punt 88 xv a new legacy",
+        "scan": "in the punt a new legacy"
+      },
+      {
+        "source": "a new legacy 94 xvi bredon plays patience",
+        "scan": "a new legacy bredon plays patience"
+      },
+      {
+        "source": "bredon plays patience 100 xvii mr quirk disappears",
+        "scan": "bredon plays patience mr quirk disappears"
+      },
+      {
+        "source": "mr quirk disappears 106 xviii in undisguise 112",
+        "scan": "mr quirk disappears in undisguise the"
+      },
+      {
+        "source": "xviii in undisguise 112 xix the story nigel",
+        "scan": "disappears in undisguise the story nigel"
+      },
+      {
+        "source": "story nigel told 118 xx a reconstruction 125",
+        "scan": "story nigel told a reconstruction a"
+      },
+      {
+        "source": "xx a reconstruction 125 xxi a walk in",
+        "scan": "told a reconstruction a walk in"
+      },
+      {
+        "source": "xxii another story 136 xxiii bredon plays patience",
+        "scan": "lock another story bredon plays patience"
+      },
+      {
+        "source": "plays patience again 142 xxiv backed both ways",
+        "scan": "plays patience again backed both ways"
+      },
+      {
+        "source": "backed both ways 149 xxv a postscript 156",
+        "scan": "backed both ways a postscript page"
+      },
+      {
+        "source": "i two cousins it is an undeniable",
+        "scan": "i two cousins i t is an undeniable"
+      },
+      {
+        "source": "much to life boat funds and cats",
+        "scan": "much to life b at funds and cats"
+      },
+      {
+        "source": "the authority of all the copy books that",
+        "scan": "the authority of au he copy books that"
+      },
+      {
+        "source": "bulk of his property some fifty thousands",
+        "scan": "bulk of his pro perty some fifty thousand"
+      },
+      {
+        "source": "property some fifty thousands pounds to his",
+        "scan": "perty some fifty thousand pounds to his"
+      },
+      {
+        "source": "attached to the will made it a",
+        "scan": "attached to the nvill made it a"
+      },
+      {
+        "source": "grandsons character by repulsion derek lived mostly",
+        "scan": "grandsons character by repul ion derek lived mostly"
+      },
+      {
+        "source": "france who let him run wild on",
+        "scan": "france who let liim run wild on"
+      },
+      {
+        "source": "boy will have money nigel who never took",
+        "scan": "boy will have moneynigel who never took"
+      },
+      {
+        "source": "there was little in the character of",
+        "scan": "there was little m the character of"
+      },
+      {
+        "source": "i intend to specify but oxford though",
+        "scan": "i intend to sp ify but oxford though"
+      }
+    ],
+    "method": "difflib word alignment, lower case, letters and digits only; OCR noise counts as disagreement",
+    "accepted": {
+      "agreement": 0.9315,
+      "date": "2026-11-15",
+      "reason": "Accepted by owner 2026-11-15 at 93.2%; sampled differences are scan OCR errors and front-matter differences between the printings, not differences in the text."
+    }
+  },
+  "sha256": "2d55619ba25d9812fcf844dca57f5dd584d76a5d39e358fb87daea490d663d92",
+  "bytes": 366825,
+  "checked": "2026-11-15"
+}

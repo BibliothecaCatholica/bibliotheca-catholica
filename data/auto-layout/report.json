@@ -1517,6 +1517,33 @@
     "indented line": 20,
     "short line": 2
    }
+  },
+  "fp-20240310": {
+   "work": "The Jesuit Martyrs of Canada",
+   "multiLineBlocks": 410,
+   "reflowed": 386,
+   "kept": 24,
+   "share": 0.941,
+   "emphasisSpans": 191,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1,
+    "indented line": 23
+   }
+  },
+  "fp-20090501": {
+   "work": "The Footsteps at the Lock",
+   "multiLineBlocks": 815,
+   "reflowed": 785,
+   "kept": 30,
+   "share": 0.963,
+   "emphasisSpans": 68,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 6,
+    "indented line": 22,
+    "short line": 2
+   }
   }
  },
  "excluded": {

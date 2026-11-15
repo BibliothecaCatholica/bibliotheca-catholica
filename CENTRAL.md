@@ -28,7 +28,7 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
 
-- 173 work records; 121 hosted editions of 116 works in `data/library.json` (201 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 186 work records; 123 hosted editions of 118 works in `data/library.json` (201 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,169 sitemap URLs; 7699 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 124 Node and 284 Python.
 
@@ -43,6 +43,11 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-15, Catholic Repo (Grok): accepted scan matches; not yet available
+
+- Hosted as basic text editions (Faded Page): The Jesuit Martyrs of Canada (93.9%) and The Footsteps at the Lock (93.2%), accepted per edition (`collation.accepted` in each source record); the global 95% gate is unchanged.
+- New work status `not-yet-available`: no editions, no samples, never featured; pages say "Not yet available online." Used for the 11 Chesterton works with no online copy found. HOLDS.md added for parked items. Skipped: Baring's C (gutenberg.net.au bot check); Candles' Beams (no Internet Archive scan to collate against); Sheehan's Augustine essay (CELT only, consent caveat, no scan found).
+
 ### 2026-11-15, Catholic Repo (Grok): new texts; Chesterton handoff to Claude Code
 
 - Hosted as basic text editions (no structure or EPUB yet): The Queen of Seven Swords and The Coward (Faded Page), von Hügel's Essays and Addresses (Faded Page; calm note on essay 5, not featured, no `added`), and The Trial of John Jasper (PG 70690).
@@ -56,12 +61,9 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 - Survey of PRs #19 to #47 (Nov 10 to 15): discovery and translation sources; Spanish Victory cross; libraries desk; two design passes and notice rules; structured editions with chapter pages and EPUBs (16); covers C; Summa Design A; hero and takedown email; hosting rule by recorded basis (#40); counts and validation tooling (#41); approval statements removed (#38); 53 Chesterton and other pre-1931 books hosted (#39, #42 to #47).
 - `bibliotheca-texts` re-exported (117 texts; the 53 new ones were missing since the November 9 export). New optional edition field `translationYear`, set only where a record states the year (`docs/CATALOG.md`). `aquinas` is described under Hosting and data flow.
 
-### 2026-11-15, Catholic Repo (Grok): GitHub Pages turned off
-
-- GitHub Pages disabled for `bibliotheca-catholica` (Micah, Nov 15). `CNAME` kept; texts.bibliothecacatholica.com untouched. Live site checked afterward: 200 from Cloudflare. Pages can be re-enabled in repo settings if ever needed.
-
 ## Open items
 
+- Parked items, owners, and next steps: [HOLDS.md](HOLDS.md).
 - Owner: the takedown agent's name and postal address, and DMCA agent registration (the page shows only the contact email).
 - Hosted texts: further editions batches; manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
 - Advent launches November 29: excerpt-to-source comparison ([checklist](docs/ADVENT-LAUNCH.md)). Social readiness for Advent is owned by the Grok bot, not tracked here.

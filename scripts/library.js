@@ -126,6 +126,7 @@ function work(render,id){var w=C.works.find(function(x){return x.id===id});if(!w
  var full=w.editions.filter(function(e){return e.access==='full-text'}),refs=w.editions.filter(function(e){return e.access==='reference'});
  var hosted=full.find(function(e){return e.text}),ext=!hosted&&full[0];
  var cta=hosted?'<a class="btn" href="#/read/'+w.id+'/'+hosted.id+'">Read here</a>'+(editionReadLabel(hosted)!=='Read here'?' <span class="small muted">'+esc(editionReadLabel(hosted).replace(/^Read translation by/,'Translated by'))+'</span>':''):ext?'<a class="btn" href="'+esc(ext.source)+'" target="_blank" rel="noopener" data-open-text="'+esc(w.id)+'">Read at source ↗</a>':'';
+ if(w.status==='not-yet-available')cta='<p class="small">Not yet available online.</p>';
  var recs=LV.work[w.id]||[];
  var listenRow=recs.length?listen(recs)+(recs.some(function(r){return r.tracks})&&hosted?'<p class="small muted">Or press Listen in the reader to hear the chapters as you read.</p>':''):'';
  var opts=RO.options[w.id]||[];

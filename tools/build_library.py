@@ -25,6 +25,10 @@ def validate(catalog):
         assert work['title'] and work['author'] and work['category'] and work['tradition']
         assert not work.get('authorId') or work['authorId'] in authors
         assert work['description'].strip(), f"Missing description: {work['id']}"
+        assert work.get('status') in (None, 'not-yet-available'), work['id']
+        if work.get('status') == 'not-yet-available':  # listed only: no online copy found yet, so no editions or samples
+            assert not work['editions'] and not work.get('readingLinks') and not work.get('added'), work['id']
+            continue
         if all(e['access']=='reference' for e in work['editions']):
             assert work.get('readingLinks'), f"Reference-only work needs a reading sample: {work['id']}"
         for item in work.get('readingLinks', []):

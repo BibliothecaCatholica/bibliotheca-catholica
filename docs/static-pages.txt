@@ -4827,6 +4827,8 @@ work/catholic-church-history/index.html
 work/charles-dickens-bookman/index.html
 work/charles-dickens-critical-study/index.html
 work/chesterton-calendar/index.html
+work/chesterton-christmas-poems/index.html
+work/chesterton-come-to-think-of-it/index.html
 work/chesterton-francis/index.html
 work/chesterton-francis/ch/01-the-problem-of-st-francis/index.html
 work/chesterton-francis/ch/02-the-world-st-francis-found/index.html
@@ -4838,6 +4840,15 @@ work/chesterton-francis/ch/07-the-three-orders/index.html
 work/chesterton-francis/ch/08-the-mirror-of-christ/index.html
 work/chesterton-francis/ch/09-miracles-and-death/index.html
 work/chesterton-francis/ch/10-the-testament-of-st-francis/index.html
+work/chesterton-new-and-collected-poems/index.html
+work/chesterton-robert-louis-stevenson/index.html
+work/chesterton-social-reform-versus-birth-control/index.html
+work/chesterton-temperance-and-the-great-alliance/index.html
+work/chesterton-the-end-of-the-roman-road/index.html
+work/chesterton-the-grave-of-arthur/index.html
+work/chesterton-the-judgment-of-dr-johnson/index.html
+work/chesterton-the-turkey-and-the-turk/index.html
+work/chesterton-ubi-ecclesia/index.html
 work/child-book-of-saints/index.html
 work/city-of-god/index.html
 work/club-queer-trades/index.html
@@ -4876,6 +4887,7 @@ work/fabiola/index.html
 work/fancies-versus-fads/index.html
 work/fides-ratio/index.html
 work/flying-inn/index.html
+work/footsteps-at-the-lock/index.html
 work/four-faultless-felons/index.html
 work/g-f-watts/index.html
 work/gaudium-spes/index.html
@@ -4949,6 +4961,7 @@ work/innocence-father-brown/story/10-the-eye-of-apollo/index.html
 work/innocence-father-brown/story/11-the-sign-of-the-broken-sword/index.html
 work/innocence-father-brown/story/12-the-three-tools-of-death/index.html
 work/irish-impressions/index.html
+work/jesuit-martyrs-of-canada/index.html
 work/john-chrysostom-homilies-on-romans/index.html
 work/justin-martyr-dialogue-with-trypho/index.html
 work/justin-martyr-first-apology/index.html

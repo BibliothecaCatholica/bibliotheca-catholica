@@ -24,11 +24,11 @@ GitHub `main` is the source of truth. Cloudflare Pages deploys it automatically 
 
 ## Verified snapshot
 
-As of November 15, 2026, `main` at `a6c9ef639c` (PR #29):
+As of November 15, 2026, `main` at `ee33656ddd` (PR #32):
 
 - 104 work records; 64 hosted editions of 59 works in `data/library.json`.
 - 4,925 static pages and 4,926 sitemap URLs; about 6,750 tracked files, about 5,980 generated (`linguist-generated` in `.gitattributes`).
-- Tests: 124 Node and 254 Python (with Part D).
+- Tests: 124 Node and 264 Python (with Story of a Soul).
 
 ## Standing owner decisions
 
@@ -39,22 +39,16 @@ As of November 15, 2026, `main` at `a6c9ef639c` (PR #29):
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-15, Claude (Claude Code): Story of a Soul structured edition
+
+- Structure from its own HTML (#16772) with accent-insensitive matching: 1,744 blocks, 11 chapters, headings; 144 of 145 HTML italics already underscored in the TXT, one added. Verse keeps its line breaks; notes stay plain. The gate also ignores line breaks next to "--" (2 blocks), which needs Micah's words before merge.
+- [PR #30](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/30), branch `claude/story-of-a-soul`, rebased on `ee33656ddd`. Approval: Micah, November 14 (follow-up, item 3).
+
 ### 2026-11-15, Claude (Claude Code): Part D on Orthodoxy and covers
 
 - Work page as a title page (facts line from the TXT, Read, Listen, Download, About this edition); on chapter pages the chapter opener replaces everything above the text, and it opens each chapter in the reader; chapter endings link the next chapter; book paragraphs with a drop cap; print starts each chapter on a new page. No characters change.
-- Covers: Micah chose design C, "Banded" (November 15: "Banded (C) is the best looking cover page for the books"); applied to all 64 editions on branch `claude/covers-c` (see its PR).
+- Covers: Micah chose design C, "Banded" (November 15: "Banded (C) is the best looking cover page for the books"); applied to all 64 editions in [PR #32](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/32), squash-merged as `ee33656ddd`; live `/build.json` `bc-f707301463e0` matches `main`.
 - Branch `claude/part-d-orthodoxy` (see its PR), under the standing approval. Story of a Soul is [PR #30](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/30), waiting on one gate equivalence. Approval: Micah, November 14 (follow-up, items 3 and 4).
-
-### 2026-11-15, Claude (Claude Code): Orthodoxy steps 2b and 2c
-
-- 2b: per-edition presentation overrides in the structure file: "by" (block 11) is a byline; the proofreader's credit (block 9) moves to the reader's collapsed front matter and the EPUB's notice appendix. No characters change.
-- 2c: the EPUB CI job runs EPUBCheck 5.1.0 (pinned by SHA-256) and fails on errors; the current EPUB has 0 errors and 0 warnings.
-- [PR #29](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/29) squash-merged as `a6c9ef639c` on green CI (standing approval); live `/build.json` `bc-d08c586a64f9` matches `main`. Approval: Micah, November 14 (follow-up, item 2).
-
-### 2026-11-14, Claude (Claude Code): notice rules applied site-wide
-
-- Chapter and Summa pages: text first, then the verbatim 1.E.1 licence sentence, then an "Edition details" toggle (edition, source, quality labels, OCR notes); no badges. Reader and EPUB: the same sentence at the end of the last section or chapter. Affiliate line once per page; badges off lists, author pages, the Advent plan, and rites resource lists (status kept as `data-rights`); one-line Wikipedia credit; Credits toggle for public-domain portraits; footer of two columns and one credits line.
-- [PR #28](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/28), branch `claude/notice-rules`: squash-merged as `7c10d68cd9` after Micah's follow-up (item 1) settled the wording; live `/build.json` served `bc-f33be8855088`, matching `main`.
 
 ## Open items
 

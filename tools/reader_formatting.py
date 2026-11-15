@@ -47,7 +47,8 @@ def structure_for(edition):
         if d.get('edition') == edition.get('id') and d['txt']['sha256'] == edition.get('sha256') and d['gate']['passed']:
             return {'sha256': d['txt']['sha256'], 'source': 'data/structured/' + p.name,
                     'roles': [[b['block'], b['role']] for b in d['blocks'] if b['role'] != 'paragraph'],
-                    'front': (d.get('presentation') or {}).get('front', [])}
+                    'front': (d.get('presentation') or {}).get('front', []),
+                    'em': (d.get('emphasis') or {}).get('spans', [])}
     return None
 
 
@@ -73,12 +74,35 @@ def with_auto_layout(edition):
     return dict(edition, autoLayout=a) if a else edition
 
 
+def structure_em(edition, index):
+    """Italics from the structure file (Story of a Soul: its own HTML's <i> spans), as (start, end, marked)."""
+    s = edition.get('structure')
+    if not s or s['sha256'] != edition.get('sha256'):
+        return []
+    return [(x[1], x[2], len(x) > 3) for x in s.get('em', []) if x[0] == index]
+
+
+def _no_overlap(spans):
+    out, at = [], 0
+    for x in sorted(spans):
+        if x[0] >= at:
+            out.append(x)
+            at = x[1]
+    return out
+
+
 def _emphasis_html(text, spans, marked):
-    """Escape text with <em> spans. marked=True keeps the source's underscores inside the span, hidden on screen."""
+    """Escape text with <em> spans. marked=True keeps the source's underscores inside the span, hidden on screen;
+    marked=None takes it from each (start, end, marked) span."""
     at, parts = 0, []
-    for a, b in spans:
+    for sp in spans:
+        a, b = sp[0], sp[1]
+        if marked is None:
+            m = sp[2]
+        else:
+            m = marked
         parts.append(html.escape(text[at:a]))
-        if marked:
+        if m:
             parts.append('<em class="u"><span class="us">_</span>' + html.escape(text[a + 1:b - 1]) + '<span class="us">_</span></em>')
         else:
             parts.append('<em>' + html.escape(text[a:b]) + '</em>')
@@ -106,6 +130,7 @@ def reading_block(edition, text, index, anchor=False):
     auto = bool(a) and not verified and a['sha256'] == edition['sha256']
     if auto:
         prose = any(lo <= index <= hi for lo, hi in a['reflow'])
+    sem = [] if verified else structure_em(edition, index)
     role = block_role(edition, index)
     cls = ' '.join(x for x in (('reading-' + role) if role else '', 'reading-verse' if verse else 'reading-prose' if prose else '') if x)
     if verse:
@@ -117,8 +142,9 @@ def reading_block(edition, text, index, anchor=False):
         content = '<span class="ch-n">' + html.escape(text[:n]) + '</span> <span class="ch-t">' + html.escape(text[n + 1:]) + '</span>'
     elif vem:
         content = _emphasis_html(text, vem, False)
-    elif auto:
-        content = _emphasis_html(text, [(s, e) for b, s, e in a['em'] if b == index], True)
+    elif auto or sem:
+        spans = ([(s, e, True) for b, s, e in a['em'] if b == index] if auto else []) + sem
+        content = _emphasis_html(text, _no_overlap(spans), None)
     else:
         content = html.escape(text)
     return '<p'+(' id="reading-p-'+str(index)+'"' if anchor else '')+(' class="'+cls+'"' if cls else '')+'>'+content+'</p>'

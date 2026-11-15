@@ -24,37 +24,41 @@ GitHub `main` is the source of truth. Cloudflare Pages deploys it automatically 
 
 ## Verified snapshot
 
-As of November 15, 2026, `main` at `ee33656ddd` (PR #32):
+As of November 15, 2026, `main` at `1de60a1b51` (PR #35) plus branch `claude/hero-takedown`:
 
 - 104 work records; 64 hosted editions of 59 works in `data/library.json`.
-- 4,925 static pages and 4,926 sitemap URLs; about 6,750 tracked files, about 5,980 generated (`linguist-generated` in `.gitattributes`).
-- Tests: 124 Node and 264 Python (with Story of a Soul).
+- 4,936 static pages and 4,937 sitemap URLs; about 6,800 tracked files, most generated (`linguist-generated` in `.gitattributes`).
+- Tests: 124 Node and 270 Python.
 
 ## Standing owner decisions
 
-- **Rule changes of November 14, 2026** (Micah's message pasted as the instruction "including every rule change below", items 1 to 5): the Gutenberg notice once per page after the text (wording decision, Micah's follow-up message the same day: the licence's own 1.E.1 sentence, verbatim), quality labels in edition details only, one-line affiliate disclosure, badges only on a record's own page, one-line Wikipedia credit and a Credits toggle for public-domain portraits, the standing approval below, and this file's cap. Recorded here once; the rules cite it as "owner rule change, November 14, 2026". Details: `docs/PROJECT-RULES.md` rules 2, 7, 10, 11, 14, and 15.
+- **Rule changes of November 14, 2026** (Micah's message pasted as the instruction "including every rule change below", items 1 to 5): the Gutenberg notice once per page after the text (wording: the licence's own 1.E.1 sentence, verbatim), quality labels in edition details only, one-line affiliate disclosure, badges only on a record's own page, one-line Wikipedia credit and a Credits toggle for public-domain portraits, the standing approval below, and this file's cap. Recorded here once; the rules cite it as "owner rule change, November 14, 2026". Details: `docs/PROJECT-RULES.md` rules 2, 7, 10, 11, 14, and 15.
 - **Standing approval:** presentation, docs, tests, and tooling may merge on green CI without Micah's review; his review is still required for new hosted texts, hosted-text wording, rights or licence statements, affiliate placements, analytics, hosting or DNS, takedown identity, and outreach ([OPERATIONS](docs/OPERATIONS.md#owner-decisions)).
+- **November 15, 2026** (Micah's message pasted as the instruction): "Yes to the matching rule, to the other editions ... Publish our EPUB file, move on the hero engraving, have my support email be the takedown contact." Covers: design C (Banded).
 
 ## Handoff log
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
-### 2026-11-15, Claude (Claude Code): Story of a Soul structured edition
+### 2026-11-15, Claude (Claude Code): hero engraving and takedown contact
 
-- Structure from its own HTML (#16772) with accent-insensitive matching: 1,744 blocks, 11 chapters, headings; 144 of 145 HTML italics already underscored in the TXT, one added. Verse keeps its line breaks; notes stay plain. The gate also ignores line breaks next to "--" (2 blocks), comparison only; approved by Micah on November 15 ("Yes to the matching rule").
-- [PR #30](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/30) squash-merged as `3d485831e7`; live `bc-1aa646a694a5` matches `main`. The EPUB CI job now runs on every pull request. Approval: Micah, November 14 and 15.
+- Home hero: Gustave Doré's Empyrean (Paradiso, Canto XXXI), public domain (Commons PD-Art, PD-old-100-1923; source: the 1892 Cassell Divine Comedy, Gutenberg #8789), record and checksums in `data/hero.json`, credit line under the image.
+- `/takedown`: the contact is micahwatson@bibliothecacatholica.com. No name or postal address: Micah still has to decide them (and DMCA agent registration). Branch `claude/hero-takedown` (see its PR).
+
+### 2026-11-15, Claude (Claude Code): EPUBs, CI, and editions batch 1
+
+- PR #30 (Story of a Soul, `3d485831e7`), #33 (EPUB CI on every pull request, `189bcfef87`), #34 (published EPUBs, `20c0e92285`), #35 (batch 1: Story of a Soul and four Father Brown collections, `1de60a1b51`). Each deploy confirmed on `/build.json` (last `bc-b7deb0f1a3a0`).
+- Six EPUBs are served from `downloads/epub/` (content-hashed, `data/epubs.json`), EPUBCheck in CI. Per-edition status: docs/HOSTED-EDITIONS.md (6 structure files, 6 with openers, 64 covers, 6 EPUBs).
 
 ### 2026-11-15, Claude (Claude Code): Part D on Orthodoxy and covers
 
-- Work page as a title page (facts line from the TXT, Read, Listen, Download, About this edition); on chapter pages the chapter opener replaces everything above the text, and it opens each chapter in the reader; chapter endings link the next chapter; book paragraphs with a drop cap; print starts each chapter on a new page. No characters change.
-- Covers: Micah chose design C, "Banded" (November 15: "Banded (C) is the best looking cover page for the books"); applied to all 64 editions in [PR #32](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/32), squash-merged as `ee33656ddd`; live `/build.json` `bc-f707301463e0` matches `main`.
-- [PR #31](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/31) merged as `1f53e01cbf` (`bc-a962c8e3a225`), under the standing approval. Approval: Micah, November 14 (follow-up, item 4).
+- Title-page work page, chapter openers and endings, book paragraphs, print (PR #31, `1f53e01cbf`); design C covers for all 64 editions (PR #32, `ee33656ddd`). Approval: Micah, November 14 and 15.
 
 ## Open items
 
-- Micah: a hero engraving (three proposals in PR #27); the takedown agent's name, address, and email (page shows a PLACEHOLDER).
-- Hosted texts: editions batch 1 (Story of a Soul and the four Father Brown collections) on branch `claude/editions-batch-1`; next batches start with the Summa (status table in docs/HOSTED-EDITIONS.md); manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
-- Advent launches November 29: excerpt-to-source comparison, Substack and social readiness ([checklist](docs/ADVENT-LAUNCH.md)).
+- Micah: the takedown agent's name and postal address, and DMCA agent registration (the page shows only the contact email).
+- Hosted texts: further editions batches, starting with the Summa (five editions), then editions with a pinned Gutenberg HTML or a mappable contents list; manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
+- Advent launches November 29: excerpt-to-source comparison ([checklist](docs/ADVENT-LAUNCH.md)). Social readiness for Advent is owned by the Grok bot, not tracked here.
 - Libraries research candidates need rights and provenance review before import. Paused: `_headers` Report-Only CSP, low-priority npm audit findings.
 - Page-audit decisions: the publish allowlist and the `study/index.html` sitemap or noindex question. CI's Study drift check names the missing `study/passages` (harmless).
 - Recover the evidence listed in the [repository audit](docs/REPOSITORY-AUDIT-2026-11-09.md); confirm backups and account responsibilities ([OPERATIONS](docs/OPERATIONS.md)).

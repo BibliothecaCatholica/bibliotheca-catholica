@@ -64,7 +64,7 @@ class TextPages(unittest.TestCase):
                 else:self.assertNotIn('rel="prev"',m)
                 if k+1<n:self.assertIn('rel="next" href="/'+path(wid,d,d['items'][k+1])+'"',m)
                 else:self.assertNotIn('rel="next"',m)
-                art=m[m.index('<article class="reading-text"'):m.index('</article>')]
+                art=m[m.index('<article class="reading-text'):m.index('</article>')]
                 import html as H
                 paragraphs=[H.unescape(re.sub(r'<[^>]*>', '', p)) for p in re.findall(r'<p(?:\s[^>]*)?>(.*?)</p>',art,re.S)]
                 self.assertEqual(paragraphs,B[x['start']:x['end']+1],f)

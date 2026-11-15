@@ -367,7 +367,7 @@ var PG_NOTICE='This eBook is for the use of anyone anywhere in the United States
 function printNow(all){
  var old=document.getElementById('print-all');if(old)old.remove();
  if(all){
-  var pg=/gutenberg\.org/.test(R.e.source),d=document.createElement('div');d.id='print-all';
+  var pg=/gutenberg\.org/.test(R.e.source),d=document.createElement('div');d.id='print-all';if(W.TEXT_PAGES&&W.TEXT_PAGES[R.w.id]&&W.TEXT_PAGES[R.w.id].d)d.className='edition-designed';
   var notice=pg?'<p class="pa-notice">'+esc(PG_NOTICE)+' Full licence: https://www.gutenberg.org/policy/license.html</p>':'';
   d.innerHTML='<h1>'+esc(R.w.title)+'</h1><p class="pa-ed">'+esc(R.w.author)+'. Reading: '+esc(editionLine(R.w,R.e))+'. Printed from bibliothecacatholica.com/'+esc(R.base)+'</p>'+notice+R.blocks.map(function(p,i){return W.BCReadingBlock?W.BCReadingBlock(R.e,p,i,false):'<p>'+esc(p)+'</p>'}).join('')+notice;
   document.body.appendChild(d);document.body.classList.add('print-all');

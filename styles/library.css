@@ -77,3 +77,24 @@ body.has-listen-dock footer{padding-bottom:64px}
 .reading-text .us,#print-all .us{display:none}
 .reading-text.orig-breaks p.reading-prose{white-space:pre-wrap}
 .rt-breaks{display:flex;align-items:center;gap:8px}
+/* Part D, beautiful editions (Orthodoxy pilot): chapter openers and endings, a drop cap, and book paragraphs (first-line
+   indents, no space between paragraphs; the first paragraph after a heading is not indented). docs/DESIGN.md "Editions". */
+.edition-designed p:not([class]),.edition-designed p.reading-prose{margin:0;text-indent:1.5em}
+.edition-designed>p:first-child,.edition-designed p.reading-chapter+p,.edition-designed p.reading-heading+p,.edition-designed .ch-end+p{text-indent:0}
+.edition-designed p.reading-chapter{border-top:0;padding-top:0;margin:3.2em 0 1.6em;font-variant-caps:normal;letter-spacing:0}
+.edition-designed p.reading-chapter::before{content:"Chapter";display:block;font:500 .62em/1 var(--serif);font-variant-caps:all-small-caps;letter-spacing:.18em;color:var(--muted)}
+.edition-designed p.reading-chapter .ch-n{display:block;font:500 2.6em/1.05 var(--display);color:var(--rubric);margin:.12em 0 .1em}
+.edition-designed p.reading-chapter .ch-t{display:block;font-variant-caps:all-small-caps;letter-spacing:.05em}
+.edition-designed p.reading-chapter::after{content:"❦";display:block;font-size:.8em;color:var(--gold);margin-top:.5em}
+.edition-designed p.reading-chapter+p::first-letter,.edition-designed>p:first-child::first-letter{float:left;font:500 3.3em/.82 var(--display);color:var(--rubric);padding:.08em .08em 0 0}
+.ch-opener{text-align:center;margin:28px auto 34px;max-width:760px}
+.ch-opener .ch-label{margin:0;font:500 15px var(--serif);font-variant-caps:all-small-caps;letter-spacing:.18em;color:var(--muted)}
+.ch-opener .ch-num{margin:4px 0 2px;font:500 64px/1 var(--display);color:var(--rubric)}
+.ch-opener h1{margin:0;font:500 clamp(30px,5vw,42px)/1.15 var(--display);text-wrap:balance}
+.ch-orn{margin:14px 0 0;color:var(--gold);font-size:20px;line-height:1}
+.ch-end{text-align:center;margin:2.4em auto 1.8em;max-width:760px;font-size:16px;color:var(--ink2)}
+.ch-end p{margin:.3em 0;text-indent:0;white-space:normal}.ch-end .ch-orn{display:block;margin:0 0 .4em}
+.work-facts{margin:10px 0 0;font:15px var(--sans);color:var(--muted)}
+.work-choices .choice{font:600 15px var(--sans);color:var(--rubric);background:none;border:0;padding:10px 4px;min-height:44px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.about-edition{max-width:66ch;margin:26px 0 30px}.about-edition h2{margin:0 0 6px}.about-edition p{margin:0;color:var(--ink2)}
+@media print{.edition-designed p.reading-chapter{break-before:page}.ch-end a{display:none}}

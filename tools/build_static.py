@@ -330,11 +330,19 @@ def part_pages(out,lib,by_html,author_ld):
             nav=('<nav class="reader-pagination" aria-label="'+E(d['nouns'])+'">'+(a('/'+part_path(wid,d,prev)+'/','← '+prev['title']).replace('<a ','<a class="btn ghost" rel="prev" ',1) if prev else '')
                  +'<span>'+E(part_label(d,x))+(' of '+str(n) if d['kind']=='ch' else ' · '+str(k+1)+' of '+str(n))+'</span>'+(a('/'+part_path(wid,d,nxt)+'/',nxt['title']+' →').replace('<a ','<a class="btn" rel="next" ',1) if nxt else '')+'</nav>')
             reader='/#/read/'+wid+'/'+e['id']+'/'+str(x['section'])+'/'+str(x['heading'])
-            body=(crumb_html(('Discover & Read','library/'),(w['title'],'work/'+wid+'/'),(x['title'],''))
-              +'<div class="page-head"><div class="eyebrow">'+E(w['title'])+' · '+E(part_label(d,x))+'</div><h1>'+E(x['title'])+'</h1>'
-              +'<p class="lede">'+by_html(w)+', <cite>'+a('/work/'+wid+'/',w['title'])+'</cite>, '+E(part_label(d,x,True))+(' of '+str(sum(1 for y in d['items'] if y['num'][:1].isdigit() or d['kind']=='ch')) if x['num'][:1].isdigit() or d['kind']=='ch' else '')+'. About '+str(max(1,round(x['words']/200)))+' min.</p></div>'
-              +'<p class="dl-row"><a class="btn" href="'+E(reader)+'">Read in the reading room →</a> '+a('/work/'+wid+'/','Work page and editions')+'</p>'
-              +'<article class="reading-text" aria-label="'+E(x['title'])+'">'+''.join(reading_block(e,B[i],i) for i in range(x['start'],x['end']+1))+'</article>'
+            pd=d.get('partD')
+            if pd:  # Part D chapter opener (Orthodoxy pilot): it replaces the page head and buttons above the text
+                head_html=('<header class="ch-opener"><p class="ch-label">'+E(d['noun'])+'</p><p class="ch-num">'+E(x['num'])+'</p><h1>'+E(x['title'])+'</h1>'
+                           +'<p class="ch-orn" aria-hidden="true">❦</p></header>')
+            else:
+                head_html=(''+'<div class="page-head"><div class="eyebrow">'+E(w['title'])+' · '+E(part_label(d,x))+'</div><h1>'+E(x['title'])+'</h1>'
+                       +'<p class="lede">'+by_html(w)+', <cite>'+a('/work/'+wid+'/',w['title'])+'</cite>, '+E(part_label(d,x,True))+(' of '+str(sum(1 for y in d['items'] if y['num'][:1].isdigit() or d['kind']=='ch')) if x['num'][:1].isdigit() or d['kind']=='ch' else '')+'. About '+str(max(1,round(x['words']/200)))+' min.</p></div>'
+                       +'<p class="dl-row"><a class="btn" href="'+E(reader)+'">Read in the reading room →</a> '+a('/work/'+wid+'/','Work page and editions')+'</p>')
+            body=(crumb_html(('Discover & Read','library/'),(w['title'],'work/'+wid+'/'),(x['title'],''))+head_html
+              +'<article class="reading-text'+(' edition-designed' if pd else '')+'" aria-label="'+E(x['title'])+'">'+''.join(reading_block(e,B[i],i) for i in range(x['start'],x['end']+1))+'</article>'
+              +(('<div class="ch-end"><p class="ch-orn" aria-hidden="true">❦</p><p>End of '+E(part_label(d,x))+'</p>'
+                 +(a('/'+part_path(wid,d,nxt)+'/','Next: '+nxt['num']+'. '+nxt['title']+' →')+' · ' if nxt else '')
+                 +'<a href="'+E(reader)+'">Continue in the reading room</a></div>') if pd else '')
               +text_notice(e)+nav+parts_list(wid,d)
               +edition_details('<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+'. '+E(d.get('editionLine') or e.get('note',''))+'</p>',
                   '<p class="small">Source: '+E(w['author']+'. '+w['title']+'. '+e['label']+'.')+' '+text_source(e)+' '+a('/rights/','How rights are checked')+'.</p>',
@@ -481,6 +489,15 @@ def summa_pages(out,lib):
             body,[{'@context':'https://schema.org','@type':'Article','headline':x['title'][:110],'name':aref(P,q,x)+': '+x['title'],'url':SITE+apath(P,q,x)+'/','author':ld_by,'isPartOf':{'@type':'Chapter','name':'Question '+str(q['n'])+'. '+q['title'],'url':SITE+qpath(P,q)+'/'},'isAccessibleForFree':True,'inLanguage':'English'},
                   crumbs(*C,('Summa','summa/'),(P['name'],'summa/'+P['slug']+'/'),('Question '+str(q['n']),qpath(P,q)+'/'),('Article '+str(x['n']),apath(P,q,x)+'/'))])
     return S
+def facts_words(n):return 'about '+format(int(n/1000+0.5)*1000,',')+' words'
+def facts_time(m):
+    m=int(m/10+0.5)*10;h,r=divmod(m,60)  # half up, as Math.round in scripts/library.js
+    return 'about '+((str(h)+(' hour' if h==1 else ' hours')) if h else '')+(' ' if h and r else '')+((str(r)+' minutes') if r else '')+' of reading'
+def part_d_html(w,pd):
+    """Part D title page (Orthodoxy pilot), static mirror of work() in scripts/library.js: facts line and About this edition."""
+    if not pd:return ''
+    return ('<p class="work-facts">'+E(facts_words(pd['words'])+' · '+facts_time(pd['minutes']))+'</p>'
+            '<h2>About this edition</h2><p>'+E(pd['about'])+'</p>')
 def summa_work_html(S):
     return ('<h2>By question and article</h2><p>'+a('/summa/','The whole Summa, one page per question and article')+': '+', '.join(a('/summa/'+P['slug']+'/',P['name']) for P in S['parts'][:-1])+', and '+a('/summa/'+S['parts'][-1]['slug']+'/',S['parts'][-1]['name'])+'.</p>')
 def main():
@@ -644,7 +661,7 @@ def main():
         hosted=any(e.get('text') for e in w['editions'])
         by=byline(w)
         ra=RA.get(w['id']);ra_note=ra_note_html(ra,libw,True) if ra and w['id'] in ra.get('noteWorks',[]) else ''
-        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p>'+ra_note+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+(summa_work_html(SUMMA) if SUMMA and w['id']==SUMMA['work'] else '')+series_html(w,lib,TPD)+(PE['works'][w['id']]['html'] if w['id'] in PE['works'] else '')+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
+        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p>'+ra_note+part_d_html(w,TPD.get(w['id'],{}).get('partD'))+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+(summa_work_html(SUMMA) if SUMMA and w['id']==SUMMA['work'] else '')+series_html(w,lib,TPD)+(PE['works'][w['id']]['html'] if w['id'] in PE['works'] else '')+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
         book={'@context':'https://schema.org','@type':'Book','name':w['title'],'url':SITE+'work/'+w['id']+'/','author':{'@type':'Person','name':w['author']},'description':d,'genre':w['category']}
         if w.get('authorId') in auth_ids:book['author']['url']=SITE+'author/'+w['authorId']+'/'
         elif w['id'] in RA:book['author']['url']=SITE+'author/'+RA[w['id']]['id']+'/'

@@ -77,7 +77,7 @@ process.stdout.write(JSON.stringify(blocks.map((b,i)=>c.render(edition,b,i,true)
 
     def test_generated_chapter_keeps_complete_original_order(self):
         page=(ROOT/'work/orthodoxy/ch/04-the-ethics-of-elfland/index.html').read_text()
-        article=page.split('<article class="reading-text"',1)[1].split('>',1)[1].split('</article>',1)[0]
+        article=page.split('<article class="reading-text',1)[1].split('>',1)[1].split('</article>',1)[0]
         parser=Text(article)
         self.assertEqual(''.join(parser.parts),''.join(self.blocks[77:111]))
         self.assertEqual(article.count('<p'),34)

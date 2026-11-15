@@ -24,11 +24,11 @@ GitHub `main` is the source of truth. Cloudflare Pages deploys it automatically 
 
 ## Verified snapshot
 
-As of November 14, 2026, `main` at `7c10d68cd9` (PR #28):
+As of November 15, 2026, `main` at `a6c9ef639c` (PR #29):
 
 - 104 work records; 64 hosted editions of 59 works in `data/library.json`.
 - 4,925 static pages and 4,926 sitemap URLs; about 6,750 tracked files, about 5,980 generated (`linguist-generated` in `.gitattributes`).
-- Tests: 124 Node and 249 Python.
+- Tests: 124 Node and 254 Python (with Part D).
 
 ## Standing owner decisions
 
@@ -39,27 +39,27 @@ As of November 14, 2026, `main` at `7c10d68cd9` (PR #28):
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-15, Claude (Claude Code): Part D on Orthodoxy (covers pending)
+
+- Work page as a title page (facts line from the TXT, Read, Listen, Download, About this edition); on chapter pages the chapter opener replaces everything above the text, and it opens each chapter in the reader; chapter endings link the next chapter; book paragraphs with a drop cap; print starts each chapter on a new page. No characters change.
+- Covers: three designs on the [contact sheet](https://claude.ai/artifact/J29rrziSRPCUzYqzpEZNkT) (private; `tools/covers.py`). Stopped for Micah's choice before applying them to all 64 editions.
+- Branch `claude/part-d-orthodoxy` (see its PR), under the standing approval. Story of a Soul is [PR #30](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/30), waiting on one gate equivalence. Approval: Micah, November 14 (follow-up, items 3 and 4).
+
 ### 2026-11-15, Claude (Claude Code): Orthodoxy steps 2b and 2c
 
 - 2b: per-edition presentation overrides in the structure file: "by" (block 11) is a byline; the proofreader's credit (block 9) moves to the reader's collapsed front matter and the EPUB's notice appendix. No characters change.
 - 2c: the EPUB CI job runs EPUBCheck 5.1.0 (pinned by SHA-256) and fails on errors; the current EPUB has 0 errors and 0 warnings.
-- Branch `claude/orthodoxy-2b-2c` (see its PR), merged on green CI under the standing approval. Approval: Micah, November 14 (follow-up message, item 2).
+- [PR #29](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/29) squash-merged as `a6c9ef639c` on green CI (standing approval); live `/build.json` `bc-d08c586a64f9` matches `main`. Approval: Micah, November 14 (follow-up, item 2).
 
 ### 2026-11-14, Claude (Claude Code): notice rules applied site-wide
 
 - Chapter and Summa pages: text first, then the verbatim 1.E.1 licence sentence, then an "Edition details" toggle (edition, source, quality labels, OCR notes); no badges. Reader and EPUB: the same sentence at the end of the last section or chapter. Affiliate line once per page; badges off lists, author pages, the Advent plan, and rites resource lists (status kept as `data-rights`); one-line Wikipedia credit; Credits toggle for public-domain portraits; footer of two columns and one credits line.
 - [PR #28](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/28), branch `claude/notice-rules`: squash-merged as `7c10d68cd9` after Micah's follow-up (item 1) settled the wording; live `/build.json` served `bc-f33be8855088`, matching `main`.
 
-### 2026-11-14, Claude (Claude Code): PR #24 merged and deployed
-
-- Orthodoxy structured text, review EPUB (CI artifact, unpublished), and automatic display-only layout (59 editions on, five verse works excluded, coverage per edition in `data/auto-layout/report.json`, `KEEP` for Orthodoxy 123 and Thursday 22). Process: [docs/HOSTED-EDITIONS.md](docs/HOSTED-EDITIONS.md).
-- Squash-merged as `6acc7bae4f`; live `/build.json` served `bc-29cc90930dce`, the build ID of `main` at that commit.
-- Approval: Micah, November 14 (item 1 of the rule-change message; step 2a rule change quoted in PROJECT-RULES rule 13).
-
 ## Open items
 
 - Micah: a hero engraving (three proposals in PR #27); the takedown agent's name, address, and email (page shows a PLACEHOLDER).
-- Hosted texts: Story of a Soul structure (no HTML italics without a decision); Part D (beautiful editions) under the standing approval for presentation; manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
+- Hosted texts: Micah to choose a cover design (A, B, or C) and confirm the Story of a Soul gate rule (PR #30); manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
 - Advent launches November 29: excerpt-to-source comparison, Substack and social readiness ([checklist](docs/ADVENT-LAUNCH.md)).
 - Libraries research candidates need rights and provenance review before import. Paused: `_headers` Report-Only CSP, low-priority npm audit findings.
 - Page-audit decisions: the publish allowlist and the `study/index.html` sitemap or noindex question. CI's Study drift check names the missing `study/passages` (harmless).

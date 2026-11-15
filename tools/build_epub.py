@@ -74,7 +74,8 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
 
     docs = []  # (id, file, title, xhtml, blocks it carries)
     first_ch = S['chapters'][0]['heading']
-    front = list(range(lo, first_ch))
+    moved = (S.get('presentation') or {}).get('front', [])  # step 2b: e.g. the proofreader's credit, with the notices
+    front = [i for i in range(lo, first_ch) if i not in moved]
     docs.append(('front', 'front.xhtml', w['title'],
                  xhtml(w['title'], '<section epub:type="frontmatter">' + ''.join(to_xml(reading_block(e, B[i], i)) for i in front) + '</section>'), front))
     for n, c in enumerate(S['chapters']):
@@ -90,8 +91,8 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
     head = B[:lo]
     tail = B[hi + 1:]
     notice = ('<section class="notice" epub:type="appendix"><h1>Project Gutenberg notice and license</h1>'
-              '<p>This edition reproduces Project Gutenberg eBook #130. Its header and full license follow exactly as in the source file.</p>'
-              + ''.join('<pre>' + E(b) + '</pre>' for b in head + tail) + '</section>')
+              '<p>This edition reproduces Project Gutenberg eBook #130. Its header, the transcriber\'s credit, and the full license follow exactly as in the source file.</p>'
+              + ''.join('<pre>' + E(b) + '</pre>' for b in head + [B[i] for i in moved] + tail) + '</section>')
     docs.append(('notice', 'notice.xhtml', 'Project Gutenberg notice and license', xhtml('Project Gutenberg notice and license', notice), []))
     colophon = ('<section class="colophon"><h1>About this edition</h1>'
                 '<p>' + E(w['author']) + ', <i>' + E(w['title']) + '</i>. ' + E(e['label']) + '. Source: ' + E(e['source']) + '.</p>'

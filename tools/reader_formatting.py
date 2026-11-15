@@ -45,7 +45,8 @@ def structure_for(edition):
         d = json.loads(p.read_text())
         if d.get('edition') == edition.get('id') and d['txt']['sha256'] == edition.get('sha256') and d['gate']['passed']:
             return {'sha256': d['txt']['sha256'], 'source': 'data/structured/' + p.name,
-                    'roles': [[b['block'], b['role']] for b in d['blocks'] if b['role'] != 'paragraph']}
+                    'roles': [[b['block'], b['role']] for b in d['blocks'] if b['role'] != 'paragraph'],
+                    'front': (d.get('presentation') or {}).get('front', [])}
     return None
 
 

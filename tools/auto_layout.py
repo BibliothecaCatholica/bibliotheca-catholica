@@ -196,7 +196,10 @@ def edition_layout(w, e, recs):
         else:
             ranges.append([i, i])
     share = len(reflow) / multi if multi else 0.0
+    from reader_formatting import structure_for
+    st = structure_for(e)
     return {
+        **({'structure': st} if st else {}),  # roles and italics from data/structured/ for editions without chapter pages
         'edition': e['id'], 'work': w['id'], 'sha256': e['sha256'], 'wrapWidth': width, 'threshold': width - MARGIN,
         'body': [s, t - 1], 'reflow': ranges, 'em': em,
         'stats': {'multiLineBlocks': multi, 'reflowed': len(reflow), 'kept': len(kept), 'share': round(share, 3),

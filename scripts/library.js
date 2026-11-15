@@ -161,7 +161,7 @@ var SE_NOTICE='This text comes from the Standard Ebooks edition, which its produ
 function renderReadingBlock(e,p,i,anchor){
  // Structured-text pilot (PR #24): a role class (title, byline, heading, chapter, contents) from data/structured/*.json,
  // shipped in data/text-pages.js (or attached as e.structure by the static builder); only for this exact TXT.
- var S=e.structure||(function(){var T=typeof window!=='undefined'&&window.TEXT_PAGES||{};for(var k in T)if(T[k].edition===e.id&&T[k].s)return {sha256:T[k].s.sha256,roles:T[k].s.r};return null})();
+ var S=e.structure||(e.autoLayout&&e.autoLayout.structure)||(function(){var T=typeof window!=='undefined'&&window.TEXT_PAGES||{};for(var k in T)if(T[k].edition===e.id&&T[k].s)return {sha256:T[k].s.sha256,roles:T[k].s.r};return null})();
  var st=S&&S.sha256===e.sha256?S.roles.find(function(x){return x[0]===i}):null;
  // Precedence: scan-verified readerFormatting for the blocks it covers, then automatic display-only layout (e.autoLayout,
  // data/auto-layout/<edition>.json from tools/auto_layout.py, fetched with the text). Every character is kept, in order;
@@ -169,12 +169,14 @@ function renderReadingBlock(e,p,i,anchor){
  var f=e.readerFormatting,active=!!f&&f.sha256===e.sha256,v=active?f.verse.find(function(x){return x.block===i}):null,prose=active&&f.proseRanges.some(function(r){return i>=r[0]&&i<=r[1]});
  var vem=active?(f.emphasis||[]).filter(function(x){return x.block===i}).map(function(x){return [x.start,x.end]}):[],verified=!!(v||prose||vem.length);
  var a=e.autoLayout,auto=!!a&&!verified&&a.sha256===e.sha256;if(auto)prose=a.reflow.some(function(r){return i>=r[0]&&i<=r[1]});
+ // Italics from the structure file (Story of a Soul: its HTML's <i> spans), as [start,end,marked]; mirror: structure_em().
+ var sem=S&&S.sha256===e.sha256&&!verified?(S.em||[]).filter(function(x){return x[0]===i}).map(function(x){return [x[1],x[2],x.length>3]}):[];
  var cls=[st?'reading-'+st[1]:'',v?'reading-verse':prose?'reading-prose':''].filter(Boolean).join(' '),content;
- function ems(spans,marked){var at=0,out='';spans.forEach(function(x){out+=esc(p.slice(at,x[0]))+(marked?'<em class="u"><span class="us">_</span>'+esc(p.slice(x[0]+1,x[1]-1))+'<span class="us">_</span></em>':'<em>'+esc(p.slice(x[0],x[1]))+'</em>');at=x[1]});return out+esc(p.slice(at))}
+ function ems(spans,marked){var at=0,out='';spans.forEach(function(x){var m=marked==null?x[2]:marked;out+=esc(p.slice(at,x[0]))+(m?'<em class="u"><span class="us">_</span>'+esc(p.slice(x[0]+1,x[1]-1))+'<span class="us">_</span></em>':'<em>'+esc(p.slice(x[0],x[1]))+'</em>');at=x[1]});return out+esc(p.slice(at))}
  if(v){var starts=v.lineStarts.concat([p.length]);content=v.lineStarts.map(function(x,k){return '<span class="verse-line">'+esc(p.slice(x,starts[k+1]))+'</span>'}).join('')}
  else if(st&&st[1]==='chapter'&&/^[IVXLC]+ \S/.test(p)){var sp1=p.indexOf(' ');content='<span class="ch-n">'+esc(p.slice(0,sp1))+'</span> <span class="ch-t">'+esc(p.slice(sp1+1))+'</span>'}
  else if(vem.length)content=ems(vem,false);
- else if(auto)content=ems(a.em.filter(function(x){return x[0]===i}).map(function(x){return [x[1],x[2]]}),true);
+ else if(auto||sem.length){var sp=(auto?a.em.filter(function(x){return x[0]===i}).map(function(x){return [x[1],x[2],true]}):[]).concat(sem).sort(function(x,y){return x[0]-y[0]||x[1]-y[1]}),at2=0;content=ems(sp.filter(function(x){if(x[0]<at2)return false;at2=x[1];return true}),null)}
  else content=esc(p);
  return '<p'+(anchor?' id="reading-p-'+i+'"':'')+(cls?' class="'+cls+'"':'')+'>'+content+'</p>';
 }

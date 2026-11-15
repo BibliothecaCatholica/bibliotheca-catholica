@@ -46,6 +46,19 @@ EDITIONS = {
             'front': {9: 'This etext was proofread by Martin Ward'},
         },
     },
+    ('story-of-a-soul', 'pg-16772'): {
+        'html': 'data/sources/gutenberg-html/pg16772-images.json',
+        'out': 'data/structured/story-of-a-soul-pg-16772.json',
+        'allowed_txt_only': {},
+        'decision': 'Micah, November 14, 2026: build Story of a Soul with accent-insensitive matching in the fidelity '
+                    'check (the displayed text still comes from the hosted TXT) and with the italics from its own '
+                    'Gutenberg HTML; verse stays as the source\'s line breaks; bracketed notes stay as plain text. '
+                    'Micah, November 15, 2026: "Yes to the matching rule" (a line break next to "--" in the TXT is ignored '
+                    'for comparison only, in the two places where the HTML has none).',
+        'fold': True,       # accent- and ligature-insensitive block matching (fold_accents)
+        'italics': True,    # the HTML's <i> spans, mapped to TXT character offsets
+        'classify': 'headings',  # h1 title; h4/h5 "CHAPTER N TITLE" chapters; other h4/h5 headings; no contents guess
+    },
 }
 
 
@@ -59,11 +72,25 @@ def norm(s):
 TYPOGRAPHIC = (('\u2014', '--'),)
 
 
-def match_key(s):
+LIGATURES = {'æ': 'ae', 'Æ': 'AE', 'œ': 'oe', 'Œ': 'OE'}
+
+
+def fold_accents(s):
+    """Accent-insensitive form (owner decision for Story of a Soul, November 14, 2026): the pinned HTML drops accents
+    and ligatures that the TXT keeps (Therese for Thérèse, anaemia for anæmia). Used only to match blocks; the
+    displayed text always comes from the TXT."""
+    s = ''.join(LIGATURES.get(c, c) for c in s)
+    return ''.join(c for c in unicodedata.normalize('NFKD', s) if not unicodedata.combining(c))
+
+
+def match_key(s, fold=False):
     s = norm(s)
     for a, b in TYPOGRAPHIC:
         s = s.replace(a, b)
-    return s
+    # Story of a Soul: the TXT marks italics with _underscores_ where the HTML uses <i>; both are dropped for matching.
+    # Spaces next to "--" are ignored too: the TXT's hard wraps can put a line break before "--" where the HTML has
+    # none (two places in Story of a Soul; counted in the gate report).
+    return re.sub(r'\s*--\s*', '--', re.sub(r'\s+', ' ', fold_accents(s).replace('_', ''))).strip() if fold else s
 
 
 def txt_blocks(path):
@@ -81,14 +108,20 @@ class Body(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         if tag in self.BLOCK and self.cur is None:
-            self.cur = {'tag': tag, 'id': dict(attrs).get('id'), 'text': '', 'br': 0}
+            self.cur = {'tag': tag, 'id': dict(attrs).get('id'), 'text': '', 'br': 0, 'it': [], 'open': []}
         elif tag == 'br' and self.cur is not None:
             self.cur['br'] += 1
             self.cur['text'] += '\n'
         if tag in self.marks:
             self.marks[tag] += 1
+        if tag in ('i', 'em') and self.cur is not None:
+            self.cur['open'].append(len(self.cur['text']))
 
     def handle_endtag(self, tag):
+        if tag in ('i', 'em') and self.cur is not None and self.cur['open']:
+            a = self.cur['open'].pop()
+            if not self.cur['open']:
+                self.cur['it'].append([a, len(self.cur['text'])])
         if self.cur is not None and tag == self.cur['tag']:
             self.blocks.append(self.cur)
             self.cur = None
@@ -113,9 +146,21 @@ def html_body(rec):
 ROMAN = re.compile(r'^(?P<num>[IVXLC]+)\.?\s+(?P<title>.+)$')
 
 
-def classify(h, k, blocks):
+CHAPTER = re.compile(r'^CHAPTER (?P<num>[IVXL]+)\.? (?P<title>.+)$')
+
+
+def classify(h, k, blocks, mode=None):
     """Role of one HTML block, from its own tag and position only (no inference about verse or emphasis)."""
     t, txt = h['tag'], norm(h['text'])
+    if mode == 'headings':  # Story of a Soul: heading levels are inconsistent (h4 and h5), so only the tag family counts
+        if t == 'h1':
+            return {'role': 'title'}
+        if t in ('h2', 'h3', 'h4', 'h5', 'h6'):
+            m = CHAPTER.match(txt)
+            if m:
+                return {'role': 'chapter', 'num': m.group('num'), 'title': m.group('title').title()}
+            return {'role': 'heading', 'level': 2}
+        return {'role': 'paragraph'}
     if t == 'p' and h['br'] >= 3:
         return {'role': 'contents'}
     if t in ('h1', 'h2'):
@@ -128,6 +173,66 @@ def classify(h, k, blocks):
     if t in ('h4', 'h5', 'h6'):
         return {'role': 'byline'}
     return {'role': 'paragraph'}
+
+
+def _skeleton(text, skip):
+    """(comparable characters, index of each in text): whitespace and characters in skip dropped, accents folded."""
+    chars, idx = [], []
+    for n, c in enumerate(text):
+        if c.isspace() or c in skip:
+            continue
+        for f in fold_accents(c).replace('\u2014', '--'):
+            chars.append(f)
+            idx.append(n)
+    return ''.join(chars), idx
+
+
+def italic_spans(rows, H, B):
+    """Map each HTML <i> span to [block, start, end] in the TXT block, character by character on a skeleton that
+    ignores whitespace, underscores, accents, and the em-dash spelling. Spans the TXT already marks with paired
+    underscores (auto_layout.underscore_spans) are left to that marking."""
+    from auto_layout import underscore_spans
+    out, report = [], {'htmlSpans': 0, 'mapped': 0, 'alreadyUnderscored': 0, 'unmapped': 0}
+    for r in rows:
+        if r.get('part') == 2:
+            continue
+        parts, it, at = H[r['k']:r['k'] + r['span']], [], 0
+        for x in parts:
+            it += [[a + at, b + at] for a, b in x['it']]
+            at += len(x['text']) + 1
+        if not it:
+            continue
+        htxt = ' '.join(x['text'] for x in parts)
+        bl = [r['block']] + ([r['also']] if r.get('also') else [])
+        hs, hidx = _skeleton(htxt, '_')  # underscores in the HTML are rules, not markers
+        ts, tidx, tblk = '', [], []
+        for b in bl:
+            c, i = _skeleton(B[b], '_')
+            ts, tidx, tblk = ts + c, tidx + i, tblk + [b] * len(i)
+        under = {b: underscore_spans(B[b]) for b in bl}
+        for a, b in it:
+            report['htmlSpans'] += 1
+            sa = next((n for n, i in enumerate(hidx) if i >= a), None)
+            sb = next((n for n in range(len(hidx) - 1, -1, -1) if hidx[n] < b), None)
+            if hs != ts or sa is None or sb is None or sb < sa:
+                report['unmapped'] += 1
+                continue
+            if tblk[sa] != tblk[sb]:
+                report['unmapped'] += 1
+                continue
+            blk, ta, tb = tblk[sa], tidx[sa], tidx[sb] + 1
+            if any(ua <= ta and tb <= ub for ua, ub in under[blk]):
+                report['alreadyUnderscored'] += 1
+                continue
+            if '_' in B[blk][ta:tb]:
+                report['unmapped'] += 1
+                continue
+            if ta and tb < len(B[blk]) and B[blk][ta - 1] == '_' and B[blk][tb] == '_':
+                out.append([blk, ta - 1, tb + 1, 1])  # the TXT's own underscores, which auto layout could not pair: kept, hidden on screen
+            else:
+                out.append([blk, ta, tb])
+            report['mapped'] += 1
+    return out, report
 
 
 def build(work, edition, spec, write=True):
@@ -145,17 +250,28 @@ def build(work, edition, spec, write=True):
     H, marks = html_body(rec)
 
     # Gate 2: in-order, word-for-word alignment of every HTML block to one TXT block.
-    rows, cur, k, dashes, joined = [], start + 1, 0, 0, []
-    keys = {i: match_key(B[i]) for i in range(start + 1, end)}
+    rows, cur, k, dashes, joined, split = [], start + 1, 0, 0, [], []
+    fold = bool(spec.get('fold'))
+    keys = {i: match_key(B[i], fold) for i in range(start + 1, end)}
     while k < len(H):
         h, hit = H[k], None
         # one HTML block, or up to three consecutive ones that the HTML splits where the TXT keeps one paragraph
         for span in (1, 2, 3):
-            want = match_key(' '.join(x['text'] for x in H[k:k + span]))
+            want = match_key(' '.join(x['text'] for x in H[k:k + span]), fold)
             j = next((i for i in range(cur, end) if keys[i] == want), None)
             if j is not None:
                 hit = (j, span, want)
                 break
+        if hit is None and fold:
+            # the TXT splits one HTML paragraph into two consecutive blocks (Story of a Soul has one such place)
+            want = match_key(h['text'], fold)
+            j = next((i for i in range(cur, end - 1) if keys[i] + ' ' + keys[i + 1] == want), None)
+            if j is not None:
+                split.append({'blocks': [j, j + 1], 'html': h['id'] or h['tag']})
+                rows.append(dict(classify(h, k, H, spec.get('classify')), block=j, html=h['id'] or h['tag'], words=len(B[j].split()), k=k, span=1, also=j + 1))
+                rows.append(dict(role='paragraph', block=j + 1, html=h['id'] or h['tag'], words=len(B[j + 1].split()), k=k, span=1, part=2))
+                cur, k = j + 2, k + 1
+                continue
         if hit is None:
             problems.append('HTML block %d (%s %s) has no TXT block with the same words after %d: %r' % (k, h['tag'], h['id'], cur, norm(h['text'])[:70]))
             k += 1
@@ -164,7 +280,7 @@ def build(work, edition, spec, write=True):
         dashes += sum(norm(x['text']).count('\u2014') for x in H[k:k + span])
         if span > 1:
             joined.append({'block': j, 'html': [x['id'] or x['tag'] for x in H[k:k + span]]})
-        rows.append(dict(classify(h, k, H), block=j, html=h['id'] or h['tag'], words=len(want.split())))
+        rows.append(dict(classify(h, k, H, spec.get('classify')), block=j, html=h['id'] or h['tag'], words=len(want.split()), k=k, span=span))
         cur, k = j + 1, k + span
     # Gate 3: coverage of the TXT body.
     covered = {r['block'] for r in rows}
@@ -178,6 +294,12 @@ def build(work, edition, spec, write=True):
     except AssertionError as err:
         problems.append('readerFormatting no longer validates: %s' % err)
 
+    folded = sum(1 for r in rows if fold and match_key(B[r['block']]) != match_key(' '.join(x['text'] for x in H[r['k']:r['k'] + r['span']])))
+    underscored = sum(1 for r in rows if fold and '_' in B[r['block']])
+    dash_space = sum(1 for r in rows if fold and re.search(r'\s--|--\s', match_key(B[r['block']]).replace('_', '')) and not re.search(r'\s--|--\s', match_key(' '.join(x['text'] for x in H[r['k']:r['k'] + r['span']]))))
+    em, em_report = (italic_spans(rows, H, B) if spec.get('italics') else ([], None))
+    if em_report and em_report['unmapped']:
+        problems.append('%d HTML italic spans could not be mapped to the TXT' % em_report['unmapped'])
     # Step 2b: presentation overrides, each checked against the exact TXT block.
     pres = spec.get('presentation') or {}
     overrides = []
@@ -197,8 +319,18 @@ def build(work, edition, spec, write=True):
     if front and front != list(range(start + 1, start + 1 + len(front))):
         problems.append('front-matter blocks must follow the START marker directly: %r' % front)
     chapters, ch = [], [r for r in rows if r['role'] == 'chapter']
+    if spec.get('classify') == 'headings':
+        # a chapter ends at the next chapter or heading (Story of a Soul: "END OF THE AUTOBIOGRAPHY" closes Chapter XI);
+        # its label is taken from the TXT block, which keeps the accents the HTML drops
+        small = {'a', 'an', 'and', 'of', 'the', 'to', 'in', 'on', 'for'}
+        for r in ch:
+            m = CHAPTER.match(norm(B[r['block']]))
+            r['title'] = ' '.join(w.capitalize() if n == 0 or w.lower() not in small else w.lower() for n, w in enumerate(m.group('title').split()))
+    stops = sorted(x['block'] for x in rows if x['role'] in ('chapter', 'heading')) if spec.get('classify') == 'headings' else None
     for n, r in enumerate(ch):
         last = (ch[n + 1]['block'] - 1) if n + 1 < len(ch) else max(x['block'] for x in rows)
+        if stops:
+            last = min([b - 1 for b in stops if b > r['block']] + [last])
         body = [x for x in rows if r['block'] < x['block'] <= last and x['role'] == 'paragraph']
         chapters.append({'num': r['num'], 'title': r['title'], 'heading': r['block'], 'start': body[0]['block'] if body else r['block'],
                          'end': last, 'paragraphs': len(body), 'words': sum(x['words'] for x in body)})
@@ -206,18 +338,20 @@ def build(work, edition, spec, write=True):
         'note': 'Generated by tools/structure_text.py. Structure only, keyed to block indexes of the hosted TXT; '
                 'no body text is stored here (only chapter labels) and renderers take every character from the TXT. Do not edit by hand.',
         'work': work, 'edition': edition,
-        'decision': 'Micah, November 14, 2026: use the hosted edition\'s own HTML (#130), structure only; nothing from #16769.',
+        'decision': spec.get('decision', 'Micah, November 14, 2026: use the hosted edition\'s own HTML (#130), structure only; nothing from #16769.'),
         'txt': {'file': e['text'], 'sha256': e['sha256'], 'blocks': len(B), 'bodyStart': start + 1, 'bodyEnd': end - 1},
         'html': {'file': rec['file'], 'sha256': rec['sha256'], 'url': rec['url'], 'retrieved': rec['retrieved'],
                  'markup': {'italics': marks['i'] + marks['em'], 'bold': marks['b'], 'lineBreaks': marks['br']}},
         'blocks': [{k: r[k] for k in ('block', 'role', 'num', 'title', 'level') if k in r} for r in rows],
+        'emphasis': ({'source': 'the pinned HTML\'s <i> spans, as [block, start, end] offsets into the TXT block ([block, start, end, 1] when the span includes the TXT\'s own underscores, which stay in the text and are hidden on screen); spans auto layout already shows from paired underscores are left to it',
+                      'spans': em, 'report': em_report} if spec.get('italics') else None),
         'chapters': chapters,
         'presentation': ({'decision': pres['decision'], 'roles': overrides, 'front': front} if pres else None),
         'formatting': ({'source': 'data/library.json readerFormatting (scan-verified Chapter IV pilot, unchanged)',
                         'evidence': f['evidence'], 'verse': f['verse'], 'emphasis': f.get('emphasis', [])} if f else None),
         'gate': {'htmlBlocks': len(H), 'matched': len(rows), 'txtBodyBlocks': end - start - 1, 'uncovered': [],
-                 'wordChanges': 0, 'typographic': {'em dash in HTML = two hyphens in TXT': dashes},
-                 'joinedHtmlBlocks': joined, 'passed': not problems},
+                 'wordChanges': 0, 'typographic': dict({'em dash in HTML = two hyphens in TXT': dashes}, **({'accents, ligatures, or TXT underscores folded (blocks)': folded, 'TXT blocks with underscores for the HTML italics': underscored, 'line break next to two hyphens in TXT (blocks)': dash_space} if fold else {})),
+                 'joinedHtmlBlocks': joined, **({'splitTxtBlocks': split} if split else {}), 'passed': not problems},
     }
     if write and not problems:
         p = ROOT / spec['out']

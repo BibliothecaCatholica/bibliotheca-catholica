@@ -1037,6 +1037,135 @@
     "indented line": 41,
     "short line": 4
    }
+  },
+  "pg-45811": {
+   "work": "A Chesterton Calendar",
+   "multiLineBlocks": 425,
+   "reflowed": 351,
+   "kept": 74,
+   "share": 0.826,
+   "emphasisSpans": 446,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 74
+   }
+  },
+  "pg-61760": {
+   "work": "Charles Dickens (Bookman Booklets)",
+   "multiLineBlocks": 150,
+   "reflowed": 110,
+   "kept": 40,
+   "share": 0.733,
+   "emphasisSpans": 121,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 9,
+    "indented line": 28,
+    "run of spaces": 2,
+    "short line": 1
+   }
+  },
+  "pg-22362": {
+   "work": "Appreciations and Criticisms of the Works of Charles Dickens",
+   "multiLineBlocks": 267,
+   "reflowed": 244,
+   "kept": 23,
+   "share": 0.914,
+   "emphasisSpans": 462,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1,
+    "indented line": 22
+   }
+  },
+  "pg-62467": {
+   "work": "Divorce versus Democracy",
+   "multiLineBlocks": 21,
+   "reflowed": 16,
+   "kept": 5,
+   "share": 0.762,
+   "emphasisSpans": 7,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 5
+   }
+  },
+  "pg-60164": {
+   "work": "Fancies Versus Fads",
+   "multiLineBlocks": 302,
+   "reflowed": 279,
+   "kept": 23,
+   "share": 0.924,
+   "emphasisSpans": 141,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 12,
+    "indented line": 11
+   }
+  },
+  "pg-64074": {
+   "work": "G. F. Watts",
+   "multiLineBlocks": 88,
+   "reflowed": 85,
+   "kept": 3,
+   "share": 0.966,
+   "emphasisSpans": 65,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 3
+   }
+  },
+  "pg-14706": {
+   "work": "Greybeards at Play",
+   "multiLineBlocks": 74,
+   "reflowed": 0,
+   "kept": 74,
+   "share": 0.0,
+   "emphasisSpans": 4,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 73,
+    "short line": 1
+   }
+  },
+  "pg-61758": {
+   "work": "Irish Impressions",
+   "multiLineBlocks": 128,
+   "reflowed": 118,
+   "kept": 10,
+   "share": 0.922,
+   "emphasisSpans": 130,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 10
+   }
+  },
+  "pg-62045": {
+   "work": "Leo Tolstoy (Bookman Booklets)",
+   "multiLineBlocks": 81,
+   "reflowed": 62,
+   "kept": 19,
+   "share": 0.765,
+   "emphasisSpans": 50,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 10,
+    "indented line": 2,
+    "short line": 7
+   }
+  },
+  "pg-62048": {
+   "work": "London",
+   "multiLineBlocks": 11,
+   "reflowed": 6,
+   "kept": 5,
+   "share": 0.545,
+   "emphasisSpans": 1,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 2,
+    "indented line": 3
+   }
   }
  },
  "excluded": {

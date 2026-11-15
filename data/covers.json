@@ -68,6 +68,12 @@
    "webp": "8cdcd5dee93fdcd3ced2d27b889a72c85c3028860304e4de73e9812b85217368",
    "og": "40b34a6f91872807c110b133ddc98bae2e560a0c40e99f4cd22c3a0c2ca7aa34"
   },
+  "pg-14706": {
+   "work": "greybeards-at-play",
+   "svg": "6f0ae5c1cde712ea96b48d9e99c569c24f3f4ff287f809fdef73aa72c9dd7571",
+   "webp": "96392526be6b75adb8372dbaa0f810c96871b32907f48092faf1656767704645",
+   "og": "c83ae0f8942db131b0f15536c070041a8f6d98481909d73b237dd87999a21f2d"
+  },
   "pg-15992": {
    "work": "come-rack",
    "svg": "4d40831ede366a57427a908892b04186397960f88c158939d0980aefa0ae4643",
@@ -236,6 +242,12 @@
    "webp": "4059a8880f1e6b890eb8bcbdc9220cd1d4e630dafff515b6975952049eb153cf",
    "og": "33251aa06e1e68fffa07536fd9093241da4faefac5e5267e0bdf642392275397"
   },
+  "pg-22362": {
+   "work": "dickens-appreciations-criticisms",
+   "svg": "97889f0bf2b45d501c8ed5f738496880d5818505866085c06f36d4ce5dd9c359",
+   "webp": "21805f2ed2d7d1eeed59516f2978c31642fdcf9b95b30dbdff3621697dbad3f0",
+   "og": "095d8cb2ac09de57a83328164975051c10220adb793052c62efc6264592fd74f"
+  },
   "pg-22403": {
    "work": "hopkins-poems",
    "svg": "fe3a914132dfcb90706edc5007f34f6487ea5c7fb431820b7c123fe457975ef7",
@@ -320,6 +332,12 @@
    "webp": "7ad13963a7ab7be88bd076ad8cf7f7be608032eec756758d6e10f934e4eb5b1b",
    "og": "00af5c2e3a4e6fb70c4d167957d1208c33b22e9892c18c204f53cdfe465f57ac"
   },
+  "pg-45811": {
+   "work": "chesterton-calendar",
+   "svg": "fbe875c75699d60d7acc6486b31e55ff19afd313a1627ec5c794798cf3779dc2",
+   "webp": "7fda61218186615b94633790fedf3f4771ea9b6174d4df750724e0b3da3309c2",
+   "og": "ff7a72c94bce48cbf79043a94d9d4744df92d07ea1f4676d1120802ce5b96412"
+  },
   "pg-46947": {
    "work": "baring-gould-lives-january",
    "svg": "9ba0eaac5ec3fb88cef0e74d4f092d0c2a58216ee424a5344acd8332c932ca84",
@@ -380,11 +398,47 @@
    "webp": "10314838f335878fb75a38bdc435f362308a6b7c48e71b15bf690ecd07c81e5e",
    "og": "7012511f7c9e0e750839f8ca854b5093749891be2055a0d37754627b8513d2a3"
   },
+  "pg-60164": {
+   "work": "fancies-versus-fads",
+   "svg": "0a2cb5bc221990491382ce9c6ee9d07ee06b4600fc9e0cec349648d393e4e0a9",
+   "webp": "82759f978f3e27ef18c5f7ea31f54d1c1231287593af8e50a9351547e26a55e9",
+   "og": "1294168f0bdc692923f9b8e748f52c06713676073a42351deda9ac24f4a62f4b"
+  },
+  "pg-61758": {
+   "work": "irish-impressions",
+   "svg": "c8e78fc7df25443e061bed0985a0644d9c6c83807e6281f0eb15430aa7b28b44",
+   "webp": "b5e50a27ee2fdf1b1025088c914023ac9533730bada9debcb1f5c5c0452f525b",
+   "og": "ccbe89a67fd25bc5171b4dd4ff688680e758e8ddad83173c01baa6a0a4a04f23"
+  },
+  "pg-61760": {
+   "work": "charles-dickens-bookman",
+   "svg": "18b0e3eb859dcdadb58261ad9bde629e584e931f1aead59fb6280731a31d8526",
+   "webp": "cd2251cd96e6d6e0af821a439a009c6edc59b7b56b4a46689fd33272769ccd2d",
+   "og": "f7f86f597e2e66e9d398d9b1939b9002a8c213d13ee628977df8e691257a7d59"
+  },
+  "pg-62045": {
+   "work": "leo-tolstoy-bookman",
+   "svg": "53708e4995165936607622a6ab0413a6a6a28f27cfd27143ec8ae14257e2c794",
+   "webp": "1e4fb9ac102a74ea095d9095204659b94bc3c68f8ecf91ee9def35da02c96c3d",
+   "og": "a2cbdadf4b91f5a5d5b2f72ff981e2c2b6b44593e32a91ee0ff1bdb05215445c"
+  },
+  "pg-62048": {
+   "work": "london-chesterton",
+   "svg": "4531273069f26be8cc427a4c16e283e941bf6d63a1091bb6786d3a04595c86eb",
+   "webp": "a14737e737662cd19631ddc3e3a5ac2cf28a25a5203cb15019714c24018bd0ad",
+   "og": "9df573cc8835eaf5a1d3ee2d1d286160017c1d9a00e0ce38cc8a3cbcd28bd251"
+  },
   "pg-62254": {
    "work": "fabiola",
    "svg": "705f274259a6256c19be31cb519ad2f3721f963b6996bc9b76dbe8df6f8670b2",
    "webp": "3f864884dd1276c90a337ea642d702623f378281141cc70c508c8d5711c51cf3",
    "og": "4e6b6899aa48b311d099c4c05831ca849a940661b25ab8c792a90ba39708de98"
+  },
+  "pg-62467": {
+   "work": "divorce-versus-democracy",
+   "svg": "31b3836e2a8999a947cc77a4f6dce6297daa47f36584bbbd3f1c2eaf6d5a0bb0",
+   "webp": "75b177bd1a2ddb492d1c1d7f75a67b01bb702b001c2a9e4b94ad051893ba6f8c",
+   "og": "99413437bc47cf0265c167b6a7e42e6790aced57d03f836b331d0b100e2c1a08"
   },
   "pg-62680": {
    "work": "superstition-divorce",
@@ -403,6 +457,12 @@
    "svg": "cf5c114e976c1dd7e62783d67a0172c65f77d1b6122878918e2a806673dfcef9",
    "webp": "67296f217cbc3d3a62f2cf35a3242218edc931a1f42a95d73ba5c0916a5996af",
    "og": "46b7eb73d5d148bdf58b32519945d501c48a72b0160101e90a97d8593fe816cb"
+  },
+  "pg-64074": {
+   "work": "g-f-watts",
+   "svg": "50a3cdcffeae85a21c66457795981746327626a483f8e59bec14b2cc85a092da",
+   "webp": "fbb3f99bf51b1b53e95d73d5ddf7955f4d3c5833eeb7b8c85b1bf8f40796badc",
+   "og": "e14fd591db6dfc68ae2753d5d57d66434430b09e8c89007b4792f1c66f3c66db"
   },
   "pg-64882": {
    "work": "servile-state",

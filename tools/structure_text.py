@@ -64,7 +64,12 @@ EDITIONS = {
 # (tools/text_pages.py, checked against the TXT by tools/build_text_pages.py), with no HTML. Only the mapped heading
 # blocks get a role; nothing else is inferred.
 for _wid, _ed in (('innocence-father-brown', 'pg-204'), ('wisdom-father-brown', 'pg-223'), ('secret-father-brown', 'pg-70175'),
-                  ('incredulity-father-brown', 'se-incredulity-father-brown')):
+                  ('incredulity-father-brown', 'se-incredulity-father-brown'),
+                  # editions batch 2 (November 15, 2026)
+                  ('heretics', 'pg-470'), ('ball-and-cross', 'pg-5265'), ('man-thursday', 'pg-1695'),
+                  ('chesterton-francis', 'pg-63084'), ('grammar-assent', 'pg-34022'), ('development-doctrine', 'pg-35110'),
+                  ('paradoxes-catholicism', 'pg-16309'), ('life-of-teresa', 'pg-8120'), ('apologia', 'pg-19690'),
+                  ('virgin-saints-and-martyrs', 'pg-53841')):
     EDITIONS[(_wid, _ed)] = {'mode': 'map', 'out': 'data/structured/%s-%s.json' % (_wid, _ed)}
 
 
@@ -266,8 +271,14 @@ def build_map(work, edition, spec, write=True):
         'decision': 'Structure from the edition\'s chapter or story map; only the mapped headings get a role.',
         'txt': {'file': e['text'], 'sha256': e['sha256'], 'blocks': len(B), 'bodyStart': start + 1, 'bodyEnd': end - 1},
         'source': 'chapter map (tools/text_pages.py), %d %s' % (len(items), tp['nouns'].lower()),
-        'blocks': [{'block': x['heading'], 'role': 'chapter'} for x in items],
-        'chapters': [{'num': x['num'], 'title': x['title'], 'heading': x['heading'], 'start': x['start'], 'end': x['end'], 'words': x['words']} for x in items],
+        # the heading block is the chapter; a separate title line under it and a division heading between parts
+        # ("PART II.") are headings; plate captions and rules between parts get no role
+        'blocks': sorted([{'block': x['heading'], 'role': 'chapter'} for x in items]
+                         + [{'block': i, 'role': 'heading'} for x in items for i in x.get('titleBlocks', [])]
+                         + [{'block': i, 'role': 'heading'} for x in items for i in x.get('before', [])
+                            if re.search(r'[A-Za-z]', B[i]) and not B[i].startswith('[')], key=lambda r: r['block']),
+        'chapters': [dict({'num': x['num'], 'title': x['title'], 'heading': x['heading'], 'start': x['start'], 'end': x['end'], 'words': x['words']},
+                          **({'before': x['before']} if x.get('before') else {})) for x in items],
         'presentation': None, 'formatting': None,
         'gate': {'mode': 'map', 'headings': len(items), 'wordChanges': 0, 'passed': not problems},
     }

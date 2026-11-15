@@ -18,9 +18,11 @@ def main(p):
 
 class PartD(unittest.TestCase):
     def test_designed_editions(self):
-        # Orthodoxy pilot, then batch 1 (November 15, 2026): Story of a Soul and the four Father Brown collections
+        # Orthodoxy pilot, batch 1 (Story of a Soul, the four Father Brown collections), and batch 2 (ten editions), November 15, 2026
         self.assertEqual(set(BTP.PART_D), {'orthodoxy', 'story-of-a-soul', 'innocence-father-brown', 'wisdom-father-brown',
-                                           'secret-father-brown', 'incredulity-father-brown'})
+                                           'secret-father-brown', 'incredulity-father-brown', 'heretics', 'ball-and-cross',
+                                           'man-thursday', 'chesterton-francis', 'grammar-assent', 'development-doctrine',
+                                           'paradoxes-catholicism', 'life-of-teresa', 'apologia', 'virgin-saints-and-martyrs'})
         for wid, d in TP.items():
             self.assertIn('partD', d, wid)
             self.assertEqual(d['partD']['words'], sum(x['words'] for x in d['items']))

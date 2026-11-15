@@ -38,18 +38,18 @@ As of November 15, 2026, `main` at `54c17291c1` (PR #37):
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-15, Claude (Claude Code): editions batch 2
+
+- Ten more editions with chapter pages, openers, structure files, and EPUBs: Heretics, The Ball and the Cross, The Man Who Was Thursday, Chesterton's Saint Francis, Grammar of Assent, Development of Christian Doctrine, Paradoxes of Catholicism, Life of St. Teresa, Apologia, Virgin Saints and Martyrs.
+- Map tooling: two-block headings, division lines carried into the EPUB, slugs capped at 60 characters, no second "Chapter" label on headings that name themselves.
+
 ### 2026-11-15, Claude (Claude Code): approval statements removed; Summa Design A
 
-- Statements naming or quoting the owner's approvals were removed from code comments, tests, data notes, docs, and structure files; contact emails stay. Approvals are kept outside the repository (git history still holds the old text).
-- Summa Design A on all 3,726 question and article pages ([PR #37](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/37), `54c17291c1`, live `bc-30bf54980a76`).
+- Approval statements removed from the repository (PR #38); Summa Design A on all 3,726 question and article pages (PR #37).
 
 ### 2026-11-15, Claude (Claude Code): hero engraving, takedown contact, EPUBs, editions batch 1
 
 - PRs #30, #33 to #36 merged and deployed: Story of a Soul, EPUB CI on every PR, six published EPUBs, batch 1 (Story of a Soul and four Father Brown collections), Doré's Empyrean as the home hero, the takedown contact email.
-
-### 2026-11-15, Claude (Claude Code): Part D on Orthodoxy and covers
-
-- Title-page work page, chapter openers and endings, book paragraphs, print (PR #31, `1f53e01cbf`); design C covers for all 64 editions (PR #32, `ee33656ddd`).
 
 ## Open items
 

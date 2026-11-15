@@ -113,7 +113,7 @@ class TextPages(unittest.TestCase):
                          [('The Innocence',1911,True),('The Wisdom',1914,True),('The Incredulity',1926,True),('The Secret',1927,True),('The Scandal',1935,False)])
         for wid in ('innocence-father-brown','wisdom-father-brown','incredulity-father-brown','secret-father-brown'):
             m=main('work/%s/index.html'%wid);self.assertIn('<h2>The Father Brown collections</h2>',m)
-            self.assertIn('The Scandal of Father Brown (1935)',m);self.assertIn('after this library’s 1931 cutoff',m)
+            self.assertIn('The Scandal of Father Brown (1935)',m);self.assertIn('enters the public domain on January 1, 2031',m)
         for p in PAGES:self.assertNotIn('gutenberg.net.au',R(p),p)
 if __name__=='__main__':unittest.main()
 

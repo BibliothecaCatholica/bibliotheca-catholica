@@ -14,7 +14,7 @@ Two modes:
       2026-10-25) and data/library.json. Conservative: every "likely hostable" lead becomes
       `unknown`; the only automatic `public_domain_us` is a record whose source identifier is the
       same Project Gutenberg ebook as a text hosted in our reading room (rights checked under the
-      pre-1931 rule). Hand-checked decisions go in MANUAL below, each with evidence and a date.
+      hosting rule in tools/rights_rule.py). Hand-checked decisions go in MANUAL below, each with evidence and a date.
   python3 tools/build_rights.py
       Validate data/rights.json against data/books.json and data/library.json, then write
       data/rights.js (lazy-loaded by app.js with books.js) and the `r` status on each record in
@@ -27,7 +27,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];D=ROOT/'data'
 CHECKED='2026-10-25'   # date of the research classification and of this mapping
 STATUSES={
- 'public_domain_us':{'label':'Public domain (US)','hostable':True,'desc':'Published before 1931, or otherwise shown to be in the US public domain, with written evidence. It may not be public domain in your country.'},
+ 'public_domain_us':{'label':'Public domain (US)','hostable':True,'desc':'Public domain in the United States by date of first publication, or by no renewal or a defective notice, with written evidence. It may not be public domain in your country.'},
  'open_license':{'label':'Open license','hostable':True,'desc':'Released under an open license (Creative Commons or CC0). The license is linked in the evidence and its terms apply.'},
  'permission_granted':{'label':'Permission granted','hostable':True,'desc':'The rights holder gave written permission. The date of the permission is in the evidence.'},
  'link_only':{'label':'Link only','hostable':False,'desc':'In copyright or restricted. We link to the record’s book page on isidore.co, never to its files.'},
@@ -55,7 +55,7 @@ CODES={
  'L6_RENEWED':('L6','link_only','A 1931–63 work with a matching copyright renewal in the NYPL CCE renewals data: protected for 95 years from publication.'),
 }
 EXTRA_CODES={
- 'P1':('public_domain_us','The same Project Gutenberg text as an edition hosted in our reading room, whose rights were checked under the pre-1931 rule:'),
+ 'P1':('public_domain_us','The same Project Gutenberg text as an edition hosted in our reading room, whose rights were checked under the hosting rule:'),
  'M':(None,'Checked by hand:'),  # MANUAL entries carry their own status
 }
 # Hand-checked decisions: {'<id>': {'status':..., 'evidence':'URL, quote, or CCE volume and page', 'checked':'YYYY-MM-DD', 'checked_by':'name'}}

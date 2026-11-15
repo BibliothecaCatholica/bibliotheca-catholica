@@ -73,7 +73,8 @@ class Pages(unittest.TestCase):
         for k in ('512(c)(3)','512(g)(3)','penalty of perjury','good faith'):self.assertIn(k,body)
     def test_rights_page_explains(self):
         s=(ROOT/'rights/index.html').read_text()
-        for k in ('Public domain (US)','Open license','Permission granted','Link only','Unknown','1931','href="/policy/"','checked','may not be in the public domain in your country'):self.assertIn(k,s)
+        sys.path.insert(0,str(ROOT/'tools'));import rights_rule
+        for k in ('Public domain (US)','Open license','Permission granted','Link only','Unknown','first published in %d or earlier'%rights_rule.pd_last_year(),'Unknown rights fail closed','href="/policy/"','checked','may not be in the public domain in your country'):self.assertIn(k,s)
     def test_app_routes_and_footer(self):
         app=(ROOT/'app.js').read_text();html=(ROOT/'index.html').read_text()
         self.assertIn("case 'rights':case 'takedown':case 'licensing':rightsPage(p[0])",app)

@@ -53,8 +53,8 @@ WORKS = {
    ('10-the-new-commandment','X','The New Commandment','CHAPTER X THE NEW COMMANDMENT','Dear Mother, God in His infinite goodness has given me','______________________________'),
    ('11-a-canticle-of-love','XI','A Canticle of Love','CHAPTER XI A CANTICLE OF LOVE','It is not only when He is about to send','_____________________________'),
   ]),
- # Father Brown: the collections published before 1931 and hosted here (Research 2026-11-09; The Incredulity, 1926,
- # added 2026-11-09 from Standard Ebooks, corrected to the 1926 printings). The Scandal (1935) is after the cutoff: see
+ # Father Brown: the collections public domain in the US by date and hosted here (Research 2026-11-09; The Incredulity, 1926,
+ # added 2026-11-09 from Standard Ebooks, corrected to the 1926 printings). The Scandal (1935) is in US copyright until 2031: see
  # `series` in data/library.json.
  'innocence-father-brown': dict(edition='pg-204', kind='story', noun='Story', nouns='Stories',
   start_after='Contents',

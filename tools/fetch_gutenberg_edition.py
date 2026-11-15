@@ -5,7 +5,7 @@ Network: gutenberg.org (catalog page + plain-text file). Usage:
 Writes data/sources/pg-<n>.json (catalog metadata snapshot, same shape as the existing records)
 and data/texts/pg-<n>.txt (the original UTF-8 bytes, credits and full Gutenberg license kept),
 then prints the SHA-256 and the first lines of front matter so a reviewer can confirm the
-translation/edition publication date is before 1931. It never edits data/library.json: add the
+translation/edition basis under tools/rights_rule.py (public domain by date, or recorded evidence). It never edits data/library.json: add the
 work there by hand (with the year evidence in the edition note) and run `npm run build`.
 """
 import hashlib, html, json, re, sys, time, urllib.request

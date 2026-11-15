@@ -77,8 +77,8 @@ UNVERIFIED={  # low-confidence fields shown with an "Unverified" marker and thei
 RESOURCE_FIX={  # (record, url) -> replacement fields
  ('armenian','https://archive.org/details/armenianchurchfo00fort'):{'title':'E. F. K. Fortescue, The Armenian Church, founded by St. Gregory the Illuminator (London: J. T. Hayes, 1872)','evidence':'Published 1872. Author as recorded by archive.org: Edward Francis Knottesford Fortescue (not Adrian Fortescue).'},
  ('latin-roman','https://archive.org/details/romanmissaladapt00unknuoft'):{'title':'The Roman Missal adapted to the use of the laity (Toronto: W. E. Blake; undated, after 1913)','rights':'unknown','evidence':'Undated: archive.org gives only "19--", and the front matter follows the rubrics of the decree of 28 October 1913. Unknown until a dated copy is found.'},
- ('latin-roman','https://archive.org/details/missaleromanum0000unse'):{'title':'Missale Romanum (Tours: Mame, 1922), a historical printing','evidence':'Title page: MCMXXII (1922), before the 1931 cutoff.'},
- ('latin-roman-1962','https://archive.org/details/missaleromanum0000unse'):{'title':'Missale Romanum (Tours: Mame, 1922), a printing before 1962; its text differs in details','evidence':'Title page: MCMXXII (1922), before the 1931 cutoff.'},
+ ('latin-roman','https://archive.org/details/missaleromanum0000unse'):{'title':'Missale Romanum (Tours: Mame, 1922), a historical printing','evidence':'Title page: MCMXXII (1922), public domain in the US by date.'},
+ ('latin-roman-1962','https://archive.org/details/missaleromanum0000unse'):{'title':'Missale Romanum (Tours: Mame, 1922), a printing before 1962; its text differs in details','evidence':'Title page: MCMXXII (1922), public domain in the US by date.'},
  ('latin-roman-1962','https://www.divinumofficium.com/'):{'title':'Divinum Officium (an independent project; software MIT, text provenance mixed)','evidence':'The software licence is not a licence for the texts.'},
 }
 PUBLIC_NOTES={  # neutral public wording of the research notes (the raw notes are working notes, not copy)

@@ -4,6 +4,9 @@ import json
 import re
 from pathlib import Path
 from reader_formatting import validate_formatting
+from rights_rule import BASES, pd_by_date
+
+HOSTED_RIGHTS = ('Public domain in the USA.', 'Open license', 'Permission granted')
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -36,7 +39,12 @@ def validate(catalog):
             assert edition['rights'] and edition['checked'] and edition['access'] in ['full-text', 'reference']
             for contributor in edition.get('contributors', []):
                 assert contributor['role'] and contributor['name']
+            if edition.get('rightsBasis'):
+                # Hosting rule (2026-11-15): a basis other than date needs its written evidence on the record
+                assert edition['rightsBasis'] in BASES, edition['id']
+                assert edition['rightsBasis'] == 'pd-date' or len(edition.get('rightsEvidence', '')) > 40, edition['id']
             if edition.get('text'):
+                assert edition['rights'].startswith(HOSTED_RIGHTS), edition['id']
                 path = (ROOT / edition['text']).resolve()
                 assert path.is_relative_to(ROOT / 'data/texts')
                 raw = path.read_bytes()
@@ -45,35 +53,36 @@ def validate(catalog):
                 source = json.loads((ROOT / ('data/sources/' + edition['id'] + '.json')).read_text())
                 if source.get('kind') == 'ocr-transcription':
                     # Supplement to the Summa (2026-11-09): our transcription of Internet Archive scans of printings
-                    # before 1931; the source record names every scan, its imprint year, and its OCR file's SHA-256
+                    # public domain in the US by date; the source record names every scan, its imprint year, and its OCR file's SHA-256
                     assert edition['source'].startswith('https://archive.org/details/'), edition['id']
                     assert b'*** END OF THE TRANSCRIPTION ***' in raw and source['sha256'] == edition['sha256'], edition['id']
                     assert source['title'] == edition['sourceTitle'] and edition['rights'].startswith('Public domain in the USA.')
                     scans = source['volumes'] + [source['substitutePages']]
                     assert edition['source'] in [v['url'] for v in scans], edition['id']
                     for v in scans:
-                        assert v['url'] == 'https://archive.org/details/' + v['identifier'] and v['year'] < 1931, v['identifier']
+                        assert v['url'] == 'https://archive.org/details/' + v['identifier'] and pd_by_date(v['year']), v['identifier']
                         assert re.fullmatch(r'[0-9a-f]{64}', v['ocrSha256']), v['identifier']
                     continue
                 if source.get('kind') == 'public-domain-text':
                     # On Christian Doctrine (2026-11-09): Shaw translation from CCEL NPNF1-02 Public Domain plain text
-                    # (no Gutenberg ebook). Print witness before 1931; New Advent stays link-only.
+                    # (no Gutenberg ebook). Print witness public domain by date; New Advent stays link-only.
                     assert source['sha256'] == edition['sha256'], edition['id']
                     assert source['title'] == edition['sourceTitle'], edition['id']
-                    assert edition['rights'].startswith('Public domain in the USA.'), edition['id']
+                    assert edition['rights'].startswith(HOSTED_RIGHTS), edition['id']
                     assert b'*** END OF THE HOSTED TEXT' in raw, edition['id']
                     assert 'gutenberg.org' not in edition['source'], edition['id']
                     assert source.get('sourceUrl', '').startswith('https://'), edition['id']
                     assert re.fullmatch(r'[0-9a-f]{64}', source.get('sourceFileSha256', '')), edition['id']
                     ia = source.get('iaWitness') or {}
                     if ia:
-                        assert ia['url'] == 'https://archive.org/details/' + ia['identifier'] and ia['year'] < 1931, ia
+                        assert ia['url'] == 'https://archive.org/details/' + ia['identifier'] and pd_by_date(ia['year']), ia
                         assert re.fullmatch(r'[0-9a-f]{64}', ia.get('ocrSha256', '')), ia
                     continue
                 assert b'END OF THE PROJECT GUTENBERG' in raw.upper()
                 assert source['metadata']['Copyright'] == ['Public domain in the USA.']
                 assert source['metadata']['Title'][0] == edition['sourceTitle']
-    # Deep-link gaps (2026-11-09): a series lists its books in order; a book from 1931 or later is never a work here
+    # Deep-link gaps (2026-11-09): a series lists its books in order. A book not public domain by date is a work
+    # here only when one of its editions records another basis (hosting rule, 2026-11-15)
     for series in catalog.get('series', []):
         assert series['id'] and series['title'] and series['items'], series
         years = [item['year'] for item in series['items']]
@@ -82,7 +91,8 @@ def validate(catalog):
             assert item['title'] and isinstance(item['year'], int)
             if item['workId']:
                 assert item['workId'] in ids, item
-                assert item['year'] < 1931, item
+                assert pd_by_date(item['year']) or any(e.get('rightsBasis', 'pd-date') != 'pd-date'
+                                                       for e in by_id[item['workId']]['editions']), item
             else:
                 assert item.get('note'), item
     # Deep-link gaps (2026-11-09): author pages for writers outside the Catholic communion whose books are in the

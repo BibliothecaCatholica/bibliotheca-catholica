@@ -70,7 +70,7 @@ Some older import scripts expect source material such as `metadata.db` or a hist
 
 - The site is an independent index and reading room, not the publisher or host of every linked work. Prefer primary sources and identify the edition readers will reach.
 - Catalog records distinguish hosted reading editions, external full-text sources, and references. Never describe a reference or a scan link as a text hosted by this site.
-- Hosted editions require edition-specific rights evidence and retain their original source notices. The pre-1931 rule is a project selection rule, not worldwide legal clearance. Unknown rights fail closed.
+- Hosted editions require a recorded, edition-specific basis and retain their original source notices. Public domain in the US by date is the usual basis (in 2026, first published 1930 or earlier, moving each January 1); later editions need written evidence of no renewal, a defective notice, an open license, or permission ([rule 1](docs/PROJECT-RULES.md)). This is a United States designation, not worldwide legal clearance. Unknown rights fail closed.
 - Isidore catalog rows are imported and unreviewed as a whole; automated author associations can be imperfect. CatholicSaints.Info remains link-only; do not copy or crawl it.
 - Current terms differ by material: code is MIT; open data and reading-catalog metadata are CC0; site writing is CC BY 4.0; hosted texts carry their source terms and no blanket license from this project. See [LICENSING.md](LICENSING.md) and the live [licensing note](https://bibliothecacatholica.com/licensing/).
 

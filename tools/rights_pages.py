@@ -3,6 +3,7 @@ written by tools/build_rights.py) and the static pages (tools/build_static.py). 
 Owner decisions still open, kept as visible placeholders: the designated takedown agent (name,
 address, email) and whether to register a DMCA agent with the US Copyright Office."""
 from html import escape as E
+from rights_rule import RULE_SENTENCE, pd_last_year
 NOT_LEGAL='<p class="notice"><b>This is not legal advice.</b> It explains how this library labels and links books. If you need advice about a particular work, ask a lawyer.</p>'
 ORDER=['public_domain_us','open_license','permission_granted','link_only','unknown']
 def badge(st,label):
@@ -16,13 +17,13 @@ def rights_html(statuses,counts,checked):
      '<section class="panel policy"><h2>The five badges</h2><ul class="rights-list">'+items+'</ul>'
      '<p>For <b>Link only</b> and <b>Unknown</b> records we link only to the record’s book page on isidore.co, never to its files or to isidore.co’s folder listings. Bibliotheca Catholica does not host, and does not vouch for, any file at isidore.co. Hover over or tap a badge to see the evidence and the date it was checked; a record’s own page shows the same details.</p>'
      '<h2>How the status is decided</h2>'
-     '<ul><li><b>Reading-room texts.</b> Each text we host was checked edition by edition before it was added: the specific edition or translation must have been published before 1931, and the evidence is recorded with the edition. These show <b>Public domain (US)</b>.</li>'
+     '<ul><li><b>Reading-room texts.</b> Each text we host was checked edition by edition before it was added, and the basis for hosting it is recorded with the edition: usually public domain in the United States by date, otherwise written evidence of no renewal, a defective notice, an open license, or the holder’s permission. The badge names the basis.</li>'
      '<li><b>Isidore Index records.</b> Each record was classified on '+E(checked)+' from its catalog year, ISBN, publisher, and an automated match against the NYPL transcription of US copyright renewals. Records presumed in copyright (for example, a 1978 or later edition, an ISBN with no year, a renewed 1931–63 book, or a post-1930 papal or curial text) are <b>Link only</b>.</li>'
-     '<li><b>Leads are not decisions.</b> A pre-1931 catalog year, a public-domain source named in the catalog, or “no renewal found” is a lead for a person to check, not proof. Catalog years are often scan or reprint dates, and a modern reprint can add a protected translation, introduction, or notes. Until someone checks the title page and the evidence, these records are <b>Unknown</b>.</li>'
+     '<li><b>Leads are not decisions.</b> An early catalog year, a public-domain source named in the catalog, or “no renewal found” is a lead for a person to check, not proof. Catalog years are often scan or reprint dates, and a modern reprint can add a protected translation, introduction, or notes. Until someone checks the title page and the evidence, these records are <b>Unknown</b>.</li>'
      '<li><b>The only automatic public-domain records</b> in the Index are the same Project Gutenberg texts that our reading room hosts after a rights check.</li>'
      '<li>When in doubt, the status is <b>Unknown</b>. A status changes only with written evidence (a URL, a quotation, or a renewal-record citation) and the date it was checked.</li></ul>'
      '<h2>The checked date</h2><p>Each badge shows when its status was last checked. Copyright status changes over time (each 1 January more US works enter the public domain), and our evidence can improve, so an older date means “as of then”.</p>'
-     '<h2>The 1931 rule still applies</h2><p>We host a full text only if that edition was published before 1931 and its rights were checked. Anything later is a link to its source, whatever its badge. A badge of <b>Public domain (US)</b> refers to the United States; the book may not be in the public domain in your country.</p>'
+     '<h2>What we host</h2><p>'+E(RULE_SENTENCE)+' Anything without a recorded basis is a link to its source. A badge of <b>Public domain (US)</b> refers to the United States; the book may not be in the public domain in your country.</p>'
      '<h2>Rights are not recommendations</h2><p>A rights badge says nothing about a book’s content. The <a href="#/policy">Fidelity &amp; Editorial Policy</a> still applies: listing is not endorsement, flagged titles keep their context note, and flagged titles are never featured.</p>'
      '<h2>Corrections and removal</h2><p>If a badge is wrong, or you hold the rights to a work and want a link or a text removed, see <a href="#/takedown">Takedown requests</a>. Data: each record’s <code>rights_status</code>, <code>rights_evidence</code>, and <code>rights_checked</code> are in the <a href="#/data">Open Data</a>.</p>'
      +NOT_LEGAL+'</section></div>')
@@ -31,7 +32,7 @@ def takedown_html():
      '<p class="lede">How a rights holder can ask us to remove a text, a link, or a record’s file links.</p></div>'
      +NOT_LEGAL+
      '<section class="panel policy"><h2>What this site holds</h2>'
-     '<p>Bibliotheca Catholica hosts only the reading-room texts, each a public-domain edition checked under our pre-1931 rule. The books listed in the Isidore Index are held by isidore.co, not by us: we show their catalog records and link to their book pages. To have a file removed from isidore.co itself, contact isidore.co. We can remove or change our own record, badge, or link.</p>'
+     '<p>Bibliotheca Catholica hosts only the reading-room texts, each an edition whose basis for hosting was checked and recorded. The books listed in the Isidore Index are held by isidore.co, not by us: we show their catalog records and link to their book pages. To have a file removed from isidore.co itself, contact isidore.co. We can remove or change our own record, badge, or link.</p>'
      '<h2>Where to send a request</h2>'
      # Takedown contact. No name or postal address is given until the owner decides them; none may be invented.
      '<p class="takedown-contact">Email takedown requests to <a href="mailto:micahwatson@bibliothecacatholica.com">micahwatson@bibliothecacatholica.com</a> and put “Takedown request” in the subject line.</p>'

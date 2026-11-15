@@ -2,6 +2,7 @@
 Internet Archive scans of the 1917, 1921, and 1922 English Dominican printings, at /summa/supp/q<n>/a<m>/."""
 import hashlib,json,re,unittest
 from pathlib import Path
+import sys;sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'));from rights_rule import pd_by_date
 ROOT=Path(__file__).resolve().parents[1]
 R=lambda p:(ROOT/p).read_text(encoding='utf-8')
 LIB=json.loads(R('data/library.json'));W=next(w for w in LIB['works'] if w['id']=='summa-theologiae')
@@ -20,7 +21,7 @@ class Supplement(unittest.TestCase):
         self.assertEqual([v['year'] for v in SRC['volumes']],[1917,1922,1921,1922])
         self.assertEqual([tuple(v['questions']) for v in SRC['volumes']],[(1,33),(34,68),(69,86),(87,99)])
         for v in SRC['volumes']+[SRC['substitutePages']]:
-            self.assertLess(v['year'],1931);self.assertRegex(v['ocrSha256'],r'^[0-9a-f]{64}$');self.assertEqual(v['url'],'https://archive.org/details/'+v['identifier'])
+            self.assertTrue(pd_by_date(v['year']));self.assertRegex(v['ocrSha256'],r'^[0-9a-f]{64}$');self.assertEqual(v['url'],'https://archive.org/details/'+v['identifier'])
         t=raw.decode('utf-8');self.assertIn('*** END OF THE TRANSCRIPTION ***',t);self.assertNotIn('1947',t);self.assertNotIn('Project Gutenberg License',t)
         self.assertNotIn('\u2014',json.dumps(E,ensure_ascii=False)+R('data/sources/ia-summa-supplement.json'))
     def test_standard_structure(self):

@@ -1,6 +1,7 @@
 """On Christian Doctrine (2026-11-09): hosted Shaw translation from CCEL NPNF1-02 Public Domain plain text."""
 import hashlib, json, re, unittest
 from pathlib import Path
+import sys;sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'));from rights_rule import pd_by_date
 
 ROOT = Path(__file__).resolve().parents[1]
 R = lambda p: (ROOT / p).read_text(encoding='utf-8')
@@ -32,7 +33,7 @@ class OnChristianDoctrine(unittest.TestCase):
         self.assertTrue(E['source'].startswith('https://www.ccel.org/'))
         self.assertRegex(SRC['sourceFileSha256'], r'^[0-9a-f]{64}$')
         self.assertEqual(SRC['iaWitness']['identifier'], 'selectlibraryofn0002unse')
-        self.assertLess(SRC['iaWitness']['year'], 1931)
+        self.assertTrue(pd_by_date(SRC['iaWitness']['year']))
         self.assertIn('*** END OF THE HOSTED TEXT: ON CHRISTIAN DOCTRINE ***', raw.decode('utf-8'))
         self.assertNotIn('Project Gutenberg License', raw.decode('utf-8'))
         self.assertNotIn('\u2014', json.dumps(W, ensure_ascii=False) + R('data/sources/ccel-npnf102-doctrine.json'))

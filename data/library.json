@@ -3403,6 +3403,311 @@
           "access": "full-text"
         }
       ]
+    },
+    {
+      "id": "short-history-england",
+      "title": "A Short History of England",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's popular history of England, told as a single narrative from Roman Britain to the First World War.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1917",
+      "editions": [
+        {
+          "id": "pg-20897",
+          "label": "Project Gutenberg #20897",
+          "source": "https://www.gutenberg.org/ebooks/20897",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1917. Transcribed from a Chatto & Windus, London printing scanned by the Internet Archive (ashorthistory00chesuoft); the file does not give that printing's year.",
+          "sourceTitle": "A Short History of England",
+          "digitalRelease": "Mar 25, 2007",
+          "access": "full-text",
+          "text": "data/texts/pg-20897.txt",
+          "sha256": "c98dd2ed66cae95f60d7c3b62b8942143fa631e022e1f7310c4d873452bddf56",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "superstition-divorce",
+      "title": "The Superstition of Divorce",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's case against the extension of divorce, set out in short chapters on the family, the vow, and the state.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1920",
+      "editions": [
+        {
+          "id": "pg-62680",
+          "label": "Project Gutenberg #62680",
+          "source": "https://www.gutenberg.org/ebooks/62680",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1920. The transcribed copy is the John Lane Company, New York printing, copyright 1920.",
+          "sourceTitle": "The Superstition of Divorce",
+          "digitalRelease": "Jul 17, 2020",
+          "access": "full-text",
+          "text": "data/texts/pg-62680.txt",
+          "sha256": "efb85065135eaeb6648b4b19786356a4cfc8cb9b244bb821aea29b16ec1da55b",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "eugenics-other-evils",
+      "title": "Eugenics and Other Evils",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's essays against the eugenics movement and the legislation proposed in its name.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1922",
+      "editions": [
+        {
+          "id": "pg-25308",
+          "label": "Project Gutenberg #25308",
+          "source": "https://www.gutenberg.org/ebooks/25308",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1922. The transcribed copy is the Cassell and Company printing (London, New York, Toronto & Melbourne), 1922.",
+          "sourceTitle": "Eugenics and Other Evils",
+          "digitalRelease": "May 3, 2008",
+          "access": "full-text",
+          "text": "data/texts/pg-25308.txt",
+          "sha256": "7114c613bc952f7e03e20a15f04202ecd1cd2386138eea98f603406a08e45524",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "new-jerusalem",
+      "title": "The New Jerusalem",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's notes on a journey through Egypt and Palestine to Jerusalem, first published in a newspaper as he travelled and gathered here, as his preface says, with a closing chapter on Zionism.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1920",
+      "editions": [
+        {
+          "id": "pg-13468",
+          "label": "Project Gutenberg #13468",
+          "source": "https://www.gutenberg.org/ebooks/13468",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1920. The file does not name the printing it follows.",
+          "sourceTitle": "The New Jerusalem",
+          "digitalRelease": "Sep 15, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-13468.txt",
+          "sha256": "630a086ebae9d340c38b56bbc6ccec4f8487b913b31681cc1fe53ebecb043a06",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "what-i-saw-america",
+      "title": "What I Saw in America",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's reflections on the United States after his lecture tour there, on its immigrants, its democracy, and its laws.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1922",
+      "editions": [
+        {
+          "id": "pg-27250",
+          "label": "Project Gutenberg #27250",
+          "source": "https://www.gutenberg.org/ebooks/27250",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1922. Transcribed from a Hodder and Stoughton, London printing scanned by the Internet Archive; the file does not give that printing's year.",
+          "sourceTitle": "What I Saw in America",
+          "digitalRelease": "Nov 13, 2008",
+          "access": "full-text",
+          "text": "data/texts/pg-27250.txt",
+          "sha256": "ff9a27bf3d1b9a18467ad07cf1ca4938e1aa6b3fe839a5b8520030cfaa3873b8",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "utopia-usurers",
+      "title": "Utopia of Usurers and Other Essays",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "A poem and essays from Chesterton's journalism on wealth, wage labour, and the condition of the poor.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1917",
+      "editions": [
+        {
+          "id": "pg-2134",
+          "label": "Project Gutenberg #2134",
+          "source": "https://www.gutenberg.org/ebooks/2134",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1917. The file does not name the printing it follows.",
+          "sourceTitle": "Utopia of Usurers and Other Essays",
+          "digitalRelease": "Apr 1, 2000",
+          "access": "full-text",
+          "text": "data/texts/pg-2134.txt",
+          "sha256": "815996681434a6e36e38da5c8d18e513650b1a1c301f8c99f0218e7063712228",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "manalive",
+      "title": "Manalive",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A comic novel in which Innocent Smith arrives at a London boarding house and is put on private trial by its residents for a string of apparent crimes.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1912",
+      "editions": [
+        {
+          "id": "pg-1718",
+          "label": "Project Gutenberg #1718",
+          "source": "https://www.gutenberg.org/ebooks/1718",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1912. The title page names Thomas Nelson and Sons, 1912.",
+          "sourceTitle": "Manalive",
+          "digitalRelease": "Apr 1, 1999",
+          "access": "full-text",
+          "text": "data/texts/pg-1718.txt",
+          "sha256": "3ef6b2f2a709012770dfa64e60a8342c456d24194076a3d7d64ef5debca69f90",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "napoleon-notting-hill",
+      "title": "The Napoleon of Notting Hill",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A novel set in a future London where a king appointed by rotation from an official list revives the old boroughs as a joke and the young provost of Notting Hill takes it seriously enough to fight for it.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1904",
+      "editions": [
+        {
+          "id": "pg-20058",
+          "label": "Project Gutenberg #20058",
+          "source": "https://www.gutenberg.org/ebooks/20058",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "illustrator",
+              "name": "W. Graham Robertson"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1904. The transcribed copy is the John Lane: The Bodley Head printing (London & New York, MDCCCCIV), copyright in the U.S.A. 1904, with illustrations by W. Graham Robertson.",
+          "sourceTitle": "The Napoleon of Notting Hill",
+          "digitalRelease": "Dec 8, 2006",
+          "access": "full-text",
+          "text": "data/texts/pg-20058.txt",
+          "sha256": "fa00ec668e1b767e87884216dc8d4ecb3a91da861703d58f20aff7f0da106237",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "club-queer-trades",
+      "title": "The Club of Queer Trades",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Six stories of Basil Grant and a club whose members must each earn their living by a trade they invented.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1905",
+      "editions": [
+        {
+          "id": "pg-1696",
+          "label": "Project Gutenberg #1696",
+          "source": "https://www.gutenberg.org/ebooks/1696",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1905. The file does not name the printing it follows.",
+          "sourceTitle": "The Club of Queer Trades",
+          "digitalRelease": "Apr 1, 1999",
+          "access": "full-text",
+          "text": "data/texts/pg-1696.txt",
+          "sha256": "76733336ba28a3712c324b4e2b0daeca0328d6572b6baac5995106273166c52d",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "flying-inn",
+      "title": "The Flying Inn",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A comic novel in which an Irish sea captain and an innkeeper roam England with their inn sign and a cask of rum after the sale of alcohol is banned.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1914",
+      "editions": [
+        {
+          "id": "pg-59239",
+          "label": "Project Gutenberg #59239",
+          "source": "https://www.gutenberg.org/ebooks/59239",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1914. The transcribed copy is the John Lane Company, New York printing, copyright 1914.",
+          "sourceTitle": "The Flying Inn",
+          "digitalRelease": "Apr 10, 2019",
+          "access": "full-text",
+          "text": "data/texts/pg-59239.txt",
+          "sha256": "e77d141f4285634642203c20615494fa7d60aeddc684dca6aebbeda459a50431",
+          "rightsBasis": "pd-date"
+        }
+      ]
     }
   ],
   "series": [

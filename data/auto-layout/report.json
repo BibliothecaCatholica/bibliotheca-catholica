@@ -780,6 +780,134 @@
     "all-capitals line": 47,
     "indented line": 31
    }
+  },
+  "pg-20897": {
+   "work": "A Short History of England",
+   "multiLineBlocks": 189,
+   "reflowed": 183,
+   "kept": 6,
+   "share": 0.968,
+   "emphasisSpans": 44,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 2,
+    "indented line": 3,
+    "short line": 1
+   }
+  },
+  "pg-62680": {
+   "work": "The Superstition of Divorce",
+   "multiLineBlocks": 76,
+   "reflowed": 70,
+   "kept": 6,
+   "share": 0.921,
+   "emphasisSpans": 22,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 6
+   }
+  },
+  "pg-25308": {
+   "work": "Eugenics and Other Evils",
+   "multiLineBlocks": 212,
+   "reflowed": 175,
+   "kept": 37,
+   "share": 0.825,
+   "emphasisSpans": 118,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 35,
+    "short line": 2
+   }
+  },
+  "pg-13468": {
+   "work": "The New Jerusalem",
+   "multiLineBlocks": 277,
+   "reflowed": 188,
+   "kept": 89,
+   "share": 0.679,
+   "emphasisSpans": 41,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 1,
+    "short line": 88
+   }
+  },
+  "pg-27250": {
+   "work": "What I Saw in America",
+   "multiLineBlocks": 311,
+   "reflowed": 302,
+   "kept": 9,
+   "share": 0.971,
+   "emphasisSpans": 82,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 9
+   }
+  },
+  "pg-2134": {
+   "work": "Utopia of Usurers and Other Essays",
+   "multiLineBlocks": 172,
+   "reflowed": 146,
+   "kept": 26,
+   "share": 0.849,
+   "emphasisSpans": 10,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 26
+   }
+  },
+  "pg-1718": {
+   "work": "Manalive",
+   "multiLineBlocks": 796,
+   "reflowed": 772,
+   "kept": 24,
+   "share": 0.97,
+   "emphasisSpans": 10,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 4,
+    "indented line": 5,
+    "short line": 15
+   }
+  },
+  "pg-20058": {
+   "work": "The Napoleon of Notting Hill",
+   "multiLineBlocks": 839,
+   "reflowed": 813,
+   "kept": 26,
+   "share": 0.969,
+   "emphasisSpans": 74,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 12,
+    "indented line": 8,
+    "short line": 6
+   }
+  },
+  "pg-1696": {
+   "work": "The Club of Queer Trades",
+   "multiLineBlocks": 809,
+   "reflowed": 803,
+   "kept": 6,
+   "share": 0.993,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 6
+   }
+  },
+  "pg-59239": {
+   "work": "The Flying Inn",
+   "multiLineBlocks": 1260,
+   "reflowed": 1165,
+   "kept": 95,
+   "share": 0.925,
+   "emphasisSpans": 85,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 95
+   }
   }
  },
  "excluded": {
@@ -793,6 +921,10 @@
   {
    "edition": "pg-12047",
    "block": 447
+  },
+  {
+   "edition": "pg-13468",
+   "block": 162
   },
   {
    "edition": "pg-15992",
@@ -827,6 +959,10 @@
    "block": 6401
   },
   {
+   "edition": "pg-20058",
+   "block": 692
+  },
+  {
    "edition": "pg-20450",
    "block": 1230
   },
@@ -835,20 +971,12 @@
    "block": 944
   },
   {
-   "edition": "pg-223",
-   "block": 659
-  },
-  {
    "edition": "pg-24526",
    "block": 681
   },
   {
    "edition": "pg-45305",
    "block": 1320
-  },
-  {
-   "edition": "pg-45604",
-   "block": 592
   },
   {
    "edition": "pg-70175",

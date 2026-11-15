@@ -2,7 +2,7 @@
 
 ## Catalog and delivery inputs
 
-The 84 hosted TXT editions are also published at `https://texts.bibliothecacatholica.com/texts/` from `BibliothecaCatholica/bibliotheca-texts`. `textArchive` in `data/library.json` controls the reader's preferred host. Original local paths, hashes, and source records remain authoritative; the reader falls back to local files on archive failure. Export with `python3 tools/build_text_archive.py --output /absolute/path/to/bibliotheca-texts`. The export preserves original bytes and includes provenance, a searchable directory, and a manifest. See `docs/archive/PROJECT-REVIEW-2026-10-22.md` for the full assessment.
+The 94 hosted TXT editions are also published at `https://texts.bibliothecacatholica.com/texts/` from `BibliothecaCatholica/bibliotheca-texts`. `textArchive` in `data/library.json` controls the reader's preferred host. Original local paths, hashes, and source records remain authoritative; the reader falls back to local files on archive failure. Export with `python3 tools/build_text_archive.py --output /absolute/path/to/bibliotheca-texts`. The export preserves original bytes and includes provenance, a searchable directory, and a manifest. See `docs/archive/PROJECT-REVIEW-2026-10-22.md` for the full assessment.
 
 `data/library.json` is the maintained source; `python3 tools/build_library.py` validates it and emits `data/library.js`. Both are committed so the site can still deploy as plain static files. There are no production API keys, application server, or database. The Study desk bundles pinned npm dependencies; see [OPERATIONS](OPERATIONS.md#validation) for setup.
 
@@ -14,7 +14,7 @@ Dated additions, skipped candidates, and source-check results are in [catalog re
 
 ## Catalog snapshot (November 9, 2026)
 
-84 Gutenberg editions in the catalog, 81 hosted. This count is checked against `data/library.json` by `tests/test_counts.py`. Use the catalog for edition details; source snapshots establish the scope of each individual check.
+94 Gutenberg editions in the catalog, 91 hosted. This count is checked against `data/library.json` by `tests/test_counts.py`. Use the catalog for edition details; source snapshots establish the scope of each individual check.
 
 ## Corrections and boundaries
 

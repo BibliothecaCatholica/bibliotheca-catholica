@@ -24,7 +24,7 @@ GitHub `main` is the source of truth. Cloudflare Pages deploys it automatically 
 
 As of November 15, 2026, `main` at `54c17291c1` (PR #37):
 
-- 124 work records; 84 hosted editions of 79 works in `data/library.json`.
+- 134 work records; 94 hosted editions of 89 works in `data/library.json`.
 - 4,936 static pages and 4,937 sitemap URLs; about 6,800 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 124 Node and 270 Python.
 

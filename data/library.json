@@ -4008,6 +4008,325 @@
           "rightsBasis": "pd-date"
         }
       ]
+    },
+    {
+      "id": "chesterton-calendar",
+      "title": "A Chesterton Calendar",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A passage from Chesterton's books and journalism for each day of the year, compiled from his writings.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1911",
+      "editions": [
+        {
+          "id": "pg-45811",
+          "label": "Project Gutenberg #45811",
+          "source": "https://www.gutenberg.org/ebooks/45811",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1911. The title page names London, 1911.",
+          "sourceTitle": "A Chesterton Calendar Compiled from the writings of 'G.K.C.' both in verse and in prose. With a section apart for the moveable feasts.",
+          "digitalRelease": "May 29, 2014",
+          "access": "full-text",
+          "text": "data/texts/pg-45811.txt",
+          "sha256": "d13a913134a56bb6f768098ad8384a0b83522ee71e53f2d78d74a848793d5500",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "charles-dickens-bookman",
+      "title": "Charles Dickens (Bookman Booklets)",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "A short illustrated booklet on Dickens, with contributions by Chesterton and F. G. Kitton.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1903",
+      "editions": [
+        {
+          "id": "pg-61760",
+          "label": "Project Gutenberg #61760",
+          "source": "https://www.gutenberg.org/ebooks/61760",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "co-author",
+              "name": "F. G. Kitton"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1903. The transcribed copy is a Hodder & Stoughton, London printing; the file does not give its year.",
+          "sourceTitle": "Charles Dickens",
+          "digitalRelease": "Apr 5, 2020",
+          "access": "full-text",
+          "text": "data/texts/pg-61760.txt",
+          "sha256": "b89d0880475b6634f56e772864a71d8cdbe135cbd33af1ef3aba53d31149d779",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "dickens-appreciations-criticisms",
+      "title": "Appreciations and Criticisms of the Works of Charles Dickens",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's essays on the novels of Charles Dickens.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1911",
+      "editions": [
+        {
+          "id": "pg-22362",
+          "label": "Project Gutenberg #22362",
+          "source": "https://www.gutenberg.org/ebooks/22362",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1911. The title page names J. M. Dent & Sons, London, and E. P. Dutton & Co., New York, 1911.",
+          "sourceTitle": "Appreciations and Criticisms of the Works of Charles Dickens",
+          "digitalRelease": "Aug 20, 2007",
+          "access": "full-text",
+          "text": "data/texts/pg-22362.txt",
+          "sha256": "825317f4f8507f500c6c1ac0d489dc3a45336f3a31323c86589a373747ca0db2",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "divorce-versus-democracy",
+      "title": "Divorce versus Democracy",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "A short essay, reprinted from Nash's Magazine, on divorce reform and its effect on the families of the poor.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1916",
+      "editions": [
+        {
+          "id": "pg-62467",
+          "label": "Project Gutenberg #62467",
+          "source": "https://www.gutenberg.org/ebooks/62467",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1916. The file names London, 1916, and says the essay is reprinted from Nash's Magazine.",
+          "sourceTitle": "Divorce versus Democracy",
+          "digitalRelease": "Jun 24, 2020",
+          "access": "full-text",
+          "text": "data/texts/pg-62467.txt",
+          "sha256": "d7ef8dd12d62aa98ff211857f1bec97b48a4e40137c85faf44236b8c8ae0ba69",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "fancies-versus-fads",
+      "title": "Fancies Versus Fads",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Essays from Chesterton's journalism on the fashions and fads of the day.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1923",
+      "editions": [
+        {
+          "id": "pg-60164",
+          "label": "Project Gutenberg #60164",
+          "source": "https://www.gutenberg.org/ebooks/60164",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1923. The transcribed copy is a Methuen & Co., London printing; the file does not give its year.",
+          "sourceTitle": "Fancies Versus Fads",
+          "digitalRelease": "Aug 24, 2019",
+          "access": "full-text",
+          "text": "data/texts/pg-60164.txt",
+          "sha256": "e45a912e2dbeb9cf265f1ed0cbfe408575b6a6dccb0ea07918ea4314e86f8131",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "g-f-watts",
+      "title": "G. F. Watts",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Art",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's study of the painter George Frederick Watts and the ideas behind his allegorical art.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1904",
+      "editions": [
+        {
+          "id": "pg-64074",
+          "label": "Project Gutenberg #64074",
+          "source": "https://www.gutenberg.org/ebooks/64074",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1904. The transcribed copy is a Duckworth & Co., London printing; the file lists reprints of 1906, 1909, 1913, and 1914.",
+          "sourceTitle": "G. F. Watts",
+          "digitalRelease": "Dec 18, 2020",
+          "access": "full-text",
+          "text": "data/texts/pg-64074.txt",
+          "sha256": "31dda47eacaf81430da70d136eac4a28e300aabca9e290c395d0f067a58c622f",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "greybeards-at-play",
+      "title": "Greybeards at Play",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's first book: illustrated comic verses, subtitled Literature and Art for Old Gentlemen.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1900",
+      "editions": [
+        {
+          "id": "pg-14706",
+          "label": "Project Gutenberg #14706",
+          "source": "https://www.gutenberg.org/ebooks/14706",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1900. The title page names R. Brimley Johnson, London, 1900.",
+          "sourceTitle": "Greybeards at Play: Literature and Art for Old Gentlemen",
+          "digitalRelease": "Jan 16, 2005",
+          "access": "full-text",
+          "text": "data/texts/pg-14706.txt",
+          "sha256": "40852637f5d0263b82db6ff7f24fec65ed367b6957682eaaabe908682194c880",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "irish-impressions",
+      "title": "Irish Impressions",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's reflections on Ireland, its religion, and its land, written after a visit there near the end of the First World War.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1919",
+      "editions": [
+        {
+          "id": "pg-61758",
+          "label": "Project Gutenberg #61758",
+          "source": "https://www.gutenberg.org/ebooks/61758",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1919. The transcribed copy is the second impression (Collins, London, January 1920); the file records the first impression of November 1919.",
+          "sourceTitle": "Irish Impressions",
+          "digitalRelease": "Apr 5, 2020",
+          "access": "full-text",
+          "text": "data/texts/pg-61758.txt",
+          "sha256": "53e578a62fc33a2359a3493d97446b487eb8b86cc46eca7ac872dab57fb79fc8",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "leo-tolstoy-bookman",
+      "title": "Leo Tolstoy (Bookman Booklets)",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "A short illustrated booklet on Tolstoy, with contributions by Chesterton, G. H. Perris, and Edward Garnett.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1903",
+      "editions": [
+        {
+          "id": "pg-62045",
+          "label": "Project Gutenberg #62045",
+          "source": "https://www.gutenberg.org/ebooks/62045",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "co-author",
+              "name": "Edward Garnett"
+            },
+            {
+              "role": "co-author",
+              "name": "G. H. Perris"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1903. The transcribed copy is a Hodder and Stoughton, London printing; the file does not give its year.",
+          "sourceTitle": "Leo Tolstoy",
+          "digitalRelease": "May 6, 2020",
+          "access": "full-text",
+          "text": "data/texts/pg-62045.txt",
+          "sha256": "9a6ea19a791a32d7c0a242f099310f9a67d156a48a673b3ee9640f1f36666356",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "london-chesterton",
+      "title": "London",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's essay on London, printed with ten photographs of the city by Alvin Langdon Coburn.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1914",
+      "editions": [
+        {
+          "id": "pg-62048",
+          "label": "Project Gutenberg #62048",
+          "source": "https://www.gutenberg.org/ebooks/62048",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "photographer",
+              "name": "Alvin Langdon Coburn"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1914. The file names a private printing, London, 1914, with ten photographs by Alvin Langdon Coburn.",
+          "sourceTitle": "London",
+          "digitalRelease": "May 7, 2020",
+          "access": "full-text",
+          "text": "data/texts/pg-62048.txt",
+          "sha256": "5aad738867afd1bc81784d838d51a1d368765a84c787d4a3a00ee80c2f9b74d6",
+          "rightsBasis": "pd-date"
+        }
+      ]
     }
   ],
   "series": [

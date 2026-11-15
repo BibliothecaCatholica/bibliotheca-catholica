@@ -4821,7 +4821,9 @@ work/catherine-dialogue/index.html
 work/catherine-letters/index.html
 work/catholic-church-conversion/index.html
 work/catholic-church-history/index.html
+work/charles-dickens-bookman/index.html
 work/charles-dickens-critical-study/index.html
+work/chesterton-calendar/index.html
 work/chesterton-francis/index.html
 work/chesterton-francis/ch/01-the-problem-of-st-francis/index.html
 work/chesterton-francis/ch/02-the-world-st-francis-found/index.html
@@ -4856,15 +4858,19 @@ work/development-doctrine/ch/09-application-of-the-fourth-note-of-a-true-develop
 work/development-doctrine/ch/10-application-of-the-fifth-note-of-a-true-development/index.html
 work/development-doctrine/ch/11-application-of-the-sixth-note-of-a-true-development/index.html
 work/development-doctrine/ch/12-application-of-the-seventh-note-of-a-true-development/index.html
+work/dickens-appreciations-criticisms/index.html
 work/dictionary-saintly-women/index.html
 work/divine-comedy/index.html
+work/divorce-versus-democracy/index.html
 work/dream-gerontius/index.html
 work/eugenics-other-evils/index.html
 work/europe-faith/index.html
 work/everlasting-man/index.html
 work/fabiola/index.html
+work/fancies-versus-fads/index.html
 work/fides-ratio/index.html
 work/flying-inn/index.html
+work/g-f-watts/index.html
 work/gaudium-spes/index.html
 work/george-bernard-shaw/index.html
 work/glories-of-mary/index.html
@@ -4880,6 +4886,7 @@ work/grammar-assent/ch/07-certitude/index.html
 work/grammar-assent/ch/08-inference/index.html
 work/grammar-assent/ch/09-the-illative-sense/index.html
 work/grammar-assent/ch/10-inference-and-assent-in-the-matter-of-religion/index.html
+work/greybeards-at-play/index.html
 work/heretics/index.html
 work/heretics/ch/01-introductory-remarks-on-the-importance-of-orthodoxy/index.html
 work/heretics/ch/02-on-the-negative-spirit/index.html
@@ -4930,6 +4937,7 @@ work/innocence-father-brown/story/09-the-hammer-of-god/index.html
 work/innocence-father-brown/story/10-the-eye-of-apollo/index.html
 work/innocence-father-brown/story/11-the-sign-of-the-broken-sword/index.html
 work/innocence-father-brown/story/12-the-three-tools-of-death/index.html
+work/irish-impressions/index.html
 work/john-chrysostom-homilies-on-romans/index.html
 work/justin-martyr-dialogue-with-trypho/index.html
 work/justin-martyr-first-apology/index.html
@@ -4938,6 +4946,7 @@ work/legends-monastic-orders/index.html
 work/legends-of-saint-patrick/index.html
 work/legends-of-the-madonna/index.html
 work/legends-of-the-saints-delehaye/index.html
+work/leo-tolstoy-bookman/index.html
 work/lewis-abolition-man/index.html
 work/lewis-four-loves/index.html
 work/lewis-great-divorce/index.html
@@ -4989,6 +4998,7 @@ work/life-of-teresa/ch/38-certain-heavenly-secrets-visions-and-revelations/index
 work/life-of-teresa/ch/39-other-graces-bestowed-on-the-saint/index.html
 work/life-of-teresa/ch/40-visions-revelations-and-locutions/index.html
 work/little-flowers-francis/index.html
+work/london-chesterton/index.html
 work/lord-world/index.html
 work/loss-and-gain/index.html
 work/lumen-gentium/index.html

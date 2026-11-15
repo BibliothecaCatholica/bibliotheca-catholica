@@ -42,13 +42,13 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 ### 2026-11-15, Claude (Claude Code): Story of a Soul structured edition
 
 - Structure from its own HTML (#16772) with accent-insensitive matching: 1,744 blocks, 11 chapters, headings; 144 of 145 HTML italics already underscored in the TXT, one added. Verse keeps its line breaks; notes stay plain. The gate also ignores line breaks next to "--" (2 blocks), comparison only; approved by Micah on November 15 ("Yes to the matching rule").
-- [PR #30](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/30), branch `claude/story-of-a-soul`, rebased on `ee33656ddd`. Approval: Micah, November 14 (follow-up, item 3).
+- [PR #30](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/30) squash-merged as `3d485831e7`; live `bc-1aa646a694a5` matches `main`. The EPUB CI job now runs on every pull request. Approval: Micah, November 14 and 15.
 
 ### 2026-11-15, Claude (Claude Code): Part D on Orthodoxy and covers
 
 - Work page as a title page (facts line from the TXT, Read, Listen, Download, About this edition); on chapter pages the chapter opener replaces everything above the text, and it opens each chapter in the reader; chapter endings link the next chapter; book paragraphs with a drop cap; print starts each chapter on a new page. No characters change.
 - Covers: Micah chose design C, "Banded" (November 15: "Banded (C) is the best looking cover page for the books"); applied to all 64 editions in [PR #32](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/32), squash-merged as `ee33656ddd`; live `/build.json` `bc-f707301463e0` matches `main`.
-- Branch `claude/part-d-orthodoxy` (see its PR), under the standing approval. Story of a Soul is [PR #30](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/30), waiting on one gate equivalence. Approval: Micah, November 14 (follow-up, items 3 and 4).
+- [PR #31](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/31) merged as `1f53e01cbf` (`bc-a962c8e3a225`), under the standing approval. Approval: Micah, November 14 (follow-up, item 4).
 
 ## Open items
 

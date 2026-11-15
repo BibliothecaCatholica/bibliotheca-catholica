@@ -2,17 +2,10 @@ name: epub-pilot
 # Structured-text and EPUB pilot (PR #24). Builds the review EPUB from the hosted TXT and data/structured/, runs the
 # fidelity gate, and attaches the file to the workflow run as an artifact (built into epub-review/: upload-artifact
 # skips hidden directories such as .epub-build/). It is not published or linked from the site.
+# Runs on every pull request (November 15, 2026): a paths filter missed the cover tool and assets on PR #32, and the
+# EPUB depends on many inputs (texts, structure, layout, covers, notices, renderers). The job takes under a minute.
 on:
   pull_request:
-    paths:
-      - 'data/structured/**'
-      - 'data/texts/pg-130.txt'
-      - 'data/sources/gutenberg-html/**'
-      - 'tools/structure_text.py'
-      - 'tools/build_epub.py'
-      - 'tools/notices.py'
-      - 'tools/reader_formatting.py'
-      - '.github/workflows/epub-pilot.yml'
 permissions:
   contents: read
 jobs:

@@ -41,7 +41,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 ### 2026-11-15, Claude (Claude Code): Story of a Soul structured edition
 
-- Structure from its own HTML (#16772) with accent-insensitive matching: 1,744 blocks, 11 chapters, headings; 144 of 145 HTML italics already underscored in the TXT, one added. Verse keeps its line breaks; notes stay plain. The gate also ignores line breaks next to "--" (2 blocks), which needs Micah's words before merge.
+- Structure from its own HTML (#16772) with accent-insensitive matching: 1,744 blocks, 11 chapters, headings; 144 of 145 HTML italics already underscored in the TXT, one added. Verse keeps its line breaks; notes stay plain. The gate also ignores line breaks next to "--" (2 blocks), comparison only; approved by Micah on November 15 ("Yes to the matching rule").
 - [PR #30](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/30), branch `claude/story-of-a-soul`, rebased on `ee33656ddd`. Approval: Micah, November 14 (follow-up, item 3).
 
 ### 2026-11-15, Claude (Claude Code): Part D on Orthodoxy and covers
@@ -53,7 +53,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 ## Open items
 
 - Micah: a hero engraving (three proposals in PR #27); the takedown agent's name, address, and email (page shows a PLACEHOLDER).
-- Hosted texts: Micah to confirm the Story of a Soul gate rule (PR #30); manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
+- Hosted texts: manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
 - Advent launches November 29: excerpt-to-source comparison, Substack and social readiness ([checklist](docs/ADVENT-LAUNCH.md)).
 - Libraries research candidates need rights and provenance review before import. Paused: `_headers` Report-Only CSP, low-priority npm audit findings.
 - Page-audit decisions: the publish allowlist and the `study/index.html` sitemap or noindex question. CI's Study drift check names the missing `study/passages` (harmless).

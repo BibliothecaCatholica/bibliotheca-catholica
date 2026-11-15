@@ -52,7 +52,9 @@ EDITIONS = {
         'allowed_txt_only': {},
         'decision': 'Micah, November 14, 2026: build Story of a Soul with accent-insensitive matching in the fidelity '
                     'check (the displayed text still comes from the hosted TXT) and with the italics from its own '
-                    'Gutenberg HTML; verse stays as the source\'s line breaks; bracketed notes stay as plain text.',
+                    'Gutenberg HTML; verse stays as the source\'s line breaks; bracketed notes stay as plain text. '
+                    'Micah, November 15, 2026: "Yes to the matching rule" (a line break next to "--" in the TXT is ignored '
+                    'for comparison only, in the two places where the HTML has none).',
         'fold': True,       # accent- and ligature-insensitive block matching (fold_accents)
         'italics': True,    # the HTML's <i> spans, mapped to TXT character offsets
         'classify': 'headings',  # h1 title; h4/h5 "CHAPTER N TITLE" chapters; other h4/h5 headings; no contents guess

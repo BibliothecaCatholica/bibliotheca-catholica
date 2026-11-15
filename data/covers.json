@@ -44,6 +44,12 @@
    "webp": "e7589b3d24a667c8afd016100b46ef28e0748e405b147294f1e8a581cce2962b",
    "og": "fd1b4d976003a0e4ae1b9185d26bc0df2fef3788fabafa62c2d02f89ccba90dd"
   },
+  "pg-12037": {
+   "work": "wild-knight",
+   "svg": "9efa8648cbdba420a6ef1aebb2503e767f306adbfb2300f4aa067933545ff2c2",
+   "webp": "5fe1dadbbf4ac2c5a8587b8dbd05fc2d57cfcf6954eab4a0062e718932170a15",
+   "og": "c56ab2ced4b7bd6e608175e32d00388f578c73896d193cb2ee43c185ff94ab2e"
+  },
   "pg-12047": {
    "work": "legends-of-the-madonna",
    "svg": "f629caee15e8b5ca166ba2b5c899bdcd036a27e8e7b6fe5e8319550681e4b646",
@@ -55,6 +61,12 @@
    "svg": "9a860af40af55625d4ac76858ae4d86d561b6d5768ef52f7dc1ea00dacb46a58",
    "webp": "1dbe8da929878e8a25f350afac48a58e796364f0d43a18781102e247cf8287e7",
    "og": "320a2b31c3cbe2d0c0c4682b1c2cfcca587c5421e8e895a0035809a4d1312269"
+  },
+  "pg-12491": {
+   "work": "twelve-types",
+   "svg": "40031b10ed648126ef6a56c047db19ff6c959ed613fe92df4abcdc36a9ed574d",
+   "webp": "e2237c2a9e6661df72f7fc8fb2061052346f7ddd38b28c6bc00a667fcd98159a",
+   "og": "eaa11a4384ad62066a7aa8fdefa7972449773514901884aaf7d0855800085493"
   },
   "pg-130": {
    "work": "orthodoxy",
@@ -79,6 +91,12 @@
    "svg": "eb849915276ba87829f6b9a7ef811805b3fbb8a97fa6a51cdc283c83bc9de524",
    "webp": "a787397efcba9206217a949f3cb4aadef2fcb65fd227a48d45a83582ecbd62e8",
    "og": "dbf8b69c1f3b488df2380f44f15d38d3eaea460ab55a75a55d877e4f71f53153"
+  },
+  "pg-14203": {
+   "work": "varied-types",
+   "svg": "6b55bb7b12c0f147e9bf241c4eb6190109d829c1fab5a0ee96f7d8d00401f514",
+   "webp": "739e3a6a2f6d94f35fe0fede62f68ee8e5f2ee9bb7f4fe65afbc023b747557c7",
+   "og": "0192829fafa4a8161bed3e8eaff35701f78664382cf134d6516c18396c456345"
   },
   "pg-14328": {
    "work": "consolation-philosophy",
@@ -151,6 +169,12 @@
    "svg": "2855437dbfadcf06ad71bf2052af55f4a0d3d399f93a731527ec8dcb5784a878",
    "webp": "d98d59bcbd41b5fccab912f170d48cc8de429728f13831b025993bc53b673343",
    "og": "c41d77547a7e227021e6ee126291391039f7f9ab1c0f777e56309e929bac07c1"
+  },
+  "pg-1721": {
+   "work": "trees-of-pride",
+   "svg": "09c09036e4dfd0846a691f205427391d61dbd77bd5dc6414654437806d286dea",
+   "webp": "7691f3921f659bc359f6e063431335d79a37aca0d796ca5e94b2cbd664de1d30",
+   "og": "8137a4ffce2d4d07f2ef8dd3d2bd6b0a1224d2cc02aa38fb1aa733174baa551b"
   },
   "pg-17611": {
    "work": "summa-theologiae",
@@ -344,6 +368,12 @@
    "webp": "64ad90e8e5ca5e5bd80f870247c7fbc9473792f1fc92e4707c3421a5d93e29d5",
    "og": "5a5adeea73675688876be73906f74d534a9426a6bea0ef99a6b4df3b272f48e0"
   },
+  "pg-35115": {
+   "work": "wine-water-song",
+   "svg": "1fb5b1a5614485e73580c9753190a65dd0d79eec1aa0f769af1df6adb934f1a7",
+   "webp": "7037b393163c0f4a88232bb9ed651b785354bad85eeb3bcfbc0691a95544ea9b",
+   "og": "fa9dea349ac31d0e158d5d0410b57837f20d318415909f439b376c7094ba91f4"
+  },
   "pg-35155": {
    "work": "betrothed",
    "svg": "c145562db21fa0f943b70cacc12bf50e44de1bb02fbea6b5fe85e6533fa58247",
@@ -440,6 +470,12 @@
    "webp": "10314838f335878fb75a38bdc435f362308a6b7c48e71b15bf690ecd07c81e5e",
    "og": "7012511f7c9e0e750839f8ca854b5093749891be2055a0d37754627b8513d2a3"
   },
+  "pg-60057": {
+   "work": "uses-of-diversity",
+   "svg": "17b5c77710f9512390709dde43b5495cf6763fb95fdc5a11d5dc662f46a39116",
+   "webp": "a897e7e784fc9808356b1a7166c0481d6d8002668fe71c173870984a71e3fb76",
+   "og": "26cfb7ec8fdf0787fce9c7fb9a4439092b14231fa9705f8a94045f2ee7e6e9b2"
+  },
   "pg-60164": {
    "work": "fancies-versus-fads",
    "svg": "0a2cb5bc221990491382ce9c6ee9d07ee06b4600fc9e0cec349648d393e4e0a9",
@@ -530,6 +566,12 @@
    "webp": "e411720feecc76c75a9239261ed373a72143bd221e291f3d73561fe017152c93",
    "og": "aa6025a28bec476e0a885862c9d603b74241b717ad53a54a6a272a0e80c2453c"
   },
+  "pg-67639": {
+   "work": "william-blake",
+   "svg": "db5ff92dfff135de6c5237579e31fc4843b758e5955eeed96e1769b3a0bc6083",
+   "webp": "b9f671a59ac16b6c8c91d17c5ce12350ee505db859b9087aab15cfe87b7478ae",
+   "og": "548a30c7d78c93abf36f1c865f2adf65b310e53e4705e54cc45313d61f415bcc"
+  },
   "pg-68682": {
    "work": "charles-dickens-critical-study",
    "svg": "4f51dd6331fb8fd0edf091310387b8821fdfbf4b248e975059dededac6e34eb2",
@@ -559,6 +601,12 @@
    "svg": "43af0c6a4cc5b9b47e8d17dc07787a530f2b2c5a5a4cd964260e007f026a4b18",
    "webp": "4c0f9fde445a7db2de9d268cebf6825aa2613d480292e7c508c2c5a240aece85",
    "og": "c076e92b50001062d600873d5e049d2eb3a1e8d6092cbed59282c3f5767210f8"
+  },
+  "pg-71159": {
+   "work": "thomas-carlyle-bookman",
+   "svg": "a8429200967d91df9442d25208ee534a526e205cce3eeb05997921b961a0c439",
+   "webp": "bba5a575a8e5129ec14959a66ed49935acc37a9b545835506f1ebad34e14ca87",
+   "og": "aec0b1762b0d0186b4db6d78b4dfd1baf4c650a69b8ef0507f67c7f5447cef19"
   },
   "pg-7165": {
    "work": "legends-of-saint-patrick",

@@ -4637,6 +4637,251 @@
           "rightsBasis": "pd-date"
         }
       ]
+    },
+    {
+      "id": "trees-of-pride",
+      "title": "The Trees of Pride",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A novella about a Cornish squire, a legend of strange trees in his garden, and the scepticism that tests it.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1922",
+      "editions": [
+        {
+          "id": "pg-1721",
+          "label": "Project Gutenberg #1721",
+          "source": "https://www.gutenberg.org/ebooks/1721",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1922. The file does not name the printing it follows.",
+          "sourceTitle": "The Trees of Pride",
+          "digitalRelease": "Apr 1, 1999",
+          "access": "full-text",
+          "text": "data/texts/pg-1721.txt",
+          "sha256": "c7f3dde6b20e80438000468da50d1e0e5f355349d5a83c2b577a8f82161fe5a4",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "uses-of-diversity",
+      "title": "The Uses of Diversity",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Essays from Chesterton's journalism on literature, manners, and the ideas of the day.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1920",
+      "editions": [
+        {
+          "id": "pg-60057",
+          "label": "Project Gutenberg #60057",
+          "source": "https://www.gutenberg.org/ebooks/60057",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1920. The transcribed copy is a Methuen & Co., London printing; the file does not give its year.",
+          "sourceTitle": "The Uses of Diversity: A book of essays",
+          "digitalRelease": "Aug 4, 2019",
+          "access": "full-text",
+          "text": "data/texts/pg-60057.txt",
+          "sha256": "6b85491117a63611bc7b27a6d234fca3ea4adc8d3860fede43514b74bc2bec3d",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "wild-knight",
+      "title": "The Wild Knight and Other Poems",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's early collection of religious and romantic poems, closing with the verse drama The Wild Knight.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1900",
+      "editions": [
+        {
+          "id": "pg-12037",
+          "label": "Project Gutenberg #12037",
+          "source": "https://www.gutenberg.org/ebooks/12037",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1900. The file names 1900.",
+          "sourceTitle": "The Wild Knight and Other Poems",
+          "digitalRelease": "Apr 1, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-12037.txt",
+          "sha256": "5381f4da162a4ae06a3d635d17cc0c4d04c9f38a1520fb16741c2d8730077ff8",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "thomas-carlyle-bookman",
+      "title": "Thomas Carlyle (Bookman Booklets)",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "A short illustrated booklet on Carlyle, with contributions by Chesterton and J. E. Hodder-Williams.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1902",
+      "editions": [
+        {
+          "id": "pg-71159",
+          "label": "Project Gutenberg #71159",
+          "source": "https://www.gutenberg.org/ebooks/71159",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "co-author",
+              "name": "J. E. Hodder-Williams"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1902. The transcribed copy is a Hodder and Stoughton, London printing; the Gutenberg record names 1902.",
+          "sourceTitle": "Thomas Carlyle",
+          "digitalRelease": "Jul 10, 2023",
+          "access": "full-text",
+          "text": "data/texts/pg-71159.txt",
+          "sha256": "a4666aaafdbdc2e22fddadf5920f5ec4a526168ffaa6e7caf881bde2cbba0777",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "twelve-types",
+      "title": "Twelve Types",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Twelve short essays on writers and historical figures, from Charlotte Brontë and William Morris to Francis of Assisi and Savonarola.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1902",
+      "editions": [
+        {
+          "id": "pg-12491",
+          "label": "Project Gutenberg #12491",
+          "source": "https://www.gutenberg.org/ebooks/12491",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1902. The title page names Arthur L. Humphreys, London, 1902.",
+          "sourceTitle": "Twelve Types",
+          "digitalRelease": "Jun 1, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-12491.txt",
+          "sha256": "85f2279bba271ef88eb6cc10dbb65a291fa90ec7b2a7eaf73f640bc61cd5cd52",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "varied-types",
+      "title": "Varied Types",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Short essays on writers and historical figures.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1903",
+      "editions": [
+        {
+          "id": "pg-14203",
+          "label": "Project Gutenberg #14203",
+          "source": "https://www.gutenberg.org/ebooks/14203",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1903. The transcribed copy is the Dodd, Mead and Company, New York printing; the file records publication in September 1905.",
+          "sourceTitle": "Varied Types",
+          "digitalRelease": "Nov 29, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-14203.txt",
+          "sha256": "2d46a2a05ef76332e784d4e3f8538bb3392dbed43b20605ca5db562f0227bb81",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "william-blake",
+      "title": "William Blake",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Art",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's short study of the poet and painter William Blake, with reproductions of his pictures.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1910",
+      "editions": [
+        {
+          "id": "pg-67639",
+          "label": "Project Gutenberg #67639",
+          "source": "https://www.gutenberg.org/ebooks/67639",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1910. The transcribed copy is the Duckworth & Co., London, and E. P. Dutton & Co., New York printing; the Gutenberg record names Duckworth, 1910.",
+          "sourceTitle": "William Blake",
+          "digitalRelease": "Mar 16, 2022",
+          "access": "full-text",
+          "text": "data/texts/pg-67639.txt",
+          "sha256": "e103651c0ab8243d3707051bc7723a1615a9bad14f4ca327585b1e2f165351bc",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "wine-water-song",
+      "title": "Wine, Water, and Song",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "The drinking songs and other verses from Chesterton's novel The Flying Inn, gathered as a separate book.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1915",
+      "editions": [
+        {
+          "id": "pg-35115",
+          "label": "Project Gutenberg #35115",
+          "source": "https://www.gutenberg.org/ebooks/35115",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1915. The transcribed copy is the third edition (Methuen & Co., London, August 23, 1915); the file records first publication on August 6, 1915.",
+          "sourceTitle": "Wine, Water, and Song",
+          "digitalRelease": "Jan 29, 2011",
+          "access": "full-text",
+          "text": "data/texts/pg-35115.txt",
+          "sha256": "b28e70a31ee8551950696ea20e3d565367ace5de5d2b041e9e4684398e92c8bb",
+          "rightsBasis": "pd-date"
+        }
+      ]
     }
   ],
   "series": [

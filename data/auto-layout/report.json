@@ -1292,6 +1292,107 @@
     "indented line": 3,
     "short line": 10
    }
+  },
+  "pg-1721": {
+   "work": "The Trees of Pride",
+   "multiLineBlocks": 327,
+   "reflowed": 321,
+   "kept": 6,
+   "share": 0.982,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 6
+   }
+  },
+  "pg-60057": {
+   "work": "The Uses of Diversity",
+   "multiLineBlocks": 337,
+   "reflowed": 305,
+   "kept": 32,
+   "share": 0.905,
+   "emphasisSpans": 226,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 3,
+    "indented line": 29
+   }
+  },
+  "pg-12037": {
+   "work": "The Wild Knight and Other Poems",
+   "multiLineBlocks": 337,
+   "reflowed": 10,
+   "kept": 327,
+   "share": 0.03,
+   "emphasisSpans": 79,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 232,
+    "short line": 95
+   }
+  },
+  "pg-71159": {
+   "work": "Thomas Carlyle (Bookman Booklets)",
+   "multiLineBlocks": 100,
+   "reflowed": 93,
+   "kept": 7,
+   "share": 0.93,
+   "emphasisSpans": 131,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 7
+   }
+  },
+  "pg-12491": {
+   "work": "Twelve Types",
+   "multiLineBlocks": 128,
+   "reflowed": 116,
+   "kept": 12,
+   "share": 0.906,
+   "emphasisSpans": 2,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 3,
+    "indented line": 9
+   }
+  },
+  "pg-14203": {
+   "work": "Varied Types",
+   "multiLineBlocks": 198,
+   "reflowed": 181,
+   "kept": 17,
+   "share": 0.914,
+   "emphasisSpans": 23,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 16,
+    "run of spaces": 1
+   }
+  },
+  "pg-67639": {
+   "work": "William Blake",
+   "multiLineBlocks": 194,
+   "reflowed": 138,
+   "kept": 56,
+   "share": 0.711,
+   "emphasisSpans": 16,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 35,
+    "short line": 21
+   }
+  },
+  "pg-35115": {
+   "work": "Wine, Water, and Song",
+   "multiLineBlocks": 77,
+   "reflowed": 5,
+   "kept": 72,
+   "share": 0.065,
+   "emphasisSpans": 9,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 72
+   }
   }
  },
  "excluded": {

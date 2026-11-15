@@ -5098,8 +5098,13 @@ work/tales-long-bow/index.html
 work/tennyson-bookman/index.html
 work/thackeray-bookman/index.html
 work/the-defendant/index.html
+work/thomas-carlyle-bookman/index.html
+work/trees-of-pride/index.html
 work/tremendous-trifles/index.html
+work/twelve-types/index.html
+work/uses-of-diversity/index.html
 work/utopia-usurers/index.html
+work/varied-types/index.html
 work/veritatis-splendor/index.html
 work/victorian-age-literature/index.html
 work/virgin-saints-and-martyrs/index.html
@@ -5123,6 +5128,9 @@ work/virgin-saints-and-martyrs/ch/17-s-theresa/index.html
 work/virgin-saints-and-martyrs/ch/18-sister-dora/index.html
 work/what-i-saw-america/index.html
 work/whats-wrong-world/index.html
+work/wild-knight/index.html
+work/william-blake/index.html
+work/wine-water-song/index.html
 work/wisdom-father-brown/index.html
 work/wisdom-father-brown/story/01-the-absence-of-mr-glass/index.html
 work/wisdom-father-brown/story/02-the-paradise-of-thieves/index.html

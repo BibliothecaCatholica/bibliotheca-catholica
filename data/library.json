@@ -3708,6 +3708,306 @@
           "rightsBasis": "pd-date"
         }
       ]
+    },
+    {
+      "id": "man-who-knew-too-much",
+      "title": "The Man Who Knew Too Much",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Eight stories of Horne Fisher, a well-connected Englishman who solves crimes among the governing class.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1922",
+      "editions": [
+        {
+          "id": "pg-1720",
+          "label": "Project Gutenberg #1720",
+          "source": "https://www.gutenberg.org/ebooks/1720",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1922. The file does not name the printing it follows.",
+          "sourceTitle": "The Man Who Knew Too Much",
+          "digitalRelease": "Apr 1, 1999",
+          "access": "full-text",
+          "text": "data/texts/pg-1720.txt",
+          "sha256": "3fae9881d7b8659830ded1be58c43abddbc1a3a131c405e25dc3e06c8e9cf335",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "the-defendant",
+      "title": "The Defendant",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Sixteen essays, each a defence of something commonly despised, from penny dreadfuls and rash vows to slang and detective stories.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1901",
+      "editions": [
+        {
+          "id": "pg-12245",
+          "label": "Project Gutenberg #12245",
+          "source": "https://www.gutenberg.org/ebooks/12245",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1901. The title page names the second edition, R. Brimley Johnson, London, MDCCCCII.",
+          "sourceTitle": "The Defendant",
+          "digitalRelease": "May 1, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-12245.txt",
+          "sha256": "c20ae3d0c20b04c445d416766ba3f1211fb21bb279a0d647008d86cbef2f0e58",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "tremendous-trifles",
+      "title": "Tremendous Trifles",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Short sketches first printed in the Daily News, each drawing a larger idea from a small everyday occasion.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1909",
+      "editions": [
+        {
+          "id": "pg-8092",
+          "label": "Project Gutenberg #8092",
+          "source": "https://www.gutenberg.org/ebooks/8092",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1909. The file does not name the printing it follows.",
+          "sourceTitle": "Tremendous Trifles",
+          "digitalRelease": "May 1, 2005",
+          "access": "full-text",
+          "text": "data/texts/pg-8092.txt",
+          "sha256": "4a0aeb920a34ee62eea9d82091ab3ea7732a031134d250c2cc97f8107f3c2311",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "all-things-considered",
+      "title": "All Things Considered",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Essays from Chesterton's newspaper columns on politics, literature, manners, and the habits of modern thought.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1908",
+      "editions": [
+        {
+          "id": "pg-11505",
+          "label": "Project Gutenberg #11505",
+          "source": "https://www.gutenberg.org/ebooks/11505",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1908. The transcribed copy is the ninth edition (November 1915); the file records the eighth edition at 1s. net, September 1915.",
+          "sourceTitle": "All Things Considered",
+          "digitalRelease": "Mar 1, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-11505.txt",
+          "sha256": "b7c220b94c52d4e495b79551e5b604416899ca346490a03f32ac20d458850eef",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "alarms-discursions",
+      "title": "Alarms and Discursions",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Essays and sketches from Chesterton's journalism on travel, English life, and the ideas of his day.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1910",
+      "editions": [
+        {
+          "id": "pg-9656",
+          "label": "Project Gutenberg #9656",
+          "source": "https://www.gutenberg.org/ebooks/9656",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1910. The file does not name the printing it follows.",
+          "sourceTitle": "Alarms and Discursions",
+          "digitalRelease": "Jan 1, 2006",
+          "access": "full-text",
+          "text": "data/texts/pg-9656.txt",
+          "sha256": "f52bec8aa9f82e8dbff8e6240bf3e0b43663ed52f2f3bfa53bc3872d1e56d350",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "miscellany-of-men",
+      "title": "A Miscellany of Men",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Short essays from Chesterton's journalism, many of them portraits of a type of man or a public quarrel of the day.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1912",
+      "editions": [
+        {
+          "id": "pg-2015",
+          "label": "Project Gutenberg #2015",
+          "source": "https://www.gutenberg.org/ebooks/2015",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1912. The file does not name the printing it follows.",
+          "sourceTitle": "A Miscellany of Men",
+          "digitalRelease": "Dec 1, 1999",
+          "access": "full-text",
+          "text": "data/texts/pg-2015.txt",
+          "sha256": "0eefdc9c4c8e2552d49dcf5f92754c069e36bf549f861d7b451f00cf88f61023",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "victorian-age-literature",
+      "title": "The Victorian Age in Literature",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A short survey of English literature in the Victorian period, written for the Home University Library.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1913",
+      "editions": [
+        {
+          "id": "pg-18639",
+          "label": "Project Gutenberg #18639",
+          "source": "https://www.gutenberg.org/ebooks/18639",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1913. The transcribed copy is a Home University Library printing (New York and London), copyright 1913.",
+          "sourceTitle": "The Victorian Age in Literature",
+          "digitalRelease": "Jun 20, 2006",
+          "access": "full-text",
+          "text": "data/texts/pg-18639.txt",
+          "sha256": "d1be513dd5495995c0b7b0e0551d9988236f5ee4631f2d9da9d2d2b83890e3b6",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "robert-browning",
+      "title": "Robert Browning",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's study of the life and poetry of Robert Browning.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1903",
+      "editions": [
+        {
+          "id": "pg-13342",
+          "label": "Project Gutenberg #13342",
+          "source": "https://www.gutenberg.org/ebooks/13342",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1903. The file does not name the printing it follows.",
+          "sourceTitle": "Robert Browning",
+          "digitalRelease": "Aug 31, 2004",
+          "access": "full-text",
+          "text": "data/texts/pg-13342.txt",
+          "sha256": "fa9f9c7205633210ce206fd5934dfbcdc81ea442af8f6f72fdf56e8ba6708062",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "charles-dickens-critical-study",
+      "title": "Charles Dickens: A Critical Study",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's critical study of Dickens's life and novels.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1906",
+      "editions": [
+        {
+          "id": "pg-68682",
+          "label": "Project Gutenberg #68682",
+          "source": "https://www.gutenberg.org/ebooks/68682",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1906. The transcribed copy is the Dodd, Mead & Company, New York printing of 1911; the file records copyright 1906 and the first edition published in September 1906.",
+          "sourceTitle": "Charles Dickens: A critical study",
+          "digitalRelease": "Aug 4, 2022",
+          "access": "full-text",
+          "text": "data/texts/pg-68682.txt",
+          "sha256": "b4dbd0d84e30b47b64c300caa417b74ffa2f2cc12a592216352b6cad47897e65",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "george-bernard-shaw",
+      "title": "George Bernard Shaw",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's critical study of the plays and ideas of George Bernard Shaw.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1909",
+      "editions": [
+        {
+          "id": "pg-19535",
+          "label": "Project Gutenberg #19535",
+          "source": "https://www.gutenberg.org/ebooks/19535",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1909. The title page names the John Lane Company, New York, MCMIX, copyright 1909.",
+          "sourceTitle": "George Bernard Shaw",
+          "digitalRelease": "Oct 13, 2006",
+          "access": "full-text",
+          "text": "data/texts/pg-19535.txt",
+          "sha256": "5d3ac4eaa2b22d3707b92a1d0363b7d13763afbfac320a2b31a7d8a1fa0e8aee",
+          "rightsBasis": "pd-date"
+        }
+      ]
     }
   ],
   "series": [

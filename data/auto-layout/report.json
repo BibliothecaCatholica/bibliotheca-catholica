@@ -908,6 +908,135 @@
    "keptBecause": {
     "indented line": 95
    }
+  },
+  "pg-1720": {
+   "work": "The Man Who Knew Too Much",
+   "multiLineBlocks": 875,
+   "reflowed": 873,
+   "kept": 2,
+   "share": 0.998,
+   "emphasisSpans": 7,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1,
+    "indented line": 1
+   }
+  },
+  "pg-12245": {
+   "work": "The Defendant",
+   "multiLineBlocks": 141,
+   "reflowed": 134,
+   "kept": 7,
+   "share": 0.95,
+   "emphasisSpans": 13,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 7
+   }
+  },
+  "pg-8092": {
+   "work": "Tremendous Trifles",
+   "multiLineBlocks": 415,
+   "reflowed": 394,
+   "kept": 21,
+   "share": 0.949,
+   "emphasisSpans": 1,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 21
+   }
+  },
+  "pg-11505": {
+   "work": "All Things Considered",
+   "multiLineBlocks": 252,
+   "reflowed": 246,
+   "kept": 6,
+   "share": 0.976,
+   "emphasisSpans": 64,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1,
+    "indented line": 3,
+    "short line": 2
+   }
+  },
+  "pg-9656": {
+   "work": "Alarms and Discursions",
+   "multiLineBlocks": 341,
+   "reflowed": 326,
+   "kept": 15,
+   "share": 0.956,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 15
+   }
+  },
+  "pg-2015": {
+   "work": "A Miscellany of Men",
+   "multiLineBlocks": 330,
+   "reflowed": 309,
+   "kept": 21,
+   "share": 0.936,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 21
+   }
+  },
+  "pg-18639": {
+   "work": "The Victorian Age in Literature",
+   "multiLineBlocks": 189,
+   "reflowed": 155,
+   "kept": 34,
+   "share": 0.82,
+   "emphasisSpans": 216,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 3,
+    "indented line": 14,
+    "short line": 17
+   }
+  },
+  "pg-13342": {
+   "work": "Robert Browning",
+   "multiLineBlocks": 287,
+   "reflowed": 231,
+   "kept": 56,
+   "share": 0.805,
+   "emphasisSpans": 294,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 8,
+    "indented line": 46,
+    "short line": 2
+   }
+  },
+  "pg-68682": {
+   "work": "Charles Dickens: A Critical Study",
+   "multiLineBlocks": 244,
+   "reflowed": 239,
+   "kept": 5,
+   "share": 0.98,
+   "emphasisSpans": 42,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 5
+   }
+  },
+  "pg-19535": {
+   "work": "George Bernard Shaw",
+   "multiLineBlocks": 233,
+   "reflowed": 185,
+   "kept": 48,
+   "share": 0.794,
+   "emphasisSpans": 221,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 3,
+    "indented line": 41,
+    "short line": 4
+   }
   }
  },
  "excluded": {
@@ -940,10 +1069,6 @@
   },
   {
    "edition": "pg-17897",
-   "block": 1841
-  },
-  {
-   "edition": "pg-17897",
    "block": 2227
   },
   {
@@ -961,6 +1086,10 @@
   {
    "edition": "pg-20058",
    "block": 692
+  },
+  {
+   "edition": "pg-2015",
+   "block": 134
   },
   {
    "edition": "pg-20450",

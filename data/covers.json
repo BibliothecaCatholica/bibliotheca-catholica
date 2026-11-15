@@ -20,17 +20,35 @@
    "webp": "e4b7c14f8279170158232cfd65929327597e26c4a08198c4a775d01d5497d701",
    "og": "607091f3138e734932197a78179c4a8ccc03458b5ce44f1a17586f522ff10950"
   },
+  "pg-11505": {
+   "work": "all-things-considered",
+   "svg": "9b6261c8a5c4845c205a98bb297140aff716100626a2ba7d8ff25e70034bab24",
+   "webp": "f550b3237c9887720b47d54eb49835a5ae30f2151f05bd36aa39a102076dc0f6",
+   "og": "b69c0f9bac8fd2a8f3ae68b03e96302fc1d24143b101f190773bf049f77212c8"
+  },
   "pg-12047": {
    "work": "legends-of-the-madonna",
    "svg": "f629caee15e8b5ca166ba2b5c899bdcd036a27e8e7b6fe5e8319550681e4b646",
    "webp": "675c6d4b9f14bbcb527323618210953c4c03aea63dfade7e7dcccfca6688742d",
    "og": "e333bfd6c187cdf45c713aa31a30ad294d5bcee0184c430482b6fb30ef764343"
   },
+  "pg-12245": {
+   "work": "the-defendant",
+   "svg": "9a860af40af55625d4ac76858ae4d86d561b6d5768ef52f7dc1ea00dacb46a58",
+   "webp": "1dbe8da929878e8a25f350afac48a58e796364f0d43a18781102e247cf8287e7",
+   "og": "320a2b31c3cbe2d0c0c4682b1c2cfcca587c5421e8e895a0035809a4d1312269"
+  },
   "pg-130": {
    "work": "orthodoxy",
    "svg": "7cceb3dd60385598fab1a0d21e8f345d24777475bd7f1324549357008c4a69cc",
    "webp": "269496bac127148887c8ee80209552999219d9e842777fe2b7c9a3d3c209dc87",
    "og": "402d43a78a95a3b22fa72abb0f10e96f2318c981a4093b8c9006f6403ec8e19c"
+  },
+  "pg-13342": {
+   "work": "robert-browning",
+   "svg": "db80bf36da65c806a07d600636b1da3853d4b899aa383414fe836d6e91db2706",
+   "webp": "f9aadf06b10df735eceb0ba68aff3653b31d1912fe1f6fb36c75d2303e21afc2",
+   "og": "ec431c2bfb94dfcdbfbeb45fa553c6b79a273712acabbffc41a712c9691e661f"
   },
   "pg-13468": {
    "work": "new-jerusalem",
@@ -104,6 +122,12 @@
    "webp": "bec9878ed581e38615e5263558c5a42eba05010abdb6107683f7fcd6b49e21f7",
    "og": "f9f12d25854f8f873297b62c10b056727999b9a985252e3a05154fb5b313ea32"
   },
+  "pg-1720": {
+   "work": "man-who-knew-too-much",
+   "svg": "2855437dbfadcf06ad71bf2052af55f4a0d3d399f93a731527ec8dcb5784a878",
+   "webp": "d98d59bcbd41b5fccab912f170d48cc8de429728f13831b025993bc53b673343",
+   "og": "c41d77547a7e227021e6ee126291391039f7f9ab1c0f777e56309e929bac07c1"
+  },
   "pg-17611": {
    "work": "summa-theologiae",
    "svg": "011816ce4afd24d3ef99c373ee44e3a5004491c85ae8bbfbccaa44db67f5dc60",
@@ -122,6 +146,12 @@
    "webp": "02b1668397dc3e4ecc7106026da8cc7d37c04baab73829bc79ed39accbb1fe9f",
    "og": "d1f72b6260e196c92c869adab88c3064e6ede8ba0956a2fd241b5e7adf17ff6c"
   },
+  "pg-18639": {
+   "work": "victorian-age-literature",
+   "svg": "962bacac7b83ed3a37e098cf03f951212ed602e1a13e55c75f6f4d6b4289dad1",
+   "webp": "66a57b8c6e41d6168965e5c300206e43cb670539d18c376942a7f0e5a076397e",
+   "og": "9d632426207e1a02cbb98b7ed686b6ab76266b29af915156bd51d9a947170c0b"
+  },
   "pg-18755": {
    "work": "summa-theologiae",
    "svg": "f92d0a8ab77b2b579a65db8e3a80e7cb1cd8565f282cf0045bf9c9b2ffa7c594",
@@ -133,6 +163,12 @@
    "svg": "b02897959913f3d703f4247024ebe362f56509dd93d5ad9f1547524cef1b0631",
    "webp": "f98009e36f1eab2f3de141a127c1ec984a9039e9722bb3e300ff42c8f4cf28bc",
    "og": "1c98c931f581bcbca5080d0310091db9bd0f6375ea5ac7309f8e7a4316ab834c"
+  },
+  "pg-19535": {
+   "work": "george-bernard-shaw",
+   "svg": "4defcd8430f75fab1f28d2fcee443fd4d691a6ae281c21b67c7bff21a7e8f91e",
+   "webp": "796a7251d766733f657fa63c01826ec166ff4a7fed1d648dd874a48a0cc38a18",
+   "og": "22e76c68e76d550b4fdc1a7f24831fef4a49af6beec664b8558712b3fa2d5ea3"
   },
   "pg-19690": {
    "work": "apologia",
@@ -151,6 +187,12 @@
    "svg": "bb6ba34247fb31178e434eba69a5f1e94398ae8de7d2eacc7534f6267effbceb",
    "webp": "4d1463d7129e076edb8e2ac89c1d86385b43441b45ec905c6e2408e2f6813bf0",
    "og": "639003331edb94ad84bd4e04445bb5d8629aae9fb0d1bfd1465eb775ef5d94a5"
+  },
+  "pg-2015": {
+   "work": "miscellany-of-men",
+   "svg": "fe752d0cf8b536e6150972ceeca001a6f584cec35e15dcaa00d6ffe225b83106",
+   "webp": "3683116471fb95d58225dcb9a52a405279dcdcf589ba31db6cc0a0efb120a05d",
+   "og": "7de376409fe9b0957567ee42469f4a15f3b80c818196f4a3c211e85cd9859551"
   },
   "pg-204": {
    "work": "innocence-father-brown",
@@ -374,6 +416,12 @@
    "webp": "e411720feecc76c75a9239261ed373a72143bd221e291f3d73561fe017152c93",
    "og": "aa6025a28bec476e0a885862c9d603b74241b717ad53a54a6a272a0e80c2453c"
   },
+  "pg-68682": {
+   "work": "charles-dickens-critical-study",
+   "svg": "4f51dd6331fb8fd0edf091310387b8821fdfbf4b248e975059dededac6e34eb2",
+   "webp": "37323bc096c02784bf098206f41c80cd44b84d30eb053b2fe14f0809ddf7596c",
+   "og": "b42a70c25554d1778fa4f0adb8d77742a16a5b7ac3253b1c654a8b747c14ea66"
+  },
   "pg-69581": {
    "work": "sacred-legendary-art",
    "svg": "f2270922a5d9039ef0551f6efdee8b699fda8e6fb47d816e258c788b055dd4c4",
@@ -428,6 +476,12 @@
    "webp": "2ab2f118ab97e03821995d3fd9a3c257634535f0c43952913100a40fec46c0e7",
    "og": "431237d869af7f15446d15748b7664bf7d0275aaa55f6a645f40c4adbc1ee4e1"
   },
+  "pg-8092": {
+   "work": "tremendous-trifles",
+   "svg": "e9f1e73e7fe8a6c506eb0c91d3d3b20881161d923e9fd43768772c1595ac9921",
+   "webp": "e5cca47fd7de582b7e9321ab47fb7a499b85a5089fa84d28d1e60c346eb0d23f",
+   "og": "d3214b14f7cbd6c153b567933e024268e92db7c7e313d5c61c325f90755cdef2"
+  },
   "pg-8120": {
    "work": "life-of-teresa",
    "svg": "ca840e92647e10b5967d77d0b1735eeebae8f20730730c963109a0121a0677a6",
@@ -439,6 +493,12 @@
    "svg": "9510c12a44d58f53c50cdff0dbc5ce644ca951fc94ec8b2591f7779e5a9a07d9",
    "webp": "4ddc34d2f0b70937c6dafb09db2596fa76fcad44968d0c4452e748cea282ab68",
    "og": "02e92fc9eaa737c21f016ccaf13c068b1f1b5f1608f08c5b56f7669fafab52f5"
+  },
+  "pg-9656": {
+   "work": "alarms-discursions",
+   "svg": "5d953c5a1046961fc5d06a7f4bbd8a1679701180da34c02118f73f9982fbffc1",
+   "webp": "6183b6f3da6e26d3ff854d5be203ba023395f6d167519a9be65b7ac0d0d9f384",
+   "og": "ad7398935123ed9e9b1aaaac3578fa2c86c3f439b5befe255a2ab8407365b6ea"
   },
   "se-incredulity-father-brown": {
    "work": "incredulity-father-brown",

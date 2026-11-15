@@ -8,9 +8,9 @@ This is the living editorial assessment and work procedure, not a claim that the
 
 ## Actual scope
 
-The selected catalogue has 114 works and 141 edition records. Only 74 editions, belonging to 69 works, have a `text` field. All 64 local files match their catalogue SHA-256 values; there are no extra files in `data/texts/`. There are 61 Gutenberg files, two public-domain extractions (CCEL and Standard Ebooks), and one OCR transcription. The other 45 selected works have no hosted reading edition. The 6,633-record imported Isidore index, source libraries, external edition links, and sample links are not hosted books.
+The selected catalogue has 124 works and 151 edition records. Only 84 editions, belonging to 79 works, have a `text` field. All 64 local files match their catalogue SHA-256 values; there are no extra files in `data/texts/`. There are 61 Gutenberg files, two public-domain extractions (CCEL and Standard Ebooks), and one OCR transcription. The other 45 selected works have no hosted reading edition. The 6,633-record imported Isidore index, source libraries, external edition links, and sample links are not hosted books.
 
-“Complete” must name its unit. We hold the entire current source file for each of the 74 editions, including its notices. That does not establish completeness against a printed book. Important explicit limits:
+“Complete” must name its unit. We hold the entire current source file for each of the 84 editions, including its notices. That does not establish completeness against a printed book. Important explicit limits:
 
 | Hosted unit | Scope and limits |
 |---|---|

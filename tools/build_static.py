@@ -139,6 +139,7 @@ def one_disclosure(body):
     def keep(m):
         n[0]+=1;return m.group(0) if n[0]==1 else ''
     return DISCL_RE.sub(keep,body)
+EPUBS=json.loads((ROOT/'data/epubs.json').read_text())['epubs'] if (ROOT/'data/epubs.json').exists() else {}  # published EPUBs (tools/build_epub.py --publish)
 COVER_OG={}  # work id -> (edition id, alt text), filled in main() for hosted works with a rendered cover
 def page(tpl,route,title,desc,body,noindex=False,jsonld=()):
     url=SITE+(route+'/' if route else '');t=E(title);d=E(desc)
@@ -212,6 +213,7 @@ def write_home(tpl,counts,snapshot):
     (ROOT/'data/site-copy.js').write_text(js)
     s=re.sub(r'data/site-copy\.js\?v=[0-9a-f]*','data/site-copy.js?v='+hashlib.sha256(js.encode()).hexdigest()[:10],s)
     s=re.sub(r'data/text-pages\.js\?v=[0-9a-f]*','data/text-pages.js?v='+hashlib.sha256((ROOT/'data/text-pages.js').read_bytes()).hexdigest()[:10],s)  # deep-link gaps: content token
+    s=re.sub(r'data/epubs\.js\?v=[0-9a-f]*','data/epubs.js?v='+hashlib.sha256((ROOT/'data/epubs.js').read_bytes()).hexdigest()[:10],s)  # published EPUBs: content token
     s=re.sub(r'data/print-editions\.js\?v=[0-9a-f]*','data/print-editions.js?v='+hashlib.sha256((ROOT/'data/print-editions.js').read_bytes()).hexdigest()[:10],s)  # affiliate preview: content token
     (ROOT/'index.html').write_text(build_info.stamp(s,snapshot))
 # --- Affiliate links (owner-approved preview 2026-11-09): data/print-editions.json from tools/build_print_editions.py
@@ -671,7 +673,7 @@ def main():
                    lambda w:dict({'@type':'Person','name':w['author']},**({'url':SITE+'author/'+w['authorId']+'/'} if w.get('authorId') in auth_ids else {})))
     SUMMA=summa_pages(out,lib) if (ROOT/'data/summa.json').exists() else None
     for w in lib['works']:
-        eds=''.join('<li>'+E(e['label'])+''.join(' · '+E(c['role'])+': '+E(c['name']) for c in e.get('contributors',[]) if 'translat' in c['role'].lower())+(' · '+a('/#/read/'+w['id']+'/'+e['id'],'Read here') if e.get('text') else '')+' · '+a(e['source'],'Source',True)+'</li>' for e in w['editions'])
+        eds=''.join('<li>'+E(e['label'])+''.join(' · '+E(c['role'])+': '+E(c['name']) for c in e.get('contributors',[]) if 'translat' in c['role'].lower())+(' · '+a('/#/read/'+w['id']+'/'+e['id'],'Read here') if e.get('text') else '')+(' · <a download href="/'+E(EPUBS[e['id']]['path'])+'">EPUB (this edition)</a>' if e['id'] in EPUBS else '')+' · '+a(e['source'],'Source',True)+'</li>' for e in w['editions'])
         d=w.get('description') or (w['title']+' by '+w['author']+': free reading edition with source, credits, and rights notes.')
         hosted=any(e.get('text') for e in w['editions'])
         by=byline(w)

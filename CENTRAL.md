@@ -20,7 +20,9 @@ Any tool can perform an assigned responsibility. References to Research, QA, and
 
 ## Hosting and data flow
 
-GitHub `main` is the source of truth. Cloudflare Pages deploys it automatically to https://bibliothecacatholica.com (every PR gets a preview check); confirm a deploy by comparing the live `/build.json` `id` with `git show origin/main:build.json`. The `CNAME` file stays. texts.bibliothecacatholica.com is served from `bibliotheca-texts`. DNS and the Cloudflare zone belong to Business. GitHub Pages ## Verified snapshot
+GitHub `main` is the source of truth. Cloudflare Pages deploys it automatically to https://bibliothecacatholica.com (every PR gets a preview check); confirm a deploy by comparing the live `/build.json` `id` with `git show origin/main:build.json`. The `CNAME` file stays. texts.bibliothecacatholica.com is served from `bibliotheca-texts`. DNS and the Cloudflare zone belong to Business. GitHub Pages for this repo was turned off on November 15, 2026, so Cloudflare is the only host; the texts repo keeps its own Pages site.
+
+## Verified snapshot
 
 As of November 15, 2026, `main` at `54c17291c1` (PR #37):
 
@@ -39,6 +41,10 @@ As of November 15, 2026, `main` at `54c17291c1` (PR #37):
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-15, Catholic Repo (Grok): GitHub Pages turned off
+
+- GitHub Pages disabled for `bibliotheca-catholica` (Micah, Nov 15). `CNAME` kept; texts.bibliothecacatholica.com untouched. Live site checked afterward: 200 from Cloudflare. Pages can be re-enabled in repo settings if ever needed.
+
 ### 2026-11-15, Claude (Claude Code): editions batch 2
 
 - Ten more editions with chapter pages, openers, structure files, and EPUBs: Heretics, The Ball and the Cross, The Man Who Was Thursday, Chesterton's Saint Francis, Grammar of Assent, Development of Christian Doctrine, Paradoxes of Catholicism, Life of St. Teresa, Apologia, Virgin Saints and Martyrs.
@@ -48,10 +54,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - Approval statements removed from the repository (PR #38); Summa Design A on all 3,726 question and article pages (PR #37).
 
-### 2026-11-15, Claude (Claude Code): hero engraving, takedown contact, EPUBs, editions batch 1
-
-- PRs #30, #33 to #36 merged and deployed: Story of a Soul, EPUB CI on every PR, six published EPUBs, batch 1 (Story of a Soul and four Father Brown collections), Doré's Empyrean as the home hero, the takedown contact email.
-
 ## Open items
 
 - Owner: the takedown agent's name and postal address, and DMCA agent registration (the page shows only the contact email).
@@ -60,8 +62,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 - Libraries research candidates need rights and provenance review before import. Paused: `_headers` Report-Only CSP, low-priority npm audit findings.
 - Page-audit decisions: the publish allowlist and the `study/index.html` sitemap or noindex question. CI's Study drift check names the missing `study/passages` (harmless).
 - Recover the evidence listed in the [repository audit](docs/REPOSITORY-AUDIT-2026-11-09.md); confirm backups and account responsibilities ([OPERATIONS](docs/OPERATIONS.md)).
-
-t responsibilities ([OPERATIONS](docs/OPERATIONS.md)).
 
 ## Reference map
 

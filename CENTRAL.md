@@ -53,7 +53,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 ## Open items
 
 - Micah: a hero engraving (three proposals in PR #27); the takedown agent's name, address, and email (page shows a PLACEHOLDER).
-- Hosted texts: manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
+- Hosted texts: EPUBs are published for Orthodoxy and Story of a Soul (branch `claude/publish-epub`); manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
 - Advent launches November 29: excerpt-to-source comparison, Substack and social readiness ([checklist](docs/ADVENT-LAUNCH.md)).
 - Libraries research candidates need rights and provenance review before import. Paused: `_headers` Report-Only CSP, low-priority npm audit findings.
 - Page-audit decisions: the publish allowlist and the `study/index.html` sitemap or noindex question. CI's Study drift check names the missing `study/passages` (harmless).

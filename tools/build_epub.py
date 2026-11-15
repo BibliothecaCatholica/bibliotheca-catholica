@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""EPUB pilot (Orthodoxy, PR #24): an EPUB 3 built from the hosted TXT and the structured-text intermediate file.
+"""EPUBs of the hosted editions that have a structure file (tools/structure_text.py): an EPUB 3 built from the hosted
+TXT and the structured-text intermediate file.
 
-Not published and not linked from the site: CI uploads it as a pull-request artifact for review only. Output
-defaults to .epub-build/ (git-ignored), never to a served path.
+Published (Micah, November 15, 2026: "Publish our EPUB file"): `--publish` (part of `npm run build`) writes each one to
+downloads/epub/<work>-<edition>.<sha256[:12]>.epub, a content-hashed name, with data/epubs.json and data/epubs.js
+(path, sha256, size). The work page links it as "EPUB (this edition)". CI also builds a review copy into epub-review/
+and runs EPUBCheck on both. Entries are stored uncompressed, so the bytes do not depend on the zlib version.
 
 Fidelity:
   * Every character of the book comes from the hosted TXT (data/texts/), rendered by the same block renderer as the
@@ -71,7 +74,9 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
     assert S['gate']['passed'], 'structure gate did not pass'
     B = ST.txt_blocks(e['text'])
     lo, hi = S['txt']['bodyStart'], S['txt']['bodyEnd']
-    TITLES = {x['heading']: x['title'] for x in json.loads((ROOT / 'data/text-pages.json').read_text())['works'][work]['items']}
+    tp = json.loads((ROOT / 'data/text-pages.json').read_text())['works'].get(work)
+    TITLES = {x['heading']: x['title'] for x in tp['items']} if tp else {}  # the site's chapter titles where it has chapter pages
+    pg = re.search(r'gutenberg\.org/ebooks/(\d+)', e['source'])
 
     docs = []  # (id, file, title, xhtml, blocks it carries)
     # The edition cover (design C, chosen by Micah on November 15, 2026; tools/covers.py), first in the book.
@@ -85,27 +90,35 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
                  xhtml(w['title'], '<section epub:type="frontmatter">' + ''.join(to_xml(reading_block(e, B[i], i)) for i in front) + '</section>'), front))
     for n, c in enumerate(S['chapters']):
         ids = list(range(c['start'], c['end'] + 1))
-        title = c['num'] + '. ' + TITLES[c['heading']]  # the site's chapter titles (data/text-pages.json)
+        title = c['num'] + '. ' + TITLES.get(c['heading'], c['title'])
         body = ('<section epub:type="chapter" aria-labelledby="h"><h2 id="h">' + E(title) + '</h2>'
                 + ''.join(to_xml(reading_block(e, B[i], i)) for i in ids) + '</section>')
-        if n == len(S['chapters']) - 1:  # rule 2: the licence's own 1.E.1 sentence once, at the end of the text
-            body = body[:-len('</section>')] + '<div class="pg-line">' + PG_LINE.replace(' target="_blank" rel="noopener"', '') + '</div></section>'
         docs.append(('ch%02d' % (n + 1), 'ch%02d.xhtml' % (n + 1), title, xhtml(title, body), ids))
+    back = list(range(S['chapters'][-1]['end'] + 1, hi + 1))
+    if back:  # what follows the last chapter (Story of a Soul: the epilogue, counsels, letters, prayers, and poems)
+        docs.append(('back', 'back.xhtml', 'After the last chapter', xhtml(w['title'], '<section epub:type="backmatter">'
+                     + ''.join(to_xml(reading_block(e, B[i], i)) for i in back) + '</section>'), back))
+    if pg:  # rule 2: the licence's own 1.E.1 sentence once, at the end of the text
+        did, fn, t, doc, ids = docs[-1]
+        doc = doc.replace('</section></body>', '<div class="pg-line">' + PG_LINE.replace(' target="_blank" rel="noopener"', '') + '</div></section></body>')
+        docs[-1] = (did, fn, t, doc, ids)
 
-    # Gutenberg header and license, verbatim (content rule 2)
+    # The source's header and license, verbatim (content rule 2)
     head = B[:lo]
     tail = B[hi + 1:]
-    notice = ('<section class="notice" epub:type="appendix"><h1>Project Gutenberg notice and license</h1>'
-              '<p>This edition reproduces Project Gutenberg eBook #130. Its header, the transcriber\'s credit, and the full license follow exactly as in the source file.</p>'
+    label = 'Project Gutenberg eBook #' + pg.group(1) if pg else e['label']
+    notice = ('<section class="notice" epub:type="appendix"><h1>Source notice and license</h1>'
+              '<p>This edition reproduces ' + E(label) + '. Its header' + (', the transcriber\'s credit,' if moved else '') + ' and the full license follow exactly as in the source file.</p>'
               + ''.join('<pre>' + E(b) + '</pre>' for b in head + [B[i] for i in moved] + tail) + '</section>')
-    docs.append(('notice', 'notice.xhtml', 'Project Gutenberg notice and license', xhtml('Project Gutenberg notice and license', notice), []))
+    docs.append(('notice', 'notice.xhtml', 'Source notice and license', xhtml('Source notice and license', notice), []))
+    f = e.get('readerFormatting')
     colophon = ('<section class="colophon"><h1>About this edition</h1>'
                 '<p>' + E(w['author']) + ', <i>' + E(w['title']) + '</i>. ' + E(e['label']) + '. Source: ' + E(e['source']) + '.</p>'
                 '<p>' + E(e['rights']) + '</p>'
                 '<p>Prepared by Bibliotheca Catholica from the hosted text (SHA-256 ' + e['sha256'] + '), with chapter structure from '
-                'Project Gutenberg\'s HTML for the same eBook. No words were changed. Chapter IV\'s two italicized words and two-line '
-                'quotation follow page 99 of the 1909 John Lane Company printing: ' + E(e['readerFormatting']['evidence']) + '.</p>'
-                '<p>Review copy for the structured-text pilot; not published.</p></section>')
+                'Project Gutenberg\'s HTML for the same eBook, matched word for word with the hosted text. No words were changed.</p>'
+                + ('<p>' + E(f['note']) + ' Witness: ' + E(f['evidence']) + '.</p>' if f and f.get('sha256') == e['sha256'] else '')
+                + '<p>Published by Bibliotheca Catholica, bibliothecacatholica.com.</p></section>')
     docs.append(('colophon', 'colophon.xhtml', 'About this edition', xhtml('About this edition', colophon), []))
 
     # Fidelity: every carried block's text, extracted from the XHTML, equals the TXT block.
@@ -125,7 +138,7 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
            '<dc:identifier id="uid">' + uid + '</dc:identifier><dc:title>' + E(w['title']) + '</dc:title>'
            '<dc:creator>' + E(w['author']) + '</dc:creator><dc:language>en</dc:language>'
            '<dc:source>' + E(e['source']) + '</dc:source><dc:rights>' + E(e['rights']) + '</dc:rights>'
-           '<dc:publisher>Bibliotheca Catholica (review copy, not published)</dc:publisher>'
+           '<dc:publisher>Bibliotheca Catholica</dc:publisher>'
            '<meta property="dcterms:modified">2026-11-14T00:00:00Z</meta></metadata><manifest>'
            '<item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>'
            '<item id="css" href="style.css" media-type="text/css"/>'
@@ -140,7 +153,7 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
     with zipfile.ZipFile(buf, 'w') as z:
         def put(name, data, store=False):
             zi = zipfile.ZipInfo(name, STAMP)
-            zi.compress_type = zipfile.ZIP_STORED if store else zipfile.ZIP_DEFLATED
+            zi.compress_type = zipfile.ZIP_STORED  # stored: identical bytes whatever the zlib version (local and CI)
             zi.external_attr = 0o644 << 16
             z.writestr(zi, data)
         put('mimetype', 'application/epub+zip', store=True)  # first and uncompressed (OCF)
@@ -163,8 +176,38 @@ def build(work='orthodoxy', edition='pg-130', out_dir=ROOT / '.epub-build'):
     return report
 
 
+def publish():
+    """Build every structured edition's EPUB into downloads/epub/ under a content-hashed name, with a manifest."""
+    import shutil, tempfile
+    out = ROOT / 'downloads/epub'
+    out.mkdir(parents=True, exist_ok=True)
+    rows, keep = {}, set()
+    with tempfile.TemporaryDirectory() as tmp:
+        for (work, edition) in sorted(ST.EDITIONS):
+            r = build(work, edition, Path(tmp))
+            name = '%s-%s.%s.epub' % (work, edition, r['sha256'][:12])
+            shutil.copyfile(Path(tmp) / ('%s-%s.epub' % (work, edition)), out / name)
+            keep.add(name)
+            rows[edition] = {'work': work, 'path': 'downloads/epub/' + name, 'sha256': r['sha256'], 'size': r['bytes']}
+    for p in out.glob('*.epub'):
+        if p.name not in keep:
+            p.unlink()
+    m = {'note': 'Generated by tools/build_epub.py --publish. EPUB 3 files of the hosted editions with a structure file; '
+                 'every character of the text comes from the hosted TXT. Published by decision of Micah, November 15, 2026.',
+         'epubs': rows}
+    (ROOT / 'data/epubs.json').write_text(json.dumps(m, indent=1) + '\n')
+    (ROOT / 'data/epubs.js').write_text('window.EPUBS=' + json.dumps({k: {'path': v['path'], 'size': v['size']} for k, v in rows.items()}, separators=(',', ':')) + ';\n')
+    return m
+
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--out', default=str(ROOT / '.epub-build'))
-    r = build(out_dir=Path(ap.parse_args().out))
+    ap.add_argument('--publish', action='store_true')
+    a = ap.parse_args()
+    if a.publish:
+        m = publish()
+        print('published EPUBs: ' + ', '.join('%s %d bytes' % (k, v['size']) for k, v in m['epubs'].items()))
+        raise SystemExit(0)
+    r = build(out_dir=Path(a.out))
     print('%s: %d bytes, sha256 %s, %d chapters, %d book blocks' % (r['file'], r['bytes'], r['sha256'], r['chapters'], r['bookBlocks']))

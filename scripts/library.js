@@ -130,6 +130,8 @@ function work(render,id){var w=C.works.find(function(x){return x.id===id});if(!w
  var listenRow=recs.length?listen(recs)+(recs.some(function(r){return r.tracks})&&hosted?'<p class="small muted">Or press Listen in the reader to hear the chapters as you read.</p>':''):'';
  var opts=RO.options[w.id]||[];
  var dl=[];if(hosted)dl.push('<a download href="'+esc(hosted.text)+'">Plain text (TXT) ↓</a>');
+ // Published EPUB of this edition (tools/build_epub.py --publish, data/epubs.js), ahead of the external EPUB links.
+ var ep=hosted&&(window.EPUBS||{})[hosted.id];if(ep)dl.push('<a download href="/'+esc(ep.path)+'">EPUB (this edition) ↓</a>');
  opts.forEach(function(o){dl.push('<a href="'+esc(o.url)+'" target="_blank" rel="noopener">'+(o.access==='source-page'?'EPUB at ':'EPUB · ')+esc(o.provider)+' ↗</a>')});
  var iso=otherFormats(w);
  if(iso)dl.push(iso);

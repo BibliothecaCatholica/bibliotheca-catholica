@@ -36,6 +36,15 @@ EDITIONS = {
         'out': 'data/structured/orthodoxy-pg-130.json',
         # TXT blocks inside the markers that the HTML body does not carry, with the reason.
         'allowed_txt_only': {},
+        # Step 2b, per-edition presentation overrides (owner decision below). No characters change: a role override
+        # only changes a block's class, and 'front' blocks move into the reader's collapsed front matter (and the
+        # EPUB's notice appendix). Each override names the block by index and checks its exact text.
+        'presentation': {
+            'decision': 'Micah, November 14, 2026 (step 2b): centre the "by" line as a byline and move the '
+                        'proofreader\'s credit line into the collapsed front matter; no characters change; the same in the EPUB.',
+            'roles': {11: ('by', 'byline')},
+            'front': {9: 'This etext was proofread by Martin Ward'},
+        },
     },
 }
 
@@ -169,6 +178,24 @@ def build(work, edition, spec, write=True):
     except AssertionError as err:
         problems.append('readerFormatting no longer validates: %s' % err)
 
+    # Step 2b: presentation overrides, each checked against the exact TXT block.
+    pres = spec.get('presentation') or {}
+    overrides = []
+    for b, (text, role) in sorted(pres.get('roles', {}).items()):
+        r = next((x for x in rows if x['block'] == b), None)
+        if r is None or B[b] != text:
+            problems.append('presentation override for block %d does not match the TXT: %r' % (b, B[b][:40]))
+            continue
+        overrides.append({'block': b, 'role': role, 'was': r['role']})
+        r['role'] = role
+    front = []
+    for b, prefix in sorted(pres.get('front', {}).items()):
+        if not B[b].startswith(prefix) or not (start < b < end):
+            problems.append('front-matter override for block %d does not match the TXT: %r' % (b, B[b][:40]))
+            continue
+        front.append(b)
+    if front and front != list(range(start + 1, start + 1 + len(front))):
+        problems.append('front-matter blocks must follow the START marker directly: %r' % front)
     chapters, ch = [], [r for r in rows if r['role'] == 'chapter']
     for n, r in enumerate(ch):
         last = (ch[n + 1]['block'] - 1) if n + 1 < len(ch) else max(x['block'] for x in rows)
@@ -185,6 +212,7 @@ def build(work, edition, spec, write=True):
                  'markup': {'italics': marks['i'] + marks['em'], 'bold': marks['b'], 'lineBreaks': marks['br']}},
         'blocks': [{k: r[k] for k in ('block', 'role', 'num', 'title', 'level') if k in r} for r in rows],
         'chapters': chapters,
+        'presentation': ({'decision': pres['decision'], 'roles': overrides, 'front': front} if pres else None),
         'formatting': ({'source': 'data/library.json readerFormatting (scan-verified Chapter IV pilot, unchanged)',
                         'evidence': f['evidence'], 'verse': f['verse'], 'emphasis': f.get('emphasis', [])} if f else None),
         'gate': {'htmlBlocks': len(H), 'matched': len(rows), 'txtBodyBlocks': end - start - 1, 'uncovered': [],

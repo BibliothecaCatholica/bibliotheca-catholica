@@ -32,7 +32,7 @@
   },
   {
    "block": 11,
-   "role": "paragraph"
+   "role": "byline"
   },
   {
    "block": 12,
@@ -1155,6 +1155,19 @@
    "words": 8524
   }
  ],
+ "presentation": {
+  "decision": "Micah, November 14, 2026 (step 2b): centre the \"by\" line as a byline and move the proofreader's credit line into the collapsed front matter; no characters change; the same in the EPUB.",
+  "roles": [
+   {
+    "block": 11,
+    "role": "byline",
+    "was": "paragraph"
+   }
+  ],
+  "front": [
+   9
+  ]
+ },
  "formatting": {
   "source": "data/library.json readerFormatting (scan-verified Chapter IV pilot, unchanged)",
   "evidence": "https://archive.org/details/orthodoxy1909ches/page/n106/mode/1up",

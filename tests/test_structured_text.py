@@ -110,6 +110,30 @@ process.stdout.write(JSON.stringify(blocks.map((b,i)=>c.render(edition,b,i,true)
         stale['structure']['sha256'] = '0' * 64
         self.assertNotIn('reading-chapter', reading_block(stale, self.blocks[19], 19))
 
+    def test_presentation_overrides_step_2b(self):
+        """Micah, November 14, 2026 (step 2b): "by" is a byline; the proofreader's credit goes to the front matter."""
+        p = STORED['presentation']
+        self.assertIn('step 2b', p['decision'])
+        self.assertEqual(p['roles'], [{'block': 11, 'role': 'byline', 'was': 'paragraph'}])
+        self.assertEqual(self.blocks[11], 'by')
+        self.assertEqual(p['front'], [9])
+        self.assertTrue(self.blocks[9].startswith('This etext was proofread by Martin Ward'))
+        self.assertIn([11, 'byline'], with_structure(self.edition)['structure']['roles'])
+        js = (ROOT / 'data/text-pages.js').read_text()
+        tp = json.loads(js[len('window.TEXT_PAGES='):].rstrip().rstrip(';'))['orthodoxy']
+        self.assertEqual(tp['s']['f'], [9])
+        self.assertIn('FRONT.indexOf(i)>=0', (ROOT / 'scripts/library.js').read_text())
+        # the EPUB: credit moved to the notice appendix, verbatim; the byline is centred by its role class
+        import tempfile, zipfile, build_epub
+        with tempfile.TemporaryDirectory() as d:
+            r = build_epub.build(out_dir=Path(d))
+            z = zipfile.ZipFile(Path(d) / 'orthodoxy-pg-130.epub')
+            front = z.read('OEBPS/front.xhtml').decode()
+            notice = z.read('OEBPS/notice.xhtml').decode()
+        self.assertNotIn('proofread by Martin Ward', front)
+        self.assertIn('class="reading-byline">by</p>', front)
+        self.assertIn(self.blocks[9].split('\n')[0], notice)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -24,11 +24,11 @@ GitHub `main` is the source of truth. Cloudflare Pages deploys it automatically 
 
 ## Verified snapshot
 
-As of November 14, 2026, `main` at `6acc7bae4f` (PR #24) plus branch `claude/notice-rules`:
+As of November 14, 2026, `main` at `7c10d68cd9` (PR #28):
 
 - 104 work records; 64 hosted editions of 59 works in `data/library.json`.
 - 4,925 static pages and 4,926 sitemap URLs; about 6,750 tracked files, about 5,980 generated (`linguist-generated` in `.gitattributes`).
-- Tests: 124 Node and 246 Python.
+- Tests: 124 Node and 249 Python.
 
 ## Standing owner decisions
 
@@ -39,21 +39,22 @@ As of November 14, 2026, `main` at `6acc7bae4f` (PR #24) plus branch `claude/not
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-15, Claude (Claude Code): Orthodoxy steps 2b and 2c
+
+- 2b: per-edition presentation overrides in the structure file: "by" (block 11) is a byline; the proofreader's credit (block 9) moves to the reader's collapsed front matter and the EPUB's notice appendix. No characters change.
+- 2c: the EPUB CI job runs EPUBCheck 5.1.0 (pinned by SHA-256) and fails on errors; the current EPUB has 0 errors and 0 warnings.
+- Branch `claude/orthodoxy-2b-2c` (see its PR), merged on green CI under the standing approval. Approval: Micah, November 14 (follow-up message, item 2).
+
 ### 2026-11-14, Claude (Claude Code): notice rules applied site-wide
 
 - Chapter and Summa pages: text first, then the verbatim 1.E.1 licence sentence, then an "Edition details" toggle (edition, source, quality labels, OCR notes); no badges. Reader and EPUB: the same sentence at the end of the last section or chapter. Affiliate line once per page; badges off lists, author pages, the Advent plan, and rites resource lists (status kept as `data-rights`); one-line Wikipedia credit; Credits toggle for public-domain portraits; footer of two columns and one credits line.
-- [PR #28](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/28), branch `claude/notice-rules`: merged on green checks per Micah's follow-up (item 1), which settled the licence wording.
+- [PR #28](https://github.com/BibliothecaCatholica/bibliotheca-catholica/pull/28), branch `claude/notice-rules`: squash-merged as `7c10d68cd9` after Micah's follow-up (item 1) settled the wording; live `/build.json` served `bc-f33be8855088`, matching `main`.
 
 ### 2026-11-14, Claude (Claude Code): PR #24 merged and deployed
 
 - Orthodoxy structured text, review EPUB (CI artifact, unpublished), and automatic display-only layout (59 editions on, five verse works excluded, coverage per edition in `data/auto-layout/report.json`, `KEEP` for Orthodoxy 123 and Thursday 22). Process: [docs/HOSTED-EDITIONS.md](docs/HOSTED-EDITIONS.md).
 - Squash-merged as `6acc7bae4f`; live `/build.json` served `bc-29cc90930dce`, the build ID of `main` at that commit.
 - Approval: Micah, November 14 (item 1 of the rule-change message; step 2a rule change quoted in PROJECT-RULES rule 13).
-
-### 2026-11-14, Claude (Claude Code): design pass parts 1 and 2 merged and deployed
-
-- PR #26 as `8cb4f466` (deploy `bc-3ac4a7750581`) and PR #27 as `d7943291` (deploy `bc-bab55b05a928`): design rules, calmer work page and reader, self-hosted portraits, seven-item navigation, catalogue shelves.
-- Approval: Micah, November 12 and 14 (design brief, "Start on Plan B", and merge without a phone check).
 
 ## Open items
 

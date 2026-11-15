@@ -57,7 +57,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 ## Open items
 
 - Micah: the takedown agent's name and postal address, and DMCA agent registration (the page shows only the contact email).
-- Hosted texts: further editions batches, starting with the Summa (five editions), then editions with a pinned Gutenberg HTML or a mappable contents list; manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
+- Hosted texts: Summa Design A ("Disputation", Micah's choice of November 15) on all question and article pages (branch `claude/summa-design-a`); further editions batches, then editions with a pinned Gutenberg HTML or a mappable contents list; manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
 - Advent launches November 29: excerpt-to-source comparison ([checklist](docs/ADVENT-LAUNCH.md)). Social readiness for Advent is owned by the Grok bot, not tracked here.
 - Libraries research candidates need rights and provenance review before import. Paused: `_headers` Report-Only CSP, low-priority npm audit findings.
 - Page-audit decisions: the publish allowlist and the `study/index.html` sitemap or noindex question. CI's Study drift check names the missing `study/passages` (harmless).

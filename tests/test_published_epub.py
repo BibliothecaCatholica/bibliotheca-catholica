@@ -1,4 +1,4 @@
-"""Published EPUBs (Micah, November 15, 2026: "Publish our EPUB file"): built in the site build by
+"""Published EPUBs: built in the site build by
 tools/build_epub.py --publish, content-hashed names, a manifest (path, sha256, size), linked as "EPUB (this edition)"
 ahead of the external EPUB links, with the verbatim Gutenberg 1.E.1 sentence and the full licence inside."""
 import hashlib, html, io, json, re, sys, unittest, zipfile

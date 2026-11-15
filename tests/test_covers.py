@@ -1,5 +1,4 @@
-"""Edition covers: design C ("Banded"), chosen by Micah on November 15, 2026 ("Banded (C) is the best looking cover page
-for the books"), for every hosted edition (tools/covers.py). The SVG is the source; the WebP and social JPEG are
+"""Edition covers: design C ("Banded") for every hosted edition (tools/covers.py). The SVG is the source; the WebP and social JPEG are
 rendered from it with the site's fonts and pinned by SHA-256 in data/covers.json."""
 import hashlib, json, re, sys, unittest
 from pathlib import Path

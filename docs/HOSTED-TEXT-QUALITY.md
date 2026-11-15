@@ -1,6 +1,6 @@
 # Hosted-text quality
 
-**Rule change (step 2a):** "Rule change: automatic, display-only prose reflow and underscore italics are now allowed on hosted editions, under the safeguards listed here." (Micah, November 14, 2026) Automatic reflow and underscore italics are now applied, display only, under the safeguards in [PROJECT-RULES.md](PROJECT-RULES.md) rule 13 and [HOSTED-EDITIONS.md](HOSTED-EDITIONS.md); the statements below that the generic reader keeps every newline or escapes underscores describe the state before that change, and no TXT changed.
+**Automatic layout (step 2a):** Automatic reflow and underscore italics are now applied, display only, under the safeguards in [PROJECT-RULES.md](PROJECT-RULES.md) rule 13 and [HOSTED-EDITIONS.md](HOSTED-EDITIONS.md); the statements below that the generic reader keeps every newline or escapes underscores describe the state before that change, and no TXT changed.
 
 For how hosted books are prepared and presented (structure files, the fidelity gate, rendering, and EPUBs), see [HOSTED-EDITIONS.md](HOSTED-EDITIONS.md). This document is the editorial assessment and correction procedure.
 

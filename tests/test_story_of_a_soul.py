@@ -1,6 +1,6 @@
 """Story of a Soul (pg-16772) structured edition.
 
-Owner decision, Micah, November 14, 2026: build it with accent-insensitive matching in the fidelity check (the displayed
+Built with accent-insensitive matching in the fidelity check (the displayed
 text still comes from the hosted TXT) and with the italics from its own Gutenberg HTML; verse stays as the source's line
 breaks; bracketed notes stay as plain text."""
 import hashlib, json, re, subprocess, sys, unittest

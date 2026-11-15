@@ -1,6 +1,6 @@
 # Full-year saints calendar (facts only)
 
-Status: live since 2026-11-09 (owner-approved launch, Micah, 2026-11-09). Built from the full-year facts export
+Status: live since 2026-11-09. Built from the full-year facts export
 (12,337 rows) with the decisions below.
 
 ## Owner's decisions (2026-11-09)

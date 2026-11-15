@@ -12,7 +12,11 @@ class CatalogTests(unittest.TestCase):
         self.catalog=json.loads((ROOT/'data/library.json').read_text())
     def test_all_hosted_editions_have_verified_files_and_rights(self):
         build.validate(self.catalog)
-        self.assertEqual(64,sum(bool(e.get('text')) for w in self.catalog['works'] for e in w['editions']))
+        # No literal count (tools/hosted_counts.py): every file in data/texts/ belongs to exactly one hosted edition and
+        # every hosted edition has its file, so a book removed by accident still fails here.
+        texts=[e['text'] for w in self.catalog['works'] for e in w['editions'] if e.get('text')]
+        self.assertEqual(len(texts),len(set(texts)))
+        self.assertEqual({t.split('/')[-1] for t in texts},{p.name for p in (ROOT/'data/texts').iterdir()})
     def test_duplicate_work_is_rejected(self):
         self.catalog['works'].append(copy.deepcopy(self.catalog['works'][0]))
         with self.assertRaises(AssertionError):build.validate(self.catalog)

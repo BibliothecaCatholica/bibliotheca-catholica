@@ -20,7 +20,7 @@ Read [CENTRAL.md](CENTRAL.md) next, then only the detailed documents relevant to
 
 ## Validate and hand off
 
-Use the [current validation procedure](docs/OPERATIONS.md#validation), matching `.github/workflows/validate.yml`. Commit generated changes, rerun generators, and verify no new drift. Report failures honestly.
+Use the [current validation procedure](docs/OPERATIONS.md#validation), matching `.github/workflows/validate.yml`: `npm run validate` runs it with a one-line result per step, and `npm run validate -- --drift` after committing checks for drift. After adding or removing a hosted book, `python3 tools/hosted_counts.py --write` refreshes every stated count. Report failures honestly.
 
 Review source changes only: `git diff origin/main -- . ':(exclude,attr:linguist-generated=true)'` (generated paths are marked in `.gitattributes`). Confirm generated output with the drift check in [OPERATIONS](docs/OPERATIONS.md#validation), never by reading generated pages. Search `docs/static-pages.txt` and `docs/HOSTED-TEXT-INVENTORY.md` with grep; do not open them whole.
 

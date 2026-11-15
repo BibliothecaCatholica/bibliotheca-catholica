@@ -16,7 +16,7 @@ class Covers(unittest.TestCase):
         self.assertEqual(M['design'], 'C')
         self.assertEqual(C.CHOSEN, 'C')
         hosted = {e['id']: w for w in LIB['works'] for e in w['editions'] if e.get('text')}
-        self.assertEqual(len(hosted), 64)
+        self.assertEqual(len(hosted), __import__('hosted_counts').count()['hosted'])
         self.assertEqual(set(M['covers']), set(hosted))
         shared = C.shared_titles()
         for ed, row in M['covers'].items():

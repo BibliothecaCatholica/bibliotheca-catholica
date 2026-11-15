@@ -150,7 +150,7 @@ These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The
 
 1. Read this file, then the edition's rows in [HOSTED-TEXT-INVENTORY.md](HOSTED-TEXT-INVENTORY.md) and [HOSTED-TEXT-QUALITY.md](HOSTED-TEXT-QUALITY.md), and its provenance record in `data/sources/`.
 2. Check CENTRAL.md and the open PRs for decisions already made about that book.
-3. Start at the earliest step not yet done, and stop where the table says to stop.
+3. Start at the earliest step not yet done, and stop where the table says to stop. For a chapter map, start from `python3 tools/draft_text_map.py <work-id>`: it drafts the `WORKS` entry from the headings the file prints and runs the builder's own checks; read it, fix it, then paste it. Exit 2 means no headings were found. For a new Gutenberg text, `tools/fetch_gutenberg_edition.py` exits 3 with one line when gutenberg.org is down; move on to another source, never a mirror. After adding a book, run `python3 tools/hosted_counts.py --write`.
 4. Prove fidelity: run `python3 tools/structure_text.py --check`, confirm `sha256sum data/texts/<file>.txt` against `data/library.json`, and run the full validation in [OPERATIONS.md](OPERATIONS.md#validation).
 5. Compare the result with Orthodoxy on desktop and phone, in both themes. Include screenshots in the PR.
 6. EPUBs are published for every edition with a structure file (owner decision, November 15, 2026). Never mark a text "proofread" without the owner's approval.

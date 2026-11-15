@@ -28,8 +28,8 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
 
-- 157 work records; 117 hosted editions of 112 works in `data/library.json` (184 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
-- 5,153 sitemap URLs; 7,629 tracked files, most generated (`linguist-generated` in `.gitattributes`).
+- 173 work records; 121 hosted editions of 116 works in `data/library.json` (201 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 5,169 sitemap URLs; 7699 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 124 Node and 284 Python.
 
 ## Standing decisions
@@ -43,6 +43,13 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-15, Catholic Repo (Grok): new texts; Chesterton handoff to Claude Code
+
+- Hosted as basic text editions (no structure or EPUB yet): The Queen of Seven Swords and The Coward (Faded Page), von Hügel's Essays and Addresses (Faded Page; calm note on essay 5, not featured, no `added`), and The Trial of John Jasper (PG 70690).
+- Link-only records for 12 Chesterton works with only a scan or a Wikisource copy (The Thing, The Outline of Sanity, and others). `tools/import_plain_text.py` now folds accents in its collation and quotes OCR file names.
+- Held: Jesuit Martyrs of Canada and The Footsteps at the Lock (scan agreement 93.9% and 93.2%, below the 95% gate; OCR noise only); Walsh and Sword of Wood (gutenberg.net.au bot check); Faustula, Plummer, and Reeves (no clean text).
+- Remaining Chesterton work: `docs/claude-code-chesterton-prompt.md` (input `docs/research/chesterton-hostable-2026-11-15.csv`).
+
 ### 2026-11-15, Catholic Repo (Grok): QA fixes; repo survey
 
 - QA low items fixed: Privacy now names the Libraries "Search another collection" form (Open Library only); author pages preload `/data/authors-detail.js` (root-absolute); stale counts and wording updated here and in PROJECT-RULES.
@@ -52,11 +59,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 ### 2026-11-15, Catholic Repo (Grok): GitHub Pages turned off
 
 - GitHub Pages disabled for `bibliotheca-catholica` (Micah, Nov 15). `CNAME` kept; texts.bibliothecacatholica.com untouched. Live site checked afterward: 200 from Cloudflare. Pages can be re-enabled in repo settings if ever needed.
-
-### 2026-11-15, Claude (Claude Code): editions batch 2
-
-- Ten more editions with chapter pages, openers, structure files, and EPUBs: Heretics, The Ball and the Cross, The Man Who Was Thursday, Chesterton's Saint Francis, Grammar of Assent, Development of Christian Doctrine, Paradoxes of Catholicism, Life of St. Teresa, Apologia, Virgin Saints and Martyrs.
-- Map tooling: two-block headings, division lines carried into the EPUB, slugs capped at 60 characters, no second "Chapter" label on headings that name themselves.
 
 ## Open items
 

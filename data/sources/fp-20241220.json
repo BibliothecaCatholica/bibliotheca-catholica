@@ -1,0 +1,195 @@
+{
+  "id": "fp-20241220",
+  "kind": "public-domain-text",
+  "title": "Essays and Addresses on the Philosophy of Religion",
+  "author": "Baron Friedrich von Hügel",
+  "firstPublished": "1921",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Faded Page notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "Faded Page",
+  "sourceUrl": "https://www.fadedpage.com/books/20241220/20241220.txt",
+  "sourcePage": "https://www.fadedpage.com/showbook.php?pid=20241220",
+  "sourceNotice": "=* A Distributed Proofreaders Canada eBook *=\n\nThis eBook is made available at no cost and with very few restrictions.\nThese restrictions apply only if (1) you make a change in the eBook\n(other than alteration for different display devices), or (2) you are\nmaking commercial use of the eBook. If either of these conditions\napplies, please contact a https://www.fadedpage.com administrator before\nproceeding. Thousands more FREE eBooks are available at\nhttps://www.fadedpage.com.\n\nThis work is in the Canadian public domain, but may be under copyright\nin some countries. If you live outside Canada, check your country's\ncopyright laws. IF THE BOOK IS UNDER COPYRIGHT IN YOUR COUNTRY, DO NOT\nDOWNLOAD OR REDISTRIBUTE THIS FILE.\n\n_Title:_ Essays and Addresses on the Philosophy of Religion\n_Date of first publication:_ 1921\n_Author:_ Baron Friedrich von Hügel (1852 - 1925)\n_Date first posted:_ 22nd December, 2024\n_Date last updated:_ 22nd December, 2024\nFaded Page eBook #20241220\n\nThis eBook was produced by: Marcia Brooks, Al Haines, Howard Ross & the\nonline Distributed Proofreaders Canada team at\nhttps://www.pgdpcanada.net\n\n\n\n\n\n                          [Cover Illustration]\n\n\n\n\n                           ESSAYS & ADDRESSES\n                                 ON THE\n                        PHILOSOPHY _of_ RELIGION\n\n                                   BY\n\n                       BARON FRIEDRICH VON HÜGEL,\n                              LL.D., D.D.\n\n\n\n\n                                 MCMXXI\n      ",
+  "sourceFileSha256": "b6cc650ed88644f8829dffab667e312b9a783e1c6bb8f36fcda2a7073bb0edc7",
+  "iaWitness": {
+    "identifier": "dli.ernet.476361",
+    "url": "https://archive.org/details/dli.ernet.476361",
+    "year": 1921,
+    "publisher": "J. M. Dent and Sons Ltd. New York",
+    "ocr": "476361-Essays And Addresses On The Philosophy Of Religion (1921)_djvu.txt",
+    "ocrSha256": "82a5be93f602190a20b71956f1b3660ab71741fac7bd6565069183b41b556e31",
+    "ocrNote": "SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)"
+  },
+  "collation": {
+    "sourceWords": 120922,
+    "scanWords": 122660,
+    "matchedWords": 117919,
+    "agreement": 0.9752,
+    "sampleDifferences": [
+      {
+        "source": "philosophy of religion date of first publication 1921 author baron friedrich",
+        "scan": "philosophy of religion f by the same author essays and"
+      },
+      {
+        "source": "d d d mcmxxi london toronto j",
+        "scan": "d d d london j m"
+      },
+      {
+        "source": "d mcmxxi london toronto j m dent",
+        "scan": "d d london j m dent"
+      },
+      {
+        "source": "m dent sons limited new york e",
+        "scan": "m dent sons ltd new york e"
+      },
+      {
+        "source": "fellow florentine september 14th 1921 vii preface the following",
+        "scan": "fellow florentine september j4th loax preface the following"
+      },
+      {
+        "source": "essays and nos 2 3 6 9",
+        "scan": "essays and nos 3 3 6 9"
+      },
+      {
+        "source": "four papers nos 1 4 5 and",
+        "scan": "four papers nos i 4 5 and"
+      },
+      {
+        "source": "of their first communication they have thus",
+        "scan": "of their first com munication they have thus"
+      },
+      {
+        "source": "impress the reader viii the roman church",
+        "scan": "impress the reader vlll preface the roman church"
+      },
+      {
+        "source": "the writings what as a matter of",
+        "scan": "the writings what a matter of"
+      },
+      {
+        "source": "experience of this reality and there is",
+        "scan": "experience of this reahty and there is"
+      },
+      {
+        "source": "with the reality experienced that it does",
+        "scan": "with the reality experi enced that it does"
+      },
+      {
+        "source": "how costly will doubtless always remain in",
+        "scan": "how costly will doubt less always remain in"
+      },
+      {
+        "source": "these insights or revelations especially have i",
+        "scan": "these insights or revela tions especially have i"
+      },
+      {
+        "source": "rate of their development thus especially the",
+        "scan": "rate of their develop ment thus especially the"
+      },
+      {
+        "source": "rebuked the vindictive zeal of his apostles",
+        "scan": "rebuked the vindictive 2 eal of his apostles"
+      },
+      {
+        "source": "persecutors and herself persisted and prevailed not",
+        "scan": "persecutors and herself per sisted and prevailed not"
+      },
+      {
+        "source": "church authorities have contributed in certain times",
+        "scan": "church authorities have con tributed in certain times"
+      },
+      {
+        "source": "good in section ii concerning the teaching",
+        "scan": "good in section il concerning the teaching"
+      },
+      {
+        "source": "of jesus and christianity in general paper",
+        "scan": "of jesus and christi anity in general paper"
+      },
+      {
+        "source": "and his perfect goodness towards the fact",
+        "scan": "and his perfect good ness towards the fact"
+      },
+      {
+        "source": "a new testament document the more clearly",
+        "scan": "a new testament docu ment the more clearly"
+      },
+      {
+        "source": "vivid operative faith xi in jesus christ",
+        "scan": "vivid operative faith preface xa in jesus christ"
+      },
+      {
+        "source": "with the parousia as does the faith",
+        "scan": "with the parousia a does the faith"
+      },
+      {
+        "source": "middle age for myself i do not",
+        "scan": "middle age for m5rself i do not"
+      },
+      {
+        "source": "no 7 the discrimination between perfect and",
+        "scan": "no 7 the disenmination between perfect and"
+      },
+      {
+        "source": "dear to me xii there is chiefly",
+        "scan": "dear to me preface xu there is chiefly"
+      },
+      {
+        "source": "in paper no 10 the doctrines of",
+        "scan": "in paper no lo the doctrines of"
+      },
+      {
+        "source": "nos 8 and 10 as to the",
+        "scan": "nos 8 and lo as to the"
+      },
+      {
+        "source": "fixed ideas of working religion in such",
+        "scan": "fixed ideas of work ing religion in such"
+      },
+      {
+        "source": "who hold these fragments with regard to",
+        "scan": "who hold these frag ments with regard to"
+      },
+      {
+        "source": "spontaneously and persistently combined the liveliest possible",
+        "scan": "spontaneously and persistently com bined the liveliest possible"
+      },
+      {
+        "source": "runs here throughout everything the sense that",
+        "scan": "runs here throughout every thing the sense that"
+      },
+      {
+        "source": "apprehend all this however neither as springing",
+        "scan": "apprehend all this how ever neither as springing"
+      },
+      {
+        "source": "of religion of xiv a habit and",
+        "scan": "xiv preface of a habit and"
+      },
+      {
+        "source": "that both kinds are ultimately given has",
+        "scan": "that both kinds re ultimately given has"
+      },
+      {
+        "source": "and those interior capacities require the impact",
+        "scan": "and those interior capaciues require the impact"
+      },
+      {
+        "source": "or habit of religious faith now of",
+        "scan": "or habit of rehgious faith now of"
+      },
+      {
+        "source": "apprehensions feelings convictions volitions which indeed possess",
+        "scan": "apprehensions feelings convictions voli tions which indeed possess"
+      },
+      {
+        "source": "supernatural religion such supernatural revealed religion is",
+        "scan": "supernatural religion such super natural revealed religion is"
+      }
+    ],
+    "method": "difflib word alignment, lower case, letters and digits only; OCR noise counts as disagreement"
+  },
+  "sha256": "72914540ca2a7c3b9928eae5b594ab9bb8ce7f023e88a5e930013feb4cf2de68",
+  "bytes": 740762,
+  "checked": "2026-11-15"
+}

@@ -1462,6 +1462,61 @@
     "indented line": 1,
     "short line": 3
    }
+  },
+  "fp-20200364": {
+   "work": "The Queen of Seven Swords",
+   "multiLineBlocks": 150,
+   "reflowed": 4,
+   "kept": 146,
+   "share": 0.027,
+   "emphasisSpans": 14,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1,
+    "indented line": 144,
+    "short line": 1
+   }
+  },
+  "fp-20170322": {
+   "work": "The Coward",
+   "multiLineBlocks": 1525,
+   "reflowed": 1515,
+   "kept": 10,
+   "share": 0.993,
+   "emphasisSpans": 104,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1,
+    "indented line": 8,
+    "short line": 1
+   }
+  },
+  "fp-20241220": {
+   "work": "Essays and Addresses on the Philosophy of Religion (First Series)",
+   "multiLineBlocks": 646,
+   "reflowed": 578,
+   "kept": 68,
+   "share": 0.895,
+   "emphasisSpans": 485,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1,
+    "indented line": 64,
+    "short line": 3
+   }
+  },
+  "pg-70690": {
+   "work": "The Trial of John Jasper for the Murder of Edwin Drood",
+   "multiLineBlocks": 732,
+   "reflowed": 710,
+   "kept": 22,
+   "share": 0.97,
+   "emphasisSpans": 42,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "indented line": 20,
+    "short line": 2
+   }
   }
  },
  "excluded": {
@@ -1472,6 +1527,10 @@
   "pg-7165": "The Legends of Saint Patrick (verse)"
  },
  "spotCheck": [
+  {
+   "edition": "fp-20170322",
+   "block": 1210
+  },
   {
    "edition": "pg-12047",
    "block": 447
@@ -1491,10 +1550,6 @@
   {
    "edition": "pg-17897",
    "block": 2227
-  },
-  {
-   "edition": "pg-17897",
-   "block": 7551
   },
   {
    "edition": "pg-18787",

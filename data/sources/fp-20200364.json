@@ -1,0 +1,75 @@
+{
+  "id": "fp-20200364",
+  "kind": "public-domain-text",
+  "title": "The Queen of Seven Swords",
+  "author": "G. K. Chesterton",
+  "firstPublished": "1926",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Faded Page notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "Faded Page",
+  "sourceUrl": "https://www.fadedpage.com/books/20200364/20200364.txt",
+  "sourcePage": "https://www.fadedpage.com/showbook.php?pid=20200364",
+  "sourceNotice": "* A Distributed Proofreaders Canada eBook *\n\nThis eBook is made available at no cost and with very few\nrestrictions. These restrictions apply only if (1) you make\na change in the eBook (other than alteration for different\ndisplay devices), or (2) you are making commercial use of\nthe eBook. If either of these conditions applies, please\ncontact a https://www.fadedpage.com administrator before proceeding.\nThousands more FREE eBooks are available at https://www.fadedpage.com.\n\nThis work is in the Canadian public domain, but may be under\ncopyright in some countries. If you live outside Canada, check your\ncountry's copyright laws. IF THE BOOK IS UNDER COPYRIGHT\nIN YOUR COUNTRY, DO NOT DOWNLOAD OR REDISTRIBUTE THIS FILE.\n\nTitle: The Queen of Seven Swords\nDate of first publication: 1926\nAuthor: G. K. Chesterton (1874-1936)\nDate first posted: Mar. 29, 2020\nDate last updated: Mar. 29, 2020\nFaded Page eBook #20200364\n\nThis eBook was produced by: Al Haines\n\n\n\n\n[Illustration: Title page]\n\n\n\n\n  THE QUEEN OF\n  SEVEN SWORDS\n\n\n  BY\n\n  G. K. CHESTERTON\n\n\n  SHEED & WARD\n  31 PATERNOSTER ROW, LONDON, E.C.4\n\n\n\n\n  _Published ... December, 1926_\n\n  _Printed in Great Britain_\n  _by Burleigh Ltd., at_ THE BURLEIGH PRESS, _Bristol_\n\n\n\n\n  CONTENTS\n\n\n  IN MEMORIAM\n  THE WHITE WITCH\n  THE RETURN OF EVE\n  A PARTY QUESTION\n  A LITTLE LITANY\n  THE BALLAD OF KING ARTHUR\n  REGINA ANGELORUM\n  THE PARADOX\n  THE TOWERS OF TIME\n  THE TWO MAIDENS\n  AN AGREEMENT\n  IN OCTOBER\n  LAUGHTER\n  THE BLACK VIRGIN\n  IMAGES\n ",
+  "sourceFileSha256": "5e6025f8b8db0952f34c8d21e3c8f59c561a39160028627f18724730ebf11c53",
+  "iaWitness": {
+    "identifier": "queenofsevenswor0000ches",
+    "url": "https://archive.org/details/queenofsevenswor0000ches",
+    "year": 1926,
+    "publisher": "London, Sheed & Ward",
+    "ocr": "queenofsevenswor0000ches_djvu.txt",
+    "ocrSha256": "f6e13311b84004cae26cf79933ed928949395f22dcf6c2c769af5c66f397b553",
+    "ocrNote": "SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)"
+  },
+  "collation": {
+    "sourceWords": 7049,
+    "scanWords": 7254,
+    "matchedWords": 6823,
+    "agreement": 0.9679,
+    "sampleDifferences": [
+      {
+        "source": "of seven swords date of first publication",
+        "scan": "of seven swords the gllee of sefe t"
+      },
+      {
+        "source": "flash made plain the queen that stands",
+        "scan": "flash made plain t he queen that stands"
+      },
+      {
+        "source": "on the little hills behind the houses",
+        "scan": "on the little hihs behind the houses"
+      },
+      {
+        "source": "to her old companions to call and",
+        "scan": "to her old com panions to call and"
+      },
+      {
+        "source": "die in october where are they gone",
+        "scan": "swords in october y here are they gone"
+      },
+      {
+        "source": "thee but though we dazed can neither",
+        "scan": "thee but though wre dazed can neither"
+      },
+      {
+        "source": "walking home foederis arca ora pro nobis",
+        "scan": "walking home foederis area ora pro nobis"
+      },
+      {
+        "source": "of seven swords it will be obvious that the seven champions",
+        "scan": "of seven swords the queen of"
+      },
+      {
+        "source": "o dolorous mother it the cross fall",
+        "scan": "o dolorous mother if the cross fall"
+      },
+      {
+        "source": "was bright the end of the queen",
+        "scan": "college library the queen of seoen swords"
+      }
+    ],
+    "method": "difflib word alignment, lower case, letters and digits only; OCR noise counts as disagreement"
+  },
+  "sha256": "ad3e68ca93026dba0fb1fef02237d59216c3116c0fd7b25ce33e8b04de32f9ea",
+  "bytes": 41788,
+  "checked": "2026-11-15"
+}

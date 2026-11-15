@@ -1,6 +1,5 @@
 """Part D, beautiful editions (Orthodoxy pilot): title-page work page, chapter openers and endings, book paragraphs.
-Owner brief, with Micah's follow-up of November 14, 2026: "Include the chapter pages: the chapter opener replaces what
-remains above the text." Covers: design C, chosen November 15 (tests/test_covers.py)."""
+On chapter pages the chapter opener replaces what was above the text. Covers: design C (tests/test_covers.py)."""
 import json, re, subprocess, sys, unittest
 from pathlib import Path
 
@@ -71,7 +70,7 @@ class PartD(unittest.TestCase):
     def test_cover_design_chosen(self):
         import covers
         self.assertEqual(set(covers.DESIGNS), {'A', 'B', 'C'})
-        self.assertEqual(covers.CHOSEN, 'C')  # Micah, November 15, 2026; tests/test_covers.py checks the files
+        self.assertEqual(covers.CHOSEN, 'C')  # tests/test_covers.py checks the files
 
 if __name__ == '__main__':
     unittest.main()

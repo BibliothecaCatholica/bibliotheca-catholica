@@ -1,7 +1,4 @@
-"""Automatic display-only layout (step 2a, PR #24): the rule, its safeguards, and renderer parity.
-
-Owner rule change, Micah, November 14, 2026: "automatic, display-only prose reflow and underscore italics are now
-allowed on hosted editions, under the safeguards listed here." """
+"""Automatic display-only layout (step 2a, PR #24): the rule, its safeguards, and renderer parity."""
 import copy, hashlib, json, subprocess, sys, unittest
 from html.parser import HTMLParser
 from pathlib import Path

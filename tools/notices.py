@@ -1,7 +1,7 @@
 """Source notices shared by the static pages and the EPUB builder.
 
-PG_LINE is the Project Gutenberg License's own sentence (clause 1.E.1), verbatim and never paraphrased (owner decision,
-Micah, November 14, 2026; docs/PROJECT-RULES.md rule 2), with "Project Gutenberg™ License" linked to the full licence.
+PG_LINE is the Project Gutenberg License's own sentence (clause 1.E.1), verbatim and never paraphrased
+(docs/PROJECT-RULES.md rule 2), with "Project Gutenberg™ License" linked to the full licence.
 It appears once per page, at the end of the text, in small type. scripts/library.js PG_LINE has the same words, and
 tests/test_text_pages.py checks both against the licence text in data/texts/pg-130.txt.
 """

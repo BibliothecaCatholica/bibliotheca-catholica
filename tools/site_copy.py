@@ -44,7 +44,7 @@ def home_about(n):
      '<p>Bibliotheca Catholica (bibliothecacatholica.com) is an independent, free reading room for the Catholic tradition, with '+str(n['hosted'])+' public-domain editions to read here and '+str(n['authors'])+' authors to explore. '
      'Every hosted text keeps its source, original notices, and rights evidence.</p><p>'+a('/about/','How the library works')+'</p></section>')
 def home_hero():
-    # Hero engraving (Micah, November 15, 2026: "move on the hero engraving"): Gustave Doré's Empyrean, Paradiso Canto
+    # Hero engraving: Gustave Doré's Empyrean, Paradiso Canto
     # XXXI, the top recommendation of PR #27, public domain with its source recorded in data/hero.json.
     return ('<section class="hero hero-c has-art"><div class="hero-text"><h1 class="eyebrow hero-name">Bibliotheca Catholica</h1><p class="hero-title">Tolle Lege</p>'
      '<p class="hero-trans">Take up and read: two thousand years of Catholic books, free to read here.</p>'

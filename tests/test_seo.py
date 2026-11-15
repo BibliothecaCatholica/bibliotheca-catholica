@@ -43,7 +43,7 @@ class SEO(unittest.TestCase):
             route=r[:-len('index.html')]
             self.assertEqual(p.canon[0],SITE+route,r);self.assertEqual(p.meta['og:url'],[SITE+route],r)
             for k in('og:title','og:description','og:image','twitter:card','twitter:title','twitter:description','twitter:image'):self.assertEqual(len(p.meta.get(k,[])),1,(r,k))
-            # a hosted work's pages use its cover (design C, owner's choice of November 15, 2026); every other page the site image
+            # a hosted work's pages use its cover (design C); every other page the site image
             self.assertRegex(p.meta['og:image'][0],r'^'+re.escape(SITE)+r'assets/(og-image\.png|covers/[a-z0-9-]+-og\.jpg)$',r)
             if 'covers/' in p.meta['og:image'][0]:self.assertTrue(r.startswith('work/'),r);self.assertTrue((ROOT/p.meta['og:image'][0][len(SITE):]).exists(),r)
             self.assertEqual(p.meta['og:image'][0].replace('og:',''),p.meta['twitter:image'][0],r)

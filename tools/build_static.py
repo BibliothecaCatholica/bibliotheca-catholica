@@ -460,7 +460,7 @@ def summa_pages(out,lib):
         out['summa/'+P['slug']]=('Summa Theologiae, '+P['name']+' ('+P['latin']+') · Bibliotheca Catholica',
             fit(['The %s of the Summa Theologiae (%s) by Thomas Aquinas in English: %d questions and %d articles, each on its own free page.'%(P['name'],P['latin'],len(P['questions']),na_)],DESC_EXTRA),
             body,[{'@context':'https://schema.org','@type':'Book','name':'Summa Theologiae, '+P['name'],'url':SITE+'summa/'+P['slug']+'/','author':ld_by,'isPartOf':{'@type':'Book','name':'Summa Theologiae','url':SITE+'summa/'},'isAccessibleForFree':True,'inLanguage':'English'},crumbs(*CP)])
-    # Summa Design A, "Disputation" (Micah, November 15, 2026: "Design A"): a book-style opener, and a centred rubric over
+    # Summa Design A, "Disputation": a book-style opener, and a centred rubric over
     # each part of an article. The paragraphs, their words, and their order are unchanged; only the rubrics are added.
     DISP=(('obj',re.compile(r'^(Objection|Obj\.)\s*([0-9]+|[ivxl]+)\b'),'Objections'),('sed',re.compile(r'^_?On the contrary'),'On the contrary'),
           ('resp',re.compile(r'^_?I answer that'),'I answer that'),('reply',re.compile(r'^_?Reply (to )?Obj'),'Replies to the objections'))
@@ -519,7 +519,7 @@ def summa_pages(out,lib):
             body,[{'@context':'https://schema.org','@type':'Article','headline':x['title'][:110],'name':aref(P,q,x)+': '+x['title'],'url':SITE+apath(P,q,x)+'/','author':ld_by,'isPartOf':{'@type':'Chapter','name':'Question '+str(q['n'])+'. '+q['title'],'url':SITE+qpath(P,q)+'/'},'isAccessibleForFree':True,'inLanguage':'English'},
                   crumbs(*C,('Summa','summa/'),(P['name'],'summa/'+P['slug']+'/'),('Question '+str(q['n']),qpath(P,q)+'/'),('Article '+str(x['n']),apath(P,q,x)+'/'))])
     return S
-# Edition covers (design C, chosen by Micah on November 15, 2026; tools/covers.py, data/covers.json)
+# Edition covers (design C; tools/covers.py, data/covers.json)
 def hosted_ed(w):return next((e for e in w['editions'] if e.get('text')),None)
 def cover_img(e,cls,wd,lazy=True):
     if not e or not (ROOT/'assets/covers'/(e['id']+'.webp')).exists():return ''

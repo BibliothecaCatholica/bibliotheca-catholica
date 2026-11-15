@@ -111,9 +111,9 @@ process.stdout.write(JSON.stringify(blocks.map((b,i)=>c.render(edition,b,i,true)
         self.assertNotIn('reading-chapter', reading_block(stale, self.blocks[19], 19))
 
     def test_presentation_overrides_step_2b(self):
-        """Micah, November 14, 2026 (step 2b): "by" is a byline; the proofreader's credit goes to the front matter."""
+        """Step 2b: "by" is a byline; the proofreader's credit goes to the front matter."""
         p = STORED['presentation']
-        self.assertIn('step 2b', p['decision'])
+        self.assertIn('Step 2b', p['decision'])
         self.assertEqual(p['roles'], [{'block': 11, 'role': 'byline', 'was': 'paragraph'}])
         self.assertEqual(self.blocks[11], 'by')
         self.assertEqual(p['front'], [9])

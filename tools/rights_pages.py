@@ -33,8 +33,7 @@ def takedown_html():
      '<section class="panel policy"><h2>What this site holds</h2>'
      '<p>Bibliotheca Catholica hosts only the reading-room texts, each a public-domain edition checked under our pre-1931 rule. The books listed in the Isidore Index are held by isidore.co, not by us: we show their catalog records and link to their book pages. To have a file removed from isidore.co itself, contact isidore.co. We can remove or change our own record, badge, or link.</p>'
      '<h2>Where to send a request</h2>'
-     # Takedown contact (Micah, November 15, 2026: "have my support email be the takedown contact"). No name or postal
-     # address is given: Micah has not decided them, and none may be invented.
+     # Takedown contact. No name or postal address is given until the owner decides them; none may be invented.
      '<p class="takedown-contact">Email takedown requests to <a href="mailto:micahwatson@bibliothecacatholica.com">micahwatson@bibliothecacatholica.com</a> and put “Takedown request” in the subject line.</p>'
      '<h2>What to include</h2><p>A notice is easiest to act on when it has the elements listed in US law (17 U.S.C. § 512(c)(3)):</p><ol>'
      '<li>your physical or electronic signature, as the rights holder or someone authorized to act for them;</li>'

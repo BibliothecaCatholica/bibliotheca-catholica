@@ -69,7 +69,7 @@ class Summa(unittest.TestCase):
         self.assertNotIn('rel="next"',main('summa/supp/q99/a5/index.html'))
     def test_question_part_and_index(self):
         m=main('summa/1/q2/index.html')
-        # Design A (Micah, November 15, 2026): the opener names the question; the h1 is its title
+        # Design A: the opener names the question; the h1 is its title
         self.assertIn('<header class="ch-opener summa-opener"><p class="ch-label">First Part · Question</p><p class="ch-num">2</p><h1>The Existence of God</h1>',m)
         self.assertIn('<h2 class="q-contents-h">The 3 articles</h2>',m)
         for k in (1,2,3):self.assertIn('href="/summa/1/q2/a%d/"'%k,m)

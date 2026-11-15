@@ -426,7 +426,7 @@
      "notes": "The year conflicts: Open Library says 2008 and Wikipedia says 2007. Show no year, or say 'c. 2007–2008'."
     }
    ],
-   "books_omitted_note": "Most of his other books, such as Diary of a Psychosis (listed on tomwoods.com/about), are political or economic rather than Catholic. Suggest leaving them off a Catholic library page. Micah decides.",
+   "books_omitted_note": "Most of his other books, such as Diary of a Psychosis (listed on tomwoods.com/about), are political or economic rather than Catholic. Suggest leaving them off a Catholic library page. The owner decides.",
    "our_site": {
     "author_page": "https://bibliothecacatholica.com/author/thomas-e-woods/",
     "edition_guides": [],
@@ -439,7 +439,7 @@
      "src": [
       "https://en.wikipedia.org/wiki/Tom_Woods"
      ],
-     "recommendation": "Leave it off the page copy. Micah decides whether any context note is needed."
+     "recommendation": "Leave it off the page copy. The owner decides whether any context note is needed."
     },
     {
      "topic": "The Great Façade (2002)",
@@ -447,7 +447,7 @@
      "src": [
       "https://en.wikipedia.org/wiki/Tom_Woods"
      ],
-     "recommendation": "Don't feature it. If the Isidore Index has it, rule 4 (editorial flags) may apply. Ask Micah."
+     "recommendation": "Don't feature it. If the Isidore Index has it, rule 4 (editorial flags) may apply. Ask the owner."
     },
     {
      "topic": "COVID-19 commentary",
@@ -1022,6 +1022,6 @@
    "why": "Strong philosophy demand. His blog is free and his books are in copyright. Lower confidence because his blog includes public disputes, so it would need the same neutral handling as Woods."
   }
  ],
- "next_batch_note": "Views are English Wikipedia user pageviews, Nov 2025 to Oct 2026, from the Wikimedia REST API. They show demand for the person, not our Search Console impressions, since per-query GSC data for these names isn't in the QA report. Every candidate is a hub author with works: [] and a live static page with no /work/ links (checked 2026-11-03). Higher-view names I skipped: Pope Leo XIV (different page type), Ross Douthat (journalist), and Taylor Marshall (publicly controversial, needs Micah's call first).",
+ "next_batch_note": "Views are English Wikipedia user pageviews, Nov 2025 to Oct 2026, from the Wikimedia REST API. They show demand for the person, not our Search Console impressions, since per-query GSC data for these names isn't in the QA report. Every candidate is a hub author with works: [] and a live static page with no /work/ links (checked 2026-11-03). Higher-view names I skipped: Pope Leo XIV (different page type), Ross Douthat (journalist), and Taylor Marshall (publicly controversial, needs the owner's call first).",
  "url_checks": "All URLs above were curl-checked on 2026-11-03 (see the url_checks list in the .md). Exceptions are noted per entry: Facebook and Instagram login walls, Rumble 403, mises.org 403, christendom.edu WAF (read with the fetch tool), bookshop.org Cloudflare."
 }

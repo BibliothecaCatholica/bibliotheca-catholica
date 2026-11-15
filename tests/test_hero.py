@@ -1,4 +1,4 @@
-"""Home hero engraving (Micah, November 15, 2026: "move on the hero engraving"): Doré's Empyrean, public domain, with
+"""Home hero engraving: Doré's Empyrean, public domain, with
 its source recorded in data/hero.json and a visible credit line."""
 import hashlib, json, unittest
 from pathlib import Path

@@ -47,7 +47,7 @@ Designed editions (Part D; the Orthodoxy pilot, November 15, 2026) read as books
 - **Chapter ending:** the ornament, "End of Chapter N", and a link to the next chapter (and, on chapter pages, to the reading room).
 - **Work page as a title page:** a facts line computed from the TXT (words and reading time at 230 words a minute), three choices (Read, Listen, Download), and "About this edition". Full source and rights stay behind the edition row's toggle.
 - **Print:** each chapter starts a new page.
-- **Covers:** design C, "Banded" (Micah, November 15, 2026): a burgundy upper panel with the title in cream capitals and the category with its ornament, a gold rule, and a cream band with the author and the cross. Volumes and same-titled works carry a gold volume line. Every hosted edition has one (`tools/covers.py --build`; SVG source, WebP 480 by 720, social JPEG 1200 by 630, checksums in `data/covers.json`). Used beside the title on work pages, small in library rows and author lists, as the social image of a work's pages, first in print, and as the EPUB cover. The site's own `assets/og-image.png` stays for every other page.
+- **Covers:** design C, "Banded": a burgundy upper panel with the title in cream capitals and the category with its ornament, a gold rule, and a cream band with the author and the cross. Volumes and same-titled works carry a gold volume line. Every hosted edition has one (`tools/covers.py --build`; SVG source, WebP 480 by 720, social JPEG 1200 by 630, checksums in `data/covers.json`). Used beside the title on work pages, small in library rows and author lists, as the social image of a work's pages, first in print, and as the EPUB cover. The site's own `assets/og-image.png` stays for every other page.
 
 ## Accessibility
 

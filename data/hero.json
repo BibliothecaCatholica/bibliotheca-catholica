@@ -1,0 +1,32 @@
+{
+ "note": "Home hero engraving (Micah, November 15, 2026: \"move on the hero engraving\"; the top recommendation of the three proposed in PR #27). Downloaded once from Wikimedia Commons; resized to WebP.",
+ "title": "The Empyrean (Rosa Celeste), Paradiso, Canto XXXI",
+ "artist": "Gustave Doré (1832-1883)",
+ "source": "Dante Alighieri, The Divine Comedy, Illustrated, Complete, ed. Henry Francis Cary (London, Paris & Melbourne: Cassell & Company, 1892), Canto XXXI; Project Gutenberg #8789, as cited on the Commons file page",
+ "commons": "https://commons.wikimedia.org/wiki/File:Paradiso_Canto_31.jpg",
+ "original": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Paradiso_Canto_31.jpg",
+ "originalSha256": "0055e15943cb186f4bd1102f267023f08144581cc05855207b467486f156bc86",
+ "originalSize": [
+  858,
+  952
+ ],
+ "license": "Public domain: the Commons file page tags it {{PD-Art|PD-old-100-1923}} (Doré died in 1883; a faithful reproduction of a two-dimensional work)",
+ "retouched": "The Commons file notes contrast arranged and a duotone (editor DarkEvil); no further change here beyond resizing.",
+ "retrieved": "2026-11-15",
+ "files": {
+  "360": {
+   "file": "assets/hero/dore-paradiso-31-360.webp",
+   "width": 360,
+   "height": 399,
+   "sha256": "a315f24d8118092b68b208d7dce1b475b6a2d5fb678671e283f5701064ed2b42",
+   "bytes": 49560
+  },
+  "640": {
+   "file": "assets/hero/dore-paradiso-31-640.webp",
+   "width": 640,
+   "height": 710,
+   "sha256": "9c5e604c891fe3e278ce570691c144aabd2939562d92a78ff0e300ea8ef41077",
+   "bytes": 158282
+  }
+ }
+}

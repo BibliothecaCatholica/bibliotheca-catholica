@@ -44,10 +44,16 @@ def home_about(n):
      '<p>Bibliotheca Catholica (bibliothecacatholica.com) is an independent, free reading room for the Catholic tradition, with '+str(n['hosted'])+' public-domain editions to read here and '+str(n['authors'])+' authors to explore. '
      'Every hosted text keeps its source, original notices, and rights evidence.</p><p>'+a('/about/','How the library works')+'</p></section>')
 def home_hero():
-    # The current site mark stays as the hero's ornament until the owner chooses one of the proposed engravings.
-    return ('<section class="hero hero-c"><h1 class="eyebrow hero-name">Bibliotheca Catholica</h1><p class="hero-title">Tolle Lege</p>'
+    # Hero engraving (Micah, November 15, 2026: "move on the hero engraving"): Gustave Doré's Empyrean, Paradiso Canto
+    # XXXI, the top recommendation of PR #27, public domain with its source recorded in data/hero.json.
+    return ('<section class="hero hero-c has-art"><div class="hero-text"><h1 class="eyebrow hero-name">Bibliotheca Catholica</h1><p class="hero-title">Tolle Lege</p>'
      '<p class="hero-trans">Take up and read: two thousand years of Catholic books, free to read here.</p>'
-     '<div class="hero-cta"><a class="btn" href="/library/">Enter the reading room</a><a class="hero-link" href="/reading/">Help me choose a book</a></div></section>')
+     '<div class="hero-cta"><a class="btn" href="/library/">Enter the reading room</a><a class="hero-link" href="/reading/">Help me choose a book</a></div></div>'
+     '<figure class="hero-art"><img src="/assets/hero/dore-paradiso-31-640.webp" srcset="/assets/hero/dore-paradiso-31-360.webp 360w, /assets/hero/dore-paradiso-31-640.webp 640w" '
+     'sizes="(max-width: 720px) 60vw, 360px" width="640" height="710" fetchpriority="high" decoding="async" '
+     'alt="Engraving: Dante and Beatrice look up at the highest heaven, a vast rose of light ringed with angels.">'
+     '<figcaption>Gustave Doré, <cite>The Empyrean</cite> (Paradiso, Canto XXXI), from the 1892 Cassell <cite>Divine Comedy</cite>. Public domain, via '
+     '<a href="https://commons.wikimedia.org/wiki/File:Paradiso_Canto_31.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.</figcaption></figure></section>')
 def home_paths(n,people=(),works=()):
     """people: [(id, name, dates)] with self-hosted portraits; works: [(id, title, author)]."""
     row=''.join('<li><a href="/author/'+E(i)+'/"><span class="pt" style="--pt:96px" aria-hidden="true"><img src="/assets/portraits/'+E(i)+'.webp" width="96" height="96" loading="lazy" decoding="async" alt=""></span><b>'+E(nm)+'</b><span>'+E(d)+'</span></a></li>' for i,nm,d in people)

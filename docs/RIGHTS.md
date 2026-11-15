@@ -23,6 +23,6 @@ Counts on 2026-10-25 (unchanged on 2026-11-02): public domain (US) 6, open licen
 
 ## Open decisions for the owner
 
-- DMCA designated agent: register (US Copyright Office, $6 per 3 years) and replace the PLACEHOLDER on `/takedown`.
+- DMCA designated agent: `/takedown` gives the contact email micahwatson@bibliothecacatholica.com (November 15, 2026). Micah still has to decide the agent's name, postal address, and registration (US Copyright Office, $6 per 3 years); none may be invented.
 - Whether to promise a specific removal time (the research guide suggested 48 hours; the page says "promptly").
 - Closed in v18 (2026-10-26): raw isidore.co author-folder links. A folder listing links every file whatever its badge, so the Index's A–Z tab (now "Authors A–Z") opens Isidore Index searches instead, the 211 author-page folder links and the folder-index resource were removed (folder names kept as data in `isidoreFolder`; in v18.1 those 211 authors gained an internal "All their books in the Isidore Index" link, `#/isidore/<catalog name>`), the Denzinger and Ott resources point to their book pages (6229 and 7262, both `unknown`), and the open data carries `index_url` instead of folder URLs. Link-only records stay listed.

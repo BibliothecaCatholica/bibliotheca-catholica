@@ -63,10 +63,13 @@ class Pages(unittest.TestCase):
             self.assertNotRegex(s.lower(),r'tax[- ]deductible|amazon\.|amzn\.')
             self.assertIn('<loc>https://bibliothecacatholica.com/%s/</loc>'%k,(ROOT/'sitemap.xml').read_text())
             self.assertIn('%s/index.html'%k,(ROOT/'docs/static-pages.txt').read_text())
-    def test_takedown_placeholder_not_invented(self):
+    def test_takedown_contact_is_the_owners_email_and_nothing_invented(self):
+        # Micah, November 15, 2026: "have my support email be the takedown contact". Name and postal address: not decided.
         s=(ROOT/'takedown/index.html').read_text();body=s[s.index('<main'):s.index('</main>')]
-        self.assertIn('PLACEHOLDER: designated takedown agent',body)
-        self.assertNotIn('mailto:',body)  # the owner adds the agent contact
+        self.assertNotIn('PLACEHOLDER',body)
+        self.assertIn('<a href="mailto:micahwatson@bibliothecacatholica.com">micahwatson@bibliothecacatholica.com</a>',body)
+        self.assertEqual(re.findall(r'mailto:([^"]+)',body),['micahwatson@bibliothecacatholica.com'])
+        self.assertNotRegex(body,r'(?i)designated agent:|postal address:')
         for k in ('512(c)(3)','512(g)(3)','penalty of perjury','good faith'):self.assertIn(k,body)
     def test_rights_page_explains(self):
         s=(ROOT/'rights/index.html').read_text()

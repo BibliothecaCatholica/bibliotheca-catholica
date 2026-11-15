@@ -460,6 +460,24 @@ def summa_pages(out,lib):
         out['summa/'+P['slug']]=('Summa Theologiae, '+P['name']+' ('+P['latin']+') · Bibliotheca Catholica',
             fit(['The %s of the Summa Theologiae (%s) by Thomas Aquinas in English: %d questions and %d articles, each on its own free page.'%(P['name'],P['latin'],len(P['questions']),na_)],DESC_EXTRA),
             body,[{'@context':'https://schema.org','@type':'Book','name':'Summa Theologiae, '+P['name'],'url':SITE+'summa/'+P['slug']+'/','author':ld_by,'isPartOf':{'@type':'Book','name':'Summa Theologiae','url':SITE+'summa/'},'isAccessibleForFree':True,'inLanguage':'English'},crumbs(*CP)])
+    # Summa Design A, "Disputation" (Micah, November 15, 2026: "Design A"): a book-style opener, and a centred rubric over
+    # each part of an article. The paragraphs, their words, and their order are unchanged; only the rubrics are added.
+    DISP=(('obj',re.compile(r'^(Objection|Obj\.)\s*([0-9]+|[ivxl]+)\b'),'Objections'),('sed',re.compile(r'^_?On the contrary'),'On the contrary'),
+          ('resp',re.compile(r'^_?I answer that'),'I answer that'),('reply',re.compile(r'^_?Reply (to )?Obj'),'Replies to the objections'))
+    def disputation(P,B,lo,hi):
+        out,cur=[],None
+        for i in range(lo,hi+1):
+            k=next(((key,lab) for key,rx,lab in DISP if rx.match(B[i].lstrip())),None)
+            if k and (cur is None or k[0]!=cur):
+                if cur is not None:out.append('</section>')
+                out.append('<section class="disp disp-'+k[0]+'"><h2 class="disp-label">'+k[1]+'</h2>');cur=k[0]
+            elif cur is None:
+                out.append('<section class="disp">');cur=''
+            out.append(para(P,B,i))
+        return ''.join(out)+('</section>' if cur is not None else '')
+    def opener(label,title,num=None):
+        return ('<header class="ch-opener summa-opener"><p class="ch-label">'+E(label)+'</p>'+('<p class="ch-num">'+str(num)+'</p>' if num else '')
+                +'<h1>'+E(title)+'</h1><p class="ch-orn" aria-hidden="true">❦</p></header>')
     for k,(P,q) in enumerate(qflat):
         B=blocks(P['edition']);CQ=C+[('Summa','summa/'),(P['name'],'summa/'+P['slug']+'/'),('Question '+str(q['n']),qpath(P,q)+'/')]
         pv=qflat[k-1] if k else None;nx=qflat[k+1] if k+1<len(qflat) else None
@@ -469,11 +487,12 @@ def summa_pages(out,lib):
         pro=''.join(para(P,B,i) for i in range(q['prologue'][0],q['prologue'][1]+1))
         arts='<ol class="text-parts">'+''.join('<li>'+a('/'+apath(P,q,x)+'/',x['title'])+'</li>' for x in q['articles'])+'</ol>'
         body=(crumb_html(*C,('Summa','summa/'),(P['name'],'summa/'+P['slug']+'/'),('Question '+str(q['n']),''))
-              +'<div class="page-head"><div class="eyebrow">Summa Theologiae · '+E(qref(P,q))+'</div><h1>Question '+str(q['n'])+'. '+E(q['title'])+'</h1>'
-              +'<p class="lede">'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>, '+a('/summa/'+P['slug']+'/',P['name'])+'. '+str(len(q['articles']))+(' article.' if len(q['articles'])==1 else ' articles.')+'</p></div>'
-              +'<p class="dl-row"><a class="btn" href="'+E(reader(P,q['heading']))+'">Read in the reading room →</a> '+a(na(P,q),'This question at New Advent',True)+'</p>'
-              +(SUPP_LINE if P['slug']=='supp' else '')+'<article class="reading-text" aria-label="'+E('Question '+str(q['n']))+'">'+pro+'</article>'
-              +'<h2>Articles</h2>'+arts+NOTICE(P)+nav+DETAILS(P))
+              +opener(P['name']+' · Question',q['title'],q['n'])
+              +(SUPP_LINE if P['slug']=='supp' else '')+'<article class="reading-text summa-a" aria-label="'+E('Question '+str(q['n']))+'">'+pro+'</article>'
+              +'<h2 class="q-contents-h">'+('The article' if len(q['articles'])==1 else 'The '+str(len(q['articles']))+' articles')+'</h2>'+arts.replace('<ol class="text-parts">','<ol class="text-parts q-contents">',1)
+              +'<div class="ch-end summa-end"><p>'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>, '+a('/summa/'+P['slug']+'/',P['name'])+', question '+str(q['n'])+'.</p>'
+              +'<p><a href="'+E(reader(P,q['heading']))+'">Read in the reading room</a> · '+a(na(P,q),'This question at New Advent',True)+'</p></div>'
+              +NOTICE(P)+nav+DETAILS(P))
         out[qpath(P,q)]=('Summa Theologiae '+qref(P,q)+': '+q['title']+' · Bibliotheca Catholica',
             fit(['Summa Theologiae, %s, question %d: %s.'%(P['name'],q['n'],q['title'].rstrip('?.')),'The question’s opening and its %d article%s, by Thomas Aquinas, free in English.'%(len(q['articles']),'' if len(q['articles'])==1 else 's')],DESC_EXTRA),
             body,[{'@context':'https://schema.org','@type':'Chapter','name':'Question '+str(q['n'])+'. '+q['title'],'url':SITE+qpath(P,q)+'/','position':q['n'],'isPartOf':{'@type':'Book','name':'Summa Theologiae, '+P['name'],'url':SITE+'summa/'+P['slug']+'/','author':ld_by},'isAccessibleForFree':True,'inLanguage':'English'},crumbs(*CQ)])
@@ -486,10 +505,12 @@ def summa_pages(out,lib):
         text=''.join(para(P,B,i) for i in range(x['start'],x['end']+1));nf=flagged(P,x['heading'],x['end'])
         fl=('<p class="small ocr-count">'+('One passage' if nf==1 else str(nf)+' passages')+' on this page '+('is' if nf==1 else 'are')+' marked “OCR uncertain”; check '+('it' if nf==1 else 'them')+' against the scan.</p>') if nf else ''
         body=(crumb_html(*C,('Summa','summa/'),(P['name'],'summa/'+P['slug']+'/'),('Question '+str(q['n']),qpath(P,q)+'/'),('Article '+str(x['n']),''))
-              +'<div class="page-head"><div class="eyebrow">Summa Theologiae · '+E(aref(P,q,x))+'</div><h1>'+E(x['title'])+'</h1>'
-              +'<p class="lede">'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>, '+a('/summa/'+P['slug']+'/',P['name'])+', '+a('/'+qpath(P,q)+'/','question '+str(q['n'])+', '+q['title'])+', article '+str(x['n'])+'. About '+str(max(1,round(x['words']/200)))+' min.</p></div>'
-              +'<p class="dl-row"><a class="btn" href="'+E(reader(P,x['heading']))+'">Read in the reading room →</a> '+a(na(P,q,x),'This article at New Advent',True)+'</p>'
-              +(SUPP_LINE if P['slug']=='supp' else '')+'<article class="reading-text" aria-label="'+E(aref(P,q,x))+'">'+text+'</article>'+NOTICE(P)+nav+DETAILS(P,fl))
+              +opener(P['name']+' · Question '+str(q['n'])+' · Article '+str(x['n']),x['title'])
+              +(SUPP_LINE if P['slug']=='supp' else '')+'<article class="reading-text summa-a" aria-label="'+E(aref(P,q,x))+'">'+disputation(P,B,x['start'],x['end'])+'</article>'
+              +'<div class="ch-end summa-end"><p class="ch-orn" aria-hidden="true">❦</p><p>End of Article '+str(x['n'])+'</p>'
+              +'<p>'+by+', <cite>'+a('/summa/','Summa Theologiae')+'</cite>, '+a('/summa/'+P['slug']+'/',P['name'])+', '+a('/'+qpath(P,q)+'/','question '+str(q['n'])+', '+q['title'])+', article '+str(x['n'])+'. About '+str(max(1,round(x['words']/200)))+' min.</p>'
+              +'<p><a href="'+E(reader(P,x['heading']))+'">Read in the reading room</a> · '+a(na(P,q,x),'This article at New Advent',True)+'</p></div>'
+              +NOTICE(P)+nav+DETAILS(P,fl))
         if (P['slug'],q['n'],x['n'])==('1',2,1):
             assert re.search(r'Q\. 3, Art\. 4',text)
             body+='<aside><h2>References in this article</h2>'+a('/summa/1/q3/a4/','I, q. 3, a. 4 · Whether essence and existence are the same in God?')+'</aside>'

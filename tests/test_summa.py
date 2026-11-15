@@ -54,6 +54,14 @@ class Summa(unittest.TestCase):
         self.assertIn('href="https://www.newadvent.org/summa/1002.htm#article3"',m)
         self.assertIn('rel="prev" href="/summa/1/q2/a2/"',m);self.assertIn('rel="next" href="/summa/1/q3/a1/"',m)
         self.assertIn('<em>I answer that,</em> The existence of God can be proved in five ways.',m)
+        # Design A: a rubric over each part; every paragraph kept, in order
+        self.assertIn('<p class="ch-label">First Part · Question 2 · Article 3</p><h1>Whether God Exists?</h1>',m)
+        art=m[m.index('<article'):m.index('</article>')]
+        self.assertEqual(re.findall(r'<section class="disp disp-(\w+)"><h2 class="disp-label">([^<]+)</h2>',art),
+                         [('obj','Objections'),('sed','On the contrary'),('resp','I answer that'),('reply','Replies to the objections')])
+        x=S['parts'][0]['questions'][1]['articles'][2]
+        self.assertEqual(len(re.findall(r'<p[ >]',art)),x['end']-x['start']+1)
+        self.assertLess(m.index('</article>'),m.index('Read in the reading room'))
         self.assertIn('href="/summa/1/q2/"',m);self.assertIn('href="/author/thomas-aquinas/"',m)
         self.assertNotIn('newadvent.org/summa/1002.htm"',main('summa/1/q2/a3/index.html').replace('1002.htm#','x'))
         last=main('summa/1/q119/a2/index.html');self.assertIn('rel="next" href="/summa/1-2/q1/a1/"',last)  # across parts
@@ -61,7 +69,9 @@ class Summa(unittest.TestCase):
         self.assertNotIn('rel="next"',main('summa/supp/q99/a5/index.html'))
     def test_question_part_and_index(self):
         m=main('summa/1/q2/index.html')
-        self.assertIn('<h1>Question 2. The Existence of God</h1>',m)
+        # Design A (Micah, November 15, 2026): the opener names the question; the h1 is its title
+        self.assertIn('<header class="ch-opener summa-opener"><p class="ch-label">First Part · Question</p><p class="ch-num">2</p><h1>The Existence of God</h1>',m)
+        self.assertIn('<h2 class="q-contents-h">The 3 articles</h2>',m)
         for k in (1,2,3):self.assertIn('href="/summa/1/q2/a%d/"'%k,m)
         self.assertIn('https://www.newadvent.org/summa/1002.htm"',m)
         p=main('summa/1-2/index.html');self.assertIn('<h2>Prologue</h2>',p);self.assertIn('<h3>Treatise on Law</h3>',p);self.assertIn('href="/summa/1-2/q90/"',p)

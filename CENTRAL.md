@@ -43,6 +43,11 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-16, Claude (Claude Code): Part 0 renewal checks
+
+- docs/research/us-pd-renewal-checks-2026-11.csv: 25 books checked against Stanford, NYPL renewal data, HathiTrust rights codes, and the scans' copyright pages. 9 clear, 16 hold (Copyright Office records not reached for 1950 and later; possible earlier editions abroad; missing copyright pages). No renewal found for any book.
+- Hosting under pd-nonrenewal still waits for Part 1 and Micah's review of each batch.
+
 ### 2026-11-16, Claude (Claude Code): Chesterton scan transcriptions
 
 - Hosted from free scans with tools/transcribe_scan.py: The Thing, The Resurrection of Rome, The Outline of Sanity, Generally Speaking, and Simplicity and Tolstoy (99.6% to 99.9% of words read; flags listed per record).
@@ -52,11 +57,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - tools/transcribe_scan.py: the Summa Supplement method made general for one free Internet Archive scan (positional OCR, running heads and page numbers dropped, hyphens rejoined into known words, OCR repairs only where one reading is far commoner in the library's texts, unread words flagged, 99.5% read gate, tests/test_transcribed_scans.py).
 - Validator: substitutePages is now optional for ocr-transcription records. Next: the Chesterton scan batch with it.
-
-### 2026-11-16, Claude (Claude Code): merging rule; PR #48 merged
-
-- PR #48 merged: chapter pages and EPUBs for nine Chesterton editions (The Everlasting Man stays with the held EPUB branch).
-- Merging rule recorded in PROJECT-RULES rule 14, OPERATIONS, and Standing decisions: pd-date go-lives merge on green CI; pd-nonrenewal batches and rights-rule changes wait for the owner.
 
 ## Open items
 

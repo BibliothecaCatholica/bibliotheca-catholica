@@ -25,6 +25,11 @@ class Repair(unittest.TestCase):
         self.assertEqual(T.repair('well', V), ('well', None))
         self.assertEqual(T.repair('1912', V), ('1912', None))
 
+    def test_double_escaped_ocr_is_unescaped(self):
+        import xml.etree.ElementTree as ET
+        o = ET.fromstring('<OBJECT><PARAGRAPH><LINE><WORD coords="1,20,9,2">&amp;quot;Sir,</WORD></LINE></PARAGRAPH></OBJECT>')
+        self.assertEqual(T.page_lines(o)[0]['text'], '"Sir,')
+
     def test_running_head_and_page_number_dropped(self):
         L = lambda t, y: {'x': 100, 'y': y, 'h': 30, 'text': t, 'paraStart': False, 'para': 0}
         page = [L('19', 150), L('SIMPLICITY AND TOLSTOY', 300), L('universe topsy-turvy, and makes it', 450), L('the end.', 900), L('20', 2200)]

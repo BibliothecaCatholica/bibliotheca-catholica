@@ -19,7 +19,7 @@ are 0-based page indexes of the djvu.xml, chosen by looking at the scan (front m
 publisher's advertisements out). Output per entry: data/texts/<edition>.txt and data/sources/<edition>.json
 (kind `ocr-transcription`, validated by tools/build_library.py and tests/test_transcribed_scans.py).
 """
-import argparse, collections, glob, hashlib, json, re, statistics, sys, time, urllib.request
+import argparse, collections, glob, hashlib, html, json, re, statistics, sys, time, urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -102,7 +102,7 @@ def page_lines(obj):
             if not ws:
                 continue
             boxes = [[int(x) for x in w.get('coords').split(',')[:4]] for w in ws]
-            text = ' '.join((w.text or '').strip() for w in ws).strip()
+            text = html.unescape(' '.join((w.text or '').strip() for w in ws).strip())  # some OCR files double-escape quotes
             if text:
                 out.append({'x': min(b[0] for b in boxes), 'y': max(b[1] for b in boxes), 'h': statistics.median(b[1] - b[3] for b in boxes),
                             'text': re.sub(r'\s+', ' ', text), 'paraStart': l_i == 0, 'para': p_i})

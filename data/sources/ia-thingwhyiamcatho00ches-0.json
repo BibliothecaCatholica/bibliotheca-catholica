@@ -1,0 +1,887 @@
+{
+  "id": "ia-thingwhyiamcatho00ches-0",
+  "kind": "ocr-transcription",
+  "title": "The Thing: Why I Am a Catholic",
+  "author": "G. K. Chesterton",
+  "rights": "Public domain in the USA. First published 1929 (London: Sheed and Ward); this is the 1930 American edition (New York: Dodd, Mead); the scanned printing is of 1930.",
+  "rightsBasis": "pd-date",
+  "volumes": [
+    {
+      "identifier": "thingwhyiamcatho00ches_0",
+      "url": "https://archive.org/details/thingwhyiamcatho00ches_0",
+      "year": 1930,
+      "publisher": "New York : Dodd, Mead & company",
+      "ocr": "thingwhyiamcatho00ches_0_djvu.xml",
+      "ocrSha256": "cd8176096420f9147d9b410632c09a9dc827461876f20ca3a508ead12b037fd0",
+      "leaves": [
+        4,
+        270
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed.",
+  "words": 75841,
+  "unknownWords": 195,
+  "readRate": 0.9974,
+  "flaggedBlocks": 113,
+  "flagged": [
+    {
+      "block": 3,
+      "words": [
+        "siclsdiyd"
+      ]
+    },
+    {
+      "block": 9,
+      "words": [
+        "Wu",
+        "Ws",
+        "Wu",
+        "wy",
+        "Ww",
+        "wy",
+        "Ww",
+        "CorpYvyricut,"
+      ]
+    },
+    {
+      "block": 26,
+      "words": [
+        "Drirt",
+        "rrRoM",
+        "OsBsTINATE",
+        "Usuat",
+        "THry"
+      ]
+    },
+    {
+      "block": 27,
+      "words": [
+        "Earty",
+        "Birp"
+      ]
+    },
+    {
+      "block": 28,
+      "words": [
+        "PropLteM",
+        "NoveEL."
+      ]
+    },
+    {
+      "block": 29,
+      "words": [
+        "Nove."
+      ]
+    },
+    {
+      "block": 30,
+      "words": [
+        "Revott",
+        "Acainst",
+        "Wuo",
+        "anp",
+        "Hato."
+      ]
+    },
+    {
+      "block": 31,
+      "words": [
+        "ProtrEesTANT"
+      ]
+    },
+    {
+      "block": 48,
+      "words": [
+        "CouracE"
+      ]
+    },
+    {
+      "block": 49,
+      "words": [
+        "Norpic",
+        "Hinpoo",
+        "Sprrituatist",
+        "Looxs",
+        "MinpD",
+        "Tuinx",
+        "Apourt.",
+        "FALy"
+      ]
+    },
+    {
+      "block": 54,
+      "words": [
+        "ee",
+        "ee.",
+        "PeaG"
+      ]
+    },
+    {
+      "block": 60,
+      "words": [
+        "Babbitt",
+        "Babbitt"
+      ]
+    },
+    {
+      "block": 62,
+      "words": [
+        "Babbitt,”"
+      ]
+    },
+    {
+      "block": 63,
+      "words": [
+        "Freudian"
+      ]
+    },
+    {
+      "block": 65,
+      "words": [
+        "katharsis",
+        "Walkurie,",
+        "bloodied.",
+        "wallops"
+      ]
+    },
+    {
+      "block": 67,
+      "words": [
+        "Dreiser,"
+      ]
+    },
+    {
+      "block": 69,
+      "words": [
+        "katharsis."
+      ]
+    },
+    {
+      "block": 70,
+      "words": [
+        "Dreiser,",
+        "Dreiser",
+        "linoleum"
+      ]
+    },
+    {
+      "block": 71,
+      "words": [
+        "Dreiser."
+      ]
+    },
+    {
+      "block": 72,
+      "words": [
+        "katharsis,",
+        "plaintiffs"
+      ]
+    },
+    {
+      "block": 73,
+      "words": [
+        "hamstrung"
+      ]
+    },
+    {
+      "block": 75,
+      "words": [
+        "ovo."
+      ]
+    },
+    {
+      "block": 76,
+      "words": [
+        "Babbitt",
+        "Babbitt"
+      ]
+    },
+    {
+      "block": 77,
+      "words": [
+        "fossilizing"
+      ]
+    },
+    {
+      "block": 84,
+      "words": [
+        "Foerster",
+        "millennial",
+        "suffuse"
+      ]
+    },
+    {
+      "block": 86,
+      "words": [
+        "nauseated",
+        "moron,"
+      ]
+    },
+    {
+      "block": 89,
+      "words": [
+        "yawp"
+      ]
+    },
+    {
+      "block": 92,
+      "words": [
+        "Dreiser."
+      ]
+    },
+    {
+      "block": 93,
+      "words": [
+        "Foerster",
+        "ninteenth"
+      ]
+    },
+    {
+      "block": 97,
+      "words": [
+        "Grandmamma"
+      ]
+    },
+    {
+      "block": 99,
+      "words": [
+        "Robot",
+        "Robot"
+      ]
+    },
+    {
+      "block": 103,
+      "words": [
+        "jazz",
+        "Fitzdragon"
+      ]
+    },
+    {
+      "block": 104,
+      "words": [
+        "shoplifters"
+      ]
+    },
+    {
+      "block": 108,
+      "words": [
+        "whick"
+      ]
+    },
+    {
+      "block": 111,
+      "words": [
+        "Slovak"
+      ]
+    },
+    {
+      "block": 116,
+      "words": [
+        "venue"
+      ]
+    },
+    {
+      "block": 119,
+      "words": [
+        "ficticious"
+      ]
+    },
+    {
+      "block": 121,
+      "words": [
+        "focussing"
+      ]
+    },
+    {
+      "block": 122,
+      "words": [
+        "Vorticism"
+      ]
+    },
+    {
+      "block": 128,
+      "words": [
+        "dif-"
+      ]
+    },
+    {
+      "block": 130,
+      "words": [
+        "chloral,"
+      ]
+    },
+    {
+      "block": 133,
+      "words": [
+        "program;"
+      ]
+    },
+    {
+      "block": 134,
+      "words": [
+        "weEapINc",
+        "Arlen",
+        "Hannen",
+        "Swaffer,"
+      ]
+    },
+    {
+      "block": 135,
+      "words": [
+        "spectfully"
+      ]
+    },
+    {
+      "block": 140,
+      "words": [
+        "hegative",
+        "__wWhat"
+      ]
+    },
+    {
+      "block": 141,
+      "words": [
+        "trafic"
+      ]
+    },
+    {
+      "block": 143,
+      "words": [
+        "Uniats,"
+      ]
+    },
+    {
+      "block": 145,
+      "words": [
+        "bestrew",
+        "zs",
+        "Baphomet"
+      ]
+    },
+    {
+      "block": 146,
+      "words": [
+        "Kiev"
+      ]
+    },
+    {
+      "block": 147,
+      "words": [
+        "Db",
+        "Yi"
+      ]
+    },
+    {
+      "block": 149,
+      "words": [
+        "Uniats,"
+      ]
+    },
+    {
+      "block": 151,
+      "words": [
+        "Kerru,"
+      ]
+    },
+    {
+      "block": 152,
+      "words": [
+        "plaintiff,"
+      ]
+    },
+    {
+      "block": 154,
+      "words": [
+        "mystagogy.",
+        "Berkleyan"
+      ]
+    },
+    {
+      "block": 156,
+      "words": [
+        "bluebooks."
+      ]
+    },
+    {
+      "block": 158,
+      "words": [
+        "Spencerian"
+      ]
+    },
+    {
+      "block": 160,
+      "words": [
+        "Vialleton",
+        "Vialleton."
+      ]
+    },
+    {
+      "block": 163,
+      "words": [
+        "spotlight"
+      ]
+    },
+    {
+      "block": 165,
+      "words": [
+        "Antiochi"
+      ]
+    },
+    {
+      "block": 171,
+      "words": [
+        "Benn;"
+      ]
+    },
+    {
+      "block": 175,
+      "words": [
+        "Jezreelites."
+      ]
+    },
+    {
+      "block": 180,
+      "words": [
+        "fossilize",
+        "chockful",
+        "traduce."
+      ]
+    },
+    {
+      "block": 185,
+      "words": [
+        "Iio",
+        "Borealic."
+      ]
+    },
+    {
+      "block": 187,
+      "words": [
+        "Bebe,"
+      ]
+    },
+    {
+      "block": 188,
+      "words": [
+        "Thibetan"
+      ]
+    },
+    {
+      "block": 189,
+      "words": [
+        "sre"
+      ]
+    },
+    {
+      "block": 191,
+      "words": [
+        "Fitzgorgon",
+        "Fitzgorgon"
+      ]
+    },
+    {
+      "block": 192,
+      "words": [
+        "Fitzgorgon,"
+      ]
+    },
+    {
+      "block": 193,
+      "words": [
+        "Fitzgorgon"
+      ]
+    },
+    {
+      "block": 196,
+      "words": [
+        "popularizing",
+        "Fitzgorgon"
+      ]
+    },
+    {
+      "block": 205,
+      "words": [
+        "“Tf"
+      ]
+    },
+    {
+      "block": 212,
+      "words": [
+        "macaroons,",
+        "macaroons?"
+      ]
+    },
+    {
+      "block": 213,
+      "words": [
+        "Mafia"
+      ]
+    },
+    {
+      "block": 215,
+      "words": [
+        "Kleagle",
+        "Klemperor,",
+        "klare",
+        "klam",
+        "macaroons",
+        "Kleagles",
+        "Klosed"
+      ]
+    },
+    {
+      "block": 216,
+      "words": [
+        "Prruaps"
+      ]
+    },
+    {
+      "block": 220,
+      "words": [
+        "Bernadone,",
+        "Bernadone,"
+      ]
+    },
+    {
+      "block": 223,
+      "words": [
+        "zs"
+      ]
+    },
+    {
+      "block": 224,
+      "words": [
+        "Peruaprs",
+        "Malvern"
+      ]
+    },
+    {
+      "block": 225,
+      "words": [
+        "zs"
+      ]
+    },
+    {
+      "block": 231,
+      "words": [
+        "crossword",
+        "crossword",
+        "crossword",
+        "crosswords"
+      ]
+    },
+    {
+      "block": 236,
+      "words": [
+        "centainly"
+      ]
+    },
+    {
+      "block": 239,
+      "words": [
+        "unctous"
+      ]
+    },
+    {
+      "block": 240,
+      "words": [
+        "cheapening"
+      ]
+    },
+    {
+      "block": 244,
+      "words": [
+        "Jix."
+      ]
+    },
+    {
+      "block": 249,
+      "words": [
+        "Labouchere,"
+      ]
+    },
+    {
+      "block": 267,
+      "words": [
+        "Houston"
+      ]
+    },
+    {
+      "block": 268,
+      "words": [
+        "Py",
+        "epolcan",
+        "Mussolini."
+      ]
+    },
+    {
+      "block": 275,
+      "words": [
+        "Glands."
+      ]
+    },
+    {
+      "block": 276,
+      "words": [
+        "manceuvre"
+      ]
+    },
+    {
+      "block": 295,
+      "words": [
+        "Praeb"
+      ]
+    },
+    {
+      "block": 296,
+      "words": [
+        "Voronoff"
+      ]
+    },
+    {
+      "block": 298,
+      "words": [
+        "Anthroposophy,"
+      ]
+    },
+    {
+      "block": 300,
+      "words": [
+        "lf"
+      ]
+    },
+    {
+      "block": 302,
+      "words": [
+        "rumptifoo.",
+        "sartorial"
+      ]
+    },
+    {
+      "block": 305,
+      "words": [
+        "jibberish",
+        "“oj”"
+      ]
+    },
+    {
+      "block": 306,
+      "words": [
+        "“doux”",
+        "“douce.”",
+        "doulce",
+        "tabloids",
+        "saccharine"
+      ]
+    },
+    {
+      "block": 308,
+      "words": [
+        "onerescape"
+      ]
+    },
+    {
+      "block": 312,
+      "words": [
+        "Drummossie."
+      ]
+    },
+    {
+      "block": 313,
+      "words": [
+        "Darnley."
+      ]
+    },
+    {
+      "block": 316,
+      "words": [
+        "CAristiani"
+      ]
+    },
+    {
+      "block": 318,
+      "words": [
+        "zs"
+      ]
+    },
+    {
+      "block": 323,
+      "words": [
+        "Miggles"
+      ]
+    },
+    {
+      "block": 325,
+      "words": [
+        "sentimentalizing"
+      ]
+    },
+    {
+      "block": 328,
+      "words": [
+        "outface"
+      ]
+    },
+    {
+      "block": 330,
+      "words": [
+        "@eoroxos,",
+        "Cotytto."
+      ]
+    },
+    {
+      "block": 333,
+      "words": [
+        "Clarence",
+        "Darrow,",
+        "Darrow"
+      ]
+    },
+    {
+      "block": 335,
+      "words": [
+        "zf"
+      ]
+    },
+    {
+      "block": 336,
+      "words": [
+        "Clarence",
+        "Darrow"
+      ]
+    },
+    {
+      "block": 337,
+      "words": [
+        "rearguard"
+      ]
+    },
+    {
+      "block": 339,
+      "words": [
+        "zs",
+        "dahlia"
+      ]
+    },
+    {
+      "block": 346,
+      "words": [
+        "gb"
+      ]
+    },
+    {
+      "block": 362,
+      "words": [
+        "regio",
+        "regio"
+      ]
+    },
+    {
+      "block": 370,
+      "words": [
+        "focal",
+        "Rango",
+        "Dango"
+      ]
+    }
+  ],
+  "corrections": 23,
+  "correctionList": [
+    {
+      "ocr": "Wuat",
+      "reading": "What"
+    },
+    {
+      "ocr": "Simpie",
+      "reading": "Simple"
+    },
+    {
+      "ocr": "Wuat",
+      "reading": "What"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "ference",
+      "reading": "terence"
+    },
+    {
+      "ocr": "Artuur",
+      "reading": "Arthur"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "meckly",
+      "reading": "meekly"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "Tuat",
+      "reading": "That"
+    },
+    {
+      "ocr": "medizvalism",
+      "reading": "mediævalism"
+    },
+    {
+      "ocr": "medizvalism",
+      "reading": "mediævalism"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "seck",
+      "reading": "seek"
+    }
+  ],
+  "text": "data/texts/ia-thingwhyiamcatho00ches-0.txt",
+  "sha256": "401a4cf96698c4af0f80d6609b9f4092eb97e7c4dc89f8935cea72536481531c",
+  "checked": "2026-11-16"
+}

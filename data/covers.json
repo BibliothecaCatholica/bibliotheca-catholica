@@ -11,38 +11,68 @@
   "fp-20090501": {
    "work": "footsteps-at-the-lock",
    "svg": "ce583a160d0c112bd845885b6b33458df287d799261b925d432b061f7b52f433",
-   "webp": "3183398bc7657a3228fec836a3a4f152471b5bcd9a0904b60c0a3311e0839676",
-   "og": "1bbfd997e3b844b0b5247f18d664d4267960b5a73e4052791a3ceddb25adcea6"
+   "webp": "6bae0b2c889b4af5ff34506f16988930043635ef702020f131308e4a9efc02cb",
+   "og": "a3628ea0dc234448a6e9aa496f1eebc9da3b107d1394c52b3a521d7b66905bee"
   },
   "fp-20170322": {
    "work": "the-coward",
    "svg": "e6e92a6613ee6b70cba883f41e66a6c67506904c99c4c1aab121b9c7c30f6ccf",
-   "webp": "cb542c2d218a00c299b0809d67e9e8835969c2d659e0cac39445e54a3d1b968b",
-   "og": "462717a7d6c64fc88776a9487146d61b6b1270bb78d25e3eda9204da21473b80"
+   "webp": "e1d7f89be6f062b4807a8ce5c2daad482b460fbfd861354df43be1fdf8a25867",
+   "og": "f29d5627bca6fad2f33ff4d1368815360395ebcfaad8b3258c10e836f99f50c3"
   },
   "fp-20200364": {
    "work": "queen-of-seven-swords",
    "svg": "2ab979d8b2009f6fcfc38b239634135f4bda87d27ee4cce825b00bf5f75ccc19",
-   "webp": "364736841191cdd50f5f569e6735a7bf2a7728d0b01fe0e1d4cf5ffd1103bb4a",
-   "og": "4a1ec73194350523f12025618903ccbc53ca0072fe5c6dae132c5c77187c8f19"
+   "webp": "ed8ccb594b6221d2e4b07debc7ddbd9c335951b788fa2e16be86bf35602b6c7f",
+   "og": "9b64890a6676f55c22d44366bf8ef541f6a6161ee0cb551cb4858a18e34cceff"
   },
   "fp-20240310": {
    "work": "jesuit-martyrs-of-canada",
    "svg": "ddb39575dee2b2d22d2bdd643df27efa37206f93cff9c7ce47db5d11374398a6",
-   "webp": "cec56a563dfed1a8d3e0711aa176c11a7f480342f983f4b3ed2f53d2bdd7cd35",
-   "og": "d4d67754ce00e2b68006f8901d654e12a4cdff4a348d190a254370e09e7669a5"
+   "webp": "84659ae31c9acd4326458ebc566e3e7a2fd081f87ca74b09e600910d3a1c8632",
+   "og": "b17f6d47d6efb2ed16a0e4ccd187a811520df624fc131e1288de33652249733d"
   },
   "fp-20241220": {
    "work": "von-hugel-essays-addresses",
    "svg": "cea8dd6cce62809f25820487a5c0786e7afa7845a5bd70dce197552d6c794b89",
-   "webp": "d01025f249ce0f288725b35517d27b21233227a4c34d1f6198a94d6eb20970f3",
-   "og": "4a63120d7ae9bad26135a28a991522ca8e1767ec99068d684e546ee83cb0b4f2"
+   "webp": "8528eb15f342e2ff21962208a17331aed02049f48949669d527e98893aae745f",
+   "og": "e06ef1aa1223ba8ad7b802b3a5fa5b296ab0132068776ac7c4cf69bd5b64f9b4"
+  },
+  "ia-generallyspeakin00ches": {
+   "work": "generally-speaking",
+   "svg": "29d6f326ce93e739941279fcc4934576e0ae46ace80a38cc819bb7d5c559f816",
+   "webp": "cdf68f5c72df7474852b2e337344050b1b6ca0a099ff26d9af39e4192b2706f7",
+   "og": "d87ff7f3ebd6f44a475f9992f18415ecbe9eb0a252fa2c72326435216623fe4f"
+  },
+  "ia-outlineofsanity0000ches": {
+   "work": "outline-of-sanity",
+   "svg": "d240916d804e11e79b725ef42665f729fd713e5bb8434ac5924a619f2acde2c1",
+   "webp": "6570c65a988f0a0ac3bbdb2dc370989b97504427a7ae4d94960080741d1a416b",
+   "og": "a0013831b4d7ab6a875da246b5d57095b718be919bc8f1a75a3739e9ad867182"
+  },
+  "ia-resurrectionofro0000gilb": {
+   "work": "resurrection-of-rome",
+   "svg": "f04fe172e34d67557463190be581204cb2472e17c529d3f76073e1dc2af5a3eb",
+   "webp": "fae4ec016c91309542ffc709662f94d5e674228cc5895f9be6531b4de732468c",
+   "og": "3f5dbb0238ab7f931aaeb48b9c0457dfe29257ed5d023e4143d0815c7948cb27"
+  },
+  "ia-simplicitytolsto00chesuoft": {
+   "work": "simplicity-and-tolstoy",
+   "svg": "0a1c0b1710907babb110540f9a5eb32901846cf92bb1decb42e3594573cc56ec",
+   "webp": "edc2d3169d87f9e1308dc7fafea4d490e76482da06059009d338a3999058cb53",
+   "og": "b374183a2869f386c971eadac9eb4c03095194dc109a07518585b551ac7183ab"
   },
   "ia-summa-supplement": {
    "work": "summa-theologiae",
    "svg": "19a22576b70c480e359b896cbeae0febeb79a33bf44ea6b463bf922dafc7ce55",
    "webp": "9329e924960350fa011b016901b61d692b71989e2339dce6118cedf63c3edf2a",
    "og": "1a8dd75e22361e151138cbf1109e5fa32aeaa799840f5d3a26923b494d21e51e"
+  },
+  "ia-thingwhyiamcatho00ches-0": {
+   "work": "the-thing",
+   "svg": "1d288235f7cb4ec9627d3c34fc6f97c57e10e9721da354726f0e8c829577d5dd",
+   "webp": "2c9d9812acb217957f48346ca455f201610fc54fd6e7098163fa67d6ecd53173",
+   "og": "2d9ab7c78e7b0dedcdf904b07f5b0863359aa4bf9b1f2b9c03d168a0d66a3ded"
   },
   "pg-1004": {
    "work": "divine-comedy",
@@ -629,8 +659,8 @@
   "pg-70690": {
    "work": "trial-of-john-jasper",
    "svg": "ed022eecfeed97bb5fa522d0983b52599943499f89caa51c3d2225e99915144e",
-   "webp": "7e8ff6206d411cd15ef82abc1e45e9093b408ba563573b9d2e26aee1e5963d86",
-   "og": "0228c57a3ec0db5b78727cdbd8096c144115a68c6c9162a419817d5411be2c62"
+   "webp": "2a332835f194dcd8b29e43890f4db1cb41a4807a70b515490160d205239cbaef",
+   "og": "dd87ae99872f062aa44c648b69db0ecdb3bdd3d2900b7548b9dc0ce8d772f8c1"
   },
   "pg-70790": {
    "work": "spiritual-exercises-adapted",

@@ -1,0 +1,365 @@
+{
+  "id": "ia-outlineofsanity0000ches",
+  "kind": "ocr-transcription",
+  "title": "The Outline of Sanity",
+  "author": "G. K. Chesterton",
+  "rights": "Public domain in the USA. First published 1926 (London: Methuen); this is the 1927 American edition (New York: Dodd, Mead); the scanned printing is of 1927.",
+  "rightsBasis": "pd-date",
+  "volumes": [
+    {
+      "identifier": "outlineofsanity0000ches",
+      "url": "https://archive.org/details/outlineofsanity0000ches",
+      "year": 1927,
+      "publisher": "New York : Dodd, Mead & Company",
+      "ocr": "outlineofsanity0000ches_djvu.xml",
+      "ocrSha256": "03105c9cf58fd3b7802aba41e9d2d751f6cf454e386cd6d1d4f9c0679a13f866",
+      "leaves": [
+        4,
+        268
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed.",
+  "words": 63093,
+  "unknownWords": 71,
+  "readRate": 0.9989,
+  "flaggedBlocks": 52,
+  "flagged": [
+    {
+      "block": 4,
+      "words": [
+        "fc?"
+      ]
+    },
+    {
+      "block": 28,
+      "words": [
+        "precisian"
+      ]
+    },
+    {
+      "block": 34,
+      "words": [
+        "geograph)',"
+      ]
+    },
+    {
+      "block": 45,
+      "words": [
+        "standardization"
+      ]
+    },
+    {
+      "block": 58,
+      "words": [
+        "taigle",
+        "Nane.”"
+      ]
+    },
+    {
+      "block": 59,
+      "words": [
+        "show'n"
+      ]
+    },
+    {
+      "block": 60,
+      "words": [
+        "Partington",
+        "Partington"
+      ]
+    },
+    {
+      "block": 71,
+      "words": [
+        "thbse"
+      ]
+    },
+    {
+      "block": 72,
+      "words": [
+        "VThere"
+      ]
+    },
+    {
+      "block": 87,
+      "words": [
+        "Robot."
+      ]
+    },
+    {
+      "block": 97,
+      "words": [
+        "oldman"
+      ]
+    },
+    {
+      "block": 101,
+      "words": [
+        "necessitarians"
+      ]
+    },
+    {
+      "block": 106,
+      "words": [
+        "Xylographers"
+      ]
+    },
+    {
+      "block": 107,
+      "words": [
+        "Chutflewit;",
+        "Cbutflewit"
+      ]
+    },
+    {
+      "block": 111,
+      "words": [
+        "clubbing"
+      ]
+    },
+    {
+      "block": 115,
+      "words": [
+        "Lundy;",
+        "Woolworth,",
+        "Woolworth"
+      ]
+    },
+    {
+      "block": 123,
+      "words": [
+        "battleline"
+      ]
+    },
+    {
+      "block": 129,
+      "words": [
+        "Leverhulme",
+        "Skysign”"
+      ]
+    },
+    {
+      "block": 130,
+      "words": [
+        "jemmy."
+      ]
+    },
+    {
+      "block": 147,
+      "words": [
+        "coupon"
+      ]
+    },
+    {
+      "block": 149,
+      "words": [
+        "Bunkham",
+        "Bunkham"
+      ]
+    },
+    {
+      "block": 151,
+      "words": [
+        "urbanized",
+        "atomic"
+      ]
+    },
+    {
+      "block": 154,
+      "words": [
+        "subsidy",
+        "subsidy,",
+        "subsidy",
+        "subsidy"
+      ]
+    },
+    {
+      "block": 156,
+      "words": [
+        "nuuber"
+      ]
+    },
+    {
+      "block": 166,
+      "words": [
+        "Heseltine"
+      ]
+    },
+    {
+      "block": 174,
+      "words": [
+        "worldlier",
+        "taskmaster."
+      ]
+    },
+    {
+      "block": 175,
+      "words": [
+        "Arkwright,"
+      ]
+    },
+    {
+      "block": 177,
+      "words": [
+        "shareholder"
+      ]
+    },
+    {
+      "block": 181,
+      "words": [
+        "Penty",
+        "Penty"
+      ]
+    },
+    {
+      "block": 182,
+      "words": [
+        "prceterea"
+      ]
+    },
+    {
+      "block": 186,
+      "words": [
+        "Penty"
+      ]
+    },
+    {
+      "block": 189,
+      "words": [
+        "consignment"
+      ]
+    },
+    {
+      "block": 190,
+      "words": [
+        "galvanometer,"
+      ]
+    },
+    {
+      "block": 193,
+      "words": [
+        "Fontarabia",
+        "abbreviate",
+        "Fontarabia"
+      ]
+    },
+    {
+      "block": 196,
+      "words": [
+        "plangent"
+      ]
+    },
+    {
+      "block": 203,
+      "words": [
+        "Penty"
+      ]
+    },
+    {
+      "block": 204,
+      "words": [
+        "standardization.",
+        "footbrakes",
+        "w'hy"
+      ]
+    },
+    {
+      "block": 205,
+      "words": [
+        "standardization;",
+        "Penty"
+      ]
+    },
+    {
+      "block": 216,
+      "words": [
+        "export"
+      ]
+    },
+    {
+      "block": 217,
+      "words": [
+        "iHe"
+      ]
+    },
+    {
+      "block": 219,
+      "words": [
+        "Aly"
+      ]
+    },
+    {
+      "block": 220,
+      "words": [
+        "Saklatvala"
+      ]
+    },
+    {
+      "block": 221,
+      "words": [
+        "Laurier"
+      ]
+    },
+    {
+      "block": 222,
+      "words": [
+        "Saklatvala"
+      ]
+    },
+    {
+      "block": 223,
+      "words": [
+        "Eldorado"
+      ]
+    },
+    {
+      "block": 231,
+      "words": [
+        "outnumber"
+      ]
+    },
+    {
+      "block": 235,
+      "words": [
+        "stickit"
+      ]
+    },
+    {
+      "block": 236,
+      "words": [
+        "Alaskan",
+        "Benn,"
+      ]
+    },
+    {
+      "block": 245,
+      "words": [
+        "standardization."
+      ]
+    },
+    {
+      "block": 246,
+      "words": [
+        "Callisthenes?"
+      ]
+    },
+    {
+      "block": 255,
+      "words": [
+        "standardization"
+      ]
+    },
+    {
+      "block": 257,
+      "words": [
+        "subsidy"
+      ]
+    }
+  ],
+  "corrections": 0,
+  "correctionList": [],
+  "text": "data/texts/ia-outlineofsanity0000ches.txt",
+  "sha256": "2dc25f08ba1d5baf3e826b27a09f31d3d3c8159459d5060fcdb4f4de64e9f00c",
+  "checked": "2026-11-16"
+}

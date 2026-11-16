@@ -1,0 +1,214 @@
+{
+  "id": "ia-simplicitytolsto00chesuoft",
+  "kind": "ocr-transcription",
+  "title": "Simplicity and Tolstoy",
+  "author": "G. K. Chesterton",
+  "rights": "Public domain in the USA. First published 1912 (London: Arthur L. Humphreys); the scanned printing is of 1912.",
+  "rightsBasis": "pd-date",
+  "volumes": [
+    {
+      "identifier": "simplicitytolsto00chesuoft",
+      "url": "https://archive.org/details/simplicitytolsto00chesuoft",
+      "year": 1912,
+      "publisher": "London : A. L. Humphreys",
+      "ocr": "simplicitytolsto00chesuoft_djvu.xml",
+      "ocrSha256": "b38332853135a6934a0b42a451d7cc61807e1dfb48bc5dc5922d23267a1fe626",
+      "leaves": [
+        8,
+        96
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed.",
+  "words": 10416,
+  "unknownWords": 15,
+  "readRate": 0.9986,
+  "flaggedBlocks": 12,
+  "flagged": [
+    {
+      "block": 9,
+      "words": [
+        "weU",
+        "bom",
+        "babjdsh"
+      ]
+    },
+    {
+      "block": 20,
+      "words": [
+        "oiu*"
+      ]
+    },
+    {
+      "block": 23,
+      "words": [
+        "imadulterated"
+      ]
+    },
+    {
+      "block": 31,
+      "words": [
+        "ers"
+      ]
+    },
+    {
+      "block": 35,
+      "words": [
+        "assimied"
+      ]
+    },
+    {
+      "block": 36,
+      "words": [
+        "Manichsean"
+      ]
+    },
+    {
+      "block": 48,
+      "words": [
+        "difiiculty"
+      ]
+    },
+    {
+      "block": 51,
+      "words": [
+        "costiunes"
+      ]
+    },
+    {
+      "block": 57,
+      "words": [
+        "'^ttl",
+        "ilP^"
+      ]
+    },
+    {
+      "block": 65,
+      "words": [
+        "thetheory"
+      ]
+    },
+    {
+      "block": 66,
+      "words": [
+        "Pimtanism,"
+      ]
+    },
+    {
+      "block": 67,
+      "words": [
+        "imrequited"
+      ]
+    }
+  ],
+  "corrections": 26,
+  "correctionList": [
+    {
+      "ocr": "Grod",
+      "reading": "God"
+    },
+    {
+      "ocr": "imconscious",
+      "reading": "unconscious"
+    },
+    {
+      "ocr": "Greorge",
+      "reading": "George"
+    },
+    {
+      "ocr": "fiiry",
+      "reading": "fury"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "tmiversal",
+      "reading": "universal"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "extraordinaiy",
+      "reading": "extraordinary"
+    },
+    {
+      "ocr": "foimd",
+      "reading": "found"
+    },
+    {
+      "ocr": "Monaisticism",
+      "reading": "Monasticism"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "aQcient",
+      "reading": "ancient"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "imtil",
+      "reading": "until"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "Morris'*s",
+      "reading": "Morris's"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "Grod",
+      "reading": "God"
+    },
+    {
+      "ocr": "Carlyle'*s",
+      "reading": "Carlyle's"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    }
+  ],
+  "text": "data/texts/ia-simplicitytolsto00chesuoft.txt",
+  "sha256": "1ff0306fc899b736d17f2651a64e4d14c7a9812bde68e6d54a0563f902481231",
+  "checked": "2026-11-16"
+}

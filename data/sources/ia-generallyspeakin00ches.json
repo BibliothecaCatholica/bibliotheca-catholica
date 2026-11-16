@@ -1,0 +1,992 @@
+{
+  "id": "ia-generallyspeakin00ches",
+  "kind": "ocr-transcription",
+  "title": "Generally Speaking",
+  "author": "G. K. Chesterton",
+  "rights": "Public domain in the USA. First published 1928 (London: Methuen); this is the 1929 American edition (New York: Dodd, Mead); the scanned printing is of 1929.",
+  "rightsBasis": "pd-date",
+  "volumes": [
+    {
+      "identifier": "generallyspeakin00ches",
+      "url": "https://archive.org/details/generallyspeakin00ches",
+      "year": 1929,
+      "publisher": "New York : Dodd, Mead & Co.",
+      "ocr": "generallyspeakin00ches_djvu.xml",
+      "ocrSha256": "6cdbd8ecbddf9d34f5fdcd57ad251e2e7e475435125f4ee2fb08146edb49b364",
+      "leaves": [
+        6,
+        304
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed.",
+  "words": 68030,
+  "unknownWords": 268,
+  "readRate": 0.9961,
+  "flaggedBlocks": 138,
+  "flagged": [
+    {
+      "block": 3,
+      "words": [
+        "^Vpeaking",
+        "Gf"
+      ]
+    },
+    {
+      "block": 96,
+      "words": [
+        "Droodj",
+        "Vkky"
+      ]
+    },
+    {
+      "block": 97,
+      "words": [
+        "Franchard",
+        "difliculty"
+      ]
+    },
+    {
+      "block": 98,
+      "words": [
+        "foUcier"
+      ]
+    },
+    {
+      "block": 100,
+      "words": [
+        "onj"
+      ]
+    },
+    {
+      "block": 101,
+      "words": [
+        "himj",
+        "himx.",
+        "Mennonites",
+        "Swedenborgianj"
+      ]
+    },
+    {
+      "block": 104,
+      "words": [
+        "themj"
+      ]
+    },
+    {
+      "block": 105,
+      "words": [
+        "soulj",
+        "cante"
+      ]
+    },
+    {
+      "block": 106,
+      "words": [
+        "^gg"
+      ]
+    },
+    {
+      "block": 107,
+      "words": [
+        "^gg",
+        "conle"
+      ]
+    },
+    {
+      "block": 109,
+      "words": [
+        "affarently",
+        "affearP"
+      ]
+    },
+    {
+      "block": 111,
+      "words": [
+        "borderlines",
+        "misisonaries.",
+        "oursj",
+        "movej",
+        "warSj"
+      ]
+    },
+    {
+      "block": 112,
+      "words": [
+        "preachy"
+      ]
+    },
+    {
+      "block": 113,
+      "words": [
+        "tonej"
+      ]
+    },
+    {
+      "block": 117,
+      "words": [
+        "indiflFerence"
+      ]
+    },
+    {
+      "block": 122,
+      "words": [
+        "oflFer"
+      ]
+    },
+    {
+      "block": 123,
+      "words": [
+        "termj"
+      ]
+    },
+    {
+      "block": 124,
+      "words": [
+        "mattery",
+        "themj"
+      ]
+    },
+    {
+      "block": 126,
+      "words": [
+        "Ditchbury,",
+        "itj"
+      ]
+    },
+    {
+      "block": 127,
+      "words": [
+        "endj",
+        "oflF",
+        "endj"
+      ]
+    },
+    {
+      "block": 128,
+      "words": [
+        "endj",
+        "itj"
+      ]
+    },
+    {
+      "block": 129,
+      "words": [
+        "shrinkage",
+        "hatsj",
+        "Vj"
+      ]
+    },
+    {
+      "block": 130,
+      "words": [
+        "samovar.",
+        "Harborough",
+        "Harborough"
+      ]
+    },
+    {
+      "block": 131,
+      "words": [
+        "themj"
+      ]
+    },
+    {
+      "block": 132,
+      "words": [
+        "Shadrek,",
+        "Abednego."
+      ]
+    },
+    {
+      "block": 134,
+      "words": [
+        "innj"
+      ]
+    },
+    {
+      "block": 137,
+      "words": [
+        "kerbstone,",
+        "didj"
+      ]
+    },
+    {
+      "block": 138,
+      "words": [
+        "Bluntzschli"
+      ]
+    },
+    {
+      "block": 139,
+      "words": [
+        "necessitarian,"
+      ]
+    },
+    {
+      "block": 141,
+      "words": [
+        "Concours",
+        "Hippiquej",
+        "sawj",
+        "headj",
+        "upj"
+      ]
+    },
+    {
+      "block": 143,
+      "words": [
+        "Romej"
+      ]
+    },
+    {
+      "block": 148,
+      "words": [
+        "awayj"
+      ]
+    },
+    {
+      "block": 150,
+      "words": [
+        "wallj",
+        "Cathay",
+        "notej",
+        "mediseval"
+      ]
+    },
+    {
+      "block": 151,
+      "words": [
+        "eflFect;"
+      ]
+    },
+    {
+      "block": 152,
+      "words": [
+        "slick,",
+        "Canyon,"
+      ]
+    },
+    {
+      "block": 153,
+      "words": [
+        "brainy"
+      ]
+    },
+    {
+      "block": 154,
+      "words": [
+        "Fairbanks",
+        "blowj",
+        "itj"
+      ]
+    },
+    {
+      "block": 155,
+      "words": [
+        "aimj",
+        "subde"
+      ]
+    },
+    {
+      "block": 156,
+      "words": [
+        "lastj",
+        "enjant"
+      ]
+    },
+    {
+      "block": 157,
+      "words": [
+        "Pittsburgh"
+      ]
+    },
+    {
+      "block": 159,
+      "words": [
+        "Bllicher",
+        "Bismarckville,"
+      ]
+    },
+    {
+      "block": 161,
+      "words": [
+        "electroplated"
+      ]
+    },
+    {
+      "block": 164,
+      "words": [
+        "nextj",
+        "knowj"
+      ]
+    },
+    {
+      "block": 167,
+      "words": [
+        "pillories.",
+        "pillories."
+      ]
+    },
+    {
+      "block": 171,
+      "words": [
+        "ished"
+      ]
+    },
+    {
+      "block": 173,
+      "words": [
+        "artj",
+        "seaj"
+      ]
+    },
+    {
+      "block": 174,
+      "words": [
+        "bluej",
+        "Jackj",
+        "Chesapeake",
+        "Alabama",
+        "polychrome"
+      ]
+    },
+    {
+      "block": 175,
+      "words": [
+        "flagj"
+      ]
+    },
+    {
+      "block": 176,
+      "words": [
+        "^tonej"
+      ]
+    },
+    {
+      "block": 179,
+      "words": [
+        "thisj",
+        "itj",
+        "herj",
+        "anyj",
+        "madej",
+        "litde"
+      ]
+    },
+    {
+      "block": 181,
+      "words": [
+        "Ambroslance"
+      ]
+    },
+    {
+      "block": 183,
+      "words": [
+        "vitamins"
+      ]
+    },
+    {
+      "block": 185,
+      "words": [
+        "muddiest"
+      ]
+    },
+    {
+      "block": 186,
+      "words": [
+        "hypochondria",
+        "bodyj"
+      ]
+    },
+    {
+      "block": 188,
+      "words": [
+        "ejfFects"
+      ]
+    },
+    {
+      "block": 191,
+      "words": [
+        "Dorinda",
+        "Norma",
+        "Hellways",
+        "Dorinda",
+        "Norma",
+        "Hellways",
+        "Norma",
+        "timej"
+      ]
+    },
+    {
+      "block": 192,
+      "words": [
+        "cloudiest"
+      ]
+    },
+    {
+      "block": 193,
+      "words": [
+        "Dukka,"
+      ]
+    },
+    {
+      "block": 194,
+      "words": [
+        "Puckle,",
+        "Churchy",
+        "noSy",
+        "Puckle"
+      ]
+    },
+    {
+      "block": 195,
+      "words": [
+        "ofif",
+        "oflF,"
+      ]
+    },
+    {
+      "block": 199,
+      "words": [
+        "ha'penny",
+        "ha'penny,"
+      ]
+    },
+    {
+      "block": 201,
+      "words": [
+        "Puckle"
+      ]
+    },
+    {
+      "block": 203,
+      "words": [
+        "Nebraskan"
+      ]
+    },
+    {
+      "block": 205,
+      "words": [
+        "diflferent",
+        "noisier",
+        "playtime"
+      ]
+    },
+    {
+      "block": 206,
+      "words": [
+        "jazzers",
+        "jazz",
+        "reverendy"
+      ]
+    },
+    {
+      "block": 208,
+      "words": [
+        "Opprenheim",
+        "eightenth"
+      ]
+    },
+    {
+      "block": 223,
+      "words": [
+        "Encyclopsedists,"
+      ]
+    },
+    {
+      "block": 226,
+      "words": [
+        "erexit",
+        "VoltalreP",
+        "inoculation"
+      ]
+    },
+    {
+      "block": 227,
+      "words": [
+        "lifej"
+      ]
+    },
+    {
+      "block": 228,
+      "words": [
+        "Anubisj"
+      ]
+    },
+    {
+      "block": 229,
+      "words": [
+        "artj"
+      ]
+    },
+    {
+      "block": 231,
+      "words": [
+        "Oldbuck",
+        "Aiken"
+      ]
+    },
+    {
+      "block": 232,
+      "words": [
+        "Utofiay"
+      ]
+    },
+    {
+      "block": 233,
+      "words": [
+        "deadj"
+      ]
+    },
+    {
+      "block": 238,
+      "words": [
+        "archicalj",
+        "savej"
+      ]
+    },
+    {
+      "block": 239,
+      "words": [
+        "honesdy",
+        "cliche",
+        "Pebbleswick"
+      ]
+    },
+    {
+      "block": 240,
+      "words": [
+        "sayj"
+      ]
+    },
+    {
+      "block": 247,
+      "words": [
+        "trainload"
+      ]
+    },
+    {
+      "block": 251,
+      "words": [
+        "mattery"
+      ]
+    },
+    {
+      "block": 253,
+      "words": [
+        "hatj",
+        "cabj"
+      ]
+    },
+    {
+      "block": 254,
+      "words": [
+        "inj"
+      ]
+    },
+    {
+      "block": 256,
+      "words": [
+        "i8o",
+        "thenj",
+        "wasj",
+        "Tailfer"
+      ]
+    },
+    {
+      "block": 257,
+      "words": [
+        "Tailfer",
+        "racej"
+      ]
+    },
+    {
+      "block": 258,
+      "words": [
+        "Tailfer",
+        "Tailfer",
+        "Tailfer",
+        "foilu,"
+      ]
+    },
+    {
+      "block": 259,
+      "words": [
+        "Nickerson,",
+        "apparendy"
+      ]
+    },
+    {
+      "block": 260,
+      "words": [
+        "Nickerson"
+      ]
+    },
+    {
+      "block": 261,
+      "words": [
+        "Nickerson",
+        "Tailfer"
+      ]
+    },
+    {
+      "block": 262,
+      "words": [
+        "fussj",
+        "fogj",
+        "headlights."
+      ]
+    },
+    {
+      "block": 263,
+      "words": [
+        "dayj"
+      ]
+    },
+    {
+      "block": 264,
+      "words": [
+        "morphine...",
+        "caffeine,",
+        "theine.\""
+      ]
+    },
+    {
+      "block": 267,
+      "words": [
+        "menj"
+      ]
+    },
+    {
+      "block": 272,
+      "words": [
+        "timej"
+      ]
+    },
+    {
+      "block": 276,
+      "words": [
+        "^ound"
+      ]
+    },
+    {
+      "block": 278,
+      "words": [
+        "diiBcult",
+        "introducted"
+      ]
+    },
+    {
+      "block": 279,
+      "words": [
+        "hoy!\"",
+        "hoy!\""
+      ]
+    },
+    {
+      "block": 284,
+      "words": [
+        "tailj"
+      ]
+    },
+    {
+      "block": 285,
+      "words": [
+        "artj",
+        "offj"
+      ]
+    },
+    {
+      "block": 286,
+      "words": [
+        "foggily"
+      ]
+    },
+    {
+      "block": 288,
+      "words": [
+        "Whisder",
+        "jimcrack",
+        "britde"
+      ]
+    },
+    {
+      "block": 292,
+      "words": [
+        "thenj"
+      ]
+    },
+    {
+      "block": 294,
+      "words": [
+        "undogmaticj"
+      ]
+    },
+    {
+      "block": 295,
+      "words": [
+        "Thoughty"
+      ]
+    },
+    {
+      "block": 298,
+      "words": [
+        "Carlson"
+      ]
+    },
+    {
+      "block": 299,
+      "words": [
+        "flowerlike",
+        "movie"
+      ]
+    },
+    {
+      "block": 300,
+      "words": [
+        "canj"
+      ]
+    },
+    {
+      "block": 302,
+      "words": [
+        "crestfallen"
+      ]
+    },
+    {
+      "block": 303,
+      "words": [
+        "decended",
+        "sinj",
+        "toxicologist",
+        "oflFered",
+        "viccj"
+      ]
+    },
+    {
+      "block": 304,
+      "words": [
+        "Carlson",
+        "notj"
+      ]
+    },
+    {
+      "block": 305,
+      "words": [
+        "Poej",
+        "Leej",
+        "virtuosity",
+        "diiBculty.",
+        "poetj",
+        "lifej",
+        "drummer",
+        "oflF"
+      ]
+    },
+    {
+      "block": 311,
+      "words": [
+        "diflFer,"
+      ]
+    },
+    {
+      "block": 313,
+      "words": [
+        "innj",
+        "lawj",
+        "Savannah,"
+      ]
+    },
+    {
+      "block": 314,
+      "words": [
+        "Prohibtion"
+      ]
+    },
+    {
+      "block": 315,
+      "words": [
+        "difiFerent",
+        "viewj"
+      ]
+    },
+    {
+      "block": 317,
+      "words": [
+        "Taj",
+        "Mahal."
+      ]
+    },
+    {
+      "block": 318,
+      "words": [
+        "downj"
+      ]
+    },
+    {
+      "block": 319,
+      "words": [
+        "mythj"
+      ]
+    },
+    {
+      "block": 320,
+      "words": [
+        "friori",
+        "agesj"
+      ]
+    },
+    {
+      "block": 321,
+      "words": [
+        "shortj"
+      ]
+    },
+    {
+      "block": 328,
+      "words": [
+        "ownj",
+        "medi2evalist3",
+        "PauPs,",
+        "PauPs"
+      ]
+    },
+    {
+      "block": 329,
+      "words": [
+        "PauPs",
+        "Woolworth"
+      ]
+    },
+    {
+      "block": 330,
+      "words": [
+        "Ajnerican"
+      ]
+    },
+    {
+      "block": 331,
+      "words": [
+        "Comtesse",
+        "Chambrun",
+        "Appletonj",
+        "Chambrun's",
+        "Fitton,",
+        "Fitton",
+        "Chambrun's"
+      ]
+    },
+    {
+      "block": 332,
+      "words": [
+        "Chambrun"
+      ]
+    },
+    {
+      "block": 333,
+      "words": [
+        "odi",
+        "vampj",
+        "gripj"
+      ]
+    },
+    {
+      "block": 334,
+      "words": [
+        "Brattleborough,",
+        "Trilby.",
+        "ideaj"
+      ]
+    },
+    {
+      "block": 335,
+      "words": [
+        "mincj"
+      ]
+    },
+    {
+      "block": 338,
+      "words": [
+        "Edvoin"
+      ]
+    },
+    {
+      "block": 340,
+      "words": [
+        "manj"
+      ]
+    },
+    {
+      "block": 343,
+      "words": [
+        "buriable",
+        "buriabkj"
+      ]
+    },
+    {
+      "block": 344,
+      "words": [
+        "arrowy"
+      ]
+    },
+    {
+      "block": 345,
+      "words": [
+        "overj"
+      ]
+    },
+    {
+      "block": 346,
+      "words": [
+        "makeshift"
+      ]
+    },
+    {
+      "block": 347,
+      "words": [
+        "treatmeant",
+        "slut,",
+        "slut.",
+        "Degas's"
+      ]
+    },
+    {
+      "block": 351,
+      "words": [
+        "woej"
+      ]
+    },
+    {
+      "block": 354,
+      "words": [
+        "Ballantraey"
+      ]
+    },
+    {
+      "block": 356,
+      "words": [
+        "Umhra^^"
+      ]
+    },
+    {
+      "block": 358,
+      "words": [
+        "WesseXj",
+        "TesSy",
+        "coatj"
+      ]
+    },
+    {
+      "block": 360,
+      "words": [
+        "itj"
+      ]
+    }
+  ],
+  "corrections": 0,
+  "correctionList": [],
+  "text": "data/texts/ia-generallyspeakin00ches.txt",
+  "sha256": "98895c857d04b76e027c57c6868ee9d06939ea563fcd63665bf6f5fe1d7843b2",
+  "checked": "2026-11-16"
+}

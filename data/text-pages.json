@@ -4626,6 +4626,2617 @@
     "front": [],
     "em": []
    }
+  },
+  "catholic-church-conversion": {
+   "partD": {
+    "about": "Project Gutenberg #76305: the Macmillan, New York printing of 1927 in the Calvert Series. Six chapters, divided as the hosted text heads them; no words were changed.",
+    "words": 23617,
+    "minutes": 103
+   },
+   "edition": "pg-76305",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "04d66187865db8c5f48d75f1898057d970f16a257df83ec772fc78724467bc0e",
+   "blocks": 194,
+   "items": [
+    {
+     "slug": "01-introductory-a-new-religion",
+     "num": "I",
+     "title": "Introductory: a New Religion",
+     "heading": 48,
+     "start": 50,
+     "end": 59,
+     "section": 1,
+     "words": 2155,
+     "firstWords": "The Catholic faith used to be called the Old Religion; but at",
+     "titleBlocks": [
+      49
+     ]
+    },
+    {
+     "slug": "02-the-obvious-blunders",
+     "num": "II",
+     "title": "The Obvious Blunders",
+     "heading": 60,
+     "start": 62,
+     "end": 78,
+     "section": 1,
+     "words": 5372,
+     "firstWords": "I have noted that Catholicism really is in the twentieth century what",
+     "titleBlocks": [
+      61
+     ]
+    },
+    {
+     "slug": "03-the-real-obstacles",
+     "num": "III",
+     "title": "The Real Obstacles",
+     "heading": 79,
+     "start": 81,
+     "end": 99,
+     "section": 2,
+     "words": 6193,
+     "firstWords": "In the last chapter I have dealt in a preliminary fashion with",
+     "titleBlocks": [
+      80
+     ]
+    },
+    {
+     "slug": "04-the-world-inside-out",
+     "num": "IV",
+     "title": "The World Inside Out",
+     "heading": 100,
+     "start": 102,
+     "end": 113,
+     "section": 2,
+     "words": 4214,
+     "firstWords": "The first fallacy about the Catholic Church is the idea that it",
+     "titleBlocks": [
+      101
+     ]
+    },
+    {
+     "slug": "05-the-exception-proves-the-rule",
+     "num": "V",
+     "title": "The Exception Proves the Rule",
+     "heading": 114,
+     "start": 116,
+     "end": 133,
+     "section": 3,
+     "words": 4435,
+     "firstWords": "The Catholic Church is the only thing which saves a man from",
+     "titleBlocks": [
+      115
+     ]
+    },
+    {
+     "slug": "06-a-note-on-present-prospects",
+     "num": "VI",
+     "title": "A Note on Present Prospects",
+     "heading": 134,
+     "start": 136,
+     "end": 142,
+     "section": 3,
+     "words": 1248,
+     "firstWords": "On reconsidering these notes I find them to be far too personal;",
+     "titleBlocks": [
+      135
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "04d66187865db8c5f48d75f1898057d970f16a257df83ec772fc78724467bc0e",
+    "source": "data/structured/catholic-church-conversion-pg-76305.json",
+    "roles": [
+     [
+      48,
+      "chapter"
+     ],
+     [
+      49,
+      "heading"
+     ],
+     [
+      60,
+      "chapter"
+     ],
+     [
+      61,
+      "heading"
+     ],
+     [
+      79,
+      "chapter"
+     ],
+     [
+      80,
+      "heading"
+     ],
+     [
+      100,
+      "chapter"
+     ],
+     [
+      101,
+      "heading"
+     ],
+     [
+      114,
+      "chapter"
+     ],
+     [
+      115,
+      "heading"
+     ],
+     [
+      134,
+      "chapter"
+     ],
+     [
+      135,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "ballad-white-horse": {
+   "partD": {
+    "about": "Project Gutenberg #1719: first published in 1911 (London: Methuen). Eight books, divided as the hosted text heads them; the dedication stays in the reader. No words were changed.",
+    "words": 16214,
+    "minutes": 70
+   },
+   "edition": "pg-1719",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "854d65ace137b7273a44d4ba17839935a65b66bc660288466f3347ba3f28f444",
+   "blocks": 613,
+   "items": [
+    {
+     "slug": "01-the-vision-of-the-king",
+     "num": "I",
+     "title": "The Vision of the King",
+     "heading": 34,
+     "start": 35,
+     "end": 91,
+     "section": 0,
+     "words": 1742,
+     "firstWords": "Before the gods that made the gods Had seen their sunrise pass,"
+    },
+    {
+     "slug": "02-the-gathering-of-the-chiefs",
+     "num": "II",
+     "title": "The Gathering of the Chiefs",
+     "heading": 92,
+     "start": 93,
+     "end": 148,
+     "section": 2,
+     "words": 1751,
+     "firstWords": "Up across windy wastes and up Went Alfred over the shaws, Shaken"
+    },
+    {
+     "slug": "03-the-harp-of-alfred",
+     "num": "III",
+     "title": "The Harp of Alfred",
+     "heading": 149,
+     "start": 150,
+     "end": 229,
+     "section": 4,
+     "words": 2465,
+     "firstWords": "In a tree that yawned and twisted The King's few goods were"
+    },
+    {
+     "slug": "04-the-woman-in-the-forest",
+     "num": "IV",
+     "title": "The Woman in the Forest",
+     "heading": 230,
+     "start": 231,
+     "end": 288,
+     "section": 6,
+     "words": 1939,
+     "firstWords": "Thick thunder of the snorting swine, Enormous in the gloam, Rending among"
+    },
+    {
+     "slug": "05-ethandune-the-first-stroke",
+     "num": "V",
+     "title": "Ethandune: the First Stroke",
+     "heading": 289,
+     "start": 290,
+     "end": 349,
+     "section": 8,
+     "words": 1868,
+     "firstWords": "King Guthrum was a dread king, Like death out of the north;"
+    },
+    {
+     "slug": "06-ethandune-the-slaying-of-the-chiefs",
+     "num": "VI",
+     "title": "Ethandune: the Slaying of the Chiefs",
+     "heading": 350,
+     "start": 351,
+     "end": 413,
+     "section": 10,
+     "words": 1821,
+     "firstWords": "As the sea flooding the flat sands Flew on the sea-born horde,"
+    },
+    {
+     "slug": "07-ethandune-the-last-charge",
+     "num": "VII",
+     "title": "Ethandune: the Last Charge",
+     "heading": 414,
+     "start": 415,
+     "end": 487,
+     "section": 11,
+     "words": 2275,
+     "firstWords": "Away in the waste of White Horse Down An idle child alone"
+    },
+    {
+     "slug": "08-the-scouring-of-the-horse",
+     "num": "VIII",
+     "title": "The Scouring of the Horse",
+     "heading": 488,
+     "start": 489,
+     "end": 561,
+     "section": 13,
+     "words": 2353,
+     "firstWords": "In the years of the peace of Wessex, When the good King"
+    }
+   ],
+   "structure": {
+    "sha256": "854d65ace137b7273a44d4ba17839935a65b66bc660288466f3347ba3f28f444",
+    "source": "data/structured/ballad-white-horse-pg-1719.json",
+    "roles": [
+     [
+      34,
+      "chapter"
+     ],
+     [
+      92,
+      "chapter"
+     ],
+     [
+      149,
+      "chapter"
+     ],
+     [
+      230,
+      "chapter"
+     ],
+     [
+      289,
+      "chapter"
+     ],
+     [
+      350,
+      "chapter"
+     ],
+     [
+      414,
+      "chapter"
+     ],
+     [
+      488,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "whats-wrong-world": {
+   "partD": {
+    "about": "Project Gutenberg #1717: first published in 1910. Forty-six chapters in five parts and three closing notes, divided as the hosted text heads them; the dedication stays in the reader. No words were changed.",
+    "words": 59158,
+    "minutes": 257
+   },
+   "edition": "pg-1717",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "3fca1be002cd168dfbc50369202a53ed89e34a88d6de3c44032e15319d5d5bd4",
+   "blocks": 412,
+   "items": [
+    {
+     "slug": "01-the-medical-mistake",
+     "num": "I",
+     "title": "The Medical Mistake",
+     "heading": 34,
+     "start": 35,
+     "end": 41,
+     "section": 0,
+     "words": 1102,
+     "firstWords": "A book of modern social inquiry has a shape that is somewhat"
+    },
+    {
+     "slug": "02-wanted-an-unpractical-man",
+     "num": "II",
+     "title": "Wanted, an Unpractical Man",
+     "heading": 42,
+     "start": 43,
+     "end": 49,
+     "section": 1,
+     "words": 1659,
+     "firstWords": "There is a popular philosophical joke intended to typify the endless and"
+    },
+    {
+     "slug": "03-the-new-hypocrite",
+     "num": "III",
+     "title": "The New Hypocrite",
+     "heading": 50,
+     "start": 51,
+     "end": 60,
+     "section": 1,
+     "words": 1839,
+     "firstWords": "But this new cloudy political cowardice has rendered useless the old English"
+    },
+    {
+     "slug": "04-the-fear-of-the-past",
+     "num": "IV",
+     "title": "The Fear of the Past",
+     "heading": 61,
+     "start": 62,
+     "end": 71,
+     "section": 1,
+     "words": 2563,
+     "firstWords": "The last few decades have been marked by a special cultivation of"
+    },
+    {
+     "slug": "05-the-unfinished-temple",
+     "num": "V",
+     "title": "The Unfinished Temple",
+     "heading": 72,
+     "start": 73,
+     "end": 80,
+     "section": 2,
+     "words": 1713,
+     "firstWords": "The task of modern idealists indeed is made much too easy for"
+    },
+    {
+     "slug": "06-the-enemies-of-property",
+     "num": "VI",
+     "title": "The Enemies of Property",
+     "heading": 81,
+     "start": 82,
+     "end": 87,
+     "section": 2,
+     "words": 1127,
+     "firstWords": "But it is for this especial reason that such an explanation is"
+    },
+    {
+     "slug": "07-the-free-family",
+     "num": "VII",
+     "title": "The Free Family",
+     "heading": 88,
+     "start": 89,
+     "end": 94,
+     "section": 2,
+     "words": 1306,
+     "firstWords": "As I have said, I propose to take only one central instance;"
+    },
+    {
+     "slug": "08-the-wildness-of-domesticity",
+     "num": "VIII",
+     "title": "The Wildness of Domesticity",
+     "heading": 95,
+     "start": 96,
+     "end": 101,
+     "section": 2,
+     "words": 1343,
+     "firstWords": "In the course of this crude study we shall have to touch"
+    },
+    {
+     "slug": "09-history-of-hudge-and-gudge",
+     "num": "IX",
+     "title": "History of Hudge and Gudge",
+     "heading": 102,
+     "start": 103,
+     "end": 111,
+     "section": 2,
+     "words": 1503,
+     "firstWords": "There is, let us say, a certain filthy rookery in Hoxton, dripping"
+    },
+    {
+     "slug": "10-oppression-by-optimism",
+     "num": "X",
+     "title": "Oppression by Optimism",
+     "heading": 112,
+     "start": 113,
+     "end": 119,
+     "section": 3,
+     "words": 866,
+     "firstWords": "But we are not here concerned with the nature and existence of"
+    },
+    {
+     "slug": "11-the-homelessness-of-jones",
+     "num": "XI",
+     "title": "The Homelessness of Jones",
+     "heading": 120,
+     "start": 121,
+     "end": 127,
+     "section": 3,
+     "words": 1208,
+     "firstWords": "Thus the Future of which we spoke at the beginning has (in"
+    },
+    {
+     "slug": "12-the-charm-of-jingoism",
+     "num": "I",
+     "title": "The Charm of Jingoism",
+     "heading": 129,
+     "start": 130,
+     "end": 135,
+     "section": 3,
+     "words": 1110,
+     "firstWords": "I have cast about widely to find a title for this section;",
+     "before": [
+      128
+     ]
+    },
+    {
+     "slug": "13-wisdom-and-the-weather",
+     "num": "II",
+     "title": "Wisdom and the Weather",
+     "heading": 136,
+     "start": 137,
+     "end": 144,
+     "section": 3,
+     "words": 2001,
+     "firstWords": "It is admitted, one may hope, that common things are never commonplace."
+    },
+    {
+     "slug": "14-the-common-vision",
+     "num": "III",
+     "title": "The Common Vision",
+     "heading": 145,
+     "start": 146,
+     "end": 152,
+     "section": 4,
+     "words": 1175,
+     "firstWords": "Now this masculine love of an open and level camaraderie is the"
+    },
+    {
+     "slug": "15-the-insane-necessity",
+     "num": "IV",
+     "title": "The Insane Necessity",
+     "heading": 153,
+     "start": 154,
+     "end": 161,
+     "section": 4,
+     "words": 1974,
+     "firstWords": "The common conception among the dregs of Darwinian culture is that men"
+    },
+    {
+     "slug": "16-the-unmilitary-suffragette",
+     "num": "I",
+     "title": "The Unmilitary Suffragette",
+     "heading": 163,
+     "start": 164,
+     "end": 168,
+     "section": 4,
+     "words": 865,
+     "firstWords": "It will be better to adopt in this chapter the same process",
+     "before": [
+      162
+     ]
+    },
+    {
+     "slug": "17-the-universal-stick",
+     "num": "II",
+     "title": "The Universal Stick",
+     "heading": 169,
+     "start": 170,
+     "end": 176,
+     "section": 4,
+     "words": 2018,
+     "firstWords": "Cast your eye round the room in which you sit, and select"
+    },
+    {
+     "slug": "18-the-emancipation-of-domesticity",
+     "num": "III",
+     "title": "The Emancipation of Domesticity",
+     "heading": 177,
+     "start": 178,
+     "end": 185,
+     "section": 5,
+     "words": 1867,
+     "firstWords": "And it should be remarked in passing that this force upon a"
+    },
+    {
+     "slug": "19-the-romance-of-thrift",
+     "num": "IV",
+     "title": "The Romance of Thrift",
+     "heading": 186,
+     "start": 187,
+     "end": 194,
+     "section": 5,
+     "words": 1734,
+     "firstWords": "The larger part of womankind, however, have had to fight for things"
+    },
+    {
+     "slug": "20-the-coldness-of-chloe",
+     "num": "V",
+     "title": "The Coldness of Chloe",
+     "heading": 195,
+     "start": 196,
+     "end": 202,
+     "section": 5,
+     "words": 1435,
+     "firstWords": "We hear much of the human error which accepts what is sham"
+    },
+    {
+     "slug": "21-the-pedant-and-the-savage",
+     "num": "VI",
+     "title": "The Pedant and the Savage",
+     "heading": 203,
+     "start": 204,
+     "end": 207,
+     "section": 5,
+     "words": 1033,
+     "firstWords": "We say then that the female holds up with two strong arms"
+    },
+    {
+     "slug": "22-the-modern-surrender-of-woman",
+     "num": "VII",
+     "title": "The Modern Surrender of Woman",
+     "heading": 208,
+     "start": 209,
+     "end": 212,
+     "section": 5,
+     "words": 907,
+     "firstWords": "But in this corner called England, at this end of the century,"
+    },
+    {
+     "slug": "23-the-brand-of-the-fleur-de-lis",
+     "num": "VIII",
+     "title": "The Brand of the Fleur-de-lis",
+     "heading": 213,
+     "start": 214,
+     "end": 217,
+     "section": 6,
+     "words": 1008,
+     "firstWords": "Seemingly from the dawn of man all nations have had governments; and"
+    },
+    {
+     "slug": "24-sincerity-and-the-gallows",
+     "num": "IX",
+     "title": "Sincerity and the Gallows",
+     "heading": 218,
+     "start": 219,
+     "end": 222,
+     "section": 6,
+     "words": 876,
+     "firstWords": "When, therefore, it is said that the tradition against Female Suffrage keeps"
+    },
+    {
+     "slug": "25-the-higher-anarchy",
+     "num": "X",
+     "title": "The Higher Anarchy",
+     "heading": 223,
+     "start": 224,
+     "end": 228,
+     "section": 6,
+     "words": 1273,
+     "firstWords": "But there is a further fact; forgotten also because we moderns forget"
+    },
+    {
+     "slug": "26-the-queen-and-the-suffragettes",
+     "num": "XI",
+     "title": "The Queen and the Suffragettes",
+     "heading": 229,
+     "start": 230,
+     "end": 232,
+     "section": 6,
+     "words": 480,
+     "firstWords": "But, indeed, with this educational matter I must of necessity embroil myself"
+    },
+    {
+     "slug": "27-the-modern-slave",
+     "num": "XII",
+     "title": "The Modern Slave",
+     "heading": 233,
+     "start": 234,
+     "end": 238,
+     "section": 6,
+     "words": 1029,
+     "firstWords": "Now I have only taken the test case of Female Suffrage because"
+    },
+    {
+     "slug": "28-the-calvinism-of-to-day",
+     "num": "I",
+     "title": "The Calvinism of To-day",
+     "heading": 240,
+     "start": 241,
+     "end": 245,
+     "section": 6,
+     "words": 704,
+     "firstWords": "When I wrote a little volume on my friend Mr. Bernard Shaw,",
+     "before": [
+      239
+     ]
+    },
+    {
+     "slug": "29-the-tribal-terror",
+     "num": "II",
+     "title": "The Tribal Terror",
+     "heading": 246,
+     "start": 247,
+     "end": 249,
+     "section": 7,
+     "words": 817,
+     "firstWords": "Popular science, like that of Mr. Blatchford, is in this matter as"
+    },
+    {
+     "slug": "30-the-tricks-of-environment",
+     "num": "III",
+     "title": "The Tricks of Environment",
+     "heading": 250,
+     "start": 251,
+     "end": 253,
+     "section": 7,
+     "words": 513,
+     "firstWords": "After all the modern clatter of Calvinism, therefore, it is only with"
+    },
+    {
+     "slug": "31-the-truth-about-education",
+     "num": "IV",
+     "title": "The Truth About Education",
+     "heading": 254,
+     "start": 255,
+     "end": 259,
+     "section": 7,
+     "words": 759,
+     "firstWords": "When a man is asked to write down what he really thinks"
+    },
+    {
+     "slug": "32-an-evil-cry",
+     "num": "V",
+     "title": "An Evil Cry",
+     "heading": 260,
+     "start": 261,
+     "end": 264,
+     "section": 7,
+     "words": 848,
+     "firstWords": "The fashionable fallacy is that by education we can give people something"
+    },
+    {
+     "slug": "33-authority-the-unavoidable",
+     "num": "VI",
+     "title": "Authority the Unavoidable",
+     "heading": 265,
+     "start": 266,
+     "end": 269,
+     "section": 7,
+     "words": 1352,
+     "firstWords": "But the important point here is only that you cannot anyhow get"
+    },
+    {
+     "slug": "34-the-humility-of-mrs-grundy",
+     "num": "VII",
+     "title": "The Humility of Mrs. Grundy",
+     "heading": 270,
+     "start": 271,
+     "end": 275,
+     "section": 7,
+     "words": 1257,
+     "firstWords": "In short, the new education is as harsh as the old, whether"
+    },
+    {
+     "slug": "35-the-broken-rainbow",
+     "num": "VIII",
+     "title": "The Broken Rainbow",
+     "heading": 276,
+     "start": 277,
+     "end": 281,
+     "section": 7,
+     "words": 1252,
+     "firstWords": "I will take one case that will serve both as symbol and"
+    },
+    {
+     "slug": "36-the-need-for-narrowness",
+     "num": "IX",
+     "title": "The Need for Narrowness",
+     "heading": 282,
+     "start": 283,
+     "end": 287,
+     "section": 8,
+     "words": 810,
+     "firstWords": "Through all this chaos, then we come back once more to our"
+    },
+    {
+     "slug": "37-the-case-for-the-public-schools",
+     "num": "X",
+     "title": "The Case for the Public Schools",
+     "heading": 288,
+     "start": 289,
+     "end": 295,
+     "section": 8,
+     "words": 1839,
+     "firstWords": "The word success can of course be used in two senses. It"
+    },
+    {
+     "slug": "38-the-school-for-hypocrites",
+     "num": "XI",
+     "title": "The School for Hypocrites",
+     "heading": 296,
+     "start": 297,
+     "end": 303,
+     "section": 8,
+     "words": 1762,
+     "firstWords": "These are the false accusations; the accusation of classicism, the accusation of"
+    },
+    {
+     "slug": "39-the-staleness-of-the-new-schools",
+     "num": "XII",
+     "title": "The Staleness of the New Schools",
+     "heading": 304,
+     "start": 305,
+     "end": 309,
+     "section": 8,
+     "words": 1080,
+     "firstWords": "For this deep and disabling reason therefore, its cynical and abandoned indifference"
+    },
+    {
+     "slug": "40-the-outlawed-parent",
+     "num": "XIII",
+     "title": "The Outlawed Parent",
+     "heading": 310,
+     "start": 311,
+     "end": 313,
+     "section": 8,
+     "words": 975,
+     "firstWords": "There is one thing at least of which there is never so"
+    },
+    {
+     "slug": "41-folly-and-female-education",
+     "num": "XIV",
+     "title": "Folly and Female Education",
+     "heading": 314,
+     "start": 315,
+     "end": 317,
+     "section": 8,
+     "words": 1148,
+     "firstWords": "It is the same in the case of girls. I am often"
+    },
+    {
+     "slug": "42-the-empire-of-the-insect",
+     "num": "I",
+     "title": "The Empire of the Insect",
+     "heading": 319,
+     "start": 320,
+     "end": 326,
+     "section": 9,
+     "words": 2009,
+     "firstWords": "A cultivated Conservative friend of mine once exhibited great distress because in",
+     "before": [
+      318
+     ]
+    },
+    {
+     "slug": "43-the-fallacy-of-the-umbrella-stand",
+     "num": "II",
+     "title": "The Fallacy of the Umbrella Stand",
+     "heading": 327,
+     "start": 328,
+     "end": 332,
+     "section": 9,
+     "words": 1375,
+     "firstWords": "When Lord Morley said that the House of Lords must be either"
+    },
+    {
+     "slug": "44-the-dreadful-duty-of-gudge",
+     "num": "III",
+     "title": "The Dreadful Duty of Gudge",
+     "heading": 333,
+     "start": 334,
+     "end": 335,
+     "section": 9,
+     "words": 809,
+     "firstWords": "In the quarrel earlier alluded to between the energetic Progressive and the"
+    },
+    {
+     "slug": "45-a-last-instance",
+     "num": "IV",
+     "title": "A Last Instance",
+     "heading": 336,
+     "start": 337,
+     "end": 339,
+     "section": 9,
+     "words": 293,
+     "firstWords": "And now, as this book is drawing to a close, I will"
+    },
+    {
+     "slug": "46-conclusion",
+     "num": "V",
+     "title": "Conclusion",
+     "heading": 340,
+     "start": 341,
+     "end": 345,
+     "section": 9,
+     "words": 1470,
+     "firstWords": "Here, it may be said, my book ends just where it ought"
+    },
+    {
+     "slug": "47-on-female-suffrage",
+     "num": "I",
+     "title": "On Female Suffrage",
+     "heading": 347,
+     "start": 348,
+     "end": 352,
+     "section": 9,
+     "words": 463,
+     "firstWords": "Not wishing to overload this long essay with too many parentheses, apart",
+     "before": [
+      346
+     ]
+    },
+    {
+     "slug": "48-on-cleanliness-in-education",
+     "num": "II",
+     "title": "On Cleanliness in Education",
+     "heading": 353,
+     "start": 354,
+     "end": 355,
+     "section": 10,
+     "words": 263,
+     "firstWords": "On re-reading my protest, which I honestly think much needed, against our"
+    },
+    {
+     "slug": "49-on-peasant-proprietorship",
+     "num": "III",
+     "title": "On Peasant Proprietorship",
+     "heading": 356,
+     "start": 357,
+     "end": 360,
+     "section": 10,
+     "words": 346,
+     "firstWords": "I have not dealt with any details touching distributed ownership, or its"
+    }
+   ],
+   "structure": {
+    "sha256": "3fca1be002cd168dfbc50369202a53ed89e34a88d6de3c44032e15319d5d5bd4",
+    "source": "data/structured/whats-wrong-world-pg-1717.json",
+    "roles": [
+     [
+      34,
+      "chapter"
+     ],
+     [
+      42,
+      "chapter"
+     ],
+     [
+      50,
+      "chapter"
+     ],
+     [
+      61,
+      "chapter"
+     ],
+     [
+      72,
+      "chapter"
+     ],
+     [
+      81,
+      "chapter"
+     ],
+     [
+      88,
+      "chapter"
+     ],
+     [
+      95,
+      "chapter"
+     ],
+     [
+      102,
+      "chapter"
+     ],
+     [
+      112,
+      "chapter"
+     ],
+     [
+      120,
+      "chapter"
+     ],
+     [
+      128,
+      "heading"
+     ],
+     [
+      129,
+      "chapter"
+     ],
+     [
+      136,
+      "chapter"
+     ],
+     [
+      145,
+      "chapter"
+     ],
+     [
+      153,
+      "chapter"
+     ],
+     [
+      162,
+      "heading"
+     ],
+     [
+      163,
+      "chapter"
+     ],
+     [
+      169,
+      "chapter"
+     ],
+     [
+      177,
+      "chapter"
+     ],
+     [
+      186,
+      "chapter"
+     ],
+     [
+      195,
+      "chapter"
+     ],
+     [
+      203,
+      "chapter"
+     ],
+     [
+      208,
+      "chapter"
+     ],
+     [
+      213,
+      "chapter"
+     ],
+     [
+      218,
+      "chapter"
+     ],
+     [
+      223,
+      "chapter"
+     ],
+     [
+      229,
+      "chapter"
+     ],
+     [
+      233,
+      "chapter"
+     ],
+     [
+      239,
+      "heading"
+     ],
+     [
+      240,
+      "chapter"
+     ],
+     [
+      246,
+      "chapter"
+     ],
+     [
+      250,
+      "chapter"
+     ],
+     [
+      254,
+      "chapter"
+     ],
+     [
+      260,
+      "chapter"
+     ],
+     [
+      265,
+      "chapter"
+     ],
+     [
+      270,
+      "chapter"
+     ],
+     [
+      276,
+      "chapter"
+     ],
+     [
+      282,
+      "chapter"
+     ],
+     [
+      288,
+      "chapter"
+     ],
+     [
+      296,
+      "chapter"
+     ],
+     [
+      304,
+      "chapter"
+     ],
+     [
+      310,
+      "chapter"
+     ],
+     [
+      314,
+      "chapter"
+     ],
+     [
+      318,
+      "heading"
+     ],
+     [
+      319,
+      "chapter"
+     ],
+     [
+      327,
+      "chapter"
+     ],
+     [
+      333,
+      "chapter"
+     ],
+     [
+      336,
+      "chapter"
+     ],
+     [
+      340,
+      "chapter"
+     ],
+     [
+      346,
+      "heading"
+     ],
+     [
+      347,
+      "chapter"
+     ],
+     [
+      353,
+      "chapter"
+     ],
+     [
+      356,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "manalive": {
+   "partD": {
+    "about": "Project Gutenberg #1718: the Thomas Nelson and Sons text of 1912. Ten chapters in two parts, divided as the hosted text heads them; no words were changed.",
+    "words": 57555,
+    "minutes": 250
+   },
+   "edition": "pg-1718",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "3ef6b2f2a709012770dfa64e60a8342c456d24194076a3d7d64ef5debca69f90",
+   "blocks": 979,
+   "items": [
+    {
+     "slug": "01-how-the-great-wind-came-to-beacon-house",
+     "num": "I",
+     "title": "How the Great Wind Came to Beacon House",
+     "heading": 16,
+     "start": 17,
+     "end": 73,
+     "section": 0,
+     "words": 4498,
+     "firstWords": "A wind sprang high in the west, like a wave of unreasonable"
+    },
+    {
+     "slug": "02-the-luggage-of-an-optimist",
+     "num": "II",
+     "title": "The Luggage of an Optimist",
+     "heading": 74,
+     "start": 75,
+     "end": 124,
+     "section": 2,
+     "words": 4103,
+     "firstWords": "We all remember the fairy tales of science in our infancy, which"
+    },
+    {
+     "slug": "03-the-banner-of-beacon",
+     "num": "III",
+     "title": "The Banner of Beacon",
+     "heading": 125,
+     "start": 126,
+     "end": 181,
+     "section": 3,
+     "words": 4132,
+     "firstWords": "All next day at Beacon House there was a crazy sense that"
+    },
+    {
+     "slug": "04-the-garden-of-the-god",
+     "num": "IV",
+     "title": "The Garden of the God",
+     "heading": 182,
+     "start": 183,
+     "end": 270,
+     "section": 5,
+     "words": 4460,
+     "firstWords": "Diana Duke seemed inexplicably irritated at the abrupt entrance and utterance of"
+    },
+    {
+     "slug": "05-the-allegorical-practical-joker",
+     "num": "V",
+     "title": "The Allegorical Practical Joker",
+     "heading": 271,
+     "start": 272,
+     "end": 418,
+     "section": 7,
+     "words": 7758,
+     "firstWords": "The criminal specialist who had come with Dr. Warner was a somewhat"
+    },
+    {
+     "slug": "06-the-eye-of-death-or-the-murder-charge",
+     "num": "I",
+     "title": "The Eye of Death; or, the Murder Charge",
+     "heading": 420,
+     "start": 421,
+     "end": 572,
+     "section": 12,
+     "words": 8485,
+     "firstWords": "The dining-room of the Dukes had been set out for the Court",
+     "before": [
+      419
+     ]
+    },
+    {
+     "slug": "07-the-two-curates-or-the-burglary-charge",
+     "num": "II",
+     "title": "The Two Curates; or, the Burglary Charge",
+     "heading": 573,
+     "start": 574,
+     "end": 708,
+     "section": 16,
+     "words": 9706,
+     "firstWords": "Arthur Inglewood handed the document he had just read to the leaders"
+    },
+    {
+     "slug": "08-the-round-road-or-the-desertion-charge",
+     "num": "III",
+     "title": "The Round Road; or, the Desertion Charge",
+     "heading": 709,
+     "start": 710,
+     "end": 841,
+     "section": 20,
+     "words": 7618,
+     "firstWords": "Pym rose with sincere embarrassment; for he was an American, and his"
+    },
+    {
+     "slug": "09-the-wild-weddings-or-the-polygamy-charge",
+     "num": "IV",
+     "title": "The Wild Weddings; or, the Polygamy Charge",
+     "heading": 842,
+     "start": 843,
+     "end": 900,
+     "section": 24,
+     "words": 5689,
+     "firstWords": "“A modern man,” said Dr. Cyrus Pym, “must, if he be thoughtful,"
+    },
+    {
+     "slug": "10-how-the-great-wind-went-from-beacon-house",
+     "num": "V",
+     "title": "How the Great Wind Went from Beacon House",
+     "heading": 901,
+     "start": 902,
+     "end": 927,
+     "section": 25,
+     "words": 1106,
+     "firstWords": "Mary was walking between Diana and Rosamund slowly up and down the"
+    }
+   ],
+   "structure": {
+    "sha256": "3ef6b2f2a709012770dfa64e60a8342c456d24194076a3d7d64ef5debca69f90",
+    "source": "data/structured/manalive-pg-1718.json",
+    "roles": [
+     [
+      16,
+      "chapter"
+     ],
+     [
+      74,
+      "chapter"
+     ],
+     [
+      125,
+      "chapter"
+     ],
+     [
+      182,
+      "chapter"
+     ],
+     [
+      271,
+      "chapter"
+     ],
+     [
+      419,
+      "heading"
+     ],
+     [
+      420,
+      "chapter"
+     ],
+     [
+      573,
+      "chapter"
+     ],
+     [
+      709,
+      "chapter"
+     ],
+     [
+      842,
+      "chapter"
+     ],
+     [
+      901,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "club-queer-trades": {
+   "partD": {
+    "about": "Project Gutenberg #1696: first published in 1905. Six stories, divided as the hosted text heads them; no words were changed.",
+    "words": 44033,
+    "minutes": 191
+   },
+   "edition": "pg-1696",
+   "kind": "story",
+   "editionLine": "",
+   "noun": "Story",
+   "nouns": "Stories",
+   "sha256": "76733336ba28a3712c324b4e2b0daeca0328d6572b6baac5995106273166c52d",
+   "blocks": 1117,
+   "items": [
+    {
+     "slug": "01-the-tremendous-adventures-of-major-brown",
+     "num": "1",
+     "title": "The Tremendous Adventures of Major Brown",
+     "heading": 12,
+     "start": 13,
+     "end": 217,
+     "section": 0,
+     "words": 8363,
+     "firstWords": "Rabelais, or his wild illustrator Gustave Dore, must have had something to"
+    },
+    {
+     "slug": "02-the-painful-fall-of-a-great-reputation",
+     "num": "2",
+     "title": "The Painful Fall of a Great Reputation",
+     "heading": 218,
+     "start": 219,
+     "end": 382,
+     "section": 6,
+     "words": 5820,
+     "firstWords": "Basil Grant and I were talking one day in what is perhaps"
+    },
+    {
+     "slug": "03-the-awful-reason-of-the-vicars-visit",
+     "num": "3",
+     "title": "The Awful Reason of the Vicar's Visit",
+     "heading": 383,
+     "start": 384,
+     "end": 528,
+     "section": 10,
+     "words": 6667,
+     "firstWords": "The revolt of Matter against Man (which I believe to exist) has"
+    },
+    {
+     "slug": "04-the-singular-speculation-of-the-house-agent",
+     "num": "4",
+     "title": "The Singular Speculation of the House-Agent",
+     "heading": 529,
+     "start": 530,
+     "end": 731,
+     "section": 15,
+     "words": 7604,
+     "firstWords": "Lieutenant Drummond Keith was a man about whom conversation always burst like"
+    },
+    {
+     "slug": "05-the-noticeable-conduct-of-professor-chadd",
+     "num": "5",
+     "title": "The Noticeable Conduct of Professor Chadd",
+     "heading": 732,
+     "start": 733,
+     "end": 872,
+     "section": 20,
+     "words": 6636,
+     "firstWords": "Basil Grant had comparatively few friends besides myself; yet he was the"
+    },
+    {
+     "slug": "06-the-eccentric-seclusion-of-the-old-lady",
+     "num": "6",
+     "title": "The Eccentric Seclusion of the Old Lady",
+     "heading": 873,
+     "start": 874,
+     "end": 1065,
+     "section": 24,
+     "words": 8943,
+     "firstWords": "The conversation of Rupert Grant had two great elements of interest--first, the"
+    }
+   ],
+   "structure": {
+    "sha256": "76733336ba28a3712c324b4e2b0daeca0328d6572b6baac5995106273166c52d",
+    "source": "data/structured/club-queer-trades-pg-1696.json",
+    "roles": [
+     [
+      12,
+      "chapter"
+     ],
+     [
+      218,
+      "chapter"
+     ],
+     [
+      383,
+      "chapter"
+     ],
+     [
+      529,
+      "chapter"
+     ],
+     [
+      732,
+      "chapter"
+     ],
+     [
+      873,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "short-history-england": {
+   "partD": {
+    "about": "Project Gutenberg #20897: first published in 1917; transcribed from a Chatto & Windus, London printing. Eighteen chapters, divided as the hosted text heads them; no words were changed.",
+    "words": 60392,
+    "minutes": 263
+   },
+   "edition": "pg-20897",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "c98dd2ed66cae95f60d7c3b62b8942143fa631e022e1f7310c4d873452bddf56",
+   "blocks": 309,
+   "items": [
+    {
+     "slug": "01-introduction",
+     "num": "I",
+     "title": "Introduction",
+     "heading": 36,
+     "start": 38,
+     "end": 42,
+     "section": 1,
+     "words": 1128,
+     "firstWords": "It will be very reasonably asked why I should consent, though upon",
+     "titleBlocks": [
+      37
+     ]
+    },
+    {
+     "slug": "02-the-province-of-britain",
+     "num": "II",
+     "title": "The Province of Britain",
+     "heading": 43,
+     "start": 45,
+     "end": 57,
+     "section": 1,
+     "words": 3168,
+     "firstWords": "The land on which we live once had the highly poetic privilege",
+     "titleBlocks": [
+      44
+     ]
+    },
+    {
+     "slug": "03-the-age-of-legends",
+     "num": "III",
+     "title": "The Age of Legends",
+     "heading": 58,
+     "start": 60,
+     "end": 71,
+     "section": 1,
+     "words": 2667,
+     "firstWords": "We should be startled if we were quietly reading a prosaic modern",
+     "titleBlocks": [
+      59
+     ]
+    },
+    {
+     "slug": "04-the-defeat-of-the-barbarians",
+     "num": "IV",
+     "title": "The Defeat of the Barbarians",
+     "heading": 72,
+     "start": 74,
+     "end": 83,
+     "section": 2,
+     "words": 3135,
+     "firstWords": "It is a quaint accident that we employ the word \"short-sighted\" as",
+     "titleBlocks": [
+      73
+     ]
+    },
+    {
+     "slug": "05-st-edward-and-the-norman-kings",
+     "num": "V",
+     "title": "St. Edward and the Norman Kings",
+     "heading": 84,
+     "start": 86,
+     "end": 96,
+     "section": 2,
+     "words": 3718,
+     "firstWords": "The reader may be surprised at the disproportionate importance given to the",
+     "titleBlocks": [
+      85
+     ]
+    },
+    {
+     "slug": "06-the-age-of-the-crusades",
+     "num": "VI",
+     "title": "The Age of the Crusades",
+     "heading": 97,
+     "start": 99,
+     "end": 108,
+     "section": 2,
+     "words": 3298,
+     "firstWords": "The last chapter began, in an apparent irrelevance, with the name of",
+     "titleBlocks": [
+      98
+     ]
+    },
+    {
+     "slug": "07-the-problem-of-the-plantagenets",
+     "num": "VII",
+     "title": "The Problem of the Plantagenets",
+     "heading": 109,
+     "start": 111,
+     "end": 124,
+     "section": 3,
+     "words": 3812,
+     "firstWords": "It is a point of prestige with what is called the Higher",
+     "titleBlocks": [
+      110
+     ]
+    },
+    {
+     "slug": "08-the-meaning-of-merry-england",
+     "num": "VIII",
+     "title": "The Meaning of Merry England",
+     "heading": 125,
+     "start": 127,
+     "end": 138,
+     "section": 3,
+     "words": 4634,
+     "firstWords": "The mental trick by which the first half of English history has",
+     "titleBlocks": [
+      126
+     ]
+    },
+    {
+     "slug": "09-nationality-and-the-french-wars",
+     "num": "IX",
+     "title": "Nationality and the French Wars",
+     "heading": 139,
+     "start": 141,
+     "end": 151,
+     "section": 3,
+     "words": 3671,
+     "firstWords": "If any one wishes to know what we mean when we say",
+     "titleBlocks": [
+      140
+     ]
+    },
+    {
+     "slug": "10-the-war-of-the-usurpers",
+     "num": "X",
+     "title": "The War of the Usurpers",
+     "heading": 152,
+     "start": 154,
+     "end": 165,
+     "section": 4,
+     "words": 3629,
+     "firstWords": "The poet Pope, though a friend of the greatest of Tory Democrats,",
+     "titleBlocks": [
+      153
+     ]
+    },
+    {
+     "slug": "11-the-rebellion-of-the-rich",
+     "num": "XI",
+     "title": "The Rebellion of the Rich",
+     "heading": 166,
+     "start": 168,
+     "end": 179,
+     "section": 4,
+     "words": 4638,
+     "firstWords": "Sir Thomas More, apart from any arguments about the more mystical meshes",
+     "titleBlocks": [
+      167
+     ]
+    },
+    {
+     "slug": "12-spain-and-the-schism-of-nations",
+     "num": "XII",
+     "title": "Spain and the Schism of Nations",
+     "heading": 180,
+     "start": 182,
+     "end": 189,
+     "section": 5,
+     "words": 3018,
+     "firstWords": "The revolution that arose out of what is called the Renascence, and",
+     "titleBlocks": [
+      181
+     ]
+    },
+    {
+     "slug": "13-the-age-of-the-puritans",
+     "num": "XIII",
+     "title": "The Age of the Puritans",
+     "heading": 190,
+     "start": 192,
+     "end": 202,
+     "section": 5,
+     "words": 3990,
+     "firstWords": "We should be very much bored if we had to read an",
+     "titleBlocks": [
+      191
+     ]
+    },
+    {
+     "slug": "14-the-triumph-of-the-whigs",
+     "num": "XIV",
+     "title": "The Triumph of the Whigs",
+     "heading": 203,
+     "start": 205,
+     "end": 216,
+     "section": 5,
+     "words": 3985,
+     "firstWords": "Whether or no we believe that the Reformation really reformed, there can",
+     "titleBlocks": [
+      204
+     ]
+    },
+    {
+     "slug": "15-the-war-with-the-great-republics",
+     "num": "XV",
+     "title": "The War with the Great Republics",
+     "heading": 217,
+     "start": 219,
+     "end": 226,
+     "section": 6,
+     "words": 3561,
+     "firstWords": "We cannot understand the eighteenth century so long as we suppose that",
+     "titleBlocks": [
+      218
+     ]
+    },
+    {
+     "slug": "16-aristocracy-and-the-discontents",
+     "num": "XVI",
+     "title": "Aristocracy and the Discontents",
+     "heading": 227,
+     "start": 229,
+     "end": 236,
+     "section": 6,
+     "words": 3574,
+     "firstWords": "It is the pathos of many hackneyed things that they are intrinsically",
+     "titleBlocks": [
+      228
+     ]
+    },
+    {
+     "slug": "17-the-return-of-the-barbarian",
+     "num": "XVII",
+     "title": "The Return of the Barbarian",
+     "heading": 237,
+     "start": 239,
+     "end": 249,
+     "section": 6,
+     "words": 3785,
+     "firstWords": "The only way to write a popular history, as we have already",
+     "titleBlocks": [
+      238
+     ]
+    },
+    {
+     "slug": "18-conclusion",
+     "num": "XVIII",
+     "title": "Conclusion",
+     "heading": 250,
+     "start": 252,
+     "end": 257,
+     "section": 7,
+     "words": 981,
+     "firstWords": "In so small a book on so large a matter, finished hastily",
+     "titleBlocks": [
+      251
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "c98dd2ed66cae95f60d7c3b62b8942143fa631e022e1f7310c4d873452bddf56",
+    "source": "data/structured/short-history-england-pg-20897.json",
+    "roles": [
+     [
+      36,
+      "chapter"
+     ],
+     [
+      37,
+      "heading"
+     ],
+     [
+      43,
+      "chapter"
+     ],
+     [
+      44,
+      "heading"
+     ],
+     [
+      58,
+      "chapter"
+     ],
+     [
+      59,
+      "heading"
+     ],
+     [
+      72,
+      "chapter"
+     ],
+     [
+      73,
+      "heading"
+     ],
+     [
+      84,
+      "chapter"
+     ],
+     [
+      85,
+      "heading"
+     ],
+     [
+      97,
+      "chapter"
+     ],
+     [
+      98,
+      "heading"
+     ],
+     [
+      109,
+      "chapter"
+     ],
+     [
+      110,
+      "heading"
+     ],
+     [
+      125,
+      "chapter"
+     ],
+     [
+      126,
+      "heading"
+     ],
+     [
+      139,
+      "chapter"
+     ],
+     [
+      140,
+      "heading"
+     ],
+     [
+      152,
+      "chapter"
+     ],
+     [
+      153,
+      "heading"
+     ],
+     [
+      166,
+      "chapter"
+     ],
+     [
+      167,
+      "heading"
+     ],
+     [
+      180,
+      "chapter"
+     ],
+     [
+      181,
+      "heading"
+     ],
+     [
+      190,
+      "chapter"
+     ],
+     [
+      191,
+      "heading"
+     ],
+     [
+      203,
+      "chapter"
+     ],
+     [
+      204,
+      "heading"
+     ],
+     [
+      217,
+      "chapter"
+     ],
+     [
+      218,
+      "heading"
+     ],
+     [
+      227,
+      "chapter"
+     ],
+     [
+      228,
+      "heading"
+     ],
+     [
+      237,
+      "chapter"
+     ],
+     [
+      238,
+      "heading"
+     ],
+     [
+      250,
+      "chapter"
+     ],
+     [
+      251,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "man-who-knew-too-much": {
+   "partD": {
+    "about": "Project Gutenberg #1720: first published in 1922. Eight Horne Fisher stories, divided as the hosted text heads them; no words were changed.",
+    "words": 59628,
+    "minutes": 259
+   },
+   "edition": "pg-1720",
+   "kind": "story",
+   "editionLine": "",
+   "noun": "Story",
+   "nouns": "Stories",
+   "sha256": "3fae9881d7b8659830ded1be58c43abddbc1a3a131c405e25dc3e06c8e9cf335",
+   "blocks": 1081,
+   "items": [
+    {
+     "slug": "01-the-face-in-the-target",
+     "num": "I",
+     "title": "The Face in the Target",
+     "heading": 16,
+     "start": 17,
+     "end": 141,
+     "section": 0,
+     "words": 7535,
+     "firstWords": "Harold March, the rising reviewer and social critic, was walking vigorously across"
+    },
+    {
+     "slug": "02-the-vanishing-prince",
+     "num": "II",
+     "title": "The Vanishing Prince",
+     "heading": 142,
+     "start": 143,
+     "end": 276,
+     "section": 4,
+     "words": 7544,
+     "firstWords": "This tale begins among a tangle of tales round a name that"
+    },
+    {
+     "slug": "03-the-soul-of-the-schoolboy",
+     "num": "III",
+     "title": "The Soul of the Schoolboy",
+     "heading": 277,
+     "start": 278,
+     "end": 385,
+     "section": 7,
+     "words": 5319,
+     "firstWords": "A large map of London would be needed to display the wild"
+    },
+    {
+     "slug": "04-the-bottomless-well",
+     "num": "IV",
+     "title": "The Bottomless Well",
+     "heading": 386,
+     "start": 387,
+     "end": 512,
+     "section": 11,
+     "words": 6187,
+     "firstWords": "In an oasis, or green island, in the red and yellow seas"
+    },
+    {
+     "slug": "05-the-fad-of-the-fisherman",
+     "num": "V",
+     "title": "The Fad of the Fisherman",
+     "heading": 513,
+     "start": 514,
+     "end": 652,
+     "section": 14,
+     "words": 6941,
+     "firstWords": "A thing can sometimes be too extraordinary to be remembered. If it"
+    },
+    {
+     "slug": "06-the-hole-in-the-wall",
+     "num": "VI",
+     "title": "The Hole in the Wall",
+     "heading": 653,
+     "start": 654,
+     "end": 786,
+     "section": 18,
+     "words": 8874,
+     "firstWords": "Two men, the one an architect and the other an archaeologist, met"
+    },
+    {
+     "slug": "07-the-temple-of-silence",
+     "num": "VII",
+     "title": "The Temple of Silence",
+     "heading": 787,
+     "start": 788,
+     "end": 926,
+     "section": 22,
+     "words": 9461,
+     "firstWords": "Harold March and the few who cultivated the friendship of Horne Fisher,"
+    },
+    {
+     "slug": "08-the-vengeance-of-the-statue",
+     "num": "VIII",
+     "title": "The Vengeance of the Statue",
+     "heading": 927,
+     "start": 928,
+     "end": 1029,
+     "section": 26,
+     "words": 7767,
+     "firstWords": "It was on the sunny veranda of a seaside hotel, overlooking a"
+    }
+   ],
+   "structure": {
+    "sha256": "3fae9881d7b8659830ded1be58c43abddbc1a3a131c405e25dc3e06c8e9cf335",
+    "source": "data/structured/man-who-knew-too-much-pg-1720.json",
+    "roles": [
+     [
+      16,
+      "chapter"
+     ],
+     [
+      142,
+      "chapter"
+     ],
+     [
+      277,
+      "chapter"
+     ],
+     [
+      386,
+      "chapter"
+     ],
+     [
+      513,
+      "chapter"
+     ],
+     [
+      653,
+      "chapter"
+     ],
+     [
+      787,
+      "chapter"
+     ],
+     [
+      927,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "flying-inn": {
+   "partD": {
+    "about": "Project Gutenberg #59239: the John Lane Company, New York printing (copyright 1914). Twenty-five chapters, divided as the hosted text heads them; no words were changed.",
+    "words": 88302,
+    "minutes": 384
+   },
+   "edition": "pg-59239",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "e77d141f4285634642203c20615494fa7d60aeddc684dca6aebbeda459a50431",
+   "blocks": 1576,
+   "items": [
+    {
+     "slug": "01-a-sermon-on-inns",
+     "num": "I",
+     "title": "A Sermon on Inns",
+     "heading": 31,
+     "start": 33,
+     "end": 63,
+     "section": 0,
+     "words": 2798,
+     "firstWords": "THE sea was a pale elfin green and the afternoon had already",
+     "titleBlocks": [
+      32
+     ]
+    },
+    {
+     "slug": "02-the-end-of-olive-island",
+     "num": "II",
+     "title": "The End of Olive Island",
+     "heading": 64,
+     "start": 66,
+     "end": 100,
+     "section": 1,
+     "words": 3172,
+     "firstWords": "THE great sea-dragon of the changing colours that wriggles round the world",
+     "titleBlocks": [
+      65
+     ]
+    },
+    {
+     "slug": "03-the-sign-of-the-old-ship",
+     "num": "III",
+     "title": "The Sign of “the Old Ship”",
+     "heading": 101,
+     "start": 103,
+     "end": 142,
+     "section": 2,
+     "words": 2417,
+     "firstWords": "UPON few of the children of men has the surname of Pump",
+     "titleBlocks": [
+      102
+     ]
+    },
+    {
+     "slug": "04-the-inn-finds-wings",
+     "num": "IV",
+     "title": "The Inn Finds Wings",
+     "heading": 143,
+     "start": 145,
+     "end": 204,
+     "section": 4,
+     "words": 3046,
+     "firstWords": "MR. HUMPHREY PUMP stood in front of his inn once more, the",
+     "titleBlocks": [
+      144
+     ]
+    },
+    {
+     "slug": "05-the-astonishment-of-the-agent",
+     "num": "V",
+     "title": "The Astonishment of the Agent",
+     "heading": 205,
+     "start": 207,
+     "end": 263,
+     "section": 5,
+     "words": 3126,
+     "firstWords": "LORD IVYWOOD shared the mental weakness of most men who have fed",
+     "titleBlocks": [
+      206
+     ]
+    },
+    {
+     "slug": "06-the-hole-in-heaven",
+     "num": "VI",
+     "title": "The Hole in Heaven",
+     "heading": 264,
+     "start": 266,
+     "end": 327,
+     "section": 7,
+     "words": 3309,
+     "firstWords": "THAT delicate ruby light which is one of the rarest but one",
+     "titleBlocks": [
+      265
+     ]
+    },
+    {
+     "slug": "07-the-society-of-simple-souls",
+     "num": "VII",
+     "title": "The Society of Simple Souls",
+     "heading": 328,
+     "start": 330,
+     "end": 375,
+     "section": 9,
+     "words": 3047,
+     "firstWords": "UNDER sunset, at once softer and more sombre, under which the leaden",
+     "titleBlocks": [
+      329
+     ]
+    },
+    {
+     "slug": "08-vox-populi-vox-dei",
+     "num": "VIII",
+     "title": "Vox Populi Vox Dei",
+     "heading": 376,
+     "start": 378,
+     "end": 435,
+     "section": 10,
+     "words": 3021,
+     "firstWords": "“I AM SURE,” Mr. Leveson, the Secretary, had said, with a somewhat",
+     "titleBlocks": [
+      377
+     ]
+    },
+    {
+     "slug": "09-the-higher-criticism-and-mr-hibbs",
+     "num": "IX",
+     "title": "The Higher Criticism and Mr. Hibbs",
+     "heading": 436,
+     "start": 438,
+     "end": 461,
+     "section": 12,
+     "words": 3764,
+     "firstWords": "PEBBLEWICK boasted an enterprising evening paper of its own, called “The Pebblewick",
+     "titleBlocks": [
+      437
+     ]
+    },
+    {
+     "slug": "10-the-character-of-quoodle",
+     "num": "X",
+     "title": "The Character of Quoodle",
+     "heading": 462,
+     "start": 464,
+     "end": 507,
+     "section": 13,
+     "words": 3355,
+     "firstWords": "THERE lay about in Lord Ivywood’s numerous gardens, terraces, outhouses, stable yards",
+     "titleBlocks": [
+      463
+     ]
+    },
+    {
+     "slug": "11-vegetarianism-in-the-drawing-room",
+     "num": "XI",
+     "title": "Vegetarianism in the Drawing-room",
+     "heading": 508,
+     "start": 510,
+     "end": 547,
+     "section": 14,
+     "words": 3996,
+     "firstWords": "THE Company that assembled to listen to the Prophet of the Moon,",
+     "titleBlocks": [
+      509
+     ]
+    },
+    {
+     "slug": "12-vegetarianism-in-the-forest",
+     "num": "XII",
+     "title": "Vegetarianism in the Forest",
+     "heading": 548,
+     "start": 550,
+     "end": 612,
+     "section": 15,
+     "words": 3881,
+     "firstWords": "HUMPHREY PUMP’S cooking of a fungus in an old frying-pan (which he",
+     "titleBlocks": [
+      549
+     ]
+    },
+    {
+     "slug": "13-the-battle-of-the-tunnel",
+     "num": "XIII",
+     "title": "The Battle of the Tunnel",
+     "heading": 613,
+     "start": 615,
+     "end": 714,
+     "section": 17,
+     "words": 4843,
+     "firstWords": "WHAT Joan Brett really felt, as she went back from the second",
+     "titleBlocks": [
+      614
+     ]
+    },
+    {
+     "slug": "14-the-creature-that-man-forgets",
+     "num": "XIV",
+     "title": "The Creature That Man Forgets",
+     "heading": 715,
+     "start": 717,
+     "end": 784,
+     "section": 20,
+     "words": 3500,
+     "firstWords": "DESPITE the natural hubbub round the wound of Lord Ivywood and the",
+     "titleBlocks": [
+      716
+     ]
+    },
+    {
+     "slug": "15-the-songs-of-the-car-club",
+     "num": "XV",
+     "title": "The Songs of the Car Club",
+     "heading": 785,
+     "start": 787,
+     "end": 857,
+     "section": 22,
+     "words": 3675,
+     "firstWords": "MORE than once as the car flew through black and silver fairylands",
+     "titleBlocks": [
+      786
+     ]
+    },
+    {
+     "slug": "16-the-seven-moods-of-dorian",
+     "num": "XVI",
+     "title": "The Seven Moods of Dorian",
+     "heading": 858,
+     "start": 860,
+     "end": 919,
+     "section": 24,
+     "words": 3939,
+     "firstWords": "THAT timeless clock of all lunatics, which was so bright in the",
+     "titleBlocks": [
+      859
+     ]
+    },
+    {
+     "slug": "17-the-poet-in-parliament",
+     "num": "XVII",
+     "title": "The Poet in Parliament",
+     "heading": 920,
+     "start": 922,
+     "end": 982,
+     "section": 26,
+     "words": 5019,
+     "firstWords": "DURING the singular entrance and exit of Dorian Wimpole, M.P., J.P., etc.,",
+     "titleBlocks": [
+      921
+     ]
+    },
+    {
+     "slug": "18-the-republic-of-peaceways",
+     "num": "XVIII",
+     "title": "The Republic of Peaceways",
+     "heading": 983,
+     "start": 985,
+     "end": 1051,
+     "section": 28,
+     "words": 4128,
+     "firstWords": "IN a hamlet round about Windermere, let us say, or somewhere in",
+     "titleBlocks": [
+      984
+     ]
+    },
+    {
+     "slug": "19-the-hospitality-of-the-captain",
+     "num": "XIX",
+     "title": "The Hospitality of the Captain",
+     "heading": 1052,
+     "start": 1054,
+     "end": 1110,
+     "section": 30,
+     "words": 3389,
+     "firstWords": "DR. MOSES MEADOWS, whether that was his name or an Anglicised version",
+     "titleBlocks": [
+      1053
+     ]
+    },
+    {
+     "slug": "20-the-turk-and-the-futurists",
+     "num": "XX",
+     "title": "The Turk and the Futurists",
+     "heading": 1111,
+     "start": 1113,
+     "end": 1188,
+     "section": 31,
+     "words": 3579,
+     "firstWords": "MR. ADRIAN CROOKE was a successful chemist whose shop was in the",
+     "titleBlocks": [
+      1112
+     ]
+    },
+    {
+     "slug": "21-the-road-to-roundabout",
+     "num": "XXI",
+     "title": "The Road to Roundabout",
+     "heading": 1189,
+     "start": 1191,
+     "end": 1265,
+     "section": 33,
+     "words": 4405,
+     "firstWords": "PATRICK DALROY looked at the invader with a heavy and yet humourous",
+     "titleBlocks": [
+      1190
+     ]
+    },
+    {
+     "slug": "22-the-chemistry-of-mr-crooke",
+     "num": "XXII",
+     "title": "The Chemistry of Mr. Crooke",
+     "heading": 1266,
+     "start": 1268,
+     "end": 1349,
+     "section": 36,
+     "words": 3999,
+     "firstWords": "WHEN the celebrated Hibbs next visited the shop of Crooke, that mystic",
+     "titleBlocks": [
+      1267
+     ]
+    },
+    {
+     "slug": "23-the-march-on-ivywood",
+     "num": "XXIII",
+     "title": "The March on Ivywood",
+     "heading": 1350,
+     "start": 1352,
+     "end": 1419,
+     "section": 38,
+     "words": 3287,
+     "firstWords": "THAT storm-spirit, or eagle of liberty, which is the sudden soul in",
+     "titleBlocks": [
+      1351
+     ]
+    },
+    {
+     "slug": "24-the-enigmas-of-lady-joan",
+     "num": "XXIV",
+     "title": "The Enigmas of Lady Joan",
+     "heading": 1420,
+     "start": 1422,
+     "end": 1497,
+     "section": 40,
+     "words": 4079,
+     "firstWords": "ON an evening when the sky was clear and only its fringes",
+     "titleBlocks": [
+      1421
+     ]
+    },
+    {
+     "slug": "25-the-finding-of-the-superman",
+     "num": "XXV",
+     "title": "The Finding of the Superman",
+     "heading": 1498,
+     "start": 1500,
+     "end": 1524,
+     "section": 42,
+     "words": 1528,
+     "firstWords": "“I’VE brought you a little dog,” said Mr. Dalroy, introducing the rampant",
+     "titleBlocks": [
+      1499
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "e77d141f4285634642203c20615494fa7d60aeddc684dca6aebbeda459a50431",
+    "source": "data/structured/flying-inn-pg-59239.json",
+    "roles": [
+     [
+      31,
+      "chapter"
+     ],
+     [
+      32,
+      "heading"
+     ],
+     [
+      64,
+      "chapter"
+     ],
+     [
+      65,
+      "heading"
+     ],
+     [
+      101,
+      "chapter"
+     ],
+     [
+      102,
+      "heading"
+     ],
+     [
+      143,
+      "chapter"
+     ],
+     [
+      144,
+      "heading"
+     ],
+     [
+      205,
+      "chapter"
+     ],
+     [
+      206,
+      "heading"
+     ],
+     [
+      264,
+      "chapter"
+     ],
+     [
+      265,
+      "heading"
+     ],
+     [
+      328,
+      "chapter"
+     ],
+     [
+      329,
+      "heading"
+     ],
+     [
+      376,
+      "chapter"
+     ],
+     [
+      377,
+      "heading"
+     ],
+     [
+      436,
+      "chapter"
+     ],
+     [
+      437,
+      "heading"
+     ],
+     [
+      462,
+      "chapter"
+     ],
+     [
+      463,
+      "heading"
+     ],
+     [
+      508,
+      "chapter"
+     ],
+     [
+      509,
+      "heading"
+     ],
+     [
+      548,
+      "chapter"
+     ],
+     [
+      549,
+      "heading"
+     ],
+     [
+      613,
+      "chapter"
+     ],
+     [
+      614,
+      "heading"
+     ],
+     [
+      715,
+      "chapter"
+     ],
+     [
+      716,
+      "heading"
+     ],
+     [
+      785,
+      "chapter"
+     ],
+     [
+      786,
+      "heading"
+     ],
+     [
+      858,
+      "chapter"
+     ],
+     [
+      859,
+      "heading"
+     ],
+     [
+      920,
+      "chapter"
+     ],
+     [
+      921,
+      "heading"
+     ],
+     [
+      983,
+      "chapter"
+     ],
+     [
+      984,
+      "heading"
+     ],
+     [
+      1052,
+      "chapter"
+     ],
+     [
+      1053,
+      "heading"
+     ],
+     [
+      1111,
+      "chapter"
+     ],
+     [
+      1112,
+      "heading"
+     ],
+     [
+      1189,
+      "chapter"
+     ],
+     [
+      1190,
+      "heading"
+     ],
+     [
+      1266,
+      "chapter"
+     ],
+     [
+      1267,
+      "heading"
+     ],
+     [
+      1350,
+      "chapter"
+     ],
+     [
+      1351,
+      "heading"
+     ],
+     [
+      1420,
+      "chapter"
+     ],
+     [
+      1421,
+      "heading"
+     ],
+     [
+      1498,
+      "chapter"
+     ],
+     [
+      1499,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "trees-of-pride": {
+   "partD": {
+    "about": "Project Gutenberg #1721: first published in 1922. Four chapters, divided as the hosted text heads them; no words were changed.",
+    "words": 24948,
+    "minutes": 108
+   },
+   "edition": "pg-1721",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "c7f3dde6b20e80438000468da50d1e0e5f355349d5a83c2b577a8f82161fe5a4",
+   "blocks": 448,
+   "items": [
+    {
+     "slug": "01-the-tale-of-the-peacock-trees",
+     "num": "I",
+     "title": "The Tale of the Peacock Trees",
+     "heading": 15,
+     "start": 16,
+     "end": 109,
+     "section": 0,
+     "words": 5835,
+     "firstWords": "Squire Vane was an elderly schoolboy of English education and Irish extraction."
+    },
+    {
+     "slug": "02-the-wager-of-squire-vane",
+     "num": "II",
+     "title": "The Wager of Squire Vane",
+     "heading": 110,
+     "start": 111,
+     "end": 210,
+     "section": 3,
+     "words": 6067,
+     "firstWords": "It was more than a month before the legend of the peacock"
+    },
+    {
+     "slug": "03-the-mystery-of-the-well",
+     "num": "III",
+     "title": "The Mystery of the Well",
+     "heading": 211,
+     "start": 212,
+     "end": 322,
+     "section": 6,
+     "words": 6653,
+     "firstWords": "Cyprian Paynter did not know what he expected to see rise out"
+    },
+    {
+     "slug": "04-the-chase-after-the-truth",
+     "num": "IV",
+     "title": "The Chase After the Truth",
+     "heading": 323,
+     "start": 324,
+     "end": 396,
+     "section": 9,
+     "words": 6393,
+     "firstWords": "Some time after the inquest, which had ended in the inconclusive verdict"
+    }
+   ],
+   "structure": {
+    "sha256": "c7f3dde6b20e80438000468da50d1e0e5f355349d5a83c2b577a8f82161fe5a4",
+    "source": "data/structured/trees-of-pride-pg-1721.json",
+    "roles": [
+     [
+      15,
+      "chapter"
+     ],
+     [
+      110,
+      "chapter"
+     ],
+     [
+      211,
+      "chapter"
+     ],
+     [
+      323,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

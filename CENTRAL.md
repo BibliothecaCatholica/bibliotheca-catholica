@@ -43,6 +43,12 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-16, Claude (Claude Code): Chesterton structure, rule and tooling recap
+
+- Earlier: hosting rule (#40), agent tools `npm run validate`, `hosted_counts.py`, `draft_text_map.py` (#41), 53 Chesterton books (#42 to #47), `import_plain_text.py`.
+- PR #48 (open, for review): chapter pages, structure files, and EPUBs for nine Chesterton editions. The Everlasting Man left to the held EPUB branch (HOLDS.md).
+- bibliotheca-texts PR #1 closed as superseded: its `main` already has all 123 editions (Grok's exports). Structure changes no texts, so no re-export is needed for #48.
+
 ### 2026-11-15, Catholic Repo (Grok): accepted scan matches; not yet available
 
 - Hosted as basic text editions (Faded Page): The Jesuit Martyrs of Canada (93.9%) and The Footsteps at the Lock (93.2%), accepted per edition (`collation.accepted` in each source record); the global 95% gate is unchanged.
@@ -54,12 +60,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 - Link-only records for 12 Chesterton works with only a scan or a Wikisource copy (The Thing, The Outline of Sanity, and others). `tools/import_plain_text.py` now folds accents in its collation and quotes OCR file names.
 - Held: Jesuit Martyrs of Canada and The Footsteps at the Lock (scan agreement 93.9% and 93.2%, below the 95% gate; OCR noise only); Walsh and Sword of Wood (gutenberg.net.au bot check); Faustula, Plummer, and Reeves (no clean text).
 - Remaining Chesterton work: `docs/claude-code-chesterton-prompt.md` (input `docs/research/chesterton-hostable-2026-11-15.csv`).
-
-### 2026-11-15, Catholic Repo (Grok): QA fixes; repo survey
-
-- QA low items fixed: Privacy now names the Libraries "Search another collection" form (Open Library only); author pages preload `/data/authors-detail.js` (root-absolute); stale counts and wording updated here and in PROJECT-RULES.
-- Survey of PRs #19 to #47 (Nov 10 to 15): discovery and translation sources; Spanish Victory cross; libraries desk; two design passes and notice rules; structured editions with chapter pages and EPUBs (16); covers C; Summa Design A; hero and takedown email; hosting rule by recorded basis (#40); counts and validation tooling (#41); approval statements removed (#38); 53 Chesterton and other pre-1931 books hosted (#39, #42 to #47).
-- `bibliotheca-texts` re-exported (117 texts; the 53 new ones were missing since the November 9 export). New optional edition field `translationYear`, set only where a record states the year (`docs/CATALOG.md`). `aquinas` is described under Hosting and data flow.
 
 ## Open items
 

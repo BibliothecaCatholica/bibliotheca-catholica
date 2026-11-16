@@ -47,7 +47,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - Earlier: hosting rule (#40), agent tools `npm run validate`, `hosted_counts.py`, `draft_text_map.py` (#41), 53 Chesterton books (#42 to #47), `import_plain_text.py`.
 - PR #48 (open, for review): chapter pages, structure files, and EPUBs for nine Chesterton editions. The Everlasting Man left to the held EPUB branch (HOLDS.md).
-- bibliotheca-texts PR #1 (open): the export of #42 to #47, additions only. Re-export after #48 to add the Grok editions. No force-pushes from here on.
+- bibliotheca-texts PR #1 closed as superseded: its `main` already has all 123 editions (Grok's exports). Structure changes no texts, so no re-export is needed for #48.
 
 ### 2026-11-15, Catholic Repo (Grok): accepted scan matches; not yet available
 

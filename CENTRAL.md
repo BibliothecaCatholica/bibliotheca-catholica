@@ -43,6 +43,11 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-16, Claude (Claude Code): single-scan transcription tool
+
+- tools/transcribe_scan.py: the Summa Supplement method made general for one free Internet Archive scan (positional OCR, running heads and page numbers dropped, hyphens rejoined into known words, OCR repairs only where one reading is far commoner in the library's texts, unread words flagged, 99.5% read gate, tests/test_transcribed_scans.py).
+- Validator: substitutePages is now optional for ocr-transcription records. Next: the Chesterton scan batch with it.
+
 ### 2026-11-16, Claude (Claude Code): merging rule; PR #48 merged
 
 - PR #48 merged: chapter pages and EPUBs for nine Chesterton editions (The Everlasting Man stays with the held EPUB branch).
@@ -53,11 +58,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 - Earlier: hosting rule (#40), agent tools `npm run validate`, `hosted_counts.py`, `draft_text_map.py` (#41), 53 Chesterton books (#42 to #47), `import_plain_text.py`.
 - PR #48 (open, for review): chapter pages, structure files, and EPUBs for nine Chesterton editions. The Everlasting Man left to the held EPUB branch (HOLDS.md).
 - bibliotheca-texts PR #1 closed as superseded: its `main` already has all 123 editions (Grok's exports). Structure changes no texts, so no re-export is needed for #48.
-
-### 2026-11-15, Catholic Repo (Grok): accepted scan matches; not yet available
-
-- Hosted as basic text editions (Faded Page): The Jesuit Martyrs of Canada (93.9%) and The Footsteps at the Lock (93.2%), accepted per edition (`collation.accepted` in each source record); the global 95% gate is unchanged.
-- New work status `not-yet-available`: no editions, no samples, never featured; pages say "Not yet available online." Used for the 11 Chesterton works with no online copy found. HOLDS.md added for parked items. Skipped: Baring's C (gutenberg.net.au bot check); Candles' Beams (no Internet Archive scan to collate against); Sheehan's Augustine essay (CELT only, consent caveat, no scan found).
 
 ## Open items
 

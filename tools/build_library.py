@@ -66,7 +66,7 @@ def validate(catalog):
                     assert edition['source'].startswith('https://archive.org/details/'), edition['id']
                     assert b'*** END OF THE TRANSCRIPTION ***' in raw and source['sha256'] == edition['sha256'], edition['id']
                     assert source['title'] == edition['sourceTitle'] and edition['rights'].startswith('Public domain in the USA.')
-                    scans = source['volumes'] + [source['substitutePages']]
+                    scans = source['volumes'] + ([source['substitutePages']] if source.get('substitutePages') else [])
                     assert edition['source'] in [v['url'] for v in scans], edition['id']
                     for v in scans:
                         assert v['url'] == 'https://archive.org/details/' + v['identifier'] and pd_by_date(v['year']), v['identifier']

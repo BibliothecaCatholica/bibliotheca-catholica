@@ -23,9 +23,10 @@ Review and commit intended source and generated changes. Rerun the three build c
 
 ## Owner decisions
 
-**Standing approval (owner rule change, November 14, 2026; recorded in CENTRAL.md).** Changes limited to presentation, docs, tests, and tooling may merge on green CI without the owner's review. His review is still required for:
+**Standing approval (owner rule change, November 14, 2026; recorded in CENTRAL.md).** Changes limited to presentation, docs, tests, and tooling may merge on green CI without the owner's review. Since November 15, 2026, so do pull requests that host texts public domain in the US by date (`rightsBasis: pd-date`): go-lives do not wait. His review is still required for:
 
-- new hosted texts;
+- new hosted texts on any other basis, including each `pd-nonrenewal` batch;
+- changes to the rights rule (`tools/rights_rule.py`, PROJECT-RULES rule 1);
 - any wording change in a hosted text;
 - rights or licence statements;
 - affiliate placements;

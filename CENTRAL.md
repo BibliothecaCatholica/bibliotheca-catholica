@@ -36,12 +36,17 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 - **Notice rules (November 14, 2026):** the Gutenberg notice is the licence's own 1.E.1 sentence, verbatim, once per page after the text; quality labels in edition details only; one-line affiliate disclosure; rights badges only on a record's own page; one-line Wikipedia credit and a Credits toggle for public-domain portraits; this file's cap. Details: `docs/PROJECT-RULES.md` rules 2, 7, 10, 11, 14, and 15.
 - **Hosting rule (November 15, 2026):** no fixed date cutoff. Host a full text only with a recorded, edition-specific basis: US public domain by date (stated once in `tools/rights_rule.py`; in 2026, 1930 or earlier, moving each January 1), or written evidence of no renewal, a defective notice, an open license, or permission. Texts may come from any source. Unknown or in-copyright without permission is link only, never hosted in part. Details: PROJECT-RULES rule 1.
-- **Standing approval:** presentation, docs, tests, and tooling may merge on green CI; the owner's review is still required for new hosted texts, hosted-text wording, rights or licence statements, affiliate placements, analytics, hosting or DNS, takedown identity, and outreach ([OPERATIONS](docs/OPERATIONS.md#owner-decisions)).
+- **Standing approval:** presentation, docs, tests, and tooling may merge on green CI, and so do hosted texts public domain by date (November 15, 2026); the owner's review is still required for new hosted texts on any other basis (each `pd-nonrenewal` batch), rights-rule changes, hosted-text wording, rights or licence statements, affiliate placements, analytics, hosting or DNS, takedown identity, and outreach ([OPERATIONS](docs/OPERATIONS.md#owner-decisions)).
 - **Settled (November 15, 2026):** Story of a Soul matching rule; EPUBs published for structured editions; hero engraving; takedown contact email; covers design C; Summa Design A.
 
 ## Handoff log
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
+
+### 2026-11-16, Claude (Claude Code): merging rule; PR #48 merged
+
+- PR #48 merged: chapter pages and EPUBs for nine Chesterton editions (The Everlasting Man stays with the held EPUB branch).
+- Merging rule recorded in PROJECT-RULES rule 14, OPERATIONS, and Standing decisions: pd-date go-lives merge on green CI; pd-nonrenewal batches and rights-rule changes wait for the owner.
 
 ### 2026-11-16, Claude (Claude Code): Chesterton structure, rule and tooling recap
 
@@ -53,13 +58,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - Hosted as basic text editions (Faded Page): The Jesuit Martyrs of Canada (93.9%) and The Footsteps at the Lock (93.2%), accepted per edition (`collation.accepted` in each source record); the global 95% gate is unchanged.
 - New work status `not-yet-available`: no editions, no samples, never featured; pages say "Not yet available online." Used for the 11 Chesterton works with no online copy found. HOLDS.md added for parked items. Skipped: Baring's C (gutenberg.net.au bot check); Candles' Beams (no Internet Archive scan to collate against); Sheehan's Augustine essay (CELT only, consent caveat, no scan found).
-
-### 2026-11-15, Catholic Repo (Grok): new texts; Chesterton handoff to Claude Code
-
-- Hosted as basic text editions (no structure or EPUB yet): The Queen of Seven Swords and The Coward (Faded Page), von Hügel's Essays and Addresses (Faded Page; calm note on essay 5, not featured, no `added`), and The Trial of John Jasper (PG 70690).
-- Link-only records for 12 Chesterton works with only a scan or a Wikisource copy (The Thing, The Outline of Sanity, and others). `tools/import_plain_text.py` now folds accents in its collation and quotes OCR file names.
-- Held: Jesuit Martyrs of Canada and The Footsteps at the Lock (scan agreement 93.9% and 93.2%, below the 95% gate; OCR noise only); Walsh and Sword of Wood (gutenberg.net.au bot check); Faustula, Plummer, and Reeves (no clean text).
-- Remaining Chesterton work: `docs/claude-code-chesterton-prompt.md` (input `docs/research/chesterton-hostable-2026-11-15.csv`).
 
 ## Open items
 

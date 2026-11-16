@@ -25,7 +25,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
-from rights_rule import pd_by_date  # noqa: E402
+from rights_rule import nonrenewal_problems, pd_by_date  # noqa: E402
 
 UA = {'User-Agent': 'BibliothecaCatholica-catalog/1.0 (+https://bibliothecacatholica.com)'}
 END = '*** END OF THE TRANSCRIPTION ***'
@@ -216,10 +216,16 @@ def main(spec, cache):
     for e in json.loads(Path(spec).read_text()):
         out_path = ROOT / f"data/texts/{e['edition']}.txt"
         assert not out_path.exists(), f"{e['edition']}: already hosted; a pinned text never changes"
-        assert pd_by_date(e['year']), e['edition']
+        basis = e.get('rightsBasis', 'pd-date')
+        if basis == 'pd-date':
+            assert pd_by_date(e['year']), e['edition']
+        else:  # pd-nonrenewal: the evidence must pass, and the scan must be the printing it names
+            assert basis == 'pd-nonrenewal', basis
+            assert not nonrenewal_problems(e.get('nonRenewal')), (e['edition'], nonrenewal_problems(e.get('nonRenewal')))
+            assert e['nonRenewal']['scan'] == e['ia'], e['edition']
         paras, corrections, flagged, words, unknown, meta, xml = build(e, cache, V)
         year = int(re.search(r'\d{4}', str(meta.get('date'))).group())
-        assert pd_by_date(year), (e['ia'], year)
+        assert pd_by_date(year) if basis == 'pd-date' else year == e['nonRenewal']['firstPublicationYear'], (e['ia'], year)
         T = e['title']
         head = [T, '', f"By {e['author']}", '', f"First published {e['firstPublished']}. Public domain in the USA.", '',
                 f"Transcribed for Bibliotheca Catholica from the Internet Archive scan {e['ia']} "
@@ -233,8 +239,10 @@ def main(spec, cache):
         out_path.write_bytes(data)
         sha = hashlib.sha256(data).hexdigest()
         rec = {'id': e['edition'], 'kind': 'ocr-transcription', 'title': e['sourceTitle'], 'author': e['author'],
-               'rights': f"Public domain in the USA. First published {e['firstPublished']}; the scanned printing is of {year}.",
-               'rightsBasis': 'pd-date',
+               'rights': (f"Public domain in the USA. First published {e['firstPublished']}; the scanned printing is of {year}."
+                          if basis == 'pd-date' else f"Public domain in the USA. First published in the United States in "
+                          f"{year} and not renewed; the evidence is in nonRenewal."),
+               'rightsBasis': basis, **({'nonRenewal': e['nonRenewal']} if basis == 'pd-nonrenewal' else {}),
                'volumes': [{'identifier': e['ia'], 'url': f"https://archive.org/details/{e['ia']}", 'year': year,
                             'publisher': meta.get('publisher'), 'ocr': f"{e['ia']}_djvu.xml",
                             'ocrSha256': hashlib.sha256(xml).hexdigest(), 'leaves': [e['firstLeaf'], e['lastLeaf']]}],

@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-7bae333238fa",
+  "id": "bc-103401b2b943",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "d9552b2c5f943dd1d7c302009d8f9c06efaae7daa34b4c4bf9943ae268ee1d2c",
@@ -93,7 +93,7 @@
     "tools/build_guides.py": "e631f58b30efd5da88314011c897d510765f94ed6030d22201fa0baa7086f7ba",
     "tools/build_info.py": "ba4d31658c397635b87d02548718264561a84d77b989481a858b659fccedb7fd",
     "tools/build_isidore_names.py": "2dc193eaddb873b549c82dfb631821e22dab7067c6f635298473bde2611dd97c",
-    "tools/build_library.py": "76bb062dce7b0af080e49be4190cce6736d0f7ad2c068e70f6af5f6c6d5e87c0",
+    "tools/build_library.py": "5db913a0893eb76eb8cbe348ab4e3d87bd10683c86b21e66f0360419f559b720",
     "tools/build_open_data.py": "088c32974d22822836c7483dc26b9937920221ebcb792cacc41d73bb1b1d30b0",
     "tools/build_print_editions.py": "59916747699424444fb7482eb531fed70e58d300c1e0aad7d796810a70a8cc56",
     "tools/build_reading_plans.py": "cf1f57b546ba691e5391540f040e8928bfe4f6d2bb7a69edb2d2afcd50418728",
@@ -126,7 +126,7 @@
     "tools/hosted_counts.py": "686b636ed859efe0c21c302a5b83fbe55b244a762301d36426b9ab289b9166b7",
     "tools/hubio.py": "2eb83cda9e0396d6e486b3eabc44af1cead8de021559d1292b0ff2b99297ce17",
     "tools/import_modern_authors.py": "f2759a6db08c7a6f6c6cb880cd2d4384a4353f523b2f9698dbd307cf6517a08c",
-    "tools/import_plain_text.py": "3498889c722b4b30b69b96b6562c987f03dfb72add9c1010a83fcd90b122caad",
+    "tools/import_plain_text.py": "db2a30653c7b3b93ee095a3bba91014b57db79b09ba3619bc705986b447dd450",
     "tools/import_saints.py": "f8cd90fe1dfdbe8e7a3997c5a6b04233ead629827220690cc3ef246e846c1b41",
     "tools/import_saints_pilot.py": "331568adebc1859f21d48e86228a7d71de106d7d4be1a59ee1409da792290504",
     "tools/import_standard_ebooks.py": "297bba7318ec9e15ea5febbb29af7dbcc68c52cee9f96d100c84e6722fec0c91",
@@ -141,7 +141,7 @@
     "tools/refresh_reading_options.py": "7b6c29b3c14170597bddbc97e579b1b015453d4afcdd732a9b44acede2883046",
     "tools/resources.py": "8aa92dd0932a62e4b48a2cc24ed872ceaeb2351b810be88fa9bc9379fa90a5e0",
     "tools/rights_pages.py": "0f4bb198b01de039f6c25636163c75020eada72afb5b57ebcfe8c32c3b9ecad2",
-    "tools/rights_rule.py": "3a0f37096b4c46e5c92127facfa21812bfe6d60ed42a75e27dc20956bf346871",
+    "tools/rights_rule.py": "521ff5f847da647d77dbec5c01b831635985f49c5cab4cd113d60d244b4bfded",
     "tools/rites_geo.py": "d1a93ba5ace2616b1a95b6b95f1689546a8324219cc09c22a943d455ab513af4",
     "tools/rites_pages.py": "8013b7a33b1193b7652bbf61f2a30be39ae406ce5c721a6fd0bc27f36914ad3f",
     "tools/saints_calendar.py": "6d9375e81c92ac6dffc6538b2079f5e34c818ae201430f7f1a9e23d496661a8a",
@@ -150,7 +150,7 @@
     "tools/structure_text.py": "ee5dd21b45d5afc99d0cc22812739c5b2b48ba34bd106089c311bc5e12ff88f6",
     "tools/substacks_src.py": "e02dd1b54559bbc0cf3dda1a747e820c9fc7dff30f8cbf036952f5733b2bda1a",
     "tools/text_pages.py": "1cefe76e1c719c78ef3c903b0ef4f8239bfbfae176df19fbe5a46c7dab589a04",
-    "tools/transcribe_scan.py": "02ffc9213bef69f3a9113e3ad1d068fddd2b20b0a1c784f28c8e597d3c9d2dfc",
+    "tools/transcribe_scan.py": "e48b43fd26669bf81d2efcf90917478025594b0e7d10d8dc89a4a67dcfda50d1",
     "tools/transcribe_supplement.py": "f574af64df26a17dd0c2664b9345a3537ae94b92ada43fe30b4f5279abd5f2e6",
     "tools/verify_text_archive.py": "5255fb5783996417d8e145e70e415bb2183393303d0c9916089695766569fd53"
   },

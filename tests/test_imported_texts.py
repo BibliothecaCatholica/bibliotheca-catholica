@@ -3,7 +3,7 @@ import hashlib, json, sys, unittest
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
-from rights_rule import pd_by_date  # noqa: E402
+from rights_rule import nonrenewal_problems, pd_by_date  # noqa: E402
 
 LIB = json.loads((ROOT / 'data/library.json').read_text())
 IMPORTED = [(w, e, json.loads((ROOT / 'data/sources' / (e['id'] + '.json')).read_text()))
@@ -20,8 +20,12 @@ class ImportedTexts(unittest.TestCase):
             self.assertIn(r['sourceNotice'].strip()[:400], text, e['id'])  # the source's own header, unchanged
             self.assertIn('*** START OF THE HOSTED TEXT', text, e['id'])
             self.assertTrue(text.rstrip().endswith('***'), e['id'])
-            self.assertEqual(r['rightsBasis'], 'pd-date', e['id'])
-            self.assertTrue(pd_by_date(r['iaWitness']['year']), e['id'])
+            self.assertIn(r['rightsBasis'], ('pd-date', 'pd-nonrenewal'), e['id'])
+            if r['rightsBasis'] == 'pd-date':
+                self.assertTrue(pd_by_date(r['iaWitness']['year']), e['id'])
+            else:
+                self.assertEqual(nonrenewal_problems(r.get('nonRenewal')), [], e['id'])
+                self.assertEqual(r['iaWitness']['identifier'], r['nonRenewal']['scan'], e['id'])
             self.assertEqual(r['iaWitness']['url'], 'https://archive.org/details/' + r['iaWitness']['identifier'])
             col = r['collation']
             if 'accepted' in col:  # per-edition owner acceptance below 95%, recorded with its score and reason

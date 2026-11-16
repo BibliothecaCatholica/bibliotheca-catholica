@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 import transcribe_scan as T  # noqa: E402
-from rights_rule import pd_by_date  # noqa: E402
+from rights_rule import nonrenewal_problems, pd_by_date  # noqa: E402
 
 V = {'god': 9000, 'grad': 3, 'universal': 1340, 'unconscious': 80, 'found': 5000, 'born': 900, 'well': 8000, 'our': 20000,
      'burns': 40, 'class': 300}
@@ -50,9 +50,14 @@ class Records(unittest.TestCase):
             self.assertGreaterEqual(r['readRate'], 0.995, r['id'])  # unread words stay flagged; this is the gate
             self.assertEqual(r['flaggedBlocks'], len(r['flagged']), r['id'])
             self.assertEqual(r['corrections'], len(r['correctionList']), r['id'])
-            self.assertEqual(r['rightsBasis'], 'pd-date', r['id'])
+            self.assertIn(r['rightsBasis'], ('pd-date', 'pd-nonrenewal'), r['id'])
+            if r['rightsBasis'] == 'pd-nonrenewal':
+                self.assertEqual(nonrenewal_problems(r.get('nonRenewal')), [], r['id'])
             for v in r['volumes']:
-                self.assertTrue(pd_by_date(v['year']), r['id'])
+                if r['rightsBasis'] == 'pd-date':
+                    self.assertTrue(pd_by_date(v['year']), r['id'])
+                else:  # the scan is the very printing the evidence names
+                    self.assertEqual((v['identifier'], v['year']), (r['nonRenewal']['scan'], r['nonRenewal']['firstPublicationYear']))
                 self.assertEqual(v['url'], 'https://archive.org/details/' + v['identifier'])
                 self.assertRegex(v['ocrSha256'], r'^[0-9a-f]{64}$')
 

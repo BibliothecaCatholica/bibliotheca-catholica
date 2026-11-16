@@ -21,7 +21,7 @@ For each entry the tool:
      `public-domain-text`, the shape tools/build_library.py validates).
 It never edits data/library.json and never overwrites an existing hosted text.
 """
-import difflib, hashlib, html, json, re, sys, time, urllib.request
+import difflib, hashlib, html, json, re, sys, time, unicodedata, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,6 +45,8 @@ def decode(raw):
 
 
 def words(s):
+    # accents are folded (é to e) so a French title is one word, not two fragments, on both sides (2026-11-15)
+    s = ''.join(c for c in unicodedata.normalize('NFKD', s) if not unicodedata.combining(c))
     return re.findall(r"[a-z0-9]+", s.lower().replace('’', "'").replace("'", ''))
 
 
@@ -72,7 +74,7 @@ def main(spec_path):
         m = meta['metadata']
         ocr_name = next(f['name'] for f in meta['files'] if f['name'].endswith('_djvu.txt'))
         # archive.org/download redirects to numbered storage hosts; the /stream/ page serves the same OCR inline.
-        page = decode(get(f"https://archive.org/stream/{e['ia']}/{ocr_name}"))
+        page = decode(get(f"https://archive.org/stream/{e['ia']}/{urllib.parse.quote(ocr_name)}"))
         ocr = html.unescape(re.search(r'<pre[^>]*>(.*?)</pre>', page, re.S).group(1)).encode('utf-8')
         year = int(re.search(r'\d{4}', str(m.get('date') or m.get('year'))).group())
         assert pd_by_date(year), (e['ia'], year)

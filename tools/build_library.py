@@ -25,6 +25,10 @@ def validate(catalog):
         assert work['title'] and work['author'] and work['category'] and work['tradition']
         assert not work.get('authorId') or work['authorId'] in authors
         assert work['description'].strip(), f"Missing description: {work['id']}"
+        assert work.get('status') in (None, 'not-yet-available'), work['id']
+        if work.get('status') == 'not-yet-available':  # listed only: no online copy found yet, so no editions or samples
+            assert not work['editions'] and not work.get('readingLinks') and not work.get('added'), work['id']
+            continue
         if all(e['access']=='reference' for e in work['editions']):
             assert work.get('readingLinks'), f"Reference-only work needs a reading sample: {work['id']}"
         for item in work.get('readingLinks', []):
@@ -39,6 +43,11 @@ def validate(catalog):
             assert edition['rights'] and edition['checked'] and edition['access'] in ['full-text', 'reference']
             for contributor in edition.get('contributors', []):
                 assert contributor['role'] and contributor['name']
+            if 'translationYear' in edition:
+                # Optional (2026-11-15): the year the named translation was first published, only when the record states it
+                # (for example Benham 1874 vs 1886); used by the EPUB title page. Never inferred from a file or a translator's dates.
+                assert isinstance(edition['translationYear'], int) and not isinstance(edition['translationYear'], bool), edition['id']
+                assert 1400 <= edition['translationYear'] <= 2100, edition['id']
             if edition.get('rightsBasis'):
                 # Hosting rule (2026-11-15): a basis other than date needs its written evidence on the record
                 assert edition['rightsBasis'] in BASES, edition['id']

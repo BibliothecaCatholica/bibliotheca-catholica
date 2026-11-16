@@ -156,6 +156,7 @@ class AffiliateLinkTests(unittest.TestCase):
         pol = self.pages['policy/index.html']
         self.assertIn('The newsletter sign-up form on the home page and the Advent reading plan is provided by Substack under its own', pol)
         self.assertIn('affiliate (a referral link', pol)
+        self.assertIn('The “Search another collection” form on the <a href="/libraries/">Libraries</a> page sends what you type to Open Library', pol)
 
     def test_agents_md_rules(self):
         t = ''.join((ROOT / f).read_text() for f in ('docs/IMPLEMENTATION-NOTES.md', 'docs/PROJECT-RULES.md', 'docs/ANALYTICS.md'))

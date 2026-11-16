@@ -23,7 +23,14 @@ class ImportedTexts(unittest.TestCase):
             self.assertEqual(r['rightsBasis'], 'pd-date', e['id'])
             self.assertTrue(pd_by_date(r['iaWitness']['year']), e['id'])
             self.assertEqual(r['iaWitness']['url'], 'https://archive.org/details/' + r['iaWitness']['identifier'])
-            self.assertGreaterEqual(r['collation']['agreement'], 0.95, e['id'])  # OCR noise allowed; a wrong book is not
+            col = r['collation']
+            if 'accepted' in col:  # per-edition owner acceptance below 95%, recorded with its score and reason
+                self.assertEqual(col['accepted']['agreement'], col['agreement'], e['id'])
+                self.assertGreaterEqual(col['agreement'], 0.9, e['id'])
+                self.assertTrue(col['accepted']['date'] and len(col['accepted']['reason']) > 40, e['id'])
+                self.assertIn('Accepted by owner ' + col['accepted']['date'] + ' at ' + f"{col['agreement']:.1%}", e['note'], e['id'])
+            else:
+                self.assertGreaterEqual(col['agreement'], 0.95, e['id'])  # OCR noise allowed; a wrong book is not
             self.assertTrue(e['rights'].startswith('Public domain in the USA.'), e['id'])
             self.assertIn(r['sourceName'], e['rights'], e['id'])
 

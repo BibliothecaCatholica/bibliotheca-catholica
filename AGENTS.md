@@ -2,7 +2,7 @@
 
 Bibliotheca Catholica is a static Catholic reading room and curated resource index. Owner: Micah Watson. These instructions apply to every contributor and agent.
 
-Read [CENTRAL.md](CENTRAL.md) next, then only the detailed documents relevant to your task. Do not treat a dated implementation note as a current task or fresh approval.
+Read [CENTRAL.md](CENTRAL.md) next (the shared handoff for the Grok bots, ChatGPT, and Claude), then only the detailed documents relevant to your task. Do not treat a dated implementation note as a current task or fresh approval.
 
 ## Rules to retain
 

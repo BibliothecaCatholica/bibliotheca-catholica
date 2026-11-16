@@ -166,7 +166,7 @@ def page(tpl,route,title,desc,body,noindex=False,jsonld=()):
     s=re.sub(r'<script (?:defer )?src="data/data\.js(\?[^"]*)?"></script>',lambda m:'<script>window.BC_BOOT='+json.dumps(route)+'</script>\n'+m.group(0),s,count=1)
     assert 'window.BC_BOOT' in s,'data/data.js script tag not found in index.html'
     if route.startswith('author/') or route=='timeline':  # Phase B item 5: these routes wait for the lazy author detail; fetch it with the core
-        s=s.replace('</head>','<link rel="preload" as="script" href="data/authors-detail.js?v='+DETAIL_V+'">\n</head>',1)
+        s=s.replace('</head>','<link rel="preload" as="script" href="/data/authors-detail.js?v='+DETAIL_V+'">\n</head>',1)
     return s
 CC_BY_SA='https://creativecommons.org/licenses/by-sa/4.0/'
 def a(href,label,ext=False):
@@ -699,7 +699,7 @@ def main():
         hosted=any(e.get('text') for e in w['editions'])
         by=byline(w)
         ra=RA.get(w['id']);ra_note=ra_note_html(ra,libw,True) if ra and w['id'] in ra.get('noteWorks',[]) else ''
-        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d).replace('<div class="page-head">','<div class="page-head work-head has-cover">'+cover_img(hosted_ed(w),'work-cover',220,False),1 if hosted else 0)+'<p>By '+by+'. '+E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.'))+'</p>'+ra_note+part_d_html(w,TPD.get(w['id'],{}).get('partD'))+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+(summa_work_html(SUMMA) if SUMMA and w['id']==SUMMA['work'] else '')+series_html(w,lib,TPD)+(PE['works'][w['id']]['html'] if w['id'] in PE['works'] else '')+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
+        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d).replace('<div class="page-head">','<div class="page-head work-head has-cover">'+cover_img(hosted_ed(w),'work-cover',220,False),1 if hosted else 0)+'<p>By '+by+'. '+('Not yet available online.' if w.get('status')=='not-yet-available' else E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.')))+'</p>'+ra_note+part_d_html(w,TPD.get(w['id'],{}).get('partD'))+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+(summa_work_html(SUMMA) if SUMMA and w['id']==SUMMA['work'] else '')+series_html(w,lib,TPD)+(PE['works'][w['id']]['html'] if w['id'] in PE['works'] else '')+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
         book={'@context':'https://schema.org','@type':'Book','name':w['title'],'url':SITE+'work/'+w['id']+'/','author':{'@type':'Person','name':w['author']},'description':d,'genre':w['category']}
         if w.get('authorId') in auth_ids:book['author']['url']=SITE+'author/'+w['authorId']+'/'
         elif w['id'] in RA:book['author']['url']=SITE+'author/'+RA[w['id']]['id']+'/'

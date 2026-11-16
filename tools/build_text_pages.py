@@ -52,7 +52,6 @@ PART_D={
     'man-who-knew-too-much':{'about':'Project Gutenberg #1720: first published in 1922. Eight Horne Fisher stories, divided as the hosted text heads them; no words were changed.'},
     'flying-inn':{'about':'Project Gutenberg #59239: the John Lane Company, New York printing (copyright 1914). Twenty-five chapters, divided as the hosted text heads them; no words were changed.'},
     'trees-of-pride':{'about':'Project Gutenberg #1721: first published in 1922. Four chapters, divided as the hosted text heads them; no words were changed.'},
-    'everlasting-man':{'about':'Project Gutenberg #65688: the Hodder and Stoughton, London text. An introduction, fourteen chapters in two parts, and a conclusion, divided as the hosted text heads them; the two appendices stay in the reader. No words were changed.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

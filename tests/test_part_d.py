@@ -24,7 +24,7 @@ class PartD(unittest.TestCase):
                                            'man-thursday', 'chesterton-francis', 'grammar-assent', 'development-doctrine',
                                            'paradoxes-catholicism', 'life-of-teresa', 'apologia', 'virgin-saints-and-martyrs',
                                            # Chesterton editions, November 15, 2026
-                                           'everlasting-man', 'catholic-church-conversion', 'ballad-white-horse',
+                                           'catholic-church-conversion', 'ballad-white-horse',
                                            'whats-wrong-world', 'short-history-england', 'man-who-knew-too-much', 'flying-inn',
                                            'trees-of-pride', 'manalive', 'club-queer-trades'})
         for wid, d in TP.items():

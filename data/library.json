@@ -52,6 +52,7 @@
         {
           "id": "ccel-npnf102-doctrine",
           "label": "Shaw translation (NPNF Series I, Vol. II)",
+          "translationYear": 1873,
           "source": "https://www.ccel.org/ccel/schaff/npnf102.html",
           "language": "English",
           "contributors": [
@@ -101,6 +102,7 @@
         {
           "id": "pg-50040",
           "label": "Project Gutenberg #50040",
+          "translationYear": 1948,
           "source": "https://www.gutenberg.org/ebooks/50040",
           "language": "English",
           "contributors": [
@@ -1378,6 +1380,7 @@
         {
           "id": "pg-45304",
           "label": "Project Gutenberg #45304 · Volume I",
+          "translationYear": 1871,
           "source": "https://www.gutenberg.org/ebooks/45304",
           "language": "English",
           "contributors": [
@@ -1406,6 +1409,7 @@
         {
           "id": "pg-45305",
           "label": "Project Gutenberg #45305 · Volume II",
+          "translationYear": 1871,
           "source": "https://www.gutenberg.org/ebooks/45305",
           "language": "English",
           "contributors": [
@@ -1483,6 +1487,7 @@
         {
           "id": "pg-7403",
           "label": "Project Gutenberg #7403",
+          "translationYear": 1905,
           "source": "https://www.gutenberg.org/ebooks/7403",
           "language": "English",
           "contributors": [
@@ -5032,6 +5037,623 @@
           "rightsBasis": "pd-date"
         }
       ]
+    },
+    {
+      "id": "queen-of-seven-swords",
+      "title": "The Queen of Seven Swords",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's poems to the Blessed Virgin Mary, published four years after he became a Catholic.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1926",
+      "editions": [
+        {
+          "id": "fp-20200364",
+          "label": "Faded Page #20200364",
+          "source": "https://www.fadedpage.com/showbook.php?pid=20200364",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Faded Page notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1926 (London: Sheed and Ward). Faded Page's text was compared word by word with the Internet Archive scan of the 1926 Sheed and Ward printing: 97% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record.",
+          "sourceTitle": "The Queen of Seven Swords",
+          "digitalRelease": "Mar. 29, 2020",
+          "access": "full-text",
+          "text": "data/texts/fp-20200364.txt",
+          "sha256": "ad3e68ca93026dba0fb1fef02237d59216c3116c0fd7b25ce33e8b04de32f9ea",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "the-coward",
+      "title": "The Coward",
+      "author": "Robert Hugh Benson",
+      "authorId": "robert-hugh-benson",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A novel about a young man of an old English family who fails a test of courage and has to live with what follows.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1912",
+      "editions": [
+        {
+          "id": "fp-20170322",
+          "label": "Faded Page #20170322",
+          "source": "https://www.fadedpage.com/showbook.php?pid=20170322",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Faded Page notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1912. Faded Page's text was compared word by word with the Internet Archive scan of the 1912 B. Herder printing (St. Louis): 99% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record.",
+          "sourceTitle": "The Coward",
+          "digitalRelease": "Mar. 13, 2017",
+          "access": "full-text",
+          "text": "data/texts/fp-20170322.txt",
+          "sha256": "418d1ef108788a74a5662b822eb4926f300f4f5cd7a0e47d9bde6c2f7c3b3544",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "von-hugel-essays-addresses",
+      "title": "Essays and Addresses on the Philosophy of Religion (First Series)",
+      "author": "Friedrich von Hügel",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "Eleven essays and addresses on religious belief, Christianity, and the Catholic Church by a Catholic layman and philosopher of religion. Some essays, especially the fifth, reflect the biblical criticism of his day.",
+      "reviewStatus": "source-checked",
+      "date": "1921",
+      "editions": [
+        {
+          "id": "fp-20241220",
+          "label": "Faded Page #20241220",
+          "source": "https://www.fadedpage.com/showbook.php?pid=20241220",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Faded Page notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1921 (London: J. M. Dent). Faded Page's text was compared word by word with the Internet Archive copy of a later Dent printing of the same text (its imprint reads first published 1921, last reprinted 1949): 98% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record. Context: von Hügel was a friend of figures in the Modernist controversy but was never censured, and he submitted this book to the judgment of the Catholic Church. Essay 5, \"The Apocalyptic Element in the Teaching of Jesus\", reflects the biblical criticism of his day and is best read alongside the Church's later teaching on Scripture.",
+          "sourceTitle": "Essays and Addresses on the Philosophy of Religion",
+          "digitalRelease": "22nd December, 2024",
+          "access": "full-text",
+          "text": "data/texts/fp-20241220.txt",
+          "sha256": "72914540ca2a7c3b9928eae5b594ab9bb8ce7f023e88a5e930013feb4cf2de68",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "trial-of-john-jasper",
+      "title": "The Trial of John Jasper for the Murder of Edwin Drood",
+      "author": "G. K. Chesterton and others",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "The record of a mock trial held in London in January 1914, in which members of the Dickens Fellowship tried John Jasper for the murder of Edwin Drood, with Chesterton as judge and Bernard Shaw as foreman of the jury.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1914",
+      "editions": [
+        {
+          "id": "pg-70690",
+          "label": "Project Gutenberg #70690",
+          "source": "https://www.gutenberg.org/ebooks/70690",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1914. The title page names Chapman and Hall, London, 1914.",
+          "sourceTitle": "Trial of John Jasper, lay precentor of Cloisterham Cathedral in the County of Kent, for the murder of Edwin Drood, engineer",
+          "digitalRelease": "May 3, 2023",
+          "access": "full-text",
+          "text": "data/texts/pg-70690.txt",
+          "sha256": "6441899100c347d07b46384e98201affe52769505358f17d0b6f385b086549ee",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "the-thing",
+      "title": "The Thing",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Apologetics",
+      "tradition": "Catholic tradition",
+      "description": "Essays from Chesterton's Catholic years on the Church and on modern arguments against it. The American edition is titled The Thing: Why I Am a Catholic.",
+      "reviewStatus": "source-checked",
+      "date": "1929",
+      "editions": [
+        {
+          "id": "ia-thingwhyiamcatho00ches-0",
+          "label": "Internet Archive scan (New York: Dodd, Mead, 1930)",
+          "source": "https://archive.org/details/thingwhyiamcatho00ches_0",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published 1930, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-15",
+          "note": "First published 1929 (London: Sheed and Ward). This scan is the 1930 American edition, freely readable (not a lending copy). Link only.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "resurrection-of-rome",
+      "title": "The Resurrection of Rome",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton on the city of Rome, its history, and the Papacy.",
+      "reviewStatus": "source-checked",
+      "date": "1930",
+      "editions": [
+        {
+          "id": "ia-resurrectionofro0000gilb",
+          "label": "Internet Archive scan (New York: Dodd, Mead, 1930)",
+          "source": "https://archive.org/details/resurrectionofro0000gilb",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published 1930, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-15",
+          "note": "First published 1930. Internet Archive record: Dodd, Mead, 1930, freely readable (not a lending copy). Link only.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "outline-of-sanity",
+      "title": "The Outline of Sanity",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's case for distributism: property, and the means of making a living, spread widely among ordinary families.",
+      "reviewStatus": "source-checked",
+      "date": "1926",
+      "editions": [
+        {
+          "id": "ia-outlineofsanity0000ches",
+          "label": "Internet Archive scan (New York: Dodd, Mead, 1927)",
+          "source": "https://archive.org/details/outlineofsanity0000ches",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published 1927, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-15",
+          "note": "First published 1926 (London: Methuen). This scan is the 1927 American edition, freely readable (not a lending copy). Link only.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "superstitions-of-the-sceptic",
+      "title": "The Superstitions of the Sceptic",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Apologetics",
+      "tradition": "Catholic tradition",
+      "description": "A short lecture on scepticism, printed with a correspondence between Chesterton and the historian G. G. Coulton.",
+      "reviewStatus": "source-checked",
+      "date": "1925",
+      "editions": [
+        {
+          "id": "ia-superstitionsofs0000unse-q9f6",
+          "label": "Internet Archive scan (Cambridge: W. Heffer and Sons, 1925)",
+          "source": "https://archive.org/details/superstitionsofs0000unse_q9f6",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published 1925, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-15",
+          "note": "First published 1925. Internet Archive record: W. Heffer and Sons, 1925, freely readable (not a lending copy). Link only.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "generally-speaking",
+      "title": "Generally Speaking",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A collection of Chesterton's essays.",
+      "reviewStatus": "source-checked",
+      "date": "1928",
+      "editions": [
+        {
+          "id": "ia-generallyspeakin00ches",
+          "label": "Internet Archive scan (New York: Dodd, Mead, 1929)",
+          "source": "https://archive.org/details/generallyspeakin00ches",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published 1929, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-15",
+          "note": "First published 1928 (London: Methuen). This scan is the 1929 American edition, freely readable (not a lending copy). Link only.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "do-we-agree",
+      "title": "Do We Agree? A Debate between G. K. Chesterton and Bernard Shaw",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "The 1928 debate between Chesterton and Bernard Shaw on property and distributism, with Hilaire Belloc in the chair.",
+      "reviewStatus": "source-checked",
+      "date": "1928",
+      "editions": [
+        {
+          "id": "ia-doweagree0000gkch",
+          "label": "Internet Archive scan (London: Cecil Palmer, 1928)",
+          "source": "https://archive.org/details/doweagree0000gkch",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published 1928, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-15",
+          "note": "First published 1928. Internet Archive record: Cecil Palmer, 1928, freely readable (not a lending copy). Link only.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "gkc-as-mc",
+      "title": "G.K.C. as M.C.",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Thirty-seven of Chesterton's introductions to other writers' books, selected by J. P. de Fonseka.",
+      "reviewStatus": "source-checked",
+      "date": "1929",
+      "editions": [
+        {
+          "id": "ia-gkcasmcbeingcoll0000gkch",
+          "label": "Internet Archive scan (1929)",
+          "source": "https://archive.org/details/gkcasmcbeingcoll0000gkch",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published 1929, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-15",
+          "note": "First published 1929 (London: Methuen). Internet Archive record dated 1929, freely readable (not a lending copy). Link only.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "simplicity-and-tolstoy",
+      "title": "Simplicity and Tolstoy",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A short essay on Tolstoy and the idea of the simple life.",
+      "reviewStatus": "source-checked",
+      "date": "1912",
+      "editions": [
+        {
+          "id": "ia-simplicitytolsto00chesuoft",
+          "label": "Internet Archive scan (London: A. L. Humphreys, 1912)",
+          "source": "https://archive.org/details/simplicitytolsto00chesuoft",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published 1912, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-15",
+          "note": "First published 1912. Internet Archive record: A. L. Humphreys, 1912, freely readable (not a lending copy). Link only.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "samuel-johnson-meynell",
+      "title": "Samuel Johnson",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A selection from Samuel Johnson's writings, edited by Alice Meynell, with an introduction by Chesterton.",
+      "reviewStatus": "source-checked",
+      "date": "1911",
+      "editions": [
+        {
+          "id": "ws-samuel-johnson-meynell-and-chesterton",
+          "label": "Wikisource transcription",
+          "source": "https://en.wikisource.org/wiki/Samuel_Johnson_(Meynell_%26_Chesterton)",
+          "language": "English",
+          "contributors": [],
+          "rights": "Full text at Wikisource; not hosted here. Published 1911, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-15",
+          "note": "First published 1911 (London: Herbert and Daniel). Link only.",
+          "access": "full-text"
+        },
+        {
+          "id": "ia-samueljohnson00chesuoft",
+          "label": "Internet Archive scan (London: Herbert and Daniel, 1911)",
+          "source": "https://archive.org/details/samueljohnson00chesuoft",
+          "language": "English",
+          "contributors": [],
+          "rights": "External scan at the Internet Archive; not hosted here. Published 1911, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-15",
+          "note": "Internet Archive record: Herbert and Daniel, 1911, freely readable (not a lending copy). Link only.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "how-to-help-annexation",
+      "title": "How to Help Annexation",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "A short wartime pamphlet.",
+      "reviewStatus": "source-checked",
+      "date": "1918",
+      "editions": [
+        {
+          "id": "ws-how-to-help-annexation",
+          "label": "Wikisource transcription",
+          "source": "https://en.wikisource.org/wiki/How_to_Help_Annexation",
+          "language": "English",
+          "contributors": [],
+          "rights": "Full text at Wikisource; not hosted here. Published 1918, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-15",
+          "note": "First published 1918. Proofread on Wikisource. Link only.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "culture-and-the-coming-peril",
+      "title": "Culture and the Coming Peril",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "A lecture Chesterton gave at the University of London, printed as a pamphlet.",
+      "reviewStatus": "source-checked",
+      "date": "1927",
+      "editions": [
+        {
+          "id": "ws-culture-and-the-coming-peril",
+          "label": "Wikisource transcription",
+          "source": "https://en.wikisource.org/wiki/Culture_and_the_Coming_Peril",
+          "language": "English",
+          "contributors": [],
+          "rights": "Full text at Wikisource; not hosted here. Published 1927, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-15",
+          "note": "First published 1927. Proofread on Wikisource. Link only.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "gloria-in-profundis",
+      "title": "Gloria in Profundis",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "A single Christmas poem, published as one of Faber's Ariel Poems.",
+      "reviewStatus": "source-checked",
+      "date": "1927",
+      "editions": [
+        {
+          "id": "ws-gloria-in-profundis",
+          "label": "Wikisource transcription",
+          "source": "https://en.wikisource.org/wiki/Gloria_in_Profundis",
+          "language": "English",
+          "contributors": [],
+          "rights": "Full text at Wikisource; not hosted here. Published 1927, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
+          "checked": "2026-11-15",
+          "note": "First published 1927 (London: Faber and Gwyer), Ariel Poems no. 5. Link only.",
+          "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "jesuit-martyrs-of-canada",
+      "title": "The Jesuit Martyrs of Canada",
+      "author": "E. J. Devine, S.J.",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "A history of the Jesuit missionaries killed in New France and the Mohawk Valley in the 1640s, written for their beatification in 1925.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1925",
+      "editions": [
+        {
+          "id": "fp-20240310",
+          "label": "Faded Page #20240310",
+          "source": "https://www.fadedpage.com/showbook.php?pid=20240310",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Faded Page notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1925 (Toronto: Canadian Messenger). Faded Page's text was compared word by word with the Internet Archive scan of the 1925 Canadian Messenger printing: 93.9% of its words are confirmed by the scan's OCR, below the usual 95%. Accepted by owner 2026-11-15 at 93.9%; sampled differences are scan OCR errors. Differing passages are listed in the provenance record.",
+          "sourceTitle": "The Jesuit Martyrs of Canada; Together with the Martyrs Slain in the Mohawk Valley",
+          "access": "full-text",
+          "text": "data/texts/fp-20240310.txt",
+          "sha256": "7581841808cfef4628415e3d97059b79873bd25b251d5f0f5d3c0bb4e8ab991d",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "footsteps-at-the-lock",
+      "title": "The Footsteps at the Lock",
+      "author": "Ronald A. Knox",
+      "authorId": "ronald-knox",
+      "category": "Fiction",
+      "tradition": "Catholic tradition",
+      "description": "A detective novel by Ronald Knox, set on a boating holiday on the upper Thames.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-15",
+      "date": "1928",
+      "editions": [
+        {
+          "id": "fp-20090501",
+          "label": "Faded Page #20090501",
+          "source": "https://www.fadedpage.com/showbook.php?pid=20090501",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Faded Page notices retained.",
+          "checked": "2026-11-15",
+          "note": "First published 1928 (London: Methuen). Faded Page's text was compared word by word with the Internet Archive scan of a later Methuen printing (fourth edition): 93.2% of its words are confirmed by the scan's OCR, below the usual 95%. Accepted by owner 2026-11-15 at 93.2%; sampled differences are scan OCR errors. Differing passages are listed in the provenance record.",
+          "sourceTitle": "The Footsteps at the Lock",
+          "access": "full-text",
+          "text": "data/texts/fp-20090501.txt",
+          "sha256": "2d55619ba25d9812fcf844dca57f5dd584d76a5d39e358fb87daea490d663d92",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "chesterton-robert-louis-stevenson",
+      "title": "Robert Louis Stevenson (Bookman Booklet)",
+      "author": "G. K. Chesterton and W. Robertson Nicoll",
+      "authorId": "g-k-chesterton",
+      "category": "Essays",
+      "tradition": "Catholic tradition",
+      "description": "A Bookman Booklet on Robert Louis Stevenson by G. K. Chesterton and W. Robertson Nicoll, first published in 1902. No online copy has been found yet.",
+      "reviewStatus": "source-checked",
+      "date": "1902",
+      "status": "not-yet-available",
+      "editions": []
+    },
+    {
+      "id": "chesterton-temperance-and-the-great-alliance",
+      "title": "Temperance and the Great Alliance",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Essays",
+      "tradition": "Catholic tradition",
+      "description": "A pamphlet by G. K. Chesterton, first published in 1916. No online copy has been found yet.",
+      "reviewStatus": "source-checked",
+      "date": "1916",
+      "status": "not-yet-available",
+      "editions": []
+    },
+    {
+      "id": "chesterton-the-end-of-the-roman-road",
+      "title": "The End of the Roman Road",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Fiction",
+      "tradition": "Catholic tradition",
+      "description": "A short story by G. K. Chesterton, first published in 1924. No online copy has been found yet.",
+      "reviewStatus": "source-checked",
+      "date": "1924",
+      "status": "not-yet-available",
+      "editions": []
+    },
+    {
+      "id": "chesterton-social-reform-versus-birth-control",
+      "title": "Social Reform versus Birth Control",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Essays",
+      "tradition": "Catholic tradition",
+      "description": "A pamphlet by G. K. Chesterton, first published in 1927. No online copy has been found yet.",
+      "reviewStatus": "source-checked",
+      "date": "1927",
+      "status": "not-yet-available",
+      "editions": []
+    },
+    {
+      "id": "chesterton-the-judgment-of-dr-johnson",
+      "title": "The Judgment of Dr. Johnson",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Fiction",
+      "tradition": "Catholic tradition",
+      "description": "A play by G. K. Chesterton, first published in 1927. No online copy has been found yet.",
+      "reviewStatus": "source-checked",
+      "date": "1927",
+      "status": "not-yet-available",
+      "editions": []
+    },
+    {
+      "id": "chesterton-christmas-poems",
+      "title": "Christmas Poems",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "A book of poems by G. K. Chesterton, first published in 1929. No online copy has been found yet.",
+      "reviewStatus": "source-checked",
+      "date": "1929",
+      "status": "not-yet-available",
+      "editions": []
+    },
+    {
+      "id": "chesterton-new-and-collected-poems",
+      "title": "New and Collected Poems",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "A book of poems by G. K. Chesterton, first published in 1929. No online copy has been found yet.",
+      "reviewStatus": "source-checked",
+      "date": "1929",
+      "status": "not-yet-available",
+      "editions": []
+    },
+    {
+      "id": "chesterton-ubi-ecclesia",
+      "title": "Ubi Ecclesia",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "A book of poems by G. K. Chesterton, first published in 1929. No online copy has been found yet.",
+      "reviewStatus": "source-checked",
+      "date": "1929",
+      "status": "not-yet-available",
+      "editions": []
+    },
+    {
+      "id": "chesterton-come-to-think-of-it",
+      "title": "Come to Think of It...",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Essays",
+      "tradition": "Catholic tradition",
+      "description": "A collection of essays by G. K. Chesterton, first published in 1930. No online copy has been found yet.",
+      "reviewStatus": "source-checked",
+      "date": "1930",
+      "status": "not-yet-available",
+      "editions": []
+    },
+    {
+      "id": "chesterton-the-grave-of-arthur",
+      "title": "The Grave of Arthur",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "A book of poems by G. K. Chesterton, first published in 1930. No online copy has been found yet.",
+      "reviewStatus": "source-checked",
+      "date": "1930",
+      "status": "not-yet-available",
+      "editions": []
+    },
+    {
+      "id": "chesterton-the-turkey-and-the-turk",
+      "title": "The Turkey and the Turk",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "A book of poems by G. K. Chesterton, first published in 1930. No online copy has been found yet.",
+      "reviewStatus": "source-checked",
+      "date": "1930",
+      "status": "not-yet-available",
+      "editions": []
     }
   ],
   "series": [

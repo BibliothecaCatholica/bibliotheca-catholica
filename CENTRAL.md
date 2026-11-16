@@ -2,7 +2,7 @@
 
 Read AGENTS.md and this file at session start. Read detailed references only for the task at hand. Update this file in place at handoff. Cap (owner rule change, November 14, 2026): handoff entries of at most 5 lines, the 3 newest only, and under 80 lines in all (`tests/test_central.py`). No separate dated report files for handoffs. No secrets, reader notes, or private account records here.
 
-When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply. Updated November 14, 2026 (America/Chicago). This is the single living coordination file for every contributor (Grok bots, ChatGPT, Codex, Claude, and others).
+When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply. Updated November 14, 2026 (America/Chicago). This is the single living coordination file for every contributor: the Grok bots, ChatGPT (and Codex), Claude (and Claude Code), and anyone else.
 
 ## Project and authority
 
@@ -20,13 +20,17 @@ Any tool can perform an assigned responsibility. References to Research, QA, and
 
 ## Hosting and data flow
 
-GitHub `main` is the source of truth. Cloudflare Pages deploys it automatically to https://bibliothecacatholica.com (every PR gets a preview check); confirm a deploy by comparing the live `/build.json` `id` with `git show origin/main:build.json`. The `CNAME` file stays. texts.bibliothecacatholica.com is served from `bibliotheca-texts`. DNS and the Cloudflare zone belong to Business. GitHub Pages ## Verified snapshot
+GitHub `main` is the source of truth. Cloudflare Pages deploys it automatically to https://bibliothecacatholica.com (every PR gets a preview check); confirm a deploy by comparing the live `/build.json` `id` with `git show origin/main:build.json`. The `CNAME` file stays. texts.bibliothecacatholica.com is served from `bibliotheca-texts`. DNS and the Cloudflare zone belong to Business. GitHub Pages for this repo was turned off on November 15, 2026, so Cloudflare is the only host; the texts repo keeps its own Pages site.
 
-As of November 15, 2026, `main` at `54c17291c1` (PR #37):
+Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, provenance, and the original TXT files in `data/texts/`. (2) `bibliotheca-texts` is a delivery copy exported from here by `tools/build_text_archive.py` (texts, `manifest.json`, `provenance/`) and served by its own GitHub Pages at texts.bibliothecacatholica.com; the reader fetches `textArchive.baseUrl` first and falls back to the local copy. Never edit texts there by hand. (3) `aquinas` (new, November 14 and 15) is a separate local study tool: SQLite search over Summa I and I-II (Project Gutenberg 17611 and 17897) plus an experimental LFM3-1.7B model, the "Aquinas Neuron", released as GitHub prereleases for Ollama. It has no website or domain and does not feed this site; the site's `/summa/` pages are built here by `tools/build_summa.py`.
 
-- 157 work records; 117 hosted editions of 112 works in `data/library.json`.
-- 4,936 static pages and 4,937 sitemap URLs; about 6,800 tracked files, most generated (`linguist-generated` in `.gitattributes`).
-- Tests: 124 Node and 270 Python.
+## Verified snapshot
+
+As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
+
+- 186 work records; 123 hosted editions of 118 works in `data/library.json` (201 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 5,169 sitemap URLs; 7699 tracked files, most generated (`linguist-generated` in `.gitattributes`).
+- Tests: 124 Node and 284 Python.
 
 ## Standing decisions
 
@@ -39,21 +43,27 @@ As of November 15, 2026, `main` at `54c17291c1` (PR #37):
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
-### 2026-11-15, Claude (Claude Code): editions batch 2
+### 2026-11-16, Claude (Claude Code): Chesterton structure, rule and tooling recap
 
-- Ten more editions with chapter pages, openers, structure files, and EPUBs: Heretics, The Ball and the Cross, The Man Who Was Thursday, Chesterton's Saint Francis, Grammar of Assent, Development of Christian Doctrine, Paradoxes of Catholicism, Life of St. Teresa, Apologia, Virgin Saints and Martyrs.
-- Map tooling: two-block headings, division lines carried into the EPUB, slugs capped at 60 characters, no second "Chapter" label on headings that name themselves.
+- Earlier: hosting rule (#40), agent tools `npm run validate`, `hosted_counts.py`, `draft_text_map.py` (#41), 53 Chesterton books (#42 to #47), `import_plain_text.py`.
+- PR #48 (open, for review): chapter pages, structure files, and EPUBs for nine Chesterton editions. The Everlasting Man left to the held EPUB branch (HOLDS.md).
+- bibliotheca-texts PR #1 (open): the export of #42 to #47, additions only. Re-export after #48 to add the Grok editions. No force-pushes from here on.
 
-### 2026-11-15, Claude (Claude Code): approval statements removed; Summa Design A
+### 2026-11-15, Catholic Repo (Grok): accepted scan matches; not yet available
 
-- Approval statements removed from the repository (PR #38); Summa Design A on all 3,726 question and article pages (PR #37).
+- Hosted as basic text editions (Faded Page): The Jesuit Martyrs of Canada (93.9%) and The Footsteps at the Lock (93.2%), accepted per edition (`collation.accepted` in each source record); the global 95% gate is unchanged.
+- New work status `not-yet-available`: no editions, no samples, never featured; pages say "Not yet available online." Used for the 11 Chesterton works with no online copy found. HOLDS.md added for parked items. Skipped: Baring's C (gutenberg.net.au bot check); Candles' Beams (no Internet Archive scan to collate against); Sheehan's Augustine essay (CELT only, consent caveat, no scan found).
 
-### 2026-11-15, Claude (Claude Code): hero engraving, takedown contact, EPUBs, editions batch 1
+### 2026-11-15, Catholic Repo (Grok): new texts; Chesterton handoff to Claude Code
 
-- PRs #30, #33 to #36 merged and deployed: Story of a Soul, EPUB CI on every PR, six published EPUBs, batch 1 (Story of a Soul and four Father Brown collections), Doré's Empyrean as the home hero, the takedown contact email.
+- Hosted as basic text editions (no structure or EPUB yet): The Queen of Seven Swords and The Coward (Faded Page), von Hügel's Essays and Addresses (Faded Page; calm note on essay 5, not featured, no `added`), and The Trial of John Jasper (PG 70690).
+- Link-only records for 12 Chesterton works with only a scan or a Wikisource copy (The Thing, The Outline of Sanity, and others). `tools/import_plain_text.py` now folds accents in its collation and quotes OCR file names.
+- Held: Jesuit Martyrs of Canada and The Footsteps at the Lock (scan agreement 93.9% and 93.2%, below the 95% gate; OCR noise only); Walsh and Sword of Wood (gutenberg.net.au bot check); Faustula, Plummer, and Reeves (no clean text).
+- Remaining Chesterton work: `docs/claude-code-chesterton-prompt.md` (input `docs/research/chesterton-hostable-2026-11-15.csv`).
 
 ## Open items
 
+- Parked items, owners, and next steps: [HOLDS.md](HOLDS.md).
 - Owner: the takedown agent's name and postal address, and DMCA agent registration (the page shows only the contact email).
 - Hosted texts: further editions batches; manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
 - Advent launches November 29: excerpt-to-source comparison ([checklist](docs/ADVENT-LAUNCH.md)). Social readiness for Advent is owned by the Grok bot, not tracked here.
@@ -61,10 +71,9 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 - Page-audit decisions: the publish allowlist and the `study/index.html` sitemap or noindex question. CI's Study drift check names the missing `study/passages` (harmless).
 - Recover the evidence listed in the [repository audit](docs/REPOSITORY-AUDIT-2026-11-09.md); confirm backups and account responsibilities ([OPERATIONS](docs/OPERATIONS.md)).
 
-t responsibilities ([OPERATIONS](docs/OPERATIONS.md)).
-
 ## Reference map
 
+- Repos: this one (source of truth); `BibliothecaCatholica/bibliotheca-texts` (exported delivery copy, see PROJECT-RULES "Document archive"); `BibliothecaCatholica/aquinas` (separate tool; read its own README and AGENTS.md).
 - Rules: `docs/PROJECT-RULES.md` and `docs/ANALYTICS.md`. Technical reference: `docs/IMPLEMENTATION-NOTES.md`; history in `docs/archive/`; map in `docs/README.md`. Operations and approvals: `docs/OPERATIONS.md`.
 
 When resuming: fetch `main`, inspect open PRs, record the task here, and reconcile conflicts before editing. End with changed paths, the commit or PR, checks run, known failures, and the next action.

@@ -17,7 +17,7 @@ def page(id):return (ROOT/'author'/id/'index.html').read_text()
 def main(s):return s[s.find('<main'):s.find('</main>')]
 class AuthorPages(unittest.TestCase):
     def test_counts(self):
-        self.assertEqual(len(NOH),454);self.assertEqual(len(AUTH)-len(NOH),22)
+        self.assertEqual(len(NOH),453);self.assertEqual(len(AUTH)-len(NOH),23)
     def test_intro_not_wikipedia_excerpt(self):
         for a in NOH:
             m=main(page(a['id']))

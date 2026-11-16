@@ -48,15 +48,16 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 - tools/rights_rule.py nonrenewal_problems(): US first publication 1931 to 1963, dated no-renewal results (Stanford, NYPL, and the Copyright Office from 1950), HathiTrust code quoted, a URAA line, and the named scan. The validator, transcribe_scan.py, import_plain_text.py, and their tests accept it; pd-date checks unchanged.
 - Waits for Micah's review (rule 14). tests/test_nonrenewal.py covers a passing record and each failure.
 
+### 2026-11-16, Claude (Claude Code): Part 0 renewal checks
+
+- docs/research/us-pd-renewal-checks-2026-11.csv: 25 books checked against Stanford, NYPL renewal data, HathiTrust rights codes, and the scans' copyright pages. 9 clear, 16 hold (Copyright Office records not reached for 1950 and later; possible earlier editions abroad; missing copyright pages). No renewal found for any book.
+- Hosting under pd-nonrenewal still waits for Part 1 and Micah's review of each batch.
+
+
 ### 2026-11-16, Claude (Claude Code): Chesterton scan transcriptions
 
 - Hosted from free scans with tools/transcribe_scan.py: The Thing, The Resurrection of Rome, The Outline of Sanity, Generally Speaking, and Simplicity and Tolstoy (99.6% to 99.9% of words read; flags listed per record).
 - Held (HOLDS.md): four scans below the 99.5% gate, the 1902 Stevenson booklet (only a 1906 scan), and Gloria in Profundis (no dated scan). Eight not-yet-available works have no free scan anywhere searched.
-
-### 2026-11-16, Claude (Claude Code): single-scan transcription tool
-
-- tools/transcribe_scan.py: the Summa Supplement method made general for one free Internet Archive scan (positional OCR, running heads and page numbers dropped, hyphens rejoined into known words, OCR repairs only where one reading is far commoner in the library's texts, unread words flagged, 99.5% read gate, tests/test_transcribed_scans.py).
-- Validator: substitutePages is now optional for ocr-transcription records. Next: the Chesterton scan batch with it.
 
 ## Open items
 

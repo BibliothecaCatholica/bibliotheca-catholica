@@ -20,3 +20,6 @@ When a hold is released or finished, delete its row in the same commit as the wo
 | Audit leftovers: PR #17, security headers, branch protection and Dependabot, evidence files, and site-copy em-dash cleanup (em-dashes in book texts stay) | Catholic Repo | Micah's go-ahead | 2026-11-15 | Fix. |
 | Doré-style art beyond the home page | Micah | his decision | 2026-11-15 | Decide. |
 | 42 Substack review-cycle drafts in the Drive folder | Bibliotheca Substack | Micah's go | 2026-11-15 | Paste them as drafts. |
+| Chesterton scans below the 99.5% read gate: The Superstitions of the Sceptic (99.27%), Do We Agree? (99.45%), G.K.C. as M.C. (99.49%), and Samuel Johnson with Alice Meynell (98.84%) | Claude Code | a cleaner scan or a hand pass | 2026-11-16 | Transcribe: check the flagged words against the scan pages, or collate a second free scan. |
+| Chesterton's Robert Louis Stevenson (Bookman booklet, 1902): the one free scan (robertlouisstev00nicogoog) says "First Impression April, 1906" | Claude Code | evidence the 1906 text is the 1902 booklet | 2026-11-16 | Compare editions, then transcribe or find a 1902 scan. |
+| Gloria in Profundis (1927): Faded Page text 20140832 is reachable, but no dated scan exists to collate against | Claude Code | a dated scan | 2026-11-16 | Find a scan, then import. |

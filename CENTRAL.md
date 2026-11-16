@@ -28,7 +28,7 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
 
-- 186 work records; 123 hosted editions of 118 works in `data/library.json` (201 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 186 work records; 128 hosted editions of 123 works in `data/library.json` (201 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,169 sitemap URLs; 7699 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 124 Node and 284 Python.
 
@@ -43,6 +43,11 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-16, Claude (Claude Code): Chesterton scan transcriptions
+
+- Hosted from free scans with tools/transcribe_scan.py: The Thing, The Resurrection of Rome, The Outline of Sanity, Generally Speaking, and Simplicity and Tolstoy (99.6% to 99.9% of words read; flags listed per record).
+- Held (HOLDS.md): four scans below the 99.5% gate, the 1902 Stevenson booklet (only a 1906 scan), and Gloria in Profundis (no dated scan). Eight not-yet-available works have no free scan anywhere searched.
+
 ### 2026-11-16, Claude (Claude Code): single-scan transcription tool
 
 - tools/transcribe_scan.py: the Summa Supplement method made general for one free Internet Archive scan (positional OCR, running heads and page numbers dropped, hyphens rejoined into known words, OCR repairs only where one reading is far commoner in the library's texts, unread words flagged, 99.5% read gate, tests/test_transcribed_scans.py).
@@ -52,12 +57,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - PR #48 merged: chapter pages and EPUBs for nine Chesterton editions (The Everlasting Man stays with the held EPUB branch).
 - Merging rule recorded in PROJECT-RULES rule 14, OPERATIONS, and Standing decisions: pd-date go-lives merge on green CI; pd-nonrenewal batches and rights-rule changes wait for the owner.
-
-### 2026-11-16, Claude (Claude Code): Chesterton structure, rule and tooling recap
-
-- Earlier: hosting rule (#40), agent tools `npm run validate`, `hosted_counts.py`, `draft_text_map.py` (#41), 53 Chesterton books (#42 to #47), `import_plain_text.py`.
-- PR #48 (open, for review): chapter pages, structure files, and EPUBs for nine Chesterton editions. The Everlasting Man left to the held EPUB branch (HOLDS.md).
-- bibliotheca-texts PR #1 closed as superseded: its `main` already has all 123 editions (Grok's exports). Structure changes no texts, so no re-export is needed for #48.
 
 ## Open items
 

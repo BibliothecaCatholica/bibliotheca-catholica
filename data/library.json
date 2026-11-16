@@ -5169,16 +5169,21 @@
       "editions": [
         {
           "id": "ia-thingwhyiamcatho00ches-0",
-          "label": "Internet Archive scan (New York: Dodd, Mead, 1930)",
+          "label": "Transcription of the Internet Archive scan (New York : Dodd, Mead & company, 1930)",
           "source": "https://archive.org/details/thingwhyiamcatho00ches_0",
           "language": "English",
           "contributors": [],
-          "rights": "External scan at the Internet Archive; not hosted here. Published 1930, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
-          "checked": "2026-11-15",
-          "note": "First published 1929 (London: Sheed and Ward). This scan is the 1930 American edition, freely readable (not a lending copy). Link only.",
-          "access": "full-text"
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-16",
+          "note": "First published 1929. Transcribed by Bibliotheca Catholica from the scan of the 1930 printing: running heads and page numbers removed, words rejoined across line breaks, 23 OCR confusions repaired, and 113 paragraphs that keep a word the OCR could not read (99.7% of words read). Not a manual proofread.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "The Thing: Why I Am a Catholic",
+          "text": "data/texts/ia-thingwhyiamcatho00ches-0.txt",
+          "sha256": "401a4cf96698c4af0f80d6609b9f4092eb97e7c4dc89f8935cea72536481531c"
         }
-      ]
+      ],
+      "added": "2026-11-16"
     },
     {
       "id": "resurrection-of-rome",
@@ -5193,16 +5198,21 @@
       "editions": [
         {
           "id": "ia-resurrectionofro0000gilb",
-          "label": "Internet Archive scan (New York: Dodd, Mead, 1930)",
+          "label": "Transcription of the Internet Archive scan (Dodd, Mead & Company, 1930)",
           "source": "https://archive.org/details/resurrectionofro0000gilb",
           "language": "English",
           "contributors": [],
-          "rights": "External scan at the Internet Archive; not hosted here. Published 1930, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
-          "checked": "2026-11-15",
-          "note": "First published 1930. Internet Archive record: Dodd, Mead, 1930, freely readable (not a lending copy). Link only.",
-          "access": "full-text"
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-16",
+          "note": "First published 1930. Transcribed by Bibliotheca Catholica from the scan of the 1930 printing: running heads and page numbers removed, words rejoined across line breaks, 52 OCR confusions repaired, and 136 paragraphs that keep a word the OCR could not read (99.7% of words read). Not a manual proofread.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "The Resurrection of Rome",
+          "text": "data/texts/ia-resurrectionofro0000gilb.txt",
+          "sha256": "0f184b98efaf75273fe2e9a6f0b97104bfa09dc18636d9d49034046c7e3e3021"
         }
-      ]
+      ],
+      "added": "2026-11-16"
     },
     {
       "id": "outline-of-sanity",
@@ -5217,16 +5227,21 @@
       "editions": [
         {
           "id": "ia-outlineofsanity0000ches",
-          "label": "Internet Archive scan (New York: Dodd, Mead, 1927)",
+          "label": "Transcription of the Internet Archive scan (New York : Dodd, Mead & Company, 1927)",
           "source": "https://archive.org/details/outlineofsanity0000ches",
           "language": "English",
           "contributors": [],
-          "rights": "External scan at the Internet Archive; not hosted here. Published 1927, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
-          "checked": "2026-11-15",
-          "note": "First published 1926 (London: Methuen). This scan is the 1927 American edition, freely readable (not a lending copy). Link only.",
-          "access": "full-text"
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-16",
+          "note": "First published 1926. Transcribed by Bibliotheca Catholica from the scan of the 1927 printing: running heads and page numbers removed, words rejoined across line breaks, 0 OCR confusions repaired, and 52 paragraphs that keep a word the OCR could not read (99.9% of words read). Not a manual proofread.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "The Outline of Sanity",
+          "text": "data/texts/ia-outlineofsanity0000ches.txt",
+          "sha256": "2dc25f08ba1d5baf3e826b27a09f31d3d3c8159459d5060fcdb4f4de64e9f00c"
         }
-      ]
+      ],
+      "added": "2026-11-16"
     },
     {
       "id": "superstitions-of-the-sceptic",
@@ -5265,16 +5280,21 @@
       "editions": [
         {
           "id": "ia-generallyspeakin00ches",
-          "label": "Internet Archive scan (New York: Dodd, Mead, 1929)",
+          "label": "Transcription of the Internet Archive scan (New York : Dodd, Mead & Co., 1929)",
           "source": "https://archive.org/details/generallyspeakin00ches",
           "language": "English",
           "contributors": [],
-          "rights": "External scan at the Internet Archive; not hosted here. Published 1929, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
-          "checked": "2026-11-15",
-          "note": "First published 1928 (London: Methuen). This scan is the 1929 American edition, freely readable (not a lending copy). Link only.",
-          "access": "full-text"
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-16",
+          "note": "First published 1928. Transcribed by Bibliotheca Catholica from the scan of the 1929 printing: running heads and page numbers removed, words rejoined across line breaks, 0 OCR confusions repaired, and 138 paragraphs that keep a word the OCR could not read (99.6% of words read). Not a manual proofread.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "Generally Speaking",
+          "text": "data/texts/ia-generallyspeakin00ches.txt",
+          "sha256": "98895c857d04b76e027c57c6868ee9d06939ea563fcd63665bf6f5fe1d7843b2"
         }
-      ]
+      ],
+      "added": "2026-11-16"
     },
     {
       "id": "do-we-agree",
@@ -5337,16 +5357,21 @@
       "editions": [
         {
           "id": "ia-simplicitytolsto00chesuoft",
-          "label": "Internet Archive scan (London: A. L. Humphreys, 1912)",
+          "label": "Transcription of the Internet Archive scan (London : A. L. Humphreys, 1912)",
           "source": "https://archive.org/details/simplicitytolsto00chesuoft",
           "language": "English",
           "contributors": [],
-          "rights": "External scan at the Internet Archive; not hosted here. Published 1912, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
-          "checked": "2026-11-15",
-          "note": "First published 1912. Internet Archive record: A. L. Humphreys, 1912, freely readable (not a lending copy). Link only.",
-          "access": "full-text"
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-16",
+          "note": "First published 1912. Transcribed by Bibliotheca Catholica from the scan of the 1912 printing: running heads and page numbers removed, words rejoined across line breaks, 26 OCR confusions repaired, and 12 paragraphs that keep a word the OCR could not read (99.9% of words read). Not a manual proofread.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "Simplicity and Tolstoy",
+          "text": "data/texts/ia-simplicitytolsto00chesuoft.txt",
+          "sha256": "1ff0306fc899b736d17f2651a64e4d14c7a9812bde68e6d54a0563f902481231"
         }
-      ]
+      ],
+      "added": "2026-11-16"
     },
     {
       "id": "samuel-johnson-meynell",

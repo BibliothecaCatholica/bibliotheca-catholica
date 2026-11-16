@@ -32,17 +32,24 @@ END = '*** END OF THE TRANSCRIPTION ***'
 # OCR confusions, tried only on words the vocabulary does not know: (wrong, right) substrings.
 CONFUSIONS = [('rn', 'm'), ('m', 'rn'), ('tm', 'un'), ('iu', 'ur'), ('ni', 'm'), ('m', 'ni'), ('li', 'h'), ('h', 'li'),
               ('ii', 'u'), ('u', 'ii'), ('cl', 'd'), ('d', 'cl'), ('vv', 'w'), ('1', 'l'), ('0', 'o'), ('c', 'e'), ('e', 'c'),
-              ('f', 't'), ('t', 'f'), ('j', 'i'), ('n', 'u'), ('u', 'n'), ('o', 'a'), ('a', 'o'), ('b', 'h'), ('h', 'b'),
+              ('f', 't'), ('t', 'f'), ('j', 'i'), ('n', 'u'), ('u', 'n'), ('b', 'h'), ('h', 'b'),
               ('im', 'un'), ('iin', 'un'), ('U', 'll'), ('fii', 'fu'), ('iy', 'ry'), ('ai', 'a'), ('aQ', 'an'), ('Gr', 'G'),
-              ('ri', 'n'), ('n', 'ri'), ('l', 'i'), ('i', 'l'), ('r', ''), ('i', ''), ('e', ''), ('', 'i')]
-WORD = re.compile(r"[A-Za-z][A-Za-z']*")
+              ('ri', 'n'), ('n', 'ri'), ('l', 'i'), ('i', 'l'),
+              ('z', 'æ'), ('u', 'h'), ('U', 'H'), ('W', 'Wh')]
+WORD = re.compile(r"[A-Za-zæœÆŒ][A-Za-zæœÆŒ']*")
+HYPHENS = ('-', '\u00ac')  # some OCR reads the line-end hyphen as a not-sign
+SUFFIXES = ('s', 'es', 'ed', 'd', 'ing', 'ly', 'er', 'ers', 'ness', 'ism', 'ist', 'ists', 'al', 'ally', 'ation', 'ations')
+PREFIXES = ('un', 're', 'in', 'non', 'over', 'pre', 'mis', 'dis', 'counter')
 
 
 def vocabulary():
     c = collections.Counter()
+    # Proofread texts only: earlier OCR transcriptions (ia-*) are left out so their flagged words never become known.
     for f in glob.glob(str(ROOT / 'data/texts/*.txt')):
+        if Path(f).name.startswith('ia-'):
+            continue
         c.update(w.lower() for w in WORD.findall(Path(f).read_text(encoding='utf-8', errors='replace')))
-    return {w: n for w, n in c.items() if n >= 2}
+    return dict(c)
 
 
 def get(url):
@@ -60,14 +67,21 @@ def fetch(ia, cache):
     return p.read_bytes(), json.loads((Path(cache) / f'{ia}.meta.json').read_text())
 
 
-def known(w, V):
+def known(w, V, depth=1):
     w = w.lower().strip("'")
-    return not w or w in V or w.isdigit() or len(w) == 1
+    if not w or w in V or w.isdigit() or len(w) == 1:
+        return True
+    if depth and w.endswith("'s") and known(w[:-2], V, 0):
+        return True
+    if depth and any(w.endswith(x) and len(w) - len(x) >= 3 and (w[:-len(x)] in V or w[:-len(x)] + 'e' in V) for x in SUFFIXES):
+        return True  # a known word with a regular ending: "monopolist" + "s"
+    return bool(depth) and any(w.startswith(x) and len(w) - len(x) >= 4 and known(w[len(x):], V, 0) for x in PREFIXES)
+
 
 
 def repair(tok, V):
     """Return (fixed token, changed?) for one whitespace token; only a unique known repair is accepted."""
-    m = re.match(r"^([^A-Za-z]*)([A-Za-z][A-Za-z0-9'*]*?)([^A-Za-z]*)$", tok)
+    m = re.match(r"^([^A-Za-zæœÆŒ]*)([A-Za-zæœÆŒ][A-Za-zæœÆŒ0-9'*]*?)([^A-Za-zæœÆŒ]*)$", tok)
     if not m:
         return tok, None
     pre, core, post = m.groups()
@@ -81,17 +95,17 @@ def repair(tok, V):
         i = plain.find(a)
         while i >= 0:
             c = plain[:i] + b + plain[i + len(a):]
-            if c and known(c, V) and c.lower() != plain.lower() and len(c) > 1:
+            if c and V.get(c.lower(), 0) >= 10 and c.lower() != plain.lower() and len(c) > 1:  # repair only to a common word
                 cands.add(c)
             i = plain.find(a, i + 1)
-    if plain != core and known(plain, V):
+    if plain != core and V.get(plain.lower(), 0) >= 10:
         cands.add(plain)
     # Take a repair only when it is far commoner in the library's texts than any other repair (20 times or more).
     ranked = sorted(cands, key=lambda c: -V.get(c.lower(), 0))
     if ranked and (len(ranked) == 1 or V.get(ranked[0].lower(), 0) >= 20 * max(1, V.get(ranked[1].lower(), 0))):
         c = ranked[0]
         return pre + c + post, (core, c)
-    return tok, 'unknown'
+    return tok, 'unknown'  # names included: kept as printed and flagged, never accepted silently
 
 
 def page_lines(obj):
@@ -109,17 +123,30 @@ def page_lines(obj):
     return out
 
 
-def body(lines, height, heads):
-    """Drop the running head and the page number."""
-    num = r'[\[(]?\s*[\dIVXLCivxlc]{1,6}\s*[\])]?\.?'
+def body(lines, height, heads, V=None):
+    """Drop the running head and the page number: by their text, and by layout (a top or bottom line set apart from
+    the body by a wider gap than the page's line spacing, which catches heads the OCR misread)."""
+    num = r'[\[(|]?\s*[\dIVXLCivxlc]{1,6}\s*[\])|]?\.?'
     keep = [l for l in lines if re.search(r'[A-Za-z]{2}|\d', l['text'])]  # scanning noise: no word of two letters
     if keep and re.fullmatch(num, keep[0]['text']):
         keep = keep[1:]
+    ys = [l['y'] for l in keep]
+    gaps = [b - a for a, b in zip(ys, ys[1:]) if b > a]
+    if len(gaps) >= 4:
+        step = statistics.median(gaps)
+        if keep[0]['y'] < 0.2 * height and ys[1] - ys[0] > 1.3 * step:
+            keep = keep[1:]
+        if len(keep) > 1 and keep[-1]['y'] > 0.75 * height and keep[-1]['y'] - keep[-2]['y'] > 1.3 * step and len(keep[-1]['text'].split()) <= 4:
+            keep = keep[:-1]
     if keep and keep[0]['y'] < 0.2 * height and (norm_head(keep[0]['text']) in heads or re.fullmatch(r'[\divxlcIVXLC.\s]{1,8}', keep[0]['text'])):
         keep = keep[1:]
-    if keep and re.fullmatch(r'[\[(]?\s*[\dIVXLCivxlc]{1,6}\s*[\])]?\.?', keep[-1]['text']):
+    if keep and re.fullmatch(num, keep[-1]['text']):
         keep = keep[:-1]
-    if keep and re.fullmatch(r'[\[(]?\s*[\dIVXLCivxlc]{1,6}\s*[\])]?\.?', keep[0]['text']):
+    if keep and re.fullmatch(num, keep[0]['text']):
+        keep = keep[1:]
+    # a printed rule under the running head, read by the OCR as nonsense: a top line with no real word in it
+    if V is not None and keep and keep[0]['y'] < 0.25 * height and len(keep[0]['text'].split()) <= 6 \
+            and not any(len(w) > 2 and known(w, V) for w in WORD.findall(keep[0]['text'])):
         keep = keep[1:]
     return keep
 
@@ -138,7 +165,7 @@ def build(e, cache, V):
     paras, corrections, flagged = [], [], []
     cur, prev_end = [], ''
     for height, ls in raw_pages:
-        ls = body(ls, height, heads)
+        ls = body(ls, height, heads, V)
         if not ls:
             continue
         margin = statistics.median(l['x'] for l in ls)
@@ -157,10 +184,14 @@ def build(e, cache, V):
     for p in paras:
         text = ''
         for line in p:
-            if text.endswith('-') and line[:1].islower():
-                head, tail = text[:-1].rsplit(' ', 1)[-1], line.split(' ', 1)[0]
-                joined = re.sub(r'[^A-Za-z]', '', head + tail)
-                text = text[:-1] + line if known(joined, V) else text + line
+            head = text.rsplit(' ', 1)[-1] if text else ''
+            tail = line.split(' ', 1)[0]
+            if text.endswith(HYPHENS) and line[:1].islower():
+                joined = re.sub(r'[^A-Za-zæœ]', '', head + tail)
+                text = text[:-1] + line if known(joined, V) else text[:-1] + '-' + line
+            elif (head.isalpha() and tail.isalpha() and tail[:1].islower() and not known(head, V)
+                  and not known(tail, V) and known(head + tail, V)):
+                text = text + line  # OCR lost the line-end hyphen: neither half is a word, the whole is
             else:
                 text = (text + ' ' + line).strip()
         text = re.sub(r'\s+([,;:.!?])', r'\1', re.sub(r'\s+', ' ', text))

@@ -2,5 +2,6 @@
 User-agent: *
 Allow: /
 Disallow: /data/texts/
+Disallow: /drafts/
 
 Sitemap: https://bibliothecacatholica.com/sitemap.xml

@@ -28,7 +28,7 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
 
-- 186 work records; 128 hosted editions of 123 works in `data/library.json` (201 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 186 work records; 128 hosted editions of 123 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,169 sitemap URLs; 7699 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 124 Node and 284 Python.
 
@@ -43,6 +43,12 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-16, Catholic Repo: unlisted /drafts/ Substack paste pages
+
+- `data/substack-drafts.json` and `tools/build_drafts.py` write noindex,nofollow pages at `/drafts/<slug>/` and `/drafts/`, kept out of the sitemap, nav, search, and feeds. Deleting an entry removes that page on the next build.
+- After Substack confirms a post is live, it sends the slug and live URL; Repo deletes that entry in a small commit that merges on green CI. Never remove a page before the post is confirmed live. No automatic RSS check.
+- HOLDS.md: Candles' Beams (needs a scan) and Sheehan (CELT consent caveat). Edition count in this file: 203.
+
 ### 2026-11-16, Claude (Claude Code): Part 0 renewal checks
 
 - docs/research/us-pd-renewal-checks-2026-11.csv: 25 books checked against Stanford, NYPL renewal data, HathiTrust rights codes, and the scans' copyright pages. 9 clear, 16 hold (Copyright Office records not reached for 1950 and later; possible earlier editions abroad; missing copyright pages). No renewal found for any book.
@@ -52,11 +58,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - Hosted from free scans with tools/transcribe_scan.py: The Thing, The Resurrection of Rome, The Outline of Sanity, Generally Speaking, and Simplicity and Tolstoy (99.6% to 99.9% of words read; flags listed per record).
 - Held (HOLDS.md): four scans below the 99.5% gate, the 1902 Stevenson booklet (only a 1906 scan), and Gloria in Profundis (no dated scan). Eight not-yet-available works have no free scan anywhere searched.
-
-### 2026-11-16, Claude (Claude Code): single-scan transcription tool
-
-- tools/transcribe_scan.py: the Summa Supplement method made general for one free Internet Archive scan (positional OCR, running heads and page numbers dropped, hyphens rejoined into known words, OCR repairs only where one reading is far commoner in the library's texts, unread words flagged, 99.5% read gate, tests/test_transcribed_scans.py).
-- Validator: substitutePages is now optional for ocr-transcription records. Next: the Chesterton scan batch with it.
 
 ## Open items
 

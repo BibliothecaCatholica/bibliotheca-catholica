@@ -11,6 +11,8 @@ When a hold is released or finished, delete its row in the same commit as the wo
 | Full Orthodoxy flow for the 105 unstructured editions | Claude Code (Micah) | Micah running it | 2026-11-15 | Use `docs/claude-code-chesterton-prompt.md`. |
 | Plummer, Reeves, and Meyer Irish editions | Claude Code or a person | transcription (scan-only) | 2026-11-15 | Transcribe. |
 | Gutenberg Australia files blocked by its bot check: Walsh's The World's Debt to the Catholic Church, Chesterton's The Sword of Wood, and Baring's C | Catholic Repo | a person downloading them in a browser | 2026-11-15 | Download, then host. |
+| Candles' Beams | Catholic Repo | a scan to check against | 2026-11-16 | Find a dated scan, then host. |
+| Sheehan | Catholic Repo | CELT consent caveat | 2026-11-16 | Resolve consent, then host. |
 | Faustula | Catholic Repo | text cleanup | 2026-11-15 | Remove the source library's added material. |
 | Benham translation year, 1874 or 1886 | Bibliotheca Research | evidence | 2026-11-15 | Fill `translationYear` for pg-1653. |
 | Bookshop gift-list URL | Bibliotheca Business | Business | 2026-11-15 | Add the link. |

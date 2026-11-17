@@ -333,6 +333,39 @@ def series_html(w,lib,TPD):
             li.append('<li>'+t+'</li>')
         h+='<h2>'+E(S['title'])+'</h2><ol class="series-list">'+''.join(li)+'</ol>'
     return h
+# Design refresh (owner's pick, November 17, 2026: "Margin contents" with the "Chapter strip" endings; docs/DESIGN.md
+# "Reading pages"): the contents sit beside the opener at the start of each part and scroll away with it (folded on phones);
+# each part ends with a Continue reading block (the next part's first sentence, quoted from the hosted text), and the last
+# part ends with Finis and a colophon of facts already in the records. Display only: no character of the text changes.
+def first_sentence(block,limit=220):
+    t=re.sub(r'\s+',' ',block.replace('_','')).strip()
+    m=re.match(r'(.+?[.!?][”’"\')]*)(?=\s|$)',t)
+    t=m.group(1) if m and len(m.group(1))>=20 else t
+    return t if len(t)<=limit else t[:limit].rsplit(' ',1)[0]+' …'
+def opening_line(B,x):
+    for i in range(x['start'],x['end']+1):
+        if len(re.sub(r'[^A-Za-z]','',B[i]))>=40:return first_sentence(B[i])
+    return ''
+def long_date(iso):
+    import datetime;d=datetime.date.fromisoformat(iso);return MONTHS[d.month-1]+' '+str(d.day)+', '+str(d.year)
+def part_toc(wid,w,d,k):
+    n=len(d['items']);x=d['items'][k]
+    li=''.join('<li><a href="/'+part_path(wid,d,y)+'/"'+(' aria-current="page"' if j==k else '')+'>'+('<span class="ch-toc-n">'+E(y['num'])+'</span>' if d['kind']=='ch' else '')+E(y['title'])+'</a></li>' for j,y in enumerate(d['items']))
+    return ('<nav class="ch-toc" aria-label="'+E(d['nouns'])+' of '+E(w['title'])+'"><p class="ch-toc-bk">'+a('/work/'+wid+'/',w['title'])+'</p><p class="ch-toc-by">'+E(w['author'])+'</p>'
+            '<details class="ch-toc-d" open><summary>Contents</summary><ol>'+li+'</ol></details>'
+            '<script>if(matchMedia("(max-width: 860px)").matches)document.currentScript.previousElementSibling.open=false</script>'
+            '<p class="ch-toc-pos">'+E(part_label(d,x))+(' of '+str(n) if d['kind']=='ch' else ' · '+str(k+1)+' of '+str(n))+'</p></nav>')
+def colophon_html(w,e,pd):
+    ep=EPUBS.get(e['id'])
+    rows=[('Work',E(w['title'])+', by '+E(w['author'])+(' ('+E(w['date'])+')' if w.get('date') else '')+'.'),
+          ('Edition',E(e['label'])+(', released '+E(e['digitalRelease']) if e.get('digitalRelease') else '')+'. '+a(e['source'],'Source record',True)+'.'),
+          ('Length',E(facts_words(pd['words'])+' · '+facts_time(pd['minutes']))+'.') if pd else None,
+          ('Checked',E(long_date(e['checked']))+'.') if e.get('checked') else None,
+          ('Text file',E(e['text'].split('/')[-1])+', SHA-256 <code class="sha">'+E(e['sha256'])+'</code>.') if e.get('sha256') else None,
+          ('Other formats',(('<a download href="/'+E(ep['path'])+'">EPUB</a> · ') if ep else '')+a('/work/'+w['id']+'/','The work page')+'.'),
+          ('Type','Set in EB Garamond and Cormorant Garamond.')]
+    return ('<section class="colophon" aria-labelledby="colophon-h"><h2 id="colophon-h">Colophon</h2>'
+            +''.join('<p><b>'+k+'.</b> '+v+'</p>' for k,v in (r for r in rows if r))+'</section>')
 def part_pages(out,lib,by_html,author_ld):
     TPD=json.loads((ROOT/'data/text-pages.json').read_text())['works'];libw={w['id']:w for w in lib['works']}
     for wid,d in TPD.items():
@@ -351,18 +384,25 @@ def part_pages(out,lib,by_html,author_ld):
                 head_html=(''+'<div class="page-head"><div class="eyebrow">'+E(w['title'])+' · '+E(part_label(d,x))+'</div><h1>'+E(x['title'])+'</h1>'
                        +'<p class="lede">'+by_html(w)+', <cite>'+a('/work/'+wid+'/',w['title'])+'</cite>, '+E(part_label(d,x,True))+(' of '+str(sum(1 for y in d['items'] if y['num'][:1].isdigit() or d['kind']=='ch')) if x['num'][:1].isdigit() or d['kind']=='ch' else '')+'. About '+str(max(1,round(x['words']/200)))+' min.</p></div>'
                        +'<p class="dl-row"><a class="btn" href="'+E(reader)+'">Read in the reading room →</a> '+a('/work/'+wid+'/','Work page and editions')+'</p>')
-            body=(crumb_html(('Discover & Read','library/'),(w['title'],'work/'+wid+'/'),(x['title'],''))+head_html
+            cont=''
+            if nxt:
+                line=opening_line(B,nxt)
+                cont=('<a class="ch-next" rel="next" href="/'+part_path(wid,d,nxt)+'/"><span class="ch-next-k">Continue reading</span>'
+                      '<span class="ch-next-t">Next: '+E(nxt['num'])+'. '+E(nxt['title'])+'</span>'+('<span class="ch-next-f">'+E(line)+'</span>' if line else '')+'</a>')
+            body=(crumb_html(('Discover & Read','library/'),(w['title'],'work/'+wid+'/'),(x['title'],''))
+              +'<div class="ch-layout">'+part_toc(wid,w,d,k)+'<div class="ch-main">'+head_html
               +'<article class="reading-text'+(' edition-designed' if pd else '')+'" aria-label="'+E(x['title'])+'">'+''.join(reading_block(e,B[i],i) for i in range(x['start'],x['end']+1))+'</article>'
-              +(('<div class="ch-end"><p class="ch-orn" aria-hidden="true">❦</p><p>End of '+E(part_label(d,x))+'</p>'
-                 +(a('/'+part_path(wid,d,nxt)+'/','Next: '+nxt['num']+'. '+nxt['title']+' →')+' · ' if nxt else '')
-                 +'<a href="'+E(reader)+'">Continue in the reading room</a></div>') if pd else '')
-              +text_notice(e)+nav+parts_list(wid,d)
+              +(('<div class="ch-end"><p class="ch-orn" aria-hidden="true">'+('❦ ❦ ❦' if not nxt else '❦')+'</p><p>End of '+E(part_label(d,x))+'</p>'
+                 +('' if nxt else '<p class="ch-fin">Finis</p>')+cont
+                 +'<p class="ch-reader"><a href="'+E(reader)+'">Continue in the reading room</a></p></div>'
+                 +('' if nxt else colophon_html(w,e,pd))) if pd else '')
+              +text_notice(e)+nav
               +edition_details('<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+'. '+E(d.get('editionLine') or e.get('note',''))+'</p>',
                   '<p class="small">Source: '+E(w['author']+'. '+w['title']+'. '+e['label']+'.')+' '+text_source(e)+' '+a('/rights/','How rights are checked')+'.</p>',
                   (formatting_note(e) if any(lo <= x['end'] and hi >= x['start'] for lo,hi in e.get('readerFormatting',{}).get('proseRanges',[])) else ''),
                   ('<p class="small text-auto-layout">'+E(AUTO_LABEL)+'</p>' if e.get('autoLayout') else ''),
                   '<p class="small">The reading room adds highlights, notes, find in work, and saved places. This page shows the same hosted text in one piece.</p>')
-              +'<p>'+a('/work/'+wid+'/',w['title'])+' · '+a('/library/','Selected library')+'</p>')
+              +'<p>'+a('/work/'+wid+'/',w['title'])+' · '+a('/library/','Selected library')+'</p></div></div>')
             what='“'+x['title']+',” '+part_label(d,x,True)+' '+('of '+str(n)+' ' if d['kind']=='ch' else '')+'in '+w['title']+' by '+w['author']+'.'
             md=fit([what],(('The full text on one page, free, with a link into the reading room for notes and highlights.','The full text on one page, with a link into the reading room.','The full text, free to read.'),)+DESC_EXTRA)
             ld_part={'@context':'https://schema.org','@type':'Chapter' if d['kind']=='ch' else 'ShortStory','name':x['title'],'url':SITE+route+'/','position':k+1,

@@ -19,6 +19,11 @@ class Repair(unittest.TestCase):
         self.assertEqual(T.repair('imconscious', V)[0], 'unconscious')
         self.assertEqual(T.repair('foimd', V)[0], 'found')
 
+    def test_semicolon_read_as_j(self):
+        import re
+        self.assertEqual(re.sub(r'(?<=[A-Za-z]) j(?= [a-z])', ';', 'most sinister of all contradictions j when we'),
+                         'most sinister of all contradictions; when we')
+
     def test_never_guesses(self):
         self.assertEqual(T.repair('oiu*', V), ('oiu*', 'unknown'))  # too short to repair: flagged, kept as printed
         self.assertEqual(T.repair('babjdsh', V), ('babjdsh', 'unknown'))
@@ -36,6 +41,26 @@ class Repair(unittest.TestCase):
         self.assertEqual([l['text'] for l in T.body(page, 2600, {'simplicityandtolstoy'})], ['universe topsy-turvy, and makes it', 'the end.'])
         noise = [L('U', 500), L('•*v', 600), L('real words here', 700)]
         self.assertEqual([l['text'] for l in T.body(noise, 2600, set())], ['real words here'])
+
+
+class Layout(unittest.TestCase):
+    L = staticmethod(lambda t, y, h=50: {'x': 100, 'y': y, 'h': h, 'text': t, 'paraStart': False, 'para': 0})
+
+    def test_footnotes_leave_the_page_body(self):
+        body = [self.L('line %d of the text' % i, 300 + 85 * i) for i in range(20)]
+        page = body + [self.L('* “The Humanism of Irving Babbitt,” The Forum.', 2000, 40), self.L('5 Moral., X, xvi, quoted', 2050, 40),
+                       self.L('Cassian, Migne, XLIX, 774.', 2100, 50)]
+        kept, notes = T.split_notes(page, 2600)
+        self.assertEqual(kept, body)
+        self.assertEqual([n[0][:3] for n in notes], ['* “', '5 M'])
+        self.assertEqual(notes[1][-1], 'Cassian, Migne, XLIX, 774.')  # a note's second line stays with it
+        self.assertEqual(T.split_notes(body, 2600), (body, []))
+
+    def test_library_stamp_dropped_but_running_heads_kept(self):
+        pages = [(3000, [self.L('THE THING', 100), self.L('text', 300), self.L('MARIN COUNTY FREE LIBRARY', 500)]) for _ in range(4)]
+        stamps = T.library_stamps(pages, {'thething'})
+        self.assertTrue(T.is_stamp('MARIN COUNTTY FREE LIBRARY', stamps))  # an OCR variant of the same stamp
+        self.assertFalse(T.is_stamp('THE THING', stamps))
 
 
 class Records(unittest.TestCase):

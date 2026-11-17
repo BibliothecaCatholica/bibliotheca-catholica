@@ -43,6 +43,11 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-17, Claude (Claude Code): transcription fixes (footnotes, stamps, semicolons)
+
+- transcribe_scan.py: footnotes move after their paragraph as [Note: ...]; repeated library stamps dropped; a lone j between words restored to a semicolon.
+- Live #51 texts still carry the old defects (Generally Speaking: 20 stamp lines, 161 semicolons read as j; The Thing: 2 notes in the flow). Corrected versions wait for Micah: a hosted text cannot be overwritten.
+
 ### 2026-11-16, Catholic Repo: unlisted /drafts/ Substack paste pages
 
 - `data/substack-drafts.json` and `tools/build_drafts.py` write noindex,nofollow pages at `/drafts/<slug>/` and `/drafts/`, kept out of the sitemap, nav, search, and feeds. Deleting an entry removes that page on the next build.
@@ -53,11 +58,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - docs/research/us-pd-renewal-checks-2026-11.csv: 25 books checked against Stanford, NYPL renewal data, HathiTrust rights codes, and the scans' copyright pages. 9 clear, 16 hold (Copyright Office records not reached for 1950 and later; possible earlier editions abroad; missing copyright pages). No renewal found for any book.
 - Hosting under pd-nonrenewal still waits for Part 1 and Micah's review of each batch.
-
-### 2026-11-16, Claude (Claude Code): Chesterton scan transcriptions
-
-- Hosted from free scans with tools/transcribe_scan.py: The Thing, The Resurrection of Rome, The Outline of Sanity, Generally Speaking, and Simplicity and Tolstoy (99.6% to 99.9% of words read; flags listed per record).
-- Held (HOLDS.md): four scans below the 99.5% gate, the 1902 Stevenson booklet (only a 1906 scan), and Gloria in Profundis (no dated scan). Eight not-yet-available works have no free scan anywhere searched.
 
 ## Open items
 

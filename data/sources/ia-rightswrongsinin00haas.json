@@ -1,0 +1,487 @@
+{
+  "id": "ia-rightswrongsinin00haas",
+  "kind": "ocr-transcription",
+  "title": "Rights and Wrongs in Industry",
+  "author": "Francis J. Haas",
+  "rights": "Public domain in the USA. First published in the United States in 1933 and not renewed; the evidence is in nonRenewal.",
+  "rightsBasis": "pd-nonrenewal",
+  "nonRenewal": {
+    "firstPublicationYear": 1933,
+    "firstPublicationCountry": "US",
+    "firstPublicationPlace": "New York",
+    "firstPublicationPublisher": "The Paulist Press",
+    "stanford": {
+      "result": "no renewal found",
+      "checked": "2026-11-16",
+      "method": "one plain curl query (title words and surname), default user agent"
+    },
+    "nypl": {
+      "result": "no renewal found",
+      "checked": "2026-11-16",
+      "method": "NYPL cce-renewals data, 1950 to 2001"
+    },
+    "hathitrust": "pd",
+    "hathitrustRecord": "pd (wu.89096185061)",
+    "uraa": "US imprint (New York: The Paulist Press) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply.",
+    "scan": "rightswrongsinin00haas",
+    "research": "docs/research/us-pd-renewal-checks-2026-11.csv"
+  },
+  "volumes": [
+    {
+      "identifier": "rightswrongsinin00haas",
+      "url": "https://archive.org/details/rightswrongsinin00haas",
+      "year": 1933,
+      "publisher": "New York : The Paulist Press",
+      "ocr": "rightswrongsinin00haas_djvu.xml",
+      "ocrSha256": "9ee4cdd45e430e3ebdce14930d1dd267ecbf9e9bf8e09adfbd47880f07c568d4",
+      "leaves": [
+        2,
+        35
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed. 40 misreadings corrected by hand against the page images of this scan, each listed in handFixes; no wording was taken from another edition.",
+  "words": 10663,
+  "unknownWords": 40,
+  "readRate": 0.9962,
+  "flaggedBlocks": 30,
+  "flagged": [
+    {
+      "block": 28,
+      "words": [
+        "insofar"
+      ]
+    },
+    {
+      "block": 29,
+      "words": [
+        "issuance"
+      ]
+    },
+    {
+      "block": 41,
+      "words": [
+        "replaceable"
+      ]
+    },
+    {
+      "block": 42,
+      "words": [
+        "indispensability"
+      ]
+    },
+    {
+      "block": 52,
+      "words": [
+        "Unionization",
+        "dispensaries,"
+      ]
+    },
+    {
+      "block": 63,
+      "words": [
+        "program"
+      ]
+    },
+    {
+      "block": 66,
+      "words": [
+        "investor"
+      ]
+    },
+    {
+      "block": 68,
+      "words": [
+        "Ironclad"
+      ]
+    },
+    {
+      "block": 72,
+      "words": [
+        "equivalence"
+      ]
+    },
+    {
+      "block": 75,
+      "words": [
+        "(adminiculante,",
+        "warmheartedly"
+      ]
+    },
+    {
+      "block": 77,
+      "words": [
+        "interorganized,"
+      ]
+    },
+    {
+      "block": 79,
+      "words": [
+        "Unionization",
+        "unionize"
+      ]
+    },
+    {
+      "block": 81,
+      "words": [
+        "Unionization",
+        "unionize"
+      ]
+    },
+    {
+      "block": 83,
+      "words": [
+        "attorneyship"
+      ]
+    },
+    {
+      "block": 85,
+      "words": [
+        "unionized"
+      ]
+    },
+    {
+      "block": 87,
+      "words": [
+        "insofar",
+        "conveyors"
+      ]
+    },
+    {
+      "block": 89,
+      "words": [
+        "Racketeering",
+        "racketeering."
+      ]
+    },
+    {
+      "block": 91,
+      "words": [
+        "unionization"
+      ]
+    },
+    {
+      "block": 93,
+      "words": [
+        "decentralized",
+        "decentralized.",
+        "program"
+      ]
+    },
+    {
+      "block": 95,
+      "words": [
+        "technician"
+      ]
+    },
+    {
+      "block": 97,
+      "words": [
+        "program"
+      ]
+    },
+    {
+      "block": 99,
+      "words": [
+        "program,"
+      ]
+    },
+    {
+      "block": 108,
+      "words": [
+        "oeconomico",
+        "attemperanda"
+      ]
+    },
+    {
+      "block": 117,
+      "words": [
+        "program"
+      ]
+    },
+    {
+      "block": 118,
+      "words": [
+        "apportionment"
+      ]
+    },
+    {
+      "block": 120,
+      "words": [
+        "cooperative"
+      ]
+    },
+    {
+      "block": 121,
+      "words": [
+        "discriminatory"
+      ]
+    },
+    {
+      "block": 123,
+      "words": [
+        "program"
+      ]
+    },
+    {
+      "block": 128,
+      "words": [
+        "biennial",
+        "Doak"
+      ]
+    },
+    {
+      "block": 130,
+      "words": [
+        "secretariates"
+      ]
+    }
+  ],
+  "corrections": 0,
+  "correctionList": [],
+  "text": "data/texts/ia-rightswrongsinin00haas.txt",
+  "sha256": "b3e51f6e31ba3e73eb6ae6984ceae62347c947918a23710419d7754715a544e9",
+  "checked": "2026-11-17",
+  "handFixes": [
+    {
+      "leaf": 2,
+      "page": "title page",
+      "ocr": "i",
+      "reading": "I"
+    },
+    {
+      "leaf": 2,
+      "page": "title page",
+      "ocr": "iW",
+      "reading": "II"
+    },
+    {
+      "leaf": 2,
+      "page": "title page",
+      "ocr": "Hk",
+      "reading": "III"
+    },
+    {
+      "leaf": 2,
+      "page": "title page",
+      "ocr": "_ PAPAL",
+      "reading": "PAPAL"
+    },
+    {
+      "leaf": 2,
+      "page": "title page",
+      "ocr": "; New York, N. Y. : i | %",
+      "reading": "New York, N. Y."
+    },
+    {
+      "leaf": 2,
+      "page": "title page",
+      "ocr": "‘THE PAULIST PRESS a",
+      "reading": "THE PAULIST PRESS"
+    },
+    {
+      "leaf": 2,
+      "page": "title page",
+      "ocr": "4 Wad 401 West 59th Street i “i ; ieee",
+      "reading": "401 West 59th Street"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": ";",
+      "reading": ""
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "|",
+      "reading": ""
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "E _ kata",
+      "reading": ""
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "vie 5 ie",
+      "reading": ""
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "IeoR amc PE ee Naame iene Ee meen ce FR ROG a ff em ame em NR ea IB eS TIS i= an",
+      "reading": ""
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "the Catholic —",
+      "reading": "the Catholic"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "the first at .",
+      "reading": "the first at"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "second at ff |",
+      "reading": "second at"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "‘and the third at & ~~",
+      "reading": "and the third at"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "February i 1933. They take s",
+      "reading": "February 7, 1933. They take"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "indus- | |",
+      "reading": "indus-"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "Encyclical of |",
+      "reading": "Encyclical of"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "Social Or- —",
+      "reading": "Social Or-"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "are to —",
+      "reading": "are to"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "small away, | |",
+      "reading": "small a way,"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "monumental ie",
+      "reading": "monumental"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "documents. %",
+      "reading": "documents."
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": ":",
+      "reading": ""
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "_ NIBIL OBSTAT:",
+      "reading": "NIHIL OBSTAT:"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "ArtHuUR J. SCANLAN, S.T.D.., fea,",
+      "reading": "ARTHUR J. SCANLAN, S.T.D.,"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "Censor Librorum. 5",
+      "reading": "Censor Librorum."
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "Haves, 2",
+      "reading": "Hayes,"
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": ". 3 . s ‘ : #",
+      "reading": ""
+    },
+    {
+      "leaf": 3,
+      "page": "verso of title page",
+      "ocr": "uw we: —_—",
+      "reading": ""
+    },
+    {
+      "leaf": 4,
+      "page": "p. 1",
+      "ocr": "HE advertising slogan, ‘Nature",
+      "reading": "THE advertising slogan, “Nature"
+    },
+    {
+      "leaf": 10,
+      "page": "p. 7",
+      "ocr": "a Rion the",
+      "reading": "a system, the"
+    },
+    {
+      "leaf": 10,
+      "page": "p. 7",
+      "ocr": "- tem of",
+      "reading": "tem of"
+    },
+    {
+      "leaf": 20,
+      "page": "p. 17",
+      "ocr": "hepotiated",
+      "reading": "negotiated"
+    },
+    {
+      "leaf": 28,
+      "page": "p. 25",
+      "ocr": "ITUICSE (D2 oii",
+      "reading": "fruit” (p. 23)."
+    },
+    {
+      "leaf": 29,
+      "page": "p. 26",
+      "ocr": "the cama force",
+      "reading": "the working force"
+    },
+    {
+      "leaf": 31,
+      "page": "p. 28",
+      "ocr": "the Begin in-",
+      "reading": "the national in-"
+    },
+    {
+      "leaf": 31,
+      "page": "p. 28",
+      "ocr": "trial etce? (pp: 25).",
+      "reading": "trial, etc.” (p. 25)."
+    },
+    {
+      "leaf": 31,
+      "page": "p. 28",
+      "ocr": "1This question",
+      "reading": "1 This question"
+    }
+  ]
+}

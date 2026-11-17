@@ -71,7 +71,7 @@ test('v18: page_path never carries a search term or Index filter, and one view h
 });
 test('v18: gaPageView sends the normalized path and location, never location.href',()=>{
  const app=fs.readFileSync('app.js','utf8');const m=/function gaPageView\(\)\{[\s\S]*?\},400\)\}/.exec(app);assert.ok(m);
- assert.match(m[0],/pagePath\(location\.hash,window\.BC_BOOT\)/);assert.match(m[0],/A\.pageLocation\(path,landing\?A\.landingSearch\(location\.search,location\.hash\):''\)/);assert.match(m[0],/page_location:loc/);
+ assert.match(m[0],/var hash=creditsAnchor\(\)\?'':location\.hash,raw=location\.pathname\+hash;/);assert.match(m[0],/pagePath\(hash,window\.BC_BOOT\)/);  /* /credits/ anchors (#ed-…) are not routes: no page_view, no '/ed-…/' path */assert.match(m[0],/A\.pageLocation\(path,landing\?A\.landingSearch\(location\.search,hash\):''\)/);assert.match(m[0],/page_location:loc/);
  assert.doesNotMatch(m[0],/location\.href/);
 });
 test('v18: outbound_click carries only link_domain and link_kind',()=>{
@@ -153,7 +153,7 @@ test('spec 2026-11-03: UTM tags on the landing page_view only; never utm_term, l
  assert.equal(u,O+'/?utm_source=s&utm_campaign='+'a'.repeat(100));
  assert.equal(A.pageLocation('/','?utm_source='),O+'/');assert.equal(A.pageLocation('/','?utm_source=%E0%A4%A'),O+'/');
  // app.js passes location.search only on the first page view
- const APP=fs.readFileSync('app.js','utf8');assert.match(APP,/var landing=!gaLanded,loc=A\.pageLocation\(path,landing\?A\.landingSearch\(location\.search,location\.hash\):''\);gaLanded=true;/);
+ const APP=fs.readFileSync('app.js','utf8');assert.match(APP,/var landing=!gaLanded,loc=A\.pageLocation\(path,landing\?A\.landingSearch\(location\.search,hash\):''\);gaLanded=true;/);
  assert.doesNotMatch(SRC,/utm_term'/);
 });
 

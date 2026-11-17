@@ -9,7 +9,11 @@ tested tool for a single-scan book"). It does the same things and nothing more:
   * rejoins words hyphenated at line ends when the joined word is a known word, and keeps the hyphen otherwise;
   * fixes a short, fixed list of OCR confusions only when exactly one repair is a known word and the OCR form is not, and
     records every change;
-  * flags (never rewrites) any paragraph that still has a word it could not read; it never supplies a missing word.
+  * flags (never rewrites) any paragraph that still has a word it could not read; it never supplies a missing word;
+  * applies the spec's `handFixes`, if any, before all of the above: each is {leaf, page, ocr, reading}, a misread checked
+    by a person against the page image of the same scan (never another edition). `ocr` must be one whole OCR line of
+    that leaf or occur exactly once in its lines and is replaced by `reading` (an empty reading drops a whole line of OCR noise). Every fix is
+    copied to the provenance record (owner decision, November 17, 2026).
 Known words are those of the library's own hosted texts (data/texts/), so the vocabulary is period English.
 
     python3 tools/transcribe_scan.py SPEC.json [--cache DIR]
@@ -209,11 +213,24 @@ def is_stamp(text, stamps):
     return all_caps(text) and len(n) >= 8 and any(difflib.SequenceMatcher(None, n, s).ratio() >= 0.85 for s in stamps)
 
 
+def apply_hand_fixes(raw_pages, e):
+    for f in e.get('handFixes', []):
+        lines = raw_pages[f['leaf'] - e['firstLeaf']][1]
+        hits = [l for l in lines if l['text'] == f['ocr']] or [l for l in lines if f['ocr'] in l['text']]
+        assert len(hits) == 1 and hits[0]['text'].count(f['ocr']) == 1, (e['edition'], f, len(hits))
+        if f['reading'] == '':
+            assert hits[0]['text'] == f['ocr'], ('only a whole line may be dropped', f)
+            lines.remove(hits[0])
+        else:
+            hits[0]['text'] = hits[0]['text'].replace(f['ocr'], f['reading'])
+
+
 def build(e, cache, V):
     xml, meta = fetch(e['ia'], cache)
     root = ET.fromstring(xml)
     objs = root.findall('.//OBJECT')[e['firstLeaf']:e['lastLeaf'] + 1]
     raw_pages = [(int(o.get('height') or 3000), page_lines(o)) for o in objs]
+    apply_hand_fixes(raw_pages, e)
     firsts = collections.Counter(norm_head(ls[0]['text']) for _, ls in raw_pages if ls and len(ls[0]['text']) < 70)
     heads = {h for h, n in firsts.items() if n >= 3 and h}
     stamps = library_stamps(raw_pages, heads)
@@ -302,6 +319,8 @@ def main(spec, cache):
                 f"across line breaks, and {len(corrections)} common OCR confusions repaired where only one reading is a "
                 f"known word. {len(flagged)} paragraphs keep a word the tool could not read; they are listed in the "
                 f"provenance record. No missing words were supplied. Not a manual proofread."
+                + (f" {len(e['handFixes'])} misreadings were corrected by hand against the page images of the same scan; "
+                   f"each is listed in the provenance record." if e.get('handFixes') else '')
                 + (f" {e['correction']}" if e.get('correction') else ''), '',
                 '*** START OF THE TRANSCRIPTION ***', '']
         data = ('\n'.join(head) + '\n\n'.join(paras) + '\n\n' + END + '\n').encode('utf-8')
@@ -322,6 +341,10 @@ def main(spec, cache):
                'flaggedBlocks': len(flagged), 'flagged': flagged, 'corrections': len(corrections),
                'correctionList': corrections, 'text': f"data/texts/{e['edition']}.txt", 'sha256': sha,
                'checked': time.strftime('%Y-%m-%d')}
+        if e.get('handFixes'):
+            rec['handFixes'] = [{k: f[k] for k in ('leaf', 'page', 'ocr', 'reading')} for f in e['handFixes']]
+            rec['method'] += (f" {len(e['handFixes'])} misreadings corrected by hand against the page images of this "
+                              f"scan, each listed in handFixes; no wording was taken from another edition.")
         if e.get('note'):
             rec['note'] = e['note']
         (ROOT / f"data/sources/{e['edition']}.json").write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')

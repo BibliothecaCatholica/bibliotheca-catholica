@@ -28,7 +28,7 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
 
-- 195 work records; 129 hosted editions of 124 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 195 work records; 130 hosted editions of 125 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,169 sitemap URLs; 7699 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 124 Node and 284 Python.
 
@@ -44,20 +44,20 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-17, Claude (Claude Code): Sources and credits page (for review)
+
+- /credits/ (tools/credits_page.py, from data): every hosted edition's full record, portraits, Wikipedia excerpts, and the home engraving, one anchor each; footer link.
+- A book ends with a one-line colophon linking to its record; author pages show "Image credit" and "Text credit" links. Rules 2, 10, 11 and DESIGN "Notices" updated; tests/test_credits_page.py.
+
+### 2026-11-17, Claude (Claude Code): Haas hosted after a hand fix (approved)
+
+- Rights and Wrongs in Industry (Paulist Press, 1933) hosted under pd-nonrenewal at 99.62% of words read, after 40 misreadings were corrected against the page images of the same scan (each logged in `handFixes`; no wording from another edition).
+- transcribe_scan.py takes a spec's `handFixes` (exactly one match per leaf; only whole noise lines may be dropped); tested.
+
 ### 2026-11-17, Claude (Claude Code): non-renewal batch A (approved)
 
 - Link-only records for six cleared Bruce and Paulist books whose OCR reads below the 99.5% gate; renewal evidence in each note; one HOLDS row.
 - Haas (99.44%): Micah approved a hand fix of its OCR misreadings against the scan's page images; its hosting PR follows.
-
-### 2026-11-17, Claude (Claude Code): non-renewal batch B (approved)
-
-- Hosted under pd-nonrenewal: Thomas Verner Moore, Prayer (B. Herder, 1931), 99.67% of words read, 61 footnotes placed after their paragraphs.
-- Link-only with a HOLDS row: Cassidy and Fichter (below the 99.5% gate).
-
-### 2026-11-17, Claude (Claude Code): corrected editions (approved)
-
-- Corrected new editions (-r2) for The Thing, The Resurrection of Rome, and Generally Speaking; the old editions are kept, served, and marked retired (validator, test, PROJECT-RULES rule 1).
-- Retired editions are left out of the public hosted-edition count (128: hosted_counts.py, build_static.py, app.js). Outline of Sanity and Simplicity and Tolstoy needed no word change.
 
 ## Open items
 

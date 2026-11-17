@@ -4,9 +4,18 @@ import json
 import re
 from pathlib import Path
 from reader_formatting import validate_formatting
-from rights_rule import BASES, pd_by_date
+from rights_rule import BASES, nonrenewal_problems, pd_by_date
 
 HOSTED_RIGHTS = ('Public domain in the USA.', 'Open license', 'Permission granted')
+
+
+def scan_ok(edition, source, scan):
+    """A scan behind a hosted text: public domain by date for pd-date; for pd-nonrenewal, the very printing the
+    evidence names (same identifier and first-publication year), never merely an old printing."""
+    if edition.get('rightsBasis') == 'pd-nonrenewal':
+        nr = source.get('nonRenewal') or {}
+        return scan.get('identifier') == nr.get('scan') and scan.get('year') == nr.get('firstPublicationYear')
+    return pd_by_date(scan.get('year'))
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -52,6 +61,10 @@ def validate(catalog):
                 # Hosting rule (2026-11-15): a basis other than date needs its written evidence on the record
                 assert edition['rightsBasis'] in BASES, edition['id']
                 assert edition['rightsBasis'] == 'pd-date' or len(edition.get('rightsEvidence', '')) > 40, edition['id']
+                if edition['rightsBasis'] == 'pd-nonrenewal':  # structured evidence in the source record (Part 1)
+                    nr = json.loads((ROOT / ('data/sources/' + edition['id'] + '.json')).read_text()).get('nonRenewal')
+                    assert not nonrenewal_problems(nr), (edition['id'], nonrenewal_problems(nr))
+                    assert edition['rights'].startswith('Public domain in the USA.'), edition['id']
             if edition.get('text'):
                 assert edition['rights'].startswith(HOSTED_RIGHTS), edition['id']
                 path = (ROOT / edition['text']).resolve()
@@ -69,7 +82,8 @@ def validate(catalog):
                     scans = source['volumes'] + ([source['substitutePages']] if source.get('substitutePages') else [])
                     assert edition['source'] in [v['url'] for v in scans], edition['id']
                     for v in scans:
-                        assert v['url'] == 'https://archive.org/details/' + v['identifier'] and pd_by_date(v['year']), v['identifier']
+                        assert v['url'] == 'https://archive.org/details/' + v['identifier'], v['identifier']
+                        assert scan_ok(edition, source, v), v['identifier']
                         assert re.fullmatch(r'[0-9a-f]{64}', v['ocrSha256']), v['identifier']
                     continue
                 if source.get('kind') == 'public-domain-text':
@@ -84,7 +98,7 @@ def validate(catalog):
                     assert re.fullmatch(r'[0-9a-f]{64}', source.get('sourceFileSha256', '')), edition['id']
                     ia = source.get('iaWitness') or {}
                     if ia:
-                        assert ia['url'] == 'https://archive.org/details/' + ia['identifier'] and pd_by_date(ia['year']), ia
+                        assert ia['url'] == 'https://archive.org/details/' + ia['identifier'] and scan_ok(edition, source, ia), ia
                         assert re.fullmatch(r'[0-9a-f]{64}', ia.get('ocrSha256', '')), ia
                     continue
                 assert b'END OF THE PROJECT GUTENBERG' in raw.upper()

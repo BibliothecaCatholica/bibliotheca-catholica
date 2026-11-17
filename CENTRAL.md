@@ -44,6 +44,11 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-17, Claude (Claude Code): design refresh
+
+- Part 1 (#56): audit, 20 unlisted previews at /design-preview/ (tools/build_design_preview.py, tests/test_design_preview.py), and docs/research/design-directions-2026-11.md. Micah picked: home v4, reading room v1 with authors v2, reading v2 contents (not sticky) with v3 endings, licensing v2, nav v1.
+- Part 2, one area per PR, screenshots in docs/research/design-refresh-2026-11/: home "Saints first" (hero band, portrait gallery with "Begin with", `HOME_BEGIN` in tools/site_copy.py). Next: library and authors, reading pages, licensing, navigation; then delete /design-preview/.
+
 ### 2026-11-17, Claude (Claude Code): pd-nonrenewal approved and merged
 
 - tools/rights_rule.py nonrenewal_problems(): US first publication 1931 to 1963, dated no-renewal results (Stanford, NYPL, and the Copyright Office from 1950), HathiTrust code quoted, a URAA line, and the named scan; validator, tools, and tests accept it, pd-date unchanged.
@@ -53,11 +58,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - transcribe_scan.py: footnotes move after their paragraph as [Note: ...]; repeated library stamps dropped; a lone j between words restored to a semicolon.
 - Live #51 texts keep their defects until the corrected-edition PR (new editions, old ones retired).
-
-### 2026-11-17, Claude (Claude Code): design refresh Part 1, previews
-
-- Audit of five areas and 20 working previews (four per area) at /design-preview/, written by tools/build_design_preview.py from real data at the end of build_static.py; noindex,nofollow, robots.txt disallow, out of the sitemap, nav, and search (tests/test_design_preview.py).
-- Directions, mismatches, and a recommendation per area: docs/research/design-directions-2026-11.md. Waiting on Micah's pick per area (HOLDS.md); Part 2 builds one area per PR, then deletes /design-preview/ with its script and test.
 
 ## Open items
 

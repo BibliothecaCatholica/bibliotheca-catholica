@@ -85,3 +85,16 @@ test('phone header: search collapses behind a search button below 600 px; the fo
  assert.ok(app.includes("if(e.key==='/'&&")&&app.includes('if(searchCollapsed())searchOpen(true);else qi.focus()'));
  assert.ok(!/scope=(library|isidore)/.test(html.slice(html.indexOf('<form class="searchwrap"'),html.indexOf('</form>'))),'header search keeps the Everything default');
 });
+
+// Design refresh (owner's pick, November 17, 2026): catalogue pages.
+test('reading room: subject facets with counts; author index: one filter bar, no chips or portraits',()=>{
+ const lib=fs.readFileSync('scripts/library.js','utf8'),app=fs.readFileSync('app.js','utf8'),css=fs.readFileSync('styles.css','utf8');
+ assert.match(lib,/<fieldset id="library-topic" class="lf-set"><legend>Subject<\/legend>/);
+ assert.match(lib,/type="radio" name="library-topic"/);assert.match(lib,/class="lf-n">'\+n\+'/);
+ for(const id of ['library-query','library-format','library-readable','library-count','library-results'])assert.ok(lib.includes('id="'+id+'"'),id);
+ for(const ev of ["filter_name:'Subject'","filter_name:'Format'","filter_name:'Read on this site'"])assert.ok(lib.includes(ev),ev);
+ const i=app.indexOf('function authors('),au=app.slice(i,app.indexOf('\nfunction ',i+1));
+ assert.ok(au.includes('class="au-bar"')&&au.includes('id="af-era"')&&au.includes('class="au-list"'));
+ assert.ok(!au.includes('class="chip')&&!au.includes('thumb('),'no chips or portraits in the author index');
+ assert.match(css,/--field:#94805c/);assert.match(css,/\[data-theme=dark\]\{[^}]*--field:#6b6f7c/);
+});

@@ -1,6 +1,6 @@
 .reader-tools,.reader-pagination{display:flex;align-items:center;flex-wrap:wrap;gap:16px;padding:16px 0}
 .reader-tools label,.toolbar label{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-select,input,button{max-width:100%}.reader-tools select,#library-topic{background:var(--card);color:var(--ink);border:1px solid var(--line);padding:8px;border-radius:8px;font:inherit}
+select,input,button{max-width:100%}.reader-tools select{background:var(--card);color:var(--ink);border:1px solid var(--line);padding:8px;border-radius:8px;font:inherit}
 .reading-text{max-width:26em;margin:16px auto 32px;font-size:22px;line-height:1.8;overflow-wrap:anywhere}
 .reading-text p{white-space:pre-wrap;margin:0 0 1.3em}.reader-pagination{justify-content:center}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
@@ -133,3 +133,20 @@ body.has-listen-dock footer{padding-bottom:64px}
 .council-sum{margin:var(--s-1) 0 0;max-width:66ch;font-size:var(--t-md);color:var(--ink2)}
 .council-acts,.council-more{margin:var(--s-1) 0 0;font:var(--t-xs)/1.6 var(--sans)}.council-acts a,.council-more a{overflow-wrap:anywhere}
 .council-note{max-width:66ch;margin:var(--s-6) 0 0;color:var(--muted)}
+
+/* Reading room as a faceted catalogue (design refresh, owner's pick of November 17, 2026; docs/DESIGN.md "Catalogue pages"):
+   a facet column (find, Subject with counts, Format, Read on this site) beside the shelves of rows; sticky on wide screens. */
+.lib-cat{display:grid;grid-template-columns:232px minmax(0,1fr);gap:32px;align-items:start}
+.lib-facets{position:sticky;top:148px;max-height:calc(100vh - 164px);overflow:auto;display:flex;flex-direction:column;gap:8px;padding:2px 8px 8px 2px}
+.lf-l{font:500 14px/1.3 var(--sans);color:var(--ink2)}
+.lib-facets input[type=search],.lib-facets select{width:100%;font:16px var(--sans);min-height:44px;padding:0 12px;border:1px solid var(--field);border-radius:6px;background:var(--card);color:var(--ink)}
+.lf-set{border:0;margin:8px 0 0;padding:0;display:flex;flex-direction:column;min-width:0}
+.lf-set legend{font:500 16px/1.3 var(--serif);font-variant-caps:all-small-caps;letter-spacing:.06em;color:var(--gold-ink);margin:0 0 4px;padding:0}
+.lf-c{display:flex;gap:8px;align-items:center;min-height:32px;font:16px/1.25 var(--serif);color:var(--ink);cursor:pointer}
+.lf-c input{accent-color:var(--rubric);width:18px;height:18px;margin:0;flex:none}
+.lf-n{margin-left:auto;color:var(--muted);font-size:14px;font-variant-numeric:lining-nums}
+.lf-h{border-top:1px solid var(--line);padding-top:8px;margin-top:4px}
+.lf-count{margin:0 0 8px;font:14px var(--sans);color:var(--muted)}
+.lib-res .shelf{max-width:none}.lib-res .shelf:first-child{margin-top:0}
+@media(max-width:860px){.lib-cat{grid-template-columns:1fr;gap:16px}.lib-facets{position:static;max-height:none;overflow:visible;padding:0}
+  .lf-set{flex-direction:row;flex-wrap:wrap;gap:0 16px}.lf-n{margin-left:2px}}

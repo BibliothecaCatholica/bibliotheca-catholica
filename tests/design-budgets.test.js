@@ -98,3 +98,13 @@ test('reading room: subject facets with counts; author index: one filter bar, no
  assert.ok(!au.includes('class="chip')&&!au.includes('thumb('),'no chips or portraits in the author index');
  assert.match(css,/--field:#94805c/);assert.match(css,/\[data-theme=dark\]\{[^}]*--field:#6b6f7c/);
 });
+
+// Design refresh (owner's pick, November 17, 2026): masthead navigation and footer.
+test('masthead: small-caps sections with an underlined current section, list menu on phones, focus not gold',()=>{
+ const css=fs.readFileSync('styles/refresh.css','utf8'),blk=css.slice(css.indexOf('/* Navigation and footer (design refresh'));
+ assert.ok(blk.length>100,'masthead block');
+ assert.match(blk,/\.mainnav a\{font:500 18px\/1 var\(--serif\);font-variant-caps:all-small-caps/);
+ assert.match(blk,/\.mainnav a\[aria-current=page\],\.mainnav a\.on,\[data-theme=dark\] \.mainnav a\.on\{color:var\(--rubric\);border-bottom-color:var\(--rubric\)\}/);
+ assert.match(blk,/\.mainnav\.open \.nav-row\{display:block\}/);
+ for(const f of ['styles/library.css','styles/home.css','styles/saints.css'])assert.ok(!/outline:[^;}]*var\(--gold\)/.test(fs.readFileSync(f,'utf8')),f);
+});

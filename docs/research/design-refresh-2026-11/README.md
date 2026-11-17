@@ -112,7 +112,7 @@ Before and after screenshots for each Part 2 pull request (desktop 1366 px at 2x
 
 ![Last chapter after, phone](reading/after-lastpage-mobile.jpg)
 
-## Licensing and credits: contents rail
+## Licensing and credits: contents rail (#66)
 
 **Before, desktop**
 
@@ -137,3 +137,45 @@ Before and after screenshots for each Part 2 pull request (desktop 1366 px at 2x
 **After, a later section, desktop**
 
 ![After, a later section, desktop](sources/after-sections-desktop.jpg)
+
+## Navigation and footer: masthead
+
+**Header before, desktop**
+
+![Header before, desktop](nav/before-header-desktop.jpg)
+
+**Header after, desktop**
+
+![Header after, desktop](nav/after-header-desktop.jpg)
+
+**Header before, phone**
+
+![Header before, phone](nav/before-header-mobile.jpg)
+
+**Header after, phone**
+
+![Header after, phone](nav/after-header-mobile.jpg)
+
+**Phone menu before**
+
+![Phone menu before](nav/before-menu-mobile.jpg)
+
+**Phone menu after**
+
+![Phone menu after](nav/after-menu-mobile.jpg)
+
+**Footer before, desktop**
+
+![Footer before, desktop](nav/before-footer-desktop.jpg)
+
+**Footer after, desktop**
+
+![Footer after, desktop](nav/after-footer-desktop.jpg)
+
+**Footer before, phone**
+
+![Footer before, phone](nav/before-footer-mobile.jpg)
+
+**Footer after, phone**
+
+![Footer after, phone](nav/after-footer-mobile.jpg)

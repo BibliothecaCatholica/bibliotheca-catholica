@@ -19,7 +19,7 @@ Exactly three styles:
 2. **Outlined secondary** (`.btn.ghost`): a hairline rubric border, no fill.
 3. **Text link**: underlined serif or small sans, rubric. Use this for everything else, including rows of actions.
 
-Gold buttons (`.btn.gold`) and pill buttons are retired. Buttons have 6 px corners, not pills. Icon buttons (theme, menu) keep their square shape.
+Gold buttons (`.btn.gold`) and pill buttons are retired, and so is the filled pill for the current section (it is underlined). Buttons have 6 px corners, not pills. Icon buttons (theme, menu) keep their square shape.
 
 ## Portraits
 
@@ -55,6 +55,14 @@ Design refresh, owner's pick of November 17, 2026: "Contents rail" ([design dire
 - No panel border around the text. A sticky "On this page" list sits beside it on wide screens (Summary, the five numbered sections, then Rights & Permissions and Takedown requests) and becomes a two-column list above the text on phones.
 - The list uses buttons that scroll to a section and move focus to its heading (`.lic-j` in `app.js`), not `#anchors`: the hash router would read an anchor as a route and count a page view.
 - The summary table keeps its stacked, labelled rows on phones; its header is small sans over a dark rule, the Material column in semibold.
+
+## Navigation and footer
+
+Design refresh, owner's pick of November 17, 2026: "Masthead" ([design directions](research/design-directions-2026-11.md)); the header and footer markup in `index.html` are unchanged, and the rules are the last block of `styles/refresh.css`.
+- **Masthead (1000 px and wider):** the search field on the left, the cross and the wordmark centered with "a library of libraries" in small capitals under it, Support and the theme button on the right. The header stays sticky at about its former height, because the reader, the author tabs, and the editions page measure it.
+- **Sections:** one row on a hairline, in serif small capitals (18 px, `.06em`), centered. The current section is burgundy with a 2 px underline; no filled pill. Phones keep the search, theme, and menu buttons; the open menu is a list of full-width rows (48 px), the current section in burgundy.
+- **Footer:** three columns (the project's name, description, newsletter line, and "About this independent project"; Read & explore; The project), serif links in `--ink2`, small-caps headings in `--gold-ink`, and one sans credit line.
+- **Focus:** outlines use `--focus` (`#1f3a5f` light, `#e9c46a` dark), not gold, which was 2.78:1 on the light background.
 
 ## Containers
 

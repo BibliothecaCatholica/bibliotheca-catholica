@@ -23,6 +23,9 @@ class Councils(unittest.TestCase):
         for c in D['councils']:
             self.assertTrue((c.get('work') in hosted) or c.get('links'),c['id'])
             for L in c.get('links',[]):self.assertTrue(L['url'].startswith('https://'),L)
+        # councils 1 to 18 link their own Papal Encyclicals Online page (checked 2026-11-17)
+        for c in D['councils'][:18]:
+            self.assertTrue(any(re.fullmatch(r'https://www\.papalencyclicals\.net/councils/ecum\d\d(-2)?\.htm',L['url']) for L in c['links']),c['id'])
         # the Church Documents links already on the site are kept
         for u in ('https://www.papalencyclicals.net/councils','https://www.papalencyclicals.net/councils/trent.htm','https://www.papalencyclicals.net/councils/ecum20.htm','https://www.vatican.va/archive/hist_councils/ii_vatican_council/index.htm'):
             self.assertIn(u,PAGE)

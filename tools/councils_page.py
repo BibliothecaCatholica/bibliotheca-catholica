@@ -39,5 +39,6 @@ def body(lib=None):
         h+='<section class="council-era" aria-labelledby="era-'+E(e['id'])+'"><h2 id="era-'+E(e['id'])+'">'+E(e['t'])+' <span class="council-years">'+E(e['span'])+'</span></h2><ol class="rows council-list" start="'+str(rows[0]['n'])+'">'+''.join(row(c,lib,hosted,libw) for c in rows)+'</ol></section>'
     h+=('<p class="council-note small">Summaries are our own, in brief. For the authoritative text of any council, '
         '<a href="https://www.vatican.va/content/vatican/en.html" target="_blank" rel="noopener">vatican.va</a> and the scholarly editions are the sources; '
-        'links marked ↗ open other sites. More Church documents: <a href="/magisterium/">Church Documents</a>.</p>')
+        'links marked ↗ open other sites. '
+        '<a href="https://www.papalencyclicals.net/councils" target="_blank" rel="noopener">All the councils at Papal Encyclicals Online ↗</a>. More Church documents: <a href="/magisterium/">Church Documents</a>.</p>')
     return h

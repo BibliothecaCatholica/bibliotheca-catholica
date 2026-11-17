@@ -2,116 +2,371 @@
   "about": "The twenty-one ecumenical councils as the Catholic Church counts them, in order. Summaries are written for this site in plain words. 'work' names a reading-room work id; the row shows 'Read on this site' only once that work has a hosted edition in data/library.json. 'links' are outbound links checked when added (see docs/research/councils-sources-2026-11.csv). Rendered by tools/councils_page.py into /councils/ (tools/build_static.py).",
   "checked": "2026-11-17",
   "eras": [
-    {"id": "early", "t": "The first seven councils", "span": "325–787"},
-    {"id": "medieval", "t": "Councils of the Middle Ages", "span": "869–1517"},
-    {"id": "modern", "t": "Councils of the modern era", "span": "1545–1965"}
+    {
+      "id": "early",
+      "t": "The first seven councils",
+      "span": "325–787"
+    },
+    {
+      "id": "medieval",
+      "t": "Councils of the Middle Ages",
+      "span": "869–1517"
+    },
+    {
+      "id": "modern",
+      "t": "Councils of the modern era",
+      "span": "1545–1965"
+    }
   ],
   "councils": [
-    {"n": 1, "id": "nicaea-i", "era": "early", "name": "First Council of Nicaea", "years": "325",
-     "summary": "Taught, against Arius, that the Son is true God, of one substance with the Father; issued the first form of the Nicene Creed; and set a common way to date Easter.",
-     "work": null,
-     "links": [
-       {"label": "Percival translation on Wikisource", "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_First_Ecumenical_Council"},
-       {"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}
-     ]},
-    {"n": 2, "id": "constantinople-i", "era": "early", "name": "First Council of Constantinople", "years": "381",
-     "summary": "Confessed the divinity of the Holy Spirit and completed the Creed in the form still prayed at Mass.",
-     "work": null,
-     "links": [
-       {"label": "Percival translation on Wikisource", "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_Second_Ecumenical_Council"},
-       {"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}
-     ]},
-    {"n": 3, "id": "ephesus", "era": "early", "name": "Council of Ephesus", "years": "431",
-     "summary": "Rejected the teaching of Nestorius and confessed Mary as Theotokos, Mother of God, because her Son is one divine Person.",
-     "work": null,
-     "links": [
-       {"label": "Percival translation on Wikisource", "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_Third_Ecumenical_Council"},
-       {"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}
-     ]},
-    {"n": 4, "id": "chalcedon", "era": "early", "name": "Council of Chalcedon", "years": "451",
-     "summary": "Defined that Christ is one Person in two natures, divine and human, without confusion or division, receiving the Tome of Pope Leo the Great.",
-     "work": null,
-     "links": [
-       {"label": "Percival translation on Wikisource", "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_Fourth_Ecumenical_Council"},
-       {"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}
-     ]},
-    {"n": 5, "id": "constantinople-ii", "era": "early", "name": "Second Council of Constantinople", "years": "553",
-     "summary": "Condemned the writings known as the Three Chapters and confirmed the teaching of Chalcedon against a Nestorian reading of it.",
-     "work": null,
-     "links": [
-       {"label": "Percival translation on Wikisource", "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_Fifth_Ecumenical_Council"},
-       {"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}
-     ]},
-    {"n": 6, "id": "constantinople-iii", "era": "early", "name": "Third Council of Constantinople", "years": "680–681",
-     "summary": "Taught that Christ has two wills, divine and human, the human will always following the divine, against monothelitism.",
-     "work": null,
-     "links": [
-       {"label": "Percival translation on Wikisource", "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_Sixth_Ecumenical_Council"},
-       {"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}
-     ]},
-    {"n": 7, "id": "nicaea-ii", "era": "early", "name": "Second Council of Nicaea", "years": "787",
-     "summary": "Upheld the veneration of holy images, distinguishing the honor shown to them from the worship due to God alone.",
-     "work": null,
-     "links": [
-       {"label": "Percival translation on Wikisource", "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_Seventh_Ecumenical_Council"},
-       {"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}
-     ]},
-    {"n": 8, "id": "constantinople-iv", "era": "medieval", "name": "Fourth Council of Constantinople", "years": "869–870",
-     "summary": "Deposed Photius and restored Ignatius as patriarch of Constantinople, and confirmed the veneration of images. It is counted as ecumenical in the West.",
-     "work": null,
-     "links": [{"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}]},
-    {"n": 9, "id": "lateran-i", "era": "medieval", "name": "First Lateran Council", "years": "1123",
-     "summary": "Confirmed the Concordat of Worms, which settled the dispute over lay investiture of bishops, and passed canons of reform.",
-     "work": null,
-     "links": [{"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}]},
-    {"n": 10, "id": "lateran-ii", "era": "medieval", "name": "Second Lateran Council", "years": "1139",
-     "summary": "Ended the schism of the antipope Anacletus II and passed canons on the discipline and celibacy of the clergy.",
-     "work": null,
-     "links": [{"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}]},
-    {"n": 11, "id": "lateran-iii", "era": "medieval", "name": "Third Lateran Council", "years": "1179",
-     "summary": "Required a two-thirds majority of the cardinals to elect a pope and passed canons against simony and heresy.",
-     "work": null,
-     "links": [{"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}]},
-    {"n": 12, "id": "lateran-iv", "era": "medieval", "name": "Fourth Lateran Council", "years": "1215",
-     "summary": "Professed the faith in a creed that uses the word transubstantiation, required yearly confession and Easter Communion, and called a crusade.",
-     "work": null,
-     "links": [{"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}]},
-    {"n": 13, "id": "lyon-i", "era": "medieval", "name": "First Council of Lyon", "years": "1245",
-     "summary": "Declared the Emperor Frederick II deposed and called for help for the Holy Land.",
-     "work": null,
-     "links": [{"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}]},
-    {"n": 14, "id": "lyon-ii", "era": "medieval", "name": "Second Council of Lyon", "years": "1274",
-     "summary": "Received a short-lived reunion with the Greek Church, taught that the Holy Spirit proceeds from the Father and the Son, and set rules for the conclave.",
-     "work": null,
-     "links": [{"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}]},
-    {"n": 15, "id": "vienne", "era": "medieval", "name": "Council of Vienne", "years": "1311–1312",
-     "summary": "Suppressed the Knights Templar and taught that the rational soul is of itself the form of the human body.",
-     "work": null,
-     "links": [{"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}]},
-    {"n": 16, "id": "constance", "era": "medieval", "name": "Council of Constance", "years": "1414–1418",
-     "summary": "Ended the Western Schism with the election of Martin V and condemned the teachings of Wycliffe and Hus.",
-     "work": null,
-     "links": [{"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}]},
-    {"n": 17, "id": "florence", "era": "medieval", "name": "Council of Basel, Ferrara, and Florence", "years": "1431–1445",
-     "summary": "Agreed decrees of reunion with the Greeks, Armenians, Copts, and others, and defined the primacy of the Roman Pontiff.",
-     "work": null,
-     "links": [{"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}]},
-    {"n": 18, "id": "lateran-v", "era": "medieval", "name": "Fifth Lateran Council", "years": "1512–1517",
-     "summary": "Taught that each human soul is individual and immortal, and passed reforms on the eve of the Reformation.",
-     "work": null,
-     "links": [{"label": "Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils"}]},
-    {"n": 19, "id": "trent", "era": "modern", "name": "Council of Trent", "years": "1545–1563",
-     "summary": "Answered the Protestant Reformation on Scripture and Tradition, justification, and the seven sacraments, and began the reform of the clergy and seminaries.",
-     "work": null,
-     "links": [{"label": "Canons and decrees at Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils/trent.htm"}]},
-    {"n": 20, "id": "vatican-i", "era": "modern", "name": "First Vatican Council", "years": "1869–1870",
-     "summary": "Taught that God can be known by the light of natural reason, and defined the primacy of the pope and his infallibility when he teaches ex cathedra.",
-     "work": null,
-     "links": [{"label": "Dei Filius and Pastor Aeternus at Papal Encyclicals Online", "url": "https://www.papalencyclicals.net/councils/ecum20.htm"}]},
-    {"n": 21, "id": "vatican-ii", "era": "modern", "name": "Second Vatican Council", "years": "1962–1965",
-     "summary": "Renewed the liturgy and set out the Church’s teaching on revelation, on the Church herself, and on her place in the modern world, in sixteen documents.",
-     "work": null,
-     "siteWorks": ["sacrosanctum-concilium", "lumen-gentium", "dei-verbum", "gaudium-spes"],
-     "links": [{"label": "All sixteen documents at vatican.va", "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/index.htm"}]}
+    {
+      "n": 1,
+      "id": "nicaea-i",
+      "era": "early",
+      "name": "First Council of Nicaea",
+      "years": "325",
+      "summary": "Taught, against Arius, that the Son is true God, of one substance with the Father; issued the first form of the Nicene Creed; and set a common way to date Easter.",
+      "work": null,
+      "links": [
+        {
+          "label": "Percival translation on Wikisource",
+          "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_First_Ecumenical_Council"
+        },
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum01.htm"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "id": "constantinople-i",
+      "era": "early",
+      "name": "First Council of Constantinople",
+      "years": "381",
+      "summary": "Confessed the divinity of the Holy Spirit and completed the Creed in the form still prayed at Mass.",
+      "work": null,
+      "links": [
+        {
+          "label": "Percival translation on Wikisource",
+          "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_Second_Ecumenical_Council"
+        },
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum02.htm"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "id": "ephesus",
+      "era": "early",
+      "name": "Council of Ephesus",
+      "years": "431",
+      "summary": "Rejected the teaching of Nestorius and confessed Mary as Theotokos, Mother of God, because her Son is one divine Person.",
+      "work": null,
+      "links": [
+        {
+          "label": "Percival translation on Wikisource",
+          "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_Third_Ecumenical_Council"
+        },
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum03.htm"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "id": "chalcedon",
+      "era": "early",
+      "name": "Council of Chalcedon",
+      "years": "451",
+      "summary": "Defined that Christ is one Person in two natures, divine and human, without confusion or division, receiving the Tome of Pope Leo the Great.",
+      "work": null,
+      "links": [
+        {
+          "label": "Percival translation on Wikisource",
+          "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_Fourth_Ecumenical_Council"
+        },
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum04.htm"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "id": "constantinople-ii",
+      "era": "early",
+      "name": "Second Council of Constantinople",
+      "years": "553",
+      "summary": "Condemned the writings known as the Three Chapters and confirmed the teaching of Chalcedon against a Nestorian reading of it.",
+      "work": null,
+      "links": [
+        {
+          "label": "Percival translation on Wikisource",
+          "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_Fifth_Ecumenical_Council"
+        },
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum05.htm"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "id": "constantinople-iii",
+      "era": "early",
+      "name": "Third Council of Constantinople",
+      "years": "680–681",
+      "summary": "Taught that Christ has two wills, divine and human, the human will always following the divine, against monothelitism.",
+      "work": null,
+      "links": [
+        {
+          "label": "Percival translation on Wikisource",
+          "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_Sixth_Ecumenical_Council"
+        },
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum06.htm"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "id": "nicaea-ii",
+      "era": "early",
+      "name": "Second Council of Nicaea",
+      "years": "787",
+      "summary": "Upheld the veneration of holy images, distinguishing the honor shown to them from the worship due to God alone.",
+      "work": null,
+      "links": [
+        {
+          "label": "Percival translation on Wikisource",
+          "url": "https://en.wikisource.org/wiki/Nicene_and_Post-Nicene_Fathers:_Series_II/Volume_XIV/The_Seventh_Ecumenical_Council"
+        },
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum07.htm"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "id": "constantinople-iv",
+      "era": "medieval",
+      "name": "Fourth Council of Constantinople",
+      "years": "869–870",
+      "summary": "Deposed Photius and restored Ignatius as patriarch of Constantinople, and confirmed the veneration of images. It is counted as ecumenical in the West.",
+      "work": null,
+      "links": [
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum08.htm"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "id": "lateran-i",
+      "era": "medieval",
+      "name": "First Lateran Council",
+      "years": "1123",
+      "summary": "Confirmed the Concordat of Worms, which settled the dispute over lay investiture of bishops, and passed canons of reform.",
+      "work": null,
+      "links": [
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum09.htm"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "id": "lateran-ii",
+      "era": "medieval",
+      "name": "Second Lateran Council",
+      "years": "1139",
+      "summary": "Ended the schism of the antipope Anacletus II and passed canons on the discipline and celibacy of the clergy.",
+      "work": null,
+      "links": [
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum10.htm"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "id": "lateran-iii",
+      "era": "medieval",
+      "name": "Third Lateran Council",
+      "years": "1179",
+      "summary": "Required a two-thirds majority of the cardinals to elect a pope and passed canons against simony and heresy.",
+      "work": null,
+      "links": [
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum11.htm"
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "id": "lateran-iv",
+      "era": "medieval",
+      "name": "Fourth Lateran Council",
+      "years": "1215",
+      "summary": "Professed the faith in a creed that uses the word transubstantiation, required yearly confession and Easter Communion, and called a crusade.",
+      "work": null,
+      "links": [
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum12-2.htm"
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "id": "lyon-i",
+      "era": "medieval",
+      "name": "First Council of Lyon",
+      "years": "1245",
+      "summary": "Declared the Emperor Frederick II deposed and called for help for the Holy Land.",
+      "work": null,
+      "links": [
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum13.htm"
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "id": "lyon-ii",
+      "era": "medieval",
+      "name": "Second Council of Lyon",
+      "years": "1274",
+      "summary": "Received a short-lived reunion with the Greek Church, taught that the Holy Spirit proceeds from the Father and the Son, and set rules for the conclave.",
+      "work": null,
+      "links": [
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum14.htm"
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "id": "vienne",
+      "era": "medieval",
+      "name": "Council of Vienne",
+      "years": "1311–1312",
+      "summary": "Suppressed the Knights Templar and taught that the rational soul is of itself the form of the human body.",
+      "work": null,
+      "links": [
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum15.htm"
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "id": "constance",
+      "era": "medieval",
+      "name": "Council of Constance",
+      "years": "1414–1418",
+      "summary": "Ended the Western Schism with the election of Martin V and condemned the teachings of Wycliffe and Hus.",
+      "work": null,
+      "links": [
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum16.htm"
+        }
+      ]
+    },
+    {
+      "n": 17,
+      "id": "florence",
+      "era": "medieval",
+      "name": "Council of Basel, Ferrara, and Florence",
+      "years": "1431–1445",
+      "summary": "Agreed decrees of reunion with the Greeks, Armenians, Copts, and others, and defined the primacy of the Roman Pontiff.",
+      "work": null,
+      "links": [
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum17.htm"
+        }
+      ]
+    },
+    {
+      "n": 18,
+      "id": "lateran-v",
+      "era": "medieval",
+      "name": "Fifth Lateran Council",
+      "years": "1512–1517",
+      "summary": "Taught that each human soul is individual and immortal, and passed reforms on the eve of the Reformation.",
+      "work": null,
+      "links": [
+        {
+          "label": "Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum18.htm"
+        }
+      ]
+    },
+    {
+      "n": 19,
+      "id": "trent",
+      "era": "modern",
+      "name": "Council of Trent",
+      "years": "1545–1563",
+      "summary": "Answered the Protestant Reformation on Scripture and Tradition, justification, and the seven sacraments, and began the reform of the clergy and seminaries.",
+      "work": null,
+      "links": [
+        {
+          "label": "Canons and decrees at Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/trent.htm"
+        }
+      ]
+    },
+    {
+      "n": 20,
+      "id": "vatican-i",
+      "era": "modern",
+      "name": "First Vatican Council",
+      "years": "1869–1870",
+      "summary": "Taught that God can be known by the light of natural reason, and defined the primacy of the pope and his infallibility when he teaches ex cathedra.",
+      "work": null,
+      "links": [
+        {
+          "label": "Dei Filius and Pastor Aeternus at Papal Encyclicals Online",
+          "url": "https://www.papalencyclicals.net/councils/ecum20.htm"
+        }
+      ]
+    },
+    {
+      "n": 21,
+      "id": "vatican-ii",
+      "era": "modern",
+      "name": "Second Vatican Council",
+      "years": "1962–1965",
+      "summary": "Renewed the liturgy and set out the Church’s teaching on revelation, on the Church herself, and on her place in the modern world, in sixteen documents.",
+      "work": null,
+      "siteWorks": [
+        "sacrosanctum-concilium",
+        "lumen-gentium",
+        "dei-verbum",
+        "gaudium-spes"
+      ],
+      "links": [
+        {
+          "label": "All sixteen documents at vatican.va",
+          "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/index.htm"
+        }
+      ]
+    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-28dd577fc2b2",
+  "id": "bc-fa48dda0b6e6",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "b1ddb045bebcbbbb2797a9c83412195ce21dd0ce7dcd68b227389e61da12162b",
@@ -12,7 +12,7 @@
     "data/books.js": "7b380c1e116603d0f7317fc3bdedef93d6e8db2bb1ea8700e5b37851f8ed04fd",
     "data/books.json": "cd0905aa65ea5d9e595ac5983a1884ba8ae2cbf450efb394fea7288ec59433d6",
     "data/catholic-hub.json": "4fba6cf11d5cb4203f68078f3ba9896cb0577df825d5cdf9d626e856de3bc3d0",
-    "data/councils.json": "13b69f1fe031603b7a5d76d5b56011e79650ffca057d5ff63007e55f14c5bdc7",
+    "data/councils.json": "a773641036b2969b6f3984504b4805a0ca26cc4386c5e11943e67eff05a10f6e",
     "data/covers.json": "1fc6fbfd00fb4c76aad31a9b593f070801a59016d1685e95ecc36a98e5c4984d",
     "data/data.js": "78dce7147e467d8d0b80c142bdbb97f0b76cd9732829f3baff7c1bdfbd45c736",
     "data/doctors.js": "8ab294f96e4aefba63130d20f42a6000eb30ab169d2c85e2fabb5e3556a984af",
@@ -116,7 +116,7 @@
     "tools/check_author_links.py": "66fedd54256d46e200b29cd1b36217be395cf0a0a4452a9f491b6989d8406d7a",
     "tools/check_library_links.py": "c9cddcddb22a5aef83bb86cba01ce80a433c04c2c7422a6d92d0158797889771",
     "tools/check_links.py": "eaca9fe8c0a299d514cb92f9889ea359645869913e53ddb5aea42b11c132e0d4",
-    "tools/councils_page.py": "b2639f3a2752a22c3761d93c0771a8f6ade6d39189729fe20af6aa1e1b2d419d",
+    "tools/councils_page.py": "c88fed3c346b3704f245f5c4c240811319bc4a777830d53ecef8256b1d7d8c1d",
     "tools/covers.py": "86adffcac39190c89225ff76d82a9aa98f4ead3aa25ef03faa5fc9cddf128f52",
     "tools/draft_text_map.py": "089eb682549c2fe928e1c06d725e804a148d72bfca82922ac038ad99d02303ec",
     "tools/edition_status.py": "2632a0df321a2f3ffdb0f217ce80d9896ccddc114b4cba50a6f7b4b94269d346",

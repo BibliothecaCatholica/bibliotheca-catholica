@@ -49,6 +49,13 @@ Design refresh, owner's pick of November 17, 2026: the "Margin contents" (v2) sh
 - New blocks use only faces the page already loads: the quoted sentence is roman with CSS quotation marks and "Finis" is in small capitals, so no italic font file is fetched for them (an extra face cost 2 Lighthouse points).
 - The Gutenberg sentence, the prev/next pager, and the Edition details stay after the text. The contents list no longer repeats after the pager. Print hides the contents and the Continue block.
 
+## Licensing and credits
+
+Design refresh, owner's pick of November 17, 2026: "Contents rail" ([design directions](research/design-directions-2026-11.md)); `licensing_html()` in `tools/rights_pages.py`, `styles/rights.css`. The page shows `LICENSING.md` word for word; only the layout changes.
+- No panel border around the text. A sticky "On this page" list sits beside it on wide screens (Summary, the five numbered sections, then Rights & Permissions and Takedown requests) and becomes a two-column list above the text on phones.
+- The list uses buttons that scroll to a section and move focus to its heading (`.lic-j` in `app.js`), not `#anchors`: the hash router would read an anchor as a route and count a page view.
+- The summary table keeps its stacked, labelled rows on phones; its header is small sans over a dark rule, the Material column in semibold.
+
 ## Containers
 
 - A container has **a border or a tint, never both**, and no shadow.

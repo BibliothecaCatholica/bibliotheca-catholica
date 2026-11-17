@@ -115,6 +115,9 @@ function efBox(id){var f=efOf(id);if(!f)return '';
    '<p class="small">Source: <a href="'+esc(EFL.disclaimer.source)+'" target="_blank" rel="noopener">Dignitatis Humanae, vatican.va ↗</a> · Listing is not endorsement: see our <a href="#/policy">Fidelity &amp; Editorial Policy</a>. This record is kept for historical study and is never featured.</p></aside>'}
 function policy(){render(EFL.policy_html||'<h1>Fidelity &amp; Editorial Policy</h1>','policy')}
 /* /rights, /takedown, and /licensing: HTML from tools/rights_pages.py via data/rights-pages.js (same source as the static pages) */
+// Design refresh (November 17, 2026): the licensing page's "On this page" buttons scroll to a section and move focus to its heading
+// (buttons, not #anchors, which the hash router would read as a route).
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.lic-j');if(!b)return;var t=document.getElementById(b.dataset.jump);if(!t)return;t.scrollIntoView({block:'start'});var h=t.querySelector('h2');if(h)h.focus({preventScroll:true})});
 /* Steering C (2026-11-03): help guides. Same HTML as the static /guides/<slug>/ page (data/guides.js from tools/guide_pages.py). */
 function guidePage(k){render('<div class="loading">Loading…</div>','');lazy('guides.js','GUIDES',function(G){var cur=(location.hash.replace(/^#\/?/,'')||(window.BC_BOOT||'')).split('?')[0];if(cur!=='guides/'+k)return;var g=G&&G[k];
   if(!g){render('<div class="empty"><h2>Not found</h2><p><a href="/guides/epub-on-your-device/">Read an EPUB on your device</a> · <a href="#/">Return home</a></p></div>','');return}render(g.html,'');document.title=g.title+' · Bibliotheca Catholica'})}

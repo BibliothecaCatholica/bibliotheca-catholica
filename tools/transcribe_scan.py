@@ -19,7 +19,7 @@ are 0-based page indexes of the djvu.xml, chosen by looking at the scan (front m
 publisher's advertisements out). Output per entry: data/texts/<edition>.txt and data/sources/<edition>.json
 (kind `ocr-transcription`, validated by tools/build_library.py and tests/test_transcribed_scans.py).
 """
-import argparse, collections, glob, hashlib, html, json, re, statistics, sys, time, urllib.request
+import argparse, collections, difflib, glob, hashlib, html, json, re, statistics, sys, time, urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -155,6 +155,60 @@ def norm_head(t):
     return re.sub(r'[^a-z]', '', t.lower())
 
 
+NOTE_MARK = re.compile(r'^[*°†‡§]|^\d{1,2}\.?\s+\S')  # "5 Moral." or "10. Cf."
+
+
+def split_notes(lines, height):
+    """Footnotes: a block at the foot of the page, starting with a note mark and set off by a wider gap than the line
+    spacing or set in smaller type. Returns (body lines, [note lines per note])."""
+    if len(lines) < 4:
+        return lines, []
+    ys = [l['y'] for l in lines]
+    gaps = [b - a for a, b in zip(ys, ys[1:])]
+    step = statistics.median(g for g in gaps if g > 0) if any(g > 0 for g in gaps) else 0
+    med_h = statistics.median(l['h'] for l in lines)
+    starts = [k for k in range(1, len(lines)) if lines[k]['y'] > 0.55 * height and NOTE_MARK.match(lines[k]['text'])
+              and (gaps[k - 1] > 1.4 * step or lines[k]['h'] < 0.85 * med_h)  # set apart, or in smaller type
+              and statistics.median(l['h'] for l in lines[k:]) < 0.92 * med_h]  # and the block is in smaller type
+    if starts:
+        k = min(starts)  # the first note of the block; the notes below it are part of the same block
+        if True:
+            notes = []
+            for l in lines[k:]:
+                if NOTE_MARK.match(l['text']) or not notes:
+                    notes.append([l['text']])
+                else:
+                    notes[-1].append(l['text'])
+            return lines[:k], notes
+    return lines, []
+
+
+def note_text(lines):
+    t = re.sub(r'([a-z])- ([a-z])', r'\1\2', ' '.join(lines))  # rejoin a word hyphenated across the note's lines
+    return '[Note: ' + t + ']'
+
+
+def library_stamps(raw_pages, heads):
+    """Short capital lines (a library's stamp) repeated on three or more pages below the top band of the page, where
+    running heads sit, and that are not running heads."""
+    c = collections.Counter()
+    for height, ls in raw_pages:
+        for l in ls:
+            t = l['text']
+            if l['y'] > 0.2 * height and len(t.split()) <= 6 and all_caps(t):
+                c[norm_head(t)] += 1
+    return {h for h, n in c.items() if n >= 3 and h and h not in heads and len(h) >= 8}
+
+
+def all_caps(t):
+    return sum(ch.isupper() for ch in t) > 0.7 * max(1, sum(ch.isalpha() for ch in t))
+
+
+def is_stamp(text, stamps):
+    n = norm_head(text)
+    return all_caps(text) and len(n) >= 8 and any(difflib.SequenceMatcher(None, n, s).ratio() >= 0.85 for s in stamps)
+
+
 def build(e, cache, V):
     xml, meta = fetch(e['ia'], cache)
     root = ET.fromstring(xml)
@@ -162,24 +216,36 @@ def build(e, cache, V):
     raw_pages = [(int(o.get('height') or 3000), page_lines(o)) for o in objs]
     firsts = collections.Counter(norm_head(ls[0]['text']) for _, ls in raw_pages if ls and len(ls[0]['text']) < 70)
     heads = {h for h, n in firsts.items() if n >= 3 and h}
-    paras, corrections, flagged = [], [], []
+    stamps = library_stamps(raw_pages, heads)
+    paras, corrections, flagged, pending = [], [], [], []
     cur, prev_end = [], ''
+
+    def close(par):
+        paras.append(par)
+        while pending:  # a page's footnotes follow the paragraph that was running on that page
+            paras.append([note_text(pending.pop(0))])
     for height, ls in raw_pages:
+        ls = [l for l in ls if not is_stamp(l['text'], stamps)]
         ls = body(ls, height, heads, V)
+        ls, notes = split_notes(ls, height)
         if not ls:
+            pending.extend(notes)
             continue
         margin = statistics.median(l['x'] for l in ls)
         for k, l in enumerate(ls):
             indent = l['x'] > margin + 25 and not prev_end.endswith('-')
-            sentence_end = bool(re.search(r'[.!?:;"”’)]$', prev_end))
+            sentence_end = bool(re.search(r'[.!?:;"”’)]\s*[\d*°†‡§]{0,2}$', prev_end))  # a note mark may follow
             heading = l['text'].isupper() and len(l['text'].split()) <= 10 and not prev_end.endswith('-')
             new = cur and (heading or (l['paraStart'] and sentence_end) or (indent and sentence_end)
                            or (cur and cur[-1].isupper() and len(cur[-1].split()) <= 10))
             if new:
-                paras.append(cur); cur = []
+                close(cur); cur = []
             cur.append(l['text']); prev_end = l['text']
+        pending.extend(notes)
     if cur:
-        paras.append(cur)
+        close(cur)
+    while pending:  # notes on the last pages
+        paras.append([note_text(pending.pop(0))])
     out = []
     for p in paras:
         text = ''
@@ -195,6 +261,8 @@ def build(e, cache, V):
             else:
                 text = (text + ' ' + line).strip()
         text = re.sub(r'\s+([,;:.!?])', r'\1', re.sub(r'\s+', ' ', text))
+        text, nj = re.subn(r'(?<=[A-Za-z]) j(?= [a-z])', ';', text)  # a semicolon the OCR read as a lone "j"
+        corrections.extend({'ocr': 'j', 'reading': ';'} for _ in range(nj))
         toks, bad = [], []
         for t in text.split(' '):
             f, ch = repair(t, V)
@@ -227,7 +295,8 @@ def main(spec, cache):
                 f"The OCR was cleaned by tools/transcribe_scan.py: running heads and page numbers removed, words rejoined "
                 f"across line breaks, and {len(corrections)} common OCR confusions repaired where only one reading is a "
                 f"known word. {len(flagged)} paragraphs keep a word the tool could not read; they are listed in the "
-                f"provenance record. No missing words were supplied. Not a manual proofread.", '',
+                f"provenance record. No missing words were supplied. Not a manual proofread."
+                + (f" {e['correction']}" if e.get('correction') else ''), '',
                 '*** START OF THE TRANSCRIPTION ***', '']
         data = ('\n'.join(head) + '\n\n'.join(paras) + '\n\n' + END + '\n').encode('utf-8')
         out_path.write_bytes(data)

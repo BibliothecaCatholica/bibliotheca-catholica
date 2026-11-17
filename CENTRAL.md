@@ -47,7 +47,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 ### 2026-11-17, Claude (Claude Code): design refresh
 
 - Part 1 (#56): audit, 20 unlisted previews at /design-preview/ (tools/build_design_preview.py, tests/test_design_preview.py), and docs/research/design-directions-2026-11.md. Micah picked: home v4, reading room v1 with authors v2, reading v2 contents (not sticky) with v3 endings, licensing v2, nav v1.
-- Part 2, one area per PR, screenshots in docs/research/design-refresh-2026-11/: home "Saints first" (#60; `HOME_BEGIN` in tools/site_copy.py); reading room facets and author shelf list (#64; `--field` token); chapter pages with contents at the start, Continue reading, Finis, colophon (#65); /licensing/ contents rail (#66); masthead navigation and footer, `--focus` outlines, dead hero CSS removed. Next: delete /design-preview/.
+- Part 2, one area per PR, screenshots in docs/research/design-refresh-2026-11/: home "Saints first" (#60; `HOME_BEGIN` in tools/site_copy.py); reading room facets and author shelf list (#64; `--field` token); chapter pages with contents at the start, Continue reading, Finis, colophon (#65); /licensing/ contents rail (#66); masthead navigation and footer (#67). /design-preview/ and its script and test removed; screenshots stay in docs/research/design-refresh-2026-11/. Open: HOLDS.md row on the licensing page names and the home Substack embed.
 
 ### 2026-11-17, Claude (Claude Code): Ecumenical Councils section
 

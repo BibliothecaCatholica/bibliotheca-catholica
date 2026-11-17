@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-b016022c6060",
+  "id": "bc-3267aea4325f",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "b1ddb045bebcbbbb2797a9c83412195ce21dd0ce7dcd68b227389e61da12162b",
@@ -90,7 +90,6 @@
     "tools/auto_layout.py": "76f76aaf9fd898bbac4cd8da9ab97ebab3d3be837e60074a59cf3977b698fb2e",
     "tools/build_books.py": "15387c91c94b6fc469566dba8b83d69413c4841144b8cca3277688b89af6f9ad",
     "tools/build_data.py": "77d085429577d0948ccb0b0107b9cd6fc14052d59a2491aac2ead825b9f40bf9",
-    "tools/build_design_preview.py": "68e2e0b76210d2d4e3a5a79fcb66c8be04a5f887aa8422b717021a4bd577104c",
     "tools/build_drafts.py": "d3da9f7de88653981b73bc024a07e8c6ca92aa3e99072db093eee0702cd5a727",
     "tools/build_editorial_flags.py": "4ad14170bbcbe4166496bc5258b60e77733c20e22e8ebf62c2fcaaffb944882a",
     "tools/build_epub.py": "f2b39c891baffaa6428dc41451c598ff402b90c222f5156061d5b9471892efd5",
@@ -104,7 +103,7 @@
     "tools/build_rights.py": "5b039cd38a857af0d7f70c04639a36096d17cc64397d0e9a3cbbb7a58e46b78a",
     "tools/build_rites.py": "0a81ecc92eaa1a8dff9034184970cdc5ca7ed948e5d9092ab262084b445207dd",
     "tools/build_saints.py": "99f6730d39e59cfab510d738a5d0be396f499360a606bb23aa69914b9425818f",
-    "tools/build_static.py": "052773739d870868f6bb658affc09cdf00e4ef3fa4ceb96ec5b4a1deb82ac2a1",
+    "tools/build_static.py": "adb4e8482069cc081c72105d872a9ccfdfd08013573ff57c08ab5651b8a7ef15",
     "tools/build_study.py": "104e6678f138ea9075089850e99d976c84afd9a0cf0102801e5e8acb6af56a80",
     "tools/build_summa.py": "9640d60813c0cf2b89af3ddddef9974f5c28eb5bd8e6e8c048e5d048e4a65557",
     "tools/build_text_archive.py": "90888a41ce43aa35952b5f6211d2f772ceab0a5b9f1402241aecf087d959af2f",

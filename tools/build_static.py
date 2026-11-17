@@ -14,7 +14,7 @@ pre-rendered or put in the sitemap.  Run after data changes and commit the outpu
 import hashlib,html,json,re,shutil,sys,urllib.parse
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE='https://bibliothecacatholica.com/';E=html.escape
-sys.path.insert(0,str(ROOT/'tools'));import site_copy,build_info
+sys.path.insert(0,str(ROOT/'tools'));import site_copy,build_info,credits_page
 from reader_formatting import reading_block, formatting_note, with_structure, with_auto_layout
 from auto_layout import LABEL as AUTO_LABEL
 # --- v17 SEO: see docs/SEO.md ---------------------------------------------------------------------
@@ -356,7 +356,7 @@ def part_pages(out,lib,by_html,author_ld):
               +(('<div class="ch-end"><p class="ch-orn" aria-hidden="true">❦</p><p>End of '+E(part_label(d,x))+'</p>'
                  +(a('/'+part_path(wid,d,nxt)+'/','Next: '+nxt['num']+'. '+nxt['title']+' →')+' · ' if nxt else '')
                  +'<a href="'+E(reader)+'">Continue in the reading room</a></div>') if pd else '')
-              +text_notice(e)+nav+parts_list(wid,d)
+              +text_notice(e)+(credits_page.colophon(e) if k==n-1 else '')+nav+parts_list(wid,d)
               +edition_details('<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+'. '+E(d.get('editionLine') or e.get('note',''))+'</p>',
                   '<p class="small">Source: '+E(w['author']+'. '+w['title']+'. '+e['label']+'.')+' '+text_source(e)+' '+a('/rights/','How rights are checked')+'.</p>',
                   (formatting_note(e) if any(lo <= x['end'] and hi >= x['start'] for lo,hi in e.get('readerFormatting',{}).get('proseRanges',[])) else ''),
@@ -611,7 +611,7 @@ def main():
         if au.get('extract') and au['extract'] not in desc:
             wt=urllib.parse.unquote(wk.split('/wiki/')[1]).replace('_',' ') if wk else au['name']
             wiki_block=('<blockquote class="extract"><p>'+E(au['extract']+('…' if len(au['extract'])>=595 else ''))+'</p></blockquote>'
-              '<p class="small wiki-credit">From Wikipedia, '+(a(wk,'“'+wt+'”',True) if wk else '“'+E(wt)+'”')+' (shortened), '+a(CC_BY_SA,'CC BY-SA 4.0',True)+'.</p>')  # rule 11: one line
+              '<p class="small wiki-credit"><a href="/credits/#wiki-'+E(au['id'])+'" aria-label="Text credit: Wikipedia excerpt, CC BY-SA 4.0">Text credit</a></p>')  # rule 11: the full attribution is on /credits/
         works=''.join('<li>'+a(w['url'],w['title'],True)+'</li>' for w in au.get('works') or [] if w.get('url'))
         mine=[w for w in lib['works'] if w.get('authorId')==au['id']]
         # v18.1: the 211 former isidore.co folder links became internal Isidore Index searches (#/isidore/<catalog name>)
@@ -789,6 +789,7 @@ def main():
     rp=json.loads((ROOT/'data/rights-pages.js').read_text().strip()[len('window.RIGHTS_PAGES='):-1])
     out['rights']=('Rights & Permissions · Bibliotheca Catholica','What the five Bibliotheca Catholica rights badges mean, how each status is decided, and when downloads are shown. Not legal advice.',rp['rights'],[crumbs(('Rights & Permissions','rights/'))])
     out['takedown']=('Takedown requests · Bibliotheca Catholica','How a rights holder can ask Bibliotheca Catholica to remove a text, a link, or a record’s file links, and how to send a counter-notice. Not legal advice.',rp['takedown'],[crumbs(('Takedown requests','takedown/'))])
+    out['credits']=('Sources and credits · Bibliotheca Catholica','Where every hosted book, portrait, and Wikipedia excerpt at Bibliotheca Catholica comes from: rights basis, evidence, source records, checksums, and credits.',credits_page.page_html(lib,hub,site_copy.HERO_CREDIT),[crumbs(('Sources and credits','credits/'))])
     out['licensing']=('Licensing & credits · Bibliotheca Catholica','How Bibliotheca Catholica is licensed: code MIT, open data CC0, site writing CC BY 4.0, texts public domain in the US, plus Wikipedia and portrait credits.',rp['licensing'],[crumbs(('Licensing & credits','licensing/'))])
     # Steering C (2026-11-03) help guides: same HTML as the app (data/guides.js, written by tools/build_guides.py from tools/guide_pages.py)
     gj=json.loads((ROOT/'data/guides.js').read_text().strip()[len('window.GUIDES='):-1]);sys.path.insert(0,str(ROOT/'tools'));import guide_pages

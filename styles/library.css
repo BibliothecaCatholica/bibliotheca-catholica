@@ -123,3 +123,15 @@ body.has-listen-dock footer{padding-bottom:64px}
 .q-contents li{counter-increment:a;display:grid;grid-template-columns:3.2em 1fr;padding:.55em 0;border-bottom:1px solid var(--line)}
 .q-contents li::before{content:"Art. " counter(a);font:500 13px var(--sans);color:var(--muted);padding-top:.2em}
 .summa-end p{margin:.3em 0}
+/* Sources and credits (November 2026): the colophon at the end of a book sits with the source's notice; /credits/ records are compact. */
+.colophon{max-width:760px;margin:8px auto 0;color:var(--muted)}
+.reader-notices .colophon{max-width:none}
+.credits-toc{margin:0 0 18px}
+.credit-record{margin:22px 0;padding-top:12px;border-top:1px solid var(--line);scroll-margin-top:90px}
+.credit-record h3{margin:0 0 2px}
+.credit-fields{display:grid;grid-template-columns:9.5rem 1fr;gap:4px 14px;margin:8px 0 0;font-size:15px}
+.credit-fields dt{color:var(--muted)}
+.credit-fields dd{margin:0;overflow-wrap:anywhere}
+.credit-list li{margin:0 0 6px;scroll-margin-top:90px}
+.credit-list li:target,.credit-record:target{background:var(--paper-2,rgba(201,162,74,.12))}
+@media (max-width:600px){.credit-fields{grid-template-columns:1fr}.credit-fields dd{margin:0 0 6px}}

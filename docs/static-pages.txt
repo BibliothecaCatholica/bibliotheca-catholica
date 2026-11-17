@@ -480,6 +480,7 @@ author/william-of-saint-thierry/index.html
 author/yves-congar/index.html
 author/yves-simon/index.html
 authors/index.html
+credits/index.html
 data/index.html
 disclosure/index.html
 doctors/index.html

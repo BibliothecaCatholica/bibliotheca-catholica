@@ -22,6 +22,16 @@ class CorrectedEditions(unittest.TestCase):
             self.assertIn('Corrected edition', new['note'])
             self.assertIn('Corrected edition', (ROOT / new['text']).read_text(encoding='utf-8')[:3000])
 
+    def test_retired_editions_are_left_out_of_the_public_count(self):
+        sys.path.insert(0, str(ROOT / 'tools'))
+        import hosted_counts as HC
+        c = HC.count()
+        live = sum(1 for w in LIB['works'] for e in w['editions'] if e.get('text') and not e.get('retired'))
+        self.assertEqual(c['hosted'], live)
+        self.assertEqual(c['retired'], sum(1 for w in LIB['works'] for e in w['editions'] if e.get('retired')))
+        self.assertIn("(e.text&&!e.retired)", (ROOT / 'app.js').read_text())
+        self.assertIn("e.get('text') and not e.get('retired')", (ROOT / 'tools/build_static.py').read_text())
+
     def test_validator_rejects_a_bad_retirement(self):
         cat = copy.deepcopy(LIB)
         w, e = next((w, e) for w in cat['works'] for e in w['editions'] if e.get('retired'))

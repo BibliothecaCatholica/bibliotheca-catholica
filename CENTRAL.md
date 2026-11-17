@@ -28,7 +28,7 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
 
-- 186 work records; 128 hosted editions of 123 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 186 work records; 131 hosted editions of 123 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,169 sitemap URLs; 7699 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 124 Node and 284 Python.
 
@@ -43,6 +43,11 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-17, Claude (Claude Code): corrected editions (for review)
+
+- Corrected new editions (-r2) for The Thing, The Resurrection of Rome, and Generally Speaking; the old editions are kept and marked retired (validator, test, PROJECT-RULES rule 1).
+- The Outline of Sanity and Simplicity and Tolstoy needed no word change. Waits for Micah's review (hosted texts).
+
 ### 2026-11-17, Claude (Claude Code): transcription fixes (footnotes, stamps, semicolons)
 
 - transcribe_scan.py: footnotes move after their paragraph as [Note: ...]; repeated library stamps dropped; a lone j between words restored to a semicolon.
@@ -52,12 +57,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - Audit of five areas and 20 working previews (four per area) at /design-preview/, written by tools/build_design_preview.py from real data at the end of build_static.py; noindex,nofollow, robots.txt disallow, out of the sitemap, nav, and search (tests/test_design_preview.py).
 - Directions, mismatches, and a recommendation per area: docs/research/design-directions-2026-11.md. Waiting on Micah's pick per area (HOLDS.md); Part 2 builds one area per PR, then deletes /design-preview/ with its script and test.
-
-### 2026-11-16, Catholic Repo: unlisted /drafts/ Substack paste pages
-
-- `data/substack-drafts.json` and `tools/build_drafts.py` write noindex,nofollow pages at `/drafts/<slug>/` and `/drafts/`, kept out of the sitemap, nav, search, and feeds. Deleting an entry removes that page on the next build.
-- After Substack confirms a post is live, it sends the slug and live URL; Repo deletes that entry in a small commit that merges on green CI. Never remove a page before the post is confirmed live. No automatic RSS check.
-- HOLDS.md: Candles' Beams (needs a scan) and Sheehan (CELT consent caveat). Edition count in this file: 203.
 
 ## Open items
 

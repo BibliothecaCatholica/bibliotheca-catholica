@@ -36,6 +36,17 @@ def validate(catalog):
             assert item['url'].startswith('https://')
             assert item['label'] and item['note'] and item['checked']
         assert work['editions'], work['id']
+        # Corrected editions (owner decision, November 17, 2026): a faulty hosted transcription is never overwritten. The
+        # corrected text is a new edition listed before the old one, which keeps its file and record and is marked retired.
+        ids_here = [e['id'] for e in work['editions']]
+        for e in work['editions']:
+            r = e.get('retired')
+            if r:
+                assert re.fullmatch(r'\d{4}-\d{2}-\d{2}', r.get('date', '')) and len(r.get('reason', '')) > 20, e['id']
+                new = next((x for x in work['editions'] if x['id'] == r.get('replacedBy')), None)
+                assert new and new.get('text') and not new.get('retired'), (e['id'], 'replacedBy must be a live hosted edition of this work')
+                assert ids_here.index(new['id']) < ids_here.index(e['id']), (e['id'], 'the replacement is listed first')
+                assert e.get('text'), (e['id'], 'a retired edition keeps its file')
         for edition in work['editions']:
             assert edition['id'] not in editions, edition['id']
             editions.add(edition['id'])

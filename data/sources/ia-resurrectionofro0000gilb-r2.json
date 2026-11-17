@@ -1,0 +1,1182 @@
+{
+  "id": "ia-resurrectionofro0000gilb-r2",
+  "kind": "ocr-transcription",
+  "title": "The Resurrection of Rome",
+  "author": "G. K. Chesterton",
+  "rights": "Public domain in the USA. First published 1930; the scanned printing is of 1930.",
+  "rightsBasis": "pd-date",
+  "volumes": [
+    {
+      "identifier": "resurrectionofro0000gilb",
+      "url": "https://archive.org/details/resurrectionofro0000gilb",
+      "year": 1930,
+      "publisher": "Dodd, Mead & Company",
+      "ocr": "resurrectionofro0000gilb_djvu.xml",
+      "ocrSha256": "4188c805b442b64fefb90a50ec727f13dfb2f3420b0865181c0769a940e4435d",
+      "leaves": [
+        4,
+        303
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed.",
+  "words": 76272,
+  "unknownWords": 254,
+  "readRate": 0.9967,
+  "flaggedBlocks": 137,
+  "flagged": [
+    {
+      "block": 3,
+      "words": [
+        "@stLeay",
+        "LiZRARY."
+      ]
+    },
+    {
+      "block": 12,
+      "words": [
+        "Copyricut,"
+      ]
+    },
+    {
+      "block": 16,
+      "words": [
+        "Quinn"
+      ]
+    },
+    {
+      "block": 26,
+      "words": [
+        "Peerae",
+        "ie"
+      ]
+    },
+    {
+      "block": 27,
+      "words": [
+        "loiter"
+      ]
+    },
+    {
+      "block": 31,
+      "words": [
+        "Trinita,",
+        "cascade",
+        "Crawford"
+      ]
+    },
+    {
+      "block": 33,
+      "words": [
+        "Jatria)"
+      ]
+    },
+    {
+      "block": 37,
+      "words": [
+        "Trinita"
+      ]
+    },
+    {
+      "block": 38,
+      "words": [
+        "mortuary"
+      ]
+    },
+    {
+      "block": 44,
+      "words": [
+        "Paganizing"
+      ]
+    },
+    {
+      "block": 45,
+      "words": [
+        "xsthetes"
+      ]
+    },
+    {
+      "block": 46,
+      "words": [
+        "medizvalists;",
+        "zsthetes"
+      ]
+    },
+    {
+      "block": 50,
+      "words": [
+        "procreative"
+      ]
+    },
+    {
+      "block": 51,
+      "words": [
+        "Trinita"
+      ]
+    },
+    {
+      "block": 55,
+      "words": [
+        "Sceasieeneennseiieemennetnettineniemnietsimmiieeemnemetmetmes",
+        "ener",
+        "ee",
+        "derground"
+      ]
+    },
+    {
+      "block": 56,
+      "words": [
+        "variegation,",
+        "gaudiest",
+        "entablatures",
+        "ie",
+        "ee",
+        "ee"
+      ]
+    },
+    {
+      "block": 61,
+      "words": [
+        "urbi",
+        "orbi;"
+      ]
+    },
+    {
+      "block": 62,
+      "words": [
+        "Apollonian"
+      ]
+    },
+    {
+      "block": 64,
+      "words": [
+        "eee",
+        "meee"
+      ]
+    },
+    {
+      "block": 66,
+      "words": [
+        "hydrogen"
+      ]
+    },
+    {
+      "block": 72,
+      "words": [
+        "whiat",
+        "Ee",
+        "ee"
+      ]
+    },
+    {
+      "block": 74,
+      "words": [
+        "cown"
+      ]
+    },
+    {
+      "block": 75,
+      "words": [
+        "Mani",
+        "contributory"
+      ]
+    },
+    {
+      "block": 78,
+      "words": [
+        "Cxsar"
+      ]
+    },
+    {
+      "block": 82,
+      "words": [
+        "Raeburn",
+        "Porsena;",
+        "Lacedemon"
+      ]
+    },
+    {
+      "block": 83,
+      "words": [
+        "anthill."
+      ]
+    },
+    {
+      "block": 84,
+      "words": [
+        "Ee",
+        "Ie",
+        "Pindaric"
+      ]
+    },
+    {
+      "block": 85,
+      "words": [
+        "Filiogue"
+      ]
+    },
+    {
+      "block": 86,
+      "words": [
+        "medizvalists",
+        "outcrop"
+      ]
+    },
+    {
+      "block": 87,
+      "words": [
+        "Danzig"
+      ]
+    },
+    {
+      "block": 93,
+      "words": [
+        "provincialized"
+      ]
+    },
+    {
+      "block": 94,
+      "words": [
+        "Lutetia."
+      ]
+    },
+    {
+      "block": 99,
+      "words": [
+        "EnEEIE",
+        "Sn"
+      ]
+    },
+    {
+      "block": 100,
+      "words": [
+        "Cesarean",
+        "flamboyance"
+      ]
+    },
+    {
+      "block": 105,
+      "words": [
+        "tne",
+        "Sealine",
+        "aaa",
+        "Ee"
+      ]
+    },
+    {
+      "block": 106,
+      "words": [
+        "tLLAR"
+      ]
+    },
+    {
+      "block": 117,
+      "words": [
+        "Carolingian"
+      ]
+    },
+    {
+      "block": 118,
+      "words": [
+        "Ee",
+        "ee",
+        "ie",
+        "ee",
+        "ee"
+      ]
+    },
+    {
+      "block": 120,
+      "words": [
+        "Mussolini;"
+      ]
+    },
+    {
+      "block": 124,
+      "words": [
+        "canyons",
+        "Mediavalism",
+        "foun-"
+      ]
+    },
+    {
+      "block": 125,
+      "words": [
+        "effervescence",
+        "soapy"
+      ]
+    },
+    {
+      "block": 126,
+      "words": [
+        "fagade"
+      ]
+    },
+    {
+      "block": 128,
+      "words": [
+        "ihis"
+      ]
+    },
+    {
+      "block": 130,
+      "words": [
+        "epee"
+      ]
+    },
+    {
+      "block": 132,
+      "words": [
+        "Hoover."
+      ]
+    },
+    {
+      "block": 135,
+      "words": [
+        "tian"
+      ]
+    },
+    {
+      "block": 138,
+      "words": [
+        "rox",
+        "Torquilstone",
+        "monkeries"
+      ]
+    },
+    {
+      "block": 139,
+      "words": [
+        "medizvalized."
+      ]
+    },
+    {
+      "block": 140,
+      "words": [
+        "insteap",
+        "medizvalized",
+        "medizvalized"
+      ]
+    },
+    {
+      "block": 141,
+      "words": [
+        "medizvalists",
+        "iSelis",
+        "TDi"
+      ]
+    },
+    {
+      "block": 142,
+      "words": [
+        "medizvalist"
+      ]
+    },
+    {
+      "block": 143,
+      "words": [
+        "mts"
+      ]
+    },
+    {
+      "block": 144,
+      "words": [
+        "decentralized"
+      ]
+    },
+    {
+      "block": 149,
+      "words": [
+        "Mohacs"
+      ]
+    },
+    {
+      "block": 150,
+      "words": [
+        "cepa",
+        "ie",
+        "ht"
+      ]
+    },
+    {
+      "block": 154,
+      "words": [
+        "scientifi¢"
+      ]
+    },
+    {
+      "block": 155,
+      "words": [
+        "archzologists"
+      ]
+    },
+    {
+      "block": 161,
+      "words": [
+        "Ceeli"
+      ]
+    },
+    {
+      "block": 162,
+      "words": [
+        "ht"
+      ]
+    },
+    {
+      "block": 163,
+      "words": [
+        "theodicy,"
+      ]
+    },
+    {
+      "block": 167,
+      "words": [
+        "errancy."
+      ]
+    },
+    {
+      "block": 171,
+      "words": [
+        "conic",
+        "Fiji",
+        "Epstein.",
+        "Epstein."
+      ]
+    },
+    {
+      "block": 174,
+      "words": [
+        "zon"
+      ]
+    },
+    {
+      "block": 175,
+      "words": [
+        "myopic",
+        "zxsthete"
+      ]
+    },
+    {
+      "block": 181,
+      "words": [
+        "Bernadone",
+        "Bandinelli"
+      ]
+    },
+    {
+      "block": 183,
+      "words": [
+        "Triumphalis,",
+        "thaz"
+      ]
+    },
+    {
+      "block": 184,
+      "words": [
+        "Karel",
+        "Capek",
+        "zs"
+      ]
+    },
+    {
+      "block": 185,
+      "words": [
+        "Capek,",
+        "Arcade",
+        "Arcade."
+      ]
+    },
+    {
+      "block": 187,
+      "words": [
+        "medizvalist,"
+      ]
+    },
+    {
+      "block": 192,
+      "words": [
+        "ee"
+      ]
+    },
+    {
+      "block": 195,
+      "words": [
+        "Pheebus"
+      ]
+    },
+    {
+      "block": 196,
+      "words": [
+        "Pincio"
+      ]
+    },
+    {
+      "block": 197,
+      "words": [
+        "Fiume"
+      ]
+    },
+    {
+      "block": 199,
+      "words": [
+        "Eom",
+        "Houston"
+      ]
+    },
+    {
+      "block": 200,
+      "words": [
+        "Revanche.",
+        "Steenkirk;",
+        "Revanche,",
+        "depopulation,"
+      ]
+    },
+    {
+      "block": 203,
+      "words": [
+        "aaa"
+      ]
+    },
+    {
+      "block": 204,
+      "words": [
+        "responsiblity"
+      ]
+    },
+    {
+      "block": 206,
+      "words": [
+        "ee",
+        "ee"
+      ]
+    },
+    {
+      "block": 208,
+      "words": [
+        "exported",
+        "standardization;",
+        "foreclose."
+      ]
+    },
+    {
+      "block": 209,
+      "words": [
+        "einen",
+        "ee",
+        "ee"
+      ]
+    },
+    {
+      "block": 211,
+      "words": [
+        "“Hengst.”"
+      ]
+    },
+    {
+      "block": 214,
+      "words": [
+        "Oem",
+        "Cac",
+        "Nas",
+        "Tet"
+      ]
+    },
+    {
+      "block": 223,
+      "words": [
+        "revivification"
+      ]
+    },
+    {
+      "block": 224,
+      "words": [
+        "/abellum"
+      ]
+    },
+    {
+      "block": 225,
+      "words": [
+        "interlocking"
+      ]
+    },
+    {
+      "block": 226,
+      "words": [
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 227,
+      "words": [
+        "Ceceli,",
+        "Mussolini",
+        "Mussolini."
+      ]
+    },
+    {
+      "block": 230,
+      "words": [
+        "Rotarian,",
+        "iy",
+        "Rotarian,"
+      ]
+    },
+    {
+      "block": 231,
+      "words": [
+        "Mussolini,",
+        "Mussolini.",
+        "Sadie",
+        "Clytie"
+      ]
+    },
+    {
+      "block": 233,
+      "words": [
+        "Sadie"
+      ]
+    },
+    {
+      "block": 235,
+      "words": [
+        "Benito",
+        "Mussolini",
+        "Mussolini.",
+        "Mussolini",
+        "Mussolini."
+      ]
+    },
+    {
+      "block": 236,
+      "words": [
+        "Mussolini?”",
+        "Mussolini,"
+      ]
+    },
+    {
+      "block": 237,
+      "words": [
+        "pardonnez,",
+        "frangais",
+        "parlez"
+      ]
+    },
+    {
+      "block": 238,
+      "words": [
+        "Mussolini;"
+      ]
+    },
+    {
+      "block": 240,
+      "words": [
+        "Mussolini",
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 242,
+      "words": [
+        "Mussolini;",
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 243,
+      "words": [
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 244,
+      "words": [
+        "Thaxted."
+      ]
+    },
+    {
+      "block": 245,
+      "words": [
+        "Mussolini",
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 250,
+      "words": [
+        "equidistant"
+      ]
+    },
+    {
+      "block": 252,
+      "words": [
+        "Mussolini",
+        "Mussolini.",
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 253,
+      "words": [
+        "paymaster;",
+        "Baccho,"
+      ]
+    },
+    {
+      "block": 254,
+      "words": [
+        "Mussolini",
+        "makeshift"
+      ]
+    },
+    {
+      "block": 255,
+      "words": [
+        "argu.",
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 256,
+      "words": [
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 264,
+      "words": [
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 271,
+      "words": [
+        "ee"
+      ]
+    },
+    {
+      "block": 273,
+      "words": [
+        "Mussolini",
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 275,
+      "words": [
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 276,
+      "words": [
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 277,
+      "words": [
+        "Blackshirt"
+      ]
+    },
+    {
+      "block": 279,
+      "words": [
+        "Mussolini",
+        "Mussolini",
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 281,
+      "words": [
+        "Hatry",
+        "Hooley",
+        "Bottomley."
+      ]
+    },
+    {
+      "block": 283,
+      "words": [
+        "Mussolini."
+      ]
+    },
+    {
+      "block": 286,
+      "words": [
+        "Mussolini"
+      ]
+    },
+    {
+      "block": 288,
+      "words": [
+        "Maurras,",
+        "Mussolini,",
+        "Maurras,"
+      ]
+    },
+    {
+      "block": 289,
+      "words": [
+        "Blackshirts"
+      ]
+    },
+    {
+      "block": 292,
+      "words": [
+        "ee",
+        "Punchinello.",
+        "anes",
+        "eee",
+        "tastic"
+      ]
+    },
+    {
+      "block": 293,
+      "words": [
+        "comicalities"
+      ]
+    },
+    {
+      "block": 295,
+      "words": [
+        "Oia"
+      ]
+    },
+    {
+      "block": 296,
+      "words": [
+        "rane",
+        "ied"
+      ]
+    },
+    {
+      "block": 298,
+      "words": [
+        "sublimate"
+      ]
+    },
+    {
+      "block": 302,
+      "words": [
+        "Mincius"
+      ]
+    },
+    {
+      "block": 305,
+      "words": [
+        "Mussolini",
+        "Pilsudski.",
+        "EEEEREEERREREnnenED"
+      ]
+    },
+    {
+      "block": 307,
+      "words": [
+        "Mussolini",
+        "“Mussolini",
+        "mange",
+        "meurt;"
+      ]
+    },
+    {
+      "block": 311,
+      "words": [
+        "Mussolini,",
+        "benissons,”"
+      ]
+    },
+    {
+      "block": 315,
+      "words": [
+        "Baldacchino"
+      ]
+    },
+    {
+      "block": 316,
+      "words": [
+        "Nemi,",
+        "Nemi",
+        "Nemi",
+        "Nemi"
+      ]
+    },
+    {
+      "block": 317,
+      "words": [
+        "Nemi;"
+      ]
+    },
+    {
+      "block": 318,
+      "words": [
+        "rane",
+        "ert",
+        "pe",
+        "lll",
+        "ecm"
+      ]
+    },
+    {
+      "block": 320,
+      "words": [
+        "Bluecoat"
+      ]
+    },
+    {
+      "block": 324,
+      "words": [
+        "elec",
+        "eet",
+        "haan",
+        "alicocaneeseieia",
+        "enea"
+      ]
+    },
+    {
+      "block": 326,
+      "words": [
+        "zhimk"
+      ]
+    },
+    {
+      "block": 331,
+      "words": [
+        "Mussolini."
+      ]
+    },
+    {
+      "block": 334,
+      "words": [
+        "lassoo",
+        "jazz"
+      ]
+    },
+    {
+      "block": 336,
+      "words": [
+        "yp"
+      ]
+    },
+    {
+      "block": 339,
+      "words": [
+        "Ciicaceauees"
+      ]
+    }
+  ],
+  "corrections": 52,
+  "correctionList": [
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizvalism",
+      "reading": "mediævalism"
+    },
+    {
+      "ocr": "Czsars",
+      "reading": "Cæsars"
+    },
+    {
+      "ocr": "Czsar",
+      "reading": "Cæsar"
+    },
+    {
+      "ocr": "Czsars",
+      "reading": "Cæsars"
+    },
+    {
+      "ocr": "Czsar",
+      "reading": "Cæsar"
+    },
+    {
+      "ocr": "Czsar",
+      "reading": "Cæsar"
+    },
+    {
+      "ocr": "Czsar",
+      "reading": "Cæsar"
+    },
+    {
+      "ocr": "Manichzan",
+      "reading": "Manichæan"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "Czsar",
+      "reading": "Cæsar"
+    },
+    {
+      "ocr": "Czsars",
+      "reading": "Cæsars"
+    },
+    {
+      "ocr": "Czsars",
+      "reading": "Cæsars"
+    },
+    {
+      "ocr": "Czsars",
+      "reading": "Cæsars"
+    },
+    {
+      "ocr": "Czsars",
+      "reading": "Cæsars"
+    },
+    {
+      "ocr": "Czsar",
+      "reading": "Cæsar"
+    },
+    {
+      "ocr": "Czsars",
+      "reading": "Cæsars"
+    },
+    {
+      "ocr": "Czsar",
+      "reading": "Cæsar"
+    },
+    {
+      "ocr": "Czsar",
+      "reading": "Cæsar"
+    },
+    {
+      "ocr": "Czsar",
+      "reading": "Cæsar"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizvalism",
+      "reading": "mediævalism"
+    },
+    {
+      "ocr": "Medizval",
+      "reading": "Mediæval"
+    },
+    {
+      "ocr": "Medizvalism",
+      "reading": "Mediævalism"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "Czsars",
+      "reading": "Cæsars"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizvalism",
+      "reading": "mediævalism"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "Manichzan",
+      "reading": "Manichæan"
+    },
+    {
+      "ocr": "Czsars",
+      "reading": "Cæsars"
+    },
+    {
+      "ocr": "zsthete",
+      "reading": "æsthete"
+    },
+    {
+      "ocr": "specialiy",
+      "reading": "specially"
+    },
+    {
+      "ocr": "medizval",
+      "reading": "mediæval"
+    },
+    {
+      "ocr": "Czsar",
+      "reading": "Cæsar"
+    },
+    {
+      "ocr": "Czsars",
+      "reading": "Cæsars"
+    },
+    {
+      "ocr": "Czsar",
+      "reading": "Cæsar"
+    },
+    {
+      "ocr": "Czsar",
+      "reading": "Cæsar"
+    },
+    {
+      "ocr": "couid",
+      "reading": "could"
+    },
+    {
+      "ocr": "rnore",
+      "reading": "more"
+    }
+  ],
+  "text": "data/texts/ia-resurrectionofro0000gilb-r2.txt",
+  "sha256": "d2956db7d4942707b2052f160e1cec79c16379cf5ce475221596f926649e362f",
+  "checked": "2026-11-17"
+}

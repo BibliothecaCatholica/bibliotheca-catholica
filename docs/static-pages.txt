@@ -4828,6 +4828,7 @@ work/butler-lives-january-march/index.html
 work/butler-lives-july/index.html
 work/butler-lives-scans/index.html
 work/callista/index.html
+work/cassidy-molders-of-the-medieval-mind/index.html
 work/catherine-dialogue/index.html
 work/catherine-letters/index.html
 work/catholic-church-conversion/index.html
@@ -4905,6 +4906,7 @@ work/europe-faith/index.html
 work/everlasting-man/index.html
 work/fabiola/index.html
 work/fancies-versus-fads/index.html
+work/fichter-james-laynez/index.html
 work/fides-ratio/index.html
 work/flying-inn/index.html
 work/flying-inn/ch/01-a-sermon-on-inns/index.html
@@ -5110,6 +5112,7 @@ work/manalive/ch/08-the-round-road-or-the-desertion-charge/index.html
 work/manalive/ch/09-the-wild-weddings-or-the-polygamy-charge/index.html
 work/manalive/ch/10-how-the-great-wind-went-from-beacon-house/index.html
 work/miscellany-of-men/index.html
+work/moore-prayer/index.html
 work/napoleon-notting-hill/index.html
 work/nepveu-meditations/index.html
 work/new-catholic-dictionary/index.html

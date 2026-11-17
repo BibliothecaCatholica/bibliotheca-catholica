@@ -49,16 +49,15 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 - tools/rights_rule.py nonrenewal_problems(): US first publication 1931 to 1963, dated no-renewal results (Stanford, NYPL, and the Copyright Office from 1950), HathiTrust code quoted, a URAA line, and the named scan; validator, tools, and tests accept it, pd-date unchanged.
 - Approved November 17 with the B. Herder reading (rule 1, standing decisions).
 
+### 2026-11-17, Claude (Claude Code): transcription fixes (footnotes, stamps, semicolons)
+
+- transcribe_scan.py: footnotes move after their paragraph as [Note: ...]; repeated library stamps dropped; a lone j between words restored to a semicolon.
+- Live #51 texts keep their defects until the corrected-edition PR (new editions, old ones retired).
+
 ### 2026-11-17, Claude (Claude Code): design refresh Part 1, previews
 
 - Audit of five areas and 20 working previews (four per area) at /design-preview/, written by tools/build_design_preview.py from real data at the end of build_static.py; noindex,nofollow, robots.txt disallow, out of the sitemap, nav, and search (tests/test_design_preview.py).
 - Directions, mismatches, and a recommendation per area: docs/research/design-directions-2026-11.md. Waiting on Micah's pick per area (HOLDS.md); Part 2 builds one area per PR, then deletes /design-preview/ with its script and test.
-
-### 2026-11-16, Catholic Repo: unlisted /drafts/ Substack paste pages
-
-- `data/substack-drafts.json` and `tools/build_drafts.py` write noindex,nofollow pages at `/drafts/<slug>/` and `/drafts/`, kept out of the sitemap, nav, search, and feeds. Deleting an entry removes that page on the next build.
-- After Substack confirms a post is live, it sends the slug and live URL; Repo deletes that entry in a small commit that merges on green CI. Never remove a page before the post is confirmed live. No automatic RSS check.
-- HOLDS.md: Candles' Beams (needs a scan) and Sheehan (CELT consent caveat). Edition count in this file: 203.
 
 ## Open items
 

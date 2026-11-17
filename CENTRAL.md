@@ -49,15 +49,15 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 - Corrected new editions (-r2) for The Thing, The Resurrection of Rome, and Generally Speaking; the old editions are kept, served, and marked retired (validator, test, PROJECT-RULES rule 1).
 - Retired editions are left out of the public hosted-edition count (128: hosted_counts.py, build_static.py, app.js). Outline of Sanity and Simplicity and Tolstoy needed no word change.
 
+### 2026-11-17, Claude (Claude Code): design refresh
+
+- Part 1 (#56): audit, 20 unlisted previews at /design-preview/ (tools/build_design_preview.py, tests/test_design_preview.py), and docs/research/design-directions-2026-11.md. Micah picked: home v4, reading room v1 with authors v2, reading v2 contents (not sticky) with v3 endings, licensing v2, nav v1.
+- Part 2, one area per PR, screenshots in docs/research/design-refresh-2026-11/: home "Saints first" (hero band, portrait gallery with "Begin with", `HOME_BEGIN` in tools/site_copy.py). Next: library and authors, reading pages, licensing, navigation; then delete /design-preview/.
+
 ### 2026-11-17, Claude (Claude Code): pd-nonrenewal approved and merged
 
 - tools/rights_rule.py nonrenewal_problems(): US first publication 1931 to 1963, dated no-renewal results (Stanford, NYPL, and the Copyright Office from 1950), HathiTrust code quoted, a URAA line, and the named scan; validator, tools, and tests accept it, pd-date unchanged.
 - Approved November 17 with the B. Herder reading (rule 1, standing decisions).
-
-### 2026-11-17, Claude (Claude Code): transcription fixes (footnotes, stamps, semicolons)
-
-- transcribe_scan.py: footnotes move after their paragraph as [Note: ...]; repeated library stamps dropped; a lone j between words restored to a semicolon.
-- Live #51 texts keep their defects until the corrected-edition PR (new editions, old ones retired).
 
 ## Open items
 

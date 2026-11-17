@@ -25,6 +25,13 @@ Gold buttons (`.btn.gold`) and pill buttons are retired. Buttons have 6 px corne
 
 List thumbnails (home row, author and saint rows) are the self-hosted public-domain set in `assets/portraits/` (160 px WebP, `data/portraits.json` with checksums and credits, from `tools/fetch_portraits.py`), drawn at a fixed size with lazy loading; anything else shows a quiet initial. Person pages show the larger Wikimedia image with its credit line beneath.
 
+## Home
+
+Design refresh, owner's pick of November 17, 2026 ("Saints first", [design directions](research/design-directions-2026-11.md)); `home_hero()` and `home_paths()` in `tools/site_copy.py`, `styles/home.css`.
+- **Hero:** a tinted band (`--bg2`, no border) with the label, "Tolle Lege", the translation, one filled button, and one text link; the Doré engraving fills the band's right side (cropped from the bottom so Dante and Beatrice stay in view) and sits above the title on phones. Its credit line is directly under the band. The hero title is the one size outside the type scale (`clamp(52px, 7vw, 84px)`).
+- **Saints and authors:** the eight portraits (`HOME_PEOPLE`) are the main gallery, four across on desktop and two on phones, each with name, dates, and "Begin with" one hosted book by that person (`HOME_BEGIN`; `tools/build_static.py` checks it). Flagged titles are never featured.
+- Then the three Explore rows, the one-line Today, About, and the newsletter. The 25-link budget before the footer still holds.
+
 ## Containers
 
 - A container has **a border or a tint, never both**, and no shadow.

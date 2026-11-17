@@ -59,10 +59,13 @@ class Layout(unittest.TestCase):
         self.assertEqual(len(T.split_notes(dotted, 2600)[1]), 2)  # a number followed by a full stop is a note mark too
 
     def test_library_stamp_dropped_but_running_heads_kept(self):
-        pages = [(3000, [self.L('THE THING', 100), self.L('text', 300), self.L('MARIN COUNTY FREE LIBRARY', 500)]) for _ in range(4)]
+        pages = [(3000, [self.L('THE THING', 100), self.L('text', 300), self.L('MARIN COUNTY FREE LIBRARY', 900)]) for _ in range(4)]
+        heads_low = [(3000, [self.L('94', 100), self.L('A CASE IN POINT', 150), self.L('text', 300)]) for _ in range(4)]
+        self.assertEqual(T.library_stamps(heads_low, set()), set())  # a running head under a page number is not a stamp
         stamps = T.library_stamps(pages, {'thething'})
         self.assertTrue(T.is_stamp('MARIN COUNTTY FREE LIBRARY', stamps))  # an OCR variant of the same stamp
         self.assertFalse(T.is_stamp('THE THING', stamps))
+        self.assertFalse(T.is_stamp('Marin County Free Library', stamps))  # only capital lines are ever removed
 
 
 class Records(unittest.TestCase):

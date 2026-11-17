@@ -189,19 +189,24 @@ def note_text(lines):
 
 
 def library_stamps(raw_pages, heads):
-    """Short capital lines (a library's stamp) repeated on three or more pages that are not running heads."""
+    """Short capital lines (a library's stamp) repeated on three or more pages below the top band of the page, where
+    running heads sit, and that are not running heads."""
     c = collections.Counter()
-    for _, ls in raw_pages:
-        for l in ls[1:]:
+    for height, ls in raw_pages:
+        for l in ls:
             t = l['text']
-            if len(t.split()) <= 6 and sum(ch.isupper() for ch in t) > 0.7 * max(1, sum(ch.isalpha() for ch in t)):
+            if l['y'] > 0.2 * height and len(t.split()) <= 6 and all_caps(t):
                 c[norm_head(t)] += 1
     return {h for h, n in c.items() if n >= 3 and h and h not in heads and len(h) >= 8}
 
 
+def all_caps(t):
+    return sum(ch.isupper() for ch in t) > 0.7 * max(1, sum(ch.isalpha() for ch in t))
+
+
 def is_stamp(text, stamps):
     n = norm_head(text)
-    return len(n) >= 8 and any(difflib.SequenceMatcher(None, n, s).ratio() >= 0.85 for s in stamps)
+    return all_caps(text) and len(n) >= 8 and any(difflib.SequenceMatcher(None, n, s).ratio() >= 0.85 for s in stamps)
 
 
 def build(e, cache, V):
@@ -290,7 +295,8 @@ def main(spec, cache):
                 f"The OCR was cleaned by tools/transcribe_scan.py: running heads and page numbers removed, words rejoined "
                 f"across line breaks, and {len(corrections)} common OCR confusions repaired where only one reading is a "
                 f"known word. {len(flagged)} paragraphs keep a word the tool could not read; they are listed in the "
-                f"provenance record. No missing words were supplied. Not a manual proofread.", '',
+                f"provenance record. No missing words were supplied. Not a manual proofread."
+                + (f" {e['correction']}" if e.get('correction') else ''), '',
                 '*** START OF THE TRANSCRIPTION ***', '']
         data = ('\n'.join(head) + '\n\n'.join(paras) + '\n\n' + END + '\n').encode('utf-8')
         out_path.write_bytes(data)

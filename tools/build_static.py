@@ -4,7 +4,7 @@
 For every author, reading-room work, edition guide, reading list, and top-level section this writes
 <route>/index.html: a copy of index.html with the route's own <title>, description, canonical URL,
 Open Graph and Twitter tags, and real content HTML inside <main>, plus `window.BC_BOOT='<route>'` so
-app.js boots straight into the same view.  It also writes sitemap.xml, robots.txt, and 404.html
+app.js boots straight into the same view.  It also writes sitemap.xml, robots.txt, and 404.html, then tools/build_drafts.py writes the unlisted /drafts/ pages (kept out of the sitemap) and tools/build_design_preview.py the unlisted /design-preview/ pages
 (which forwards /author/x style paths that have no static page to /#/author/x).
 
 Isidore Index book pages are not pre-rendered, and nothing listed in data/editorial-flags.json is
@@ -830,7 +830,7 @@ def main():
     man.write_text(''.join(r+'/index.html\n' for r in sorted(out)))
     urls=[SITE]+[SITE+r+'/' for r in sorted(out)]
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('  <url><loc>'+E(u)+'</loc></url>\n' for u in urls)+'</urlset>\n')
-    (ROOT/'robots.txt').write_text('# Bibliotheca Catholica\nUser-agent: *\nAllow: /\nDisallow: /data/texts/\n\nSitemap: '+SITE+'sitemap.xml\n')
+    (ROOT/'robots.txt').write_text('# Bibliotheca Catholica\nUser-agent: *\nAllow: /\nDisallow: /data/texts/\nDisallow: /drafts/\nDisallow: /design-preview/\n\nSitemap: '+SITE+'sitemap.xml\n')
     (ROOT/'404.html').write_text('''<!doctype html><html lang="en"><head>
 '''+GA_TAG+'''<meta charset="utf-8"><title>Not found · Bibliotheca Catholica</title><meta name="robots" content="noindex">
 <script>(function(){var p=location.pathname.replace(/^\\/+|\\/+$/g,'').replace(/\\/index\\.html$/,'');
@@ -842,4 +842,6 @@ if(p&&/^[A-Za-z0-9._~%\\/-]+$/.test(p)){location.replace('/#/'+p+location.search
         footer=re.search(r'<footer class="footer">.*?</footer>',(ROOT/'index.html').read_text(),re.S).group(0)
         study.write_text(re.sub(r'<footer class="footer">.*?</footer>',lambda m:footer,study.read_text(),flags=re.S))
     print(len(out),'pages;',len(urls),'sitemap URLs')
+    import build_drafts;build_drafts.build()
+    import build_design_preview;build_design_preview.build()  # unlisted design-refresh previews (remove with the directory when the refresh is done)
 if __name__=='__main__':main()

@@ -11,6 +11,8 @@ When a hold is released or finished, delete its row in the same commit as the wo
 | Full Orthodoxy flow for the 105 unstructured editions | Claude Code (Micah) | Micah running it | 2026-11-15 | Use `docs/claude-code-chesterton-prompt.md`. |
 | Plummer, Reeves, and Meyer Irish editions | Claude Code or a person | transcription (scan-only) | 2026-11-15 | Transcribe. |
 | Gutenberg Australia files blocked by its bot check: Walsh's The World's Debt to the Catholic Church, Chesterton's The Sword of Wood, and Baring's C | Catholic Repo | a person downloading them in a browser | 2026-11-15 | Download, then host. |
+| Candles' Beams | Catholic Repo | a scan to check against | 2026-11-16 | Find a dated scan, then host. |
+| Sheehan | Catholic Repo | CELT consent caveat | 2026-11-16 | Resolve consent, then host. |
 | Faustula | Catholic Repo | text cleanup | 2026-11-15 | Remove the source library's added material. |
 | Benham translation year, 1874 or 1886 | Bibliotheca Research | evidence | 2026-11-15 | Fill `translationYear` for pg-1653. |
 | Bookshop gift-list URL | Bibliotheca Business | Business | 2026-11-15 | Add the link. |
@@ -23,3 +25,5 @@ When a hold is released or finished, delete its row in the same commit as the wo
 | Chesterton scans below the 99.5% read gate: The Superstitions of the Sceptic (99.27%), Do We Agree? (99.45%), G.K.C. as M.C. (99.49%), and Samuel Johnson with Alice Meynell (98.84%) | Claude Code | a cleaner scan or a hand pass | 2026-11-16 | Transcribe: check the flagged words against the scan pages, or collate a second free scan. |
 | Chesterton's Robert Louis Stevenson (Bookman booklet, 1902): the one free scan (robertlouisstev00nicogoog) says "First Impression April, 1906" | Claude Code | evidence the 1906 text is the 1902 booklet | 2026-11-16 | Compare editions, then transcribe or find a 1902 scan. |
 | Gloria in Profundis (1927): Faded Page text 20140832 is reachable, but no dated scan exists to collate against | Claude Code | a dated scan | 2026-11-16 | Find a scan, then import. |
+| Design refresh Part 2: build the chosen variation for each area (home, library and authors, reading pages, licensing and credits, navigation and footer), one PR per area, then delete /design-preview/ | Claude Code | Micah's pick per area (docs/research/design-directions-2026-11.md) | 2026-11-17 | Build the picks. |
+| Design refresh wording and embed questions outside presentation: the licensing page's three names (H1 "Licensing (draft)", label "Rights & Permissions", nav "Licensing & credits") and the home page's Substack iframe placement | Micah | his decision | 2026-11-17 | Decide; then a small PR. |

@@ -1652,6 +1652,18 @@
    "keptBecause": {
     "all-capitals line": 1
    }
+  },
+  "ia-rightswrongsinin00haas": {
+   "work": "Rights and Wrongs in Industry",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1
+   }
   }
  },
  "excluded": {

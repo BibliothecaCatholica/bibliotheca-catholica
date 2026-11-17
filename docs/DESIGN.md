@@ -39,6 +39,16 @@ Design refresh, owner's pick of November 17, 2026 ([design directions](research/
 - **Author index and Doctors** (`authors()` in `app.js`, `styles.css`): one filter bar (Find, Era, Type, Order) with the count, a jump line of eras with counts, and names with dates in two columns under a small-caps era heading. No portraits or descriptions in the index; they stay on each author page. No pill chips.
 - **Form fields** use the `--field` border (`#94805c` light, `#6b6f7c` dark), at least 3:1 against every background, and are 44 px tall.
 
+## Reading pages
+
+Design refresh, owner's pick of November 17, 2026: the "Margin contents" (v2) shown only at the start of each part, with the "Chapter strip" (v3) endings ([design directions](research/design-directions-2026-11.md)). `part_pages()` in `tools/build_static.py`, `styles/library.css`.
+- **Contents at the start:** the book's title, author, and contents sit in a left column beside the opener, with the current part marked (`aria-current`) and "Chapter N of M" under them. They scroll away with the opener; nothing stays pinned while reading. On phones they fold into a closed "Contents" disclosure above the opener.
+- **Measure and leading:** the text column stays 26em; static chapter pages use a line height of 1.65.
+- **Continue reading:** each part but the last ends with the ornament, "End of …", and a block with "Next: N. Title" and the next part's first sentence, quoted from the hosted text (display only; underscores dropped), then the reading-room link.
+- **End of the book:** the last part ends with three ornaments, "Finis", and a centered colophon of facts already in the records: the work, the edition and its release, length, checked date, the TXT file and its SHA-256, other formats, and the typefaces. Rights and quality notes stay in the Edition details (once per page).
+- New blocks use only faces the page already loads: the quoted sentence is roman with CSS quotation marks and "Finis" is in small capitals, so no italic font file is fetched for them (an extra face cost 2 Lighthouse points).
+- The Gutenberg sentence, the prev/next pager, and the Edition details stay after the text. The contents list no longer repeats after the pager. Print hides the contents and the Continue block.
+
 ## Containers
 
 - A container has **a border or a tint, never both**, and no shadow.
@@ -58,7 +68,7 @@ Design refresh, owner's pick of November 17, 2026 ([design directions](research/
 Designed editions (Part D; the Orthodoxy pilot, November 15, 2026) read as books. The parts below come from `PART_D` in `tools/build_text_pages.py` and `.edition-designed` in `styles/library.css`.
 - **Paragraphs:** first-line indents of 1.5em and no space between paragraphs. The first paragraph after a heading is not indented and carries a drop cap. Verse, headings, and the title page keep their own spacing.
 - **Chapter opener:** a small-caps "Chapter" label, a large burgundy numeral, the title, and one gold ornament (❦). On static chapter pages it replaces the page head and buttons above the text. In the reader the label and ornament are CSS, so the text still comes only from the TXT.
-- **Chapter ending:** the ornament, "End of Chapter N", and a link to the next chapter (and, on chapter pages, to the reading room).
+- **Chapter ending:** the ornament, "End of Chapter N", and a link to the next chapter (and, on chapter pages, to the reading room). On static chapter pages the link is a Continue reading block (see Reading pages).
 - **Work page as a title page:** a facts line computed from the TXT (words and reading time at 230 words a minute), three choices (Read, Listen, Download), and "About this edition". Full source and rights stay behind the edition row's toggle.
 - **Print:** each chapter starts a new page.
 - **Covers:** design C, "Banded": a burgundy upper panel with the title in cream capitals and the category with its ornament, a gold rule, and a cream band with the author and the cross. Volumes and same-titled works carry a gold volume line. Every hosted edition has one (`tools/covers.py --build`; SVG source, WebP 480 by 720, social JPEG 1200 by 630, checksums in `data/covers.json`). Used beside the title on work pages, small in library rows and author lists, as the social image of a work's pages, first in print, and as the EPUB cover. The site's own `assets/og-image.png` stays for every other page.

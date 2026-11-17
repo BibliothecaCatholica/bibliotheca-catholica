@@ -1,0 +1,2147 @@
+{
+  "id": "ia-generallyspeakin00ches-r2",
+  "kind": "ocr-transcription",
+  "title": "Generally Speaking",
+  "author": "G. K. Chesterton",
+  "rights": "Public domain in the USA. First published 1928 (London: Methuen); this is the 1929 American edition (New York: Dodd, Mead); the scanned printing is of 1929.",
+  "rightsBasis": "pd-date",
+  "volumes": [
+    {
+      "identifier": "generallyspeakin00ches",
+      "url": "https://archive.org/details/generallyspeakin00ches",
+      "year": 1929,
+      "publisher": "New York : Dodd, Mead & Co.",
+      "ocr": "generallyspeakin00ches_djvu.xml",
+      "ocrSha256": "6cdbd8ecbddf9d34f5fdcd57ad251e2e7e475435125f4ee2fb08146edb49b364",
+      "leaves": [
+        6,
+        304
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed.",
+  "words": 67668,
+  "unknownWords": 267,
+  "readRate": 0.9961,
+  "flaggedBlocks": 137,
+  "flagged": [
+    {
+      "block": 1,
+      "words": [
+        "^Vpeaking",
+        "Gf"
+      ]
+    },
+    {
+      "block": 94,
+      "words": [
+        "Droodj",
+        "Vkky"
+      ]
+    },
+    {
+      "block": 95,
+      "words": [
+        "Franchard",
+        "difliculty"
+      ]
+    },
+    {
+      "block": 96,
+      "words": [
+        "foUcier"
+      ]
+    },
+    {
+      "block": 98,
+      "words": [
+        "onj"
+      ]
+    },
+    {
+      "block": 99,
+      "words": [
+        "himj",
+        "himx.",
+        "Mennonites",
+        "Swedenborgianj"
+      ]
+    },
+    {
+      "block": 102,
+      "words": [
+        "themj"
+      ]
+    },
+    {
+      "block": 103,
+      "words": [
+        "soulj",
+        "cante"
+      ]
+    },
+    {
+      "block": 104,
+      "words": [
+        "^gg"
+      ]
+    },
+    {
+      "block": 105,
+      "words": [
+        "^gg",
+        "conle"
+      ]
+    },
+    {
+      "block": 107,
+      "words": [
+        "affarently",
+        "affearP"
+      ]
+    },
+    {
+      "block": 109,
+      "words": [
+        "borderlines",
+        "misisonaries.",
+        "oursj",
+        "movej",
+        "warSj"
+      ]
+    },
+    {
+      "block": 110,
+      "words": [
+        "preachy"
+      ]
+    },
+    {
+      "block": 111,
+      "words": [
+        "tonej"
+      ]
+    },
+    {
+      "block": 112,
+      "words": [
+        "indiflFerence"
+      ]
+    },
+    {
+      "block": 117,
+      "words": [
+        "oflFer"
+      ]
+    },
+    {
+      "block": 118,
+      "words": [
+        "termj"
+      ]
+    },
+    {
+      "block": 119,
+      "words": [
+        "mattery",
+        "themj"
+      ]
+    },
+    {
+      "block": 121,
+      "words": [
+        "Ditchbury,",
+        "itj"
+      ]
+    },
+    {
+      "block": 122,
+      "words": [
+        "endj",
+        "oflF",
+        "endj"
+      ]
+    },
+    {
+      "block": 123,
+      "words": [
+        "endj",
+        "itj"
+      ]
+    },
+    {
+      "block": 124,
+      "words": [
+        "shrinkage",
+        "hatsj",
+        "Vj"
+      ]
+    },
+    {
+      "block": 125,
+      "words": [
+        "samovar.",
+        "Harborough",
+        "Harborough"
+      ]
+    },
+    {
+      "block": 126,
+      "words": [
+        "themj"
+      ]
+    },
+    {
+      "block": 127,
+      "words": [
+        "Shadrek,",
+        "Abednego."
+      ]
+    },
+    {
+      "block": 129,
+      "words": [
+        "innj"
+      ]
+    },
+    {
+      "block": 132,
+      "words": [
+        "kerbstone,",
+        "didj"
+      ]
+    },
+    {
+      "block": 133,
+      "words": [
+        "Bluntzschli"
+      ]
+    },
+    {
+      "block": 134,
+      "words": [
+        "necessitarian,"
+      ]
+    },
+    {
+      "block": 136,
+      "words": [
+        "Concours",
+        "Hippiquej",
+        "sawj",
+        "headj",
+        "upj"
+      ]
+    },
+    {
+      "block": 138,
+      "words": [
+        "Romej"
+      ]
+    },
+    {
+      "block": 140,
+      "words": [
+        "awayj"
+      ]
+    },
+    {
+      "block": 142,
+      "words": [
+        "wallj",
+        "Cathay",
+        "notej",
+        "mediseval"
+      ]
+    },
+    {
+      "block": 143,
+      "words": [
+        "eflFect;"
+      ]
+    },
+    {
+      "block": 144,
+      "words": [
+        "slick,",
+        "Canyon,"
+      ]
+    },
+    {
+      "block": 145,
+      "words": [
+        "brainy"
+      ]
+    },
+    {
+      "block": 146,
+      "words": [
+        "Fairbanks",
+        "blowj",
+        "itj"
+      ]
+    },
+    {
+      "block": 147,
+      "words": [
+        "aimj",
+        "subde"
+      ]
+    },
+    {
+      "block": 148,
+      "words": [
+        "lastj",
+        "enjant"
+      ]
+    },
+    {
+      "block": 149,
+      "words": [
+        "Pittsburgh"
+      ]
+    },
+    {
+      "block": 151,
+      "words": [
+        "Bllicher",
+        "Bismarckville,"
+      ]
+    },
+    {
+      "block": 153,
+      "words": [
+        "electroplated"
+      ]
+    },
+    {
+      "block": 156,
+      "words": [
+        "nextj",
+        "knowj"
+      ]
+    },
+    {
+      "block": 159,
+      "words": [
+        "pillories.",
+        "pillories."
+      ]
+    },
+    {
+      "block": 163,
+      "words": [
+        "artj",
+        "seaj"
+      ]
+    },
+    {
+      "block": 164,
+      "words": [
+        "bluej",
+        "Jackj",
+        "Chesapeake",
+        "Alabama",
+        "polychrome"
+      ]
+    },
+    {
+      "block": 165,
+      "words": [
+        "flagj"
+      ]
+    },
+    {
+      "block": 166,
+      "words": [
+        "^tonej"
+      ]
+    },
+    {
+      "block": 169,
+      "words": [
+        "thisj",
+        "itj",
+        "herj",
+        "anyj",
+        "madej",
+        "litde"
+      ]
+    },
+    {
+      "block": 171,
+      "words": [
+        "Ambroslance"
+      ]
+    },
+    {
+      "block": 173,
+      "words": [
+        "vitamins"
+      ]
+    },
+    {
+      "block": 175,
+      "words": [
+        "muddiest"
+      ]
+    },
+    {
+      "block": 176,
+      "words": [
+        "hypochondria",
+        "bodyj"
+      ]
+    },
+    {
+      "block": 178,
+      "words": [
+        "ejfFects"
+      ]
+    },
+    {
+      "block": 181,
+      "words": [
+        "Dorinda",
+        "Norma",
+        "Hellways",
+        "Dorinda",
+        "Norma",
+        "Hellways",
+        "Norma",
+        "timej"
+      ]
+    },
+    {
+      "block": 182,
+      "words": [
+        "cloudiest"
+      ]
+    },
+    {
+      "block": 183,
+      "words": [
+        "Dukka,"
+      ]
+    },
+    {
+      "block": 184,
+      "words": [
+        "Puckle,",
+        "Churchy",
+        "noSy",
+        "Puckle"
+      ]
+    },
+    {
+      "block": 185,
+      "words": [
+        "ofif",
+        "oflF,"
+      ]
+    },
+    {
+      "block": 189,
+      "words": [
+        "ha'penny",
+        "ha'penny,"
+      ]
+    },
+    {
+      "block": 191,
+      "words": [
+        "Puckle"
+      ]
+    },
+    {
+      "block": 193,
+      "words": [
+        "Nebraskan"
+      ]
+    },
+    {
+      "block": 195,
+      "words": [
+        "diflferent",
+        "noisier",
+        "playtime"
+      ]
+    },
+    {
+      "block": 196,
+      "words": [
+        "jazzers",
+        "jazz",
+        "reverendy"
+      ]
+    },
+    {
+      "block": 198,
+      "words": [
+        "Opprenheim",
+        "eightenth"
+      ]
+    },
+    {
+      "block": 211,
+      "words": [
+        "Encyclopsedists,"
+      ]
+    },
+    {
+      "block": 214,
+      "words": [
+        "erexit",
+        "VoltalreP",
+        "inoculation"
+      ]
+    },
+    {
+      "block": 215,
+      "words": [
+        "lifej"
+      ]
+    },
+    {
+      "block": 216,
+      "words": [
+        "Anubisj"
+      ]
+    },
+    {
+      "block": 217,
+      "words": [
+        "artj"
+      ]
+    },
+    {
+      "block": 219,
+      "words": [
+        "Oldbuck",
+        "Aiken"
+      ]
+    },
+    {
+      "block": 220,
+      "words": [
+        "Utofiay"
+      ]
+    },
+    {
+      "block": 221,
+      "words": [
+        "deadj"
+      ]
+    },
+    {
+      "block": 226,
+      "words": [
+        "archicalj",
+        "savej"
+      ]
+    },
+    {
+      "block": 227,
+      "words": [
+        "honesdy",
+        "cliche",
+        "Pebbleswick"
+      ]
+    },
+    {
+      "block": 228,
+      "words": [
+        "sayj"
+      ]
+    },
+    {
+      "block": 233,
+      "words": [
+        "trainload"
+      ]
+    },
+    {
+      "block": 237,
+      "words": [
+        "mattery"
+      ]
+    },
+    {
+      "block": 239,
+      "words": [
+        "hatj",
+        "cabj"
+      ]
+    },
+    {
+      "block": 240,
+      "words": [
+        "inj"
+      ]
+    },
+    {
+      "block": 242,
+      "words": [
+        "i8o",
+        "thenj",
+        "wasj",
+        "Tailfer"
+      ]
+    },
+    {
+      "block": 243,
+      "words": [
+        "Tailfer",
+        "racej"
+      ]
+    },
+    {
+      "block": 244,
+      "words": [
+        "Tailfer",
+        "Tailfer",
+        "Tailfer",
+        "foilu,"
+      ]
+    },
+    {
+      "block": 245,
+      "words": [
+        "Nickerson,",
+        "apparendy"
+      ]
+    },
+    {
+      "block": 246,
+      "words": [
+        "Nickerson"
+      ]
+    },
+    {
+      "block": 247,
+      "words": [
+        "Nickerson",
+        "Tailfer"
+      ]
+    },
+    {
+      "block": 248,
+      "words": [
+        "fussj",
+        "fogj",
+        "headlights."
+      ]
+    },
+    {
+      "block": 249,
+      "words": [
+        "dayj"
+      ]
+    },
+    {
+      "block": 250,
+      "words": [
+        "morphine...",
+        "caffeine,",
+        "theine.\""
+      ]
+    },
+    {
+      "block": 253,
+      "words": [
+        "menj"
+      ]
+    },
+    {
+      "block": 258,
+      "words": [
+        "timej"
+      ]
+    },
+    {
+      "block": 262,
+      "words": [
+        "^ound"
+      ]
+    },
+    {
+      "block": 264,
+      "words": [
+        "diiBcult",
+        "introducted"
+      ]
+    },
+    {
+      "block": 265,
+      "words": [
+        "hoy!\"",
+        "hoy!\""
+      ]
+    },
+    {
+      "block": 270,
+      "words": [
+        "tailj"
+      ]
+    },
+    {
+      "block": 271,
+      "words": [
+        "artj",
+        "offj"
+      ]
+    },
+    {
+      "block": 272,
+      "words": [
+        "foggily"
+      ]
+    },
+    {
+      "block": 274,
+      "words": [
+        "Whisder",
+        "jimcrack",
+        "britde"
+      ]
+    },
+    {
+      "block": 275,
+      "words": [
+        "thenj"
+      ]
+    },
+    {
+      "block": 277,
+      "words": [
+        "undogmaticj"
+      ]
+    },
+    {
+      "block": 278,
+      "words": [
+        "Thoughty"
+      ]
+    },
+    {
+      "block": 281,
+      "words": [
+        "Carlson"
+      ]
+    },
+    {
+      "block": 282,
+      "words": [
+        "flowerlike",
+        "movie"
+      ]
+    },
+    {
+      "block": 283,
+      "words": [
+        "canj"
+      ]
+    },
+    {
+      "block": 285,
+      "words": [
+        "crestfallen"
+      ]
+    },
+    {
+      "block": 286,
+      "words": [
+        "decended",
+        "sinj",
+        "toxicologist",
+        "oflFered",
+        "viccj"
+      ]
+    },
+    {
+      "block": 287,
+      "words": [
+        "Carlson",
+        "notj"
+      ]
+    },
+    {
+      "block": 288,
+      "words": [
+        "Poej",
+        "Leej",
+        "virtuosity",
+        "diiBculty.",
+        "poetj",
+        "lifej",
+        "drummer",
+        "oflF"
+      ]
+    },
+    {
+      "block": 291,
+      "words": [
+        "diflFer,"
+      ]
+    },
+    {
+      "block": 293,
+      "words": [
+        "innj",
+        "lawj",
+        "Savannah,"
+      ]
+    },
+    {
+      "block": 294,
+      "words": [
+        "Prohibtion"
+      ]
+    },
+    {
+      "block": 295,
+      "words": [
+        "difiFerent",
+        "viewj"
+      ]
+    },
+    {
+      "block": 297,
+      "words": [
+        "Taj",
+        "Mahal."
+      ]
+    },
+    {
+      "block": 298,
+      "words": [
+        "downj"
+      ]
+    },
+    {
+      "block": 299,
+      "words": [
+        "mythj"
+      ]
+    },
+    {
+      "block": 300,
+      "words": [
+        "friori",
+        "agesj"
+      ]
+    },
+    {
+      "block": 301,
+      "words": [
+        "shortj"
+      ]
+    },
+    {
+      "block": 305,
+      "words": [
+        "ownj",
+        "medi2evalist3",
+        "PauPs,",
+        "PauPs"
+      ]
+    },
+    {
+      "block": 306,
+      "words": [
+        "PauPs",
+        "Woolworth"
+      ]
+    },
+    {
+      "block": 307,
+      "words": [
+        "Ajnerican"
+      ]
+    },
+    {
+      "block": 308,
+      "words": [
+        "Comtesse",
+        "Chambrun",
+        "Appletonj",
+        "Chambrun's",
+        "Fitton,",
+        "Fitton",
+        "Chambrun's"
+      ]
+    },
+    {
+      "block": 309,
+      "words": [
+        "Chambrun"
+      ]
+    },
+    {
+      "block": 310,
+      "words": [
+        "odi",
+        "vampj",
+        "gripj"
+      ]
+    },
+    {
+      "block": 311,
+      "words": [
+        "Brattleborough,",
+        "Trilby.",
+        "ideaj"
+      ]
+    },
+    {
+      "block": 312,
+      "words": [
+        "mincj"
+      ]
+    },
+    {
+      "block": 315,
+      "words": [
+        "Edvoin"
+      ]
+    },
+    {
+      "block": 317,
+      "words": [
+        "manj"
+      ]
+    },
+    {
+      "block": 320,
+      "words": [
+        "buriable",
+        "buriabkj"
+      ]
+    },
+    {
+      "block": 321,
+      "words": [
+        "arrowy"
+      ]
+    },
+    {
+      "block": 322,
+      "words": [
+        "overj"
+      ]
+    },
+    {
+      "block": 323,
+      "words": [
+        "makeshift"
+      ]
+    },
+    {
+      "block": 324,
+      "words": [
+        "treatmeant",
+        "slut,",
+        "slut.",
+        "Degas's"
+      ]
+    },
+    {
+      "block": 328,
+      "words": [
+        "woej"
+      ]
+    },
+    {
+      "block": 329,
+      "words": [
+        "Ballantraey"
+      ]
+    },
+    {
+      "block": 331,
+      "words": [
+        "Umhra^^"
+      ]
+    },
+    {
+      "block": 333,
+      "words": [
+        "WesseXj",
+        "TesSy",
+        "coatj"
+      ]
+    },
+    {
+      "block": 335,
+      "words": [
+        "itj"
+      ]
+    }
+  ],
+  "corrections": 290,
+  "correctionList": [
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    }
+  ],
+  "text": "data/texts/ia-generallyspeakin00ches-r2.txt",
+  "sha256": "290683ac73ec108ffc0948bfcf5c6ab9e3638b45114c6fb5eb9d805ffe080038",
+  "checked": "2026-11-17"
+}

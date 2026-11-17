@@ -28,7 +28,7 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
 
-- 186 work records; 128 hosted editions of 123 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 189 work records; 129 hosted editions of 124 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,169 sitemap URLs; 7699 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 124 Node and 284 Python.
 
@@ -44,6 +44,11 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-17, Claude (Claude Code): non-renewal batch B (approved)
+
+- Hosted under pd-nonrenewal: Thomas Verner Moore, Prayer (B. Herder, 1931), 99.67% of words read, 61 footnotes placed after their paragraphs.
+- Link-only with a HOLDS row: Cassidy and Fichter (below the 99.5% gate).
+
 ### 2026-11-17, Claude (Claude Code): corrected editions (approved)
 
 - Corrected new editions (-r2) for The Thing, The Resurrection of Rome, and Generally Speaking; the old editions are kept, served, and marked retired (validator, test, PROJECT-RULES rule 1).
@@ -53,11 +58,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - Part 1 (#56): audit, 20 unlisted previews at /design-preview/ (tools/build_design_preview.py, tests/test_design_preview.py), and docs/research/design-directions-2026-11.md. Micah picked: home v4, reading room v1 with authors v2, reading v2 contents (not sticky) with v3 endings, licensing v2, nav v1.
 - Part 2, one area per PR, screenshots in docs/research/design-refresh-2026-11/: home "Saints first" (hero band, portrait gallery with "Begin with", `HOME_BEGIN` in tools/site_copy.py). Next: library and authors, reading pages, licensing, navigation; then delete /design-preview/.
-
-### 2026-11-17, Claude (Claude Code): pd-nonrenewal approved and merged
-
-- tools/rights_rule.py nonrenewal_problems(): US first publication 1931 to 1963, dated no-renewal results (Stanford, NYPL, and the Copyright Office from 1950), HathiTrust code quoted, a URAA line, and the named scan; validator, tools, and tests accept it, pd-date unchanged.
-- Approved November 17 with the B. Herder reading (rule 1, standing decisions).
 
 ## Open items
 

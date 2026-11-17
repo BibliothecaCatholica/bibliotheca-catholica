@@ -67,6 +67,25 @@ class Layout(unittest.TestCase):
         self.assertFalse(T.is_stamp('THE THING', stamps))
         self.assertFalse(T.is_stamp('Marin County Free Library', stamps))  # only capital lines are ever removed
 
+    def test_hand_fixes_replace_one_reading_and_drop_only_whole_noise_lines(self):
+        L = lambda t: {'x': 100, 'y': 300, 'h': 30, 'text': t, 'paraStart': False, 'para': 0}
+        pages = [(3000, [L('i'), L('the victim of a Rion the sys-'), L('uw we: —_—')])]
+        e = {'edition': 'x', 'firstLeaf': 5, 'handFixes': [
+            {'leaf': 5, 'page': 'p. 7', 'ocr': 'i', 'reading': 'I'},  # a whole line wins over a substring
+            {'leaf': 5, 'page': 'p. 7', 'ocr': 'a Rion the', 'reading': 'a system, the'},
+            {'leaf': 5, 'page': 'p. 7', 'ocr': 'uw we: —_—', 'reading': ''}]}
+        T.apply_hand_fixes(pages, e)
+        self.assertEqual([l['text'] for l in pages[0][1]], ['I', 'the victim of a system, the sys-'])
+        with self.assertRaises(AssertionError):  # a reading must be found exactly once
+            T.apply_hand_fixes(pages, {'edition': 'x', 'firstLeaf': 5, 'handFixes': [{'leaf': 5, 'ocr': 'the', 'reading': 'a'}]})
+        with self.assertRaises(AssertionError):  # dropping part of a line is not allowed
+            T.apply_hand_fixes(pages, {'edition': 'x', 'firstLeaf': 5, 'handFixes': [{'leaf': 5, 'ocr': 'victim', 'reading': ''}]})
+
+    def test_hand_fixes_are_logged(self):
+        for r in RECORDS:
+            for f in r.get('handFixes', []):
+                self.assertEqual(set(f), {'leaf', 'page', 'ocr', 'reading'}, r['id'])
+                self.assertNotEqual(f['ocr'], f['reading'], r['id'])
 
 class Records(unittest.TestCase):
     def test_every_transcription_is_pinned_flagged_and_dated(self):

@@ -44,17 +44,41 @@
    "webp": "cdf68f5c72df7474852b2e337344050b1b6ca0a099ff26d9af39e4192b2706f7",
    "og": "d87ff7f3ebd6f44a475f9992f18415ecbe9eb0a252fa2c72326435216623fe4f"
   },
+  "ia-generallyspeakin00ches-r2": {
+   "work": "generally-speaking",
+   "svg": "29d6f326ce93e739941279fcc4934576e0ae46ace80a38cc819bb7d5c559f816",
+   "webp": "cdf68f5c72df7474852b2e337344050b1b6ca0a099ff26d9af39e4192b2706f7",
+   "og": "d87ff7f3ebd6f44a475f9992f18415ecbe9eb0a252fa2c72326435216623fe4f"
+  },
   "ia-outlineofsanity0000ches": {
    "work": "outline-of-sanity",
    "svg": "d240916d804e11e79b725ef42665f729fd713e5bb8434ac5924a619f2acde2c1",
    "webp": "6570c65a988f0a0ac3bbdb2dc370989b97504427a7ae4d94960080741d1a416b",
    "og": "a0013831b4d7ab6a875da246b5d57095b718be919bc8f1a75a3739e9ad867182"
   },
+  "ia-prayer00moor": {
+   "work": "moore-prayer",
+   "svg": "5d76a90eee0771eefa889fbf40378c39292e71e5328cca890a00f9b5f0c10e7a",
+   "webp": "83daa6818c356af5950d5ec74d96785fad0c088b7bb4b3af4e8b294778b660c3",
+   "og": "72bc9464fe09e5d5e94c1c0b6f1e795dcf28538b2cd2374c590f5c190e0761ab"
+  },
   "ia-resurrectionofro0000gilb": {
    "work": "resurrection-of-rome",
    "svg": "f04fe172e34d67557463190be581204cb2472e17c529d3f76073e1dc2af5a3eb",
    "webp": "fae4ec016c91309542ffc709662f94d5e674228cc5895f9be6531b4de732468c",
    "og": "3f5dbb0238ab7f931aaeb48b9c0457dfe29257ed5d023e4143d0815c7948cb27"
+  },
+  "ia-resurrectionofro0000gilb-r2": {
+   "work": "resurrection-of-rome",
+   "svg": "f04fe172e34d67557463190be581204cb2472e17c529d3f76073e1dc2af5a3eb",
+   "webp": "fae4ec016c91309542ffc709662f94d5e674228cc5895f9be6531b4de732468c",
+   "og": "3f5dbb0238ab7f931aaeb48b9c0457dfe29257ed5d023e4143d0815c7948cb27"
+  },
+  "ia-rightswrongsinin00haas": {
+   "work": "haas-rights-and-wrongs-in-industry",
+   "svg": "7a08f38d76b305e9f78e7635c71af73d0a8da30b6f12ac64182106833fc8a48b",
+   "webp": "c144f4093def8129a8f0e84d6f1e1c989b6479ffe033da482f218ff802b53a0e",
+   "og": "fc68e5dc226a86c34fc22554076de67157110286d192ef3f96223b1fe1dd4a6c"
   },
   "ia-simplicitytolsto00chesuoft": {
    "work": "simplicity-and-tolstoy",
@@ -69,6 +93,12 @@
    "og": "1a8dd75e22361e151138cbf1109e5fa32aeaa799840f5d3a26923b494d21e51e"
   },
   "ia-thingwhyiamcatho00ches-0": {
+   "work": "the-thing",
+   "svg": "1d288235f7cb4ec9627d3c34fc6f97c57e10e9721da354726f0e8c829577d5dd",
+   "webp": "2c9d9812acb217957f48346ca455f201610fc54fd6e7098163fa67d6ecd53173",
+   "og": "2d9ab7c78e7b0dedcdf904b07f5b0863359aa4bf9b1f2b9c03d168a0d66a3ded"
+  },
+  "ia-thingwhyiamcatho00ches-0-r2": {
    "work": "the-thing",
    "svg": "1d288235f7cb4ec9627d3c34fc6f97c57e10e9721da354726f0e8c829577d5dd",
    "webp": "2c9d9812acb217957f48346ca455f201610fc54fd6e7098163fa67d6ecd53173",

@@ -25,6 +25,23 @@ class Hero(unittest.TestCase):
         self.assertIn('Gustave Doré, <cite>The Empyrean</cite>', main)
         self.assertIn('href="https://commons.wikimedia.org/wiki/File:Paradiso_Canto_31.jpg"', main)
 
+    def test_saints_first_gallery(self):
+        # design refresh (owner's pick, November 17, 2026): each home portrait names a hosted book by that person to begin with
+        import re, sys
+        sys.path.insert(0, str(ROOT / 'tools'))
+        import site_copy
+        lib = {w['id']: w for w in json.loads((ROOT / 'data/library.json').read_text())['works']}
+        home = (ROOT / 'index.html').read_text()
+        main = home[home.index('<main'):home.index('</main>')]
+        items = re.findall(r'<li><span class="pt"[^>]*><img src="/assets/portraits/([a-z-]+)\.webp".*?Begin with <a href="/work/([a-z0-9-]+)/">', main)
+        self.assertEqual([i for i, _ in items], site_copy.HOME_PEOPLE)
+        for person, work in items:
+            w = lib[work]
+            self.assertEqual(w['authorId'], person)
+            self.assertTrue(any(e.get('text') for e in w['editions']), work)
+        self.assertIn('class="hero-credit"', main)
+        self.assertEqual(main.count('fetchpriority="high"'), 1)
+
 
 if __name__ == '__main__':
     unittest.main()

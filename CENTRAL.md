@@ -28,7 +28,7 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
 
-- 186 work records; 128 hosted editions of 123 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 195 work records; 130 hosted editions of 125 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,169 sitemap URLs; 7699 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 124 Node and 284 Python.
 
@@ -49,15 +49,15 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 - /councils/: the 21 councils in order with own-words summaries and where to read each (data/councils.json, tools/councils_page.py, tests/test_councils.py); linked first on /magisterium/ and in the footer, not the main nav. Kept static by app.js (staticOnly), so it has no in-page #anchors.
 - Sources research for hosting each council: docs/research/councils-sources-2026-11.csv (docs-only PR); hosting waits for Micah (HOLDS.md).
 
-### 2026-11-17, Claude (Claude Code): pd-nonrenewal approved and merged
+### 2026-11-17, Claude (Claude Code): Haas hosted after a hand fix (approved)
 
-- tools/rights_rule.py nonrenewal_problems(): US first publication 1931 to 1963, dated no-renewal results (Stanford, NYPL, and the Copyright Office from 1950), HathiTrust code quoted, a URAA line, and the named scan; validator, tools, and tests accept it, pd-date unchanged.
-- Approved November 17 with the B. Herder reading (rule 1, standing decisions).
+- Rights and Wrongs in Industry (Paulist Press, 1933) hosted under pd-nonrenewal at 99.62% of words read, after 40 misreadings were corrected against the page images of the same scan (each logged in `handFixes`; no wording from another edition).
+- transcribe_scan.py takes a spec's `handFixes` (exactly one match per leaf; only whole noise lines may be dropped); tested.
 
-### 2026-11-17, Claude (Claude Code): transcription fixes (footnotes, stamps, semicolons)
+### 2026-11-17, Claude (Claude Code): non-renewal batch A (approved)
 
-- transcribe_scan.py: footnotes move after their paragraph as [Note: ...]; repeated library stamps dropped; a lone j between words restored to a semicolon.
-- Live #51 texts keep their defects until the corrected-edition PR (new editions, old ones retired).
+- Link-only records for six cleared Bruce and Paulist books whose OCR reads below the 99.5% gate; renewal evidence in each note; one HOLDS row.
+- Haas (99.44%): Micah approved a hand fix of its OCR misreadings against the scan's page images; its hosting PR follows.
 
 ## Open items
 

@@ -5814,6 +5814,144 @@
           "note": "First published in 1944 (St. Louis: B. Herder Book Co.). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in St. Louis by B. Herder Book Co., 1944. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. Imprint names St. Louis and B. Herder's London office (33 Queen Square); the copyright page says Printed in U.S.A. No earlier London edition is indicated, so US publication was at least simultaneous, which excludes URAA restoration (17 USC 104A(h)(6)(D)). Proposed reading, approved only with PR #53. Its OCR reads below the 99.5% transcription gate (98.87%), so it is linked, not hosted, for now."
         }
       ]
+    },
+    {
+      "id": "walsh-saint-teresa",
+      "title": "Saint Teresa of Avila: A Biography",
+      "author": "William Thomas Walsh",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "William Thomas Walsh's biography of St. Teresa of Avila.",
+      "reviewStatus": "source-checked",
+      "date": "1943",
+      "editions": [
+        {
+          "id": "ia-saintteresaofavi00wals",
+          "label": "Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1943)",
+          "source": "https://archive.org/details/saintteresaofavi00wals",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1943 (Milwaukee: The Bruce Publishing Company). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in Milwaukee by The Bruce Publishing Company, 1943. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (98.64%), so it is linked, not hosted, for now."
+        }
+      ]
+    },
+    {
+      "id": "walsh-high-points-medieval-culture",
+      "title": "High Points of Medieval Culture",
+      "author": "James J. Walsh",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "James J. Walsh's essays on medieval learning, books, and culture.",
+      "reviewStatus": "source-checked",
+      "date": "1937",
+      "editions": [
+        {
+          "id": "ia-highpointsofmedi00wals",
+          "label": "Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1937)",
+          "source": "https://archive.org/details/highpointsofmedi00wals",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1937 (Milwaukee: The Bruce Publishing Company). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in Milwaukee by The Bruce Publishing Company, 1937. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (99.30%), so it is linked, not hosted, for now."
+        }
+      ]
+    },
+    {
+      "id": "huber-st-anthony-of-padua",
+      "title": "St. Anthony of Padua, Doctor of the Church Universal",
+      "author": "Raphael M. Huber",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Raphael M. Huber's study of St. Anthony of Padua and his title Doctor of the Church.",
+      "reviewStatus": "source-checked",
+      "date": "1948",
+      "editions": [
+        {
+          "id": "ia-stanthonyofpadua00hube",
+          "label": "Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1948)",
+          "source": "https://archive.org/details/stanthonyofpadua00hube",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1948 (Milwaukee: The Bruce Publishing Company). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in Milwaukee by The Bruce Publishing Company, 1948. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pd. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (94.89%), so it is linked, not hosted, for now."
+        }
+      ]
+    },
+    {
+      "id": "grant-john-england",
+      "title": "John England, American Christopher",
+      "author": "Dorothy Fremont Grant",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Dorothy Fremont Grant's biography of John England, the first Bishop of Charleston.",
+      "reviewStatus": "source-checked",
+      "date": "1949",
+      "editions": [
+        {
+          "id": "ia-johnenglandameri00gran",
+          "label": "Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1949)",
+          "source": "https://archive.org/details/johnenglandameri00gran",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1949 (Milwaukee: The Bruce Publishing Company). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in Milwaukee by The Bruce Publishing Company, 1949. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pd. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (99.13%), so it is linked, not hosted, for now."
+        }
+      ]
+    },
+    {
+      "id": "furfey-mystery-of-iniquity",
+      "title": "The Mystery of Iniquity",
+      "author": "Paul Hanly Furfey",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "Paul Hanly Furfey's 1945 book on Catholic social thought.",
+      "reviewStatus": "source-checked",
+      "date": "1945",
+      "editions": [
+        {
+          "id": "ia-mysteryofiniquit00furf",
+          "label": "Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1945)",
+          "source": "https://archive.org/details/mysteryofiniquit00furf",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1945 (Milwaukee: The Bruce Publishing Company). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in Milwaukee by The Bruce Publishing Company, 1945. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (99.12%), so it is linked, not hosted, for now."
+        }
+      ]
+    },
+    {
+      "id": "haas-rights-and-wrongs-in-industry",
+      "title": "Rights and Wrongs in Industry",
+      "author": "Francis J. Haas",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "A 1933 pamphlet by Francis J. Haas on the roots of the Depression, moral values in industry, and papal teaching on labor.",
+      "reviewStatus": "source-checked",
+      "date": "1933",
+      "editions": [
+        {
+          "id": "ia-rightswrongsinin00haas",
+          "label": "Internet Archive scan (New York: The Paulist Press, 1933)",
+          "source": "https://archive.org/details/rightswrongsinin00haas",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1933 (New York: The Paulist Press). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in New York by The Paulist Press, 1933. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pd. US imprint (New York: The Paulist Press) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (99.44%), so it is linked, not hosted, for now."
+        }
+      ]
     }
   ],
   "series": [

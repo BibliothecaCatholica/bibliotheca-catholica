@@ -62,7 +62,7 @@ Before and after screenshots for each Part 2 pull request (desktop 1366 px at 2x
 
 ![Authors after, phone](library/after-authors-mobile.jpg)
 
-## Reading pages: contents at the start, Continue reading, Finis and colophon
+## Reading pages: contents at the start, Continue reading, Finis and colophon (#65)
 
 **Chapter start before, desktop**
 
@@ -111,3 +111,29 @@ Before and after screenshots for each Part 2 pull request (desktop 1366 px at 2x
 **Last chapter after, phone**
 
 ![Last chapter after, phone](reading/after-lastpage-mobile.jpg)
+
+## Licensing and credits: contents rail
+
+**Before, desktop**
+
+![Before, desktop](sources/before-top-desktop.jpg)
+
+**Before, phone**
+
+![Before, phone](sources/before-top-mobile.jpg)
+
+**After, desktop**
+
+![After, desktop](sources/after-top-desktop.jpg)
+
+**After, phone**
+
+![After, phone](sources/after-top-mobile.jpg)
+
+**Before, a later section, desktop**
+
+![Before, a later section, desktop](sources/before-sections-desktop.jpg)
+
+**After, a later section, desktop**
+
+![After, a later section, desktop](sources/after-sections-desktop.jpg)

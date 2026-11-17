@@ -99,14 +99,8 @@ def load():
     d['lic_lede']=re.search(r'<p class="lede">(.*?)</p>',lic,re.S).group(1)
     d['lic_table']=re.search(r'<div class="table-wrap">.*?</div>',lic,re.S).group(0)
     d['lic_rows']=[[re.sub(r'^<td[^>]*>|</td>$','',c) for c in re.findall(r'<td[^>]*>.*?</td>',r,re.S)] for r in re.findall(r'<tr>(<td.*?)</tr>',lic,re.S)]
-    body=re.search(r'</div>(<h2>.*)</section></div>$',lic,re.S).group(1)
-    parts=re.split(r'(<h2>.*?</h2>)',body)
-    secs=[];tail=''
-    for i in range(1,len(parts),2):
-        content=parts[i+1]
-        m=re.search(r'<p class="small">This page shows.*$',content,re.S)
-        if m:tail=m.group(0);content=content[:m.start()]
-        secs.append((re.sub(r'</?h2>','',parts[i]),content))
+    secs=[(html.unescape(t) if False else t,c) for t,c in re.findall(r'<section id="lic-\d+"[^>]*><h2[^>]*>(.*?)</h2>(.*?)</section>',lic,re.S)]
+    tail=re.search(r'(<p class="small">This page shows.*?</p>)',lic,re.S).group(1)
     d['lic_secs']=secs;d['lic_tail']=tail
     from collections import Counter
     from urllib.parse import urlparse

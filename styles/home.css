@@ -52,6 +52,6 @@ h1.hero-name{margin:0 0 8px;line-height:1.3;letter-spacing:.06em}
   mask-image:linear-gradient(to right,var(--hs-a) 0,#000 var(--hs-fade),#000 calc(100% - var(--hs-fade)),var(--hs-b) 100%),linear-gradient(#000,#000);
   -webkit-mask-size:100% calc(100% - 12px),100% 12px;mask-size:100% calc(100% - 12px),100% 12px;
   -webkit-mask-position:0 0,0 100%;mask-position:0 0,0 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
-.hscroll:focus-visible{-webkit-mask-image:none;mask-image:none;outline:3px solid var(--focus,var(--gold));outline-offset:2px}
+.hscroll:focus-visible{-webkit-mask-image:none;mask-image:none;outline:3px solid var(--focus);outline-offset:2px}
 @media(prefers-reduced-motion:no-preference){.hscroll{scroll-behavior:smooth}}
 @media(max-width:720px){.hscroll{--hs-fade:28px}}

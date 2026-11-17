@@ -47,7 +47,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 ### 2026-11-17, Claude (Claude Code): Ecumenical Councils section
 
 - /councils/: the 21 councils in order with own-words summaries and where to read each (data/councils.json, tools/councils_page.py, tests/test_councils.py); linked first on /magisterium/ and in the footer, not the main nav. Kept static by app.js (staticOnly), so it has no in-page #anchors.
-- Sources research for hosting each council: docs/research/councils-sources-2026-11.csv (docs-only PR); hosting waits for Micah (HOLDS.md).
+- Sources (Part 2, docs only): docs/research/councils-sources-2026-11.csv. Hostable by date: 1 to 7 (Percival 1900), Trent (Waterworth 1848), Vatican I (Manning 1870). Link-only: 8 to 18 (Schroeder 1937 canons pending NYPL), Vatican II. No LibriVox recording of any council text. Hosting waits for Micah (HOLDS.md).
 
 ### 2026-11-17, Claude (Claude Code): Haas hosted after a hand fix (approved)
 

@@ -64,8 +64,8 @@ def load():
     d['authors']=[{'id':a['id'],'name':a['name'],'dates':dates(a),'era':a.get('era') or '','desc':a.get('desc') or '','portrait':a['id'] in portraits,
                    'hosted':sum(1 for w in works if w['authorId']==a['id'] and w['hosted'])} for a in hub['authors']]
     h=home_hero()
-    d['hero_img']=re.search(r'<img [^>]+>',h).group(0)
-    d['hero_cap']=re.search(r'<figcaption>(.*?)</figcaption>',h,re.S).group(1)
+    d['hero_img']=re.sub(r' class="hero-art"| sizes="[^"]*"','',re.search(r'<img [^>]+>',h).group(0)).replace('<img ','<img sizes="(max-width: 720px) 60vw, 360px" ')
+    d['hero_cap']=re.search(r'<p class="hero-credit">(.*?)</p>',h,re.S).group(1)
     # the generated home page holds the exact home copy (site_copy.py), so the preview reads it from there
     d['home_about']=re.search(r'<section class="home-about".*?<p>(.*?)</p>',tpl,re.S).group(1)
     d['mark']=re.search(r'<svg class="brand-mark".*?</svg>',tpl,re.S).group(0)

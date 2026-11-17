@@ -16,7 +16,8 @@ class Covers(unittest.TestCase):
         self.assertEqual(M['design'], 'C')
         self.assertEqual(C.CHOSEN, 'C')
         hosted = {e['id']: w for w in LIB['works'] for e in w['editions'] if e.get('text')}
-        self.assertEqual(len(hosted), __import__('hosted_counts').count()['hosted'])
+        c = __import__('hosted_counts').count()
+        self.assertEqual(len(hosted), c['hosted'] + c['retired'])  # retired editions keep their files and covers
         self.assertEqual(set(M['covers']), set(hosted))
         shared = C.shared_titles()
         for ed, row in M['covers'].items():

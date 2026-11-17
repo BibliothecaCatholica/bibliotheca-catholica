@@ -5,7 +5,7 @@ def lib():
     L=json.loads((ROOT/'data/library.json').read_text())
     E=[(w,e) for w in L['works'] for e in w['editions']]
     pg=[e for w,e in E if 'gutenberg.org' in json.dumps(e['source'])]
-    return dict(works=len(L['works']),editions=len(E),hosted=sum(1 for w,e in E if e.get('text')),pg=len(pg),pg_hosted=sum(1 for e in pg if e.get('text')))
+    return dict(works=len(L['works']),editions=len(E),hosted=sum(1 for w,e in E if e.get('text') and not e.get('retired')),pg=len(pg),pg_hosted=sum(1 for e in pg if e.get('text')))
 class Counts(unittest.TestCase):
     def test_data_page_counts_are_computed(self):
         app=(ROOT/'app.js').read_text();m=re.search(r'function openData\(\)\{[\s\S]*?render\(h,\'data\'\)',app);self.assertTrue(m)

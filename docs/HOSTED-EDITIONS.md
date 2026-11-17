@@ -106,7 +106,7 @@ These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The
 | pg-60164 | Fancies Versus Fads | 92% | · | · | yes | · |
 | pga-0300781 | Four Faultless Felons | 100% | · | · | yes | · |
 | pg-64074 | G. F. Watts | 97% | · | · | yes | · |
-| ia-generallyspeakin00ches | Generally Speaking | 0% | · | · | yes | · |
+| ia-generallyspeakin00ches-r2 | Generally Speaking | 0% | · | · | yes | · |
 | pg-19535 | George Bernard Shaw | 79% | · | · | yes | · |
 | pg-14706 | Greybeards at Play | 0% | · | · | yes | · |
 | pg-470 | Heretics | 97% | map | yes | yes | yes |
@@ -185,12 +185,12 @@ These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The
 | ia-outlineofsanity0000ches | The Outline of Sanity | 0% | · | · | yes | · |
 | pga-0900711 | The Poet and the Lunatics | 100% | · | · | yes | · |
 | fp-20200364 | The Queen of Seven Swords | 3% | · | · | yes | · |
-| ia-resurrectionofro0000gilb | The Resurrection of Rome | 0% | · | · | yes | · |
+| ia-resurrectionofro0000gilb-r2 | The Resurrection of Rome | 0% | · | · | yes | · |
 | pga-0900401 | The Return of Don Quixote | 100% | · | · | yes | · |
 | pg-70175 | The Secret of Father Brown | 99% | map | yes | yes | yes |
 | pg-64882 | The Servile State | 96% | · | · | yes | · |
 | pg-62680 | The Superstition of Divorce | 92% | · | · | yes | · |
-| ia-thingwhyiamcatho00ches-0 | The Thing | 0% | · | · | yes | · |
+| ia-thingwhyiamcatho00ches-0-r2 | The Thing | 0% | · | · | yes | · |
 | pg-1721 | The Trees of Pride | 98% | map | yes | yes | yes |
 | pg-70690 | The Trial of John Jasper for the Murder of Edwin Drood | 97% | · | · | yes | · |
 | pg-60057 | The Uses of Diversity | 90% | · | · | yes | · |

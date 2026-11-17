@@ -1518,8 +1518,32 @@
     "short line": 2
    }
   },
+  "ia-thingwhyiamcatho00ches-0-r2": {
+   "work": "The Thing",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1
+   }
+  },
   "ia-thingwhyiamcatho00ches-0": {
    "work": "The Thing",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1
+   }
+  },
+  "ia-resurrectionofro0000gilb-r2": {
+   "work": "The Resurrection of Rome",
    "multiLineBlocks": 1,
    "reflowed": 0,
    "kept": 1,
@@ -1544,6 +1568,18 @@
   },
   "ia-outlineofsanity0000ches": {
    "work": "The Outline of Sanity",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1
+   }
+  },
+  "ia-generallyspeakin00ches-r2": {
+   "work": "Generally Speaking",
    "multiLineBlocks": 1,
    "reflowed": 0,
    "kept": 1,

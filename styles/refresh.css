@@ -28,6 +28,6 @@ input::placeholder{color:var(--muted);opacity:1}
 
 /* Hero engraving (2026-11-15): Doré's Empyrean beside the text; below it on phones. The site mark ornament is hidden. */
 .hero.hero-c.has-art{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:40px;align-items:center}.hero.hero-c.has-art:after{display:none}
-.hero-art{margin:0}.hero-art img{display:block;width:100%;height:auto;border:1px solid var(--line)}
-.hero-art figcaption{margin-top:8px;font:12px/1.5 var(--sans);color:var(--muted)}
-@media(max-width:720px){.hero.hero-c.has-art{grid-template-columns:1fr;gap:20px}.hero-art{max-width:260px}}
+
+
+@media(max-width:720px){.hero.hero-c.has-art{grid-template-columns:1fr;gap:20px}}

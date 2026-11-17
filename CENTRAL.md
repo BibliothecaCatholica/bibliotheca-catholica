@@ -44,20 +44,20 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
-### 2026-11-17, Claude (Claude Code): non-renewal batch B (for review)
+### 2026-11-17, Claude (Claude Code): non-renewal batch B (approved)
 
 - Hosted under pd-nonrenewal: Thomas Verner Moore, Prayer (B. Herder, 1931), 99.67% of words read, 61 footnotes placed after their paragraphs.
-- Link-only with a HOLDS row: Cassidy and Fichter (below the 99.5% gate). Waits for Micah's review.
+- Link-only with a HOLDS row: Cassidy and Fichter (below the 99.5% gate).
 
-### 2026-11-17, Claude (Claude Code): pd-nonrenewal approved and merged
+### 2026-11-17, Claude (Claude Code): corrected editions (approved)
 
-- tools/rights_rule.py nonrenewal_problems(): US first publication 1931 to 1963, dated no-renewal results (Stanford, NYPL, and the Copyright Office from 1950), HathiTrust code quoted, a URAA line, and the named scan; validator, tools, and tests accept it, pd-date unchanged.
-- Approved November 17 with the B. Herder reading (rule 1, standing decisions).
+- Corrected new editions (-r2) for The Thing, The Resurrection of Rome, and Generally Speaking; the old editions are kept, served, and marked retired (validator, test, PROJECT-RULES rule 1).
+- Retired editions are left out of the public hosted-edition count (128: hosted_counts.py, build_static.py, app.js). Outline of Sanity and Simplicity and Tolstoy needed no word change.
 
-### 2026-11-17, Claude (Claude Code): transcription fixes (footnotes, stamps, semicolons)
+### 2026-11-17, Claude (Claude Code): design refresh
 
-- transcribe_scan.py: footnotes move after their paragraph as [Note: ...]; repeated library stamps dropped; a lone j between words restored to a semicolon.
-- Live #51 texts keep their defects until the corrected-edition PR (new editions, old ones retired).
+- Part 1 (#56): audit, 20 unlisted previews at /design-preview/ (tools/build_design_preview.py, tests/test_design_preview.py), and docs/research/design-directions-2026-11.md. Micah picked: home v4, reading room v1 with authors v2, reading v2 contents (not sticky) with v3 endings, licensing v2, nav v1.
+- Part 2, one area per PR, screenshots in docs/research/design-refresh-2026-11/: home "Saints first" (hero band, portrait gallery with "Begin with", `HOME_BEGIN` in tools/site_copy.py). Next: library and authors, reading pages, licensing, navigation; then delete /design-preview/.
 
 ## Open items
 

@@ -27,7 +27,7 @@ def table():
     yes = lambda b: 'yes' if b else '·'
     for w in sorted(lib['works'], key=lambda w: w['title'].lower()):
         for e in w['editions']:
-            if not e.get('text'):
+            if not e.get('text') or e.get('retired'):  # retired editions are served for old links, not listed
                 continue
             al = 'excluded (verse)' if e['id'] in report['excluded'] else ('%d%%' % round(100 * report['editions'][e['id']]['share']) if e['id'] in report['editions'] else '·')
             t = tp.get(w['id'])

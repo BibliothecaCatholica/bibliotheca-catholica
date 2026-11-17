@@ -59,7 +59,6 @@ var ISO_NOTE='Bibliotheca Catholica does not host, and does not vouch for, any f
 function host(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
 function fav(u){var h=host(u);return h?'<img class="fav" loading="lazy" alt="" src="https://www.google.com/s2/favicons?domain='+encodeURIComponent(h)+'&sz=64" onerror="this.style.visibility=\'hidden\'">':''}
 function badges(a,max){var t=a.tags.filter(function(x){return TAGL[x]});t.sort(function(x,y){return TAGF.indexOf(x)-TAGF.indexOf(y)});return '<div class="badges">'+t.slice(0,max||4).map(function(x){return '<span class="badge '+x+'">'+esc(x==='doctor'?'Doctor':TAGL[x])+'</span>'}).join('')+'</div>'}
-function acard(a){return '<li class="arow"><a href="#/author/'+a.id+'">'+thumb(a.id,a.name,48)+'<span class="arow-t"><b>'+esc(a.name)+'</b><span class="arow-d">'+esc(dates(a))+' · '+esc(ERA[a.era].label)+'</span><span class="arow-p">'+esc(a.desc)+'</span></span></a></li>'}
 var TAN_REFERRAL='https://lddy.no/1qbrw';
 function extRel(u){return u===TAN_REFERRAL?'noopener sponsored':'noopener'}
 function rcard(r){if(r.url===TAN_REFERRAL)return '<div class="rcard"><div class="rc-top">'+fav('https://tanbooks.com/')+'<h3>'+esc(r.name)+'</h3></div><p>'+esc(r.desc)+'</p><p class="buy-tan"><a class="buy-b" href="'+esc(r.url)+'" target="_blank" rel="noopener sponsored">Browse TAN Books ↗</a></p></div>';
@@ -320,23 +319,34 @@ var AF={q:'',eras:{},tags:{},sort:'chron'};
 function authors(opts){
   opts=opts||{};var doctorsOnly=opts.doctors;
   var h='<div class="page-head"><div class="eyebrow">'+(doctorsOnly?'Doctores Ecclesiae':'Auctores')+'</div><h1>'+(doctorsOnly?'Doctors of the Church':'Catholic Authors')+'</h1><p class="lede">'+(doctorsOnly?'The saints proclaimed Doctors of the Church for their eminent learning and holiness — from St. Athanasius to St. John Henry Newman (2025).':'From the Apostolic Fathers to the present day. Filter by era or vocation, or type to narrow instantly.')+'</p></div>';
-  h+='<div class="toolbar"><input type="search" id="af-q" placeholder="Filter by name, work, keyword…" value="'+esc(AF.q)+'"><select id="af-sort" aria-label="Sort"><option value="chron">Chronological</option><option value="az">A → Z</option></select>'+
-   '<div class="filter-row"><label>Era</label><div class="chips" id="af-eras">'+D.eras.map(function(e){return '<button class="chip'+(AF.eras[e.id]?' on':'')+'" data-era="'+e.id+'" title="'+esc(e.range)+'">'+esc(e.label)+'</button>'}).join('')+'</div></div>'+
-   (doctorsOnly?'':'<div class="filter-row"><label>Type</label><div class="chips" id="af-tags">'+TAGF.map(function(t){return '<button class="chip'+(AF.tags[t]?' on':'')+'" data-tag="'+t+'">'+esc(TAGL[t])+'</button>'}).join('')+'</div></div>')+'</div><div class="result-meta" id="af-meta"></div><div id="af-out"></div>';
+  // Design refresh (owner's pick, November 17, 2026: printed shelf list): one filter bar (find, era, type, order), a jump line of
+  // eras, and names with dates in two columns per era; no portraits or descriptions here (they stay on each author page).
+  var one=function(o){var k=Object.keys(o).filter(function(x){return o[x]});return k.length?k[0]:''};
+  h+='<form class="au-bar" role="search" aria-label="Filter authors"><div class="au-f au-fq"><label for="af-q">Find</label><input type="search" id="af-q" placeholder="Name, work, or keyword" value="'+esc(AF.q)+'"></div>'+
+   '<div class="au-f"><label for="af-era">Era</label><select id="af-era"><option value="">All eras</option>'+D.eras.map(function(e){return '<option value="'+e.id+'">'+esc(e.label)+'</option>'}).join('')+'</select></div>'+
+   (doctorsOnly?'':'<div class="au-f"><label for="af-tag">Type</label><select id="af-tag"><option value="">All types</option>'+TAGF.map(function(t){return '<option value="'+t+'">'+esc(TAGL[t])+'</option>'}).join('')+'</select></div>')+
+   '<div class="au-f"><label for="af-sort">Order</label><select id="af-sort"><option value="chron">By era</option><option value="az">A to Z</option></select></div>'+
+   '<p class="result-meta" id="af-meta" role="status"></p></form><p class="au-jump" id="af-jump"></p><div id="af-out"></div>';
   render(h,doctorsOnly?'doctors':'authors');
-  $('#af-sort').value=AF.sort;
+  $('#af-sort').value=AF.sort;$('#af-era').value=one(AF.eras);if($('#af-tag'))$('#af-tag').value=one(AF.tags);
+  function row(a){return '<li><a href="#/author/'+a.id+'">'+esc(a.name)+'</a> <span class="au-dt">'+esc(dates(a))+'</span></li>'}
   function draw(){var q=norm(AF.q),eras=Object.keys(AF.eras).filter(function(k){return AF.eras[k]}),tags=Object.keys(AF.tags).filter(function(k){return AF.tags[k]});
     var L=A.filter(function(a){if(doctorsOnly&&!a.doctor)return false;if(eras.length&&eras.indexOf(a.era)<0)return false;if(!doctorsOnly&&tags.length&&!tags.every(function(t){return a.tags.indexOf(t)>=0}))return false;
       if(q){var x=norm(a.name+' '+a.desc+' '+a.wikiDesc+' '+a.tags.join(' ')+' '+a.works.map(function(w){return w.title}).join(' '));return q.split(/\s+/).every(function(t){return x.indexOf(t)>=0})}return true});
     $('#af-meta').textContent=L.length+' of '+(doctorsOnly?A.filter(function(a){return a.doctor}).length:A.length)+' authors';
-    var out='';
-    if(AF.sort==='az'){L=L.slice().sort(function(a,b){return a.name.localeCompare(b.name)});out='<ul class="rows arows">'+L.map(acard).join('')+'</ul>'}
-    else{var cur=null;D.eras.forEach(function(e){var g=L.filter(function(a){return a.era===e.id});if(!g.length)return;out+='<div class="era-block"><h2>'+esc(e.label)+'</h2><span>'+esc(e.range)+' · '+g.length+'</span></div><ul class="rows arows">'+g.map(acard).join('')+'</ul>'})}
+    var out='',jump=[];
+    if(AF.sort==='az'){L=L.slice().sort(function(a,b){return a.name.localeCompare(b.name)});if(L.length)out='<section class="au-grp"><ul class="au-list">'+L.map(row).join('')+'</ul></section>'}
+    else{D.eras.forEach(function(e){var g=L.filter(function(a){return a.era===e.id});if(!g.length)return;jump.push('<button type="button" class="au-j" data-jump="'+e.id+'">'+esc(e.label)+'</button>&nbsp;<span class="au-jn">'+g.length+'</span>');
+      out+='<section class="au-grp" aria-labelledby="af-e-'+e.id+'"><h2 id="af-e-'+e.id+'" tabindex="-1">'+esc(e.label)+' <span>'+esc(e.range)+' · '+g.length+'</span></h2><ul class="au-list">'+g.map(row).join('')+'</ul></section>'})}
+    $('#af-jump').innerHTML=jump.length>1?jump.join(' · '):'';$('#af-jump').hidden=jump.length<2;
     $('#af-out').innerHTML=out||'<div class="empty">No authors match. Try clearing a filter.</div>'}
   draw();
+  $('.au-bar').addEventListener('submit',function(e){e.preventDefault()});
   $('#af-q').addEventListener('input',function(e){AF.q=e.target.value;draw()});
   $('#af-sort').addEventListener('change',function(e){AF.sort=e.target.value;draw()});
-  main.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;if(b.dataset.era){AF.eras[b.dataset.era]=!AF.eras[b.dataset.era]}else if(b.dataset.tag){AF.tags[b.dataset.tag]=!AF.tags[b.dataset.tag]}b.classList.toggle('on');draw()});
+  $('#af-era').addEventListener('change',function(e){AF.eras={};if(e.target.value)AF.eras[e.target.value]=true;draw()});
+  if($('#af-tag'))$('#af-tag').addEventListener('change',function(e){AF.tags={};if(e.target.value)AF.tags[e.target.value]=true;draw()});
+  $('#af-jump').addEventListener('click',function(e){var b=e.target.closest('.au-j');if(!b)return;var t=document.getElementById('af-e-'+b.dataset.jump);if(t){t.scrollIntoView({block:'start'});t.focus({preventScroll:true})}});
 }
 /* ---------- v6: tabbed author profile ---------- */
 var AUTABS=[['works','Works'],['commentaries','Commentaries'],['buy','Buy the Books'],['related','Related']];

@@ -32,6 +32,13 @@ Design refresh, owner's pick of November 17, 2026 ("Saints first", [design direc
 - **Saints and authors:** the eight portraits (`HOME_PEOPLE`) are the main gallery, four across on desktop and two on phones, each with name, dates, and "Begin with" one hosted book by that person (`HOME_BEGIN`; `tools/build_static.py` checks it). Flagged titles are never featured.
 - Then the three Explore rows, the one-line Today, About, and the newsletter. The 25-link budget before the footer still holds.
 
+## Catalogue pages
+
+Design refresh, owner's pick of November 17, 2026 ([design directions](research/design-directions-2026-11.md)): the reading room is the "Faceted catalogue" (v1) and the author index the "Printed shelf list" (v2).
+- **Reading room** (`library()` in `scripts/library.js`, `styles/library.css`): a facet column beside the shelves. Find a work, Subject as radio buttons with counts (one choice, as before), Format, and Read on this site; the column is sticky on wide screens and sits above the results on phones. The shelves of rows, the six-per-shelf preview, and "See all" links are unchanged. The same `filter_use` events as before.
+- **Author index and Doctors** (`authors()` in `app.js`, `styles.css`): one filter bar (Find, Era, Type, Order) with the count, a jump line of eras with counts, and names with dates in two columns under a small-caps era heading. No portraits or descriptions in the index; they stay on each author page. No pill chips.
+- **Form fields** use the `--field` border (`#94805c` light, `#6b6f7c` dark), at least 3:1 against every background, and are 44 px tall.
+
 ## Containers
 
 - A container has **a border or a tint, never both**, and no shadow.

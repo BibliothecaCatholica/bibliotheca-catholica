@@ -36,6 +36,7 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 - **Notice rules (November 14, 2026):** the Gutenberg notice is the licence's own 1.E.1 sentence, verbatim, once per page after the text; quality labels in edition details only; one-line affiliate disclosure; rights badges only on a record's own page; one-line Wikipedia credit and a Credits toggle for public-domain portraits; this file's cap. Details: `docs/PROJECT-RULES.md` rules 2, 7, 10, 11, 14, and 15.
 - **Hosting rule (November 15, 2026):** no fixed date cutoff. Host a full text only with a recorded, edition-specific basis: US public domain by date (stated once in `tools/rights_rule.py`; in 2026, 1930 or earlier, moving each January 1), or written evidence of no renewal, a defective notice, an open license, or permission. Texts may come from any source. Unknown or in-copyright without permission is link only, never hosted in part. Details: PROJECT-RULES rule 1.
+- **Non-renewal basis (November 17, 2026):** `pd-nonrenewal` approved as built in PR #53, with the B. Herder "Printed in U.S.A." reading (US publication at least simultaneous with London; no URAA restoration). Each `pd-nonrenewal` batch still waits for the owner's review.
 - **Standing approval:** presentation, docs, tests, and tooling may merge on green CI, and so do hosted texts public domain by date (November 15, 2026); the owner's review is still required for new hosted texts on any other basis (each `pd-nonrenewal` batch), rights-rule changes, hosted-text wording, rights or licence statements, affiliate placements, analytics, hosting or DNS, takedown identity, and outreach ([OPERATIONS](docs/OPERATIONS.md#owner-decisions)).
 - **Settled (November 15, 2026):** Story of a Soul matching rule; EPUBs published for structured editions; hero engraving; takedown contact email; covers design C; Summa Design A.
 
@@ -43,20 +44,20 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
-### 2026-11-17, Claude (Claude Code): corrected editions (for review)
+### 2026-11-17, Claude (Claude Code): corrected editions (approved)
 
-- Corrected new editions (-r2) for The Thing, The Resurrection of Rome, and Generally Speaking; the old editions are kept and marked retired (validator, test, PROJECT-RULES rule 1).
-- The Outline of Sanity and Simplicity and Tolstoy needed no word change. Waits for Micah's review (hosted texts).
+- Corrected new editions (-r2) for The Thing, The Resurrection of Rome, and Generally Speaking; the old editions are kept, served, and marked retired (validator, test, PROJECT-RULES rule 1).
+- Retired editions are left out of the public hosted-edition count (128: hosted_counts.py, build_static.py, app.js). Outline of Sanity and Simplicity and Tolstoy needed no word change.
+
+### 2026-11-17, Claude (Claude Code): pd-nonrenewal approved and merged
+
+- tools/rights_rule.py nonrenewal_problems(): US first publication 1931 to 1963, dated no-renewal results (Stanford, NYPL, and the Copyright Office from 1950), HathiTrust code quoted, a URAA line, and the named scan; validator, tools, and tests accept it, pd-date unchanged.
+- Approved November 17 with the B. Herder reading (rule 1, standing decisions).
 
 ### 2026-11-17, Claude (Claude Code): transcription fixes (footnotes, stamps, semicolons)
 
 - transcribe_scan.py: footnotes move after their paragraph as [Note: ...]; repeated library stamps dropped; a lone j between words restored to a semicolon.
 - Live #51 texts keep their defects until the corrected-edition PR (new editions, old ones retired).
-
-### 2026-11-17, Claude (Claude Code): design refresh Part 1, previews
-
-- Audit of five areas and 20 working previews (four per area) at /design-preview/, written by tools/build_design_preview.py from real data at the end of build_static.py; noindex,nofollow, robots.txt disallow, out of the sitemap, nav, and search (tests/test_design_preview.py).
-- Directions, mismatches, and a recommendation per area: docs/research/design-directions-2026-11.md. Waiting on Micah's pick per area (HOLDS.md); Part 2 builds one area per PR, then deletes /design-preview/ with its script and test.
 
 ## Open items
 

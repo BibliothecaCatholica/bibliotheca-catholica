@@ -26,7 +26,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
-from rights_rule import pd_by_date  # noqa: E402
+from rights_rule import nonrenewal_problems, pd_by_date  # noqa: E402
 
 UA = {'User-Agent': 'BibliothecaCatholica-catalog/1.0 (+https://bibliothecacatholica.com)'}
 RIGHTS = 'Public domain in the USA. Outside the U.S., check local copyright rules. {name} notices retained.'
@@ -67,7 +67,13 @@ def main(spec_path):
     for e in json.loads(Path(spec_path).read_text()):
         out = ROOT / f"data/texts/{e['edition']}.txt"
         assert not out.exists(), f"{e['edition']}: already hosted; a pinned text never changes"
-        assert pd_by_date(e['year']), e['edition']
+        basis = e.get('rightsBasis', 'pd-date')
+        if basis == 'pd-date':
+            assert pd_by_date(e['year']), e['edition']
+        else:  # pd-nonrenewal: the evidence must pass, and the witness scan must be the printing it names
+            assert basis == 'pd-nonrenewal', basis
+            assert not nonrenewal_problems(e.get('nonRenewal')), (e['edition'], nonrenewal_problems(e.get('nonRenewal')))
+            assert e['nonRenewal']['scan'] == e['ia'], e['edition']
         raw = get(e['sourceUrl'])
         text = decode(raw).replace('\r\n', '\n').replace('\r', '\n').strip('\n')
         meta = json.loads(get(f"https://archive.org/metadata/{e['ia']}"))
@@ -77,7 +83,7 @@ def main(spec_path):
         page = decode(get(f"https://archive.org/stream/{e['ia']}/{urllib.parse.quote(ocr_name)}"))
         ocr = html.unescape(re.search(r'<pre[^>]*>(.*?)</pre>', page, re.S).group(1)).encode('utf-8')
         year = int(re.search(r'\d{4}', str(m.get('date') or m.get('year'))).group())
-        assert pd_by_date(year), (e['ia'], year)
+        assert pd_by_date(year) if basis == 'pd-date' else year == e['nonRenewal']['firstPublicationYear'], (e['ia'], year)
         col = collate(text, decode(ocr))
         witness = {'identifier': e['ia'], 'url': f"https://archive.org/details/{e['ia']}", 'year': year,
                    'publisher': m.get('publisher'), 'ocr': ocr_name, 'ocrSha256': hashlib.sha256(ocr).hexdigest(),
@@ -98,7 +104,7 @@ def main(spec_path):
         notice = text[:1500]
         rec = {'id': e['edition'], 'kind': 'public-domain-text', 'title': e['sourceTitle'], 'author': e['author'],
                'firstPublished': e['firstPublished'], 'rights': RIGHTS.format(name=e['sourceName']),
-               'rightsBasis': 'pd-date', 'sourceName': e['sourceName'], 'sourceUrl': e['sourceUrl'],
+               'rightsBasis': basis, **({'nonRenewal': e['nonRenewal']} if basis == 'pd-nonrenewal' else {}), 'sourceName': e['sourceName'], 'sourceUrl': e['sourceUrl'],
                'sourcePage': e['sourcePage'], 'sourceNotice': notice, 'sourceFileSha256': hashlib.sha256(raw).hexdigest(),
                'iaWitness': witness, 'collation': col, 'sha256': sha, 'bytes': len(data),
                'checked': time.strftime('%Y-%m-%d')}

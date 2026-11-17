@@ -194,9 +194,13 @@ def write_home(tpl,counts,snapshot):
     about=site_copy.home_about(counts)
     hero=site_copy.home_hero()
     hubA={x['id']:x for x in json.loads((ROOT/'data/catholic-hub.json').read_text())['authors']};lib=json.loads((ROOT/'data/library.json').read_text());libw={w['id']:w for w in lib['works']};have=set(portrait_ids())
-    people=[(i,hubA[i]['name'],(hubA[i].get('dshow') or (str(hubA[i]['born'])+'–'+str(hubA[i]['died']) if hubA[i].get('born') and hubA[i].get('died') else ''))) for i in site_copy.HOME_PEOPLE if i in have and i in hubA]
-    works=[(i,libw[i]['title'],libw[i]['author']) for i in site_copy.HOME_SHELF if i in libw]
-    paths=site_copy.home_paths(counts,people,works)
+    # Saints first (design refresh, November 17, 2026): each portrait carries the book to begin with, a hosted work by that person.
+    def begin(i):
+        w=libw.get(site_copy.HOME_BEGIN.get(i,''))
+        assert w and w.get('authorId')==i and any(e.get('text') for e in w['editions']),'HOME_BEGIN must name a hosted work by '+i
+        return w['id'],w['title']
+    people=[(i,hubA[i]['name'],(hubA[i].get('dshow') or (str(hubA[i]['born'])+'–'+str(hubA[i]['died']) if hubA[i].get('born') and hubA[i].get('died') else '')))+begin(i) for i in site_copy.HOME_PEOPLE if i in have and i in hubA]
+    paths=site_copy.home_paths(counts,people)
     home='<!-- static-home:start --><div class="static-prerender">'+hero+paths+about+site_copy.newsletter_box()+'</div><!-- static-home:end -->'
     s=tpl
     assert '<!-- static-home:start -->' in s,'index.html <main> must contain the static-home markers'

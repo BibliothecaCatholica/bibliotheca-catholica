@@ -28,7 +28,7 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
 
-- 186 work records; 128 hosted editions of 123 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 195 work records; 130 hosted editions of 125 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,169 sitemap URLs; 7699 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 124 Node and 284 Python.
 
@@ -36,6 +36,7 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 - **Notice rules (November 14, 2026):** the Gutenberg notice is the licence's own 1.E.1 sentence, verbatim, once per page after the text; quality labels in edition details only; one-line affiliate disclosure; rights badges only on a record's own page; one-line Wikipedia credit and a Credits toggle for public-domain portraits; this file's cap. Details: `docs/PROJECT-RULES.md` rules 2, 7, 10, 11, 14, and 15.
 - **Hosting rule (November 15, 2026):** no fixed date cutoff. Host a full text only with a recorded, edition-specific basis: US public domain by date (stated once in `tools/rights_rule.py`; in 2026, 1930 or earlier, moving each January 1), or written evidence of no renewal, a defective notice, an open license, or permission. Texts may come from any source. Unknown or in-copyright without permission is link only, never hosted in part. Details: PROJECT-RULES rule 1.
+- **Non-renewal basis (November 17, 2026):** `pd-nonrenewal` approved as built in PR #53, with the B. Herder "Printed in U.S.A." reading (US publication at least simultaneous with London; no URAA restoration). Each `pd-nonrenewal` batch still waits for the owner's review.
 - **Standing approval:** presentation, docs, tests, and tooling may merge on green CI, and so do hosted texts public domain by date (November 15, 2026); the owner's review is still required for new hosted texts on any other basis (each `pd-nonrenewal` batch), rights-rule changes, hosted-text wording, rights or licence statements, affiliate placements, analytics, hosting or DNS, takedown identity, and outreach ([OPERATIONS](docs/OPERATIONS.md#owner-decisions)).
 - **Settled (November 15, 2026):** Story of a Soul matching rule; EPUBs published for structured editions; hero engraving; takedown contact email; covers design C; Summa Design A.
 
@@ -43,21 +44,20 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
-### 2026-11-16, Catholic Repo: unlisted /drafts/ Substack paste pages
+### 2026-11-17, Claude (Claude Code): design refresh
 
-- `data/substack-drafts.json` and `tools/build_drafts.py` write noindex,nofollow pages at `/drafts/<slug>/` and `/drafts/`, kept out of the sitemap, nav, search, and feeds. Deleting an entry removes that page on the next build.
-- After Substack confirms a post is live, it sends the slug and live URL; Repo deletes that entry in a small commit that merges on green CI. Never remove a page before the post is confirmed live. No automatic RSS check.
-- HOLDS.md: Candles' Beams (needs a scan) and Sheehan (CELT consent caveat). Edition count in this file: 203.
+- Part 1 (#56): audit, 20 unlisted previews at /design-preview/ (tools/build_design_preview.py, tests/test_design_preview.py), and docs/research/design-directions-2026-11.md. Micah picked: home v4, reading room v1 with authors v2, reading v2 contents (not sticky) with v3 endings, licensing v2, nav v1.
+- Part 2, one area per PR, screenshots in docs/research/design-refresh-2026-11/: home "Saints first" (#60; `HOME_BEGIN` in tools/site_copy.py); reading room facets and author shelf list (#64; `--field` token); chapter pages with contents at the start, Continue reading, Finis, colophon (#65); /licensing/ contents rail (#66); masthead navigation and footer (#67). /design-preview/ and its script and test removed; screenshots stay in docs/research/design-refresh-2026-11/. Open: HOLDS.md row on the licensing page names and the home Substack embed.
 
-### 2026-11-16, Claude (Claude Code): Part 0 renewal checks
+### 2026-11-17, Claude (Claude Code): Ecumenical Councils section
 
-- docs/research/us-pd-renewal-checks-2026-11.csv: 25 books checked against Stanford, NYPL renewal data, HathiTrust rights codes, and the scans' copyright pages. 9 clear, 16 hold (Copyright Office records not reached for 1950 and later; possible earlier editions abroad; missing copyright pages). No renewal found for any book.
-- Hosting under pd-nonrenewal still waits for Part 1 and Micah's review of each batch.
+- /councils/: the 21 councils in order with own-words summaries and where to read each (data/councils.json, tools/councils_page.py, tests/test_councils.py); linked first on /magisterium/ and in the footer, not the main nav. Kept static by app.js (staticOnly), so it has no in-page #anchors.
+- Sources (Part 2, docs only): docs/research/councils-sources-2026-11.csv. Hostable by date: 1 to 7 (Percival 1900), Trent (Waterworth 1848), Vatican I (Manning 1870). Link-only: 8 to 18 (Schroeder 1937 canons pending NYPL), Vatican II. No LibriVox recording of any council text. Hosting waits for Micah (HOLDS.md).
 
-### 2026-11-16, Claude (Claude Code): Chesterton scan transcriptions
+### 2026-11-17, Claude (Claude Code): Haas hosted after a hand fix (approved)
 
-- Hosted from free scans with tools/transcribe_scan.py: The Thing, The Resurrection of Rome, The Outline of Sanity, Generally Speaking, and Simplicity and Tolstoy (99.6% to 99.9% of words read; flags listed per record).
-- Held (HOLDS.md): four scans below the 99.5% gate, the 1902 Stevenson booklet (only a 1906 scan), and Gloria in Profundis (no dated scan). Eight not-yet-available works have no free scan anywhere searched.
+- Rights and Wrongs in Industry (Paulist Press, 1933) hosted under pd-nonrenewal at 99.62% of words read, after 40 misreadings were corrected against the page images of the same scan (each logged in `handFixes`; no wording from another edition).
+- transcribe_scan.py takes a spec's `handFixes` (exactly one match per leaf; only whole noise lines may be dropped); tested.
 
 ## Open items
 

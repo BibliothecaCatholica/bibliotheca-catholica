@@ -9,7 +9,11 @@ tested tool for a single-scan book"). It does the same things and nothing more:
   * rejoins words hyphenated at line ends when the joined word is a known word, and keeps the hyphen otherwise;
   * fixes a short, fixed list of OCR confusions only when exactly one repair is a known word and the OCR form is not, and
     records every change;
-  * flags (never rewrites) any paragraph that still has a word it could not read; it never supplies a missing word.
+  * flags (never rewrites) any paragraph that still has a word it could not read; it never supplies a missing word;
+  * applies the spec's `handFixes`, if any, before all of the above: each is {leaf, page, ocr, reading}, a misread checked
+    by a person against the page image of the same scan (never another edition). `ocr` must be one whole OCR line of
+    that leaf or occur exactly once in its lines and is replaced by `reading` (an empty reading drops a whole line of OCR noise). Every fix is
+    copied to the provenance record (owner decision, November 17, 2026).
 Known words are those of the library's own hosted texts (data/texts/), so the vocabulary is period English.
 
     python3 tools/transcribe_scan.py SPEC.json [--cache DIR]
@@ -19,13 +23,13 @@ are 0-based page indexes of the djvu.xml, chosen by looking at the scan (front m
 publisher's advertisements out). Output per entry: data/texts/<edition>.txt and data/sources/<edition>.json
 (kind `ocr-transcription`, validated by tools/build_library.py and tests/test_transcribed_scans.py).
 """
-import argparse, collections, glob, hashlib, html, json, re, statistics, sys, time, urllib.request
+import argparse, collections, difflib, glob, hashlib, html, json, re, statistics, sys, time, urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
-from rights_rule import pd_by_date  # noqa: E402
+from rights_rule import nonrenewal_problems, pd_by_date  # noqa: E402
 
 UA = {'User-Agent': 'BibliothecaCatholica-catalog/1.0 (+https://bibliothecacatholica.com)'}
 END = '*** END OF THE TRANSCRIPTION ***'
@@ -155,31 +159,110 @@ def norm_head(t):
     return re.sub(r'[^a-z]', '', t.lower())
 
 
+NOTE_MARK = re.compile(r'^[*°†‡§]|^\d{1,2}\.?\s+\S')  # "5 Moral." or "10. Cf."
+
+
+def split_notes(lines, height):
+    """Footnotes: a block at the foot of the page, starting with a note mark and set off by a wider gap than the line
+    spacing or set in smaller type. Returns (body lines, [note lines per note])."""
+    if len(lines) < 4:
+        return lines, []
+    ys = [l['y'] for l in lines]
+    gaps = [b - a for a, b in zip(ys, ys[1:])]
+    step = statistics.median(g for g in gaps if g > 0) if any(g > 0 for g in gaps) else 0
+    med_h = statistics.median(l['h'] for l in lines)
+    starts = [k for k in range(1, len(lines)) if lines[k]['y'] > 0.55 * height and NOTE_MARK.match(lines[k]['text'])
+              and (gaps[k - 1] > 1.4 * step or lines[k]['h'] < 0.85 * med_h)  # set apart, or in smaller type
+              and statistics.median(l['h'] for l in lines[k:]) < 0.92 * med_h]  # and the block is in smaller type
+    if starts:
+        k = min(starts)  # the first note of the block; the notes below it are part of the same block
+        if True:
+            notes = []
+            for l in lines[k:]:
+                if NOTE_MARK.match(l['text']) or not notes:
+                    notes.append([l['text']])
+                else:
+                    notes[-1].append(l['text'])
+            return lines[:k], notes
+    return lines, []
+
+
+def note_text(lines):
+    t = re.sub(r'([a-z])- ([a-z])', r'\1\2', ' '.join(lines))  # rejoin a word hyphenated across the note's lines
+    return '[Note: ' + t + ']'
+
+
+def library_stamps(raw_pages, heads):
+    """Short capital lines (a library's stamp) repeated on three or more pages below the top band of the page, where
+    running heads sit, and that are not running heads."""
+    c = collections.Counter()
+    for height, ls in raw_pages:
+        for l in ls:
+            t = l['text']
+            if l['y'] > 0.2 * height and len(t.split()) <= 6 and all_caps(t):
+                c[norm_head(t)] += 1
+    return {h for h, n in c.items() if n >= 3 and h and h not in heads and len(h) >= 8}
+
+
+def all_caps(t):
+    return sum(ch.isupper() for ch in t) > 0.7 * max(1, sum(ch.isalpha() for ch in t))
+
+
+def is_stamp(text, stamps):
+    n = norm_head(text)
+    return all_caps(text) and len(n) >= 8 and any(difflib.SequenceMatcher(None, n, s).ratio() >= 0.85 for s in stamps)
+
+
+def apply_hand_fixes(raw_pages, e):
+    for f in e.get('handFixes', []):
+        lines = raw_pages[f['leaf'] - e['firstLeaf']][1]
+        hits = [l for l in lines if l['text'] == f['ocr']] or [l for l in lines if f['ocr'] in l['text']]
+        assert len(hits) == 1 and hits[0]['text'].count(f['ocr']) == 1, (e['edition'], f, len(hits))
+        if f['reading'] == '':
+            assert hits[0]['text'] == f['ocr'], ('only a whole line may be dropped', f)
+            lines.remove(hits[0])
+        else:
+            hits[0]['text'] = hits[0]['text'].replace(f['ocr'], f['reading'])
+
+
 def build(e, cache, V):
     xml, meta = fetch(e['ia'], cache)
     root = ET.fromstring(xml)
     objs = root.findall('.//OBJECT')[e['firstLeaf']:e['lastLeaf'] + 1]
     raw_pages = [(int(o.get('height') or 3000), page_lines(o)) for o in objs]
+    apply_hand_fixes(raw_pages, e)
     firsts = collections.Counter(norm_head(ls[0]['text']) for _, ls in raw_pages if ls and len(ls[0]['text']) < 70)
     heads = {h for h, n in firsts.items() if n >= 3 and h}
-    paras, corrections, flagged = [], [], []
+    stamps = library_stamps(raw_pages, heads)
+    paras, corrections, flagged, pending = [], [], [], []
     cur, prev_end = [], ''
+
+    def close(par):
+        paras.append(par)
+        while pending:  # a page's footnotes follow the paragraph that was running on that page
+            paras.append([note_text(pending.pop(0))])
     for height, ls in raw_pages:
+        ls = [l for l in ls if not is_stamp(l['text'], stamps)]
         ls = body(ls, height, heads, V)
+        ls, notes = split_notes(ls, height)
         if not ls:
+            pending.extend(notes)
             continue
         margin = statistics.median(l['x'] for l in ls)
         for k, l in enumerate(ls):
             indent = l['x'] > margin + 25 and not prev_end.endswith('-')
-            sentence_end = bool(re.search(r'[.!?:;"”’)]$', prev_end))
+            sentence_end = bool(re.search(r'[.!?:;"”’)]\s*[\d*°†‡§]{0,2}$', prev_end))  # a note mark may follow
             heading = l['text'].isupper() and len(l['text'].split()) <= 10 and not prev_end.endswith('-')
             new = cur and (heading or (l['paraStart'] and sentence_end) or (indent and sentence_end)
                            or (cur and cur[-1].isupper() and len(cur[-1].split()) <= 10))
             if new:
-                paras.append(cur); cur = []
+                close(cur); cur = []
             cur.append(l['text']); prev_end = l['text']
+        pending.extend(notes)
     if cur:
-        paras.append(cur)
+        close(cur)
+    while pending:  # notes on the last pages
+        paras.append([note_text(pending.pop(0))])
     out = []
     for p in paras:
         text = ''
@@ -195,6 +278,8 @@ def build(e, cache, V):
             else:
                 text = (text + ' ' + line).strip()
         text = re.sub(r'\s+([,;:.!?])', r'\1', re.sub(r'\s+', ' ', text))
+        text, nj = re.subn(r'(?<=[A-Za-z]) j(?= [a-z])', ';', text)  # a semicolon the OCR read as a lone "j"
+        corrections.extend({'ocr': 'j', 'reading': ';'} for _ in range(nj))
         toks, bad = [], []
         for t in text.split(' '):
             f, ch = repair(t, V)
@@ -216,10 +301,16 @@ def main(spec, cache):
     for e in json.loads(Path(spec).read_text()):
         out_path = ROOT / f"data/texts/{e['edition']}.txt"
         assert not out_path.exists(), f"{e['edition']}: already hosted; a pinned text never changes"
-        assert pd_by_date(e['year']), e['edition']
+        basis = e.get('rightsBasis', 'pd-date')
+        if basis == 'pd-date':
+            assert pd_by_date(e['year']), e['edition']
+        else:  # pd-nonrenewal: the evidence must pass, and the scan must be the printing it names
+            assert basis == 'pd-nonrenewal', basis
+            assert not nonrenewal_problems(e.get('nonRenewal')), (e['edition'], nonrenewal_problems(e.get('nonRenewal')))
+            assert e['nonRenewal']['scan'] == e['ia'], e['edition']
         paras, corrections, flagged, words, unknown, meta, xml = build(e, cache, V)
         year = int(re.search(r'\d{4}', str(meta.get('date'))).group())
-        assert pd_by_date(year), (e['ia'], year)
+        assert pd_by_date(year) if basis == 'pd-date' else year == e['nonRenewal']['firstPublicationYear'], (e['ia'], year)
         T = e['title']
         head = [T, '', f"By {e['author']}", '', f"First published {e['firstPublished']}. Public domain in the USA.", '',
                 f"Transcribed for Bibliotheca Catholica from the Internet Archive scan {e['ia']} "
@@ -227,14 +318,19 @@ def main(spec, cache):
                 f"The OCR was cleaned by tools/transcribe_scan.py: running heads and page numbers removed, words rejoined "
                 f"across line breaks, and {len(corrections)} common OCR confusions repaired where only one reading is a "
                 f"known word. {len(flagged)} paragraphs keep a word the tool could not read; they are listed in the "
-                f"provenance record. No missing words were supplied. Not a manual proofread.", '',
+                f"provenance record. No missing words were supplied. Not a manual proofread."
+                + (f" {len(e['handFixes'])} misreadings were corrected by hand against the page images of the same scan; "
+                   f"each is listed in the provenance record." if e.get('handFixes') else '')
+                + (f" {e['correction']}" if e.get('correction') else ''), '',
                 '*** START OF THE TRANSCRIPTION ***', '']
         data = ('\n'.join(head) + '\n\n'.join(paras) + '\n\n' + END + '\n').encode('utf-8')
         out_path.write_bytes(data)
         sha = hashlib.sha256(data).hexdigest()
         rec = {'id': e['edition'], 'kind': 'ocr-transcription', 'title': e['sourceTitle'], 'author': e['author'],
-               'rights': f"Public domain in the USA. First published {e['firstPublished']}; the scanned printing is of {year}.",
-               'rightsBasis': 'pd-date',
+               'rights': (f"Public domain in the USA. First published {e['firstPublished']}; the scanned printing is of {year}."
+                          if basis == 'pd-date' else f"Public domain in the USA. First published in the United States in "
+                          f"{year} and not renewed; the evidence is in nonRenewal."),
+               'rightsBasis': basis, **({'nonRenewal': e['nonRenewal']} if basis == 'pd-nonrenewal' else {}),
                'volumes': [{'identifier': e['ia'], 'url': f"https://archive.org/details/{e['ia']}", 'year': year,
                             'publisher': meta.get('publisher'), 'ocr': f"{e['ia']}_djvu.xml",
                             'ocrSha256': hashlib.sha256(xml).hexdigest(), 'leaves': [e['firstLeaf'], e['lastLeaf']]}],
@@ -245,6 +341,10 @@ def main(spec, cache):
                'flaggedBlocks': len(flagged), 'flagged': flagged, 'corrections': len(corrections),
                'correctionList': corrections, 'text': f"data/texts/{e['edition']}.txt", 'sha256': sha,
                'checked': time.strftime('%Y-%m-%d')}
+        if e.get('handFixes'):
+            rec['handFixes'] = [{k: f[k] for k in ('leaf', 'page', 'ocr', 'reading')} for f in e['handFixes']]
+            rec['method'] += (f" {len(e['handFixes'])} misreadings corrected by hand against the page images of this "
+                              f"scan, each listed in handFixes; no wording was taken from another edition.")
         if e.get('note'):
             rec['note'] = e['note']
         (ROOT / f"data/sources/{e['edition']}.json").write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')

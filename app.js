@@ -59,7 +59,6 @@ var ISO_NOTE='Bibliotheca Catholica does not host, and does not vouch for, any f
 function host(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
 function fav(u){var h=host(u);return h?'<img class="fav" loading="lazy" alt="" src="https://www.google.com/s2/favicons?domain='+encodeURIComponent(h)+'&sz=64" onerror="this.style.visibility=\'hidden\'">':''}
 function badges(a,max){var t=a.tags.filter(function(x){return TAGL[x]});t.sort(function(x,y){return TAGF.indexOf(x)-TAGF.indexOf(y)});return '<div class="badges">'+t.slice(0,max||4).map(function(x){return '<span class="badge '+x+'">'+esc(x==='doctor'?'Doctor':TAGL[x])+'</span>'}).join('')+'</div>'}
-function acard(a){return '<li class="arow"><a href="#/author/'+a.id+'">'+thumb(a.id,a.name,48)+'<span class="arow-t"><b>'+esc(a.name)+'</b><span class="arow-d">'+esc(dates(a))+' · '+esc(ERA[a.era].label)+'</span><span class="arow-p">'+esc(a.desc)+'</span></span></a></li>'}
 var TAN_REFERRAL='https://lddy.no/1qbrw';
 function extRel(u){return u===TAN_REFERRAL?'noopener sponsored':'noopener'}
 function rcard(r){if(r.url===TAN_REFERRAL)return '<div class="rcard"><div class="rc-top">'+fav('https://tanbooks.com/')+'<h3>'+esc(r.name)+'</h3></div><p>'+esc(r.desc)+'</p><p class="buy-tan"><a class="buy-b" href="'+esc(r.url)+'" target="_blank" rel="noopener sponsored">Browse TAN Books ↗</a></p></div>';
@@ -116,6 +115,9 @@ function efBox(id){var f=efOf(id);if(!f)return '';
    '<p class="small">Source: <a href="'+esc(EFL.disclaimer.source)+'" target="_blank" rel="noopener">Dignitatis Humanae, vatican.va ↗</a> · Listing is not endorsement: see our <a href="#/policy">Fidelity &amp; Editorial Policy</a>. This record is kept for historical study and is never featured.</p></aside>'}
 function policy(){render(EFL.policy_html||'<h1>Fidelity &amp; Editorial Policy</h1>','policy')}
 /* /rights, /takedown, and /licensing: HTML from tools/rights_pages.py via data/rights-pages.js (same source as the static pages) */
+// Design refresh (November 17, 2026): the licensing page's "On this page" buttons scroll to a section and move focus to its heading
+// (buttons, not #anchors, which the hash router would read as a route).
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.lic-j');if(!b)return;var t=document.getElementById(b.dataset.jump);if(!t)return;t.scrollIntoView({block:'start'});var h=t.querySelector('h2');if(h)h.focus({preventScroll:true})});
 /* Steering C (2026-11-03): help guides. Same HTML as the static /guides/<slug>/ page (data/guides.js from tools/guide_pages.py). */
 function guidePage(k){render('<div class="loading">Loading…</div>','');lazy('guides.js','GUIDES',function(G){var cur=(location.hash.replace(/^#\/?/,'')||(window.BC_BOOT||'')).split('?')[0];if(cur!=='guides/'+k)return;var g=G&&G[k];
   if(!g){render('<div class="empty"><h2>Not found</h2><p><a href="/guides/epub-on-your-device/">Read an EPUB on your device</a> · <a href="#/">Return home</a></p></div>','');return}render(g.html,'');document.title=g.title+' · Bibliotheca Catholica'})}
@@ -320,23 +322,34 @@ var AF={q:'',eras:{},tags:{},sort:'chron'};
 function authors(opts){
   opts=opts||{};var doctorsOnly=opts.doctors;
   var h='<div class="page-head"><div class="eyebrow">'+(doctorsOnly?'Doctores Ecclesiae':'Auctores')+'</div><h1>'+(doctorsOnly?'Doctors of the Church':'Catholic Authors')+'</h1><p class="lede">'+(doctorsOnly?'The saints proclaimed Doctors of the Church for their eminent learning and holiness — from St. Athanasius to St. John Henry Newman (2025).':'From the Apostolic Fathers to the present day. Filter by era or vocation, or type to narrow instantly.')+'</p></div>';
-  h+='<div class="toolbar"><input type="search" id="af-q" placeholder="Filter by name, work, keyword…" value="'+esc(AF.q)+'"><select id="af-sort" aria-label="Sort"><option value="chron">Chronological</option><option value="az">A → Z</option></select>'+
-   '<div class="filter-row"><label>Era</label><div class="chips" id="af-eras">'+D.eras.map(function(e){return '<button class="chip'+(AF.eras[e.id]?' on':'')+'" data-era="'+e.id+'" title="'+esc(e.range)+'">'+esc(e.label)+'</button>'}).join('')+'</div></div>'+
-   (doctorsOnly?'':'<div class="filter-row"><label>Type</label><div class="chips" id="af-tags">'+TAGF.map(function(t){return '<button class="chip'+(AF.tags[t]?' on':'')+'" data-tag="'+t+'">'+esc(TAGL[t])+'</button>'}).join('')+'</div></div>')+'</div><div class="result-meta" id="af-meta"></div><div id="af-out"></div>';
+  // Design refresh (owner's pick, November 17, 2026: printed shelf list): one filter bar (find, era, type, order), a jump line of
+  // eras, and names with dates in two columns per era; no portraits or descriptions here (they stay on each author page).
+  var one=function(o){var k=Object.keys(o).filter(function(x){return o[x]});return k.length?k[0]:''};
+  h+='<form class="au-bar" role="search" aria-label="Filter authors"><div class="au-f au-fq"><label for="af-q">Find</label><input type="search" id="af-q" placeholder="Name, work, or keyword" value="'+esc(AF.q)+'"></div>'+
+   '<div class="au-f"><label for="af-era">Era</label><select id="af-era"><option value="">All eras</option>'+D.eras.map(function(e){return '<option value="'+e.id+'">'+esc(e.label)+'</option>'}).join('')+'</select></div>'+
+   (doctorsOnly?'':'<div class="au-f"><label for="af-tag">Type</label><select id="af-tag"><option value="">All types</option>'+TAGF.map(function(t){return '<option value="'+t+'">'+esc(TAGL[t])+'</option>'}).join('')+'</select></div>')+
+   '<div class="au-f"><label for="af-sort">Order</label><select id="af-sort"><option value="chron">By era</option><option value="az">A to Z</option></select></div>'+
+   '<p class="result-meta" id="af-meta" role="status"></p></form><p class="au-jump" id="af-jump"></p><div id="af-out"></div>';
   render(h,doctorsOnly?'doctors':'authors');
-  $('#af-sort').value=AF.sort;
+  $('#af-sort').value=AF.sort;$('#af-era').value=one(AF.eras);if($('#af-tag'))$('#af-tag').value=one(AF.tags);
+  function row(a){return '<li><a href="#/author/'+a.id+'">'+esc(a.name)+'</a> <span class="au-dt">'+esc(dates(a))+'</span></li>'}
   function draw(){var q=norm(AF.q),eras=Object.keys(AF.eras).filter(function(k){return AF.eras[k]}),tags=Object.keys(AF.tags).filter(function(k){return AF.tags[k]});
     var L=A.filter(function(a){if(doctorsOnly&&!a.doctor)return false;if(eras.length&&eras.indexOf(a.era)<0)return false;if(!doctorsOnly&&tags.length&&!tags.every(function(t){return a.tags.indexOf(t)>=0}))return false;
       if(q){var x=norm(a.name+' '+a.desc+' '+a.wikiDesc+' '+a.tags.join(' ')+' '+a.works.map(function(w){return w.title}).join(' '));return q.split(/\s+/).every(function(t){return x.indexOf(t)>=0})}return true});
     $('#af-meta').textContent=L.length+' of '+(doctorsOnly?A.filter(function(a){return a.doctor}).length:A.length)+' authors';
-    var out='';
-    if(AF.sort==='az'){L=L.slice().sort(function(a,b){return a.name.localeCompare(b.name)});out='<ul class="rows arows">'+L.map(acard).join('')+'</ul>'}
-    else{var cur=null;D.eras.forEach(function(e){var g=L.filter(function(a){return a.era===e.id});if(!g.length)return;out+='<div class="era-block"><h2>'+esc(e.label)+'</h2><span>'+esc(e.range)+' · '+g.length+'</span></div><ul class="rows arows">'+g.map(acard).join('')+'</ul>'})}
+    var out='',jump=[];
+    if(AF.sort==='az'){L=L.slice().sort(function(a,b){return a.name.localeCompare(b.name)});if(L.length)out='<section class="au-grp"><ul class="au-list">'+L.map(row).join('')+'</ul></section>'}
+    else{D.eras.forEach(function(e){var g=L.filter(function(a){return a.era===e.id});if(!g.length)return;jump.push('<button type="button" class="au-j" data-jump="'+e.id+'">'+esc(e.label)+'</button>&nbsp;<span class="au-jn">'+g.length+'</span>');
+      out+='<section class="au-grp" aria-labelledby="af-e-'+e.id+'"><h2 id="af-e-'+e.id+'" tabindex="-1">'+esc(e.label)+' <span>'+esc(e.range)+' · '+g.length+'</span></h2><ul class="au-list">'+g.map(row).join('')+'</ul></section>'})}
+    $('#af-jump').innerHTML=jump.length>1?jump.join(' · '):'';$('#af-jump').hidden=jump.length<2;
     $('#af-out').innerHTML=out||'<div class="empty">No authors match. Try clearing a filter.</div>'}
   draw();
+  $('.au-bar').addEventListener('submit',function(e){e.preventDefault()});
   $('#af-q').addEventListener('input',function(e){AF.q=e.target.value;draw()});
   $('#af-sort').addEventListener('change',function(e){AF.sort=e.target.value;draw()});
-  main.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;if(b.dataset.era){AF.eras[b.dataset.era]=!AF.eras[b.dataset.era]}else if(b.dataset.tag){AF.tags[b.dataset.tag]=!AF.tags[b.dataset.tag]}b.classList.toggle('on');draw()});
+  $('#af-era').addEventListener('change',function(e){AF.eras={};if(e.target.value)AF.eras[e.target.value]=true;draw()});
+  if($('#af-tag'))$('#af-tag').addEventListener('change',function(e){AF.tags={};if(e.target.value)AF.tags[e.target.value]=true;draw()});
+  $('#af-jump').addEventListener('click',function(e){var b=e.target.closest('.au-j');if(!b)return;var t=document.getElementById('af-e-'+b.dataset.jump);if(t){t.scrollIntoView({block:'start'});t.focus({preventScroll:true})}});
 }
 /* ---------- v6: tabbed author profile ---------- */
 var AUTABS=[['works','Works'],['commentaries','Commentaries'],['buy','Buy the Books'],['related','Related']];
@@ -543,7 +556,7 @@ function openData(){
   lazy('open.js','OPEN_MANIFEST',function(M){if(!$('#od-out'))return;if(!M){$('#od-out').innerHTML='<div class="empty">Manifest failed to load.</div>';return}
     $('#od-out').innerHTML='<div class="od-grid">'+M.datasets.map(function(d){var f=Object.keys(d.fields);return '<div class="od"><h3>'+esc(d.name)+' <span class="small muted">'+d.count.toLocaleString()+' records</span></h3><p>'+esc(d.description)+'</p><div class="dl-row"><a class="btn ghost" href="'+odUrl(d.json)+'" download>JSON ↓</a><a class="btn ghost" href="'+odUrl(d.csv)+'" download>CSV ↓</a></div><details><summary>'+f.length+' fields</summary><dl class="od-f">'+f.map(function(k){return '<dt>'+esc(k)+'</dt><dd>'+esc(d.fields[k])+'</dd>'}).join('')+'</dl></details></div>'}).join('')+'</div><p class="small muted">Generated '+esc(M.generated)+'.</p>'})}
 /* v18: counts come from the catalog itself, never typed into copy */
-function libCount(k){var W=(window.LIBRARY_DATA&&window.LIBRARY_DATA.works)||[];if(k==='works')return W.length;var n=0;W.forEach(function(w){w.editions.forEach(function(e){if(k==='editions'||e.text)n++})});return n}
+function libCount(k){var W=(window.LIBRARY_DATA&&window.LIBRARY_DATA.works)||[];if(k==='works')return W.length;var n=0;W.forEach(function(w){w.editions.forEach(function(e){if(k==='editions'||(e.text&&!e.retired))n++})});return n}
 var LICENSING_URL='/licensing/';
 function odUrl(p){return (location.protocol==='file:'?'https://bibliothecacatholica.com/':'')+p}
 function season(d){d=d||new Date();var y=d.getFullYear();function easter(Y){var a=Y%19,b=Math.floor(Y/100),c=Y%100,dd=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-dd-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1;return new Date(Y,mo-1,da)}
@@ -569,6 +582,7 @@ function libraryDeskLoad(cb){if(window.BCLibraryDesk){cb();return}LIB_DESK_WAIT.
 function section(k,focus){
   var s=SECTIONS[k];var R=D.resources.filter(function(r){return r.section===k});var cats=[];R.forEach(function(r){if(cats.indexOf(r.category)<0)cats.push(r.category)});
   var h='<div class="page-head"><div class="eyebrow">'+esc(s.e)+'</div><h1>'+esc(s.t)+'</h1><p class="lede">'+esc(s.d)+'</p></div>';
+  if(k==='magisterium')h+='<p class="councils-link"><a class="btn ghost" href="/councils/">The 21 Ecumenical Councils</a> <span class="small">From Nicaea to Vatican II, in order, with what each one settled.</span></p>';
   if(k==='magisterium')h+='<p><a class="btn" href="#/library/Magisterium">Read individual Church documents →</a></p>';
   if(k==='magisterium')h+='<div class="callout">For the authoritative text of any papal or curial document, <a href="https://www.vatican.va/content/vatican/en.html" target="_blank" rel="noopener">vatican.va</a> is always the primary source; the other links here are convenient mirrors and finding aids.</div>';
   if(k==='prayers')h+=dailyPanel()+prayersBlock();
@@ -662,8 +676,8 @@ function support(){var shop=AFF.bookshopShop||'';
    LIBRARY_DATA.relatedAuthors) are static documents built by tools/build_static.py, as are the Summa pages
    (/summa/, /summa/<part>/, /summa/<part>/q<n>/, /summa/<part>/q<n>/a<m>/, part 1, 1-2, 2-2, 3, or supp for the Supplement).
    On their own static page the pre-rendered text stays as the view; a hash link to one loads the static page. */
-function staticOnly(path){path=String(path||'').replace(/\/+$/,'');var m=/^author\/([a-z0-9-]+)$/.exec(path),L=typeof window!=='undefined'&&window.LIBRARY_DATA;if(m)return !!(L&&(L.relatedAuthors||[]).some(function(r){return r.id===m[1]}));if(/^saints\/calendar\/(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(path))return window.BC_BOOT===path&&!location.hash;return /^work\/[a-z0-9-]+\/(ch|story)\/\d\d-[a-z0-9-]+$/.test(path)||/^summa(\/(1|1-2|2-2|3|supp)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(path)}
-function keepStatic(path){path=path.replace(/\/+$/,'');if(!location.hash&&window.BC_BOOT===path&&main.querySelector('.static-prerender')){setNav('library');return}location.replace('/'+path+'/')}
+function staticOnly(path){path=String(path||'').replace(/\/+$/,'');var m=/^author\/([a-z0-9-]+)$/.exec(path),L=typeof window!=='undefined'&&window.LIBRARY_DATA;if(m)return !!(L&&(L.relatedAuthors||[]).some(function(r){return r.id===m[1]}));if(/^saints\/calendar\/(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(path))return window.BC_BOOT===path&&!location.hash;return path==='councils'||/^work\/[a-z0-9-]+\/(ch|story)\/\d\d-[a-z0-9-]+$/.test(path)||/^summa(\/(1|1-2|2-2|3|supp)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(path)}
+function keepStatic(path){path=path.replace(/\/+$/,'');if(!location.hash&&window.BC_BOOT===path&&main.querySelector('.static-prerender')){setNav(path==='councils'?'magisterium':'library');return}location.replace('/'+path+'/')}
 function route(){var raw=location.hash.replace(/^#\/?/,'');if(!raw&&window.BC_BOOT)raw=window.BC_BOOT;if(raw==='search'&&!location.hash){var lookup=new URLSearchParams(location.search).get('lookup');if(lookup)raw='search/'+encodeURIComponent(lookup.slice(0,300))}var queryAt=raw.indexOf('?');var query=new URLSearchParams(queryAt<0?'':raw.slice(queryAt+1));var path=queryAt<0?raw:raw.slice(0,queryAt);var h;try{h=decodeURIComponent(path)}catch(e){notfound();return}if(staticOnly(h)){keepStatic(h);return}var p=h.split('/');if(p[0]==='search'){searchScope=['curated','isidore','all'].indexOf(query.get('scope'))>=0?query.get('scope'):'all';}
   hideSug();if(p[0]!=='search')gaReset('search');
   switch(p[0]){case 'library':window.BCLibrary.library(render,p[1]);break;case 'work':window.BCLibrary.work(render,p[1]);break;case 'read':window.BCLibrary.read(render,p[1],p[2],p[3],p[4]);break;case 'related':window.BCLibrary.related(render);break;case '':home();break;case 'authors':authors();break;case 'doctors':authors({doctors:true});break;case 'author':hubNeed([hubDetail],function(){author(p[1],p[2]||'')});break;case 'timeline':hubNeed([hubDetail],function(){timeline(p[1],p[2])});break;
@@ -693,7 +707,7 @@ function gaPageView(){clearTimeout(gaT);gaT=setTimeout(function(){var raw=locati
 window.addEventListener('hashchange',gaPageView);
 /* ---------- per-route meta (description, canonical, Open Graph, Twitter) ---------- */
 var SITE='https://bibliothecacatholica.com/',DEF_DESC=(document.querySelector('meta[name=description]')||{}).content||'';
-var STATIC_SECTIONS=['library','related','authors','doctors','timeline','scripture','magisterium','references','media','libraries','prayers','rare','projects','isidore','data','support','editions','reading','substacks','policy','saints','rites','rights','takedown','licensing','about','disclosure'];
+var STATIC_SECTIONS=['councils','library','related','authors','doctors','timeline','scripture','magisterium','references','media','libraries','prayers','rare','projects','isidore','data','support','editions','reading','substacks','policy','saints','rites','rights','takedown','licensing','about','disclosure'];
 function canonicalFor(){var raw=(location.hash.replace(/^#\/?/,'')||window.BC_BOOT||'').split('?')[0],p=raw.split('/').filter(Boolean);
   if(!p.length)return SITE;if(p[0]==='search')return SITE+'search/';if(p.length===1&&STATIC_SECTIONS.indexOf(p[0])>=0)return SITE+p[0]+'/';
   if(p.length===2&&/^(author|work)$/.test(p[0])&&/^[a-z0-9-]+$/.test(p[1]))return SITE+p[0]+'/'+p[1]+'/';

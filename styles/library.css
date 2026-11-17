@@ -1,9 +1,9 @@
 .reader-tools,.reader-pagination{display:flex;align-items:center;flex-wrap:wrap;gap:16px;padding:16px 0}
 .reader-tools label,.toolbar label{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-select,input,button{max-width:100%}.reader-tools select,#library-topic{background:var(--card);color:var(--ink);border:1px solid var(--line);padding:8px;border-radius:8px;font:inherit}
+select,input,button{max-width:100%}.reader-tools select{background:var(--card);color:var(--ink);border:1px solid var(--line);padding:8px;border-radius:8px;font:inherit}
 .reading-text{max-width:26em;margin:16px auto 32px;font-size:22px;line-height:1.8;overflow-wrap:anywhere}
 .reading-text p{white-space:pre-wrap;margin:0 0 1.3em}.reader-pagination{justify-content:center}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 @media(max-width:600px){.reader-tools{align-items:stretch;flex-direction:column}.reading-text{font-size:20px}}
 .reading-text p{scroll-margin-top:230px}
 @media(max-width:600px){.reader-tools{flex-direction:row;align-items:center;gap:8px 12px;padding:8px 0;font-size:15px}.reader-tools select{padding:6px}}
@@ -51,7 +51,7 @@ select,input,button{max-width:100%}.reader-tools select,#library-topic{backgroun
 /* v10: reader Listen dock (persists across sections of a work) */
 .listen-dock{position:fixed;right:16px;bottom:16px;z-index:40;display:flex;flex-direction:column;align-items:flex-end;gap:8px;max-width:calc(100vw - 32px)}
 .ld-toggle{order:2;border:0;border-radius:999px;padding:10px 18px;background:var(--rubric);color:var(--on-rubric);font:inherit;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.22)}
-.ld-toggle:focus-visible,.ld-panel button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.ld-toggle:focus-visible,.ld-panel button:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 .ld-panel{order:1;width:360px;max-width:100%;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:0 8px 28px rgba(0,0,0,.25);display:flex;flex-direction:column;gap:8px}
 .ld-panel[hidden]{display:none}
 .ld-top{display:flex;justify-content:space-between;align-items:center}.ld-close{border:0;background:none;color:var(--ink2);font-size:22px;line-height:1;cursor:pointer;padding:0 4px}
@@ -123,3 +123,33 @@ body.has-listen-dock footer{padding-bottom:64px}
 .q-contents li{counter-increment:a;display:grid;grid-template-columns:3.2em 1fr;padding:.55em 0;border-bottom:1px solid var(--line)}
 .q-contents li::before{content:"Art. " counter(a);font:500 13px var(--sans);color:var(--muted);padding-top:.2em}
 .summa-end p{margin:.3em 0}
+/* Ecumenical councils (/councils/, 2026-11-17, docs/DESIGN.md): numbered rows with hairline dividers, serif text, text links */
+.councils-link{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s-2) var(--s-3);margin:0 0 var(--s-5)}.councils-link .small{color:var(--ink2);font-family:var(--serif);font-size:var(--t-sm)}
+.council-era{max-width:820px;margin:var(--s-6) 0 0}.council-era h2{font-size:var(--t-xl);margin:0 0 var(--s-2)}
+.council-years{font-family:var(--serif);font-size:var(--t-sm);font-weight:400;color:var(--muted);font-variant-numeric:oldstyle-nums;white-space:nowrap}
+.council{display:grid;grid-template-columns:2.25em minmax(0,1fr);gap:0 var(--s-3);align-items:baseline}
+.council-n{font-family:var(--display);font-size:var(--t-xl);color:var(--rubric);text-align:right;font-variant-numeric:oldstyle-nums}
+.council h3{font-size:var(--t-lg);margin:0;line-height:1.3}.council h3 .council-years{margin-left:var(--s-1)}
+.council-sum{margin:var(--s-1) 0 0;max-width:66ch;font-size:var(--t-md);color:var(--ink2)}
+.council-acts,.council-more{margin:var(--s-1) 0 0;font:var(--t-xs)/1.6 var(--sans)}.council-acts a,.council-more a{overflow-wrap:anywhere}
+.council-note{max-width:66ch;margin:var(--s-6) 0 0;color:var(--muted)}
+
+/* Reading room as a faceted catalogue (design refresh, owner's pick of November 17, 2026; docs/DESIGN.md "Catalogue pages"):
+   a facet column (find, Subject with counts, Format, Read on this site) beside the shelves of rows; sticky on wide screens. */
+.lib-cat{display:grid;grid-template-columns:232px minmax(0,1fr);gap:32px;align-items:start}
+.lib-facets{position:sticky;top:148px;max-height:calc(100vh - 164px);overflow:auto;display:flex;flex-direction:column;gap:8px;padding:2px 8px 8px 2px}
+.lf-l{font:500 14px/1.3 var(--sans);color:var(--ink2)}
+.lib-facets input[type=search],.lib-facets select{width:100%;font:16px var(--sans);min-height:44px;padding:0 12px;border:1px solid var(--field);border-radius:6px;background:var(--card);color:var(--ink)}
+.lf-set{border:0;margin:8px 0 0;padding:0;display:flex;flex-direction:column;min-width:0}
+.lf-set legend{font:500 16px/1.3 var(--serif);font-variant-caps:all-small-caps;letter-spacing:.06em;color:var(--gold-ink);margin:0 0 4px;padding:0}
+.lf-c{display:flex;gap:8px;align-items:center;min-height:32px;font:16px/1.25 var(--serif);color:var(--ink);cursor:pointer}
+.lf-c input{accent-color:var(--rubric);width:18px;height:18px;margin:0;flex:none}
+.lf-n{margin-left:auto;color:var(--muted);font-size:14px;font-variant-numeric:lining-nums}
+.lf-h{border-top:1px solid var(--line);padding-top:8px;margin-top:4px}
+.lf-count{margin:0 0 8px;font:14px var(--sans);color:var(--muted)}
+.lib-res .shelf{max-width:none}.lib-res .shelf:first-child{margin-top:0}
+@media(max-width:860px){.lib-cat{grid-template-columns:1fr;gap:16px}.lib-facets{position:static;max-height:none;overflow:visible;padding:0}
+  .lf-set{flex-direction:row;flex-wrap:wrap;gap:0 16px}.lf-n{margin-left:2px}}
+
+/* Reading pages (design refresh, November 17, 2026; docs/DESIGN.md "Reading pages") */
+.ch-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:32px;align-items:start}.ch-main{min-width:0}.ch-main .reading-text{line-height:1.65}.ch-toc{padding-top:40px;font:16px/1.35 var(--serif)}.ch-toc p{margin:0}.ch-toc-bk{font:600 21px/1.2 var(--display)}.ch-toc-bk a{color:var(--ink);text-decoration:none}.ch-toc-bk a:hover{color:var(--rubric);text-decoration:underline}.ch-toc-by{color:var(--muted);margin:0 0 16px!important}.ch-toc-d summary{font:500 16px var(--serif);font-variant-caps:all-small-caps;letter-spacing:.06em;color:var(--gold-ink);cursor:pointer;min-height:32px;display:flex;align-items:center;gap:6px}.ch-toc-d summary::-webkit-details-marker{display:none}.ch-toc-d summary::before{content:'\25B8';font-size:12px}.ch-toc-d[open] summary::before{content:'\25BE'}.ch-toc-d ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}.ch-toc-d a{display:flex;gap:8px;padding:4px 12px;margin-left:-1px;border-left:2px solid transparent;text-decoration:none;color:var(--ink2);min-height:24px}.ch-toc-d a:hover{color:var(--rubric)}.ch-toc-d a[aria-current]{color:var(--ink);border-left-color:var(--rubric);font-weight:600}.ch-toc-n{flex:none;min-width:2.4em;color:var(--muted);font-family:var(--display);font-weight:500}.ch-toc-pos{margin-top:16px!important;font:14px var(--sans);color:var(--muted)}.ch-end .ch-next{display:block;max-width:26em;margin:24px auto 0;padding:24px 0;border-block:1px solid var(--field);text-decoration:none;color:var(--ink)}.ch-next span{display:block}.ch-next-k{font:500 14px var(--sans);color:var(--muted)}.ch-next-t{font:600 26px/1.2 var(--display);color:var(--ink);margin-top:8px;text-wrap:balance}.ch-next:hover .ch-next-t{color:var(--rubric);text-decoration:underline}.ch-next-f{font:18px/1.5 var(--serif);color:var(--ink2);margin-top:8px}.ch-next-f::before{content:'\201C'}.ch-next-f::after{content:'\201D'}.ch-end .ch-fin{font:600 26px/1.2 var(--display);font-variant-caps:all-small-caps;letter-spacing:.14em;color:var(--ink);margin-top:8px}.ch-end .ch-reader{margin-top:16px;font:14px var(--sans)}.colophon{max-width:30em;margin:48px auto 0;text-align:center;font-size:16px;line-height:1.6;color:var(--ink2)}.colophon h2{font:500 21px var(--serif);font-variant-caps:all-small-caps;letter-spacing:.14em;color:var(--gold-ink);margin:0 0 16px}.colophon p{margin:0 0 12px}.colophon b{font-weight:600;color:var(--ink)}.colophon .sha{font-size:.8em;overflow-wrap:anywhere}@media(max-width:860px){.ch-layout{grid-template-columns:1fr;gap:0}.ch-toc{padding:16px 0 4px;border-bottom:1px solid var(--line)}.ch-toc-pos{margin:8px 0!important}}@media print{.ch-toc,.ch-next,.ch-reader{display:none!important}.ch-layout{display:block}}.ch-main>.pg-notice,.ch-main>.edition-details,.ch-main>p:last-child{max-width:40em;margin-left:auto;margin-right:auto}

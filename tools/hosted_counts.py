@@ -28,7 +28,8 @@ def count():
         'pg_hosted': sum(1 for e in pg if e.get('text')),
         'works': len(lib['works']),
         'editions': len(eds),
-        'hosted': sum(1 for e in eds if e.get('text')),
+        'hosted': sum(1 for e in eds if e.get('text') and not e.get('retired')),  # public count: retired files are served, not counted
+        'retired': sum(1 for e in eds if e.get('text') and e.get('retired')),
         'hosted_works': sum(1 for w in lib['works'] if any(e.get('text') for e in w['editions'])),
         'structured': len(list((ROOT / 'data/structured').glob('*.json'))),
         'openers': len(__import__('build_text_pages').PART_D),

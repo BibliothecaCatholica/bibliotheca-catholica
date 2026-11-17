@@ -5168,8 +5168,23 @@
       "date": "1929",
       "editions": [
         {
+          "id": "ia-thingwhyiamcatho00ches-0-r2",
+          "label": "Transcription of the Internet Archive scan (New York : Dodd, Mead & company, 1930), corrected",
+          "source": "https://archive.org/details/thingwhyiamcatho00ches_0",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-17",
+          "note": "First published 1929. Transcribed by Bibliotheca Catholica from the scan of the 1930 printing: running heads and page numbers removed, words rejoined across line breaks, 23 OCR confusions repaired, and 113 paragraphs that keep a word the OCR could not read (99.7% of words read). Not a manual proofread. Corrected edition (November 17, 2026): replaces ia-thingwhyiamcatho00ches-0. Two footnotes were left in the running text, one in mid-sentence.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "The Thing: Why I Am a Catholic",
+          "text": "data/texts/ia-thingwhyiamcatho00ches-0-r2.txt",
+          "sha256": "bd4ef1a3e2d61965559c18012b43cbd18908147a3fc379048900b646b3718140"
+        },
+        {
           "id": "ia-thingwhyiamcatho00ches-0",
-          "label": "Transcription of the Internet Archive scan (New York : Dodd, Mead & company, 1930)",
+          "label": "Transcription of the Internet Archive scan (New York : Dodd, Mead & company, 1930) (retired; replaced by the corrected edition)",
           "source": "https://archive.org/details/thingwhyiamcatho00ches_0",
           "language": "English",
           "contributors": [],
@@ -5180,7 +5195,12 @@
           "rightsBasis": "pd-date",
           "sourceTitle": "The Thing: Why I Am a Catholic",
           "text": "data/texts/ia-thingwhyiamcatho00ches-0.txt",
-          "sha256": "401a4cf96698c4af0f80d6609b9f4092eb97e7c4dc89f8935cea72536481531c"
+          "sha256": "401a4cf96698c4af0f80d6609b9f4092eb97e7c4dc89f8935cea72536481531c",
+          "retired": {
+            "date": "2026-11-17",
+            "replacedBy": "ia-thingwhyiamcatho00ches-0-r2",
+            "reason": "Two footnotes were left in the running text, one in mid-sentence. Kept so that earlier links and reader notes still open it."
+          }
         }
       ],
       "added": "2026-11-16"
@@ -5197,8 +5217,23 @@
       "date": "1930",
       "editions": [
         {
+          "id": "ia-resurrectionofro0000gilb-r2",
+          "label": "Transcription of the Internet Archive scan (Dodd, Mead & Company, 1930), corrected",
+          "source": "https://archive.org/details/resurrectionofro0000gilb",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-17",
+          "note": "First published 1930. Transcribed by Bibliotheca Catholica from the scan of the 1930 printing: running heads and page numbers removed, words rejoined across line breaks, 52 OCR confusions repaired, and 137 paragraphs that keep a word the OCR could not read (99.7% of words read). Not a manual proofread. Corrected edition (November 17, 2026): replaces ia-resurrectionofro0000gilb. Three footnotes were left in the running text.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "The Resurrection of Rome",
+          "text": "data/texts/ia-resurrectionofro0000gilb-r2.txt",
+          "sha256": "d2956db7d4942707b2052f160e1cec79c16379cf5ce475221596f926649e362f"
+        },
+        {
           "id": "ia-resurrectionofro0000gilb",
-          "label": "Transcription of the Internet Archive scan (Dodd, Mead & Company, 1930)",
+          "label": "Transcription of the Internet Archive scan (Dodd, Mead & Company, 1930) (retired; replaced by the corrected edition)",
           "source": "https://archive.org/details/resurrectionofro0000gilb",
           "language": "English",
           "contributors": [],
@@ -5209,7 +5244,12 @@
           "rightsBasis": "pd-date",
           "sourceTitle": "The Resurrection of Rome",
           "text": "data/texts/ia-resurrectionofro0000gilb.txt",
-          "sha256": "0f184b98efaf75273fe2e9a6f0b97104bfa09dc18636d9d49034046c7e3e3021"
+          "sha256": "0f184b98efaf75273fe2e9a6f0b97104bfa09dc18636d9d49034046c7e3e3021",
+          "retired": {
+            "date": "2026-11-17",
+            "replacedBy": "ia-resurrectionofro0000gilb-r2",
+            "reason": "Three footnotes were left in the running text. Kept so that earlier links and reader notes still open it."
+          }
         }
       ],
       "added": "2026-11-16"
@@ -5279,8 +5319,23 @@
       "date": "1928",
       "editions": [
         {
+          "id": "ia-generallyspeakin00ches-r2",
+          "label": "Transcription of the Internet Archive scan (New York : Dodd, Mead & Co., 1929), corrected",
+          "source": "https://archive.org/details/generallyspeakin00ches",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-17",
+          "note": "First published 1928. Transcribed by Bibliotheca Catholica from the scan of the 1929 printing: running heads and page numbers removed, words rejoined across line breaks, 290 OCR confusions repaired, and 137 paragraphs that keep a word the OCR could not read (99.6% of words read). Not a manual proofread. Corrected edition (November 17, 2026): replaces ia-generallyspeakin00ches. The scanned copy's library stamp was transcribed into the text 20 times, and 161 semicolons were read as the letter j.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "Generally Speaking",
+          "text": "data/texts/ia-generallyspeakin00ches-r2.txt",
+          "sha256": "290683ac73ec108ffc0948bfcf5c6ab9e3638b45114c6fb5eb9d805ffe080038"
+        },
+        {
           "id": "ia-generallyspeakin00ches",
-          "label": "Transcription of the Internet Archive scan (New York : Dodd, Mead & Co., 1929)",
+          "label": "Transcription of the Internet Archive scan (New York : Dodd, Mead & Co., 1929) (retired; replaced by the corrected edition)",
           "source": "https://archive.org/details/generallyspeakin00ches",
           "language": "English",
           "contributors": [],
@@ -5291,7 +5346,12 @@
           "rightsBasis": "pd-date",
           "sourceTitle": "Generally Speaking",
           "text": "data/texts/ia-generallyspeakin00ches.txt",
-          "sha256": "98895c857d04b76e027c57c6868ee9d06939ea563fcd63665bf6f5fe1d7843b2"
+          "sha256": "98895c857d04b76e027c57c6868ee9d06939ea563fcd63665bf6f5fe1d7843b2",
+          "retired": {
+            "date": "2026-11-17",
+            "replacedBy": "ia-generallyspeakin00ches-r2",
+            "reason": "The scanned copy's library stamp was transcribed into the text 20 times, and 161 semicolons were read as the letter j. Kept so that earlier links and reader notes still open it."
+          }
         }
       ],
       "added": "2026-11-16"
@@ -5679,6 +5739,225 @@
       "date": "1930",
       "status": "not-yet-available",
       "editions": []
+    },
+    {
+      "id": "moore-prayer",
+      "title": "Prayer",
+      "author": "Thomas Verner Moore",
+      "category": "Spiritual life",
+      "tradition": "Catholic tradition",
+      "description": "Thomas Verner Moore's 1931 treatise on prayer, from the relation of God and man to the Divine Office.",
+      "reviewStatus": "source-checked",
+      "date": "1931",
+      "editions": [
+        {
+          "id": "ia-prayer00moor",
+          "label": "Transcription of the Internet Archive scan (St. Louis: B. Herder Book Co., 1931)",
+          "source": "https://archive.org/details/prayer00moor",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rightsBasis": "pd-nonrenewal",
+          "rightsEvidence": "First published in St. Louis by B. Herder Book Co., 1931. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. Imprint names St. Louis and B. Herder's London office (33 Queen Square); the copyright page says Printed in U.S.A. No earlier London edition is indicated, so US publication was at least simultaneous, which excludes URAA restoration (17 USC 104A(h)(6)(D)). Proposed reading, approved only with PR #53.",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1931. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, footnotes placed after their paragraphs, 5 OCR confusions repaired, and 103 paragraphs that keep a word the OCR could not read (99.7% of words read). Not a manual proofread. Public domain in the USA because its copyright was not renewed.",
+          "sourceTitle": "Prayer",
+          "text": "data/texts/ia-prayer00moor.txt",
+          "sha256": "eeb7f15216bc2d73d880fb29c25552cb5597f7c65de074805c45962e91bcbb9a"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "cassidy-molders-of-the-medieval-mind",
+      "title": "Molders of the Medieval Mind",
+      "author": "Francis P. Cassidy",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "Francis P. Cassidy's survey of the teachers and schools that shaped medieval education.",
+      "reviewStatus": "source-checked",
+      "date": "1944",
+      "editions": [
+        {
+          "id": "ia-moldersofmedieva00cass",
+          "label": "Internet Archive scan (St. Louis: B. Herder Book Co., 1944)",
+          "source": "https://archive.org/details/moldersofmedieva00cass",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1944 (St. Louis: B. Herder Book Co.). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in St. Louis by B. Herder Book Co., 1944. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. Imprint names St. Louis and B. Herder's London office (33 Queen Square); the copyright page says Printed in U.S.A. No earlier London edition is indicated, so US publication was at least simultaneous, which excludes URAA restoration (17 USC 104A(h)(6)(D)). Proposed reading, approved only with PR #53. Its OCR reads below the 99.5% transcription gate (98.72%), so it is linked, not hosted, for now."
+        }
+      ]
+    },
+    {
+      "id": "fichter-james-laynez",
+      "title": "James Laynez, Jesuit",
+      "author": "Joseph H. Fichter",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Joseph H. Fichter's biography of James Laynez, second General of the Society of Jesus.",
+      "reviewStatus": "source-checked",
+      "date": "1944",
+      "editions": [
+        {
+          "id": "ia-jameslaynezjesui00fich",
+          "label": "Internet Archive scan (St. Louis: B. Herder Book Co., 1944)",
+          "source": "https://archive.org/details/jameslaynezjesui00fich",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1944 (St. Louis: B. Herder Book Co.). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in St. Louis by B. Herder Book Co., 1944. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. Imprint names St. Louis and B. Herder's London office (33 Queen Square); the copyright page says Printed in U.S.A. No earlier London edition is indicated, so US publication was at least simultaneous, which excludes URAA restoration (17 USC 104A(h)(6)(D)). Proposed reading, approved only with PR #53. Its OCR reads below the 99.5% transcription gate (98.87%), so it is linked, not hosted, for now."
+        }
+      ]
+    },
+    {
+      "id": "walsh-saint-teresa",
+      "title": "Saint Teresa of Avila: A Biography",
+      "author": "William Thomas Walsh",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "William Thomas Walsh's biography of St. Teresa of Avila.",
+      "reviewStatus": "source-checked",
+      "date": "1943",
+      "editions": [
+        {
+          "id": "ia-saintteresaofavi00wals",
+          "label": "Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1943)",
+          "source": "https://archive.org/details/saintteresaofavi00wals",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1943 (Milwaukee: The Bruce Publishing Company). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in Milwaukee by The Bruce Publishing Company, 1943. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (98.64%), so it is linked, not hosted, for now."
+        }
+      ]
+    },
+    {
+      "id": "walsh-high-points-medieval-culture",
+      "title": "High Points of Medieval Culture",
+      "author": "James J. Walsh",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "James J. Walsh's essays on medieval learning, books, and culture.",
+      "reviewStatus": "source-checked",
+      "date": "1937",
+      "editions": [
+        {
+          "id": "ia-highpointsofmedi00wals",
+          "label": "Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1937)",
+          "source": "https://archive.org/details/highpointsofmedi00wals",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1937 (Milwaukee: The Bruce Publishing Company). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in Milwaukee by The Bruce Publishing Company, 1937. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (99.30%), so it is linked, not hosted, for now."
+        }
+      ]
+    },
+    {
+      "id": "huber-st-anthony-of-padua",
+      "title": "St. Anthony of Padua, Doctor of the Church Universal",
+      "author": "Raphael M. Huber",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Raphael M. Huber's study of St. Anthony of Padua and his title Doctor of the Church.",
+      "reviewStatus": "source-checked",
+      "date": "1948",
+      "editions": [
+        {
+          "id": "ia-stanthonyofpadua00hube",
+          "label": "Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1948)",
+          "source": "https://archive.org/details/stanthonyofpadua00hube",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1948 (Milwaukee: The Bruce Publishing Company). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in Milwaukee by The Bruce Publishing Company, 1948. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pd. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (94.89%), so it is linked, not hosted, for now."
+        }
+      ]
+    },
+    {
+      "id": "grant-john-england",
+      "title": "John England, American Christopher",
+      "author": "Dorothy Fremont Grant",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "Dorothy Fremont Grant's biography of John England, the first Bishop of Charleston.",
+      "reviewStatus": "source-checked",
+      "date": "1949",
+      "editions": [
+        {
+          "id": "ia-johnenglandameri00gran",
+          "label": "Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1949)",
+          "source": "https://archive.org/details/johnenglandameri00gran",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1949 (Milwaukee: The Bruce Publishing Company). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in Milwaukee by The Bruce Publishing Company, 1949. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pd. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (99.13%), so it is linked, not hosted, for now."
+        }
+      ]
+    },
+    {
+      "id": "furfey-mystery-of-iniquity",
+      "title": "The Mystery of Iniquity",
+      "author": "Paul Hanly Furfey",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "Paul Hanly Furfey's 1945 book on Catholic social thought.",
+      "reviewStatus": "source-checked",
+      "date": "1945",
+      "editions": [
+        {
+          "id": "ia-mysteryofiniquit00furf",
+          "label": "Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1945)",
+          "source": "https://archive.org/details/mysteryofiniquit00furf",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1945 (Milwaukee: The Bruce Publishing Company). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in Milwaukee by The Bruce Publishing Company, 1945. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (99.12%), so it is linked, not hosted, for now."
+        }
+      ]
+    },
+    {
+      "id": "haas-rights-and-wrongs-in-industry",
+      "title": "Rights and Wrongs in Industry",
+      "author": "Francis J. Haas",
+      "category": "Philosophy",
+      "tradition": "Catholic tradition",
+      "description": "A 1933 pamphlet by Francis J. Haas on the roots of the Depression, moral values in industry, and papal teaching on labor.",
+      "reviewStatus": "source-checked",
+      "date": "1933",
+      "editions": [
+        {
+          "id": "ia-rightswrongsinin00haas",
+          "label": "Transcription of the Internet Archive scan (New York: The Paulist Press, 1933)",
+          "source": "https://archive.org/details/rightswrongsinin00haas",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-17",
+          "access": "full-text",
+          "rightsBasis": "pd-nonrenewal",
+          "rightsEvidence": "First published in New York by The Paulist Press, 1933. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pd. US imprint (New York: The Paulist Press) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply.",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1933. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, footnotes placed after their paragraphs, 40 misreadings corrected by hand against the scan's page images, and 30 paragraphs that keep a word the OCR could not read (99.6% of words read). Not a manual proofread. Public domain in the USA because its copyright was not renewed.",
+          "sourceTitle": "Rights and Wrongs in Industry",
+          "text": "data/texts/ia-rightswrongsinin00haas.txt",
+          "sha256": "b3e51f6e31ba3e73eb6ae6984ceae62347c947918a23710419d7754715a544e9"
+        }
+      ],
+      "added": "2026-11-17"
     }
   ],
   "series": [

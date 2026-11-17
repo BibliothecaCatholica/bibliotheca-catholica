@@ -1,17 +1,30 @@
-/* Home (design part 2, docs/DESIGN.md): hero, portrait row, Start here, three links, one-line Today, About. */
-.hero.hero-c{padding:40px 0 32px;border-bottom:1px solid var(--line)}
-h1.hero-name{margin:0 0 4px;line-height:1.3}
-.hero-c .hero-title{font:700 clamp(56px,8vw,96px)/1 var(--display);letter-spacing:-.03em;margin:0;color:var(--ink)}
-.hero-c .hero-trans{font:italic 21px/1.45 var(--serif);color:var(--ink2);margin:12px 0 24px;max-width:36em}
-.hero-c .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
-.hero-link{font:500 16px var(--sans)}
-.home-people,.home-start,.home-links,.home-about{margin:40px 0 0;max-width:1000px}.home-people{max-width:none}
-.home-people h2,.home-start h2,.home-about h2{font-size:26px;margin:0 0 12px}
-.people-row{list-style:none;margin:0;padding:4px 2px 14px;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(108px,1fr);gap:12px}
-.people-row a{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;text-decoration:none;color:var(--ink)}
-.people-row b{font:600 16px/1.25 var(--serif);margin-top:6px}.people-row span:not(.pt){font-size:14px;color:var(--muted)}
-.people-row a:hover b{color:var(--rubric)}
-.home-start .rows li,.home-links .rows li{padding:10px 0}.home-start a{font-size:19px}.home-links a{font:600 19px var(--serif)}
+/* Home (design refresh, November 17, 2026, "Saints first"; docs/DESIGN.md "Home"): a tinted band with the engraving beside
+   the title, the credit line under it, the portrait gallery with each person's book to begin with, three links, Today, About. */
+.home-hero{margin:0}
+.home-band{position:relative;background:var(--bg2);min-height:400px;overflow:hidden}
+.home-band .hero-text{position:relative;max-width:30rem;padding:64px 0 64px 48px}
+h1.hero-name{margin:0 0 8px;line-height:1.3;letter-spacing:.06em}
+.home-hero .hero-title{font:600 clamp(52px,7vw,84px)/1 var(--display);letter-spacing:-.02em;margin:0 0 12px;color:var(--ink)}
+.home-hero .hero-trans{font:italic 21px/1.45 var(--serif);color:var(--ink2);margin:0 0 24px}
+.home-hero .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
+.hero-link{font:500 16px var(--sans);display:inline-flex;align-items:center;min-height:44px}
+.hero-art{position:absolute;right:0;top:0;width:min(44%,520px);height:100%;object-fit:cover;object-position:50% 88%;display:block}
+.hero-credit{font:14px/1.5 var(--sans);color:var(--muted);text-align:right;margin:8px 0 0}
+.home-people,.home-links,.home-about{margin:48px 0 0;max-width:1000px}.home-people{max-width:none}
+.home-people h2,.home-about h2{font-size:26px;margin:0 0 24px}.home-about h2{margin-bottom:12px}
+.people-gallery{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px 24px}
+.people-gallery li{text-align:center}.people-gallery .pt{display:grid;margin:0 auto 12px}.people-gallery p{margin:0}
+.people-gallery .nm{font:600 21px/1.2 var(--display)}.people-gallery .nm a{color:var(--ink);text-decoration:none}
+.people-gallery .nm a:hover{color:var(--rubric);text-decoration:underline}
+.people-gallery .dt{font-size:14px;color:var(--muted);font-variant-numeric:oldstyle-nums}.people-gallery .bk{font-size:16px;margin-top:4px}
+.home-links .rows li{padding:12px 0}.home-links a{font:600 18px var(--serif)}
+@media(max-width:720px){
+  .home-band{display:flex;flex-direction:column;min-height:0}
+  .hero-art{position:static;order:-1;width:100%;height:220px}
+  .home-band .hero-text{max-width:none;padding:24px 16px 32px}
+  .hero-credit{text-align:left}
+  .people-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}
+}
 .home-today{margin:32px 0 0;padding:12px 0;border-block:1px solid var(--line);font-size:17px}.home-today .k{font-variant-caps:all-small-caps;letter-spacing:.06em;color:var(--gold-ink);margin-right:6px}
 .home-about p{max-width:66ch;color:var(--ink2);margin:0 0 8px}
 .crumbs{margin:0 0 10px;color:var(--muted);font-family:var(--sans)}
@@ -39,6 +52,6 @@ h1.hero-name{margin:0 0 4px;line-height:1.3}
   mask-image:linear-gradient(to right,var(--hs-a) 0,#000 var(--hs-fade),#000 calc(100% - var(--hs-fade)),var(--hs-b) 100%),linear-gradient(#000,#000);
   -webkit-mask-size:100% calc(100% - 12px),100% 12px;mask-size:100% calc(100% - 12px),100% 12px;
   -webkit-mask-position:0 0,0 100%;mask-position:0 0,0 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
-.hscroll:focus-visible{-webkit-mask-image:none;mask-image:none;outline:3px solid var(--focus,var(--gold));outline-offset:2px}
+.hscroll:focus-visible{-webkit-mask-image:none;mask-image:none;outline:3px solid var(--focus);outline-offset:2px}
 @media(prefers-reduced-motion:no-preference){.hscroll{scroll-behavior:smooth}}
 @media(max-width:720px){.hscroll{--hs-fade:28px}}

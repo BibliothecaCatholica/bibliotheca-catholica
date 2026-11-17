@@ -126,6 +126,20 @@ class V182(unittest.TestCase):
         self.assertIn('<td data-label="Terms">',page);self.assertIn('<td data-label="Material">',page)
         css=R('styles/rights.css');self.assertIn('.licensing-table td::before{content:attr(data-label)',css)
         self.assertRegex(css,r'@media \(max-width:640px\)\{\s*\.licensing-table thead')
+    def test_licensing_contents_rail(self):
+        # design refresh (owner's pick, November 17, 2026): the same text beside an "On this page" list of buttons, no #anchors
+        import re
+        s=R('licensing/index.html');page=s[s.index('<main'):s.index('</main>')]
+        self.assertIn('<nav class="lic-rail" aria-label="On this page">',page)
+        jumps=re.findall(r'data-jump="([^"]+)"',page)
+        self.assertEqual(jumps[0],'lic-summary');self.assertGreaterEqual(len(jumps),6)
+        for j in jumps:self.assertIn('<section id="'+j+'"',page)
+        self.assertNotRegex(page,r'href="#(?!/)')
+        self.assertIn('href="/takedown/"',page);self.assertIn('href="/rights/"',page)
+        self.assertNotIn('class="panel policy"',page)
+        md=R('LICENSING.md')
+        for h in re.findall(r'^## (.+)$',md,re.M):self.assertIn('>'+h.replace('&','&amp;')+'</h2>',page)
+        self.assertIn(".lic-j')",R('app.js'))
     def test_portrait_credits_fields(self):
         import re
         pc=json.loads(R('data/portrait-credits.json'));self.assertIn('fields',pc)

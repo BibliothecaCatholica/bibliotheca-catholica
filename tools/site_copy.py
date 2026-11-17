@@ -34,34 +34,40 @@ INFO_LINKS=[('/about/','About the library'),('/policy/','Fidelity & Editorial Po
 LICENSING_URL='/licensing/'
 def a(href,label):return '<a href="'+E(href)+'">'+E(label)+'</a>'
 # Design part 2 (owner-approved brief, November 12, 2026): a calm home. One search (the header), a hero with one
-# filled button and one text link, a row of portraits, a short Start here shelf, three plain links, a one-line
-# Today (filled in by app.js), and two sentences about the library. Budget: at most 25 links before the footer.
+# filled button and one text link, three plain links, a one-line Today (filled in by app.js), and two sentences about
+# the library. Budget: at most 25 links before the footer.
+# Design refresh (owner's pick, November 17, 2026: "Saints first", docs/research/design-directions-2026-11.md): the hero is a
+# tinted band with the engraving beside the title, and the eight portraits are the main gallery, each with the book to
+# begin with (HOME_BEGIN: a hosted work by that person). HOME_SHELF is the earlier Start here list, kept for the previews.
 HOME_PEOPLE=['augustine-of-hippo','thomas-aquinas','catherine-of-siena','thomas-a-kempis','teresa-of-avila','john-henry-newman','therese-of-lisieux','g-k-chesterton']
 HOME_SHELF=['confessions','imitation-of-christ','story-of-a-soul','apologia','orthodoxy']
+HOME_BEGIN={'augustine-of-hippo':'confessions','thomas-aquinas':'summa-theologiae','catherine-of-siena':'catherine-letters','thomas-a-kempis':'imitation-of-christ',
+            'teresa-of-avila':'life-of-teresa','john-henry-newman':'apologia','therese-of-lisieux':'story-of-a-soul','g-k-chesterton':'orthodoxy'}
 HOME_LINKS=[('/authors/','Authors','Fathers, Doctors, theologians, poets, and novelists'),('/saints/','Saints','sourced feast days and the old lives of the saints'),('/libraries/','Libraries','the great Catholic archives and digital libraries')]
 def home_about(n):
     """The descriptive block on the home page (static HTML and the app). n: dict of counts."""
     return ('<section class="home-about" aria-labelledby="home-about-h"><h2 id="home-about-h">About the library</h2>'
      '<p>Bibliotheca Catholica (bibliothecacatholica.com) is an independent, free reading room for the Catholic tradition, with '+str(n['hosted'])+' public-domain editions to read here and '+str(n['authors'])+' authors to explore. '
      'Every hosted text keeps its source, original notices, and rights evidence.</p><p>'+a('/about/','How the library works')+'</p></section>')
+HERO_IMG=('<img class="hero-art" src="/assets/hero/dore-paradiso-31-640.webp" srcset="/assets/hero/dore-paradiso-31-360.webp 360w, /assets/hero/dore-paradiso-31-640.webp 640w" '
+     'sizes="(max-width: 720px) 100vw, 520px" width="640" height="710" fetchpriority="high" decoding="async" '
+     'alt="Engraving: Dante and Beatrice look up at the highest heaven, a vast rose of light ringed with angels.">')
+HERO_CREDIT=('Gustave Doré, <cite>The Empyrean</cite> (Paradiso, Canto XXXI), from the 1892 Cassell <cite>Divine Comedy</cite>. Public domain, via '
+     '<a href="https://commons.wikimedia.org/wiki/File:Paradiso_Canto_31.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.')
 def home_hero():
     # Hero engraving: Gustave Doré's Empyrean, Paradiso Canto
     # XXXI, the top recommendation of PR #27, public domain with its source recorded in data/hero.json.
-    return ('<section class="hero hero-c has-art"><div class="hero-text"><h1 class="eyebrow hero-name">Bibliotheca Catholica</h1><p class="hero-title">Tolle Lege</p>'
+    return ('<section class="home-hero"><div class="home-band"><div class="hero-text"><h1 class="eyebrow hero-name">Bibliotheca Catholica</h1><p class="hero-title">Tolle Lege</p>'
      '<p class="hero-trans">Take up and read: two thousand years of Catholic books, free to read here.</p>'
      '<div class="hero-cta"><a class="btn" href="/library/">Enter the reading room</a><a class="hero-link" href="/reading/">Help me choose a book</a></div></div>'
-     '<figure class="hero-art"><img src="/assets/hero/dore-paradiso-31-640.webp" srcset="/assets/hero/dore-paradiso-31-360.webp 360w, /assets/hero/dore-paradiso-31-640.webp 640w" '
-     'sizes="(max-width: 720px) 60vw, 360px" width="640" height="710" fetchpriority="high" decoding="async" '
-     'alt="Engraving: Dante and Beatrice look up at the highest heaven, a vast rose of light ringed with angels.">'
-     '<figcaption>Gustave Doré, <cite>The Empyrean</cite> (Paradiso, Canto XXXI), from the 1892 Cassell <cite>Divine Comedy</cite>. Public domain, via '
-     '<a href="https://commons.wikimedia.org/wiki/File:Paradiso_Canto_31.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.</figcaption></figure></section>')
-def home_paths(n,people=(),works=()):
-    """people: [(id, name, dates)] with self-hosted portraits; works: [(id, title, author)]."""
-    row=''.join('<li><a href="/author/'+E(i)+'/"><span class="pt" style="--pt:96px" aria-hidden="true"><img src="/assets/portraits/'+E(i)+'.webp" width="96" height="96" loading="lazy" decoding="async" alt=""></span><b>'+E(nm)+'</b><span>'+E(d)+'</span></a></li>' for i,nm,d in people)
-    shelf=''.join('<li><a href="/work/'+E(i)+'/">'+E(t)+'</a> <span class="muted">'+E(au)+'</span></li>' for i,t,au in works)
+     +HERO_IMG+'</div><p class="hero-credit">'+HERO_CREDIT+'</p></section>')
+def home_paths(n,people=()):
+    """people: [(id, name, dates, work id, work title)] with self-hosted portraits; the work is the book to begin with."""
+    gallery=''.join('<li><span class="pt" style="--pt:112px" aria-hidden="true"><img src="/assets/portraits/'+E(i)+'.webp" width="112" height="112" loading="lazy" decoding="async" alt=""></span>'
+                    '<p class="nm"><a href="/author/'+E(i)+'/">'+E(nm)+'</a></p><p class="dt">'+E(d)+'</p>'
+                    +('<p class="bk">Begin with <a href="/work/'+E(w)+'/"><cite>'+E(t)+'</cite></a></p>' if w else '')+'</li>' for i,nm,d,w,t in people)
     links=''.join('<li>'+a(h,l)+' <span class="muted">'+E(d)+'</span></li>' for h,l,d in HOME_LINKS)
-    return ('<section class="home-people" aria-labelledby="home-people-h"><h2 id="home-people-h">Saints and authors</h2><ul class="people-row hscroll">'+row+'</ul></section>'
-     '<section class="home-start" aria-labelledby="home-start-h"><h2 id="home-start-h">Start here</h2><ul class="rows">'+shelf+'</ul></section>'
+    return ('<section class="home-people" aria-labelledby="home-people-h"><h2 id="home-people-h">Saints and authors</h2><ul class="people-gallery">'+gallery+'</ul></section>'
      '<nav class="home-links" aria-label="Explore"><ul class="rows">'+links+'</ul></nav>'
      '<p class="home-today" id="home-today" hidden></p>')
 

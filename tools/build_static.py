@@ -14,7 +14,7 @@ pre-rendered or put in the sitemap.  Run after data changes and commit the outpu
 import hashlib,html,json,re,shutil,sys,urllib.parse
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE='https://bibliothecacatholica.com/';E=html.escape
-sys.path.insert(0,str(ROOT/'tools'));import site_copy,build_info
+sys.path.insert(0,str(ROOT/'tools'));import site_copy,build_info,councils_page
 from reader_formatting import reading_block, formatting_note, with_structure, with_auto_layout
 from auto_layout import LABEL as AUTO_LABEL
 # --- v17 SEO: see docs/SEO.md ---------------------------------------------------------------------
@@ -194,9 +194,13 @@ def write_home(tpl,counts,snapshot):
     about=site_copy.home_about(counts)
     hero=site_copy.home_hero()
     hubA={x['id']:x for x in json.loads((ROOT/'data/catholic-hub.json').read_text())['authors']};lib=json.loads((ROOT/'data/library.json').read_text());libw={w['id']:w for w in lib['works']};have=set(portrait_ids())
-    people=[(i,hubA[i]['name'],(hubA[i].get('dshow') or (str(hubA[i]['born'])+'–'+str(hubA[i]['died']) if hubA[i].get('born') and hubA[i].get('died') else ''))) for i in site_copy.HOME_PEOPLE if i in have and i in hubA]
-    works=[(i,libw[i]['title'],libw[i]['author']) for i in site_copy.HOME_SHELF if i in libw]
-    paths=site_copy.home_paths(counts,people,works)
+    # Saints first (design refresh, November 17, 2026): each portrait carries the book to begin with, a hosted work by that person.
+    def begin(i):
+        w=libw.get(site_copy.HOME_BEGIN.get(i,''))
+        assert w and w.get('authorId')==i and any(e.get('text') for e in w['editions']),'HOME_BEGIN must name a hosted work by '+i
+        return w['id'],w['title']
+    people=[(i,hubA[i]['name'],(hubA[i].get('dshow') or (str(hubA[i]['born'])+'–'+str(hubA[i]['died']) if hubA[i].get('born') and hubA[i].get('died') else '')))+begin(i) for i in site_copy.HOME_PEOPLE if i in have and i in hubA]
+    paths=site_copy.home_paths(counts,people)
     home='<!-- static-home:start --><div class="static-prerender">'+hero+paths+about+site_copy.newsletter_box()+'</div><!-- static-home:end -->'
     s=tpl
     assert '<!-- static-home:start -->' in s,'index.html <main> must contain the static-home markers'
@@ -329,6 +333,39 @@ def series_html(w,lib,TPD):
             li.append('<li>'+t+'</li>')
         h+='<h2>'+E(S['title'])+'</h2><ol class="series-list">'+''.join(li)+'</ol>'
     return h
+# Design refresh (owner's pick, November 17, 2026: "Margin contents" with the "Chapter strip" endings; docs/DESIGN.md
+# "Reading pages"): the contents sit beside the opener at the start of each part and scroll away with it (folded on phones);
+# each part ends with a Continue reading block (the next part's first sentence, quoted from the hosted text), and the last
+# part ends with Finis and a colophon of facts already in the records. Display only: no character of the text changes.
+def first_sentence(block,limit=220):
+    t=re.sub(r'\s+',' ',block.replace('_','')).strip()
+    m=re.match(r'(.+?[.!?][”’"\')]*)(?=\s|$)',t)
+    t=m.group(1) if m and len(m.group(1))>=20 else t
+    return t if len(t)<=limit else t[:limit].rsplit(' ',1)[0]+' …'
+def opening_line(B,x):
+    for i in range(x['start'],x['end']+1):
+        if len(re.sub(r'[^A-Za-z]','',B[i]))>=40:return first_sentence(B[i])
+    return ''
+def long_date(iso):
+    import datetime;d=datetime.date.fromisoformat(iso);return MONTHS[d.month-1]+' '+str(d.day)+', '+str(d.year)
+def part_toc(wid,w,d,k):
+    n=len(d['items']);x=d['items'][k]
+    li=''.join('<li><a href="/'+part_path(wid,d,y)+'/"'+(' aria-current="page"' if j==k else '')+'>'+('<span class="ch-toc-n">'+E(y['num'])+'</span>' if d['kind']=='ch' else '')+E(y['title'])+'</a></li>' for j,y in enumerate(d['items']))
+    return ('<nav class="ch-toc" aria-label="'+E(d['nouns'])+' of '+E(w['title'])+'"><p class="ch-toc-bk">'+a('/work/'+wid+'/',w['title'])+'</p><p class="ch-toc-by">'+E(w['author'])+'</p>'
+            '<details class="ch-toc-d" open><summary>Contents</summary><ol>'+li+'</ol></details>'
+            '<script>if(matchMedia("(max-width: 860px)").matches)document.currentScript.previousElementSibling.open=false</script>'
+            '<p class="ch-toc-pos">'+E(part_label(d,x))+(' of '+str(n) if d['kind']=='ch' else ' · '+str(k+1)+' of '+str(n))+'</p></nav>')
+def colophon_html(w,e,pd):
+    ep=EPUBS.get(e['id'])
+    rows=[('Work',E(w['title'])+', by '+E(w['author'])+(' ('+E(w['date'])+')' if w.get('date') else '')+'.'),
+          ('Edition',E(e['label'])+(', released '+E(e['digitalRelease']) if e.get('digitalRelease') else '')+'. '+a(e['source'],'Source record',True)+'.'),
+          ('Length',E(facts_words(pd['words'])+' · '+facts_time(pd['minutes']))+'.') if pd else None,
+          ('Checked',E(long_date(e['checked']))+'.') if e.get('checked') else None,
+          ('Text file',E(e['text'].split('/')[-1])+', SHA-256 <code class="sha">'+E(e['sha256'])+'</code>.') if e.get('sha256') else None,
+          ('Other formats',(('<a download href="/'+E(ep['path'])+'">EPUB</a> · ') if ep else '')+a('/work/'+w['id']+'/','The work page')+'.'),
+          ('Type','Set in EB Garamond and Cormorant Garamond.')]
+    return ('<section class="colophon" aria-labelledby="colophon-h"><h2 id="colophon-h">Colophon</h2>'
+            +''.join('<p><b>'+k+'.</b> '+v+'</p>' for k,v in (r for r in rows if r))+'</section>')
 def part_pages(out,lib,by_html,author_ld):
     TPD=json.loads((ROOT/'data/text-pages.json').read_text())['works'];libw={w['id']:w for w in lib['works']}
     for wid,d in TPD.items():
@@ -347,18 +384,25 @@ def part_pages(out,lib,by_html,author_ld):
                 head_html=(''+'<div class="page-head"><div class="eyebrow">'+E(w['title'])+' · '+E(part_label(d,x))+'</div><h1>'+E(x['title'])+'</h1>'
                        +'<p class="lede">'+by_html(w)+', <cite>'+a('/work/'+wid+'/',w['title'])+'</cite>, '+E(part_label(d,x,True))+(' of '+str(sum(1 for y in d['items'] if y['num'][:1].isdigit() or d['kind']=='ch')) if x['num'][:1].isdigit() or d['kind']=='ch' else '')+'. About '+str(max(1,round(x['words']/200)))+' min.</p></div>'
                        +'<p class="dl-row"><a class="btn" href="'+E(reader)+'">Read in the reading room →</a> '+a('/work/'+wid+'/','Work page and editions')+'</p>')
-            body=(crumb_html(('Discover & Read','library/'),(w['title'],'work/'+wid+'/'),(x['title'],''))+head_html
+            cont=''
+            if nxt:
+                line=opening_line(B,nxt)
+                cont=('<a class="ch-next" rel="next" href="/'+part_path(wid,d,nxt)+'/"><span class="ch-next-k">Continue reading</span>'
+                      '<span class="ch-next-t">Next: '+E(nxt['num'])+'. '+E(nxt['title'])+'</span>'+('<span class="ch-next-f">'+E(line)+'</span>' if line else '')+'</a>')
+            body=(crumb_html(('Discover & Read','library/'),(w['title'],'work/'+wid+'/'),(x['title'],''))
+              +'<div class="ch-layout">'+part_toc(wid,w,d,k)+'<div class="ch-main">'+head_html
               +'<article class="reading-text'+(' edition-designed' if pd else '')+'" aria-label="'+E(x['title'])+'">'+''.join(reading_block(e,B[i],i) for i in range(x['start'],x['end']+1))+'</article>'
-              +(('<div class="ch-end"><p class="ch-orn" aria-hidden="true">❦</p><p>End of '+E(part_label(d,x))+'</p>'
-                 +(a('/'+part_path(wid,d,nxt)+'/','Next: '+nxt['num']+'. '+nxt['title']+' →')+' · ' if nxt else '')
-                 +'<a href="'+E(reader)+'">Continue in the reading room</a></div>') if pd else '')
-              +text_notice(e)+nav+parts_list(wid,d)
+              +(('<div class="ch-end"><p class="ch-orn" aria-hidden="true">'+('❦ ❦ ❦' if not nxt else '❦')+'</p><p>End of '+E(part_label(d,x))+'</p>'
+                 +('' if nxt else '<p class="ch-fin">Finis</p>')+cont
+                 +'<p class="ch-reader"><a href="'+E(reader)+'">Continue in the reading room</a></p></div>'
+                 +('' if nxt else colophon_html(w,e,pd))) if pd else '')
+              +text_notice(e)+nav
               +edition_details('<p class="small text-edition">Text: '+E(w['title'])+', '+E(e['label'])+'. '+E(d.get('editionLine') or e.get('note',''))+'</p>',
                   '<p class="small">Source: '+E(w['author']+'. '+w['title']+'. '+e['label']+'.')+' '+text_source(e)+' '+a('/rights/','How rights are checked')+'.</p>',
                   (formatting_note(e) if any(lo <= x['end'] and hi >= x['start'] for lo,hi in e.get('readerFormatting',{}).get('proseRanges',[])) else ''),
                   ('<p class="small text-auto-layout">'+E(AUTO_LABEL)+'</p>' if e.get('autoLayout') else ''),
                   '<p class="small">The reading room adds highlights, notes, find in work, and saved places. This page shows the same hosted text in one piece.</p>')
-              +'<p>'+a('/work/'+wid+'/',w['title'])+' · '+a('/library/','Selected library')+'</p>')
+              +'<p>'+a('/work/'+wid+'/',w['title'])+' · '+a('/library/','Selected library')+'</p></div></div>')
             what='“'+x['title']+',” '+part_label(d,x,True)+' '+('of '+str(n)+' ' if d['kind']=='ch' else '')+'in '+w['title']+' by '+w['author']+'.'
             md=fit([what],(('The full text on one page, free, with a link into the reading room for notes and highlights.','The full text on one page, with a link into the reading room.','The full text, free to read.'),)+DESC_EXTRA)
             ld_part={'@context':'https://schema.org','@type':'Chapter' if d['kind']=='ch' else 'ShortStory','name':x['title'],'url':SITE+route+'/','position':k+1,
@@ -778,6 +822,7 @@ def main():
         elif k=='substacks':extra=guide['own']['html']  # our own newsletter first (tools/substacks_src.py OWN, 2026-11-09)
         elif k=='doctors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors if x.get('doctor'))+'</ul>'
         intro='<p class="section-intro">'+E(INTRO[k])+'</p>' if k in INTRO else ''
+        if k=='magisterium':intro=councils_page.MAGISTERIUM_LINK+intro  # the councils, first on the page (2026-11-17)
         out[k]=(t+' · Bibliotheca Catholica',fit([d],DESC_EXTRA),head('Bibliotheca Catholica',t,d)+intro+extra,[crumbs((t,k+'/'))])
     if flags.get('policy_html'):
         out['policy']=('Fidelity & Editorial Policy · Bibliotheca Catholica','Bibliotheca Catholica is faithful to the Magisterium. Listing is not endorsement; flagged records carry calm context notes. Privacy and how to report a concern.',flags['policy_html'],[crumbs(('Fidelity & Editorial Policy','policy/'))])
@@ -798,7 +843,7 @@ def main():
         route='rites/'+k if k else 'rites'
         cr=[('Rites & Liturgy','rites/')]+([(pg['h1'] if k!='sources' else 'Sources and method',route+'/')] if k else [])
         out[route]=(pg['title']+' · Bibliotheca Catholica',pg['desc'],rites_pages.expand(pg['html'],rj),[crumbs(*cr)])
-    counts={'authors':len(authors),'saints':len(saints),'books':6633,'hosted':sum(1 for w in lib['works'] for e in w['editions'] if e.get('text'))}
+    counts={'authors':len(authors),'saints':len(saints),'books':6633,'hosted':sum(1 for w in lib['works'] for e in w['editions'] if e.get('text') and not e.get('retired'))}
     m=re.search(r'window\.BOOKS_COUNT=(\d+)',tpl)
     if m:counts['books']=int(m.group(1))
     out['disclosure']=(site_copy.DISCLOSURE_TITLE+' · Bibliotheca Catholica',site_copy.DISCLOSURE_DESC,disclosure_html(),[crumbs((site_copy.DISCLOSURE_TITLE,'disclosure/'))])
@@ -807,6 +852,7 @@ def main():
     directory+='<h2>Selected reading editions</h2><ul class="search-browse">'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+' — '+E(w['author'])+'</li>' for w in sorted(lib['works'],key=lambda w:w['title'].casefold()))+'</ul>'
     directory+='<h2>Authors</h2><ul class="search-browse">'+''.join('<li>'+a('/author/'+au['id']+'/',au['name'])+'</li>' for au in sorted(authors,key=lambda au:au['name'].casefold()))+'</ul>'
     directory+='<p>'+a('/saints/','Saints & Hagiography')+' · '+a('/editions/','Editions & Translations')+' · '+a('/reading/','Reading Lists')+'</p>'
+    out['councils']=(councils_page.TITLE+' · Bibliotheca Catholica',councils_page.DESC,crumb_html(('Church Documents','magisterium/'),(councils_page.TITLE,''))+councils_page.body(lib),[crumbs(('Church Documents','magisterium/'),(councils_page.TITLE,'councils/'))])
     out['search']=('Search and browse · Bibliotheca Catholica','Search Bibliotheca Catholica for people and titles, or browse the plain directory of selected reading editions and Catholic authors without JavaScript.',directory,[crumbs(('Search and browse','search/'))])
     extra_pages=ROOT/'tools/static_extra.json'
     if extra_pages.exists():

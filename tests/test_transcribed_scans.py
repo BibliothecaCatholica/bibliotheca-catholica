@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 import transcribe_scan as T  # noqa: E402
-from rights_rule import pd_by_date  # noqa: E402
+from rights_rule import nonrenewal_problems, pd_by_date  # noqa: E402
 
 V = {'god': 9000, 'grad': 3, 'universal': 1340, 'unconscious': 80, 'found': 5000, 'born': 900, 'well': 8000, 'our': 20000,
      'burns': 40, 'class': 300}
@@ -18,6 +18,11 @@ class Repair(unittest.TestCase):
         self.assertEqual(T.repair('tmiversal,', V)[0], 'universal,')
         self.assertEqual(T.repair('imconscious', V)[0], 'unconscious')
         self.assertEqual(T.repair('foimd', V)[0], 'found')
+
+    def test_semicolon_read_as_j(self):
+        import re
+        self.assertEqual(re.sub(r'(?<=[A-Za-z]) j(?= [a-z])', ';', 'most sinister of all contradictions j when we'),
+                         'most sinister of all contradictions; when we')
 
     def test_never_guesses(self):
         self.assertEqual(T.repair('oiu*', V), ('oiu*', 'unknown'))  # too short to repair: flagged, kept as printed
@@ -38,6 +43,50 @@ class Repair(unittest.TestCase):
         self.assertEqual([l['text'] for l in T.body(noise, 2600, set())], ['real words here'])
 
 
+class Layout(unittest.TestCase):
+    L = staticmethod(lambda t, y, h=50: {'x': 100, 'y': y, 'h': h, 'text': t, 'paraStart': False, 'para': 0})
+
+    def test_footnotes_leave_the_page_body(self):
+        body = [self.L('line %d of the text' % i, 300 + 85 * i) for i in range(20)]
+        page = body + [self.L('* “The Humanism of Irving Babbitt,” The Forum.', 2000, 40), self.L('5 Moral., X, xvi, quoted', 2050, 40),
+                       self.L('Cassian, Migne, XLIX, 774.', 2100, 50)]
+        kept, notes = T.split_notes(page, 2600)
+        self.assertEqual(kept, body)
+        self.assertEqual([n[0][:3] for n in notes], ['* “', '5 M'])
+        self.assertEqual(notes[1][-1], 'Cassian, Migne, XLIX, 774.')  # a note's second line stays with it
+        self.assertEqual(T.split_notes(body, 2600), (body, []))
+        dotted = body + [self.L('10. Cf. Dark Night, I, xiv, 2.', 2300, 40), self.L('11 Dark Night of the Soul, II, vi, 2.', 2350, 40)]
+        self.assertEqual(len(T.split_notes(dotted, 2600)[1]), 2)  # a number followed by a full stop is a note mark too
+
+    def test_library_stamp_dropped_but_running_heads_kept(self):
+        pages = [(3000, [self.L('THE THING', 100), self.L('text', 300), self.L('MARIN COUNTY FREE LIBRARY', 900)]) for _ in range(4)]
+        heads_low = [(3000, [self.L('94', 100), self.L('A CASE IN POINT', 150), self.L('text', 300)]) for _ in range(4)]
+        self.assertEqual(T.library_stamps(heads_low, set()), set())  # a running head under a page number is not a stamp
+        stamps = T.library_stamps(pages, {'thething'})
+        self.assertTrue(T.is_stamp('MARIN COUNTTY FREE LIBRARY', stamps))  # an OCR variant of the same stamp
+        self.assertFalse(T.is_stamp('THE THING', stamps))
+        self.assertFalse(T.is_stamp('Marin County Free Library', stamps))  # only capital lines are ever removed
+
+    def test_hand_fixes_replace_one_reading_and_drop_only_whole_noise_lines(self):
+        L = lambda t: {'x': 100, 'y': 300, 'h': 30, 'text': t, 'paraStart': False, 'para': 0}
+        pages = [(3000, [L('i'), L('the victim of a Rion the sys-'), L('uw we: —_—')])]
+        e = {'edition': 'x', 'firstLeaf': 5, 'handFixes': [
+            {'leaf': 5, 'page': 'p. 7', 'ocr': 'i', 'reading': 'I'},  # a whole line wins over a substring
+            {'leaf': 5, 'page': 'p. 7', 'ocr': 'a Rion the', 'reading': 'a system, the'},
+            {'leaf': 5, 'page': 'p. 7', 'ocr': 'uw we: —_—', 'reading': ''}]}
+        T.apply_hand_fixes(pages, e)
+        self.assertEqual([l['text'] for l in pages[0][1]], ['I', 'the victim of a system, the sys-'])
+        with self.assertRaises(AssertionError):  # a reading must be found exactly once
+            T.apply_hand_fixes(pages, {'edition': 'x', 'firstLeaf': 5, 'handFixes': [{'leaf': 5, 'ocr': 'the', 'reading': 'a'}]})
+        with self.assertRaises(AssertionError):  # dropping part of a line is not allowed
+            T.apply_hand_fixes(pages, {'edition': 'x', 'firstLeaf': 5, 'handFixes': [{'leaf': 5, 'ocr': 'victim', 'reading': ''}]})
+
+    def test_hand_fixes_are_logged(self):
+        for r in RECORDS:
+            for f in r.get('handFixes', []):
+                self.assertEqual(set(f), {'leaf', 'page', 'ocr', 'reading'}, r['id'])
+                self.assertNotEqual(f['ocr'], f['reading'], r['id'])
+
 class Records(unittest.TestCase):
     def test_every_transcription_is_pinned_flagged_and_dated(self):
         for r in RECORDS:
@@ -50,9 +99,14 @@ class Records(unittest.TestCase):
             self.assertGreaterEqual(r['readRate'], 0.995, r['id'])  # unread words stay flagged; this is the gate
             self.assertEqual(r['flaggedBlocks'], len(r['flagged']), r['id'])
             self.assertEqual(r['corrections'], len(r['correctionList']), r['id'])
-            self.assertEqual(r['rightsBasis'], 'pd-date', r['id'])
+            self.assertIn(r['rightsBasis'], ('pd-date', 'pd-nonrenewal'), r['id'])
+            if r['rightsBasis'] == 'pd-nonrenewal':
+                self.assertEqual(nonrenewal_problems(r.get('nonRenewal')), [], r['id'])
             for v in r['volumes']:
-                self.assertTrue(pd_by_date(v['year']), r['id'])
+                if r['rightsBasis'] == 'pd-date':
+                    self.assertTrue(pd_by_date(v['year']), r['id'])
+                else:  # the scan is the very printing the evidence names
+                    self.assertEqual((v['identifier'], v['year']), (r['nonRenewal']['scan'], r['nonRenewal']['firstPublicationYear']))
                 self.assertEqual(v['url'], 'https://archive.org/details/' + v['identifier'])
                 self.assertRegex(v['ocrSha256'], r'^[0-9a-f]{64}$')
 

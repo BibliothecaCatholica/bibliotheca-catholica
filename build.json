@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-0d16f356453e",
+  "id": "bc-1c43bdcfbc50",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "d9552b2c5f943dd1d7c302009d8f9c06efaae7daa34b4c4bf9943ae268ee1d2c",
@@ -117,7 +117,7 @@
     "tools/check_links.py": "eaca9fe8c0a299d514cb92f9889ea359645869913e53ddb5aea42b11c132e0d4",
     "tools/covers.py": "86adffcac39190c89225ff76d82a9aa98f4ead3aa25ef03faa5fc9cddf128f52",
     "tools/draft_text_map.py": "089eb682549c2fe928e1c06d725e804a148d72bfca82922ac038ad99d02303ec",
-    "tools/edition_status.py": "425abf6fe2352a4ee1c45bfbf081b823a6e4a2e06bac2dd1b3434446aeee600f",
+    "tools/edition_status.py": "2632a0df321a2f3ffdb0f217ce80d9896ccddc114b4cba50a6f7b4b94269d346",
     "tools/editions_data.py": "a5706f88af8b256d56deabfa2fee5515649e8c8dd019098d02d0ee7a39d18af6",
     "tools/fetch_gutenberg_edition.py": "b7ff3804885f0655bbe128ab91093da455a7f985da612b840f324d825a2324d8",
     "tools/fetch_librivox.py": "42f99b23a0cfd0ed1fc8115c326ed8a9c3c6b4fdb80b909aba3883664a4bd9fe",

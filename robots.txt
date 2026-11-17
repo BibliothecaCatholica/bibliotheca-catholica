@@ -3,5 +3,6 @@ User-agent: *
 Allow: /
 Disallow: /data/texts/
 Disallow: /drafts/
+Disallow: /design-preview/
 
 Sitemap: https://bibliothecacatholica.com/sitemap.xml

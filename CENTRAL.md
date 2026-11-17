@@ -28,7 +28,7 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
 
-- 192 work records; 128 hosted editions of 123 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 195 work records; 129 hosted editions of 124 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,169 sitemap URLs; 7699 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 124 Node and 284 Python.
 
@@ -44,20 +44,20 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
-### 2026-11-17, Claude (Claude Code): non-renewal batch A (for review)
+### 2026-11-17, Claude (Claude Code): non-renewal batch A (approved)
 
 - Link-only records for six cleared Bruce and Paulist books whose OCR reads below the 99.5% gate; renewal evidence in each note; one HOLDS row.
-- Haas (99.44%) listed with its 60 unread words for Micah's case-by-case decision. Waits for Micah's review.
+- Haas (99.44%): Micah approved a hand fix of its OCR misreadings against the scan's page images; its hosting PR follows.
 
-### 2026-11-17, Claude (Claude Code): pd-nonrenewal approved and merged
+### 2026-11-17, Claude (Claude Code): non-renewal batch B (approved)
 
-- tools/rights_rule.py nonrenewal_problems(): US first publication 1931 to 1963, dated no-renewal results (Stanford, NYPL, and the Copyright Office from 1950), HathiTrust code quoted, a URAA line, and the named scan; validator, tools, and tests accept it, pd-date unchanged.
-- Approved November 17 with the B. Herder reading (rule 1, standing decisions).
+- Hosted under pd-nonrenewal: Thomas Verner Moore, Prayer (B. Herder, 1931), 99.67% of words read, 61 footnotes placed after their paragraphs.
+- Link-only with a HOLDS row: Cassidy and Fichter (below the 99.5% gate).
 
-### 2026-11-17, Claude (Claude Code): transcription fixes (footnotes, stamps, semicolons)
+### 2026-11-17, Claude (Claude Code): corrected editions (approved)
 
-- transcribe_scan.py: footnotes move after their paragraph as [Note: ...]; repeated library stamps dropped; a lone j between words restored to a semicolon.
-- Live #51 texts keep their defects until the corrected-edition PR (new editions, old ones retired).
+- Corrected new editions (-r2) for The Thing, The Resurrection of Rome, and Generally Speaking; the old editions are kept, served, and marked retired (validator, test, PROJECT-RULES rule 1).
+- Retired editions are left out of the public hosted-edition count (128: hosted_counts.py, build_static.py, app.js). Outline of Sanity and Simplicity and Tolstoy needed no word change.
 
 ## Open items
 

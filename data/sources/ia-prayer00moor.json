@@ -1,0 +1,748 @@
+{
+  "id": "ia-prayer00moor",
+  "kind": "ocr-transcription",
+  "title": "Prayer",
+  "author": "Thomas Verner Moore",
+  "rights": "Public domain in the USA. First published in the United States in 1931 and not renewed; the evidence is in nonRenewal.",
+  "rightsBasis": "pd-nonrenewal",
+  "nonRenewal": {
+    "firstPublicationYear": 1931,
+    "firstPublicationCountry": "US",
+    "firstPublicationPlace": "St. Louis",
+    "firstPublicationPublisher": "B. Herder Book Co.",
+    "stanford": {
+      "result": "no renewal found",
+      "checked": "2026-11-16",
+      "method": "one plain curl query (title words and surname), default user agent"
+    },
+    "nypl": {
+      "result": "no renewal found",
+      "checked": "2026-11-16",
+      "method": "NYPL cce-renewals data, 1950 to 2001"
+    },
+    "hathitrust": "pdus",
+    "hathitrustRecord": "pdus (hvd.hn2h3v)",
+    "uraa": "Imprint names St. Louis and B. Herder's London office (33 Queen Square); the copyright page says Printed in U.S.A. No earlier London edition is indicated, so US publication was at least simultaneous, which excludes URAA restoration (17 USC 104A(h)(6)(D)). Proposed reading, approved only with PR #53.",
+    "scan": "prayer00moor",
+    "research": "docs/research/us-pd-renewal-checks-2026-11.csv"
+  },
+  "volumes": [
+    {
+      "identifier": "prayer00moor",
+      "url": "https://archive.org/details/prayer00moor",
+      "year": 1931,
+      "publisher": "St. Louis, Mo. ; London : B. Herder Book Co.",
+      "ocr": "prayer00moor_djvu.xml",
+      "ocrSha256": "50c85dafb62edca48a8fd74f5f170d03fdbc5c33fa56c7a36adc5450f28a7608",
+      "leaves": [
+        5,
+        228
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed.",
+  "words": 47631,
+  "unknownWords": 157,
+  "readRate": 0.9967,
+  "flaggedBlocks": 103,
+  "flagged": [
+    {
+      "block": 3,
+      "words": [
+        "Dieckhoff,"
+      ]
+    },
+    {
+      "block": 8,
+      "words": [
+        "Ludovici,",
+        "Holweck,"
+      ]
+    },
+    {
+      "block": 10,
+      "words": [
+        "Ludovici,",
+        "Glennon,"
+      ]
+    },
+    {
+      "block": 13,
+      "words": [
+        "Placidian."
+      ]
+    },
+    {
+      "block": 19,
+      "words": [
+        "ReEvatTiIon",
+        "Gop",
+        "Fortra",
+        "eee",
+        "Tht",
+        "dg",
+        "kt",
+        "eee"
+      ]
+    },
+    {
+      "block": 21,
+      "words": [
+        "siy",
+        "Sr.",
+        "AucusTINE",
+        "iad",
+        "oMAal",
+        "Gabi",
+        "Sr."
+      ]
+    },
+    {
+      "block": 22,
+      "words": [
+        "ee"
+      ]
+    },
+    {
+      "block": 24,
+      "words": [
+        "“planetesimal’’",
+        "planetesimals?"
+      ]
+    },
+    {
+      "block": 26,
+      "words": [
+        "gasoline,",
+        "utilization"
+      ]
+    },
+    {
+      "block": 27,
+      "words": [
+        "erg"
+      ]
+    },
+    {
+      "block": 39,
+      "words": [
+        "“Tet",
+        "nee"
+      ]
+    },
+    {
+      "block": 47,
+      "words": [
+        "“Orationi"
+      ]
+    },
+    {
+      "block": 64,
+      "words": [
+        "Coenobitorum",
+        "Gazaeus",
+        "Patrologia"
+      ]
+    },
+    {
+      "block": 70,
+      "words": [
+        "Ro"
+      ]
+    },
+    {
+      "block": 72,
+      "words": [
+        "Henoch",
+        "Henoch",
+        "Beret"
+      ]
+    },
+    {
+      "block": 83,
+      "words": [
+        "crystallize"
+      ]
+    },
+    {
+      "block": 99,
+      "words": [
+        "sancity."
+      ]
+    },
+    {
+      "block": 112,
+      "words": [
+        "erace,"
+      ]
+    },
+    {
+      "block": 118,
+      "words": [
+        "Ean",
+        "eae"
+      ]
+    },
+    {
+      "block": 119,
+      "words": [
+        "Exercitia"
+      ]
+    },
+    {
+      "block": 143,
+      "words": [
+        "Ixxiii.)"
+      ]
+    },
+    {
+      "block": 147,
+      "words": [
+        "inforiation"
+      ]
+    },
+    {
+      "block": 150,
+      "words": [
+        "schemata"
+      ]
+    },
+    {
+      "block": 159,
+      "words": [
+        "submerges"
+      ]
+    },
+    {
+      "block": 162,
+      "words": [
+        "Gazaeus"
+      ]
+    },
+    {
+      "block": 168,
+      "words": [
+        "experiential",
+        "fainteth"
+      ]
+    },
+    {
+      "block": 169,
+      "words": [
+        "seniorum,"
+      ]
+    },
+    {
+      "block": 176,
+      "words": [
+        "(«dxds",
+        "zpocevxds),"
+      ]
+    },
+    {
+      "block": 179,
+      "words": [
+        "gemitu)."
+      ]
+    },
+    {
+      "block": 182,
+      "words": [
+        "Diadema",
+        "Cll,"
+      ]
+    },
+    {
+      "block": 192,
+      "words": [
+        "Enarratio"
+      ]
+    },
+    {
+      "block": 196,
+      "words": [
+        "zs"
+      ]
+    },
+    {
+      "block": 199,
+      "words": [
+        "Delatte,",
+        "Weare"
+      ]
+    },
+    {
+      "block": 201,
+      "words": [
+        "Delatte,",
+        "McCann,"
+      ]
+    },
+    {
+      "block": 210,
+      "words": [
+        "Cll,"
+      ]
+    },
+    {
+      "block": 211,
+      "words": [
+        "iE",
+        "Rovia"
+      ]
+    },
+    {
+      "block": 213,
+      "words": [
+        "Quintaval,"
+      ]
+    },
+    {
+      "block": 217,
+      "words": [
+        "breviter",
+        "orandum"
+      ]
+    },
+    {
+      "block": 225,
+      "words": [
+        "Baltazar"
+      ]
+    },
+    {
+      "block": 226,
+      "words": [
+        "Poulain,",
+        "Inquisitione"
+      ]
+    },
+    {
+      "block": 227,
+      "words": [
+        "paternae",
+        "proferens,",
+        "lucts,",
+        "illuminans!"
+      ]
+    },
+    {
+      "block": 228,
+      "words": [
+        "toa"
+      ]
+    },
+    {
+      "block": 231,
+      "words": [
+        "focally"
+      ]
+    },
+    {
+      "block": 248,
+      "words": [
+        "Responsio"
+      ]
+    },
+    {
+      "block": 263,
+      "words": [
+        "Ammae"
+      ]
+    },
+    {
+      "block": 265,
+      "words": [
+        "Psi:"
+      ]
+    },
+    {
+      "block": 304,
+      "words": [
+        "CoNnTEMPLATIVE"
+      ]
+    },
+    {
+      "block": 322,
+      "words": [
+        "OrpDINARILY"
+      ]
+    },
+    {
+      "block": 348,
+      "words": [
+        "valebam"
+      ]
+    },
+    {
+      "block": 350,
+      "words": [
+        "(Zdid.,"
+      ]
+    },
+    {
+      "block": 352,
+      "words": [
+        "Exech.,"
+      ]
+    },
+    {
+      "block": 358,
+      "words": [
+        "sancitity."
+      ]
+    },
+    {
+      "block": 370,
+      "words": [
+        "portance",
+        "Catholique.",
+        "Dublanchy"
+      ]
+    },
+    {
+      "block": 398,
+      "words": [
+        "Cassiani"
+      ]
+    },
+    {
+      "block": 409,
+      "words": [
+        "Nestero,"
+      ]
+    },
+    {
+      "block": 410,
+      "words": [
+        "Nestero,"
+      ]
+    },
+    {
+      "block": 412,
+      "words": [
+        "Collatio"
+      ]
+    },
+    {
+      "block": 417,
+      "words": [
+        "Cis",
+        "Pe"
+      ]
+    },
+    {
+      "block": 421,
+      "words": [
+        "sensory",
+        "thc"
+      ]
+    },
+    {
+      "block": 427,
+      "words": [
+        "oftimes"
+      ]
+    },
+    {
+      "block": 432,
+      "words": [
+        "Xs",
+        "OSs"
+      ]
+    },
+    {
+      "block": 433,
+      "words": [
+        "tT"
+      ]
+    },
+    {
+      "block": 455,
+      "words": [
+        "“Tn"
+      ]
+    },
+    {
+      "block": 475,
+      "words": [
+        "“Tn"
+      ]
+    },
+    {
+      "block": 485,
+      "words": [
+        "agine",
+        "posssessing"
+      ]
+    },
+    {
+      "block": 497,
+      "words": [
+        "suf-"
+      ]
+    },
+    {
+      "block": 502,
+      "words": [
+        "Grieg",
+        "Sousa",
+        "jazz",
+        "Idyls"
+      ]
+    },
+    {
+      "block": 503,
+      "words": [
+        "pvernpis,",
+        "focal"
+      ]
+    },
+    {
+      "block": 513,
+      "words": [
+        "multitide"
+      ]
+    },
+    {
+      "block": 520,
+      "words": [
+        "AVLis3.)"
+      ]
+    },
+    {
+      "block": 521,
+      "words": [
+        "pulsate"
+      ]
+    },
+    {
+      "block": 526,
+      "words": [
+        "mtellectual"
+      ]
+    },
+    {
+      "block": 537,
+      "words": [
+        "Flim"
+      ]
+    },
+    {
+      "block": 539,
+      "words": [
+        "oases",
+        "Psallendi,?"
+      ]
+    },
+    {
+      "block": 540,
+      "words": [
+        "Pieaven.?”*"
+      ]
+    },
+    {
+      "block": 547,
+      "words": [
+        "(processu"
+      ]
+    },
+    {
+      "block": 549,
+      "words": [
+        "(delicias),"
+      ]
+    },
+    {
+      "block": 554,
+      "words": [
+        "correlate"
+      ]
+    },
+    {
+      "block": 562,
+      "words": [
+        "focal"
+      ]
+    },
+    {
+      "block": 563,
+      "words": [
+        "selfseeking."
+      ]
+    },
+    {
+      "block": 576,
+      "words": [
+        "“Ciest.",
+        "homas,"
+      ]
+    },
+    {
+      "block": 577,
+      "words": [
+        "stabilizing"
+      ]
+    },
+    {
+      "block": 581,
+      "words": [
+        "Kirchengeschichte,",
+        "Gologie",
+        "Liturgik,",
+        "Tibingen,"
+      ]
+    },
+    {
+      "block": 588,
+      "words": [
+        "Stromata,"
+      ]
+    },
+    {
+      "block": 591,
+      "words": [
+        "zw"
+      ]
+    },
+    {
+      "block": 592,
+      "words": [
+        "Annunication,"
+      ]
+    },
+    {
+      "block": 620,
+      "words": [
+        "/mstitutes"
+      ]
+    },
+    {
+      "block": 621,
+      "words": [
+        "interpersed"
+      ]
+    },
+    {
+      "block": 622,
+      "words": [
+        "reci-",
+        "Coenobitorum"
+      ]
+    },
+    {
+      "block": 624,
+      "words": [
+        "tation"
+      ]
+    },
+    {
+      "block": 630,
+      "words": [
+        "Psallendi,”"
+      ]
+    },
+    {
+      "block": 631,
+      "words": [
+        "psalmistry",
+        "VEICe:)"
+      ]
+    },
+    {
+      "block": 636,
+      "words": [
+        "attente"
+      ]
+    },
+    {
+      "block": 640,
+      "words": [
+        "Quintaval,",
+        "Albon,",
+        "hae"
+      ]
+    },
+    {
+      "block": 642,
+      "words": [
+        "Delatte,"
+      ]
+    },
+    {
+      "block": 643,
+      "words": [
+        "Dublanchy,"
+      ]
+    },
+    {
+      "block": 644,
+      "words": [
+        "Gazaeus,"
+      ]
+    },
+    {
+      "block": 645,
+      "words": [
+        "Henoch,"
+      ]
+    },
+    {
+      "block": 650,
+      "words": [
+        "McCann,"
+      ]
+    },
+    {
+      "block": 653,
+      "words": [
+        "Nestero,"
+      ]
+    },
+    {
+      "block": 654,
+      "words": [
+        "Benedictina,"
+      ]
+    },
+    {
+      "block": 657,
+      "words": [
+        "Poulain,",
+        "Tife;"
+      ]
+    },
+    {
+      "block": 660,
+      "words": [
+        "o97f."
+      ]
+    }
+  ],
+  "corrections": 5,
+  "correctionList": [
+    {
+      "ocr": "Tuomas",
+      "reading": "Thomas"
+    },
+    {
+      "ocr": "Joun",
+      "reading": "John"
+    },
+    {
+      "ocr": "Wuen",
+      "reading": "When"
+    },
+    {
+      "ocr": "Balt",
+      "reading": "Bait"
+    },
+    {
+      "ocr": "fiber",
+      "reading": "tiber"
+    }
+  ],
+  "text": "data/texts/ia-prayer00moor.txt",
+  "sha256": "eeb7f15216bc2d73d880fb29c25552cb5597f7c65de074805c45962e91bcbb9a",
+  "checked": "2026-11-17"
+}

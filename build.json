@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-4181084b3e92",
+  "id": "bc-5d0f656344ff",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "d9552b2c5f943dd1d7c302009d8f9c06efaae7daa34b4c4bf9943ae268ee1d2c",
@@ -153,7 +153,7 @@
     "tools/structure_text.py": "ee5dd21b45d5afc99d0cc22812739c5b2b48ba34bd106089c311bc5e12ff88f6",
     "tools/substacks_src.py": "e02dd1b54559bbc0cf3dda1a747e820c9fc7dff30f8cbf036952f5733b2bda1a",
     "tools/text_pages.py": "1cefe76e1c719c78ef3c903b0ef4f8239bfbfae176df19fbe5a46c7dab589a04",
-    "tools/transcribe_scan.py": "cf238f1c4bf620cda1de875044f8001844f581246cfee9f518642663229b3ad6",
+    "tools/transcribe_scan.py": "e4eb7dfed7ed8b76282b1d1a4b64fb421d8a927939f2d9e9ef7aa23d958c93d4",
     "tools/transcribe_supplement.py": "f574af64df26a17dd0c2664b9345a3537ae94b92ada43fe30b4f5279abd5f2e6",
     "tools/verify_text_archive.py": "5255fb5783996417d8e145e70e415bb2183393303d0c9916089695766569fd53"
   },

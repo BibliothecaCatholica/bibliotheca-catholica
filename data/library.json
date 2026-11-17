@@ -5942,16 +5942,22 @@
       "editions": [
         {
           "id": "ia-rightswrongsinin00haas",
-          "label": "Internet Archive scan (New York: The Paulist Press, 1933)",
+          "label": "Transcription of the Internet Archive scan (New York: The Paulist Press, 1933)",
           "source": "https://archive.org/details/rightswrongsinin00haas",
           "language": "English",
           "contributors": [],
           "checked": "2026-11-17",
           "access": "full-text",
-          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
-          "note": "First published in 1933 (New York: The Paulist Press). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in New York by The Paulist Press, 1933. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pd. US imprint (New York: The Paulist Press) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (99.44%), so it is linked, not hosted, for now."
+          "rightsBasis": "pd-nonrenewal",
+          "rightsEvidence": "First published in New York by The Paulist Press, 1933. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pd. US imprint (New York: The Paulist Press) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply.",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1933. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, footnotes placed after their paragraphs, 40 misreadings corrected by hand against the scan's page images, and 30 paragraphs that keep a word the OCR could not read (99.6% of words read). Not a manual proofread. Public domain in the USA because its copyright was not renewed.",
+          "sourceTitle": "Rights and Wrongs in Industry",
+          "text": "data/texts/ia-rightswrongsinin00haas.txt",
+          "sha256": "b3e51f6e31ba3e73eb6ae6984ceae62347c947918a23710419d7754715a544e9"
         }
-      ]
+      ],
+      "added": "2026-11-17"
     }
   ],
   "series": [

@@ -55,6 +55,8 @@ class Layout(unittest.TestCase):
         self.assertEqual([n[0][:3] for n in notes], ['* “', '5 M'])
         self.assertEqual(notes[1][-1], 'Cassian, Migne, XLIX, 774.')  # a note's second line stays with it
         self.assertEqual(T.split_notes(body, 2600), (body, []))
+        dotted = body + [self.L('10. Cf. Dark Night, I, xiv, 2.', 2300, 40), self.L('11 Dark Night of the Soul, II, vi, 2.', 2350, 40)]
+        self.assertEqual(len(T.split_notes(dotted, 2600)[1]), 2)  # a number followed by a full stop is a note mark too
 
     def test_library_stamp_dropped_but_running_heads_kept(self):
         pages = [(3000, [self.L('THE THING', 100), self.L('text', 300), self.L('MARIN COUNTY FREE LIBRARY', 500)]) for _ in range(4)]

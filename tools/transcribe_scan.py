@@ -155,7 +155,7 @@ def norm_head(t):
     return re.sub(r'[^a-z]', '', t.lower())
 
 
-NOTE_MARK = re.compile(r'^[*°†‡§]|^\d{1,2}\s+\S')
+NOTE_MARK = re.compile(r'^[*°†‡§]|^\d{1,2}\.?\s+\S')  # "5 Moral." or "10. Cf."
 
 
 def split_notes(lines, height):
@@ -168,7 +168,8 @@ def split_notes(lines, height):
     step = statistics.median(g for g in gaps if g > 0) if any(g > 0 for g in gaps) else 0
     med_h = statistics.median(l['h'] for l in lines)
     starts = [k for k in range(1, len(lines)) if lines[k]['y'] > 0.55 * height and NOTE_MARK.match(lines[k]['text'])
-              and (gaps[k - 1] > 1.4 * step or lines[k]['h'] < 0.85 * med_h)]  # set apart, or in smaller type
+              and (gaps[k - 1] > 1.4 * step or lines[k]['h'] < 0.85 * med_h)  # set apart, or in smaller type
+              and statistics.median(l['h'] for l in lines[k:]) < 0.92 * med_h]  # and the block is in smaller type
     if starts:
         k = min(starts)  # the first note of the block; the notes below it are part of the same block
         if True:
@@ -180,6 +181,11 @@ def split_notes(lines, height):
                     notes[-1].append(l['text'])
             return lines[:k], notes
     return lines, []
+
+
+def note_text(lines):
+    t = re.sub(r'([a-z])- ([a-z])', r'\1\2', ' '.join(lines))  # rejoin a word hyphenated across the note's lines
+    return '[Note: ' + t + ']'
 
 
 def library_stamps(raw_pages, heads):
@@ -212,7 +218,7 @@ def build(e, cache, V):
     def close(par):
         paras.append(par)
         while pending:  # a page's footnotes follow the paragraph that was running on that page
-            paras.append(['[Note: ' + ' '.join(pending.pop(0)) + ']'])
+            paras.append([note_text(pending.pop(0))])
     for height, ls in raw_pages:
         ls = [l for l in ls if not is_stamp(l['text'], stamps)]
         ls = body(ls, height, heads, V)
@@ -234,7 +240,7 @@ def build(e, cache, V):
     if cur:
         close(cur)
     while pending:  # notes on the last pages
-        paras.append(['[Note: ' + ' '.join(pending.pop(0)) + ']'])
+        paras.append([note_text(pending.pop(0))])
     out = []
     for p in paras:
         text = ''

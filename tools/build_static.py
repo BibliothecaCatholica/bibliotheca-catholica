@@ -14,7 +14,7 @@ pre-rendered or put in the sitemap.  Run after data changes and commit the outpu
 import hashlib,html,json,re,shutil,sys,urllib.parse
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE='https://bibliothecacatholica.com/';E=html.escape
-sys.path.insert(0,str(ROOT/'tools'));import site_copy,build_info
+sys.path.insert(0,str(ROOT/'tools'));import site_copy,build_info,councils_page
 from reader_formatting import reading_block, formatting_note, with_structure, with_auto_layout
 from auto_layout import LABEL as AUTO_LABEL
 # --- v17 SEO: see docs/SEO.md ---------------------------------------------------------------------
@@ -782,6 +782,7 @@ def main():
         elif k=='substacks':extra=guide['own']['html']  # our own newsletter first (tools/substacks_src.py OWN, 2026-11-09)
         elif k=='doctors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors if x.get('doctor'))+'</ul>'
         intro='<p class="section-intro">'+E(INTRO[k])+'</p>' if k in INTRO else ''
+        if k=='magisterium':intro=councils_page.MAGISTERIUM_LINK+intro  # the councils, first on the page (2026-11-17)
         out[k]=(t+' · Bibliotheca Catholica',fit([d],DESC_EXTRA),head('Bibliotheca Catholica',t,d)+intro+extra,[crumbs((t,k+'/'))])
     if flags.get('policy_html'):
         out['policy']=('Fidelity & Editorial Policy · Bibliotheca Catholica','Bibliotheca Catholica is faithful to the Magisterium. Listing is not endorsement; flagged records carry calm context notes. Privacy and how to report a concern.',flags['policy_html'],[crumbs(('Fidelity & Editorial Policy','policy/'))])
@@ -811,6 +812,7 @@ def main():
     directory+='<h2>Selected reading editions</h2><ul class="search-browse">'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+' — '+E(w['author'])+'</li>' for w in sorted(lib['works'],key=lambda w:w['title'].casefold()))+'</ul>'
     directory+='<h2>Authors</h2><ul class="search-browse">'+''.join('<li>'+a('/author/'+au['id']+'/',au['name'])+'</li>' for au in sorted(authors,key=lambda au:au['name'].casefold()))+'</ul>'
     directory+='<p>'+a('/saints/','Saints & Hagiography')+' · '+a('/editions/','Editions & Translations')+' · '+a('/reading/','Reading Lists')+'</p>'
+    out['councils']=(councils_page.TITLE+' · Bibliotheca Catholica',councils_page.DESC,crumb_html(('Church Documents','magisterium/'),(councils_page.TITLE,''))+councils_page.body(lib),[crumbs(('Church Documents','magisterium/'),(councils_page.TITLE,'councils/'))])
     out['search']=('Search and browse · Bibliotheca Catholica','Search Bibliotheca Catholica for people and titles, or browse the plain directory of selected reading editions and Catholic authors without JavaScript.',directory,[crumbs(('Search and browse','search/'))])
     extra_pages=ROOT/'tools/static_extra.json'
     if extra_pages.exists():

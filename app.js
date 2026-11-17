@@ -569,6 +569,7 @@ function libraryDeskLoad(cb){if(window.BCLibraryDesk){cb();return}LIB_DESK_WAIT.
 function section(k,focus){
   var s=SECTIONS[k];var R=D.resources.filter(function(r){return r.section===k});var cats=[];R.forEach(function(r){if(cats.indexOf(r.category)<0)cats.push(r.category)});
   var h='<div class="page-head"><div class="eyebrow">'+esc(s.e)+'</div><h1>'+esc(s.t)+'</h1><p class="lede">'+esc(s.d)+'</p></div>';
+  if(k==='magisterium')h+='<p class="councils-link"><a class="btn ghost" href="/councils/">The 21 Ecumenical Councils</a> <span class="small">From Nicaea to Vatican II, in order, with what each one settled.</span></p>';
   if(k==='magisterium')h+='<p><a class="btn" href="#/library/Magisterium">Read individual Church documents →</a></p>';
   if(k==='magisterium')h+='<div class="callout">For the authoritative text of any papal or curial document, <a href="https://www.vatican.va/content/vatican/en.html" target="_blank" rel="noopener">vatican.va</a> is always the primary source; the other links here are convenient mirrors and finding aids.</div>';
   if(k==='prayers')h+=dailyPanel()+prayersBlock();
@@ -662,8 +663,8 @@ function support(){var shop=AFF.bookshopShop||'';
    LIBRARY_DATA.relatedAuthors) are static documents built by tools/build_static.py, as are the Summa pages
    (/summa/, /summa/<part>/, /summa/<part>/q<n>/, /summa/<part>/q<n>/a<m>/, part 1, 1-2, 2-2, 3, or supp for the Supplement).
    On their own static page the pre-rendered text stays as the view; a hash link to one loads the static page. */
-function staticOnly(path){path=String(path||'').replace(/\/+$/,'');var m=/^author\/([a-z0-9-]+)$/.exec(path),L=typeof window!=='undefined'&&window.LIBRARY_DATA;if(m)return !!(L&&(L.relatedAuthors||[]).some(function(r){return r.id===m[1]}));if(/^saints\/calendar\/(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(path))return window.BC_BOOT===path&&!location.hash;return /^work\/[a-z0-9-]+\/(ch|story)\/\d\d-[a-z0-9-]+$/.test(path)||/^summa(\/(1|1-2|2-2|3|supp)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(path)}
-function keepStatic(path){path=path.replace(/\/+$/,'');if(!location.hash&&window.BC_BOOT===path&&main.querySelector('.static-prerender')){setNav('library');return}location.replace('/'+path+'/')}
+function staticOnly(path){path=String(path||'').replace(/\/+$/,'');var m=/^author\/([a-z0-9-]+)$/.exec(path),L=typeof window!=='undefined'&&window.LIBRARY_DATA;if(m)return !!(L&&(L.relatedAuthors||[]).some(function(r){return r.id===m[1]}));if(/^saints\/calendar\/(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(path))return window.BC_BOOT===path&&!location.hash;return path==='councils'||/^work\/[a-z0-9-]+\/(ch|story)\/\d\d-[a-z0-9-]+$/.test(path)||/^summa(\/(1|1-2|2-2|3|supp)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(path)}
+function keepStatic(path){path=path.replace(/\/+$/,'');if(!location.hash&&window.BC_BOOT===path&&main.querySelector('.static-prerender')){setNav(path==='councils'?'magisterium':'library');return}location.replace('/'+path+'/')}
 function route(){var raw=location.hash.replace(/^#\/?/,'');if(!raw&&window.BC_BOOT)raw=window.BC_BOOT;if(raw==='search'&&!location.hash){var lookup=new URLSearchParams(location.search).get('lookup');if(lookup)raw='search/'+encodeURIComponent(lookup.slice(0,300))}var queryAt=raw.indexOf('?');var query=new URLSearchParams(queryAt<0?'':raw.slice(queryAt+1));var path=queryAt<0?raw:raw.slice(0,queryAt);var h;try{h=decodeURIComponent(path)}catch(e){notfound();return}if(staticOnly(h)){keepStatic(h);return}var p=h.split('/');if(p[0]==='search'){searchScope=['curated','isidore','all'].indexOf(query.get('scope'))>=0?query.get('scope'):'all';}
   hideSug();if(p[0]!=='search')gaReset('search');
   switch(p[0]){case 'library':window.BCLibrary.library(render,p[1]);break;case 'work':window.BCLibrary.work(render,p[1]);break;case 'read':window.BCLibrary.read(render,p[1],p[2],p[3],p[4]);break;case 'related':window.BCLibrary.related(render);break;case '':home();break;case 'authors':authors();break;case 'doctors':authors({doctors:true});break;case 'author':hubNeed([hubDetail],function(){author(p[1],p[2]||'')});break;case 'timeline':hubNeed([hubDetail],function(){timeline(p[1],p[2])});break;
@@ -693,7 +694,7 @@ function gaPageView(){clearTimeout(gaT);gaT=setTimeout(function(){var raw=locati
 window.addEventListener('hashchange',gaPageView);
 /* ---------- per-route meta (description, canonical, Open Graph, Twitter) ---------- */
 var SITE='https://bibliothecacatholica.com/',DEF_DESC=(document.querySelector('meta[name=description]')||{}).content||'';
-var STATIC_SECTIONS=['library','related','authors','doctors','timeline','scripture','magisterium','references','media','libraries','prayers','rare','projects','isidore','data','support','editions','reading','substacks','policy','saints','rites','rights','takedown','licensing','about','disclosure'];
+var STATIC_SECTIONS=['councils','library','related','authors','doctors','timeline','scripture','magisterium','references','media','libraries','prayers','rare','projects','isidore','data','support','editions','reading','substacks','policy','saints','rites','rights','takedown','licensing','about','disclosure'];
 function canonicalFor(){var raw=(location.hash.replace(/^#\/?/,'')||window.BC_BOOT||'').split('?')[0],p=raw.split('/').filter(Boolean);
   if(!p.length)return SITE;if(p[0]==='search')return SITE+'search/';if(p.length===1&&STATIC_SECTIONS.indexOf(p[0])>=0)return SITE+p[0]+'/';
   if(p.length===2&&/^(author|work)$/.test(p[0])&&/^[a-z0-9-]+$/.test(p[1]))return SITE+p[0]+'/'+p[1]+'/';

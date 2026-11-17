@@ -44,6 +44,11 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-17, Claude (Claude Code): Ecumenical Councils section
+
+- /councils/: the 21 councils in order with own-words summaries and where to read each (data/councils.json, tools/councils_page.py, tests/test_councils.py); linked first on /magisterium/ and in the footer, not the main nav. Kept static by app.js (staticOnly), so it has no in-page #anchors.
+- Sources research for hosting each council: docs/research/councils-sources-2026-11.csv (docs-only PR); hosting waits for Micah (HOLDS.md).
+
 ### 2026-11-17, Claude (Claude Code): Haas hosted after a hand fix (approved)
 
 - Rights and Wrongs in Industry (Paulist Press, 1933) hosted under pd-nonrenewal at 99.62% of words read, after 40 misreadings were corrected against the page images of the same scan (each logged in `handFixes`; no wording from another edition).
@@ -53,11 +58,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - Link-only records for six cleared Bruce and Paulist books whose OCR reads below the 99.5% gate; renewal evidence in each note; one HOLDS row.
 - Haas (99.44%): Micah approved a hand fix of its OCR misreadings against the scan's page images; its hosting PR follows.
-
-### 2026-11-17, Claude (Claude Code): non-renewal batch B (approved)
-
-- Hosted under pd-nonrenewal: Thomas Verner Moore, Prayer (B. Herder, 1931), 99.67% of words read, 61 footnotes placed after their paragraphs.
-- Link-only with a HOLDS row: Cassidy and Fichter (below the 99.5% gate).
 
 ## Open items
 

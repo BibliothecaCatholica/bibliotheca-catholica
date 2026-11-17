@@ -4934,6 +4934,7 @@ work/flying-inn/ch/24-the-enigmas-of-lady-joan/index.html
 work/flying-inn/ch/25-the-finding-of-the-superman/index.html
 work/footsteps-at-the-lock/index.html
 work/four-faultless-felons/index.html
+work/furfey-mystery-of-iniquity/index.html
 work/g-f-watts/index.html
 work/gaudium-spes/index.html
 work/generally-speaking/index.html
@@ -4953,7 +4954,9 @@ work/grammar-assent/ch/07-certitude/index.html
 work/grammar-assent/ch/08-inference/index.html
 work/grammar-assent/ch/09-the-illative-sense/index.html
 work/grammar-assent/ch/10-inference-and-assent-in-the-matter-of-religion/index.html
+work/grant-john-england/index.html
 work/greybeards-at-play/index.html
+work/haas-rights-and-wrongs-in-industry/index.html
 work/heretics/index.html
 work/heretics/ch/01-introductory-remarks-on-the-importance-of-orthodoxy/index.html
 work/heretics/ch/02-on-the-negative-spirit/index.html
@@ -4979,6 +4982,7 @@ work/holy-angels-okennedy/index.html
 work/holy-library-sixtus/index.html
 work/hopkins-poems/index.html
 work/how-to-help-annexation/index.html
+work/huber-st-anthony-of-padua/index.html
 work/idea-university/index.html
 work/ignatius-of-antioch-epistle-to-the-ephesians/index.html
 work/ignatius-of-antioch-epistle-to-the-romans/index.html
@@ -5244,6 +5248,8 @@ work/virgin-saints-and-martyrs/ch/16-s-clara/index.html
 work/virgin-saints-and-martyrs/ch/17-s-theresa/index.html
 work/virgin-saints-and-martyrs/ch/18-sister-dora/index.html
 work/von-hugel-essays-addresses/index.html
+work/walsh-high-points-medieval-culture/index.html
+work/walsh-saint-teresa/index.html
 work/what-i-saw-america/index.html
 work/whats-wrong-world/index.html
 work/whats-wrong-world/ch/01-the-medical-mistake/index.html

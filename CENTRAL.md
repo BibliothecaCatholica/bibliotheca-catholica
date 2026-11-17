@@ -28,7 +28,7 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
 
-- 186 work records; 128 hosted editions of 123 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 192 work records; 128 hosted editions of 123 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,169 sitemap URLs; 7699 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 124 Node and 284 Python.
 
@@ -44,6 +44,11 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-17, Claude (Claude Code): non-renewal batch A (for review)
+
+- Link-only records for six cleared Bruce and Paulist books whose OCR reads below the 99.5% gate; renewal evidence in each note; one HOLDS row.
+- Haas (99.44%) listed with its 60 unread words for Micah's case-by-case decision. Waits for Micah's review.
+
 ### 2026-11-17, Claude (Claude Code): pd-nonrenewal approved and merged
 
 - tools/rights_rule.py nonrenewal_problems(): US first publication 1931 to 1963, dated no-renewal results (Stanford, NYPL, and the Copyright Office from 1950), HathiTrust code quoted, a URAA line, and the named scan; validator, tools, and tests accept it, pd-date unchanged.
@@ -53,11 +58,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - transcribe_scan.py: footnotes move after their paragraph as [Note: ...]; repeated library stamps dropped; a lone j between words restored to a semicolon.
 - Live #51 texts keep their defects until the corrected-edition PR (new editions, old ones retired).
-
-### 2026-11-17, Claude (Claude Code): design refresh Part 1, previews
-
-- Audit of five areas and 20 working previews (four per area) at /design-preview/, written by tools/build_design_preview.py from real data at the end of build_static.py; noindex,nofollow, robots.txt disallow, out of the sitemap, nav, and search (tests/test_design_preview.py).
-- Directions, mismatches, and a recommendation per area: docs/research/design-directions-2026-11.md. Waiting on Micah's pick per area (HOLDS.md); Part 2 builds one area per PR, then deletes /design-preview/ with its script and test.
 
 ## Open items
 

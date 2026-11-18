@@ -37,8 +37,10 @@ class Licensing(unittest.TestCase):
         self.assertNotIn('Our rule is to host only texts first published before 1931',m)
         self.assertIn('Unknown rights fail closed',m)
     def test_wikipedia_credit_on_author_pages(self):
-        app=R('app.js');self.assertIn('wiki-credit">From Wikipedia, ',app);self.assertIn(' (shortened), <a href="\'+CC_BY_SA+\'"',app);self.assertIn("CC_BY_SA='https://creativecommons.org/licenses/by-sa/4.0/'",app)
-        hub=json.loads(R('data/catholic-hub.json'))
+        # Rule 11 (owner, November 15, 2026): the author page shows a small "Text credit" link; the full attribution
+        # (article link, "shortened", CC BY-SA 4.0 and its link) is the author's entry on /credits/.
+        app=R('app.js');self.assertIn('<p class="small wiki-credit"><a href="/credits/#wiki-\'+esc(a.id)+\'"',app);self.assertNotIn('wiki-credit">From Wikipedia, ',app)
+        hub=json.loads(R('data/catholic-hub.json'));credits=main(R('credits/index.html'))
         # Phase A item 2: only authors with a hosted work show the excerpt (the others show our intro; tests/test_author_pages.py)
         lib=json.loads(R('data/library.json'));hosted={w['authorId'] for w in lib['works'] if w.get('authorId') and any(e.get('text') for e in w['editions'])}
         ids=[a['id'] for a in hub['authors'] if a.get('extract') and a['id'] in hosted]
@@ -46,12 +48,16 @@ class Licensing(unittest.TestCase):
         for i in ids:
             f=ROOT/'author'/i/'index.html'
             if not f.exists():continue
-            s=main(f.read_text());n+=1
+            s=main(f.read_text())
+            if 'class="extract"' not in s:continue
+            n+=1
             with self.subTest(i):
-                line=re.search(r'<p class="small wiki-credit">(.*?)</p>',s).group(1)  # rule 11: one line, source and licence link
-                self.assertTrue(line.startswith('From Wikipedia, '));self.assertIn(' (shortened), ',line)
-                self.assertIn('href="https://creativecommons.org/licenses/by-sa/4.0/"',s)
-                self.assertRegex(s,r'<a href="https://en\.wikipedia\.org/wiki/[^"]+" target="_blank" rel="noopener">“')
+                line=re.search(r'<p class="small wiki-credit">(.*?)</p>',s).group(1)
+                self.assertIn('href="/credits/#wiki-'+i+'"',line);self.assertIn('>Text credit</a>',line)
+                entry=re.search(r'<li id="wiki-'+re.escape(i)+r'">(.*?)</li>',credits).group(1)
+                self.assertIn('the excerpt is from Wikipedia, ',entry);self.assertIn(' (shortened), ',entry)
+                self.assertIn('href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>',entry)
+                self.assertRegex(entry,r'<a href="https://en\.wikipedia\.org/wiki/[^"]+" target="_blank" rel="noopener">“')
                 lede=re.search(r'<p class="lede">(.*?)</p>',s).group(1)
                 a=next(x for x in hub['authors'] if x['id']==i)
                 self.assertNotIn(a['extract'][:60].replace('&','&amp;'),lede)

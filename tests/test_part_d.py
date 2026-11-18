@@ -73,12 +73,12 @@ class PartD(unittest.TestCase):
                         art = nm[nm.index('<article'):nm.index('</article>')]
                         plain = re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]*>', '', art))).replace('_', '')
                         self.assertIn(H.unescape(f.group(1)).rstrip(' …'), plain, (wid, x['slug']))
-                    self.assertNotIn('class="colophon"', m)
+                    self.assertNotIn('class="end-colophon"', m)
                 else:
                     self.assertIn('<p class="ch-fin">Finis</p>', end)
-                    self.assertIn('<section class="colophon"', end)
+                    self.assertIn('<section class="end-colophon"', end)
                     self.assertNotIn('rights-badge', end)
-                    self.assertLess(end.index('class="colophon"'), end.index('pg-notice'))
+                    self.assertLess(end.index('class="end-colophon"'), end.index('pg-notice'))
 
     def test_work_page_title_page_facts_agree(self):
         m = main('work/orthodoxy/index.html')

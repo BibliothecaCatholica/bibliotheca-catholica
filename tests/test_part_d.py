@@ -52,6 +52,34 @@ class PartD(unittest.TestCase):
             if k + 1 < len(items):
                 self.assertIn('Next: %s. ' % items[k + 1]['num'], end)
 
+    def test_reading_pages_contents_continue_and_colophon(self):
+        # design refresh (owner's pick, November 17, 2026): contents at the start only, Continue reading, Finis and a colophon
+        import html as H, re
+        for wid, d in TP.items():
+            items = d['items']
+            for k, x in enumerate(items):
+                m = main('work/%s/%s/%s/index.html' % (wid, d['kind'], x['slug']))
+                toc = m[m.index('<nav class="ch-toc"'):m.index('</nav>', m.index('<nav class="ch-toc"'))]
+                self.assertLess(m.index('<nav class="ch-toc"'), m.index('<article'))
+                self.assertEqual(toc.count('aria-current="page"'), 1)
+                self.assertIn('href="/work/%s/%s/%s/" aria-current="page"' % (wid, d['kind'], x['slug']), toc)
+                self.assertEqual(m.count('<ol class="text-parts">'), 0)  # the contents list is not repeated after the pager
+                end = m[m.index('</article>'):]
+                if k + 1 < len(items):
+                    self.assertIn('class="ch-next" rel="next"', end)
+                    f = re.search(r'class="ch-next-f">([^<]*)</span>', end)
+                    if f:
+                        nm = main('work/%s/%s/%s/index.html' % (wid, d['kind'], items[k + 1]['slug']))
+                        art = nm[nm.index('<article'):nm.index('</article>')]
+                        plain = re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]*>', '', art))).replace('_', '')
+                        self.assertIn(H.unescape(f.group(1)).rstrip(' …'), plain, (wid, x['slug']))
+                    self.assertNotIn('class="end-colophon"', m)
+                else:
+                    self.assertIn('<p class="ch-fin">Finis</p>', end)
+                    self.assertIn('<section class="end-colophon"', end)
+                    self.assertNotIn('rights-badge', end)
+                    self.assertLess(end.index('class="end-colophon"'), end.index('pg-notice'))
+
     def test_work_page_title_page_facts_agree(self):
         m = main('work/orthodoxy/index.html')
         d = TP['orthodoxy']['partD']

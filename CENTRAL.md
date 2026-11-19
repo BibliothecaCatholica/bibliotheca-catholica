@@ -47,8 +47,9 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 ### 2026-11-19, Claude (Claude Code): cleanup pass, Advent readiness, Magisterium AI support
 
-- Hygiene (PR A): snapshot set to post-#70 main; HOLDS uses "owner" (no row was finished), with a new Advent publishing row; dead /design-preview/ links and a wrong test name fixed in docs; docs/README.md lists every file in docs/.
+- Hygiene (#71): snapshot set to post-#70 main; HOLDS uses "owner" (no row was finished), with a new Advent publishing row; dead /design-preview/ links and a wrong test name fixed in docs; docs/README.md lists every file in docs/.
 - Branches: 62 remote. The 16 fully merged with no PR are listed for the owner to delete (this session's proxy refuses ref deletes); 46 hold commits not on main (mostly squash-merged PRs) and stay. `epub/structure-hosted-works` is not on GitHub.
+- Advent (#72): all 26 entries checked against the hosted texts (no data errors); `tools/check_plan_ui.js` browser check; live-site and Publishing items stay open. Magisterium AI (#73, for owner review): panels on /magisterium/, /councils/, /summa/, /study/ from `tools/study_partner.py`; rule 7 allowlist test.
 
 ### 2026-11-17, Claude (Claude Code): Sources and credits page (approved)
 
@@ -65,7 +66,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 - Parked items, owners, and next steps: [HOLDS.md](HOLDS.md).
 - Owner: the takedown agent's name and postal address, and DMCA agent registration (the page shows only the contact email).
 - Hosted texts: further editions batches; manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
-- Advent launches November 29: excerpt-to-source comparison ([checklist](docs/ADVENT-LAUNCH.md)). Social readiness for Advent is owned by the Grok bot, not tracked here.
+- Advent launches November 29: data and local UI verified (#72); live-site checks and the publishing steps remain ([checklist](docs/ADVENT-LAUNCH.md), HOLDS row). Social readiness for Advent is owned by the Grok bot, not tracked here.
 - Libraries research candidates need rights and provenance review before import. Paused: `_headers` Report-Only CSP, low-priority npm audit findings.
 - Page-audit decisions: the publish allowlist and the `study/index.html` sitemap or noindex question. CI's Study drift check names the missing `study/passages` (harmless).
 - Recover the evidence listed in the [repository audit](docs/REPOSITORY-AUDIT-2026-11-09.md); confirm backups and account responsibilities ([OPERATIONS](docs/OPERATIONS.md)).

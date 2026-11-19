@@ -58,7 +58,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 ### 2026-11-19, Claude (Claude Code): third pass (in progress)
 
-- Housekeeping (#77): the branch cleanup HOLDS row is removed (all 60 deleted on November 19). "Licensing & credits" everywhere (#78); the home page has a Subscribe button instead of the Substack embed (#79). Dependabot: weekly grouped npm and Actions PRs.
+- Housekeeping (#77): the branch cleanup HOLDS row is removed (all 60 deleted on November 19). "Licensing & credits" everywhere (#78); the home page has a Subscribe button instead of the Substack embed (#79). Dependabot (#80): weekly grouped npm and Actions PRs. Site copy has no em-dashes (#84, `tests/test_site_copy_dashes.py`).
 - Blocked here: archive.org, Wikimedia, and HathiTrust are outside this session's network, so Councils 1a to 1c, the hand passes, and the Doré headers wait for a session on the repo's own environment.
 
 ## Open items

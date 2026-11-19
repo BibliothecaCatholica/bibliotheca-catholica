@@ -26,7 +26,9 @@ class PartD(unittest.TestCase):
                                            # Chesterton editions, November 15, 2026
                                            'catholic-church-conversion', 'ballad-white-horse',
                                            'whats-wrong-world', 'short-history-england', 'man-who-knew-too-much', 'flying-inn',
-                                           'trees-of-pride', 'manalive', 'club-queer-trades'})
+                                           'trees-of-pride', 'manalive', 'club-queer-trades',
+                                           # Orthodoxy flow batch 1, November 19, 2026
+                                           'confessions', 'betrothed', 'revelations-divine-love'})
         for wid, d in TP.items():
             self.assertIn('partD', d, wid)
             self.assertEqual(d['partD']['words'], sum(x['words'] for x in d['items']))

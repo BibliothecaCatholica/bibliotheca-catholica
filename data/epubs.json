@@ -19,6 +19,12 @@
    "sha256": "bfd2c0106ffcc61191a9de185530bdc44dabb4c5cbfcf9b5c8c0477ccd284bf5",
    "size": 159568
   },
+  "pg-35155": {
+   "work": "betrothed",
+   "path": "downloads/epub/betrothed-pg-35155.fca3ec8fcd99.epub",
+   "sha256": "fca3ec8fcd999ae8416141184885dd0d38f751dc40342b2018043d072edd042c",
+   "size": 1035286
+  },
   "pg-76305": {
    "work": "catholic-church-conversion",
    "path": "downloads/epub/catholic-church-conversion-pg-76305.179708dce392.epub",
@@ -36,6 +42,12 @@
    "path": "downloads/epub/club-queer-trades-pg-1696.86aa1e31142b.epub",
    "sha256": "86aa1e31142b546ee1535e9813a1acdf67d45c38896365a3e2886d02ee491adc",
    "size": 298518
+  },
+  "pg-3296": {
+   "work": "confessions",
+   "path": "downloads/epub/confessions-pg-3296.6439e9f19379.epub",
+   "sha256": "6439e9f19379e7fa9d9b0b881392ffb1fae8064db79617500c88d162e580c347",
+   "size": 652127
   },
   "pg-35110": {
    "work": "development-doctrine",
@@ -108,6 +120,12 @@
    "path": "downloads/epub/paradoxes-catholicism-pg-16309.e26d9ae5c717.epub",
    "sha256": "e26d9ae5c717ff2f4f00bb5f2400e7d00a9641743f04fa3c3347e7a1471dde8f",
    "size": 241637
+  },
+  "pg-52958": {
+   "work": "revelations-divine-love",
+   "path": "downloads/epub/revelations-divine-love-pg-52958.1a089a0fbbcb.epub",
+   "sha256": "1a089a0fbbcb54e7aa410e0493096e438abd28e7b177cae9608f80080e640b89",
+   "size": 566432
   },
   "pg-70175": {
    "work": "secret-father-brown",

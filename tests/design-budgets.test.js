@@ -21,11 +21,11 @@ test('every work page has at most one filled button and at most six buttons',()=
  for(const id of ids){const h=workHtml(id);assert.ok(h.length>0,id);assert.ok(filled(h)<=1,id+': '+filled(h)+' filled buttons');assert.ok(buttons(h)<=6,id+': '+buttons(h)+' buttons')}
 });
 test('a hosted work leads with one "Read here" and keeps its rights evidence behind a disclosure',()=>{
- const h=workHtml('confessions');
- assert.match(h,/<a class="btn" href="#\/read\/confessions\/pg-3296">Read here<\/a>/);
+ const h=workHtml('divine-comedy');  // an unmapped hosted work (verse, kept out of chapter maps); mapped works get the title-page work page
+ assert.match(h,/<a class="btn" href="#\/read\/divine-comedy\/pg-1004">Read here<\/a>/);
  assert.ok(h.indexOf('Read here')<h.indexOf('Other ways to read'));
  assert.match(h,/<details class="ed-details"><summary>Source and rights details<\/summary>/);
- const e=W.LIBRARY_DATA.works.find(w=>w.id==='confessions').editions[0];
+ const e=W.LIBRARY_DATA.works.find(w=>w.id==='divine-comedy').editions[0];
  assert.ok(h.includes(e.checked)&&h.includes('Source checked'),'checked date stays on the page');
  for(const way of ['Listen','Download','Buy in print','Find in a library'])assert.ok(h.includes('<h3>'+way+'</h3>'),way);
  // rule 7 (owner, November 14, 2026): the one-line disclosure appears once, beside the affiliate links, with Details

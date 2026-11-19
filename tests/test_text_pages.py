@@ -16,6 +16,8 @@ TP=json.loads(R('data/text-pages.json'))['works'];LIB={w['id']:w for w in json.l
 SITEMAP=R('sitemap.xml');PAGES=set(R('docs/static-pages.txt').split())
 def main(p):s=R(p);return s[s.find('<main'):s.find('</main>')]
 def path(wid,d,x):return 'work/%s/%s/%s/'%(wid,d['kind'],x['slug'])
+def B2(wid,d):
+    e=next(x for x in LIB[wid]['editions'] if x['id']==d['edition']);return BTP.split_text((ROOT/e['text']).read_text(encoding='utf-8'))
 class TextPages(unittest.TestCase):
     def test_data_is_current(self):
         self.assertEqual(BTP.build(),TP)
@@ -77,6 +79,13 @@ class TextPages(unittest.TestCase):
         for wid,d in TP.items():
             for x in d['items']:
                 m=main(path(wid,d,x)+'index.html');m=m[:m.find('<article')]+m[m.find('</article>'):]
+                # the Continue block quotes the next part's first sentence from the hosted text: book text keeps its own em-dashes
+                q=re.search(r'<span class="ch-next-f">(.*?)</span>',m)
+                if q:
+                    import html as H
+                    nxt=d['items'][d['items'].index(x)+1];quoted=H.unescape(q.group(1)).rstrip(' …')
+                    self.assertIn(quoted,re.sub(r'\s+',' ',' '.join(B2(wid,d)[nxt['start']:nxt['end']+1]).replace('_','')),path(wid,d,x))
+                    m=m.replace(q.group(0),'')
                 self.assertNotIn('—',m.replace('— Bibliotheca Catholica',''),path(wid,d,x))
     def test_app_keeps_the_static_page_and_mirrors_the_contents(self):
         app=R('app.js');lib=R('scripts/library.js')

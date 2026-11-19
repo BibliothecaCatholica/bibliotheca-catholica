@@ -95,7 +95,7 @@ def about_page(n):
      '<p>Dates for a work, its translation, and a digital release are distinct, and source editions retain their own notices and credits. '
      'Ebook files, Isidore Index files, and library-copy searches are served by the original libraries; their formatting and editorial details may differ from the online text, and holdings, borrowing, and digital availability depend on the library and edition. '
      'In the reader, sections divide a source into manageable reading lengths; they are navigation aids, not editorial chapters or scholarly paragraph numbers.</p>'
-     '<h2>Licensing and credits</h2>'
+     '<h2>Licensing &amp; credits</h2>'
      '<p>The site’s code is under the MIT License, the '+a('/data/','open data')+' is dedicated to the public domain under CC0, and the writing on these pages is under CC BY 4.0. Hosted texts carry no license from us: they are public domain in the United States, and each keeps its source’s notice. Author excerpts from Wikipedia are shortened and shared under CC BY-SA 4.0, and each excerpt, portrait, and hosted book is credited in full on '+a('/credits/','Sources and credits')+'. The details are in our <a href="'+LICENSING_URL+'">licensing note</a>, a summary rather than legal advice.</p>'
      '<h2>Our name</h2>'
      '<p>Bibliotheca Catholica (bibliothecacatholica.com) is an independent project. It is not affiliated with IntraText’s “Bibliotheca Catholica” collection (intratext.com) or with Minha Biblioteca Católica (bibliotecacatolica.com.br), and it does not speak for them.</p>'

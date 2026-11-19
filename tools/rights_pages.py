@@ -89,7 +89,7 @@ def licensing_html(md):
         p=_inline(' '.join(para))
         if not lede:lede=p
         else:out.append('<p>'+p+'</p>')
-    # Design refresh (owner's pick, November 17, 2026: "Contents rail"; docs/DESIGN.md "Licensing and credits"): the same text,
+    # Design refresh (owner's pick, November 17, 2026: "Contents rail"; docs/DESIGN.md "Licensing & credits"): the same text,
     # without the panel border, beside a sticky "On this page" list. The list uses buttons that scroll (app.js .lic-j), not
     # #anchors, because the hash router would read an anchor as a route and count a page view.
     secs=[];cur=None
@@ -104,7 +104,7 @@ def licensing_html(md):
         rail+='<li><button type="button" class="lic-j" data-jump="'+sid+'">'+title+'</button></li>'
         body+='<section id="'+sid+'" aria-labelledby="'+sid+'-h"><h2 id="'+sid+'-h" tabindex="-1">'+title+'</h2>'+''.join(sec[1:])+'</section>'
     rail+='<li><a href="/rights/">Rights &amp; Permissions</a></li><li><a href="/takedown/">Takedown requests</a></li>'
-    return ('<div class="rights-page lic-page"><div class="page-head"><div class="eyebrow">Rights &amp; Permissions</div><h1>'+_inline(h1)+'</h1>'
+    return ('<div class="rights-page lic-page"><div class="page-head"><div class="eyebrow">Licensing &amp; credits</div><h1>'+_inline(h1)+'</h1>'
             '<p class="lede">'+lede+'</p></div><div class="lic-lay"><nav class="lic-rail" aria-label="On this page"><p class="lic-rail-h">On this page</p><ol>'+rail+'</ol></nav>'
             '<div class="lic-body">'+body+
             '<p class="small">This page shows <a href="'+REPO+'LICENSING.md" target="_blank" rel="noopener">LICENSING.md</a> from the site’s repository.</p></div></div></div>')

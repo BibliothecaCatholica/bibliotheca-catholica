@@ -83,7 +83,7 @@ class Licensing(unittest.TestCase):
 class V181(unittest.TestCase):
     def test_licensing_page_renders_licensing_md_and_is_in_sitemap(self):
         m=main(R('licensing/index.html'))
-        self.assertEqual(m.count('<h1'),1);self.assertIn('Licensing (draft)',m);self.assertIn('not legal advice',m)
+        self.assertEqual(m.count('<h1'),1);self.assertIn('<h1>Licensing &amp; credits</h1>',m);self.assertNotIn('(draft)',m);self.assertNotIn('<div class="eyebrow">Rights &amp; Permissions</div>',m);self.assertIn('not legal advice',m)
         for k in('MIT','CC0 1.0','CC BY 4.0','CC BY-SA 4.0','Project Gutenberg License','data/library.json','does not vouch for'):self.assertIn(k,m)
         self.assertIn('<loc>https://bibliothecacatholica.com/licensing/</loc>',R('sitemap.xml'))
         self.assertIn("case 'licensing':rightsPage(p[0])",R('app.js'))

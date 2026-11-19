@@ -1,4 +1,4 @@
-# Licensing (draft)
+# Licensing & credits
 
 Bibliotheca Catholica (bibliothecacatholica.com) contains several kinds of material, each under its own terms. This note is a draft summary, **not legal advice**. If anything here conflicts with a notice in a file or on a source page, that notice governs for that material.
 

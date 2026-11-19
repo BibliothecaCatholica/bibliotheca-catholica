@@ -7237,6 +7237,2720 @@
     "front": [],
     "em": []
    }
+  },
+  "confessions": {
+   "partD": {
+    "about": "Project Gutenberg #3296: the translation by E. B. Pusey. Thirteen books, divided as the hosted text heads them; no words were changed.",
+    "words": 111775,
+    "minutes": 486
+   },
+   "edition": "pg-3296",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Book",
+   "nouns": "Books",
+   "sha256": "ef3fa6267968c875def9091a1882d14b525a85bbf6996a3e2f130a775b2e22d2",
+   "blocks": 541,
+   "items": [
+    {
+     "slug": "01-book-i",
+     "num": "I",
+     "title": "Book I",
+     "heading": 15,
+     "start": 16,
+     "end": 53,
+     "section": 0,
+     "words": 7054,
+     "firstWords": "Great art Thou, O Lord, and greatly to be praised; great is"
+    },
+    {
+     "slug": "02-book-ii",
+     "num": "II",
+     "title": "Book II",
+     "heading": 54,
+     "start": 55,
+     "end": 72,
+     "section": 1,
+     "words": 3781,
+     "firstWords": "I will now call to mind my past foulness, and the carnal"
+    },
+    {
+     "slug": "03-book-iii",
+     "num": "III",
+     "title": "Book III",
+     "heading": 73,
+     "start": 74,
+     "end": 94,
+     "section": 2,
+     "words": 5465,
+     "firstWords": "To Carthage I came, where there sang all around me in my"
+    },
+    {
+     "slug": "04-book-iv",
+     "num": "IV",
+     "title": "Book IV",
+     "heading": 95,
+     "start": 96,
+     "end": 126,
+     "section": 2,
+     "words": 6973,
+     "firstWords": "For this space of nine years (from my nineteenth year to my"
+    },
+    {
+     "slug": "05-book-v",
+     "num": "V",
+     "title": "Book V",
+     "heading": 127,
+     "start": 128,
+     "end": 152,
+     "section": 3,
+     "words": 6695,
+     "firstWords": "Accept the sacrifice of my confessions from the ministry of my tongue,"
+    },
+    {
+     "slug": "06-book-vi",
+     "num": "VI",
+     "title": "Book VI",
+     "heading": 153,
+     "start": 154,
+     "end": 180,
+     "section": 4,
+     "words": 7838,
+     "firstWords": "O Thou, my hope from my youth, where wert Thou to me,"
+    },
+    {
+     "slug": "07-book-vii",
+     "num": "VII",
+     "title": "Book VII",
+     "heading": 181,
+     "start": 182,
+     "end": 208,
+     "section": 5,
+     "words": 8409,
+     "firstWords": "Deceased was now that my evil and abominable youth, and I was"
+    },
+    {
+     "slug": "08-book-viii",
+     "num": "VIII",
+     "title": "Book VIII",
+     "heading": 209,
+     "start": 210,
+     "end": 240,
+     "section": 5,
+     "words": 8123,
+     "firstWords": "O my God, let me, with thanksgiving, remember, and confess unto Thee"
+    },
+    {
+     "slug": "09-book-ix",
+     "num": "IX",
+     "title": "Book IX",
+     "heading": 241,
+     "start": 242,
+     "end": 279,
+     "section": 6,
+     "words": 8819,
+     "firstWords": "O Lord, I am Thy servant; I am Thy servant, and the"
+    },
+    {
+     "slug": "10-book-x",
+     "num": "X",
+     "title": "Book X",
+     "heading": 280,
+     "start": 281,
+     "end": 350,
+     "section": 8,
+     "words": 16315,
+     "firstWords": "Let me know Thee, O Lord, who knowest me: let me know"
+    },
+    {
+     "slug": "11-book-xi",
+     "num": "XI",
+     "title": "Book XI",
+     "heading": 351,
+     "start": 352,
+     "end": 392,
+     "section": 10,
+     "words": 9501,
+     "firstWords": "Lord, since eternity is Thine, art Thou ignorant of what I say"
+    },
+    {
+     "slug": "12-book-xii",
+     "num": "XII",
+     "title": "Book XII",
+     "heading": 393,
+     "start": 394,
+     "end": 435,
+     "section": 11,
+     "words": 10205,
+     "firstWords": "My heart, O Lord, touched with the words of Thy Holy Scripture,"
+    },
+    {
+     "slug": "13-book-xiii",
+     "num": "XIII",
+     "title": "Book XIII",
+     "heading": 436,
+     "start": 437,
+     "end": 489,
+     "section": 12,
+     "words": 12597,
+     "firstWords": "I call upon Thee, O my God, my mercy, Who createdst me,"
+    }
+   ],
+   "structure": {
+    "sha256": "ef3fa6267968c875def9091a1882d14b525a85bbf6996a3e2f130a775b2e22d2",
+    "source": "data/structured/confessions-pg-3296.json",
+    "roles": [
+     [
+      15,
+      "chapter"
+     ],
+     [
+      54,
+      "chapter"
+     ],
+     [
+      73,
+      "chapter"
+     ],
+     [
+      95,
+      "chapter"
+     ],
+     [
+      127,
+      "chapter"
+     ],
+     [
+      153,
+      "chapter"
+     ],
+     [
+      181,
+      "chapter"
+     ],
+     [
+      209,
+      "chapter"
+     ],
+     [
+      241,
+      "chapter"
+     ],
+     [
+      280,
+      "chapter"
+     ],
+     [
+      351,
+      "chapter"
+     ],
+     [
+      393,
+      "chapter"
+     ],
+     [
+      436,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "betrothed": {
+   "partD": {
+    "about": "Project Gutenberg #35155: the English translation published in London by Richard Bentley in 1834 (Standard Novels). Thirty-seven chapters, divided as the hosted text heads them; the transcriber’s note stays in the reader. No words were changed.",
+    "words": 165040,
+    "minutes": 718
+   },
+   "edition": "pg-35155",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "8294b2a37ed541d3a2935d524e5b1aa89ee57270388c3aec29afeff04cc1440c",
+   "blocks": 2638,
+   "items": [
+    {
+     "slug": "01-chapter-i",
+     "num": "I",
+     "title": "Chapter I",
+     "heading": 45,
+     "start": 46,
+     "end": 109,
+     "section": 1,
+     "words": 6029,
+     "firstWords": "That branch of the Lake of Como, which turns toward the south"
+    },
+    {
+     "slug": "02-chapter-ii",
+     "num": "II",
+     "title": "Chapter II",
+     "heading": 110,
+     "start": 111,
+     "end": 209,
+     "section": 3,
+     "words": 3758,
+     "firstWords": "It is related that the Prince of Condé slept soundly the night"
+    },
+    {
+     "slug": "03-chapter-iii",
+     "num": "III",
+     "title": "Chapter III",
+     "heading": 210,
+     "start": 211,
+     "end": 281,
+     "section": 6,
+     "words": 4682,
+     "firstWords": "Lucy entered the lower room as Renzo was sorrowfully informing Agnes of"
+    },
+    {
+     "slug": "04-chapter-iv",
+     "num": "IV",
+     "title": "Chapter IV",
+     "heading": 282,
+     "start": 283,
+     "end": 318,
+     "section": 8,
+     "words": 3749,
+     "firstWords": "The sun had not yet risen above the horizon, when Father Christopher"
+    },
+    {
+     "slug": "05-chapter-v",
+     "num": "V",
+     "title": "Chapter V",
+     "heading": 319,
+     "start": 320,
+     "end": 409,
+     "section": 9,
+     "words": 3946,
+     "firstWords": "Father Christopher perceived immediately, from the countenances of Lucy and her mother,"
+    },
+    {
+     "slug": "06-chapter-vi",
+     "num": "VI",
+     "title": "Chapter VI",
+     "heading": 410,
+     "start": 411,
+     "end": 511,
+     "section": 11,
+     "words": 3852,
+     "firstWords": "“In what can I serve you?” said Don Roderick, as soon as"
+    },
+    {
+     "slug": "07-chapter-vii",
+     "num": "VII",
+     "title": "Chapter VII",
+     "heading": 512,
+     "start": 513,
+     "end": 617,
+     "section": 14,
+     "words": 4614,
+     "firstWords": "“Peace be with you!” said the friar as he entered. “There is"
+    },
+    {
+     "slug": "08-chapter-viii",
+     "num": "VIII",
+     "title": "Chapter VIII",
+     "heading": 618,
+     "start": 619,
+     "end": 689,
+     "section": 17,
+     "words": 5663,
+     "firstWords": "“Carneades! who was he?” said Don Abbondio to himself, seated in his"
+    },
+    {
+     "slug": "09-chapter-ix",
+     "num": "IX",
+     "title": "Chapter IX",
+     "heading": 690,
+     "start": 691,
+     "end": 718,
+     "section": 19,
+     "words": 4808,
+     "firstWords": "The shock which the boat received, as it struck against the shore,"
+    },
+    {
+     "slug": "10-chapter-x",
+     "num": "X",
+     "title": "Chapter X",
+     "heading": 719,
+     "start": 720,
+     "end": 763,
+     "section": 20,
+     "words": 5098,
+     "firstWords": "There are moments in which the mind, particularly of the young, is"
+    },
+    {
+     "slug": "11-chapter-xi",
+     "num": "XI",
+     "title": "Chapter XI",
+     "heading": 764,
+     "start": 765,
+     "end": 821,
+     "section": 21,
+     "words": 4607,
+     "firstWords": "As a pack of blood-hounds, after having in vain tracked the hare,"
+    },
+    {
+     "slug": "12-chapter-xii",
+     "num": "XII",
+     "title": "Chapter XII",
+     "heading": 822,
+     "start": 823,
+     "end": 850,
+     "section": 23,
+     "words": 3327,
+     "firstWords": "This was the second year of the scarcity; in the preceding one,"
+    },
+    {
+     "slug": "13-chapter-xiii",
+     "num": "XIII",
+     "title": "Chapter XIII",
+     "heading": 851,
+     "start": 852,
+     "end": 916,
+     "section": 24,
+     "words": 4539,
+     "firstWords": "The unfortunate superintendent was at this moment painfully digesting his miserable dinner,"
+    },
+    {
+     "slug": "14-chapter-xiv",
+     "num": "XIV",
+     "title": "Chapter XIV",
+     "heading": 917,
+     "start": 918,
+     "end": 1011,
+     "section": 26,
+     "words": 5271,
+     "firstWords": "The crowd began to disperse; some went home to take care of"
+    },
+    {
+     "slug": "15-chapter-xv",
+     "num": "XV",
+     "title": "Chapter XV",
+     "heading": 1012,
+     "start": 1013,
+     "end": 1112,
+     "section": 28,
+     "words": 4881,
+     "firstWords": "The host, seeing that the game was about to be carried too"
+    },
+    {
+     "slug": "16-chapter-xvi",
+     "num": "XVI",
+     "title": "Chapter XVI",
+     "heading": 1113,
+     "start": 1114,
+     "end": 1216,
+     "section": 31,
+     "words": 4570,
+     "firstWords": "“Fly, fly, honest man! Here is a convent, there is a church;"
+    },
+    {
+     "slug": "17-chapter-xvii",
+     "num": "XVII",
+     "title": "Chapter XVII",
+     "heading": 1217,
+     "start": 1218,
+     "end": 1268,
+     "section": 34,
+     "words": 4065,
+     "firstWords": "The discourse of the merchant had plunged our poor Renzo into inexpressible"
+    },
+    {
+     "slug": "18-chapter-xviii",
+     "num": "XVIII",
+     "title": "Chapter XVIII",
+     "heading": 1269,
+     "start": 1270,
+     "end": 1347,
+     "section": 36,
+     "words": 4264,
+     "firstWords": "On this same day, the 13th of November, there arrived a courier"
+    },
+    {
+     "slug": "19-chapter-xix",
+     "num": "XIX",
+     "title": "Chapter XIX",
+     "heading": 1348,
+     "start": 1349,
+     "end": 1399,
+     "section": 38,
+     "words": 3548,
+     "firstWords": "The signor count formed the resolution to make use of the father"
+    },
+    {
+     "slug": "20-chapter-xx",
+     "num": "XX",
+     "title": "Chapter XX",
+     "heading": 1400,
+     "start": 1401,
+     "end": 1453,
+     "section": 40,
+     "words": 4054,
+     "firstWords": "The castle of the Unknown was situated above a narrow and shady"
+    },
+    {
+     "slug": "21-chapter-xxi",
+     "num": "XXI",
+     "title": "Chapter XXI",
+     "heading": 1454,
+     "start": 1455,
+     "end": 1523,
+     "section": 41,
+     "words": 4327,
+     "firstWords": "The old woman hastened to obey, and gave orders, under authority of"
+    },
+    {
+     "slug": "22-chapter-xxii",
+     "num": "XXII",
+     "title": "Chapter XXII",
+     "heading": 1524,
+     "start": 1525,
+     "end": 1547,
+     "section": 43,
+     "words": 2778,
+     "firstWords": "The bravo hastened back with the intelligence, that the Cardinal Frederick Borromeo,"
+    },
+    {
+     "slug": "23-chapter-xxiii",
+     "num": "XXIII",
+     "title": "Chapter XXIII",
+     "heading": 1548,
+     "start": 1549,
+     "end": 1636,
+     "section": 44,
+     "words": 5652,
+     "firstWords": "The Cardinal Frederick was engaged in study, as was his custom, preparatory"
+    },
+    {
+     "slug": "24-chapter-xxiv",
+     "num": "XXIV",
+     "title": "Chapter XXIV",
+     "heading": 1637,
+     "start": 1638,
+     "end": 1761,
+     "section": 46,
+     "words": 8375,
+     "firstWords": "Lucy had just risen. She was endeavouring to collect her senses, to"
+    },
+    {
+     "slug": "25-chapter-xxv",
+     "num": "XXV",
+     "title": "Chapter XXV",
+     "heading": 1762,
+     "start": 1763,
+     "end": 1809,
+     "section": 50,
+     "words": 4539,
+     "firstWords": "The next morning, in the village of Lucy, and throughout all the"
+    },
+    {
+     "slug": "26-chapter-xxvi",
+     "num": "XXVI",
+     "title": "Chapter XXVI",
+     "heading": 1810,
+     "start": 1811,
+     "end": 1871,
+     "section": 51,
+     "words": 4925,
+     "firstWords": "Don Abbondio uttered not a word. It must be confessed that we"
+    },
+    {
+     "slug": "27-chapter-xxvii",
+     "num": "XXVII",
+     "title": "Chapter XXVII",
+     "heading": 1872,
+     "start": 1873,
+     "end": 1896,
+     "section": 53,
+     "words": 4425,
+     "firstWords": "We have had occasion to mention more than once a war which"
+    },
+    {
+     "slug": "28-chapter-xxviii",
+     "num": "XXVIII",
+     "title": "Chapter XXVIII",
+     "heading": 1897,
+     "start": 1898,
+     "end": 1930,
+     "section": 54,
+     "words": 3894,
+     "firstWords": "After the famous sedition on St. Martin’s day, it may be said"
+    },
+    {
+     "slug": "29-chapter-xxix",
+     "num": "XXIX",
+     "title": "Chapter XXIX",
+     "heading": 1931,
+     "start": 1932,
+     "end": 1999,
+     "section": 55,
+     "words": 3530,
+     "firstWords": "Here, among those who were expecting the arrival of the army in"
+    },
+    {
+     "slug": "30-chapter-xxx",
+     "num": "XXX",
+     "title": "Chapter XXX",
+     "heading": 2000,
+     "start": 2001,
+     "end": 2049,
+     "section": 57,
+     "words": 2698,
+     "firstWords": "As our fugitives approached the valley, they were joined by many companions"
+    },
+    {
+     "slug": "31-chapter-xxxi",
+     "num": "XXXI",
+     "title": "Chapter XXXI",
+     "heading": 2050,
+     "start": 2051,
+     "end": 2098,
+     "section": 58,
+     "words": 6210,
+     "firstWords": "The pestilence, as the Tribunal of Health had feared, did enter the"
+    },
+    {
+     "slug": "32-chapter-xxxii",
+     "num": "XXXII",
+     "title": "Chapter XXXII",
+     "heading": 2099,
+     "start": 2100,
+     "end": 2209,
+     "section": 59,
+     "words": 5427,
+     "firstWords": "One night, towards the end of the month of August, in the"
+    },
+    {
+     "slug": "33-chapter-xxxiii",
+     "num": "XXXIII",
+     "title": "Chapter XXXIII",
+     "heading": 2210,
+     "start": 2211,
+     "end": 2275,
+     "section": 63,
+     "words": 4773,
+     "firstWords": "Renzo had heard vague mention made of severe orders, forbidding the entrance"
+    },
+    {
+     "slug": "34-chapter-xxxiv",
+     "num": "XXXIV",
+     "title": "Chapter XXXIV",
+     "heading": 2276,
+     "start": 2277,
+     "end": 2343,
+     "section": 65,
+     "words": 2975,
+     "firstWords": "The reader may imagine the lazaretto, peopled with sixteen thousand persons infected"
+    },
+    {
+     "slug": "35-chapter-xxxv",
+     "num": "XXXV",
+     "title": "Chapter XXXV",
+     "heading": 2344,
+     "start": 2345,
+     "end": 2470,
+     "section": 66,
+     "words": 4884,
+     "firstWords": "Who would have told Renzo some moments before, that at the very"
+    },
+    {
+     "slug": "36-chapter-xxxvi",
+     "num": "XXXVI",
+     "title": "Chapter XXXVI",
+     "heading": 2471,
+     "start": 2472,
+     "end": 2511,
+     "section": 70,
+     "words": 2836,
+     "firstWords": "As Renzo passed without the walls of the lazaretto, the rain began"
+    },
+    {
+     "slug": "37-chapter-xxxvii",
+     "num": "XXXVII",
+     "title": "Chapter XXXVII",
+     "heading": 2512,
+     "start": 2513,
+     "end": 2583,
+     "section": 71,
+     "words": 3467,
+     "firstWords": "One fine evening Agnes heard a carriage drive up to the door"
+    }
+   ],
+   "structure": {
+    "sha256": "8294b2a37ed541d3a2935d524e5b1aa89ee57270388c3aec29afeff04cc1440c",
+    "source": "data/structured/betrothed-pg-35155.json",
+    "roles": [
+     [
+      45,
+      "chapter"
+     ],
+     [
+      110,
+      "chapter"
+     ],
+     [
+      210,
+      "chapter"
+     ],
+     [
+      282,
+      "chapter"
+     ],
+     [
+      319,
+      "chapter"
+     ],
+     [
+      410,
+      "chapter"
+     ],
+     [
+      512,
+      "chapter"
+     ],
+     [
+      618,
+      "chapter"
+     ],
+     [
+      690,
+      "chapter"
+     ],
+     [
+      719,
+      "chapter"
+     ],
+     [
+      764,
+      "chapter"
+     ],
+     [
+      822,
+      "chapter"
+     ],
+     [
+      851,
+      "chapter"
+     ],
+     [
+      917,
+      "chapter"
+     ],
+     [
+      1012,
+      "chapter"
+     ],
+     [
+      1113,
+      "chapter"
+     ],
+     [
+      1217,
+      "chapter"
+     ],
+     [
+      1269,
+      "chapter"
+     ],
+     [
+      1348,
+      "chapter"
+     ],
+     [
+      1400,
+      "chapter"
+     ],
+     [
+      1454,
+      "chapter"
+     ],
+     [
+      1524,
+      "chapter"
+     ],
+     [
+      1548,
+      "chapter"
+     ],
+     [
+      1637,
+      "chapter"
+     ],
+     [
+      1762,
+      "chapter"
+     ],
+     [
+      1810,
+      "chapter"
+     ],
+     [
+      1872,
+      "chapter"
+     ],
+     [
+      1897,
+      "chapter"
+     ],
+     [
+      1931,
+      "chapter"
+     ],
+     [
+      2000,
+      "chapter"
+     ],
+     [
+      2050,
+      "chapter"
+     ],
+     [
+      2099,
+      "chapter"
+     ],
+     [
+      2210,
+      "chapter"
+     ],
+     [
+      2276,
+      "chapter"
+     ],
+     [
+      2344,
+      "chapter"
+     ],
+     [
+      2471,
+      "chapter"
+     ],
+     [
+      2512,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "revelations-divine-love": {
+   "partD": {
+    "about": "Project Gutenberg #52958: Grace Warrack’s version (London: Methuen, 1901). Julian’s eighty-six chapters, divided as the hosted text heads them; Warrack’s introduction stays in the reader. No words were changed.",
+    "words": 60592,
+    "minutes": 263
+   },
+   "edition": "pg-52958",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "2e01d1a44b27b001b51053053fe69db771a6609edbbbc5a7fb31da9d4b3cc4b9",
+   "blocks": 1417,
+   "items": [
+    {
+     "slug": "01-a-revelation-of-love-in-sixteen-shewings",
+     "num": "I",
+     "title": "A Revelation of Love, in Sixteen Shewings",
+     "heading": 192,
+     "start": 194,
+     "end": 216,
+     "section": 5,
+     "words": 628,
+     "firstWords": "This is a Revelation of Love that Jesus Christ, our endless bliss,",
+     "titleBlocks": [
+      193
+     ]
+    },
+    {
+     "slug": "02-a-simple-creature-unlettered-which-creature-afore-desired",
+     "num": "II",
+     "title": "A simple creature unlettered. Which creature afore desired three gifts of God",
+     "heading": 217,
+     "start": 219,
+     "end": 230,
+     "section": 6,
+     "words": 505,
+     "firstWords": "These Revelations were shewed to a simple creature unlettered,[1] the year of",
+     "titleBlocks": [
+      218
+     ]
+    },
+    {
+     "slug": "03-i-desired-to-suffer-with-him",
+     "num": "III",
+     "title": "I desired to suffer with Him",
+     "heading": 231,
+     "start": 233,
+     "end": 252,
+     "section": 6,
+     "words": 765,
+     "firstWords": "And when I was thirty years old and a half, God sent",
+     "titleBlocks": [
+      232
+     ]
+    },
+    {
+     "slug": "04-i-saw-as-it-were-in-the-time-of-his-passion-and-in-the-sa",
+     "num": "IV",
+     "title": "I saw ... as it were in the time of His Passion.... And in the same Shewing suddenly the Trinity filled my heart with utmost joy",
+     "heading": 253,
+     "start": 255,
+     "end": 262,
+     "section": 7,
+     "words": 513,
+     "firstWords": "In this [moment] suddenly I saw the red blood trickle down from",
+     "titleBlocks": [
+      254
+     ]
+    },
+    {
+     "slug": "05-god-of-thy-goodness-give-me-thyself-only-in-thee-i-have-a",
+     "num": "V",
+     "title": "God, of Thy Goodness, give me Thyself; only in Thee I have all",
+     "heading": 263,
+     "start": 265,
+     "end": 277,
+     "section": 7,
+     "words": 600,
+     "firstWords": "In this same time our Lord shewed me a spiritual[1] sight of",
+     "titleBlocks": [
+      264
+     ]
+    },
+    {
+     "slug": "06-the-goodness-of-god-is-the-highest-prayer-and-it-cometh-d",
+     "num": "VI",
+     "title": "The Goodness of God is the highest prayer, and it cometh down to the lowest part of our need",
+     "heading": 278,
+     "start": 280,
+     "end": 297,
+     "section": 7,
+     "words": 999,
+     "firstWords": "This Shewing was made to learn our soul wisely to cleave to",
+     "titleBlocks": [
+      279
+     ]
+    },
+    {
+     "slug": "07-the-shewing-is-not-other-than-of-faith-nor-less-nor-more",
+     "num": "VII",
+     "title": "The Shewing is not other than of faith, nor less nor more",
+     "heading": 298,
+     "start": 300,
+     "end": 308,
+     "section": 8,
+     "words": 811,
+     "firstWords": "And [it was] to learn us this, as to mine understanding, [that]",
+     "titleBlocks": [
+      299
+     ]
+    },
+    {
+     "slug": "08-in-all-this-i-was-greatly-stirred-in-charity-to-my-fellow",
+     "num": "VIII",
+     "title": "In all this I was greatly stirred in charity to my fellow-Christians that they might see and know the same that I saw",
+     "heading": 309,
+     "start": 311,
+     "end": 319,
+     "section": 8,
+     "words": 556,
+     "firstWords": "And as long as I saw this sight of the plenteous bleeding",
+     "titleBlocks": [
+      310
+     ]
+    },
+    {
+     "slug": "09-if-i-look-singularly-to-myself-i-am-right-nought",
+     "num": "IX",
+     "title": "If I look singularly to myself, I am right nought",
+     "heading": 320,
+     "start": 322,
+     "end": 328,
+     "section": 9,
+     "words": 474,
+     "firstWords": "Because of the Shewing I am not good but if I love",
+     "titleBlocks": [
+      321
+     ]
+    },
+    {
+     "slug": "10-god-willeth-to-be-seen-and-to-be-sought-to-be-abided-and",
+     "num": "X",
+     "title": "God willeth to be seen and to be sought: to be abided and to be trusted",
+     "heading": 329,
+     "start": 331,
+     "end": 349,
+     "section": 9,
+     "words": 1294,
+     "firstWords": "And after this I saw with bodily sight in the face of",
+     "titleBlocks": [
+      330
+     ]
+    },
+    {
+     "slug": "11-all-thing-that-is-done-it-is-well-done-for-our-lord-god-d",
+     "num": "XI",
+     "title": "All thing that is done, it is well done: for our Lord God doeth all.\" \"Sin is no deed",
+     "heading": 350,
+     "start": 352,
+     "end": 366,
+     "section": 10,
+     "words": 1007,
+     "firstWords": "And after this I saw God in a Point,[1] that is to",
+     "titleBlocks": [
+      351
+     ]
+    },
+    {
+     "slug": "12-the-dearworthy-blood-of-our-lord-jesus-christ-as-verily-a",
+     "num": "XII",
+     "title": "The dearworthy blood of our Lord Jesus Christ as verily as it is most precious, so verily it it most plenteous",
+     "heading": 367,
+     "start": 369,
+     "end": 377,
+     "section": 10,
+     "words": 410,
+     "firstWords": "And after this I saw, beholding, the body plenteously bleeding in seeming",
+     "titleBlocks": [
+      368
+     ]
+    },
+    {
+     "slug": "13-the-enemy-is-overcome-by-the-blessed-passion-and-death-of",
+     "num": "XIII",
+     "title": "The Enemy is overcome by the blessed Passion and Death of our Lord Jesus Christ",
+     "heading": 378,
+     "start": 380,
+     "end": 391,
+     "section": 10,
+     "words": 645,
+     "firstWords": "And after this, ere God shewed any words, He suffered me for",
+     "titleBlocks": [
+      379
+     ]
+    },
+    {
+     "slug": "14-the-age-of-every-man-shall-be-acknowledged-before-him-in",
+     "num": "XIV",
+     "title": "The age of every man shall be acknowledged before him in Heaven, and every man shall be rewarded for his willing service and for his time",
+     "heading": 392,
+     "start": 394,
+     "end": 402,
+     "section": 11,
+     "words": 460,
+     "firstWords": "After this our good Lord said: I thank thee for thy travail,",
+     "titleBlocks": [
+      393
+     ]
+    },
+    {
+     "slug": "15-it-is-not-god-s-will-that-we-follow-the-feeling-of-pains",
+     "num": "XV",
+     "title": "It is not God's will that we follow the feeling of pains in sorrow and mourning for them",
+     "heading": 403,
+     "start": 405,
+     "end": 410,
+     "section": 11,
+     "words": 413,
+     "firstWords": "And after this He shewed a sovereign ghostly pleasante in my soul.",
+     "titleBlocks": [
+      404
+     ]
+    },
+    {
+     "slug": "16-a-part-of-his-passion",
+     "num": "XVI",
+     "title": "A Part of His Passion",
+     "heading": 411,
+     "start": 413,
+     "end": 417,
+     "section": 11,
+     "words": 368,
+     "firstWords": "After this Christ shewed a part of His Passion near His dying.",
+     "titleBlocks": [
+      412
+     ]
+    },
+    {
+     "slug": "17-how-might-any-pain-be-more-to-me-than-to-see-him-that-is",
+     "num": "XVII",
+     "title": "How might any pain be more to me than to see Him that is all my life, and all my bliss, and all my joy suffer?",
+     "heading": 418,
+     "start": 420,
+     "end": 429,
+     "section": 11,
+     "words": 774,
+     "firstWords": "And in this dying was brought to my mind the words of",
+     "titleBlocks": [
+      419
+     ]
+    },
+    {
+     "slug": "18-when-he-was-in-pain-we-were-in-pain",
+     "num": "XVIII",
+     "title": "When He was in pain, we were in pain",
+     "heading": 430,
+     "start": 432,
+     "end": 440,
+     "section": 12,
+     "words": 486,
+     "firstWords": "Here I saw a part of the compassion of our Lady, Saint",
+     "titleBlocks": [
+      431
+     ]
+    },
+    {
+     "slug": "19-thus-was-i-learned-to-choose-jesus-for-my-heaven-whom-i-s",
+     "num": "XIX",
+     "title": "Thus was I learned to choose Jesus for my Heaven, whom I saw only in pain at that time",
+     "heading": 441,
+     "start": 443,
+     "end": 448,
+     "section": 12,
+     "words": 515,
+     "firstWords": "In this [time] I would have looked up from the Cross, but",
+     "titleBlocks": [
+      442
+     ]
+    },
+    {
+     "slug": "20-for-every-man-s-sin-that-shall-be-saved-he-suffered-and-e",
+     "num": "XX",
+     "title": "For every man's sin that shall be saved He suffered, and every man's sorrow and desolation He saw, and sorrowed for Kinship and Love",
+     "heading": 449,
+     "start": 451,
+     "end": 455,
+     "section": 12,
+     "words": 359,
+     "firstWords": "And thus I saw our Lord Jesus languoring long time. For the",
+     "titleBlocks": [
+      450
+     ]
+    },
+    {
+     "slug": "21-we-be-now-with-him-in-his-pains-and-his-passion-dying-we",
+     "num": "XXI",
+     "title": "We be now with Him in His Pains and His Passion, dying. We shall be with Him in Heaven. Through learning in this little pain that we suffer here, we shall have an high endless knowledge of God which we could never have without that",
+     "heading": 456,
+     "start": 458,
+     "end": 466,
+     "section": 13,
+     "words": 432,
+     "firstWords": "It is God's will, as to mine understanding, that we have Three[1]",
+     "titleBlocks": [
+      457
+     ]
+    },
+    {
+     "slug": "22-the-love-that-made-him-to-suffer-passeth-so-far-all-his-p",
+     "num": "XXII",
+     "title": "The Love that made Him to suffer passeth so far all His Pains as Heaven is above Earth",
+     "heading": 467,
+     "start": 469,
+     "end": 480,
+     "section": 13,
+     "words": 752,
+     "firstWords": "Then said our good Lord Jesus Christ: Art thou well pleased that",
+     "titleBlocks": [
+      468
+     ]
+    },
+    {
+     "slug": "23-the-glad-giver-all-the-trinity-wrought-in-the-passion-of",
+     "num": "XXIII",
+     "title": "The Glad Giver\" \"All the Trinity wrought in the Passion of Jesus Christ",
+     "heading": 481,
+     "start": 483,
+     "end": 495,
+     "section": 13,
+     "words": 633,
+     "firstWords": "And in these three words: It is a joy, a bliss, an",
+     "titleBlocks": [
+      482
+     ]
+    },
+    {
+     "slug": "24-our-lord-looked-unto-his-wounded-side-and-beheld-rejoicin",
+     "num": "XXIV",
+     "title": "Our Lord looked unto His [wounded] Side, and beheld, rejoicing.... _Lo! how I loved thee_",
+     "heading": 496,
+     "start": 498,
+     "end": 505,
+     "section": 14,
+     "words": 384,
+     "firstWords": "Then with a glad cheer our Lord looked unto His Side and",
+     "titleBlocks": [
+      497
+     ]
+    },
+    {
+     "slug": "25-i-wot-well-that-thou-wouldst-see-my-blessed-mother-wilt-t",
+     "num": "XXV",
+     "title": "I wot well that thou wouldst see my blessed Mother....\" \"Wilt thou see in her how thou art loved?",
+     "heading": 506,
+     "start": 508,
+     "end": 515,
+     "section": 14,
+     "words": 569,
+     "firstWords": "And with this same cheer of mirth and joy our good Lord",
+     "titleBlocks": [
+      507
+     ]
+    },
+    {
+     "slug": "26-it-is-i-it-is-i",
+     "num": "XXVI",
+     "title": "It is I, it is I",
+     "heading": 516,
+     "start": 518,
+     "end": 520,
+     "section": 14,
+     "words": 212,
+     "firstWords": "And after this our Lord shewed Himself more glorified, as to my",
+     "titleBlocks": [
+      517
+     ]
+    },
+    {
+     "slug": "27-often-i-wondered-why-by-the-great-foreseeing-wisdom-of-go",
+     "num": "XXVII",
+     "title": "Often I wondered why by the great foreseeing wisdom of God the beginning of sin was not hindered: for then, methought, all should have been well.\" \"Sin is behovable, [playeth a needful part], ; but all shall be well",
+     "heading": 521,
+     "start": 523,
+     "end": 537,
+     "section": 14,
+     "words": 953,
+     "firstWords": "After this the Lord brought to my mind the longing that I",
+     "titleBlocks": [
+      522
+     ]
+    },
+    {
+     "slug": "28-each-brotherly-compassion-that-man-hath-on-his-fellow-chr",
+     "num": "XXVIII",
+     "title": "Each brotherly compassion that man hath on his fellow Christians, with charity, it is Christ in him",
+     "heading": 538,
+     "start": 540,
+     "end": 547,
+     "section": 15,
+     "words": 465,
+     "firstWords": "Thus I saw how Christ hath compassion on us for the cause",
+     "titleBlocks": [
+      539
+     ]
+    },
+    {
+     "slug": "29-how-could-all-be-well-for-the-great-harm-that-is-come-by",
+     "num": "XXIX",
+     "title": "How could all be well, for the great harm that is come by sin to the creature?",
+     "heading": 548,
+     "start": 550,
+     "end": 553,
+     "section": 15,
+     "words": 210,
+     "firstWords": "But in this I stood beholding things general, troublously and mourning, saying",
+     "titleBlocks": [
+      549
+     ]
+    },
+    {
+     "slug": "30-two-parts-of-truth-the-part-that-is-open-our-saviour-and",
+     "num": "XXX",
+     "title": "Two parts of Truth: the part that is open: our Saviour and our salvation; and the part that is hid and shut up from us: all beside our salvation",
+     "heading": 554,
+     "start": 556,
+     "end": 559,
+     "section": 15,
+     "words": 345,
+     "firstWords": "He gave me understanding of two parts [of truth]. The one part",
+     "titleBlocks": [
+      555
+     ]
+    },
+    {
+     "slug": "31-the-spiritual-thirst-which-was-in-him-from-without-beginn",
+     "num": "XXXI",
+     "title": "The Spiritual Thirst (which was in Him from without beginning) is desire in Him as long as we be in need, drawing us up to His Bliss",
+     "heading": 560,
+     "start": 562,
+     "end": 568,
+     "section": 16,
+     "words": 691,
+     "firstWords": "And thus our good Lord answered to all the questions and doubts",
+     "titleBlocks": [
+      561
+     ]
+    },
+    {
+     "slug": "32-there-be-deeds-evil-done-in-our-sight-and-so-great-harms",
+     "num": "XXXII",
+     "title": "There be deeds evil done in our sight, and so great harms taken, that it seemeth to us that it were impossible that ever it should come to good end.\" \"That Great Deed ordained ... by which our Lord God shall make all things well",
+     "heading": 569,
+     "start": 571,
+     "end": 586,
+     "section": 16,
+     "words": 846,
+     "firstWords": "One time our good Lord said: All thing shall be well; and",
+     "titleBlocks": [
+      570
+     ]
+    },
+    {
+     "slug": "33-it-is-god-s-will-that-we-have-great-regard-to-all-his-dee",
+     "num": "XXXIII",
+     "title": "It is God's will that we have great regard to all His deeds that He hath done, but evermore it needeth us to leave the beholding what the Deed shall be",
+     "heading": 587,
+     "start": 589,
+     "end": 593,
+     "section": 16,
+     "words": 437,
+     "firstWords": "And yet in this I desired, as [far] as I durst, that",
+     "titleBlocks": [
+      588
+     ]
+    },
+    {
+     "slug": "34-all-that-is-speedful-for-us-to-learn-and-to-know-full-cou",
+     "num": "XXXIV",
+     "title": "All that is speedful for us to learn and to know, full courteously will our Lord shew us",
+     "heading": 594,
+     "start": 596,
+     "end": 599,
+     "section": 16,
+     "words": 339,
+     "firstWords": "Our Lord God shewed two manner of secret things. One is this",
+     "titleBlocks": [
+      595
+     ]
+    },
+    {
+     "slug": "35-i-desired-to-learn-assuredly-as-to-a-certain-creature-tha",
+     "num": "XXXV",
+     "title": "I desired to learn assuredly as to a certain creature that I loved.... It is more worship to God to behold Him in _all_ than in any special thing",
+     "heading": 600,
+     "start": 602,
+     "end": 610,
+     "section": 17,
+     "words": 614,
+     "firstWords": "And when God Almighty had shewed so plenteously and joyfully of His",
+     "titleBlocks": [
+      601
+     ]
+    },
+    {
+     "slug": "36-my-sin-shall-not-hinder-his-goodness-working-a-deed-shall",
+     "num": "XXXVI",
+     "title": "My sin shall not hinder His Goodness working.... A deed shall be done, as we come to Heaven, and it may be known here in part; though it be truly taken for the general Man, yet it excludeth not the special. For what our good Lord will do by His poor creatures, it is now unknown to me",
+     "heading": 611,
+     "start": 613,
+     "end": 627,
+     "section": 17,
+     "words": 907,
+     "firstWords": "Our Lord God shewed that a deed shall be done, and Himself",
+     "titleBlocks": [
+      612
+     ]
+    },
+    {
+     "slug": "37-in-every-soul-that-shall-be-saved-is-a-godly-will-that-ne",
+     "num": "XXXVII",
+     "title": "In every soul that shall be saved is a Godly Will that never assented to sin, nor ever shall.\", \"For failing of Love on our part, therefore is all our travail",
+     "heading": 628,
+     "start": 630,
+     "end": 635,
+     "section": 17,
+     "words": 330,
+     "firstWords": "God brought to my mind that I should sin. And for pleasance",
+     "titleBlocks": [
+      629
+     ]
+    },
+    {
+     "slug": "38-in-heaven-the-token-of-sin-is-turned-to-worship-examples",
+     "num": "XXXVIII",
+     "title": "In Heaven “the token of sin is turned to worship.” Examples thereof",
+     "heading": 636,
+     "start": 638,
+     "end": 645,
+     "section": 18,
+     "words": 671,
+     "firstWords": "Also God shewed that sin shall be no shame to man, but",
+     "titleBlocks": [
+      637
+     ]
+    },
+    {
+     "slug": "39-sin-is-the-sharpest-scourge-by-contrition-we-are-made-cle",
+     "num": "XXXIX",
+     "title": "Sin is the sharpest scourge.... By contrition we are made clean, by compassion we are made ready, and by true longing towards God we are made worthy",
+     "heading": 646,
+     "start": 648,
+     "end": 657,
+     "section": 18,
+     "words": 743,
+     "firstWords": "Sin is the sharpest scourge that any chosen soul may be smitten",
+     "titleBlocks": [
+      647
+     ]
+    },
+    {
+     "slug": "40-true-love-teacheth-us-that-we-should-hate-sin-only-for-lo",
+     "num": "XL",
+     "title": "True love teacheth us that we should hate sin only for love.\" \"To me was shewed no harder hell than sin.\" \"God willeth that we endlessly hate the sin and endlessly love the soul, as God loveth it",
+     "heading": 658,
+     "start": 660,
+     "end": 667,
+     "section": 18,
+     "words": 709,
+     "firstWords": "This is a sovereign friendship of our courteous Lord that He keepeth",
+     "titleBlocks": [
+      659
+     ]
+    },
+    {
+     "slug": "41-i-am-the-ground-of-thy-beseeching-also-to-prayer-belonget",
+     "num": "XLI",
+     "title": "_I am the Ground of thy beseeching._\" \"Also to prayer belongeth thanking",
+     "heading": 668,
+     "start": 670,
+     "end": 682,
+     "section": 19,
+     "words": 868,
+     "firstWords": "After this our Lord shewed concerning Prayer. In which Shewing I see",
+     "titleBlocks": [
+      669
+     ]
+    },
+    {
+     "slug": "42-prayer-is-a-right-understanding-of-that-fulness-of-joy-th",
+     "num": "XLII",
+     "title": "Prayer is a right understanding of that fulness of joy that is to come, with accordant longing and sure trust",
+     "heading": 683,
+     "start": 685,
+     "end": 693,
+     "section": 19,
+     "words": 919,
+     "firstWords": "Our Lord God willeth that we have true understanding, and specially in",
+     "titleBlocks": [
+      684
+     ]
+    },
+    {
+     "slug": "43-prayer-uniteth-the-soul-to-god",
+     "num": "XLIII",
+     "title": "Prayer uniteth the soul to God",
+     "heading": 694,
+     "start": 696,
+     "end": 706,
+     "section": 19,
+     "words": 805,
+     "firstWords": "Prayer oneth the soul to God. For though the soul be ever",
+     "titleBlocks": [
+      695
+     ]
+    },
+    {
+     "slug": "44-god-is-endless-sovereign-truth-wisdom-love-not-made-and-m",
+     "num": "XLIV",
+     "title": "God is endless, sovereign Truth, Wisdom, Love, not-made; and man's Soul is a creature in God which hath the same properties made",
+     "heading": 707,
+     "start": 709,
+     "end": 715,
+     "section": 20,
+     "words": 265,
+     "firstWords": "God shewed in all the Revelations, oftentimes, that man worketh evermore His",
+     "titleBlocks": [
+      708
+     ]
+    },
+    {
+     "slug": "45-all-heavenly-things-and-all-earthly-things-that-belong-to",
+     "num": "XLV",
+     "title": "All heavenly things and all earthly things that belong to Heaven are comprehended in these two judgments",
+     "heading": 716,
+     "start": 718,
+     "end": 721,
+     "section": 20,
+     "words": 560,
+     "firstWords": "God deemeth us [looking] upon our Nature-Substance, which is ever kept one",
+     "titleBlocks": [
+      717
+     ]
+    },
+    {
+     "slug": "46-it-is-needful-to-see-and-to-know-that-we-are-sinners-wher",
+     "num": "XLVI",
+     "title": "It is needful to see and to know that we are sinners: wherefore we deserve pain and wrath.\" \"He is God: Good, Life, Truth, Love, Peace: His Clarity and His Unity suffereth Him not to be wroth",
+     "heading": 722,
+     "start": 724,
+     "end": 731,
+     "section": 20,
+     "words": 711,
+     "firstWords": "But our passing life that we have here in our sense-soul knoweth",
+     "titleBlocks": [
+      723
+     ]
+    },
+    {
+     "slug": "47-we-fail-oftentimes-of-the-sight-of-him-and-anon-we-fall-i",
+     "num": "XLVII",
+     "title": "We fail oftentimes of the sight of Him, and anon we fall into our self, and then find we no feeling of right, nought but contrariness that is in our self",
+     "heading": 732,
+     "start": 734,
+     "end": 743,
+     "section": 20,
+     "words": 624,
+     "firstWords": "Two things belong to our soul as duty: the one is that",
+     "titleBlocks": [
+      733
+     ]
+    },
+    {
+     "slug": "48-i-beheld-the-property-of-mercy-and-i-beheld-the-property",
+     "num": "XLVIII",
+     "title": "I beheld the property of Mercy, and I beheld the property of Grace: which have two manners of working in one love",
+     "heading": 744,
+     "start": 746,
+     "end": 756,
+     "section": 21,
+     "words": 645,
+     "firstWords": "But our good Lord the Holy Ghost, which is endless life dwelling",
+     "titleBlocks": [
+      745
+     ]
+    },
+    {
+     "slug": "49-where-our-lord-appeareth-peace-is-taken-and-wrath-hath-no",
+     "num": "XLIX",
+     "title": "Where our Lord appeareth, peace is taken, and wrath hath no place.\" \"Immediately is the soul made at one with God when it is truly set at peace in itself",
+     "heading": 757,
+     "start": 759,
+     "end": 765,
+     "section": 21,
+     "words": 676,
+     "firstWords": "For this was an high marvel to the soul which was continually",
+     "titleBlocks": [
+      758
+     ]
+    },
+    {
+     "slug": "50-the-blame-of-our-sin-continually-hangeth-upon-us-in-the-s",
+     "num": "L",
+     "title": "The blame of our sin continually hangeth upon us.\" \"In the sight of God the soul that shall be saved was never dead, nor ever shall be dead",
+     "heading": 766,
+     "start": 768,
+     "end": 777,
+     "section": 21,
+     "words": 535,
+     "firstWords": "And in this life mercy and forgiveness is our way and evermore",
+     "titleBlocks": [
+      767
+     ]
+    },
+    {
+     "slug": "51-he-is-the-head-and-we-be-his-members-therefore-our-father",
+     "num": "LI",
+     "title": "He is the Head, and we be His members.\" \"Therefore our Father nor may nor will more blame assign to us than to His own Son, precious and worthy Christ",
+     "heading": 778,
+     "start": 780,
+     "end": 835,
+     "section": 22,
+     "words": 4831,
+     "firstWords": "And then our Courteous Lord answered in shewing full mistily a wonderful",
+     "titleBlocks": [
+      779
+     ]
+    },
+    {
+     "slug": "52-we-have-now-matter-of-mourning-for-our-sin-is-cause-of-ch",
+     "num": "LII",
+     "title": "We have now matter of mourning: for our sin is cause of Christ's pains; and we have, lastingly, matter of joy: for endless love made Him to suffer",
+     "heading": 836,
+     "start": 838,
+     "end": 857,
+     "section": 23,
+     "words": 1511,
+     "firstWords": "And thus I saw that God rejoiceth that He is our Father,",
+     "titleBlocks": [
+      837
+     ]
+    },
+    {
+     "slug": "53-in-every-soul-that-shall-be-saved-is-a-godly-will-that-ne",
+     "num": "LIII",
+     "title": "In every soul that shall be saved is a Godly Will that never assented to sin, nor ever shall.\" \"Ere that He made us He loved us, and when we were made we loved Him",
+     "heading": 858,
+     "start": 860,
+     "end": 874,
+     "section": 24,
+     "words": 918,
+     "firstWords": "And I saw that He willeth that we understand He taketh not",
+     "titleBlocks": [
+      859
+     ]
+    },
+    {
+     "slug": "54-faith-is-nought-else-but-a-right-understanding-with-true",
+     "num": "LIV",
+     "title": "Faith is nought else but a right understanding, with true belief and sure trust, of our Being: that we are in God, and God is in us: Whom we see not",
+     "heading": 875,
+     "start": 877,
+     "end": 880,
+     "section": 25,
+     "words": 451,
+     "firstWords": "And because of this great, endless love that God hath to all",
+     "titleBlocks": [
+      876
+     ]
+    },
+    {
+     "slug": "55-christ-is-our-way-mankind-shall-be-restored-from-double-d",
+     "num": "LV",
+     "title": "Christ is our Way\", \"Mankind shall be restored from double death",
+     "heading": 881,
+     "start": 883,
+     "end": 896,
+     "section": 25,
+     "words": 837,
+     "firstWords": "And thus Christ is our Way, us surely leading in His laws,",
+     "titleBlocks": [
+      882
+     ]
+    },
+    {
+     "slug": "56-god-is-nearer-to-us-than-our-own-soul-we-can-never-come-t",
+     "num": "LVI",
+     "title": "God is nearer to us than our own soul\" \"We can never come to full knowing of God till we know first clearly our own Soul",
+     "heading": 897,
+     "start": 899,
+     "end": 909,
+     "section": 25,
+     "words": 806,
+     "firstWords": "And thus I saw full surely that it is readier to us",
+     "titleBlocks": [
+      898
+     ]
+    },
+    {
+     "slug": "57-in-christ-our-two-natures-are-united",
+     "num": "LVII",
+     "title": "In Christ our two natures are united",
+     "heading": 910,
+     "start": 912,
+     "end": 939,
+     "section": 26,
+     "words": 2474,
+     "firstWords": "And anent our Substance He made us noble, and so rich that",
+     "titleBlocks": [
+      911
+     ]
+    },
+    {
+     "slug": "58-all-our-life-is-in-three-nature-mercy-grace-the-high-migh",
+     "num": "LVIII",
+     "title": "All our life is in three: 'Nature, Mercy, Grace.' The high Might of the Trinity is our Father, and the deep Wisdom of the Trinity is our Mother, and the great Love of the Trinity is our Lord",
+     "heading": 940,
+     "start": 942,
+     "end": 954,
+     "section": 26,
+     "words": 866,
+     "firstWords": "God, the blessed Trinity, which is everlasting Being, right as He is",
+     "titleBlocks": [
+      941
+     ]
+    },
+    {
+     "slug": "59-jesus-christ-that-doeth-good-against-evil-is-our-very-mot",
+     "num": "LIX",
+     "title": "Jesus Christ that doeth Good against evil is our Very Mother: we have our Being of Him where the Ground of Motherhood beginneth, with all the sweet Keeping by Love, that endlessly followeth.",
+     "heading": 955,
+     "start": 957,
+     "end": 965,
+     "section": 27,
+     "words": 588,
+     "firstWords": "And all this bliss we have by Mercy and Grace: which manner",
+     "titleBlocks": [
+      956
+     ]
+    },
+    {
+     "slug": "60-the-kind-loving-mother",
+     "num": "LX",
+     "title": "The Kind, loving, Mother",
+     "heading": 966,
+     "start": 968,
+     "end": 980,
+     "section": 27,
+     "words": 886,
+     "firstWords": "But now behoveth to say a little more of this forthspreading, as",
+     "titleBlocks": [
+      967
+     ]
+    },
+    {
+     "slug": "61-by-the-assay-of-this-falling-we-shall-have-an-high-marvel",
+     "num": "LXI",
+     "title": "By the assay of this falling we shall have an high marvellous knowing of Love in God, without end. For strong and marvellous is that love which may not, nor will not, be broken for trespass",
+     "heading": 981,
+     "start": 983,
+     "end": 994,
+     "section": 28,
+     "words": 1174,
+     "firstWords": "And in our spiritual forthbringing He useth more tenderness of keeping, without",
+     "titleBlocks": [
+      982
+     ]
+    },
+    {
+     "slug": "62-god-is-very-father-and-very-mother-of-nature-and-all-natu",
+     "num": "LXII",
+     "title": "God is Very Father and Very Mother of Nature: and all natures that He hath made to flow out of Him to work His will shall be restored and brought again into Him by the salvation of Mankind through the working of Grace",
+     "heading": 995,
+     "start": 997,
+     "end": 1005,
+     "section": 28,
+     "words": 412,
+     "firstWords": "For in that time He shewed our frailty and our fallings, our",
+     "titleBlocks": [
+      996
+     ]
+    },
+    {
+     "slug": "63-as-verily-as-sin-is-unclean-so-verily-is-it-unkind-a-dise",
+     "num": "LXIII",
+     "title": "As verily as sin is unclean, so verily is it unkind\", a disease or monstrous thing against nature. \"He shall heal us full fair.",
+     "heading": 1006,
+     "start": 1008,
+     "end": 1019,
+     "section": 28,
+     "words": 675,
+     "firstWords": "Here may we see that we have verily of Nature to hate",
+     "titleBlocks": [
+      1007
+     ]
+    },
+    {
+     "slug": "64-thou-shalt-come-up-above-a-very-fair-creature-a-little-ch",
+     "num": "LXIV",
+     "title": "_Thou shalt come up above._\" \"A very fair creature, a little Child, nimble and lively, whiter than lily",
+     "heading": 1020,
+     "start": 1022,
+     "end": 1040,
+     "section": 29,
+     "words": 838,
+     "firstWords": "Afore this time I had great longing and desire of God's gift",
+     "titleBlocks": [
+      1021
+     ]
+    },
+    {
+     "slug": "65-the-charity-of-god-maketh-in-us-such-a-unity-that-when-it",
+     "num": "LXV",
+     "title": "The Charity of God maketh in us such a unity that, when it is truly seen, no man can part himself from other",
+     "heading": 1041,
+     "start": 1043,
+     "end": 1053,
+     "section": 29,
+     "words": 547,
+     "firstWords": "And thus I understood that what man or woman with firm will[1]",
+     "titleBlocks": [
+      1042
+     ]
+    },
+    {
+     "slug": "66-all-was-closed-and-i-saw-no-more-for-the-folly-of-feeling",
+     "num": "LXVI",
+     "title": "All was closed, and I saw no more.\" \"For the folly of feeling a little bodily pain I unwisely lost for the time the comfort of all this blessed Shewing of our Lord God",
+     "heading": 1054,
+     "start": 1056,
+     "end": 1065,
+     "section": 30,
+     "words": 849,
+     "firstWords": "And after this the good Lord shewed the Sixteenth [Revelation] on the",
+     "titleBlocks": [
+      1055
+     ]
+    },
+    {
+     "slug": "67-the-place-that-jesus-taketh-in-our-soul-he-shall-never-re",
+     "num": "LXVII",
+     "title": "The place that Jesus taketh in our soul He shall never remove from, without end: for in us His homliest home and His endless dwelling.\" \"Our soul can never have rest in things that are beneath itself, yet may it not abide in the beholding of its self",
+     "heading": 1066,
+     "start": 1068,
+     "end": 1076,
+     "section": 30,
+     "words": 491,
+     "firstWords": "And then our Lord opened my spiritual eye and shewed me my",
+     "titleBlocks": [
+      1067
+     ]
+    },
+    {
+     "slug": "68-he-said-not-thou-shalt-not-be-tempested-thou-shalt-not-be",
+     "num": "LXVIII",
+     "title": "He said not: _Thou shalt not be tempested, thou shalt not be travailed, thou shalt not be afflicted_; but He said: _Thou shalt not be overcome_",
+     "heading": 1077,
+     "start": 1079,
+     "end": 1085,
+     "section": 30,
+     "words": 390,
+     "firstWords": "This was a delectable Sight and a restful Shewing, that it is",
+     "titleBlocks": [
+      1078
+     ]
+    },
+    {
+     "slug": "69-i-was-delivered-from-the-enemy-by-the-virtue-of-christ-s",
+     "num": "LXIX",
+     "title": "I was delivered from the Enemy by the virtue of Christ's Passion",
+     "heading": 1086,
+     "start": 1088,
+     "end": 1095,
+     "section": 31,
+     "words": 379,
+     "firstWords": "After this the Fiend came again with his heat and with his",
+     "titleBlocks": [
+      1087
+     ]
+    },
+    {
+     "slug": "70-above-the-faith-is-no-goodness-kept-in-this-life-as-to-my",
+     "num": "LXX",
+     "title": "Above the Faith is no goodness kept in this life, as to my sight, and beneath the Faith is no help of soul; but _in_ the Faith, _there_ willeth the Lord that we keep us",
+     "heading": 1096,
+     "start": 1098,
+     "end": 1104,
+     "section": 31,
+     "words": 549,
+     "firstWords": "In all this blessed Shewing our good Lord gave understanding that the",
+     "titleBlocks": [
+      1097
+     ]
+    },
+    {
+     "slug": "71-three-manners-of-looking-seen-in-our-lord-s-countenance",
+     "num": "LXXI",
+     "title": "Three manners of looking seen in our Lord's Countenance",
+     "heading": 1105,
+     "start": 1107,
+     "end": 1112,
+     "section": 31,
+     "words": 408,
+     "firstWords": "Glad and joyous and sweet is the Blissful lovely Cheer[1] of our",
+     "titleBlocks": [
+      1106
+     ]
+    },
+    {
+     "slug": "72-as-long-as-we-be-meddling-with-any-part-of-sin-we-shall-n",
+     "num": "LXXII",
+     "title": "As long as we be meddling with any part of sin we shall never see clearly the Blissful Countenance of our Lord",
+     "heading": 1113,
+     "start": 1115,
+     "end": 1127,
+     "section": 31,
+     "words": 868,
+     "firstWords": "But now behoveth me to tell in what manner I saw sin",
+     "titleBlocks": [
+      1114
+     ]
+    },
+    {
+     "slug": "73-two-manners-of-sickness-that-we-have-impatience-or-sloth",
+     "num": "LXXIII",
+     "title": "Two manners of sickness that we have: impatience, or sloth; despair, or mistrustful dread",
+     "heading": 1128,
+     "start": 1130,
+     "end": 1140,
+     "section": 32,
+     "words": 655,
+     "firstWords": "All the blessed teaching of our Lord was shewed by three parts:",
+     "titleBlocks": [
+      1129
+     ]
+    },
+    {
+     "slug": "74-there-is-no-dread-that-fully-pleaseth-god-in-us-but-rever",
+     "num": "LXXIV",
+     "title": "There is no dread that fully pleaseth God in us but reverent dread",
+     "heading": 1141,
+     "start": 1143,
+     "end": 1151,
+     "section": 32,
+     "words": 752,
+     "firstWords": "For I understand [that there be] four manner of dreads. One is",
+     "titleBlocks": [
+      1142
+     ]
+    },
+    {
+     "slug": "75-we-shall-see-verily-the-cause-of-all-things-that-he-hath",
+     "num": "LXXV",
+     "title": "We shall see verily the cause of all things that He hath done; and evermore we shall see the cause of all things that He hath permitted",
+     "heading": 1152,
+     "start": 1154,
+     "end": 1159,
+     "section": 32,
+     "words": 589,
+     "firstWords": "I saw that God can do all that we need. And these",
+     "titleBlocks": [
+      1153
+     ]
+    },
+    {
+     "slug": "76-the-soul-that-beholdeth-the-fair-nature-of-our-lord-jesus",
+     "num": "LXXVI",
+     "title": "The soul that beholdeth the fair nature of our Lord Jesus, it hateth no hell but sin",
+     "heading": 1160,
+     "start": 1162,
+     "end": 1168,
+     "section": 33,
+     "words": 564,
+     "firstWords": "I speak but little of reverent dread, for I hope it may",
+     "titleBlocks": [
+      1161
+     ]
+    },
+    {
+     "slug": "77-accuse-not-thyself-overmuch-deeming-that-thy-tribulation",
+     "num": "LXXVII",
+     "title": "Accuse not thyself overmuch, deeming that thy tribulation and thy woe is all thy fault.\" \"All thy living is penance profitable.\" \"In the remedy He willeth that we rejoice",
+     "heading": 1169,
+     "start": 1171,
+     "end": 1181,
+     "section": 33,
+     "words": 781,
+     "firstWords": "Our good Lord shewed the enmity of the Fiend: in which Shewing",
+     "titleBlocks": [
+      1170
+     ]
+    },
+    {
+     "slug": "78-though-we-be-highly-lifted-up-into-contemplation-by-the-s",
+     "num": "LXXVIII",
+     "title": "Though we be highly lifted up into contemplation by the special gift of our Lord, yet it is needful to us to have knowledge and sight of our sin and our feebleness",
+     "heading": 1182,
+     "start": 1184,
+     "end": 1193,
+     "section": 33,
+     "words": 615,
+     "firstWords": "Our Lord of His mercy sheweth us our sin and our feebleness",
+     "titleBlocks": [
+      1183
+     ]
+    },
+    {
+     "slug": "79-i-was-taught-that-i-should-see-mine-own-sin-and-not-other",
+     "num": "LXXIX",
+     "title": "I was taught that I should see mine own sin, and not other men’s sin, except it may be for comfort and help of my fellow-Christians",
+     "heading": 1194,
+     "start": 1196,
+     "end": 1203,
+     "section": 34,
+     "words": 579,
+     "firstWords": "Also I had of this [Revelation] more understanding. In that He shewed",
+     "titleBlocks": [
+      1195
+     ]
+    },
+    {
+     "slug": "80-himself-is-nearest-and-meekest-highest-and-lowest-and-doe",
+     "num": "LXXX",
+     "title": "Himself is nearest and meekest, highest and lowest, and doeth all.\" \"Love suffereth never to be without Pity",
+     "heading": 1204,
+     "start": 1206,
+     "end": 1211,
+     "section": 34,
+     "words": 546,
+     "firstWords": "By three things man standeth in this life; by which three God",
+     "titleBlocks": [
+      1205
+     ]
+    },
+    {
+     "slug": "81-god-seeth-all-our-living-a-penance-for-nature-longing-of",
+     "num": "LXXXI",
+     "title": "God seeth all our living a penance: for nature-longing of our love is to Him a lasting penance in us.\" \"His love maketh Him to long",
+     "heading": 1212,
+     "start": 1214,
+     "end": 1222,
+     "section": 34,
+     "words": 418,
+     "firstWords": "Our Good Lord shewed Himself in diverse manners both in heaven and",
+     "titleBlocks": [
+      1213
+     ]
+    },
+    {
+     "slug": "82-in-falling-and-in-rising-we-are-ever-preciously-kept-in-o",
+     "num": "LXXXII",
+     "title": "In falling and in rising we are ever preciously kept in one Love",
+     "heading": 1223,
+     "start": 1225,
+     "end": 1232,
+     "section": 34,
+     "words": 596,
+     "firstWords": "But here shewed our courteous Lord the moaning and the mourning of",
+     "titleBlocks": [
+      1224
+     ]
+    },
+    {
+     "slug": "83-life-love-and-light",
+     "num": "LXXXIII",
+     "title": "Life, Love, and Light",
+     "heading": 1233,
+     "start": 1235,
+     "end": 1240,
+     "section": 35,
+     "words": 390,
+     "firstWords": "I had, in part, touching, sight, and feeling in three properties of",
+     "titleBlocks": [
+      1234
+     ]
+    },
+    {
+     "slug": "84-charity",
+     "num": "LXXXIV",
+     "title": "Charity",
+     "heading": 1241,
+     "start": 1243,
+     "end": 1245,
+     "section": 35,
+     "words": 177,
+     "firstWords": "The light is Charity, and the measuring of this light is done",
+     "titleBlocks": [
+      1242
+     ]
+    },
+    {
+     "slug": "85-lord-blessed-mayest-thou-be-for-it-is-thus-it-is-well",
+     "num": "LXXXV",
+     "title": "Lord, blessed mayest Thou be, for it is thus: it is well",
+     "heading": 1246,
+     "start": 1248,
+     "end": 1248,
+     "section": 35,
+     "words": 212,
+     "firstWords": "And in this sight I marvelled highly. For notwithstanding our simple living",
+     "titleBlocks": [
+      1247
+     ]
+    },
+    {
+     "slug": "86-love-was-our-lord-s-meaning",
+     "num": "LXXXVI",
+     "title": "Love was our Lord's Meaning",
+     "heading": 1249,
+     "start": 1251,
+     "end": 1365,
+     "section": 35,
+     "words": 1538,
+     "firstWords": "This book is begun by God's gift and His grace, but it",
+     "titleBlocks": [
+      1250
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "2e01d1a44b27b001b51053053fe69db771a6609edbbbc5a7fb31da9d4b3cc4b9",
+    "source": "data/structured/revelations-divine-love-pg-52958.json",
+    "roles": [
+     [
+      192,
+      "chapter"
+     ],
+     [
+      193,
+      "heading"
+     ],
+     [
+      217,
+      "chapter"
+     ],
+     [
+      218,
+      "heading"
+     ],
+     [
+      231,
+      "chapter"
+     ],
+     [
+      232,
+      "heading"
+     ],
+     [
+      253,
+      "chapter"
+     ],
+     [
+      254,
+      "heading"
+     ],
+     [
+      263,
+      "chapter"
+     ],
+     [
+      264,
+      "heading"
+     ],
+     [
+      278,
+      "chapter"
+     ],
+     [
+      279,
+      "heading"
+     ],
+     [
+      298,
+      "chapter"
+     ],
+     [
+      299,
+      "heading"
+     ],
+     [
+      309,
+      "chapter"
+     ],
+     [
+      310,
+      "heading"
+     ],
+     [
+      320,
+      "chapter"
+     ],
+     [
+      321,
+      "heading"
+     ],
+     [
+      329,
+      "chapter"
+     ],
+     [
+      330,
+      "heading"
+     ],
+     [
+      350,
+      "chapter"
+     ],
+     [
+      351,
+      "heading"
+     ],
+     [
+      367,
+      "chapter"
+     ],
+     [
+      368,
+      "heading"
+     ],
+     [
+      378,
+      "chapter"
+     ],
+     [
+      379,
+      "heading"
+     ],
+     [
+      392,
+      "chapter"
+     ],
+     [
+      393,
+      "heading"
+     ],
+     [
+      403,
+      "chapter"
+     ],
+     [
+      404,
+      "heading"
+     ],
+     [
+      411,
+      "chapter"
+     ],
+     [
+      412,
+      "heading"
+     ],
+     [
+      418,
+      "chapter"
+     ],
+     [
+      419,
+      "heading"
+     ],
+     [
+      430,
+      "chapter"
+     ],
+     [
+      431,
+      "heading"
+     ],
+     [
+      441,
+      "chapter"
+     ],
+     [
+      442,
+      "heading"
+     ],
+     [
+      449,
+      "chapter"
+     ],
+     [
+      450,
+      "heading"
+     ],
+     [
+      456,
+      "chapter"
+     ],
+     [
+      457,
+      "heading"
+     ],
+     [
+      467,
+      "chapter"
+     ],
+     [
+      468,
+      "heading"
+     ],
+     [
+      481,
+      "chapter"
+     ],
+     [
+      482,
+      "heading"
+     ],
+     [
+      496,
+      "chapter"
+     ],
+     [
+      497,
+      "heading"
+     ],
+     [
+      506,
+      "chapter"
+     ],
+     [
+      507,
+      "heading"
+     ],
+     [
+      516,
+      "chapter"
+     ],
+     [
+      517,
+      "heading"
+     ],
+     [
+      521,
+      "chapter"
+     ],
+     [
+      522,
+      "heading"
+     ],
+     [
+      538,
+      "chapter"
+     ],
+     [
+      539,
+      "heading"
+     ],
+     [
+      548,
+      "chapter"
+     ],
+     [
+      549,
+      "heading"
+     ],
+     [
+      554,
+      "chapter"
+     ],
+     [
+      555,
+      "heading"
+     ],
+     [
+      560,
+      "chapter"
+     ],
+     [
+      561,
+      "heading"
+     ],
+     [
+      569,
+      "chapter"
+     ],
+     [
+      570,
+      "heading"
+     ],
+     [
+      587,
+      "chapter"
+     ],
+     [
+      588,
+      "heading"
+     ],
+     [
+      594,
+      "chapter"
+     ],
+     [
+      595,
+      "heading"
+     ],
+     [
+      600,
+      "chapter"
+     ],
+     [
+      601,
+      "heading"
+     ],
+     [
+      611,
+      "chapter"
+     ],
+     [
+      612,
+      "heading"
+     ],
+     [
+      628,
+      "chapter"
+     ],
+     [
+      629,
+      "heading"
+     ],
+     [
+      636,
+      "chapter"
+     ],
+     [
+      637,
+      "heading"
+     ],
+     [
+      646,
+      "chapter"
+     ],
+     [
+      647,
+      "heading"
+     ],
+     [
+      658,
+      "chapter"
+     ],
+     [
+      659,
+      "heading"
+     ],
+     [
+      668,
+      "chapter"
+     ],
+     [
+      669,
+      "heading"
+     ],
+     [
+      683,
+      "chapter"
+     ],
+     [
+      684,
+      "heading"
+     ],
+     [
+      694,
+      "chapter"
+     ],
+     [
+      695,
+      "heading"
+     ],
+     [
+      707,
+      "chapter"
+     ],
+     [
+      708,
+      "heading"
+     ],
+     [
+      716,
+      "chapter"
+     ],
+     [
+      717,
+      "heading"
+     ],
+     [
+      722,
+      "chapter"
+     ],
+     [
+      723,
+      "heading"
+     ],
+     [
+      732,
+      "chapter"
+     ],
+     [
+      733,
+      "heading"
+     ],
+     [
+      744,
+      "chapter"
+     ],
+     [
+      745,
+      "heading"
+     ],
+     [
+      757,
+      "chapter"
+     ],
+     [
+      758,
+      "heading"
+     ],
+     [
+      766,
+      "chapter"
+     ],
+     [
+      767,
+      "heading"
+     ],
+     [
+      778,
+      "chapter"
+     ],
+     [
+      779,
+      "heading"
+     ],
+     [
+      836,
+      "chapter"
+     ],
+     [
+      837,
+      "heading"
+     ],
+     [
+      858,
+      "chapter"
+     ],
+     [
+      859,
+      "heading"
+     ],
+     [
+      875,
+      "chapter"
+     ],
+     [
+      876,
+      "heading"
+     ],
+     [
+      881,
+      "chapter"
+     ],
+     [
+      882,
+      "heading"
+     ],
+     [
+      897,
+      "chapter"
+     ],
+     [
+      898,
+      "heading"
+     ],
+     [
+      910,
+      "chapter"
+     ],
+     [
+      911,
+      "heading"
+     ],
+     [
+      940,
+      "chapter"
+     ],
+     [
+      941,
+      "heading"
+     ],
+     [
+      955,
+      "chapter"
+     ],
+     [
+      956,
+      "heading"
+     ],
+     [
+      966,
+      "chapter"
+     ],
+     [
+      967,
+      "heading"
+     ],
+     [
+      981,
+      "chapter"
+     ],
+     [
+      982,
+      "heading"
+     ],
+     [
+      995,
+      "chapter"
+     ],
+     [
+      996,
+      "heading"
+     ],
+     [
+      1006,
+      "chapter"
+     ],
+     [
+      1007,
+      "heading"
+     ],
+     [
+      1020,
+      "chapter"
+     ],
+     [
+      1021,
+      "heading"
+     ],
+     [
+      1041,
+      "chapter"
+     ],
+     [
+      1042,
+      "heading"
+     ],
+     [
+      1054,
+      "chapter"
+     ],
+     [
+      1055,
+      "heading"
+     ],
+     [
+      1066,
+      "chapter"
+     ],
+     [
+      1067,
+      "heading"
+     ],
+     [
+      1077,
+      "chapter"
+     ],
+     [
+      1078,
+      "heading"
+     ],
+     [
+      1086,
+      "chapter"
+     ],
+     [
+      1087,
+      "heading"
+     ],
+     [
+      1096,
+      "chapter"
+     ],
+     [
+      1097,
+      "heading"
+     ],
+     [
+      1105,
+      "chapter"
+     ],
+     [
+      1106,
+      "heading"
+     ],
+     [
+      1113,
+      "chapter"
+     ],
+     [
+      1114,
+      "heading"
+     ],
+     [
+      1128,
+      "chapter"
+     ],
+     [
+      1129,
+      "heading"
+     ],
+     [
+      1141,
+      "chapter"
+     ],
+     [
+      1142,
+      "heading"
+     ],
+     [
+      1152,
+      "chapter"
+     ],
+     [
+      1153,
+      "heading"
+     ],
+     [
+      1160,
+      "chapter"
+     ],
+     [
+      1161,
+      "heading"
+     ],
+     [
+      1169,
+      "chapter"
+     ],
+     [
+      1170,
+      "heading"
+     ],
+     [
+      1182,
+      "chapter"
+     ],
+     [
+      1183,
+      "heading"
+     ],
+     [
+      1194,
+      "chapter"
+     ],
+     [
+      1195,
+      "heading"
+     ],
+     [
+      1204,
+      "chapter"
+     ],
+     [
+      1205,
+      "heading"
+     ],
+     [
+      1212,
+      "chapter"
+     ],
+     [
+      1213,
+      "heading"
+     ],
+     [
+      1223,
+      "chapter"
+     ],
+     [
+      1224,
+      "heading"
+     ],
+     [
+      1233,
+      "chapter"
+     ],
+     [
+      1234,
+      "heading"
+     ],
+     [
+      1241,
+      "chapter"
+     ],
+     [
+      1242,
+      "heading"
+     ],
+     [
+      1246,
+      "chapter"
+     ],
+     [
+      1247,
+      "heading"
+     ],
+     [
+      1249,
+      "chapter"
+     ],
+     [
+      1250,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

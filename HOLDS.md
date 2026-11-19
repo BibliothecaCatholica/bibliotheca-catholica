@@ -9,7 +9,7 @@ When a hold is released or finished, delete its row in the same commit as the wo
 | Advent launch publishing (docs/ADVENT-LAUNCH.md, unchecked items): Substack preview on Nov 22 and daily drafts reconciled with `data/advent-2026.json`, social copy, daily delivery Nov 29 to Dec 24, recovery contact and last known-good deploy | Publishing (Substack and X bots) | the owner's go and account access | 2026-11-19 | Do each item outside the repo, then tick it in ADVENT-LAUNCH.md with evidence. |
 | Illustrated and kids EPUB art project | Bibliotheca EPUB | the owner's bigger discussion | 2026-11-15 | Discuss. |
 | Aquinas tool work: PR #9 review, adding II-II and III, doc fixes | Bibliotheca Aquinas | usage | 2026-11-15 | Resume when the owner says. |
-| Full Orthodoxy flow for the 105 unstructured editions | Claude Code (owner runs it) | the owner running it | 2026-11-15 | Use `docs/claude-code-chesterton-prompt.md`. |
+| Full Orthodoxy flow for the 102 unstructured editions (next by reader value: City of God needs a two-volume map; Catherine's Letters and the Apostolic Fathers need hand maps) | Claude Code (owner runs it) | the owner running it | 2026-11-15 | Use `docs/claude-code-chesterton-prompt.md`. |
 | Plummer, Reeves, and Meyer Irish editions | Claude Code or a person | transcription (scan-only) | 2026-11-15 | Transcribe. |
 | Gutenberg Australia files blocked by its bot check: Walsh's The World's Debt to the Catholic Church, Chesterton's The Sword of Wood, and Baring's C | Catholic Repo | a person downloading them in a browser | 2026-11-15 | Download, then host. |
 | Candles' Beams | Catholic Repo | a scan to check against | 2026-11-16 | Find a dated scan, then host. |

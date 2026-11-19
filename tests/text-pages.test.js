@@ -50,5 +50,5 @@ test('the work page in the app lists the parts by real path',()=>{
  const c={window:{TEXT_PAGES:JSON.parse(fs.readFileSync('data/text-pages.js','utf8').replace(/^window\.TEXT_PAGES=/,'').replace(/;\s*$/,''))},esc:s=>String(s)};
  vm.runInNewContext(m[0]+';this.partsList=partsList;',c);
  for(const [w,d] of Object.entries(TP)){const h=c.partsList({id:w});for(const x of d.items)assert(h.includes('href="/work/'+w+'/'+d.kind+'/'+x.slug+'/"'),x.slug)}
- assert.equal(c.partsList({id:'confessions'}),'');
+ assert.equal(c.partsList({id:'divine-comedy'}),'');  // verse, kept out of chapter maps
 });

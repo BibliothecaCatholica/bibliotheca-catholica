@@ -52,6 +52,10 @@ PART_D={
     'man-who-knew-too-much':{'about':'Project Gutenberg #1720: first published in 1922. Eight Horne Fisher stories, divided as the hosted text heads them; no words were changed.'},
     'flying-inn':{'about':'Project Gutenberg #59239: the John Lane Company, New York printing (copyright 1914). Twenty-five chapters, divided as the hosted text heads them; no words were changed.'},
     'trees-of-pride':{'about':'Project Gutenberg #1721: first published in 1922. Four chapters, divided as the hosted text heads them; no words were changed.'},
+    # Orthodoxy flow batch 1 (November 19, 2026). Each sentence restates the edition's record and its map.
+    'confessions':{'about':'Project Gutenberg #3296: the translation by E. B. Pusey. Thirteen books, divided as the hosted text heads them; no words were changed.'},
+    'betrothed':{'about':'Project Gutenberg #35155: the English translation published in London by Richard Bentley in 1834 (Standard Novels). Thirty-seven chapters, divided as the hosted text heads them; the transcriber’s note stays in the reader. No words were changed.'},
+    'revelations-divine-love':{'about':'Project Gutenberg #52958: Grace Warrack’s version (London: Methuen, 1901). Julian’s eighty-six chapters, divided as the hosted text heads them; Warrack’s introduction stays in the reader. No words were changed.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

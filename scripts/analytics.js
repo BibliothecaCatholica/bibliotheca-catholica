@@ -31,8 +31,8 @@ function pubHosts(){if(PUB_HOSTS)return PUB_HOSTS;PUB_HOSTS={};try{var P=(root.A
 /* linkKind(domain, hints): 'bookshop', 'affiliate', 'publisher', 'substack', 'audio', 'official', 'source', or 'other', in that order
    of precedence (analytics spec 2026-11-03). hints: {publisher:key, substack:bool, source:bool (the link has data-open-text)}.
    Each host matches itself and its subdomains. */
-/* AFFILIATE_HOSTS: affiliate referral redirectors (lddy.no is the TAN Books LeadDyno link, QA click-tracking plan 2026-11-09) */
-var AFFILIATE_HOSTS=['lddy.no'],AUDIO_HOSTS=['librivox.org'],OFFICIAL_HOSTS=['vatican.va','usccb.org','vaticannews.va'],
+/* AFFILIATE_HOSTS: affiliate referral hosts (lddy.no is the TAN Books LeadDyno link, QA click-tracking plan 2026-11-09; magisterium.com is the Magisterium AI Pro referral, 2026-11-19) */
+var AFFILIATE_HOSTS=['lddy.no','magisterium.com'],AUDIO_HOSTS=['librivox.org'],OFFICIAL_HOSTS=['vatican.va','usccb.org','vaticannews.va'],
   SOURCE_HOSTS=['isidore.co','gutenberg.org','newadvent.org','ccel.org','archive.org','documentacatholicaomnia.eu','tertullian.org','dbu.edu','sourcebooks.fordham.edu'];
 function hostIn(d,list){for(var i=0;i<list.length;i++){var h=list[i];if(d===h||d.slice(-h.length-1)==='.'+h)return true}return false}
 function linkKind(d,hints){hints=hints||{};d=str(d).toLowerCase();

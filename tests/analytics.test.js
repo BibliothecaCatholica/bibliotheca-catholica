@@ -219,15 +219,17 @@ test('2026-11-09: the hash fallback is the existing landing page_view, not a new
  const APP=fs.readFileSync('app.js','utf8');assert.match(APP,/if\(landing&&A\.stripHashUtm&&A\.stripHashUtm\(\)\)gaLast=location\.pathname\+location\.hash/);
 });
 
-test('affiliate preview 2026-11-09: lddy.no (TAN Books referral) is link_kind affiliate, checked right after bookshop',()=>{
+test('affiliate preview 2026-11-09: lddy.no (TAN Books referral) and magisterium.com are link_kind affiliate, checked right after bookshop',()=>{
  const {A}=load(false);
- assert.deepEqual(Array.from(A.AFFILIATE_HOSTS),['lddy.no']);
+ assert.deepEqual(Array.from(A.AFFILIATE_HOSTS),['lddy.no','magisterium.com']);
  assert.equal(A.linkKind('lddy.no'),'affiliate');assert.equal(A.linkKind('go.lddy.no'),'affiliate');assert.equal(A.linkKind('notlddy.no'),'other');
  assert.equal(A.linkKind('lddy.no',{publisher:'tan'}),'affiliate');assert.equal(A.linkKind('lddy.no',{source:true}),'affiliate');
+ assert.equal(A.linkKind('magisterium.com'),'affiliate');assert.equal(A.linkKind('www.magisterium.com'),'affiliate');assert.equal(A.linkKind('notmagisterium.com'),'other');
+ assert.equal(A.linkKind('www.magisterium.com',{publisher:'tan'}),'affiliate');assert.equal(A.linkKind('www.magisterium.com',{source:true}),'affiliate');
  assert.equal(A.linkKind('bookshop.org'),'bookshop');assert.equal(A.linkKind('bookshop.org',{publisher:'tan'}),'bookshop');
  assert.equal(A.linkKind('bibliothecacatholica.substack.com'),'substack');assert.equal(A.linkKind('tanbooks.com'),'publisher');
  const kinds=['bookshop','affiliate','publisher','substack','audio','official','source','other'];
- for(const [href,d,k] of [['https://lddy.no/1qbrw','lddy.no','affiliate'],['https://bookshop.org/a/130222/9780898705522','bookshop.org','bookshop'],['https://bibliothecacatholica.substack.com/subscribe','bibliothecacatholica.substack.com','substack']]){
+ for(const [href,d,k] of [['https://lddy.no/1qbrw','lddy.no','affiliate'],['https://www.magisterium.com/pro/micah','magisterium.com','affiliate'],['https://bookshop.org/a/130222/9780898705522','bookshop.org','bookshop'],['https://bibliothecacatholica.substack.com/subscribe','bibliothecacatholica.substack.com','substack']]){
   const {A,calls,ctx}=load(true);ctx.location.hash='#/work/orthodoxy';
   const a={getAttribute:x=>x==='href'?href:null,closest:sel=>sel==='a[href]'?a:null};
   A.onClick({target:a});

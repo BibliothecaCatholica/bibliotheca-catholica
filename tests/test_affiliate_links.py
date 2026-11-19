@@ -3,6 +3,7 @@ edition-guide ISBNs, "Browse TAN Books" through the referral link, the one-line 
 the /disclosure/ page, no Amazon, the Substack sign-up on every page (the embed only on the home page and the Advent
 plan), and no new analytics."""
 import json, pathlib, re, unittest
+from html import escape as html_escape
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 FTC = 'Some links are affiliate links. If you buy through them, Bibliotheca Catholica may earn a small commission at no extra cost to you. It helps keep the library free.'
@@ -162,13 +163,8 @@ class AffiliateLinkTests(unittest.TestCase):
         self.assertIn('Some links to Bookshop.org, TAN Books, and Magisterium AI are affiliate links', pol)
         self.assertIn('The “Search another collection” form on the <a href="/libraries/">Libraries</a> page sends what you type to Open Library', pol)
 
-    def test_magisterium_affiliate_on_libraries_only(self):
-        # one placement: /libraries/, with sponsored rel and the commission line beside the link; not a donation
-        hits = []
-        for name, html in self.pages.items():
-            if MAG in html:
-                hits.append(name)
-        self.assertEqual(set(hits), {'libraries/index.html', 'disclosure/index.html'})
+    def test_magisterium_on_libraries(self):
+        # #70: /libraries/ keeps its own wording, with sponsored rel and the commission line beside the link; not a donation
         m = main_of(self.pages['libraries/index.html'])
         a = re.search(r'<a [^>]*href="' + re.escape(MAG) + r'"[^>]*>', m).group(0)
         self.assertIn('rel="noopener sponsored"', a)
@@ -179,16 +175,78 @@ class AffiliateLinkTests(unittest.TestCase):
         self.assertIn('href="/disclosure/"', m[m.index(MAG_LINE)-200:m.index(MAG_LINE)+200])
         self.assertNotIn('donation', m.lower())
         self.assertNotIn('support the library', m.lower())
-        # kept off author pages, header, footer, and home
-        home = self.pages['index.html']
-        self.assertNotIn(MAG, main_of(home))
-        self.assertNotIn(MAG, home[home.index('<header'):home.index('</header>')])
-        self.assertNotIn(MAG, home[home.index('<footer'):])
-        for name, html in self.pages.items():
-            if name.startswith('author/'):
+
+    def test_magisterium_allowlist(self):
+        # rule 7 (owner-approved placements, November 19, 2026): the referral is on the pages in study_partner.PAGES only
+        import sys; sys.path.insert(0, str(ROOT / 'tools')); import study_partner as SP
+        self.assertEqual(SP.partner(), ('Magisterium AI', MAG))  # read from partners.magisterium in data/affiliates.js
+        study = (ROOT / 'study/index.html').read_text(encoding='utf-8')
+        allp = dict(self.pages, **{'study/index.html': study})
+        hits = {n for n, h in allp.items() if MAG in h}
+        self.assertEqual(hits, {r + '/index.html' for r in SP.PAGES})
+        for name, html in allp.items():
+            head = html[:html.index('<main')] if '<main' in html else html
+            self.assertNotIn(MAG, head, name + ': header')
+            self.assertNotIn(MAG, html[html.index('<footer'):], name + ': footer')
+            if name.startswith('author/') or '/ch/' in name or '/story/' in name or re.match(r'summa/[^/]+/', name) or name == 'index.html':
                 self.assertNotIn(MAG, html, name)
-            foot = html[html.index('<footer'):]
-            self.assertNotIn(MAG, foot, name)
+        after = {'magisterium': '</ul>', 'councils': 'class="council-note', 'summa': 'class="dl-row"', 'study': 'id="scans"'}
+        for r in SP.PANEL_ROUTES:
+            m = main_of(allp[r + '/index.html'])
+            self.assertEqual(m.count('class="study-partner"'), 1, r)  # one panel, no repeats
+            self.assertEqual(m.count(MAG), 1, r)
+            panel = re.search(r'<aside class="study-partner".*?</aside>', m, re.S).group(0)
+            self.assertIn('<h2 id="study-partner-h">Study with Magisterium AI</h2>', panel)
+            self.assertEqual(re.findall(r'<a [^>]*href="' + re.escape(MAG) + r'"[^>]*>([^<]*)</a>', panel), ['Try Magisterium AI Pro ↗'], r)
+            a = re.search(r'<a [^>]*href="' + re.escape(MAG) + r'"[^>]*>', panel).group(0)
+            self.assertIn('rel="noopener sponsored"', a); self.assertIn('target="_blank"', a)
+            self.assertNotRegex(a, r'data-(support|ga|track|event)', r)
+            self.assertEqual(panel.count(DLINE), 1, r); self.assertEqual(m.count('class="disclosure'), 1, r)  # once per page
+            self.assertLess(m.rindex(after[r]) if r == 'magisterium' else m.index(after[r]), m.index(panel), r + ': below the free reading options')
+            copy = re.findall(r'<p>([^<]*)</p>', panel)[0]
+            self.assertEqual(copy, html_escape(SP.COPY[r]))
+            self.assertIn(len(re.findall(r'(?<!\bSt)[.!?](?:\s|$)', copy)), (1, 2), r)  # 'St.' does not end a sentence
+            for bad in ('—', 'donat', '<iframe', 'onclick', 'position:fixed', 'banner'):
+                self.assertNotIn(bad, panel.lower(), r)
+        # the app renders /magisterium/ itself: the same panel from SITE_COPY, after the resource rows
+        sc = jsvar('data/site-copy.js', 'SITE_COPY')
+        self.assertEqual(sc['studyPartner'], SP.panel('magisterium'))
+        app = (ROOT / 'app.js').read_text(encoding='utf-8')
+        self.assertIn("<div id=\"rs-out\"></div>'+(k==='magisterium'?(SC.studyPartner||''):'')", app)
+        # never hard-coded: the URL lives only in data/affiliates.js (and the pages built from it)
+        for f in list((ROOT / 'tools').glob('*.py')) + [ROOT / 'app.js'] + list((ROOT / 'scripts').glob('*.js')):
+            self.assertNotIn(MAG, f.read_text(encoding='utf-8'), f.name)
+        # no affiliate link in the open data; entry 70 keeps its neutral catalogue description
+        proj = jsvar('data/projects.js', 'PROJECTS_DATA')
+        e70 = next(x for x in proj['items'] if x['id'] == 70)
+        self.assertEqual(e70['d'], 'A Catholic AI assistant that answers from Church documents with citations.')
+        for f in [ROOT / 'data/projects.js', ROOT / 'data/library.json'] + list((ROOT / 'data/open').glob('*')):
+            if f.is_file():
+                s = f.read_text(encoding='utf-8', errors='ignore')
+                self.assertNotIn('magisterium.com/pro', s, f.name); self.assertNotIn('via=micah', s, f.name)
+
+    def test_support_names_the_tool_apart_from_donations(self):
+        sc = jsvar('data/site-copy.js', 'SITE_COPY')
+        note = sc['supportTools']
+        self.assertIn('<h2 class="sup-h">Tools we support</h2>', note)
+        self.assertIn('Magisterium AI', note)
+        self.assertNotIn(MAG, note); self.assertNotIn('sponsored', note)  # no referral link on /support/
+        self.assertIn('not a donation to the library', note)
+        self.assertIn('The only way to donate is PayPal', note)
+        app = (ROOT / 'app.js').read_text(encoding='utf-8')
+        sup = app[app.index('function support()'):app.index("render(h,'support')}")]
+        self.assertLess(sup.index('Donate with PayPal'), sup.index('SC.supportTools'))
+        self.assertLess(sup.index('Other ways to help'), sup.index('SC.supportTools'))
+        self.assertEqual(re.findall(r"var SUPPORT=\{([a-z]+):", app), ['paypal'])  # PayPal stays the only donation option
+        self.assertNotIn('buymeacoffee', app.lower())
+
+    def test_disclosure_lists_every_magisterium_page(self):
+        html = main_of(self.pages['disclosure/index.html'])
+        para = html[html.index('<h2>Magisterium AI</h2>'):]
+        para = para[:para.index('</p>')]
+        for href in ('/libraries/', '/magisterium/', '/councils/', '/summa/', '/study/'):
+            self.assertIn('href="' + href + '"', para)
+        self.assertIn(MAG, para)
 
     def test_agents_md_rules(self):
         t = ''.join((ROOT / f).read_text() for f in ('docs/IMPLEMENTATION-NOTES.md', 'docs/PROJECT-RULES.md', 'docs/ANALYTICS.md'))

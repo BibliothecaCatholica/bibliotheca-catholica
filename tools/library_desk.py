@@ -1,9 +1,8 @@
 """Shared, progressively enhanced research paths for /libraries/."""
-import html,json,re
+import html,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 E=html.escape
-MAGISTERIUM_URL='https://www.magisterium.com/pro/micah'
 PATHS=[
  ('Read the Fathers','Compare a readable text with a scanned edition and follow its Scripture references.','/study/','Open the study desk'),
  ('Find a saint','Browse sourced names and calendar dates, then follow writings and biographies.','/saints/','Explore the saints'),
@@ -18,10 +17,8 @@ def desk_html():
  h+='</div><div class="library-source-search"><h3>Search another collection</h3><form id="library-source-form" action="https://openlibrary.org/search" method="get" target="_blank" rel="noopener"><label for="library-source-q">Title, author, or subject</label><input id="library-source-q" name="q" type="search" maxlength="200" placeholder="For example, Bede or Lives of the Saints" required><label for="library-source">Collection</label><select id="library-source" disabled><option>Open Library</option></select><button class="btn" type="submit">Search at source ↗</button></form><p id="library-source-note" class="small" role="status">Search opens Open Library in a new tab. Your query goes to the collection you choose only when you submit.</p></div><p><a href="/study/">Search passages in our hosted editions</a> · <a href="/saints/books/">Read lives of the saints here</a></p></section>'
  return h+magisterium_html()
 def magisterium_partner():
- s=(ROOT/'data'/'affiliates.js').read_text(encoding='utf-8');block=s[s.index('partners'):]
- m=re.search(r"magisterium:\s*\{\s*name:\s*'([^']+)',\s*url:\s*'([^']+)'",block)
- assert m and m.group(2)==MAGISTERIUM_URL,m
- return m.group(1),m.group(2)
+ from study_partner import partner  # partners.magisterium in data/affiliates.js, read in one place
+ return partner()
 def magisterium_html():
  name,url=magisterium_partner()
  return ('<section class="library-affiliate" aria-labelledby="magisterium-aff-h"><h2 id="magisterium-aff-h">'+E(name)+'</h2>'

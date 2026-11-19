@@ -8,6 +8,7 @@ reviews, or claims we cannot check.  Oxford commas; follow the money rules in AG
 import html
 E=html.escape
 from rights_rule import RULE_SENTENCE
+import study_partner
 # (path, label, one-line description) for the home page's "Sections of the library" list
 SECTION_LINKS=[
  ('/library/','Reading Room: Discover & Read','classic texts to read here, with source editions and rights notes'),
@@ -134,7 +135,7 @@ def disclosure_page(ftc):
      '<h2>TAN Books</h2>'
      '<p>Bibliotheca Catholica is a TAN Books affiliate. The “Browse TAN Books” link on classic Catholic works and their authors’ pages is a referral link (it passes through lddy.no, TAN Books’ referral service, and opens tanbooks.com). If you buy from TAN Books after following it, we may earn a small commission at no extra cost to you. The link opens TAN’s store, not a particular book, and does not mean TAN publishes that title.</p>'
      '<h2>Magisterium AI</h2>'
-     '<p>Bibliotheca Catholica is a Magisterium AI affiliate. The “Try Magisterium AI Pro” link on the '+a('/libraries/','Digital Libraries')+' page is a referral link (https://www.magisterium.com/pro/micah, which opens Magisterium’s Pro page with our referral). Readers who subscribe to Pro through that link get 25% off, and we earn a 10% commission. It is a subscription to their research tool, not a donation to the library.</p>'
+     '<p>Bibliotheca Catholica is a Magisterium AI affiliate. The “Try Magisterium AI Pro” link appears on these pages: '+study_partner.disclosure_pages_html(a)+'. It is a referral link ('+E(study_partner.partner()[1])+', which opens Magisterium’s Pro page with our referral). Readers who subscribe to Pro through that link get 25% off, and we earn a 10% commission. It is a subscription to their research tool, not a donation to the library, and it never appears on author pages, chapter or reading pages, the home page, or in the header or footer.</p>'
      '<h2>Other links</h2>'
      '<p>Links to other publishers, libraries, and bookstores, including the publisher searches in the edition guides, are ordinary links, and we earn nothing from them unless a program is added to this page. We do not use Amazon affiliate links.</p>'
      '<h2>How we choose</h2>'

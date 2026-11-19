@@ -70,6 +70,7 @@ class ReadingPlans(unittest.TestCase):
         shows must be on the static page and in data/reading-plans.json exactly."""
         T=json.loads((ROOT/'data/advent-2026.json').read_text(encoding='utf-8'))
         self.assertEqual(T['canonicalUrl'],'https://bibliothecacatholica.com/data/advent-2026.json')
+        self.assertNotIn('buymeacoffee',T['footer'].lower());self.assertNotIn('tax-deductible',T['footer'].lower());self.assertIn('https://bibliothecacatholica.com/#/support',T['footer'])
         self.assertEqual(len(T['days']),26);self.assertEqual(PLAN['text'],'data/advent-2026.json')
         self.assertIn(html.escape(T['intro'],quote=False),PAGE)
         for t,d in zip(T['days'],PLAN['days']):

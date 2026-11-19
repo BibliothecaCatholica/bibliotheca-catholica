@@ -31,5 +31,7 @@ class SocialLinks(unittest.TestCase):
         app=(ROOT/'app.js').read_text();sup=app[app.index('function support()'):app.index("render(h,'support')}")]
         self.assertIn('<a href="%s" target="_blank" rel="noopener">Subscribe on Substack'%NL,sup)
         self.assertNotIn('data-support="newsletter',sup)
+        self.assertNotIn('buymeacoffee',sup.lower());self.assertNotIn('Buy Me a Coffee',sup)
+        self.assertIn('data-support="paypal"',sup);self.assertIn("SUPPORT.paypal",sup)
         for t in (m,sup,(ROOT/'index.html').read_text()):self.assertNotRegex(t,r'(?i)latest posts|read our posts|new posts')
 if __name__=='__main__':unittest.main()

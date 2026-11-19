@@ -655,11 +655,10 @@ function results(q){
 var srchT=null,SCOPE_LABEL={all:'Everything',curated:'Selected library',isidore:'Isidore Index'};
 function notfound(){render('<div class="empty"><h2>Not found</h2><p><a href="#/">Return home</a></p></div>','')}
 /* ---------- v7: Support the Library ---------- */
-var SUPPORT={bmc:'https://buymeacoffee.com/bibliothecacatholica',paypal:'https://www.paypal.com/donate/?hosted_button_id=D48R9YU7SH43A'};
+var SUPPORT={paypal:'https://www.paypal.com/donate/?hosted_button_id=D48R9YU7SH43A'};
 function support(){var shop=AFF.bookshopShop||'';
   var h='<div class="page-head"><div class="eyebrow">Adiuva bibliothecam</div><h1>Support the Library</h1><p class="lede">Bibliotheca Catholica is free for everyone, with no ads and no paywall. Donations cover hosting and the hours of curation behind every author page, edition, and link.</p></div>'+
    '<div class="sup-grid">'+
-   '<div class="sup-card"><div class="sup-ico" aria-hidden="true">☕</div><h2>Buy Me a Coffee</h2><p>A quick, small gift in a few taps.</p><a class="btn sup-btn" data-support="buymeacoffee" href="'+SUPPORT.bmc+'" target="_blank" rel="noopener">Buy us a coffee ↗</a></div>'+
    '<div class="sup-card"><div class="sup-ico" aria-hidden="true">✠</div><h2>Donate with PayPal</h2><p>Give once, or set up a monthly gift that keeps the library growing.</p><a class="btn sup-btn sup-pp" data-support="paypal" href="'+SUPPORT.paypal+'" target="_blank" rel="noopener">Donate with PayPal ↗</a><p class="small muted">Choose one-time or monthly on the PayPal page.</p></div>'+
    '</div>'+
    '<h2 class="sup-h">Other ways to help</h2><ul class="sup-list">'+
@@ -668,7 +667,7 @@ function support(){var shop=AFF.bookshopShop||'';
    '<li><b>Report a broken link or an error.</b> <a data-support="correction_email" href="mailto:micahwatson@bibliothecacatholica.com?subject=Correction">Tell us ✉</a>, and we will fix it.</li>'+
    '<li><b>Get the newsletter.</b> <a href="https://bibliothecacatholica.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack ↗</a> to hear about new texts and features by email.</li>'+
    '<li><b>Share the library</b> with a friend, a parish, or a homeschool group.</li></ul>'+
-   '<p class="small muted sup-fine">Bibliotheca Catholica is an independent project. Payments are handled by Buy Me a Coffee and PayPal; we never see your card details.</p>'+discl();
+   '<p class="small muted sup-fine">Bibliotheca Catholica is an independent project. Payments are handled by PayPal; we never see your card details.</p>'+discl();
   render(h,'support')}
 /* Deep-link gaps (2026-11-09): chapter and story pages (/work/<id>/ch|story/<slug>/) and the related authors' pages (/author/<id>/ for
    LIBRARY_DATA.relatedAuthors) are static documents built by tools/build_static.py, as are the Summa pages

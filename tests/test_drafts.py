@@ -63,6 +63,8 @@ class DraftPages(unittest.TestCase):
     def test_no_amazon(self):
         for d in DRAFTS:
             self.assertNotRegex(d['body'].lower(),r'href="[^"]*(amazon\.|amzn\.)',d['slug'])
+            self.assertNotIn('buymeacoffee',d['body'].lower(),d['slug'])
+            self.assertNotIn('tax-deductible',d['body'].lower(),d['slug'])
 
     def test_rebuild_drops_removed_entries(self):
         """Deleting an entry and rebuilding must drop that page and leave no stale directory."""

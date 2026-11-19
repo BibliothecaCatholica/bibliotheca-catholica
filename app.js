@@ -302,7 +302,7 @@ function authorEditions(a){loadGuide(function(err){if(err)return;var box=$('#au-
 /* ---------- views ---------- */
 var SC=window.SITE_COPY||{};
 function home(){
-  var h=(SC.hero||'')+(window.BCReader?window.BCReader.continueRow():'')+(SC.paths||'')+(SC.home||'')+(SC.newsletter||'');
+  var h=(SC.hero||'')+(window.BCReader?window.BCReader.continueRow():'')+(SC.paths||'')+(SC.home||'')+(SC.homeNewsletter||'');
   render(h,'');document.title=SC.homeTitle||'Bibliotheca Catholica';hsInit();todayLine($('#home-today'));
 }
 /* Design part 2: Today is one line (date, feast or season, and a link). The daily outbound links live on the Prayers page.

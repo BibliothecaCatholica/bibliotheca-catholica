@@ -1,7 +1,6 @@
 """Affiliate preview (owner-approved for a preview, Business 2026-11-09): Bookshop.org ID 130222 links only for real
 edition-guide ISBNs, "Browse TAN Books" through the referral link, the one-line FTC disclosure once per page beside the links,
-the /disclosure/ page, no Amazon, the Substack sign-up on every page (the embed only on the home page and the Advent
-plan), and no new analytics."""
+the /disclosure/ page, no Amazon, the Substack sign-up on every page (the embed only on the Advent plan; a Subscribe button on the home page), and no new analytics."""
 import json, pathlib, re, unittest
 from html import escape as html_escape
 
@@ -160,7 +159,12 @@ class AffiliateLinkTests(unittest.TestCase):
 
     def test_substack_embed_only_on_home_and_advent(self):
         with_embed = {n for n, h in self.pages.items() if '<iframe' in h}
-        self.assertEqual(with_embed, {'index.html', 'reading/advent-2026/index.html'})
+        self.assertEqual(with_embed, {'reading/advent-2026/index.html'})  # the home page has a button instead (2026-11-19)
+        home = main_of(self.pages['index.html'])
+        btn = re.search(r'<section class="newsletter-box nl-home".*?</section>', home, re.S).group(0)
+        self.assertIn('<a class="btn ghost" href="' + SUBSCRIBE + '" target="_blank" rel="noopener">Subscribe ↗</a>', btn)  # the hero keeps the one filled button
+        self.assertNotRegex(btn, r'data-(support|ga|track|event)|onclick')
+        self.assertIn("(SC.homeNewsletter||'')", (ROOT / 'app.js').read_text(encoding='utf-8'))
         for n in with_embed:
             f = re.search(r'<iframe [^>]*>', self.pages[n]).group(0)
             self.assertIn('src="https://bibliothecacatholica.substack.com/embed"', f)
@@ -187,7 +191,7 @@ class AffiliateLinkTests(unittest.TestCase):
 
     def test_privacy_mentions_substack_and_affiliate(self):
         pol = self.pages['policy/index.html']
-        self.assertIn('The newsletter sign-up form on the home page and the Advent reading plan is provided by Substack under its own', pol)
+        self.assertIn('The newsletter sign-up form on the Advent reading plan is provided by Substack under its own', pol)
         self.assertIn('affiliate (a referral link', pol)
         self.assertIn('Some links to Bookshop.org, TAN Books, and Magisterium AI are affiliate links', pol)
         self.assertIn('The “Search another collection” form on the <a href="/libraries/">Libraries</a> page sends what you type to Open Library', pol)

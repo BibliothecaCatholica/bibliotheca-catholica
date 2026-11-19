@@ -30,6 +30,16 @@ class ReadingPlans(unittest.TestCase):
         self.assertEqual(sum('Sunday' in d['marker'] for d in days),4)
         ant=['Sapientia','Adonai','Radix Jesse','Clavis David','Oriens','Rex Gentium','Emmanuel']
         for k,name in enumerate(ant):self.assertIn('O '+name,by['2026-12-%d'%(17+k)])
+    def test_titles_subtitles_and_weekdays_agree(self):
+        """QA 2026-11-19: each day's title, subtitle, weekday label, and attribution agree with its date and fields."""
+        T=json.loads((ROOT/'data/advent-2026.json').read_text(encoding='utf-8'))
+        for t in T['days']:
+            dt=datetime.date.fromisoformat(t['date']);wd=dt.strftime('%A')
+            self.assertEqual(t['title'],'Day %d: %s'%(t['day'],t['theme']),t['day'])
+            self.assertEqual(t['subtitle'].split(' · ')[:2],['%s, %s %d, %d'%(wd,dt.strftime('%B'),dt.day,dt.year),t['liturgicalDay']],t['day'])
+            m=re.match(r'(\w+day), (First|Second|Third|Fourth) Week of Advent$',t['liturgicalDay'])
+            if m:self.assertEqual(m.group(1),wd,t['day'])
+            self.assertTrue(t['attribution'].startswith('%s, %s, %s. %s'%(t['author'],t['work'],t['location'],t['translation'])),t['day'])
     def test_links_resolve_to_hosted_passages(self):
         for d in PLAN['days']:
             w=LIB[d['work']];e=next(x for x in w['editions'] if x['id']==d['edition'])

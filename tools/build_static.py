@@ -14,7 +14,7 @@ pre-rendered or put in the sitemap.  Run after data changes and commit the outpu
 import hashlib,html,json,re,shutil,sys,urllib.parse
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE='https://bibliothecacatholica.com/';E=html.escape
-sys.path.insert(0,str(ROOT/'tools'));import site_copy,build_info,councils_page,credits_page
+sys.path.insert(0,str(ROOT/'tools'));import site_copy,build_info,councils_page,credits_page,study_partner
 from reader_formatting import reading_block, formatting_note, with_structure, with_auto_layout
 from auto_layout import LABEL as AUTO_LABEL
 # --- v17 SEO: see docs/SEO.md ---------------------------------------------------------------------
@@ -213,7 +213,7 @@ def write_home(tpl,counts,snapshot):
     org={'@context':'https://schema.org','@type':'Organization','@id':SITE+'#organization','name':NAME,'url':SITE,'logo':OG_IMAGE,'sameAs':SAME_AS}
     web={'@context':'https://schema.org','@type':'WebSite','@id':SITE+'#website','name':NAME,'url':SITE,'description':HOME_DESC,'inLanguage':'en','publisher':{'@id':SITE+'#organization'}}
     s=LD_RE.sub('',s).replace('</head>','<!-- jsonld:start -->'+ld(web)+ld(org)+'<!-- jsonld:end -->\n</head>',1)
-    js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'acta':site_copy.acta_source(),'home':about,'hero':hero,'paths':paths,'about':site_copy.about_page(counts),'newsletter':site_copy.newsletter_box(),'disclosure':disclosure_html(),'portraits':portrait_ids()},ensure_ascii=False,separators=(',',':'))+';\n'
+    js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'acta':site_copy.acta_source(),'home':about,'hero':hero,'paths':paths,'about':site_copy.about_page(counts),'newsletter':site_copy.newsletter_box(),'disclosure':disclosure_html(),'studyPartner':study_partner.panel('magisterium'),'supportTools':study_partner.support_note(),'portraits':portrait_ids()},ensure_ascii=False,separators=(',',':'))+';\n'
     (ROOT/'data/site-copy.js').write_text(js)
     s=re.sub(r'data/site-copy\.js\?v=[0-9a-f]*','data/site-copy.js?v='+hashlib.sha256(js.encode()).hexdigest()[:10],s)
     s=re.sub(r'data/text-pages\.js\?v=[0-9a-f]*','data/text-pages.js?v='+hashlib.sha256((ROOT/'data/text-pages.js').read_bytes()).hexdigest()[:10],s)  # deep-link gaps: content token
@@ -475,6 +475,7 @@ def summa_pages(out,lib):
           +'<p class="small">Aquinas left the Third Part unfinished at question 90, where the Gutenberg files end. The '+a('/summa/supp/','Supplement')+', compiled from his earlier writings after his death, completes it here in '+str(len(SUPP['questions']))+' questions, transcribed from the 1917, 1921, and 1922 printings of the same translation.</p>'
           +'<p class="small">About this text: the English Dominican translation, first printed 1911 to 1925. A sample check on 2026-11-09 against pre-1931 printings at the Internet Archive found that the article text matches, with no 1947 introduction, synopsis, or index; “From the Complete American Edition” in Gutenberg’s catalog titles is a provenance note only.</p>'
           +'<p class="dl-row"><a class="btn" href="/work/'+w['id']+'/">Work page and editions</a> '+a('/editions/summa/','Edition guide')+'</p>'
+          +study_partner.panel('summa')  # the landing page only, never question or article pages (rule 7)
           +pg_notice+edition_details(edline(S['parts'][0]),other,tr_notice)+'<p>'+a('/author/thomas-aquinas/','Thomas Aquinas')+' · '+a('/library/','Selected library')+'</p>')
     out['summa']=('Summa Theologiae by Question and Article · Bibliotheca Catholica',
         fit(['The Summa Theologiae of Thomas Aquinas in English, one free page for each of its %d questions and %d articles.'%(total_q,total_a)],(('Read in the reading room too.',''),)+DESC_EXTRA),
@@ -805,6 +806,7 @@ def main():
         if k=='libraries':
             from library_desk import desk_html
             extra=desk_html()+extra
+        if k=='magisterium':extra+=study_partner.panel('magisterium')  # below the free resources (rule 7, 2026-11-19)
         if k=='timeline':
             extra='<p>Authors are placed by their principal-work century; additional saints use sourced life dates. Undated and legendary figures remain outside the dated sequence. Writings by a person and biographies about them are listed separately in the interactive timeline.</p><p>'+a('/saints/','Saints & Hagiography')+' · '+a('/library/','Reading room')+'</p>'
             for au in sorted(authors,key=lambda x:(x.get('century') or 999,x['name'])):
@@ -853,7 +855,7 @@ def main():
     directory+='<h2>Selected reading editions</h2><ul class="search-browse">'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+' — '+E(w['author'])+'</li>' for w in sorted(lib['works'],key=lambda w:w['title'].casefold()))+'</ul>'
     directory+='<h2>Authors</h2><ul class="search-browse">'+''.join('<li>'+a('/author/'+au['id']+'/',au['name'])+'</li>' for au in sorted(authors,key=lambda au:au['name'].casefold()))+'</ul>'
     directory+='<p>'+a('/saints/','Saints & Hagiography')+' · '+a('/editions/','Editions & Translations')+' · '+a('/reading/','Reading Lists')+'</p>'
-    out['councils']=(councils_page.TITLE+' · Bibliotheca Catholica',councils_page.DESC,crumb_html(('Church Documents','magisterium/'),(councils_page.TITLE,''))+councils_page.body(lib),[crumbs(('Church Documents','magisterium/'),(councils_page.TITLE,'councils/'))])
+    out['councils']=(councils_page.TITLE+' · Bibliotheca Catholica',councils_page.DESC,crumb_html(('Church Documents','magisterium/'),(councils_page.TITLE,''))+councils_page.body(lib)+study_partner.panel('councils'),[crumbs(('Church Documents','magisterium/'),(councils_page.TITLE,'councils/'))])
     out['search']=('Search and browse · Bibliotheca Catholica','Search Bibliotheca Catholica for people and titles, or browse the plain directory of selected reading editions and Catholic authors without JavaScript.',directory,[crumbs(('Search and browse','search/'))])
     extra_pages=ROOT/'tools/static_extra.json'
     if extra_pages.exists():
@@ -885,6 +887,7 @@ if(p&&/^[A-Za-z0-9._~%\\/-]+$/.test(p)){location.replace('/#/'+p+location.search
 <body><p>Page not found. <a href="/">Go to Bibliotheca Catholica</a>.</p></body></html>
 ''')
     study=ROOT/'study/index.html'
+    study_partner.write_study(study)  # the panel between the study-partner markers (rule 7)
     if study.exists():
         footer=re.search(r'<footer class="footer">.*?</footer>',(ROOT/'index.html').read_text(),re.S).group(0)
         study.write_text(re.sub(r'<footer class="footer">.*?</footer>',lambda m:footer,study.read_text(),flags=re.S))

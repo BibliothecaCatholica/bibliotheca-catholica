@@ -559,3 +559,13 @@ details.au-credit summary{cursor:pointer}details.au-credit p{margin:4px 0 0}
 .au-list a{font-weight:500;display:inline-block;min-height:24px}
 .au-dt{color:var(--muted);font-size:14px}
 @media(max-width:600px){.au-bar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}.au-f input,.au-f select{width:100%;min-width:0}.au-f{flex-direction:column;align-items:stretch;gap:4px}.au-fq,.au-bar .result-meta{grid-column:1/-1}.au-bar .result-meta{margin:0}}
+/* Magisterium AI panel (PROJECT-RULES rule 7, 2026-11-19; tools/study_partner.py): a tinted container, no border or shadow, below the free reading options */
+.study-partner{max-width:66ch;margin:var(--s-7) 0 var(--s-5);padding:var(--s-5);background:var(--bg2);border-radius:8px}
+.study-partner .study-partner-label{margin:0 0 var(--s-1);font:400 var(--t-sm)/1.3 var(--serif);font-variant-caps:all-small-caps;letter-spacing:.06em;color:var(--gold-ink)}
+.study-partner h2{margin:0 0 var(--s-3);font:600 var(--t-xl)/1.2 var(--display);color:var(--ink)}
+.study-partner p{margin:0 0 var(--s-3);font:400 var(--t-md)/1.55 var(--serif);font-variant-numeric:oldstyle-nums;color:var(--ink2)}
+.study-partner .study-partner-act{margin:0}
+.study-partner .study-partner-link{font:600 var(--t-sm)/1.4 var(--sans);color:var(--rubric);text-decoration:underline;text-underline-offset:3px}
+.study-partner .disclosure{margin:var(--s-3) 0 0;padding:0;border:0;font:400 var(--t-xs)/1.4 var(--sans);color:var(--muted)}
+.sup-tools{max-width:66ch;color:var(--ink2)}
+@media(max-width:600px){.study-partner{padding:var(--s-4);margin-top:var(--s-6)}}

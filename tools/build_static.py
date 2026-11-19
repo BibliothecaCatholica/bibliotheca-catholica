@@ -201,7 +201,7 @@ def write_home(tpl,counts,snapshot):
         return w['id'],w['title']
     people=[(i,hubA[i]['name'],(hubA[i].get('dshow') or (str(hubA[i]['born'])+'–'+str(hubA[i]['died']) if hubA[i].get('born') and hubA[i].get('died') else '')))+begin(i) for i in site_copy.HOME_PEOPLE if i in have and i in hubA]
     paths=site_copy.home_paths(counts,people)
-    home='<!-- static-home:start --><div class="static-prerender">'+hero+paths+about+site_copy.newsletter_box()+'</div><!-- static-home:end -->'
+    home='<!-- static-home:start --><div class="static-prerender">'+hero+paths+about+site_copy.home_newsletter()+'</div><!-- static-home:end -->'
     s=tpl
     assert '<!-- static-home:start -->' in s,'index.html <main> must contain the static-home markers'
     s=HOME_RE.sub(lambda m:home,s,count=1)
@@ -213,7 +213,7 @@ def write_home(tpl,counts,snapshot):
     org={'@context':'https://schema.org','@type':'Organization','@id':SITE+'#organization','name':NAME,'url':SITE,'logo':OG_IMAGE,'sameAs':SAME_AS}
     web={'@context':'https://schema.org','@type':'WebSite','@id':SITE+'#website','name':NAME,'url':SITE,'description':HOME_DESC,'inLanguage':'en','publisher':{'@id':SITE+'#organization'}}
     s=LD_RE.sub('',s).replace('</head>','<!-- jsonld:start -->'+ld(web)+ld(org)+'<!-- jsonld:end -->\n</head>',1)
-    js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'acta':site_copy.acta_source(),'home':about,'hero':hero,'paths':paths,'about':site_copy.about_page(counts),'newsletter':site_copy.newsletter_box(),'disclosure':disclosure_html(),'studyPartner':study_partner.panel('magisterium'),'supportTools':study_partner.support_note(),'portraits':portrait_ids()},ensure_ascii=False,separators=(',',':'))+';\n'
+    js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'acta':site_copy.acta_source(),'home':about,'hero':hero,'paths':paths,'about':site_copy.about_page(counts),'newsletter':site_copy.newsletter_box(),'homeNewsletter':site_copy.home_newsletter(),'disclosure':disclosure_html(),'studyPartner':study_partner.panel('magisterium'),'supportTools':study_partner.support_note(),'portraits':portrait_ids()},ensure_ascii=False,separators=(',',':'))+';\n'
     (ROOT/'data/site-copy.js').write_text(js)
     s=re.sub(r'data/site-copy\.js\?v=[0-9a-f]*','data/site-copy.js?v='+hashlib.sha256(js.encode()).hexdigest()[:10],s)
     s=re.sub(r'data/text-pages\.js\?v=[0-9a-f]*','data/text-pages.js?v='+hashlib.sha256((ROOT/'data/text-pages.js').read_bytes()).hexdigest()[:10],s)  # deep-link gaps: content token

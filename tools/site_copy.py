@@ -115,7 +115,14 @@ def about_page(n):
 SUBSTACK='https://bibliothecacatholica.substack.com/'
 SUBSCRIBE=SUBSTACK+'subscribe'
 NEWSLETTER_LINE='Advent with the Fathers: a short reading from the Church Fathers each day, Nov 29 to Dec 24. Free.'
+def home_newsletter():
+    """Home page (owner design decision, November 19, 2026): a Subscribe button to Substack in a new tab, no embed."""
+    return ('<section class="newsletter-box nl-home" aria-label="Newsletter"><div class="eyebrow">The newsletter</div>'
+     '<h2>Bibliotheca Catholica by email</h2>'
+     '<p class="nl-home-act"><a class="btn ghost" href="'+SUBSCRIBE+'" target="_blank" rel="noopener">Subscribe ↗</a></p>'
+     '<p class="small nl-fine">Free, on Substack. Signing up happens on Substack under its own <a href="https://substack.com/privacy" target="_blank" rel="noopener">privacy policy</a>.</p></section>')
 def newsletter_box():
+    """The Substack embed, now only on the Advent reading plan (static page and scripts/plans.js)."""
     return ('<section class="newsletter-box" aria-label="Newsletter sign-up"><div class="eyebrow">The newsletter</div>'
      '<h2>Bibliotheca Catholica by email</h2>'
      '<iframe class="nl-embed" src="'+SUBSTACK+'embed" title="Sign up for the Bibliotheca Catholica newsletter on Substack" width="480" height="320" loading="lazy" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>'

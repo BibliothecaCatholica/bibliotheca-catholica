@@ -9951,6 +9951,1013 @@
     "front": [],
     "em": []
    }
+  },
+  "bede-ecclesiastical-history": {
+   "partD": {
+    "about": "Project Gutenberg #38326: A. M. Sellar’s revised translation (London: George Bell and Sons, 1907). Five books, divided as the hosted text heads them; the preface, index, and footnotes stay in the reader. No words were changed.",
+    "words": 116293,
+    "minutes": 506
+   },
+   "edition": "pg-38326",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Book",
+   "nouns": "Books",
+   "sha256": "977da0babf070c825befb0a5db65a9cc2440d9ab45aa869a959c1bab911be2c8",
+   "blocks": 3889,
+   "items": [
+    {
+     "slug": "01-book-i",
+     "num": "I",
+     "title": "Book I",
+     "heading": 103,
+     "start": 104,
+     "end": 237,
+     "section": 2,
+     "words": 21492,
+     "firstWords": "Chap. I. Of the Situation of Britain and Ireland, and of their"
+    },
+    {
+     "slug": "02-book-ii",
+     "num": "II",
+     "title": "Book II",
+     "heading": 238,
+     "start": 239,
+     "end": 344,
+     "section": 6,
+     "words": 17892,
+     "firstWords": "Chap. I. Of the death of the blessed Pope Gregory.(143) [604 A.D.]"
+    },
+    {
+     "slug": "03-book-iii",
+     "num": "III",
+     "title": "Book III",
+     "heading": 345,
+     "start": 346,
+     "end": 480,
+     "section": 9,
+     "words": 23903,
+     "firstWords": "Chap. I. How King Edwin’s next successors lost both the faith of"
+    },
+    {
+     "slug": "04-book-iv",
+     "num": "IV",
+     "title": "Book IV",
+     "heading": 481,
+     "start": 482,
+     "end": 658,
+     "section": 13,
+     "words": 26000,
+     "firstWords": "Chap. I. How when Deusdedit died, Wighard was sent to Rome to"
+    },
+    {
+     "slug": "05-book-v",
+     "num": "V",
+     "title": "Book V",
+     "heading": 659,
+     "start": 660,
+     "end": 898,
+     "section": 18,
+     "words": 27006,
+     "firstWords": "Chap. I. How Ethelwald, successor to Cuthbert, leading a hermit’s life, calmed"
+    }
+   ],
+   "structure": {
+    "sha256": "977da0babf070c825befb0a5db65a9cc2440d9ab45aa869a959c1bab911be2c8",
+    "source": "data/structured/bede-ecclesiastical-history-pg-38326.json",
+    "roles": [
+     [
+      103,
+      "chapter"
+     ],
+     [
+      238,
+      "chapter"
+     ],
+     [
+      345,
+      "chapter"
+     ],
+     [
+      481,
+      "chapter"
+     ],
+     [
+      659,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "consolation-philosophy": {
+   "partD": {
+    "about": "Project Gutenberg #14328: H. R. James’s translation (London: Elliot Stock, 1897). Five books, each with its summary, songs, and prose, divided as the hosted text heads them; the introduction, epilogue, and notes stay in the reader. No words were changed.",
+    "words": 41137,
+    "minutes": 179
+   },
+   "edition": "pg-14328",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Book",
+   "nouns": "Books",
+   "sha256": "82257f260aeb9f1f2d197ceb18aec1180c7a831fe6437a642f6ba5b32f44cdbd",
+   "blocks": 831,
+   "items": [
+    {
+     "slug": "01-the-sorrows-of-boethius",
+     "num": "I",
+     "title": "The Sorrows of Boethius",
+     "heading": 42,
+     "start": 44,
+     "end": 128,
+     "section": 1,
+     "words": 5799,
+     "firstWords": "SUMMARY.",
+     "titleBlocks": [
+      43
+     ]
+    },
+    {
+     "slug": "02-the-vanity-of-fortune-s-gifts",
+     "num": "II",
+     "title": "The Vanity of Fortune's Gifts",
+     "heading": 129,
+     "start": 131,
+     "end": 204,
+     "section": 3,
+     "words": 7419,
+     "firstWords": "Summary",
+     "titleBlocks": [
+      130
+     ]
+    },
+    {
+     "slug": "03-true-happiness-and-false",
+     "num": "III",
+     "title": "True Happiness and False",
+     "heading": 205,
+     "start": 207,
+     "end": 477,
+     "section": 5,
+     "words": 11221,
+     "firstWords": "SUMMARY",
+     "titleBlocks": [
+      206
+     ]
+    },
+    {
+     "slug": "04-good-and-ill-fortune",
+     "num": "IV",
+     "title": "Good and Ill Fortune",
+     "heading": 478,
+     "start": 480,
+     "end": 673,
+     "section": 13,
+     "words": 9332,
+     "firstWords": "SUMMARY.",
+     "titleBlocks": [
+      479
+     ]
+    },
+    {
+     "slug": "05-free-will-and-god-s-foreknowledge",
+     "num": "V",
+     "title": "Free Will and God's Foreknowledge",
+     "heading": 674,
+     "start": 676,
+     "end": 757,
+     "section": 19,
+     "words": 7366,
+     "firstWords": "SUMMARY.",
+     "titleBlocks": [
+      675
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "82257f260aeb9f1f2d197ceb18aec1180c7a831fe6437a642f6ba5b32f44cdbd",
+    "source": "data/structured/consolation-philosophy-pg-14328.json",
+    "roles": [
+     [
+      42,
+      "chapter"
+     ],
+     [
+      43,
+      "heading"
+     ],
+     [
+      129,
+      "chapter"
+     ],
+     [
+      130,
+      "heading"
+     ],
+     [
+      205,
+      "chapter"
+     ],
+     [
+      206,
+      "heading"
+     ],
+     [
+      478,
+      "chapter"
+     ],
+     [
+      479,
+      "heading"
+     ],
+     [
+      674,
+      "chapter"
+     ],
+     [
+      675,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "abandonment": {
+   "partD": {
+    "about": "Project Gutenberg #52057: Ella McMahon’s translation, edited by H. Ramière (New York: Benziger Brothers, 1887). Thirty-three chapters in three books, divided as the hosted text heads them; the appendix of prayers stays in the reader. No words were changed.",
+    "words": 23462,
+    "minutes": 102
+   },
+   "edition": "pg-52057",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "6c157eaaae913f11e814d61bc78c303f44644c535456acfdb0fadfa30f5c2b23",
+   "blocks": 543,
+   "items": [
+    {
+     "slug": "01-the-sanctity-of-the-righteous-of-the-old-law-and-of-josep",
+     "num": "I",
+     "title": "The Sanctity of the Righteous of the Old Law, and of Joseph and of Mary herself, consisted in Fidelity to the Order of God",
+     "heading": 140,
+     "start": 142,
+     "end": 142,
+     "section": 4,
+     "words": 405,
+     "firstWords": "God speaks to-day as He spoke to our fathers, when directors were",
+     "titleBlocks": [
+      141
+     ]
+    },
+    {
+     "slug": "02-the-duties-of-each-moment-are-the-shadows-which-veil-the",
+     "num": "II",
+     "title": "The Duties of each Moment are the Shadows which veil the Divine Action",
+     "heading": 143,
+     "start": 145,
+     "end": 148,
+     "section": 4,
+     "words": 395,
+     "firstWords": "“The power of the Most High shall overshadow thee,” said the angel",
+     "titleBlocks": [
+      144
+     ]
+    },
+    {
+     "slug": "03-how-much-easier-sanctity-becomes-when-studied-from-this-p",
+     "num": "III",
+     "title": "How much Easier Sanctity becomes when studied from this Point of View",
+     "heading": 149,
+     "start": 151,
+     "end": 168,
+     "section": 4,
+     "words": 1090,
+     "firstWords": "If the work of our salvation offers obstacles apparently so insurmountable, it",
+     "titleBlocks": [
+      150
+     ]
+    },
+    {
+     "slug": "04-perfection-does-not-consist-in-knowing-the-order-of-god-b",
+     "num": "IV",
+     "title": "Perfection does not consist in knowing the Order of God, but in submitting to it",
+     "heading": 169,
+     "start": 171,
+     "end": 177,
+     "section": 4,
+     "words": 349,
+     "firstWords": "The order of God, the good pleasure of God, the will of",
+     "titleBlocks": [
+      170
+     ]
+    },
+    {
+     "slug": "05-reading-and-other-exercises-only-sanctify-us-in-so-far-as",
+     "num": "V",
+     "title": "Reading and other Exercises only sanctify us in so far as they are the Channels of the Divine Action",
+     "heading": 178,
+     "start": 180,
+     "end": 192,
+     "section": 5,
+     "words": 907,
+     "firstWords": "All our science consists in recognizing God’s will in regard to the",
+     "titleBlocks": [
+      179
+     ]
+    },
+    {
+     "slug": "06-the-mind-and-other-human-means-are-useful-only-in-as-far",
+     "num": "VI",
+     "title": "The Mind and other Human Means are Useful only in as far as they are the Instruments of the Divine Action",
+     "heading": 193,
+     "start": 195,
+     "end": 203,
+     "section": 5,
+     "words": 589,
+     "firstWords": "The mind with all its powers would hold the first place among",
+     "titleBlocks": [
+      194
+     ]
+    },
+    {
+     "slug": "07-there-is-no-enduring-peace-but-in-submission-to-the-divin",
+     "num": "VII",
+     "title": "There is no Enduring Peace but in Submission to the Divine Action",
+     "heading": 204,
+     "start": 206,
+     "end": 207,
+     "section": 5,
+     "words": 394,
+     "firstWords": "The soul that is not united solely to the will of God",
+     "titleBlocks": [
+      205
+     ]
+    },
+    {
+     "slug": "08-the-perfection-of-souls-and-the-excellence-of-different-s",
+     "num": "VIII",
+     "title": "The Perfection of Souls and the Excellence of Different States are in Proportion to their Conformity to the Order of God",
+     "heading": 208,
+     "start": 210,
+     "end": 217,
+     "section": 5,
+     "words": 1342,
+     "firstWords": "The order of God gives to all things which concern the faithful",
+     "titleBlocks": [
+      209
+     ]
+    },
+    {
+     "slug": "09-all-the-riches-of-grace-are-the-fruit-of-purity-of-heart",
+     "num": "IX",
+     "title": "All the Riches of Grace are the Fruit of Purity of Heart and Perfect Self-abandonment",
+     "heading": 218,
+     "start": 220,
+     "end": 224,
+     "section": 6,
+     "words": 1235,
+     "firstWords": "He, therefore, who would abundantly enjoy all good has but to purify",
+     "titleBlocks": [
+      219
+     ]
+    },
+    {
+     "slug": "10-the-divine-action-is-everywhere-and-always-present-though",
+     "num": "I",
+     "title": "The Divine Action is everywhere and always Present, though only Visible to the Eye of Faith",
+     "heading": 227,
+     "start": 229,
+     "end": 234,
+     "section": 6,
+     "words": 845,
+     "firstWords": "All creatures are living in the hand of God; the senses perceive",
+     "titleBlocks": [
+      228
+     ],
+     "before": [
+      225,
+      226
+     ]
+    },
+    {
+     "slug": "11-the-divine-action-is-all-the-more-visible-to-the-eye-of-f",
+     "num": "II",
+     "title": "The Divine Action is all the more Visible to the Eye of Faith when hidden under Appearances most Repugnant to the Senses",
+     "heading": 235,
+     "start": 237,
+     "end": 245,
+     "section": 6,
+     "words": 977,
+     "firstWords": "The soul enlightened by faith is far from judging of created things,",
+     "titleBlocks": [
+      236
+     ]
+    },
+    {
+     "slug": "12-the-divine-action-offers-us-at-each-moment-infinite-bless",
+     "num": "III",
+     "title": "The Divine Action offers us at each Moment Infinite Blessings, which we receive in proportion to our Faith and Love",
+     "heading": 246,
+     "start": 248,
+     "end": 251,
+     "section": 7,
+     "words": 501,
+     "firstWords": "If we knew how to greet each moment as the manifestation of",
+     "titleBlocks": [
+      247
+     ]
+    },
+    {
+     "slug": "13-god-reveals-himself-to-us-as-mysteriously-as-adorably-and",
+     "num": "IV",
+     "title": "God reveals Himself to us as Mysteriously, as Adorably, and with as much Reality in the most Ordinary Events as in the great Events of History and the Holy Scriptures",
+     "heading": 252,
+     "start": 254,
+     "end": 258,
+     "section": 7,
+     "words": 734,
+     "firstWords": "The written word of God is full of mystery; His word expressed",
+     "titleBlocks": [
+      253
+     ]
+    },
+    {
+     "slug": "14-the-divine-action-continues-in-our-hearts-the-revelation",
+     "num": "V",
+     "title": "The Divine Action continues in our Hearts the Revelation begun in Holy Scripture; but the Characters in which it is written will be Visible only at the Last Day",
+     "heading": 259,
+     "start": 261,
+     "end": 265,
+     "section": 7,
+     "words": 980,
+     "firstWords": "“Jesus Christ,” says the Apostle, “is the same yesterday, to-day, and forever.”",
+     "titleBlocks": [
+      260
+     ]
+    },
+    {
+     "slug": "15-divine-love-is-communicated-to-us-through-the-veil-of-cre",
+     "num": "VI",
+     "title": "Divine Love is communicated to us through the Veil of Creatures, as Jesus communicates Himself to us through the Veil of the Eucharistic Species",
+     "heading": 266,
+     "start": 268,
+     "end": 268,
+     "section": 7,
+     "words": 401,
+     "firstWords": "What sublime truths are hidden even from Christians who believe themselves most",
+     "titleBlocks": [
+      267
+     ]
+    },
+    {
+     "slug": "16-the-divine-action-the-will-of-god-is-as-unworthily-treate",
+     "num": "VII",
+     "title": "The Divine Action, the Will of God, is as unworthily treated and disregarded in its Daily Manifestation by many Christians as was Jesus in the Flesh by the Jews",
+     "heading": 269,
+     "start": 271,
+     "end": 275,
+     "section": 7,
+     "words": 530,
+     "firstWords": "What infidelity we find in the world! How unworthily men think of",
+     "titleBlocks": [
+      270
+     ]
+    },
+    {
+     "slug": "17-the-revelation-of-the-present-moment-is-the-more-profitab",
+     "num": "VIII",
+     "title": "The Revelation of the Present Moment is the more Profitable that it is addressed Directly to us",
+     "heading": 276,
+     "start": 278,
+     "end": 282,
+     "section": 7,
+     "words": 337,
+     "firstWords": "We are only truly instructed by the words which God pronounces expressly",
+     "titleBlocks": [
+      277
+     ]
+    },
+    {
+     "slug": "18-the-revelation-of-the-present-moment-is-an-inexhaustible",
+     "num": "IX",
+     "title": "The Revelation of the Present Moment is an Inexhaustible Source of Sanctity",
+     "heading": 283,
+     "start": 285,
+     "end": 287,
+     "section": 8,
+     "words": 373,
+     "firstWords": "O all ye who thirst! know that you have not far to",
+     "titleBlocks": [
+      284
+     ]
+    },
+    {
+     "slug": "19-the-present-moment-is-the-manifestation-of-the-name-of-go",
+     "num": "X",
+     "title": "The Present Moment is the Manifestation of the Name of God and the Coming of His Kingdom",
+     "heading": 288,
+     "start": 290,
+     "end": 296,
+     "section": 8,
+     "words": 891,
+     "firstWords": "The present moment is like an ambassador which declares the will of",
+     "titleBlocks": [
+      289
+     ]
+    },
+    {
+     "slug": "20-the-divine-will-imparts-the-highest-sanctity-to-souls-the",
+     "num": "XI",
+     "title": "The Divine Will imparts the Highest Sanctity to Souls; they have but to abandon Themselves to its Divine Action",
+     "heading": 297,
+     "start": 299,
+     "end": 309,
+     "section": 8,
+     "words": 1436,
+     "firstWords": "It is only because they know not how to profit by the",
+     "titleBlocks": [
+      298
+     ]
+    },
+    {
+     "slug": "21-the-divine-action-alone-can-sanctify-us-for-it-forms-us-a",
+     "num": "XII",
+     "title": "The Divine Action alone can sanctify us, for it forms us after the Divine Model of our Perfection",
+     "heading": 310,
+     "start": 312,
+     "end": 315,
+     "section": 8,
+     "words": 800,
+     "firstWords": "The divine action executes in time the designs of the eternal Wisdom",
+     "titleBlocks": [
+      311
+     ]
+    },
+    {
+     "slug": "22-god-himself-guides-souls-who-wholly-abandon-themselves-to",
+     "num": "I",
+     "title": "God Himself guides Souls who wholly abandon themselves to Him",
+     "heading": 318,
+     "start": 320,
+     "end": 328,
+     "section": 9,
+     "words": 1048,
+     "firstWords": "Sacrificate sacrificium justitiæ et sperate in Domino: Sacrifice, saith the prophet, a",
+     "titleBlocks": [
+      319
+     ],
+     "before": [
+      316,
+      317
+     ]
+    },
+    {
+     "slug": "23-the-more-god-seems-to-withdraw-light-from-the-soul-abando",
+     "num": "II",
+     "title": "The more God seems to withdraw Light from the Soul abandoned to His Direction, the more Safely He guides Her",
+     "heading": 329,
+     "start": 331,
+     "end": 337,
+     "section": 9,
+     "words": 760,
+     "firstWords": "It is particularly in souls wholly abandoned to God that the words",
+     "titleBlocks": [
+      330
+     ]
+    },
+    {
+     "slug": "24-the-afflictions-with-which-god-visits-the-soul-are-but-lo",
+     "num": "III",
+     "title": "The Afflictions with which God visits the Soul are but Loving Artifices at which she will One Day rejoice",
+     "heading": 338,
+     "start": 340,
+     "end": 344,
+     "section": 9,
+     "words": 672,
+     "firstWords": "Souls who walk in light sing canticles of joy; those who walk",
+     "titleBlocks": [
+      339
+     ]
+    },
+    {
+     "slug": "25-the-more-god-seems-to-take-from-a-soul-wholly-abandoned-t",
+     "num": "IV",
+     "title": "The more God seems to take from a Soul wholly abandoned to Him, the more Generous He is to her",
+     "heading": 345,
+     "start": 347,
+     "end": 351,
+     "section": 9,
+     "words": 653,
+     "firstWords": "But let us go on in the study of the divine action",
+     "titleBlocks": [
+      346
+     ]
+    },
+    {
+     "slug": "26-the-less-capable-the-faithful-soul-is-of-defending-hersel",
+     "num": "V",
+     "title": "The less Capable the Faithful Soul is of defending Herself, the more Powerfully does God defend Her",
+     "heading": 352,
+     "start": 354,
+     "end": 359,
+     "section": 10,
+     "words": 628,
+     "firstWords": "The supreme and infallible work of the divine action is always opportunely",
+     "titleBlocks": [
+      353
+     ]
+    },
+    {
+     "slug": "27-the-soul-abandoned-to-the-will-of-god-so-far-from-resisti",
+     "num": "VI",
+     "title": "The Soul abandoned to the Will of God, so far from resisting her Enemies, finds in them Useful Auxiliaries",
+     "heading": 360,
+     "start": 362,
+     "end": 364,
+     "section": 10,
+     "words": 324,
+     "firstWords": "I fear my own action and that of my friends more than",
+     "titleBlocks": [
+      361
+     ]
+    },
+    {
+     "slug": "28-the-soul-who-abandons-herself-to-god-has-no-need-to-justi",
+     "num": "VII",
+     "title": "The Soul who abandons Herself to God has no Need to justify Herself by Words or Actions: the Divine Action justifies Her",
+     "heading": 365,
+     "start": 367,
+     "end": 370,
+     "section": 10,
+     "words": 375,
+     "firstWords": "The broad, solid, firm rock upon which the faithful soul stands sheltered",
+     "titleBlocks": [
+      366
+     ]
+    },
+    {
+     "slug": "29-god-gives-life-to-the-soul-abandoned-to-him-by-means-whic",
+     "num": "VIII",
+     "title": "God gives Life to the Soul abandoned to Him by Means which apparently lead only to Death",
+     "heading": 371,
+     "start": 373,
+     "end": 377,
+     "section": 10,
+     "words": 798,
+     "firstWords": "There is a time when God wills to be the life of",
+     "titleBlocks": [
+      372
+     ]
+    },
+    {
+     "slug": "30-love-holds-the-place-of-all-things-to-souls-who-walk-in-t",
+     "num": "IX",
+     "title": "Love holds the Place of All Things to Souls who walk in the Way of Abandonment",
+     "heading": 378,
+     "start": 380,
+     "end": 391,
+     "section": 10,
+     "words": 1004,
+     "firstWords": "God, while He despoils a soul who wholly abandons herself to Him,",
+     "titleBlocks": [
+      379
+     ]
+    },
+    {
+     "slug": "31-the-faithful-soul-finds-in-submission-to-the-will-of-god",
+     "num": "X",
+     "title": "The Faithful Soul finds in Submission to the Will of God more Force and Strength than the Proudest of those who resist Him",
+     "heading": 392,
+     "start": 394,
+     "end": 400,
+     "section": 11,
+     "words": 568,
+     "firstWords": "What avail the most sublime intelligence and divine revelations if we love",
+     "titleBlocks": [
+      393
+     ]
+    },
+    {
+     "slug": "32-the-soul-abandoned-to-god-learns-to-recognize-his-will-ev",
+     "num": "XI",
+     "title": "The Soul abandoned to God learns to recognize His Will even in the Proud who resist Him. All Creatures, whether Good or Evil, reveal Him to her",
+     "heading": 401,
+     "start": 403,
+     "end": 406,
+     "section": 11,
+     "words": 438,
+     "firstWords": "The will of God is the whole life of the simple soul.",
+     "titleBlocks": [
+      402
+     ]
+    },
+    {
+     "slug": "33-god-assures-to-faithful-souls-a-glorious-victory-over-the",
+     "num": "XII",
+     "title": "God assures to Faithful Souls a Glorious Victory over the Powers of Earth and Hell",
+     "heading": 407,
+     "start": 409,
+     "end": 414,
+     "section": 11,
+     "words": 683,
+     "firstWords": "If the divine action is veiled here below by an exterior of",
+     "titleBlocks": [
+      408
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "6c157eaaae913f11e814d61bc78c303f44644c535456acfdb0fadfa30f5c2b23",
+    "source": "data/structured/abandonment-pg-52057.json",
+    "roles": [
+     [
+      140,
+      "chapter"
+     ],
+     [
+      141,
+      "heading"
+     ],
+     [
+      143,
+      "chapter"
+     ],
+     [
+      144,
+      "heading"
+     ],
+     [
+      149,
+      "chapter"
+     ],
+     [
+      150,
+      "heading"
+     ],
+     [
+      169,
+      "chapter"
+     ],
+     [
+      170,
+      "heading"
+     ],
+     [
+      178,
+      "chapter"
+     ],
+     [
+      179,
+      "heading"
+     ],
+     [
+      193,
+      "chapter"
+     ],
+     [
+      194,
+      "heading"
+     ],
+     [
+      204,
+      "chapter"
+     ],
+     [
+      205,
+      "heading"
+     ],
+     [
+      208,
+      "chapter"
+     ],
+     [
+      209,
+      "heading"
+     ],
+     [
+      218,
+      "chapter"
+     ],
+     [
+      219,
+      "heading"
+     ],
+     [
+      225,
+      "heading"
+     ],
+     [
+      226,
+      "heading"
+     ],
+     [
+      227,
+      "chapter"
+     ],
+     [
+      228,
+      "heading"
+     ],
+     [
+      235,
+      "chapter"
+     ],
+     [
+      236,
+      "heading"
+     ],
+     [
+      246,
+      "chapter"
+     ],
+     [
+      247,
+      "heading"
+     ],
+     [
+      252,
+      "chapter"
+     ],
+     [
+      253,
+      "heading"
+     ],
+     [
+      259,
+      "chapter"
+     ],
+     [
+      260,
+      "heading"
+     ],
+     [
+      266,
+      "chapter"
+     ],
+     [
+      267,
+      "heading"
+     ],
+     [
+      269,
+      "chapter"
+     ],
+     [
+      270,
+      "heading"
+     ],
+     [
+      276,
+      "chapter"
+     ],
+     [
+      277,
+      "heading"
+     ],
+     [
+      283,
+      "chapter"
+     ],
+     [
+      284,
+      "heading"
+     ],
+     [
+      288,
+      "chapter"
+     ],
+     [
+      289,
+      "heading"
+     ],
+     [
+      297,
+      "chapter"
+     ],
+     [
+      298,
+      "heading"
+     ],
+     [
+      310,
+      "chapter"
+     ],
+     [
+      311,
+      "heading"
+     ],
+     [
+      316,
+      "heading"
+     ],
+     [
+      317,
+      "heading"
+     ],
+     [
+      318,
+      "chapter"
+     ],
+     [
+      319,
+      "heading"
+     ],
+     [
+      329,
+      "chapter"
+     ],
+     [
+      330,
+      "heading"
+     ],
+     [
+      338,
+      "chapter"
+     ],
+     [
+      339,
+      "heading"
+     ],
+     [
+      345,
+      "chapter"
+     ],
+     [
+      346,
+      "heading"
+     ],
+     [
+      352,
+      "chapter"
+     ],
+     [
+      353,
+      "heading"
+     ],
+     [
+      360,
+      "chapter"
+     ],
+     [
+      361,
+      "heading"
+     ],
+     [
+      365,
+      "chapter"
+     ],
+     [
+      366,
+      "heading"
+     ],
+     [
+      371,
+      "chapter"
+     ],
+     [
+      372,
+      "heading"
+     ],
+     [
+      378,
+      "chapter"
+     ],
+     [
+      379,
+      "heading"
+     ],
+     [
+      392,
+      "chapter"
+     ],
+     [
+      393,
+      "heading"
+     ],
+     [
+      401,
+      "chapter"
+     ],
+     [
+      402,
+      "heading"
+     ],
+     [
+      407,
+      "chapter"
+     ],
+     [
+      408,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

@@ -2,7 +2,7 @@
 
 [Open the library](https://bibliothecacatholica.com) · [Report a problem or correction](https://github.com/BibliothecaCatholica/bibliotheca-catholica/issues/new?template=site_problem.yml) · [Browse the source code](https://github.com/BibliothecaCatholica/bibliotheca-catholica)
 
-Bibliotheca Catholica is a free Catholic **reading room and curated resource index**—a library of libraries. It helps readers find classic texts, compare editions, follow sourced links to original documents, and discover authors, saints, reference works, and media. Coverage is selective, not exhaustive; inclusion is not endorsement.
+Bibliotheca Catholica is a free Catholic **reading room and curated resource index**, a library of libraries. It helps readers find classic texts, compare editions, follow sourced links to original documents, and discover authors, saints, reference works, and media. Coverage is selective, not exhaustive; inclusion is not endorsement.
 
 ## Contributor starting point
 

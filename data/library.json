@@ -1651,7 +1651,7 @@
       "editions": [
         {
           "id": "lewis-bibliography-mere-christianity",
-          "label": "Bibliographic record — Dallas Baptist University",
+          "label": "Bibliographic record at Dallas Baptist University",
           "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
           "language": "English",
           "contributors": [],
@@ -1684,7 +1684,7 @@
       "editions": [
         {
           "id": "lewis-bibliography-screwtape-letters",
-          "label": "Bibliographic record — Dallas Baptist University",
+          "label": "Bibliographic record at Dallas Baptist University",
           "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
           "language": "English",
           "contributors": [],
@@ -1717,7 +1717,7 @@
       "editions": [
         {
           "id": "lewis-bibliography-abolition-man",
-          "label": "Bibliographic record — Dallas Baptist University",
+          "label": "Bibliographic record at Dallas Baptist University",
           "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
           "language": "English",
           "contributors": [],
@@ -1750,7 +1750,7 @@
       "editions": [
         {
           "id": "lewis-bibliography-great-divorce",
-          "label": "Bibliographic record — Dallas Baptist University",
+          "label": "Bibliographic record at Dallas Baptist University",
           "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
           "language": "English",
           "contributors": [],
@@ -1783,7 +1783,7 @@
       "editions": [
         {
           "id": "lewis-bibliography-problem-pain",
-          "label": "Bibliographic record — Dallas Baptist University",
+          "label": "Bibliographic record at Dallas Baptist University",
           "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
           "language": "English",
           "contributors": [],
@@ -1816,7 +1816,7 @@
       "editions": [
         {
           "id": "lewis-bibliography-miracles",
-          "label": "Bibliographic record — Dallas Baptist University",
+          "label": "Bibliographic record at Dallas Baptist University",
           "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
           "language": "English",
           "contributors": [],
@@ -1849,7 +1849,7 @@
       "editions": [
         {
           "id": "lewis-bibliography-four-loves",
-          "label": "Bibliographic record — Dallas Baptist University",
+          "label": "Bibliographic record at Dallas Baptist University",
           "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
           "language": "English",
           "contributors": [],
@@ -1882,7 +1882,7 @@
       "editions": [
         {
           "id": "lewis-bibliography-till-we-have-faces",
-          "label": "Bibliographic record — Dallas Baptist University",
+          "label": "Bibliographic record at Dallas Baptist University",
           "source": "https://www.dbu.edu/mitchell/c-s-lewis-resources/bibliography.html",
           "language": "English",
           "contributors": [],
@@ -2099,7 +2099,7 @@
       "editions": [
         {
           "id": "dei-verbum-vatican",
-          "label": "Vatican — official English text",
+          "label": "Official English text at vatican.va",
           "source": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html",
           "language": "English",
           "contributors": [],
@@ -2122,7 +2122,7 @@
       "editions": [
         {
           "id": "lumen-gentium-vatican",
-          "label": "Vatican — official English text",
+          "label": "Official English text at vatican.va",
           "source": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html",
           "language": "English",
           "contributors": [],
@@ -2145,7 +2145,7 @@
       "editions": [
         {
           "id": "sacrosanctum-concilium-vatican",
-          "label": "Vatican — official English text",
+          "label": "Official English text at vatican.va",
           "source": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
           "language": "English",
           "contributors": [],
@@ -2168,7 +2168,7 @@
       "editions": [
         {
           "id": "gaudium-spes-vatican",
-          "label": "Vatican — official English text",
+          "label": "Official English text at vatican.va",
           "source": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html",
           "language": "English",
           "contributors": [],
@@ -2191,7 +2191,7 @@
       "editions": [
         {
           "id": "fides-ratio-vatican",
-          "label": "Vatican — official English text",
+          "label": "Official English text at vatican.va",
           "source": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_14091998_fides-et-ratio.html",
           "language": "English",
           "contributors": [],
@@ -2214,7 +2214,7 @@
       "editions": [
         {
           "id": "veritatis-splendor-vatican",
-          "label": "Vatican — official English text",
+          "label": "Official English text at vatican.va",
           "source": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_06081993_veritatis-splendor.html",
           "language": "English",
           "contributors": [],
@@ -2237,7 +2237,7 @@
       "editions": [
         {
           "id": "deus-caritas-est-vatican",
-          "label": "Vatican — official English text",
+          "label": "Official English text at vatican.va",
           "source": "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html",
           "language": "English",
           "contributors": [],
@@ -2260,7 +2260,7 @@
       "editions": [
         {
           "id": "rerum-novarum-vatican",
-          "label": "Vatican — official English text",
+          "label": "Official English text at vatican.va",
           "source": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_15051891_rerum-novarum.html",
           "language": "English",
           "contributors": [],

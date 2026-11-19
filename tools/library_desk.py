@@ -19,12 +19,14 @@ def desk_html():
 def magisterium_partner():
  from study_partner import partner  # partners.magisterium in data/affiliates.js, read in one place
  return partner()
+def disclosure_line():
+ from study_partner import disclosure_line  # the page's one line (rule 7); one_disclosure()/oneDiscl() drop the later copy
+ return disclosure_line()
 def magisterium_html():
  name,url=magisterium_partner()
  return ('<section class="library-affiliate" aria-labelledby="magisterium-aff-h"><h2 id="magisterium-aff-h">'+E(name)+'</h2>'
   '<p>'+E(name)+' is a search tool for Church documents and other Catholic sources. '
   '<a href="'+E(url)+'" target="_blank" rel="noopener sponsored">Try Magisterium AI Pro ↗</a>. '
-  'Readers who subscribe to Pro through this link get 25% off. We earn a commission if you subscribe through this link. '
-  '<a href="/disclosure/">Details</a>.</p></section>')
+  'Readers who subscribe to Pro through this link get 25% off.</p>'+disclosure_line()+'</section>')
 if __name__=='__main__':
  (ROOT/'data/library-desk.js').write_text('window.LIBRARY_DESK='+json.dumps({'html':desk_html()},ensure_ascii=False)+';\n')

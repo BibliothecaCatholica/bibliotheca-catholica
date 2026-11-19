@@ -1,0 +1,29 @@
+# Dependabot (audit leftovers, owner go-ahead November 19, 2026): weekly, one grouped PR per ecosystem.
+# npm: the Study desk dependencies are pinned exactly and their built output (assets/study, assets/libraries,
+# pagefind, study/passages) is checked by CI, so a version PR also needs `npm run build:study` and the regenerated
+# files committed before it can pass. Neither kind of PR merges on its own; review it like any other change.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "08:00"
+      timezone: America/Chicago
+    open-pull-requests-limit: 2
+    versioning-strategy: increase
+    groups:
+      npm-dependencies:
+        patterns: ["*"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "08:00"
+      timezone: America/Chicago
+    open-pull-requests-limit: 2
+    groups:
+      github-actions:
+        patterns: ["*"]

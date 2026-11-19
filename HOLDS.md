@@ -20,7 +20,7 @@ When a hold is released or finished, delete its row in the same commit as the wo
 | @MindofTheChurch DM | BiblioCatholica X | their follow-back | 2026-11-15 | Send the DM. |
 | TAN BIBLIO15 promo code | Bibliotheca Business | TAN's reply | 2026-11-15 | Confirm the code. |
 | Cloudflare R2 storage | Bibliotheca Business | the business bank account | 2026-11-15 | Set up R2. |
-| Audit leftovers: PR #17, security headers, branch protection and Dependabot, evidence files, and site-copy em-dash cleanup (em-dashes in book texts stay) | Catholic Repo | the owner's go-ahead | 2026-11-15 | Fix. |
+| Audit leftovers: PR #17, security headers, branch protection (an owner setting), evidence files, and site-copy em-dash cleanup (em-dashes in book texts stay) | Catholic Repo | the owner's go-ahead | 2026-11-15 | Fix. |
 | Doré-style art beyond the home page | Owner | the owner's decision | 2026-11-15 | Decide. |
 | 42 Substack review-cycle drafts in the Drive folder | Bibliotheca Substack | the owner's go | 2026-11-15 | Paste them as drafts. |
 | Chesterton scans below the 99.5% read gate: The Superstitions of the Sceptic (99.27%), Do We Agree? (99.45%), G.K.C. as M.C. (99.49%), and Samuel Johnson with Alice Meynell (98.84%) | Claude Code | a cleaner scan or a hand pass | 2026-11-16 | Transcribe: check the flagged words against the scan pages, or collate a second free scan. |

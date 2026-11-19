@@ -273,7 +273,7 @@ mark{background:color-mix(in srgb,var(--gold2) 45%,transparent);color:inherit;bo
 .free a{font:500 12.5px var(--sans);padding:4px 9px;border-radius:999px;background:color-mix(in srgb,#2e7d4f 12%,var(--card));color:#256b43;text-decoration:none}
 [data-theme=dark] .free a{color:#8fdcb0}
 .free a:hover{text-decoration:underline}
-.disclosure{font:400 12.5px var(--sans);color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:12px}
+.disclosure{font:400 var(--t-xs)/1.45 var(--sans);color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:12px}
 .rl-tabs{margin:0 0 18px}
 .g-lists{grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin-bottom:10px}
 .rl{margin-top:26px}
@@ -511,7 +511,7 @@ html.app-unavailable #main>.static-prerender{min-height:0}
 .buy-list li{color:var(--ink2);padding:2px 0}
 .ed-picks .buy-b{margin-left:4px}
 .buy-tan{margin:4px 0 0}
-.buy-print .disclosure{margin-top:6px;padding-top:0;border:0;font-size:13px}
+.buy-print .disclosure{margin-top:6px;padding-top:0;border:0}
 .footer-newsletter{margin:14px 0 4px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px}
 .footer-newsletter .nl-line{margin:0;font:500 14px/1.45 var(--sans);flex:1 1 260px}
 .newsletter-box{margin:40px 0 0;padding:24px 0 0;border-top:1px solid var(--line)}
@@ -563,9 +563,9 @@ details.au-credit summary{cursor:pointer}details.au-credit p{margin:4px 0 0}
 .study-partner{max-width:66ch;margin:var(--s-7) 0 var(--s-5);padding:var(--s-5);background:var(--bg2);border-radius:8px}
 .study-partner .study-partner-label{margin:0 0 var(--s-1);font:400 var(--t-sm)/1.3 var(--serif);font-variant-caps:all-small-caps;letter-spacing:.06em;color:var(--gold-ink)}
 .study-partner h2{margin:0 0 var(--s-3);font:600 var(--t-xl)/1.2 var(--display);color:var(--ink)}
-.study-partner p{margin:0 0 var(--s-3);font:400 var(--t-md)/1.55 var(--serif);font-variant-numeric:oldstyle-nums;color:var(--ink2)}
+.study-partner p:not(.disclosure){margin:0 0 var(--s-3);font:400 var(--t-md)/1.55 var(--serif);font-variant-numeric:oldstyle-nums;color:var(--ink2)}
 .study-partner .study-partner-act{margin:0}
 .study-partner .study-partner-link{font:600 var(--t-sm)/1.4 var(--sans);color:var(--rubric);text-decoration:underline;text-underline-offset:3px}
-.study-partner .disclosure{margin:var(--s-3) 0 0;padding:0;border:0;font:400 var(--t-xs)/1.4 var(--sans);color:var(--muted)}
+.study-partner .disclosure{margin:var(--s-3) 0 0;padding:0;border:0}
 .sup-tools{max-width:66ch;color:var(--ink2)}
 @media(max-width:600px){.study-partner{padding:var(--s-4);margin-top:var(--s-6)}}

@@ -88,6 +88,35 @@ class AffiliateLinkTests(unittest.TestCase):
             for t in re.findall(r'<a [^>]*href="https://lddy\.no/1qbrw"[^>]*>([^<]*)</a>', m):
                 self.assertEqual(t, 'Browse TAN Books ↗', name)
 
+    def test_exactly_one_disclosure_line_per_page(self):
+        # rule 7: every page with an affiliate link has the one-line disclosure exactly once; pages without one have none
+        study = (ROOT / 'study/index.html').read_text(encoding='utf-8')
+        aff = r'href="https://(?:bookshop\.org/a/|lddy\.no/|www\.magisterium\.com/)'
+        n = 0
+        for name, html in dict(self.pages, **{'study/index.html': study}).items():
+            m = main_of(html)
+            if name == 'disclosure/index.html':
+                continue
+            has = bool(re.search(aff, m)); n += has
+            self.assertEqual(m.count(DLINE), 1 if has else 0, name)
+            self.assertEqual(m.count('class="disclosure'), 1 if has else 0, name)
+        self.assertGreater(n, 200)
+
+    def test_one_disclosure_size(self):
+        # DESIGN.md "Notices": the smallest legible size, 14 px (--t-xs), the same on every page
+        css = (ROOT / 'styles.css').read_text(encoding='utf-8')
+        self.assertIn('.disclosure{font:400 var(--t-xs)/1.45 var(--sans);', css)
+        self.assertIn('--t-xs:14px', css)
+        # container paragraph rules must not restyle the line: the panels exclude it explicitly
+        self.assertIn('.study-partner p:not(.disclosure){', css)
+        self.assertNotRegex(css, r'\.study-partner p\{')
+        sheets = [ROOT / 'styles.css'] + list((ROOT / 'styles').glob('*.css')) + list((ROOT / 'assets').glob('*/*.css'))
+        for f in sheets:
+            for sel, body in re.findall(r'([^{}]*\.disclosure[^{}]*)\{([^}]*)\}', f.read_text(encoding='utf-8')):
+                if sel.strip() == '.disclosure' or ':not(.disclosure)' in sel:
+                    continue  # the one rule that sets the size, and rules that exclude the line
+                self.assertNotRegex(body, r'font(-size)?\s*:', f.name + ' ' + sel.strip())
+
     def test_affiliate_links_are_plain_and_sponsored(self):
         for name, html in self.pages.items():
             for a in re.findall(r'<a [^>]*href="(?:https://bookshop\.org/a/|https://lddy\.no/|https://www\.magisterium\.com/)[^>]*>', main_of(html)):
@@ -170,9 +199,13 @@ class AffiliateLinkTests(unittest.TestCase):
         self.assertIn('rel="noopener sponsored"', a)
         self.assertIn('target="_blank"', a)
         self.assertIn('Try Magisterium AI Pro ↗', m)
-        self.assertIn(MAG_LINE, m)
+        self.assertNotIn(MAG_LINE, m)  # one disclosure line per page (rule 7); the fuller statement is on /disclosure/
         self.assertIn('Readers who subscribe to Pro through this link get 25% off', m)
-        self.assertIn('href="/disclosure/"', m[m.index(MAG_LINE)-200:m.index(MAG_LINE)+200])
+        sec = re.search(r'<section class="library-affiliate".*?</section>', m, re.S).group(0)
+        self.assertEqual(sec.count(DLINE), 1)  # the page's one line sits beside its first affiliate link
+        self.assertEqual(m.count('class="disclosure'), 1)
+        app = (ROOT / 'app.js').read_text(encoding='utf-8')
+        self.assertIn("$('#rs-q').closest('.toolbar').before(box);oneDiscl();", app)  # the lazy desk keeps one line in the app too
         self.assertNotIn('donation', m.lower())
         self.assertNotIn('support the library', m.lower())
 

@@ -10,3 +10,12 @@ test('Citations preserve translator and source without inventing a publication d
  const ris=cite.format('ris');assert.match(ris,/Pusey/);assert.match(ris,/3296/);
  assert.match(cite.format('bibliography',{format:'text',template:'apa'}),/Confessions/);
 });
+test('/study/ loads the site fonts the same way the other static pages do',()=>{
+ const fs=require('fs'),path=require('path'),R=p=>fs.readFileSync(path.join(__dirname,'..',p),'utf8');
+ const idx=R('index.html'),study=R('study/index.html');
+ const fontsCss=idx.match(/href="(?:\/)?(styles\/fonts\.css\?v=[^"]+)"/)[1];
+ assert.ok(study.includes('href="/'+fontsCss+'"'),'same fonts.css version as index.html');
+ for(const m of idx.matchAll(/<link rel="preload" as="font"[^>]*href="(\/fonts\/[^"]+)">/g))assert.ok(study.includes('href="'+m[1]+'"'),m[1]);
+ assert.ok(study.indexOf('fonts.css')<study.indexOf('/styles.css'),'fonts.css before styles.css');
+ assert.equal((study.match(/googletagmanager\.com\/gtag\/js/g)||[]).length,1);
+});

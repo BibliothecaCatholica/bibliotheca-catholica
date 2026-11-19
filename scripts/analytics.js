@@ -108,11 +108,15 @@ function pageTitle(path,docTitle){if(path==='/search/')return 'Search · '+SITE_
 var SEEN={};
 function once(scope,key){var s=SEEN[scope]||(SEEN[scope]={});if(s[key])return false;s[key]=1;return true}
 function reset(scope){delete SEEN[scope]}
-function onClick(e){try{var t=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(!t)return;
-  var sup=t.closest('[data-support]');if(sup)track('support_click',{target:sup.getAttribute('data-support')});
+/* BC_CLICK_KINDS: a page outside app.js may set window.BC_CLICK_KINDS (for example ['affiliate'] on /study/, owner-approved
+   2026-11-19) so that only outbound_click events of those link kinds are sent there, and nothing else from this handler. */
+function onClick(e){try{var t=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(!t)return;var only=root.BC_CLICK_KINDS;
+  var sup=t.closest('[data-support]');if(sup&&!only)track('support_click',{target:sup.getAttribute('data-support')});
   var href=t.getAttribute('href')||'';if(!/^https?:\/\//i.test(href))return;var d=domain(href);if(!d||d==='bibliothecacatholica.com')return;
-  var ot=t.getAttribute('data-open-text');if(ot)track('open_text',{work_id:ot,text_source:'external',link_domain:d});
+  var ot=t.getAttribute('data-open-text');
   var kind=linkKind(d,{publisher:t.getAttribute('data-pub'),substack:!!t.closest('#ss-out'),source:!!ot});
+  if(only){if(only.indexOf&&only.indexOf(kind)>=0)track('outbound_click',{link_domain:d,link_kind:kind});return}
+  if(ot)track('open_text',{work_id:ot,text_source:'external',link_domain:d});
   /* listen_open (librivox): a work-page Listen link (class listen-btn) to LibriVox, once per work per page view */
   if(kind==='audio'&&t.classList&&t.classList.contains('listen-btn')){var L=root.location||{},wid=routeWork(L.hash)||routeWork('#/'+str(root.BC_BOOT));
     if(wid&&once('listen_open',wid))track('listen_open',{work_id:wid,listen_source:'librivox'})}

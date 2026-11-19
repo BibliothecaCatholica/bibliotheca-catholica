@@ -50,16 +50,16 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - Merged #72 (Advent readiness) and #73 (Magisterium AI panels on /magisterium/, /councils/, /summa/, /study/), after validating #73 on the new main.
 - #74 (merged): /study/ loads the site fonts; the disclosure line is 14 px on every page (one `.disclosure` rule); /libraries/ has one line, under its Magisterium link; tests keep one line per page.
-- #75 (open, analytics): /study/ loads `scripts/analytics.js` with `BC_CLICK_KINDS=['affiliate']`, so only the Magisterium click counts there. The delete command for 60 merged branches is with the owner (HOLDS). Day 4's J. M. Dent publisher not added: the hosted Scudder file names no publisher.
+- #75 (open, analytics): /study/ loads `scripts/analytics.js` with `BC_CLICK_KINDS=['affiliate']`, so only the Magisterium click counts there. The 60 merged branches were deleted on November 19. Day 4's J. M. Dent publisher not added: the hosted Scudder file names no publisher.
 
 ### 2026-11-19, Claude (Claude Code): cleanup pass, Advent readiness, Magisterium AI support
 
 - Hygiene (#71): snapshot, lean HOLDS with an Advent publishing row, dead /design-preview/ links fixed, docs/README.md matches docs/. Advent (#72): all 26 entries checked against the hosted texts (no data errors); `tools/check_plan_ui.js`; live-site and Publishing items stay open. Magisterium AI (#73): rule 7 allowlist test.
 
-### 2026-11-17, Claude (Claude Code): Sources and credits page (approved)
+### 2026-11-19, Claude (Claude Code): third pass (in progress)
 
-- /credits/ (tools/credits_page.py, from data): every hosted edition's full record, portraits, Wikipedia excerpts, and the home engraving, one anchor each; footer link; app.js keeps its #anchors out of routing and page views.
-- A book ends with a one-line `.colophon` linking to its record (after the 2c `.end-colophon` section on static last pages); author pages show "Image credit" and "Text credit" links. Approved with the PR's defaults; merged after main's design refresh.
+- Housekeeping: the branch cleanup HOLDS row is removed (all 60 deleted on November 19).
+- Blocked here: archive.org, Wikimedia, and HathiTrust are outside this session's network, so Councils 1a to 1c, the hand passes, and the Doré headers wait for a session on the repo's own environment.
 
 ## Open items
 

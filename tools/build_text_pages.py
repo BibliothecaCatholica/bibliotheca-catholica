@@ -56,6 +56,10 @@ PART_D={
     'confessions':{'about':'Project Gutenberg #3296: the translation by E. B. Pusey. Thirteen books, divided as the hosted text heads them; no words were changed.'},
     'betrothed':{'about':'Project Gutenberg #35155: the English translation published in London by Richard Bentley in 1834 (Standard Novels). Thirty-seven chapters, divided as the hosted text heads them; the transcriber’s note stays in the reader. No words were changed.'},
     'revelations-divine-love':{'about':'Project Gutenberg #52958: Grace Warrack’s version (London: Methuen, 1901). Julian’s eighty-six chapters, divided as the hosted text heads them; Warrack’s introduction stays in the reader. No words were changed.'},
+    # Orthodoxy flow batch 2 (November 19, 2026). Each sentence restates the edition's record and its map.
+    'bede-ecclesiastical-history':{'about':'Project Gutenberg #38326: A. M. Sellar’s revised translation (London: George Bell and Sons, 1907). Five books, divided as the hosted text heads them; the preface, index, and footnotes stay in the reader. No words were changed.'},
+    'consolation-philosophy':{'about':'Project Gutenberg #14328: H. R. James’s translation (London: Elliot Stock, 1897). Five books, each with its summary, songs, and prose, divided as the hosted text heads them; the introduction, epilogue, and notes stay in the reader. No words were changed.'},
+    'abandonment':{'about':'Project Gutenberg #52057: Ella McMahon’s translation, edited by H. Ramière (New York: Benziger Brothers, 1887). Thirty-three chapters in three books, divided as the hosted text heads them; the appendix of prayers stays in the reader. No words were changed.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

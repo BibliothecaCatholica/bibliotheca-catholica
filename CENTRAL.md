@@ -28,7 +28,7 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 19, 2026, `main` after PR #74 (`0384057ebf`):
 
-- 195 work records; 130 hosted editions of 125 works in `data/library.json` (215 editions in all, 3 retired); 28 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 195 work records; 130 hosted editions of 125 works in `data/library.json` (215 editions in all, 3 retired); 31 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,327 sitemap URLs; 8,132 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 127 Node and 337 Python.
 
@@ -58,7 +58,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 ### 2026-11-19, Claude (Claude Code): third pass (in progress)
 
-- Housekeeping (#77): the branch cleanup HOLDS row is removed (all 60 deleted on November 19). "Licensing & credits" everywhere (#78); the home page has a Subscribe button instead of the Substack embed (#79). Dependabot (#80): weekly grouped npm and Actions PRs. Site copy has no em-dashes (#84, `tests/test_site_copy_dashes.py`). Orthodoxy flow batch 1: Confessions, The Betrothed, and Revelations of Divine Love get chapter pages, openers, structure, and EPUBs (28 structured).
+- Housekeeping (#77): the branch cleanup HOLDS row is removed (all 60 deleted on November 19). "Licensing & credits" everywhere (#78); the home page has a Subscribe button instead of the Substack embed (#79). Dependabot (#80): weekly grouped npm and Actions PRs. Site copy has no em-dashes (#84, `tests/test_site_copy_dashes.py`). Orthodoxy flow batch 1: Confessions, The Betrothed, and Revelations of Divine Love get chapter pages, openers, structure, and EPUBs (#88); batch 2 adds Bede, Boethius, and Abandonment (31 structured).
 - Blocked here: archive.org, Wikimedia, and HathiTrust are outside this session's network, so Councils 1a to 1c, the hand passes, and the Doré headers wait for a session on the repo's own environment.
 
 ## Open items

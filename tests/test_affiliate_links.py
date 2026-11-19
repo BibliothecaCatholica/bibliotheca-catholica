@@ -8,6 +8,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 FTC = 'Some links are affiliate links. If you buy through them, Bibliotheca Catholica may earn a small commission at no extra cost to you. It helps keep the library free.'
 SUBSCRIBE = 'https://bibliothecacatholica.substack.com/subscribe'
 TAN = 'https://lddy.no/1qbrw'
+MAG = 'https://www.magisterium.com/pro/micah'
+MAG_LINE = 'We earn a commission if you subscribe through this link.'
 DLINE = '<p class="disclosure small">Affiliate links: we may earn a commission. <a href="/disclosure/">Details</a>.</p>'  # rule 7, November 14, 2026
 LINE = 'Advent with the Fathers: a short reading from the Church Fathers each day, Nov 29 to Dec 24. Free.'
 
@@ -39,6 +41,7 @@ class AffiliateLinkTests(unittest.TestCase):
     def test_config(self):
         self.assertRegex(self.aff, r"bookshopId:\s*'130222'")
         self.assertIn("tan: { name: 'TAN Books', url: '" + TAN + "'", self.aff)
+        self.assertIn("magisterium: { name: 'Magisterium AI', url: '" + MAG + "'", self.aff)
         self.assertIn("disclosure: 'Affiliate disclosure: " + FTC + "'", self.aff)  # the fuller statement on /disclosure/
         self.assertIn("line: 'Affiliate links: we may earn a commission.'", self.aff)
         self.assertEqual(self.pe['bookshopId'], '130222')
@@ -86,7 +89,7 @@ class AffiliateLinkTests(unittest.TestCase):
 
     def test_affiliate_links_are_plain_and_sponsored(self):
         for name, html in self.pages.items():
-            for a in re.findall(r'<a [^>]*href="(?:https://bookshop\.org/a/|https://lddy\.no/)[^>]*>', main_of(html)):
+            for a in re.findall(r'<a [^>]*href="(?:https://bookshop\.org/a/|https://lddy\.no/|https://www\.magisterium\.com/)[^>]*>', main_of(html)):
                 self.assertIn('rel="noopener sponsored"', a, name)
                 self.assertNotRegex(a, r'data-(support|ga|track|event)', name)
 
@@ -108,7 +111,7 @@ class AffiliateLinkTests(unittest.TestCase):
         self.assertIn('<h1>Affiliate disclosure</h1>', html)
         self.assertIn('<meta name="robots" content="index,follow">', html)
         self.assertIn('https://bibliothecacatholica.com/disclosure/', (ROOT / 'sitemap.xml').read_text())
-        for s in ('Bookshop.org', 'TAN Books', 'lddy.no', FTC, 'Commissions never decide'):
+        for s in ('Bookshop.org', 'TAN Books', 'lddy.no', 'Magisterium AI', MAG, FTC, 'Commissions never decide', 'not a donation to the library'):
             self.assertIn(s, html)
         self.assertEqual(html.count('googletagmanager.com/gtag/js'), 1)
         self.assertIn("'disclosure'", (ROOT / 'app.js').read_text())
@@ -156,7 +159,36 @@ class AffiliateLinkTests(unittest.TestCase):
         pol = self.pages['policy/index.html']
         self.assertIn('The newsletter sign-up form on the home page and the Advent reading plan is provided by Substack under its own', pol)
         self.assertIn('affiliate (a referral link', pol)
+        self.assertIn('Some links to Bookshop.org, TAN Books, and Magisterium AI are affiliate links', pol)
         self.assertIn('The “Search another collection” form on the <a href="/libraries/">Libraries</a> page sends what you type to Open Library', pol)
+
+    def test_magisterium_affiliate_on_libraries_only(self):
+        # one placement: /libraries/, with sponsored rel and the commission line beside the link; not a donation
+        hits = []
+        for name, html in self.pages.items():
+            if MAG in html:
+                hits.append(name)
+        self.assertEqual(set(hits), {'libraries/index.html', 'disclosure/index.html'})
+        m = main_of(self.pages['libraries/index.html'])
+        a = re.search(r'<a [^>]*href="' + re.escape(MAG) + r'"[^>]*>', m).group(0)
+        self.assertIn('rel="noopener sponsored"', a)
+        self.assertIn('target="_blank"', a)
+        self.assertIn('Try Magisterium AI Pro ↗', m)
+        self.assertIn(MAG_LINE, m)
+        self.assertIn('Readers who subscribe to Pro through this link get 25% off', m)
+        self.assertIn('href="/disclosure/"', m[m.index(MAG_LINE)-200:m.index(MAG_LINE)+200])
+        self.assertNotIn('donation', m.lower())
+        self.assertNotIn('support the library', m.lower())
+        # kept off author pages, header, footer, and home
+        home = self.pages['index.html']
+        self.assertNotIn(MAG, main_of(home))
+        self.assertNotIn(MAG, home[home.index('<header'):home.index('</header>')])
+        self.assertNotIn(MAG, home[home.index('<footer'):])
+        for name, html in self.pages.items():
+            if name.startswith('author/'):
+                self.assertNotIn(MAG, html, name)
+            foot = html[html.index('<footer'):]
+            self.assertNotIn(MAG, foot, name)
 
     def test_agents_md_rules(self):
         t = ''.join((ROOT / f).read_text() for f in ('docs/IMPLEMENTATION-NOTES.md', 'docs/PROJECT-RULES.md', 'docs/ANALYTICS.md'))

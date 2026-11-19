@@ -122,7 +122,7 @@ def newsletter_box():
 
 # --- /disclosure/ (owner-approved preview 2026-11-09): the affiliate relationships, in plain words.
 DISCLOSURE_TITLE='Affiliate disclosure'
-DISCLOSURE_DESC='How Bibliotheca Catholica uses affiliate links to Bookshop.org and TAN Books, what they earn, and why free reading in the library always comes first here.'
+DISCLOSURE_DESC='How Bibliotheca Catholica uses affiliate links to Bookshop.org, TAN Books, and Magisterium AI, and why free reading here always comes first.'
 def disclosure_page(ftc):
     return ('<div class="page-head"><div class="eyebrow">Support the library</div><h1>'+DISCLOSURE_TITLE+'</h1>'
      '<p class="lede">'+E(ftc)+'</p></div>'
@@ -133,12 +133,14 @@ def disclosure_page(ftc):
      '<p>Bibliotheca Catholica is a Bookshop.org affiliate. Links to Bookshop.org on book pages, '+a('/editions/','edition guides')+', and the '+a('/support/','Support page')+' carry our affiliate ID. When you buy through them, Bookshop.org pays us a small commission at no extra cost to you, and part of each sale supports independent bookstores. We link a specific book only where our edition guide records its ISBN.</p>'
      '<h2>TAN Books</h2>'
      '<p>Bibliotheca Catholica is a TAN Books affiliate. The “Browse TAN Books” link on classic Catholic works and their authors’ pages is a referral link (it passes through lddy.no, TAN Books’ referral service, and opens tanbooks.com). If you buy from TAN Books after following it, we may earn a small commission at no extra cost to you. The link opens TAN’s store, not a particular book, and does not mean TAN publishes that title.</p>'
+     '<h2>Magisterium AI</h2>'
+     '<p>Bibliotheca Catholica is a Magisterium AI affiliate. The “Try Magisterium AI Pro” link on the '+a('/libraries/','Digital Libraries')+' page is a referral link (https://www.magisterium.com/pro/micah, which opens Magisterium’s Pro page with our referral). Readers who subscribe to Pro through that link get 25% off, and we earn a 10% commission. It is a subscription to their research tool, not a donation to the library.</p>'
      '<h2>Other links</h2>'
      '<p>Links to other publishers, libraries, and bookstores, including the publisher searches in the edition guides, are ordinary links, and we earn nothing from them unless a program is added to this page. We do not use Amazon affiliate links.</p>'
      '<h2>How we choose</h2>'
      '<p>Commissions never decide what we recommend. Editions and translations are chosen on their merits, and a book with no affiliate link is listed just the same. Listing is not endorsement; see the '+a('/policy/','Fidelity & Editorial Policy')+'.</p>'
      '<h2>Privacy</h2>'
-     '<p>Affiliate links are plain links. Our analytics record only that an outside link was clicked, with its domain and a general kind (such as bookshop or affiliate), as the '+a('/policy/','Privacy section')+' explains. Bookshop.org and TAN Books handle your purchase under their own privacy policies.</p>'
+     '<p>Affiliate links are plain links. Our analytics record only that an outside link was clicked, with its domain and a general kind (such as bookshop or affiliate), as the '+a('/policy/','Privacy section')+' explains. Bookshop.org, TAN Books, and Magisterium AI handle your purchase under their own privacy policies.</p>'
      '<h2>Other ways to help</h2>'
      '<p>You can also '+a('/support/','support the library')+' directly, or get the free <a href="'+SUBSCRIBE+'" target="_blank" rel="noopener">newsletter</a> on Substack.</p>'
      '</section>')

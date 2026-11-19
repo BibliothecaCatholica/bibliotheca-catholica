@@ -6,6 +6,9 @@
  *  partners    Affiliate referral links that are not tied to one book (owner-approved preview 2026-11-09).
  *              tan.url is TAN Books' LeadDyno referral link; it redirects to tanbooks.com (checked 2026-11-09).
  *              Shown only as a general "Browse TAN Books" link (tools/build_print_editions.py).
+ *              magisterium.url is the Magisterium AI Pro referral (https://www.magisterium.com/pro/micah,
+ *              which redirects to /pro?via=micah; 25% off Pro, 10% commission; checked 2026-11-19).
+ *              Shown only on /libraries/ (tools/library_desk.py), never on author pages, the header, the footer, or home.
  *  line        The one-line FTC disclosure beside affiliate links, once per page, followed by a "Details" link to
  *              /disclosure/ (owner rule 7, November 14, 2026).
  *  disclosure  The fuller statement on the /disclosure/ page.
@@ -23,7 +26,8 @@ window.AFFILIATES = {
   line: 'Affiliate links: we may earn a commission.',
   disclosure: 'Affiliate disclosure: Some links are affiliate links. If you buy through them, Bibliotheca Catholica may earn a small commission at no extra cost to you. It helps keep the library free.',
   partners: {
-    tan: { name: 'TAN Books', url: 'https://lddy.no/1qbrw', lands: 'tanbooks.com', program: 'LeadDyno', checked: '2026-11-09' }
+    tan: { name: 'TAN Books', url: 'https://lddy.no/1qbrw', lands: 'tanbooks.com', program: 'LeadDyno', checked: '2026-11-09' },
+    magisterium: { name: 'Magisterium AI', url: 'https://www.magisterium.com/pro/micah', lands: 'magisterium.com/pro', program: 'via=micah', checked: '2026-11-19' }
   },
   publishers: {
     ignatius:   { name: 'Ignatius Press',      search: 'https://ignatius.com/search.php?search_query={q}', wrap: '', param: '', program: 'CJ (10%): https://www.ignatius.com/affiliate-programs/' },

@@ -280,3 +280,27 @@ test('2026-11-09: on every static page, page_path equals the path of its <link r
   if(!b||!c)continue;n++;assert.equal(A.pagePath('',b[1]),c[1],f);assert.equal(A.pagePath('#/'+b[1]),c[1],f)}
  assert.ok(n>4000,'checked '+n+' static pages');
 });
+test('2026-11-19: /study/ counts only affiliate clicks, as outbound_click with link_kind affiliate',()=>{
+ const link=(href,attrs)=>{const a={getAttribute:k=>k==='href'?href:(attrs||{})[k]||null,closest:sel=>sel==='a[href]'?a:null,classList:{contains:()=>false}};return a};
+ const {A,calls,ctx}=load(true);ctx.BC_BOOT='study';ctx.BC_CLICK_KINDS=['affiliate'];ctx.location.pathname='/study/';
+ A.onClick({target:link('https://www.magisterium.com/pro/micah')});
+ A.onClick({target:link('https://archive.org/details/summatheologi18thom')});  // a source link: not counted on /study/
+ A.onClick({target:link('https://www.biblegateway.com/passage/?search=Wis+2')});
+ A.onClick({target:link('https://archive.org/x',{'data-open-text':'summa'})});
+ const ev=calls.filter(c=>c[0]==='event');
+ assert.deepEqual(ev,[['event','outbound_click',{link_domain:'magisterium.com',link_kind:'affiliate'}]]);
+ assert.deepEqual(calls.filter(c=>c[0]==='set')[0],['set',{page_title:'Bibliotheca Catholica',page_location:'https://bibliothecacatholica.com/study/'}]);
+ // without the setting (every app page), the handler is unchanged
+ const b=load(true);b.ctx.location.hash='#/libraries';b.A.onClick({target:link('https://archive.org/x')});
+ assert.deepEqual(b.calls.filter(c=>c[0]==='event').map(c=>c[2].link_kind),['source']);
+});
+test('2026-11-19: /study/ loads the existing analytics script with one GA4 tag and no page view',()=>{
+ const html=fs.readFileSync('study/index.html','utf8');
+ assert.equal((html.match(/googletagmanager\.com\/gtag\/js/g)||[]).length,1);
+ assert.equal((html.match(/<script defer src="\/scripts\/analytics\.js\?v=[^"]+"><\/script>/g)||[]).length,1);
+ assert.match(html,/<script>window\.BC_BOOT='study';window\.BC_CLICK_KINDS=\['affiliate'\];<\/script>/);
+ assert.match(html,/'send_page_view': false/);
+ assert.doesNotMatch(html,/app\.js/);  // no page_view sender on this page
+ const idx=fs.readFileSync('index.html','utf8').match(/scripts\/analytics\.js\?v=[^"]+/)[0];
+ assert.ok(html.includes('/'+idx),'same analytics.js version as the app pages');
+});

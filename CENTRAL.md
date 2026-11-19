@@ -26,11 +26,11 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 ## Verified snapshot
 
-As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes that followed it:
+As of November 19, 2026, `main` after PR #70 (`ec12305459`):
 
-- 195 work records; 130 hosted editions of 125 works in `data/library.json` (203 editions in all); 16 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
-- 5,169 sitemap URLs; 7699 tracked files, most generated (`linguist-generated` in `.gitattributes`).
-- Tests: 124 Node and 284 Python.
+- 195 work records; 130 hosted editions of 125 works in `data/library.json` (215 editions in all, 3 retired); 25 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 5,327 sitemap URLs; 8,086 tracked files, most generated (`linguist-generated` in `.gitattributes`).
+- Tests: 126 Node and 331 Python.
 
 ## Standing decisions
 
@@ -45,27 +45,28 @@ As of November 15, 2026, `main` after PR #47 (`32e22d4d05`) and the QA fixes tha
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-19, Claude (Claude Code): cleanup pass, Advent readiness, Magisterium AI support
+
+- Hygiene (#71): snapshot set to post-#70 main; HOLDS uses "owner" (no row was finished), with a new Advent publishing row; dead /design-preview/ links and a wrong test name fixed in docs; docs/README.md lists every file in docs/.
+- Branches: 62 remote. The 16 fully merged with no PR are listed for the owner to delete (this session's proxy refuses ref deletes); 46 hold commits not on main (mostly squash-merged PRs) and stay. `epub/structure-hosted-works` is not on GitHub.
+- Advent (#72): all 26 entries checked against the hosted texts (no data errors); `tools/check_plan_ui.js` browser check; live-site and Publishing items stay open. Magisterium AI (#73, for owner review): panels on /magisterium/, /councils/, /summa/, /study/ from `tools/study_partner.py`; rule 7 allowlist test.
+
 ### 2026-11-17, Claude (Claude Code): Sources and credits page (approved)
 
 - /credits/ (tools/credits_page.py, from data): every hosted edition's full record, portraits, Wikipedia excerpts, and the home engraving, one anchor each; footer link; app.js keeps its #anchors out of routing and page views.
-- A book ends with a one-line `.colophon` linking to its record (after the 2c `.end-colophon` section on static last pages); author pages show "Image credit" and "Text credit" links. Approved by Micah November 17 with the PR's defaults; merged after main's design refresh.
+- A book ends with a one-line `.colophon` linking to its record (after the 2c `.end-colophon` section on static last pages); author pages show "Image credit" and "Text credit" links. Approved with the PR's defaults; merged after main's design refresh.
 
 ### 2026-11-17, Claude (Claude Code): design refresh
 
-- Part 1 (#56): audit, 20 unlisted previews at /design-preview/ (tools/build_design_preview.py, tests/test_design_preview.py), and docs/research/design-directions-2026-11.md. Micah picked: home v4, reading room v1 with authors v2, reading v2 contents (not sticky) with v3 endings, licensing v2, nav v1.
-- Part 2, one area per PR, screenshots in docs/research/design-refresh-2026-11/: home "Saints first" (#60; `HOME_BEGIN` in tools/site_copy.py); reading room facets and author shelf list (#64; `--field` token); chapter pages with contents at the start, Continue reading, Finis, colophon (#65); /licensing/ contents rail (#66); masthead navigation and footer (#67). /design-preview/ and its script and test removed; screenshots stay in docs/research/design-refresh-2026-11/. Open: HOLDS.md row on the licensing page names and the home Substack embed.
-
-### 2026-11-17, Claude (Claude Code): Ecumenical Councils section
-
-- /councils/: the 21 councils in order with own-words summaries and where to read each (data/councils.json, tools/councils_page.py, tests/test_councils.py); linked first on /magisterium/ and in the footer, not the main nav. Kept static by app.js (staticOnly), so it has no in-page #anchors.
-- Sources (Part 2, docs only): docs/research/councils-sources-2026-11.csv. Hostable by date: 1 to 7 (Percival 1900), Trent (Waterworth 1848), Vatican I (Manning 1870). Link-only: 8 to 18 (Schroeder 1937 canons pending NYPL), Vatican II. No LibriVox recording of any council text. Hosting waits for Micah (HOLDS.md).
+- Part 1 (#56): audit, 20 unlisted previews (removed in #69), and docs/research/design-directions-2026-11.md. Picks: home v4, reading room v1 with authors v2, reading v2 contents (not sticky) with v3 endings, licensing v2, nav v1.
+- Part 2, one area per PR, screenshots in docs/research/design-refresh-2026-11/: home "Saints first" (#60; `HOME_BEGIN` in tools/site_copy.py); reading room facets and author shelf list (#64; `--field` token); chapter pages with contents at the start, Continue reading, Finis, colophon (#65); /licensing/ contents rail (#66); masthead navigation and footer (#67). Previews, script, and test removed (#69). Open: HOLDS.md row on the licensing page names and the home Substack embed.
 
 ## Open items
 
 - Parked items, owners, and next steps: [HOLDS.md](HOLDS.md).
 - Owner: the takedown agent's name and postal address, and DMCA agent registration (the page shows only the contact email).
 - Hosted texts: further editions batches; manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
-- Advent launches November 29: excerpt-to-source comparison ([checklist](docs/ADVENT-LAUNCH.md)). Social readiness for Advent is owned by the Grok bot, not tracked here.
+- Advent launches November 29: data and local UI verified (#72); live-site checks and the publishing steps remain ([checklist](docs/ADVENT-LAUNCH.md), HOLDS row). Social readiness for Advent is owned by the Grok bot, not tracked here.
 - Libraries research candidates need rights and provenance review before import. Paused: `_headers` Report-Only CSP, low-priority npm audit findings.
 - Page-audit decisions: the publish allowlist and the `study/index.html` sitemap or noindex question. CI's Study drift check names the missing `study/passages` (harmless).
 - Recover the evidence listed in the [repository audit](docs/REPOSITORY-AUDIT-2026-11-09.md); confirm backups and account responsibilities ([OPERATIONS](docs/OPERATIONS.md)).

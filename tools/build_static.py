@@ -176,8 +176,8 @@ def resource_li(r):
     # Affiliate preview: the libraries Publishers entry uses the TAN LeadDyno referral link, with the same
     # "Browse TAN Books" label, rel="noopener sponsored", as work pages (tools/build_print_editions.py).
     if r.get('url')==TAN_REFERRAL:
-        return '<li>'+E(r['name'])+': <a href="'+E(r['url'])+'" target="_blank" rel="noopener sponsored">Browse TAN Books ↗</a> — '+E(r.get('desc',''))+'</li>'
-    return '<li>'+a(r['url'],r['name'],True)+' — '+E(r.get('desc',''))+'</li>'
+        return '<li>'+E(r['name'])+': <a href="'+E(r['url'])+'" target="_blank" rel="noopener sponsored">Browse TAN Books ↗</a>: '+E(r.get('desc',''))+'</li>'
+    return '<li>'+a(r['url'],r['name'],True)+': '+E(r.get('desc',''))+'</li>'
 def years(au):
     b,d=au.get('born'),au.get('died')
     f=lambda y:(str(-y)+' BC' if y<0 else str(y)) if isinstance(y,int) else ''
@@ -256,7 +256,7 @@ def list_item_title(i,gid,libw):
     if i.get('e') in gid:return a('/editions/'+i['e']+'/',gid[i['e']]['t'])
     ws=[libw[x] for x in i.get('workIds') or [] if x in libw]
     if ws:return ', '.join(a('/work/'+w['id']+'/',w['title'])+' by '+E(w['author']) for w in ws)
-    t=E(i.get('t','')+(' — '+i['a'] if i.get('a') else ''))
+    t=E(i.get('t','')+(' by '+i['a'] if i.get('a') else ''))
     assert t.strip(),'reading-list entry with no title, guide, or work: %r'%i
     return t
 # --- Deep-link gaps (2026-11-09): chapter and story pages for hosted texts (tools/text_pages.py, data/text-pages.json) ---
@@ -789,7 +789,7 @@ def main():
         d=x['name']+': '+s_facts(x)[0].lower()+s_facts(x)[1:]+' Sources, feast days, and where to read more.'
         d=fit([d],DESC_EXTRA)
         out['saints/'+x['id']]=(x['name']+' · Saints · Bibliotheca Catholica',d,crumb_html(('Saints & Hagiography','saints/'),(x['name'],''))+body,[crumbs(('Saints & Hagiography','saints/'),(x['name'],'saints/'+x['id']+'/'))])
-    sh=''.join('<li>'+a(b['url'],b['title'],True)+' — '+E(b['author'])+'; '+E(b['edition'] or b['imprint'])+(' (novel)' if b.get('fiction') else '')+'</li>' for b in SD['shelf'])
+    sh=''.join('<li>'+a(b['url'],b['title'],True)+' by '+E(b['author'])+'; '+E(b['edition'] or b['imprint'])+(' (novel)' if b.get('fiction') else '')+'</li>' for b in SD['shelf'])
     out['saints/books']=('The hagiography shelf · Saints · Bibliotheca Catholica','Public-domain lives of the saints, with editions and rights checked: Butler, Baring-Gould, the Golden Legend, the Little Flowers of St. Francis, and more.',head('Saints & Hagiography','The hagiography shelf','Public-domain lives of the saints, each with its edition, imprint, and rights evidence.')+'<ul>'+sh+'</ul>'+site_copy.acta_source()+'<p>'+a('/saints/','Saints & Hagiography')+'</p>',[crumbs(('Saints & Hagiography','saints/'),('The hagiography shelf','saints/books/'))])
     out['saints/about']=('Saints: sources and method · Bibliotheca Catholica','Where the Bibliotheca Catholica saints guide gets its facts, how feast dates are labelled by source, and what the CatholicSaints.Info links mean.',head('Saints & Hagiography','Sources & method','Every fact links its source. Feast dates are labelled by where they come from: Vatican News “Saint of the day”, the General Roman Calendar (not yet checked), and other calendars recorded in Wikidata.')+'<p>'+a('/saints/','Saints & Hagiography')+'</p>',[crumbs(('Saints & Hagiography','saints/'),('Sources & method','saints/about/'))])
     if CAL is not None:
@@ -814,12 +814,12 @@ def main():
                 sa=saints_by_author.get(au['id'])
                 extra+='<h2>'+a('/author/'+au['id']+'/',au['name'])+'</h2><p>'+E(str(au.get('century','Unplaced'))+' century · principal work')+(' · '+E(s_status(sa)) if sa else '')+'</p>'
                 if mine:extra+='<ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+'</li>' for w in mine)+'</ul>'
-            extra+='<h2>Additional saints and traditional figures</h2><ul>'+''.join('<li>'+a(s_href(x),x['name'])+' — '+E(s_status(x))+(' · '+E(FLAGL[x['historicity']['flag']]) if x.get('historicity') else '')+'</li>' for x in saints if not x.get('author_id') and x['id'] not in skip_auth)+'</ul>'
+            extra+='<h2>Additional saints and traditional figures</h2><ul>'+''.join('<li>'+a(s_href(x),x['name'])+', '+E(s_status(x))+(' · '+E(FLAGL[x['historicity']['flag']]) if x.get('historicity') else '')+'</li>' for x in saints if not x.get('author_id') and x['id'] not in skip_auth)+'</ul>'
         elif k=='related':extra='<h2>Writers with their own pages</h2><ul>'+''.join('<li>'+a('/author/'+ra['id']+'/',ra['name']+' ('+str(ra['born'])+'–'+str(ra['died'])+')')+' · '+E(ra['badge']+' · '+ra['tradition'])+'</li>' for ra in lib.get('relatedAuthors',[]))+'</ul>'
         elif k=='authors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors)+'</ul>'
-        elif k=='library':extra='<ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title']+' — '+w['author'])+'</li>' for w in lib['works'])+'</ul>'
+        elif k=='library':extra='<ul>'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+' by '+E(w['author'])+'</li>' for w in lib['works'])+'</ul>'
         elif k=='editions':extra='<ul>'+''.join('<li>'+a('/editions/'+e['id']+'/',e['t'])+'</li>' for e in guide['editions'])+'</ul>'
-        elif k=='saints':extra='<ul class="saint-list">'+''.join('<li class="saint-row">'+s_thumb(x)+a(s_href(x),x['name'])+' — '+E(s_status(x))+(' · Vatican News: '+E(s_vn(x)) if x['feasts']['vatican_news'] else '')+(' · '+E(FLAGL[x['historicity']['flag']]) if x.get('historicity') else '')+'</li>' for x in sorted(saints,key=lambda x:x['name']))+'</ul>'+(SC.months_html(CAL_N,a) if CAL is not None else '')+'<p>'+a('/saints/books/','The hagiography shelf')+' · '+a('/saints/about/','Sources & method')+'</p>'
+        elif k=='saints':extra='<ul class="saint-list">'+''.join('<li class="saint-row">'+s_thumb(x)+a(s_href(x),x['name'])+', '+E(s_status(x))+(' · Vatican News: '+E(s_vn(x)) if x['feasts']['vatican_news'] else '')+(' · '+E(FLAGL[x['historicity']['flag']]) if x.get('historicity') else '')+'</li>' for x in sorted(saints,key=lambda x:x['name']))+'</ul>'+(SC.months_html(CAL_N,a) if CAL is not None else '')+'<p>'+a('/saints/books/','The hagiography shelf')+' · '+a('/saints/about/','Sources & method')+'</p>'
         elif k=='reading':extra='<h2>Reading plans</h2><ul>'+''.join('<li>'+a('/reading/'+P['id']+'/',P['t']+' ('+str(len(P['days']))+' days, '+PLAN_SPAN(P)+')')+'</li>' for P in plans)+'</ul><h2>Reading lists</h2><ul>'+''.join('<li>'+a('/reading/'+L['id']+'/',L['t'])+'</li>' for L in guide['lists'])+'</ul>'
         elif k=='substacks':extra=guide['own']['html']  # our own newsletter first (tools/substacks_src.py OWN, 2026-11-09)
         elif k=='doctors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors if x.get('doctor'))+'</ul>'
@@ -852,7 +852,7 @@ def main():
     out['disclosure']=(site_copy.DISCLOSURE_TITLE+' · Bibliotheca Catholica',site_copy.DISCLOSURE_DESC,disclosure_html(),[crumbs((site_copy.DISCLOSURE_TITLE,'disclosure/'))])
     out['about']=('About the library · Bibliotheca Catholica','About Bibliotheca Catholica: what the free Catholic library holds, where its texts come from, the hosting rule, rights badges, editorial policy, and goals.',site_copy.about_page(counts),[crumbs(('About the library','about/'))])
     directory=head('Find a text','Search and browse the library','Use the search box for interactive results. Without JavaScript, browse the titles and authors below, or use your browser’s Find command.')
-    directory+='<h2>Selected reading editions</h2><ul class="search-browse">'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+' — '+E(w['author'])+'</li>' for w in sorted(lib['works'],key=lambda w:w['title'].casefold()))+'</ul>'
+    directory+='<h2>Selected reading editions</h2><ul class="search-browse">'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+' by '+E(w['author'])+'</li>' for w in sorted(lib['works'],key=lambda w:w['title'].casefold()))+'</ul>'
     directory+='<h2>Authors</h2><ul class="search-browse">'+''.join('<li>'+a('/author/'+au['id']+'/',au['name'])+'</li>' for au in sorted(authors,key=lambda au:au['name'].casefold()))+'</ul>'
     directory+='<p>'+a('/saints/','Saints & Hagiography')+' · '+a('/editions/','Editions & Translations')+' · '+a('/reading/','Reading Lists')+'</p>'
     out['councils']=(councils_page.TITLE+' · Bibliotheca Catholica',councils_page.DESC,crumb_html(('Church Documents','magisterium/'),(councils_page.TITLE,''))+councils_page.body(lib)+study_partner.panel('councils'),[crumbs(('Church Documents','magisterium/'),(councils_page.TITLE,'councils/'))])

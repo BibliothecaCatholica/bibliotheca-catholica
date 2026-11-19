@@ -2,7 +2,7 @@
 "name": "projects",
 "description": "Projects & Translations: 73 Catholic digital projects with AI-assisted work labelled (flagged entries excluded).",
 "license": "CC0-1.0",
-"generated": "2026-11-10",
+"generated": "2026-11-19",
 "count": 73,
 "fields": {
 "name": "project",
@@ -20,7 +20,7 @@
 },
 "records": [
 {
-"name": "Aquinas Institute — Opera Omnia online (aquinas.cc)",
+"name": "Aquinas Institute: the Opera Omnia online (aquinas.cc)",
 "category": "translation",
 "url": "https://aquinas.cc/",
 "github": null,
@@ -37,7 +37,7 @@
 ]
 },
 {
-"name": "Aquinas Institute — Augustine online (augustinus.cc)",
+"name": "Aquinas Institute: Augustine online (augustinus.cc)",
 "category": "translation",
 "url": "https://augustinus.cc/",
 "github": null,
@@ -53,7 +53,7 @@
 ]
 },
 {
-"name": "Mediatrix Press — Bellarmine Translation Project",
+"name": "Mediatrix Press: the Bellarmine Translation Project",
 "category": "translation",
 "url": "https://mediatrixpress.com/",
 "github": null,
@@ -70,7 +70,7 @@
 ]
 },
 {
-"name": "Freddoso — New English Translation of the Summa Theologiae",
+"name": "Freddoso's New English Translation of the Summa Theologiae",
 "category": "translation",
 "url": "https://www3.nd.edu/~afreddos/summa-translation/TOC.htm",
 "github": null,
@@ -344,7 +344,7 @@
 "x_handles": []
 },
 {
-"name": "Open Greek and Latin — CSEL (dev)",
+"name": "Open Greek and Latin: CSEL (dev)",
 "category": "dataset/API",
 "url": "https://opengreekandlatin.github.io/csel-dev/",
 "github": "https://github.com/OpenGreekAndLatin/csel-dev",
@@ -358,7 +358,7 @@
 "x_handles": []
 },
 {
-"name": "Open Greek and Latin — First1KGreek",
+"name": "Open Greek and Latin: First1KGreek",
 "category": "dataset/API",
 "url": "https://opengreekandlatin.github.io/First1KGreek/",
 "github": "https://github.com/OpenGreekAndLatin/First1KGreek",
@@ -372,7 +372,7 @@
 "x_handles": []
 },
 {
-"name": "Open Greek and Latin — Patrologia Latina (dev)",
+"name": "Open Greek and Latin: Patrologia Latina (dev)",
 "category": "dataset/API",
 "url": "https://opengreekandlatin.github.io/patrologia_latina-dev/",
 "github": "https://github.com/OpenGreekAndLatin/patrologia_latina-dev",
@@ -428,7 +428,7 @@
 "x_handles": []
 },
 {
-"name": "Petrus Lombardus — Sentences",
+"name": "Petrus Lombardus: the Sentences",
 "category": "dataset/API",
 "url": "https://github.com/historical-theology/petrus-lombardus",
 "github": "https://github.com/historical-theology/petrus-lombardus",
@@ -596,7 +596,7 @@
 "x_handles": []
 },
 {
-"name": "Summa Theologica — Latin plain text",
+"name": "Summa Theologica in Latin plain text",
 "category": "dataset/API",
 "url": "https://github.com/androur/Summa-Theologica-Latin",
 "github": "https://github.com/androur/Summa-Theologica-Latin",
@@ -610,7 +610,7 @@
 "x_handles": []
 },
 {
-"name": "Romanus — Roman Catechism (Go)",
+"name": "Romanus: the Roman Catechism (Go)",
 "category": "dataset/API",
 "url": "https://github.com/mborders/romanus",
 "github": "https://github.com/mborders/romanus",
@@ -722,7 +722,7 @@
 "x_handles": []
 },
 {
-"name": "Church Latin AI (Boyne Archives) — incl. Cano 'De Locis Theologicis' 1563 English",
+"name": "Church Latin AI (Boyne Archives), including Cano's 'De Locis Theologicis' (1563) in English",
 "category": "tool",
 "url": "https://churchlatin.ai/",
 "github": null,
@@ -894,7 +894,7 @@
 "x_handles": []
 },
 {
-"name": "Updated Works — Patrologia Latina in English",
+"name": "Updated Works: the Patrologia Latina in English",
 "category": "translation",
 "url": "https://updatedworks.com/patrologia-latina/",
 "github": null,
@@ -926,7 +926,7 @@
 ]
 },
 {
-"name": "Migne.app — Patrologia Latina & Graeca, open",
+"name": "Migne.app: the Patrologia Latina and Graeca, open",
 "category": "translation",
 "url": "https://migne.app/",
 "github": null,
@@ -945,7 +945,7 @@
 ]
 },
 {
-"name": "Lapide.org — Cornelius a Lapide commentary translated",
+"name": "Lapide.org: Cornelius a Lapide's commentary translated",
 "category": "translation",
 "url": "https://lapide.org/",
 "github": "https://github.com/farant/lapide",
@@ -962,7 +962,7 @@
 ]
 },
 {
-"name": "Bonaventure — Opera Omnia in English",
+"name": "Bonaventure's Opera Omnia in English",
 "category": "translation",
 "url": "https://bonaventure.wrootpress.com/",
 "github": null,
@@ -1062,7 +1062,7 @@
 ]
 },
 {
-"name": "Patristica.jp — Patrologia Latina in Japanese",
+"name": "Patristica.jp: the Patrologia Latina in Japanese",
 "category": "translation",
 "url": "https://patristica.jp/",
 "github": null,
@@ -1078,7 +1078,7 @@
 ]
 },
 {
-"name": "Bibliothecarius Modernus — Latin Patristic Texts (AI-assisted)",
+"name": "Bibliothecarius Modernus: Latin Patristic Texts (AI-assisted)",
 "category": "translation",
 "url": "https://bibliothecarius-modernus.github.io/",
 "github": "https://github.com/wryan14/Latin-Patristic-Texts",

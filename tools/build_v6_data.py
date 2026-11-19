@@ -89,7 +89,7 @@ for s in G['substacks']:
         if N(a['name'])==N(s['author']): x(a['id'])['own']=[dict(k='substack',t=s['name'],u=s['url'],n=s['desc'])]
 # media by the author (curated resources whose name carries the author's name)
 OWN={'robert-barron':['Word on Fire Show (Bishop Barron)','Bishop Robert Barron'],'fr-mike-schmitz':['The Bible in a Year (Fr. Mike Schmitz)','The Catechism in a Year (Fr. Mike Schmitz)','Ascension Presents'],
- 'brant-pitre':['Dr. Brant Pitre — Catholic Productions','Catholic Productions (Brant Pitre)'],'scott-hahn':['Scott Hahn — St. Paul Center'],'jimmy-akin':['The Jimmy Akin Podcast','Jimmy Akin\'s Mysterious World'],
+ 'brant-pitre':['Dr. Brant Pitre at Catholic Productions','Catholic Productions (Brant Pitre)'],'scott-hahn':['Scott Hahn at the St. Paul Center'],'jimmy-akin':['The Jimmy Akin Podcast','Jimmy Akin\'s Mysterious World'],
  'matt-fradd':['Pints with Aquinas (Matt Fradd)','Pints With Aquinas'],'taylor-marshall':['Dr. Taylor Marshall'],'trent-horn':['Counsel of Trent (Trent Horn)','The Counsel of Trent']}
 RS={r['name']:r for r in D['resources']}
 for i,names in OWN.items():

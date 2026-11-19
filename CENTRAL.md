@@ -26,11 +26,11 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 ## Verified snapshot
 
-As of November 19, 2026, `main` after PR #70 (`ec12305459`):
+As of November 19, 2026, `main` after PR #74 (`0384057ebf`):
 
 - 195 work records; 130 hosted editions of 125 works in `data/library.json` (215 editions in all, 3 retired); 25 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
-- 5,327 sitemap URLs; 8,086 tracked files, most generated (`linguist-generated` in `.gitattributes`).
-- Tests: 126 Node and 331 Python.
+- 5,327 sitemap URLs; 8,132 tracked files, most generated (`linguist-generated` in `.gitattributes`).
+- Tests: 127 Node and 337 Python.
 
 ## Standing decisions
 
@@ -40,26 +40,26 @@ As of November 19, 2026, `main` after PR #70 (`ec12305459`):
 - **Standing approval:** presentation, docs, tests, and tooling may merge on green CI, and so do hosted texts public domain by date (November 15, 2026); the owner's review is still required for new hosted texts on any other basis (each `pd-nonrenewal` batch), rights-rule changes, hosted-text wording, rights or licence statements, affiliate placements, analytics, hosting or DNS, takedown identity, and outreach ([OPERATIONS](docs/OPERATIONS.md#owner-decisions)).
 - **Settled (November 15, 2026):** Story of a Soul matching rule; EPUBs published for structured editions; hero engraving; takedown contact email; covers design C; Summa Design A.
 - **Donations (November 19, 2026):** Buy Me a Coffee was removed. PayPal is the only donation option.
+- **Magisterium AI (November 19, 2026):** the placements as built in #73 (PROJECT-RULES rule 7, `PAGES` in `tools/study_partner.py`), and counting its /study/ clicks as the existing affiliate kind (#75).
 
 ## Handoff log
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-19, Claude (Claude Code): follow-up pass
+
+- Merged #72 (Advent readiness) and #73 (Magisterium AI panels on /magisterium/, /councils/, /summa/, /study/), after validating #73 on the new main.
+- #74 (merged): /study/ loads the site fonts; the disclosure line is 14 px on every page (one `.disclosure` rule); /libraries/ has one line, under its Magisterium link; tests keep one line per page.
+- #75 (open, analytics): /study/ loads `scripts/analytics.js` with `BC_CLICK_KINDS=['affiliate']`, so only the Magisterium click counts there. The delete command for 60 merged branches is with the owner (HOLDS). Day 4's J. M. Dent publisher not added: the hosted Scudder file names no publisher.
+
 ### 2026-11-19, Claude (Claude Code): cleanup pass, Advent readiness, Magisterium AI support
 
-- Hygiene (#71): snapshot set to post-#70 main; HOLDS uses "owner" (no row was finished), with a new Advent publishing row; dead /design-preview/ links and a wrong test name fixed in docs; docs/README.md lists every file in docs/.
-- Branches: 62 remote. The 16 fully merged with no PR are listed for the owner to delete (this session's proxy refuses ref deletes); 46 hold commits not on main (mostly squash-merged PRs) and stay. `epub/structure-hosted-works` is not on GitHub.
-- Advent (#72): all 26 entries checked against the hosted texts (no data errors); `tools/check_plan_ui.js` browser check; live-site and Publishing items stay open. Magisterium AI (#73, for owner review): panels on /magisterium/, /councils/, /summa/, /study/ from `tools/study_partner.py`; rule 7 allowlist test.
+- Hygiene (#71): snapshot, lean HOLDS with an Advent publishing row, dead /design-preview/ links fixed, docs/README.md matches docs/. Advent (#72): all 26 entries checked against the hosted texts (no data errors); `tools/check_plan_ui.js`; live-site and Publishing items stay open. Magisterium AI (#73): rule 7 allowlist test.
 
 ### 2026-11-17, Claude (Claude Code): Sources and credits page (approved)
 
 - /credits/ (tools/credits_page.py, from data): every hosted edition's full record, portraits, Wikipedia excerpts, and the home engraving, one anchor each; footer link; app.js keeps its #anchors out of routing and page views.
 - A book ends with a one-line `.colophon` linking to its record (after the 2c `.end-colophon` section on static last pages); author pages show "Image credit" and "Text credit" links. Approved with the PR's defaults; merged after main's design refresh.
-
-### 2026-11-17, Claude (Claude Code): design refresh
-
-- Part 1 (#56): audit, 20 unlisted previews (removed in #69), and docs/research/design-directions-2026-11.md. Picks: home v4, reading room v1 with authors v2, reading v2 contents (not sticky) with v3 endings, licensing v2, nav v1.
-- Part 2, one area per PR, screenshots in docs/research/design-refresh-2026-11/: home "Saints first" (#60; `HOME_BEGIN` in tools/site_copy.py); reading room facets and author shelf list (#64; `--field` token); chapter pages with contents at the start, Continue reading, Finis, colophon (#65); /licensing/ contents rail (#66); masthead navigation and footer (#67). Previews, script, and test removed (#69). Open: HOLDS.md row on the licensing page names and the home Substack embed.
 
 ## Open items
 

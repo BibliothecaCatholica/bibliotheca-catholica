@@ -58,7 +58,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 ### 2026-11-19, Claude (Claude Code): third pass (in progress)
 
-- Housekeeping: the branch cleanup HOLDS row is removed (all 60 deleted on November 19).
+- Housekeeping (#77): the branch cleanup HOLDS row is removed (all 60 deleted on November 19). Licensing page is "Licensing & credits" everywhere (H1, label, footer, /about/, docs).
 - Blocked here: archive.org, Wikimedia, and HathiTrust are outside this session's network, so Councils 1a to 1c, the hand passes, and the Doré headers wait for a session on the repo's own environment.
 
 ## Open items

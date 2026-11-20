@@ -1653,6 +1653,19 @@
     "all-capitals line": 1
    }
   },
+  "pga-1100451": {
+   "work": "The World's Debt to the Catholic Church",
+   "multiLineBlocks": 449,
+   "reflowed": 420,
+   "kept": 29,
+   "share": 0.935,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 2,
+    "short line": 27
+   }
+  },
   "ia-rightswrongsinin00haas": {
    "work": "Rights and Wrongs in Industry",
    "multiLineBlocks": 1,

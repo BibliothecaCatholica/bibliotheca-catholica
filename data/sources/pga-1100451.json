@@ -1,0 +1,203 @@
+{
+  "id": "pga-1100451",
+  "kind": "public-domain-text",
+  "title": "The World's Debt to the Catholic Church",
+  "author": "James J. Walsh",
+  "firstPublished": "1924 (Boston: The Stratford Company)",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "Project Gutenberg Australia",
+  "sourceUrl": "https://gutenberg.net.au/ebooks11/1100451h.html",
+  "sourcePage": "https://gutenberg.net.au/ebooks11/1100451h.html",
+  "sourceNotice": "BROWSE the site for other\nworks by this author\nProject Gutenberg Australia (and our other authors) or get\n\na treasure-trove of literature HELP Reading, Downloading\nand Converting files)\ntreasure found hidden with no evidence of\nor\nownership\nSEARCH the entire site with\nGoogle Site Search\n\nTitle: The World's Debt to the Catholic Church\nAuthor: James J Walsh M. D., PH. D., Sc. D., ETC.\n* A Project Gutenberg Australia eBook *\neBook No.: 1100451h.html\nLanguage: English\nDate first posted: May 2011\nDate most recently updated: May 2011\n\nProduction notes:\n\n[Transcriber's Notes]\n\nPage numbers in this book are indicated by numbers enclosed in curly\nbraces, e.g. {99}. They have been located where page breaks occurred\nin the original book.\n\nExtended quotations and citations are indented such as reports,\nletters and interviews.\n\nObvious spelling or typographical errors have been corrected.\nInconsistant spelling of names and inventive and alternative\nspelling is left as printed.\n\n[End Transcriber's Notes]\n\nProject Gutenberg Australia eBooks are created from printed editions\nwhich are in the public domain in Australia, unless a copyright notice\nis included. We do NOT keep any eBooks in compliance with a particular\npaper edition.\n\nCopyright laws are changing all over the world. Be sure to check the\ncopyright laws for your country before downloading or redistributing this\nfile.\n\nThis eBook is made available at no cost and with almost no restrictions\nwhatsoever. You may copy it, give it away or",
+  "sourceFileSha256": "76c05adc5085b1381e24ae58651fce6f06a26d25db6998fc2921ccb7ec83f56f",
+  "sourceFile": "data/sources/pdf-prints/pga-1100451.pdf",
+  "sourceFileNote": "sourceFileSha256 is the SHA-256 of the pinned PDF print of the source page; the source's own server serves a bot check",
+  "readGate": {
+    "words": 91404,
+    "unknown": 356,
+    "readRate": 0.9961,
+    "gate": 0.995
+  },
+  "iaWitness": {
+    "identifier": "worldsdebttocath0000wals",
+    "url": "https://archive.org/details/worldsdebttocath0000wals",
+    "year": 1924,
+    "publisher": "Boston, Mass., The Stratford Co.",
+    "ocr": "worldsdebttocath0000wals_djvu.txt",
+    "ocrSha256": "ae85dbf9233643bebee8170d2fcc24519dab21f5613283883bedbba43d6d4bda",
+    "ocrNote": "SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)"
+  },
+  "collation": {
+    "sourceWords": 91917,
+    "scanWords": 94318,
+    "matchedWords": 89655,
+    "agreement": 0.9754,
+    "sampleDifferences": [
+      {
+        "source": "browse the site for",
+        "scan": "the library school"
+      },
+      {
+        "source": "james j walsh m d ph d sc d",
+        "scan": "james j walsh md fa d sc d"
+      },
+      {
+        "source": "of america preface for some nineteen hundred",
+        "scan": "wi2 p4ae preface or some nineteen hundred"
+      },
+      {
+        "source": "years the church established by christ when",
+        "scan": "years the church estab lished by christ when"
+      },
+      {
+        "source": "go teach all nations has stood for",
+        "scan": "go teach all na tions has stood for"
+      },
+      {
+        "source": "middle ages and renaissance down to modern",
+        "scan": "middle ages and renais sance down to modern"
+      },
+      {
+        "source": "factors architecture painting sculpture music poetry and",
+        "scan": "factors architecture painting sculp ture music poetry and"
+      },
+      {
+        "source": "and for the opportunity to display art",
+        "scan": "and for the oppor tunity to display art"
+      },
+      {
+        "source": "and the drama reborn in the service",
+        "scan": "and the drama re born in the service"
+      },
+      {
+        "source": "for the woman who felt that she",
+        "scan": "for the woman whe felt that she"
+      },
+      {
+        "source": "matrimony and has cultivated all the fruits",
+        "scan": "matrimony and has cul tivated all the fruits"
+      },
+      {
+        "source": "vesalius galileo morgagni mendel were all faithful",
+        "scan": "vesalius galileo morgagni men del were all faithful"
+      },
+      {
+        "source": "give it more abundantly not the life",
+        "scan": "give it more abun dantly not the life"
+      },
+      {
+        "source": "no mere human institution has ever done",
+        "scan": "no mere human in stitution has ever done"
+      },
+      {
+        "source": "are all gathered together even in the",
+        "scan": "are all gathered to gether even in the"
+      },
+      {
+        "source": "the world contents i ii iii chapter",
+        "scan": "the world contents chapter z ii ill iv"
+      },
+      {
+        "source": "iv v vi vii viii ix x xi",
+        "scan": "iv v vi vil viil ix xi xii"
+      },
+      {
+        "source": "vii viii ix x xi xii xiii",
+        "scan": "vil viil ix xi xii xiii"
+      },
+      {
+        "source": "49 65 85 103 124 141 161",
+        "scan": "49 65 85 21105 124 141 hod"
+      },
+      {
+        "source": "233 258 284 notes 303 1 chapter",
+        "scan": "8 258 284 303 chapter i"
+      },
+      {
+        "source": "284 notes 303 1 chapter i introduction",
+        "scan": "258 284 303 chapter i introduction"
+      },
+      {
+        "source": "chapter i introduction the subject of this",
+        "scan": "chapter i introduction he subject of this"
+      },
+      {
+        "source": "in brief the contribution of the catholic",
+        "scan": "in brief the contribu he of the catholic"
+      },
+      {
+        "source": "church to civilization civilization is the process",
+        "scan": "church to civilization ciy ilization is the process"
+      },
+      {
+        "source": "rather than the satisfaction which comes with",
+        "scan": "rather than the satisfac tion which comes with"
+      },
+      {
+        "source": "to men the christian church has been",
+        "scan": "to men the chris tian church has been"
+      },
+      {
+        "source": "of the higher better nobler life 2",
+        "scan": "of the higher bet ter nobler life 1"
+      },
+      {
+        "source": "life that is worthiest of man as",
+        "scan": "life that is worthi est of man as"
+      },
+      {
+        "source": "many temptations for indulgences of one kind",
+        "scan": "many temptations for indul gences of one kind"
+      },
+      {
+        "source": "makes a bloody entrance and while this",
+        "scan": "makes a bloody en trance and while this"
+      },
+      {
+        "source": "definite persistence of character as cannot be",
+        "scan": "definite persistence of char acter as cannot be"
+      },
+      {
+        "source": "its desires this condition of human life",
+        "scan": "its desires this con dition of human life"
+      },
+      {
+        "source": "the most trying circumstances and inclined to",
+        "scan": "the most trying circum stances and inclined to"
+      },
+      {
+        "source": "in order to 3 secure the continuance",
+        "scan": "in order to 2 introduction secure the continuance"
+      },
+      {
+        "source": "of ours the conditions of human life",
+        "scan": "of ours the con ditions of human life"
+      },
+      {
+        "source": "the various physical tendencies which we have",
+        "scan": "the various physical ten dencies which we have"
+      },
+      {
+        "source": "to secure proper development and cultivation and",
+        "scan": "to secure proper de velopment and cultivation and"
+      },
+      {
+        "source": "is not necessarily associated with education and",
+        "scan": "is not necessarily asso ciated with education and"
+      },
+      {
+        "source": "people who think themselves educated and who",
+        "scan": "people who think them selves educated and who"
+      },
+      {
+        "source": "to indicate the possession of mental development",
+        "scan": "to indicate the pos session of mental development"
+      }
+    ],
+    "method": "difflib word alignment, lower case, letters and digits only; OCR noise counts as disagreement"
+  },
+  "sha256": "825c2714a563f989bdd942ba37ce0fd8c1cf45828904617f222bb252755d2a8b",
+  "bytes": 528459,
+  "checked": "2026-11-20"
+}

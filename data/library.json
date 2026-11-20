@@ -5862,6 +5862,35 @@
       ]
     },
     {
+      "id": "walsh-worlds-debt-catholic-church",
+      "title": "The World's Debt to the Catholic Church",
+      "author": "James J. Walsh",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "James J. Walsh's survey of what art, architecture, literature, science, education, and social care owe to the Catholic Church.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-20",
+      "date": "1924",
+      "editions": [
+        {
+          "id": "pga-1100451",
+          "label": "Project Gutenberg Australia #1100451",
+          "source": "https://gutenberg.net.au/ebooks11/1100451h.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+          "checked": "2026-11-20",
+          "note": "First published 1924 (Boston: The Stratford Company). Project Gutenberg Australia does not tie its texts to a printing; the text was rebuilt from a PDF print of its page and compared word by word with the Internet Archive scan of the 1924 printing (Boston, Mass., The Stratford Co.): 98% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record.",
+          "sourceTitle": "The World's Debt to the Catholic Church",
+          "digitalRelease": "May 2011",
+          "access": "full-text",
+          "text": "data/texts/pga-1100451.txt",
+          "sha256": "825c2714a563f989bdd942ba37ce0fd8c1cf45828904617f222bb252755d2a8b",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
       "id": "huber-st-anthony-of-padua",
       "title": "St. Anthony of Padua, Doctor of the Church Universal",
       "author": "Raphael M. Huber",

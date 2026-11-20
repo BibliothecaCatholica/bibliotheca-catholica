@@ -21,9 +21,10 @@ words that are known words of the library's hosted texts or that occur in this b
     python3 tools/import_pdf_print.py SPEC.json --stage DIR     # rebuild and score only; writes DIR/<edition>.txt
     python3 tools/import_pdf_print.py SPEC.json --host          # network: archive.org scan comparison, then the
                                                                 # tools/import_plain_text.py record and hosted text
+                                                                # (entries without `ia` are skipped, not hosted)
 
 SPEC is a list of {edition, pdf, sourceUrl, sourcePage, sourceName, sourceTitle, title, author, year, firstPublished,
-firstPublishedEvidence, ia?}. `--host` refuses without `ia` (a dated Internet Archive scan of a printing that is
+firstPublishedEvidence, ia?}. `--host` skips an entry without `ia` (a dated Internet Archive scan of a printing that is
 public domain in the US by date), exactly as tools/import_plain_text.py does: the comparison is the gate that shows the
 source is the book it claims to be (95% agreement, tests/test_imported_texts.py).
 """
@@ -35,6 +36,7 @@ sys.path.insert(0, str(ROOT / 'tools'))
 from rights_rule import pd_by_date  # noqa: E402
 
 READ_GATE = 0.995
+AGREEMENT = 0.95  # the scan comparison's floor (tests/test_imported_texts.py)
 WORD = re.compile(r"[A-Za-z][A-Za-z'’]*")
 
 
@@ -139,8 +141,27 @@ def main():
             print(e['edition'], f"{r['words']} words, read rate {r['readRate']:.2%} ({r['unknown']} unknown)",
                   'passes' if r['readRate'] >= READ_GATE else 'BELOW THE GATE', f"pdf {sha_pdf[:12]}")
         else:
-            sys.exit('--host needs archive.org for the scan comparison (tools/import_plain_text.py); run it in a session '
-                     'that can reach archive.org, with `ia` set for each entry')
+            host(e, pdf, text, sha_pdf, r)
+
+
+def host(e, pdf, text, sha_pdf, r):
+    """Hosts one rebuilt text through tools/import_plain_text.py: the dated scan comparison, then the hosted text and
+    its source record. Refuses (and writes nothing) without `ia`, below the read gate, or below 95% agreement."""
+    import import_plain_text as I
+    if not e.get('ia'):
+        print(e['edition'], 'NOT HOSTED: no dated Internet Archive scan (`ia`) to compare with'); return
+    if r['readRate'] < READ_GATE:
+        print(e['edition'], f"NOT HOSTED: read rate {r['readRate']:.2%} is below the gate"); return
+    out, basis = I.check_basis(e)
+    body = text.strip('\n')
+    witness, col = I.scan_witness(e, body, basis)
+    if col['agreement'] < AGREEMENT:
+        print(e['edition'], f"NOT HOSTED: {col['agreement']:.1%} agreement with {e['ia']} is below {AGREEMENT:.0%}"); return
+    I.host(e, pdf.read_bytes(), body, basis, out, witness, col,
+           converted="Rebuilt from a browser's PDF print of the source page (tools/import_pdf_print.py)",
+           extra={'sourceFile': e['pdf'], 'sourceFileNote': "sourceFileSha256 is the SHA-256 of the pinned PDF print "
+                  "of the source page; the source's own server serves a bot check", 'readGate': {k: r[k] for k in (
+                      'words', 'unknown', 'readRate', 'gate')}})
 
 
 if __name__ == '__main__':

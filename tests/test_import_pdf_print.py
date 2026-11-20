@@ -52,7 +52,16 @@ class ImportPdfPrint(unittest.TestCase):
             self.assertIn(str(e['year']), e['firstPublishedEvidence'], e['edition'])
             r = json.loads((ROOT / 'docs/research/pga-pdf-prints-2026-11' / (e['edition'] + '.read.json')).read_text())
             self.assertGreaterEqual(r['readRate'], P.READ_GATE, e['edition'])
-            self.assertFalse((ROOT / 'data/texts' / (e['edition'] + '.txt')).exists(), 'hosted only through --host, after the scan comparison')
+            hosted = ROOT / 'data/texts' / (e['edition'] + '.txt')
+            if not e.get('ia'):
+                self.assertFalse(hosted.exists(), 'hosted only through --host, after the scan comparison')
+                continue
+            src = json.loads((ROOT / 'data/sources' / (e['edition'] + '.json')).read_text())
+            self.assertEqual(src['iaWitness']['identifier'], e['ia'], e['edition'])
+            self.assertGreaterEqual(src['collation']['agreement'], P.AGREEMENT, e['edition'])
+            self.assertEqual(src['sourceFileSha256'], e['pdfSha256'], e['edition'])  # the pinned print, not a refetch
+            self.assertGreaterEqual(src['readGate']['readRate'], P.READ_GATE, e['edition'])
+            self.assertEqual(hashlib.sha256(hosted.read_bytes()).hexdigest(), src['sha256'], e['edition'])
 
 
 if __name__ == '__main__':

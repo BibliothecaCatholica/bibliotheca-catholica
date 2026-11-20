@@ -10,7 +10,7 @@
   "pdfSha256": "76c05adc5085b1381e24ae58651fce6f06a26d25db6998fc2921ccb7ec83f56f",
   "sourceUrl": "https://gutenberg.net.au/ebooks11/1100451h.html", "sourcePage": "https://gutenberg.net.au/ebooks11/1100451h.html",
   "sourceName": "Project Gutenberg Australia", "sourceTitle": "The World's Debt to the Catholic Church", "title": "The World's Debt to the Catholic Church",
-  "author": "James J. Walsh", "year": 1924,
+  "author": "James J. Walsh", "year": 1924, "ia": "worldsdebttocath0000wals",
   "firstPublished": "1924 (Boston: The Stratford Company)",
   "firstPublishedEvidence": "the source's title page: \"THE STRATFORD COMPANY, Publishers ... Published September, 1924 / Second edition December, 1924 / Third edition March, 1925\""},
  {"edition": "pga-0500731", "pdf": "data/sources/pdf-prints/pga-0500731.pdf", "pdfTitle": "C",

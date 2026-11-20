@@ -53,10 +53,15 @@ class ImportPdfPrint(unittest.TestCase):
             r = json.loads((ROOT / 'docs/research/pga-pdf-prints-2026-11' / (e['edition'] + '.read.json')).read_text())
             self.assertGreaterEqual(r['readRate'], P.READ_GATE, e['edition'])
             hosted = ROOT / 'data/texts' / (e['edition'] + '.txt')
-            if not e.get('ia'):
+            if not e.get('ia') and not e.get('scanException'):
                 self.assertFalse(hosted.exists(), 'hosted only through --host, after the scan comparison')
                 continue
             src = json.loads((ROOT / 'data/sources' / (e['edition'] + '.json')).read_text())
+            if not e.get('ia'):  # the owner-approved exception, recorded exactly as the spec gives it
+                self.assertEqual(src['scanException'], e['scanException'], e['edition'])
+                self.assertEqual(src['sourceFileSha256'], e['pdfSha256'], e['edition'])
+                self.assertGreaterEqual(src['readGate']['readRate'], P.READ_GATE, e['edition'])
+                continue
             self.assertEqual(src['iaWitness']['identifier'], e['ia'], e['edition'])
             self.assertGreaterEqual(src['collation']['agreement'], P.AGREEMENT, e['edition'])
             self.assertEqual(src['sourceFileSha256'], e['pdfSha256'], e['edition'])  # the pinned print, not a refetch

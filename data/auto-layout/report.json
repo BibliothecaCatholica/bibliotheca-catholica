@@ -1691,6 +1691,31 @@
     "short line": 27
    }
   },
+  "pga-0900731": {
+   "work": "The Sword of Wood",
+   "multiLineBlocks": 65,
+   "reflowed": 56,
+   "kept": 9,
+   "share": 0.862,
+   "emphasisSpans": 6,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "short line": 9
+   }
+  },
+  "pga-0500731": {
+   "work": "C",
+   "multiLineBlocks": 2744,
+   "reflowed": 2623,
+   "kept": 121,
+   "share": 0.956,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 8,
+    "short line": 113
+   }
+  },
   "ia-rightswrongsinin00haas": {
    "work": "Rights and Wrongs in Industry",
    "multiLineBlocks": 1,

@@ -5953,6 +5953,65 @@
       ]
     },
     {
+      "id": "sword-of-wood",
+      "title": "The Sword of Wood",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's short story, first published as the first volume of the Woburn Series.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-20",
+      "date": "1928",
+      "editions": [
+        {
+          "id": "pga-0900731",
+          "label": "Project Gutenberg Australia #0900731",
+          "source": "https://gutenberg.net.au/ebooks09/0900731h.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+          "checked": "2026-11-20",
+          "note": "First published 1928 (London: Elkin Mathews & Marrot, the Woburn Series), the year the source's own note prints. Rebuilt from a PDF print of the Project Gutenberg Australia page. No dated scan of this printing exists on archive.org or Open Library (searched November 20, 2026), so it was not compared with a scan; hosted by an owner-approved exception, with the read gate passed (99.75%).",
+          "sourceTitle": "The Sword of Wood",
+          "access": "full-text",
+          "text": "data/texts/pga-0900731.txt",
+          "sha256": "9a3b1e932428117a78e17bf4264f097bab418aa25e23b543956789daeab710bf",
+          "rightsBasis": "pd-date",
+          "digitalRelease": "March 2013"
+        }
+      ]
+    },
+    {
+      "id": "baring-c",
+      "title": "C",
+      "author": "Maurice Baring",
+      "authorId": "maurice-baring",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Maurice Baring's 1924 novel following Caryl Bramsley, called C., from his boyhood.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-20",
+      "date": "1924",
+      "editions": [
+        {
+          "id": "pga-0500731",
+          "label": "Project Gutenberg Australia #0500731",
+          "source": "https://gutenberg.net.au/ebooks05/0500731h.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+          "checked": "2026-11-20",
+          "note": "First published 1924, the year the source's title page prints. Rebuilt from a PDF print of the Project Gutenberg Australia page. No dated scan of this printing exists on archive.org or Open Library (searched November 20, 2026), so it was not compared with a scan; hosted by an owner-approved exception, with the read gate passed (99.70%).",
+          "sourceTitle": "C",
+          "access": "full-text",
+          "text": "data/texts/pga-0500731.txt",
+          "sha256": "81a9ecf6375d9adccc116eec3603bbbf9383d619ac883ed9bf5f4eb84edf5179",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
       "id": "huber-st-anthony-of-padua",
       "title": "St. Anthony of Padua, Doctor of the Church Universal",
       "author": "Raphael M. Huber",

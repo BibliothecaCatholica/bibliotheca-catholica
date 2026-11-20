@@ -22,7 +22,7 @@ const ERA={};hub.eras.forEach(e=>{ERA[e.id]=e.label});
 const BY={};R.books.forEach(b=>{if(flags.books[String(b[0])])return;b[2].forEach(i=>{const h=R.authors[i][1];if(h)BY[h]=(BY[h]||0)+1})});
 const skip=new Set(flags.hubAuthors||[]);
 const noHosted=hub.authors.filter(a=>!skip.has(a.id)&&!ctx.auHosted(a.id));
-test('453 authors have no hosted work; 23 do (Knox added 2026-11-15)',()=>{assert.equal(noHosted.length,453)});
+test('452 authors have no hosted work; 24 do (Knox added 2026-11-15; Maurice Baring, C, 2026-11-20)',()=>{assert.equal(noHosted.length,452)});
 test('auIntro() matches the static intro on every page without a hosted work',()=>{
  for(const a of noHosted){
   const html=fs.readFileSync('author/'+a.id+'/index.html','utf8');

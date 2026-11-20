@@ -60,6 +60,10 @@ def checks(r):
         return ('Compared word by word with the Internet Archive scan ' + ext(w.get('url', ''), E(w.get('identifier', ''))) + ' ('
                 + E(w.get('year', '')) + '): ' + format(c['agreement'], '.1%') + ' of ' + format(c['sourceWords'], ',')
                 + ' words confirmed by its OCR; the differing passages are listed in the source record.')
+    if r.get('scanException'):  # owner-approved, per edition (November 20, 2026)
+        x = r['scanException']
+        return ('Not compared with a scan: ' + E(x['reason']) + ' Hosted by an owner-approved exception (' + E(x['date']) + '); '
+                + format(r['readGate']['readRate'], '.2%') + ' of ' + format(r['readGate']['words'], ',') + ' words pass the read gate.')
     if r.get('readRate') is not None:
         fixes = len(r.get('handFixes') or [])
         return ('Transcribed from the scan: ' + format(r['readRate'], '.2%') + ' of ' + format(r['words'], ',') + ' words read, '

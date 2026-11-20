@@ -148,14 +148,20 @@ def host(e, pdf, text, sha_pdf, r):
     """Hosts one rebuilt text through tools/import_plain_text.py: the dated scan comparison, then the hosted text and
     its source record. Refuses (and writes nothing) without `ia`, below the read gate, or below 95% agreement."""
     import import_plain_text as I
-    if not e.get('ia'):
+    if (ROOT / f"data/texts/{e['edition']}.txt").exists():
+        print(e['edition'], 'already hosted; a pinned text never changes'); return
+    if not e.get('ia') and not e.get('scanException'):
         print(e['edition'], 'NOT HOSTED: no dated Internet Archive scan (`ia`) to compare with'); return
     if r['readRate'] < READ_GATE:
         print(e['edition'], f"NOT HOSTED: read rate {r['readRate']:.2%} is below the gate"); return
     out, basis = I.check_basis(e)
     body = text.strip('\n')
-    witness, col = I.scan_witness(e, body, basis)
-    if col['agreement'] < AGREEMENT:
+    if not e.get('ia'):  # the owner-approved exception: hosted without a comparison, the exception recorded
+        assert basis == 'pd-date' and str(e['scanException']['yearInText']) in body, e['edition']
+        witness, col = None, None
+    else:
+        witness, col = I.scan_witness(e, body, basis)
+    if col and col['agreement'] < AGREEMENT:
         print(e['edition'], f"NOT HOSTED: {col['agreement']:.1%} agreement with {e['ia']} is below {AGREEMENT:.0%}"); return
     I.host(e, pdf.read_bytes(), body, basis, out, witness, col,
            converted="Rebuilt from a browser's PDF print of the source page (tools/import_pdf_print.py)",

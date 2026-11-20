@@ -1,0 +1,23 @@
+{
+ "words": 5209,
+ "unknown": 14,
+ "readRate": 0.9973,
+ "unknownWords": [
+  "Barebones",
+  "Falkland",
+  "Glashan",
+  "Google",
+  "Marrot",
+  "Noll's",
+  "Woburn",
+  "ferule",
+  "figo",
+  "handshake",
+  "peruke",
+  "pothecaries",
+  "swordplay",
+  "update"
+ ],
+ "gate": 0.995,
+ "method": "share of words that are known words of the hosted texts (tools/transcribe_scan.py) or occur at least twice in this text"
+}

@@ -1,0 +1,23 @@
+[
+ {"edition": "pga-0900731", "pdf": "data/sources/pdf-prints/pga-0900731.pdf", "pdfTitle": "The Sword of Wood",
+  "pdfSha256": "7125e5db75459714fe08ba9596a1ba4d2650bfb5a8ae07e7d2bec878ad7390d6",
+  "sourceUrl": "https://gutenberg.net.au/ebooks09/0900731h.html", "sourcePage": "https://gutenberg.net.au/ebooks09/0900731h.html",
+  "sourceName": "Project Gutenberg Australia", "sourceTitle": "The Sword of Wood", "title": "The Sword of Wood",
+  "author": "G. K. Chesterton", "year": 1928,
+  "firstPublished": "1928 (London: Elkin Mathews & Marrot, the Woburn Series)",
+  "firstPublishedEvidence": "the source's own note: \"First published by E. Mathews & Marrot, London, 1928, as Vol. 1 in the Woburn Series\""},
+ {"edition": "pga-1100451", "pdf": "data/sources/pdf-prints/pga-1100451.pdf", "pdfTitle": "The World's Debt to the Catholic Church; By James J. Walsh",
+  "pdfSha256": "76c05adc5085b1381e24ae58651fce6f06a26d25db6998fc2921ccb7ec83f56f",
+  "sourceUrl": "https://gutenberg.net.au/ebooks11/1100451h.html", "sourcePage": "https://gutenberg.net.au/ebooks11/1100451h.html",
+  "sourceName": "Project Gutenberg Australia", "sourceTitle": "The World's Debt to the Catholic Church", "title": "The World's Debt to the Catholic Church",
+  "author": "James J. Walsh", "year": 1924, "ia": "worldsdebttocath0000wals",
+  "firstPublished": "1924 (Boston: The Stratford Company)",
+  "firstPublishedEvidence": "the source's title page: \"THE STRATFORD COMPANY, Publishers ... Published September, 1924 / Second edition December, 1924 / Third edition March, 1925\""},
+ {"edition": "pga-0500731", "pdf": "data/sources/pdf-prints/pga-0500731.pdf", "pdfTitle": "C",
+  "pdfSha256": "0bffc5d6787e3d7fe758880e286c20bf7db4d5a11029223d6672a7f67246350e",
+  "sourceUrl": "https://gutenberg.net.au/ebooks05/0500731h.html", "sourcePage": "https://gutenberg.net.au/ebooks05/0500731h.html",
+  "sourceName": "Project Gutenberg Australia", "sourceTitle": "C", "title": "C",
+  "author": "Maurice Baring", "year": 1924,
+  "firstPublished": "1924",
+  "firstPublishedEvidence": "the source's title page: \"1924\""}
+]

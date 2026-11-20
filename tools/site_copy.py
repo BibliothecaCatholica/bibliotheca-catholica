@@ -55,6 +55,37 @@ HERO_IMG=('<img class="hero-art" src="/assets/hero/dore-paradiso-31-640.webp" sr
      'alt="Engraving: Dante and Beatrice look up at the highest heaven, a vast rose of light ringed with angels.">')
 HERO_CREDIT=('Gustave Doré, <cite>The Empyrean</cite> (Paradiso, Canto XXXI), from the 1892 Cassell <cite>Divine Comedy</cite>. Public domain, via '
      '<a href="https://commons.wikimedia.org/wiki/File:Paradiso_Canto_31.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.')
+# Section-header engravings (owner's pick of option A in PR #95, November 20, 2026): the home hero's Doré style carried
+# into five section heads. Each plate is cropped from the 1871 Berlin Göttliche Komödie scan on Wikimedia Commons (public
+# domain) and credited under its own band and on /credits/. Keys are the page keys used by both renderers.
+_PDP = 'https://commons.wikimedia.org/wiki/File:'
+PAGE_ART = {
+ 'library': ('dore-paradiso-14', 'Paradiso, Canto XIV', _PDP + 'Gottliche_Komodie._T._3%2C_Das_Paradies_1871_%28148199950%29.jpg', 1206, 1509,
+             'Engraving: Beatrice stands on a cloud above Dante as a host of spirits streams across the sky.'),
+ 'magisterium': ('dore-paradiso-18', 'Paradiso, Canto XVIII', _PDP + 'Gottliche_Komodie._T._3%2C_Das_Paradies_1871_%28148200062%29.jpg', 1254, 1545,
+             'Engraving: Dante and Beatrice stand on a cloud inside spiralling bands of winged spirits.'),
+ 'councils': ('dore-paradiso-03', 'Paradiso, Canto III', _PDP + 'Gottliche_Komodie._T._3%2C_Das_Paradies_1871_%28148199779%29.jpg', 1220, 1524,
+             'Engraving: Dante and Beatrice meet a gathering of robed spirits among the clouds.'),
+ 'saints': ('dore-paradiso-31-madonna', 'Paradiso, Canto XXXI', _PDP + 'Paradiso_Canto_31_-_Madonna_%28148200440%29.jpg', 1843, 2282,
+             'Engraving: the Virgin enthroned in the highest heaven, ringed by countless angels, with saints below.'),
+ 'summa': ('dore-paradiso-12', 'Paradiso, Canto XII', _PDP + 'Gottliche_Komodie._T._3%2C_Das_Paradies_1871_%28148199891%29.jpg', 1235, 1544,
+             'Engraving: Dante and Beatrice stand on a cloud between two rings of shining spirits.'),
+}
+def art_credit(key):
+    f, canto, url, w, h, alt = PAGE_ART[key]
+    return ('Gustave Doré, <cite>' + E(canto) + '</cite>, from the 1871 Berlin <cite>Göttliche Komödie</cite>. Public domain, via '
+            '<a href="' + E(url) + '" target="_blank" rel="noopener">Wikimedia Commons</a>.')
+def art_figure(key):
+    """The engraving and its credit, placed first inside the page's .page-head (styles/home.css, .page-head.has-art)."""
+    f, canto, url, w, h, alt = PAGE_ART[key]
+    return ('<figure class="page-art"><img src="/assets/hero/' + f + '-640.webp" srcset="/assets/hero/' + f + '-360.webp 360w, '
+            '/assets/hero/' + f + '-640.webp 640w" sizes="(max-width: 720px) 100vw, 460px" width="640" height="' + str(round(h * 640 / w))
+            + '" decoding="async" alt="' + E(alt) + '"><figcaption class="art-credit">' + art_credit(key) + '</figcaption></figure>')
+def with_art(key, html_):
+    """Puts a section's engraving into its first .page-head; the same rule as withPageArt() in app.js."""
+    if key not in PAGE_ART or '<div class="page-head">' not in html_:
+        return html_
+    return html_.replace('<div class="page-head">', '<div class="page-head has-art">' + art_figure(key), 1)
 def home_hero():
     # Hero engraving: Gustave Doré's Empyrean, Paradiso Canto
     # XXXI, the top recommendation of PR #27, public domain with its source recorded in data/hero.json.

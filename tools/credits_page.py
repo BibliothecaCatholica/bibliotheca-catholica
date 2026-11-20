@@ -122,7 +122,12 @@ def hosted_authors(lib):
     return {w['authorId'] for w in lib['works'] if w.get('authorId') and any(e.get('text') for e in w['editions'])}
 
 
+ART_LABELS = (('library', 'Reading room'), ('magisterium', 'Church Documents'), ('councils', 'Councils'), ('saints', 'Saints'),
+              ('summa', 'Summa'))  # section-header engravings (tools/site_copy.py PAGE_ART)
+
+
 def page_html(lib, hub, hero_credit):
+    import site_copy
     libw = {w['id']: w for w in lib['works']}
     books = [(w, e) for w in sorted(lib['works'], key=lambda w: (w['title'].lower(), w['id'])) for e in w['editions'] if e.get('text')]
     P = portrait_entries(hub)
@@ -141,4 +146,5 @@ def page_html(lib, hub, hero_credit):
             + '<h2 id="wikipedia">Wikipedia excerpts</h2><p>These excerpts are shortened from Wikipedia and shared under CC BY-SA 4.0; they are '
             'not covered by the site’s own licences.</p><ul class="credit-list">' + ''.join(wiki_entry(a) for a in W) + '</ul>'
             + '<h2 id="images">Other images</h2><ul class="credit-list"><li id="home-engraving">Home page engraving: ' + hero_credit + '</li>'
-            '<li>Book covers are Bibliotheca Catholica’s own typographic designs, with no third-party art.</li></ul>')
+            + ''.join('<li id="art-' + k + '">' + label + ' engraving: ' + site_copy.art_credit(k) + '</li>' for k, label in ART_LABELS)
+            + '<li>Book covers are Bibliotheca Catholica’s own typographic designs, with no third-party art.</li></ul>')

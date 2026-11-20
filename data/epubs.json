@@ -13,6 +13,12 @@
    "sha256": "38e1946b8d24c9d4c25a71d0b4cafce9bc10dba1abbee37850cc68b8b85a9ef5",
    "size": 820554
   },
+  "pg-77576": {
+   "work": "apostolic-fathers",
+   "path": "downloads/epub/apostolic-fathers-pg-77576.ba01838fac60.epub",
+   "sha256": "ba01838fac60a03460b42edaf96531e21df1972ef78f9b630bace858acda4732",
+   "size": 990527
+  },
   "pg-5265": {
    "work": "ball-and-cross",
    "path": "downloads/epub/ball-and-cross-pg-5265.ae7fe218b882.epub",
@@ -36,6 +42,12 @@
    "path": "downloads/epub/betrothed-pg-35155.fca3ec8fcd99.epub",
    "sha256": "fca3ec8fcd999ae8416141184885dd0d38f751dc40342b2018043d072edd042c",
    "size": 1035286
+  },
+  "pg-7403": {
+   "work": "catherine-letters",
+   "path": "downloads/epub/catherine-letters-pg-7403.fc37220be3ff.epub",
+   "sha256": "fc37220be3ffaa25236037ec6b34ff23d2d8792ac3f36bba8c52a208a8abed4c",
+   "size": 697844
   },
   "pg-76305": {
    "work": "catholic-church-conversion",
@@ -72,6 +84,12 @@
    "path": "downloads/epub/development-doctrine-pg-35110.1fac4092caa4.epub",
    "sha256": "1fac4092caa42feacab8cc781825a70fe259917436fa7973115abee06b1359d1",
    "size": 882501
+  },
+  "pg-8442": {
+   "work": "europe-faith",
+   "path": "downloads/epub/europe-faith-pg-8442.a01b4b92c0cb.epub",
+   "sha256": "a01b4b92c0cbc0863a178760d7956fa93625bdbf38bd6dbd9b697093c312e454",
+   "size": 448379
   },
   "pg-59239": {
    "work": "flying-inn",

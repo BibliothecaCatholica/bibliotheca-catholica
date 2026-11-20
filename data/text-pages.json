@@ -10958,6 +10958,1716 @@
     "front": [],
     "em": []
    }
+  },
+  "catherine-letters": {
+   "partD": {
+    "about": "Project Gutenberg #7403: Vida D. Scudder’s translation and selection (1905). Sixty letters in the book’s sections, divided as the hosted text heads them, each with the editor’s note that introduces it; the introduction and tables stay in the reader. No words were changed.",
+    "words": 97916,
+    "minutes": 426
+   },
+   "edition": "pg-7403",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Letter",
+   "nouns": "Letters",
+   "sha256": "d207bb39366ef31ebf1c08078ef048c5af45d0fce8a7c28aa499d9c169645a87",
+   "blocks": 779,
+   "items": [
+    {
+     "slug": "01-to-monna-alessa-dei-saracini",
+     "num": "I",
+     "title": "To Monna Alessa dei Saracini",
+     "heading": 90,
+     "start": 91,
+     "end": 100,
+     "section": 2,
+     "words": 1271,
+     "firstWords": "The young widow of noble family to whom this letter was written"
+    },
+    {
+     "slug": "02-to-benincasa-her-brother-when-he-was-in-florence",
+     "num": "II",
+     "title": "To Benincasa her Brother, when he was in Florence",
+     "heading": 101,
+     "start": 102,
+     "end": 114,
+     "section": 2,
+     "words": 2281,
+     "firstWords": "One questions whether Catherine's brother would have relished the admonitions of his"
+    },
+    {
+     "slug": "03-to-monna-agnese-who-was-the-wife-of-messer-orso-malavolti",
+     "num": "III",
+     "title": "To Monna Agnese, who was the wife of Messer Orso Malavolti",
+     "heading": 115,
+     "start": 116,
+     "end": 127,
+     "section": 3,
+     "words": 2909,
+     "firstWords": "Catherine is well aware that the world can be as true a"
+    },
+    {
+     "slug": "04-to-sister-eugenia-her-niece-at-the-convent-of-saint-agnes",
+     "num": "IV",
+     "title": "To Sister Eugenia, her Niece, at the Convent of Saint Agnes of Montepulciano",
+     "heading": 128,
+     "start": 129,
+     "end": 138,
+     "section": 3,
+     "words": 2587,
+     "firstWords": "Two nieces, daughters of Bartolo Benincasa, were nuns in the Convent of"
+    },
+    {
+     "slug": "05-to-nanna-daughter-of-benincasa-a-little-maid-her-niece-in",
+     "num": "V",
+     "title": "To Nanna, daughter of Benincasa, a little Maid, her Niece, in Florence",
+     "heading": 139,
+     "start": 140,
+     "end": 149,
+     "section": 3,
+     "words": 1326,
+     "firstWords": "This tender and playful little letter, with its childlike simplicity of fancy"
+    },
+    {
+     "slug": "06-to-brother-william-of-england-of-the-hermit-brothers-of-s",
+     "num": "VI",
+     "title": "To Brother William of England, of the Hermit Brothers of St. Augustine",
+     "heading": 156,
+     "start": 157,
+     "end": 166,
+     "section": 4,
+     "words": 1881,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:",
+     "before": [
+      150,
+      151,
+      152,
+      153,
+      154,
+      155
+     ]
+    },
+    {
+     "slug": "07-to-daniella-of-orvieto-clothed-with-the-habit-of-st-domin",
+     "num": "VII",
+     "title": "To Daniella of Orvieto, clothed with the habit of St. Dominic",
+     "heading": 167,
+     "start": 168,
+     "end": 172,
+     "section": 4,
+     "words": 1799,
+     "firstWords": "Thou seest, then, that such men enjoy in this life the pledge"
+    },
+    {
+     "slug": "08-to-monna-agnese-wife-of-francesco-a-tailor-of-florence",
+     "num": "VIII",
+     "title": "To Monna Agnese, wife of Francesco, a Tailor of Florence",
+     "heading": 173,
+     "start": 174,
+     "end": 176,
+     "section": 4,
+     "words": 341,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:"
+    },
+    {
+     "slug": "09-to-monna-orsa-wife-of-bartolo-usimbardi-and-to-monna-agne",
+     "num": "IX",
+     "title": "To Monna Orsa, wife of Bartolo Usimbardi, and to Monna Agnese, wife of Francesco di Pipino Tailor of Florence",
+     "heading": 180,
+     "start": 181,
+     "end": 183,
+     "section": 5,
+     "words": 491,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:",
+     "before": [
+      177,
+      178,
+      179
+     ]
+    },
+    {
+     "slug": "10-to-a-religious-man-in-florence-who-was-shocked-at-her-asc",
+     "num": "X",
+     "title": "To a Religious Man in Florence, who was Shocked at her Ascetic Practices",
+     "heading": 184,
+     "start": 185,
+     "end": 187,
+     "section": 5,
+     "words": 605,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:"
+    },
+    {
+     "slug": "11-to-brother-bartolomeo-dominici-of-the-order-of-the-preach",
+     "num": "XI",
+     "title": "To Brother Bartolomeo Dominici, of the Order of the Preachers when he was Bible Reader at Florence",
+     "heading": 188,
+     "start": 189,
+     "end": 195,
+     "section": 5,
+     "words": 984,
+     "firstWords": "Belief in the wrath to come is sufficiently real to Catherine, and"
+    },
+    {
+     "slug": "12-to-brother-matteo-di-francesco-tolomei-of-the-order-of-th",
+     "num": "XII",
+     "title": "To Brother Matteo di Francesco Tolomei, of the Order of the Preachers",
+     "heading": 196,
+     "start": 197,
+     "end": 204,
+     "section": 5,
+     "words": 2469,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:"
+    },
+    {
+     "slug": "13-to-a-mantellata-of-saint-dominic-called-catarina-di-scett",
+     "num": "XIII",
+     "title": "To a Mantellata of Saint Dominic called Catarina di Scetto",
+     "heading": 205,
+     "start": 206,
+     "end": 210,
+     "section": 5,
+     "words": 848,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:"
+    },
+    {
+     "slug": "14-to-monna-giovanna-and-her-other-daughters-in-siena",
+     "num": "XIV",
+     "title": "To Monna Giovanna and her other Daughters in Siena",
+     "heading": 223,
+     "start": 224,
+     "end": 231,
+     "section": 6,
+     "words": 853,
+     "firstWords": "\"Teach us, O Lord, and enable us to live the life of",
+     "before": [
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222
+     ]
+    },
+    {
+     "slug": "15-to-messer-john-the-soldier-of-fortune-and-head-of-the-com",
+     "num": "XV",
+     "title": "To Messer John, the Soldier of Fortune and Head of the Company, That Came in the Time of Famine",
+     "heading": 232,
+     "start": 233,
+     "end": 238,
+     "section": 6,
+     "words": 769,
+     "firstWords": "Which letter is one of credentials, certifying that he may put faith"
+    },
+    {
+     "slug": "16-to-monna-colomba-in-lucca",
+     "num": "XVI",
+     "title": "To Monna Colomba in Lucca",
+     "heading": 239,
+     "start": 240,
+     "end": 249,
+     "section": 6,
+     "words": 1481,
+     "firstWords": "Let us hope that the frivolous Monna Colomba listened to Catherine's gentle"
+    },
+    {
+     "slug": "17-to-brother-raimondo-of-capua-of-the-order-of-the-preacher",
+     "num": "XVII",
+     "title": "To Brother Raimondo of Capua, of the Order of the Preachers",
+     "heading": 250,
+     "start": 251,
+     "end": 266,
+     "section": 7,
+     "words": 1953,
+     "firstWords": "The following is one of the famous letters of the world. The"
+    },
+    {
+     "slug": "18-to-gregory-xi",
+     "num": "XVIII",
+     "title": "To Gregory XI",
+     "heading": 267,
+     "start": 268,
+     "end": 281,
+     "section": 7,
+     "words": 2923,
+     "firstWords": "This is the first letter to Gregory which has come down to"
+    },
+    {
+     "slug": "19-to-gregory-xi",
+     "num": "XIX",
+     "title": "To Gregory XI",
+     "heading": 282,
+     "start": 283,
+     "end": 290,
+     "section": 8,
+     "words": 1679,
+     "firstWords": "There is less formality here than in the first letter to Gregory."
+    },
+    {
+     "slug": "20-to-gregory-xi",
+     "num": "XX",
+     "title": "To Gregory XI",
+     "heading": 291,
+     "start": 292,
+     "end": 299,
+     "section": 8,
+     "words": 1611,
+     "firstWords": "\"Ahi, Constantin, di quanto mal fu matre, Non la tua conversion, ma"
+    },
+    {
+     "slug": "21-to-brother-raimondo-of-capua-at-avignon",
+     "num": "XXI",
+     "title": "To Brother Raimondo of Capua, at Avignon",
+     "heading": 300,
+     "start": 301,
+     "end": 312,
+     "section": 8,
+     "words": 1495,
+     "firstWords": "The last letter tells us that Catherine had sent to the Pope"
+    },
+    {
+     "slug": "22-to-catarina-of-the-hospital-and-giovanna-di-capo",
+     "num": "XXII",
+     "title": "To Catarina of the Hospital and Giovanna di Capo",
+     "heading": 313,
+     "start": 314,
+     "end": 339,
+     "section": 8,
+     "words": 4933,
+     "firstWords": "From the comparative quiet of her home Catherine looks off to far"
+    },
+    {
+     "slug": "23-to-brother-raimondo-of-capua-of-the-order-of-the-preacher",
+     "num": "XXIII",
+     "title": "To Brother Raimondo of Capua, of the Order of the Preachers, and to Master John III., of the Order of the Hermit Brothers of St. Augustine, and to all their Companions, when they were at Avignon",
+     "heading": 340,
+     "start": 343,
+     "end": 349,
+     "section": 9,
+     "words": 1499,
+     "firstWords": "Catherine's interest in public affairs is rising and widening. This letter marks",
+     "titleBlocks": [
+      341,
+      342
+     ]
+    },
+    {
+     "slug": "24-to-sister-bartolomea-della-seta-nun-in-the-convent-of-san",
+     "num": "XXIV",
+     "title": "To Sister Bartolomea Della Seta, Nun in the Convent of Santo Stefano at Pisa",
+     "heading": 350,
+     "start": 351,
+     "end": 358,
+     "section": 10,
+     "words": 2035,
+     "firstWords": "The conflicts of the cloister and of the court are not dissimilar;"
+    },
+    {
+     "slug": "25-to-gregory-xi",
+     "num": "XXV",
+     "title": "To Gregory XI",
+     "heading": 359,
+     "start": 360,
+     "end": 362,
+     "section": 10,
+     "words": 638,
+     "firstWords": "Catherine, sent by the Florentines as their representative to the Pope, has"
+    },
+    {
+     "slug": "26-to-the-king-of-france",
+     "num": "XXVI",
+     "title": "To the King of France",
+     "heading": 363,
+     "start": 364,
+     "end": 372,
+     "section": 10,
+     "words": 1610,
+     "firstWords": "Catherine's letters to great personages whom she did not know are, as"
+    },
+    {
+     "slug": "27-to-the-eight-of-war-chosen-by-the-commune-of-florence-at",
+     "num": "XXVII",
+     "title": "To the Eight of War Chosen by the Commune of Florence,, at Whose Instance the Saint Went to Pope Gregory XI",
+     "heading": 377,
+     "start": 378,
+     "end": 385,
+     "section": 10,
+     "words": 828,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:",
+     "before": [
+      373,
+      374,
+      375,
+      376
+     ]
+    },
+    {
+     "slug": "28-to-buonaccorso-di-lapo-in-florence-written-when-the-saint",
+     "num": "XXVIII",
+     "title": "To Buonaccorso di Lapo in Florence, written when the Saint was at Avignon",
+     "heading": 386,
+     "start": 387,
+     "end": 392,
+     "section": 11,
+     "words": 1087,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:"
+    },
+    {
+     "slug": "29-to-gregory-xi",
+     "num": "XXIX",
+     "title": "To Gregory XI",
+     "heading": 393,
+     "start": 394,
+     "end": 404,
+     "section": 11,
+     "words": 2140,
+     "firstWords": "The attempt to reconcile Gregory with the Florentines miscarried through their own"
+    },
+    {
+     "slug": "30-to-monna-lapa-her-mother-before-she-returned-from-avignon",
+     "num": "XXX",
+     "title": "To Monna Lapa her Mother, before she returned from Avignon",
+     "heading": 405,
+     "start": 406,
+     "end": 408,
+     "section": 11,
+     "words": 797,
+     "firstWords": "Catherine succeeded in her great aim. In September, 1376, Gregory actually started"
+    },
+    {
+     "slug": "31-to-monna-giovanna-di-corrado-maconi",
+     "num": "XXXI",
+     "title": "To Monna Giovanna di Corrado Maconi",
+     "heading": 409,
+     "start": 410,
+     "end": 415,
+     "section": 11,
+     "words": 1446,
+     "firstWords": "Monna Lapa was evidently not the only mother in Siena who fretted"
+    },
+    {
+     "slug": "32-to-messer-ristoro-canigiani",
+     "num": "XXXII",
+     "title": "To Messer Ristoro Canigiani",
+     "heading": 416,
+     "start": 417,
+     "end": 443,
+     "section": 11,
+     "words": 4237,
+     "firstWords": "Apart from her relations with Religious seeking to follow the Counsels, Catherine"
+    },
+    {
+     "slug": "33-to-the-anziani-and-consuls-and-gonfalonieri-of-bologna",
+     "num": "XXXIII",
+     "title": "To the Anziani and Consuls and Gonfalonieri of Bologna",
+     "heading": 444,
+     "start": 445,
+     "end": 453,
+     "section": 12,
+     "words": 1598,
+     "firstWords": "Catherine lays down admirable political principles, for the fourteenth or for the"
+    },
+    {
+     "slug": "34-to-nicholas-of-osimo",
+     "num": "XXXIV",
+     "title": "To Nicholas of Osimo",
+     "heading": 454,
+     "start": 455,
+     "end": 466,
+     "section": 12,
+     "words": 1828,
+     "firstWords": "Ardour is the first trait which one feels in approaching the character"
+    },
+    {
+     "slug": "35-to-misser-lorenzo-del-pino-of-bologna-doctor-in-decretals",
+     "num": "XXXV",
+     "title": "To Misser Lorenzo del Pino of Bologna,, Doctor in Decretals (written in Trance)",
+     "heading": 467,
+     "start": 468,
+     "end": 478,
+     "section": 13,
+     "words": 1982,
+     "firstWords": "The familiar but ever-noble theology with which this letter opens, leads first"
+    },
+    {
+     "slug": "36-to-monna-lapa-her-mother-and-to-monna-cecca-in-the-monast",
+     "num": "XXXVI",
+     "title": "To Monna Lapa her Mother and to Monna Cecca, in the Monastery of Saint Agnes at Montepulciano, when she was at Rocca",
+     "heading": 483,
+     "start": 484,
+     "end": 485,
+     "section": 13,
+     "words": 443,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:",
+     "before": [
+      479,
+      480,
+      481,
+      482
+     ]
+    },
+    {
+     "slug": "37-to-monna-catarina-of-the-hospital-and-to-giovanna-di-capo",
+     "num": "XXXVII",
+     "title": "To Monna Catarina of the Hospital and to Giovanna di Capo in Siena",
+     "heading": 486,
+     "start": 487,
+     "end": 492,
+     "section": 13,
+     "words": 696,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:"
+    },
+    {
+     "slug": "38-to-monna-alessa-clothed-with-the-habit-of-saint-dominic-w",
+     "num": "XXXVIII",
+     "title": "To Monna Alessa, clothed with the habit of Saint Dominic, when she was at Rocca",
+     "heading": 493,
+     "start": 494,
+     "end": 499,
+     "section": 14,
+     "words": 1003,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:"
+    },
+    {
+     "slug": "39-to-gregory-xi",
+     "num": "XXXIX",
+     "title": "To Gregory XI",
+     "heading": 500,
+     "start": 501,
+     "end": 505,
+     "section": 14,
+     "words": 948,
+     "firstWords": "There is no evidence as to the date of this letter, but"
+    },
+    {
+     "slug": "40-to-raimondo-of-capua-of-the-order-of-the-preachers",
+     "num": "XL",
+     "title": "To Raimondo of Capua, of the Order of the Preachers",
+     "heading": 506,
+     "start": 507,
+     "end": 516,
+     "section": 14,
+     "words": 2052,
+     "firstWords": "This letter confirms what history elsewhere indicates--that Gregory, after his return to"
+    },
+    {
+     "slug": "41-to-urban-vi",
+     "num": "XLI",
+     "title": "To Urban VI",
+     "heading": 517,
+     "start": 518,
+     "end": 525,
+     "section": 14,
+     "words": 2084,
+     "firstWords": "In March, 1378, Gregory died, and was succeeded by the Archbishop of"
+    },
+    {
+     "slug": "42-to-her-spiritual-children-in-siena",
+     "num": "XLII",
+     "title": "To her Spiritual Children in Siena",
+     "heading": 526,
+     "start": 527,
+     "end": 532,
+     "section": 15,
+     "words": 922,
+     "firstWords": "Catherine turned without difficulty from public cares to the needs and problems"
+    },
+    {
+     "slug": "43-to-sano-di-maco-and-all-her-other-sons-in-siena",
+     "num": "XLIII",
+     "title": "To Sano di Maco and all her other Sons in Siena",
+     "heading": 533,
+     "start": 534,
+     "end": 541,
+     "section": 15,
+     "words": 1421,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:"
+    },
+    {
+     "slug": "44-to-brother-raimondo-of-capua-of-the-order-of-the-preacher",
+     "num": "XLIV",
+     "title": "To Brother Raimondo of Capua, of the Order of the Preachers",
+     "heading": 542,
+     "start": 543,
+     "end": 548,
+     "section": 15,
+     "words": 1355,
+     "firstWords": "With all her longing to suffer for her faith, Catherine was only"
+    },
+    {
+     "slug": "45-to-urban-vi",
+     "num": "XLV",
+     "title": "To Urban VI",
+     "heading": 549,
+     "start": 550,
+     "end": 557,
+     "section": 15,
+     "words": 1051,
+     "firstWords": "By this time Catherine has evidently more than an inkling of the"
+    },
+    {
+     "slug": "46-to-don-giovanni-of-the-cells-of-vallombrosa",
+     "num": "XLVI",
+     "title": "To Don Giovanni of the Cells of Vallombrosa",
+     "heading": 558,
+     "start": 559,
+     "end": 568,
+     "section": 15,
+     "words": 1614,
+     "firstWords": "Catherine has missed her chance at martyrdom. Schism is threatening, and she"
+    },
+    {
+     "slug": "47-to-monna-alessa-when-the-saint-was-at-florence",
+     "num": "XLVII",
+     "title": "To Monna Alessa, when the Saint was at Florence",
+     "heading": 573,
+     "start": 574,
+     "end": 576,
+     "section": 16,
+     "words": 312,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:",
+     "before": [
+      569,
+      570,
+      571,
+      572
+     ]
+    },
+    {
+     "slug": "48-to-sano-di-maco-and-to-the-other-sons-in-christ-while-she",
+     "num": "XLVIII",
+     "title": "To Sano di Maco and to the other Sons in Christ, While she was in Florence",
+     "heading": 577,
+     "start": 578,
+     "end": 581,
+     "section": 16,
+     "words": 396,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:"
+    },
+    {
+     "slug": "49-to-three-italian-cardinals",
+     "num": "XLIX",
+     "title": "To Three Italian Cardinals",
+     "heading": 582,
+     "start": 583,
+     "end": 598,
+     "section": 16,
+     "words": 3611,
+     "firstWords": "Catherine had ardently wished to see in the Seat of Peter a"
+    },
+    {
+     "slug": "50-to-giovanna-queen-of-naples",
+     "num": "L",
+     "title": "To Giovanna Queen of Naples",
+     "heading": 599,
+     "start": 600,
+     "end": 611,
+     "section": 17,
+     "words": 2947,
+     "firstWords": "Giovanna of Naples was one of the most depraved, as well as"
+    },
+    {
+     "slug": "51-to-sister-daniella-of-orvieto",
+     "num": "LI",
+     "title": "To Sister Daniella of Orvieto",
+     "heading": 612,
+     "start": 613,
+     "end": 621,
+     "section": 17,
+     "words": 1707,
+     "firstWords": "Sister Daniella has found herself in straits again; constrained, it would seem,"
+    },
+    {
+     "slug": "52-to-stefano-maconi",
+     "num": "LII",
+     "title": "To Stefano Maconi",
+     "heading": 622,
+     "start": 623,
+     "end": 646,
+     "section": 17,
+     "words": 2670,
+     "firstWords": "\"To Stefano di Corrado Maconi, her ignorant and most ungrateful son\": \"To"
+    },
+    {
+     "slug": "53-to-certain-holy-hermits-who-had-been-invited-to-rome-by-t",
+     "num": "LIII",
+     "title": "To certain holy Hermits, who had been invited to Rome by the Pope",
+     "heading": 647,
+     "start": 648,
+     "end": 651,
+     "section": 18,
+     "words": 556,
+     "firstWords": "From early years, Catherine had cherished the simple-hearted desire that the affairs"
+    },
+    {
+     "slug": "54-to-brother-william-of-england-and-brother-antonio-of-nizz",
+     "num": "LIV",
+     "title": "To Brother William of England and Brother Antonio of Nizza, at Lecceto",
+     "heading": 652,
+     "start": 653,
+     "end": 659,
+     "section": 18,
+     "words": 1289,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:"
+    },
+    {
+     "slug": "55-to-brother-antonio-of-nizza-of-the-hermit-brothers-of-sai",
+     "num": "LV",
+     "title": "To Brother Antonio of Nizza, of the Hermit Brothers of Saint Augustine at the Convent of Lecceto, Near Siena",
+     "heading": 660,
+     "start": 661,
+     "end": 663,
+     "section": 18,
+     "words": 1216,
+     "firstWords": "In the name of Jesus Christ crucified and of sweet Mary:"
+    },
+    {
+     "slug": "56-to-queen-giovanna-of-naples-written-in-trance",
+     "num": "LVI",
+     "title": "To Queen Giovanna of Naples, (written in Trance)",
+     "heading": 664,
+     "start": 665,
+     "end": 675,
+     "section": 18,
+     "words": 2148,
+     "firstWords": "Giovanna, recalcitrant, has failed to respond to the entreaties of Catherine. Her"
+    },
+    {
+     "slug": "57-to-brother-raimondo-of-the-preaching-order-when-he-was-in",
+     "num": "LVII",
+     "title": "To Brother Raimondo, of the Preaching Order when he was in Genoa",
+     "heading": 676,
+     "start": 677,
+     "end": 694,
+     "section": 19,
+     "words": 3279,
+     "firstWords": "In more grievous ways than any yet noted, Catherine was to be"
+    },
+    {
+     "slug": "58-to-urban-vi",
+     "num": "LVIII",
+     "title": "To Urban VI",
+     "heading": 695,
+     "start": 696,
+     "end": 703,
+     "section": 19,
+     "words": 1184,
+     "firstWords": "This is the last letter to Urban that we possess. If, as"
+    },
+    {
+     "slug": "59-to-master-raimondo-of-capua",
+     "num": "LIX",
+     "title": "To Master Raimondo of Capua",
+     "heading": 713,
+     "start": 714,
+     "end": 718,
+     "section": 20,
+     "words": 1410,
+     "firstWords": "... I was breathless with grief from the crucified desire which had",
+     "before": [
+      704,
+      705,
+      706,
+      707,
+      708,
+      709,
+      710,
+      711,
+      712
+     ]
+    },
+    {
+     "slug": "60-to-master-raimondo-of-capua-of-the-order-of-the-preachers",
+     "num": "LX",
+     "title": "To Master Raimondo of Capua of the Order of the Preachers",
+     "heading": 719,
+     "start": 720,
+     "end": 727,
+     "section": 20,
+     "words": 2388,
+     "firstWords": "In the Name of Jesus Christ crucified and of sweet Mary:"
+    }
+   ],
+   "structure": {
+    "sha256": "d207bb39366ef31ebf1c08078ef048c5af45d0fce8a7c28aa499d9c169645a87",
+    "source": "data/structured/catherine-letters-pg-7403.json",
+    "roles": [
+     [
+      90,
+      "chapter"
+     ],
+     [
+      101,
+      "chapter"
+     ],
+     [
+      115,
+      "chapter"
+     ],
+     [
+      128,
+      "chapter"
+     ],
+     [
+      139,
+      "chapter"
+     ],
+     [
+      150,
+      "heading"
+     ],
+     [
+      151,
+      "heading"
+     ],
+     [
+      152,
+      "heading"
+     ],
+     [
+      153,
+      "heading"
+     ],
+     [
+      154,
+      "heading"
+     ],
+     [
+      155,
+      "heading"
+     ],
+     [
+      156,
+      "chapter"
+     ],
+     [
+      167,
+      "chapter"
+     ],
+     [
+      173,
+      "chapter"
+     ],
+     [
+      177,
+      "heading"
+     ],
+     [
+      178,
+      "heading"
+     ],
+     [
+      179,
+      "heading"
+     ],
+     [
+      180,
+      "chapter"
+     ],
+     [
+      184,
+      "chapter"
+     ],
+     [
+      188,
+      "chapter"
+     ],
+     [
+      196,
+      "chapter"
+     ],
+     [
+      205,
+      "chapter"
+     ],
+     [
+      211,
+      "heading"
+     ],
+     [
+      212,
+      "heading"
+     ],
+     [
+      213,
+      "heading"
+     ],
+     [
+      214,
+      "heading"
+     ],
+     [
+      215,
+      "heading"
+     ],
+     [
+      216,
+      "heading"
+     ],
+     [
+      217,
+      "heading"
+     ],
+     [
+      218,
+      "heading"
+     ],
+     [
+      219,
+      "heading"
+     ],
+     [
+      220,
+      "heading"
+     ],
+     [
+      221,
+      "heading"
+     ],
+     [
+      222,
+      "heading"
+     ],
+     [
+      223,
+      "chapter"
+     ],
+     [
+      232,
+      "chapter"
+     ],
+     [
+      239,
+      "chapter"
+     ],
+     [
+      250,
+      "chapter"
+     ],
+     [
+      267,
+      "chapter"
+     ],
+     [
+      282,
+      "chapter"
+     ],
+     [
+      291,
+      "chapter"
+     ],
+     [
+      300,
+      "chapter"
+     ],
+     [
+      313,
+      "chapter"
+     ],
+     [
+      340,
+      "chapter"
+     ],
+     [
+      341,
+      "heading"
+     ],
+     [
+      342,
+      "heading"
+     ],
+     [
+      350,
+      "chapter"
+     ],
+     [
+      359,
+      "chapter"
+     ],
+     [
+      363,
+      "chapter"
+     ],
+     [
+      373,
+      "heading"
+     ],
+     [
+      374,
+      "heading"
+     ],
+     [
+      375,
+      "heading"
+     ],
+     [
+      376,
+      "heading"
+     ],
+     [
+      377,
+      "chapter"
+     ],
+     [
+      386,
+      "chapter"
+     ],
+     [
+      393,
+      "chapter"
+     ],
+     [
+      405,
+      "chapter"
+     ],
+     [
+      409,
+      "chapter"
+     ],
+     [
+      416,
+      "chapter"
+     ],
+     [
+      444,
+      "chapter"
+     ],
+     [
+      454,
+      "chapter"
+     ],
+     [
+      467,
+      "chapter"
+     ],
+     [
+      479,
+      "heading"
+     ],
+     [
+      480,
+      "heading"
+     ],
+     [
+      481,
+      "heading"
+     ],
+     [
+      482,
+      "heading"
+     ],
+     [
+      483,
+      "chapter"
+     ],
+     [
+      486,
+      "chapter"
+     ],
+     [
+      493,
+      "chapter"
+     ],
+     [
+      500,
+      "chapter"
+     ],
+     [
+      506,
+      "chapter"
+     ],
+     [
+      517,
+      "chapter"
+     ],
+     [
+      526,
+      "chapter"
+     ],
+     [
+      533,
+      "chapter"
+     ],
+     [
+      542,
+      "chapter"
+     ],
+     [
+      549,
+      "chapter"
+     ],
+     [
+      558,
+      "chapter"
+     ],
+     [
+      569,
+      "heading"
+     ],
+     [
+      570,
+      "heading"
+     ],
+     [
+      571,
+      "heading"
+     ],
+     [
+      572,
+      "heading"
+     ],
+     [
+      573,
+      "chapter"
+     ],
+     [
+      577,
+      "chapter"
+     ],
+     [
+      582,
+      "chapter"
+     ],
+     [
+      599,
+      "chapter"
+     ],
+     [
+      612,
+      "chapter"
+     ],
+     [
+      622,
+      "chapter"
+     ],
+     [
+      647,
+      "chapter"
+     ],
+     [
+      652,
+      "chapter"
+     ],
+     [
+      660,
+      "chapter"
+     ],
+     [
+      664,
+      "chapter"
+     ],
+     [
+      676,
+      "chapter"
+     ],
+     [
+      695,
+      "chapter"
+     ],
+     [
+      704,
+      "heading"
+     ],
+     [
+      705,
+      "heading"
+     ],
+     [
+      706,
+      "heading"
+     ],
+     [
+      707,
+      "heading"
+     ],
+     [
+      708,
+      "heading"
+     ],
+     [
+      709,
+      "heading"
+     ],
+     [
+      710,
+      "heading"
+     ],
+     [
+      711,
+      "heading"
+     ],
+     [
+      712,
+      "heading"
+     ],
+     [
+      713,
+      "chapter"
+     ],
+     [
+      719,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "apostolic-fathers": {
+   "partD": {
+    "about": "Project Gutenberg #77576: the Ante-Nicene Christian Library, vol. I (Edinburgh: T. & T. Clark, 1870). Twenty-two parts, one for each writing as the volume heads it, with its introductory notice; the indexes stay in the reader. No words were changed.",
+    "words": 154091,
+    "minutes": 670
+   },
+   "edition": "pg-77576",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Part",
+   "nouns": "Parts",
+   "sha256": "2a50a9cb4e98ab58a01fc6e11df700a9ab685b638d52be954fc0a7467eb598cb",
+   "blocks": 5789,
+   "items": [
+    {
+     "slug": "01-the-first-epistle-of-clement",
+     "num": "I",
+     "title": "The First Epistle of Clement",
+     "heading": 65,
+     "start": 66,
+     "end": 706,
+     "section": 1,
+     "words": 16430,
+     "firstWords": "INTRODUCTORY NOTICE."
+    },
+    {
+     "slug": "02-the-second-epistle-of-clement",
+     "num": "II",
+     "title": "The Second Epistle of Clement",
+     "heading": 707,
+     "start": 708,
+     "end": 848,
+     "section": 20,
+     "words": 3326,
+     "firstWords": "INTRODUCTORY NOTICE."
+    },
+    {
+     "slug": "03-the-epistle-of-polycarp",
+     "num": "III",
+     "title": "The Epistle of Polycarp",
+     "heading": 849,
+     "start": 850,
+     "end": 1044,
+     "section": 24,
+     "words": 3463,
+     "firstWords": "INTRODUCTORY NOTICE."
+    },
+    {
+     "slug": "04-the-martyrdom-of-polycarp",
+     "num": "IV",
+     "title": "The Martyrdom of Polycarp",
+     "heading": 1045,
+     "start": 1046,
+     "end": 1217,
+     "section": 29,
+     "words": 4742,
+     "firstWords": "INTRODUCTORY NOTICE."
+    },
+    {
+     "slug": "05-the-epistle-of-barnabas",
+     "num": "V",
+     "title": "The Epistle of Barnabas",
+     "heading": 1218,
+     "start": 1219,
+     "end": 1836,
+     "section": 34,
+     "words": 14474,
+     "firstWords": "INTRODUCTORY NOTICE."
+    },
+    {
+     "slug": "06-the-epistles-of-ignatius-introductory-notice",
+     "num": "VI",
+     "title": "The Epistles of Ignatius: Introductory Notice",
+     "heading": 1837,
+     "start": 1838,
+     "end": 1854,
+     "section": 52,
+     "words": 1838,
+     "firstWords": "INTRODUCTORY NOTICE."
+    },
+    {
+     "slug": "07-ignatius-to-the-ephesians",
+     "num": "VII",
+     "title": "Ignatius to the Ephesians",
+     "heading": 1855,
+     "start": 1856,
+     "end": 2258,
+     "section": 53,
+     "words": 8205,
+     "firstWords": "SHORTER."
+    },
+    {
+     "slug": "08-ignatius-to-the-magnesians",
+     "num": "VIII",
+     "title": "Ignatius to the Magnesians",
+     "heading": 2259,
+     "start": 2260,
+     "end": 2530,
+     "section": 64,
+     "words": 5320,
+     "firstWords": "SHORTER."
+    },
+    {
+     "slug": "09-ignatius-to-the-trallians",
+     "num": "IX",
+     "title": "Ignatius to the Trallians",
+     "heading": 2531,
+     "start": 2532,
+     "end": 2782,
+     "section": 72,
+     "words": 5534,
+     "firstWords": "SHORTER."
+    },
+    {
+     "slug": "10-ignatius-to-the-romans",
+     "num": "X",
+     "title": "Ignatius to the Romans",
+     "heading": 2783,
+     "start": 2784,
+     "end": 2961,
+     "section": 79,
+     "words": 4530,
+     "firstWords": "SHORTER."
+    },
+    {
+     "slug": "11-ignatius-to-the-philadelphians",
+     "num": "XI",
+     "title": "Ignatius to the Philadelphians",
+     "heading": 2962,
+     "start": 2963,
+     "end": 3203,
+     "section": 84,
+     "words": 5577,
+     "firstWords": "SHORTER."
+    },
+    {
+     "slug": "12-ignatius-to-the-smyrnaeans",
+     "num": "XII",
+     "title": "Ignatius to the Smyrnæans",
+     "heading": 3204,
+     "start": 3205,
+     "end": 3449,
+     "section": 91,
+     "words": 5252,
+     "firstWords": "SHORTER."
+    },
+    {
+     "slug": "13-ignatius-to-polycarp",
+     "num": "XIII",
+     "title": "Ignatius to Polycarp",
+     "heading": 3450,
+     "start": 3451,
+     "end": 3626,
+     "section": 98,
+     "words": 3392,
+     "firstWords": "SHORTER."
+    },
+    {
+     "slug": "14-the-epistles-of-ignatius-after-the-syriac-version",
+     "num": "XIV",
+     "title": "The Epistles of Ignatius after the Syriac Version",
+     "heading": 3627,
+     "start": 3628,
+     "end": 3775,
+     "section": 103,
+     "words": 3954,
+     "firstWords": "INTRODUCTORY NOTICE."
+    },
+    {
+     "slug": "15-the-martyrdom-of-ignatius",
+     "num": "XV",
+     "title": "The Martyrdom of Ignatius",
+     "heading": 3776,
+     "start": 3777,
+     "end": 3866,
+     "section": 107,
+     "words": 2800,
+     "firstWords": "INTRODUCTORY NOTICE."
+    },
+    {
+     "slug": "16-the-epistle-to-diognetus",
+     "num": "XVI",
+     "title": "The Epistle to Diognetus",
+     "heading": 3867,
+     "start": 3868,
+     "end": 4030,
+     "section": 110,
+     "words": 5677,
+     "firstWords": "Introductory Notice."
+    },
+    {
+     "slug": "17-the-pastor-of-hermas",
+     "num": "XVII",
+     "title": "The Pastor of Hermas",
+     "heading": 4031,
+     "start": 4032,
+     "end": 4063,
+     "section": 115,
+     "words": 982,
+     "firstWords": "Introductory Notice."
+    },
+    {
+     "slug": "18-hermas-book-first-visions",
+     "num": "XVIII",
+     "title": "Hermas, Book First: Visions",
+     "heading": 4064,
+     "start": 4065,
+     "end": 4297,
+     "section": 116,
+     "words": 9866,
+     "firstWords": "VISION FIRST. AGAINST FILTHY AND PROUD THOUGHTS, AND THE CARELESSNESS OF HERMAS"
+    },
+    {
+     "slug": "19-hermas-book-second-commandments",
+     "num": "XIX",
+     "title": "Hermas, Book Second: Commandments",
+     "heading": 4298,
+     "start": 4299,
+     "end": 4484,
+     "section": 122,
+     "words": 9862,
+     "firstWords": "COMMANDMENT FIRST. On Faith in God."
+    },
+    {
+     "slug": "20-hermas-book-third-similitudes",
+     "num": "XX",
+     "title": "Hermas, Book Third: Similitudes",
+     "heading": 4485,
+     "start": 4486,
+     "end": 4804,
+     "section": 128,
+     "words": 22977,
+     "firstWords": "SIMILITUDE FIRST. As in this world we have no abiding city, we"
+    },
+    {
+     "slug": "21-fragments-of-papias",
+     "num": "XXI",
+     "title": "Fragments of Papias",
+     "heading": 4805,
+     "start": 4806,
+     "end": 4890,
+     "section": 137,
+     "words": 2666,
+     "firstWords": "INTRODUCTORY NOTICE."
+    },
+    {
+     "slug": "22-appendix-the-spurious-epistles-of-ignatius",
+     "num": "XXII",
+     "title": "Appendix: The Spurious Epistles of Ignatius",
+     "heading": 4891,
+     "start": 4892,
+     "end": 5470,
+     "section": 139,
+     "words": 13224,
+     "firstWords": "INTRODUCTORY NOTICE."
+    }
+   ],
+   "structure": {
+    "sha256": "2a50a9cb4e98ab58a01fc6e11df700a9ab685b638d52be954fc0a7467eb598cb",
+    "source": "data/structured/apostolic-fathers-pg-77576.json",
+    "roles": [
+     [
+      65,
+      "chapter"
+     ],
+     [
+      707,
+      "chapter"
+     ],
+     [
+      849,
+      "chapter"
+     ],
+     [
+      1045,
+      "chapter"
+     ],
+     [
+      1218,
+      "chapter"
+     ],
+     [
+      1837,
+      "chapter"
+     ],
+     [
+      1855,
+      "chapter"
+     ],
+     [
+      2259,
+      "chapter"
+     ],
+     [
+      2531,
+      "chapter"
+     ],
+     [
+      2783,
+      "chapter"
+     ],
+     [
+      2962,
+      "chapter"
+     ],
+     [
+      3204,
+      "chapter"
+     ],
+     [
+      3450,
+      "chapter"
+     ],
+     [
+      3627,
+      "chapter"
+     ],
+     [
+      3776,
+      "chapter"
+     ],
+     [
+      3867,
+      "chapter"
+     ],
+     [
+      4031,
+      "chapter"
+     ],
+     [
+      4064,
+      "chapter"
+     ],
+     [
+      4298,
+      "chapter"
+     ],
+     [
+      4485,
+      "chapter"
+     ],
+     [
+      4805,
+      "chapter"
+     ],
+     [
+      4891,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "europe-faith": {
+   "partD": {
+    "about": "Project Gutenberg #8442: Hilaire Belloc’s Europe and the Faith. The Introduction and ten chapters, divided as the hosted text heads them; no words were changed.",
+    "words": 68077,
+    "minutes": 296
+   },
+   "edition": "pg-8442",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "c3f1d47684156b7dd45fee731eff572c81266d851906eaa0c668c30aefc1d01f",
+   "blocks": 860,
+   "items": [
+    {
+     "slug": "00-introduction-the-catholic-conscience-of-history",
+     "num": "Introduction",
+     "title": "The Catholic Conscience of History",
+     "heading": 14,
+     "start": 15,
+     "end": 79,
+     "section": 0,
+     "words": 5314,
+     "firstWords": "I say the Catholic “conscience” of history—I say “conscience”—that is, an intimate"
+    },
+    {
+     "slug": "01-what-was-the-roman-empire",
+     "num": "I",
+     "title": "What Was the Roman Empire?",
+     "heading": 81,
+     "start": 82,
+     "end": 131,
+     "section": 2,
+     "words": 4787,
+     "firstWords": "The history of European civilization is the history of a certain political",
+     "before": [
+      80
+     ]
+    },
+    {
+     "slug": "02-what-was-the-church-in-the-roman-empire",
+     "num": "II",
+     "title": "What Was the Church in the Roman Empire?",
+     "heading": 132,
+     "start": 133,
+     "end": 225,
+     "section": 3,
+     "words": 8228,
+     "firstWords": "So far I have attempted to answer the question, “What Was the"
+    },
+    {
+     "slug": "03-what-was-the-fall-of-the-roman-empire",
+     "num": "III",
+     "title": "What Was the “Fall” of the Roman Empire?",
+     "heading": 226,
+     "start": 227,
+     "end": 314,
+     "section": 6,
+     "words": 7147,
+     "firstWords": "That state of society which I have just described, the ordered and"
+    },
+    {
+     "slug": "04-the-beginning-of-the-nations",
+     "num": "IV",
+     "title": "The Beginning of the Nations",
+     "heading": 315,
+     "start": 316,
+     "end": 404,
+     "section": 9,
+     "words": 7586,
+     "firstWords": "European civilization, which the Catholic Church has made and makes, is by"
+    },
+    {
+     "slug": "05-what-happened-in-britain",
+     "num": "V",
+     "title": "What Happened in Britain?",
+     "heading": 405,
+     "start": 406,
+     "end": 546,
+     "section": 11,
+     "words": 13338,
+     "firstWords": "I have now carried this study through four sections. My object in"
+    },
+    {
+     "slug": "06-the-dark-ages",
+     "num": "VI",
+     "title": "The Dark Ages",
+     "heading": 547,
+     "start": 548,
+     "end": 613,
+     "section": 15,
+     "words": 4742,
+     "firstWords": "So far we have traced the fortunes of the Roman Empire (that"
+    },
+    {
+     "slug": "07-the-middle-ages",
+     "num": "VII",
+     "title": "The Middle Ages",
+     "heading": 614,
+     "start": 615,
+     "end": 662,
+     "section": 17,
+     "words": 3736,
+     "firstWords": "I said in my last chapter that the Dark Ages might be"
+    },
+    {
+     "slug": "08-what-was-the-reformation",
+     "num": "VIII",
+     "title": "What Was the Reformation?",
+     "heading": 663,
+     "start": 664,
+     "end": 718,
+     "section": 18,
+     "words": 4473,
+     "firstWords": "This is perhaps the greatest of all historical questions, after the original"
+    },
+    {
+     "slug": "09-the-defection-of-britain",
+     "num": "IX",
+     "title": "The Defection of Britain",
+     "heading": 719,
+     "start": 720,
+     "end": 772,
+     "section": 20,
+     "words": 5589,
+     "firstWords": "One thing stands out in the fate of modern Europe: the profound"
+    },
+    {
+     "slug": "10-conclusion",
+     "num": "X",
+     "title": "Conclusion",
+     "heading": 773,
+     "start": 774,
+     "end": 808,
+     "section": 22,
+     "words": 3137,
+     "firstWords": "The grand effect of the Reformation was the isolation of the soul."
+    }
+   ],
+   "structure": {
+    "sha256": "c3f1d47684156b7dd45fee731eff572c81266d851906eaa0c668c30aefc1d01f",
+    "source": "data/structured/europe-faith-pg-8442.json",
+    "roles": [
+     [
+      14,
+      "chapter"
+     ],
+     [
+      80,
+      "heading"
+     ],
+     [
+      81,
+      "chapter"
+     ],
+     [
+      132,
+      "chapter"
+     ],
+     [
+      226,
+      "chapter"
+     ],
+     [
+      315,
+      "chapter"
+     ],
+     [
+      405,
+      "chapter"
+     ],
+     [
+      547,
+      "chapter"
+     ],
+     [
+      614,
+      "chapter"
+     ],
+     [
+      663,
+      "chapter"
+     ],
+     [
+      719,
+      "chapter"
+     ],
+     [
+      773,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

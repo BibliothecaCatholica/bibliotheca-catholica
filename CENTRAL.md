@@ -50,7 +50,7 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - Merged #72 (Advent readiness) and #73 (Magisterium AI panels on /magisterium/, /councils/, /summa/, /study/), after validating #73 on the new main.
 - #74 (merged): /study/ loads the site fonts; the disclosure line is 14 px on every page (one `.disclosure` rule); /libraries/ has one line, under its Magisterium link; tests keep one line per page.
-- #75 (open, analytics): /study/ loads `scripts/analytics.js` with `BC_CLICK_KINDS=['affiliate']`, so only the Magisterium click counts there. The 60 merged branches were deleted on November 19. Day 4's J. M. Dent publisher not added: the hosted Scudder file names no publisher.
+- #75 (merged, analytics): /study/ loads `scripts/analytics.js` with `BC_CLICK_KINDS=['affiliate']`, so only the Magisterium click counts there. The 60 merged branches were deleted on November 19. Day 4's J. M. Dent publisher not added: the hosted Scudder file names no publisher.
 
 ### 2026-11-19, Claude (Claude Code): cleanup pass, Advent readiness, Magisterium AI support
 
@@ -67,8 +67,8 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 - Owner: the takedown agent's name and postal address, and DMCA agent registration (the page shows only the contact email).
 - Hosted texts: further editions batches; manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
 - Advent launches November 29: data and local UI verified (#72); live-site checks and the publishing steps remain ([checklist](docs/ADVENT-LAUNCH.md), HOLDS row). Social readiness for Advent is owned by the Grok bot, not tracked here.
-- Libraries research candidates need rights and provenance review before import. Paused: `_headers` Report-Only CSP, low-priority npm audit findings.
-- Page-audit decisions: the publish allowlist and the `study/index.html` sitemap or noindex question. CI's Study drift check names the missing `study/passages` (harmless).
+- Libraries research candidates need rights and provenance review before import. No Report-Only CSP exists in `_headers`; the enforced CSP is #83, which the owner merges after the November 22 preview. Low-priority npm audit findings are paused.
+- Page-audit decisions: the publish allowlist. `/study/` is indexed, canonical, and in the sitemap (November 20). CI's Study drift check names the missing `study/passages` (harmless).
 - Recover the evidence listed in the [repository audit](docs/REPOSITORY-AUDIT-2026-11-09.md); confirm backups and account responsibilities ([OPERATIONS](docs/OPERATIONS.md)).
 
 ## Reference map

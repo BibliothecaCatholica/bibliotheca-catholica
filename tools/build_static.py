@@ -877,7 +877,8 @@ def main():
     for route,v in out.items():
         t,d,body=v[:3];body=unhash(body);f=ROOT/route/'index.html';f.parent.mkdir(parents=True,exist_ok=True);f.write_text(page(tpl,route,t,d,body,jsonld=v[3] if len(v)>3 else ()))
     man.write_text(''.join(r+'/index.html\n' for r in sorted(out)))
-    urls=[SITE]+[SITE+r+'/' for r in sorted(out)]
+    # /study/ is maintained by hand (not in `out`) but is a real, linked page: indexed and listed (housekeeping, 2026-11-20)
+    urls=[SITE]+[SITE+r+'/' for r in sorted(list(out)+(['study'] if (ROOT/'study/index.html').exists() else []))]
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('  <url><loc>'+E(u)+'</loc></url>\n' for u in urls)+'</urlset>\n')
     (ROOT/'robots.txt').write_text('# Bibliotheca Catholica\nUser-agent: *\nAllow: /\nDisallow: /data/texts/\nDisallow: /drafts/\n\nSitemap: '+SITE+'sitemap.xml\n')
     (ROOT/'404.html').write_text('''<!doctype html><html lang="en"><head>

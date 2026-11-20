@@ -20,7 +20,9 @@ class CrawlTests(unittest.TestCase):
             rel=u[len('https://bibliothecacatholica.com/'):]
             f=ROOT/rel/'index.html' if rel else ROOT/'index.html';self.assertTrue(f.exists(),rel)
             s=f.read_text();self.assertIn('<link rel="canonical" href="%s">'%u,s)
-            if rel:self.assertIn('window.BC_BOOT="%s"'%rel.rstrip('/'),s);self.assertIn('<base href="/">',s)
+            if rel=='study/':  # maintained by hand, not an app page: no <base> (its #section links would leave the page)
+                self.assertIn("window.BC_BOOT='study'",s);self.assertNotIn('<base href="/">',s);self.assertIn('<meta name="robots" content="index,follow">',s)
+            elif rel:self.assertIn('window.BC_BOOT="%s"'%rel.rstrip('/'),s);self.assertIn('<base href="/">',s)
         self.assertIn('Sitemap: https://bibliothecacatholica.com/sitemap.xml',(ROOT/'robots.txt').read_text())
     def test_share_image(self):
         b=(ROOT/'assets/og-image.png').read_bytes();self.assertEqual(b[:8],b'\x89PNG\r\n\x1a\n')

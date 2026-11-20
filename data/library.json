@@ -2213,6 +2213,34 @@
       ]
     },
     {
+      "id": "catholic-encyclopedia-advent",
+      "title": "Advent (The Catholic Encyclopedia, 1907)",
+      "author": "Francis Mershman",
+      "category": "Liturgy",
+      "tradition": "Catholic tradition",
+      "description": "Francis Mershman's article on the season of Advent from the first volume of The Catholic Encyclopedia: its symbolism in the liturgy, its duration and ritual, and its historical origin.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-20",
+      "date": "1907",
+      "editions": [
+        {
+          "id": "ia-cathencyc-1907-advent",
+          "label": "Transcription of the Internet Archive scan (New York: Robert Appleton Company, 1907), vol. 1, pp. 165-166",
+          "source": "https://archive.org/details/07470918.1.emory.edu",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-20",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1907 in The Catholic Encyclopedia, vol. 1 (New York: Robert Appleton Company). Transcribed by Bibliotheca Catholica from the scan of the Emory University copy: the article only, cut from pages 165 and 166; running heads and page numbers removed, 2 OCR confusions repaired, 13 misreadings corrected by hand against the page images, and 14 names and foreign words checked against them (100% of words read). Not a manual proofread. New Advent's online text stays a link only.",
+          "sourceTitle": "Advent (The Catholic Encyclopedia, vol. 1, 1907)",
+          "text": "data/texts/ia-cathencyc-1907-advent.txt",
+          "sha256": "8af5f9499f68732086056b24bc9ec0098e48d99a726e07820b7dfa81a02c6e01"
+        }
+      ]
+    },
+    {
       "id": "fides-ratio",
       "title": "Fides et Ratio",
       "author": "John Paul II",

@@ -10,6 +10,8 @@ tested tool for a single-scan book"). It does the same things and nothing more:
   * fixes a short, fixed list of OCR confusions only when exactly one repair is a known word and the OCR form is not, and
     records every change;
   * flags (never rewrites) any paragraph that still has a word it could not read; it never supplies a missing word;
+  * counts a word in the spec's `verifiedWords` as read: a name or foreign word a person checked against the page image
+    of the same scan (listed in the provenance record; November 20, 2026);
   * applies the spec's `handFixes`, if any, before all of the above: each is {leaf, page, ocr, reading}, a misread checked
     by a person against the page image of the same scan (never another edition). `ocr` must be one whole OCR line of
     that leaf or occur exactly once in its lines and is replaced by `reading` (an empty reading drops a whole line of OCR noise). Every fix is
@@ -18,7 +20,8 @@ Known words are those of the library's own hosted texts (data/texts/), so the vo
 
     python3 tools/transcribe_scan.py SPEC.json [--cache DIR]
 
-SPEC is a list of {edition, ia, title, sourceTitle, author, year, firstPublished, firstLeaf, lastLeaf, note?}; leaves
+SPEC is a list of {edition, ia, title, sourceTitle, author, year, firstPublished, firstLeaf, lastLeaf, note?, startsWith?,
+endsWith?} (the last two cut one article from shared pages: see bounded()); leaves
 are 0-based page indexes of the djvu.xml, chosen by looking at the scan (front matter in, library stamps and
 publisher's advertisements out). Output per entry: data/texts/<edition>.txt and data/sources/<edition>.json
 (kind `ocr-transcription`, validated by tools/build_library.py and tests/test_transcribed_scans.py).
@@ -132,6 +135,13 @@ def body(lines, height, heads, V=None):
     the body by a wider gap than the page's line spacing, which catches heads the OCR misread)."""
     num = r'[\[(|]?\s*[\dIVXLCivxlc]{1,6}\s*[\])|]?\.?'
     keep = [l for l in lines if re.search(r'[A-Za-z]{2}|\d', l['text'])]  # scanning noise: no word of two letters
+    # a running head set as several short items on one line (an encyclopedia's "ADVENT  166  ADVENTISTS", November 20,
+    # 2026): drop the whole band when it sits at the top, apart from the text below it
+    if len(keep) > 3 and keep[0]['y'] < 0.15 * height:
+        band = [l for l in keep if abs(l['y'] - keep[0]['y']) < keep[0]['h']]
+        below = [l['y'] for l in keep if l not in band]
+        if len(band) > 1 and all(len(l['text'].split()) <= 4 for l in band) and below and min(below) - keep[0]['y'] > 2 * keep[0]['h']:
+            keep = [l for l in keep if l not in band]
     if keep and re.fullmatch(num, keep[0]['text']):
         keep = keep[1:]
     ys = [l['y'] for l in keep]
@@ -225,6 +235,18 @@ def apply_hand_fixes(raw_pages, e):
             hits[0]['text'] = hits[0]['text'].replace(f['ocr'], f['reading'])
 
 
+def bounded(paras, e):
+    """One article cut from shared pages (an encyclopedia entry, November 20, 2026): with `startsWith` and `endsWith` in
+    the spec, keep the paragraphs from the first one that starts with the one through the first later one that ends
+    with the other. Matching ignores runs of spaces; both must be found, or nothing is kept."""
+    if not (e.get('startsWith') or e.get('endsWith')):
+        return paras
+    n = lambda t: re.sub(r'\s+', ' ', t).strip()
+    a = next(i for i, p in enumerate(paras) if n(' '.join(p)).startswith(n(e['startsWith'])))
+    b = next(i for i, p in enumerate(paras) if i >= a and n(' '.join(p)).endswith(n(e['endsWith'])))
+    return paras[a:b + 1]
+
+
 def build(e, cache, V):
     xml, meta = fetch(e['ia'], cache)
     root = ET.fromstring(xml)
@@ -249,8 +271,26 @@ def build(e, cache, V):
             pending.extend(notes)
             continue
         margin = statistics.median(l['x'] for l in ls)
+        # Two-column pages (an encyclopedia, November 20, 2026): a line set higher than the one before it starts the
+        # next column. The OCR opens a new paragraph there, but the text runs on unless the line is indented.
+        wide = [l['x'] for l in ls if len(l['text']) > 30]
+        two_col = bool(wide) and max(wide) - min(wide) > 300
+        prev_y = None
         for k, l in enumerate(ls):
-            indent = l['x'] > margin + 25 and not prev_end.endswith('-')
+            col_top = two_col and prev_y is not None and l['y'] < prev_y - 3 * l['h']
+            prev_y = l['y']
+            if col_top:
+                left = min(x['x'] for x in ls if abs(x['x'] - l['x']) < 120)
+                indent = l['x'] > left + 25 and not prev_end.endswith('-')
+                sentence_end = bool(re.search(r'[.!?:;"”’)]\s*[\d*°†‡§]{0,2}$', prev_end))
+                heading = l['text'].isupper() and len(l['text'].split()) <= 10 and not prev_end.endswith('-')
+                if cur and (heading or (indent and sentence_end)):
+                    close(cur); cur = []
+                cur.append(l['text']); prev_end = l['text']
+                continue
+            # on a two-column page the indent is measured from the line's own column
+            left = min(x['x'] for x in ls if abs(x['x'] - l['x']) < 120) if two_col else margin
+            indent = l['x'] > left + 25 and not prev_end.endswith('-')
             sentence_end = bool(re.search(r'[.!?:;"”’)]\s*[\d*°†‡§]{0,2}$', prev_end))  # a note mark may follow
             heading = l['text'].isupper() and len(l['text'].split()) <= 10 and not prev_end.endswith('-')
             new = cur and (heading or (l['paraStart'] and sentence_end) or (indent and sentence_end)
@@ -263,6 +303,8 @@ def build(e, cache, V):
         close(cur)
     while pending:  # notes on the last pages
         paras.append([note_text(pending.pop(0))])
+    paras = bounded(paras, e)
+    verified = set(e.get('verifiedWords', []))
     out = []
     for p in paras:
         text = ''
@@ -285,6 +327,8 @@ def build(e, cache, V):
             f, ch = repair(t, V)
             if isinstance(ch, tuple):
                 corrections.append({'ocr': ch[0], 'reading': ch[1]})
+            elif ch == 'unknown' and re.sub(r"^[^\w]+|[^\w]+$", '', t) in verified:
+                pass  # checked by a person against the page image: read, and listed in the provenance record
             elif ch == 'unknown':
                 bad.append(t)
             toks.append(f)
@@ -345,6 +389,10 @@ def main(spec, cache):
             rec['handFixes'] = [{k: f[k] for k in ('leaf', 'page', 'ocr', 'reading')} for f in e['handFixes']]
             rec['method'] += (f" {len(e['handFixes'])} misreadings corrected by hand against the page images of this "
                               f"scan, each listed in handFixes; no wording was taken from another edition.")
+        if e.get('verifiedWords'):
+            rec['verifiedWords'] = e['verifiedWords']
+            rec['method'] += (f" {len(e['verifiedWords'])} words the vocabulary does not know (names, Latin, and foreign "
+                              f"titles) were checked by hand against the page images and are listed in verifiedWords.")
         if e.get('note'):
             rec['note'] = e['note']
         (ROOT / f"data/sources/{e['edition']}.json").write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')

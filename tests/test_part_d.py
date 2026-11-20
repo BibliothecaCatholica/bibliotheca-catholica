@@ -32,7 +32,9 @@ class PartD(unittest.TestCase):
                                            # Orthodoxy flow batch 2, November 19, 2026
                                            'bede-ecclesiastical-history', 'consolation-philosophy', 'abandonment',
                                            # Orthodoxy flow batch 3, November 20, 2026
-                                           'catherine-letters', 'apostolic-fathers', 'europe-faith'})
+                                           'catherine-letters', 'apostolic-fathers', 'europe-faith',
+                                           # Orthodoxy flow batch 4, November 20, 2026
+                                           'idea-university', 'aquinas-prayer-contemplative', 'glories-of-mary'})
         for wid, d in TP.items():
             self.assertIn('partD', d, wid)
             self.assertEqual(d['partD']['words'], sum(x['words'] for x in d['items']))

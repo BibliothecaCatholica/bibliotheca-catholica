@@ -19,6 +19,12 @@
    "sha256": "ba01838fac60a03460b42edaf96531e21df1972ef78f9b630bace858acda4732",
    "size": 990527
   },
+  "pg-22295": {
+   "work": "aquinas-prayer-contemplative",
+   "path": "downloads/epub/aquinas-prayer-contemplative-pg-22295.b80c7d9394a8.epub",
+   "sha256": "b80c7d9394a8fe9cbc7a4c1dc8963f79fbcfe71555356ee1b436662018693cef",
+   "size": 479411
+  },
   "pg-5265": {
    "work": "ball-and-cross",
    "path": "downloads/epub/ball-and-cross-pg-5265.ae7fe218b882.epub",
@@ -97,6 +103,12 @@
    "sha256": "bef98cf3f8a9ba1021c1576efd799bd0ffded529ef79c848d0d91b1808976ec5",
    "size": 570552
   },
+  "pg-72411": {
+   "work": "glories-of-mary",
+   "path": "downloads/epub/glories-of-mary-pg-72411.e4c05c3c3e38.epub",
+   "sha256": "e4c05c3c3e38186332fb3369e78c8d03e3b956030429864e14483697044c80b9",
+   "size": 1258403
+  },
   "pg-34022": {
    "work": "grammar-assent",
    "path": "downloads/epub/grammar-assent-pg-34022.36b8b4af15d0.epub",
@@ -108,6 +120,12 @@
    "path": "downloads/epub/heretics-pg-470.3f7baef4cc68.epub",
    "sha256": "3f7baef4cc68c9820c9c7eccdc8bbf025cdf16ce57b372718b7a59ef35b39cfb",
    "size": 412881
+  },
+  "pg-24526": {
+   "work": "idea-university",
+   "path": "downloads/epub/idea-university-pg-24526.189a03225a9e.epub",
+   "sha256": "189a03225a9efbd2719ba8a87e2f3a0d97d0eb87c3702552acaf4104cda8cf63",
+   "size": 981040
   },
   "se-incredulity-father-brown": {
    "work": "incredulity-father-brown",

@@ -280,7 +280,8 @@ def text_source(e):
 def text_split(path):
     return [p.strip() for p in re.split(r'\n\s*\n',(ROOT/path).read_text(encoding='utf-8').replace('\r','')) if p.strip()]
 def part_label(d,x,low=False):
-    t=(d['noun']+' '+x['num']) if x['num'][:1].isdigit() or d['kind']=='ch' else x['num']
+    # the noun goes before a numeral only: "Chapter IV", but "Discourse I" or "Introduction" stands as the book prints it
+    t=(d['noun']+' '+x['num']) if re.fullmatch(r'[0-9]+|[IVXLC]+',x['num']) else x['num']
     return t[0].lower()+t[1:] if low else t
 def part_path(wid,d,x):return 'work/'+wid+'/'+d['kind']+'/'+x['slug']
 def parts_list(wid,d):

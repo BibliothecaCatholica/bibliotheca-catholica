@@ -12668,6 +12668,1304 @@
     "front": [],
     "em": []
    }
+  },
+  "idea-university": {
+   "partD": {
+    "about": "Project Gutenberg #24526: Newman’s The Idea of a University. Nine discourses and ten lectures and essays, divided as the hosted text heads them; the preface, index, and notes stay in the reader. No words were changed.",
+    "words": 152753,
+    "minutes": 664
+   },
+   "edition": "pg-24526",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Part",
+   "nouns": "Parts",
+   "sha256": "811ebda414dcefd9664c6b845d60aa773a9f91f7a74e3adb678c47041dc02bcd",
+   "blocks": 1481,
+   "items": [
+    {
+     "slug": "01-discourse-i-introductory",
+     "num": "Discourse I",
+     "title": "Introductory",
+     "heading": 41,
+     "start": 43,
+     "end": 70,
+     "section": 1,
+     "words": 5313,
+     "firstWords": "1.",
+     "titleBlocks": [
+      42
+     ]
+    },
+    {
+     "slug": "02-discourse-ii-theology-a-branch-of-knowledge",
+     "num": "Discourse II",
+     "title": "Theology a Branch of Knowledge",
+     "heading": 71,
+     "start": 73,
+     "end": 111,
+     "section": 2,
+     "words": 7234,
+     "firstWords": "There were two questions, to which I drew your attention, Gentlemen, in",
+     "titleBlocks": [
+      72
+     ]
+    },
+    {
+     "slug": "03-discourse-iii-bearing-of-theology-on-other-branches-of-kn",
+     "num": "Discourse III",
+     "title": "Bearing of Theology on Other Branches of Knowledge",
+     "heading": 112,
+     "start": 114,
+     "end": 152,
+     "section": 3,
+     "words": 8439,
+     "firstWords": "1.",
+     "titleBlocks": [
+      113
+     ]
+    },
+    {
+     "slug": "04-discourse-iv-bearing-of-other-branches-of-knowledge-on-th",
+     "num": "Discourse IV",
+     "title": "Bearing of Other Branches of Knowledge on Theology",
+     "heading": 153,
+     "start": 155,
+     "end": 200,
+     "section": 4,
+     "words": 8552,
+     "firstWords": "1.",
+     "titleBlocks": [
+      154
+     ]
+    },
+    {
+     "slug": "05-discourse-v-knowledge-its-own-end",
+     "num": "Discourse V",
+     "title": "Knowledge its Own End",
+     "heading": 201,
+     "start": 203,
+     "end": 241,
+     "section": 5,
+     "words": 7607,
+     "firstWords": "A University may be considered with reference either to its Students or",
+     "titleBlocks": [
+      202
+     ]
+    },
+    {
+     "slug": "06-discourse-vi-knowledge-viewed-in-relation-to-learning",
+     "num": "Discourse VI",
+     "title": "Knowledge Viewed in Relation to Learning",
+     "heading": 242,
+     "start": 244,
+     "end": 294,
+     "section": 6,
+     "words": 8187,
+     "firstWords": "1.",
+     "titleBlocks": [
+      243
+     ]
+    },
+    {
+     "slug": "07-discourse-vii-knowledge-viewed-in-relation-to-professiona",
+     "num": "Discourse VII",
+     "title": "Knowledge Viewed in Relation to Professional Skill",
+     "heading": 295,
+     "start": 297,
+     "end": 346,
+     "section": 8,
+     "words": 8850,
+     "firstWords": "1.",
+     "titleBlocks": [
+      296
+     ]
+    },
+    {
+     "slug": "08-discourse-viii-knowledge-viewed-in-relation-to-religion",
+     "num": "Discourse VIII",
+     "title": "Knowledge Viewed in Relation to Religion",
+     "heading": 347,
+     "start": 349,
+     "end": 398,
+     "section": 9,
+     "words": 10228,
+     "firstWords": "1.",
+     "titleBlocks": [
+      348
+     ]
+    },
+    {
+     "slug": "09-discourse-ix-duties-of-the-church-towards-knowledge",
+     "num": "Discourse IX",
+     "title": "Duties of the Church Towards Knowledge",
+     "heading": 399,
+     "start": 401,
+     "end": 440,
+     "section": 11,
+     "words": 8252,
+     "firstWords": "1.",
+     "titleBlocks": [
+      400
+     ]
+    },
+    {
+     "slug": "10-lecture-i-christianity-and-letters-a-lecture-in-the-schoo",
+     "num": "Lecture I",
+     "title": "Christianity and Letters: A Lecture in the School of Philosophy and Letters",
+     "heading": 456,
+     "start": 458,
+     "end": 488,
+     "section": 13,
+     "words": 5616,
+     "firstWords": "1.",
+     "titleBlocks": [
+      457
+     ],
+     "before": [
+      441,
+      442,
+      443,
+      444,
+      445,
+      446,
+      447,
+      448,
+      449,
+      450,
+      451,
+      452,
+      453,
+      454,
+      455
+     ]
+    },
+    {
+     "slug": "11-lecture-ii-literature-a-lecture-in-the-school-of-philosop",
+     "num": "Lecture II",
+     "title": "Literature: A Lecture in the School of Philosophy and Letters",
+     "heading": 489,
+     "start": 491,
+     "end": 539,
+     "section": 13,
+     "words": 7904,
+     "firstWords": "1.",
+     "titleBlocks": [
+      490
+     ]
+    },
+    {
+     "slug": "12-lecture-iii-english-catholic-literature",
+     "num": "Lecture III",
+     "title": "English Catholic Literature",
+     "heading": 540,
+     "start": 542,
+     "end": 616,
+     "section": 15,
+     "words": 10096,
+     "firstWords": "One of the special objects which a Catholic University would promote is",
+     "titleBlocks": [
+      541
+     ]
+    },
+    {
+     "slug": "13-lecture-iv-elementary-studies",
+     "num": "Lecture IV",
+     "title": "Elementary Studies",
+     "heading": 617,
+     "start": 619,
+     "end": 882,
+     "section": 17,
+     "words": 14291,
+     "firstWords": "It has often been observed that, when the eyes of the infant",
+     "titleBlocks": [
+      618
+     ]
+    },
+    {
+     "slug": "14-lecture-v-a-form-of-infidelity-of-the-day",
+     "num": "Lecture V",
+     "title": "A Form of Infidelity of the Day",
+     "heading": 883,
+     "start": 885,
+     "end": 930,
+     "section": 25,
+     "words": 6943,
+     "firstWords": "§ 1.",
+     "titleBlocks": [
+      884
+     ]
+    },
+    {
+     "slug": "15-lecture-vi-university-preaching",
+     "num": "Lecture VI",
+     "title": "University Preaching",
+     "heading": 931,
+     "start": 933,
+     "end": 973,
+     "section": 26,
+     "words": 7229,
+     "firstWords": "1.",
+     "titleBlocks": [
+      932
+     ]
+    },
+    {
+     "slug": "16-lecture-vii-christianity-and-physical-science-a-lecture-i",
+     "num": "Lecture VII",
+     "title": "Christianity and Physical Science: A Lecture in the School of Medicine",
+     "heading": 974,
+     "start": 976,
+     "end": 1036,
+     "section": 27,
+     "words": 8456,
+     "firstWords": "1.",
+     "titleBlocks": [
+      975
+     ]
+    },
+    {
+     "slug": "17-lecture-viii-christianity-and-scientific-investigation-a",
+     "num": "Lecture VIII",
+     "title": "Christianity and Scientific Investigation: A Lecture Written for the School of Science",
+     "heading": 1037,
+     "start": 1039,
+     "end": 1083,
+     "section": 29,
+     "words": 7255,
+     "firstWords": "1.",
+     "titleBlocks": [
+      1038
+     ]
+    },
+    {
+     "slug": "18-lecture-ix-discipline-of-mind-an-address-to-the-evening-c",
+     "num": "Lecture IX",
+     "title": "Discipline of Mind: An Address to the Evening Classes",
+     "heading": 1084,
+     "start": 1086,
+     "end": 1137,
+     "section": 30,
+     "words": 7504,
+     "firstWords": "1.",
+     "titleBlocks": [
+      1085
+     ]
+    },
+    {
+     "slug": "19-lecture-x-christianity-and-medical-science-an-address-to",
+     "num": "Lecture X",
+     "title": "Christianity and Medical Science: An Address to the Students of Medicine",
+     "heading": 1138,
+     "start": 1140,
+     "end": 1172,
+     "section": 32,
+     "words": 4797,
+     "firstWords": "1.",
+     "titleBlocks": [
+      1139
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "811ebda414dcefd9664c6b845d60aa773a9f91f7a74e3adb678c47041dc02bcd",
+    "source": "data/structured/idea-university-pg-24526.json",
+    "roles": [
+     [
+      41,
+      "chapter"
+     ],
+     [
+      42,
+      "heading"
+     ],
+     [
+      71,
+      "chapter"
+     ],
+     [
+      72,
+      "heading"
+     ],
+     [
+      112,
+      "chapter"
+     ],
+     [
+      113,
+      "heading"
+     ],
+     [
+      153,
+      "chapter"
+     ],
+     [
+      154,
+      "heading"
+     ],
+     [
+      201,
+      "chapter"
+     ],
+     [
+      202,
+      "heading"
+     ],
+     [
+      242,
+      "chapter"
+     ],
+     [
+      243,
+      "heading"
+     ],
+     [
+      295,
+      "chapter"
+     ],
+     [
+      296,
+      "heading"
+     ],
+     [
+      347,
+      "chapter"
+     ],
+     [
+      348,
+      "heading"
+     ],
+     [
+      399,
+      "chapter"
+     ],
+     [
+      400,
+      "heading"
+     ],
+     [
+      441,
+      "heading"
+     ],
+     [
+      442,
+      "heading"
+     ],
+     [
+      443,
+      "heading"
+     ],
+     [
+      444,
+      "heading"
+     ],
+     [
+      445,
+      "heading"
+     ],
+     [
+      446,
+      "heading"
+     ],
+     [
+      447,
+      "heading"
+     ],
+     [
+      448,
+      "heading"
+     ],
+     [
+      449,
+      "heading"
+     ],
+     [
+      451,
+      "heading"
+     ],
+     [
+      452,
+      "heading"
+     ],
+     [
+      453,
+      "heading"
+     ],
+     [
+      454,
+      "heading"
+     ],
+     [
+      455,
+      "heading"
+     ],
+     [
+      456,
+      "chapter"
+     ],
+     [
+      457,
+      "heading"
+     ],
+     [
+      489,
+      "chapter"
+     ],
+     [
+      490,
+      "heading"
+     ],
+     [
+      540,
+      "chapter"
+     ],
+     [
+      541,
+      "heading"
+     ],
+     [
+      617,
+      "chapter"
+     ],
+     [
+      618,
+      "heading"
+     ],
+     [
+      883,
+      "chapter"
+     ],
+     [
+      884,
+      "heading"
+     ],
+     [
+      931,
+      "chapter"
+     ],
+     [
+      932,
+      "heading"
+     ],
+     [
+      974,
+      "chapter"
+     ],
+     [
+      975,
+      "heading"
+     ],
+     [
+      1037,
+      "chapter"
+     ],
+     [
+      1038,
+      "heading"
+     ],
+     [
+      1084,
+      "chapter"
+     ],
+     [
+      1085,
+      "heading"
+     ],
+     [
+      1138,
+      "chapter"
+     ],
+     [
+      1139,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "aquinas-prayer-contemplative": {
+   "partD": {
+    "about": "Project Gutenberg #22295: Hugh Pope’s translation (London: R. & T. Washbourne, 1914). Nine questions from the Summa, divided as the hosted text heads them; the introduction and indexes stay in the reader. No words were changed.",
+    "words": 60745,
+    "minutes": 264
+   },
+   "edition": "pg-22295",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Question",
+   "nouns": "Questions",
+   "sha256": "97039fc2a806568693df12797f12e0db2cf98f1213dfdddc7a0c8e9dd25c217b",
+   "blocks": 1814,
+   "items": [
+    {
+     "slug": "01-question-lxxxi-of-the-virtue-of-religion",
+     "num": "LXXXI",
+     "title": "Of the Virtue of Religion",
+     "heading": 124,
+     "start": 126,
+     "end": 281,
+     "section": 3,
+     "words": 6224,
+     "firstWords": "I. Does the Virtue of Religion Direct a Man To God Alone?",
+     "titleBlocks": [
+      125
+     ]
+    },
+    {
+     "slug": "02-question-lxxxii-of-devotion",
+     "num": "LXXXII",
+     "title": "Of Devotion",
+     "heading": 282,
+     "start": 284,
+     "end": 362,
+     "section": 8,
+     "words": 3779,
+     "firstWords": "I. Is Devotion a Special Kind of Act? Cardinal Cajetan, On the",
+     "titleBlocks": [
+      283
+     ]
+    },
+    {
+     "slug": "03-question-lxxxiii-of-prayer",
+     "num": "LXXXIII",
+     "title": "Of Prayer",
+     "heading": 363,
+     "start": 365,
+     "end": 841,
+     "section": 10,
+     "words": 23685,
+     "firstWords": "I. Is Prayer an Act of the Appetitive Powers? Cardinal Cajetan, On",
+     "titleBlocks": [
+      364
+     ]
+    },
+    {
+     "slug": "04-supplement-question-lxxii-of-the-prayers-of-the-saints-wh",
+     "num": "Supplement, Question LXXII",
+     "title": "Of the Prayers of the Saints who Are in Heaven",
+     "heading": 842,
+     "start": 844,
+     "end": 927,
+     "section": 24,
+     "words": 4341,
+     "firstWords": "I. Are the Saints cognizant of our Prayers? II. Ought we to",
+     "titleBlocks": [
+      843
+     ]
+    },
+    {
+     "slug": "05-question-clxxix-of-the-division-of-life-into-the-active-a",
+     "num": "CLXXIX",
+     "title": "Of the Division of Life into the Active and the Contemplative",
+     "heading": 928,
+     "start": 930,
+     "end": 989,
+     "section": 26,
+     "words": 2340,
+     "firstWords": "I. May Life be fittingly divided into the Active and the Contemplative?",
+     "titleBlocks": [
+      929
+     ]
+    },
+    {
+     "slug": "06-question-clxxx-of-the-contemplative-life",
+     "num": "CLXXX",
+     "title": "Of the Contemplative Life",
+     "heading": 990,
+     "start": 992,
+     "end": 1231,
+     "section": 28,
+     "words": 10842,
+     "firstWords": "I. Is the Contemplative Life wholly confined to the Intellect, or does",
+     "titleBlocks": [
+      991
+     ]
+    },
+    {
+     "slug": "07-question-clxxxi-of-the-active-life",
+     "num": "CLXXXI",
+     "title": "Of the Active Life",
+     "heading": 1232,
+     "start": 1234,
+     "end": 1316,
+     "section": 35,
+     "words": 3222,
+     "firstWords": "I. Do all Acts of the Moral Virtues come under the Active",
+     "titleBlocks": [
+      1233
+     ]
+    },
+    {
+     "slug": "08-question-clxxxii-of-the-comparison-between-the-active-and",
+     "num": "CLXXXII",
+     "title": "Of the Comparison between the Active and the Contemplative Life",
+     "heading": 1317,
+     "start": 1319,
+     "end": 1443,
+     "section": 37,
+     "words": 5200,
+     "firstWords": "I. Is the Active Life preferable to the Contemplative? Cardinal Cajetan, On",
+     "titleBlocks": [
+      1318
+     ]
+    },
+    {
+     "slug": "09-question-clxxxvi-on-the-religious-state",
+     "num": "CLXXXVI",
+     "title": "On the Religious State",
+     "heading": 1444,
+     "start": 1446,
+     "end": 1469,
+     "section": 41,
+     "words": 1112,
+     "firstWords": "Are Contemplative Orders superior to Active Orders?",
+     "titleBlocks": [
+      1445
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "97039fc2a806568693df12797f12e0db2cf98f1213dfdddc7a0c8e9dd25c217b",
+    "source": "data/structured/aquinas-prayer-contemplative-pg-22295.json",
+    "roles": [
+     [
+      124,
+      "chapter"
+     ],
+     [
+      125,
+      "heading"
+     ],
+     [
+      282,
+      "chapter"
+     ],
+     [
+      283,
+      "heading"
+     ],
+     [
+      363,
+      "chapter"
+     ],
+     [
+      364,
+      "heading"
+     ],
+     [
+      842,
+      "chapter"
+     ],
+     [
+      843,
+      "heading"
+     ],
+     [
+      928,
+      "chapter"
+     ],
+     [
+      929,
+      "heading"
+     ],
+     [
+      990,
+      "chapter"
+     ],
+     [
+      991,
+      "heading"
+     ],
+     [
+      1232,
+      "chapter"
+     ],
+     [
+      1233,
+      "heading"
+     ],
+     [
+      1317,
+      "chapter"
+     ],
+     [
+      1318,
+      "heading"
+     ],
+     [
+      1444,
+      "chapter"
+     ],
+     [
+      1445,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "glories-of-mary": {
+   "partD": {
+    "about": "Project Gutenberg #72411: the second American edition (New York: Edward Dunigan and Brother, 1852). Ten chapters on the Salve Regina, nine discourses, and the devotions that follow, divided as the hosted text heads them; the footnotes stay in the reader. No words were changed.",
+    "words": 176288,
+    "minutes": 766
+   },
+   "edition": "pg-72411",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Part",
+   "nouns": "Parts",
+   "sha256": "18684ebb448fe34ec152f2a0645c1d8bd85cd0d1b2281929467833036e74352f",
+   "blocks": 3316,
+   "items": [
+    {
+     "slug": "01-chapter-i-salve-regina-mater-misericordiae",
+     "num": "Chapter I",
+     "title": "Salve Regina, Mater Misericordiæ",
+     "heading": 154,
+     "start": 156,
+     "end": 222,
+     "section": 4,
+     "words": 12966,
+     "firstWords": "Hail queen, Mother of mercy.",
+     "titleBlocks": [
+      155
+     ]
+    },
+    {
+     "slug": "02-chapter-ii-vita-dulcedo",
+     "num": "Chapter II",
+     "title": "Vita, Dulcedo",
+     "heading": 223,
+     "start": 225,
+     "end": 274,
+     "section": 6,
+     "words": 8123,
+     "firstWords": "Our life, our sweetness.",
+     "titleBlocks": [
+      224
+     ]
+    },
+    {
+     "slug": "03-chapter-iii-spes-nostra-salve",
+     "num": "Chapter III",
+     "title": "Spes Nostra Salve",
+     "heading": 275,
+     "start": 277,
+     "end": 316,
+     "section": 7,
+     "words": 6069,
+     "firstWords": "Hail, our hope.",
+     "titleBlocks": [
+      276
+     ]
+    },
+    {
+     "slug": "04-chapter-iv-ad-te-clamamus-exules-filii-hevae",
+     "num": "Chapter IV",
+     "title": "Ad Te Clamamus Exules Filii Hevæ",
+     "heading": 317,
+     "start": 319,
+     "end": 355,
+     "section": 9,
+     "words": 5520,
+     "firstWords": "To thee do we cry, poor banished children of Eve.",
+     "titleBlocks": [
+      318
+     ]
+    },
+    {
+     "slug": "05-chapter-v-ad-te-suspiramus-gementes-et-flentes-in-hac-lac",
+     "num": "Chapter V",
+     "title": "Ad Te Suspiramus Gementes Et Flentes in Hac Lacrymarum Valle",
+     "heading": 356,
+     "start": 358,
+     "end": 402,
+     "section": 10,
+     "words": 6991,
+     "firstWords": "To thee we send up our sighs, groaning and weeping in this",
+     "titleBlocks": [
+      357
+     ]
+    },
+    {
+     "slug": "06-chapter-vi-eja-ergo-advocata-nostra",
+     "num": "Chapter VI",
+     "title": "Eja Ergo Advocata Nostra!",
+     "heading": 403,
+     "start": 405,
+     "end": 454,
+     "section": 11,
+     "words": 8879,
+     "firstWords": "Ah, then, our advocate!",
+     "titleBlocks": [
+      404
+     ]
+    },
+    {
+     "slug": "07-chapter-vii-illos-tuos-misericordes-oculos-ad-nos-convert",
+     "num": "Chapter VII",
+     "title": "Illos Tuos Misericordes Oculos Ad Nos Converte",
+     "heading": 455,
+     "start": 457,
+     "end": 474,
+     "section": 13,
+     "words": 2762,
+     "firstWords": "Turn thy eyes of mercy towards us.",
+     "titleBlocks": [
+      456
+     ]
+    },
+    {
+     "slug": "08-chapter-viii-et-jesum-benedictum-fructum-ventris-tui-nobi",
+     "num": "Chapter VIII",
+     "title": "Et Jesum Benedictum Fructum Ventris Tui Nobis Post Hoc Exilium Ostende",
+     "heading": 475,
+     "start": 477,
+     "end": 525,
+     "section": 13,
+     "words": 8052,
+     "firstWords": "And after this our exile, show us the blessed fruit of thy",
+     "titleBlocks": [
+      476
+     ]
+    },
+    {
+     "slug": "09-chapter-ix-o-clemens-o-pia",
+     "num": "Chapter IX",
+     "title": "O Clemens! O Pia!",
+     "heading": 526,
+     "start": 528,
+     "end": 546,
+     "section": 15,
+     "words": 2992,
+     "firstWords": "Oh clement! Oh merciful!",
+     "titleBlocks": [
+      527
+     ]
+    },
+    {
+     "slug": "10-chapter-x-oh-dulcis-virgo-maria",
+     "num": "Chapter X",
+     "title": "Oh Dulcis Virgo Maria!",
+     "heading": 547,
+     "start": 549,
+     "end": 611,
+     "section": 15,
+     "words": 6613,
+     "firstWords": "Oh sweet Virgin Mary!",
+     "titleBlocks": [
+      548
+     ]
+    },
+    {
+     "slug": "11-discourse-i-on-the-immaculate-conception-of-mary",
+     "num": "Discourse I",
+     "title": "On the Immaculate Conception of Mary",
+     "heading": 616,
+     "start": 618,
+     "end": 654,
+     "section": 17,
+     "words": 7314,
+     "firstWords": "How befitting it was to all Three of the Divine Persons that",
+     "titleBlocks": [
+      617
+     ],
+     "before": [
+      612,
+      613,
+      614,
+      615
+     ]
+    },
+    {
+     "slug": "12-discourse-ii-on-the-birth-of-mary",
+     "num": "Discourse II",
+     "title": "On the Birth of Mary",
+     "heading": 655,
+     "start": 657,
+     "end": 680,
+     "section": 18,
+     "words": 5184,
+     "firstWords": "Mary was born a saint, and a great saint, for great was",
+     "titleBlocks": [
+      656
+     ]
+    },
+    {
+     "slug": "13-discourse-iii-on-the-presentation-of-mary",
+     "num": "Discourse III",
+     "title": "On the Presentation of Mary",
+     "heading": 681,
+     "start": 683,
+     "end": 703,
+     "section": 19,
+     "words": 4060,
+     "firstWords": "The offering which Mary made of herself to God was prompt, without",
+     "titleBlocks": [
+      682
+     ]
+    },
+    {
+     "slug": "14-discourse-iv-on-the-annunciation-of-mary",
+     "num": "Discourse IV",
+     "title": "On the Annunciation of Mary",
+     "heading": 704,
+     "start": 706,
+     "end": 730,
+     "section": 20,
+     "words": 5541,
+     "firstWords": "Mary could not humble herself more than she did in the incarnation",
+     "titleBlocks": [
+      705
+     ]
+    },
+    {
+     "slug": "15-discourse-v-on-the-visitation-of-mary",
+     "num": "Discourse V",
+     "title": "On the Visitation of Mary",
+     "heading": 731,
+     "start": 733,
+     "end": 756,
+     "section": 20,
+     "words": 4841,
+     "firstWords": "Mary is the treasurer of all the divine graces. Therefore he who",
+     "titleBlocks": [
+      732
+     ]
+    },
+    {
+     "slug": "16-discourse-vi-on-the-purification-of-mary",
+     "num": "Discourse VI",
+     "title": "On the Purification of Mary",
+     "heading": 757,
+     "start": 759,
+     "end": 780,
+     "section": 21,
+     "words": 4381,
+     "firstWords": "The great sacrifice which Mary this day made to God, in offering",
+     "titleBlocks": [
+      758
+     ]
+    },
+    {
+     "slug": "17-discourse-vii-on-the-assumption-of-mary",
+     "num": "Discourse VII",
+     "title": "On the Assumption of Mary",
+     "heading": 781,
+     "start": 783,
+     "end": 803,
+     "section": 22,
+     "words": 5516,
+     "firstWords": "On this day the Church proposes to us to celebrate two solemn",
+     "titleBlocks": [
+      782
+     ]
+    },
+    {
+     "slug": "18-discourse-viii-another-discourse-on-the-assumption-of-mar",
+     "num": "Discourse VIII",
+     "title": "Another Discourse on the Assumption of Mary",
+     "heading": 804,
+     "start": 806,
+     "end": 826,
+     "section": 22,
+     "words": 4348,
+     "firstWords": "1st. How glorious was the triumph of Mary when she ascended to",
+     "titleBlocks": [
+      805
+     ]
+    },
+    {
+     "slug": "19-discourse-ix-on-the-dolors-of-mary",
+     "num": "Discourse IX",
+     "title": "On the Dolors of Mary",
+     "heading": 827,
+     "start": 829,
+     "end": 998,
+     "section": 23,
+     "words": 29192,
+     "firstWords": "Mary was queen of martyrs, because her martyrdom was longer and greater",
+     "titleBlocks": [
+      828
+     ]
+    },
+    {
+     "slug": "20-various-practices-of-devotion-to-the-divine-mother",
+     "num": "Devotions",
+     "title": "Various Practices of Devotion to the Divine Mother",
+     "heading": 999,
+     "start": 1000,
+     "end": 1035,
+     "section": 28,
+     "words": 8237,
+     "firstWords": "The queen of heaven is so liberal, as St. Andrew of Crete"
+    },
+    {
+     "slug": "21-various-additional-examples",
+     "num": "Devotions",
+     "title": "Various Additional Examples",
+     "heading": 1036,
+     "start": 1038,
+     "end": 1128,
+     "section": 29,
+     "words": 12658,
+     "firstWords": "VARIOUS ADDITIONAL EXAMPLES APPERTAINING TO THE MOST HOLY MARY.",
+     "titleBlocks": [
+      1037
+     ]
+    },
+    {
+     "slug": "22-novena-of-meditations",
+     "num": "Devotions",
+     "title": "Novena of Meditations",
+     "heading": 1129,
+     "start": 1130,
+     "end": 1202,
+     "section": 32,
+     "words": 9031,
+     "firstWords": "FOR THE NINE DAYS PRECEDING THE FEAST OF THE PURIFICATION OF MARY,"
+    },
+    {
+     "slug": "23-prayers-to-the-divine-mother",
+     "num": "Devotions",
+     "title": "Prayers to the Divine Mother",
+     "heading": 1203,
+     "start": 1204,
+     "end": 1254,
+     "section": 34,
+     "words": 3999,
+     "firstWords": "FOR EVERY DAY OF THE WEEK."
+    },
+    {
+     "slug": "24-various-prayers-to-mary",
+     "num": "Devotions",
+     "title": "Various Prayers to Mary",
+     "heading": 1255,
+     "start": 1256,
+     "end": 1301,
+     "section": 35,
+     "words": 1584,
+     "firstWords": "Dedication of oneself to Mary."
+    },
+    {
+     "slug": "25-acclamations-in-praise-of-mary",
+     "num": "Devotions",
+     "title": "Acclamations in Praise of Mary",
+     "heading": 1302,
+     "start": 1303,
+     "end": 1307,
+     "section": 37,
+     "words": 1435,
+     "firstWords": "Oh most holy Virgin Mary! oh queen of angels! how complete and"
+    }
+   ],
+   "structure": {
+    "sha256": "18684ebb448fe34ec152f2a0645c1d8bd85cd0d1b2281929467833036e74352f",
+    "source": "data/structured/glories-of-mary-pg-72411.json",
+    "roles": [
+     [
+      154,
+      "chapter"
+     ],
+     [
+      155,
+      "heading"
+     ],
+     [
+      223,
+      "chapter"
+     ],
+     [
+      224,
+      "heading"
+     ],
+     [
+      275,
+      "chapter"
+     ],
+     [
+      276,
+      "heading"
+     ],
+     [
+      317,
+      "chapter"
+     ],
+     [
+      318,
+      "heading"
+     ],
+     [
+      356,
+      "chapter"
+     ],
+     [
+      357,
+      "heading"
+     ],
+     [
+      403,
+      "chapter"
+     ],
+     [
+      404,
+      "heading"
+     ],
+     [
+      455,
+      "chapter"
+     ],
+     [
+      456,
+      "heading"
+     ],
+     [
+      475,
+      "chapter"
+     ],
+     [
+      476,
+      "heading"
+     ],
+     [
+      526,
+      "chapter"
+     ],
+     [
+      527,
+      "heading"
+     ],
+     [
+      547,
+      "chapter"
+     ],
+     [
+      548,
+      "heading"
+     ],
+     [
+      612,
+      "heading"
+     ],
+     [
+      613,
+      "heading"
+     ],
+     [
+      614,
+      "heading"
+     ],
+     [
+      615,
+      "heading"
+     ],
+     [
+      616,
+      "chapter"
+     ],
+     [
+      617,
+      "heading"
+     ],
+     [
+      655,
+      "chapter"
+     ],
+     [
+      656,
+      "heading"
+     ],
+     [
+      681,
+      "chapter"
+     ],
+     [
+      682,
+      "heading"
+     ],
+     [
+      704,
+      "chapter"
+     ],
+     [
+      705,
+      "heading"
+     ],
+     [
+      731,
+      "chapter"
+     ],
+     [
+      732,
+      "heading"
+     ],
+     [
+      757,
+      "chapter"
+     ],
+     [
+      758,
+      "heading"
+     ],
+     [
+      781,
+      "chapter"
+     ],
+     [
+      782,
+      "heading"
+     ],
+     [
+      804,
+      "chapter"
+     ],
+     [
+      805,
+      "heading"
+     ],
+     [
+      827,
+      "chapter"
+     ],
+     [
+      828,
+      "heading"
+     ],
+     [
+      999,
+      "chapter"
+     ],
+     [
+      1036,
+      "chapter"
+     ],
+     [
+      1037,
+      "heading"
+     ],
+     [
+      1129,
+      "chapter"
+     ],
+     [
+      1203,
+      "chapter"
+     ],
+     [
+      1255,
+      "chapter"
+     ],
+     [
+      1302,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

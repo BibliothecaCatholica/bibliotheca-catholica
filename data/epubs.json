@@ -85,6 +85,12 @@
    "sha256": "5592f99a75940f0c47903a6c5e3ff76f28bc2ed1a6c3d536a0a8f79eed950450",
    "size": 299548
   },
+  "peo-trent-1848": {
+   "work": "council-of-trent",
+   "path": "downloads/epub/council-of-trent-peo-trent-1848.32c0bc8877d4.epub",
+   "sha256": "32c0bc8877d47e0b1be3a4740aa3fd360ec21774d00062ffe947e239a74ad9fa",
+   "size": 599075
+  },
   "pg-35110": {
    "work": "development-doctrine",
    "path": "downloads/epub/development-doctrine-pg-35110.1fac4092caa4.epub",

@@ -68,6 +68,8 @@ PART_D={
     'idea-university':{'about':'Project Gutenberg #24526: Newman’s The Idea of a University. Nine discourses and ten lectures and essays, divided as the hosted text heads them; the preface, index, and notes stay in the reader. No words were changed.'},
     'aquinas-prayer-contemplative':{'about':'Project Gutenberg #22295: Hugh Pope’s translation (London: R. & T. Washbourne, 1914). Nine questions from the Summa, divided as the hosted text heads them; the introduction and indexes stay in the reader. No words were changed.'},
     'glories-of-mary':{'about':'Project Gutenberg #72411: the second American edition (New York: Edward Dunigan and Brother, 1852). Ten chapters on the Salve Regina, nine discourses, and the devotions that follow, divided as the hosted text heads them; the footnotes stay in the reader. No words were changed.'},
+    # Councils Part 3 (November 20, 2026). The sentence restates the edition's record and its map.
+    'council-of-trent':{'about':'J. Waterworth’s translation (London: C. Dolman, 1848), in the Hanover Historical Texts transcription served by Papal Encyclicals Online. The bull of indiction and the twenty-five sessions, each headed by its source page’s own title; the preface and the transcribers’ notes stay in the reader. No words were changed.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

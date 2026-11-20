@@ -609,6 +609,19 @@
     "indented line": 1
    }
   },
+  "peo-trent-1848": {
+   "work": "The Canons and Decrees of the Council of Trent",
+   "multiLineBlocks": 24,
+   "reflowed": 0,
+   "kept": 24,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 16,
+    "short line": 8
+   }
+  },
   "pg-20450": {
    "work": "The Lives of the Saints: January, February, and March",
    "multiLineBlocks": 1525,

@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-efa9e249644e",
+  "id": "bc-572678410dfc",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "5baba22ec2adbab80e17cc93f5900bc33d05534bf526a4f92e998058c5029e95",
@@ -131,6 +131,7 @@
     "tools/hosted_counts.py": "f86293b3b65f9be8fc43c15a93e75d437898ac4383f3f690bbe53e3fcc9227c9",
     "tools/hubio.py": "2eb83cda9e0396d6e486b3eabc44af1cead8de021559d1292b0ff2b99297ce17",
     "tools/import_modern_authors.py": "f2759a6db08c7a6f6c6cb880cd2d4384a4353f523b2f9698dbd307cf6517a08c",
+    "tools/import_pdf_print.py": "aaab28c2630b0d09b271c5ac617e40a5638afbb51c04623f1ac831c57bb100be",
     "tools/import_plain_text.py": "db2a30653c7b3b93ee095a3bba91014b57db79b09ba3619bc705986b447dd450",
     "tools/import_saints.py": "f8cd90fe1dfdbe8e7a3997c5a6b04233ead629827220690cc3ef246e846c1b41",
     "tools/import_saints_pilot.py": "331568adebc1859f21d48e86228a7d71de106d7d4be1a59ee1409da792290504",

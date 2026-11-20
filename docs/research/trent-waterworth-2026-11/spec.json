@@ -1,0 +1,54 @@
+[
+ {
+  "edition": "peo-trent-1848",
+  "pages": [
+   "https://www.papalencyclicals.net/councils/trent/trpref.htm",
+   "https://www.papalencyclicals.net/councils/trent/ctbull.htm",
+   "https://www.papalencyclicals.net/councils/trent/firstsession.htm",
+   "https://www.papalencyclicals.net/councils/trent/second-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/third-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/fourth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/fifth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/sixth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/seventh-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/eighth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/ninth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/tenth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/eleventh-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/twelfth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/thirteenth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/fourteenth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/fifteenth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/sixteenth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/seventeenth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/eighteenth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/nineteenth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/twentieth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/twenty-first-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/twenty-second-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/twenty-third-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/twenty-fourth-session.htm",
+   "https://www.papalencyclicals.net/councils/trent/twenty-fifth-session.htm"
+  ],
+  "sourceUrl": "https://www.papalencyclicals.net/councils/trent.htm",
+  "sourcePage": "https://www.papalencyclicals.net/councils/trent.htm",
+  "sourceName": "Papal Encyclicals Online",
+  "sourceTitle": "The Council of Trent: The canons and decrees of the sacred and ecumenical Council of Trent, Ed. and trans. J. Waterworth (London: Dolman, 1848)",
+  "title": "The Canons and Decrees of the Council of Trent",
+  "author": "Council of Trent",
+  "year": 1848,
+  "firstPublished": "1848 (London: C. Dolman), translated by J. Waterworth",
+  "ia": "cu31924029369760",
+  "siteNotice": "Papal Encyclicals Online's pages carry the site's own footer, \"© Copyright 2000-2026\", for the website. The text is the Hanover Historical Texts Project transcription of Waterworth's 1848 translation (its notes, kept at the top of the text, ask that errors be reported to historians@hanover.edu); the 1848 translation is public domain in the US by date.",
+  "secondWitnesses": [
+   {
+    "identifier": "canonsdecreesofc0000revj",
+    "url": "https://archive.org/details/canonsdecreesofc0000revj",
+    "year": 1848,
+    "publisher": "London: C. Dolman",
+    "agreement": 0.8734,
+    "note": "The first printing (Graduate Theological Union copy, tesseract OCR), collated the same way on November 20, 2026. Its OCR keeps margin rules and splits words at line-end hyphens, which lowers the figure; no other cause was established. The witness of record is the later Burns and Oates issue of the same translation."
+   }
+  ]
+ }
+]

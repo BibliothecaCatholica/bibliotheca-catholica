@@ -13966,6 +13966,600 @@
     "front": [],
     "em": []
    }
+  },
+  "council-of-trent": {
+   "partD": {
+    "about": "J. Waterworth’s translation (London: C. Dolman, 1848), in the Hanover Historical Texts transcription served by Papal Encyclicals Online. The bull of indiction and the twenty-five sessions, each headed by its source page’s own title; the preface and the transcribers’ notes stay in the reader. No words were changed.",
+    "words": 93116,
+    "minutes": 405
+   },
+   "edition": "peo-trent-1848",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Session",
+   "nouns": "Sessions",
+   "sha256": "9de7346c18740535da817d02b430130a044c8150fbd1bfe930c36f09103a309b",
+   "blocks": 1209,
+   "items": [
+    {
+     "slug": "00-bull-of-indiction",
+     "num": "Bull",
+     "title": "The Bull of Indiction",
+     "heading": 27,
+     "start": 29,
+     "end": 32,
+     "section": 0,
+     "words": 4186,
+     "firstWords": "PAUL, bishop, servant of the servants of God, for the future memory",
+     "titleBlocks": [
+      28
+     ]
+    },
+    {
+     "slug": "01-first-session",
+     "num": "I",
+     "title": "First Session",
+     "heading": 33,
+     "start": 36,
+     "end": 41,
+     "section": 0,
+     "words": 186,
+     "firstWords": "Celebrated under the sovereign Pontiff, Paul III, on the thirteenth day of",
+     "titleBlocks": [
+      34,
+      35
+     ]
+    },
+    {
+     "slug": "02-second-session",
+     "num": "II",
+     "title": "Second Session",
+     "heading": 42,
+     "start": 44,
+     "end": 52,
+     "section": 1,
+     "words": 893,
+     "firstWords": "Celebrated on the seventh day of the month of January,1546.",
+     "titleBlocks": [
+      43
+     ]
+    },
+    {
+     "slug": "03-third-session",
+     "num": "III",
+     "title": "Third Session",
+     "heading": 53,
+     "start": 55,
+     "end": 60,
+     "section": 1,
+     "words": 711,
+     "firstWords": "Celebrated on the fourth day of the month of February, in the",
+     "titleBlocks": [
+      54
+     ]
+    },
+    {
+     "slug": "04-fourth-session",
+     "num": "IV",
+     "title": "Fourth Session",
+     "heading": 61,
+     "start": 63,
+     "end": 72,
+     "section": 1,
+     "words": 1286,
+     "firstWords": "Celebrated on the eighth day of the month of April, in the",
+     "titleBlocks": [
+      62
+     ]
+    },
+    {
+     "slug": "05-fifth-session",
+     "num": "V",
+     "title": "Fifth Session",
+     "heading": 73,
+     "start": 75,
+     "end": 103,
+     "section": 2,
+     "words": 2895,
+     "firstWords": "Celebrated on the seventeenth day of the month of June, in the",
+     "titleBlocks": [
+      74
+     ]
+    },
+    {
+     "slug": "06-sixth-session",
+     "num": "VI",
+     "title": "Sixth Session",
+     "heading": 104,
+     "start": 106,
+     "end": 214,
+     "section": 2,
+     "words": 7446,
+     "firstWords": "Celebrated on the thirteenth day of the month of January, 1547.",
+     "titleBlocks": [
+      105
+     ]
+    },
+    {
+     "slug": "07-seventh-session",
+     "num": "VII",
+     "title": "Seventh Session",
+     "heading": 215,
+     "start": 216,
+     "end": 311,
+     "section": 6,
+     "words": 4138,
+     "firstWords": "[Page 53] Celebrated on the third day of the month of March,"
+    },
+    {
+     "slug": "08-eighth-session",
+     "num": "VIII",
+     "title": "Eighth Session",
+     "heading": 312,
+     "start": 314,
+     "end": 316,
+     "section": 8,
+     "words": 329,
+     "firstWords": "Celebrated on the eleventh day of the month of March, in the",
+     "titleBlocks": [
+      313
+     ]
+    },
+    {
+     "slug": "09-ninth-session",
+     "num": "IX",
+     "title": "Ninth Session",
+     "heading": 317,
+     "start": 319,
+     "end": 321,
+     "section": 9,
+     "words": 478,
+     "firstWords": "Celebrated at Bologna, on the twenty-first day of the month of April,",
+     "titleBlocks": [
+      318
+     ]
+    },
+    {
+     "slug": "10-tenth-session",
+     "num": "X",
+     "title": "Tenth Session",
+     "heading": 322,
+     "start": 324,
+     "end": 333,
+     "section": 9,
+     "words": 1059,
+     "firstWords": "Celebrated at Bologna on the second day of the month of June,",
+     "titleBlocks": [
+      323
+     ]
+    },
+    {
+     "slug": "11-eleventh-session",
+     "num": "XI",
+     "title": "Eleventh Session",
+     "heading": 334,
+     "start": 336,
+     "end": 340,
+     "section": 9,
+     "words": 131,
+     "firstWords": "Of the sacred and holy, oecumenical and general Council of Trent, celebrated",
+     "titleBlocks": [
+      335
+     ]
+    },
+    {
+     "slug": "12-twelfth-session",
+     "num": "XII",
+     "title": "Twelfth Session",
+     "heading": 341,
+     "start": 343,
+     "end": 344,
+     "section": 9,
+     "words": 363,
+     "firstWords": "Being the second under the Sovereign Pontiff, Julius III., celebrated on the",
+     "titleBlocks": [
+      342
+     ]
+    },
+    {
+     "slug": "13-thirteenth-session",
+     "num": "XIII",
+     "title": "Thirteenth Session",
+     "heading": 345,
+     "start": 347,
+     "end": 421,
+     "section": 9,
+     "words": 5427,
+     "firstWords": "Being the third under the Sovereign Pontiff, Julius III., celebrated on the",
+     "titleBlocks": [
+      346
+     ]
+    },
+    {
+     "slug": "14-fourteenth-session",
+     "num": "XIV",
+     "title": "Fourteenth Session",
+     "heading": 422,
+     "start": 424,
+     "end": 536,
+     "section": 12,
+     "words": 9424,
+     "firstWords": "Being the fourth under the Sovereign Pontiff, Julius III., celebrated on the",
+     "titleBlocks": [
+      423
+     ]
+    },
+    {
+     "slug": "15-fifteenth-session",
+     "num": "XV",
+     "title": "Fifteenth Session",
+     "heading": 537,
+     "start": 539,
+     "end": 545,
+     "section": 15,
+     "words": 1742,
+     "firstWords": "Being the fifth under thc Sovereign Pontiff, Julius III., celebrated on the",
+     "titleBlocks": [
+      538
+     ]
+    },
+    {
+     "slug": "16-sixteenth-session",
+     "num": "XVI",
+     "title": "Sixteenth Session",
+     "heading": 546,
+     "start": 548,
+     "end": 556,
+     "section": 15,
+     "words": 2126,
+     "firstWords": "Being the sixth, and last under the Sovereign Pontiff, Julius III., celebrated",
+     "titleBlocks": [
+      547
+     ]
+    },
+    {
+     "slug": "17-seventeenth-session",
+     "num": "XVII",
+     "title": "Seventeenth Session",
+     "heading": 557,
+     "start": 559,
+     "end": 563,
+     "section": 15,
+     "words": 238,
+     "firstWords": "Of the Holy, Oecumenical, and General Council of Trent, being the first",
+     "titleBlocks": [
+      558
+     ]
+    },
+    {
+     "slug": "18-eighteenth-session",
+     "num": "XVIII",
+     "title": "Eighteenth Session",
+     "heading": 564,
+     "start": 566,
+     "end": 574,
+     "section": 16,
+     "words": 2080,
+     "firstWords": "Being the second under the Sovereign Pontiff, Pius IV., celebrated on the",
+     "titleBlocks": [
+      565
+     ]
+    },
+    {
+     "slug": "19-nineteenth-session",
+     "num": "XIX",
+     "title": "Nineteenth Session",
+     "heading": 575,
+     "start": 577,
+     "end": 579,
+     "section": 16,
+     "words": 173,
+     "firstWords": "Being the third under the Sovereign Pontiff, Pius IV., celebrated on the",
+     "titleBlocks": [
+      576
+     ]
+    },
+    {
+     "slug": "20-twentieth-session",
+     "num": "XX",
+     "title": "Twentieth Session",
+     "heading": 580,
+     "start": 582,
+     "end": 584,
+     "section": 16,
+     "words": 168,
+     "firstWords": "Being the fourth under the Sovereign Pontiff, Pius IV., celebrated on the",
+     "titleBlocks": [
+      581
+     ]
+    },
+    {
+     "slug": "21-twenty-first-session",
+     "num": "XXI",
+     "title": "Twenty-First Session",
+     "heading": 585,
+     "start": 587,
+     "end": 640,
+     "section": 16,
+     "words": 3711,
+     "firstWords": "Being the fifth under the Sovereign Pontiff, Pius IV., celebrated on the",
+     "titleBlocks": [
+      586
+     ]
+    },
+    {
+     "slug": "22-twenty-second-session",
+     "num": "XXII",
+     "title": "Twenty-Second Session",
+     "heading": 641,
+     "start": 643,
+     "end": 731,
+     "section": 18,
+     "words": 5531,
+     "firstWords": "Being the sixth under the Sovereign Pontiff, Pius IV., celebrated on the",
+     "titleBlocks": [
+      642
+     ]
+    },
+    {
+     "slug": "23-twenty-third-session",
+     "num": "XXIII",
+     "title": "Twenty-Third Session",
+     "heading": 732,
+     "start": 734,
+     "end": 824,
+     "section": 20,
+     "words": 7047,
+     "firstWords": "Being the seventh under the Sovereign Pontiff, Pius IV., celebrated on the",
+     "titleBlocks": [
+      733
+     ]
+    },
+    {
+     "slug": "24-twenty-fourth-session",
+     "num": "XXIV",
+     "title": "Twenty-Fourth Session",
+     "heading": 825,
+     "start": 827,
+     "end": 974,
+     "section": 23,
+     "words": 12942,
+     "firstWords": "Being the eighth under the Sovereign Pontiff, Pius IV., celebrated on the",
+     "titleBlocks": [
+      826
+     ]
+    },
+    {
+     "slug": "25-twenty-fifth-session",
+     "num": "XXV",
+     "title": "Twenty-Fifth Session",
+     "heading": 975,
+     "start": 977,
+     "end": 1207,
+     "section": 27,
+     "words": 18406,
+     "firstWords": "Begun on the third, and terminated on the fourth, day of December,",
+     "titleBlocks": [
+      976
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "9de7346c18740535da817d02b430130a044c8150fbd1bfe930c36f09103a309b",
+    "source": "data/structured/council-of-trent-peo-trent-1848.json",
+    "roles": [
+     [
+      27,
+      "chapter"
+     ],
+     [
+      28,
+      "heading"
+     ],
+     [
+      33,
+      "chapter"
+     ],
+     [
+      34,
+      "heading"
+     ],
+     [
+      35,
+      "heading"
+     ],
+     [
+      42,
+      "chapter"
+     ],
+     [
+      43,
+      "heading"
+     ],
+     [
+      53,
+      "chapter"
+     ],
+     [
+      54,
+      "heading"
+     ],
+     [
+      61,
+      "chapter"
+     ],
+     [
+      62,
+      "heading"
+     ],
+     [
+      73,
+      "chapter"
+     ],
+     [
+      74,
+      "heading"
+     ],
+     [
+      104,
+      "chapter"
+     ],
+     [
+      105,
+      "heading"
+     ],
+     [
+      215,
+      "chapter"
+     ],
+     [
+      312,
+      "chapter"
+     ],
+     [
+      313,
+      "heading"
+     ],
+     [
+      317,
+      "chapter"
+     ],
+     [
+      318,
+      "heading"
+     ],
+     [
+      322,
+      "chapter"
+     ],
+     [
+      323,
+      "heading"
+     ],
+     [
+      334,
+      "chapter"
+     ],
+     [
+      335,
+      "heading"
+     ],
+     [
+      341,
+      "chapter"
+     ],
+     [
+      342,
+      "heading"
+     ],
+     [
+      345,
+      "chapter"
+     ],
+     [
+      346,
+      "heading"
+     ],
+     [
+      422,
+      "chapter"
+     ],
+     [
+      423,
+      "heading"
+     ],
+     [
+      537,
+      "chapter"
+     ],
+     [
+      538,
+      "heading"
+     ],
+     [
+      546,
+      "chapter"
+     ],
+     [
+      547,
+      "heading"
+     ],
+     [
+      557,
+      "chapter"
+     ],
+     [
+      558,
+      "heading"
+     ],
+     [
+      564,
+      "chapter"
+     ],
+     [
+      565,
+      "heading"
+     ],
+     [
+      575,
+      "chapter"
+     ],
+     [
+      576,
+      "heading"
+     ],
+     [
+      580,
+      "chapter"
+     ],
+     [
+      581,
+      "heading"
+     ],
+     [
+      585,
+      "chapter"
+     ],
+     [
+      586,
+      "heading"
+     ],
+     [
+      641,
+      "chapter"
+     ],
+     [
+      642,
+      "heading"
+     ],
+     [
+      732,
+      "chapter"
+     ],
+     [
+      733,
+      "heading"
+     ],
+     [
+      825,
+      "chapter"
+     ],
+     [
+      826,
+      "heading"
+     ],
+     [
+      975,
+      "chapter"
+     ],
+     [
+      976,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

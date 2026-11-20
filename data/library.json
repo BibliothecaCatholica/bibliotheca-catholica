@@ -2179,6 +2179,40 @@
       ]
     },
     {
+      "id": "council-of-trent",
+      "title": "The Canons and Decrees of the Council of Trent",
+      "author": "Council of Trent",
+      "category": "Magisterium",
+      "tradition": "Catholic",
+      "description": "The decrees and canons of the Council of Trent (1545 to 1563), session by session, with the bull that convoked it, in J. Waterworth's English translation of 1848.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-20",
+      "date": "1545-1563",
+      "editions": [
+        {
+          "id": "peo-trent-1848",
+          "label": "Waterworth translation (London: C. Dolman, 1848), Hanover Historical Texts transcription",
+          "source": "https://www.papalencyclicals.net/councils/trent.htm",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Waterworth, J."
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Papal Encyclicals Online notices retained.",
+          "checked": "2026-11-20",
+          "note": "First published 1848 (London: C. Dolman), translated by J. Waterworth. The text is the Hanover Historical Texts Project transcription as served by Papal Encyclicals Online, one page per session, with the transcribers' notes and the 1848 page numbers in brackets; Waterworth's italics, citations, historical essays, and appendices are not in it. Compared word by word with the Internet Archive scan of the Burns and Oates issue of the same translation: 97% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record. The transcription's own misspellings are kept.",
+          "sourceTitle": "The Council of Trent: The canons and decrees of the sacred and ecumenical Council of Trent, Ed. and trans. J. Waterworth (London: Dolman, 1848)",
+          "access": "full-text",
+          "text": "data/texts/peo-trent-1848.txt",
+          "sha256": "9de7346c18740535da817d02b430130a044c8150fbd1bfe930c36f09103a309b",
+          "rightsBasis": "pd-date",
+          "translationYear": 1848
+        }
+      ]
+    },
+    {
       "id": "fides-ratio",
       "title": "Fides et Ratio",
       "author": "John Paul II",

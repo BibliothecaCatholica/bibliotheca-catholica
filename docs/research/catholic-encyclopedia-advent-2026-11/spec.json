@@ -1,0 +1,112 @@
+[
+ {
+  "edition": "ia-cathencyc-1907-advent",
+  "ia": "07470918.1.emory.edu",
+  "title": "ADVENT",
+  "sourceTitle": "Advent (The Catholic Encyclopedia, vol. 1, 1907)",
+  "author": "Francis Mershman",
+  "year": 1907,
+  "firstPublished": "1907 (New York: Robert Appleton Company), in The Catholic Encyclopedia, vol. 1, pp. 165-166",
+  "firstLeaf": 185,
+  "lastLeaf": 186,
+  "startsWith": "Advent (Lat. ad-venio",
+  "endsWith": "Francis Mershman.",
+  "note": "One article cut from two pages of the volume (startsWith/endsWith in the spec); the neighbouring articles are left out.",
+  "handFixes": [
+   {
+    "leaf": 185,
+    "page": 165,
+    "ocr": "In the Miisses the",
+    "reading": "In the Masses the"
+   },
+   {
+    "leaf": 185,
+    "page": 165,
+    "ocr": "worlcs",
+    "reading": "works"
+   },
+   {
+    "leaf": 186,
+    "page": 166,
+    "ocr": "A avent symbolize",
+    "reading": "Advent symbolize"
+   },
+   {
+    "leaf": 186,
+    "page": 166,
+    "ocr": "HisTOHicAL Origin, —",
+    "reading": "Historical Origin. —"
+   },
+   {
+    "leaf": 186,
+    "page": 166,
+    "ocr": "autunmal",
+    "reading": "autumnal"
+   },
+   {
+    "leaf": 186,
+    "page": 166,
+    "ocr": "Butler, Feagta and Fasts; Binterim, DenkwUrdy/keiten",
+    "reading": "Butler, Feasts and Fasts; Binterim, Denkwürdigkeiten"
+   },
+   {
+    "leaf": 186,
+    "page": 166,
+    "ocr": "V, i; Probst in Kirchenlex., (2d ed.), I, 250-252; Binder'",
+    "reading": "V, i; Probst in Kirchenlex., (2d ed.), I, 250-252; Binder,"
+   },
+   {
+    "leaf": 186,
+    "page": 166,
+    "ocr": "AUgcmeine Realencyklopadte; B^umer-Biron, Hiat du",
+    "reading": "Allgemeine Realencyklopædie; Bæumer-Biron, Hist. du"
+   },
+   {
+    "leaf": 186,
+    "page": 166,
+    "ocr": "bHviaire romain (Paris, 1905), I, 901, 266, 371; II, 52-53-",
+    "reading": "bréviaire romain (Paris, 1905), I, 901, 266, 371; II, 52-53;"
+   },
+   {
+    "leaf": 186,
+    "page": 166,
+    "ocr": "Kellner, Heortologie (Freiburg. 1901), 106-108; Nilleb!",
+    "reading": "Kellner, Heortologie (Freiburg, 1901), 106-108; Nilles,"
+   },
+   {
+    "leaf": 186,
+    "page": 166,
+    "ocr": "Kalen4anum Manuale utriusque Eccleaiee (TnDspnick, 1897)^",
+    "reading": "Kalendarium Manuale utriusque Ecclesiæ (Innspruck, 1897),"
+   },
+   {
+    "leaf": 186,
+    "page": 166,
+    "ocr": "II, 535-539, 511-514; Ceremoniale Epiacoporum; Gueranqer'",
+    "reading": "II, 535-539, 511-514; Ceremoniale Episcoporum; Gueranger,"
+   },
+   {
+    "leaf": 186,
+    "page": 166,
+    "ocr": "Annee Liturgigue (Paris, 1870; Eng. tr. London). '",
+    "reading": "Année Liturgique (Paris, 1870; Eng. tr. London)."
+   }
+  ],
+  "verifiedWords": [
+   "Invitatory",
+   "Binterim",
+   "Ruthenians",
+   "Probst",
+   "Kirchenlex",
+   "Allgemeine",
+   "Realencyklopædie",
+   "Kellner",
+   "Heortologie",
+   "Innspruck",
+   "Mershman",
+   "Ceremoniale",
+   "Gueranger",
+   "Liturgique"
+  ]
+ }
+]

@@ -5007,6 +5007,7 @@ work/catholic-church-conversion/ch/04-the-world-inside-out/index.html
 work/catholic-church-conversion/ch/05-the-exception-proves-the-rule/index.html
 work/catholic-church-conversion/ch/06-a-note-on-present-prospects/index.html
 work/catholic-church-history/index.html
+work/catholic-encyclopedia-advent/index.html
 work/charles-dickens-bookman/index.html
 work/charles-dickens-critical-study/index.html
 work/chesterton-calendar/index.html

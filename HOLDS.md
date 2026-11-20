@@ -14,7 +14,6 @@ When a hold is released or finished, delete its row in the same commit as the wo
 | Candles' Beams | Catholic Repo | a scan to check against | 2026-11-16 | Find a dated scan, then host. |
 | Sheehan | Catholic Repo | CELT consent caveat | 2026-11-16 | Resolve consent, then host. |
 | Faustula | Catholic Repo | text cleanup | 2026-11-15 | Remove the source library's added material. |
-| Benham translation year, 1874 or 1886 | Bibliotheca Research | evidence | 2026-11-15 | Fill `translationYear` for pg-1653. |
 | Bookshop gift-list URL | Bibliotheca Business | Business | 2026-11-15 | Add the link. |
 | @MindofTheChurch DM | BiblioCatholica X | their follow-back | 2026-11-15 | Send the DM. |
 | TAN BIBLIO15 promo code | Bibliotheca Business | TAN's reply | 2026-11-15 | Confirm the code. |

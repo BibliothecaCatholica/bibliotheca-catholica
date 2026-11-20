@@ -143,12 +143,13 @@
           ],
           "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
           "checked": "2026-10-21",
-          "note": "",
+          "note": "Benham's translation first appeared in 1874: the dedication to the Rev. Craufurd Tait in the London printing (R. Clay, Sons, and Taylor) is dated \"Margate, Second Sunday in Lent, 1874\" (Internet Archive scan imitationchrist01unkngoog, the Oxford copy). The Tauchnitz reprint of 1877 (imitationchrist07thomgoog) and John C. Nimmo's illustrated edition of 1886 (imitationofchris00benhrich) are later.",
           "sourceTitle": "The Imitation of Christ",
           "digitalRelease": "Feb 1, 1999",
           "access": "full-text",
           "text": "data/texts/pg-1653.txt",
-          "sha256": "7631799607b0ede62f1bd7ed2a8eb62d89524451a3c41e9ad2b5cbf4c2aa5383"
+          "sha256": "7631799607b0ede62f1bd7ed2a8eb62d89524451a3c41e9ad2b5cbf4c2aa5383",
+          "translationYear": 1874
         }
       ]
     },

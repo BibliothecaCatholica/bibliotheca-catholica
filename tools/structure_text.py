@@ -79,7 +79,9 @@ for _wid, _ed in (('innocence-father-brown', 'pg-204'), ('wisdom-father-brown', 
                   # Orthodoxy flow batch 2 (November 19, 2026)
                   ('bede-ecclesiastical-history', 'pg-38326'), ('consolation-philosophy', 'pg-14328'), ('abandonment', 'pg-52057'),
                   # Orthodoxy flow batch 3 (November 20, 2026)
-                  ('catherine-letters', 'pg-7403'), ('apostolic-fathers', 'pg-77576'), ('europe-faith', 'pg-8442')):
+                  ('catherine-letters', 'pg-7403'), ('apostolic-fathers', 'pg-77576'), ('europe-faith', 'pg-8442'),
+                  # Orthodoxy flow batch 4 (November 20, 2026)
+                  ('idea-university', 'pg-24526'), ('aquinas-prayer-contemplative', 'pg-22295'), ('glories-of-mary', 'pg-72411')):
     EDITIONS[(_wid, _ed)] = {'mode': 'map', 'out': 'data/structured/%s-%s.json' % (_wid, _ed)}
 
 

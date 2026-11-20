@@ -64,6 +64,10 @@ PART_D={
     'catherine-letters':{'about':'Project Gutenberg #7403: Vida D. Scudder’s translation and selection (1905). Sixty letters in the book’s sections, divided as the hosted text heads them, each with the editor’s note that introduces it; the introduction and tables stay in the reader. No words were changed.'},
     'apostolic-fathers':{'about':'Project Gutenberg #77576: the Ante-Nicene Christian Library, vol. I (Edinburgh: T. & T. Clark, 1870). Twenty-two parts, one for each writing as the volume heads it, with its introductory notice; the indexes stay in the reader. No words were changed.'},
     'europe-faith':{'about':'Project Gutenberg #8442: Hilaire Belloc’s Europe and the Faith. The Introduction and ten chapters, divided as the hosted text heads them; no words were changed.'},
+    # Orthodoxy flow batch 4 (November 20, 2026). Each sentence restates the edition's record and its map.
+    'idea-university':{'about':'Project Gutenberg #24526: Newman’s The Idea of a University. Nine discourses and ten lectures and essays, divided as the hosted text heads them; the preface, index, and notes stay in the reader. No words were changed.'},
+    'aquinas-prayer-contemplative':{'about':'Project Gutenberg #22295: Hugh Pope’s translation (London: R. & T. Washbourne, 1914). Nine questions from the Summa, divided as the hosted text heads them; the introduction and indexes stay in the reader. No words were changed.'},
+    'glories-of-mary':{'about':'Project Gutenberg #72411: the second American edition (New York: Edward Dunigan and Brother, 1852). Ten chapters on the Salve Regina, nine discourses, and the devotions that follow, divided as the hosted text heads them; the footnotes stay in the reader. No words were changed.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""
@@ -78,8 +82,9 @@ def items_for(wid,spec,B):
     before the next chapter): they are left out of the part before them, recorded as that next part's `before` blocks,
     and kept in the reader and the EPUB."""
     end=next(i for i,b in enumerate(B) if re.search(r'\*\*\* ?END OF (THE |THIS )?(PROJECT GUTENBERG|HOSTED TEXT)',b,re.I))
-    if spec.get('end_before'):end=next(i for i in range(len(B)) if norm(B[i])==norm(spec['end_before']))  # back matter after the last part
     at=next(i for i,b in enumerate(B) if norm(b)==norm(spec['start_after']))
+    # back matter after the last part: the first match after start_after (a contents list may print the same words earlier)
+    if spec.get('end_before'):end=next(i for i in range(at+1,len(B)) if norm(B[i])==norm(spec['end_before']))
     div={norm(x) for x in spec.get('divisions',())}
     heads=[]
     for slug,num,title,head,first,last in spec['parts']:

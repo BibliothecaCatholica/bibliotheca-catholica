@@ -60,6 +60,10 @@ PART_D={
     'bede-ecclesiastical-history':{'about':'Project Gutenberg #38326: A. M. Sellar’s revised translation (London: George Bell and Sons, 1907). Five books, divided as the hosted text heads them; the preface, index, and footnotes stay in the reader. No words were changed.'},
     'consolation-philosophy':{'about':'Project Gutenberg #14328: H. R. James’s translation (London: Elliot Stock, 1897). Five books, each with its summary, songs, and prose, divided as the hosted text heads them; the introduction, epilogue, and notes stay in the reader. No words were changed.'},
     'abandonment':{'about':'Project Gutenberg #52057: Ella McMahon’s translation, edited by H. Ramière (New York: Benziger Brothers, 1887). Thirty-three chapters in three books, divided as the hosted text heads them; the appendix of prayers stays in the reader. No words were changed.'},
+    # Orthodoxy flow batch 3 (November 20, 2026). Each sentence restates the edition's record and its map.
+    'catherine-letters':{'about':'Project Gutenberg #7403: Vida D. Scudder’s translation and selection (1905). Sixty letters in the book’s sections, divided as the hosted text heads them, each with the editor’s note that introduces it; the introduction and tables stay in the reader. No words were changed.'},
+    'apostolic-fathers':{'about':'Project Gutenberg #77576: the Ante-Nicene Christian Library, vol. I (Edinburgh: T. & T. Clark, 1870). Twenty-two parts, one for each writing as the volume heads it, with its introductory notice; the indexes stay in the reader. No words were changed.'},
+    'europe-faith':{'about':'Project Gutenberg #8442: Hilaire Belloc’s Europe and the Faith. The Introduction and ten chapters, divided as the hosted text heads them; no words were changed.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""
@@ -69,7 +73,8 @@ def items_for(wid,spec,B):
     """The parts of one mapped work: heading, body range, and words (also used by tools/structure_text.py map mode).
 
     A heading is one block, or a tuple of consecutive blocks (a numeral line and a title line); the whole tuple must occur
-    once. `divisions` (optional) are exact texts of headings that stand between parts ("PART II.", a plate caption printed
+    once, unless it is given as {'text': heading, 'occurrence': n}: the n-th time that heading occurs after
+    `start_after`, for a book that prints the same heading more than once ("TO GREGORY XI" in Catherine's letters). `divisions` (optional) are exact texts of headings that stand between parts ("PART II.", a plate caption printed
     before the next chapter): they are left out of the part before them, recorded as that next part's `before` blocks,
     and kept in the reader and the EPUB."""
     end=next(i for i,b in enumerate(B) if re.search(r'\*\*\* ?END OF (THE |THIS )?(PROJECT GUTENBERG|HOSTED TEXT)',b,re.I))
@@ -79,9 +84,12 @@ def items_for(wid,spec,B):
     heads=[]
     for slug,num,title,head,first,last in spec['parts']:
         assert SLUG.match(slug) and len(slug)<=60,slug  # page paths keep each segment under 80 characters
+        nth=None
+        if isinstance(head,dict):head,nth=head['text'],head['occurrence']  # a heading the book prints more than once
         hs=head if isinstance(head,tuple) else (head,)
         hits=[i for i in range(at+1,end) if all(i+j<end and norm(B[i+j])==norm(x) for j,x in enumerate(hs))]
-        assert len(hits)==1,(wid,slug,'heading must occur once',hits)
+        if nth is None:assert len(hits)==1,(wid,slug,'heading must occur once',hits)
+        else:assert nth>=1 and len(hits)>=nth,(wid,slug,'occurrence',nth,hits);hits=[hits[nth-1]]
         assert not heads or hits[0]>heads[-1][0],(wid,slug,'out of order')
         heads.append((hits[0],len(hs)))
     items=[];prev_end=None

@@ -213,7 +213,7 @@ def write_home(tpl,counts,snapshot):
     org={'@context':'https://schema.org','@type':'Organization','@id':SITE+'#organization','name':NAME,'url':SITE,'logo':OG_IMAGE,'sameAs':SAME_AS}
     web={'@context':'https://schema.org','@type':'WebSite','@id':SITE+'#website','name':NAME,'url':SITE,'description':HOME_DESC,'inLanguage':'en','publisher':{'@id':SITE+'#organization'}}
     s=LD_RE.sub('',s).replace('</head>','<!-- jsonld:start -->'+ld(web)+ld(org)+'<!-- jsonld:end -->\n</head>',1)
-    js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'acta':site_copy.acta_source(),'home':about,'hero':hero,'paths':paths,'about':site_copy.about_page(counts),'newsletter':site_copy.newsletter_box(),'homeNewsletter':site_copy.home_newsletter(),'disclosure':disclosure_html(),'studyPartner':study_partner.panel('magisterium'),'supportTools':study_partner.support_note(),'portraits':portrait_ids()},ensure_ascii=False,separators=(',',':'))+';\n'
+    js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'acta':site_copy.acta_source(),'home':about,'hero':hero,'paths':paths,'about':site_copy.about_page(counts),'newsletter':site_copy.newsletter_box(),'homeNewsletter':site_copy.home_newsletter(),'disclosure':disclosure_html(),'studyPartner':study_partner.panel('magisterium'),'supportTools':study_partner.support_note(),'portraits':portrait_ids(),'pageArt':{k:site_copy.art_figure(k) for k in site_copy.PAGE_ART}},ensure_ascii=False,separators=(',',':'))+';\n'
     (ROOT/'data/site-copy.js').write_text(js)
     s=re.sub(r'data/site-copy\.js\?v=[0-9a-f]*','data/site-copy.js?v='+hashlib.sha256(js.encode()).hexdigest()[:10],s)
     s=re.sub(r'data/text-pages\.js\?v=[0-9a-f]*','data/text-pages.js?v='+hashlib.sha256((ROOT/'data/text-pages.js').read_bytes()).hexdigest()[:10],s)  # deep-link gaps: content token
@@ -469,8 +469,8 @@ def summa_pages(out,lib):
     total_a=len(flat);total_q=len(qflat)
     # /summa/
     parts_ul='<ul class="text-parts">'+''.join('<li>'+a('/summa/'+P['slug']+'/',P['name']+' ('+P['latin']+')')+': '+str(len(P['questions']))+' questions, '+str(sum(len(q['articles']) for q in P['questions']))+' articles</li>' for P in S['parts'])+'</ul>'
-    body=(crumb_html(*C,('By question and article',''))+'<div class="page-head"><div class="eyebrow">Thomas Aquinas · Theology</div><h1>Summa Theologiae</h1>'
-          +'<p class="lede">The whole Summa in English, one page for each of its '+str(total_q)+' questions and '+str(total_a)+' articles, from the four Project Gutenberg volumes in the reading room and a transcription of the Supplement.</p></div>'
+    body=(crumb_html(*C,('By question and article',''))+site_copy.with_art('summa','<div class="page-head"><div class="eyebrow">Thomas Aquinas · Theology</div><h1>Summa Theologiae</h1>'
+          +'<p class="lede">The whole Summa in English, one page for each of its '+str(total_q)+' questions and '+str(total_a)+' articles, from the four Project Gutenberg volumes in the reading room and a transcription of the Supplement.</p></div>')
           +'<p>Each article page has the objections, the reply “On the contrary,” the answer “I answer that,” and the replies to the objections, with a link into the reading room for notes and highlights. Article pages are at <code>/summa/&lt;part&gt;/q&lt;question&gt;/a&lt;article&gt;/</code>; for example '+a('/summa/1/q2/a3/','First Part, question 2, article 3')+', “Whether God Exists?”</p>'
           +'<h2>The four parts and the Supplement</h2>'+parts_ul
           +'<p class="small">Aquinas left the Third Part unfinished at question 90, where the Gutenberg files end. The '+a('/summa/supp/','Supplement')+', compiled from his earlier writings after his death, completes it here in '+str(len(SUPP['questions']))+' questions, transcribed from the 1917, 1921, and 1922 printings of the same translation.</p>'
@@ -826,7 +826,7 @@ def main():
         elif k=='doctors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors if x.get('doctor'))+'</ul>'
         intro='<p class="section-intro">'+E(INTRO[k])+'</p>' if k in INTRO else ''
         if k=='magisterium':intro=councils_page.MAGISTERIUM_LINK+intro  # the councils, first on the page (2026-11-17)
-        out[k]=(t+' · Bibliotheca Catholica',fit([d],DESC_EXTRA),head('Bibliotheca Catholica',t,d)+intro+extra,[crumbs((t,k+'/'))])
+        out[k]=(t+' · Bibliotheca Catholica',fit([d],DESC_EXTRA),site_copy.with_art(k,head('Bibliotheca Catholica',t,d))+intro+extra,[crumbs((t,k+'/'))])
     if flags.get('policy_html'):
         out['policy']=('Fidelity & Editorial Policy · Bibliotheca Catholica','Bibliotheca Catholica is faithful to the Magisterium. Listing is not endorsement; flagged records carry calm context notes. Privacy and how to report a concern.',flags['policy_html'],[crumbs(('Fidelity & Editorial Policy','policy/'))])
     # v16 rights pages: same HTML as the app (data/rights-pages.js, written by tools/build_rights.py from tools/rights_pages.py)

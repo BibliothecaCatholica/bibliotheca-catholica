@@ -31,7 +31,8 @@ def row(c,lib,hosted,libw):
 def body(lib=None):
     lib=lib or json.loads((ROOT/'data/library.json').read_text())
     D=load();hosted=hosted_works(lib);libw={w['id']:w for w in lib['works']}
-    h='<div class="page-head"><div class="eyebrow">Church Documents</div><h1>'+E(TITLE)+'</h1><p class="lede">'+E(LEDE)+'</p></div>'
+    import site_copy  # the section-header engraving (PR #95, option A)
+    h=site_copy.with_art('councils','<div class="page-head"><div class="eyebrow">Church Documents</div><h1>'+E(TITLE)+'</h1><p class="lede">'+E(LEDE)+'</p></div>')
     # no in-page #anchor links: app.js reads location.hash as the route
     for e in D['eras']:
         rows=[c for c in D['councils'] if c['era']==e['id']]

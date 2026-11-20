@@ -577,9 +577,11 @@ function prayersWire(focus){document.querySelectorAll('.pr-lat').forEach(functio
   if(focus){var el=document.getElementById('pr-'+focus);if(el){el.open=true;setTimeout(function(){el.scrollIntoView({block:'center'})},30)}}}
 var LIB_DESK_LOADING=false,LIB_DESK_WAIT=[];
 function libraryDeskLoad(cb){if(window.BCLibraryDesk){cb();return}LIB_DESK_WAIT.push(cb);if(LIB_DESK_LOADING)return;LIB_DESK_LOADING=true;var s=document.createElement('script');s.src='/assets/libraries/desk.js?v=20261109';s.onload=function(){LIB_DESK_WAIT.splice(0).forEach(function(f){f()})};s.onerror=function(){LIB_DESK_LOADING=false;LIB_DESK_WAIT=[]};document.head.appendChild(s)}
+/* Section-header engravings (PR #95, option A): tools/site_copy.py PAGE_ART, shipped in data/site-copy.js; with_art() is the static twin. */
+window.withPageArt=function(k,h){var A=window.SITE_COPY&&window.SITE_COPY.pageArt&&window.SITE_COPY.pageArt[k];return A?String(h).replace('<div class="page-head">','<div class="page-head has-art">'+A):h};
 function section(k,focus){
   var s=SECTIONS[k];var R=D.resources.filter(function(r){return r.section===k});var cats=[];R.forEach(function(r){if(cats.indexOf(r.category)<0)cats.push(r.category)});
-  var h='<div class="page-head"><div class="eyebrow">'+esc(s.e)+'</div><h1>'+esc(s.t)+'</h1><p class="lede">'+esc(s.d)+'</p></div>';
+  var h=window.withPageArt(k,'<div class="page-head"><div class="eyebrow">'+esc(s.e)+'</div><h1>'+esc(s.t)+'</h1><p class="lede">'+esc(s.d)+'</p></div>');
   if(k==='magisterium')h+='<p class="councils-link"><a class="btn ghost" href="/councils/">The 21 Ecumenical Councils</a> <span class="small">From Nicaea to Vatican II, in order, with what each one settled.</span></p>';
   if(k==='magisterium')h+='<p><a class="btn" href="#/library/Magisterium">Read individual Church documents →</a></p>';
   if(k==='magisterium')h+='<div class="callout">For the authoritative text of any papal or curial document, <a href="https://www.vatican.va/content/vatican/en.html" target="_blank" rel="noopener">vatican.va</a> is always the primary source; the other links here are convenient mirrors and finding aids.</div>';

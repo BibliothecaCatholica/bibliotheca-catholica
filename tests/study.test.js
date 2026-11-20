@@ -19,3 +19,12 @@ test('/study/ loads the site fonts the same way the other static pages do',()=>{
  assert.ok(study.indexOf('fonts.css')<study.indexOf('/styles.css'),'fonts.css before styles.css');
  assert.equal((study.match(/googletagmanager\.com\/gtag\/js/g)||[]).length,1);
 });
+test('housekeeping 2026-11-20: /study/ is indexed, canonical, described, and in the sitemap',()=>{
+ const fs=require('fs'),path=require('path'),R=p=>fs.readFileSync(path.join(__dirname,'..',p),'utf8');
+ const s=R('study/index.html');
+ assert.match(s,/<link rel="canonical" href="https:\/\/bibliothecacatholica\.com\/study\/">/);
+ assert.match(s,/<meta name="robots" content="index,follow">/);
+ const d=s.match(/<meta name="description" content="([^"]+)">/)[1];assert.ok(d.length>=50&&d.length<=170&&!d.includes('—'),d);
+ assert.ok(R('sitemap.xml').includes('<loc>https://bibliothecacatholica.com/study/</loc>'));
+ assert.ok(!/Disallow: \/study/.test(R('robots.txt')));
+});

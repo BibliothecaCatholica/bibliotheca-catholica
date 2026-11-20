@@ -2,7 +2,7 @@
 
 Read AGENTS.md and this file at session start. Read detailed references only for the task at hand. Update this file in place at handoff. Cap (owner rule change, November 14, 2026): handoff entries of at most 5 lines, the 3 newest only, and under 80 lines in all (`tests/test_central.py`). No separate dated report files for handoffs. No secrets, reader notes, or private account records here.
 
-When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply. Updated November 14, 2026 (America/Chicago). This is the single living coordination file for every contributor: the Grok bots, ChatGPT (and Codex), Claude (and Claude Code), and anyone else.
+When an instruction file and the existing code disagree, follow the conventions in the code, and point out each mismatch in your final reply. Updated November 20, 2026 (America/Chicago). This is the single living coordination file for every contributor: the Grok bots, ChatGPT (and Codex), Claude (and Claude Code), and anyone else.
 
 ## Project and authority
 
@@ -46,6 +46,12 @@ As of November 19, 2026, `main` after PR #74 (`0384057ebf`):
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-20, Claude (Claude Code): network pass
+
+- Merged #90: Walsh's The World's Debt to the Catholic Church hosted (97.5% scan agreement); The Sword of Wood and C held (no dated scan). #96: Trent (Waterworth, 1848) hosted and structured by session via the new `tools/import_html_pages.py` (read gate 99.81%, 96.6% agreement), linked from /councils/. #95 (do not merge): Doré header options for five pages; the owner picks.
+- Refused archive.org file servers (HOLDS rows name them): ia600707, ia800707, ia600406, ia800406 (Schroeder); ia600806, ia800806 (Percival); ia600803, ia800803 (Manning); ia601608, ia801608, ia600704, ia800704 (second printings).
+- Stopped here: the transcription backlog (its scans are on allowed servers; G.K.C. as M.C., at 99.49%, is nearest the gate). #83 waits for the owner after the Nov 22 preview.
+
 ### 2026-11-20, Claude (Claude Code): work queue
 
 - Merged #81, #82 (Libraries desk rebuilt for fuse.js 7.5.0), and #87 (Schroeder basis approved); #83 (CSP) waits for the owner after the Nov 22 preview. #90 (for review): the Gutenberg Australia PDF prints rebuilt by `tools/import_pdf_print.py`, read gate 99.73%, 99.61%, 99.69%; hosting waits for the archive.org scan comparison. Orthodoxy flow #91 and #93 (37 structured); #92 indexes /study/ and recommends closing #17 and `deep-link-gaps-summa`.
@@ -54,12 +60,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 ### 2026-11-19, Claude (Claude Code): third pass
 
 - Housekeeping (#77): the branch cleanup HOLDS row is removed (all 60 deleted on November 19). "Licensing & credits" everywhere (#78); the home page has a Subscribe button instead of the Substack embed (#79). Dependabot (#80): weekly grouped npm and Actions PRs. Site copy has no em-dashes (#84, `tests/test_site_copy_dashes.py`). Orthodoxy flow batch 1: Confessions, The Betrothed, and Revelations of Divine Love get chapter pages, openers, structure, and EPUBs (#88); batch 2 adds Bede, Boethius, and Abandonment (#89); batch 3 Catherine, the Apostolic Fathers, and Belloc (#91); batch 4 Newman's Idea, Aquinas On Prayer, and the Glories of Mary (37 structured). Schroeder (councils 8 to 18): no renewal in the NYPL data; basis approved (#87). Blocked here: archive.org, Wikimedia, and HathiTrust are outside this session's network, so Councils 1a to 1c, the hand passes, and the Doré headers wait for a session on the repo's own environment.
-
-### 2026-11-19, Claude (Claude Code): follow-up pass
-
-- Merged #72 (Advent readiness) and #73 (Magisterium AI panels on /magisterium/, /councils/, /summa/, /study/), after validating #73 on the new main.
-- #74 (merged): /study/ loads the site fonts; the disclosure line is 14 px on every page (one `.disclosure` rule); /libraries/ has one line, under its Magisterium link; tests keep one line per page.
-- #75 (merged, analytics): /study/ loads `scripts/analytics.js` with `BC_CLICK_KINDS=['affiliate']`, so only the Magisterium click counts there. The 60 merged branches were deleted on November 19. Day 4's J. M. Dent publisher not added: the hosted Scudder file names no publisher.
 
 ## Open items
 

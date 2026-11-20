@@ -14,8 +14,8 @@ class TranslationYear(unittest.TestCase):
         self.assertEqual(EDS['pg-45304']['translationYear'], 1871)
         self.assertEqual(EDS['ccel-npnf102-doctrine']['translationYear'], 1873)
         self.assertEqual(EDS['pg-7403']['translationYear'], 1905)
-        # Benham's Imitation: the hosted file names no edition year, so it stays unset
-        self.assertNotIn('translationYear', EDS['pg-1653'])
+        # Benham's Imitation (November 20, 2026): the 1874 London printing's dated dedication, cited in the edition note
+        self.assertEqual(EDS['pg-1653']['translationYear'], 1874)
         for e in EDS.values():
             if 'translationYear' in e:
                 rest = {k: v for k, v in e.items() if k != 'translationYear'}

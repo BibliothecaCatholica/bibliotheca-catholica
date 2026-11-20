@@ -54,5 +54,16 @@
     ]
   },
   "textUrl": "https://www.gutenberg.org/cache/epub/1653/pg1653.txt",
-  "checked": "2026-10-21"
+  "checked": "2026-10-21",
+  "translationYearEvidence": {
+    "year": 1874,
+    "scan": "https://archive.org/details/imitationchrist01unkngoog",
+    "reading": "dedication dated \"Margate, Second Sunday in Lent, 1874\"; printed in London by R. Clay, Sons, and Taylor",
+    "checked": "2026-11-20",
+    "laterPrintings": [
+      "https://archive.org/details/imitationchrist07thomgoog (Leipzig: Tauchnitz, 1877)",
+      "https://archive.org/details/imitationofchris00benhrich (London: John C. Nimmo, 1886)"
+    ],
+    "textCheck": "the opening of Book I, chapter I in the hosted file matches the 1874 scan's OCR"
+  }
 }

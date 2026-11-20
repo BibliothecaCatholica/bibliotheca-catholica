@@ -1,0 +1,31 @@
+{
+  "id": "pga-0900731",
+  "kind": "public-domain-text",
+  "title": "The Sword of Wood",
+  "author": "G. K. Chesterton",
+  "firstPublished": "1928 (London: Elkin Mathews & Marrot, the Woburn Series)",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "Project Gutenberg Australia",
+  "sourceUrl": "https://gutenberg.net.au/ebooks09/0900731h.html",
+  "sourcePage": "https://gutenberg.net.au/ebooks09/0900731h.html",
+  "sourceNotice": "Project Gutenberg\nAustralia\na treasure-trove of\nliterature\ntreasure found hidden with no\nevidence of ownership\nBROWSE the site for\nother works by this\nauthor\n(and our other authors)\nor get HELP Reading,\nDownloading and\nConverting files)\nor\nSEARCH the entire site\nwith Google Site Search\n\nTitle: The Sword of Wood\nAuthor: G.K. Chesterton\n* A Project Gutenberg of Australia eBook *\neBook No.: 0900731h.html\nLanguage: English\nDate first posted: Mar 2013\nMost recent update: Mar 2013\nThis eBook was produced by: Roy Glashan\nProject Gutenberg of Australia eBooks are created from printed editions\nwhich are in the public domain in Australia, unless a copyright notice\nis included. We do NOT keep any eBooks in compliance with a particular\npaper edition.\nCopyright laws are changing all over the world. Be sure to check the\ncopyright laws for your country before downloading or redistributing this\nfile.\nThis eBook is made available at no cost and with almost no restrictions\nwhatsoever. You may copy it, give it away or re-use it under the terms\nof the Project Gutenberg of Australia License which may be viewed online at\nhttp://gutenberg.net.au/licence.html\nTo contact Project Gutenberg of Australia go to http://gutenberg.net.au\n\nGO TO Project Gutenberg Australia HOME PAGE\n\nThe Sword of Wood\n\nby\n\nG.K. Chesterton\nFirst published by E. Mathews & Marrot, London, 1928, as Vol. 1 in\nthe Woburn Series\n\nDOWN in the little village of Grayling-Abbot, in Somerset,\nmen did not know that the world we live in h",
+  "sourceFileSha256": "7125e5db75459714fe08ba9596a1ba4d2650bfb5a8ae07e7d2bec878ad7390d6",
+  "sourceFile": "data/sources/pdf-prints/pga-0900731.pdf",
+  "sourceFileNote": "sourceFileSha256 is the SHA-256 of the pinned PDF print of the source page; the source's own server serves a bot check",
+  "readGate": {
+    "words": 5209,
+    "unknown": 13,
+    "readRate": 0.9975,
+    "gate": 0.995
+  },
+  "scanException": {
+    "reason": "No dated scan of this printing exists on archive.org or Open Library (searched November 20, 2026).",
+    "approved": "owner",
+    "date": "2026-11-20",
+    "yearInText": 1928
+  },
+  "sha256": "9a3b1e932428117a78e17bf4264f097bab418aa25e23b543956789daeab710bf",
+  "bytes": 29424,
+  "checked": "2026-11-20"
+}

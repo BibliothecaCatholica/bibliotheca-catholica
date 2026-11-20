@@ -11,7 +11,6 @@ When a hold is released or finished, delete its row in the same commit as the wo
 | Aquinas tool work: PR #9 review, adding II-II and III, doc fixes | Bibliotheca Aquinas | usage | 2026-11-15 | Resume when the owner says. |
 | Full Orthodoxy flow for the 93 unstructured editions (next: City of God, which needs a two-volume map in the builders and serves nine Advent days, so after the Advent freeze; then on by reader value) | Claude Code (owner runs it) | the owner running it | 2026-11-20 | Use `docs/claude-code-chesterton-prompt.md`; three per PR. |
 | Plummer, Reeves, and Meyer Irish editions | Claude Code or a person | transcription (scan-only) | 2026-11-15 | Transcribe. |
-| Gutenberg Australia texts from the owner's PDF prints, Chesterton's The Sword of Wood (1928) and Baring's C (1924): rebuilt, past the read gate (99.73% and 99.69%; docs/research/pga-pdf-prints-2026-11/); no dated scan of either printing on archive.org or Open Library (searched November 20, 2026), so no agreement figure | Claude Code | a dated scan of each printing | 2026-11-20 | Find a dated scan (archive.org or another free library), set `ia` in the spec, run `tools/import_pdf_print.py --host`, add the library records, and host. |
 | Candles' Beams | Catholic Repo | a scan to check against | 2026-11-16 | Find a dated scan, then host. |
 | Sheehan | Catholic Repo | CELT consent caveat | 2026-11-16 | Resolve consent, then host. |
 | Faustula | Catholic Repo | text cleanup | 2026-11-15 | Remove the source library's added material. |

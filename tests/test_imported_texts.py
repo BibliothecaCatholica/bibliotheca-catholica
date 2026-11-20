@@ -21,6 +21,18 @@ class ImportedTexts(unittest.TestCase):
             self.assertIn('*** START OF THE HOSTED TEXT', text, e['id'])
             self.assertTrue(text.rstrip().endswith('***'), e['id'])
             self.assertIn(r['rightsBasis'], ('pd-date', 'pd-nonrenewal'), e['id'])
+            if 'scanException' in r:  # owner-approved, per edition: no dated scan exists (November 20, 2026)
+                x = r['scanException']
+                self.assertEqual(set(x), {'reason', 'approved', 'date', 'yearInText'}, e['id'])
+                self.assertEqual(x['approved'], 'owner', e['id'])
+                self.assertIn('No dated scan', x['reason'], e['id'])
+                self.assertEqual(r['rightsBasis'], 'pd-date', e['id'])  # never for a non-renewal basis
+                self.assertTrue(pd_by_date(x['yearInText']), e['id'])
+                self.assertIn(str(x['yearInText']), text, e['id'])  # the year is printed in the text itself
+                self.assertGreaterEqual(r['readGate']['readRate'], 0.995, e['id'])
+                self.assertNotIn('iaWitness', r, e['id'])
+                self.assertIn('no dated scan', e['note'].lower(), e['id'])
+                continue
             if r['rightsBasis'] == 'pd-date':
                 self.assertTrue(pd_by_date(r['iaWitness']['year']), e['id'])
             else:

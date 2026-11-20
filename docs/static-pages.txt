@@ -4882,6 +4882,7 @@ work/ballad-white-horse/ch/06-ethandune-the-slaying-of-the-chiefs/index.html
 work/ballad-white-horse/ch/07-ethandune-the-last-charge/index.html
 work/ballad-white-horse/ch/08-the-scouring-of-the-horse/index.html
 work/barbarism-of-berlin/index.html
+work/baring-c/index.html
 work/baring-gould-lives-february/index.html
 work/baring-gould-lives-january/index.html
 work/baring-gould-lives-march/index.html
@@ -5566,6 +5567,7 @@ work/story-of-a-soul/ch/11-a-canticle-of-love/index.html
 work/summa-theologiae/index.html
 work/superstition-divorce/index.html
 work/superstitions-of-the-sceptic/index.html
+work/sword-of-wood/index.html
 work/tales-long-bow/index.html
 work/tennyson-bookman/index.html
 work/thackeray-bookman/index.html

@@ -95,15 +95,21 @@ def scan_witness(e, text, basis):
 
 def host(e, raw, text, basis, out, witness, col, converted='Converted to UTF-8 plain text', extra=None):
     """Writes the hosted text and its source record (step 3). `raw` is the source file as received."""
-    year, m_pub = witness['year'], witness['publisher']
     T = e['title'].upper()
+    x = e.get('scanException')
+    if witness is None:  # owner-approved exception (November 20, 2026): no dated scan exists to compare with
+        assert x and x.get('reason') and x.get('approved') == 'owner' and x.get('date') and pd_by_date(x['yearInText']), e['edition']
+        compared = (f"Not compared with a scan: {x['reason']} Hosted by an owner-approved exception ({x['date']}); "
+                    f"public domain in the USA by date ({x['yearInText']}, the year printed in the text).")
+    else:
+        year, m_pub = witness['year'], witness['publisher']
+        compared = (f"Compared word by word with the Internet Archive scan {e['ia']} ({m_pub or 'publisher not recorded'}, {year}): "
+                    f"{col['agreement']:.1%} of the source's words are confirmed by the scan's OCR, and the differences "
+                    f"are listed for review in the provenance record.")
     head = [T, '', f"By {e['author']}", '',
             f"First published {e['firstPublished']}. Public domain in the USA.", '',
             f"Source: {e['sourceName']} ({e['sourcePage']}), reproduced unchanged below with its own notices. "
-            f"{converted} by Bibliotheca Catholica; no words were changed. Compared word by word "
-            f"with the Internet Archive scan {e['ia']} ({m_pub or 'publisher not recorded'}, {year}): "
-            f"{col['agreement']:.1%} of the source's words are confirmed by the scan's OCR, and the differences "
-            f"are listed for review in the provenance record.", '',
+            f"{converted} by Bibliotheca Catholica; no words were changed. " + compared, '',
             f"*** START OF THE HOSTED TEXT: {T} ***", '']
     body = '\n'.join(head) + text + f"\n\n*** END OF THE HOSTED TEXT: {T} ***\n"
     data = body.encode('utf-8')
@@ -114,10 +120,11 @@ def host(e, raw, text, basis, out, witness, col, converted='Converted to UTF-8 p
            'firstPublished': e['firstPublished'], 'rights': RIGHTS.format(name=e['sourceName']),
            'rightsBasis': basis, **({'nonRenewal': e['nonRenewal']} if basis == 'pd-nonrenewal' else {}), 'sourceName': e['sourceName'], 'sourceUrl': e['sourceUrl'],
            'sourcePage': e['sourcePage'], 'sourceNotice': notice, 'sourceFileSha256': hashlib.sha256(raw).hexdigest(),
-           **(extra or {}), 'iaWitness': witness, 'collation': col, 'sha256': sha, 'bytes': len(data),
+           **(extra or {}), **({'iaWitness': witness, 'collation': col} if witness else {'scanException': x}),
+           'sha256': sha, 'bytes': len(data),
            'checked': time.strftime('%Y-%m-%d')}
     (ROOT / f"data/sources/{e['edition']}.json").write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')
-    print(e['edition'], sha, f"agreement {col['agreement']:.1%}", f"scan {e['ia']} {year}")
+    print(e['edition'], sha, f"agreement {col['agreement']:.1%} scan {e['ia']} {witness['year']}" if witness else 'scan exception')
     return sha
 
 

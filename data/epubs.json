@@ -103,6 +103,12 @@
    "sha256": "a01b4b92c0cbc0863a178760d7956fa93625bdbf38bd6dbd9b697093c312e454",
    "size": 448379
   },
+  "pg-65688": {
+   "work": "everlasting-man",
+   "path": "downloads/epub/everlasting-man-pg-65688.7074f7bbbc04.epub",
+   "sha256": "7074f7bbbc0447e0ef75259cab04309284e99d2cf8abda04319262da96b916b4",
+   "size": 646204
+  },
   "pg-59239": {
    "work": "flying-inn",
    "path": "downloads/epub/flying-inn-pg-59239.bef98cf3f8a9.epub",
@@ -169,6 +175,12 @@
    "sha256": "656128e12fef7806108222b065682c492057b7ec9255181ac5d8a0348e5063dd",
    "size": 375676
   },
+  "pg-13468": {
+   "work": "new-jerusalem",
+   "path": "downloads/epub/new-jerusalem-pg-13468.fa9802233bbb.epub",
+   "sha256": "fa9802233bbb3c563fe7c095c8e507f457e409644bae466225c717fc388df606",
+   "size": 562930
+  },
   "pg-130": {
    "work": "orthodoxy",
    "path": "downloads/epub/orthodoxy-pg-130.64ae296bc11e.epub",
@@ -210,6 +222,12 @@
    "path": "downloads/epub/trees-of-pride-pg-1721.08dda6e9dc92.epub",
    "sha256": "08dda6e9dc9263b1d1cfcbc7826e03175ff935268346ff8ac686d634fc240023",
    "size": 178192
+  },
+  "pg-8092": {
+   "work": "tremendous-trifles",
+   "path": "downloads/epub/tremendous-trifles-pg-8092.8a816f05478a.epub",
+   "sha256": "8a816f05478a7122e01b1b5032a8e73ce8a6057d4792a75f83012212212088a8",
+   "size": 371075
   },
   "pg-53841": {
    "work": "virgin-saints-and-martyrs",

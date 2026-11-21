@@ -70,6 +70,10 @@ PART_D={
     'glories-of-mary':{'about':'Project Gutenberg #72411: the second American edition (New York: Edward Dunigan and Brother, 1852). Ten chapters on the Salve Regina, nine discourses, and the devotions that follow, divided as the hosted text heads them; the footnotes stay in the reader. No words were changed.'},
     # Councils Part 3 (November 20, 2026). The sentence restates the edition's record and its map.
     'council-of-trent':{'about':'J. Waterworth’s translation (London: C. Dolman, 1848), in the Hanover Historical Texts transcription served by Papal Encyclicals Online. The bull of indiction and the twenty-five sessions, each headed by its source page’s own title; the preface and the transcribers’ notes stay in the reader. No words were changed.'},
+    # Chesterton polish batch 1 (November 21, 2026). Each sentence restates the edition's record and its map.
+    'everlasting-man':{'about':"Project Gutenberg #65688: the Hodder and Stoughton, London text, printed by T. and A. Constable. The introduction, fourteen chapters in two parts, the conclusion, and two appendices, divided as the hosted text heads them; the prefatory note and the transcriber's note stay in the reader. No words were changed."},
+    'tremendous-trifles':{'about':'Project Gutenberg #8092: first published in 1909. Thirty-nine essays, divided as the hosted text heads them; no words were changed.'},
+    'new-jerusalem':{'about':'Project Gutenberg #13468: first published in 1920. Thirteen chapters and the conclusion, divided as the hosted text heads them; the preface stays in the reader. No words were changed.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

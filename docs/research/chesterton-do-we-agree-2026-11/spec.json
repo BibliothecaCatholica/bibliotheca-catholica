@@ -1,0 +1,261 @@
+[
+ {
+  "edition": "ia-doweagree0000gkch",
+  "ia": "doweagree0000gkch",
+  "title": "DO WE AGREE?",
+  "sourceTitle": "Do We Agree? A Debate between G. K. Chesterton and Bernard Shaw, with Hilaire Belloc in the Chair",
+  "author": "G. K. Chesterton",
+  "year": 1928,
+  "firstPublished": "1928 (London: Cecil Palmer), first edition",
+  "firstLeaf": 8,
+  "lastLeaf": 52,
+  "handFixes": [
+   {
+    "leaf": 12,
+    "page": "leaf 12",
+    "ocr": "BEttoc: Iam",
+    "reading": "Belloc: I am"
+   },
+   {
+    "leaf": 17,
+    "page": "leaf 17",
+    "ocr": "use'or",
+    "reading": "use or"
+   },
+   {
+    "leaf": 19,
+    "page": "leaf 19",
+    "ocr": "Ivish",
+    "reading": "Irish"
+   },
+   {
+    "leaf": 19,
+    "page": "leaf 19",
+    "ocr": "distinctly. Iam",
+    "reading": "distinctly. I am"
+   },
+   {
+    "leaf": 20,
+    "page": "leaf 20",
+    "ocr": "Gavern4",
+    "reading": "Govern-"
+   },
+   {
+    "leaf": 23,
+    "page": "leaf 23",
+    "ocr": "toa point",
+    "reading": "to a point"
+   },
+   {
+    "leaf": 24,
+    "page": "leaf 24",
+    "ocr": "artfuiness",
+    "reading": "artfulness"
+   },
+   {
+    "leaf": 24,
+    "page": "leaf 24",
+    "ocr": "poimt",
+    "reading": "point"
+   },
+   {
+    "leaf": 24,
+    "page": "leaf 24",
+    "ocr": "Janguage",
+    "reading": "language"
+   },
+   {
+    "leaf": 26,
+    "page": "leaf 26",
+    "ocr": "fcr 200",
+    "reading": "for 300"
+   },
+   {
+    "leaf": 26,
+    "page": "leaf 26",
+    "ocr": "msist",
+    "reading": "insist"
+   },
+   {
+    "leaf": 26,
+    "page": "leaf 26",
+    "ocr": "te'l.",
+    "reading": "tell."
+   },
+   {
+    "leaf": 26,
+    "page": "leaf 26",
+    "ocr": "though [ think",
+    "reading": "though I think"
+   },
+   {
+    "leaf": 28,
+    "page": "leaf 28",
+    "ocr": "frora",
+    "reading": "from"
+   },
+   {
+    "leaf": 28,
+    "page": "leaf 28",
+    "ocr": "I pegin",
+    "reading": "I begin"
+   },
+   {
+    "leaf": 28,
+    "page": "leaf 28",
+    "ocr": "thesociety",
+    "reading": "the society"
+   },
+   {
+    "leaf": 30,
+    "page": "leaf 30",
+    "ocr": "comingatyranny. I donot",
+    "reading": "coming a tyranny. I do not"
+   },
+   {
+    "leaf": 31,
+    "page": "leaf 31",
+    "ocr": "portrait ofa man",
+    "reading": "portrait of a man"
+   },
+   {
+    "leaf": 32,
+    "page": "leaf 32",
+    "ocr": "meorhimtoeat.",
+    "reading": "me or him to eat."
+   },
+   {
+    "leaf": 32,
+    "page": "leaf 32",
+    "ocr": "mea spade",
+    "reading": "me a spade"
+   },
+   {
+    "leaf": 33,
+    "page": "leaf 33",
+    "ocr": "you'ask",
+    "reading": "you ask"
+   },
+   {
+    "leaf": 35,
+    "page": "leaf 35",
+    "ocr": "camtalist",
+    "reading": "capitalist"
+   },
+   {
+    "leaf": 36,
+    "page": "leaf 36",
+    "ocr": "hisland.",
+    "reading": "his land."
+   },
+   {
+    "leaf": 36,
+    "page": "leaf 36",
+    "ocr": "Peiiord a",
+    "reading": "landlord,"
+   },
+   {
+    "leaf": 39,
+    "page": "leaf 39",
+    "ocr": "Iamso",
+    "reading": "I am so"
+   },
+   {
+    "leaf": 40,
+    "page": "leaf 40",
+    "ocr": "mme, and Iam",
+    "reading": "mine, and I am"
+   },
+   {
+    "leaf": 40,
+    "page": "leaf 40",
+    "ocr": "dificult",
+    "reading": "difficult"
+   },
+   {
+    "leaf": 42,
+    "page": "leaf 42",
+    "ocr": "ofland",
+    "reading": "of land"
+   },
+   {
+    "leaf": 42,
+    "page": "leaf 42",
+    "ocr": "that Iam",
+    "reading": "that I am"
+   },
+   {
+    "leaf": 43,
+    "page": "leaf 43",
+    "ocr": "hisass.",
+    "reading": "his ass."
+   },
+   {
+    "leaf": 45,
+    "page": "leaf 45",
+    "ocr": "itis",
+    "reading": "it is"
+   },
+   {
+    "leaf": 45,
+    "page": "leaf 45",
+    "ocr": "atall and",
+    "reading": "at all and"
+   },
+   {
+    "leaf": 45,
+    "page": "leaf 45",
+    "ocr": "tite acre",
+    "reading": "the acre"
+   },
+   {
+    "leaf": 47,
+    "page": "leaf 47",
+    "ocr": "forme.",
+    "reading": "for me."
+   },
+   {
+    "leaf": 48,
+    "page": "leaf 48",
+    "ocr": "hisage.",
+    "reading": "his age."
+   },
+   {
+    "leaf": 49,
+    "page": "leaf 49",
+    "ocr": "down amine.",
+    "reading": "down a mine."
+   },
+   {
+    "leaf": 50,
+    "page": "leaf 50",
+    "ocr": "Bettoc:",
+    "reading": "Belloc:"
+   },
+   {
+    "leaf": 43,
+    "page": "leaf 43",
+    "ocr": "at allsane.",
+    "reading": "at all sane."
+   },
+   {
+    "leaf": 46,
+    "page": "leaf 46",
+    "ocr": "Socially] am not asnob.",
+    "reading": "Socially I am not a snob."
+   },
+   {
+    "leaf": 15,
+    "page": "leaf 15",
+    "ocr": "that?” ie",
+    "reading": "that?”"
+   }
+  ],
+  "verifiedWords": [
+   "Spengler",
+   "Sunderland",
+   "Whitehaven",
+   "executant"
+  ]
+ }
+]

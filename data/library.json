@@ -5458,16 +5458,21 @@
       "editions": [
         {
           "id": "ia-doweagree0000gkch",
-          "label": "Internet Archive scan (London: Cecil Palmer, 1928)",
+          "label": "Transcription of the Internet Archive scan (London: Cecil Palmer, 1928)",
           "source": "https://archive.org/details/doweagree0000gkch",
           "language": "English",
           "contributors": [],
-          "rights": "External scan at the Internet Archive; not hosted here. Published 1928, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
-          "checked": "2026-11-15",
-          "note": "First published 1928. Internet Archive record: Cecil Palmer, 1928, freely readable (not a lending copy). Link only.",
-          "access": "full-text"
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-21",
+          "note": "First published 1928 (London: Cecil Palmer), first edition. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, words rejoined across line breaks, 1 OCR confusion repaired, 40 misreadings corrected by hand against the page images, and 1 paragraph that keeps a word the OCR could not read (99.99% of words read). Not a manual proofread.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "Do We Agree? A Debate between G. K. Chesterton and Bernard Shaw, with Hilaire Belloc in the Chair",
+          "text": "data/texts/ia-doweagree0000gkch.txt",
+          "sha256": "8b16e265d64bc464f7207fa7a33bac5fb8c1253cd5d8738831bbd33e4987c980"
         }
-      ]
+      ],
+      "added": "2026-11-21"
     },
     {
       "id": "gkc-as-mc",

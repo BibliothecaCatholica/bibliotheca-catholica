@@ -71,6 +71,7 @@ def clean_title(s):
     s = re.sub(r'^USA:\s*', '', s)
     s = WEEK_PAREN.sub('', s)
     s = re.sub(r'(?<=[A-Za-z)])\d{1,2}$', '', s)  # footnote markers such as Holy Saturday9
+    s = PSS.sub('', s).strip()
     s = s.strip(' .')
     core = re.sub(r'\([^)]*\)', '', s).strip()
     if core and core.upper() == core:

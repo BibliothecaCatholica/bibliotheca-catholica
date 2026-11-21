@@ -94,6 +94,13 @@ missing slugs (unlinked names), conflicts, dropped keys, prose dropped, and days
 Result (2026-11-09): 12,136 entries on 366 days (saint 7,421, blessed 2,824, martyr group 596, marian title 156,
 pope 88, feast 41, other 1,010); 191 junk rows dropped. Per-day counts run from 4 (29 February) to 76.
 
+
+## Hosted readings
+
+Some day pages link to a life or text hosted in the reading room, from `data/saints-calendar-readings.json`.
+Each link is a site path only (no outbound URL), is shown next to the matching entry on that day, and is not
+a source credit for the calendar facts. The calendar itself stays facts-only.
+
 ## Size and hosting
 
 366 day pages, about 22 KB on average (33 KB max), 8.1 MB in all; `data/saints-days.json` is 1.7 MB. File count: +367 (366 pages and

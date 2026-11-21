@@ -98,6 +98,14 @@ class SaintOfTheDayTests(unittest.TestCase):
         self.assertIn('Any readings', souls)
         self.assertEqual(self.days['12-25']['readings']['usccb'], 'https://bible.usccb.org/bible/readings/122526.cfm')
 
+    def test_pss_prop_stripped_from_feast_names(self):
+        for md in ('03-19', '04-02'):
+            name = self.days[md]['principal']['name']
+            self.assertNotIn('Pss Prop', name, md)
+            self.assertNotRegex(name, r'\bPss\b')
+        self.assertIn('Joseph', self.days['03-19']['principal']['name'])
+        self.assertIn('Holy Thursday', self.days['04-02']['principal']['name'])
+
     def test_observances_are_names_only(self):
         for md, day in self.days.items():
             for o in day['observances']:
@@ -122,9 +130,9 @@ class MagisteriumDisclosureConfigTests(unittest.TestCase):
         self.assertIn("line: 'Affiliate links: we may earn a commission.'", aff)
         self.assertIn("disclosure: 'Affiliate disclosure: Some links are affiliate links.", aff)
         self.assertIn("magisterium: { name: 'Magisterium AI', url: 'https://www.magisterium.com/pro/micah'", aff)
-        self.assertIn("short: 'Some links to Magisterium AI are affiliate links. If you subscribe through them, Bibliotheca Catholica may earn a small commission at no extra cost to you, and you may receive a discount. It helps keep the library free.'", aff)
         # partner() in study_partner.py requires name and url to come first
         self.assertRegex(aff, r"magisterium:\s*\{\s*name:\s*'Magisterium AI',\s*url:\s*'https://www\.magisterium\.com/pro/micah'")
+        self.assertNotIn('short:', aff)
 
     def test_disclosure_copy_has_research_long_form(self):
         import sys

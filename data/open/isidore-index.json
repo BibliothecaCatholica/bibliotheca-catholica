@@ -2,7 +2,7 @@
 "name": "isidore-index",
 "description": "Every book record in the St. Isidore (isidore.co) Calibre library, normalized: canonical languages, author era, rights status, and deep links. Files stay on isidore.co; file links are given only for public-domain, openly licensed, or permitted records.",
 "license": "CC0-1.0",
-"generated": "2026-11-19",
+"generated": "2026-11-21",
 "count": 6633,
 "fields": {
 "id": "isidore.co Calibre book id",
@@ -57519,11 +57519,14 @@
 "series_index": null,
 "publisher": "B. Herder Book Co.",
 "isidore_book_url": "https://isidore.co/calibre/legacy/book/8823/CalibreLibrary",
-"isidore_files_url": null,
-"download_urls": [],
-"rights_status": "unknown",
-"rights_evidence": "Lead, not confirmed: a 1931–63 catalog year and a US-looking publisher, with no renewal found by an automated match. That match has limited recall; a manual renewal search and an edition check are needed. Automated renewal check: no matching renewal in NYPL CCE renewals data (title+surname match, +/-3 yrs).",
-"rights_checked": "2026-10-25",
+"isidore_files_url": "https://isidore.co/CalibreLibrary/Schroeder%2C%20H.%20J.%2C%20O.P_/Disciplinary%20Decrees%20of%20the%20General%20Councils_%20Text%2C%20Translation%2C%20and%20Commentary%20%288823%29/",
+"download_urls": [
+"https://isidore.co/calibre/get/PDF/8823/CalibreLibrary",
+"https://isidore.co/calibre/get/PDF_OCR/8823/CalibreLibrary"
+],
+"rights_status": "public_domain_us",
+"rights_evidence": "Checked by hand: US first publication: B. Herder Book Co., 1937, \"Printed in U. S. A.\", copyright 1937 (Internet Archive DisciplinaryCouncils; pd-nonrenewal basis approved 2026-11-20). Manual renewal search, NYPL cce-renewals transcription of the Copyright Office database (1950-1991 set), 2026-11-21: no matching renewal for Schroeder, Disciplinary Decrees of the General Councils. Public domain in the US by non-renewal. Not legal advice. Hosting the text is a separate step.",
+"rights_checked": "2026-11-21",
 "page_url": "https://bibliothecacatholica.com/#/isidore/book/8823",
 "editorial_flag": null,
 "context_note": null

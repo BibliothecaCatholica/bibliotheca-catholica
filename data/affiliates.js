@@ -8,10 +8,10 @@
  *              Shown only as a general "Browse TAN Books" link (tools/build_print_editions.py).
  *              magisterium.url is the Magisterium AI Pro referral (https://www.magisterium.com/pro/micah,
  *              which redirects to /pro?via=micah; 25% off Pro, 10% commission; checked 2026-11-19).
- *              magisterium.short is the Magisterium-specific FTC wording from Research (20 Nov 2026), for
- *              use next to a Magisterium link when a partner-specific line is needed. The shared one-line
- *              disclosure remains `line`, once per page, with Details to /disclosure/.
- *              The referral must not appear in the header or footer, or on author, chapter, or reading pages.
+ *              Shown in Ask Magisterium AI prompts and buttons on the home page, /scripture/, /saints/,
+ *              /doctors/, /prayers/, /libraries/, /magisterium/, /councils/, the /summa/ landing page, /study/,
+ *              /about/magisterium-ai/, and selected work pages. It does not appear on author, chapter, or
+ *              reading pages, or in the header or footer.
  *  line        The one-line FTC disclosure beside affiliate links, once per page, followed by a "Details" link to
  *              /disclosure/ (owner rule 7, November 14, 2026).
  *  disclosure  The fuller statement on the /disclosure/ page.
@@ -30,7 +30,7 @@ window.AFFILIATES = {
   disclosure: 'Affiliate disclosure: Some links are affiliate links. If you buy through them, Bibliotheca Catholica may earn a small commission at no extra cost to you. It helps keep the library free.',
   partners: {
     tan: { name: 'TAN Books', url: 'https://lddy.no/1qbrw', lands: 'tanbooks.com', program: 'LeadDyno', checked: '2026-11-09' },
-    magisterium: { name: 'Magisterium AI', url: 'https://www.magisterium.com/pro/micah', lands: 'magisterium.com/pro', program: 'via=micah', checked: '2026-11-19', short: 'Some links to Magisterium AI are affiliate links. If you subscribe through them, Bibliotheca Catholica may earn a small commission at no extra cost to you, and you may receive a discount. It helps keep the library free.' }
+    magisterium: { name: 'Magisterium AI', url: 'https://www.magisterium.com/pro/micah', lands: 'magisterium.com/pro', program: 'via=micah', checked: '2026-11-19' }
   },
   publishers: {
     ignatius:   { name: 'Ignatius Press',      search: 'https://ignatius.com/search.php?search_query={q}', wrap: '', param: '', program: 'CJ (10%): https://www.ignatius.com/affiliate-programs/' },

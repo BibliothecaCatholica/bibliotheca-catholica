@@ -4954,6 +4954,7 @@ work/book-of-wisdom-douay-rheims/ch/16-chapter-16/index.html
 work/book-of-wisdom-douay-rheims/ch/17-chapter-17/index.html
 work/book-of-wisdom-douay-rheims/ch/18-chapter-18/index.html
 work/book-of-wisdom-douay-rheims/ch/19-chapter-19/index.html
+work/butler-eulalia-merida/index.html
 work/butler-lives-january-march/index.html
 work/butler-lives-july/index.html
 work/butler-lives-scans/index.html

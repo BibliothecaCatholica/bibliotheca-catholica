@@ -229,8 +229,32 @@ def neighbours(md):
 PAGE_NOTE=('This list combines the Vatican News “Saint of the day” pages with a long-form calendar of saints, blessed, and feasts '
            '(credited on our Resources page). Calendars differ, so a note marks each place the sources disagree. '
            'This is not the General Roman Calendar.')
+def load_readings():
+    """Hosted on-site readings for calendar day pages (data/saints-calendar-readings.json)."""
+    p=Path(__file__).resolve().parents[1]/'data'/'saints-calendar-readings.json'
+    return json.loads(p.read_text()) if p.is_file() else {}
+
+def attach_readings(md,entries,readings=None):
+    """Copy a site-path reading link onto the matching day entry. Outbound URLs and em-dashes are refused."""
+    readings=load_readings() if readings is None else readings
+    by_name={e['name'] if 'name' in e else e['n']:e for e in entries}
+    for r in readings.get(md,[]):
+        href=r.get('href') or ''
+        label=r.get('label') or ''
+        name=r.get('name') or ''
+        if href.startswith('http://') or href.startswith('https://') or not href.startswith('/'):
+            raise CalendarError('calendar reading must be a site path: '+href)
+        if '—' in href or '—' in label:
+            raise CalendarError('calendar reading has an em-dash')
+        e=by_name.get(name)
+        if e is None:
+            raise CalendarError('calendar reading does not match a day entry: '+name+' on '+md)
+        e['reading']=r
+    return entries
+
 def day_page(md,entries,a):
     """(title, description core, body, count) for /saints/calendar/<md>/ from merged_day() entries."""
+    attach_readings(md,entries)
     total=len(entries);day=fmt_day(md)
     lede=(str(total)+(' saint, blessed, or feast' if total==1 else ' saints, blessed, and feasts')+' kept on '+day+', with short facts.') if total else 'No saints are listed for '+day+' yet.'
     h='<div class="page-head"><div class="eyebrow">Sancti · '+E(MONTHS[int(md[:2])-1])+'</div><h1>'+E('Saints of '+day)+'</h1><p class="lede">'+E(lede)+'</p></div>'
@@ -240,7 +264,7 @@ def day_page(md,entries,a):
         h+='<section><h2>'+E(label)+' ('+str(len(L))+')</h2><ul class="saint-list cal-facts">'
         for x in L:
             nm=a(x['href'],x['name']) if x.get('href') else E(x['name'])
-            h+='<li class="saint-row"><b>'+nm+'</b>'+(' <span class="saint-meta">'+E(x['facts'])+'</span>' if x['facts'] else '')+(' <span class="saint-note small muted">'+E(' '.join(x['notes']))+'</span>' if x['notes'] else '')+'</li>'
+            h+='<li class="saint-row"><b>'+nm+'</b>'+(' <span class="saint-meta">'+E(x['facts'])+'</span>' if x['facts'] else '')+(' <span class="saint-note small muted">'+E(' '.join(x['notes']))+'</span>' if x['notes'] else '')+((' <span class="saint-reading small">'+a(x['reading']['href'],x['reading']['label'])+'</span>') if x.get('reading') else '')+'</li>'
         h+='</ul></section>'
     prev,nxt=neighbours(md)
     h+='<p class="small muted">'+E(PAGE_NOTE)+' '+a('/references/','Resources')+' · '+a('/saints/about/','Sources & method')+'</p>'

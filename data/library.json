@@ -2630,6 +2630,35 @@
       ]
     },
     {
+      "id": "butler-eulalia-merida",
+      "title": "The Life of St. Eulalia of Merida",
+      "author": "Alban Butler",
+      "authorId": "alban-butler",
+      "category": "Biography",
+      "tradition": "Catholic tradition",
+      "description": "The life of St. Eulalia of Merida, virgin and martyr, for 10 December, from Alban Butler's Lives of the Fathers, Martyrs, and Other Principal Saints. This is the life only, from volume XII of the Derby edition of 1842, not the whole volume.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-21",
+      "date": "1756–1759 (this life from the Derby edition of 1842, vol. XII)",
+      "editions": [
+        {
+          "id": "ia-butler-1842-eulalia",
+          "label": "Transcription of the Internet Archive scan (Derby: Printed by Richardson and Son, 1842), vol. XII, pp. 229-237",
+          "source": "https://archive.org/details/livesoffathersma12butl",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-21",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1756-1759; this life is from the Derby edition of 1842, volume XII, printed pages 229-237 of the Internet Archive item livesoffathersma12butl. Transcribed by Bibliotheca Catholica from that scan: the life of St. Eulalia of Merida only, including Butler's notes and the short notice of St. Eulalia of Barcelona as printed at the end of this life; running heads and page numbers removed, 201 misreadings corrected by hand against the page images, and names and Latin words checked against them (100% of words read). Not a manual proofread. Note blocks are split at page turns, a limitation of the transcription tool; the notes are complete and in the order of the scan.",
+          "sourceTitle": "The Life of St. Eulalia of Merida (Butler's Lives, December 10, Derby 1842)",
+          "text": "data/texts/ia-butler-1842-eulalia.txt",
+          "sha256": "46c201668ad1902a6a4c12839e2f58512a802403ceded3c63b975595673c491e"
+        }
+      ]
+    },
+    {
       "id": "baring-gould-lives-january",
       "title": "The Lives of the Saints: January",
       "author": "Sabine Baring-Gould",

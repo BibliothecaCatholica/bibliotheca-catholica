@@ -60,7 +60,16 @@ EXTRA_CODES={
 }
 # Hand-checked decisions: {'<id>': {'status':..., 'evidence':'URL, quote, or CCE volume and page', 'checked':'YYYY-MM-DD', 'checked_by':'name'}}
 # Leave empty until a person has checked the title page and the rights evidence (research guide, §1b).
-MANUAL={}
+MANUAL={
+  # H. J. Schroeder, Disciplinary Decrees of the General Councils (B. Herder, 1937), Isidore 8823.
+  # pd-nonrenewal basis approved 2026-11-20; NYPL cce-renewals search confirmed 2026-11-21. Labels only; no new hosted text.
+  '8823':{
+    'status':'public_domain_us',
+    'evidence':'US first publication: B. Herder Book Co., 1937, "Printed in U. S. A.", copyright 1937 (Internet Archive DisciplinaryCouncils; pd-nonrenewal basis approved 2026-11-20). Manual renewal search, NYPL cce-renewals transcription of the Copyright Office database (1950-1991 set), 2026-11-21: no matching renewal for Schroeder, Disciplinary Decrees of the General Councils. Public domain in the US by non-renewal. Not legal advice. Hosting the text is a separate step.',
+    'checked':'2026-11-21',
+    'checked_by':'Bibliotheca Catholica',
+  },
+}
 def code_table():
     t={c:{'status':s,'text':x} for c,s,x in CODES.values()}
     for c,(s,x) in EXTRA_CODES.items():t[c]={'status':s,'text':x}

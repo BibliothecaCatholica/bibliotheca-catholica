@@ -1727,6 +1727,18 @@
     "short line": 2
    }
   },
+  "ia-robertlouisstev00nicogoog": {
+   "work": "Robert Louis Stevenson (Bookman Booklet)",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1
+   }
+  },
   "ia-prayer00moor": {
    "work": "Prayer",
    "multiLineBlocks": 1,

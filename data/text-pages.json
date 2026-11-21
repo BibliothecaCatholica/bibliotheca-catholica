@@ -13973,12 +13973,12 @@
     "words": 93116,
     "minutes": 405
    },
-   "edition": "peo-trent-1848",
+   "edition": "peo-trent-1848-r2",
    "kind": "ch",
    "editionLine": "",
    "noun": "Session",
    "nouns": "Sessions",
-   "sha256": "9de7346c18740535da817d02b430130a044c8150fbd1bfe930c36f09103a309b",
+   "sha256": "a276393839a4f271e5f68ffa756229b2819b4bce4cc077d6e7c68446d5cf65af",
    "blocks": 1209,
    "items": [
     {
@@ -14345,8 +14345,8 @@
     }
    ],
    "structure": {
-    "sha256": "9de7346c18740535da817d02b430130a044c8150fbd1bfe930c36f09103a309b",
-    "source": "data/structured/council-of-trent-peo-trent-1848.json",
+    "sha256": "a276393839a4f271e5f68ffa756229b2819b4bce4cc077d6e7c68446d5cf65af",
+    "source": "data/structured/council-of-trent-peo-trent-1848-r2.json",
     "roles": [
      [
       27,

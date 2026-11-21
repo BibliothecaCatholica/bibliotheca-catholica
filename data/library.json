@@ -2191,8 +2191,29 @@
       "date": "1545-1563",
       "editions": [
         {
+          "id": "peo-trent-1848-r2",
+          "label": "Waterworth translation (London: C. Dolman, 1848), Hanover Historical Texts transcription, corrected",
+          "source": "https://www.papalencyclicals.net/councils/trent.htm",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Waterworth, J."
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Papal Encyclicals Online notices retained.",
+          "checked": "2026-11-20",
+          "note": "First published 1848 (London: C. Dolman), translated by J. Waterworth. The text is the Hanover Historical Texts Project transcription as served by Papal Encyclicals Online, one page per session, with the transcribers' notes and the 1848 page numbers in brackets; Waterworth's italics, citations, historical essays, and appendices are not in it. Compared word by word with the Internet Archive scan of the Burns and Oates issue of the same translation: 97% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record. Corrected edition (November 20, 2026): replaces peo-trent-1848. 34 transcription typos (for example coucils, neccessary, privelege) were corrected where the OCR of the 1848 printing and of the Burns and Oates issue both read the corrected spelling at the same place; each is listed in the provenance record. Other misspellings stay as printed.",
+          "sourceTitle": "The Council of Trent: The canons and decrees of the sacred and ecumenical Council of Trent, Ed. and trans. J. Waterworth (London: Dolman, 1848)",
+          "access": "full-text",
+          "text": "data/texts/peo-trent-1848-r2.txt",
+          "sha256": "a276393839a4f271e5f68ffa756229b2819b4bce4cc077d6e7c68446d5cf65af",
+          "rightsBasis": "pd-date",
+          "translationYear": 1848
+        },
+        {
           "id": "peo-trent-1848",
-          "label": "Waterworth translation (London: C. Dolman, 1848), Hanover Historical Texts transcription",
+          "label": "Waterworth translation (London: C. Dolman, 1848), Hanover Historical Texts transcription (retired; replaced by the corrected edition)",
           "source": "https://www.papalencyclicals.net/councils/trent.htm",
           "language": "English",
           "contributors": [
@@ -2209,7 +2230,12 @@
           "text": "data/texts/peo-trent-1848.txt",
           "sha256": "9de7346c18740535da817d02b430130a044c8150fbd1bfe930c36f09103a309b",
           "rightsBasis": "pd-date",
-          "translationYear": 1848
+          "translationYear": 1848,
+          "retired": {
+            "date": "2026-11-20",
+            "replacedBy": "peo-trent-1848-r2",
+            "reason": "Thirty-four transcription typos, corrected in the new edition where the 1848 printing confirms the spelling. Kept so that earlier links and reader notes still open it."
+          }
         }
       ]
     },

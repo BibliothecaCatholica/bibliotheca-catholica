@@ -182,7 +182,7 @@ function renderReadingBlock(e,p,i,anchor){
  var a=e.autoLayout,auto=!!a&&!verified&&a.sha256===e.sha256;if(auto)prose=a.reflow.some(function(r){return i>=r[0]&&i<=r[1]});
  // Italics from the structure file (Story of a Soul: its HTML's <i> spans), as [start,end,marked]; mirror: structure_em().
  var sem=S&&S.sha256===e.sha256&&!verified?(S.em||[]).filter(function(x){return x[0]===i}).map(function(x){return [x[1],x[2],x.length>3]}):[];
- var cls=[st?'reading-'+st[1]:'',v?'reading-verse':prose?'reading-prose':'',st&&st[1]==='chapter'&&/^_?(chapter|book|part|discourse|lecture)\b/i.test(p)?'ch-named':''].filter(Boolean).join(' '),content;
+ var cls=[st?'reading-'+st[1]:'',v?'reading-verse':prose?'reading-prose':'',st&&st[1]==='chapter'&&/^_?(chapter|book|part|discourse|lecture)\b/i.test(p)?'ch-named':'',p.slice(0,6)==='[Page '&&!st?'lead-mark':''].filter(Boolean).join(' '),content;
  function ems(spans,marked){var at=0,out='';spans.forEach(function(x){var m=marked==null?x[2]:marked;out+=esc(p.slice(at,x[0]))+(m?'<em class="u"><span class="us">_</span>'+esc(p.slice(x[0]+1,x[1]-1))+'<span class="us">_</span></em>':'<em>'+esc(p.slice(x[0],x[1]))+'</em>');at=x[1]});return out+esc(p.slice(at))}
  if(v){var starts=v.lineStarts.concat([p.length]);content=v.lineStarts.map(function(x,k){return '<span class="verse-line">'+esc(p.slice(x,starts[k+1]))+'</span>'}).join('')}
  else if(st&&st[1]==='chapter'&&/^[IVXLC]+\.? \S/.test(p)){var sp1=p.indexOf(' ');content='<span class="ch-n">'+esc(p.slice(0,sp1))+'</span> <span class="ch-t">'+esc(p.slice(sp1+1))+'</span>'}

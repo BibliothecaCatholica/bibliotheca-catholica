@@ -917,7 +917,7 @@ WORKS = {
   ]),
  # Council of Trent (November 20, 2026): the bull of indiction and the twenty-five sessions, each headed by its source
  # page's own title; Waterworth's preface and the transcribers' notes stay in the reader.
- 'council-of-trent': dict(edition='peo-trent-1848', kind='ch', noun='Session', nouns='Sessions',
+ 'council-of-trent': dict(edition='peo-trent-1848-r2', kind='ch', noun='Session', nouns='Sessions',
   start_after='NEWARK, May 22nd, 1848.',
   parts=[
    ('00-bull-of-indiction', 'Bull', 'The Bull of Indiction', ('THE BULL OF INDICTION OF THE SACRED ECUMENICAL AND GENERAL COUNCIL OF TRENT UNDER THE SOVEREIGN PONTIFF, PAUL III', '[Page 1]'), 'PAUL, bishop, servant of the servants of God, for', 'Jer. Dand.'),

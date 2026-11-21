@@ -16679,6 +16679,531 @@
     "front": [],
     "em": []
    }
+  },
+  "william-cobbett": {
+   "partD": {
+    "about": "Project Gutenberg Australia #0900441: first published in 1925. Seven chapters, divided as the hosted text heads them; no words were changed.",
+    "words": 46341,
+    "minutes": 201
+   },
+   "edition": "pga-0900441",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "5b3dc722b44a2beb893d1b29359ced28eea6d871791e252ccec457973c43fd20",
+   "blocks": 181,
+   "items": [
+    {
+     "slug": "01-the-revival-of-cobbett",
+     "num": "I",
+     "title": "The Revival of Cobbett",
+     "heading": 15,
+     "start": 16,
+     "end": 27,
+     "section": 0,
+     "words": 4602,
+     "firstWords": "This chapter is here called 'The Revival of Cobbett.' As originally planned,"
+    },
+    {
+     "slug": "02-a-self-made-man",
+     "num": "II",
+     "title": "A Self-made Man",
+     "heading": 28,
+     "start": 29,
+     "end": 44,
+     "section": 0,
+     "words": 4352,
+     "firstWords": "It is now rather more than a century and a half since"
+    },
+    {
+     "slug": "03-the-tragedy-of-the-patriot",
+     "num": "III",
+     "title": "The Tragedy of the Patriot",
+     "heading": 45,
+     "start": 46,
+     "end": 75,
+     "section": 1,
+     "words": 8155,
+     "firstWords": "A book like this can be but a bare outline a life"
+    },
+    {
+     "slug": "04-revolution-and-the-bones-of-paine",
+     "num": "IV",
+     "title": "Revolution and the Bones of Paine",
+     "heading": 76,
+     "start": 77,
+     "end": 92,
+     "section": 2,
+     "words": 5316,
+     "firstWords": "His imprisonment destroyed in Cobbett the whole dream with which he had"
+    },
+    {
+     "slug": "05-the-amateur-historian",
+     "num": "V",
+     "title": "The Amateur Historian",
+     "heading": 93,
+     "start": 94,
+     "end": 121,
+     "section": 2,
+     "words": 7823,
+     "firstWords": "There is a joke with which we are all familiar, about the"
+    },
+    {
+     "slug": "06-the-rural-rider",
+     "num": "VI",
+     "title": "The Rural Rider",
+     "heading": 122,
+     "start": 123,
+     "end": 153,
+     "section": 3,
+     "words": 8952,
+     "firstWords": "Even the most elementary sketches of Cobbett have tended to give too"
+    },
+    {
+     "slug": "07-last-days-and-death",
+     "num": "VII",
+     "title": "Last Days and Death",
+     "heading": 154,
+     "start": 155,
+     "end": 179,
+     "section": 4,
+     "words": 7141,
+     "firstWords": "A mere outline of the career of Cobbett has been broken or"
+    }
+   ],
+   "structure": {
+    "sha256": "5b3dc722b44a2beb893d1b29359ced28eea6d871791e252ccec457973c43fd20",
+    "source": "data/structured/william-cobbett-pga-0900441.json",
+    "roles": [
+     [
+      15,
+      "chapter"
+     ],
+     [
+      28,
+      "chapter"
+     ],
+     [
+      45,
+      "chapter"
+     ],
+     [
+      76,
+      "chapter"
+     ],
+     [
+      93,
+      "chapter"
+     ],
+     [
+      122,
+      "chapter"
+     ],
+     [
+      154,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "robert-louis-stevenson-1927": {
+   "partD": {
+    "about": "Project Gutenberg Australia #0900631: first published in 1927. Ten chapters, divided as the hosted text heads them; no words were changed.",
+    "words": 42546,
+    "minutes": 185
+   },
+   "edition": "pga-0900631",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "ead0c20109391c59e45974227730e122ee1f29f15bec8a0eab598a5cab4afed0",
+   "blocks": 141,
+   "items": [
+    {
+     "slug": "01-the-myth-of-stevenson",
+     "num": "I",
+     "title": "# \"the Myth of Stevenson\"",
+     "heading": 15,
+     "start": 16,
+     "end": 27,
+     "section": 0,
+     "words": 4358,
+     "firstWords": "In this brief study of Stevenson I propose to follow a somewhat"
+    },
+    {
+     "slug": "02-in-the-country-of-skelt",
+     "num": "II",
+     "title": "# in the Country of Skelt",
+     "heading": 28,
+     "start": 29,
+     "end": 40,
+     "section": 0,
+     "words": 4101,
+     "firstWords": "Every now and then the eye is riveted, in reading current criticism,"
+    },
+    {
+     "slug": "03-youth-and-edinburgh",
+     "num": "III",
+     "title": "# Youth and Edinburgh",
+     "heading": 41,
+     "start": 42,
+     "end": 53,
+     "section": 1,
+     "words": 4437,
+     "firstWords": "It is the suggestion of this chapter that when Stevenson first stepped"
+    },
+    {
+     "slug": "04-the-reaction-to-romance",
+     "num": "IV",
+     "title": "# the Reaction to Romance",
+     "heading": 54,
+     "start": 55,
+     "end": 71,
+     "section": 1,
+     "words": 4657,
+     "firstWords": "When a man walks down the street with a very long feather"
+    },
+    {
+     "slug": "05-the-scottish-stories",
+     "num": "V",
+     "title": "# the Scottish Stories",
+     "heading": 72,
+     "start": 73,
+     "end": 83,
+     "section": 2,
+     "words": 3940,
+     "firstWords": "Proverbs are generally true, when they are the proverbs of the people;"
+    },
+    {
+     "slug": "06-the-style-of-stevenson",
+     "num": "VI",
+     "title": "# the Style of Stevenson",
+     "heading": 84,
+     "start": 85,
+     "end": 91,
+     "section": 2,
+     "words": 3224,
+     "firstWords": "Before writing this chapter I ought to explain that I am quite"
+    },
+    {
+     "slug": "07-experiment-and-range",
+     "num": "VII",
+     "title": "# Experiment and Range",
+     "heading": 92,
+     "start": 93,
+     "end": 104,
+     "section": 2,
+     "words": 4575,
+     "firstWords": "In any generalisation about Stevenson, it is of course easy to forget"
+    },
+    {
+     "slug": "08-the-limits-of-a-craft",
+     "num": "VIII",
+     "title": "# the Limits of a Craft",
+     "heading": 105,
+     "start": 106,
+     "end": 112,
+     "section": 3,
+     "words": 3558,
+     "firstWords": "The truest adverse criticism of Stevenson was written by Stevenson. It was"
+    },
+    {
+     "slug": "09-the-philosophy-of-gesture",
+     "num": "IX",
+     "title": "# the Philosophy of Gesture",
+     "heading": 113,
+     "start": 114,
+     "end": 120,
+     "section": 3,
+     "words": 3346,
+     "firstWords": "Something has been said, from time to time, in these pages about"
+    },
+    {
+     "slug": "10-the-moral-of-stevenson",
+     "num": "X",
+     "title": "# the Moral of Stevenson",
+     "heading": 121,
+     "start": 122,
+     "end": 139,
+     "section": 3,
+     "words": 6350,
+     "firstWords": "Even those unfortunates for whom the tale of Treasure Island, and the"
+    }
+   ],
+   "structure": {
+    "sha256": "ead0c20109391c59e45974227730e122ee1f29f15bec8a0eab598a5cab4afed0",
+    "source": "data/structured/robert-louis-stevenson-1927-pga-0900631.json",
+    "roles": [
+     [
+      15,
+      "chapter"
+     ],
+     [
+      28,
+      "chapter"
+     ],
+     [
+      41,
+      "chapter"
+     ],
+     [
+      54,
+      "chapter"
+     ],
+     [
+      72,
+      "chapter"
+     ],
+     [
+      84,
+      "chapter"
+     ],
+     [
+      92,
+      "chapter"
+     ],
+     [
+      105,
+      "chapter"
+     ],
+     [
+      113,
+      "chapter"
+     ],
+     [
+      121,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "irish-impressions": {
+   "partD": {
+    "about": "Project Gutenberg #61758: first published in 1919; the transcribed copy is the second impression (Collins, London, January 1920). Nine chapters, divided as the hosted text heads them; no words were changed.",
+    "words": 41672,
+    "minutes": 181
+   },
+   "edition": "pg-61758",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "53e578a62fc33a2359a3493d97446b487eb8b86cc46eca7ac872dab57fb79fc8",
+   "blocks": 326,
+   "items": [
+    {
+     "slug": "01-two-stones-in-a-square",
+     "num": "I",
+     "title": "Two Stones in a Square",
+     "heading": 36,
+     "start": 38,
+     "end": 43,
+     "section": 1,
+     "words": 2336,
+     "firstWords": "When I had for the first time crossed St George’s Channel, and",
+     "titleBlocks": [
+      37
+     ]
+    },
+    {
+     "slug": "02-the-root-of-reality",
+     "num": "II",
+     "title": "The Root of Reality",
+     "heading": 44,
+     "start": 46,
+     "end": 57,
+     "section": 1,
+     "words": 4777,
+     "firstWords": "The only excuse of literature is to make things new; and the",
+     "titleBlocks": [
+      45
+     ]
+    },
+    {
+     "slug": "03-the-family-and-the-feud",
+     "num": "III",
+     "title": "The Family and the Feud",
+     "heading": 58,
+     "start": 60,
+     "end": 68,
+     "section": 1,
+     "words": 3575,
+     "firstWords": "There was an old joke of my childhood, to the effect that",
+     "titleBlocks": [
+      59
+     ]
+    },
+    {
+     "slug": "04-the-paradox-of-labour",
+     "num": "IV",
+     "title": "The Paradox of Labour",
+     "heading": 69,
+     "start": 71,
+     "end": 78,
+     "section": 1,
+     "words": 4278,
+     "firstWords": "My first general and visual impression of the green island was that",
+     "titleBlocks": [
+      70
+     ]
+    },
+    {
+     "slug": "05-the-englishman-in-ireland",
+     "num": "V",
+     "title": "The Englishman in Ireland",
+     "heading": 79,
+     "start": 81,
+     "end": 89,
+     "section": 2,
+     "words": 3487,
+     "firstWords": "With no desire to decorate my travels with too tall a traveller’s",
+     "titleBlocks": [
+      80
+     ]
+    },
+    {
+     "slug": "06-the-mistake-of-england",
+     "num": "VI",
+     "title": "The Mistake of England",
+     "heading": 90,
+     "start": 92,
+     "end": 100,
+     "section": 2,
+     "words": 4270,
+     "firstWords": "I met one hearty Unionist, not to say Coercionist in Ireland, in",
+     "titleBlocks": [
+      91
+     ]
+    },
+    {
+     "slug": "07-the-mistake-of-ireland",
+     "num": "VII",
+     "title": "The Mistake of Ireland",
+     "heading": 101,
+     "start": 103,
+     "end": 116,
+     "section": 2,
+     "words": 5294,
+     "firstWords": "There is one phrase which certain Irishmen sometimes use in conversation, which",
+     "titleBlocks": [
+      102
+     ]
+    },
+    {
+     "slug": "08-an-example-and-a-question",
+     "num": "VIII",
+     "title": "An Example and a Question",
+     "heading": 117,
+     "start": 119,
+     "end": 135,
+     "section": 3,
+     "words": 5943,
+     "firstWords": "We all had occasion to rejoice at the return of Sherlock Holmes",
+     "titleBlocks": [
+      118
+     ]
+    },
+    {
+     "slug": "09-belfast-and-the-religious-problem",
+     "num": "IX",
+     "title": "Belfast and the Religious Problem",
+     "heading": 136,
+     "start": 138,
+     "end": 274,
+     "section": 3,
+     "words": 7712,
+     "firstWords": "Of that cloud of dream which seems to drift over so many",
+     "titleBlocks": [
+      137
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "53e578a62fc33a2359a3493d97446b487eb8b86cc46eca7ac872dab57fb79fc8",
+    "source": "data/structured/irish-impressions-pg-61758.json",
+    "roles": [
+     [
+      36,
+      "chapter"
+     ],
+     [
+      37,
+      "heading"
+     ],
+     [
+      44,
+      "chapter"
+     ],
+     [
+      45,
+      "heading"
+     ],
+     [
+      58,
+      "chapter"
+     ],
+     [
+      59,
+      "heading"
+     ],
+     [
+      69,
+      "chapter"
+     ],
+     [
+      70,
+      "heading"
+     ],
+     [
+      79,
+      "chapter"
+     ],
+     [
+      80,
+      "heading"
+     ],
+     [
+      90,
+      "chapter"
+     ],
+     [
+      91,
+      "heading"
+     ],
+     [
+      101,
+      "chapter"
+     ],
+     [
+      102,
+      "heading"
+     ],
+     [
+      117,
+      "chapter"
+     ],
+     [
+      118,
+      "heading"
+     ],
+     [
+      136,
+      "chapter"
+     ],
+     [
+      137,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

@@ -49,6 +49,12 @@
    "sha256": "fca3ec8fcd999ae8416141184885dd0d38f751dc40342b2018043d072edd042c",
    "size": 1035286
   },
+  "ebible-dra-wisdom": {
+   "work": "book-of-wisdom-douay-rheims",
+   "path": "downloads/epub/book-of-wisdom-douay-rheims-ebible-dra-wisdom.14030f34d432.epub",
+   "sha256": "14030f34d432305bf6ed0ecc419e33bfdda09838d375a02b7529509a2f7aa38e",
+   "size": 91154
+  },
   "pg-7403": {
    "work": "catherine-letters",
    "path": "downloads/epub/catherine-letters-pg-7403.fc37220be3ff.epub",
@@ -102,6 +108,12 @@
    "path": "downloads/epub/development-doctrine-pg-35110.1fac4092caa4.epub",
    "sha256": "1fac4092caa42feacab8cc781825a70fe259917436fa7973115abee06b1359d1",
    "size": 882501
+  },
+  "ebible-dra-ecclesiasticus": {
+   "work": "ecclesiasticus-douay-rheims",
+   "path": "downloads/epub/ecclesiasticus-douay-rheims-ebible-dra-ecclesiasticus.de23e311628a.epub",
+   "sha256": "de23e311628a3a0584b6dd6edad0cf6941772cc41a7d34130a62b564d2b51865",
+   "size": 225940
   },
   "pg-25308": {
    "work": "eugenics-other-evils",

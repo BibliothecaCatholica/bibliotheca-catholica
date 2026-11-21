@@ -659,6 +659,26 @@
     "all-capitals line": 1
    }
   },
+  "ebible-dra-wisdom": {
+   "work": "The Book of Wisdom (Douay-Rheims)",
+   "multiLineBlocks": 0,
+   "reflowed": 0,
+   "kept": 0,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {}
+  },
+  "ebible-dra-ecclesiasticus": {
+   "work": "Ecclesiasticus (Douay-Rheims)",
+   "multiLineBlocks": 0,
+   "reflowed": 0,
+   "kept": 0,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {}
+  },
   "pg-20450": {
    "work": "The Lives of the Saints: January, February, and March",
    "multiLineBlocks": 1525,

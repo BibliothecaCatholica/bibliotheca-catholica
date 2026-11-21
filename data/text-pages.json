@@ -18618,6 +18618,1104 @@
     "front": [],
     "em": []
    }
+  },
+  "book-of-wisdom-douay-rheims": {
+   "partD": {
+    "about": "eBible.org's transcription of the Douay-Rheims American edition of 1899: the nineteen chapters of the Book of Wisdom, each verse a paragraph with its number.",
+    "words": 11044,
+    "minutes": 48
+   },
+   "edition": "ebible-dra-wisdom",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "dc73766dc6cc0cc7860a86a56870c658f8613df65fe4e54bc0ca014d50f33c09",
+   "blocks": 464,
+   "items": [
+    {
+     "slug": "01-chapter-1",
+     "num": "1",
+     "title": "Chapter 1",
+     "heading": 5,
+     "start": 6,
+     "end": 21,
+     "section": 0,
+     "words": 388,
+     "firstWords": "1 Love justice, you that are the judges of the earth. Think"
+    },
+    {
+     "slug": "02-chapter-2",
+     "num": "2",
+     "title": "Chapter 2",
+     "heading": 22,
+     "start": 23,
+     "end": 47,
+     "section": 0,
+     "words": 607,
+     "firstWords": "1 For they have said, reasoning with themselves, but not right: The"
+    },
+    {
+     "slug": "03-chapter-3",
+     "num": "3",
+     "title": "Chapter 3",
+     "heading": 48,
+     "start": 49,
+     "end": 67,
+     "section": 1,
+     "words": 400,
+     "firstWords": "1 But the souls of the just are in the hand of"
+    },
+    {
+     "slug": "04-chapter-4",
+     "num": "4",
+     "title": "Chapter 4",
+     "heading": 68,
+     "start": 69,
+     "end": 88,
+     "section": 1,
+     "words": 463,
+     "firstWords": "1 O how beautiful is the chaste generation with glory: for the"
+    },
+    {
+     "slug": "05-chapter-5",
+     "num": "5",
+     "title": "Chapter 5",
+     "heading": 89,
+     "start": 90,
+     "end": 113,
+     "section": 2,
+     "words": 616,
+     "firstWords": "1 Then shall the just stand with great constancy against those that"
+    },
+    {
+     "slug": "06-chapter-6",
+     "num": "6",
+     "title": "Chapter 6",
+     "heading": 114,
+     "start": 115,
+     "end": 141,
+     "section": 3,
+     "words": 551,
+     "firstWords": "1 Wisdom is better than strength, and a wise man is better"
+    },
+    {
+     "slug": "07-chapter-7",
+     "num": "7",
+     "title": "Chapter 7",
+     "heading": 142,
+     "start": 143,
+     "end": 172,
+     "section": 4,
+     "words": 683,
+     "firstWords": "1 I myself also am a mortal man, like all others, and"
+    },
+    {
+     "slug": "08-chapter-8",
+     "num": "8",
+     "title": "Chapter 8",
+     "heading": 173,
+     "start": 174,
+     "end": 194,
+     "section": 4,
+     "words": 542,
+     "firstWords": "1 She reacheth therefore from end to end mightily, and ordereth all"
+    },
+    {
+     "slug": "09-chapter-9",
+     "num": "9",
+     "title": "Chapter 9",
+     "heading": 195,
+     "start": 196,
+     "end": 214,
+     "section": 5,
+     "words": 454,
+     "firstWords": "1 God of my fathers, and Lord of mercy, who hast made"
+    },
+    {
+     "slug": "10-chapter-10",
+     "num": "10",
+     "title": "Chapter 10",
+     "heading": 215,
+     "start": 216,
+     "end": 236,
+     "section": 6,
+     "words": 536,
+     "firstWords": "1 She preserved him, that was first formed by God the father"
+    },
+    {
+     "slug": "11-chapter-11",
+     "num": "11",
+     "title": "Chapter 11",
+     "heading": 237,
+     "start": 238,
+     "end": 264,
+     "section": 6,
+     "words": 604,
+     "firstWords": "1 She prospered their works in the hands of the holy prophet."
+    },
+    {
+     "slug": "12-chapter-12",
+     "num": "12",
+     "title": "Chapter 12",
+     "heading": 265,
+     "start": 266,
+     "end": 292,
+     "section": 7,
+     "words": 716,
+     "firstWords": "1 O how good and sweet is thy spirit, O Lord, in"
+    },
+    {
+     "slug": "13-chapter-13",
+     "num": "13",
+     "title": "Chapter 13",
+     "heading": 293,
+     "start": 294,
+     "end": 312,
+     "section": 8,
+     "words": 560,
+     "firstWords": "1 But all men are vain, in whom there is not the"
+    },
+    {
+     "slug": "14-chapter-14",
+     "num": "14",
+     "title": "Chapter 14",
+     "heading": 313,
+     "start": 314,
+     "end": 344,
+     "section": 8,
+     "words": 786,
+     "firstWords": "1 Again, another designing to sail, and beginning to make his voyage"
+    },
+    {
+     "slug": "15-chapter-15",
+     "num": "15",
+     "title": "Chapter 15",
+     "heading": 345,
+     "start": 346,
+     "end": 364,
+     "section": 9,
+     "words": 548,
+     "firstWords": "1 But thou, our God, art gracious and true, patient, and ordering"
+    },
+    {
+     "slug": "16-chapter-16",
+     "num": "16",
+     "title": "Chapter 16",
+     "heading": 365,
+     "start": 366,
+     "end": 394,
+     "section": 10,
+     "words": 768,
+     "firstWords": "1 For these things, and by the like things to these, they"
+    },
+    {
+     "slug": "17-chapter-17",
+     "num": "17",
+     "title": "Chapter 17",
+     "heading": 395,
+     "start": 396,
+     "end": 415,
+     "section": 11,
+     "words": 551,
+     "firstWords": "1 For thy judgments, O Lord, are great, and thy words cannot"
+    },
+    {
+     "slug": "18-chapter-18",
+     "num": "18",
+     "title": "Chapter 18",
+     "heading": 416,
+     "start": 417,
+     "end": 441,
+     "section": 11,
+     "words": 688,
+     "firstWords": "1 But thy saints had a very great light, and they heard"
+    },
+    {
+     "slug": "19-chapter-19",
+     "num": "19",
+     "title": "Chapter 19",
+     "heading": 442,
+     "start": 443,
+     "end": 462,
+     "section": 12,
+     "words": 583,
+     "firstWords": "1 But as to the wicked, even to the end there came"
+    }
+   ],
+   "structure": {
+    "sha256": "dc73766dc6cc0cc7860a86a56870c658f8613df65fe4e54bc0ca014d50f33c09",
+    "source": "data/structured/book-of-wisdom-douay-rheims-ebible-dra-wisdom.json",
+    "roles": [
+     [
+      5,
+      "chapter"
+     ],
+     [
+      22,
+      "chapter"
+     ],
+     [
+      48,
+      "chapter"
+     ],
+     [
+      68,
+      "chapter"
+     ],
+     [
+      89,
+      "chapter"
+     ],
+     [
+      114,
+      "chapter"
+     ],
+     [
+      142,
+      "chapter"
+     ],
+     [
+      173,
+      "chapter"
+     ],
+     [
+      195,
+      "chapter"
+     ],
+     [
+      215,
+      "chapter"
+     ],
+     [
+      237,
+      "chapter"
+     ],
+     [
+      265,
+      "chapter"
+     ],
+     [
+      293,
+      "chapter"
+     ],
+     [
+      313,
+      "chapter"
+     ],
+     [
+      345,
+      "chapter"
+     ],
+     [
+      365,
+      "chapter"
+     ],
+     [
+      395,
+      "chapter"
+     ],
+     [
+      416,
+      "chapter"
+     ],
+     [
+      442,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "ecclesiasticus-douay-rheims": {
+   "partD": {
+    "about": "eBible.org's transcription of the Douay-Rheims American edition of 1899: the fifty-one chapters of Ecclesiasticus, each verse a paragraph with its number.",
+    "words": 32459,
+    "minutes": 141
+   },
+   "edition": "ebible-dra-ecclesiasticus",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "2378ab2fe96df31f629b117801e9ae9cdb7779814dde9de4e994c6f7eac04e39",
+   "blocks": 1648,
+   "items": [
+    {
+     "slug": "01-chapter-1",
+     "num": "1",
+     "title": "Chapter 1",
+     "heading": 5,
+     "start": 6,
+     "end": 45,
+     "section": 0,
+     "words": 727,
+     "firstWords": "1 All wisdom is from the Lord God, and hath been always"
+    },
+    {
+     "slug": "02-chapter-2",
+     "num": "2",
+     "title": "Chapter 2",
+     "heading": 46,
+     "start": 47,
+     "end": 69,
+     "section": 1,
+     "words": 477,
+     "firstWords": "1 Son, when thou comest to the service of God, stand in"
+    },
+    {
+     "slug": "03-chapter-3",
+     "num": "3",
+     "title": "Chapter 3",
+     "heading": 70,
+     "start": 71,
+     "end": 104,
+     "section": 2,
+     "words": 693,
+     "firstWords": "1 The sons of wisdom are the church of the just: and"
+    },
+    {
+     "slug": "04-chapter-4",
+     "num": "4",
+     "title": "Chapter 4",
+     "heading": 105,
+     "start": 106,
+     "end": 141,
+     "section": 3,
+     "words": 678,
+     "firstWords": "1 Son, defraud not the poor of alms, and turn not away"
+    },
+    {
+     "slug": "05-chapter-5",
+     "num": "5",
+     "title": "Chapter 5",
+     "heading": 142,
+     "start": 143,
+     "end": 160,
+     "section": 4,
+     "words": 362,
+     "firstWords": "1 Set not thy heart upon unjust possessions, and say not: I"
+    },
+    {
+     "slug": "06-chapter-6",
+     "num": "6",
+     "title": "Chapter 6",
+     "heading": 161,
+     "start": 162,
+     "end": 198,
+     "section": 4,
+     "words": 784,
+     "firstWords": "1 Instead of a friend become not an enemy to thy neighbour:"
+    },
+    {
+     "slug": "07-chapter-7",
+     "num": "7",
+     "title": "Chapter 7",
+     "heading": 199,
+     "start": 200,
+     "end": 239,
+     "section": 5,
+     "words": 703,
+     "firstWords": "1 Do no evils, and no evils shall lay hold of thee."
+    },
+    {
+     "slug": "08-chapter-8",
+     "num": "8",
+     "title": "Chapter 8",
+     "heading": 240,
+     "start": 241,
+     "end": 262,
+     "section": 6,
+     "words": 433,
+     "firstWords": "1 Strive not with a powerful man, lest thou fall into his"
+    },
+    {
+     "slug": "09-chapter-9",
+     "num": "9",
+     "title": "Chapter 9",
+     "heading": 263,
+     "start": 264,
+     "end": 288,
+     "section": 7,
+     "words": 493,
+     "firstWords": "1 Be not jealous over the wife of thy bosom, lest she"
+    },
+    {
+     "slug": "10-chapter-10",
+     "num": "10",
+     "title": "Chapter 10",
+     "heading": 289,
+     "start": 290,
+     "end": 323,
+     "section": 8,
+     "words": 714,
+     "firstWords": "1 A wise judge shall judge his people, and the government of"
+    },
+    {
+     "slug": "11-chapter-11",
+     "num": "11",
+     "title": "Chapter 11",
+     "heading": 324,
+     "start": 325,
+     "end": 360,
+     "section": 9,
+     "words": 763,
+     "firstWords": "1 The wisdom of the humble shall exalt his head, and shall"
+    },
+    {
+     "slug": "12-chapter-12",
+     "num": "12",
+     "title": "Chapter 12",
+     "heading": 361,
+     "start": 362,
+     "end": 380,
+     "section": 10,
+     "words": 421,
+     "firstWords": "1 If thou do good, know to whom thou dost it, and"
+    },
+    {
+     "slug": "13-chapter-13",
+     "num": "13",
+     "title": "Chapter 13",
+     "heading": 381,
+     "start": 382,
+     "end": 413,
+     "section": 10,
+     "words": 673,
+     "firstWords": "1 He that toucheth pitch, shall be defiled with it: and he"
+    },
+    {
+     "slug": "14-chapter-14",
+     "num": "14",
+     "title": "Chapter 14",
+     "heading": 414,
+     "start": 415,
+     "end": 441,
+     "section": 11,
+     "words": 557,
+     "firstWords": "1 Blessed is the man that hath not slipped by a word"
+    },
+    {
+     "slug": "15-chapter-15",
+     "num": "15",
+     "title": "Chapter 15",
+     "heading": 442,
+     "start": 443,
+     "end": 464,
+     "section": 12,
+     "words": 454,
+     "firstWords": "1 He that feareth God, will do good: and he that possesseth"
+    },
+    {
+     "slug": "16-chapter-16",
+     "num": "16",
+     "title": "Chapter 16",
+     "heading": 465,
+     "start": 466,
+     "end": 496,
+     "section": 13,
+     "words": 641,
+     "firstWords": "1 Rejoice not in ungodly children, if they be multiplied: neither be"
+    },
+    {
+     "slug": "17-chapter-17",
+     "num": "17",
+     "title": "Chapter 17",
+     "heading": 497,
+     "start": 498,
+     "end": 528,
+     "section": 14,
+     "words": 621,
+     "firstWords": "1 God created man of the earth, and made him after his"
+    },
+    {
+     "slug": "18-chapter-18",
+     "num": "18",
+     "title": "Chapter 18",
+     "heading": 529,
+     "start": 530,
+     "end": 562,
+     "section": 15,
+     "words": 631,
+     "firstWords": "1 He that liveth for ever created all things together. God only"
+    },
+    {
+     "slug": "19-chapter-19",
+     "num": "19",
+     "title": "Chapter 19",
+     "heading": 563,
+     "start": 564,
+     "end": 591,
+     "section": 16,
+     "words": 659,
+     "firstWords": "1 A workman that is a drunkard shall not be rich: and"
+    },
+    {
+     "slug": "20-chapter-20",
+     "num": "20",
+     "title": "Chapter 20",
+     "heading": 592,
+     "start": 593,
+     "end": 625,
+     "section": 16,
+     "words": 667,
+     "firstWords": "1 How much better is it to reprove, than to be angry,"
+    },
+    {
+     "slug": "21-chapter-21",
+     "num": "21",
+     "title": "Chapter 21",
+     "heading": 626,
+     "start": 627,
+     "end": 657,
+     "section": 17,
+     "words": 652,
+     "firstWords": "1 My son, hast thou sinned? do so no more: but for"
+    },
+    {
+     "slug": "22-chapter-22",
+     "num": "22",
+     "title": "Chapter 22",
+     "heading": 658,
+     "start": 659,
+     "end": 691,
+     "section": 18,
+     "words": 704,
+     "firstWords": "1 The sluggard is pelted with a dirty stone, and all men"
+    },
+    {
+     "slug": "23-chapter-23",
+     "num": "23",
+     "title": "Chapter 23",
+     "heading": 692,
+     "start": 693,
+     "end": 730,
+     "section": 19,
+     "words": 872,
+     "firstWords": "1 O Lord, father, and sovereign ruler of my life, leave me"
+    },
+    {
+     "slug": "24-chapter-24",
+     "num": "24",
+     "title": "Chapter 24",
+     "heading": 731,
+     "start": 732,
+     "end": 778,
+     "section": 20,
+     "words": 957,
+     "firstWords": "1 Wisdom shall praise her own self, and shall be honoured in"
+    },
+    {
+     "slug": "25-chapter-25",
+     "num": "25",
+     "title": "Chapter 25",
+     "heading": 779,
+     "start": 780,
+     "end": 815,
+     "section": 22,
+     "words": 635,
+     "firstWords": "1 With three things my spirit is pleased, which are approved before"
+    },
+    {
+     "slug": "26-chapter-26",
+     "num": "26",
+     "title": "Chapter 26",
+     "heading": 816,
+     "start": 817,
+     "end": 844,
+     "section": 23,
+     "words": 523,
+     "firstWords": "1 Happy is the husband of a good wife: for the number"
+    },
+    {
+     "slug": "27-chapter-27",
+     "num": "27",
+     "title": "Chapter 27",
+     "heading": 845,
+     "start": 846,
+     "end": 878,
+     "section": 24,
+     "words": 678,
+     "firstWords": "1 Through poverty many have sinned: and he that seeketh to be"
+    },
+    {
+     "slug": "28-chapter-28",
+     "num": "28",
+     "title": "Chapter 28",
+     "heading": 879,
+     "start": 880,
+     "end": 909,
+     "section": 25,
+     "words": 616,
+     "firstWords": "1 He that seeketh to revenge himself, shall find vengeance from the"
+    },
+    {
+     "slug": "29-chapter-29",
+     "num": "29",
+     "title": "Chapter 29",
+     "heading": 910,
+     "start": 911,
+     "end": 944,
+     "section": 26,
+     "words": 669,
+     "firstWords": "1 He that sheweth mercy, lendeth to his neighbour: and he that"
+    },
+    {
+     "slug": "30-chapter-30",
+     "num": "30",
+     "title": "Chapter 30",
+     "heading": 945,
+     "start": 946,
+     "end": 972,
+     "section": 27,
+     "words": 562,
+     "firstWords": "1 He that loveth his son, frequently chastiseth him, that he may"
+    },
+    {
+     "slug": "31-chapter-31",
+     "num": "31",
+     "title": "Chapter 31",
+     "heading": 973,
+     "start": 974,
+     "end": 1015,
+     "section": 27,
+     "words": 722,
+     "firstWords": "1 Watching for riches consumeth the flesh, and the thought thereof driveth"
+    },
+    {
+     "slug": "32-chapter-32",
+     "num": "32",
+     "title": "Chapter 32",
+     "heading": 1016,
+     "start": 1017,
+     "end": 1044,
+     "section": 29,
+     "words": 517,
+     "firstWords": "1 Have they made thee ruler? be not lifted up: be among"
+    },
+    {
+     "slug": "33-chapter-33",
+     "num": "33",
+     "title": "Chapter 33",
+     "heading": 1045,
+     "start": 1046,
+     "end": 1078,
+     "section": 29,
+     "words": 723,
+     "firstWords": "1 No evils shall happen to him that feareth the Lord, but"
+    },
+    {
+     "slug": "34-chapter-34",
+     "num": "34",
+     "title": "Chapter 34",
+     "heading": 1079,
+     "start": 1080,
+     "end": 1110,
+     "section": 30,
+     "words": 645,
+     "firstWords": "1 The hopes of a man that is void of understanding are"
+    },
+    {
+     "slug": "35-chapter-35",
+     "num": "35",
+     "title": "Chapter 35",
+     "heading": 1111,
+     "start": 1112,
+     "end": 1137,
+     "section": 31,
+     "words": 515,
+     "firstWords": "1 He that keepeth the law, multiplieth offerings."
+    },
+    {
+     "slug": "36-chapter-36",
+     "num": "36",
+     "title": "Chapter 36",
+     "heading": 1138,
+     "start": 1139,
+     "end": 1166,
+     "section": 32,
+     "words": 534,
+     "firstWords": "1 Have mercy upon us, O God of all, and behold us,"
+    },
+    {
+     "slug": "37-chapter-37",
+     "num": "37",
+     "title": "Chapter 37",
+     "heading": 1167,
+     "start": 1168,
+     "end": 1201,
+     "section": 33,
+     "words": 705,
+     "firstWords": "1 Every friend will say: I also am his friend: but there"
+    },
+    {
+     "slug": "38-chapter-38",
+     "num": "38",
+     "title": "Chapter 38",
+     "heading": 1202,
+     "start": 1203,
+     "end": 1241,
+     "section": 34,
+     "words": 846,
+     "firstWords": "1 Honour the physician for the need thou hast of him: for"
+    },
+    {
+     "slug": "39-chapter-39",
+     "num": "39",
+     "title": "Chapter 39",
+     "heading": 1242,
+     "start": 1243,
+     "end": 1283,
+     "section": 35,
+     "words": 807,
+     "firstWords": "1 The wise men will seek out the wisdom of all the"
+    },
+    {
+     "slug": "40-chapter-40",
+     "num": "40",
+     "title": "Chapter 40",
+     "heading": 1284,
+     "start": 1285,
+     "end": 1316,
+     "section": 36,
+     "words": 648,
+     "firstWords": "1 Great labour is created for all men, and a heavy yoke"
+    },
+    {
+     "slug": "41-chapter-41",
+     "num": "41",
+     "title": "Chapter 41",
+     "heading": 1317,
+     "start": 1318,
+     "end": 1345,
+     "section": 37,
+     "words": 553,
+     "firstWords": "1 O death, how bitter is the remembrance of thee to a"
+    },
+    {
+     "slug": "42-chapter-42",
+     "num": "42",
+     "title": "Chapter 42",
+     "heading": 1346,
+     "start": 1347,
+     "end": 1372,
+     "section": 38,
+     "words": 612,
+     "firstWords": "1 Repeat not the word which thou hast heard, and disclose not"
+    },
+    {
+     "slug": "43-chapter-43",
+     "num": "43",
+     "title": "Chapter 43",
+     "heading": 1373,
+     "start": 1374,
+     "end": 1410,
+     "section": 39,
+     "words": 726,
+     "firstWords": "1 The firmament on high is his beauty, the beauty of heaven"
+    },
+    {
+     "slug": "44-chapter-44",
+     "num": "44",
+     "title": "Chapter 44",
+     "heading": 1411,
+     "start": 1412,
+     "end": 1438,
+     "section": 40,
+     "words": 499,
+     "firstWords": "1 Let us now praise men of renown, and our fathers in"
+    },
+    {
+     "slug": "45-chapter-45",
+     "num": "45",
+     "title": "Chapter 45",
+     "heading": 1439,
+     "start": 1440,
+     "end": 1470,
+     "section": 41,
+     "words": 760,
+     "firstWords": "1 Moses was beloved of God, and men: whose memory is in"
+    },
+    {
+     "slug": "46-chapter-46",
+     "num": "46",
+     "title": "Chapter 46",
+     "heading": 1471,
+     "start": 1472,
+     "end": 1494,
+     "section": 42,
+     "words": 572,
+     "firstWords": "1 Valiant in war was Jesus the son of Nave, who was"
+    },
+    {
+     "slug": "47-chapter-47",
+     "num": "47",
+     "title": "Chapter 47",
+     "heading": 1495,
+     "start": 1496,
+     "end": 1526,
+     "section": 42,
+     "words": 658,
+     "firstWords": "1 Then Nathan the prophet arose in the days of David."
+    },
+    {
+     "slug": "48-chapter-48",
+     "num": "48",
+     "title": "Chapter 48",
+     "heading": 1527,
+     "start": 1528,
+     "end": 1555,
+     "section": 43,
+     "words": 581,
+     "firstWords": "1 And Elias the prophet stood up, as a fire, and his"
+    },
+    {
+     "slug": "49-chapter-49",
+     "num": "49",
+     "title": "Chapter 49",
+     "heading": 1556,
+     "start": 1557,
+     "end": 1575,
+     "section": 44,
+     "words": 385,
+     "firstWords": "1 The memory of Josias is like the composition of a sweet"
+    },
+    {
+     "slug": "50-chapter-50",
+     "num": "50",
+     "title": "Chapter 50",
+     "heading": 1576,
+     "start": 1577,
+     "end": 1607,
+     "section": 45,
+     "words": 716,
+     "firstWords": "1 Simon the high priest, the son of Onias, who in his"
+    },
+    {
+     "slug": "51-chapter-51",
+     "num": "51",
+     "title": "Chapter 51",
+     "heading": 1608,
+     "start": 1609,
+     "end": 1646,
+     "section": 45,
+     "words": 716,
+     "firstWords": "1 A prayer of Jesus the son of Sirach. I will give"
+    }
+   ],
+   "structure": {
+    "sha256": "2378ab2fe96df31f629b117801e9ae9cdb7779814dde9de4e994c6f7eac04e39",
+    "source": "data/structured/ecclesiasticus-douay-rheims-ebible-dra-ecclesiasticus.json",
+    "roles": [
+     [
+      5,
+      "chapter"
+     ],
+     [
+      46,
+      "chapter"
+     ],
+     [
+      70,
+      "chapter"
+     ],
+     [
+      105,
+      "chapter"
+     ],
+     [
+      142,
+      "chapter"
+     ],
+     [
+      161,
+      "chapter"
+     ],
+     [
+      199,
+      "chapter"
+     ],
+     [
+      240,
+      "chapter"
+     ],
+     [
+      263,
+      "chapter"
+     ],
+     [
+      289,
+      "chapter"
+     ],
+     [
+      324,
+      "chapter"
+     ],
+     [
+      361,
+      "chapter"
+     ],
+     [
+      381,
+      "chapter"
+     ],
+     [
+      414,
+      "chapter"
+     ],
+     [
+      442,
+      "chapter"
+     ],
+     [
+      465,
+      "chapter"
+     ],
+     [
+      497,
+      "chapter"
+     ],
+     [
+      529,
+      "chapter"
+     ],
+     [
+      563,
+      "chapter"
+     ],
+     [
+      592,
+      "chapter"
+     ],
+     [
+      626,
+      "chapter"
+     ],
+     [
+      658,
+      "chapter"
+     ],
+     [
+      692,
+      "chapter"
+     ],
+     [
+      731,
+      "chapter"
+     ],
+     [
+      779,
+      "chapter"
+     ],
+     [
+      816,
+      "chapter"
+     ],
+     [
+      845,
+      "chapter"
+     ],
+     [
+      879,
+      "chapter"
+     ],
+     [
+      910,
+      "chapter"
+     ],
+     [
+      945,
+      "chapter"
+     ],
+     [
+      973,
+      "chapter"
+     ],
+     [
+      1016,
+      "chapter"
+     ],
+     [
+      1045,
+      "chapter"
+     ],
+     [
+      1079,
+      "chapter"
+     ],
+     [
+      1111,
+      "chapter"
+     ],
+     [
+      1138,
+      "chapter"
+     ],
+     [
+      1167,
+      "chapter"
+     ],
+     [
+      1202,
+      "chapter"
+     ],
+     [
+      1242,
+      "chapter"
+     ],
+     [
+      1284,
+      "chapter"
+     ],
+     [
+      1317,
+      "chapter"
+     ],
+     [
+      1346,
+      "chapter"
+     ],
+     [
+      1373,
+      "chapter"
+     ],
+     [
+      1411,
+      "chapter"
+     ],
+     [
+      1439,
+      "chapter"
+     ],
+     [
+      1471,
+      "chapter"
+     ],
+     [
+      1495,
+      "chapter"
+     ],
+     [
+      1527,
+      "chapter"
+     ],
+     [
+      1556,
+      "chapter"
+     ],
+     [
+      1576,
+      "chapter"
+     ],
+     [
+      1608,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

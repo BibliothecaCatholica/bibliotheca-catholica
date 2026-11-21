@@ -1,0 +1,330 @@
+{
+  "id": "ebible-dra-wisdom",
+  "kind": "public-domain-text",
+  "title": "The Book of Wisdom (Douay-Rheims, American edition of 1899)",
+  "author": "English College at Douay (revised by Richard Challoner)",
+  "firstPublished": "1609 (Douay); revised by Richard Challoner, 1749-1752; eBible.org transcribes the American edition of 1899",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. eBible.org notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "eBible.org",
+  "sourceUrl": "https://ebible.org/engDRA/WIS01.htm",
+  "sourcePage": "https://ebible.org/engDRA/",
+  "sourceNotice": "THE WISDOM OF SOLOMON\n\nWisdom of Solomon 1\n\n1 Love justice, you that are the judges of the earth. Think of the Lord in goodness, and seek him in simplicity of heart.\n\n2 For he is found by them that tempt him not: and he sheweth himself to them that have faith in him.\n\n3 For perverse thoughts separate from God: and his power, when it is tried, reproveth the unwise:\n\n4 For wisdom will not enter into a malicious soul, nor dwell in a body subject to sins.\n\n5 For the Holy Spirit of discipline will flee from the deceitful, and will withdraw himself from thoughts that are without understanding, and he shall not abide when iniquity cometh in.\n\n6 For the spirit of wisdom is benevolent, and will not acquit the evil speaker from his lips: for God is witness of his reins, and he is a true searcher of his heart, and a hearer of his tongue.\n\n7 For the spirit of the Lord hath filled the whole world: and that, which containeth all things, hath knowledge of the voice.\n\n8 Therefore he that speaketh unjust things cannot be hid, neither shall the chastising judgment pass him by.\n\n9 For inquisition shall be made into the thoughts of the ungodly: and the hearing of his words shall come to God, to the chastising of his iniquities.\n\n10 For the ear of jealousy heareth all things, and the tumult of murmuring shall not be hid.\n\n11 Keep yourselves therefore from murmuring, which profiteth nothing, and refrain your tongue from detraction, for an obscure speech shall not go for nought: and the mouth that ",
+  "sourceFileSha256": "c5dec90e31d2a4b0847b6a7f038a372c73e2f29734218039695365e3d8011775",
+  "sourcePages": [
+    {
+      "url": "https://ebible.org/engDRA/WIS01.htm",
+      "sha256": "59224720b8690d7dc6558093ac9497804e4a5f443b37e28a9f184abf502db3d3",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/01.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS02.htm",
+      "sha256": "62559b77fcb707d4ace05ad7a3dd4cba9f680b5517624caab4b04a18b746357a",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/02.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS03.htm",
+      "sha256": "c1c0cd0c0c4e4716396300d34a059959f9f91735f2f4441d4e3330fb62aec419",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/03.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS04.htm",
+      "sha256": "d048603d533cfb65d843341f77a38fcd79473be908812b82b014a449cb085909",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/04.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS05.htm",
+      "sha256": "29ca9e2868af7456ec57665056d297ee8e1ef0ac838e7133634f557b8111ef26",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/05.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS06.htm",
+      "sha256": "08ef523586174ae7776ff22b3857ba7d79fbb07ad62b6da4c47f6ce0d30df7a6",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/06.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS07.htm",
+      "sha256": "bbe9d79a710b92f75575d6794269c9bb5d33afbd7cc9fa6e2f2d69decc9db815",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/07.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS08.htm",
+      "sha256": "d1c094aa67267cff3e0ce0de7ab8cb6b4f1e6451458ce029ee98879b9f67e76c",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/08.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS09.htm",
+      "sha256": "e2d7932122e325efb54240418cd466241840262672f9564787d03be5f6e35022",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/09.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS10.htm",
+      "sha256": "3affccf2ae37394b25257eee87b9d378a5e2ddb8f8ad297e884388d893f75203",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/10.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS11.htm",
+      "sha256": "d1c178b712006c5f13a2932f99f06defe0cf6869b4611dab4a4eabbb1980cf8b",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/11.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS12.htm",
+      "sha256": "ccb1e5857838620201516b1e53fb0ae161c55d06acf78cd5aa3e000ebfd4e8ac",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/12.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS13.htm",
+      "sha256": "e7343c18b66722bb9b12038fe1b53b826065f090c454590efec0cf938dc3d3d9",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/13.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS14.htm",
+      "sha256": "aa8ceecabd167f130a5ea80e6fbe737608a54cb78d87fe833d17a7be46a8a4d0",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/14.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS15.htm",
+      "sha256": "37985e13e4372970ac6d4e17c472c90f25720144016a7279cbfd9c532a44b0c4",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/15.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS16.htm",
+      "sha256": "2765aee4435bd8e93adeb2253ac36c9b3dba338cc7c20bc71d2d348d2680edc7",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/16.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS17.htm",
+      "sha256": "32c978a95a6998961849b885bf1bfbe880b698c2b303a22e2a359da5f9feceaf",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/17.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS18.htm",
+      "sha256": "8d5bf22193a9613382ec0e33fd216b81f907f7e8b1dd77d79eb73bb3b0b1984e",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/18.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/WIS19.htm",
+      "sha256": "47afdd8744efa74a202ff31eb3ae45f12ae69d83528fc8d2190420c5c58d3b07",
+      "file": "data/sources/html-pages/ebible-dra-wisdom/19.html.gz"
+    }
+  ],
+  "sourceFileNote": "sourceFileSha256 is the SHA-256 of the pages' bytes joined in order; each page is pinned in sourcePages",
+  "siteNotice": "eBible.org, \"Douay-Rheims 1899\" (engDRA): \"The Holy Bible in English, Douay-Rheims American Edition of 1899, translated from the Latin Vulgate. Public Domain.\" (https://ebible.org/engDRA/copyright.htm); each chapter page links \"Public Domain\" to that statement.",
+  "readGate": {
+    "words": 10666,
+    "unknown": 21,
+    "readRate": 0.998,
+    "gate": 0.995
+  },
+  "readGateUnknownWords": [
+    "God’s",
+    "abateth",
+    "admonishest",
+    "borroweth",
+    "brother’s",
+    "carveth",
+    "convincest",
+    "destroyedst",
+    "disposest",
+    "divulgeth",
+    "enticeth",
+    "extinguisheth",
+    "fighteth",
+    "forecasteth",
+    "foreshewed",
+    "lovedst",
+    "petitioneth",
+    "scourgest",
+    "shewest",
+    "smoketh",
+    "winter’s"
+  ],
+  "sourceFormat": "ebible",
+  "iaWitness": {
+    "identifier": "holybibletransla00denv",
+    "url": "https://archive.org/details/holybibletransla00denv",
+    "year": 1899,
+    "publisher": "New York : Benziger",
+    "ocr": "holybibletransla00denv_djvu.txt",
+    "ocrSha256": "ffef700ad2f15707952716a6e0aeacf5a392c003ece0140920b4f2426c74a911",
+    "ocrNote": "SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)",
+    "excerpt": {
+      "from": "BOOK OF WISDOM.",
+      "to": "ECCLESIASTICUS. This Book is so called",
+      "words": 12741,
+      "note": "compared with the OCR from the first occurrence of `from` up to the next occurrence of `to` (whitespace-insensitive)"
+    }
+  },
+  "collation": {
+    "sourceWords": 11124,
+    "scanWords": 12741,
+    "matchedWords": 10744,
+    "agreement": 0.9658,
+    "sampleDifferences": [
+      {
+        "source": "the lord in goodness and seek him",
+        "scan": "the lord in good ness and seek him"
+      },
+      {
+        "source": "it is tried reproveth the unwise 4",
+        "scan": "it is tried re proveth the unwise 4"
+      },
+      {
+        "source": "enter into a malicious soul nor dwell",
+        "scan": "enter into a malici ous soul nor dwell"
+      },
+      {
+        "source": "and will withdraw himself from thoughts that",
+        "scan": "and will withdraw him self from thoughts that"
+      },
+      {
+        "source": "that are without understanding and he shall",
+        "scan": "that are without under standing and he shall"
+      },
+      {
+        "source": "not abide when iniquity cometh in 6",
+        "scan": "not abide when ini quity cometh in 6"
+      },
+      {
+        "source": "god to the chastising of his iniquities",
+        "scan": "god to the chastis ing of his iniquities"
+      },
+      {
+        "source": "yourselves therefore from murmuring which profiteth nothing",
+        "scan": "yourselves therefore from mur muring which profiteth nothing"
+      },
+      {
+        "source": "which profiteth nothing and refrain your tongue",
+        "scan": "which profiteth nothing aud refrain your tongue"
+      },
+      {
+        "source": "kingdom of hell upon the earth 15",
+        "scan": "kingdom of hell up on the earth 15"
+      },
+      {
+        "source": "have made a covenant with it because",
+        "scan": "have made a co venant with it because"
+      },
+      {
+        "source": "because they are worthy to be of",
+        "scan": "because they are wmrthy to be of"
+      },
+      {
+        "source": "the part thereof wisdom of solomon 2",
+        "scan": "the part thereof chap ii the vam reasonings of the wicked"
+      },
+      {
+        "source": "said reasoning with themselves but not right",
+        "scan": "said reasoning with them t selves but not right"
+      },
+      {
+        "source": "nothing and after this we shall be",
+        "scan": "nothing and after t is we shall be"
+      },
+      {
+        "source": "trace of a cloud and shall be",
+        "scan": "trace of a clpud and shall be"
+      },
+      {
+        "source": "shall be dispersed as a mist which",
+        "scan": "shall be dispersed is a mist which"
+      },
+      {
+        "source": "have any remembrance of our works 5",
+        "scan": "have any remembrance oi our works 5"
+      },
+      {
+        "source": "and no man returneth 6 come therefore",
+        "scan": "and no man re turneth 6 come therefore"
+      },
+      {
+        "source": "ourselves with roses before they be withered",
+        "scan": "ourselves with roses be fore they be withered"
+      },
+      {
+        "source": "luxury let us everywhere leave tokens of",
+        "scan": "luxury let us every where leave tokens ot"
+      },
+      {
+        "source": "everywhere leave tokens of joy for this",
+        "scan": "where leave tokens ot joy for this"
+      },
+      {
+        "source": "he hath the knowledge of god and",
+        "scan": "he hath the know ledge of god and"
+      },
+      {
+        "source": "triflers and he abstaineth from our ways as",
+        "scan": "triflers and he abstainethfrom our waysas from"
+      },
+      {
+        "source": "abstaineth from our ways as from filthiness and",
+        "scan": "he abstainethfrom our waysas from filthiness and"
+      },
+      {
+        "source": "shall be 18 for if he be",
+        "scan": "shall be 18 jpor if he be"
+      },
+      {
+        "source": "to a most shameful death for there",
+        "scan": "to a most shame ful death for there"
+      },
+      {
+        "source": "that are of his side wisdom of",
+        "scan": "that are of hia side isal 22"
+      },
+      {
+        "source": "die and their departure was taken for",
+        "scan": "die and their depaiture was taken for"
+      },
+      {
+        "source": "of men they suffered torments their hope",
+        "scan": "of men they buffered torments their hope"
+      },
+      {
+        "source": "is full of immortality 5 afflicted in",
+        "scan": "is full of im mortality 5 afflicted in"
+      },
+      {
+        "source": "shall be punished according to their own",
+        "scan": "shall be punished ac cording to their own"
+      },
+      {
+        "source": "rejecteth wisdom and discipline is unhappy and",
+        "scan": "rejecteth wisdom and dis cipline is unhappy and"
+      },
+      {
+        "source": "foolish and their children wicked 13 their",
+        "scan": "foolish and their chil dren wicked 13 their"
+      },
+      {
+        "source": "wicked 13 their offspring is cursed for",
+        "scan": "wicked 13 their oflfepring is cursed for"
+      },
+      {
+        "source": "and a most acceptable lot in the",
+        "scan": "and a most ac ceptable lot in the"
+      },
+      {
+        "source": "seed of the unlawful bed shall be",
+        "scan": "seed of the un lawful bed shall be"
+      },
+      {
+        "source": "age shall be without honour 18 and",
+        "scan": "age shall be vithout honour 18 and"
+      },
+      {
+        "source": "race wisdom of solomon 4 1 o how beautiful is the",
+        "scan": "the death of the just and the wicked ohow beautiful is the"
+      },
+      {
+        "source": "fruits shall be unprofitable and sour to",
+        "scan": "fruits shall be un profitable and sour to"
+      }
+    ],
+    "method": "difflib word alignment, lower case, letters and digits only; OCR noise counts as disagreement"
+  },
+  "sha256": "dc73766dc6cc0cc7860a86a56870c658f8613df65fe4e54bc0ca014d50f33c09",
+  "bytes": 60221,
+  "checked": "2026-11-21"
+}

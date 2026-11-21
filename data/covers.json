@@ -8,6 +8,18 @@
    "webp": "cb1a1650b7a97c013c67671f43cff6d743bcc1a1a4623235a01f0d0d53fc7473",
    "og": "bd91bbf841c5dbb40f3c004c0a0aaa041515d7f87f041303629e71476641296b"
   },
+  "ebible-dra-ecclesiasticus": {
+   "work": "ecclesiasticus-douay-rheims",
+   "svg": "68a22aab535cdde9d5519d75fdb59677ff430646ba4da064e7c7a351a35aacbf",
+   "webp": "489c7b8c1b97f8111f1e9bcdb21dd3069eb444075442c103f25cee9dc37eb951",
+   "og": "698c4da2260bd93ac96986f0c3449472d0f9c1ec23623495a07c3bf192d22e5f"
+  },
+  "ebible-dra-wisdom": {
+   "work": "book-of-wisdom-douay-rheims",
+   "svg": "2a6dd282c13f011d63b708ff7f03cdd833124c37c3a28942377d3b36c262eb91",
+   "webp": "c5fc59a15ef10fe1faf901d1f5e510ad113cdd42564d9e3e3e7a7699e0f4e376",
+   "og": "07550a3eae1d865d4d1a226619f25c926985559c04e927877149e36d040a45f1"
+  },
   "fp-20090501": {
    "work": "footsteps-at-the-lock",
    "svg": "ce583a160d0c112bd845885b6b33458df287d799261b925d432b061f7b52f433",

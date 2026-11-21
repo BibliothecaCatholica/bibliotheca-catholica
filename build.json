@@ -1,12 +1,12 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-4bb450257a17",
+  "id": "bc-db7d23af0a16",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "619e13d79dde88858948459eb6ce8b80c5527d5962ad2cbb907160d7eca0cfde",
     "app.js": "e3e633a501a3171e6e2163e3c25ca009c0f7c1f6ae48b92aca9be0e8ad7c5fbe",
     "data/advent-2026.json": "c6f468f3d885d03b3996bc5ab39bb85f09fd68cc93568e2e8b7eae9a214aee67",
-    "data/affiliates.js": "35e671bc1dc94a49ffcdd6280295024ea33368e7c257521600e821abee948f38",
+    "data/affiliates.js": "f5911b113714707752c1250357cfbec0849d2937e4b223c6bc7d48a3cd5ceb53",
     "data/authors-detail.js": "5983c6d097288412c3d34ca63d5adb233c479d85234db042df6143012a23547b",
     "data/authorx.js": "5e8455f846523c68bfcaafae8302e632e98626837d07334d4c767be40db2ed01",
     "data/books.js": "7b380c1e116603d0f7317fc3bdedef93d6e8db2bb1ea8700e5b37851f8ed04fd",
@@ -154,7 +154,7 @@
     "tools/rites_pages.py": "07d73da145a9eb2be1ada109f82b5b99752954173fe087c8c989c3753b987bc7",
     "tools/saints_calendar.py": "5d7c1de461d2ca7b98f770a286869ab7853686ad51957a9dc78d7d2e5630c6f1",
     "tools/serve.py": "bf16673d8781713b31dfae39b37a366788671bb8c4ad156565b63a0383fef1c2",
-    "tools/site_copy.py": "0287573c8b65e52c30525e9e965b57efbbf640c0aedf111b57c98c42eb1af1b3",
+    "tools/site_copy.py": "ecf1b9e152ec953b447b6996dc93dc6e51256ab6aeb1e38661e31aa5c676889e",
     "tools/structure_text.py": "0de7f7bf235f274f3e480ccf783a86f55f537976071fdaf9f5631653f6fdf59b",
     "tools/study_partner.py": "58336480ff3e899400b5b4cb3e2d122873846f33a494f9d2abe0ba696004e4e1",
     "tools/substacks_src.py": "e02dd1b54559bbc0cf3dda1a747e820c9fc7dff30f8cbf036952f5733b2bda1a",

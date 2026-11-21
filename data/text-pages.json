@@ -18020,6 +18020,604 @@
     "front": [],
     "em": []
    }
+  },
+  "eugenics-other-evils": {
+   "partD": {
+    "about": "Project Gutenberg #25308: first published in 1922; the transcribed copy is the Cassell and Company printing of 1922. Seventeen chapters in two parts, divided as the hosted text heads them; the note to the reader stays in the reader. No words were changed.",
+    "words": 48183,
+    "minutes": 209
+   },
+   "edition": "pg-25308",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "7114c613bc952f7e03e20a15f04202ecd1cd2386138eea98f603406a08e45524",
+   "blocks": 509,
+   "items": [
+    {
+     "slug": "01-what-is-eugenics",
+     "num": "I",
+     "title": "What Is Eugenics?",
+     "heading": 50,
+     "start": 52,
+     "end": 57,
+     "section": 1,
+     "words": 2245,
+     "firstWords": "The wisest thing in the world is to cry out before you",
+     "titleBlocks": [
+      51
+     ]
+    },
+    {
+     "slug": "02-the-first-obstacles",
+     "num": "II",
+     "title": "The First Obstacles",
+     "heading": 58,
+     "start": 60,
+     "end": 66,
+     "section": 1,
+     "words": 2491,
+     "firstWords": "Now before I set about arguing these things, there is a cloud",
+     "titleBlocks": [
+      59
+     ]
+    },
+    {
+     "slug": "03-the-anarchy-from-above",
+     "num": "III",
+     "title": "The Anarchy from Above",
+     "heading": 67,
+     "start": 69,
+     "end": 77,
+     "section": 1,
+     "words": 2297,
+     "firstWords": "A silent anarchy is eating out our society. I must pause upon",
+     "titleBlocks": [
+      68
+     ]
+    },
+    {
+     "slug": "04-the-lunatic-and-the-law",
+     "num": "IV",
+     "title": "The Lunatic and the Law",
+     "heading": 78,
+     "start": 80,
+     "end": 95,
+     "section": 2,
+     "words": 4136,
+     "firstWords": "The modern evil, we have said, greatly turns on this: that people",
+     "titleBlocks": [
+      79
+     ]
+    },
+    {
+     "slug": "05-the-flying-authority",
+     "num": "V",
+     "title": "The Flying Authority",
+     "heading": 96,
+     "start": 98,
+     "end": 110,
+     "section": 2,
+     "words": 3882,
+     "firstWords": "It happened one day that an atheist and a man were standing",
+     "titleBlocks": [
+      97
+     ]
+    },
+    {
+     "slug": "06-the-unanswered-challenge",
+     "num": "VI",
+     "title": "The Unanswered Challenge",
+     "heading": 111,
+     "start": 113,
+     "end": 124,
+     "section": 3,
+     "words": 3055,
+     "firstWords": "Dr. Saleeby did me the honour of referring to me in one",
+     "titleBlocks": [
+      112
+     ]
+    },
+    {
+     "slug": "07-the-established-church-of-doubt",
+     "num": "VII",
+     "title": "The Established Church of Doubt",
+     "heading": 125,
+     "start": 127,
+     "end": 136,
+     "section": 3,
+     "words": 2400,
+     "firstWords": "Let us now finally consider what the honest Eugenists do mean, since",
+     "titleBlocks": [
+      126
+     ]
+    },
+    {
+     "slug": "08-a-summary-of-a-false-theory",
+     "num": "VIII",
+     "title": "A Summary of a False Theory",
+     "heading": 137,
+     "start": 139,
+     "end": 148,
+     "section": 3,
+     "words": 1579,
+     "firstWords": "I have up to this point treated the Eugenists, I hope, as",
+     "titleBlocks": [
+      138
+     ]
+    },
+    {
+     "slug": "09-the-impotence-of-impenitence",
+     "num": "I",
+     "title": "The Impotence of Impenitence",
+     "heading": 150,
+     "start": 152,
+     "end": 159,
+     "section": 4,
+     "words": 2689,
+     "firstWords": "The root formula of an epoch is always an unwritten law, just",
+     "titleBlocks": [
+      151
+     ],
+     "before": [
+      149
+     ]
+    },
+    {
+     "slug": "10-true-history-of-a-tramp",
+     "num": "II",
+     "title": "True History of a Tramp",
+     "heading": 160,
+     "start": 162,
+     "end": 172,
+     "section": 4,
+     "words": 3528,
+     "firstWords": "He awoke in the Dark Ages and smelt dawn in the dark,",
+     "titleBlocks": [
+      161
+     ]
+    },
+    {
+     "slug": "11-true-history-of-a-eugenist",
+     "num": "III",
+     "title": "True History of a Eugenist",
+     "heading": 173,
+     "start": 175,
+     "end": 183,
+     "section": 4,
+     "words": 3155,
+     "firstWords": "He does not live in a dark lonely tower by the sea,",
+     "titleBlocks": [
+      174
+     ]
+    },
+    {
+     "slug": "12-the-vengeance-of-the-flesh",
+     "num": "IV",
+     "title": "The Vengeance of the Flesh",
+     "heading": 184,
+     "start": 186,
+     "end": 195,
+     "section": 5,
+     "words": 2529,
+     "firstWords": "By a quaint paradox, we generally miss the meaning of simple stories",
+     "titleBlocks": [
+      185
+     ]
+    },
+    {
+     "slug": "13-the-meanness-of-the-motive",
+     "num": "V",
+     "title": "The Meanness of the Motive",
+     "heading": 196,
+     "start": 198,
+     "end": 208,
+     "section": 5,
+     "words": 3285,
+     "firstWords": "Now, if any ask whether it be imaginable that an ordinary man",
+     "titleBlocks": [
+      197
+     ]
+    },
+    {
+     "slug": "14-the-eclipse-of-liberty",
+     "num": "VI",
+     "title": "The Eclipse of Liberty",
+     "heading": 209,
+     "start": 211,
+     "end": 220,
+     "section": 5,
+     "words": 2909,
+     "firstWords": "If such a thing as the Eugenic sociology had been suggested in",
+     "titleBlocks": [
+      210
+     ]
+    },
+    {
+     "slug": "15-the-transformation-of-socialism",
+     "num": "VII",
+     "title": "The Transformation of Socialism",
+     "heading": 221,
+     "start": 223,
+     "end": 233,
+     "section": 6,
+     "words": 2533,
+     "firstWords": "Socialism is one of the simplest ideas in the world. It has",
+     "titleBlocks": [
+      222
+     ]
+    },
+    {
+     "slug": "16-the-end-of-the-household-gods",
+     "num": "VIII",
+     "title": "The End of the Household Gods",
+     "heading": 234,
+     "start": 236,
+     "end": 251,
+     "section": 6,
+     "words": 2888,
+     "firstWords": "The only place where it is possible to find an echo of",
+     "titleBlocks": [
+      235
+     ]
+    },
+    {
+     "slug": "17-a-short-chapter",
+     "num": "IX",
+     "title": "A Short Chapter",
+     "heading": 252,
+     "start": 254,
+     "end": 457,
+     "section": 7,
+     "words": 2582,
+     "firstWords": "Round about the year 1913 Eugenics was turned from a fad to",
+     "titleBlocks": [
+      253
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "7114c613bc952f7e03e20a15f04202ecd1cd2386138eea98f603406a08e45524",
+    "source": "data/structured/eugenics-other-evils-pg-25308.json",
+    "roles": [
+     [
+      50,
+      "chapter"
+     ],
+     [
+      51,
+      "heading"
+     ],
+     [
+      58,
+      "chapter"
+     ],
+     [
+      59,
+      "heading"
+     ],
+     [
+      67,
+      "chapter"
+     ],
+     [
+      68,
+      "heading"
+     ],
+     [
+      78,
+      "chapter"
+     ],
+     [
+      79,
+      "heading"
+     ],
+     [
+      96,
+      "chapter"
+     ],
+     [
+      97,
+      "heading"
+     ],
+     [
+      111,
+      "chapter"
+     ],
+     [
+      112,
+      "heading"
+     ],
+     [
+      125,
+      "chapter"
+     ],
+     [
+      126,
+      "heading"
+     ],
+     [
+      137,
+      "chapter"
+     ],
+     [
+      138,
+      "heading"
+     ],
+     [
+      149,
+      "heading"
+     ],
+     [
+      150,
+      "chapter"
+     ],
+     [
+      151,
+      "heading"
+     ],
+     [
+      160,
+      "chapter"
+     ],
+     [
+      161,
+      "heading"
+     ],
+     [
+      173,
+      "chapter"
+     ],
+     [
+      174,
+      "heading"
+     ],
+     [
+      184,
+      "chapter"
+     ],
+     [
+      185,
+      "heading"
+     ],
+     [
+      196,
+      "chapter"
+     ],
+     [
+      197,
+      "heading"
+     ],
+     [
+      209,
+      "chapter"
+     ],
+     [
+      210,
+      "heading"
+     ],
+     [
+      221,
+      "chapter"
+     ],
+     [
+      222,
+      "heading"
+     ],
+     [
+      234,
+      "chapter"
+     ],
+     [
+      235,
+      "heading"
+     ],
+     [
+      252,
+      "chapter"
+     ],
+     [
+      253,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "tales-long-bow": {
+   "partD": {
+    "about": "Project Gutenberg #69185: first published in 1925; the transcribed copy is the Dodd, Mead and Company, New York printing. Eight tales, divided as the hosted text heads them; no words were changed.",
+    "words": 61443,
+    "minutes": 267
+   },
+   "edition": "pg-69185",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "fa7d84238985eac7f6d79b5346ea0ea7e8d154e0b642ed8b67927846943b6613",
+   "blocks": 1104,
+   "items": [
+    {
+     "slug": "01-the-unpresentable-appearance-of-colonel-crane",
+     "num": "I",
+     "title": "The Unpresentable Appearance of Colonel Crane",
+     "heading": 33,
+     "start": 34,
+     "end": 153,
+     "section": 0,
+     "words": 8126,
+     "firstWords": "These tales concern the doing of things recognized as impossible to do;"
+    },
+    {
+     "slug": "02-the-improbable-success-of-mr-owen-hood",
+     "num": "II",
+     "title": "The Improbable Success of Mr. Owen Hood",
+     "heading": 157,
+     "start": 158,
+     "end": 290,
+     "section": 4,
+     "words": 9364,
+     "firstWords": "Heroes who have endured the heavy labour of reading to the end",
+     "before": [
+      155
+     ]
+    },
+    {
+     "slug": "03-the-unobtrusive-traffic-of-captain-pierce",
+     "num": "III",
+     "title": "The Unobtrusive Traffic of Captain Pierce",
+     "heading": 294,
+     "start": 295,
+     "end": 444,
+     "section": 8,
+     "words": 7067,
+     "firstWords": "Those acquainted with Colonel Crane and Mr. Owen Hood, the lawyer, may",
+     "before": [
+      292
+     ]
+    },
+    {
+     "slug": "04-the-elusive-companion-of-parson-white",
+     "num": "IV",
+     "title": "The Elusive Companion of Parson White",
+     "heading": 448,
+     "start": 449,
+     "end": 575,
+     "section": 12,
+     "words": 7597,
+     "firstWords": "In the scriptures and the chronicles of the League of the Long",
+     "before": [
+      446
+     ]
+    },
+    {
+     "slug": "05-the-exclusive-luxury-of-enoch-oates",
+     "num": "V",
+     "title": "The Exclusive Luxury of Enoch Oates",
+     "heading": 579,
+     "start": 580,
+     "end": 691,
+     "section": 16,
+     "words": 6646,
+     "firstWords": "“Since the Colonel ate his hat the Lunatic Asylum has lacked a",
+     "before": [
+      577
+     ]
+    },
+    {
+     "slug": "06-the-unthinkable-theory-of-professor-green",
+     "num": "VI",
+     "title": "The Unthinkable Theory of Professor Green",
+     "heading": 695,
+     "start": 696,
+     "end": 826,
+     "section": 19,
+     "words": 7458,
+     "firstWords": "If the present passage in the chronicles of the Long Bow seems",
+     "before": [
+      693
+     ]
+    },
+    {
+     "slug": "07-the-unprecedented-architecture-of-commander-blair",
+     "num": "VII",
+     "title": "The Unprecedented Architecture of Commander Blair",
+     "heading": 830,
+     "start": 831,
+     "end": 973,
+     "section": 23,
+     "words": 7521,
+     "firstWords": "The Earl of Eden had become Prime Minister for the third time,",
+     "before": [
+      828
+     ]
+    },
+    {
+     "slug": "08-the-ultimate-ultimatum-of-the-league-of-the-long-bow",
+     "num": "VIII",
+     "title": "The Ultimate Ultimatum of the League of the Long Bow",
+     "heading": 977,
+     "start": 978,
+     "end": 1046,
+     "section": 27,
+     "words": 7664,
+     "firstWords": "Mr. Robert Owen Hood came through his library that was lined with",
+     "before": [
+      975
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "fa7d84238985eac7f6d79b5346ea0ea7e8d154e0b642ed8b67927846943b6613",
+    "source": "data/structured/tales-long-bow-pg-69185.json",
+    "roles": [
+     [
+      33,
+      "chapter"
+     ],
+     [
+      155,
+      "heading"
+     ],
+     [
+      157,
+      "chapter"
+     ],
+     [
+      292,
+      "heading"
+     ],
+     [
+      294,
+      "chapter"
+     ],
+     [
+      446,
+      "heading"
+     ],
+     [
+      448,
+      "chapter"
+     ],
+     [
+      577,
+      "heading"
+     ],
+     [
+      579,
+      "chapter"
+     ],
+     [
+      693,
+      "heading"
+     ],
+     [
+      695,
+      "chapter"
+     ],
+     [
+      828,
+      "heading"
+     ],
+     [
+      830,
+      "chapter"
+     ],
+     [
+      975,
+      "heading"
+     ],
+     [
+      977,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

@@ -1,0 +1,447 @@
+{
+  "id": "ia-thackeray-1890-eulalia",
+  "kind": "ocr-transcription",
+  "title": "St. Eulalia (Peristephanon III), a selection, translated by F. St. J. Thackeray (1890)",
+  "author": "Prudentius",
+  "rights": "Public domain in the USA. First published 1890 (this 10-stanza selection from Translations from Prudentius, London: George Bell and Sons); the scanned printing is of 1890.",
+  "rightsBasis": "pd-date",
+  "volumes": [
+    {
+      "identifier": "translationsfro00thacgoog",
+      "url": "https://archive.org/details/translationsfro00thacgoog",
+      "year": 1890,
+      "publisher": "London: George Bell and Sons, York Street, Covent Garden",
+      "ocr": "translationsfro00thacgoog_djvu.xml",
+      "ocrSha256": "c2c7de2149ce196e5e0363c7a290617f32202569ee676d54151a0ac496afcb32",
+      "leaves": [
+        202,
+        207
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, verse lines and stanza breaks kept as printed, words not rejoined across line breaks, unique known-word OCR repairs recorded, unread words flagged and kept as printed. 42 misreadings corrected by hand against the page images of this scan, each listed in handFixes; no wording was taken from another edition. 156 words the vocabulary does not know (names, Latin, and foreign titles) were checked by hand against the page images and are listed in verifiedWords.",
+  "words": 509,
+  "unknownWords": 0,
+  "readRate": 1.0,
+  "flaggedBlocks": 0,
+  "flagged": [],
+  "corrections": 0,
+  "correctionList": [],
+  "text": "data/texts/ia-thackeray-1890-eulalia.txt",
+  "sha256": "a5ed411df43e2f40a23eb2b1ae5f6b6f7bbbcd28f45bdc11333a94d1d2a87353",
+  "checked": "2026-11-21",
+  "handFixes": [
+    {
+      "leaf": 206,
+      "page": "124",
+      "ocr": "ta4 PBñmtsPHAÑúH. m.",
+      "reading": ""
+    },
+    {
+      "leaf": 202,
+      "page": "120",
+      "ocr": "lU. IN HONOREM EULALIAE MARTYRIS.",
+      "reading": "III. IN HONOREM EULALIAE MARTYRIS."
+    },
+    {
+      "leaf": 202,
+      "page": "120",
+      "ocr": "ERMINE nobüis Eulalia,",
+      "reading": "GERMINE nobilis Eulalia,"
+    },
+    {
+      "leaf": 202,
+      "page": "120",
+      "ocr": "mortis et índole nobilior,",
+      "reading": "mortis et indole nobilior,"
+    },
+    {
+      "leaf": 202,
+      "page": "120",
+      "ocr": "Emerítam sacra virgo suam,",
+      "reading": "Emeritam sacra virgo suam,"
+    },
+    {
+      "leaf": 202,
+      "page": "120",
+      "ocr": "ossibus omat, amore colit",
+      "reading": "ossibus ornat, amore colit."
+    },
+    {
+      "leaf": 202,
+      "page": "120",
+      "ocr": "qui tulit hoc decus ^regium,",
+      "reading": "qui tulit hoc decus egregium,"
+    },
+    {
+      "leaf": 202,
+      "page": "120",
+      "ocr": "cum crepitante p\\Ta trépidos",
+      "reading": "cum crepitante pyra trepidos"
+    },
+    {
+      "leaf": 202,
+      "page": "120",
+      "ocr": "temí i t áspera camiñces",
+      "reading": "terruit aspera carnifices"
+    },
+    {
+      "leaf": 202,
+      "page": "120",
+      "ocr": "laní dederat prius indicium.",
+      "reading": "Iam dederat prius indicium."
+    },
+    {
+      "leaf": 202,
+      "page": "120",
+      "ocr": "tendere se Patris ad solium,",
+      "reading": "tendere se Patris ad solium."
+    },
+    {
+      "leaf": 202,
+      "page": "120",
+      "ocr": "ipsa crepuncia repuleíat,",
+      "reading": "ipsa crepundia repulerat,"
+    },
+    {
+      "leaf": 202,
+      "page": "120",
+      "ocr": "luuere nesoia pusiola.",
+      "reading": "ludere nescia pusiola."
+    },
+    {
+      "leaf": 203,
+      "page": "121",
+      "ocr": "^ORN of a noble race,",
+      "reading": "BORN of a noble race,"
+    },
+    {
+      "leaf": 203,
+      "page": "121",
+      "ocr": "More by her death ennoblecí, Eulalie",
+      "reading": "More by her death ennobled, Eulalie"
+    },
+    {
+      "leaf": 203,
+      "page": "121",
+      "ocr": "Still by her dust on Merída sheds grace,",
+      "reading": "Still by her dust on Merida sheds grace,"
+    },
+    {
+      "leaf": 203,
+      "page": "121",
+      "ocr": "A región in the West",
+      "reading": "A region in the West"
+    },
+    {
+      "leaf": 203,
+      "page": "121",
+      "ocr": "Rich, in its Virgin- Martyr still more blest,",
+      "reading": "Rich, in its Virgin-Martyr still more blest,"
+    },
+    {
+      "leaf": 203,
+      "page": "121",
+      "ocr": "No earthly bride, but dedioate to Heaven ;",
+      "reading": "No earthly bride, but dedicate to Heaven ;"
+    },
+    {
+      "leaf": 204,
+      "page": "122",
+      "ocr": "Spemere sucina, fiare rosas,",
+      "reading": "Spernere sucina, flare rosas,"
+    },
+    {
+      "leaf": 204,
+      "page": "122",
+      "ocr": "fulva monília respuere,",
+      "reading": "fulva monilia respuere,"
+    },
+    {
+      "leaf": 204,
+      "page": "122",
+      "ocr": "canitiem meditata senum. ^ ^",
+      "reading": "canitiem meditata senum.\n\n* * * *"
+    },
+    {
+      "leaf": 204,
+      "page": "122",
+      "ocr": "perqué comas vegetata caput",
+      "reading": "perque comas vegetata caput"
+    },
+    {
+      "leaf": 205,
+      "page": "123",
+      "ocr": "Ripe wisdom of oíd age, this gentle maid.",
+      "reading": "Ripe wisdom of old age, this gentle maid.\n\n* * * * *"
+    },
+    {
+      "leaf": 205,
+      "page": "123",
+      "ocr": "Feed on her locks and tower in wreathfed spires !",
+      "reading": "Feed on her locks and tower in wreathèd spires !"
+    },
+    {
+      "leaf": 205,
+      "page": "123",
+      "ocr": "She courts the ñames, and drinks the longed-for",
+      "reading": "She courts the flames, and drinks the longed-for"
+    },
+    {
+      "leaf": 205,
+      "page": "123",
+      "ocr": "*Tis said you then might see",
+      "reading": "'Tis said you then might see"
+    },
+    {
+      "leaf": 205,
+      "page": "123",
+      "ocr": "The spirit puré of guileless Eulalie,",
+      "reading": "The spirit pure of guileless Eulalie,"
+    },
+    {
+      "leaf": 205,
+      "page": "123",
+      "ocr": "Ye boys and maidens, culi",
+      "reading": "Ye boys and maidens, cull"
+    },
+    {
+      "leaf": 205,
+      "page": "123",
+      "ocr": "That genial clime shall heap your baskets fuU,",
+      "reading": "That genial clime shall heap your baskets full,"
+    },
+    {
+      "leaf": 206,
+      "page": "124",
+      "ocr": "..^^^— — w^— ^^i^^^^M^M^^— — m iiiüi .1. 'i T",
+      "reading": ""
+    },
+    {
+      "leaf": 206,
+      "page": "124",
+      "ocr": "Ista comantíbus e foliis",
+      "reading": "Ista comantibus e foliis"
+    },
+    {
+      "leaf": 206,
+      "page": "124",
+      "ocr": "muñera viígo pue^ue date :",
+      "reading": "munera virgo puerque date :"
+    },
+    {
+      "leaf": 206,
+      "page": "124",
+      "ocr": "ast^o serta dioro in medio",
+      "reading": "ast ego serta choro in medio"
+    },
+    {
+      "leaf": 206,
+      "page": "124",
+      "ocr": "vilia* marcida. fiesta tameii.",
+      "reading": "vilia, marcida, festa tamen."
+    },
+    {
+      "leaf": 206,
+      "page": "124",
+      "ocr": "Sic venerarier ossa libeti",
+      "reading": "Sic venerarier ossa libet,"
+    },
+    {
+      "leaf": 206,
+      "page": "124",
+      "ocr": "ossibus altar et inpositmxi.",
+      "reading": "ossibus altar et inpositum."
+    },
+    {
+      "leaf": 206,
+      "page": "124",
+      "ocr": "carmine propitiata fovet",
+      "reading": "carmine propitiata fovet."
+    },
+    {
+      "leaf": 207,
+      "page": "125",
+      "ocr": "Shed on her ñowers and leaves !",
+      "reading": "Shed on her flowers and leaves !"
+    },
+    {
+      "leaf": 207,
+      "page": "125",
+      "ocr": "Take these my dactyls — take my humble gift —",
+      "reading": "Take these my dactyls—take my humble gift—"
+    },
+    {
+      "leaf": 207,
+      "page": "125",
+      "ocr": "So we these relies prize,",
+      "reading": "So we these relics prize,"
+    },
+    {
+      "leaf": 207,
+      "page": "125",
+      "ocr": "Touched by my song, where at God*s feet she lies,",
+      "reading": "Touched by my song, where at God's feet she lies,"
+    }
+  ],
+  "verifiedWords": [
+    "nobilior",
+    "Emeritam",
+    "cuius",
+    "ubere",
+    "progenita",
+    "colit",
+    "occiduo",
+    "tulit",
+    "egregium",
+    "locuples",
+    "mage",
+    "martyrii",
+    "virgineoque",
+    "titulo",
+    "Curriculis",
+    "tris",
+    "hiemes",
+    "attigerat",
+    "crepitante",
+    "pyra",
+    "trepidos",
+    "terruit",
+    "carnifices",
+    "supplicium",
+    "rata",
+    "indicium",
+    "tendere",
+    "solium",
+    "dicata",
+    "toro",
+    "crepundia",
+    "repulerat",
+    "nescia",
+    "pusiola",
+    "Spernere",
+    "sucina",
+    "flare",
+    "monilia",
+    "respuere",
+    "severa",
+    "modesta",
+    "gradu",
+    "canitiem",
+    "meditata",
+    "senum",
+    "Flamma",
+    "crepans",
+    "faciem",
+    "perque",
+    "vegetata",
+    "exuperatque",
+    "apicem",
+    "citum",
+    "cupiens",
+    "obitum",
+    "appetit",
+    "rogum",
+    "Emicat",
+    "columba",
+    "repens",
+    "nive",
+    "candidior",
+    "relinquere",
+    "astra",
+    "sequi",
+    "Eulaliae",
+    "lacteolus",
+    "innocuus",
+    "Carpite",
+    "purpureas",
+    "violas",
+    "sanguineosque",
+    "crocos",
+    "metite",
+    "caret",
+    "genialis",
+    "hiems",
+    "laxat",
+    "arva",
+    "tepens",
+    "glacies",
+    "cumulet",
+    "calathos",
+    "Ista",
+    "comantibus",
+    "foliis",
+    "munera",
+    "puerque",
+    "serta",
+    "choro",
+    "texta",
+    "feram",
+    "dactylico",
+    "vilia",
+    "marcida",
+    "festa",
+    "venerarier",
+    "ossa",
+    "libet",
+    "inpositum",
+    "prospicit",
+    "populosque",
+    "carmine",
+    "propitiata",
+    "fovet",
+    "GERMINE",
+    "nobilis",
+    "indole",
+    "ornat",
+    "Proximus",
+    "potens",
+    "populis",
+    "sanguine",
+    "tribus",
+    "atque",
+    "novem",
+    "quater",
+    "aspera",
+    "prius",
+    "membra",
+    "ludere",
+    "fulva",
+    "ore",
+    "moribus",
+    "nimium",
+    "teneris",
+    "volat",
+    "comas",
+    "occupat",
+    "virgo",
+    "bibit",
+    "inde",
+    "martyris",
+    "visa",
+    "spiritus",
+    "celer",
+    "non",
+    "his",
+    "et",
+    "ut",
+    "braveries",
+    "forgone",
+    "Eulalie",
+    "Merida",
+    "pursuivants",
+    "emprise",
+    "wrapt",
+    "wreathèd",
+    "guileless",
+    "dactyls",
+    "PERISTEPHANON",
+    "HONOREM",
+    "EULALIAE",
+    "MARTYRIS",
+    "Iam",
+    "floribus"
+  ],
+  "layout": "verse",
+  "note": "Thackeray's 10-stanza selection of Prudentius, Peristephanon III (St. Eulalia), from Translations from Prudentius (London: George Bell and Sons, 1890), printed pages 120-125 (IA leaves 202-207), with Latin and English on facing pages. It is not the whole poem: a row of asterisks on pp. 122 and 123 marks the stanzas he left out. The Internet Archive identifier translationsfro00thacgoog is mislabeled in the catalog as Hilario Cuevas, Estudio práctico sobre el cultivo del café (Mexico, 1895). The files are the Harvard University Google Books scan of Thackeray 1890 (Google Books id 0zBRe61LLy0C), confirmed from the printed title page ('Translations from Prudentius ... Francis St. John Thackeray ... London: George Bell and Sons ... 1890') and from the PDF title. The catalog date and publisher are not used. English and Latin are both hosted, in the order of the scan, with verse line and stanza breaks kept as printed."
+}

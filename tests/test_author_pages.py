@@ -1,4 +1,4 @@
-"""Phase A item 2 (2026-11-03): static pages for the 454 authors with no hosted work (tools/author_pages.py).
+"""Phase A item 2 (2026-11-03): static pages for the 451 authors with no hosted work (tools/author_pages.py).
 Intro instead of the Wikipedia excerpt; reading-room works and Isidore Index books listed link-only with rights badges;
 edition guides with Bookshop.org buttons only for ISBNs in data/guide.js; official links only when checked."""
 import json,re,sys,unittest
@@ -17,7 +17,7 @@ def page(id):return (ROOT/'author'/id/'index.html').read_text()
 def main(s):return s[s.find('<main'):s.find('</main>')]
 class AuthorPages(unittest.TestCase):
     def test_counts(self):
-        self.assertEqual(len(NOH),452);self.assertEqual(len(AUTH)-len(NOH),24)
+        self.assertEqual(len(NOH),451);self.assertEqual(len(AUTH)-len(NOH),25)
     def test_intro_not_wikipedia_excerpt(self):
         for a in NOH:
             m=main(page(a['id']))

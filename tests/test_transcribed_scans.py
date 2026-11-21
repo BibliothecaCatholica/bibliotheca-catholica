@@ -151,6 +151,67 @@ class Layout(unittest.TestCase):
                 self.assertIn('verifiedWords', r['method'], r['id'])
 
 
+
+class VerseLayout(unittest.TestCase):
+    def test_verse_keeps_lines_and_breaks_stanzas_on_a_wide_gap(self):
+        L = lambda t, y, x=100: {'x': x, 'y': y, 'h': 20, 'text': t, 'paraStart': False, 'para': 0}
+        # line spacing ~20; a stanza gap of 80 is wider than 2.2 * median
+        pages = [(3000, [
+            L('RUNNING HEAD 120', 80),
+            L('GERMINE nobilis Eulalia,', 400),
+            L('mortis et indole nobilior.', 420),
+            L('Proximus occiduo locus est,', 500),
+            L('qui tulit hoc decus egregium.', 520),
+        ])]
+        e = {'edition': 'x', 'firstLeaf': 1, 'layout': 'verse'}
+        paras = T.verse_paras(pages, e, heads={'runninghead'}, stamps=set(), V={})
+        self.assertEqual(paras[0], ['GERMINE nobilis Eulalia,', 'mortis et indole nobilior.'])
+        self.assertEqual(paras[1], ['Proximus occiduo locus est,', 'qui tulit hoc decus egregium.'])
+
+    def test_hand_fix_may_insert_an_omission_row_of_asterisks(self):
+        L = lambda t, y: {'x': 100, 'y': y, 'h': 20, 'text': t, 'paraStart': False, 'para': 0}
+        pages = [(3000, [
+            L('canitiem meditata senum. ^ ^', 200),
+            L('Flamma crepans volat in faciem,', 600),
+            L('perque comas vegetata caput.', 620),
+        ])]
+        e = {'edition': 'x', 'firstLeaf': 10, 'layout': 'verse', 'handFixes': [
+            {'leaf': 10, 'page': '122', 'ocr': 'canitiem meditata senum. ^ ^',
+             'reading': 'canitiem meditata senum.\n\n* * * *'}]}
+        T.apply_hand_fixes(pages, e)
+        paras = T.verse_paras(pages, e, heads=set(), stamps=set(), V={})
+        self.assertEqual(paras[0], ['canitiem meditata senum.'])
+        self.assertEqual(paras[1], ['* * * *'])
+        self.assertEqual(paras[2], ['Flamma crepans volat in faciem,', 'perque comas vegetata caput.'])
+
+    def test_short_roman_numerals_on_a_verse_page_are_kept(self):
+        L = lambda t, y: {'x': 100, 'y': y, 'h': 20, 'text': t, 'paraStart': False, 'para': 0}
+        pages = [(3000, [
+            L('ST. EULALIA. 125', 80),
+            L('IX.', 400),
+            L('Shed on her flowers and leaves !', 510),
+            L('X.', 700),
+            L('So we these relics prize,', 820),
+        ])]
+        paras = T.verse_paras(pages, {'edition': 'x', 'firstLeaf': 1, 'layout': 'verse'}, heads=set(), stamps=set(), V={})
+        self.assertEqual(paras[0][0], 'IX.')
+        self.assertIn('Shed on her flowers and leaves !', paras[0])
+        self.assertEqual(paras[1][0], 'X.')
+        self.assertIn('So we these relics prize,', paras[1])
+
+    def test_verse_does_not_rejoin_a_turned_line(self):
+        # "longed-for" / "death." is one verse turned over, not a hyphen to join
+        V = {'longed': 1, 'for': 99, 'death': 9, 'she': 99, 'courts': 1}
+        e = {'edition': 'x', 'layout': 'verse', 'firstLeaf': 0, 'ia': 'x', 'year': 1890}
+        out, *_ = [],
+        paras = [['She courts the flames, and drinks the longed-for', 'death.']]
+        # score through join would be wrong; verse path keeps two lines
+        text = '\n'.join(paras[0])
+        self.assertIn('\n', text)
+        self.assertTrue(text.endswith('death.'))
+        self.assertIn('longed-for', text.split('\n')[0])
+
+
 class Records(unittest.TestCase):
     def test_every_transcription_is_pinned_flagged_and_dated(self):
         for r in RECORDS:

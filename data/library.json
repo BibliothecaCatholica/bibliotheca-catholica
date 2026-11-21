@@ -2659,6 +2659,41 @@
       ]
     },
     {
+      "id": "prudentius-eulalia",
+      "title": "St. Eulalia (Peristephanon III)",
+      "author": "Prudentius",
+      "authorId": "prudentius",
+      "category": "Poetry",
+      "tradition": "Catholic tradition",
+      "description": "A ten-stanza selection from Prudentius's hymn for St. Eulalia of Merida, Peristephanon III (The Martyrs' Garland), in F. St. J. Thackeray's 1890 English verse, with the Latin of those same stanzas. It is a selection, not the whole poem.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-21",
+      "date": "c. 400 (this selection from Thackeray's translation of 1890)",
+      "editions": [
+        {
+          "id": "ia-thackeray-1890-eulalia",
+          "label": "Transcription of the Internet Archive scan of F. St. J. Thackeray, Translations from Prudentius (London: George Bell and Sons, 1890), pp. 120-125, a ten-stanza selection",
+          "source": "https://archive.org/details/translationsfro00thacgoog",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Thackeray, F. St. J. (Francis St. John)"
+            }
+          ],
+          "translationYear": 1890,
+          "checked": "2026-11-21",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1890 as a ten-stanza selection in Translations from Prudentius (London: George Bell and Sons), printed pages 120-125, Latin and English on facing pages. The Internet Archive item translationsfro00thacgoog is mislabeled in the catalog as a Spanish book on coffee (Mexico, 1895); the files are the Harvard Google Books scan of Thackeray 1890 (Google Books id 0zBRe61LLy0C), confirmed from the printed title page. Transcribed by Bibliotheca Catholica from that scan: verse lines and stanza breaks kept as printed, 42 misreadings corrected by hand against the page images, and names and Latin words checked against them (100% of words read). The row of asterisks on pp. 122 and 123 is the printed mark of the stanzas Thackeray left out. Not a manual proofread.",
+          "sourceTitle": "St. Eulalia (Peristephanon III), a selection, translated by F. St. J. Thackeray (1890)",
+          "text": "data/texts/ia-thackeray-1890-eulalia.txt",
+          "sha256": "a5ed411df43e2f40a23eb2b1ae5f6b6f7bbbcd28f45bdc11333a94d1d2a87353"
+        }
+      ]
+    },
+    {
       "id": "baring-gould-lives-january",
       "title": "The Lives of the Saints: January",
       "author": "Sabine Baring-Gould",

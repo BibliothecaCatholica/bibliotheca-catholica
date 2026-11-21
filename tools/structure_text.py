@@ -83,7 +83,9 @@ for _wid, _ed in (('innocence-father-brown', 'pg-204'), ('wisdom-father-brown', 
                   # Orthodoxy flow batch 4 (November 20, 2026)
                   ('idea-university', 'pg-24526'), ('aquinas-prayer-contemplative', 'pg-22295'), ('glories-of-mary', 'pg-72411'),
                   # Councils Part 3 (November 20, 2026)
-                  ('council-of-trent', 'peo-trent-1848-r2')):
+                  ('council-of-trent', 'peo-trent-1848-r2'),
+                  # Chesterton polish batch 1 (November 21, 2026)
+                  ('everlasting-man', 'pg-65688'), ('tremendous-trifles', 'pg-8092'), ('new-jerusalem', 'pg-13468')):
     EDITIONS[(_wid, _ed)] = {'mode': 'map', 'out': 'data/structured/%s-%s.json' % (_wid, _ed)}
 
 

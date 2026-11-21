@@ -14560,6 +14560,1384 @@
     "front": [],
     "em": []
    }
+  },
+  "everlasting-man": {
+   "partD": {
+    "about": "Project Gutenberg #65688: the Hodder and Stoughton, London text, printed by T. and A. Constable. The introduction, fourteen chapters in two parts, the conclusion, and two appendices, divided as the hosted text heads them; the prefatory note and the transcriber's note stay in the reader. No words were changed.",
+    "words": 106652,
+    "minutes": 464
+   },
+   "edition": "pg-65688",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "acd5ff3cb765b1a0d203cbea0afb599bde1d94c2cd2c75d0ea369d701c64d25c",
+   "blocks": 449,
+   "items": [
+    {
+     "slug": "00-the-plan-of-this-book",
+     "num": "Introduction",
+     "title": "The Plan of This Book",
+     "heading": 42,
+     "start": 44,
+     "end": 58,
+     "section": 1,
+     "words": 4637,
+     "firstWords": "There are two ways of getting home; and one of them is",
+     "titleBlocks": [
+      43
+     ]
+    },
+    {
+     "slug": "01-the-man-in-the-cave",
+     "num": "I",
+     "title": "The Man In The Cave",
+     "heading": 61,
+     "start": 63,
+     "end": 81,
+     "section": 1,
+     "words": 7187,
+     "firstWords": "Far away in some strange constellation in skies infinitely remote, there is",
+     "titleBlocks": [
+      62
+     ],
+     "before": [
+      59,
+      60
+     ]
+    },
+    {
+     "slug": "02-professors-and-prehistoric-men",
+     "num": "II",
+     "title": "Professors And Prehistoric Men",
+     "heading": 82,
+     "start": 84,
+     "end": 98,
+     "section": 2,
+     "words": 6593,
+     "firstWords": "Science is weak about these prehistoric things in a way that has",
+     "titleBlocks": [
+      83
+     ]
+    },
+    {
+     "slug": "03-the-antiquity-of-civilisation",
+     "num": "III",
+     "title": "The Antiquity Of Civilisation",
+     "heading": 99,
+     "start": 101,
+     "end": 128,
+     "section": 2,
+     "words": 10734,
+     "firstWords": "The modern man looking at the most ancient origins has been like",
+     "titleBlocks": [
+      100
+     ]
+    },
+    {
+     "slug": "04-god-and-comparative-religion",
+     "num": "IV",
+     "title": "God And Comparative Religion",
+     "heading": 129,
+     "start": 131,
+     "end": 150,
+     "section": 3,
+     "words": 7717,
+     "firstWords": "I was once escorted over the Roman foundations of an ancient British",
+     "titleBlocks": [
+      130
+     ]
+    },
+    {
+     "slug": "05-man-and-mythologies",
+     "num": "V",
+     "title": "Man And Mythologies",
+     "heading": 151,
+     "start": 153,
+     "end": 168,
+     "section": 4,
+     "words": 6449,
+     "firstWords": "What are here called the Gods might almost alternatively be called the",
+     "titleBlocks": [
+      152
+     ]
+    },
+    {
+     "slug": "06-the-demons-and-the-philosophers",
+     "num": "VI",
+     "title": "The Demons And The Philosophers",
+     "heading": 169,
+     "start": 171,
+     "end": 198,
+     "section": 4,
+     "words": 8613,
+     "firstWords": "I have dwelt at some little length on this imaginative sort of",
+     "titleBlocks": [
+      170
+     ]
+    },
+    {
+     "slug": "07-the-war-of-the-gods-and-demons",
+     "num": "VII",
+     "title": "The War Of The Gods And Demons",
+     "heading": 199,
+     "start": 201,
+     "end": 218,
+     "section": 5,
+     "words": 5917,
+     "firstWords": "The materialist theory of history, that all politics and ethics are the",
+     "titleBlocks": [
+      200
+     ]
+    },
+    {
+     "slug": "08-the-end-of-the-world",
+     "num": "VIII",
+     "title": "The End Of The World",
+     "heading": 219,
+     "start": 221,
+     "end": 235,
+     "section": 6,
+     "words": 5986,
+     "firstWords": "I was once sitting on a summer day in a meadow in",
+     "titleBlocks": [
+      220
+     ]
+    },
+    {
+     "slug": "09-the-god-in-the-cave",
+     "num": "I",
+     "title": "The God In The Cave",
+     "heading": 238,
+     "start": 240,
+     "end": 258,
+     "section": 6,
+     "words": 6973,
+     "firstWords": "This sketch of the human story began in a cave; the cave",
+     "titleBlocks": [
+      239
+     ],
+     "before": [
+      236,
+      237
+     ]
+    },
+    {
+     "slug": "10-the-riddles-of-the-gospel",
+     "num": "II",
+     "title": "The Riddles Of The Gospel",
+     "heading": 259,
+     "start": 261,
+     "end": 274,
+     "section": 7,
+     "words": 5304,
+     "firstWords": "To understand the nature of this chapter, it is necessary to recur",
+     "titleBlocks": [
+      260
+     ]
+    },
+    {
+     "slug": "11-the-strangest-story-in-the-world",
+     "num": "III",
+     "title": "The Strangest Story In The World",
+     "heading": 275,
+     "start": 277,
+     "end": 297,
+     "section": 7,
+     "words": 6186,
+     "firstWords": "In the last chapter I have deliberately stressed what seems to be",
+     "titleBlocks": [
+      276
+     ]
+    },
+    {
+     "slug": "12-the-witness-of-the-heretics",
+     "num": "IV",
+     "title": "The Witness Of The Heretics",
+     "heading": 298,
+     "start": 300,
+     "end": 324,
+     "section": 8,
+     "words": 7384,
+     "firstWords": "Christ founded the Church with two great figures of speech; in the",
+     "titleBlocks": [
+      299
+     ]
+    },
+    {
+     "slug": "13-the-escape-from-paganism",
+     "num": "V",
+     "title": "The Escape From Paganism",
+     "heading": 325,
+     "start": 327,
+     "end": 351,
+     "section": 9,
+     "words": 7359,
+     "firstWords": "The modern missionary, with his palm-leaf hat and his umbrella, has become",
+     "titleBlocks": [
+      326
+     ]
+    },
+    {
+     "slug": "14-the-five-deaths-of-the-faith",
+     "num": "VI",
+     "title": "The Five Deaths Of The Faith",
+     "heading": 352,
+     "start": 354,
+     "end": 371,
+     "section": 10,
+     "words": 4729,
+     "firstWords": "It is not the purpose of this book to trace the subsequent",
+     "titleBlocks": [
+      353
+     ]
+    },
+    {
+     "slug": "15-the-summary-of-this-book",
+     "num": "Conclusion",
+     "title": "The Summary of This Book",
+     "heading": 372,
+     "start": 374,
+     "end": 385,
+     "section": 10,
+     "words": 3975,
+     "firstWords": "I have taken the liberty once or twice of borrowing the excellent",
+     "titleBlocks": [
+      373
+     ]
+    },
+    {
+     "slug": "16-on-prehistoric-man",
+     "num": "Appendix I",
+     "title": "On Prehistoric Man",
+     "heading": 386,
+     "start": 388,
+     "end": 388,
+     "section": 11,
+     "words": 512,
+     "firstWords": "In a sense it would be better if history were more superficial.",
+     "titleBlocks": [
+      387
+     ]
+    },
+    {
+     "slug": "17-on-authority-and-accuracy",
+     "num": "Appendix II",
+     "title": "On Authority and Accuracy",
+     "heading": 389,
+     "start": 391,
+     "end": 391,
+     "section": 11,
+     "words": 397,
+     "firstWords": "In this book, which is merely meant as a popular criticism of",
+     "titleBlocks": [
+      390
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "acd5ff3cb765b1a0d203cbea0afb599bde1d94c2cd2c75d0ea369d701c64d25c",
+    "source": "data/structured/everlasting-man-pg-65688.json",
+    "roles": [
+     [
+      42,
+      "chapter"
+     ],
+     [
+      43,
+      "heading"
+     ],
+     [
+      59,
+      "heading"
+     ],
+     [
+      60,
+      "heading"
+     ],
+     [
+      61,
+      "chapter"
+     ],
+     [
+      62,
+      "heading"
+     ],
+     [
+      82,
+      "chapter"
+     ],
+     [
+      83,
+      "heading"
+     ],
+     [
+      99,
+      "chapter"
+     ],
+     [
+      100,
+      "heading"
+     ],
+     [
+      129,
+      "chapter"
+     ],
+     [
+      130,
+      "heading"
+     ],
+     [
+      151,
+      "chapter"
+     ],
+     [
+      152,
+      "heading"
+     ],
+     [
+      169,
+      "chapter"
+     ],
+     [
+      170,
+      "heading"
+     ],
+     [
+      199,
+      "chapter"
+     ],
+     [
+      200,
+      "heading"
+     ],
+     [
+      219,
+      "chapter"
+     ],
+     [
+      220,
+      "heading"
+     ],
+     [
+      236,
+      "heading"
+     ],
+     [
+      237,
+      "heading"
+     ],
+     [
+      238,
+      "chapter"
+     ],
+     [
+      239,
+      "heading"
+     ],
+     [
+      259,
+      "chapter"
+     ],
+     [
+      260,
+      "heading"
+     ],
+     [
+      275,
+      "chapter"
+     ],
+     [
+      276,
+      "heading"
+     ],
+     [
+      298,
+      "chapter"
+     ],
+     [
+      299,
+      "heading"
+     ],
+     [
+      325,
+      "chapter"
+     ],
+     [
+      326,
+      "heading"
+     ],
+     [
+      352,
+      "chapter"
+     ],
+     [
+      353,
+      "heading"
+     ],
+     [
+      372,
+      "chapter"
+     ],
+     [
+      373,
+      "heading"
+     ],
+     [
+      386,
+      "chapter"
+     ],
+     [
+      387,
+      "heading"
+     ],
+     [
+      389,
+      "chapter"
+     ],
+     [
+      390,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "tremendous-trifles": {
+   "partD": {
+    "about": "Project Gutenberg #8092: first published in 1909. Thirty-nine essays, divided as the hosted text heads them; no words were changed.",
+    "words": 55336,
+    "minutes": 241
+   },
+   "edition": "pg-8092",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "4a0aeb920a34ee62eea9d82091ab3ea7732a031134d250c2cc97f8107f3c2311",
+   "blocks": 630,
+   "items": [
+    {
+     "slug": "01-tremendous-trifles",
+     "num": "I",
+     "title": "Tremendous Trifles",
+     "heading": 15,
+     "start": 16,
+     "end": 20,
+     "section": 0,
+     "words": 1316,
+     "firstWords": "Once upon a time there were two little boys who lived chiefly"
+    },
+    {
+     "slug": "02-a-piece-of-chalk",
+     "num": "II",
+     "title": "A Piece of Chalk",
+     "heading": 21,
+     "start": 22,
+     "end": 33,
+     "section": 0,
+     "words": 1523,
+     "firstWords": "I remember one splendid morning, all blue and silver, in the summer"
+    },
+    {
+     "slug": "03-the-secret-of-a-train",
+     "num": "III",
+     "title": "The Secret of a Train",
+     "heading": 34,
+     "start": 35,
+     "end": 41,
+     "section": 0,
+     "words": 1468,
+     "firstWords": "All this talk of a railway mystery has sent my mind back"
+    },
+    {
+     "slug": "04-the-perfect-game",
+     "num": "IV",
+     "title": "The Perfect Game",
+     "heading": 42,
+     "start": 43,
+     "end": 61,
+     "section": 1,
+     "words": 1351,
+     "firstWords": "We have all met the man who says that some odd things"
+    },
+    {
+     "slug": "05-the-extraordinary-cabman",
+     "num": "V",
+     "title": "The Extraordinary Cabman",
+     "heading": 62,
+     "start": 63,
+     "end": 71,
+     "section": 1,
+     "words": 1301,
+     "firstWords": "From time to time I have introduced into this newspaper column the"
+    },
+    {
+     "slug": "06-an-accident",
+     "num": "VI",
+     "title": "An Accident",
+     "heading": 72,
+     "start": 73,
+     "end": 82,
+     "section": 2,
+     "words": 1499,
+     "firstWords": "Some time ago I wrote in these columns an article called “The"
+    },
+    {
+     "slug": "07-the-advantages-of-having-one-leg",
+     "num": "VII",
+     "title": "The Advantages of Having One Leg",
+     "heading": 83,
+     "start": 84,
+     "end": 88,
+     "section": 2,
+     "words": 1397,
+     "firstWords": "A friend of mine who was visiting a poor woman in bereavement"
+    },
+    {
+     "slug": "08-the-end-of-the-world",
+     "num": "VIII",
+     "title": "The End of the World",
+     "heading": 89,
+     "start": 90,
+     "end": 103,
+     "section": 2,
+     "words": 1408,
+     "firstWords": "For some time I had been wandering in quiet streets in the"
+    },
+    {
+     "slug": "09-in-the-place-de-la-bastille",
+     "num": "IX",
+     "title": "In the Place de La Bastille",
+     "heading": 104,
+     "start": 105,
+     "end": 111,
+     "section": 2,
+     "words": 1279,
+     "firstWords": "On the first of May I was sitting outside a café in"
+    },
+    {
+     "slug": "10-on-lying-in-bed",
+     "num": "X",
+     "title": "On Lying in Bed",
+     "heading": 112,
+     "start": 113,
+     "end": 120,
+     "section": 3,
+     "words": 1294,
+     "firstWords": "Lying in bed would be an altogether perfect and supreme experience if"
+    },
+    {
+     "slug": "11-the-twelve-men",
+     "num": "XI",
+     "title": "The Twelve Men",
+     "heading": 121,
+     "start": 122,
+     "end": 134,
+     "section": 3,
+     "words": 1326,
+     "firstWords": "The other day, while I was meditating on morality and Mr. H."
+    },
+    {
+     "slug": "12-the-wind-and-the-trees",
+     "num": "XII",
+     "title": "The Wind and the Trees",
+     "heading": 135,
+     "start": 136,
+     "end": 151,
+     "section": 3,
+     "words": 1272,
+     "firstWords": "I am sitting under tall trees, with a great wind boiling like"
+    },
+    {
+     "slug": "13-the-dickensian",
+     "num": "XIII",
+     "title": "The Dickensian",
+     "heading": 152,
+     "start": 153,
+     "end": 177,
+     "section": 4,
+     "words": 1213,
+     "firstWords": "He was a quiet man, dressed in dark clothes, with a large"
+    },
+    {
+     "slug": "14-in-topsy-turvy-land",
+     "num": "XIV",
+     "title": "In Topsy-Turvy Land",
+     "heading": 178,
+     "start": 179,
+     "end": 186,
+     "section": 5,
+     "words": 1233,
+     "firstWords": "Last week, in an idle metaphor, I took the tumbling of trees"
+    },
+    {
+     "slug": "15-what-i-found-in-my-pocket",
+     "num": "XV",
+     "title": "What I Found in My Pocket",
+     "heading": 187,
+     "start": 188,
+     "end": 195,
+     "section": 5,
+     "words": 1264,
+     "firstWords": "Once when I was very young I met one of those men"
+    },
+    {
+     "slug": "16-the-dragon-s-grandmother",
+     "num": "XVI",
+     "title": "The Dragon’s Grandmother",
+     "heading": 196,
+     "start": 197,
+     "end": 206,
+     "section": 5,
+     "words": 1518,
+     "firstWords": "I met a man the other day who did not believe in"
+    },
+    {
+     "slug": "17-the-red-angel",
+     "num": "XVII",
+     "title": "The Red Angel",
+     "heading": 207,
+     "start": 208,
+     "end": 220,
+     "section": 5,
+     "words": 1415,
+     "firstWords": "I find that there really are human beings who think fairy tales"
+    },
+    {
+     "slug": "18-the-tower",
+     "num": "XVIII",
+     "title": "The Tower",
+     "heading": 221,
+     "start": 222,
+     "end": 230,
+     "section": 6,
+     "words": 1198,
+     "firstWords": "I have been standing where everybody has stood, opposite the great Belfry"
+    },
+    {
+     "slug": "19-how-i-met-the-president",
+     "num": "XIX",
+     "title": "How I Met the President",
+     "heading": 231,
+     "start": 232,
+     "end": 241,
+     "section": 6,
+     "words": 1567,
+     "firstWords": "Several years ago, when there was a small war going on in"
+    },
+    {
+     "slug": "20-the-giant",
+     "num": "XX",
+     "title": "The Giant",
+     "heading": 242,
+     "start": 243,
+     "end": 255,
+     "section": 6,
+     "words": 1598,
+     "firstWords": "I sometimes fancy that every great city must have been built by"
+    },
+    {
+     "slug": "21-a-great-man",
+     "num": "XXI",
+     "title": "A Great Man",
+     "heading": 256,
+     "start": 257,
+     "end": 266,
+     "section": 7,
+     "words": 1252,
+     "firstWords": "People accuse journalism of being too personal; but to me it has"
+    },
+    {
+     "slug": "22-the-orthodox-barber",
+     "num": "XXII",
+     "title": "The Orthodox Barber",
+     "heading": 267,
+     "start": 268,
+     "end": 290,
+     "section": 7,
+     "words": 1379,
+     "firstWords": "Those thinkers who cannot believe in any gods often assert that the"
+    },
+    {
+     "slug": "23-the-toy-theatre",
+     "num": "XXIII",
+     "title": "The Toy Theatre",
+     "heading": 291,
+     "start": 292,
+     "end": 304,
+     "section": 8,
+     "words": 1595,
+     "firstWords": "There is only one reason why all grown-up people do not play"
+    },
+    {
+     "slug": "24-a-tragedy-of-twopence",
+     "num": "XXIV",
+     "title": "A Tragedy of Twopence",
+     "heading": 305,
+     "start": 306,
+     "end": 312,
+     "section": 8,
+     "words": 1339,
+     "firstWords": "My relations with the readers of this page have been long and"
+    },
+    {
+     "slug": "25-a-cab-ride-across-country",
+     "num": "XXV",
+     "title": "A Cab Ride Across Country",
+     "heading": 313,
+     "start": 314,
+     "end": 326,
+     "section": 8,
+     "words": 1608,
+     "firstWords": "Sown somewhere far off in the shallow dales of Hertfordshire there lies"
+    },
+    {
+     "slug": "26-the-two-noises",
+     "num": "XXVI",
+     "title": "The Two Noises",
+     "heading": 327,
+     "start": 328,
+     "end": 340,
+     "section": 9,
+     "words": 1103,
+     "firstWords": "For three days and three nights the sea had charged England as"
+    },
+    {
+     "slug": "27-some-policemen-and-a-moral",
+     "num": "XXVII",
+     "title": "Some Policemen and a Moral",
+     "heading": 341,
+     "start": 342,
+     "end": 350,
+     "section": 9,
+     "words": 1446,
+     "firstWords": "The other day I was nearly arrested by two excited policemen in"
+    },
+    {
+     "slug": "28-the-lion",
+     "num": "XXVIII",
+     "title": "The Lion",
+     "heading": 351,
+     "start": 352,
+     "end": 361,
+     "section": 10,
+     "words": 1254,
+     "firstWords": "In the town of Belfort I take a chair and I sit"
+    },
+    {
+     "slug": "29-humanity-an-interlude",
+     "num": "XXIX",
+     "title": "Humanity: an Interlude",
+     "heading": 362,
+     "start": 363,
+     "end": 377,
+     "section": 10,
+     "words": 1724,
+     "firstWords": "Except for some fine works of art, which seem to be there"
+    },
+    {
+     "slug": "30-the-little-birds-who-won-t-sing",
+     "num": "XXX",
+     "title": "The Little Birds Who Won’t Sing",
+     "heading": 378,
+     "start": 379,
+     "end": 392,
+     "section": 10,
+     "words": 1345,
+     "firstWords": "On my last morning on the Flemish coast, when I knew that"
+    },
+    {
+     "slug": "31-the-riddle-of-the-ivy",
+     "num": "XXXI",
+     "title": "The Riddle of the Ivy",
+     "heading": 393,
+     "start": 394,
+     "end": 409,
+     "section": 11,
+     "words": 1405,
+     "firstWords": "More than a month ago, when I was leaving London for a"
+    },
+    {
+     "slug": "32-the-travellers-in-state",
+     "num": "XXXII",
+     "title": "The Travellers in State",
+     "heading": 410,
+     "start": 411,
+     "end": 422,
+     "section": 11,
+     "words": 1392,
+     "firstWords": "The other day, to my great astonishment, I caught a train; it"
+    },
+    {
+     "slug": "33-the-prehistoric-railway-station",
+     "num": "XXXIII",
+     "title": "The Prehistoric Railway Station",
+     "heading": 423,
+     "start": 424,
+     "end": 430,
+     "section": 12,
+     "words": 1331,
+     "firstWords": "A railway station is an admirable place, although Ruskin did not think"
+    },
+    {
+     "slug": "34-the-diabolist",
+     "num": "XXXIV",
+     "title": "The Diabolist",
+     "heading": 431,
+     "start": 432,
+     "end": 450,
+     "section": 12,
+     "words": 1627,
+     "firstWords": "Every now and then I have introduced into my essays an element"
+    },
+    {
+     "slug": "35-a-glimpse-of-my-country",
+     "num": "XXXV",
+     "title": "A Glimpse of My Country",
+     "heading": 451,
+     "start": 452,
+     "end": 468,
+     "section": 12,
+     "words": 1484,
+     "firstWords": "Whatever is it that we are all looking for? I fancy that"
+    },
+    {
+     "slug": "36-a-somewhat-improbable-story",
+     "num": "XXXVI",
+     "title": "A Somewhat Improbable Story",
+     "heading": 469,
+     "start": 470,
+     "end": 495,
+     "section": 13,
+     "words": 1816,
+     "firstWords": "I cannot remember whether this tale is true or not. If I"
+    },
+    {
+     "slug": "37-the-shop-of-ghosts",
+     "num": "XXXVII",
+     "title": "The Shop Of Ghosts",
+     "heading": 496,
+     "start": 497,
+     "end": 532,
+     "section": 14,
+     "words": 1650,
+     "firstWords": "Nearly all the best and most precious things in the universe you"
+    },
+    {
+     "slug": "38-the-ballade-of-a-strange-town",
+     "num": "XXXVIII",
+     "title": "The Ballade of a Strange Town",
+     "heading": 533,
+     "start": 534,
+     "end": 563,
+     "section": 15,
+     "words": 1570,
+     "firstWords": "My friend and I, in fooling about Flanders, fell into a fixed"
+    },
+    {
+     "slug": "39-the-mystery-of-a-pageant",
+     "num": "XXXIX",
+     "title": "The Mystery of a Pageant",
+     "heading": 564,
+     "start": 565,
+     "end": 578,
+     "section": 16,
+     "words": 1576,
+     "firstWords": "Once upon a time, it seems centuries ago, I was prevailed on"
+    }
+   ],
+   "structure": {
+    "sha256": "4a0aeb920a34ee62eea9d82091ab3ea7732a031134d250c2cc97f8107f3c2311",
+    "source": "data/structured/tremendous-trifles-pg-8092.json",
+    "roles": [
+     [
+      15,
+      "chapter"
+     ],
+     [
+      21,
+      "chapter"
+     ],
+     [
+      34,
+      "chapter"
+     ],
+     [
+      42,
+      "chapter"
+     ],
+     [
+      62,
+      "chapter"
+     ],
+     [
+      72,
+      "chapter"
+     ],
+     [
+      83,
+      "chapter"
+     ],
+     [
+      89,
+      "chapter"
+     ],
+     [
+      104,
+      "chapter"
+     ],
+     [
+      112,
+      "chapter"
+     ],
+     [
+      121,
+      "chapter"
+     ],
+     [
+      135,
+      "chapter"
+     ],
+     [
+      152,
+      "chapter"
+     ],
+     [
+      178,
+      "chapter"
+     ],
+     [
+      187,
+      "chapter"
+     ],
+     [
+      196,
+      "chapter"
+     ],
+     [
+      207,
+      "chapter"
+     ],
+     [
+      221,
+      "chapter"
+     ],
+     [
+      231,
+      "chapter"
+     ],
+     [
+      242,
+      "chapter"
+     ],
+     [
+      256,
+      "chapter"
+     ],
+     [
+      267,
+      "chapter"
+     ],
+     [
+      291,
+      "chapter"
+     ],
+     [
+      305,
+      "chapter"
+     ],
+     [
+      313,
+      "chapter"
+     ],
+     [
+      327,
+      "chapter"
+     ],
+     [
+      341,
+      "chapter"
+     ],
+     [
+      351,
+      "chapter"
+     ],
+     [
+      362,
+      "chapter"
+     ],
+     [
+      378,
+      "chapter"
+     ],
+     [
+      393,
+      "chapter"
+     ],
+     [
+      410,
+      "chapter"
+     ],
+     [
+      423,
+      "chapter"
+     ],
+     [
+      431,
+      "chapter"
+     ],
+     [
+      451,
+      "chapter"
+     ],
+     [
+      469,
+      "chapter"
+     ],
+     [
+      496,
+      "chapter"
+     ],
+     [
+      533,
+      "chapter"
+     ],
+     [
+      564,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "new-jerusalem": {
+   "partD": {
+    "about": "Project Gutenberg #13468: first published in 1920. Thirteen chapters and the conclusion, divided as the hosted text heads them; the preface stays in the reader. No words were changed.",
+    "words": 92490,
+    "minutes": 402
+   },
+   "edition": "pg-13468",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "630a086ebae9d340c38b56bbc6ccec4f8487b913b31681cc1fe53ebecb043a06",
+   "blocks": 370,
+   "items": [
+    {
+     "slug": "01-the-way-of-the-cities",
+     "num": "I",
+     "title": "The Way of the Cities",
+     "heading": 18,
+     "start": 20,
+     "end": 32,
+     "section": 0,
+     "words": 5532,
+     "firstWords": "It was in the season of Christmas that I came out of",
+     "titleBlocks": [
+      19
+     ]
+    },
+    {
+     "slug": "02-the-way-of-the-desert",
+     "num": "II",
+     "title": "The Way of the Desert",
+     "heading": 33,
+     "start": 35,
+     "end": 56,
+     "section": 0,
+     "words": 7216,
+     "firstWords": "It may truly be said, touching the type of culture at least,",
+     "titleBlocks": [
+      34
+     ]
+    },
+    {
+     "slug": "03-the-gates-of-the-city",
+     "num": "III",
+     "title": "The Gates of the City",
+     "heading": 57,
+     "start": 59,
+     "end": 79,
+     "section": 1,
+     "words": 6276,
+     "firstWords": "The men I met coming from Jerusalem reported all sorts of contradictory",
+     "titleBlocks": [
+      58
+     ]
+    },
+    {
+     "slug": "04-the-philosophy-of-sight-seeing",
+     "num": "IV",
+     "title": "The Philosophy of Sight-seeing",
+     "heading": 80,
+     "start": 82,
+     "end": 94,
+     "section": 2,
+     "words": 5346,
+     "firstWords": "Various cultivated critics told me that I should find Jerusalem disappointing; and",
+     "titleBlocks": [
+      81
+     ]
+    },
+    {
+     "slug": "05-the-streets-of-the-city",
+     "num": "V",
+     "title": "The Streets of the City",
+     "heading": 95,
+     "start": 97,
+     "end": 120,
+     "section": 2,
+     "words": 7813,
+     "firstWords": "When Jerusalem had been half buried in snow for two or three",
+     "titleBlocks": [
+      96
+     ]
+    },
+    {
+     "slug": "06-the-groups-of-the-city",
+     "num": "VI",
+     "title": "The Groups of the City",
+     "heading": 121,
+     "start": 123,
+     "end": 143,
+     "section": 3,
+     "words": 6742,
+     "firstWords": "Palestine is a striped country; that is the first effect of landscape",
+     "titleBlocks": [
+      122
+     ]
+    },
+    {
+     "slug": "07-the-shadow-of-the-problem",
+     "num": "VII",
+     "title": "The Shadow of the Problem",
+     "heading": 144,
+     "start": 146,
+     "end": 162,
+     "section": 4,
+     "words": 5225,
+     "firstWords": "A traveller sees the hundred branches of a tree long before he",
+     "titleBlocks": [
+      145
+     ]
+    },
+    {
+     "slug": "08-the-other-side-of-the-desert",
+     "num": "VIII",
+     "title": "The Other Side of the Desert",
+     "heading": 163,
+     "start": 165,
+     "end": 183,
+     "section": 4,
+     "words": 6940,
+     "firstWords": "There was a story in Jerusalem so true or so well told",
+     "titleBlocks": [
+      164
+     ]
+    },
+    {
+     "slug": "09-the-battle-with-the-dragon",
+     "num": "IX",
+     "title": "The Battle with the Dragon",
+     "heading": 184,
+     "start": 186,
+     "end": 204,
+     "section": 5,
+     "words": 6733,
+     "firstWords": "Lydda or Ludd has already been noted as the legendary birthplace of",
+     "titleBlocks": [
+      185
+     ]
+    },
+    {
+     "slug": "10-the-endless-empire",
+     "num": "X",
+     "title": "The Endless Empire",
+     "heading": 205,
+     "start": 207,
+     "end": 224,
+     "section": 5,
+     "words": 6536,
+     "firstWords": "One of the adventures of travel consists, not so much in finding",
+     "titleBlocks": [
+      206
+     ]
+    },
+    {
+     "slug": "11-the-meaning-of-the-crusade",
+     "num": "XI",
+     "title": "The Meaning of the Crusade",
+     "heading": 225,
+     "start": 227,
+     "end": 250,
+     "section": 6,
+     "words": 8049,
+     "firstWords": "There are three examples of Western work on the great eastern slope",
+     "titleBlocks": [
+      226
+     ]
+    },
+    {
+     "slug": "12-the-fall-of-chivalry",
+     "num": "XII",
+     "title": "The Fall of Chivalry",
+     "heading": 251,
+     "start": 253,
+     "end": 276,
+     "section": 7,
+     "words": 7807,
+     "firstWords": "On the back of this book is the name of the New",
+     "titleBlocks": [
+      252
+     ]
+    },
+    {
+     "slug": "13-the-problem-of-zionism",
+     "num": "XIII",
+     "title": "The Problem of Zionism",
+     "heading": 277,
+     "start": 279,
+     "end": 315,
+     "section": 7,
+     "words": 11490,
+     "firstWords": "There is an attitude for which my friends and I were for",
+     "titleBlocks": [
+      278
+     ]
+    },
+    {
+     "slug": "14-conclusion",
+     "num": "Conclusion",
+     "title": "Conclusion",
+     "heading": 316,
+     "start": 317,
+     "end": 318,
+     "section": 9,
+     "words": 785,
+     "firstWords": "To have worn a large scallop shell in my hat in the"
+    }
+   ],
+   "structure": {
+    "sha256": "630a086ebae9d340c38b56bbc6ccec4f8487b913b31681cc1fe53ebecb043a06",
+    "source": "data/structured/new-jerusalem-pg-13468.json",
+    "roles": [
+     [
+      18,
+      "chapter"
+     ],
+     [
+      19,
+      "heading"
+     ],
+     [
+      33,
+      "chapter"
+     ],
+     [
+      34,
+      "heading"
+     ],
+     [
+      57,
+      "chapter"
+     ],
+     [
+      58,
+      "heading"
+     ],
+     [
+      80,
+      "chapter"
+     ],
+     [
+      81,
+      "heading"
+     ],
+     [
+      95,
+      "chapter"
+     ],
+     [
+      96,
+      "heading"
+     ],
+     [
+      121,
+      "chapter"
+     ],
+     [
+      122,
+      "heading"
+     ],
+     [
+      144,
+      "chapter"
+     ],
+     [
+      145,
+      "heading"
+     ],
+     [
+      163,
+      "chapter"
+     ],
+     [
+      164,
+      "heading"
+     ],
+     [
+      184,
+      "chapter"
+     ],
+     [
+      185,
+      "heading"
+     ],
+     [
+      205,
+      "chapter"
+     ],
+     [
+      206,
+      "heading"
+     ],
+     [
+      225,
+      "chapter"
+     ],
+     [
+      226,
+      "heading"
+     ],
+     [
+      251,
+      "chapter"
+     ],
+     [
+      252,
+      "heading"
+     ],
+     [
+      277,
+      "chapter"
+     ],
+     [
+      278,
+      "heading"
+     ],
+     [
+      316,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

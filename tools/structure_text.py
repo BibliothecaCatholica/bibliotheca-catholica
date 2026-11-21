@@ -89,7 +89,9 @@ for _wid, _ed in (('innocence-father-brown', 'pg-204'), ('wisdom-father-brown', 
                   # Chesterton polish batch 2 (November 21, 2026)
                   ('charles-dickens-critical-study', 'pg-68682'), ('poet-and-lunatics', 'pga-0900711'), ('return-don-quixote', 'pga-0900401'),
                   # Chesterton polish batch 3 (November 21, 2026)
-                  ('william-cobbett', 'pga-0900441'), ('robert-louis-stevenson-1927', 'pga-0900631'), ('irish-impressions', 'pg-61758')):
+                  ('william-cobbett', 'pga-0900441'), ('robert-louis-stevenson-1927', 'pga-0900631'), ('irish-impressions', 'pg-61758'),
+                  # Chesterton polish batch 4 (November 21, 2026)
+                  ('napoleon-notting-hill', 'pg-20058'), ('victorian-age-literature', 'pg-18639'), ('four-faultless-felons', 'pga-0300781')):
     EDITIONS[(_wid, _ed)] = {'mode': 'map', 'out': 'data/structured/%s-%s.json' % (_wid, _ed)}
 
 

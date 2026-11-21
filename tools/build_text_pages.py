@@ -82,6 +82,10 @@ PART_D={
     'william-cobbett':{'about':'Project Gutenberg Australia #0900441: first published in 1925. Seven chapters, divided as the hosted text heads them; no words were changed.'},
     'robert-louis-stevenson-1927':{'about':'Project Gutenberg Australia #0900631: first published in 1927. Ten chapters, divided as the hosted text heads them; no words were changed.'},
     'irish-impressions':{'about':'Project Gutenberg #61758: first published in 1919; the transcribed copy is the second impression (Collins, London, January 1920). Nine chapters, divided as the hosted text heads them; no words were changed.'},
+    # Chesterton polish batch 4 (November 21, 2026). Each sentence restates the edition's record and its map.
+    'napoleon-notting-hill':{'about':'Project Gutenberg #20058: first published in 1904; the transcribed copy is the John Lane: The Bodley Head printing of 1904. Fifteen chapters in five books, divided as the hosted text heads them; the dedication and the list of illustrations stay in the reader. No words were changed.'},
+    'victorian-age-literature':{'about':'Project Gutenberg #18639: first published in 1913; the transcribed copy is a Home University Library printing (New York and London). Four chapters, divided as the hosted text heads them; no words were changed.'},
+    'four-faultless-felons':{'about':'Project Gutenberg Australia #0300781: first published in 1930. The prologue and four stories of six chapters each, divided as the hosted text heads them; no words were changed.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

@@ -28,7 +28,7 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 19, 2026, `main` after PR #74 (`0384057ebf`):
 
-- 200 work records; 135 hosted editions of 130 works in `data/library.json` (215 editions in all, 3 retired); 37 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 200 work records; 136 hosted editions of 131 works in `data/library.json` (215 editions in all, 3 retired); 37 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,327 sitemap URLs; 8,132 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 127 Node and 337 Python.
 

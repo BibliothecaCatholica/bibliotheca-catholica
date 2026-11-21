@@ -1,0 +1,38 @@
+{
+  "id": "cc-pl24-1845-isaiah-prologue",
+  "kind": "collation",
+  "method": "Corpus Corporum clean text (idno 7170, section 7170:1), cross-checked against the Latin Wikisource raw page, then collated word for word against the 1845 Migne PL 24 scan.",
+  "workId": "jerome-isaiah-prologue",
+  "source": "https://mlat.uzh.ch/?text=7170",
+  "sourceDisplay": "https://mlat.uzh.ch/php_modules/display_text.php?ajax=true&path=7170:1",
+  "teiDownload": "https://mlat.uzh.ch/php_modules/download.php?idno=7170&type=file-xml",
+  "crossCheck": "https://la.wikisource.org/w/index.php?title=Commentaria_in_Isaiam_(Hieronymus)/pro&action=raw",
+  "year": 1845,
+  "publisher": "Paris: J. P. Migne, Petit-Montrouge",
+  "rightsBasis": "pd-date",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+  "sha256": "b3376e7f0efab33ba56bac20d06b8493305de71df393dbb268d7d5de5d0dfd19",
+  "text": "data/texts/cc-pl24-1845-isaiah-prologue.txt",
+  "language": "Latin",
+  "scope": "Prologue only (PL 24, columns 17-22). Liber I and the rest of the commentary are not hosted. The editor's preface and the Maurist/Martianay footnotes printed on these pages are omitted.",
+  "collation": {
+    "witness": "Internet Archive item PatrologiaLatina, file Patrologia Latina Vol. 24.pdf",
+    "url": "https://archive.org/details/PatrologiaLatina",
+    "pdf": "https://archive.org/download/PatrologiaLatina/Patrologia%20Latina%20Vol.%2024.pdf",
+    "titlePageYear": 1845,
+    "columns": "17-22",
+    "pdfPages": "13-15",
+    "agreement": 1.0,
+    "wordVariants": [],
+    "notes": [
+      "The collection catalog and the printed title page both give Paris, 1845 (Patrologiae tomus XXIV, S. Hieronymi tomus quartus).",
+      "Ligatures (sanctae, praesentia, and the rest) were expanded to ae, as in Corpus Corporum and Wikisource.",
+      "French typographic spaces before colons, semicolons, and question marks were normalized to ordinary spacing, as in Corpus Corporum and Wikisource.",
+      "In-text scripture citations are kept as printed, including Matth. VII, 76 and II Cor. I, 24.",
+      "No English translation is hosted: none published before 1931 is known."
+    ],
+    "checks": "Compared word for word with the 1845 Migne scan of Patrologia Latina volume 24, columns 17-22 (Internet Archive item PatrologiaLatina, PDF pages 13-15): 100% agreement; no wording differences were found. Ligatures were expanded and punctuation spacing was normalized. The editor's footnotes were omitted."
+  },
+  "checked": "2026-11-21",
+  "title": "Commentariorum in Isaiam prophetam Prologus (Migne, Patrologia Latina 24, 1845)"
+}

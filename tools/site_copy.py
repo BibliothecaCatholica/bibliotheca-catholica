@@ -91,7 +91,7 @@ def art_figure(key):
     f, canto, url, w, h, alt = PAGE_ART[key]
     return ('<figure class="page-art"><img src="/assets/hero/' + f + '-640.webp" srcset="/assets/hero/' + f + '-360.webp 360w, '
             '/assets/hero/' + f + '-640.webp 640w" sizes="(max-width: 720px) 100vw, 460px" width="640" height="' + str(round(h * 640 / w))
-            + '" decoding="async" alt="' + E(alt) + '"><figcaption class="art-credit">' + art_credit(key) + '</figcaption></figure>')
+            + '" decoding="async" alt="' + E(alt) + '"><figcaption class="art-credit"><a href="/credits/#art-' + key + '">Image credits</a></figcaption></figure>')
 def with_art(key, html_):
     """Puts a section's engraving into its first .page-head; the same rule as withPageArt() in app.js."""
     if key not in PAGE_ART or '<div class="page-head">' not in html_:

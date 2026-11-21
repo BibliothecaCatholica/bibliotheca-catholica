@@ -29,6 +29,7 @@ class SourceNotices(unittest.TestCase):
             'https://ebible.org/engDRA/': ('ebible', 'eBible.org record', 'eBible.org'),
             'https://www.papalencyclicals.net/councils/trent.htm': ('peo', 'Papal Encyclicals Online record', 'Papal Encyclicals Online'),
             'https://gutenberg.net.au/ebooks03/0300781h.html': ('pga', 'Project Gutenberg Australia record', 'Project Gutenberg Australia'),
+            'https://mlat.uzh.ch/?text=7170': ('mlat', 'Corpus Corporum record', 'Corpus Corporum'),
         }
         for src, (kind, label, needle) in cases.items():
             with self.subTest(src=src):
@@ -59,6 +60,7 @@ class SourceNotices(unittest.TestCase):
             ('PEO_NOTICE', N.PEO_NOTICE),
             ('PGA_NOTICE', N.PGA_NOTICE),
             ('GENERIC_NOTICE', N.GENERIC_NOTICE),
+            ('MLAT_NOTICE', N.MLAT_NOTICE),
             ('SE_NOTICE', N.SE_NOTICE),
         ):
             compact = ' '.join(val.split())

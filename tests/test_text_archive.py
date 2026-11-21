@@ -40,6 +40,12 @@ class TextArchiveTests(unittest.TestCase):
                     if record['rights'].startswith('Public domain in the USA.') and record.get('rightsBasis', 'pd-date') == 'pd-date':
                         # the dated scan's year, or the year printed in the text under an owner-approved scan exception
                         self.assertTrue(pd_by_date(record['iaWitness']['year'] if 'iaWitness' in record else record['scanException']['yearInText']))
+                elif record.get('kind') == 'collation':  # Jerome, Isaiah prologue: Corpus Corporum / Migne PL 24
+                    self.assertTrue(record['rights'].startswith('Public domain in the USA.'))
+                    self.assertEqual(record['sha256'], entry['sha256'])
+                    self.assertEqual(record['year'], 1845)
+                    self.assertTrue(pd_by_date(record['year']))
+                    self.assertEqual(record['collation']['agreement'], 1.0)
                 else:
                     self.assertEqual(['Public domain in the USA.'], record['metadata']['Copyright'])
             exported = {e['editionId'] for e in manifest['documents']}

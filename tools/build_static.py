@@ -573,7 +573,7 @@ def summa_pages(out,lib):
 def hosted_ed(w):return next((e for e in w['editions'] if e.get('text')),None)
 def cover_img(e,cls,wd,lazy=True):
     if not e or not (ROOT/'assets/covers'/(e['id']+'.webp')).exists():return ''
-    return '<img class="'+cls+'" src="/assets/covers/'+E(e['id'])+'.webp" width="'+str(wd)+'" height="'+str(round(wd*1.5))+'"'+(' loading="lazy"' if lazy else '')+' decoding="async" alt="">'
+    return '<img class="'+cls+'" src="/assets/covers/'+E(e['id'])+'.webp" width="'+str(wd)+'" height="'+str(round(wd*1.5))+'"'+(' loading="lazy"' if lazy else '')+' decoding="async" alt="" aria-hidden="true">'
 def facts_words(n):return 'about '+format(int(n/1000+0.5)*1000,',')+' words'
 def facts_time(m):
     m=int(m/10+0.5)*10;h,r=divmod(m,60)  # half up, as Math.round in scripts/library.js
@@ -757,7 +757,25 @@ def main():
         if langs:book['inLanguage']=langs[0] if len(langs)==1 else langs
         if hosted:book['isAccessibleForFree']=True
         md=fit([w['title']+' by '+w['author']+':',d.rstrip('.')+'.'],(('Read it free online, with source and rights notes.','Read it free online.') if hosted else ('Editions and sources, with rights notes.','Editions and sources.'),)+DESC_EXTRA)
+        if w['id']=='jerome-isaiah-prologue':
+            body=body.replace('<h2>Reading editions &amp; sources</h2>',
+                '<p>This is the Latin prologue only. No English translation published before 1931 is known, so none is hosted here. The line <i lang="la">ignoratio Scripturarum, ignoratio Christi est</i> has a stable page at '+a('/work/jerome-isaiah-prologue/ignoratio-scripturarum/','/work/jerome-isaiah-prologue/ignoratio-scripturarum/')+'.</p>'
+                +'<h2>Reading editions &amp; sources</h2>')
         out['work/'+w['id']]=(w['title']+' · Bibliotheca Catholica',md,body,[book,crumbs(('Discover & Read','library/'),(w['title'],'work/'+w['id']+'/'))])
+    # Stable Media URL for Jerome's line (a path, not a hash fragment: the app router would swallow a fragment).
+    if 'jerome-isaiah-prologue' in libw:
+        jw=libw['jerome-isaiah-prologue']; je=next(x for x in jw['editions'] if x.get('text'))
+        quote='ignoratio Scripturarum, ignoratio Christi est'
+        passage='Si enim juxta apostolum Paulum (II Cor. I, 24) Christus Dei virtus est, Deique sapientia; et qui nescit Scripturas, nescit Dei virtutem ejusque sapientiam: ignoratio Scripturarum, ignoratio Christi est.'
+        jbody=(crumb_html(('Discover & Read','library/'),(jw['title'],'work/jerome-isaiah-prologue/'),(quote,''))
+            +head('A line from Jerome',quote+'.','From the prologue to the Commentary on Isaiah, in the 1845 Migne Latin text.')
+            +'<p>Jerome is writing to Eustochium at the opening of his commentary on Isaiah. After recalling Christ as the power and wisdom of God, he adds:</p>'
+            +'<blockquote><p lang="la">'+E(passage)+'</p></blockquote>'
+            +'<p>The sentence stands in the '+a('/work/jerome-isaiah-prologue/','work page')+' and in the full prologue, which you can '+a('/#/read/'+jw['id']+'/'+je['id'],'read here')+'. This page exists so the line has a stable URL that does not use a hash fragment.</p>'
+            +'<p>Latin only. No English translation published before 1931 is known, so none is hosted here.</p>'
+            +'<p>'+a('/work/jerome-isaiah-prologue/','Commentary on Isaiah, Prologue')+' · '+a('/library/','Selected library')+'</p>')
+        jd=fit([quote+".","A line from the prologue to Jerome's Commentary on Isaiah, in the 1845 Migne Latin text."],(("Read the Latin sentence in context, with a link to the full prologue.","The Latin sentence, with a link to the full prologue."),))
+        out['work/jerome-isaiah-prologue/ignoratio-scripturarum']=(quote+' · Bibliotheca Catholica',jd,jbody,[crumbs(('Discover & Read','library/'),(jw['title'],'work/jerome-isaiah-prologue/'),(quote,'work/jerome-isaiah-prologue/ignoratio-scripturarum/'))])
     def ed_related(ed):
         r=[]
         if ed.get('aid') in auth_ids:r.append('Author: '+a('/author/'+ed['aid']+'/',ed.get('a') or ed['aid']))
@@ -832,6 +850,7 @@ def main():
             extra=(extra or '')+study_partner.ask_block(k)
         intro='<p class="section-intro">'+E(INTRO[k])+'</p>' if k in INTRO else ''
         if k=='magisterium':intro=councils_page.MAGISTERIUM_LINK+intro  # the councils, first on the page (2026-11-17)
+        if k=='support':intro+='<p>Support is a gift.</p>'
         out[k]=(t+' · Bibliotheca Catholica',fit([d],DESC_EXTRA),site_copy.with_art(k,head('Bibliotheca Catholica',t,d))+intro+extra,[crumbs((t,k+'/'))])
     if flags.get('policy_html'):
         out['policy']=('Fidelity & Editorial Policy · Bibliotheca Catholica','Bibliotheca Catholica is faithful to the Magisterium. Listing is not endorsement; flagged records carry calm context notes. Privacy and how to report a concern.',flags['policy_html'],[crumbs(('Fidelity & Editorial Policy','policy/'))])

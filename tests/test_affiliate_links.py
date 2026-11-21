@@ -281,8 +281,8 @@ class AffiliateLinkTests(unittest.TestCase):
         html = main_of(self.pages['disclosure/index.html'])
         para = html[html.index('<h2>Magisterium AI</h2>'):]
         para = para[:para.index('</p>')]
-        for href in ('/libraries/', '/magisterium/', '/councils/', '/summa/', '/study/'):
-            self.assertIn('href="' + href + '"', para)
+        self.assertIn('Those links appear in Ask Magisterium AI prompts and a few library and reference pages.', para)
+        self.assertIn('The referral does not appear on author pages, chapter or reading pages, or in the header or footer.', para)
         self.assertIn(MAG, para)
 
     def test_agents_md_rules(self):

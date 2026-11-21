@@ -46,6 +46,7 @@ class Covers(unittest.TestCase):
     def test_covers_are_used(self):
         work = (ROOT / 'work/orthodoxy/index.html').read_text()
         self.assertIn('<img class="work-cover" src="/assets/covers/pg-130.webp"', work)
+        self.assertIn('alt="" aria-hidden="true"', work)
         self.assertIn('<meta property="og:image" content="https://bibliothecacatholica.com/assets/covers/pg-130-og.jpg">', work)
         ch = (ROOT / 'work/orthodoxy/ch/04-the-ethics-of-elfland/index.html').read_text()
         self.assertIn('assets/covers/pg-130-og.jpg', ch)
@@ -55,6 +56,7 @@ class Covers(unittest.TestCase):
         lib = (ROOT / 'scripts/library.js').read_text()
         self.assertIn("coverImg(local,'wrow-cover',48)", lib)
         self.assertIn("coverImg(hosted,'work-cover',220)", lib)
+        self.assertIn('alt="" aria-hidden="true"', lib)
         self.assertIn('pa-cover', (ROOT / 'scripts/reader.js').read_text())
         self.assertIn('properties="cover-image"', (ROOT / 'tools/build_epub.py').read_text())
 

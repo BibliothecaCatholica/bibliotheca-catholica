@@ -256,7 +256,7 @@ class AffiliateLinkTests(unittest.TestCase):
         sc = jsvar('data/site-copy.js', 'SITE_COPY')
         self.assertEqual(sc['studyPartner'], SP.panel('magisterium'))
         app = (ROOT / 'app.js').read_text(encoding='utf-8')
-        self.assertIn("(k==='magisterium'?(SC.studyPartner||''):'')+((SC.studyAsks&&SC.studyAsks[k])||'')", app)
+        self.assertIn("<div id=\"rs-out\"></div>'+(k==='references'?(SC.referencesSaintsCredit||''):'')+(k==='magisterium'?(SC.studyPartner||''):'')+((SC.studyAsks&&SC.studyAsks[k])||'')", app)
         # never hard-coded: the URL lives only in data/affiliates.js (and the pages built from it)
         for f in list((ROOT / 'tools').glob('*.py')) + [ROOT / 'app.js'] + list((ROOT / 'scripts').glob('*.js')):
             self.assertNotIn(MAG, f.read_text(encoding='utf-8'), f.name)
@@ -291,7 +291,8 @@ class AffiliateLinkTests(unittest.TestCase):
         self.assertIn('Those links appear on these pages:', para)
         self.assertIn('The referral does not appear on author pages, chapter or reading pages, or in the header or footer.', para)
         for href in ('/', '/scripture/', '/libraries/', '/magisterium/', '/councils/', '/summa/', '/study/',
-                     '/saints/', '/doctors/', '/prayers/', '/about/magisterium-ai/', '/work/confessions/', '/work/orthodoxy/'):
+                     '/saints/', '/saints/calendar/', '/doctors/', '/prayers/', '/about/magisterium-ai/',
+                     '/work/confessions/', '/work/orthodoxy/'):
             self.assertIn('href="' + href + '"', para, href)
         self.assertIn('Readers who subscribe to Magisterium AI through our links currently receive 25% off, and Bibliotheca Catholica earns a commission (currently 10%) on those subscriptions, at no extra cost to you. Magisterium AI does not endorse or control Bibliotheca Catholica.', para)
         self.assertIn(MAG, para)

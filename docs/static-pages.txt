@@ -629,6 +629,7 @@ saints/barbara/index.html
 saints/bernadette-soubirous/index.html
 saints/blaise-of-sebaste/index.html
 saints/books/index.html
+saints/calendar/index.html
 saints/calendar/01-01/index.html
 saints/calendar/01-02/index.html
 saints/calendar/01-03/index.html

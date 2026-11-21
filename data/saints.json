@@ -470,7 +470,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/12/07.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "12-07",
+     "rank": "Memorial",
+     "title": "Saint Ambrose, Bishop and Doctor of the Church",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "12-07",
@@ -586,7 +592,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/11/30.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "11-30",
+     "rank": "Feast",
+     "title": "Saint Andrew, Apostle",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "11-30"
@@ -1283,7 +1295,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/01/02.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "01-02",
+     "rank": "Memorial",
+     "title": "Saints Basil the Great and Gregory Nazianzen, Bishops and Doctors of the Church",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "01-02",
@@ -2445,7 +2463,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/11/23.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "11-23",
+     "rank": "Optional Memorial",
+     "title": "Saint Clement I, Pope and Martyr",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "11-23"
@@ -3397,7 +3421,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/01/24.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "01-24",
+     "rank": "Memorial",
+     "title": "Saint Francis de Sales, Bishop and Doctor of the Church",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "01-24"
@@ -3600,7 +3630,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/12/03.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "12-03",
+     "rank": "Memorial",
+     "title": "Saint Francis Xavier, Priest",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "12-03"
@@ -3997,7 +4033,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/01/02.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "01-02",
+     "rank": "Memorial",
+     "title": "Saints Basil the Great and Gregory Nazianzen, Bishops and Doctors of the Church",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "01-02",
@@ -5880,7 +5922,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/12/04.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "12-04",
+     "rank": "Optional Memorial",
+     "title": "Saint John of Damascus, Priest and Doctor of the Church",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "12-04"
@@ -5938,7 +5986,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/12/14.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "12-14",
+     "rank": "Memorial",
+     "title": "Saint John of the Cross, Priest and Doctor of the Church",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "12-14"
@@ -6068,7 +6122,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/12/27.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "12-27",
+     "rank": "Feast",
+     "title": "Saint John, Apostle and Evangelist",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "12-26",
@@ -6334,7 +6394,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/12/09.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "12-09",
+     "rank": "Optional Memorial",
+     "title": "Saint Juan Diego Cuauhtlatoatzin",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "12-09"
@@ -7012,7 +7078,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/12/13.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "12-13",
+     "rank": "Memorial",
+     "title": "Saint Lucy, Virgin and Martyr",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "12-13"
@@ -7780,7 +7852,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/12/06.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "12-06",
+     "rank": "Optional Memorial",
+     "title": "Saint Nicholas, Bishop",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "05-22",
@@ -8258,7 +8336,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/12/21.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "12-21",
+     "rank": "Optional Memorial",
+     "title": "Saint Peter Canisius, Priest and Doctor of the Church",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "04-27",
@@ -9849,7 +9933,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/12/26.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "12-26",
+     "rank": "Feast",
+     "title": "Saint Stephen, The First Martyr",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "12-26",
@@ -10152,7 +10242,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/01/28.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "01-28",
+     "rank": "Memorial",
+     "title": "Saint Thomas Aquinas, Priest and Doctor of the Church",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "01-28",
@@ -10212,8 +10308,9 @@
     "source_url": "https://www.wikidata.org/wiki/Q192236#P569"
    },
    "died": {
-    "year": 1171,
-    "source_url": "https://www.wikidata.org/wiki/Q192236#P570"
+    "year": 1170,
+    "source_url": "https://www.newadvent.org/cathen/14676a.htm",
+    "note": "Murdered in Canterbury Cathedral on 29 December 1170."
    },
    "feasts": {
     "vatican_news": [
@@ -10223,7 +10320,13 @@
       "source_url": "https://www.vaticannews.va/en/saints/12/29.html"
      }
     ],
-    "general_roman_calendar": null,
+    "general_roman_calendar": {
+     "date": "12-29",
+     "rank": "Optional Memorial",
+     "title": "Saint Thomas Becket, Bishop and Martyr",
+     "checked": "2026-11-21",
+     "source_url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+    },
     "other_wikidata": {
      "dates": [
       "12-29"

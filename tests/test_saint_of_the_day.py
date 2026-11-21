@@ -61,7 +61,7 @@ class SaintOfTheDayTests(unittest.TestCase):
         self.assertIn('Circumcision', p['note'])
         self.assertIn('left unchanged', p['note'])
         names = [o['name'] for o in self.days['01-01']['observances']]
-        self.assertTrue(any('Circumcision' in n for n in names))
+        self.assertFalse(any('Circumcision' in n for n in names))
         cites = ' '.join(self.days['01-01']['readings']['citations'])
         self.assertIn('Nm 6:22-27', cites)
         self.assertIn('Lk 2:16-21', cites)

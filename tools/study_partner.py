@@ -7,7 +7,8 @@ Owner-approved placements of 19 November 2026 remain: /libraries/ (its own wordi
 /magisterium/, /councils/, the /summa/ landing page, /study/, and /disclosure/. Owner-approved draft of
 21 November 2026 adds Ask blocks on the home page, /scripture/, /saints/ (the index only), /doctors/, and
 /prayers/; Ask-about-this-book questions on selected work pages; Ask buttons beside vatican.va links on
-Church Documents; and /about/magisterium-ai/. The Advent plan and data/advent-2026.json are left untouched
+Church Documents; and /about/magisterium-ai/. A short mention appears on /saints/calendar/ only (owner option A,
+November 21, 2026); day pages stay facts-only. The Advent plan and data/advent-2026.json are left untouched
 until the freeze ends on 24 December 2026. The referral never appears in the header, the footer, author
 pages, or chapter or reading pages.
 
@@ -17,7 +18,7 @@ import html, json, re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];E=html.escape
 # route -> where the link appears; 'disclosure' only describes it
-PAGES=('libraries','magisterium','councils','summa','study','disclosure','scripture','saints','doctors','prayers','about/magisterium-ai')
+PAGES=('libraries','magisterium','councils','summa','study','disclosure','scripture','saints','doctors','prayers','about/magisterium-ai','saints/calendar')
 PANEL_ROUTES=('magisterium','councils','summa','study')
 ASK_ROUTES=('home','scripture','saints','doctors','prayers')
 BOOK_WORKS=('confessions','orthodoxy','dei-verbum','lumen-gentium','sacrosanctum-concilium','gaudium-spes','council-of-trent')
@@ -260,16 +261,24 @@ def support_note():
     name,_=partner()
     return ('<h2 class="sup-h">Tools we support</h2><p class="sup-tools">We recommend '+E(name)+', a research tool that answers questions about '
             'Catholic teaching with citations to Church documents, on the '
-            '<a href="/magisterium/">Church Documents</a>, <a href="/councils/">Ecumenical Councils</a>, <a href="/summa/">Summa</a>, and '
-            '<a href="/study/">Study desk</a> pages, and in short Ask prompts on other section pages. A Pro subscription is paid to '+E(name)+' and is not a donation to the library; '
+            '<a href="/magisterium/">Church Documents</a>, <a href="/councils/">Ecumenical Councils</a>, <a href="/summa/">Summa</a>, '
+            '<a href="/study/">Study desk</a>, and <a href="/saints/calendar/">Saints calendar</a> pages, and in short Ask prompts on other section pages. A Pro subscription is paid to '+E(name)+' and is not a donation to the library; '
             'if you subscribe through our link, we earn a commission (<a href="/disclosure/">details</a>). '
             'The only way to donate is PayPal, above. '+a_why()+'</p>')
 def a_why():
     return '<a href="'+E(WHY_HREF)+'">'+E(WHY_LABEL)+'</a>.'
+def calendar_mention():
+    """A short affiliate mention for the saints calendar index only (owner option A, 2026-11-21)."""
+    name,url=partner()
+    return ('<p class="cal-affiliate">Some research for this calendar used '
+            '<a href="'+E(url)+'" target="_blank" rel="noopener sponsored">'+E(name)+'</a> '
+            'to help find gaps in the list. Dates and facts were then checked against the General Roman Calendar '
+            'and standard reference works. We are independent and are not endorsed by '+E(name)+'.</p>'
+            +disclosure_line())
 def disclosure_pages_html(a):
     """The /disclosure/ sentence naming every page that carries the link (a(href,label) builds each link)."""
     names=[('/', 'the home page'),('/scripture/','Sacred Scripture'),('/magisterium/','Church Documents'),('/councils/','Ecumenical Councils'),
-           ('/summa/','Summa Theologiae'),('/study/','Study desk'),('/saints/','Saints'),('/doctors/','Doctors of the Church'),
+           ('/summa/','Summa Theologiae'),('/study/','Study desk'),('/saints/','Saints'),('/saints/calendar/','Saints calendar'),('/doctors/','Doctors of the Church'),
            ('/prayers/','Prayers & Devotions'),('/libraries/','Digital Libraries'),(WHY_HREF, WHY_LABEL)]
     links=[a(h,t) for h,t in names]
     works='selected work pages, including '+a('/work/confessions/','Confessions')+', '+a('/work/orthodoxy/','Orthodoxy')+', and the hosted council documents'

@@ -10,7 +10,7 @@
  *              which redirects to /pro?via=micah; 25% off Pro, 10% commission; checked 2026-11-19).
  *              Shown in Ask Magisterium AI prompts and buttons on the home page, /scripture/, /saints/,
  *              /doctors/, /prayers/, /libraries/, /magisterium/, /councils/, the /summa/ landing page, /study/,
- *              /about/magisterium-ai/, and selected work pages. It does not appear on author, chapter, or
+ *              /about/magisterium-ai/, /saints/calendar/, and selected work pages. It does not appear on author, chapter, or
  *              reading pages, or in the header or footer.
  *  line        The one-line FTC disclosure beside affiliate links, once per page, followed by a "Details" link to
  *              /disclosure/ (owner rule 7, November 14, 2026).

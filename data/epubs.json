@@ -61,6 +61,12 @@
    "sha256": "179708dce392787051b383183749ba500c7045a440888a7dc78cf1cbfe8838d5",
    "size": 182205
   },
+  "pg-68682": {
+   "work": "charles-dickens-critical-study",
+   "path": "downloads/epub/charles-dickens-critical-study-pg-68682.bdd800b48564.epub",
+   "sha256": "bdd800b485646db696c853752aae03a9b874b2e02d00dd7c84095a0f1dd65f05",
+   "size": 424391
+  },
   "pg-63084": {
    "work": "chesterton-francis",
    "path": "downloads/epub/chesterton-francis-pg-63084.c40e71bc560d.epub",
@@ -192,6 +198,18 @@
    "path": "downloads/epub/paradoxes-catholicism-pg-16309.e26d9ae5c717.epub",
    "sha256": "e26d9ae5c717ff2f4f00bb5f2400e7d00a9641743f04fa3c3347e7a1471dde8f",
    "size": 241637
+  },
+  "pga-0900711": {
+   "work": "poet-and-lunatics",
+   "path": "downloads/epub/poet-and-lunatics-pga-0900711.b7e47679c45a.epub",
+   "sha256": "b7e47679c45ae85b83de0225877eb42314cc25c538f9e78f234ce14349215d9a",
+   "size": 399862
+  },
+  "pga-0900401": {
+   "work": "return-don-quixote",
+   "path": "downloads/epub/return-don-quixote-pga-0900401.bbdb17c9b8a3.epub",
+   "sha256": "bbdb17c9b8a33849d82642e98581acb3d89c46f9c30b848ba10be844774d5ceb",
+   "size": 460239
   },
   "pg-52958": {
    "work": "revelations-divine-love",

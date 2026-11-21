@@ -38,7 +38,9 @@ class PartD(unittest.TestCase):
                                            # Councils Part 3, November 20, 2026
                                            'council-of-trent',
                                            # Chesterton polish batch 1 (November 21, 2026)
-                                           'everlasting-man', 'tremendous-trifles', 'new-jerusalem'})
+                                           'everlasting-man', 'tremendous-trifles', 'new-jerusalem',
+                                           # Chesterton polish batch 2 (November 21, 2026)
+                                           'charles-dickens-critical-study', 'poet-and-lunatics', 'return-don-quixote'})
         for wid, d in TP.items():
             self.assertIn('partD', d, wid)
             self.assertEqual(d['partD']['words'], sum(x['words'] for x in d['items']))

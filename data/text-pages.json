@@ -15938,6 +15938,747 @@
     "front": [],
     "em": []
    }
+  },
+  "charles-dickens-critical-study": {
+   "partD": {
+    "about": "Project Gutenberg #68682: first published in 1906; the transcribed copy is the Dodd, Mead & Company, New York printing of 1911. Twelve chapters, divided as the hosted text heads them; no words were changed.",
+    "words": 66835,
+    "minutes": 291
+   },
+   "edition": "pg-68682",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "b4dbd0d84e30b47b64c300caa417b74ffa2f2cc12a592216352b6cad47897e65",
+   "blocks": 361,
+   "items": [
+    {
+     "slug": "01-the-dickens-period",
+     "num": "I",
+     "title": "The Dickens Period",
+     "heading": 44,
+     "start": 46,
+     "end": 67,
+     "section": 1,
+     "words": 5082,
+     "firstWords": "Much of our modern difficulty, in religion and other things, arises merely",
+     "titleBlocks": [
+      45
+     ]
+    },
+    {
+     "slug": "02-the-boyhood-of-dickens",
+     "num": "II",
+     "title": "The Boyhood of Dickens",
+     "heading": 68,
+     "start": 70,
+     "end": 85,
+     "section": 1,
+     "words": 4242,
+     "firstWords": "Charles Dickens was born at Landport, in Portsea, on February 7, 1812.",
+     "titleBlocks": [
+      69
+     ]
+    },
+    {
+     "slug": "03-the-youth-of-dickens",
+     "num": "III",
+     "title": "The Youth of Dickens",
+     "heading": 86,
+     "start": 88,
+     "end": 107,
+     "section": 2,
+     "words": 6337,
+     "firstWords": "There are popular phrases so picturesque that even when they are intentionally",
+     "titleBlocks": [
+      87
+     ]
+    },
+    {
+     "slug": "04-the-pickwick-papers",
+     "num": "IV",
+     "title": "“the Pickwick Papers”",
+     "heading": 108,
+     "start": 110,
+     "end": 128,
+     "section": 3,
+     "words": 6485,
+     "firstWords": "Round the birth of “Pickwick” broke one of those literary quarrels that",
+     "titleBlocks": [
+      109
+     ]
+    },
+    {
+     "slug": "05-the-great-popularity",
+     "num": "V",
+     "title": "The Great Popularity",
+     "heading": 129,
+     "start": 131,
+     "end": 150,
+     "section": 3,
+     "words": 6041,
+     "firstWords": "There is one aspect of Charles Dickens which must be of interest",
+     "titleBlocks": [
+      130
+     ]
+    },
+    {
+     "slug": "06-dickens-and-america",
+     "num": "VI",
+     "title": "Dickens and America",
+     "heading": 151,
+     "start": 153,
+     "end": 172,
+     "section": 4,
+     "words": 6117,
+     "firstWords": "The essential of Dickens’s character was the conjunction of common sense with",
+     "titleBlocks": [
+      152
+     ]
+    },
+    {
+     "slug": "07-dickens-and-christmas",
+     "num": "VII",
+     "title": "Dickens and Christmas",
+     "heading": 173,
+     "start": 175,
+     "end": 195,
+     "section": 4,
+     "words": 5685,
+     "firstWords": "In the July of 1844 Dickens went on an Italian tour, which",
+     "titleBlocks": [
+      174
+     ]
+    },
+    {
+     "slug": "08-the-time-of-transition",
+     "num": "VIII",
+     "title": "The Time of Transition",
+     "heading": 196,
+     "start": 198,
+     "end": 220,
+     "section": 5,
+     "words": 6838,
+     "firstWords": "Dickens was back in London by the June of 1845. About this",
+     "titleBlocks": [
+      197
+     ]
+    },
+    {
+     "slug": "09-later-life-and-works",
+     "num": "IX",
+     "title": "Later Life and Works",
+     "heading": 221,
+     "start": 223,
+     "end": 251,
+     "section": 6,
+     "words": 7299,
+     "firstWords": "I have deliberately in this book mentioned only such facts in the",
+     "titleBlocks": [
+      222
+     ]
+    },
+    {
+     "slug": "10-the-great-dickens-characters",
+     "num": "X",
+     "title": "The Great Dickens Characters",
+     "heading": 252,
+     "start": 254,
+     "end": 272,
+     "section": 7,
+     "words": 4966,
+     "firstWords": "All criticism tends too much to become criticism of criticism; and the",
+     "titleBlocks": [
+      253
+     ]
+    },
+    {
+     "slug": "11-on-the-alleged-optimism-of-dickens",
+     "num": "XI",
+     "title": "On the Alleged Optimism of Dickens",
+     "heading": 273,
+     "start": 275,
+     "end": 295,
+     "section": 7,
+     "words": 5581,
+     "firstWords": "In one of the plays of the decadent period, an intellectual expressed",
+     "titleBlocks": [
+      274
+     ]
+    },
+    {
+     "slug": "12-a-note-on-the-future-of-dickens",
+     "num": "XII",
+     "title": "A Note on the Future of Dickens",
+     "heading": 296,
+     "start": 298,
+     "end": 309,
+     "section": 8,
+     "words": 2162,
+     "firstWords": "The hardest thing to remember about our own time, of course, is",
+     "titleBlocks": [
+      297
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "b4dbd0d84e30b47b64c300caa417b74ffa2f2cc12a592216352b6cad47897e65",
+    "source": "data/structured/charles-dickens-critical-study-pg-68682.json",
+    "roles": [
+     [
+      44,
+      "chapter"
+     ],
+     [
+      45,
+      "heading"
+     ],
+     [
+      68,
+      "chapter"
+     ],
+     [
+      69,
+      "heading"
+     ],
+     [
+      86,
+      "chapter"
+     ],
+     [
+      87,
+      "heading"
+     ],
+     [
+      108,
+      "chapter"
+     ],
+     [
+      109,
+      "heading"
+     ],
+     [
+      129,
+      "chapter"
+     ],
+     [
+      130,
+      "heading"
+     ],
+     [
+      151,
+      "chapter"
+     ],
+     [
+      152,
+      "heading"
+     ],
+     [
+      173,
+      "chapter"
+     ],
+     [
+      174,
+      "heading"
+     ],
+     [
+      196,
+      "chapter"
+     ],
+     [
+      197,
+      "heading"
+     ],
+     [
+      221,
+      "chapter"
+     ],
+     [
+      222,
+      "heading"
+     ],
+     [
+      252,
+      "chapter"
+     ],
+     [
+      253,
+      "heading"
+     ],
+     [
+      273,
+      "chapter"
+     ],
+     [
+      274,
+      "heading"
+     ],
+     [
+      296,
+      "chapter"
+     ],
+     [
+      297,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "poet-and-lunatics": {
+   "partD": {
+    "about": "Project Gutenberg Australia #0900711: first published in 1929. Eight stories of Gabriel Gale, divided as the hosted text heads them; no words were changed.",
+    "words": 65481,
+    "minutes": 285
+   },
+   "edition": "pga-0900711",
+   "kind": "story",
+   "editionLine": "",
+   "noun": "Story",
+   "nouns": "Stories",
+   "sha256": "3fcdfd21c7b4ed800c096adfbc7b47566ffcc16d260203f154c344e4070e7d46",
+   "blocks": 959,
+   "items": [
+    {
+     "slug": "01-the-fantastic-friends",
+     "num": "I",
+     "title": "The Fantastic Friends",
+     "heading": 16,
+     "start": 17,
+     "end": 145,
+     "section": 0,
+     "words": 8141,
+     "firstWords": "The inn called the Rising Sun had an exterior rather suggesting the"
+    },
+    {
+     "slug": "02-the-yellow-bird",
+     "num": "II",
+     "title": "The Yellow Bird",
+     "heading": 146,
+     "start": 147,
+     "end": 270,
+     "section": 4,
+     "words": 7452,
+     "firstWords": "Five men had halted at the top of a hill overlooking a"
+    },
+    {
+     "slug": "03-the-shadow-of-the-shark",
+     "num": "III",
+     "title": "The Shadow of the Shark",
+     "heading": 271,
+     "start": 272,
+     "end": 383,
+     "section": 7,
+     "words": 8222,
+     "firstWords": "It is notable that the late Mr. Sherlock Holmes, in the course"
+    },
+    {
+     "slug": "04-the-crime-of-gabriel-gale",
+     "num": "IV",
+     "title": "The Crime of Gabriel Gale",
+     "heading": 384,
+     "start": 385,
+     "end": 483,
+     "section": 10,
+     "words": 8131,
+     "firstWords": "Dr. Butterworth, the famous London physician, was sitting in his summer-house in"
+    },
+    {
+     "slug": "05-the-finger-of-stone",
+     "num": "V",
+     "title": "The Finger of Stone",
+     "heading": 484,
+     "start": 485,
+     "end": 589,
+     "section": 13,
+     "words": 8209,
+     "firstWords": "Three young men on a walking tour came to a halt outside"
+    },
+    {
+     "slug": "06-the-house-of-the-peacock",
+     "num": "VI",
+     "title": "The House of the Peacock",
+     "heading": 590,
+     "start": 591,
+     "end": 692,
+     "section": 16,
+     "words": 7323,
+     "firstWords": "It happened that some years ago, down a sunny and empty street"
+    },
+    {
+     "slug": "07-the-purple-jewel",
+     "num": "VII",
+     "title": "The Purple Jewel",
+     "heading": 693,
+     "start": 694,
+     "end": 831,
+     "section": 19,
+     "words": 9350,
+     "firstWords": "Gabriel Gale was a painter and poet; he was the last person"
+    },
+    {
+     "slug": "08-the-asylum-of-adventure",
+     "num": "VIII",
+     "title": "The Asylum of Adventure",
+     "heading": 832,
+     "start": 833,
+     "end": 957,
+     "section": 23,
+     "words": 8653,
+     "firstWords": "A very small funeral procession passed through a very small churchyard on"
+    }
+   ],
+   "structure": {
+    "sha256": "3fcdfd21c7b4ed800c096adfbc7b47566ffcc16d260203f154c344e4070e7d46",
+    "source": "data/structured/poet-and-lunatics-pga-0900711.json",
+    "roles": [
+     [
+      16,
+      "chapter"
+     ],
+     [
+      146,
+      "chapter"
+     ],
+     [
+      271,
+      "chapter"
+     ],
+     [
+      384,
+      "chapter"
+     ],
+     [
+      484,
+      "chapter"
+     ],
+     [
+      590,
+      "chapter"
+     ],
+     [
+      693,
+      "chapter"
+     ],
+     [
+      832,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "return-don-quixote": {
+   "partD": {
+    "about": "Project Gutenberg Australia #0900401: first published in 1927. Nineteen chapters, divided as the hosted text heads them; no words were changed.",
+    "words": 72749,
+    "minutes": 316
+   },
+   "edition": "pga-0900401",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "0d51a9c5f00679e3a99e4cbf18e31da10db4d6d84b4264f400ca34d817e2b780",
+   "blocks": 1145,
+   "items": [
+    {
+     "slug": "01-a-hole-in-the-caste",
+     "num": "I",
+     "title": "A Hole in the Caste",
+     "heading": 19,
+     "start": 20,
+     "end": 63,
+     "section": 0,
+     "words": 2647,
+     "firstWords": "The end of the longest room at Seawood Abbey was full of"
+    },
+    {
+     "slug": "02-a-dangerous-man",
+     "num": "II",
+     "title": "A Dangerous Man",
+     "heading": 64,
+     "start": 65,
+     "end": 125,
+     "section": 1,
+     "words": 2602,
+     "firstWords": "John Braintree was a long, lean, alert young man with a black"
+    },
+    {
+     "slug": "03-the-ladder-in-the-library",
+     "num": "III",
+     "title": "The Ladder in the Library",
+     "heading": 126,
+     "start": 127,
+     "end": 174,
+     "section": 3,
+     "words": 3262,
+     "firstWords": "The librarian at Seawood had once had his name in the papers;"
+    },
+    {
+     "slug": "04-the-first-trial-of-john-braintree",
+     "num": "IV",
+     "title": "The First Trial of John Braintree",
+     "heading": 175,
+     "start": 176,
+     "end": 248,
+     "section": 5,
+     "words": 3910,
+     "firstWords": "The gentleman called Monkey made his way rapidly across the wide and"
+    },
+    {
+     "slug": "05-the-second-trial-of-john-braintree",
+     "num": "V",
+     "title": "The Second Trial of John Braintree",
+     "heading": 249,
+     "start": 250,
+     "end": 304,
+     "section": 7,
+     "words": 3645,
+     "firstWords": "Douglas Murrel knew the world; he knew his own world, though that"
+    },
+    {
+     "slug": "06-a-commission-as-colourman",
+     "num": "VI",
+     "title": "A Commission as Colourman",
+     "heading": 305,
+     "start": 306,
+     "end": 357,
+     "section": 8,
+     "words": 3022,
+     "firstWords": "As Murrel gazed there gradually grew upon his mind (which was perhaps"
+    },
+    {
+     "slug": "07-blondel-the-troubadour",
+     "num": "VII",
+     "title": "\"blondel the Troubadour\"",
+     "heading": 358,
+     "start": 359,
+     "end": 421,
+     "section": 10,
+     "words": 4020,
+     "firstWords": "\"Oh,\" said Murrel rather blankly. \"Oh, yes...Anything to oblige.\""
+    },
+    {
+     "slug": "08-the-misadventures-of-monkey",
+     "num": "VIII",
+     "title": "The Misadventures of Monkey",
+     "heading": 422,
+     "start": 423,
+     "end": 480,
+     "section": 12,
+     "words": 4844,
+     "firstWords": "Murrel stood staring in the porch at the figure which appeared dark"
+    },
+    {
+     "slug": "09-the-mystery-of-a-hansom-cab",
+     "num": "IX",
+     "title": "The Mystery of a Hansom Cab",
+     "heading": 481,
+     "start": 482,
+     "end": 549,
+     "section": 13,
+     "words": 5261,
+     "firstWords": "A day later he stood in a seaside town where a steep"
+    },
+    {
+     "slug": "10-when-doctors-disagree",
+     "num": "X",
+     "title": "When Doctors Disagree",
+     "heading": 550,
+     "start": 551,
+     "end": 588,
+     "section": 15,
+     "words": 3602,
+     "firstWords": "The house with the pillared porch to which the crawling cab eventually"
+    },
+    {
+     "slug": "11-the-lunacy-of-the-librarian",
+     "num": "XI",
+     "title": "The Lunacy of the Librarian",
+     "heading": 589,
+     "start": 590,
+     "end": 656,
+     "section": 16,
+     "words": 3018,
+     "firstWords": "Far away in Seawood Abbey the great performance of \"Blondel the Troubadour\""
+    },
+    {
+     "slug": "12-the-statesman-and-the-summer-house",
+     "num": "XII",
+     "title": "The Statesman and the Summer-house",
+     "heading": 657,
+     "start": 658,
+     "end": 707,
+     "section": 18,
+     "words": 2996,
+     "firstWords": "At this point of the conversation that particular corner of the garden"
+    },
+    {
+     "slug": "13-the-victorian-and-the-arrow",
+     "num": "XIII",
+     "title": "The Victorian and the Arrow",
+     "heading": 708,
+     "start": 709,
+     "end": 773,
+     "section": 20,
+     "words": 5376,
+     "firstWords": "The arrow that had entered the summer-house with a sound like song"
+    },
+    {
+     "slug": "14-the-return-of-the-knight-errant",
+     "num": "XIV",
+     "title": "The Return of the Knight-errant",
+     "heading": 774,
+     "start": 775,
+     "end": 830,
+     "section": 22,
+     "words": 6032,
+     "firstWords": "In the great General Election, which had been produced by the big"
+    },
+    {
+     "slug": "15-the-parting-of-the-ways",
+     "num": "XV",
+     "title": "The Parting of the Ways",
+     "heading": 831,
+     "start": 832,
+     "end": 898,
+     "section": 23,
+     "words": 5170,
+     "firstWords": "Olive Ashley came away from the scene of the indignant oration looking"
+    },
+    {
+     "slug": "16-the-judgment-of-the-king",
+     "num": "XVI",
+     "title": "The Judgment of the King",
+     "heading": 899,
+     "start": 900,
+     "end": 966,
+     "section": 25,
+     "words": 4212,
+     "firstWords": "Lord Seawood and Lord Eden were seated in their favourite summer-house on"
+    },
+    {
+     "slug": "17-the-departure-of-don-quixote",
+     "num": "XVII",
+     "title": "The Departure of Don Quixote",
+     "heading": 967,
+     "start": 968,
+     "end": 1030,
+     "section": 27,
+     "words": 3502,
+     "firstWords": "And all this first hubbub, the two noblemen who had been named"
+    },
+    {
+     "slug": "18-the-secret-of-seawood",
+     "num": "XVIII",
+     "title": "The Secret of Seawood",
+     "heading": 1031,
+     "start": 1032,
+     "end": 1081,
+     "section": 29,
+     "words": 2626,
+     "firstWords": "It had been a day of amazement for many, in which their"
+    },
+    {
+     "slug": "19-the-return-of-don-quixote",
+     "num": "XIX",
+     "title": "The Return of Don Quixote",
+     "heading": 1082,
+     "start": 1083,
+     "end": 1143,
+     "section": 30,
+     "words": 3002,
+     "firstWords": "Someday perhaps the story will be told of the adventures of the"
+    }
+   ],
+   "structure": {
+    "sha256": "0d51a9c5f00679e3a99e4cbf18e31da10db4d6d84b4264f400ca34d817e2b780",
+    "source": "data/structured/return-don-quixote-pga-0900401.json",
+    "roles": [
+     [
+      19,
+      "chapter"
+     ],
+     [
+      64,
+      "chapter"
+     ],
+     [
+      126,
+      "chapter"
+     ],
+     [
+      175,
+      "chapter"
+     ],
+     [
+      249,
+      "chapter"
+     ],
+     [
+      305,
+      "chapter"
+     ],
+     [
+      358,
+      "chapter"
+     ],
+     [
+      422,
+      "chapter"
+     ],
+     [
+      481,
+      "chapter"
+     ],
+     [
+      550,
+      "chapter"
+     ],
+     [
+      589,
+      "chapter"
+     ],
+     [
+      657,
+      "chapter"
+     ],
+     [
+      708,
+      "chapter"
+     ],
+     [
+      774,
+      "chapter"
+     ],
+     [
+      831,
+      "chapter"
+     ],
+     [
+      899,
+      "chapter"
+     ],
+     [
+      967,
+      "chapter"
+     ],
+     [
+      1031,
+      "chapter"
+     ],
+     [
+      1082,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

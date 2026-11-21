@@ -1,0 +1,59 @@
+{
+  "id": "ebible-engdra-wis08",
+  "kind": "public-domain-text",
+  "title": "Douay-Rheims 1899 Wisdom of Solomon 8 (eBible engDRA)",
+  "author": "Richard Challoner",
+  "firstPublished": "1752 (Challoner revision of the Douay-Rheims Bible, itself a revision of the Douay Old Testament of 1609-10). The hosted typographic text is the Douay-Rheims American Edition of 1899, as served by eBible (engDRA).",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. eBible.org notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "eBible.org",
+  "sourceUrl": "https://ebible.org/engDRA/WIS08.htm",
+  "sourcePage": "https://ebible.org/engDRA/WIS08.htm",
+  "sourceNotice": "WISDOM 8\n\n1 She reacheth therefore from end to end mightily, and ordereth all things sweetly.\n2 Her have I loved, and have sought her out from my youth, and have desired to take her for my spouse, and I became a lover of her beauty.\n3 She glorifieth her nobility by being conversant with God: yea and the Lord of all things hath loved her.\n4 For it is she that teacheth the knowledge of God, and is the chooser of his works.\n5 And if riches be desired in life, what is richer than wisdom, which maketh all things?\n6 And if sense do work: who is a more artful worker than she of those things that are?\n7 And if a man love justice: her labours have great virtues; for she teacheth temperance, and prudence, and justice, and fortitude, which are such things as men can have nothing more profitable in life.\n8 And if a man desire much knowledge: she knoweth things past, and judgeth of things to come: she knoweth the subtilties of speeches, and the solutions of arguments: she knoweth signs and wonders before they be done, and the events of times and ages.\n9 I purposed therefore to take her to me to live with me: knowing that she will communicate to me of her good things, and will be a comfort in my cares and grief.\n10 For her sake I shall have glory among the multitude, and honour with the ancients, though I be young:\n11 And I shall be found of a quick conceit in judgment, and shall be admired in the sight of the mighty, and the faces of princes shall wonder at me.\n12 They shall wait for me w",
+  "sourceFileSha256": "d1c094aa67267cff3e0ce0de7ab8cb6b4f1e6451458ce029ee98879b9f67e76c",
+  "sourceFileNote": "sourceFileSha256 is the SHA-256 of the chapter HTML as served; the page is pinned in sourcePages",
+  "siteNotice": "eBible.org labels engDRA \"Douay-Rheims American Edition of 1899\" and \"Public Domain\" (https://ebible.org/engDRA/copyright.htm).",
+  "copyrightPage": {
+    "url": "https://ebible.org/engDRA/copyright.htm",
+    "sha256": "13fdc30c8c0f85d580a789988ade21fb8b2ebd9afcffbd087776b91d90b5e045"
+  },
+  "readGate": {
+    "words": 522,
+    "unknown": 0,
+    "readRate": 1.0,
+    "gate": 0.995
+  },
+  "readGateUnknownWords": [],
+  "gutenbergCrossCheck": {
+    "canonicalUrl": "https://www.gutenberg.org/ebooks/1581",
+    "canonicalStatus": "HTTP 503 on 2026-11-21, retry-after 21600; relied on eBible as the hosting source",
+    "chapterUrl": "https://www.gutenberg.org/cache/epub/8325/pg8325.html#id00187",
+    "mirrorUsed": "https://gutenberg.pglaf.org/cache/epub/8325/pg8325.html#id00187",
+    "sourceWords": 544,
+    "gutenbergWords": 562,
+    "matchedWords": 541,
+    "agreement": 0.9945,
+    "sampleDifferences": [
+      {
+        "source": "wisdom 8 1 she",
+        "gutenberg": "8 1 she"
+      },
+      {
+        "source": "desired to take her for my spouse",
+        "gutenberg": "desired to take for my spouse"
+      },
+      {
+        "source": "hands on their mouths 13 moreover by",
+        "gutenberg": "hands on their mouth 8 13 moreover by"
+      }
+    ],
+    "method": "difflib word alignment, lower case, letters and digits only; Gutenberg official-mirror cross-check (gutenberg.org returned 503)",
+    "year": 1752
+  },
+  "sha256": "98ead36edd8d43679a7efd97a08d48d3a43bc6bbf149696a9aa89bf4a7d3e5c1",
+  "bytes": 3893,
+  "checked": "2026-11-21",
+  "verseCount": 21,
+  "numbering": "Douay verse numbers as marked in the eBible HTML (span.verse), kept unchanged",
+  "pinnedFile": "data/sources/ebible-html/ebible-engdra-wis08.html.gz"
+}

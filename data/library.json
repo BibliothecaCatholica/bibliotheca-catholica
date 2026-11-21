@@ -1475,6 +1475,45 @@
       ]
     },
     {
+      "id": "douay-rheims-ecclesiasticus-24",
+      "title": "Ecclesiasticus 24 (Douay-Rheims, Challoner)",
+      "author": "Richard Challoner",
+      "authorId": "richard-challoner",
+      "category": "Scripture",
+      "tradition": "Catholic tradition",
+      "description": "Chapter 24 of Ecclesiasticus (Sirach) in Bishop Richard Challoner's revision of the Douay-Rheims Bible: Wisdom praises her origin, her dwelling, and her fruits, including the well-known verse \"I am the mother of fair love, and of fear, and of knowledge, and of holy hope.\"",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-21",
+      "date": "1752",
+      "editions": [
+        {
+          "id": "ebible-engdra-sir24",
+          "label": "Douay-Rheims, Challoner revision (1749-1752); typographic text of the 1899 American edition (eBible engDRA)",
+          "source": "https://ebible.org/engDRA/SIR24.htm",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "English College, Douai"
+            },
+            {
+              "role": "reviser",
+              "name": "Challoner, Richard"
+            }
+          ],
+          "checked": "2026-11-21",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. eBible.org notices retained.",
+          "note": "First published 1752 (Challoner revision of the Douay-Rheims Bible, itself a revision of the Douay Old Testament of 1609-10). The hosted typographic text is the Douay-Rheims American Edition of 1899, as served by eBible (engDRA). Hosted from the eBible engDRA chapter HTML. Douay verse numbering is kept (this chapter has 47 verses). The 99.5% read gate scored 99.67% (911 words, 3 unknown). Cross-checked word by word with the official Project Gutenberg mirror of the Challoner text (Ecclesiasticus chapter in Gutenberg #8326; canonical gutenberg.org #1581 and the chapter ebooks returned HTTP 503 on 2026-11-21). 99.8% of the eBible chapter's words are confirmed by the Gutenberg chapter; differing passages are listed in the provenance record. The hosted wording is the eBible text.",
+          "sourceTitle": "Douay-Rheims 1899 Sirach 24 (eBible engDRA)",
+          "text": "data/texts/ebible-engdra-sir24.txt",
+          "sha256": "e100d1c9c32201cf2d6702754ede2a2a4504cc705b2419d09e549f25d6028acd",
+          "translationYear": 1752
+        }
+      ]
+    },
+    {
       "id": "catherine-letters",
       "title": "Saint Catherine of Siena as Seen in Her Letters",
       "author": "Catherine of Siena",
@@ -5122,6 +5161,45 @@
           "text": "data/texts/pga-0900441.txt",
           "sha256": "5b3dc722b44a2beb893d1b29359ced28eea6d871791e252ccec457973c43fd20",
           "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "douay-rheims-wisdom-8",
+      "title": "Wisdom 8 (Douay-Rheims, Challoner)",
+      "author": "Richard Challoner",
+      "authorId": "richard-challoner",
+      "category": "Scripture",
+      "tradition": "Catholic tradition",
+      "description": "Chapter 8 of the Book of Wisdom in Bishop Richard Challoner's revision of the Douay-Rheims Bible: Solomon seeks Wisdom as a spouse, praises her government of all things, and prays to receive her as God's gift.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-21",
+      "date": "1752",
+      "editions": [
+        {
+          "id": "ebible-engdra-wis08",
+          "label": "Douay-Rheims, Challoner revision (1749-1752); typographic text of the 1899 American edition (eBible engDRA)",
+          "source": "https://ebible.org/engDRA/WIS08.htm",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "English College, Douai"
+            },
+            {
+              "role": "reviser",
+              "name": "Challoner, Richard"
+            }
+          ],
+          "checked": "2026-11-21",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. eBible.org notices retained.",
+          "note": "First published 1752 (Challoner revision of the Douay-Rheims Bible, itself a revision of the Douay Old Testament of 1609-10). The hosted typographic text is the Douay-Rheims American Edition of 1899, as served by eBible (engDRA). Hosted from the eBible engDRA chapter HTML. Douay verse numbering is kept (this chapter has 21 verses). The 99.5% read gate scored 100.00% (522 words, 0 unknown). Cross-checked word by word with the official Project Gutenberg mirror of the Challoner text (Wisdom chapter in Gutenberg #8325; canonical gutenberg.org #1581 and the chapter ebooks returned HTTP 503 on 2026-11-21). 99.5% of the eBible chapter's words are confirmed by the Gutenberg chapter; differing passages are listed in the provenance record. The hosted wording is the eBible text.",
+          "sourceTitle": "Douay-Rheims 1899 Wisdom of Solomon 8 (eBible engDRA)",
+          "text": "data/texts/ebible-engdra-wis08.txt",
+          "sha256": "98ead36edd8d43679a7efd97a08d48d3a43bc6bbf149696a9aa89bf4a7d3e5c1",
+          "translationYear": 1752
         }
       ]
     },

@@ -543,6 +543,18 @@
     "indented line": 971
    }
   },
+  "ebible-engdra-sir24": {
+   "work": "Ecclesiasticus 24 (Douay-Rheims, Challoner)",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "short line": 1
+   }
+  },
   "pg-7403": {
    "work": "Saint Catherine of Siena as Seen in Her Letters",
    "multiLineBlocks": 594,
@@ -1497,6 +1509,18 @@
     "all-capitals line": 1,
     "indented line": 2,
     "short line": 2
+   }
+  },
+  "ebible-engdra-wis08": {
+   "work": "Wisdom 8 (Douay-Rheims, Challoner)",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "short line": 1
    }
   },
   "pga-0900631": {

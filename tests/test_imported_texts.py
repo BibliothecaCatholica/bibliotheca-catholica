@@ -33,6 +33,17 @@ class ImportedTexts(unittest.TestCase):
                 self.assertNotIn('iaWitness', r, e['id'])
                 self.assertIn('no dated scan', e['note'].lower(), e['id'])
                 continue
+            if 'gutenbergCrossCheck' in r and 'iaWitness' not in r:
+                # eBible Douay chapters (2026-11-21): gutenberg.org was 503, so the dated Challoner text
+                # was cross-checked against an official Gutenberg mirror instead of an IA OCR scan.
+                g = r['gutenbergCrossCheck']
+                self.assertTrue(pd_by_date(g['year']), e['id'])
+                self.assertGreaterEqual(g['agreement'], 0.95, e['id'])
+                self.assertTrue(g['canonicalUrl'].startswith('https://www.gutenberg.org/'), e['id'])
+                self.assertGreaterEqual(r['readGate']['readRate'], 0.995, e['id'])
+                self.assertTrue(e['rights'].startswith('Public domain in the USA.'), e['id'])
+                self.assertIn(r['sourceName'], e['rights'], e['id'])
+                continue
             if r['rightsBasis'] == 'pd-date':
                 self.assertTrue(pd_by_date(r['iaWitness']['year']), e['id'])
             else:

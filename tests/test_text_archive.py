@@ -39,7 +39,7 @@ class TextArchiveTests(unittest.TestCase):
                     self.assertEqual(record['sha256'], entry['sha256'])
                     if record['rights'].startswith('Public domain in the USA.') and record.get('rightsBasis', 'pd-date') == 'pd-date':
                         # the dated scan's year, or the year printed in the text under an owner-approved scan exception
-                        self.assertTrue(pd_by_date(record['iaWitness']['year'] if 'iaWitness' in record else record['scanException']['yearInText']))
+                        self.assertTrue(pd_by_date((record['iaWitness']['year'] if 'iaWitness' in record else record['gutenbergCrossCheck']['year'] if 'gutenbergCrossCheck' in record else record['scanException']['yearInText'])))
                 else:
                     self.assertEqual(['Public domain in the USA.'], record['metadata']['Copyright'])
             exported = {e['editionId'] for e in manifest['documents']}

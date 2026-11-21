@@ -5128,6 +5128,8 @@ work/dictionary-saintly-women/index.html
 work/divine-comedy/index.html
 work/divorce-versus-democracy/index.html
 work/do-we-agree/index.html
+work/douay-rheims-ecclesiasticus-24/index.html
+work/douay-rheims-wisdom-8/index.html
 work/dream-gerontius/index.html
 work/eugenics-other-evils/index.html
 work/eugenics-other-evils/ch/01-what-is-eugenics/index.html

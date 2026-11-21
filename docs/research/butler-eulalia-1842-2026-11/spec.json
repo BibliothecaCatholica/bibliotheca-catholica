@@ -1,0 +1,1302 @@
+[
+ {
+  "edition": "ia-butler-1842-eulalia",
+  "ia": "livesoffathersma12butl",
+  "title": "ST. EULALIA, V. M.",
+  "sourceTitle": "The Life of St. Eulalia of Merida (Butler's Lives, December 10, Derby 1842)",
+  "author": "Alban Butler",
+  "year": 1842,
+  "firstPublished": "1756-1759; this life from the Derby edition of 1842 (Derby: Printed by Richardson and Son), vol. XII, pp. 229-237",
+  "firstLeaf": 232,
+  "lastLeaf": 240,
+  "startsWith": "ST. EULALIA, V. M.",
+  "endsWith": "Leg. 12 et 13. de officio Procons.]",
+  "note": "One life cut from volume XII of the Derby 1842 printing (startsWith/endsWith in the spec); the preceding life of St. Melchiades and the following life of St. Damasus are left out. The short notice of St. Eulalia of Barcelona is kept as printed at the end of this life.",
+  "rightsBasis": "pd-date",
+  "handFixes": [
+   {
+    "leaf": 232,
+    "page": "229",
+    "ocr": "15 . 12",
+    "reading": ""
+   },
+   {
+    "leaf": 232,
+    "page": "229",
+    "ocr": "I AuRELins Pbudentius CLEMfiNS, the gloiy of the",
+    "reading": "¹ AURELIUS PRUDENTIUS CLEMENS, the glory of the"
+   },
+   {
+    "leaf": 232,
+    "page": "229",
+    "ocr": "PiitJi)i:NTiusI has celebrated the triumph of",
+    "reading": "PRUDENTIUS¹ has celebrated the triumph of"
+   },
+   {
+    "leaf": 232,
+    "page": "229",
+    "ocr": "ancient Christian poets, v/as born in Spain in 3/G,(Praef. in",
+    "reading": "ancient Christian poets, was born in Spain in 348, (Præf. in"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "(Hymn. 1. de Cor. p. IIG. et hymn. 18. v. 31.) After his",
+    "reading": "(Hymn. 1. de Cor. p. 116. et hymn. 18. v. 31.) After his"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "(Prtef. in Cathem. ethymn,9. de Sanct. Calagurit.) He was",
+    "reading": "(Præf. in Cathem. et hymn. 9. de Sanct. Calagurit.) He was"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "1 this holy virgin, who was a native of Merida,",
+    "reading": "this holy virgin, who was a native of Merida,"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "beauty, with whose chaste love I burn, and in Vv'hom I find",
+    "reading": "beauty, with whose chaste love I burn, and in whom I find"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "but in his Saviour. \" Thou art,'' says he, \"the charming",
+    "reading": "but in his Saviour. “Thou art,” says he, “the charming"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "childhood lie studied eloquence under a celebrated rhetori-",
+    "reading": "childhood he studied eloquence under a celebrated rhetori-"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "compunction for his sins. (De Cor. hymn. 19. de S. Cas-",
+    "reading": "compunction for his sins. (De Cor. hymn. 19. de S. Cassiano.)"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "finera,v. 898, &c.) But when he had devoted himself with",
+    "reading": "finem, v. 898, &c.) But when he had devoted himself with"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "is.) Prudentius deplores still more bitterly other irregu-",
+    "reading": "18.) Prudentius deplores still more bitterly other irregu-"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "pal dignity having been translated to Compostel-",
+    "reading": "pal dignity having been translated to Compostella."
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "quality of governor;) but' at Calahorra, in Old Castile",
+    "reading": "quality of governor;) but at Calahorra, in Old Castile"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "siano.) At Rome he saw an infinite number of tombs of",
+    "reading": "At Rome he saw an infinite number of tombs of"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "some others mistake,- (though he resided there some time in",
+    "reading": "some others mistake; (though he resided there some time in"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "the prince (Theodosius I. or Honorius) raised hira to the",
+    "reading": "the prince (Theodosius I. or Honorius) raised him to the"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "the vigour of his age, he took a 'journey to Rouie about the",
+    "reading": "the vigour of his age, he took a journey to Rome about the"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "then the capital city of Liisitania in Spain, now a",
+    "reading": "then the capital city of Lusitania in Spain, now a"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "understood that he was created prefect of the praetorium. In",
+    "reading": "understood that he was created prefect of the prætorium. In"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "which he tells us (Prajf. in Cathem.) that the clemency of",
+    "reading": "which he tells us (Præf. in Cathem.) that the clemency of"
+   },
+   {
+    "leaf": 233,
+    "page": "230",
+    "ocr": "world and the corruption of his own heart. (Psych, sub",
+    "reading": "world and the corruption of his own heart. (Psych. sub"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "12 'nothing can be tiner than the smiles and other ligui^s-",
+    "reading": "12,) nothing can be finer than the smiles and other figures-"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "?he Holy Innocents in the office of the Church, which aie",
+    "reading": "the Holy Innocents in the office of the Church, which are"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "Church office are almost copied from our poet s Morning",
+    "reading": "Church office are almost copied from our poet's Morning"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "Hymn, (Cathem. hymno 2.) His erudition is displayed ip",
+    "reading": "Hymn, (Cathem. hymno 2.) His erudition is displayed in"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "Nox ettenebrce etnubila, and Lux eccc surgit awea, ^c. in the",
+    "reading": "Nox et tenebræ et nubila, and Lux ecce surgit aurea, &c. in the"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "Salvelejlork S^'c. Nothing softer or more .^^^^^^^ \"",
+    "reading": "Salvete flores, &c. Nothing softer or more beautiful than the"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "Sedulius, a priest (according to some a bishop) in Italy",
+    "reading": "SEDULIUS, a priest (according to some a bishop) in Italy"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "Yet he is sometimes careless and incorrect in his versihca-",
+    "reading": "Yet he is sometimes careless and incorrect in his versifica-"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "a 2 ep. 9.) compares his lyrics to the odes of Horace, who",
+    "reading": "(l. 2. ep. 9.) compares his lyrics to the odes of Horace, who"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "evelation, the soul of poetry. x • 1. ,",
+    "reading": "evelation, the soul of poetry."
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "expressions, Falmu et coronis luditis, S^c. Ihe hymni.",
+    "reading": "expressions, Palma et coronis luditis, &c. The hymns"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "fiifancy distinguished herself by an admirable",
+    "reading": "infancy distinguished herself by an admirable"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "for he wrote only on religious subjects on ^hicli al I s",
+    "reading": "for he wrote only on religious subjects on which all his"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "gion^^^^^^^ in sentiments of perfect piety, horn her",
+    "reading": "gion, and in sentiments of perfect piety, from her"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "hymn ^ so/is ortus cardine, &c. According to Trithemius and",
+    "reading": "hymn A solis ortus curdine, &c. According to Trithemius and"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "if Pha^drus be joined with him) is the sweetest, sinoothest,",
+    "reading": "(if Phædrus be joined with him) is the sweetest, smoothest,"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "la. Eulalia descended from one of the best fami-",
+    "reading": "Eulalia descended from one of the best fami-"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "language, and for strength and majesty of style; yet talis",
+    "reading": "language, and for strength and majesty of style; yet falls"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "lies in Spain, was educated in the Christian reh-",
+    "reading": "lies in Spain, was educated in the Christian reli-"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "majesty, fire, and elegance of his verses, especia ly nis lyrics.",
+    "reading": "majesty, fire, and elegance of his verses, especially his lyrics."
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "most learned of the Christian poets ^^^onius ApolUnar s",
+    "reading": "most learned of the Christian poets. Sidonius Apollinaris"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "most polished, and elegant writer, not only ot the poets, but",
+    "reading": "most polished, and elegant writer, not only of the poets, but"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "not less remarkable in Juvencus, the Spanish pnest, author",
+    "reading": "not less remarkable in Juvencus, the Spanish priest, author"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "of all the classics. ISo verses in Horace or any other poet",
+    "reading": "of all the classics. No verses in Horace or any other poet"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "of the poem on the Life of Christ, in the reign ot Coustantine",
+    "reading": "of the poem on the Life of Christ, in the reign of Constantine"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "orator, and divine; who, for the love of learning, left ins",
+    "reading": "orator, and divine; who, for the love of learning, left his"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "other pious compositions, and flourished under 'Iheodosius",
+    "reading": "other pious compositions, and flourished under Theodosius"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "sometimes flags. Also the Latin language having m this",
+    "reading": "sometimes flags. Also the Latin language having in this"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "standard of the Augustan age in certain Phrases, and in",
+    "reading": "standard of the Augustan age in certain phrases, and in"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "the Great: he is commended for correctness and puiily of",
+    "reading": "the Great: he is commended for correctness and purity of"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "the accents and quantities of certain words. 1 his detect is",
+    "reading": "the accents and quantities of certain words. This defect is"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "thoughts were employed. He has always been esteemed t e",
+    "reading": "thoughts were employed. He has always been esteemed the"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "time degenerated from its purity, he deviates Irom the",
+    "reading": "time degenerated from its purity, he deviates from the"
+   },
+   {
+    "leaf": 234,
+    "page": "231",
+    "ocr": "tion; and the vigour of his spirit, sentiment, and taiicy",
+    "reading": "tion; and the vigour of his spirit, sentiment, and fancy"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "'vriters. See Antiq. Brit. c. 16, Colgan, act SS. p. 320.",
+    "reading": "writers. See Antiq. Brit. c. 16. Colgan, act SS. p. 320."
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "1 ornaments, diversions, and worldly comjpany,",
+    "reading": "ornaments, diversions, and worldly company,"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "I Sweetness of temper, modesty, and devotion,",
+    "reading": "sweetness of temper, modesty, and devotion,"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "Symmachus,in his petition for the restoration of tlie idol of",
+    "reading": "Symmachus, in his petition for the restoration of the idol of"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "Ware's Writers, p. 7. &c. He is not to be confounded vvitli",
+    "reading": "Ware's Writers, p. 7. &c. He is not to be confounded with"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "and earnestly prays for mercy, and that Whilst others are",
+    "reading": "and earnestly prays for mercy, and that whilst others are"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "butes. It is a confutation of the idolaters, and of the priii-",
+    "reading": "butes. It is a confutation of the idolaters, and of the prin-"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "council held at Rome by pope Grogory 11. He was after-",
+    "reading": "council held at Rome by pope Grogory II. He was after-"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "covetousness, and of concorfi over enmity. His Cathc-",
+    "reading": "covetousness, and of concord over enmity. His Cathe-"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "days, for Christmas, Epiphany, the lighting of a canHle,",
+    "reading": "days, for Christmas, Epiphany, the lighting of a candle,"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "fehowed a great love of the holy state of virginity,",
+    "reading": "showed a great love of the holy state of virginity,"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "first physician to Pliilip V. See Usher, loc. cit. Ware, p. 47,",
+    "reading": "first physician to Philip V. See Usher, loc. cit. Ware, p. 47,"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "humility, of temperance over gluttony, of almsdeeds oVer",
+    "reading": "humility, of temperance over gluttony, of almsdeeds over"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "i*rudentius in his Psycomachia, or combat of the soul",
+    "reading": "Prudentius in his Psycomachia, or combat of the soul"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "iiis MS. written on parchment in the Gothic character, was in",
+    "reading": "his MS. written on parchment in the Gothic character, was in"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "length came to be in high esteem at Rome for his threat ac-",
+    "reading": "length came to be in high esteem at Rome for his great ac-"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "morning, night, before and after mieals, fast days, after fast",
+    "reading": "morning, night, before and after meals, fast days, after fast"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "of prayer and praise for different times ol the day ijiz. fol\"",
+    "reading": "of prayer and praise for different times of the day viz. for"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "tablished an evil first principle, he composed his Araaiti-",
+    "reading": "tablished an evil first principle, he composed his Amarti-"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "the possession of Sir John Wiggins, counsellor of state and",
+    "reading": "the possession of Sir John Higgins, counsellor of state and"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "victory, presented successively to Gratian, Valentiniaii li.",
+    "reading": "victory, presented successively to Gratian, Valentinian II."
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "ward made a iDishop in Spain, where it is said he wrote a",
+    "reading": "ward made a bishop in Spain, where it is said he wrote a"
+   },
+   {
+    "leaf": 235,
+    "page": "232",
+    "ocr": "} and by her seriolisnees and her contempt of dress,",
+    "reading": "and by her seriousness and her contempt of dress,"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "' sought by praters. Nobody ever oflered here pure supplica-",
+    "reading": "sought by prayers. Nobody ever offered here pure supplica-"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "233",
+    "reading": ""
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "310. makes the following observation on this work: \" Jt",
+    "reading": "310. makes the following observation on this work: “It"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "5 Certain Protestant writers, who fancy that the tradition of the",
+    "reading": "Certain Protestant writers, who fancy that the tradition of the"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": ": martyrs of Calaborra, be says, (v. 10.) Exteri necnon et",
+    "reading": "martyrs of Calaborra, he says, (v. 10.) Exteri necnon et"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "> solicitous to intercede for us, thut they suffer not that they",
+    "reading": "solicitous to intercede for us, that they suffer not that they"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "B^C. 10.] ST. EULALIA, V. M.",
+    "reading": ""
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "I four or five first centuries ought to be joined wfth the",
+    "reading": "four or five first centuries ought to be joined with the"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "I scripture, have denied that the saints were prayed to in the",
+    "reading": "scripture, have denied that the saints were prayed to in the"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "The most famous work of Prudentius is his book 5r6j^ rrg-",
+    "reading": "The most famous work of Prudentius is his book περὶ στεφάνων,"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "Tlie army of Honorius, commanded by Stilico, in 403, van-",
+    "reading": "The army of Honorius, commanded by Stilico, in 403, van-"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "\\ should be prayed to in vain. Whether it be done with a loud",
+    "reading": "should be prayed to in vain. Whether it be done with a loud"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "^ the world (patronos mundi) are here, whose favour may be",
+    "reading": "the world (patronos mundi) are here, whose favour may be"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "^xvojVf or on the crowns of martyrs, consisting of fourteen",
+    "reading": "or on the crowns of martyrs, consisting of fourteen"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "against Syramachus, which are a spirited, learned, and",
+    "reading": "against Symmachus, which are a spirited, learned, and"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "all his holy requests were granteii him, went away ful of",
+    "reading": "all his holy requests were granted him, went away ful of"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "cross on their foreheads, and the ensign of -Christ (that is,",
+    "reading": "cross on their foreheads, and the ensign of Christ (that is,"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "earth a lieavenly life. Her heart was raised",
+    "reading": "earth a heavenly life. Her heart was raised"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "elegant confutation 'of idolatry. In the conclusion, he ex-",
+    "reading": "elegant confutation of idolatry. In the conclusion, he ex-"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "fourth centpry. But they should not have framed a national",
+    "reading": "fourth century. But they should not have framed a national"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "gave early proofs of her sincere desire to lead on \\",
+    "reading": "gave early proofs of her sincere desire to lead on"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "joy, haying wiped away his tears.* These martyrs are so",
+    "reading": "joy, having wiped away his tears.’ These martyrs are so"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "not suffer crimes and murders to serve for pastime aiMl",
+    "reading": "not suffer crimes and murders to serve for pastime and"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "of knowing it, so that its amusements^ which ^",
+    "reading": "of knowing it, so that its amusements, which"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "system before they were well instructed in faots, since they",
+    "reading": "system before they were well instructed in facts, since they"
+   },
+   {
+    "leaf": 236,
+    "page": "233",
+    "ocr": "■.orbis., &c. ' Strangers come hither in crowds, because fame",
+    "reading": "orbis, &c. ‘Strangers come hither in crowds, because fame"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "\" need only read hymn ii. v. 457. iii. 311. iv. 17.^. 196. v.",
+    "reading": "“need only read hymn ii. v. 457. iii. 311. iv. 175. 196. v."
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "'■■■^ filling churches with images was practised in Italy in",
+    "reading": "filling churches with images was practised in Italy in"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "( Prudentius's time, as is clear from his hymn ix. on St.",
+    "reading": "Prudentius's time, as is clear from his hymn ix. on St."
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "( tuted by Constantine, he mentions that a cross was wrought",
+    "reading": "tuted by Constantine, he mentions that a cross was wrought"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "-writings, he deserves to be ranked among the gravest doc-",
+    "reading": "writings, he deserves to be ranked among the gravest doc-"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "/ On this latter passage Le Clerc makes the following remark:",
+    "reading": "On this latter passage Le Clerc makes the following remark:"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "/ that a figure of the cross in solid gold was set upon the",
+    "reading": "that a figure of the cross in solid gold was set upon the"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "1 . charms for her, and every day of her life made an",
+    "reading": "charms for her, and every day of her life made an"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "64o. ix. 97. X. 139. xiv, 124.\" The works of St. Pnnlinus,",
+    "reading": "545. ix. 97. x. 139. xiv. 124.” The works of St. Paulinus,"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "> &c ) in describing the labarum, or military ensign, insti-",
+    "reading": "&c.) In describing the labarum, or military ensign, insti-"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "Eternal Kinif. Thence plentiful gifts flow bountifully from",
+    "reading": "Eternal King. Thence plentiful gifts flow bountifully from"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "I ; addition to her virtues,",
+    "reading": "addition to her virtues."
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "Prudentius's works are those o.f Weitzius, Nich. Heinsius",
+    "reading": "Prudentius's works are those of Weitzius, Nich. Heinsius"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "^ . St. Ambrose, St. Jerome, St Austin, St. Basil, St. Chrysos-",
+    "reading": "St. Ambrose, St. Jerome, St Austin, St. Basil, St. Chrysos-"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "altnr where they are wont to place images now in the Church",
+    "reading": "altar where they are wont to place images now in the Church"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "f chasing away infernal fiends. (Cath. hym. vi. v. 129. 133,",
+    "reading": "chasing away infernal fiends. (Cath. hym. vi. v. 129. 133,"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "full of the tombs of martyrs. Hymn ii. v. 541. hymn xi. v,",
+    "reading": "full of the tombs of martyrs. Hymn ii. v. 541. hymn xi. v."
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "his martyrs.' Those who desire more proofs,\" says I^e Clerc,",
+    "reading": "his martyrs.’ Those who desire more proofs,” says Le Clerc,"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "i . She was but twelve years old when the bloody",
+    "reading": "She was but twelve years old when the bloody"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "i usually fill tlie minds of yoiiiifr persons had no",
+    "reading": "usually fill the minds of young persons had no"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "of Rome \" Le Clerc, Lives of Primitive Fathers, in Pru-",
+    "reading": "of Rome.” Le Clerc, Lives of Primitive Fathers, in Pru-"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "practice of the Church in the fourth and fifth ages, l.e",
+    "reading": "practice of the Church in the fourth and fifth ages. Le"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "preface: in which he enumerates all his othei works, except",
+    "reading": "preface: in which he enumerates all his other works, except"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "shaft, (in Symmach 1. \\. v. 406. 488.) The best editions of",
+    "reading": "shaft, (in Symmach l. 1. v. 466. 488.) The best editions of"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "t cross, tl)e frequent use of which he strongly recommends, as",
+    "reading": "cross, the frequent use of which he strongly recommends, as"
+   },
+   {
+    "leaf": 237,
+    "page": "234",
+    "ocr": "toni, &c. demonstrate this to have been the doctrine and",
+    "reading": "tom, &c. demonstrate this to have been the doctrine and"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "Au£(ust, Ceillier, t. 17. p. 60, He is not to be confounded",
+    "reading": "August, Ceillier, t. 17. p. 66. He is not to be confounded"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "Clerc amongst his Primitive Fathers, p. 2Hl. Baillet, 2otli",
+    "reading": "Clerc amongst his Primitive Fathers, p. 281. Baillet, 25th"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "Ecclesiastical writers and some compilers of the lives if",
+    "reading": "Ecclesiastical writers and some compilers of the lives of"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "and is honoured on the Gih of April.",
+    "reading": "and is honoured on the 6th of April."
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "cused by her youth and inattention under tlie in- j",
+    "reading": "cused by her youth and inattention under the in-"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "edicts of Dioclesian were issued, by which itt",
+    "reading": "edicts of Dioclesian were issued, by which it"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "fluence of a warm zeal, and fear of the snare !",
+    "reading": "fluence of a warm zeal, and fear of the snare"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "lates, spat at the judge: an action only to be ex- .",
+    "reading": "lates, spat at the judge: an action only to be ex-"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "life compiled by Aldas Minutius, Geor<je Fabricius, Le",
+    "reading": "life compiled by Aldas Minutius, George Fabricius, Le"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "not in the IMartyrologies. See Ills works, and the notes col-",
+    "reading": "not in the Martyrologies. See his works, and the notes col-"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "of ii^e, sex, or profession, should be compelled",
+    "reading": "of age, sex, or profession, should be compelled"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "saints, give him the title of saint, thour^h his name occurs",
+    "reading": "saints, give him the title of saint, though his name occurs"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "sonls, by compelling them to renounce the only",
+    "reading": "souls, by compelling them to renounce the only"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "to be placed before her eyes, saying to her, '* All",
+    "reading": "to be placed before her eyes, saying to her, “All"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "with Saint Prudentius, bishop of Troyes, who died in 8(51,",
+    "reading": "with Saint Prudentius, bishop of Troyes, who died in 861,"
+   },
+   {
+    "leaf": 238,
+    "page": "235",
+    "ocr": "■was ordered tliat all persons, without exception ■",
+    "reading": "was ordered that all persons, without exception"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": ". which were laid for her. At the judge's order,",
+    "reading": "which were laid for her. At the judge’s order,"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "1 The lessoTis of the Church of Oviedo, and the acts of St, Eulalia's",
+    "reading": "1 The lessons of the Church of Oviedo, and the acts of St. Eulalia's"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "; Ecclesise Lusitanse, ssec. 4. c. 6. p. 217.1",
+    "reading": "Ecclesiæ Lusitanæ, sæc. 4. c. 6. p. 217.1"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "I bare. In the mean time she called tlie strokes so",
+    "reading": "bare. In the mean time she called the strokes so"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "I fire at length catching her hair, surrounded her",
+    "reading": "fire at length catching her hair, surrounded her"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "I head and face, and the saint was stifled by tlie",
+    "reading": "head and face, and the saint was stifled by the"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "I hotird from her mouth but thanksgivings. The",
+    "reading": "heard from her mouth but thanksgivings. The"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "I is honoured as patroness. The Roman Martyrol-",
+    "reading": "is honoured as patroness. The Roman Martyrol-"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "I kept with great veneration at Oviedo, where she",
+    "reading": "kept with great veneration at Oviedo, where she"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "I many trophies of Christ. Next lighted torches",
+    "reading": "many trophies of Christ. Next lighted torches"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "I smoke and flame. Prudentius tells us, that a",
+    "reading": "smoke and flame. Prudentius tells us, that a"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "I two executioners began to tear her tender sides",
+    "reading": "two executioners began to tear her tender sides"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "I with iron hooks, so as to leave the very bones",
+    "reading": "with iron hooks, so as to leave the very bones"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "Lcgrtt. and as the lawyer Venuleius Saturuinus shows, Leg. 11. ff. de",
+    "reading": "Legat. and as the lawyer Venuleius Saturninus shows, Leg. 11. ff. de"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "\\ by hymns, protects her clients.\" Her relics are",
+    "reading": "by hymns, protects her clients.” Her relics are"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "] ogy mentions her name on the 10th of Decembei'.",
+    "reading": "ogy mentions her name on the 10th of December."
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "f century. He assures us that pilgrims came to",
+    "reading": "century. He assures us that “pilgrims came to"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "i See Prudentius De Cor. hymno 9. alias 3. de. S.",
+    "reading": "See Prudentius De Cor. hymno 9. alias 3. de. S."
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "j Eulalia; and F. Thomas ab Incarnatione Hist.",
+    "reading": "Eulalia; and F. Thomas ab Incarnatione Hist."
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "that the holy martyr suflered in winter. The",
+    "reading": "that the holy martyr suffered in winter. The"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "the Christians near the place of her martyrdom:",
+    "reading": "the Christians near the place of her martyrdom;"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "the cr.ipovor Constantius declares. Leg. unica cod. de Offic. Procons. efc",
+    "reading": "the emperor Constantius declares. Leg. unica cod. de Offic. Procons. et"
+   },
+   {
+    "leaf": 239,
+    "page": "236",
+    "ocr": "♦ white dove seemed to come out of her mouth, and",
+    "reading": "white dove seemed to come out of her mouth, and"
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "A. D. 384.",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "DEC. 11. 3 ST. DAMASUS, P. C. 237",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "DECEMBER X/",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "From his vroiks, St. Jerom, Rufin, and Anastasius iu the Pontifical.",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "Pope Damasus is said in the Pontifical to have",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "Rome. Liberius at length was prevailed upon to",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "ST. DAMASUS, POPE, C.",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "See 'i'illeniont, t. 8. p. 3is6.",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "St. Athanasius, as is clear from that holy man's",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "St. Jerom assures us. When Liberius Avas ban-",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "always lived in a perfect state of continence, as",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "archdeacon of the Roman church, and attended",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "banishment, he constantly liekl communion with",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "been a Spaniard ; which may be true of his ex-",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "church of St. Laurence in Rome. Damasus serv-",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "delegate to a lieutenant such a, jurisdiction.' ieg. 1'^ et 13. do ofl^oig",
+    "reading": "delegate to a lieutenant such a jurisdiction. Leg. 12 et 13. de officio"
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "ed in the sacred ministry in the same church, and",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "he seems to have been born at Rome. His father,",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "him into exile, but immediately returned to",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "ished by Constantius to Beroea, in 355, he was",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "ly reader, deacon, and priest of the title or parish",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "mentioned by Ado, Usuard, &c. but we have no i",
+    "reading": "mentioned by Ado, Usuard, &c. but we have no"
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "of his wife, or by her free consent, engaged him-",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "officio Procons. et Legati, But the lawyers Pauhi^ and Pomponiua",
+    "reading": "officio Procons. et Legati. But the lawyers Paulus and Pomponius"
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "self in an ecclesiastical state, and was successive-",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "sign a confession of faith in which the word con-",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "substantial was omitted. After his return from",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "tell us, that proconsuls cquld, Ly a special mandate and .coniniitEion,",
+    "reading": "tell us, that proconsuls could, by a special mandate and commission,"
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "traction: but Tillemont and Merenda show that",
+    "reading": ""
+   },
+   {
+    "leaf": 240,
+    "page": "237",
+    "ocr": "whose name was Antony, either after the death",
+    "reading": ""
+   }
+  ],
+  "verifiedWords": [
+   "Lusitania",
+   "Estremadura",
+   "Compostella",
+   "Calahorra",
+   "Calaborra",
+   "Ceillier",
+   "Cathemer",
+   "Calagurit",
+   "prætorium",
+   "Cassiano",
+   "Hippolyto",
+   "Sidonius",
+   "Apollinaris",
+   "Phædrus",
+   "Juvencus",
+   "Sedulius",
+   "curdine",
+   "Trithemius",
+   "Grogory",
+   "Higgins",
+   "Psycomachia",
+   "Apotheoses",
+   "Amartigenia",
+   "Cathemerinon",
+   "Enchiridion",
+   "Pollentia",
+   "Stilico",
+   "στεφάνων",
+   "Exteri",
+   "necnon",
+   "Weitzius",
+   "Heinsius",
+   "Cellarius",
+   "Elzevir",
+   "Chamillard",
+   "Minutius",
+   "Fabricius",
+   "Baillet",
+   "Calpurnianus",
+   "Venuleius",
+   "Saturninus",
+   "Merida",
+   "Oviedo",
+   "Cathemerinon",
+   "labarum",
+   "Symmach",
+   "Paulinus",
+   "evelation",
+   "Salvete",
+   "luditis",
+   "nubila",
+   "aurea",
+   "Sedulins",
+   "patronos",
+   "mundi",
+   "Lusitanæ",
+   "sæc",
+   "Pomponius",
+   "Procons",
+   "Bruto",
+   "Cathem",
+   "Psych",
+   "coronis",
+   "surgit",
+   "Trithem",
+   "Sixt",
+   "Symmachum",
+   "Dacianus",
+   "Legati",
+   "Orat",
+   "Apoth",
+   "Imola",
+   "Busiris",
+   "Isocrates",
+   "Georgias"
+  ]
+ }
+]

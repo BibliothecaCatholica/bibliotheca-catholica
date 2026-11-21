@@ -143,3 +143,24 @@ class SameNameOnOneDay(unittest.TestCase):
         for md,L in D.items():
             n=[SC.key(e['n']) for e in L];self.assertEqual(len(n),len(set(n)),md)
         self.assertIn('St. Ambrose of Agaune (died 523)',[e['n'] for e in D['11-02']])
+
+class HostedReadings(unittest.TestCase):
+    def test_hosted_reading_link_is_a_site_path(self):
+        readings=SC.load_readings()
+        days=json.loads((ROOT/'data/saints-days.json').read_text())['days']
+        for md,items in readings.items():
+            self.assertIn(md,days,md)
+            names={e['n'] for e in days[md]}
+            for r in items:
+                self.assertTrue(r['href'].startswith('/'), r)
+                self.assertFalse(r['href'].startswith('/http'), r)
+                self.assertNotIn('://', r['href'], r)
+                self.assertNotIn('—', r['href']+r['label'])
+                self.assertIn(r['name'], names, r)
+                # the built page carries the site path and no catholicsaints / https href on the day
+        doc=json.loads((ROOT/'data/saints-days.json').read_text())
+        body=SC.day_page('12-10', SC.merged_day('12-10', doc, GUIDE, href), lambda u,lab: '<a href="%s">%s</a>'%(u,lab))[2]
+        self.assertIn('/work/butler-eulalia-merida/', body)
+        self.assertIn("Her life, from Butler's Lives (Derby, 1842)", body)
+        self.assertNotIn('href="https://', body)
+        self.assertNotIn('catholicsaints', body.lower())

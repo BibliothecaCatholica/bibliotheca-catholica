@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE='https://bibliothecacatholica.com/'
 sys.path.insert(0,str(ROOT/'tools'))
 import build_text_pages as BTP
-from notices import PG_LINE  # noqa: E402
+from notices import PG_LINE, notice_for, record_label, source_kind, SE_NOTICE  # noqa: E402
 R=lambda p:(ROOT/p).read_text()
 TP=json.loads(R('data/text-pages.json'))['works'];LIB={w['id']:w for w in json.loads(R('data/library.json'))['works']}
 SITEMAP=R('sitemap.xml');PAGES=set(R('docs/static-pages.txt').split())
@@ -51,10 +51,17 @@ class TextPages(unittest.TestCase):
                 self.assertIn('<link rel="canonical" href="'+SITE+p+'">',s);self.assertIn('<meta name="robots" content="index,follow">',s)
                 self.assertIn('window.BC_BOOT='+json.dumps(p.rstrip('/')),s)
                 self.assertEqual(m.count('<h1>'),1);self.assertIn('<h1>'+html.escape(x['title'])+'</h1>',m)
-                # rule 2 (owner, November 14, 2026): the licence's own 1.E.1 sentence, verbatim, once per page after the text
-                if 'gutenberg.org' in e['source']:
-                    self.assertEqual(m.count('class="small pg-notice">'+PG_LINE+'</p>'),1,f)  # verbatim 1.E.1, once per page
-                else:self.assertEqual(m.count('class="small pg-notice">This text comes from the Standard Ebooks edition'),1,f);self.assertNotIn('Project Gutenberg™ License',m,f)
+                # rule 2 (owner, November 14, 2026): the licence's own 1.E.1 sentence, verbatim, once per page after the text, only for gutenberg.org
+                kind=source_kind(e['source'])
+                self.assertEqual(m.count('class="small pg-notice">'+notice_for(e['source'])+'</p>'),1,f)
+                self.assertIn(record_label(e['source']),m,f)
+                if kind=='pg':
+                    self.assertIn(PG_LINE,m,f)
+                else:
+                    self.assertNotIn('Project Gutenberg™ License',m,f)
+                    self.assertNotIn('Standard Ebooks record',m,f) if kind!='se' else self.assertIn('Standard Ebooks record',m,f)
+                    if kind!='se':
+                        self.assertNotIn('This text comes from the Standard Ebooks edition',m,f)
                 self.assertGreater(m.index('pg-notice'),m.index('</article>'),f)
                 self.assertGreater(m.index('<details class="edition-details">'),m.index('</article>'),f)
                 for label in ('text-formatting','text-auto-layout','text-edition'):  # quality labels only in the edition details

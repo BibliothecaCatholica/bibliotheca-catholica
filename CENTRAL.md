@@ -26,9 +26,9 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 ## Verified snapshot
 
-As of November 19, 2026, `main` after PR #74 (`0384057ebf`):
+As of November 21, 2026, `main` after PR #114:
 
-- 200 work records; 140 hosted editions of 135 works in `data/library.json` (215 editions in all, 3 retired); 37 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 200 work records; 140 hosted editions of 135 works in `data/library.json` (222 editions in all, 4 retired); 52 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 5,327 sitemap URLs; 8,132 tracked files, most generated (`linguist-generated` in `.gitattributes`).
 - Tests: 127 Node and 337 Python.
 
@@ -46,6 +46,11 @@ As of November 19, 2026, `main` after PR #74 (`0384057ebf`):
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-21, Claude (Claude Code): open run 2
+
+- Chesterton polish (full Orthodoxy treatment, owner-approved): #108, #111, #112, #113, and #114 structure 14 more editions (Everlasting Man, Tremendous Trifles, New Jerusalem, Dickens, Poet and the Lunatics, Return of Don Quixote, Cobbett, Stevenson 1927, Irish Impressions, Napoleon of Notting Hill, Victorian Age, Four Faultless Felons, Eugenics, Tales of the Long Bow); about 45 Chesterton editions remain, several needing hand-built maps (`What I Saw in America` prints no headings). Hosted: Samuel Johnson (#109, 99.61%; `transcribe_scan.py` rejoins lost line-end hyphens) and the Stevenson booklet as its 1906 New York printing (#110). Essays and Addresses was already hosted with its evidence. Gloria in Profundis: no dated scan found.
+- Still refused: every server in the December-texts, councils, and Schroeder rows, the Faustula scans (ia601004, ia801004, ia601606, ia903203), ia601403 (Trent images, so "Aposotlic" and "excomnunication" stay), la.wikisource.org, books.google.com, www.mirrorservice.org; gutenberg.org 503; HathiTrust bot check. The non-renewal batch was probed (Cassidy 98.87% with the new tool; about 270 cited names to check per book). Next: more Chesterton maps, then the non-renewal review batch.
+
 ### 2026-11-21, Claude (Claude Code): open run
 
 - Merged #98 (Catholic Encyclopedia "Advent"; `transcribe_scan.py` learns article bounds, two columns, `verifiedWords`), #99 and #106 (Doré heads on ten sections; #95 closed), #100 (The Sword of Wood and C under an owner-approved `scanException`), #101 (Benham 1874), #102 (Trent r2: 34 confirmed typos; Session VII drop cap), #103 to #105 (G.K.C. as M.C., Do We Agree?, The Superstitions of the Sceptic). Bug sweep clean: no broken internal links or missing alt text in 5,726 pages, no console errors, plan check 26/26.
@@ -56,11 +61,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 - Merged #90: Walsh's The World's Debt to the Catholic Church hosted (97.5% scan agreement); The Sword of Wood and C held (no dated scan). #96: Trent (Waterworth, 1848) hosted and structured by session via the new `tools/import_html_pages.py` (read gate 99.81%, 96.6% agreement), linked from /councils/. #95 (do not merge): Doré header options for five pages; the owner picks.
 - Refused archive.org file servers (HOLDS rows name them): ia600707, ia800707, ia600406, ia800406 (Schroeder); ia600806, ia800806 (Percival); ia600803, ia800803 (Manning); ia601608, ia801608, ia600704, ia800704 (second printings).
 - Stopped here: the transcription backlog (its scans are on allowed servers; G.K.C. as M.C., at 99.49%, is nearest the gate). #83 waits for the owner after the Nov 22 preview.
-
-### 2026-11-20, Claude (Claude Code): work queue
-
-- Merged #81, #82 (Libraries desk rebuilt for fuse.js 7.5.0), and #87 (Schroeder basis approved); #83 (CSP) waits for the owner after the Nov 22 preview. #90 (for review): the Gutenberg Australia PDF prints rebuilt by `tools/import_pdf_print.py`, read gate 99.73%, 99.61%, 99.69%; hosting waits for the archive.org scan comparison. Orthodoxy flow #91 and #93 (37 structured); #92 indexes /study/ and recommends closing #17 and `deep-link-gaps-summa`.
-- Stopped here: Schroeder hosting, Councils Part 3, the transcription backlog, and the Doré proposal need archive.org or Wikimedia (outside this session's network); City of God (two-volume map) waits until the Advent freeze ends.
 
 ## Open items
 

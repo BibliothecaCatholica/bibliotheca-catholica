@@ -13,13 +13,12 @@ When a hold is released or finished, delete its row in the same commit as the wo
 | Plummer, Reeves, and Meyer Irish editions | Claude Code or a person | transcription (scan-only) | 2026-11-15 | Transcribe. |
 | Candles' Beams | Catholic Repo | a scan to check against | 2026-11-16 | Find a dated scan, then host. |
 | Sheehan | Catholic Repo | CELT consent caveat | 2026-11-16 | Resolve consent, then host. |
-| Faustula | Catholic Repo | text cleanup | 2026-11-15 | Remove the source library's added material. |
+| Faustula (John Ayscough, 1912) | Claude Code | a source | 2026-11-21 | No source text is recorded in the repository or its history, so there is no added material to remove yet. Faded Page has no copy; archive.org has dated 1912 Benziger scans (faustulanad34000aysc, cu31924013588847); gutenberg.org was down November 20 and 21. Next: check Project Gutenberg, else transcribe a scan. |
 | Bookshop gift-list URL | Bibliotheca Business | Business | 2026-11-15 | Add the link. |
 | @MindofTheChurch DM | BiblioCatholica X | their follow-back | 2026-11-15 | Send the DM. |
 | TAN BIBLIO15 promo code | Bibliotheca Business | TAN's reply | 2026-11-15 | Confirm the code. |
 | Cloudflare R2 storage | Bibliotheca Business | the business bank account | 2026-11-15 | Set up R2. |
-| Audit leftovers: PR #17 (superseded by #22 and #23, nothing left to salvage: close it; `deep-link-gaps-summa` likewise, superseded by the hosted Summa), security headers, branch protection (an owner setting), and evidence files | Catholic Repo | the owner's go-ahead | 2026-11-15 | Fix. |
-| Doré-style art beyond the home page | Owner | the owner's decision | 2026-11-15 | Decide. |
+| Audit leftovers: branch protection (an owner setting) and #83 (security headers, merged by the owner after the November 22 preview). PR #17 is closed; deleting the 29 merged branches and `deep-link-gaps-summa` needs the owner's command (the session's deletes were refused). The five missing evidence files are held outside the repository: see Open items in CENTRAL.md | Owner | the owner | 2026-11-21 | Merge #83; set branch protection; run the branch-delete command. |
 | 42 Substack review-cycle drafts in the Drive folder | Bibliotheca Substack | the owner's go | 2026-11-15 | Paste them as drafts. |
 | Chesterton scans below the 99.5% read gate: Samuel Johnson with Alice Meynell (98.84%); G.K.C. as M.C., Do We Agree?, and The Superstitions of the Sceptic hosted November 21 (settings in docs/research/chesterton-*-2026-11/) | Claude Code | a cleaner scan or a hand pass | 2026-11-16 | Transcribe: check the flagged words against the scan pages, or collate a second free scan. |
 | Chesterton's Robert Louis Stevenson (Bookman booklet, 1902): the one free scan (robertlouisstev00nicogoog) says "First Impression April, 1906" | Claude Code | evidence the 1906 text is the 1902 booklet | 2026-11-16 | Compare editions, then transcribe or find a 1902 scan. |

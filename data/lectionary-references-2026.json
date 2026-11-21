@@ -1,0 +1,3952 @@
+{
+  "source": {
+    "name": "Liturgical Calendar for the Dioceses of the United States of America (2026)",
+    "publisher": "United States Conference of Catholic Bishops",
+    "url": "https://www.usccb.org/resources/2026cal.pdf",
+    "checked": "2026-11-21",
+    "note": "Scripture citations only. No lectionary or biblical text is reproduced. Extracted from the official PDF with pdftotext; the PDF itself is not stored in this repository."
+  },
+  "days": {
+    "01-01": {
+      "weekday": "Thu",
+      "title": "SOLEMNITY OF MARY, THE HOLY MOTHER OF GOD white",
+      "extra": [
+        "The Octave Day of the Nativity of the Lord",
+        "(Holyday of Obligation)"
+      ],
+      "cites": [
+        "Nm 6:22-27/Gal 4:4-7/Lk 2:16-21 (18) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "01-02": {
+      "weekday": "Fri",
+      "title": "Saints Basil the Great and Gregory Nazianzen, white",
+      "extra": [
+        "Bishops and Doctors of the Church"
+      ],
+      "cites": [
+        "1 Jn 2:22-28/Jn 1:19-28 (205) Pss I"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "01-03": {
+      "weekday": "Sat",
+      "title": "Christmas Weekday white/white",
+      "extra": [],
+      "cites": [
+        "1 Jn 2:29—3:6/Jn 1:29-34 (206)"
+      ],
+      "rank": null,
+      "optional": [
+        "The Most Holy Name of Jesus"
+      ]
+    },
+    "01-04": {
+      "weekday": "SUN",
+      "title": "USA: THE EPIPHANY OF THE LORD white",
+      "extra": [],
+      "cites": [
+        "Is 60:1-6/Eph 3:2-3a, 5-6/Mt 2:1-12 (20) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "01-05": {
+      "weekday": "Mon",
+      "title": "USA: Saint John Neumann, Bishop white",
+      "extra": [],
+      "cites": [
+        "1 Jn 3:22—4:6/Mt 4:12-17, 23-25 (212) Pss II"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "01-06": {
+      "weekday": "Tue",
+      "title": "Christmas Weekday white/white",
+      "extra": [],
+      "cites": [
+        "1 Jn 4:7-10/Mk 6:34-44 (213)"
+      ],
+      "rank": null,
+      "optional": [
+        "USA: Saint André Bessette, Religious"
+      ]
+    },
+    "01-07": {
+      "weekday": "Wed",
+      "title": "Christmas Weekday white/white",
+      "extra": [],
+      "cites": [
+        "1 Jn 4:11-18/Mk 6:45-52 (214)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Raymond of Penyafort, Priest"
+      ]
+    },
+    "01-08": {
+      "weekday": "Thu",
+      "title": "Christmas Weekday white",
+      "extra": [],
+      "cites": [
+        "1 Jn 4:19—5:4/Lk 4:14-22a (215)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "01-09": {
+      "weekday": "Fri",
+      "title": "Christmas Weekday white",
+      "extra": [],
+      "cites": [
+        "1 Jn 5:5-13/Lk 5:12-16 (216)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "01-10": {
+      "weekday": "Sat",
+      "title": "Christmas Weekday white",
+      "extra": [],
+      "cites": [
+        "1 Jn 5:14-21/Jn 3:22-30 (217)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "01-11": {
+      "weekday": "SUN",
+      "title": "THE BAPTISM OF THE LORD white",
+      "extra": [],
+      "cites": [
+        "Is 42:1-4, 6-7/Acts 10:34-38/Mt 3:13-17 (21) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "01-12": {
+      "weekday": "Mon",
+      "title": "Weekday (First Week in Ordinary Time) green",
+      "extra": [],
+      "cites": [
+        "1 Sm 1:1-8/Mk 1:14-20 (305) Pss I"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "01-13": {
+      "weekday": "Tue",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "1 Sm 1:9-20/Mk 1:21-28 (306)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Hilary, Bishop and Doctor of the Church"
+      ]
+    },
+    "01-14": {
+      "weekday": "Wed",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Sm 3:1-10, 19-20/Mk 1:29-39 (307)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "01-15": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Sm 4:1-11/Mk 1:40-45 (308)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "01-16": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Sm 8:4-7, 10-22a/Mk 2:1-12 (309)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "01-17": {
+      "weekday": "Sat",
+      "title": "Saint Anthony, Abbot white",
+      "extra": [],
+      "cites": [
+        "1 Sm 9:1-4, 17-19; 10:1a/Mk 2:13-17 (310)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "01-18": {
+      "weekday": "SUN",
+      "title": "SECOND SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Is 49:3, 5-6/1 Cor 1:1-3/Jn 1:29-34 (64) Pss II"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "01-19": {
+      "weekday": "Mon",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Sm 15:16-23/Mk 2:18-22 (311)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "01-20": {
+      "weekday": "Tue",
+      "title": "Weekday green/red/red",
+      "extra": [],
+      "cites": [
+        "1 Sm 16:1-13/Mk 2:23-28 (312)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Fabian, Pope and Martyr; Saint Sebastian, Martyr"
+      ]
+    },
+    "01-21": {
+      "weekday": "Wed",
+      "title": "Saint Agnes, Virgin and Martyr red",
+      "extra": [],
+      "cites": [
+        "1 Sm 17:32-33, 37, 40-51/Mk 3:1-6 (313) Pss Prop"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "01-22": {
+      "weekday": "Thu",
+      "title": "USA: Day of Prayer for the Legal white or violet",
+      "extra": [
+        "Protection of Unborn Children",
+        "or, for the Day of Prayer, any readings from the Mass “For Giving Thanks to God",
+        "for the Gift of Human Life” (Lectionary for Mass Supplement, 947A-947E)"
+      ],
+      "cites": [
+        "1 Sm 18:6-9; 19:1-7/Mk 3:7-12 (314)",
+        "or the Mass “For Peace and Justice” (887-891)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "01-23": {
+      "weekday": "Fri",
+      "title": "Weekday green/red/white",
+      "extra": [],
+      "cites": [
+        "1 Sm 24:3-21/Mk 3:13-19 (315)"
+      ],
+      "rank": null,
+      "optional": [
+        "USA: Saint Vincent, Deacon and Martyr; USA: Saint Marianne Cope, Virgin"
+      ]
+    },
+    "01-24": {
+      "weekday": "Sat",
+      "title": "Saint Francis de Sales, Bishop and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "2 Sm 1:1-4, 11-12, 19, 23-27/Mk 3:20-21 (316)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "01-25": {
+      "weekday": "SUN",
+      "title": "THIRD SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Is 8:23—9:3/1 Cor 1:10-13, 17/Mt 4:12-23 or 4:12-17 (67) Pss III"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "01-26": {
+      "weekday": "Mon",
+      "title": "Saints Timothy and Titus, Bishops white",
+      "extra": [],
+      "cites": [
+        "2 Tm 1:1-8 or Ti 1:1-5 (520)/Mk 3:22-30 (317)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "01-27": {
+      "weekday": "Tue",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "2 Sm 6:12b-15, 17-19/Mk 3:31-35 (318)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Angela Merici, Virgin"
+      ]
+    },
+    "01-28": {
+      "weekday": "Wed",
+      "title": "Saint Thomas Aquinas, Priest and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "2 Sm 7:4-17/Mk 4:1-20 (319)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "01-29": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "2 Sm 7:18-19, 24-29/Mk 4:21-25 (320)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "01-30": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "2 Sm 11:1-4a, 5-10a, 13-17/Mk 4:26-34 (321)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "01-31": {
+      "weekday": "Sat",
+      "title": "Saint John Bosco, Priest white",
+      "extra": [],
+      "cites": [
+        "2 Sm 12:1-7a, 10-17/Mk 4:35-41 (322)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "02-01": {
+      "weekday": "SUN",
+      "title": "FOURTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Zep 2:3; 3:12-13/1 Cor 1:26-31/Mt 5:1-12a (70) Pss IV"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-02": {
+      "weekday": "Mon",
+      "title": "The Presentation of the Lord white",
+      "extra": [],
+      "cites": [
+        "Mal 3:1-4/Heb 2:14-18/Lk 2:22-40 or 2:22-32 (524) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "02-03": {
+      "weekday": "Tue",
+      "title": "Weekday green/red/white",
+      "extra": [],
+      "cites": [
+        "2 Sm 18:9-10, 14b, 24-25a, 30—19:3/Mk 5:21-43 (324)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Blaise, Bishop and Martyr; Saint Ansgar, Bishop"
+      ]
+    },
+    "02-04": {
+      "weekday": "Wed",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "2 Sm 24:2, 9-17/Mk 6:1-6 (325)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-05": {
+      "weekday": "Thu",
+      "title": "Saint Agatha, Virgin and Martyr red",
+      "extra": [],
+      "cites": [
+        "1 Kgs 2:1-4, 10-12/Mk 6:7-13 (326)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "02-06": {
+      "weekday": "Fri",
+      "title": "Saint Paul Miki and Companions, Martyrs red",
+      "extra": [],
+      "cites": [
+        "Sir 47:2-11/Mk 6:14-29 (327)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "02-07": {
+      "weekday": "Sat",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "1 Kgs 3:4-13/Mk 6:30-34 (328)"
+      ],
+      "rank": null,
+      "optional": [
+        "BVM"
+      ]
+    },
+    "02-08": {
+      "weekday": "SUN",
+      "title": "FIFTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Is 58:7-10/1 Cor 2:1-5/Mt 5:13-16 (73) Pss I"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-09": {
+      "weekday": "Mon",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Kgs 8:1-7, 9-13/Mk 6:53-56 (329)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-10": {
+      "weekday": "Tue",
+      "title": "Saint Scholastica, Virgin white",
+      "extra": [],
+      "cites": [
+        "1 Kgs 8:22-23, 27-30/Mk 7:1-13 (330)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "02-11": {
+      "weekday": "Wed",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "1 Kgs 10:1-10/Mk 7:14-23 (331)"
+      ],
+      "rank": null,
+      "optional": [
+        "Our Lady of Lourdes"
+      ]
+    },
+    "02-12": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Kgs 11:4-13/Mk 7:24-30 (332)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-13": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Kgs 11:29-32; 12:19/Mk 7:31-37 (333)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-14": {
+      "weekday": "Sat",
+      "title": "Saints Cyril, Monk, and Methodius, Bishop white",
+      "extra": [],
+      "cites": [
+        "1 Kgs 12:26-32; 13:33-34/Mk 8:1-10 (334)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "02-15": {
+      "weekday": "SUN",
+      "title": "SIXTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Sir 15:15-20/1 Cor 2:6-10/Mt 5:17-37 or 5:20-22a, 27-28, 33-34a, 37 (76) Pss II"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-16": {
+      "weekday": "Mon",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Jas 1:1-11/Mk 8:11-13 (335)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-17": {
+      "weekday": "Tue",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Jas 1:12-18/Mk 8:14-21 (336)"
+      ],
+      "rank": null,
+      "optional": [
+        "The Seven Holy Founders of the Servite Order"
+      ]
+    },
+    "02-18": {
+      "weekday": "Wed",
+      "title": "Ash Wednesday violet",
+      "extra": [],
+      "cites": [
+        "Jl 2:12-18/2 Cor 5:20—6:2/Mt 6:1-6, 16-18 (219) Pss IV"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-19": {
+      "weekday": "Thu",
+      "title": "Thursday after Ash Wednesday violet",
+      "extra": [],
+      "cites": [
+        "Dt 30:15-20/Lk 9:22-25 (220)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-20": {
+      "weekday": "Fri",
+      "title": "Friday after Ash Wednesday violet",
+      "extra": [],
+      "cites": [
+        "Is 58:1-9a/Mt 9:14-15 (221)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-21": {
+      "weekday": "Sat",
+      "title": "Saturday after Ash Wednesday violet",
+      "extra": [],
+      "cites": [
+        "Is 58:9b-14/Lk 5:27-32 (222)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Peter Damian, Bishop and Doctor of the Church"
+      ]
+    },
+    "02-22": {
+      "weekday": "SUN",
+      "title": "FIRST SUNDAY OF LENT violet",
+      "extra": [],
+      "cites": [
+        "Gn 2:7-9; 3:1-7/Rom 5:12-19 or 5:12, 17-19/Mt 4:1-11 (22) Pss I"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-23": {
+      "weekday": "Mon",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Lv 19:1-2, 11-18/Mt 25:31-46 (224)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Polycarp, Bishop and Martyr"
+      ]
+    },
+    "02-24": {
+      "weekday": "Tue",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Is 55:10-11/Mt 6:7-15 (225)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-25": {
+      "weekday": "Wed",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Jon 3:1-10/Lk 11:29-32 (226)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-26": {
+      "weekday": "Thu",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Est C:12, 14-16, 23-25/Mt 7:7-12 (227)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "02-27": {
+      "weekday": "Fri",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Ez 18:21-28/Mt 5:20-26 (228)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Gregory of Narek, Abbot and Doctor of the Church"
+      ]
+    },
+    "02-28": {
+      "weekday": "Sat",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Dt 26:16-19/Mt 5:43-48 (229)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-01": {
+      "weekday": "SUN",
+      "title": "SECOND SUNDAY OF LENT violet",
+      "extra": [],
+      "cites": [
+        "Gn 12:1-4a/2 Tm 1:8b-10/Mt 17:1-9 (25) Pss II"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-02": {
+      "weekday": "Mon",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Dn 9:4b-10/Lk 6:36-38 (230)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-03": {
+      "weekday": "Tue",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Is 1:10, 16-20/Mt 23:1-12 (231)"
+      ],
+      "rank": null,
+      "optional": [
+        "USA: Saint Katharine Drexel, Virgin"
+      ]
+    },
+    "03-04": {
+      "weekday": "Wed",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Jer 18:18-20/Mt 20:17-28 (232)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Casimir"
+      ]
+    },
+    "03-05": {
+      "weekday": "Thu",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Jer 17:5-10/Lk 16:19-31 (233)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-06": {
+      "weekday": "Fri",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Gn 37:3-4, 12-13a, 17b-28a/Mt 21:33-43, 45-46 (234)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-07": {
+      "weekday": "Sat",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Mi 7:14-15, 18-20/Lk 15:1-3, 11-32 (235)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saints Perpetua and Felicity, Martyrs"
+      ]
+    },
+    "03-08": {
+      "weekday": "SUN",
+      "title": "THIRD SUNDAY OF LENT violet",
+      "extra": [],
+      "cites": [
+        "Ex 17:3-7/Rom 5:1-2, 5-8/Jn 4:5-42 or 4:5-15, 19b-26, 39a, 40-42 (28) Pss III"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-09": {
+      "weekday": "Mon",
+      "title": "Lenten Weekday5 violet",
+      "extra": [],
+      "cites": [
+        "2 Kgs 5:1-15ab/Lk 4:24-30 (237)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Frances of Rome, Religious"
+      ]
+    },
+    "03-10": {
+      "weekday": "Tue",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Dn 3:25, 34-43/Mt 18:21-35 (238)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-11": {
+      "weekday": "Wed",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Dt 4:1, 5-9/Mt 5:17-19 (239)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-12": {
+      "weekday": "Thu",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Jer 7:23-28/Lk 11:14-23 (240)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-13": {
+      "weekday": "Fri",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Hos 14:2-10/Mk 12:28-34 (241)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-14": {
+      "weekday": "Sat",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Hos 6:1-6/Lk 18:9-14 (242)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-15": {
+      "weekday": "SUN",
+      "title": "FOURTH SUNDAY OF LENT violet or rose",
+      "extra": [],
+      "cites": [
+        "1 Sm 16:1b, 6-7, 10-13a/Eph 5:8-14/Jn 9:1-41 or 9:1, 6-9, 13-17, 34-38 (31) Pss IV"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-16": {
+      "weekday": "Mon",
+      "title": "Lenten Weekday6 violet",
+      "extra": [],
+      "cites": [
+        "Is 65:17-21/Jn 4:43-54 (244)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-17": {
+      "weekday": "Tue",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Ez 47:1-9, 12/Jn 5:1-16 (245)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Patrick, Bishop"
+      ]
+    },
+    "03-18": {
+      "weekday": "Wed",
+      "title": "Lenten Weekday violet",
+      "extra": [
+        "The following readings may be used on any day this week, especially in Years B and C when the Gospel of the Samaritan",
+        "The following readings may be used on any Lenten day this week, especially in Years B and C when the Gospel of the"
+      ],
+      "cites": [
+        "Is 49:8-15/Jn 5:17-30 (246)",
+        "Woman is not read on the Third Sunday of Lent: Ex 17:1-7/Jn 4:5-42 (236).",
+        "Man Born Blind is not read on the Fourth Sunday of Lent: Mi 7:7-9/Jn 9:1-41 (243)."
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Cyril of Jerusalem, Bishop and Doctor of the Church"
+      ]
+    },
+    "03-19": {
+      "weekday": "Thu",
+      "title": "SAINT JOSEPH, SPOUSE OF THE BLESSED VIRGIN MARY white",
+      "extra": [
+        "Pss Prop"
+      ],
+      "cites": [
+        "2 Sm 7:4-5a, 12-14a, 16/Rom 4:13, 16-18, 22/Mt 1:16, 18-21, 24a or Lk 2:41-51a (543)"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "03-20": {
+      "weekday": "Fri",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Wis 2:1a, 12-22/Jn 7:1-2, 10, 25-30 (248)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-21": {
+      "weekday": "Sat",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Jer 11:18-20/Jn 7:40-53 (249)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-22": {
+      "weekday": "SUN",
+      "title": "FIFTH SUNDAY OF LENT violet",
+      "extra": [],
+      "cites": [
+        "Ez 37:12-14/Rom 8:8-11/Jn 11:1-45 or 11:3-7, 17, 20-27, 33b-45 (34) Pss I"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-23": {
+      "weekday": "Mon",
+      "title": "Lenten Weekday7 violet",
+      "extra": [],
+      "cites": [
+        "Dn 13:1-9, 15-17, 19-30, 33-62 or 13:41c-62/Jn 8:1-11 (251)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Turibius of Mogrovejo, Bishop"
+      ]
+    },
+    "03-24": {
+      "weekday": "Tue",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Nm 21:4-9/Jn 8:21-30 (252)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-25": {
+      "weekday": "Wed",
+      "title": "THE ANNUNCIATION OF THE LORD white",
+      "extra": [],
+      "cites": [
+        "Is 7:10-14; 8:10/Heb 10:4-10/Lk 1:26-38 (545) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "03-26": {
+      "weekday": "Thu",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Gn 17:3-9/Jn 8:51-59 (254)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-27": {
+      "weekday": "Fri",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Jer 20:10-13/Jn 10:31-42 (255)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-28": {
+      "weekday": "Sat",
+      "title": "Lenten Weekday violet",
+      "extra": [],
+      "cites": [
+        "Ez 37:21-28/Jn 11:45-56 (256)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-29": {
+      "weekday": "SUN",
+      "title": "PALM SUNDAY OF THE PASSION OF THE LORD red",
+      "extra": [
+        "The following readings may be used on any Lenten day this week, especially in Years B and C when the Gospel of Lazarus"
+      ],
+      "cites": [
+        "Mt 21:1-11 (37)/Is 50:4-7/Phil 2:6-11/Mt 26:14—27:66 or 27:11-54 (38) Pss II",
+        "is not read on the Fifth Sunday of Lent: 2 Kgs 4:18b-21, 32-37/Jn 11:1-45 (250)."
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-30": {
+      "weekday": "Mon",
+      "title": "Monday of Holy Week violet",
+      "extra": [],
+      "cites": [
+        "Is 42:1-7/Jn 12:1-11 (257)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "03-31": {
+      "weekday": "Tue",
+      "title": "Tuesday of Holy Week violet",
+      "extra": [],
+      "cites": [
+        "Is 49:1-6/Jn 13:21-33, 36-38 (258)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-01": {
+      "weekday": "Wed",
+      "title": "Wednesday of Holy Week violet",
+      "extra": [],
+      "cites": [
+        "Is 50:4-9a/Mt 26:14-25 (259)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-02": {
+      "weekday": "Thu",
+      "title": "Thursday of Holy Week (Holy Thursday)8 white",
+      "extra": [
+        "Pss Prop"
+      ],
+      "cites": [
+        "Chrism Mass: Is 61:1-3a, 6a, 8b-9/Rv 1:5-8/Lk 4:16-21 (260)",
+        "Evening Mass of the Lord's Supper: Ex 12:1-8, 11-14/1 Cor 11:23-26/Jn 13:1-15 (39)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-03": {
+      "weekday": "Fri",
+      "title": "Friday of the Passion of the Lord (Good Friday) red",
+      "extra": [],
+      "cites": [
+        "Is 52:13—53:12/Heb 4:14-16; 5:7-9/Jn 18:1—19:42 (40) Pss Prop"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-04": {
+      "weekday": "Sat",
+      "title": "Holy Saturday9 white",
+      "extra": [],
+      "cites": [
+        "Easter Vigil: Gn 1:1—2:2 or 1:1, 26-31a/Gn 22:1-18 or 22:1-2, 9a, 10-13, 15-18/",
+        "Ex 14:15—15:1/Is 54:5-14/Is 55:1-11/Bar 3:9-15, 32—4:4/Ez 36:16-17a, 18-28/",
+        "Rom 6:3-11/Mt 28:1-10 (41) Pss Prop"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-05": {
+      "weekday": "SUN",
+      "title": "EASTER SUNDAY OF THE RESURRECTION OF THE LORD white",
+      "extra": [],
+      "cites": [
+        "Acts 10:34a, 37-43/Col 3:1-4 or 1 Cor 5:6b-8/Jn 20:1-9 (42) or Mt 28:1-10 (41)",
+        "or, at an afternoon or evening Mass, Lk 24:13-35 (46) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "04-06": {
+      "weekday": "Mon",
+      "title": "Monday within the Octave of Easter10 white",
+      "extra": [
+        "If necessary, the Chrism Mass may be celebrated on a suitable day before Holy Thursday.",
+        "Nine readings are assigned to the Easter Vigil: seven from the Old Testament and two from the New. If circumstances",
+        "demand in individual cases, the number of prescribed readings may be reduced. Three selections from the Old Testament,",
+        "both from the Law and the Prophets, should be read before the Epistle and Gospel. In any case, the reading from Exodus",
+        "about the escape through the Red Sea (reading 3) should never be omitted.",
+        "Although not given the title of Solemnity, “[t]he first eight days of Easter Time constitute the Octave of Easter and are",
+        "celebrated as Solemnities of the Lord” (Universal Norms on the Liturgical Year and the Calendar, no. 24)."
+      ],
+      "cites": [
+        "Acts 2:14, 22-33/Mt 28:8-15 (261) Pss Prop"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-07": {
+      "weekday": "Tue",
+      "title": "Tuesday within the Octave of Easter white",
+      "extra": [],
+      "cites": [
+        "Acts 2:36-41/Jn 20:11-18 (262) Pss Prop"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-08": {
+      "weekday": "Wed",
+      "title": "Wednesday within the Octave of Easter white",
+      "extra": [],
+      "cites": [
+        "Acts 3:1-10/Lk 24:13-35 (263) Pss Prop"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-09": {
+      "weekday": "Thu",
+      "title": "Thursday within the Octave of Easter white",
+      "extra": [],
+      "cites": [
+        "Acts 3:11-26/Lk 24:35-48 (264) Pss Prop"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-10": {
+      "weekday": "Fri",
+      "title": "Friday within the Octave of Easter white",
+      "extra": [],
+      "cites": [
+        "Acts 4:1-12/Jn 21:1-14 (265) Pss Prop"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-11": {
+      "weekday": "Sat",
+      "title": "Saturday within the Octave of Easter white",
+      "extra": [],
+      "cites": [
+        "Acts 4:13-21/Mk 16:9-15 (266) Pss Prop"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-12": {
+      "weekday": "SUN",
+      "title": "SECOND SUNDAY OF EASTER white",
+      "extra": [
+        "(OR SUNDAY OF DIVINE MERCY)"
+      ],
+      "cites": [
+        "Acts 2:42-47/1 Pt 1:3-9/Jn 20:19-31 (43) Pss Prop"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-13": {
+      "weekday": "Mon",
+      "title": "Easter Weekday white/red",
+      "extra": [],
+      "cites": [
+        "Acts 4:23-31/Jn 3:1-8 (267) Pss II"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Martin I, Pope and Martyr"
+      ]
+    },
+    "04-14": {
+      "weekday": "Tue",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 4:32-37/Jn 3:7b-15 (268)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-15": {
+      "weekday": "Wed",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 5:17-26/Jn 3:16-21 (269)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-16": {
+      "weekday": "Thu",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 5:27-33/Jn 3:31-36 (270)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-17": {
+      "weekday": "Fri",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 5:34-42/Jn 6:1-15 (271)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-18": {
+      "weekday": "Sat",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 6:1-7/Jn 6:16-21 (272)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-19": {
+      "weekday": "SUN",
+      "title": "THIRD SUNDAY OF EASTER white",
+      "extra": [],
+      "cites": [
+        "Acts 2:14, 22-33/1 Pt 1:17-21/Lk 24:13-35 (46) Pss III"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-20": {
+      "weekday": "Mon",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 6:8-15/Jn 6:22-29 (273)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-21": {
+      "weekday": "Tue",
+      "title": "Easter Weekday white/white",
+      "extra": [],
+      "cites": [
+        "Acts 7:51—8:1a/Jn 6:30-35 (274)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Anselm, Bishop and Doctor of the Church"
+      ]
+    },
+    "04-22": {
+      "weekday": "Wed",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 8:1b-8/Jn 6:35-40 (275)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-23": {
+      "weekday": "Thu",
+      "title": "Easter Weekday white/red/red",
+      "extra": [],
+      "cites": [
+        "Acts 8:26-40/Jn 6:44-51 (276)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint George, Martyr; Saint Adalbert, Bishop and Martyr"
+      ]
+    },
+    "04-24": {
+      "weekday": "Fri",
+      "title": "Easter Weekday white/red",
+      "extra": [],
+      "cites": [
+        "Acts 9:1-20/Jn 6:52-59 (277)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Fidelis of Sigmaringen, Priest and Martyr"
+      ]
+    },
+    "04-25": {
+      "weekday": "Sat",
+      "title": "Saint Mark, Evangelist red",
+      "extra": [],
+      "cites": [
+        "1 Pt 5:5b-14/Mk 16:15-20 (555) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "04-26": {
+      "weekday": "SUN",
+      "title": "FOURTH SUNDAY OF EASTER white",
+      "extra": [],
+      "cites": [
+        "Acts 2:14a, 36-41/1 Pt 2:20b-25/Jn 10:1-10 (49) Pss IV"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-27": {
+      "weekday": "Mon",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 11:1-18/Jn 10:11-18 (second choice) (279)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "04-28": {
+      "weekday": "Tue",
+      "title": "Easter Weekday white/red/white",
+      "extra": [],
+      "cites": [
+        "Acts 11:19-26/Jn 10:22-30 (280)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Peter Chanel, Priest and Martyr; Saint Louis Grignion de Montfort, Priest"
+      ]
+    },
+    "04-29": {
+      "weekday": "Wed",
+      "title": "Saint Catherine of Siena, Virgin and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "Acts 12:24—13:5a/Jn 12:44-50 (281)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "04-30": {
+      "weekday": "Thu",
+      "title": "Easter Weekday white/white",
+      "extra": [],
+      "cites": [
+        "Acts 13:13-25/Jn 13:16-20 (282)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Pius V, Pope"
+      ]
+    },
+    "05-01": {
+      "weekday": "Fri",
+      "title": "Easter Weekday white/white",
+      "extra": [],
+      "cites": [
+        "Acts 13:26-33/Jn 14:1-6 (283)",
+        "or, for the Optional Memorial, Gn 1:26—2:3 or Col 3:14-15, 17, 23-24/Mt 13:54-58 (559)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Joseph the Worker"
+      ]
+    },
+    "05-02": {
+      "weekday": "Sat",
+      "title": "Saint Athanasius, Bishop and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "Acts 13:44-52/Jn 14:7-14 (284)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "05-03": {
+      "weekday": "SUN",
+      "title": "FIFTH SUNDAY OF EASTER white",
+      "extra": [],
+      "cites": [
+        "Acts 6:1-7/1 Pt 2:4-9/Jn 14:1-12 (52) Pss I"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-04": {
+      "weekday": "Mon",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 14:5-18/Jn 14:21-26 (285)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-05": {
+      "weekday": "Tue",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 14:19-28/Jn 14:27-31a (286)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-06": {
+      "weekday": "Wed",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 15:1-6/Jn 15:1-8 (287)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-07": {
+      "weekday": "Thu",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 15:7-21/Jn 15:9-11 (288)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-08": {
+      "weekday": "Fri",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 15:22-31/Jn 15:12-17 (289)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-09": {
+      "weekday": "Sat",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 16:1-10/Jn 15:18-21 (290)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-10": {
+      "weekday": "SUN",
+      "title": "SIXTH SUNDAY OF EASTER11 white",
+      "extra": [],
+      "cites": [
+        "Acts 8:5-8, 14-17/1 Pt 3:15-18/Jn 14:15-21 (55) Pss II"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-11": {
+      "weekday": "Mon",
+      "title": "Easter Weekday white",
+      "extra": [
+        "When the Ascension of the Lord is celebrated on the following Sunday, the Second Reading and Gospel from the",
+        "Seventh Sunday of Easter (see no. 59) may be read on the Sixth Sunday of Easter."
+      ],
+      "cites": [
+        "Acts 16:11-15/Jn 15:26—16:4a (291)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-12": {
+      "weekday": "Tue",
+      "title": "Easter Weekday white/red/red",
+      "extra": [],
+      "cites": [
+        "Acts 16:22-34/Jn 16:5-11 (292)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saints Nereus and Achilleus, Martyrs; Saint Pancras, Martyr"
+      ]
+    },
+    "05-13": {
+      "weekday": "Wed",
+      "title": "Easter Weekday white/white",
+      "extra": [
+        "Ecclesiastical Provinces of Boston, Hartford, New York, Omaha, Philadelphia:"
+      ],
+      "cites": [
+        "Acts 17:15, 22—18:1/Jn 16:12-15 (293)"
+      ],
+      "rank": null,
+      "optional": [
+        "Our Lady of Fatima"
+      ]
+    },
+    "05-14": {
+      "weekday": "Thu",
+      "title": "THE ASCENSION OF THE LORD white",
+      "extra": [
+        "All Other U.S. Ecclesiastical Provinces:",
+        "(Holyday of Obligation)"
+      ],
+      "cites": [
+        "Acts 1:1-11/Eph 1:17-23/Mt 28:16-20 (58) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "05-15": {
+      "weekday": "Fri",
+      "title": "Easter Weekday white/white",
+      "extra": [],
+      "cites": [
+        "Acts 18:9-18/Jn 16:20-23 (295)"
+      ],
+      "rank": null,
+      "optional": [
+        "USA: Saint Isidore"
+      ]
+    },
+    "05-16": {
+      "weekday": "Sat",
+      "title": "Easter Weekday white",
+      "extra": [
+        "Ecclesiastical Provinces of Boston, Hartford, New York, Omaha, Philadelphia:"
+      ],
+      "cites": [
+        "Acts 18:23-28/Jn 16:23b-28 (296)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-17": {
+      "weekday": "SUN",
+      "title": "SEVENTH SUNDAY OF EASTER white",
+      "extra": [
+        "All Other U.S. Ecclesiastical Provinces:"
+      ],
+      "cites": [
+        "Acts 1:12-14/1 Pt 4:13-16/Jn 17:1-11a (59) Pss III"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-18": {
+      "weekday": "Mon",
+      "title": "Easter Weekday white/red",
+      "extra": [],
+      "cites": [
+        "Acts 19:1-8/Jn 16:29-33 (297)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint John I, Pope and Martyr"
+      ]
+    },
+    "05-19": {
+      "weekday": "Tue",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Acts 20:17-27/Jn 17:1-11a (298)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-20": {
+      "weekday": "Wed",
+      "title": "Easter Weekday white/white",
+      "extra": [],
+      "cites": [
+        "Acts 20:28-38/Jn 17:11b-19 (299)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Bernardine of Siena, Priest"
+      ]
+    },
+    "05-21": {
+      "weekday": "Thu",
+      "title": "Easter Weekday white/red",
+      "extra": [],
+      "cites": [
+        "Acts 22:30; 23:6-11/Jn 17:20-26 (300)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Christopher Magallanes, Priest, and Companions, Martyrs"
+      ]
+    },
+    "05-22": {
+      "weekday": "Fri",
+      "title": "Easter Weekday white/white",
+      "extra": [],
+      "cites": [
+        "Acts 25:13b-21/Jn 21:15-19 (301)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Rita of Cascia, Religious"
+      ]
+    },
+    "05-23": {
+      "weekday": "Sat",
+      "title": "Easter Weekday white",
+      "extra": [],
+      "cites": [
+        "Morning: Acts 28:16-20, 30-31/Jn 21:20-25 (302)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-24": {
+      "weekday": "SUN",
+      "title": "PENTECOST SUNDAY red",
+      "extra": [],
+      "cites": [
+        "Vigil: Gn 11:1-9 or Ex 19:3-8a, 16-20b or Ez 37:1-14 or Jl 3:1-5/Rom 8:22-27/Jn 7:37-39 (62)",
+        "or, for the Extended Vigil: Gn 11:1-9/Ex 19:3-8a, 16-20b/Ez 37:1-14/Jl 3:1-5/Rom 8:22-27/",
+        "Jn 7:37-39 (see Lectionary for Mass Supplement, 62)",
+        "Day: Acts 2:1-11/1 Cor 12:3b-7, 12-13/Jn 20:19-23 (63) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "05-25": {
+      "weekday": "Mon",
+      "title": "The Blessed Virgin Mary, Mother of the Church white",
+      "extra": [
+        "(Eighth Week in Ordinary Time)"
+      ],
+      "cites": [
+        "Gn 3:9-15, 20 or Acts 1:12-14/Jn 19:25-34 (572A, see USCCB.org/motherofthechurch) Pss IV"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "05-26": {
+      "weekday": "Tue",
+      "title": "Saint Philip Neri, Priest white",
+      "extra": [],
+      "cites": [
+        "1 Pt 1:10-16/Mk 10:28-31 (348)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "05-27": {
+      "weekday": "Wed",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "1 Pt 1:18-25/Mk 10:32-45 (349)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Augustine of Canterbury, Bishop"
+      ]
+    },
+    "05-28": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Pt 2:2-5, 9-12/Mk 10:46-52 (350)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "05-29": {
+      "weekday": "Fri",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "1 Pt 4:7-13/Mk 11:11-26 (351)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Paul VI, Pope"
+      ]
+    },
+    "05-30": {
+      "weekday": "Sat",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Jude 17, 20b-25/Mk 11:27-33 (352)"
+      ],
+      "rank": null,
+      "optional": [
+        "BVM"
+      ]
+    },
+    "05-31": {
+      "weekday": "SUN",
+      "title": "THE MOST HOLY TRINITY white",
+      "extra": [],
+      "cites": [
+        "Ex 34:4b-6, 8-9/2 Cor 13:11-13/Jn 3:16-18 (164) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "06-01": {
+      "weekday": "Mon",
+      "title": "Saint Justin, Martyr (Ninth Week in Ordinary Time) red",
+      "extra": [],
+      "cites": [
+        "2 Pt 1:2-7/Mk 12:1-12 (353) Pss I"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "06-02": {
+      "weekday": "Tue",
+      "title": "Weekday green/red",
+      "extra": [],
+      "cites": [
+        "2 Pt 3:12-15a, 17-18/Mk 12:13-17 (354)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saints Marcellinus and Peter, Martyrs"
+      ]
+    },
+    "06-03": {
+      "weekday": "Wed",
+      "title": "Saint Charles Lwanga and Companions, Martyrs red",
+      "extra": [],
+      "cites": [
+        "2 Tm 1:1-3, 6-12/Mk 12:18-27 (355)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "06-04": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "2 Tm 2:8-15/Mk 12:28-34 (356)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-05": {
+      "weekday": "Fri",
+      "title": "Saint Boniface, Bishop and Martyr red",
+      "extra": [],
+      "cites": [
+        "2 Tm 3:10-17/Mk 12:35-37 (357)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "06-06": {
+      "weekday": "Sat",
+      "title": "Weekday green/white/white",
+      "extra": [],
+      "cites": [
+        "2 Tm 4:1-8/Mk 12:38-44 (358)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Norbert, Bishop; BVM"
+      ]
+    },
+    "06-07": {
+      "weekday": "SUN",
+      "title": "USA: THE MOST HOLY BODY AND BLOOD OF CHRIST white",
+      "extra": [
+        "(Corpus Christi)"
+      ],
+      "cites": [
+        "Dt 8:2-3, 14b-16a/1 Cor 10:16-17/Jn 6:51-58 (167) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "06-08": {
+      "weekday": "Mon",
+      "title": "Weekday (Tenth Week in Ordinary Time) green",
+      "extra": [],
+      "cites": [
+        "1 Kgs 17:1-6/Mt 5:1-12 (359) Pss II"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-09": {
+      "weekday": "Tue",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "1 Kgs 17:7-16/Mt 5:13-16 (360)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Ephrem, Deacon and Doctor of the Church"
+      ]
+    },
+    "06-10": {
+      "weekday": "Wed",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Kgs 18:20-39/Mt 5:17-19 (361)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-11": {
+      "weekday": "Thu",
+      "title": "Saint Barnabas, Apostle red",
+      "extra": [],
+      "cites": [
+        "Acts 11:21b-26; 13:1-3 (580)/Mt 5:20-26 (362)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "06-12": {
+      "weekday": "Fri",
+      "title": "THE MOST SACRED HEART OF JESUS white",
+      "extra": [],
+      "cites": [
+        "Dt 7:6-11/1 Jn 4:7-16/Mt 11:25-30 (170) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "06-13": {
+      "weekday": "Sat",
+      "title": "Weekday green/white/white/white",
+      "extra": [
+        "[The Immaculate Heart of the Blessed Virgin Mary;",
+        "Saint Anthony of Padua, Priest and Doctor of the Church; BVM]"
+      ],
+      "cites": [
+        "1 Kgs 19:19-21/Mt 5:33-37 (364)",
+        "or, for the Optional Memorial of the Immaculate Heart, 1 Kgs 19:19-21 (364)/Lk 2:41-51 (573)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-14": {
+      "weekday": "SUN",
+      "title": "ELEVENTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Ex 19:2-6a/Rom 5:6-11/Mt 9:36—10:8 (91) Pss III"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-15": {
+      "weekday": "Mon",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Kgs 21:1-16/Mt 5:38-42 (365)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-16": {
+      "weekday": "Tue",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Kgs 21:17-29/Mt 5:43-48 (366)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-17": {
+      "weekday": "Wed",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "2 Kgs 2:1, 6-14/Mt 6:1-6, 16-18 (367)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-18": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Sir 48:1-14/Mt 6:7-15 (368)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-19": {
+      "weekday": "Fri",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "2 Kgs 11:1-4, 9-18, 20/Mt 6:19-23 (369)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Romuald, Abbot"
+      ]
+    },
+    "06-20": {
+      "weekday": "Sat",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "2 Chr 24:17-25/Mt 6:24-34 (370)"
+      ],
+      "rank": null,
+      "optional": [
+        "BVM"
+      ]
+    },
+    "06-21": {
+      "weekday": "SUN",
+      "title": "TWELFTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Jer 20:10-13/Rom 5:12-15/Mt 10:26-33 (94) Pss IV"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-22": {
+      "weekday": "Mon",
+      "title": "Weekday green/white/red",
+      "extra": [
+        "[Saint Paulinus of Nola, Bishop; Saints John Fisher, Bishop,",
+        "and Thomas More, Martyrs]"
+      ],
+      "cites": [
+        "2 Kgs 17:5-8, 13-15a, 18/Mt 7:1-5 (371)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-23": {
+      "weekday": "Tue",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "2 Kgs 19:9b-11, 14-21, 31-35a, 36/Mt 7:6, 12-14 (372)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-24": {
+      "weekday": "Wed",
+      "title": "THE NATIVITY OF SAINT JOHN THE BAPTIST white",
+      "extra": [],
+      "cites": [
+        "Vigil: Jer 1:4-10/1 Pt 1:8-12/Lk 1:5-17 (586)",
+        "Day: Is 49:1-6/Acts 13:22-26/Lk 1:57-66, 80 (587) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "06-25": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "2 Kgs 24:8-17/Mt 7:21-29 (374)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-26": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "2 Kgs 25:1-12/Mt 8:1-4 (375)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-27": {
+      "weekday": "Sat",
+      "title": "Weekday green/white/white",
+      "extra": [],
+      "cites": [
+        "Lam 2:2, 10-14, 18-19/Mt 8:5-17 (376)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Cyril of Alexandria, Bishop and Doctor of the Church; BVM"
+      ]
+    },
+    "06-28": {
+      "weekday": "SUN",
+      "title": "THIRTEENTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "2 Kgs 4:8-11, 14-16a/Rom 6:3-4, 8-11/Mt 10:37-42 (97) Pss I"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "06-29": {
+      "weekday": "Mon",
+      "title": "SAINTS PETER AND PAUL, APOSTLES red",
+      "extra": [],
+      "cites": [
+        "Vigil: Acts 3:1-10/Gal 1:11-20/Jn 21:15-19 (590)",
+        "Day: Acts 12:1-11/2 Tm 4:6-8, 17-18/Mt 16:13-19 (591) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "06-30": {
+      "weekday": "Tue",
+      "title": "Weekday green/red",
+      "extra": [],
+      "cites": [
+        "Am 3:1-8; 4:11-12/Mt 8:23-27 (378)"
+      ],
+      "rank": null,
+      "optional": [
+        "The First Martyrs of the Holy Roman Church"
+      ]
+    },
+    "07-01": {
+      "weekday": "Wed",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Am 5:14-15, 21-24/Mt 8:28-34 (379)"
+      ],
+      "rank": null,
+      "optional": [
+        "USA: Saint Junípero Serra, Priest"
+      ]
+    },
+    "07-02": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Am 7:10-17/Mt 9:1-8 (380)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "07-03": {
+      "weekday": "Fri",
+      "title": "Saint Thomas, Apostle red",
+      "extra": [],
+      "cites": [
+        "Eph 2:19-22/Jn 20:24-29 (593) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "07-04": {
+      "weekday": "Sat",
+      "title": "Weekday green/white/white",
+      "extra": [
+        "or, for Independence Day, any readings from the Mass “For the Country"
+      ],
+      "cites": [
+        "Am 9:11-15/Mt 9:14-17 (382)",
+        "or a City” (882-886) or the Mass “For Peace and Justice” (887-891)"
+      ],
+      "rank": null,
+      "optional": [
+        "USA: Independence Day; BVM"
+      ]
+    },
+    "07-05": {
+      "weekday": "SUN",
+      "title": "FOURTEENTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Zec 9:9-10/Rom 8:9, 11-13/Mt 11:25-30 (100) Pss II"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "07-06": {
+      "weekday": "Mon",
+      "title": "Weekday green/red",
+      "extra": [],
+      "cites": [
+        "Hos 2:16, 17c-18, 21-22/Mt 9:18-26 (383)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Maria Goretti, Virgin and Martyr"
+      ]
+    },
+    "07-07": {
+      "weekday": "Tue",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Hos 8:4-7, 11-13/Mt 9:32-38 (384)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "07-08": {
+      "weekday": "Wed",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Hos 10:1-3, 7-8, 12/Mt 10:1-7 (385)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "07-09": {
+      "weekday": "Thu",
+      "title": "Weekday green/red",
+      "extra": [],
+      "cites": [
+        "Hos 11:1-4, 8e-9/Mt 10:7-15 (386)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Augustine Zhao Rong, Priest, and Companions, Martyrs"
+      ]
+    },
+    "07-10": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Hos 14:2-10/Mt 10:16-23 (387)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "07-11": {
+      "weekday": "Sat",
+      "title": "Saint Benedict, Abbot white",
+      "extra": [],
+      "cites": [
+        "Is 6:1-8/Mt 10:24-33 (388)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "07-12": {
+      "weekday": "SUN",
+      "title": "FIFTEENTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Is 55:10-11/Rom 8:18-23/Mt 13:1-23 or 13:1-9 (103) Pss III"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "07-13": {
+      "weekday": "Mon",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Is 1:10-17/Mt 10:34—11:1 (389)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Henry"
+      ]
+    },
+    "07-14": {
+      "weekday": "Tue",
+      "title": "USA: Saint Kateri Tekakwitha, Virgin white",
+      "extra": [],
+      "cites": [
+        "Is 7:1-9/Mt 11:20-24 (390)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "07-15": {
+      "weekday": "Wed",
+      "title": "Saint Bonaventure, Bishop and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "Is 10:5-7, 13b-16/Mt 11:25-27 (391)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "07-16": {
+      "weekday": "Thu",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Is 26:7-9, 12, 16-19/Mt 11:28-30 (392)"
+      ],
+      "rank": null,
+      "optional": [
+        "Our Lady of Mount Carmel"
+      ]
+    },
+    "07-17": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Is 38:1-6, 21-22, 7-8/Mt 12:1-8 (393)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "07-18": {
+      "weekday": "Sat",
+      "title": "Weekday green/white/white",
+      "extra": [],
+      "cites": [
+        "Mi 2:1-5/Mt 12:14-21 (394)"
+      ],
+      "rank": null,
+      "optional": [
+        "USA: Saint Camillus de Lellis, Priest; BVM"
+      ]
+    },
+    "07-19": {
+      "weekday": "SUN",
+      "title": "SIXTEENTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Wis 12:13, 16-19/Rom 8:26-27/Mt 13:24-43 or 13:24-30 (106) Pss IV"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "07-20": {
+      "weekday": "Mon",
+      "title": "Weekday green/red",
+      "extra": [],
+      "cites": [
+        "Mi 6:1-4, 6-8/Mt 12:38-42 (395)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Apollinaris, Bishop and Martyr"
+      ]
+    },
+    "07-21": {
+      "weekday": "Tue",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Mi 7:14-15, 18-20/Mt 12:46-50 (396)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Lawrence of Brindisi, Priest and Doctor of the Church"
+      ]
+    },
+    "07-22": {
+      "weekday": "Wed",
+      "title": "Saint Mary Magdalene white",
+      "extra": [],
+      "cites": [
+        "Sg 3:1-4b or 2 Cor 5:14-17/Jn 20:1-2, 11-18 (603) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "07-23": {
+      "weekday": "Thu",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Jer 2:1-3, 7-8, 12-13/Mt 13:10-17 (398)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Bridget, Religious"
+      ]
+    },
+    "07-24": {
+      "weekday": "Fri",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Jer 3:14-17/Mt 13:18-23 (399)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Sharbel Makhlūf, Priest"
+      ]
+    },
+    "07-25": {
+      "weekday": "Sat",
+      "title": "Saint James, Apostle red",
+      "extra": [],
+      "cites": [
+        "2 Cor 4:7-15/Mt 20:20-28 (605) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "07-26": {
+      "weekday": "SUN",
+      "title": "SEVENTEENTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "1 Kgs 3:5, 7-12/Rom 8:28-30/Mt 13:44-52 or 13:44-46 (109) Pss I"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "07-27": {
+      "weekday": "Mon",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Jer 13:1-11/Mt 13:31-35 (401)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "07-28": {
+      "weekday": "Tue",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Jer 14:17-22/Mt 13:36-43 (402)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "07-29": {
+      "weekday": "Wed",
+      "title": "Saints Martha, Mary, and Lazarus white",
+      "extra": [],
+      "cites": [
+        "Jer 15:10, 16-21 (403)/Jn 11:19-27 or Lk 10:38-42 (607)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "07-30": {
+      "weekday": "Thu",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Jer 18:1-6/Mt 13:47-53 (404)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Peter Chrysologus, Bishop and Doctor of the Church"
+      ]
+    },
+    "07-31": {
+      "weekday": "Fri",
+      "title": "Saint Ignatius of Loyola, Priest white",
+      "extra": [],
+      "cites": [
+        "Jer 26:1-9/Mt 13:54-58 (405)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "08-01": {
+      "weekday": "Sat",
+      "title": "Saint Alphonsus Liguori, Bishop and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "Jer 26:11-16, 24/Mt 14:1-12 (406)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "08-02": {
+      "weekday": "SUN",
+      "title": "EIGHTEENTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Is 55:1-3/Rom 8:35, 37-39/Mt 14:13-21 (112) Pss II"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "08-03": {
+      "weekday": "Mon",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Jer 28:1-17 (407)/Mt 14:22-36 (408)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "08-04": {
+      "weekday": "Tue",
+      "title": "Saint John Vianney, Priest white",
+      "extra": [],
+      "cites": [
+        "Jer 30:1-2, 12-15, 18-22/Mt 14:22-36 or Mt 15:1-2, 10-14 (408)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "08-05": {
+      "weekday": "Wed",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Jer 31:1-7/Mt 15:21-28 (409)"
+      ],
+      "rank": null,
+      "optional": [
+        "The Dedication of the Basilica of Saint Mary Major"
+      ]
+    },
+    "08-06": {
+      "weekday": "Thu",
+      "title": "The Transfiguration of the Lord white",
+      "extra": [],
+      "cites": [
+        "Dn 7:9-10, 13-14/2 Pt 1:16-19/Mt 17:1-9 (614) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "08-07": {
+      "weekday": "Fri",
+      "title": "Weekday green/red/white",
+      "extra": [],
+      "cites": [
+        "Na 2:1, 3; 3:1-3, 6-7/Mt 16:24-28 (411)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Sixtus II, Pope, and Companions, Martyrs; Saint Cajetan, Priest"
+      ]
+    },
+    "08-08": {
+      "weekday": "Sat",
+      "title": "Saint Dominic, Priest white",
+      "extra": [],
+      "cites": [
+        "Hb 1:12—2:4/Mt 17:14-20 (412)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "08-09": {
+      "weekday": "SUN",
+      "title": "NINETEENTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "1 Kgs 19:9a, 11-13a/Rom 9:1-5/Mt 14:22-33 (115) Pss III"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "08-10": {
+      "weekday": "Mon",
+      "title": "Saint Lawrence, Deacon and Martyr red",
+      "extra": [],
+      "cites": [
+        "2 Cor 9:6-10/Jn 12:24-26 (618) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "08-11": {
+      "weekday": "Tue",
+      "title": "Saint Clare, Virgin white",
+      "extra": [],
+      "cites": [
+        "Ez 2:8—3:4/Mt 18:1-5, 10, 12-14 (414)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "08-12": {
+      "weekday": "Wed",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Ez 9:1-7; 10:18-22/Mt 18:15-20 (415)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Jane Frances de Chantal, Religious"
+      ]
+    },
+    "08-13": {
+      "weekday": "Thu",
+      "title": "Weekday green/red",
+      "extra": [],
+      "cites": [
+        "Ez 12:1-12/Mt 18:21—19:1 (416)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saints Pontian, Pope, and Hippolytus, Priest, Martyrs"
+      ]
+    },
+    "08-14": {
+      "weekday": "Fri",
+      "title": "Saint Maximilian Kolbe, Priest and Martyr red",
+      "extra": [],
+      "cites": [
+        "Ez 16:1-15, 60, 63 or 16:59-63/Mt 19:3-12 (417)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "08-15": {
+      "weekday": "Sat",
+      "title": "THE ASSUMPTION OF THE BLESSED VIRGIN MARY white",
+      "extra": [
+        "(not a Holyday of Obligation this year)"
+      ],
+      "cites": [
+        "Vigil: 1 Chr 15:3-4, 15-16; 16:1-2/1 Cor 15:54b-57/Lk 11:27-28 (621)",
+        "Day: Rv 11:19a; 12:1-6a, 10ab/1 Cor 15:20-27/Lk 1:39-56 (622) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "08-16": {
+      "weekday": "SUN",
+      "title": "TWENTIETH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Is 56:1, 6-7/Rom 11:13-15, 29-32/Mt 15:21-28 (118) Pss IV"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "08-17": {
+      "weekday": "Mon",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Ez 24:15-23/Mt 19:16-22 (419)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "08-18": {
+      "weekday": "Tue",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Ez 28:1-10/Mt 19:23-30 (420)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "08-19": {
+      "weekday": "Wed",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Ez 34:1-11/Mt 20:1-16 (421)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint John Eudes, Priest"
+      ]
+    },
+    "08-20": {
+      "weekday": "Thu",
+      "title": "Saint Bernard, Abbot and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "Ez 36:23-28/Mt 22:1-14 (422)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "08-21": {
+      "weekday": "Fri",
+      "title": "Saint Pius X, Pope white",
+      "extra": [],
+      "cites": [
+        "Ez 37:1-14/Mt 22:34-40 (423)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "08-22": {
+      "weekday": "Sat",
+      "title": "The Queenship of the Blessed Virgin Mary white",
+      "extra": [],
+      "cites": [
+        "Ez 43:1-7ab/Mt 23:1-12 (424)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "08-23": {
+      "weekday": "SUN",
+      "title": "TWENTY-FIRST SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Is 22:19-23/Rom 11:33-36/Mt 16:13-20 (121) Pss I"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "08-24": {
+      "weekday": "Mon",
+      "title": "Saint Bartholomew, Apostle red",
+      "extra": [],
+      "cites": [
+        "Rv 21:9b-14/Jn 1:45-51 (629) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "08-25": {
+      "weekday": "Tue",
+      "title": "Weekday green/white/white",
+      "extra": [],
+      "cites": [
+        "2 Thes 2:1-3a, 14-17/Mt 23:23-26 (426)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Louis; Saint Joseph Calasanz, Priest"
+      ]
+    },
+    "08-26": {
+      "weekday": "Wed",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "2 Thes 3:6-10, 16-18/Mt 23:27-32 (427)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "08-27": {
+      "weekday": "Thu",
+      "title": "Saint Monica white",
+      "extra": [],
+      "cites": [
+        "1 Cor 1:1-9/Mt 24:42-51 (428)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "08-28": {
+      "weekday": "Fri",
+      "title": "Saint Augustine, Bishop and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "1 Cor 1:17-25/Mt 25:1-13 (429)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "08-29": {
+      "weekday": "Sat",
+      "title": "The Passion of Saint John the Baptist red",
+      "extra": [],
+      "cites": [
+        "1 Cor 1:26-31 (430)/Mk 6:17-29 (634) Pss Prop"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "08-30": {
+      "weekday": "SUN",
+      "title": "TWENTY-SECOND SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Jer 20:7-9/Rom 12:1-2/Mt 16:21-27 (124) Pss II"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "08-31": {
+      "weekday": "Mon",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Cor 2:1-5/Lk 4:16-30 (431)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-01": {
+      "weekday": "Tue",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Cor 2:10b-16/Lk 4:31-37 (432)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-02": {
+      "weekday": "Wed",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Cor 3:1-9/Lk 4:38-44 (433)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-03": {
+      "weekday": "Thu",
+      "title": "Saint Gregory the Great, Pope and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "1 Cor 3:18-23/Lk 5:1-11 (434)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "09-04": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Cor 4:1-5/Lk 5:33-39 (435)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-05": {
+      "weekday": "Sat",
+      "title": "Weekday green/white/white",
+      "extra": [],
+      "cites": [
+        "1 Cor 4:6b-15/Lk 6:1-5 (436)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Teresa of Calcutta, Virgin; BVM"
+      ]
+    },
+    "09-06": {
+      "weekday": "SUN",
+      "title": "TWENTY-THIRD SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Ez 33:7-9/Rom 13:8-10/Mt 18:15-20 (127) Pss III"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-07": {
+      "weekday": "Mon",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Cor 5:1-8/Lk 6:6-11 (437)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-08": {
+      "weekday": "Tue",
+      "title": "The Nativity of the Blessed Virgin Mary white",
+      "extra": [],
+      "cites": [
+        "Mi 5:1-4a or Rom 8:28-30/Mt 1:1-16, 18-23 or 1:18-23 (636) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "09-09": {
+      "weekday": "Wed",
+      "title": "USA: Saint Peter Claver, Priest white",
+      "extra": [],
+      "cites": [
+        "1 Cor 7:25-31/Lk 6:20-26 (439)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "09-10": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Cor 8:1b-7, 11-13/Lk 6:27-38 (440)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-11": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Cor 9:16-19, 22b-27/Lk 6:39-42 (441)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-12": {
+      "weekday": "Sat",
+      "title": "Weekday green/white/white",
+      "extra": [],
+      "cites": [
+        "1 Cor 10:14-22/Lk 6:43-49 (442)"
+      ],
+      "rank": null,
+      "optional": [
+        "The Most Holy Name of Mary; BVM"
+      ]
+    },
+    "09-13": {
+      "weekday": "SUN",
+      "title": "TWENTY-FOURTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Sir 27:30—28:7/Rom 14:7-9/Mt 18:21-35 (130) Pss IV"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-14": {
+      "weekday": "Mon",
+      "title": "The Exaltation of the Holy Cross red",
+      "extra": [],
+      "cites": [
+        "Nm 21:4b-9/Phil 2:6-11/Jn 3:13-17 (638) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "09-15": {
+      "weekday": "Tue",
+      "title": "Our Lady of Sorrows white",
+      "extra": [],
+      "cites": [
+        "1 Cor 12:12-14, 27-31a (444)/Jn 19:25-27 or Lk 2:33-35 (639) Pss Prop"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "09-16": {
+      "weekday": "Wed",
+      "title": "Saints Cornelius, Pope, and Cyprian, Bishop, Martyrs red",
+      "extra": [],
+      "cites": [
+        "1 Cor 12:31—13:13/Lk 7:31-35 (445)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "09-17": {
+      "weekday": "Thu",
+      "title": "Weekday green/white/white",
+      "extra": [
+        "[Saint Robert Bellarmine, Bishop and Doctor of the Church;",
+        "Saint Hildegard of Bingen, Virgin and Doctor of the Church]"
+      ],
+      "cites": [
+        "1 Cor 15:1-11/Lk 7:36-50 (446)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-18": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "1 Cor 15:12-20/Lk 8:1-3 (447)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-19": {
+      "weekday": "Sat",
+      "title": "Weekday green/red/white",
+      "extra": [],
+      "cites": [
+        "1 Cor 15:35-37, 42-49/Lk 8:4-15 (448)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Januarius, Bishop and Martyr; BVM"
+      ]
+    },
+    "09-20": {
+      "weekday": "SUN",
+      "title": "TWENTY-FIFTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Is 55:6-9/Phil 1:20c-24, 27a/Mt 20:1-16a (133) Pss I"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-21": {
+      "weekday": "Mon",
+      "title": "Saint Matthew, Apostle and Evangelist red",
+      "extra": [],
+      "cites": [
+        "Eph 4:1-7, 11-13/Mt 9:9-13 (643) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "09-22": {
+      "weekday": "Tue",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Prv 21:1-6, 10-13/Lk 8:19-21 (450)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-23": {
+      "weekday": "Wed",
+      "title": "Saint Pius of Pietrelcina, Priest white",
+      "extra": [],
+      "cites": [
+        "Prv 30:5-9/Lk 9:1-6 (451)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "09-24": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Eccl 1:2-11/Lk 9:7-9 (452)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-25": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Eccl 3:1-11/Lk 9:18-22 (453)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-26": {
+      "weekday": "Sat",
+      "title": "Weekday green/red/white",
+      "extra": [],
+      "cites": [
+        "Eccl 11:9—12:8/Lk 9:43b-45 (454)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saints Cosmas and Damian, Martyrs; BVM"
+      ]
+    },
+    "09-27": {
+      "weekday": "SUN",
+      "title": "TWENTY-SIXTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Ez 18:25-28/Phil 2:1-11 or 2:1-5/Mt 21:28-32 (136) Pss II"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "09-28": {
+      "weekday": "Mon",
+      "title": "Weekday green/red/red",
+      "extra": [],
+      "cites": [
+        "Jb 1:6-22/Lk 9:46-50 (455)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Wenceslaus, Martyr; Saint Lawrence Ruiz and Companions, Martyrs"
+      ]
+    },
+    "09-29": {
+      "weekday": "Tue",
+      "title": "Saints Michael, Gabriel and Raphael, Archangels white",
+      "extra": [],
+      "cites": [
+        "Dn 7:9-10, 13-14 or Rv 12:7-12ab/Jn 1:47-51 (647) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "09-30": {
+      "weekday": "Wed",
+      "title": "Saint Jerome, Priest and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "Jb 9:1-12, 14-16/Lk 9:57-62 (457)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "10-01": {
+      "weekday": "Thu",
+      "title": "Saint Thérèse of the Child Jesus, Virgin and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "Jb 19:21-27/Lk 10:1-12 (458)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "10-02": {
+      "weekday": "Fri",
+      "title": "The Holy Guardian Angels white",
+      "extra": [],
+      "cites": [
+        "Jb 38:1, 12-21; 40:3-5 (459)/Mt 18:1-5, 10 (650) Pss Prop"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "10-03": {
+      "weekday": "Sat",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Jb 42:1-3, 5-6, 12-17/Lk 10:17-24 (460)"
+      ],
+      "rank": null,
+      "optional": [
+        "BVM"
+      ]
+    },
+    "10-04": {
+      "weekday": "SUN",
+      "title": "TWENTY-SEVENTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Is 5:1-7/Phil 4:6-9/Mt 21:33-43 (139) Pss III"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-05": {
+      "weekday": "Mon",
+      "title": "Weekday green/white/white",
+      "extra": [
+        "[Saint Faustina Kowalska, Virgin;",
+        "USA: Blessed Francis Xavier Seelos, Priest]"
+      ],
+      "cites": [
+        "Gal 1:6-12/Lk 10:25-37 (461)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-06": {
+      "weekday": "Tue",
+      "title": "Weekday green/white/white",
+      "extra": [],
+      "cites": [
+        "Gal 1:13-24/Lk 10:38-42 (462)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Bruno, Priest; USA: Blessed Marie Rose Durocher, Virgin"
+      ]
+    },
+    "10-07": {
+      "weekday": "Wed",
+      "title": "Our Lady of the Rosary white",
+      "extra": [],
+      "cites": [
+        "Gal 2:1-2, 7-14/Lk 11:1-4 (463) Pss Prop"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "10-08": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Gal 3:1-5/Lk 11:5-13 (464)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-09": {
+      "weekday": "Fri",
+      "title": "Weekday green/red/white/white",
+      "extra": [
+        "[Saint Denis, Bishop, and Companions, Martyrs; Saint John Leonardi, Priest;",
+        "Saint John Henry Newman, Priest and Doctor of the Church]"
+      ],
+      "cites": [
+        "Gal 3:7-14/Lk 11:15-26 (465)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-10": {
+      "weekday": "Sat",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Gal 3:22-29/Lk 11:27-28 (466)"
+      ],
+      "rank": null,
+      "optional": [
+        "BVM"
+      ]
+    },
+    "10-11": {
+      "weekday": "SUN",
+      "title": "TWENTY-EIGHTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Is 25:6-10a/Phil 4:12-14, 19-20/Mt 22:1-14 or 22:1-10 (142) Pss IV"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-12": {
+      "weekday": "Mon",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Gal 4:22-24, 26-27, 31—5:1/Lk 11:29-32 (467)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-13": {
+      "weekday": "Tue",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Gal 5:1-6/Lk 11:37-41 (468)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-14": {
+      "weekday": "Wed",
+      "title": "Weekday green/red",
+      "extra": [],
+      "cites": [
+        "Gal 5:18-25/Lk 11:42-46 (469)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Callistus I, Pope and Martyr"
+      ]
+    },
+    "10-15": {
+      "weekday": "Thu",
+      "title": "Saint Teresa of Jesus, Virgin and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "Eph 1:1-10/Lk 11:47-54 (470)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "10-16": {
+      "weekday": "Fri",
+      "title": "Weekday green/white/white",
+      "extra": [],
+      "cites": [
+        "Eph 1:11-14/Lk 12:1-7 (471)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Hedwig, Religious; Saint Margaret Mary Alacoque, Virgin"
+      ]
+    },
+    "10-17": {
+      "weekday": "Sat",
+      "title": "Saint Ignatius of Antioch, Bishop and Martyr red",
+      "extra": [],
+      "cites": [
+        "Eph 1:15-23/Lk 12:8-12 (472)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "10-18": {
+      "weekday": "SUN",
+      "title": "TWENTY-NINTH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Is 45:1, 4-6/1 Thes 1:1-5b/Mt 22:15-21 (145) Pss I"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-19": {
+      "weekday": "Mon",
+      "title": "USA: Saints John de Brébeuf and Isaac Jogues, Priests, red",
+      "extra": [
+        "and Companions, Martyrs"
+      ],
+      "cites": [
+        "Eph 2:1-10/Lk 12:13-21 (473)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "10-20": {
+      "weekday": "Tue",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Eph 2:12-22/Lk 12:35-38 (474)"
+      ],
+      "rank": null,
+      "optional": [
+        "USA: Saint Paul of the Cross, Priest"
+      ]
+    },
+    "10-21": {
+      "weekday": "Wed",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Eph 3:2-12/Lk 12:39-48 (475)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-22": {
+      "weekday": "Thu",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Eph 3:14-21/Lk 12:49-53 (476)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint John Paul II, Pope"
+      ]
+    },
+    "10-23": {
+      "weekday": "Fri",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Eph 4:1-6/Lk 12:54-59 (477)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint John of Capistrano, Priest"
+      ]
+    },
+    "10-24": {
+      "weekday": "Sat",
+      "title": "Weekday green/white/white",
+      "extra": [],
+      "cites": [
+        "Eph 4:7-16/Lk 13:1-9 (478)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Anthony Mary Claret, Bishop; BVM"
+      ]
+    },
+    "10-25": {
+      "weekday": "SUN",
+      "title": "THIRTIETH SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Ex 22:20-26/1 Thes 1:5c-10/Mt 22:34-40 (148) Pss II"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-26": {
+      "weekday": "Mon",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Eph 4:32—5:8/Lk 13:10-17 (479)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-27": {
+      "weekday": "Tue",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Eph 5:21-33/Lk 13:18-21 (480)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-28": {
+      "weekday": "Wed",
+      "title": "Saints Simon and Jude, Apostles red",
+      "extra": [],
+      "cites": [
+        "Eph 2:19-22/Lk 6:12-16 (666) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "10-29": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Eph 6:10-20/Lk 13:31-35 (482)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-30": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Phil 1:1-11/Lk 14:1-6 (483)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "10-31": {
+      "weekday": "Sat",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Phil 1:18b-26/Lk 14:1, 7-11 (484)"
+      ],
+      "rank": null,
+      "optional": [
+        "BVM"
+      ]
+    },
+    "11-01": {
+      "weekday": "SUN",
+      "title": "ALL SAINTS white",
+      "extra": [],
+      "cites": [
+        "Rv 7:2-4, 9-14/1 Jn 3:1-3/Mt 5:1-12a (667) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "11-02": {
+      "weekday": "Mon",
+      "title": "The Commemoration of All the Faithful Departed violet or white or black",
+      "extra": [
+        "(All Souls’ Day)"
+      ],
+      "cites": [
+        "Any readings from no. 668 or from the Masses for the Dead (1011-1016) Pss Prop"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "11-03": {
+      "weekday": "Tue",
+      "title": "Weekday (Thirty-First Week in Ordinary Time) green/white",
+      "extra": [],
+      "cites": [
+        "Phil 2:5-11/Lk 14:15-24 (486) Pss III"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Martin de Porres, Religious"
+      ]
+    },
+    "11-04": {
+      "weekday": "Wed",
+      "title": "Saint Charles Borromeo, Bishop white",
+      "extra": [],
+      "cites": [
+        "Phil 2:12-18/Lk 14:25-33 (487)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "11-05": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Phil 3:3-8a/Lk 15:1-10 (488)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "11-06": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Phil 3:17—4:1/Lk 16:1-8 (489)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "11-07": {
+      "weekday": "Sat",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Phil 4:10-19/Lk 16:9-15 (490)"
+      ],
+      "rank": null,
+      "optional": [
+        "BVM"
+      ]
+    },
+    "11-08": {
+      "weekday": "SUN",
+      "title": "THIRTY-SECOND SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Wis 6:12-16/1 Thes 4:13-18 or 4:13-14/Mt 25:1-13 (154) Pss IV"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "11-09": {
+      "weekday": "Mon",
+      "title": "The Dedication of the Lateran Basilica white",
+      "extra": [],
+      "cites": [
+        "Ez 47:1-2, 8-9, 12/1 Cor 3:9c-11, 16-17/Jn 2:13-22 (671) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "11-10": {
+      "weekday": "Tue",
+      "title": "Saint Leo the Great, Pope and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "Ti 2:1-8, 11-14/Lk 17:7-10 (492)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "11-11": {
+      "weekday": "Wed",
+      "title": "Saint Martin of Tours, Bishop white",
+      "extra": [],
+      "cites": [
+        "Ti 3:1-7/Lk 17:11-19 (493) Pss Prop"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "11-12": {
+      "weekday": "Thu",
+      "title": "Saint Josaphat, Bishop and Martyr red",
+      "extra": [],
+      "cites": [
+        "Phlm 7-20/Lk 17:20-25 (494)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "11-13": {
+      "weekday": "Fri",
+      "title": "USA: Saint Frances Xavier Cabrini, Virgin white",
+      "extra": [],
+      "cites": [
+        "2 Jn 4-9/Lk 17:26-37 (495)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "11-14": {
+      "weekday": "Sat",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "3 Jn 5-8/Lk 18:1-8 (496)"
+      ],
+      "rank": null,
+      "optional": [
+        "BVM"
+      ]
+    },
+    "11-15": {
+      "weekday": "SUN",
+      "title": "THIRTY-THIRD SUNDAY IN ORDINARY TIME green",
+      "extra": [],
+      "cites": [
+        "Prv 31:10-13, 19-20, 30-31/1 Thes 5:1-6/Mt 25:14-30 or 25:14-15, 19-21 (157) Pss I"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "11-16": {
+      "weekday": "Mon",
+      "title": "Weekday green/white/white",
+      "extra": [],
+      "cites": [
+        "Rv 1:1-4; 2:1-5/Lk 18:35-43 (497)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Margaret of Scotland; Saint Gertrude, Virgin"
+      ]
+    },
+    "11-17": {
+      "weekday": "Tue",
+      "title": "Saint Elizabeth of Hungary, Religious white",
+      "extra": [],
+      "cites": [
+        "Rv 3:1-6, 14-22/Lk 19:1-10 (498)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "11-18": {
+      "weekday": "Wed",
+      "title": "Weekday green/white/white",
+      "extra": [
+        "[The Dedication of the Basilicas of Saints Peter and Paul, Apostles;",
+        "USA: Saint Rose Philippine Duchesne, Virgin]"
+      ],
+      "cites": [
+        "Rv 4:1-11/Lk 19:11-28 (499)",
+        "or, for the Optional Memorial of the Dedication, Acts 28:11-16, 30-31/Mt 14:22-33 (679)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "11-19": {
+      "weekday": "Thu",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Rv 5:1-10/Lk 19:41-44 (500)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "11-20": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Rv 10:8-11/Lk 19:45-48 (501)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "11-21": {
+      "weekday": "Sat",
+      "title": "The Presentation of the Blessed Virgin Mary white",
+      "extra": [],
+      "cites": [
+        "Rv 11:4-12/Lk 20:27-40 (502)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "11-22": {
+      "weekday": "SUN",
+      "title": "OUR LORD JESUS CHRIST, KING OF THE UNIVERSE white",
+      "extra": [],
+      "cites": [
+        "Ez 34:11-12, 15-17/1 Cor 15:20-26, 28/Mt 25:31-46 (160) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "11-23": {
+      "weekday": "Mon",
+      "title": "Weekday (Thirty-Fourth or Last Week in Ordinary Time) green/red/white/red",
+      "extra": [
+        "[Saint Clement I, Pope and Martyr; Saint Columban, Abbot;",
+        "USA: Blessed Miguel Agustín Pro, Priest and Martyr]"
+      ],
+      "cites": [
+        "Rv 14:1-3, 4b-5/Lk 21:1-4 (503) Pss II"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "11-24": {
+      "weekday": "Tue",
+      "title": "Saint Andrew Dũng-Lạc, Priest, and Companions, Martyrs red",
+      "extra": [],
+      "cites": [
+        "Rv 14:14-19/Lk 21:5-11 (504)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "11-25": {
+      "weekday": "Wed",
+      "title": "Weekday green/red",
+      "extra": [],
+      "cites": [
+        "Rv 15:1-4/Lk 21:12-19 (505)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Catherine of Alexandria, Virgin and Martyr"
+      ]
+    },
+    "11-26": {
+      "weekday": "Thu",
+      "title": "Weekday green/white",
+      "extra": [],
+      "cites": [
+        "Rv 18:1-2, 21-23; 19:1-3, 9a/Lk 21:20-28 (506)",
+        "or, for Thanksgiving Day, any readings from the Mass “In Thanksgiving to God” (943-947)"
+      ],
+      "rank": null,
+      "optional": [
+        "USA: Thanksgiving Day"
+      ]
+    },
+    "11-27": {
+      "weekday": "Fri",
+      "title": "Weekday green",
+      "extra": [],
+      "cites": [
+        "Rv 20:1-4, 11—21:2/Lk 21:29-33 (507)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "11-28": {
+      "weekday": "Sat",
+      "title": "Weekday green/white",
+      "extra": [
+        "YEAR B – WEEKDAYS I"
+      ],
+      "cites": [
+        "Rv 22:1-7/Lk 21:34-36 (508)"
+      ],
+      "rank": null,
+      "optional": [
+        "BVM"
+      ]
+    },
+    "11-29": {
+      "weekday": "SUN",
+      "title": "FIRST SUNDAY OF ADVENT violet",
+      "extra": [],
+      "cites": [
+        "Is 63:16b-17, 19b; 64:2-7/1 Cor 1:3-9/Mk 13:33-37 (2) Pss I"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "11-30": {
+      "weekday": "Mon",
+      "title": "Saint Andrew, Apostle red",
+      "extra": [],
+      "cites": [
+        "Rom 10:9-18/Mt 4:18-22 (684) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "12-01": {
+      "weekday": "Tue",
+      "title": "Advent Weekday violet",
+      "extra": [],
+      "cites": [
+        "Is 11:1-10/Lk 10:21-24 (176)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-02": {
+      "weekday": "Wed",
+      "title": "Advent Weekday violet",
+      "extra": [],
+      "cites": [
+        "Is 25:6-10a/Mt 15:29-37 (177)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-03": {
+      "weekday": "Thu",
+      "title": "Saint Francis Xavier, Priest white",
+      "extra": [],
+      "cites": [
+        "Is 26:1-6/Mt 7:21, 24-27 (178)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "12-04": {
+      "weekday": "Fri",
+      "title": "Advent Weekday violet/white",
+      "extra": [],
+      "cites": [
+        "Is 29:17-24/Mt 9:27-31 (179)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint John Damascene, Priest and Doctor of the Church"
+      ]
+    },
+    "12-05": {
+      "weekday": "Sat",
+      "title": "Advent Weekday violet",
+      "extra": [],
+      "cites": [
+        "Is 30:19-21, 23-26/Mt 9:35—10:1, 5a, 6-8 (180)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-06": {
+      "weekday": "SUN",
+      "title": "SECOND SUNDAY OF ADVENT violet",
+      "extra": [],
+      "cites": [
+        "Is 40:1-5, 9-11/2 Pt 3:8-14/Mk 1:1-8 (5) Pss II"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-07": {
+      "weekday": "Mon",
+      "title": "Saint Ambrose, Bishop and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "Is 35:1-10/Lk 5:17-26 (181)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "12-08": {
+      "weekday": "Tue",
+      "title": "THE IMMACULATE CONCEPTION OF THE white",
+      "extra": [
+        "BLESSED VIRGIN MARY",
+        "(Patronal Feastday of the United States of America)",
+        "(Holyday of Obligation)"
+      ],
+      "cites": [
+        "Gn 3:9-15, 20/Eph 1:3-6, 11-12/Lk 1:26-38 (689) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "12-09": {
+      "weekday": "Wed",
+      "title": "Advent Weekday violet/white",
+      "extra": [],
+      "cites": [
+        "Is 40:25-31/Mt 11:28-30 (183)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Juan Diego Cuauhtlatoatzin"
+      ]
+    },
+    "12-10": {
+      "weekday": "Thu",
+      "title": "Advent Weekday violet/white",
+      "extra": [],
+      "cites": [
+        "Is 41:13-20/Mt 11:11-15 (184)"
+      ],
+      "rank": null,
+      "optional": [
+        "Our Lady of Loreto"
+      ]
+    },
+    "12-11": {
+      "weekday": "Fri",
+      "title": "Advent Weekday violet/white",
+      "extra": [],
+      "cites": [
+        "Is 48:17-19/Mt 11:16-19 (185)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Damasus I, Pope"
+      ]
+    },
+    "12-12": {
+      "weekday": "Sat",
+      "title": "USA: Our Lady of Guadalupe white",
+      "extra": [],
+      "cites": [
+        "Zec 2:14-17 or Rv 11:19a; 12:1-6a, 10ab/Lk 1:26-38 or Lk 1:39-47 (690A)",
+        "or any readings from the Common of the Blessed Virgin Mary (707-712) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "12-13": {
+      "weekday": "SUN",
+      "title": "THIRD SUNDAY OF ADVENT violet or rose",
+      "extra": [],
+      "cites": [
+        "Is 61:1-2a, 10-11/1 Thes 5:16-24/Jn 1:6-8, 19-28 (8) Pss III"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-14": {
+      "weekday": "Mon",
+      "title": "Saint John of the Cross, Priest and Doctor of the Church white",
+      "extra": [],
+      "cites": [
+        "Nm 24:2-7, 15-17a/Mt 21:23-27 (187)"
+      ],
+      "rank": "memorial",
+      "optional": []
+    },
+    "12-15": {
+      "weekday": "Tue",
+      "title": "Advent Weekday violet",
+      "extra": [],
+      "cites": [
+        "Zep 3:1-2, 9-13/Mt 21:28-32 (188)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-16": {
+      "weekday": "Wed",
+      "title": "Advent Weekday violet",
+      "extra": [],
+      "cites": [
+        "Is 45:6c-8, 18, 21c-25/Lk 7:18b-23 (189)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-17": {
+      "weekday": "Thu",
+      "title": "Advent Weekday violet",
+      "extra": [],
+      "cites": [
+        "Gn 49:2, 8-10/Mt 1:1-17 (193)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-18": {
+      "weekday": "Fri",
+      "title": "Advent Weekday violet",
+      "extra": [],
+      "cites": [
+        "Jer 23:5-8/Mt 1:18-25 (194)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-19": {
+      "weekday": "Sat",
+      "title": "Advent Weekday violet",
+      "extra": [],
+      "cites": [
+        "Jgs 13:2-7, 24-25a/Lk 1:5-25 (195)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-20": {
+      "weekday": "SUN",
+      "title": "FOURTH SUNDAY OF ADVENT violet",
+      "extra": [],
+      "cites": [
+        "2 Sm 7:1-5, 8b-12, 14a, 16/Rom 16:25-27/Lk 1:26-38 (11) Pss IV"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-21": {
+      "weekday": "Mon",
+      "title": "Advent Weekday violet",
+      "extra": [],
+      "cites": [
+        "Sg 2:8-14 or Zep 3:14-18a/Lk 1:39-45 (197)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Peter Canisius, Priest and Doctor of the Church"
+      ]
+    },
+    "12-22": {
+      "weekday": "Tue",
+      "title": "Advent Weekday violet",
+      "extra": [],
+      "cites": [
+        "1 Sm 1:24-28/Lk 1:46-56 (198)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-23": {
+      "weekday": "Wed",
+      "title": "Advent Weekday violet",
+      "extra": [],
+      "cites": [
+        "Mal 3:1-4, 23-24/Lk 1:57-66 (199)"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint John of Kanty, Priest"
+      ]
+    },
+    "12-24": {
+      "weekday": "Thu",
+      "title": "Advent Weekday violet",
+      "extra": [],
+      "cites": [
+        "Morning: 2 Sm 7:1-5, 8b-12, 14a, 16/Lk 1:67-79 (200)"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-25": {
+      "weekday": "Fri",
+      "title": "THE NATIVITY OF THE LORD (Christmas) white",
+      "extra": [
+        "(Holyday of Obligation)"
+      ],
+      "cites": [
+        "Vigil: Is 62:1-5/Acts 13:16-17, 22-25/Mt 1:1-25 or 1:18-25 (13)",
+        "Night: Is 9:1-6/Ti 2:11-14/Lk 2:1-14 (14)",
+        "Dawn: Is 62:11-12/Ti 3:4-7/Lk 2:15-20 (15)",
+        "Day: Is 52:7-10/Heb 1:1-6/Jn 1:1-18 or 1:1-5, 9-14 (16) Pss Prop"
+      ],
+      "rank": "solemnity",
+      "optional": []
+    },
+    "12-26": {
+      "weekday": "Sat",
+      "title": "Saint Stephen, The First Martyr red",
+      "extra": [],
+      "cites": [
+        "Acts 6:8-10; 7:54-59/Mt 10:17-22 (696) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "12-27": {
+      "weekday": "SUN",
+      "title": "THE HOLY FAMILY OF JESUS, MARY AND JOSEPH white",
+      "extra": [],
+      "cites": [
+        "Sir 3:2-6, 12-14/Col 3:12-21 or 3:12-17/Lk 2:22-40 or 2:22, 39-40",
+        "or, in Year B, Gn 15:1-6; 21:1-3/Heb 11:8, 11-12, 17-19/Lk 2:22-40 or 2:22, 39-40 (17) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "12-28": {
+      "weekday": "Mon",
+      "title": "The Holy Innocents, Martyrs red",
+      "extra": [],
+      "cites": [
+        "1 Jn 1:5—2:2/Mt 2:13-18 (698) Pss Prop"
+      ],
+      "rank": "feast",
+      "optional": []
+    },
+    "12-29": {
+      "weekday": "Tue",
+      "title": "Fifth Day within the Octave of the Nativity of the Lord white",
+      "extra": [],
+      "cites": [
+        "1 Jn 2:3-11/Lk 2:22-35 (202) Pss Prop"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Thomas Becket, Bishop and Martyr"
+      ]
+    },
+    "12-30": {
+      "weekday": "Wed",
+      "title": "Sixth Day within the Octave of the Nativity of the Lord white",
+      "extra": [],
+      "cites": [
+        "1 Jn 2:12-17/Lk 2:36-40 (203) Pss Prop"
+      ],
+      "rank": null,
+      "optional": []
+    },
+    "12-31": {
+      "weekday": "Thu",
+      "title": "Seventh Day within the Octave of the Nativity of the Lord white",
+      "extra": [],
+      "cites": [
+        "1 Jn 2:18-21/Jn 1:1-18 (204) Pss Prop"
+      ],
+      "rank": null,
+      "optional": [
+        "Saint Sylvester I, Pope"
+      ]
+    }
+  }
+}

@@ -249,7 +249,7 @@ class AffiliateLinkTests(unittest.TestCase):
         sc = jsvar('data/site-copy.js', 'SITE_COPY')
         self.assertEqual(sc['studyPartner'], SP.panel('magisterium'))
         app = (ROOT / 'app.js').read_text(encoding='utf-8')
-        self.assertIn("<div id=\"rs-out\"></div>'+(k==='magisterium'?(SC.studyPartner||''):'')", app)
+        self.assertIn("<div id=\"rs-out\"></div>'+(k==='references'?(SC.referencesSaintsCredit||''):'')+(k==='magisterium'?(SC.studyPartner||''):'')", app)
         # never hard-coded: the URL lives only in data/affiliates.js (and the pages built from it)
         for f in list((ROOT / 'tools').glob('*.py')) + [ROOT / 'app.js'] + list((ROOT / 'scripts').glob('*.js')):
             self.assertNotIn(MAG, f.read_text(encoding='utf-8'), f.name)
@@ -281,7 +281,7 @@ class AffiliateLinkTests(unittest.TestCase):
         html = main_of(self.pages['disclosure/index.html'])
         para = html[html.index('<h2>Magisterium AI</h2>'):]
         para = para[:para.index('</p>')]
-        for href in ('/libraries/', '/magisterium/', '/councils/', '/summa/', '/study/'):
+        for href in ('/libraries/', '/magisterium/', '/councils/', '/summa/', '/study/', '/saints/calendar/'):
             self.assertIn('href="' + href + '"', para)
         self.assertIn(MAG, para)
 

@@ -122,6 +122,18 @@ class Built(unittest.TestCase):
             body=re.search(r'<div class="static-prerender">(.*)</div></main>',h,re.S).group(1)
             self.assertNotRegex(body,r'(?i)catholicsaints|href="https?://');self.assertNotIn('\u2014',body)
             self.assertEqual(h.count("gtag('config'"),1);self.assertIn('https://bibliothecacatholica.com/saints/calendar/'+md+'/',sm)
+    def test_calendar_index_has_affiliate_mention(self):
+        p=ROOT/'saints/calendar/index.html'
+        if not (ROOT/'data/saints-days.json').exists():return
+        self.assertTrue(p.exists())
+        h=p.read_text();body=re.search(r'<div class="static-prerender">(.*)</div></main>',h,re.S).group(1)
+        self.assertIn('https://www.magisterium.com/pro/micah',body)
+        self.assertIn('rel="noopener sponsored"',body)
+        self.assertIn('Affiliate links: we may earn a commission.',body)
+        self.assertIn('/disclosure/',body)
+        self.assertNotRegex(body,r'(?i)catholicsaints')
+        self.assertNotIn('\u2014',body)
+        self.assertIn('https://bibliothecacatholica.com/saints/calendar/',(ROOT/'sitemap.xml').read_text())
 if __name__=='__main__':unittest.main()
 class SameNameOnOneDay(unittest.TestCase):
     """Two different people with one name on one day get their death year (or birth year) from the facts (2026-11-10)."""

@@ -8,6 +8,25 @@ def js_obj(path,var):
 D=json.loads((ROOT/'data/saints.json').read_text());S=D['saints']
 REQ=['id','qid','name','tier','kind','aliases','status','feasts','wikidata','reading_room_works','lives_about','catholicsaints']
 HARD={'barbara','catherine-of-alexandria','christopher','dymphna','expeditus','george','margaret-of-antioch','michael-the-archangel','philomena','ursula','valentine','veronica'}
+GRC_CHECKED={
+    'clement-of-rome':('11-23','Optional Memorial','Saint Clement I, Pope and Martyr'),
+    'andrew-the-apostle':('11-30','Feast','Saint Andrew, Apostle'),
+    'francis-xavier':('12-03','Memorial','Saint Francis Xavier, Priest'),
+    'john-of-damascus':('12-04','Optional Memorial','Saint John of Damascus, Priest and Doctor of the Church'),
+    'nicholas-of-myra':('12-06','Optional Memorial','Saint Nicholas, Bishop'),
+    'ambrose-of-milan':('12-07','Memorial','Saint Ambrose, Bishop and Doctor of the Church'),
+    'juan-diego':('12-09','Optional Memorial','Saint Juan Diego Cuauhtlatoatzin'),
+    'lucy-of-syracuse':('12-13','Memorial','Saint Lucy, Virgin and Martyr'),
+    'john-of-the-cross':('12-14','Memorial','Saint John of the Cross, Priest and Doctor of the Church'),
+    'peter-canisius':('12-21','Optional Memorial','Saint Peter Canisius, Priest and Doctor of the Church'),
+    'stephen-protomartyr':('12-26','Feast','Saint Stephen, The First Martyr'),
+    'john-the-apostle':('12-27','Feast','Saint John, Apostle and Evangelist'),
+    'thomas-becket':('12-29','Optional Memorial','Saint Thomas Becket, Bishop and Martyr'),
+    'basil-the-great':('01-02','Memorial','Saints Basil the Great and Gregory Nazianzen, Bishops and Doctors of the Church'),
+    'gregory-of-nazianzus':('01-02','Memorial','Saints Basil the Great and Gregory Nazianzen, Bishops and Doctors of the Church'),
+    'francis-de-sales':('01-24','Memorial','Saint Francis de Sales, Bishop and Doctor of the Church'),
+    'thomas-aquinas':('01-28','Memorial','Saint Thomas Aquinas, Priest and Doctor of the Church'),
+}
 sys.path.insert(0,str(ROOT/'tools'))
 import build_saints
 class SaintSchemaTests(unittest.TestCase):
@@ -21,9 +40,21 @@ class SaintSchemaTests(unittest.TestCase):
             self.assertTrue(s['status']['source_url'].startswith('https://'),s['id'])
             for v in s['feasts']['vatican_news']:
                 self.assertRegex(v['date'],r'^\d\d-\d\d$');self.assertEqual(urlparse(v['source_url']).hostname,'www.vaticannews.va')
-            self.assertIsNone(s['feasts']['general_roman_calendar'],'GRC dates are deferred until checked against the Missal')
+            g=s['feasts']['general_roman_calendar']
+            if s['id'] in GRC_CHECKED:
+                self.assertIsInstance(g,dict,s['id'])
+                date,rank,title=GRC_CHECKED[s['id']]
+                self.assertEqual(g['date'],date,s['id']);self.assertEqual(g['rank'],rank,s['id']);self.assertEqual(g['title'],title,s['id'])
+                self.assertRegex(g['date'],r'^\d\d-\d\d$');self.assertIn(g['rank'],('Solemnity','Feast','Memorial','Optional Memorial'))
+                self.assertEqual(g.get('checked'),'2026-11-21');self.assertTrue(g.get('source_url','').startswith('https://'),s['id'])
+            else:
+                self.assertIsNone(g,'GRC dates remain deferred until checked against the Missal: '+s['id'])
             for d in s['feasts']['other_wikidata']['dates']:self.assertRegex(d,r'^\d\d-\d\d$')
             if s.get('born') and s.get('died'):self.assertLess(s['born']['year'],s['died']['year'],s['id'])
+    def test_becket_died_1170(self):
+        b=next(x for x in S if x['id']=='thomas-becket')
+        self.assertEqual(b['died']['year'],1170)
+        self.assertIn('1170',b['died'].get('note',''))
     def test_tier1_saints_are_hub_authors_and_not_flagged(self):
         hub={a['id'] for a in json.loads((ROOT/'data/catholic-hub.json').read_text())['authors']}
         flagged=set(json.loads((ROOT/'data/editorial-flags.json').read_text()).get('hubAuthors',[]))

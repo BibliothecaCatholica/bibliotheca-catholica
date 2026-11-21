@@ -173,6 +173,11 @@ def newsletter_box():
 # --- /disclosure/ (owner-approved preview 2026-11-09): the affiliate relationships, in plain words.
 DISCLOSURE_TITLE='Affiliate disclosure'
 DISCLOSURE_DESC='How Bibliotheca Catholica uses affiliate links to Bookshop.org, TAN Books, and Magisterium AI, and why free reading here always comes first.'
+def references_saints_credit():
+    """Plain credit on /references/ for saints-calendar research (owner option A, 2026-11-21). No affiliate URL."""
+    return ('<p class="small muted">Saints calendar: Magisterium AI was used to help find gaps in the list. '
+            'Dates and facts were then checked against the General Roman Calendar, the Catholic Encyclopedia (1913), and Butler. '
+            'Bibliotheca Catholica is independent and is not endorsed by Magisterium AI.</p>')
 def disclosure_page(ftc):
     return ('<div class="page-head"><div class="eyebrow">Support the library</div><h1>'+DISCLOSURE_TITLE+'</h1>'
      '<p class="lede">'+E(ftc)+'</p></div>'

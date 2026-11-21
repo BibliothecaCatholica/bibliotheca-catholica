@@ -3,8 +3,8 @@ November 19, 2026).
 
 The name and URL come only from `partners.magisterium` in data/affiliates.js, and the disclosure line from its `line`,
 so nothing here hard-codes the referral. PAGES is the allowlist (tests/test_affiliate_links.py enforces it): the
-referral appears on these pages and nowhere else, never in the header, the footer, author pages, chapter or reading
-pages, or the home page. /libraries/ keeps its own wording from #70 (tools/library_desk.py); the four panels here each
+referral appears on these pages and nowhere else (including a short mention on /saints/calendar/, owner option A,
+November 21, 2026), never in the header, the footer, author pages, chapter or reading pages, or the home page. /libraries/ keeps its own wording from #70 (tools/library_desk.py); the four panels here each
 say, in one or two sentences, what the tool does for that page's reader, then one link and the one-line disclosure,
 below the free reading options. /support/ names the tool in a short note with no referral link, apart from donations.
 """
@@ -12,7 +12,7 @@ import html,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];E=html.escape
 # route -> where the link appears; 'disclosure' only describes it
-PAGES=('libraries','magisterium','councils','summa','study','disclosure')
+PAGES=('libraries','magisterium','councils','summa','study','disclosure','saints/calendar')
 PANEL_ROUTES=('magisterium','councils','summa','study')
 COPY={
  'magisterium':'Magisterium AI searches encyclicals, council documents, the Catechism, and canon law, and answers questions with citations to the passages it used. Use it to find where the Church has taught on a subject, then read the document itself in the links above.',
@@ -47,13 +47,21 @@ def support_note():
     name,_=partner()
     return ('<h2 class="sup-h">Tools we support</h2><p class="sup-tools">We recommend '+E(name)+', a research tool that answers questions about '
             'Catholic teaching with citations to Church documents, on the '
-            '<a href="/magisterium/">Church Documents</a>, <a href="/councils/">Ecumenical Councils</a>, <a href="/summa/">Summa</a>, and '
-            '<a href="/study/">Study desk</a> pages. A Pro subscription is paid to '+E(name)+' and is not a donation to the library; '
+            '<a href="/magisterium/">Church Documents</a>, <a href="/councils/">Ecumenical Councils</a>, <a href="/summa/">Summa</a>, '
+            '<a href="/study/">Study desk</a>, and <a href="/saints/calendar/">Saints calendar</a> pages. A Pro subscription is paid to '+E(name)+' and is not a donation to the library; '
             'if you subscribe through our link, we earn a commission (<a href="/disclosure/">details</a>). '
             'The only way to donate is PayPal, above.</p>')
+def calendar_mention():
+    """A short affiliate mention for the saints calendar index only (owner option A, 2026-11-21)."""
+    name,url=partner()
+    return ('<p class="cal-affiliate">Some research for this calendar used '
+            '<a href="'+E(url)+'" target="_blank" rel="noopener sponsored">'+E(name)+'</a> '
+            'to help find gaps in the list. Dates and facts were then checked against the General Roman Calendar '
+            'and standard reference works. We are independent and are not endorsed by '+E(name)+'.</p>'
+            +disclosure_line())
 def disclosure_pages_html(a):
     """The /disclosure/ sentence naming every page that carries the link (a(href,label) builds each link)."""
-    names=[('/libraries/','Digital Libraries'),('/magisterium/','Church Documents'),('/councils/','Ecumenical Councils'),('/summa/','Summa Theologiae'),('/study/','Study desk')]
+    names=[('/libraries/','Digital Libraries'),('/magisterium/','Church Documents'),('/councils/','Ecumenical Councils'),('/summa/','Summa Theologiae'),('/study/','Study desk'),('/saints/calendar/','Saints calendar')]
     links=[a(h,t) for h,t in names]
     return ', '.join(links[:-1])+', and '+links[-1]
 STUDY_START='<!-- study-partner:start -->';STUDY_END='<!-- study-partner:end -->'

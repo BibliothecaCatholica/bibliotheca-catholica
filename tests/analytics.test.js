@@ -294,13 +294,32 @@ test('2026-11-19: /study/ counts only affiliate clicks, as outbound_click with l
  const b=load(true);b.ctx.location.hash='#/libraries';b.A.onClick({target:link('https://archive.org/x')});
  assert.deepEqual(b.calls.filter(c=>c[0]==='event').map(c=>c[2].link_kind),['source']);
 });
-test('2026-11-19: /study/ loads the existing analytics script with one GA4 tag and no page view',()=>{
+test('2026-11-19: /study/ loads the existing analytics script with one GA4 tag and one page view sender (QA 2026-11-21)',()=>{
  const html=fs.readFileSync('study/index.html','utf8');
  assert.equal((html.match(/googletagmanager\.com\/gtag\/js/g)||[]).length,1);
+ assert.equal((html.match(/G-[A-Z0-9]{6,}/g)||[]).filter(x=>x!=='G-HFG445Y1LT').length,0);
  assert.equal((html.match(/<script defer src="\/scripts\/analytics\.js\?v=[^"]+"><\/script>/g)||[]).length,1);
  assert.match(html,/<script>window\.BC_BOOT='study';window\.BC_CLICK_KINDS=\['affiliate'\];<\/script>/);
  assert.match(html,/'send_page_view': false/);
- assert.doesNotMatch(html,/app\.js/);  // no page_view sender on this page
+ assert.doesNotMatch(html,/app\.js/);  // the inline sender below is the page's only page_view
+ assert.equal((html.match(/track\('/g)||[]).length,1);
  const idx=fs.readFileSync('index.html','utf8').match(/scripts\/analytics\.js\?v=[^"]+/)[0];
  assert.ok(html.includes('/'+idx),'same analytics.js version as the app pages');
+});
+test('QA 2026-11-21: /study/ sends exactly one page_view, in path form, and no other event on load',()=>{
+ const html=fs.readFileSync('study/index.html','utf8');
+ const inline=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m[1]).filter(x=>x.includes("track('page_view'"));
+ assert.equal(inline.length,1);
+ for(const [hash,search,want] of [['','','https://bibliothecacatholica.com/study/'],['#passages','','https://bibliothecacatholica.com/study/'],
+   ['#cite','?utm_source=x&q=secret&gclid=1','https://bibliothecacatholica.com/study/?utm_source=x']]){
+  const {A,calls,ctx}=load(true);ctx.BC_BOOT='study';ctx.BC_CLICK_KINDS=['affiliate'];Object.assign(ctx.location,{pathname:'/study/',hash,search});
+  let ready=null;ctx.document={title:'Study desk · Bibliotheca Catholica',addEventListener:(n,f)=>{assert.equal(n,'DOMContentLoaded');ready=f}};
+  vm.runInNewContext(inline[0],ctx);ready();
+  const ev=calls.filter(c=>c[0]==='event');
+  assert.deepEqual(ev,[['event','page_view',{page_title:'Study desk · Bibliotheca Catholica',page_location:want,page_path:'/study/'}]],hash+search);
+  assert.equal(A.pagePath('',ctx.BC_BOOT),'/study/');
+ }
+ // pages.dev previews send nothing
+ const p=load(true,false,'x.pages.dev');p.ctx.BC_BOOT='study';let r=null;p.ctx.document={title:'t',addEventListener:(n,f)=>{r=f}};
+ vm.runInNewContext(inline[0],p.ctx);r();assert.equal(p.calls.filter(c=>c[0]==='event').length,0);
 });

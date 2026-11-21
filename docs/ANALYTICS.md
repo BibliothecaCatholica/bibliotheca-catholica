@@ -13,7 +13,7 @@ Mandatory for analytics changes. Moved verbatim from [PROJECT-RULES](PROJECT-RUL
 
 | Event | Params | Fired from |
 |---|---|---|
-| `page_view` | `page_title`, `page_location`, `page_path` | `app.js` `gaPageView()` |
+| `page_view` | `page_title`, `page_location`, `page_path` | `app.js` `gaPageView()`; on `/study/`, which has no `app.js`, one inline script after `scripts/analytics.js` sends the page's single `page_view` on `DOMContentLoaded`, path `/study/` from `window.BC_BOOT` (its `#passages`-style anchors are not routes), with the landing view's kept `utm_` tags (QA 2026-11-21) |
 | `search` | `search_term` (trimmed, lowercased, max 100 characters), `search_scope` (`Everything`, `Selected library`, or `Isidore Index`), `results_count` | `app.js` `results()`: once per visit to a results URL, after the catalogs that scope needs load (or after 8 s); Isidore Index page: a query in the URL (`#/isidore/q=<term>` or `#/isidore/<term>`), or typing that pauses for 1.5 s (deduped). Author links (`#/isidore/author=<name>`, v18.3) send no `search` event, only their page view, so search counts are not inflated |
 | `open_text` | `work_id`, `text_source` (`hosted` or `external`), `edition_id` (hosted) or `link_domain` (external) | `scripts/library.js` `read()` once per reader opening; external "Read at source" / "Read full text at source" links carry `data-open-text` |
 | `reader_section` | `work_id`, `edition_id`, `section_index`, `sections_total` (number of sections in that edition; spec 2026-11-03) | `read()`, once per section per reader session |

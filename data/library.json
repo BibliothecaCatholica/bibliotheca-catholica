@@ -2296,6 +2296,80 @@
       ]
     },
     {
+      "id": "book-of-wisdom-douay-rheims",
+      "title": "The Book of Wisdom (Douay-Rheims)",
+      "author": "Douay-Rheims Bible",
+      "category": "Scripture",
+      "tradition": "Catholic tradition",
+      "description": "The Book of Wisdom in the Douay-Rheims translation as revised by Bishop Richard Challoner: nineteen chapters on wisdom, justice, and immortality, including the praise of Wisdom in chapter 8.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-21",
+      "date": "1609 (Challoner revision 1750)",
+      "editions": [
+        {
+          "id": "ebible-dra-wisdom",
+          "label": "Douay-Rheims, American edition of 1899, eBible.org transcription",
+          "source": "https://ebible.org/engDRA/",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "English College at Douay"
+            },
+            {
+              "role": "reviser",
+              "name": "Challoner, Richard"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. eBible.org notices retained.",
+          "checked": "2026-11-21",
+          "note": "The Douay Old Testament (English College at Douay, 1609) as revised by Richard Challoner (1749-1752), in the text eBible.org gives as the Douay-Rheims American Edition of 1899, one page per chapter (19 chapters), with the verse numbers; the chapter summaries and Challoner's annotations of the printed Bibles are not in it. Compared word by word with the Internet Archive scan of the 1899 Benziger Brothers printing (New York; the Denvir edition), the Book of Wisdom only: 96.6% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record. 99.80% of its words pass the read gate.",
+          "sourceTitle": "The Book of Wisdom (Douay-Rheims, American edition of 1899)",
+          "access": "full-text",
+          "text": "data/texts/ebible-dra-wisdom.txt",
+          "sha256": "dc73766dc6cc0cc7860a86a56870c658f8613df65fe4e54bc0ca014d50f33c09",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "ecclesiasticus-douay-rheims",
+      "title": "Ecclesiasticus (Douay-Rheims)",
+      "author": "Douay-Rheims Bible",
+      "category": "Scripture",
+      "tradition": "Catholic tradition",
+      "description": "Ecclesiasticus, also called Sirach, in the Douay-Rheims translation as revised by Bishop Richard Challoner: fifty-one chapters of counsel, including Wisdom's praise of herself in chapter 24.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-21",
+      "date": "1609 (Challoner revision 1750)",
+      "editions": [
+        {
+          "id": "ebible-dra-ecclesiasticus",
+          "label": "Douay-Rheims, American edition of 1899, eBible.org transcription",
+          "source": "https://ebible.org/engDRA/",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "English College at Douay"
+            },
+            {
+              "role": "reviser",
+              "name": "Challoner, Richard"
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. eBible.org notices retained.",
+          "checked": "2026-11-21",
+          "note": "The Douay Old Testament (English College at Douay, 1609) as revised by Richard Challoner (1749-1752), in the text eBible.org gives as the Douay-Rheims American Edition of 1899, one page per chapter (51 chapters), with the verse numbers; the chapter summaries and Challoner's annotations of the printed Bibles are not in it. Compared word by word with the Internet Archive scan of the 1899 Benziger Brothers printing (New York; the Denvir edition), Ecclesiasticus only: 96.2% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record. 99.80% of its words pass the read gate.",
+          "sourceTitle": "Ecclesiasticus (Douay-Rheims, American edition of 1899)",
+          "access": "full-text",
+          "text": "data/texts/ebible-dra-ecclesiasticus.txt",
+          "sha256": "2378ab2fe96df31f629b117801e9ae9cdb7779814dde9de4e994c6f7eac04e39",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
       "id": "fides-ratio",
       "title": "Fides et Ratio",
       "author": "John Paul II",

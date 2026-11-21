@@ -41,7 +41,7 @@ class ImportHtmlPages(unittest.TestCase):
             text = (ROOT / 'data/texts' / (r['id'] + '.txt')).read_text(encoding='utf-8')
             start = text.index('***\n', text.index('*** START OF THE HOSTED TEXT')) + 4
             end = text.rindex('\n\n*** END OF THE HOSTED TEXT')
-            self.assertEqual(text[start:end], H.joined([raw for _, raw in pages]), r['id'])
+            self.assertEqual(text[start:end], H.joined([raw for _, raw in pages], r.get('sourceFormat', 'entry-content')), r['id'])
 
     def test_read_gate_and_witnesses(self):
         for r in RECORDS:
@@ -56,6 +56,28 @@ class ImportHtmlPages(unittest.TestCase):
                '</p><p>&nbsp;</p><h3>CANON I.</h3></div><!-- .entry-content -->').encode('utf-8')
         self.assertEqual(H.extract(raw), 'Session ’Two\n\nA [Page 5] word,\nnext\n\nCANON I.')
 
+
+    def test_extract_ebible_keeps_titles_heading_and_numbered_verses(self):
+        # eBible.org chapter pages (Douay-Rheims Wisdom and Ecclesiasticus, November 21, 2026)
+        raw = ("\ufeff<html><body><ul class='tnav'>\n<li><a href='index.htm'>Sirach</a></li>\n<li><a href='SIR02.htm'>&gt;</a></li>\n</ul>"
+               '<div class="main">\n <div class=\'mt\'>THE WISDOM OF JESUS THE SON OF SIRACH,  </div><div class=\'mt2\'>OR  </div>'
+               "<div class='chapterlabel' id=\"V0\"> 1</div><div class='p'> <span class=\"verse\" id=\"V1\">1&#160;</span>All wisdom"
+               ' is from the Lord God.   <span class="verse" id="V2">2&#160;</span>Who hath numbered the sand?   </div>'
+               "<ul class='tnav'>\n<li><a href='index.htm'>Sirach</a></li></ul><div class=\"copyright\"><p>Public Domain</p></div></body></html>").encode('utf-8')
+        self.assertEqual(H.extract_ebible(raw), 'THE WISDOM OF JESUS THE SON OF SIRACH,\nOR\n\nSirach 1\n\n'
+                         '1 All wisdom is from the Lord God.\n\n2 Who hath numbered the sand?')
+        self.assertEqual(H.joined([raw, raw], 'ebible').count('Sirach 1'), 2)
+        for r in RECORDS:  # every eBible record compares with one book of its scan, named in the witness
+            if r.get('sourceFormat') == 'ebible':
+                self.assertTrue(r['sourceUrl'].startswith('https://ebible.org/'), r['id'])
+                self.assertIn('excerpt', r['iaWitness'], r['id'])
+
+    def test_scan_excerpt_is_whitespace_insensitive_and_bounded(self):
+        import import_plain_text as I
+        ocr = 'TOBIAS ends.\n\nTHE \n\nBOOK  OF  WISDOM. \n\nLove justice.\n\nECCLESIASTICUS. \n\nThis  Book is so called'
+        self.assertEqual(I.excerpt(ocr, 'BOOK OF WISDOM.', 'ECCLESIASTICUS. This Book'), 'BOOK  OF  WISDOM. \n\nLove justice.\n\n')
+        with self.assertRaises(AttributeError):
+            I.excerpt(ocr, 'BOOK OF JOB', 'ECCLESIASTICUS')
 
 if __name__ == '__main__':
     unittest.main()

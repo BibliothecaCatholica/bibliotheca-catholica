@@ -89,6 +89,9 @@ PART_D={
     # Chesterton polish batch 5 (November 21, 2026). Each sentence restates the edition's record and its map.
     'eugenics-other-evils':{'about':'Project Gutenberg #25308: first published in 1922; the transcribed copy is the Cassell and Company printing of 1922. Seventeen chapters in two parts, divided as the hosted text heads them; the note to the reader stays in the reader. No words were changed.'},
     'tales-long-bow':{'about':'Project Gutenberg #69185: first published in 1925; the transcribed copy is the Dodd, Mead and Company, New York printing. Eight tales, divided as the hosted text heads them; no words were changed.'},
+    # Douay-Rheims Wisdom and Ecclesiasticus (November 21, 2026). Each sentence restates the edition's record and its map.
+    'book-of-wisdom-douay-rheims':{'about':"eBible.org's transcription of the Douay-Rheims American edition of 1899: the nineteen chapters of the Book of Wisdom, each verse a paragraph with its number."},
+    'ecclesiasticus-douay-rheims':{'about':"eBible.org's transcription of the Douay-Rheims American edition of 1899: the fifty-one chapters of Ecclesiasticus, each verse a paragraph with its number."},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

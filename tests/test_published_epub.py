@@ -12,6 +12,19 @@ from notices import PG_LINE  # noqa: E402
 M = json.loads((ROOT / 'data/epubs.json').read_text())['epubs']
 
 
+def heads(ed):
+    """The chapter headings of an edition's map in tools/text_pages.py (WORKS), whitespace collapsed."""
+    sys.path.insert(0, str(ROOT / 'tools'))
+    from text_pages import WORKS
+    out = set()
+    for w in WORKS.values():
+        if w['edition'] != ed:
+            continue
+        for p in w['parts']:
+            h = p[3]['text'] if isinstance(p[3], dict) else ' '.join(p[3]) if isinstance(p[3], tuple) else p[3]
+            out.add(' '.join(h.split()))
+    return out
+
 class PublishedEpub(unittest.TestCase):
     def test_one_per_structured_edition_with_a_hashed_name_and_manifest(self):
         self.assertEqual(set(M), {ed for (w, ed) in ST.EDITIONS})
@@ -41,6 +54,9 @@ class PublishedEpub(unittest.TestCase):
                 # (the first block may sit in the appendix and the rest in the front matter, so each block is checked)
                 rec = json.loads((ROOT / 'data/sources' / (ed + '.json')).read_text())
                 for block in rec['sourceNotice'][:600].split('\n\n')[:-1]:
+                    if ' '.join(block.split()) in heads(ed):
+                        continue  # a source with no header of its own (eBible, November 21, 2026): its notice is the
+                        # text's opening, where a mapped chapter heading is shown as the chapter's title instead
                     self.assertIn(' '.join(block.split()), text, ed)
             else:  # Standard Ebooks: its own notice at the end and its CC0 dedication from the source file
                 from notices import SE_NOTICE

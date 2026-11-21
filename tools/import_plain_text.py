@@ -86,11 +86,26 @@ def scan_witness(e, text, basis):
     ocr = html.unescape(re.search(r'<pre[^>]*>(.*?)</pre>', page, re.S).group(1)).encode('utf-8')
     year = int(re.search(r'\d{4}', str(m.get('date') or m.get('year'))).group())
     assert pd_by_date(year) if basis == 'pd-date' else year == e['nonRenewal']['firstPublicationYear'], (e['ia'], year)
-    col = collate(text, decode(ocr))
+    scan = decode(ocr)
+    if e.get('scanFrom'):  # one book of a larger volume (a Bible): compare with that part of the OCR only
+        scan = excerpt(scan, e['scanFrom'], e['scanTo'])
+    col = collate(text, scan)
     witness = {'identifier': e['ia'], 'url': f"https://archive.org/details/{e['ia']}", 'year': year,
                'publisher': m.get('publisher'), 'ocr': ocr_name, 'ocrSha256': hashlib.sha256(ocr).hexdigest(),
-               'ocrNote': 'SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)'}
+               'ocrNote': 'SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)',
+               **({'excerpt': {'from': e['scanFrom'], 'to': e['scanTo'], 'words': len(words(scan)),
+                               'note': 'compared with the OCR from the first occurrence of `from` up to the next '
+                                       'occurrence of `to` (whitespace-insensitive)'}} if e.get('scanFrom') else {})}
     return witness, col
+
+
+def excerpt(ocr, start, end):
+    """The part of a scan's OCR from the first occurrence of `start` up to (not including) the next occurrence of `end`,
+    matching across any run of whitespace, since OCR spacing and line breaks vary (November 21, 2026: one book of a
+    Bible volume). Both must be found."""
+    pat = lambda s: re.compile(r'\s+'.join(map(re.escape, s.split())))
+    i = pat(start).search(ocr).start()
+    return ocr[i:pat(end).search(ocr, i + 1).start()]
 
 
 def host(e, raw, text, basis, out, witness, col, converted='Converted to UTF-8 plain text', extra=None):

@@ -5437,6 +5437,8 @@ work/irish-impressions/ch/06-the-mistake-of-england/index.html
 work/irish-impressions/ch/07-the-mistake-of-ireland/index.html
 work/irish-impressions/ch/08-an-example-and-a-question/index.html
 work/irish-impressions/ch/09-belfast-and-the-religious-problem/index.html
+work/jerome-isaiah-prologue/index.html
+work/jerome-isaiah-prologue/ignoratio-scripturarum/index.html
 work/jesuit-martyrs-of-canada/index.html
 work/john-chrysostom-homilies-on-romans/index.html
 work/justin-martyr-dialogue-with-trypho/index.html

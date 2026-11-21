@@ -41,6 +41,7 @@ EXCLUDE = {
     'dream-gerontius': 'The Dream of Gerontius (verse)',
     'legends-of-saint-patrick': 'The Legends of Saint Patrick (verse)',
     'prudentius-eulalia': 'Prudentius, Peristephanon III (verse)',
+    'jerome-isaiah-prologue': 'Jerome, Isaiah prologue (Latin collation)',
 }
 # Known verse the rule cannot tell from prose: keep the file's own line breaks.
 KEEP = {('pg-130', 123): 'known verse (quoted stanza)', ('pg-1695', 22): 'known verse (last stanza of the dedication)'}

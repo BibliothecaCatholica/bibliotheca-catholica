@@ -2658,6 +2658,35 @@
         }
       ]
     },
+{
+      "id": "jerome-isaiah-prologue",
+      "title": "Commentary on Isaiah, Prologue",
+      "author": "Jerome",
+      "authorId": "jerome",
+      "category": "Church Fathers",
+      "tradition": "Catholic tradition",
+      "description": "Jerome's Latin prologue to his commentary on Isaiah, written for Eustochium around 408 to 410. This is the prologue only, from Migne's 1845 Patrologia Latina, volume 24, including the line ignoratio Scripturarum, ignoratio Christi est. No English translation published before 1931 is known, so none is hosted here.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-21",
+      "date": "c. 408-410 (this text from Migne, Patrologia Latina, volume 24, 1845)",
+      "editions": [
+        {
+          "id": "cc-pl24-1845-isaiah-prologue",
+          "label": "Corpus Corporum text of Migne, Patrologia Latina, volume 24 (Paris, 1845), columns 17-22, collated against the 1845 scan",
+          "source": "https://mlat.uzh.ch/?text=7170",
+          "language": "Latin",
+          "contributors": [],
+          "checked": "2026-11-21",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "The prologue only, from J. P. Migne, Patrologia Latina, volume 24 (Paris: Petit-Montrouge, 1845), printed columns 17-22. The wording follows the Corpus Corporum edition at the University of Zurich (mlat.uzh.ch, idno 7170, section 7170:1), was cross-checked against the Latin Wikisource text, and was collated word for word against the 1845 Migne scan at the Internet Archive (item PatrologiaLatina, Patrologia Latina Vol. 24.pdf, PDF pages 13-15). Every word was read against the scan; no wording differences were found. Ligatures were expanded and punctuation spacing was normalized, following Corpus Corporum. In-text scripture citations are kept as Migne prints them. The editor's footnotes are omitted. No English translation is hosted, because none published before 1931 is known. The line ignoratio Scripturarum, ignoratio Christi est has a stable page at /work/jerome-isaiah-prologue/ignoratio-scripturarum/.",
+          "sourceTitle": "Commentariorum in Isaiam prophetam Prologus (Migne, Patrologia Latina 24, 1845)",
+          "text": "data/texts/cc-pl24-1845-isaiah-prologue.txt",
+          "sha256": "b3376e7f0efab33ba56bac20d06b8493305de71df393dbb268d7d5de5d0dfd19"
+        }
+      ]
+    },
     {
       "id": "prudentius-eulalia",
       "title": "St. Eulalia (Peristephanon III)",

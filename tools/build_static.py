@@ -756,7 +756,25 @@ def main():
         if langs:book['inLanguage']=langs[0] if len(langs)==1 else langs
         if hosted:book['isAccessibleForFree']=True
         md=fit([w['title']+' by '+w['author']+':',d.rstrip('.')+'.'],(('Read it free online, with source and rights notes.','Read it free online.') if hosted else ('Editions and sources, with rights notes.','Editions and sources.'),)+DESC_EXTRA)
+        if w['id']=='jerome-isaiah-prologue':
+            body=body.replace('<h2>Reading editions &amp; sources</h2>',
+                '<p>This is the Latin prologue only. No English translation published before 1931 is known, so none is hosted here. The line <i lang="la">ignoratio Scripturarum, ignoratio Christi est</i> has a stable page at '+a('/work/jerome-isaiah-prologue/ignoratio-scripturarum/','/work/jerome-isaiah-prologue/ignoratio-scripturarum/')+'.</p>'
+                +'<h2>Reading editions &amp; sources</h2>')
         out['work/'+w['id']]=(w['title']+' · Bibliotheca Catholica',md,body,[book,crumbs(('Discover & Read','library/'),(w['title'],'work/'+w['id']+'/'))])
+    # Stable Media URL for Jerome's line (a path, not a hash fragment: the app router would swallow a fragment).
+    if 'jerome-isaiah-prologue' in libw:
+        jw=libw['jerome-isaiah-prologue']; je=next(x for x in jw['editions'] if x.get('text'))
+        quote='ignoratio Scripturarum, ignoratio Christi est'
+        passage='Si enim juxta apostolum Paulum (II Cor. I, 24) Christus Dei virtus est, Deique sapientia; et qui nescit Scripturas, nescit Dei virtutem ejusque sapientiam: ignoratio Scripturarum, ignoratio Christi est.'
+        jbody=(crumb_html(('Discover & Read','library/'),(jw['title'],'work/jerome-isaiah-prologue/'),(quote,''))
+            +head('A line from Jerome',quote+'.','From the prologue to the Commentary on Isaiah, in the 1845 Migne Latin text.')
+            +'<p>Jerome is writing to Eustochium at the opening of his commentary on Isaiah. After recalling Christ as the power and wisdom of God, he adds:</p>'
+            +'<blockquote><p lang="la">'+E(passage)+'</p></blockquote>'
+            +'<p>The sentence stands in the '+a('/work/jerome-isaiah-prologue/','work page')+' and in the full prologue, which you can '+a('/#/read/'+jw['id']+'/'+je['id'],'read here')+'. This page exists so the line has a stable URL that does not use a hash fragment.</p>'
+            +'<p>Latin only. No English translation published before 1931 is known, so none is hosted here.</p>'
+            +'<p>'+a('/work/jerome-isaiah-prologue/','Commentary on Isaiah, Prologue')+' · '+a('/library/','Selected library')+'</p>')
+        jd=fit([quote+".","A line from the prologue to Jerome's Commentary on Isaiah, in the 1845 Migne Latin text."],(("Read the Latin sentence in context, with a link to the full prologue.","The Latin sentence, with a link to the full prologue."),))
+        out['work/jerome-isaiah-prologue/ignoratio-scripturarum']=(quote+' · Bibliotheca Catholica',jd,jbody,[crumbs(('Discover & Read','library/'),(jw['title'],'work/jerome-isaiah-prologue/'),(quote,'work/jerome-isaiah-prologue/ignoratio-scripturarum/'))])
     def ed_related(ed):
         r=[]
         if ed.get('aid') in auth_ids:r.append('Author: '+a('/author/'+ed['aid']+'/',ed.get('a') or ed['aid']))

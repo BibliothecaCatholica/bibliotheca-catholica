@@ -676,7 +676,7 @@ function support(){var shop=AFF.bookshopShop||'';
    LIBRARY_DATA.relatedAuthors) are static documents built by tools/build_static.py, as are the Summa pages
    (/summa/, /summa/<part>/, /summa/<part>/q<n>/, /summa/<part>/q<n>/a<m>/, part 1, 1-2, 2-2, 3, or supp for the Supplement).
    On their own static page the pre-rendered text stays as the view; a hash link to one loads the static page. */
-function staticOnly(path){path=String(path||'').replace(/\/+$/,'');var m=/^author\/([a-z0-9-]+)$/.exec(path),L=typeof window!=='undefined'&&window.LIBRARY_DATA;if(m)return !!(L&&(L.relatedAuthors||[]).some(function(r){return r.id===m[1]}));if(/^saints\/calendar\/(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(path))return window.BC_BOOT===path&&!location.hash;if(path==='credits')return true;return path==='councils'||/^work\/[a-z0-9-]+\/(ch|story)\/\d\d-[a-z0-9-]+$/.test(path)||/^summa(\/(1|1-2|2-2|3|supp)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(path)}
+function staticOnly(path){path=String(path||'').replace(/\/+$/,'');var m=/^author\/([a-z0-9-]+)$/.exec(path),L=typeof window!=='undefined'&&window.LIBRARY_DATA;if(m)return !!(L&&(L.relatedAuthors||[]).some(function(r){return r.id===m[1]}));if(/^saints\/calendar\/(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(path))return window.BC_BOOT===path&&!location.hash;if(path==='credits')return true;return path==='councils'||/^work\/[a-z0-9-]+\/(ch|story)\/\d\d-[a-z0-9-]+$/.test(path)||/^summa(\/(1|1-2|2-2|3|supp)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(path)||path==='work/jerome-isaiah-prologue/ignoratio-scripturarum'}
 function keepStatic(path){path=path.replace(/\/+$/,'');if(!location.hash&&window.BC_BOOT===path&&main.querySelector('.static-prerender')){setNav(path==='councils'?'magisterium':'library');return}location.replace('/'+path+'/')}
 /* /credits/ is a static page whose entries are in-page anchors (#ed-…, #portrait-…, #wiki-…), not routes: the browser scrolls to them. */
 function creditsAnchor(){return window.BC_BOOT==='credits'&&!!location.hash&&!/^#\//.test(location.hash)}
@@ -719,6 +719,7 @@ function canonicalFor(){var raw=(location.hash.replace(/^#\/?/,'')||window.BC_BO
   if(p.length===2&&/^(author|work)$/.test(p[0])&&/^[a-z0-9-]+$/.test(p[1]))return SITE+p[0]+'/'+p[1]+'/';
   if(/^summa(\/(1|1-2|2-2|3|supp)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(p.join('/')))return SITE+p.join('/')+'/';
   if(p.length===4&&p[0]==='work'&&/^[a-z0-9-]+$/.test(p[1])&&/^(ch|story)$/.test(p[2])&&/^\d\d-[a-z0-9-]+$/.test(p[3]))return SITE+p.join('/')+'/';
+  if(p.length===3&&p[0]==='work'&&p[1]==='jerome-isaiah-prologue'&&p[2]==='ignoratio-scripturarum')return SITE+p.join('/')+'/';
   if(p.length===2&&p[0]==='editions'&&/^[a-z0-9_-]+$/.test(p[1]))return SITE+'editions/'+p[1]+'/';
   if(p.length===2&&p[0]==='reading'&&/^[a-z0-9-]+$/.test(p[1]))return SITE+'reading/'+p[1]+'/';
   if(p.length===2&&p[0]==='rites'&&/^[a-z0-9-]+$/.test(p[1]))return SITE+'rites/'+p[1]+'/';

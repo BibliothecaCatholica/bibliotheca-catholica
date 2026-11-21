@@ -97,6 +97,17 @@ def validate(catalog):
                         assert scan_ok(edition, source, v), v['identifier']
                         assert re.fullmatch(r'[0-9a-f]{64}', v['ocrSha256']), v['identifier']
                     continue
+                if source.get('kind') == 'collation':
+                    # Jerome, Isaiah prologue (2026-11-21): Corpus Corporum / Migne PL 24 Latin text,
+                    # collated against the 1845 scan; not a Gutenberg ebook and not the English word gate.
+                    assert source['sha256'] == edition['sha256'], edition['id']
+                    assert source['title'] == edition['sourceTitle'], edition['id']
+                    assert edition['rights'].startswith(HOSTED_RIGHTS), edition['id']
+                    assert b'*** END OF THE HOSTED TEXT' in raw, edition['id']
+                    assert 'mlat.uzh.ch' in edition['source'], edition['id']
+                    assert edition.get('language') == 'Latin', edition['id']
+                    assert source.get('collation', {}).get('agreement') == 1.0, edition['id']
+                    continue
                 if source.get('kind') == 'public-domain-text':
                     # On Christian Doctrine (2026-11-09): Shaw translation from CCEL NPNF1-02 Public Domain plain text
                     # (no Gutenberg ebook). Print witness public domain by date; New Advent stays link-only.

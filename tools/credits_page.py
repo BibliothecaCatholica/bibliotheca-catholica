@@ -59,6 +59,12 @@ def checks(r):
     """The collation or transcription result, from the edition's source record, in plain words."""
     if isinstance(r.get('collation'), str):  # a collation written up in words (the Standard Ebooks edition)
         return E(r['collation'])
+    if r.get('kind') == 'collation' and isinstance(r.get('collation'), dict):
+        c = r['collation']
+        if c.get('checks'):
+            return E(c['checks'])
+        return ('Compared word for word with the printed witness'
+                + (': ' + format(c['agreement'], '.1%') + ' agreement.' if 'agreement' in c else '.'))
     if r.get('collation'):
         c = r['collation']
         w = r.get('iaWitness') or {}

@@ -103,6 +103,12 @@
    "sha256": "1fac4092caa42feacab8cc781825a70fe259917436fa7973115abee06b1359d1",
    "size": 882501
   },
+  "pg-25308": {
+   "work": "eugenics-other-evils",
+   "path": "downloads/epub/eugenics-other-evils-pg-25308.f458f2aa619b.epub",
+   "sha256": "f458f2aa619be1b220c1ff2ca0008ff7cc54cbbae2dd73d9705e072ccd59d8af",
+   "size": 326853
+  },
   "pg-8442": {
    "work": "europe-faith",
    "path": "downloads/epub/europe-faith-pg-8442.a01b4b92c0cb.epub",
@@ -258,6 +264,12 @@
    "path": "downloads/epub/story-of-a-soul-pg-16772.0ec84c22044c.epub",
    "sha256": "0ec84c22044c09391791200ab60b77a34c34cfe87198d56979aab85c2a9787ad",
    "size": 640197
+  },
+  "pg-69185": {
+   "work": "tales-long-bow",
+   "path": "downloads/epub/tales-long-bow-pg-69185.cb0597092026.epub",
+   "sha256": "cb0597092026eff0efa802b7cb8f20b92a461a37819beb78fcaa5ba46a4655af",
+   "size": 398469
   },
   "pg-1721": {
    "work": "trees-of-pride",

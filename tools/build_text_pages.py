@@ -86,6 +86,9 @@ PART_D={
     'napoleon-notting-hill':{'about':'Project Gutenberg #20058: first published in 1904; the transcribed copy is the John Lane: The Bodley Head printing of 1904. Fifteen chapters in five books, divided as the hosted text heads them; the dedication and the list of illustrations stay in the reader. No words were changed.'},
     'victorian-age-literature':{'about':'Project Gutenberg #18639: first published in 1913; the transcribed copy is a Home University Library printing (New York and London). Four chapters, divided as the hosted text heads them; no words were changed.'},
     'four-faultless-felons':{'about':'Project Gutenberg Australia #0300781: first published in 1930. The prologue and four stories of six chapters each, divided as the hosted text heads them; no words were changed.'},
+    # Chesterton polish batch 5 (November 21, 2026). Each sentence restates the edition's record and its map.
+    'eugenics-other-evils':{'about':'Project Gutenberg #25308: first published in 1922; the transcribed copy is the Cassell and Company printing of 1922. Seventeen chapters in two parts, divided as the hosted text heads them; the note to the reader stays in the reader. No words were changed.'},
+    'tales-long-bow':{'about':'Project Gutenberg #69185: first published in 1925; the transcribed copy is the Dodd, Mead and Company, New York printing. Eight tales, divided as the hosted text heads them; no words were changed.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

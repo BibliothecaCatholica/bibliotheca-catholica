@@ -78,7 +78,8 @@ class OnChristianDoctrine(unittest.TestCase):
         self.assertIn('/work/on-christian-doctrine/', R('sitemap.xml'))
 
     def test_reader_notice_and_archive_docs(self):
-        self.assertIn('ccel\\.org\\//.test(e.source)', R('scripts/library.js'))
+        self.assertIn('ccel\\.org\\//.test(src)', R('scripts/library.js'))
+        self.assertIn('Nicene and Post-Nicene Fathers', R('scripts/library.js'))
         self.assertIn('public-domain-text', R('tools/build_library.py'))
         self.assertIn('ccel-npnf102-doctrine', R('docs/IMPLEMENTATION-NOTES.md'))
         self.assertIn('ccel-npnf102-doctrine.txt', R('tools/build_text_archive.py'))

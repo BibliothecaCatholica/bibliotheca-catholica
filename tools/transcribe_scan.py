@@ -173,27 +173,35 @@ NOTE_MARK = re.compile(r'^[*°†‡§]|^\d{1,2}\.?\s+\S')  # "5 Moral." or "10.
 
 
 def split_notes(lines, height):
-    """Footnotes: a block at the foot of the page, starting with a note mark and set off by a wider gap than the line
-    spacing or set in smaller type. Returns (body lines, [note lines per note])."""
+    """Footnotes: a block at the foot of the page, or a long note that starts above mid-page, set off by a wider gap
+    than the line spacing and set in smaller type than the lines before the break (not the whole-page median, which
+    hides the break when notes fill most of the page). The first line of the remainder must itself be smaller, so a
+    still-body line is not pulled into the notes. A note mark is not required (a continued note often has none).
+    Returns (body lines, [note lines per note])."""
     if len(lines) < 4:
         return lines, []
     ys = [l['y'] for l in lines]
     gaps = [b - a for a, b in zip(ys, ys[1:])]
     step = statistics.median(g for g in gaps if g > 0) if any(g > 0 for g in gaps) else 0
-    med_h = statistics.median(l['h'] for l in lines)
-    starts = [k for k in range(1, len(lines)) if lines[k]['y'] > 0.55 * height and NOTE_MARK.match(lines[k]['text'])
-              and (gaps[k - 1] > 1.4 * step or lines[k]['h'] < 0.85 * med_h)  # set apart, or in smaller type
-              and statistics.median(l['h'] for l in lines[k:]) < 0.92 * med_h]  # and the block is in smaller type
+    starts = []
+    for k in range(1, len(lines)):
+        rest = lines[k:]
+        if len(rest) < 2:
+            continue
+        med_before = statistics.median(l['h'] for l in lines[:k])
+        if not (lines[k]['h'] < 0.90 * med_before and statistics.median(l['h'] for l in rest) < 0.88 * med_before):
+            continue
+        if gaps[k - 1] > 1.4 * step or NOTE_MARK.match(lines[k]['text']):
+            starts.append(k)
     if starts:
         k = min(starts)  # the first note of the block; the notes below it are part of the same block
-        if True:
-            notes = []
-            for l in lines[k:]:
-                if NOTE_MARK.match(l['text']) or not notes:
-                    notes.append([l['text']])
-                else:
-                    notes[-1].append(l['text'])
-            return lines[:k], notes
+        notes = []
+        for l in lines[k:]:
+            if NOTE_MARK.match(l['text']) or not notes:
+                notes.append([l['text']])
+            else:
+                notes[-1].append(l['text'])
+        return lines[:k], notes
     return lines, []
 
 

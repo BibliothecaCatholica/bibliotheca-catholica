@@ -8,9 +8,10 @@
  *              Shown only as a general "Browse TAN Books" link (tools/build_print_editions.py).
  *              magisterium.url is the Magisterium AI Pro referral (https://www.magisterium.com/pro/micah,
  *              which redirects to /pro?via=micah; 25% off Pro, 10% commission; checked 2026-11-19).
- *              Shown only on the pages in PAGES of tools/study_partner.py (/libraries/, /magisterium/, /councils/,
- *              the /summa/ landing page, /study/, /disclosure/, and a short mention on /saints/calendar/,
- *              owner option A, 2026-11-21), never on author or chapter pages, the header, the footer, or home.
+ *              Shown in Ask Magisterium AI prompts and buttons on the home page, /scripture/, /saints/,
+ *              /doctors/, /prayers/, /libraries/, /magisterium/, /councils/, the /summa/ landing page, /study/,
+ *              /about/magisterium-ai/, /saints/calendar/, and selected work pages. It does not appear on author, chapter, or
+ *              reading pages, or in the header or footer.
  *  line        The one-line FTC disclosure beside affiliate links, once per page, followed by a "Details" link to
  *              /disclosure/ (owner rule 7, November 14, 2026).
  *  disclosure  The fuller statement on the /disclosure/ page.

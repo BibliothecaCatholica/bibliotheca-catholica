@@ -570,3 +570,12 @@ details.au-credit summary{cursor:pointer}details.au-credit p{margin:4px 0 0}
 .study-partner .disclosure{margin:var(--s-3) 0 0;padding:0;border:0}
 .sup-tools{max-width:66ch;color:var(--ink2)}
 @media(max-width:600px){.study-partner{padding:var(--s-4);margin-top:var(--s-6)}}
+.study-partner-qs-intro{margin:0 0 var(--s-2)}
+.study-partner-qs{margin:0 0 var(--s-3);padding:0 0 0 1.2em}
+.study-partner-qs li{margin:0 0 var(--s-2)}
+.study-partner-qs li:last-child{margin-bottom:0}
+.study-partner-note{margin:var(--s-3) 0 0}
+.study-ask-btn{display:inline-block;margin-left:.55em;font:600 var(--t-xs)/1.3 var(--sans);color:var(--rubric);text-decoration:underline;text-underline-offset:2px;white-space:nowrap;vertical-align:baseline}
+.rcard-ask{display:flex;flex-direction:column;gap:var(--s-2);text-decoration:none}
+.rcard-ask>a{color:inherit;text-decoration:none}
+.rcard-ask .study-ask-btn{margin:0 var(--s-4) var(--s-3);align-self:flex-start}

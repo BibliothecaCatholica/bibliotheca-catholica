@@ -58,6 +58,38 @@ class Layout(unittest.TestCase):
         dotted = body + [self.L('10. Cf. Dark Night, I, xiv, 2.', 2300, 40), self.L('11 Dark Night of the Soul, II, vi, 2.', 2350, 40)]
         self.assertEqual(len(T.split_notes(dotted, 2600)[1]), 2)  # a number followed by a full stop is a note mark too
 
+    def test_continued_notes_starting_above_mid_page(self):
+        # long Butler notes often begin above mid-page and may lack a fresh mark; type is compared to the
+        # preceding lines, not the whole page (notes can fill most of it). The first note line is only slightly
+        # smaller (46 / 51.25 ~= 0.898), so the first-line threshold is 0.90.
+        body = [self.L('body line %d of the text' % i, 300 + 80 * i, 51.25) for i in range(4)]
+        notes = [self.L('Honorius of Autun, continuing the note from the last page,', 700, 46),
+                 self.L('and the rest of this long note in the same smaller type,', 755, 45),
+                 self.L('which runs well past the middle of the page to the foot.', 810, 45),
+                 self.L('A second sentence of the same note keeps the smaller type.', 865, 44),
+                 self.L('Still more of the note, now the bulk of what is on the page.', 920, 45),
+                 self.L('The last line of the note, still in the smaller type.', 975, 45)]
+        # a gap between the last body line and the first note line
+        notes[0]['y'] = body[-1]['y'] + 160
+        for i, l in enumerate(notes[1:], 1):
+            l['y'] = notes[0]['y'] + 55 * i
+        kept, got = T.split_notes(body + notes, 2600)
+        self.assertEqual(kept, body)
+        self.assertEqual(len(got), 1)
+        self.assertEqual(got[0][0], notes[0]['text'])
+        self.assertEqual(got[0][-1], notes[-1]['text'])
+        # a still-body line after a gap must not be pulled into the notes: the first line of a candidate
+        # remainder has to be smaller type itself
+        extra = self.L('one more body line after a gap', body[-1]['y'] + 160, 51.25)
+        almost = body + [extra] + [dict(l) for l in notes]
+        almost[-len(notes)]['y'] = extra['y'] + 160  # a real gap, but the extra line is still body type
+        for i, l in enumerate(almost[-len(notes)+1:], 1):
+            l['y'] = almost[-len(notes)]['y'] + 55 * i
+        kept2, got2 = T.split_notes(almost, 2600)
+        self.assertEqual(len(kept2), 5)
+        self.assertEqual(kept2[-1]['text'], 'one more body line after a gap')
+        self.assertEqual(got2[0][0], notes[0]['text'])
+
     def test_library_stamp_dropped_but_running_heads_kept(self):
         pages = [(3000, [self.L('THE THING', 100), self.L('text', 300), self.L('MARIN COUNTY FREE LIBRARY', 900)]) for _ in range(4)]
         heads_low = [(3000, [self.L('94', 100), self.L('A CASE IN POINT', 150), self.L('text', 300)]) for _ in range(4)]

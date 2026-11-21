@@ -121,6 +121,12 @@
    "sha256": "bef98cf3f8a9ba1021c1576efd799bd0ffded529ef79c848d0d91b1808976ec5",
    "size": 570552
   },
+  "pga-0300781": {
+   "work": "four-faultless-felons",
+   "path": "downloads/epub/four-faultless-felons-pga-0300781.19d0781c8aa5.epub",
+   "sha256": "19d0781c8aa5015b749f3cdcdc844114e091e11a75d57b070f29c7b353608cd9",
+   "size": 446829
+  },
   "pg-72411": {
    "work": "glories-of-mary",
    "path": "downloads/epub/glories-of-mary-pg-72411.e4c05c3c3e38.epub",
@@ -186,6 +192,12 @@
    "path": "downloads/epub/manalive-pg-1718.656128e12fef.epub",
    "sha256": "656128e12fef7806108222b065682c492057b7ec9255181ac5d8a0348e5063dd",
    "size": 375676
+  },
+  "pg-20058": {
+   "work": "napoleon-notting-hill",
+   "path": "downloads/epub/napoleon-notting-hill-pg-20058.8058f9ad337e.epub",
+   "sha256": "8058f9ad337e301097843413095a7c2d36ba01c2e66bd60cd03912af0047a051",
+   "size": 377693
   },
   "pg-13468": {
    "work": "new-jerusalem",
@@ -258,6 +270,12 @@
    "path": "downloads/epub/tremendous-trifles-pg-8092.8a816f05478a.epub",
    "sha256": "8a816f05478a7122e01b1b5032a8e73ce8a6057d4792a75f83012212212088a8",
    "size": 371075
+  },
+  "pg-18639": {
+   "work": "victorian-age-literature",
+   "path": "downloads/epub/victorian-age-literature-pg-18639.f023e6f62f30.epub",
+   "sha256": "f023e6f62f308b3c333b05e0a37427af783a571e28818aa21d820102c5760456",
+   "size": 286108
   },
   "pg-53841": {
    "work": "virgin-saints-and-martyrs",

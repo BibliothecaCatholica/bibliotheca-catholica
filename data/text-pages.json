@@ -17204,6 +17204,822 @@
     "front": [],
     "em": []
    }
+  },
+  "napoleon-notting-hill": {
+   "partD": {
+    "about": "Project Gutenberg #20058: first published in 1904; the transcribed copy is the John Lane: The Bodley Head printing of 1904. Fifteen chapters in five books, divided as the hosted text heads them; the dedication and the list of illustrations stay in the reader. No words were changed.",
+    "words": 54567,
+    "minutes": 237
+   },
+   "edition": "pg-20058",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "fa00ec668e1b767e87884216dc8d4ecb3a91da861703d58f20aff7f0da106237",
+   "blocks": 1265,
+   "items": [
+    {
+     "slug": "01-introductory-remarks-on-the-art-of-prophecy",
+     "num": "I",
+     "title": "Introductory Remarks on the Art of Prophecy",
+     "heading": 61,
+     "start": 62,
+     "end": 77,
+     "section": 1,
+     "words": 1705,
+     "firstWords": "The human race, to which so many of my readers belong, has"
+    },
+    {
+     "slug": "02-the-man-in-green",
+     "num": "II",
+     "title": "The Man in Green",
+     "heading": 78,
+     "start": 79,
+     "end": 193,
+     "section": 2,
+     "words": 5534,
+     "firstWords": "Very few words are needed to explain why London, a hundred years"
+    },
+    {
+     "slug": "03-the-hill-of-humour",
+     "num": "III",
+     "title": "The Hill of Humour",
+     "heading": 194,
+     "start": 195,
+     "end": 260,
+     "section": 5,
+     "words": 2394,
+     "firstWords": "\"In a little square garden of yellow roses, beside the sea,\" said"
+    },
+    {
+     "slug": "04-the-charter-of-the-cities",
+     "num": "I",
+     "title": "The Charter of the Cities",
+     "heading": 262,
+     "start": 263,
+     "end": 314,
+     "section": 7,
+     "words": 3307,
+     "firstWords": "Lambert was standing bewildered outside the door of the King's apartments amid",
+     "before": [
+      261
+     ]
+    },
+    {
+     "slug": "05-the-council-of-the-provosts",
+     "num": "II",
+     "title": "The Council of the Provosts",
+     "heading": 315,
+     "start": 316,
+     "end": 396,
+     "section": 9,
+     "words": 3691,
+     "firstWords": "The King got up early next morning and came down three steps"
+    },
+    {
+     "slug": "06-enter-a-lunatic",
+     "num": "III",
+     "title": "Enter a Lunatic",
+     "heading": 397,
+     "start": 398,
+     "end": 508,
+     "section": 11,
+     "words": 3864,
+     "firstWords": "The King of the Fairies, who was, it is to be presumed,"
+    },
+    {
+     "slug": "07-the-mental-condition-of-adam-wayne",
+     "num": "I",
+     "title": "The Mental Condition of Adam Wayne",
+     "heading": 510,
+     "start": 511,
+     "end": 575,
+     "section": 14,
+     "words": 4426,
+     "firstWords": "A little while after the King's accession a small book of poems",
+     "before": [
+      509
+     ]
+    },
+    {
+     "slug": "08-the-remarkable-mr-turnbull",
+     "num": "II",
+     "title": "The Remarkable Mr. Turnbull",
+     "heading": 576,
+     "start": 577,
+     "end": 645,
+     "section": 16,
+     "words": 3031,
+     "firstWords": "After two more interviews with shopmen, however, the patriot's confidence in his"
+    },
+    {
+     "slug": "09-the-experiment-of-mr-buck",
+     "num": "III",
+     "title": "The Experiment of Mr. Buck",
+     "heading": 646,
+     "start": 647,
+     "end": 752,
+     "section": 18,
+     "words": 4561,
+     "firstWords": "An earnest and eloquent petition was sent up to the King signed"
+    },
+    {
+     "slug": "10-the-battle-of-the-lamps",
+     "num": "I",
+     "title": "The Battle of the Lamps",
+     "heading": 754,
+     "start": 755,
+     "end": 839,
+     "section": 21,
+     "words": 3838,
+     "firstWords": "Mr. Buck, who, though retired, frequently went down to his big drapery",
+     "before": [
+      753
+     ]
+    },
+    {
+     "slug": "11-the-correspondent-of-the-court-journal",
+     "num": "II",
+     "title": "The Correspondent of the Court Journal",
+     "heading": 840,
+     "start": 841,
+     "end": 917,
+     "section": 24,
+     "words": 2951,
+     "firstWords": "Journalism had become, like most other such things in England under the"
+    },
+    {
+     "slug": "12-the-great-army-of-south-kensington",
+     "num": "III",
+     "title": "The Great Army of South Kensington",
+     "heading": 918,
+     "start": 919,
+     "end": 1024,
+     "section": 26,
+     "words": 6520,
+     "firstWords": "The article from the special correspondent of the Court Journal arrived in"
+    },
+    {
+     "slug": "13-the-empire-of-notting-hill",
+     "num": "I",
+     "title": "The Empire of Notting Hill",
+     "heading": 1026,
+     "start": 1027,
+     "end": 1099,
+     "section": 29,
+     "words": 4187,
+     "firstWords": "On the evening of the third of October, twenty years after the",
+     "before": [
+      1025
+     ]
+    },
+    {
+     "slug": "14-the-last-battle",
+     "num": "II",
+     "title": "The Last Battle",
+     "heading": 1100,
+     "start": 1101,
+     "end": 1143,
+     "section": 31,
+     "words": 2325,
+     "firstWords": "The day was cloudy when Wayne went down to die with all"
+    },
+    {
+     "slug": "15-two-voices",
+     "num": "III",
+     "title": "Two Voices",
+     "heading": 1144,
+     "start": 1145,
+     "end": 1183,
+     "section": 32,
+     "words": 2233,
+     "firstWords": "In a place in which there was total darkness for hours, there"
+    }
+   ],
+   "structure": {
+    "sha256": "fa00ec668e1b767e87884216dc8d4ecb3a91da861703d58f20aff7f0da106237",
+    "source": "data/structured/napoleon-notting-hill-pg-20058.json",
+    "roles": [
+     [
+      61,
+      "chapter"
+     ],
+     [
+      78,
+      "chapter"
+     ],
+     [
+      194,
+      "chapter"
+     ],
+     [
+      261,
+      "heading"
+     ],
+     [
+      262,
+      "chapter"
+     ],
+     [
+      315,
+      "chapter"
+     ],
+     [
+      397,
+      "chapter"
+     ],
+     [
+      509,
+      "heading"
+     ],
+     [
+      510,
+      "chapter"
+     ],
+     [
+      576,
+      "chapter"
+     ],
+     [
+      646,
+      "chapter"
+     ],
+     [
+      753,
+      "heading"
+     ],
+     [
+      754,
+      "chapter"
+     ],
+     [
+      840,
+      "chapter"
+     ],
+     [
+      918,
+      "chapter"
+     ],
+     [
+      1025,
+      "heading"
+     ],
+     [
+      1026,
+      "chapter"
+     ],
+     [
+      1100,
+      "chapter"
+     ],
+     [
+      1144,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "victorian-age-literature": {
+   "partD": {
+    "about": "Project Gutenberg #18639: first published in 1913; the transcribed copy is a Home University Library printing (New York and London). Four chapters, divided as the hosted text heads them; no words were changed.",
+    "words": 41716,
+    "minutes": 181
+   },
+   "edition": "pg-18639",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "d1be513dd5495995c0b7b0e0551d9988236f5ee4631f2d9da9d2d2b83890e3b6",
+   "blocks": 290,
+   "items": [
+    {
+     "slug": "01-the-victorian-compromise-and-its-enemies",
+     "num": "I",
+     "title": "The Victorian Compromise and Its Enemies",
+     "heading": 42,
+     "start": 44,
+     "end": 87,
+     "section": 1,
+     "words": 13346,
+     "firstWords": "The previous literary life of this country had left vigorous many old",
+     "titleBlocks": [
+      43
+     ]
+    },
+    {
+     "slug": "02-the-great-victorian-novelists",
+     "num": "II",
+     "title": "The Great Victorian Novelists",
+     "heading": 88,
+     "start": 90,
+     "end": 131,
+     "section": 2,
+     "words": 11284,
+     "firstWords": "The Victorian novel was a thing entirely Victorian; quite unique and suited",
+     "titleBlocks": [
+      89
+     ]
+    },
+    {
+     "slug": "03-the-great-victorian-poets",
+     "num": "III",
+     "title": "The Great Victorian Poets",
+     "heading": 132,
+     "start": 134,
+     "end": 175,
+     "section": 3,
+     "words": 8090,
+     "firstWords": "What was really unsatisfactory in Victorian literature is something much easier to",
+     "titleBlocks": [
+      133
+     ]
+    },
+    {
+     "slug": "04-the-break-up-of-the-compromise",
+     "num": "IV",
+     "title": "The Break-up of the Compromise",
+     "heading": 176,
+     "start": 178,
+     "end": 238,
+     "section": 5,
+     "words": 8996,
+     "firstWords": "If it be curiously and carefully considered it will, I think, appear",
+     "titleBlocks": [
+      177
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "d1be513dd5495995c0b7b0e0551d9988236f5ee4631f2d9da9d2d2b83890e3b6",
+    "source": "data/structured/victorian-age-literature-pg-18639.json",
+    "roles": [
+     [
+      42,
+      "chapter"
+     ],
+     [
+      43,
+      "heading"
+     ],
+     [
+      88,
+      "chapter"
+     ],
+     [
+      89,
+      "heading"
+     ],
+     [
+      132,
+      "chapter"
+     ],
+     [
+      133,
+      "heading"
+     ],
+     [
+      176,
+      "chapter"
+     ],
+     [
+      177,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "four-faultless-felons": {
+   "partD": {
+    "about": "Project Gutenberg Australia #0300781: first published in 1930. The prologue and four stories of six chapters each, divided as the hosted text heads them; no words were changed.",
+    "words": 70388,
+    "minutes": 306
+   },
+   "edition": "pga-0300781",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "d4d233bc4f5997aafa719574d723ad825b843ea3f2f0f88cf795e6bb0c75e0bd",
+   "blocks": 1120,
+   "items": [
+    {
+     "slug": "01-prologue-of-the-pressman",
+     "num": "I",
+     "title": "Prologue of the Pressman",
+     "heading": 12,
+     "start": 13,
+     "end": 77,
+     "section": 0,
+     "words": 3724,
+     "firstWords": "MR. ASA LEE PINION, of the Chicago Comet, had crossed half of"
+    },
+    {
+     "slug": "02-the-man-with-the-green-umbrella",
+     "num": "I",
+     "title": "The Man with the Green Umbrella",
+     "heading": 79,
+     "start": 80,
+     "end": 103,
+     "section": 2,
+     "words": 1964,
+     "firstWords": "THE new Governor was Lord Tallboys, commonly called Top-hat Tallboys, because of",
+     "before": [
+      78
+     ]
+    },
+    {
+     "slug": "03-the-boy-who-made-a-scene",
+     "num": "II",
+     "title": "The Boy Who Made a Scene",
+     "heading": 104,
+     "start": 105,
+     "end": 139,
+     "section": 2,
+     "words": 2409,
+     "firstWords": "BARBARA TRAILL was a girl with a good deal of the boy"
+    },
+    {
+     "slug": "04-the-man-who-could-not-hate",
+     "num": "III",
+     "title": "The Man Who Could Not Hate",
+     "heading": 140,
+     "start": 141,
+     "end": 186,
+     "section": 4,
+     "words": 3116,
+     "firstWords": "IMMEDIATELY after leaving the little garden-party, Tom and his tutor parted for"
+    },
+    {
+     "slug": "05-the-detective-and-the-parson",
+     "num": "IV",
+     "title": "The Detective and the Parson",
+     "heading": 187,
+     "start": 188,
+     "end": 234,
+     "section": 5,
+     "words": 3069,
+     "firstWords": "IT was not until the following evening, as already noted, that the"
+    },
+    {
+     "slug": "06-the-theory-of-moderate-murder",
+     "num": "V",
+     "title": "The Theory of Moderate Murder",
+     "heading": 235,
+     "start": 236,
+     "end": 291,
+     "section": 6,
+     "words": 2210,
+     "firstWords": "COLONEL HAYTER, the Chief of the Police, was moving towards the inner"
+    },
+    {
+     "slug": "07-the-thing-that-really-happened",
+     "num": "VI",
+     "title": "The Thing That Really Happened",
+     "heading": 292,
+     "start": 293,
+     "end": 335,
+     "section": 8,
+     "words": 2853,
+     "firstWords": "IT is not true that Lord Tallboys wore his top-hat in bed,"
+    },
+    {
+     "slug": "08-the-prologue-of-the-tree",
+     "num": "I",
+     "title": "The Prologue of the Tree",
+     "heading": 337,
+     "start": 338,
+     "end": 361,
+     "section": 9,
+     "words": 2167,
+     "firstWords": "MR. WALTER WINDRUSH, the eminent and eccentric painter and poet, lived in",
+     "before": [
+      336
+     ]
+    },
+    {
+     "slug": "09-the-man-with-the-black-bag",
+     "num": "II",
+     "title": "The Man with the Black Bag",
+     "heading": 362,
+     "start": 363,
+     "end": 392,
+     "section": 10,
+     "words": 2728,
+     "firstWords": "ENID WINDRUSH, a very good-looking young woman with a brilliant shock of"
+    },
+    {
+     "slug": "10-the-trespasser-in-the-garden",
+     "num": "III",
+     "title": "The Trespasser in the Garden",
+     "heading": 393,
+     "start": 394,
+     "end": 437,
+     "section": 11,
+     "words": 3253,
+     "firstWords": "FOR various causes, which accumulated in his dark and brooding brain for"
+    },
+    {
+     "slug": "11-the-disease-of-duodiapsychosis",
+     "num": "IV",
+     "title": "The Disease of Duodiapsychosis",
+     "heading": 438,
+     "start": 439,
+     "end": 497,
+     "section": 12,
+     "words": 2908,
+     "firstWords": "ENID WINDRUSH was a human being, a very human being. She had"
+    },
+    {
+     "slug": "12-the-secret-of-the-tree",
+     "num": "V",
+     "title": "The Secret of the Tree",
+     "heading": 498,
+     "start": 499,
+     "end": 577,
+     "section": 14,
+     "words": 3480,
+     "firstWords": "THE motives of the simple are more subtle than those of the"
+    },
+    {
+     "slug": "13-the-epilogue-of-the-garden",
+     "num": "VI",
+     "title": "The Epilogue of the Garden",
+     "heading": 578,
+     "start": 579,
+     "end": 611,
+     "section": 16,
+     "words": 1911,
+     "firstWords": "A FORTNIGHT afterwards, Mr. Walter Windrush was walking round his favourite garden,"
+    },
+    {
+     "slug": "14-the-name-of-nadoway",
+     "num": "I",
+     "title": "The Name of Nadoway",
+     "heading": 613,
+     "start": 614,
+     "end": 648,
+     "section": 17,
+     "words": 2426,
+     "firstWords": "THE name of Nadoway was in one sense famous, and even after",
+     "before": [
+      612
+     ]
+    },
+    {
+     "slug": "15-the-burglar-and-the-brooch",
+     "num": "II",
+     "title": "The Burglar and the Brooch",
+     "heading": 649,
+     "start": 650,
+     "end": 689,
+     "section": 18,
+     "words": 2882,
+     "firstWords": "IT was the scare of the burglary that actually started the story"
+    },
+    {
+     "slug": "16-a-queer-reformation",
+     "num": "III",
+     "title": "A Queer Reformation",
+     "heading": 690,
+     "start": 691,
+     "end": 748,
+     "section": 19,
+     "words": 3575,
+     "firstWords": "MILLICENT MILTON could not help wondering a good deal, especially when walking"
+    },
+    {
+     "slug": "17-the-problems-of-detective-price",
+     "num": "IV",
+     "title": "The Problems of Detective Price",
+     "heading": 749,
+     "start": 750,
+     "end": 796,
+     "section": 21,
+     "words": 2921,
+     "firstWords": "MR. PETER PRICE, the private inquiry agent, did not glow with that"
+    },
+    {
+     "slug": "18-the-thief-on-trial",
+     "num": "V",
+     "title": "The Thief on Trial",
+     "heading": 797,
+     "start": 798,
+     "end": 856,
+     "section": 22,
+     "words": 2564,
+     "firstWords": "THERE was an extraordinary amount of fuss and delay about the hearing"
+    },
+    {
+     "slug": "19-the-cleansing-of-the-name",
+     "num": "VI",
+     "title": "The Cleansing of the Name",
+     "heading": 857,
+     "start": 858,
+     "end": 896,
+     "section": 24,
+     "words": 2525,
+     "firstWords": "THE trial and acquittal of Alan Nadoway in a court of law"
+    },
+    {
+     "slug": "20-the-menace-of-the-word",
+     "num": "I",
+     "title": "The Menace of the Word",
+     "heading": 898,
+     "start": 899,
+     "end": 910,
+     "section": 25,
+     "words": 1703,
+     "firstWords": "IT will be best, both for the reader and the writer, not",
+     "before": [
+      897
+     ]
+    },
+    {
+     "slug": "21-the-procession-of-the-plotters",
+     "num": "II",
+     "title": "The Procession of the Plotters",
+     "heading": 911,
+     "start": 912,
+     "end": 949,
+     "section": 26,
+     "words": 3191,
+     "firstWords": "IT has already been explained that Pavonia was governed on enlightened modern"
+    },
+    {
+     "slug": "22-the-princess-intervenes",
+     "num": "III",
+     "title": "The Princess Intervenes",
+     "heading": 950,
+     "start": 951,
+     "end": 985,
+     "section": 27,
+     "words": 3716,
+     "firstWords": "THE moment that Colonel Grimm of the Pavonian Police saw that black"
+    },
+    {
+     "slug": "23-the-unreasonableness-of-woman",
+     "num": "IV",
+     "title": "The Unreasonableness of Woman",
+     "heading": 986,
+     "start": 987,
+     "end": 1032,
+     "section": 28,
+     "words": 2629,
+     "firstWords": "WHEN the great police raid on Peacock Crescent had a conclusion pour"
+    },
+    {
+     "slug": "24-the-terms-of-a-traitor",
+     "num": "V",
+     "title": "The Terms of a Traitor",
+     "heading": 1033,
+     "start": 1034,
+     "end": 1064,
+     "section": 29,
+     "words": 3041,
+     "firstWords": "ONE single thought like a thundercloud brooded over Pavonia, its palace and"
+    },
+    {
+     "slug": "25-the-speaking-of-the-word",
+     "num": "VI",
+     "title": "The Speaking of the Word",
+     "heading": 1065,
+     "start": 1066,
+     "end": 1118,
+     "section": 30,
+     "words": 3423,
+     "firstWords": "COLONEL GRIMM of the Pavonian Police was very exactly described as a"
+    }
+   ],
+   "structure": {
+    "sha256": "d4d233bc4f5997aafa719574d723ad825b843ea3f2f0f88cf795e6bb0c75e0bd",
+    "source": "data/structured/four-faultless-felons-pga-0300781.json",
+    "roles": [
+     [
+      12,
+      "chapter"
+     ],
+     [
+      78,
+      "heading"
+     ],
+     [
+      79,
+      "chapter"
+     ],
+     [
+      104,
+      "chapter"
+     ],
+     [
+      140,
+      "chapter"
+     ],
+     [
+      187,
+      "chapter"
+     ],
+     [
+      235,
+      "chapter"
+     ],
+     [
+      292,
+      "chapter"
+     ],
+     [
+      336,
+      "heading"
+     ],
+     [
+      337,
+      "chapter"
+     ],
+     [
+      362,
+      "chapter"
+     ],
+     [
+      393,
+      "chapter"
+     ],
+     [
+      438,
+      "chapter"
+     ],
+     [
+      498,
+      "chapter"
+     ],
+     [
+      578,
+      "chapter"
+     ],
+     [
+      612,
+      "heading"
+     ],
+     [
+      613,
+      "chapter"
+     ],
+     [
+      649,
+      "chapter"
+     ],
+     [
+      690,
+      "chapter"
+     ],
+     [
+      749,
+      "chapter"
+     ],
+     [
+      797,
+      "chapter"
+     ],
+     [
+      857,
+      "chapter"
+     ],
+     [
+      897,
+      "heading"
+     ],
+     [
+      898,
+      "chapter"
+     ],
+     [
+      911,
+      "chapter"
+     ],
+     [
+      950,
+      "chapter"
+     ],
+     [
+      986,
+      "chapter"
+     ],
+     [
+      1033,
+      "chapter"
+     ],
+     [
+      1065,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

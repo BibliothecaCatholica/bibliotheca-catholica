@@ -5482,16 +5482,21 @@
       "editions": [
         {
           "id": "ia-gkcasmcbeingcoll0000gkch",
-          "label": "Internet Archive scan (1929)",
+          "label": "Transcription of the Internet Archive scan (London: Methuen, 1929)",
           "source": "https://archive.org/details/gkcasmcbeingcoll0000gkch",
           "language": "English",
           "contributors": [],
-          "rights": "External scan at the Internet Archive; not hosted here. Published 1929, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
-          "checked": "2026-11-15",
-          "note": "First published 1929 (London: Methuen). Internet Archive record dated 1929, freely readable (not a lending copy). Link only.",
-          "access": "full-text"
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-21",
+          "note": "First published 1929 (London: Methuen). Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, words rejoined across line breaks, 6 OCR confusions repaired, 22 misreadings corrected by hand against the page images, and 163 paragraphs that keep a word the OCR could not read (99.5% of words read). Not a manual proofread.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "G.K.C. as M.C.: Being a Collection of Thirty-Seven Introductions",
+          "text": "data/texts/ia-gkcasmcbeingcoll0000gkch.txt",
+          "sha256": "a56928813abd1ea0b41a7f95af7a79908ea1e1bd33eb70ef56eec605817c38b4"
         }
-      ]
+      ],
+      "added": "2026-11-21"
     },
     {
       "id": "simplicity-and-tolstoy",

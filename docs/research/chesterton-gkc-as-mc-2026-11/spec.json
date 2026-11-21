@@ -1,0 +1,147 @@
+[
+ {
+  "edition": "ia-gkcasmcbeingcoll0000gkch",
+  "ia": "gkcasmcbeingcoll0000gkch",
+  "title": "G.K.C. AS M.C.",
+  "sourceTitle": "G.K.C. as M.C.: Being a Collection of Thirty-Seven Introductions",
+  "author": "G. K. Chesterton",
+  "year": 1929,
+  "firstPublished": "1929 (London: Methuen), selected and edited by J. P. de Fonseka",
+  "firstLeaf": 8,
+  "lastLeaf": 299,
+  "handFixes": [
+   {
+    "leaf": 13,
+    "page": "leaf 13",
+    "ocr": "but*for",
+    "reading": "but for"
+   },
+   {
+    "leaf": 17,
+    "page": "leaf 17",
+    "ocr": "Ifsome",
+    "reading": "If some"
+   },
+   {
+    "leaf": 18,
+    "page": "leaf 18",
+    "ocr": "fromi",
+    "reading": "from"
+   },
+   {
+    "leaf": 21,
+    "page": "leaf 21",
+    "ocr": "Fonszxa",
+    "reading": "Fonseka"
+   },
+   {
+    "leaf": 26,
+    "page": "leaf 26",
+    "ocr": "ofices",
+    "reading": "offices"
+   },
+   {
+    "leaf": 26,
+    "page": "leaf 26",
+    "ocr": "‘ohnson",
+    "reading": "Johnson"
+   },
+   {
+    "leaf": 26,
+    "page": "leaf 26",
+    "ocr": "Fohnson",
+    "reading": "Johnson"
+   },
+   {
+    "leaf": 27,
+    "page": "leaf 27",
+    "ocr": "canremember",
+    "reading": "can remember"
+   },
+   {
+    "leaf": 27,
+    "page": "leaf 27",
+    "ocr": "uponascrap-book. Ifthe",
+    "reading": "upon a scrap-book. If the"
+   },
+   {
+    "leaf": 27,
+    "page": "leaf 27",
+    "ocr": "Boswell’s Fohnson",
+    "reading": "Boswell’s Johnson"
+   },
+   {
+    "leaf": 29,
+    "page": "leaf 29",
+    "ocr": "chanceof being called beforethe",
+    "reading": "chance of being called before the"
+   },
+   {
+    "leaf": 29,
+    "page": "leaf 29",
+    "ocr": "asnob",
+    "reading": "a snob"
+   },
+   {
+    "leaf": 30,
+    "page": "leaf 30",
+    "ocr": "Yohnson",
+    "reading": "Johnson"
+   },
+   {
+    "leaf": 56,
+    "page": "leaf 56",
+    "ocr": "Iam writing",
+    "reading": "I am writing"
+   },
+   {
+    "leaf": 69,
+    "page": "leaf 69",
+    "ocr": "Heis willing",
+    "reading": "He is willing"
+   },
+   {
+    "leaf": 94,
+    "page": "leaf 94",
+    "ocr": "wasa little",
+    "reading": "was a little"
+   },
+   {
+    "leaf": 95,
+    "page": "leaf 95",
+    "ocr": "Weare alone",
+    "reading": "We are alone"
+   },
+   {
+    "leaf": 139,
+    "page": "leaf 139",
+    "ocr": "He wasa",
+    "reading": "He was a"
+   },
+   {
+    "leaf": 177,
+    "page": "leaf 177",
+    "ocr": "Heis fighting anold",
+    "reading": "He is fighting an old"
+   },
+   {
+    "leaf": 182,
+    "page": "leaf 182",
+    "ocr": "as Iam",
+    "reading": "as I am"
+   },
+   {
+    "leaf": 211,
+    "page": "leaf 211",
+    "ocr": "Weare even",
+    "reading": "We are even"
+   },
+   {
+    "leaf": 281,
+    "page": "leaf 281",
+    "ocr": "Iam all",
+    "reading": "I am all"
+   }
+  ]
+ }
+]

@@ -75,6 +75,9 @@
   "justin-martyr": {
    "html": "<section class=\"buy-print\"><h2>Buy in print</h2><p class=\"buy-tan\"><a class=\"buy-b\" href=\"https://lddy.no/1qbrw\" target=\"_blank\" rel=\"noopener sponsored\">Browse TAN Books ↗</a></p><p class=\"disclosure small\">Affiliate links: we may earn a commission. <a href=\"/disclosure/\">Details</a>.</p></section>"
   },
+  "maurice-baring": {
+   "html": "<section class=\"buy-print\"><h2>Buy in print</h2><p class=\"buy-tan\"><a class=\"buy-b\" href=\"https://lddy.no/1qbrw\" target=\"_blank\" rel=\"noopener sponsored\">Browse TAN Books ↗</a></p><p class=\"disclosure small\">Affiliate links: we may earn a commission. <a href=\"/disclosure/\">Details</a>.</p></section>"
+  },
   "nicholas-wiseman": {
    "html": "<section class=\"buy-print\"><h2>Buy in print</h2><p class=\"buy-tan\"><a class=\"buy-b\" href=\"https://lddy.no/1qbrw\" target=\"_blank\" rel=\"noopener sponsored\">Browse TAN Books ↗</a></p><p class=\"disclosure small\">Affiliate links: we may earn a commission. <a href=\"/disclosure/\">Details</a>.</p></section>"
   },
@@ -167,6 +170,11 @@
    "html": "<section class=\"buy-print\"><h2>Buy in print</h2><p class=\"buy-tan\"><a class=\"buy-b\" href=\"https://lddy.no/1qbrw\" target=\"_blank\" rel=\"noopener sponsored\">Browse TAN Books ↗</a></p><p class=\"disclosure small\">Affiliate links: we may earn a commission. <a href=\"/disclosure/\">Details</a>.</p></section>",
    "tan": true
   },
+  "baring-c": {
+   "bookshop": 0,
+   "html": "<section class=\"buy-print\"><h2>Buy in print</h2><p class=\"buy-tan\"><a class=\"buy-b\" href=\"https://lddy.no/1qbrw\" target=\"_blank\" rel=\"noopener sponsored\">Browse TAN Books ↗</a></p><p class=\"disclosure small\">Affiliate links: we may earn a commission. <a href=\"/disclosure/\">Details</a>.</p></section>",
+   "tan": true
+  },
   "basil-the-great-de-spiritu-sancto": {
    "bookshop": 0,
    "html": "<section class=\"buy-print\"><h2>Buy in print</h2><p class=\"buy-tan\"><a class=\"buy-b\" href=\"https://lddy.no/1qbrw\" target=\"_blank\" rel=\"noopener sponsored\">Browse TAN Books ↗</a></p><p class=\"disclosure small\">Affiliate links: we may earn a commission. <a href=\"/disclosure/\">Details</a>.</p></section>",
@@ -223,6 +231,11 @@
    "tan": true
   },
   "catholic-church-history": {
+   "bookshop": 0,
+   "html": "<section class=\"buy-print\"><h2>Buy in print</h2><p class=\"buy-tan\"><a class=\"buy-b\" href=\"https://lddy.no/1qbrw\" target=\"_blank\" rel=\"noopener sponsored\">Browse TAN Books ↗</a></p><p class=\"disclosure small\">Affiliate links: we may earn a commission. <a href=\"/disclosure/\">Details</a>.</p></section>",
+   "tan": true
+  },
+  "catholic-encyclopedia-advent": {
    "bookshop": 0,
    "html": "<section class=\"buy-print\"><h2>Buy in print</h2><p class=\"buy-tan\"><a class=\"buy-b\" href=\"https://lddy.no/1qbrw\" target=\"_blank\" rel=\"noopener sponsored\">Browse TAN Books ↗</a></p><p class=\"disclosure small\">Affiliate links: we may earn a commission. <a href=\"/disclosure/\">Details</a>.</p></section>",
    "tan": true
@@ -797,6 +810,11 @@
    "html": "<section class=\"buy-print\"><h2>Buy in print</h2><p class=\"buy-tan\"><a class=\"buy-b\" href=\"https://lddy.no/1qbrw\" target=\"_blank\" rel=\"noopener sponsored\">Browse TAN Books ↗</a></p><p class=\"disclosure small\">Affiliate links: we may earn a commission. <a href=\"/disclosure/\">Details</a>.</p></section>",
    "tan": true
   },
+  "sword-of-wood": {
+   "bookshop": 0,
+   "html": "<section class=\"buy-print\"><h2>Buy in print</h2><p class=\"buy-tan\"><a class=\"buy-b\" href=\"https://lddy.no/1qbrw\" target=\"_blank\" rel=\"noopener sponsored\">Browse TAN Books ↗</a></p><p class=\"disclosure small\">Affiliate links: we may earn a commission. <a href=\"/disclosure/\">Details</a>.</p></section>",
+   "tan": true
+  },
   "tales-long-bow": {
    "bookshop": 0,
    "html": "<section class=\"buy-print\"><h2>Buy in print</h2><p class=\"buy-tan\"><a class=\"buy-b\" href=\"https://lddy.no/1qbrw\" target=\"_blank\" rel=\"noopener sponsored\">Browse TAN Books ↗</a></p><p class=\"disclosure small\">Affiliate links: we may earn a commission. <a href=\"/disclosure/\">Details</a>.</p></section>",
@@ -883,6 +901,11 @@
    "tan": true
   },
   "walsh-saint-teresa": {
+   "bookshop": 0,
+   "html": "<section class=\"buy-print\"><h2>Buy in print</h2><p class=\"buy-tan\"><a class=\"buy-b\" href=\"https://lddy.no/1qbrw\" target=\"_blank\" rel=\"noopener sponsored\">Browse TAN Books ↗</a></p><p class=\"disclosure small\">Affiliate links: we may earn a commission. <a href=\"/disclosure/\">Details</a>.</p></section>",
+   "tan": true
+  },
+  "walsh-worlds-debt-catholic-church": {
    "bookshop": 0,
    "html": "<section class=\"buy-print\"><h2>Buy in print</h2><p class=\"buy-tan\"><a class=\"buy-b\" href=\"https://lddy.no/1qbrw\" target=\"_blank\" rel=\"noopener sponsored\">Browse TAN Books ↗</a></p><p class=\"disclosure small\">Affiliate links: we may earn a commission. <a href=\"/disclosure/\">Details</a>.</p></section>",
    "tan": true

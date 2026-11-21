@@ -94,5 +94,13 @@ class CreditsPage(unittest.TestCase):
         self.assertIn('id="home-engraving"', CREDITS)
 
 
+    def test_counts_agree_with_their_nouns(self):
+        # QA, November 21, 2026: "1 OCR confusions" and "1 paragraphs" (Do We Agree?)
+        self.assertEqual([CP.plural(n, 'paragraph') for n in (0, 1, 2, 1204)], ['0 paragraphs', '1 paragraph', '2 paragraphs', '1,204 paragraphs'])
+        self.assertEqual(CP.plural(1, 'OCR confusion'), '1 OCR confusion')
+        text = re.sub(r'<[^>]+>', ' ', main(PAGE))
+        self.assertEqual(re.findall(r'(?<![\d,.])1 (?:OCR confusions|paragraphs|misreadings|words)\b', text), [])
+        self.assertIn('1 OCR confusion repaired', text)
+
 if __name__ == '__main__':
     unittest.main()

@@ -11,7 +11,7 @@ NYA = [w for w in CATALOG['works'] if w.get('status') == 'not-yet-available']
 
 class NotYetAvailable(unittest.TestCase):
     def test_chesterton_list(self):
-        self.assertEqual(len(NYA), 11)
+        self.assertEqual(len(NYA), 10)  # 11 on November 15; the Robert Louis Stevenson booklet hosted November 21, 2026
         for w in NYA:
             self.assertEqual(w['authorId'], 'g-k-chesterton')
             self.assertEqual(w['editions'], [])

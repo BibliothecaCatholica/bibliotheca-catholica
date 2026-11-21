@@ -1,0 +1,1302 @@
+{
+  "id": "ia-gkcasmcbeingcoll0000gkch",
+  "kind": "ocr-transcription",
+  "title": "G.K.C. as M.C.: Being a Collection of Thirty-Seven Introductions",
+  "author": "G. K. Chesterton",
+  "rights": "Public domain in the USA. First published 1929 (London: Methuen), selected and edited by J. P. de Fonseka; the scanned printing is of 1929.",
+  "rightsBasis": "pd-date",
+  "volumes": [
+    {
+      "identifier": "gkcasmcbeingcoll0000gkch",
+      "url": "https://archive.org/details/gkcasmcbeingcoll0000gkch",
+      "year": 1929,
+      "publisher": null,
+      "ocr": "gkcasmcbeingcoll0000gkch_djvu.xml",
+      "ocrSha256": "c5e9d28c7eb83d4aabde639e400e4d5cee564bc5117ea4d644bfee4291285b35",
+      "leaves": [
+        8,
+        299
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed. 22 misreadings corrected by hand against the page images of this scan, each listed in handFixes; no wording was taken from another edition.",
+  "words": 63806,
+  "unknownWords": 294,
+  "readRate": 0.9954,
+  "flaggedBlocks": 163,
+  "flagged": [
+    {
+      "block": 7,
+      "words": [
+        "Zee",
+        "ee",
+        "bie",
+        "ee",
+        "Vy,"
+      ]
+    },
+    {
+      "block": 11,
+      "words": [
+        "Furst",
+        "tn"
+      ]
+    },
+    {
+      "block": 13,
+      "words": [
+        "forewords;",
+        "Lucendo."
+      ]
+    },
+    {
+      "block": 17,
+      "words": [
+        "CuHEsTertTon"
+      ]
+    },
+    {
+      "block": 19,
+      "words": [
+        "reciprocate,"
+      ]
+    },
+    {
+      "block": 22,
+      "words": [
+        "commingle.",
+        "Grandmamma",
+        "Ogpu",
+        "Leningrad,",
+        "Lud",
+        "Lyly"
+      ]
+    },
+    {
+      "block": 23,
+      "words": [
+        "lacune",
+        "anteceded"
+      ]
+    },
+    {
+      "block": 24,
+      "words": [
+        "Fonseka"
+      ]
+    },
+    {
+      "block": 27,
+      "words": [
+        "DepicaTion.::",
+        "Ottver",
+        "Wenvett",
+        "Matruew",
+        "Eg",
+        "Lonpon.",
+        "zg",
+        "Manin"
+      ]
+    },
+    {
+      "block": 28,
+      "words": [
+        "GiKG,"
+      ]
+    },
+    {
+      "block": 30,
+      "words": [
+        "eso",
+        "‘CurisrMas",
+        "Uropias.:::::::",
+        "iE",
+        "Gerorce",
+        "MacDonatp",
+        "pe",
+        "Frrenps,"
+      ]
+    },
+    {
+      "block": 32,
+      "words": [
+        "RasseELas.",
+        "Wuo",
+        "Tuurspay.::;",
+        "FEttows.::::,",
+        "Enciiso",
+        "Suropsuire",
+        "ApoLociA..::.:",
+        "Yazhs"
+      ]
+    },
+    {
+      "block": 34,
+      "words": [
+        "pak"
+      ]
+    },
+    {
+      "block": 36,
+      "words": [
+        "kek"
+      ]
+    },
+    {
+      "block": 39,
+      "words": [
+        "‘truncating’,",
+        "iti;",
+        "Nugent",
+        "Hinchcliffe",
+        "Isbister,"
+      ]
+    },
+    {
+      "block": 43,
+      "words": [
+        "ofaman.",
+        "privacies"
+      ]
+    },
+    {
+      "block": 44,
+      "words": [
+        "/ues",
+        "Boswelliana.",
+        "toadmire"
+      ]
+    },
+    {
+      "block": 46,
+      "words": [
+        "grouse"
+      ]
+    },
+    {
+      "block": 49,
+      "words": [
+        "teristic",
+        "tohim.",
+        "minutiz"
+      ]
+    },
+    {
+      "block": 50,
+      "words": [
+        "Blackie",
+        "Grice",
+        "charac-]"
+      ]
+    },
+    {
+      "block": 51,
+      "words": [
+        "toa",
+        "aspidestra",
+        "fernery,"
+      ]
+    },
+    {
+      "block": 52,
+      "words": [
+        "Edste"
+      ]
+    },
+    {
+      "block": 54,
+      "words": [
+        "Stonewall"
+      ]
+    },
+    {
+      "block": 62,
+      "words": [
+        "bragged",
+        "superiorité"
+      ]
+    },
+    {
+      "block": 63,
+      "words": [
+        "tocome."
+      ]
+    },
+    {
+      "block": 64,
+      "words": [
+        "Populusque"
+      ]
+    },
+    {
+      "block": 66,
+      "words": [
+        "Atheneum;"
+      ]
+    },
+    {
+      "block": 68,
+      "words": [
+        "Revanche’."
+      ]
+    },
+    {
+      "block": 73,
+      "words": [
+        "Laurie,"
+      ]
+    },
+    {
+      "block": 74,
+      "words": [
+        "Anditis",
+        "Runnimede.",
+        "Runnimede."
+      ]
+    },
+    {
+      "block": 75,
+      "words": [
+        "‘colonie’",
+        "lava"
+      ]
+    },
+    {
+      "block": 77,
+      "words": [
+        "Fob.",
+        "Wellwood,"
+      ]
+    },
+    {
+      "block": 78,
+      "words": [
+        "interpolate"
+      ]
+    },
+    {
+      "block": 82,
+      "words": [
+        "proseand",
+        "vagrancy"
+      ]
+    },
+    {
+      "block": 86,
+      "words": [
+        "rdle"
+      ]
+    },
+    {
+      "block": 87,
+      "words": [
+        "Mallock."
+      ]
+    },
+    {
+      "block": 90,
+      "words": [
+        "raina",
+        "Heunrolls",
+        "inthesun."
+      ]
+    },
+    {
+      "block": 91,
+      "words": [
+        "impenetrability",
+        "phors,"
+      ]
+    },
+    {
+      "block": 94,
+      "words": [
+        "fs"
+      ]
+    },
+    {
+      "block": 95,
+      "words": [
+        "ontheland.",
+        "inthe"
+      ]
+    },
+    {
+      "block": 97,
+      "words": [
+        "arotten",
+        "rahter"
+      ]
+    },
+    {
+      "block": 101,
+      "words": [
+        "rurallifeof",
+        "Timeand",
+        "havealready",
+        "brokenit",
+        "Chie",
+        "boysinthe",
+        "Arndt.",
+        "Marrott,"
+      ]
+    },
+    {
+      "block": 103,
+      "words": [
+        "toremember",
+        "itall",
+        "Itisagood",
+        "Heinzel-",
+        "_mannchen"
+      ]
+    },
+    {
+      "block": 104,
+      "words": [
+        "besinging"
+      ]
+    },
+    {
+      "block": 105,
+      "words": [
+        "isso",
+        "niceand",
+        "Youare"
+      ]
+    },
+    {
+      "block": 110,
+      "words": [
+        "Lxtracts",
+        "rgrt.",
+        "Jrene"
+      ]
+    },
+    {
+      "block": 113,
+      "words": [
+        "ofan"
+      ]
+    },
+    {
+      "block": 114,
+      "words": [
+        "likeadictionary.",
+        "Noman,",
+        "asadictionary."
+      ]
+    },
+    {
+      "block": 115,
+      "words": [
+        "onlyin"
+      ]
+    },
+    {
+      "block": 116,
+      "words": [
+        "Boswellian"
+      ]
+    },
+    {
+      "block": 125,
+      "words": [
+        "Carabas,"
+      ]
+    },
+    {
+      "block": 126,
+      "words": [
+        "Blackie"
+      ]
+    },
+    {
+      "block": 127,
+      "words": [
+        "abook",
+        "itis"
+      ]
+    },
+    {
+      "block": 128,
+      "words": [
+        "Puxch"
+      ]
+    },
+    {
+      "block": 130,
+      "words": [
+        "Ponto,"
+      ]
+    },
+    {
+      "block": 133,
+      "words": [
+        "Heinemann,"
+      ]
+    },
+    {
+      "block": 134,
+      "words": [
+        "‘Mappe’",
+        "Mabinogion;",
+        "tobe."
+      ]
+    },
+    {
+      "block": 135,
+      "words": [
+        "arealso"
+      ]
+    },
+    {
+      "block": 137,
+      "words": [
+        "Babrius"
+      ]
+    },
+    {
+      "block": 138,
+      "words": [
+        "beimpersonal.",
+        "marchon.",
+        "foxy."
+      ]
+    },
+    {
+      "block": 139,
+      "words": [
+        "chessmen.",
+        "foxy"
+      ]
+    },
+    {
+      "block": 140,
+      "words": [
+        "Thata",
+        "befoul"
+      ]
+    },
+    {
+      "block": 145,
+      "words": [
+        "turnuptoo"
+      ]
+    },
+    {
+      "block": 147,
+      "words": [
+        "shaz,"
+      ]
+    },
+    {
+      "block": 155,
+      "words": [
+        "Mandell"
+      ]
+    },
+    {
+      "block": 162,
+      "words": [
+        "thatisviolent.",
+        "Thereis"
+      ]
+    },
+    {
+      "block": 163,
+      "words": [
+        "Wanderwide"
+      ]
+    },
+    {
+      "block": 165,
+      "words": [
+        "privateaims.",
+        "Pepler,"
+      ]
+    },
+    {
+      "block": 168,
+      "words": [
+        "also'the",
+        "ofhope."
+      ]
+    },
+    {
+      "block": 172,
+      "words": [
+        "Lockington,"
+      ]
+    },
+    {
+      "block": 173,
+      "words": [
+        "ie"
+      ]
+    },
+    {
+      "block": 174,
+      "words": [
+        "Lockington"
+      ]
+    },
+    {
+      "block": 175,
+      "words": [
+        "enthusiasticadmirers."
+      ]
+    },
+    {
+      "block": 178,
+      "words": [
+        "sostrangely"
+      ]
+    },
+    {
+      "block": 182,
+      "words": [
+        "borna"
+      ]
+    },
+    {
+      "block": 186,
+      "words": [
+        "andexchange."
+      ]
+    },
+    {
+      "block": 193,
+      "words": [
+        "aruby.",
+        "Ishould"
+      ]
+    },
+    {
+      "block": 195,
+      "words": [
+        "Rashleigh.",
+        "Verinder",
+        "Manderson.",
+        "reallyan"
+      ]
+    },
+    {
+      "block": 197,
+      "words": [
+        "resem-",
+        "Heffer"
+      ]
+    },
+    {
+      "block": 198,
+      "words": [
+        "blance"
+      ]
+    },
+    {
+      "block": 202,
+      "words": [
+        "Theleme?",
+        "Dormouse?"
+      ]
+    },
+    {
+      "block": 204,
+      "words": [
+        "bottleful,",
+        "asalaw."
+      ]
+    },
+    {
+      "block": 205,
+      "words": [
+        "backfiring"
+      ]
+    },
+    {
+      "block": 206,
+      "words": [
+        "_extravagancies,"
+      ]
+    },
+    {
+      "block": 208,
+      "words": [
+        "teenth",
+        "skit"
+      ]
+    },
+    {
+      "block": 209,
+      "words": [
+        "Freindship"
+      ]
+    },
+    {
+      "block": 210,
+      "words": [
+        "juvenilia",
+        "Freindship"
+      ]
+    },
+    {
+      "block": 211,
+      "words": [
+        "Barfrestone"
+      ]
+    },
+    {
+      "block": 212,
+      "words": [
+        "Freindship,",
+        "Uske,",
+        "Inthe",
+        "Uske,"
+      ]
+    },
+    {
+      "block": 214,
+      "words": [
+        "ineant"
+      ]
+    },
+    {
+      "block": 216,
+      "words": [
+        "Freindship,"
+      ]
+    },
+    {
+      "block": 218,
+      "words": [
+        "vunce’"
+      ]
+    },
+    {
+      "block": 219,
+      "words": [
+        "eesthetes"
+      ]
+    },
+    {
+      "block": 221,
+      "words": [
+        "controversionalist.",
+        "mordant"
+      ]
+    },
+    {
+      "block": 223,
+      "words": [
+        "Wellsian"
+      ]
+    },
+    {
+      "block": 225,
+      "words": [
+        "peuple"
+      ]
+    },
+    {
+      "block": 226,
+      "words": [
+        "theseare"
+      ]
+    },
+    {
+      "block": 229,
+      "words": [
+        "‘symposia’",
+        "‘musea’)"
+      ]
+    },
+    {
+      "block": 230,
+      "words": [
+        "Greville"
+      ]
+    },
+    {
+      "block": 231,
+      "words": [
+        "Curdie),"
+      ]
+    },
+    {
+      "block": 232,
+      "words": [
+        "Greville"
+      ]
+    },
+    {
+      "block": 233,
+      "words": [
+        "Curdie"
+      ]
+    },
+    {
+      "block": 235,
+      "words": [
+        "Maenads"
+      ]
+    },
+    {
+      "block": 236,
+      "words": [
+        "asamemory.",
+        "esthete.",
+        "esthete"
+      ]
+    },
+    {
+      "block": 238,
+      "words": [
+        "Cupples"
+      ]
+    },
+    {
+      "block": 243,
+      "words": [
+        "ruffans"
+      ]
+    },
+    {
+      "block": 246,
+      "words": [
+        "Joyce",
+        "Arnoux."
+      ]
+    },
+    {
+      "block": 247,
+      "words": [
+        "excised"
+      ]
+    },
+    {
+      "block": 248,
+      "words": [
+        "isan",
+        "eesthetic",
+        "Arnoux"
+      ]
+    },
+    {
+      "block": 250,
+      "words": [
+        "Rusticula."
+      ]
+    },
+    {
+      "block": 254,
+      "words": [
+        "Ithasa"
+      ]
+    },
+    {
+      "block": 258,
+      "words": [
+        "ie",
+        "alldamned"
+      ]
+    },
+    {
+      "block": 268,
+      "words": [
+        "plangent"
+      ]
+    },
+    {
+      "block": 269,
+      "words": [
+        "Abissinia,"
+      ]
+    },
+    {
+      "block": 271,
+      "words": [
+        "Dicticnary",
+        "Quasind,"
+      ]
+    },
+    {
+      "block": 272,
+      "words": [
+        "Yuan."
+      ]
+    },
+    {
+      "block": 276,
+      "words": [
+        "Benn,"
+      ]
+    },
+    {
+      "block": 278,
+      "words": [
+        "suicidesome"
+      ]
+    },
+    {
+      "block": 282,
+      "words": [
+        "Laurie,"
+      ]
+    },
+    {
+      "block": 283,
+      "words": [
+        "onthe"
+      ]
+    },
+    {
+      "block": 287,
+      "words": [
+        "desiccation,"
+      ]
+    },
+    {
+      "block": 288,
+      "words": [
+        "Crewe,",
+        "Nicolson,"
+      ]
+    },
+    {
+      "block": 289,
+      "words": [
+        "skit"
+      ]
+    },
+    {
+      "block": 290,
+      "words": [
+        "menare"
+      ]
+    },
+    {
+      "block": 291,
+      "words": [
+        "anda",
+        "Spens",
+        "Northumbrain",
+        "toscale.",
+        "bea"
+      ]
+    },
+    {
+      "block": 292,
+      "words": [
+        "avery",
+        "Nicolson.",
+        "Nicolson"
+      ]
+    },
+    {
+      "block": 298,
+      "words": [
+        "asimple"
+      ]
+    },
+    {
+      "block": 299,
+      "words": [
+        "Ganelon",
+        "ould",
+        "Ganelon?’"
+      ]
+    },
+    {
+      "block": 301,
+      "words": [
+        "andaderision.",
+        "panniers"
+      ]
+    },
+    {
+      "block": 303,
+      "words": [
+        "Sitwellian;"
+      ]
+    },
+    {
+      "block": 306,
+      "words": [
+        "Heseltine,"
+      ]
+    },
+    {
+      "block": 307,
+      "words": [
+        "Thereforea",
+        "‘theless,",
+        "Heseltine"
+      ]
+    },
+    {
+      "block": 308,
+      "words": [
+        "Heseltine,"
+      ]
+    },
+    {
+      "block": 313,
+      "words": [
+        "maggot"
+      ]
+    },
+    {
+      "block": 316,
+      "words": [
+        "dificult",
+        "sefused"
+      ]
+    },
+    {
+      "block": 323,
+      "words": [
+        "warmship,",
+        "saintship"
+      ]
+    },
+    {
+      "block": 326,
+      "words": [
+        "evento"
+      ]
+    },
+    {
+      "block": 328,
+      "words": [
+        "Wecalleditsinging."
+      ]
+    },
+    {
+      "block": 329,
+      "words": [
+        "Ickenham",
+        "calla"
+      ]
+    },
+    {
+      "block": 334,
+      "words": [
+        "Vianney",
+        "Vianney",
+        "beena"
+      ]
+    },
+    {
+      "block": 335,
+      "words": [
+        "Veuillot"
+      ]
+    },
+    {
+      "block": 337,
+      "words": [
+        "nameand"
+      ]
+    },
+    {
+      "block": 342,
+      "words": [
+        "monogamist;",
+        "Monogamist",
+        "Carnivore’.",
+        "carnivores,",
+        "wanta"
+      ]
+    },
+    {
+      "block": 343,
+      "words": [
+        "itisfunny."
+      ]
+    },
+    {
+      "block": 345,
+      "words": [
+        "Kipps,"
+      ]
+    },
+    {
+      "block": 350,
+      "words": [
+        "Alston"
+      ]
+    },
+    {
+      "block": 362,
+      "words": [
+        "Routledge."
+      ]
+    },
+    {
+      "block": 367,
+      "words": [
+        "Baverstock,"
+      ]
+    },
+    {
+      "block": 368,
+      "words": [
+        "Fifield."
+      ]
+    },
+    {
+      "block": 370,
+      "words": [
+        "Maynard,",
+        "Wiifts"
+      ]
+    },
+    {
+      "block": 371,
+      "words": [
+        "Maitra,"
+      ]
+    },
+    {
+      "block": 372,
+      "words": [
+        "McQuilland,",
+        "Cranton."
+      ]
+    },
+    {
+      "block": 373,
+      "words": [
+        "Nordentoft,"
+      ]
+    },
+    {
+      "block": 374,
+      "words": [
+        "Bristowe;"
+      ]
+    },
+    {
+      "block": 375,
+      "words": [
+        "Dyson,"
+      ]
+    },
+    {
+      "block": 376,
+      "words": [
+        "Merrick,"
+      ]
+    },
+    {
+      "block": 377,
+      "words": [
+        "Vivienne",
+        "Dayrell,"
+      ]
+    },
+    {
+      "block": 378,
+      "words": [
+        "Penty,"
+      ]
+    },
+    {
+      "block": 379,
+      "words": [
+        "Hernaman,"
+      ]
+    },
+    {
+      "block": 382,
+      "words": [
+        "Hancock."
+      ]
+    },
+    {
+      "block": 383,
+      "words": [
+        "Grein,",
+        "Hopkinson."
+      ]
+    },
+    {
+      "block": 385,
+      "words": [
+        "Sieveking,",
+        "Routledge."
+      ]
+    },
+    {
+      "block": 387,
+      "words": [
+        "Crackow)."
+      ]
+    }
+  ],
+  "corrections": 6,
+  "correctionList": [
+    {
+      "ocr": "XXli",
+      "reading": "XXii"
+    },
+    {
+      "ocr": "RuyMes",
+      "reading": "RhyMes"
+    },
+    {
+      "ocr": "smali",
+      "reading": "small"
+    },
+    {
+      "ocr": "Suitan",
+      "reading": "Sultan"
+    },
+    {
+      "ocr": "zsthetic",
+      "reading": "æsthetic"
+    },
+    {
+      "ocr": "remernbered",
+      "reading": "remembered"
+    }
+  ],
+  "text": "data/texts/ia-gkcasmcbeingcoll0000gkch.txt",
+  "sha256": "a56928813abd1ea0b41a7f95af7a79908ea1e1bd33eb70ef56eec605817c38b4",
+  "checked": "2026-11-21",
+  "handFixes": [
+    {
+      "leaf": 13,
+      "page": "leaf 13",
+      "ocr": "but*for",
+      "reading": "but for"
+    },
+    {
+      "leaf": 17,
+      "page": "leaf 17",
+      "ocr": "Ifsome",
+      "reading": "If some"
+    },
+    {
+      "leaf": 18,
+      "page": "leaf 18",
+      "ocr": "fromi",
+      "reading": "from"
+    },
+    {
+      "leaf": 21,
+      "page": "leaf 21",
+      "ocr": "Fonszxa",
+      "reading": "Fonseka"
+    },
+    {
+      "leaf": 26,
+      "page": "leaf 26",
+      "ocr": "ofices",
+      "reading": "offices"
+    },
+    {
+      "leaf": 26,
+      "page": "leaf 26",
+      "ocr": "‘ohnson",
+      "reading": "Johnson"
+    },
+    {
+      "leaf": 26,
+      "page": "leaf 26",
+      "ocr": "Fohnson",
+      "reading": "Johnson"
+    },
+    {
+      "leaf": 27,
+      "page": "leaf 27",
+      "ocr": "canremember",
+      "reading": "can remember"
+    },
+    {
+      "leaf": 27,
+      "page": "leaf 27",
+      "ocr": "uponascrap-book. Ifthe",
+      "reading": "upon a scrap-book. If the"
+    },
+    {
+      "leaf": 27,
+      "page": "leaf 27",
+      "ocr": "Boswell’s Fohnson",
+      "reading": "Boswell’s Johnson"
+    },
+    {
+      "leaf": 29,
+      "page": "leaf 29",
+      "ocr": "chanceof being called beforethe",
+      "reading": "chance of being called before the"
+    },
+    {
+      "leaf": 29,
+      "page": "leaf 29",
+      "ocr": "asnob",
+      "reading": "a snob"
+    },
+    {
+      "leaf": 30,
+      "page": "leaf 30",
+      "ocr": "Yohnson",
+      "reading": "Johnson"
+    },
+    {
+      "leaf": 56,
+      "page": "leaf 56",
+      "ocr": "Iam writing",
+      "reading": "I am writing"
+    },
+    {
+      "leaf": 69,
+      "page": "leaf 69",
+      "ocr": "Heis willing",
+      "reading": "He is willing"
+    },
+    {
+      "leaf": 94,
+      "page": "leaf 94",
+      "ocr": "wasa little",
+      "reading": "was a little"
+    },
+    {
+      "leaf": 95,
+      "page": "leaf 95",
+      "ocr": "Weare alone",
+      "reading": "We are alone"
+    },
+    {
+      "leaf": 139,
+      "page": "leaf 139",
+      "ocr": "He wasa",
+      "reading": "He was a"
+    },
+    {
+      "leaf": 177,
+      "page": "leaf 177",
+      "ocr": "Heis fighting anold",
+      "reading": "He is fighting an old"
+    },
+    {
+      "leaf": 182,
+      "page": "leaf 182",
+      "ocr": "as Iam",
+      "reading": "as I am"
+    },
+    {
+      "leaf": 211,
+      "page": "leaf 211",
+      "ocr": "Weare even",
+      "reading": "We are even"
+    },
+    {
+      "leaf": 281,
+      "page": "leaf 281",
+      "ocr": "Iam all",
+      "reading": "I am all"
+    }
+  ]
+}

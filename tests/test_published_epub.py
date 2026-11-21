@@ -36,6 +36,12 @@ class PublishedEpub(unittest.TestCase):
                 self.assertIn(sentence, text, ed)  # the 1.E.1 sentence, verbatim, at the end of the text
                 self.assertIn('START: FULL LICENSE', text, ed)
                 self.assertIn('1.E.1. The following sentence', text, ed)
+            elif not ed.startswith('se-'):  # another public-domain source (Trent, November 20, 2026): its own header and
+                # notes, verbatim, in the notice appendix (tools/build_epub.py copies the blocks before the first chapter)
+                # (the first block may sit in the appendix and the rest in the front matter, so each block is checked)
+                rec = json.loads((ROOT / 'data/sources' / (ed + '.json')).read_text())
+                for block in rec['sourceNotice'][:600].split('\n\n')[:-1]:
+                    self.assertIn(' '.join(block.split()), text, ed)
             else:  # Standard Ebooks: its own notice at the end and its CC0 dedication from the source file
                 from notices import SE_NOTICE
                 self.assertIn(' '.join(SE_NOTICE.split()), text, ed)

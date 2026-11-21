@@ -1,0 +1,31 @@
+{
+  "id": "pga-0500731",
+  "kind": "public-domain-text",
+  "title": "C",
+  "author": "Maurice Baring",
+  "firstPublished": "1924",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "Project Gutenberg Australia",
+  "sourceUrl": "https://gutenberg.net.au/ebooks05/0500731h.html",
+  "sourcePage": "https://gutenberg.net.au/ebooks05/0500731h.html",
+  "sourceNotice": "Project Gutenberg\nAustralia\na treasure-trove of\nliterature\ntreasure found hidden with no\nevidence of ownership\nBROWSE the site for\nother works by this\nauthor\n(and our other authors)\nor get HELP Reading,\nDownloading and\nConverting files)\nor\nSEARCH the entire site\nwith Google Site Search\n\nA Project Gutenberg of Australia eBook\nTitle:\nC\nAuthor:\nMaurice Baring\neBook No.: 0500731h.html\nEdition:\n1\nLanguage:\nEnglish\nCharacter set encoding:\nLatin-1(ISO-8859-1)--8 bit\nDate first posted:\nAugust 2005\nDate most recently updated: August 2005\nThis eBook was produced by: Don Lainson dlainson@sympatico.ca\nProject Gutenberg of Australia eBooks are created from printed editions\nwhich are in the public domain in Australia, unless a copyright notice\nis included. We do NOT keep any eBooks in compliance with a particular\npaper edition.\nCopyright laws are changing all over the world. Be sure to check the\ncopyright laws for your country before downloading or redistributing this\nfile.\nThis eBook is made available at no cost and with almost no restrictions\nwhatsoever. You may copy it, give it away or re-use it under the terms\nof the Project Gutenberg of Australia License which may be viewed online at\nhttp://gutenberg.net.au/licence.html\nTo contact Project Gutenberg of Australia go to http://gutenberg.net.au\n\nC\n\nMAURICE BARING\n1924\n\nCONTENTS\n\nVOL. I\n\nIntroduction\n\nWalter Wright's Introduction\n\nChapter I\nChapter II\nChapter III\nChapter IV\nChapter V\nChapter VI\nChapter VII\nChapter VIII\nChapter IX\nChapter X",
+  "sourceFileSha256": "0bffc5d6787e3d7fe758880e286c20bf7db4d5a11029223d6672a7f67246350e",
+  "sourceFile": "data/sources/pdf-prints/pga-0500731.pdf",
+  "sourceFileNote": "sourceFileSha256 is the SHA-256 of the pinned PDF print of the source page; the source's own server serves a bot check",
+  "readGate": {
+    "words": 190266,
+    "unknown": 576,
+    "readRate": 0.997,
+    "gate": 0.995
+  },
+  "scanException": {
+    "reason": "No dated scan of this printing exists on archive.org or Open Library (searched November 20, 2026).",
+    "approved": "owner",
+    "date": "2026-11-20",
+    "yearInText": 1924
+  },
+  "sha256": "81a9ecf6375d9adccc116eec3603bbbf9383d619ac883ed9bf5f4eb84edf5179",
+  "bytes": 1032608,
+  "checked": "2026-11-20"
+}

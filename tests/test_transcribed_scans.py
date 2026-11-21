@@ -87,6 +87,38 @@ class Layout(unittest.TestCase):
                 self.assertEqual(set(f), {'leaf', 'page', 'ocr', 'reading'}, r['id'])
                 self.assertNotEqual(f['ocr'], f['reading'], r['id'])
 
+    def test_lost_line_end_hyphen_rejoined_when_the_whole_is_common(self):
+        # Samuel Johnson's scan drops every line-end hyphen: "the imagina" / "tion to riot" is one word, even though
+        # "tion" occurs in other texts; a known first half is never joined
+        v = {'imagination': 5, 'tion': 2, 'the': 99, 'and': 99, 'to': 99, 'riot': 4, 'suffer': 9, 'in': 99, 'at': 99}
+        self.assertEqual(T.join_lines(['and suffer the imagina', 'tion to riot'], v), 'and suffer the imagination to riot')
+        self.assertEqual(T.join_lines(['to riot', 'at the'], v), 'to riot at the')
+        v.update({'per': 50, 'performances': 4})
+        self.assertEqual(T.join_lines(['the per', 'formances of'], dict(v, of=99)), 'the performances of')
+        self.assertEqual(T.join_lines(['to the imagina', 'tion. Then'], dict(v, then=9)), 'to the imagination. Then')  # punctuation after
+
+    def test_one_article_is_cut_from_shared_pages(self):
+        paras = [['ADULTS ends here.'], ['Advent (Lat. ad-venio, to', 'come to) begins.'], ['More.'], ['Francis', 'Mershman.'], ['Adventists.']]
+        e = {'startsWith': 'Advent (Lat. ad-venio', 'endsWith': 'Francis Mershman.'}
+        self.assertEqual(T.bounded(paras, e), paras[1:4])
+        self.assertEqual(T.bounded(paras, {}), paras)
+        with self.assertRaises(StopIteration):  # both bounds must be found
+            T.bounded(paras, {'startsWith': 'Nowhere', 'endsWith': 'Mershman.'})
+
+    def test_running_head_band_dropped(self):
+        L = lambda t, x, y: {'x': x, 'y': y, 'h': 20, 'text': t, 'paraStart': False, 'para': 0}
+        page = [L('ADVENT', 480, 137), L('166', 850, 139), L('ADVENTISTS', 1110, 140)] + [L('body line %d of the column' % i, 240, 200 + 28 * i) for i in range(6)]
+        self.assertEqual([l['text'] for l in T.body(page, 2250, set())][0], 'body line 0 of the column')
+
+    def test_verified_words_are_in_the_text_and_logged(self):
+        for r in RECORDS:
+            if r.get('verifiedWords'):
+                text = (ROOT / r['text']).read_text(encoding='utf-8')
+                for w in r['verifiedWords']:
+                    self.assertIn(w, text, r['id'])
+                self.assertIn('verifiedWords', r['method'], r['id'])
+
+
 class Records(unittest.TestCase):
     def test_every_transcription_is_pinned_flagged_and_dated(self):
         for r in RECORDS:

@@ -32,7 +32,21 @@ class PartD(unittest.TestCase):
                                            # Orthodoxy flow batch 2, November 19, 2026
                                            'bede-ecclesiastical-history', 'consolation-philosophy', 'abandonment',
                                            # Orthodoxy flow batch 3, November 20, 2026
-                                           'catherine-letters', 'apostolic-fathers', 'europe-faith'})
+                                           'catherine-letters', 'apostolic-fathers', 'europe-faith',
+                                           # Orthodoxy flow batch 4, November 20, 2026
+                                           'idea-university', 'aquinas-prayer-contemplative', 'glories-of-mary',
+                                           # Councils Part 3, November 20, 2026
+                                           'council-of-trent',
+                                           # Chesterton polish batch 1 (November 21, 2026)
+                                           'everlasting-man', 'tremendous-trifles', 'new-jerusalem',
+                                           # Chesterton polish batch 2 (November 21, 2026)
+                                           'charles-dickens-critical-study', 'poet-and-lunatics', 'return-don-quixote',
+                                           # Chesterton polish batch 3 (November 21, 2026)
+                                           'william-cobbett', 'robert-louis-stevenson-1927', 'irish-impressions',
+                                           # Chesterton polish batch 4 (November 21, 2026)
+                                           'napoleon-notting-hill', 'victorian-age-literature', 'four-faultless-felons',
+                                           # Chesterton polish batch 5 (November 21, 2026)
+                                           'eugenics-other-evils', 'tales-long-bow'})
         for wid, d in TP.items():
             self.assertIn('partD', d, wid)
             self.assertEqual(d['partD']['words'], sum(x['words'] for x in d['items']))

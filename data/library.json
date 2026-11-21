@@ -143,12 +143,13 @@
           ],
           "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg notices retained.",
           "checked": "2026-10-21",
-          "note": "",
+          "note": "Benham's translation first appeared in 1874: the dedication to the Rev. Craufurd Tait in the London printing (R. Clay, Sons, and Taylor) is dated \"Margate, Second Sunday in Lent, 1874\" (Internet Archive scan imitationchrist01unkngoog, the Oxford copy). The Tauchnitz reprint of 1877 (imitationchrist07thomgoog) and John C. Nimmo's illustrated edition of 1886 (imitationofchris00benhrich) are later.",
           "sourceTitle": "The Imitation of Christ",
           "digitalRelease": "Feb 1, 1999",
           "access": "full-text",
           "text": "data/texts/pg-1653.txt",
-          "sha256": "7631799607b0ede62f1bd7ed2a8eb62d89524451a3c41e9ad2b5cbf4c2aa5383"
+          "sha256": "7631799607b0ede62f1bd7ed2a8eb62d89524451a3c41e9ad2b5cbf4c2aa5383",
+          "translationYear": 1874
         }
       ]
     },
@@ -2175,6 +2176,94 @@
           "rights": "External official text; Vatican source notices apply. Not hosted here.",
           "checked": "2026-10-21",
           "access": "full-text"
+        }
+      ]
+    },
+    {
+      "id": "council-of-trent",
+      "title": "The Canons and Decrees of the Council of Trent",
+      "author": "Council of Trent",
+      "category": "Magisterium",
+      "tradition": "Catholic",
+      "description": "The decrees and canons of the Council of Trent (1545 to 1563), session by session, with the bull that convoked it, in J. Waterworth's English translation of 1848.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-20",
+      "date": "1545-1563",
+      "editions": [
+        {
+          "id": "peo-trent-1848-r2",
+          "label": "Waterworth translation (London: C. Dolman, 1848), Hanover Historical Texts transcription, corrected",
+          "source": "https://www.papalencyclicals.net/councils/trent.htm",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Waterworth, J."
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Papal Encyclicals Online notices retained.",
+          "checked": "2026-11-20",
+          "note": "First published 1848 (London: C. Dolman), translated by J. Waterworth. The text is the Hanover Historical Texts Project transcription as served by Papal Encyclicals Online, one page per session, with the transcribers' notes and the 1848 page numbers in brackets; Waterworth's italics, citations, historical essays, and appendices are not in it. Compared word by word with the Internet Archive scan of the Burns and Oates issue of the same translation: 97% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record. Corrected edition (November 20, 2026): replaces peo-trent-1848. 34 transcription typos (for example coucils, neccessary, privelege) were corrected where the OCR of the 1848 printing and of the Burns and Oates issue both read the corrected spelling at the same place; each is listed in the provenance record. Other misspellings stay as printed.",
+          "sourceTitle": "The Council of Trent: The canons and decrees of the sacred and ecumenical Council of Trent, Ed. and trans. J. Waterworth (London: Dolman, 1848)",
+          "access": "full-text",
+          "text": "data/texts/peo-trent-1848-r2.txt",
+          "sha256": "a276393839a4f271e5f68ffa756229b2819b4bce4cc077d6e7c68446d5cf65af",
+          "rightsBasis": "pd-date",
+          "translationYear": 1848
+        },
+        {
+          "id": "peo-trent-1848",
+          "label": "Waterworth translation (London: C. Dolman, 1848), Hanover Historical Texts transcription (retired; replaced by the corrected edition)",
+          "source": "https://www.papalencyclicals.net/councils/trent.htm",
+          "language": "English",
+          "contributors": [
+            {
+              "role": "translator",
+              "name": "Waterworth, J."
+            }
+          ],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Papal Encyclicals Online notices retained.",
+          "checked": "2026-11-20",
+          "note": "First published 1848 (London: C. Dolman), translated by J. Waterworth. The text is the Hanover Historical Texts Project transcription as served by Papal Encyclicals Online, one page per session, with the transcribers' notes and the 1848 page numbers in brackets; Waterworth's italics, citations, historical essays, and appendices are not in it. Compared word by word with the Internet Archive scan of the Burns and Oates issue of the same translation: 97% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record. The transcription's own misspellings are kept.",
+          "sourceTitle": "The Council of Trent: The canons and decrees of the sacred and ecumenical Council of Trent, Ed. and trans. J. Waterworth (London: Dolman, 1848)",
+          "access": "full-text",
+          "text": "data/texts/peo-trent-1848.txt",
+          "sha256": "9de7346c18740535da817d02b430130a044c8150fbd1bfe930c36f09103a309b",
+          "rightsBasis": "pd-date",
+          "translationYear": 1848,
+          "retired": {
+            "date": "2026-11-20",
+            "replacedBy": "peo-trent-1848-r2",
+            "reason": "Thirty-four transcription typos, corrected in the new edition where the 1848 printing confirms the spelling. Kept so that earlier links and reader notes still open it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "catholic-encyclopedia-advent",
+      "title": "Advent (The Catholic Encyclopedia, 1907)",
+      "author": "Francis Mershman",
+      "category": "Liturgy",
+      "tradition": "Catholic tradition",
+      "description": "Francis Mershman's article on the season of Advent from the first volume of The Catholic Encyclopedia: its symbolism in the liturgy, its duration and ritual, and its historical origin.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-20",
+      "date": "1907",
+      "editions": [
+        {
+          "id": "ia-cathencyc-1907-advent",
+          "label": "Transcription of the Internet Archive scan (New York: Robert Appleton Company, 1907), vol. 1, pp. 165-166",
+          "source": "https://archive.org/details/07470918.1.emory.edu",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-20",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1907 in The Catholic Encyclopedia, vol. 1 (New York: Robert Appleton Company). Transcribed by Bibliotheca Catholica from the scan of the Emory University copy: the article only, cut from pages 165 and 166; running heads and page numbers removed, 2 OCR confusions repaired, 13 misreadings corrected by hand against the page images, and 14 names and foreign words checked against them (100% of words read). Not a manual proofread. New Advent's online text stays a link only.",
+          "sourceTitle": "Advent (The Catholic Encyclopedia, vol. 1, 1907)",
+          "text": "data/texts/ia-cathencyc-1907-advent.txt",
+          "sha256": "8af5f9499f68732086056b24bc9ec0098e48d99a726e07820b7dfa81a02c6e01"
         }
       ]
     },
@@ -5296,16 +5385,21 @@
       "editions": [
         {
           "id": "ia-superstitionsofs0000unse-q9f6",
-          "label": "Internet Archive scan (Cambridge: W. Heffer and Sons, 1925)",
+          "label": "Transcription of the Internet Archive scan (Cambridge: W. Heffer and Sons, 1925)",
           "source": "https://archive.org/details/superstitionsofs0000unse_q9f6",
           "language": "English",
           "contributors": [],
-          "rights": "External scan at the Internet Archive; not hosted here. Published 1925, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
-          "checked": "2026-11-15",
-          "note": "First published 1925. Internet Archive record: W. Heffer and Sons, 1925, freely readable (not a lending copy). Link only.",
-          "access": "full-text"
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-21",
+          "note": "First published 1925 (Cambridge: W. Heffer and Sons), with the correspondence between Chesterton and G. G. Coulton. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, words rejoined across line breaks, 1 OCR confusion repaired, 22 misreadings corrected by hand against the page images (three lines of library-stamp noise dropped), and 7 paragraphs that keep a word the OCR could not read (99.9% of words read). The book's own misprints (superstititions, Protestanism) are kept. Not a manual proofread.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "The Superstitions of the Sceptic, with a Correspondence between the Author and Mr. G. G. Coulton",
+          "text": "data/texts/ia-superstitionsofs0000unse-q9f6.txt",
+          "sha256": "9194287ecc528b22e1520627d0adf0dd8b57f2259d29f75806519509414e75ff"
         }
-      ]
+      ],
+      "added": "2026-11-21"
     },
     {
       "id": "generally-speaking",
@@ -5369,16 +5463,21 @@
       "editions": [
         {
           "id": "ia-doweagree0000gkch",
-          "label": "Internet Archive scan (London: Cecil Palmer, 1928)",
+          "label": "Transcription of the Internet Archive scan (London: Cecil Palmer, 1928)",
           "source": "https://archive.org/details/doweagree0000gkch",
           "language": "English",
           "contributors": [],
-          "rights": "External scan at the Internet Archive; not hosted here. Published 1928, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
-          "checked": "2026-11-15",
-          "note": "First published 1928. Internet Archive record: Cecil Palmer, 1928, freely readable (not a lending copy). Link only.",
-          "access": "full-text"
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-21",
+          "note": "First published 1928 (London: Cecil Palmer), first edition. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, words rejoined across line breaks, 1 OCR confusion repaired, 40 misreadings corrected by hand against the page images, and 1 paragraph that keeps a word the OCR could not read (99.99% of words read). Not a manual proofread.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "Do We Agree? A Debate between G. K. Chesterton and Bernard Shaw, with Hilaire Belloc in the Chair",
+          "text": "data/texts/ia-doweagree0000gkch.txt",
+          "sha256": "8b16e265d64bc464f7207fa7a33bac5fb8c1253cd5d8738831bbd33e4987c980"
         }
-      ]
+      ],
+      "added": "2026-11-21"
     },
     {
       "id": "gkc-as-mc",
@@ -5393,16 +5492,21 @@
       "editions": [
         {
           "id": "ia-gkcasmcbeingcoll0000gkch",
-          "label": "Internet Archive scan (1929)",
+          "label": "Transcription of the Internet Archive scan (London: Methuen, 1929)",
           "source": "https://archive.org/details/gkcasmcbeingcoll0000gkch",
           "language": "English",
           "contributors": [],
-          "rights": "External scan at the Internet Archive; not hosted here. Published 1929, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
-          "checked": "2026-11-15",
-          "note": "First published 1929 (London: Methuen). Internet Archive record dated 1929, freely readable (not a lending copy). Link only.",
-          "access": "full-text"
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-21",
+          "note": "First published 1929 (London: Methuen). Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, words rejoined across line breaks, 6 OCR confusions repaired, 22 misreadings corrected by hand against the page images, and 163 paragraphs that keep a word the OCR could not read (99.5% of words read). Not a manual proofread.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "G.K.C. as M.C.: Being a Collection of Thirty-Seven Introductions",
+          "text": "data/texts/ia-gkcasmcbeingcoll0000gkch.txt",
+          "sha256": "a56928813abd1ea0b41a7f95af7a79908ea1e1bd33eb70ef56eec605817c38b4"
         }
-      ]
+      ],
+      "added": "2026-11-21"
     },
     {
       "id": "simplicity-and-tolstoy",
@@ -5445,6 +5549,21 @@
       "date": "1911",
       "editions": [
         {
+          "id": "ia-samueljohnson00chesuoft",
+          "label": "Transcription of the Internet Archive scan (London: Herbert and Daniel, 1911)",
+          "source": "https://archive.org/details/samueljohnson00chesuoft",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-21",
+          "note": "First published 1911 (London: Herbert and Daniel, The Regent Library): selections from Johnson chosen by Alice Meynell, with an introduction by G. K. Chesterton. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, words rejoined across line breaks (the scan's OCR drops every line-end hyphen), 4 OCR confusions repaired, 14 misreadings corrected by hand against the page images, and 155 paragraphs that keep a word the OCR could not read (99.6% of words read). Not a manual proofread.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "Samuel Johnson (The Regent Library)",
+          "text": "data/texts/ia-samueljohnson00chesuoft.txt",
+          "sha256": "38ccf5ecbc3b10f663791d8a105828fe674fa9ecb6a76e1ddeebb255eb4025a6"
+        },
+        {
           "id": "ws-samuel-johnson-meynell-and-chesterton",
           "label": "Wikisource transcription",
           "source": "https://en.wikisource.org/wiki/Samuel_Johnson_(Meynell_%26_Chesterton)",
@@ -5454,19 +5573,9 @@
           "checked": "2026-11-15",
           "note": "First published 1911 (London: Herbert and Daniel). Link only.",
           "access": "full-text"
-        },
-        {
-          "id": "ia-samueljohnson00chesuoft",
-          "label": "Internet Archive scan (London: Herbert and Daniel, 1911)",
-          "source": "https://archive.org/details/samueljohnson00chesuoft",
-          "language": "English",
-          "contributors": [],
-          "rights": "External scan at the Internet Archive; not hosted here. Published 1911, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
-          "checked": "2026-11-15",
-          "note": "Internet Archive record: Herbert and Daniel, 1911, freely readable (not a lending copy). Link only.",
-          "access": "full-text"
         }
-      ]
+      ],
+      "added": "2026-11-21"
     },
     {
       "id": "how-to-help-annexation",
@@ -5604,11 +5713,27 @@
       "authorId": "g-k-chesterton",
       "category": "Essays",
       "tradition": "Catholic tradition",
-      "description": "A Bookman Booklet on Robert Louis Stevenson by G. K. Chesterton and W. Robertson Nicoll, first published in 1902. No online copy has been found yet.",
+      "description": "A Bookman Booklet on Robert Louis Stevenson by G. K. Chesterton and W. Robertson Nicoll: Chesterton's essay on Stevenson's character, Nicoll's on his personality and style, and a biographical note.",
       "reviewStatus": "source-checked",
       "date": "1902",
-      "status": "not-yet-available",
-      "editions": []
+      "editions": [
+        {
+          "id": "ia-robertlouisstev00nicogoog",
+          "label": "Transcription of the Internet Archive scan (New York: James Pott & Company, 1906)",
+          "source": "https://archive.org/details/robertlouisstev00nicogoog",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-21",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "The London Bookman Booklet is recorded as first published in 1902; this is the New York printing (James Pott & Company), whose title page reads 1906 and \"First Impression April, 1906\". No scan of the 1902 London booklet was found to compare, so this edition is hosted as the 1906 printing it is (public domain in the USA by date). Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, words rejoined across line breaks, 18 OCR confusions repaired, 29 misreadings corrected by hand against the page images, and 3 paragraphs that keep a word the OCR could not read (99.9% of words read). Not a manual proofread.",
+          "sourceTitle": "Robert Louis Stevenson (New York: James Pott & Company, 1906)",
+          "text": "data/texts/ia-robertlouisstev00nicogoog.txt",
+          "sha256": "d05ba3320c02d3033cb8e8f376c9bfe81412adb2e3cb7eca1e5ae417c9cf86b8"
+        }
+      ],
+      "added": "2026-11-21"
     },
     {
       "id": "chesterton-temperance-and-the-great-alliance",
@@ -5858,6 +5983,94 @@
           "access": "full-text",
           "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
           "note": "First published in 1937 (Milwaukee: The Bruce Publishing Company). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in Milwaukee by The Bruce Publishing Company, 1937. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (99.30%), so it is linked, not hosted, for now."
+        }
+      ]
+    },
+    {
+      "id": "walsh-worlds-debt-catholic-church",
+      "title": "The World's Debt to the Catholic Church",
+      "author": "James J. Walsh",
+      "category": "History",
+      "tradition": "Catholic tradition",
+      "description": "James J. Walsh's survey of what art, architecture, literature, science, education, and social care owe to the Catholic Church.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-20",
+      "date": "1924",
+      "editions": [
+        {
+          "id": "pga-1100451",
+          "label": "Project Gutenberg Australia #1100451",
+          "source": "https://gutenberg.net.au/ebooks11/1100451h.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+          "checked": "2026-11-20",
+          "note": "First published 1924 (Boston: The Stratford Company). Project Gutenberg Australia does not tie its texts to a printing; the text was rebuilt from a PDF print of its page and compared word by word with the Internet Archive scan of the 1924 printing (Boston, Mass., The Stratford Co.): 98% of its words are confirmed by the scan's OCR, and differing passages are listed in the provenance record.",
+          "sourceTitle": "The World's Debt to the Catholic Church",
+          "digitalRelease": "May 2011",
+          "access": "full-text",
+          "text": "data/texts/pga-1100451.txt",
+          "sha256": "825c2714a563f989bdd942ba37ce0fd8c1cf45828904617f222bb252755d2a8b",
+          "rightsBasis": "pd-date"
+        }
+      ]
+    },
+    {
+      "id": "sword-of-wood",
+      "title": "The Sword of Wood",
+      "author": "G. K. Chesterton",
+      "authorId": "g-k-chesterton",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Chesterton's short story, first published as the first volume of the Woburn Series.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-20",
+      "date": "1928",
+      "editions": [
+        {
+          "id": "pga-0900731",
+          "label": "Project Gutenberg Australia #0900731",
+          "source": "https://gutenberg.net.au/ebooks09/0900731h.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+          "checked": "2026-11-20",
+          "note": "First published 1928 (London: Elkin Mathews & Marrot, the Woburn Series), the year the source's own note prints. Rebuilt from a PDF print of the Project Gutenberg Australia page. No dated scan of this printing exists on archive.org or Open Library (searched November 20, 2026), so it was not compared with a scan; hosted by an owner-approved exception, with the read gate passed (99.75%).",
+          "sourceTitle": "The Sword of Wood",
+          "access": "full-text",
+          "text": "data/texts/pga-0900731.txt",
+          "sha256": "9a3b1e932428117a78e17bf4264f097bab418aa25e23b543956789daeab710bf",
+          "rightsBasis": "pd-date",
+          "digitalRelease": "March 2013"
+        }
+      ]
+    },
+    {
+      "id": "baring-c",
+      "title": "C",
+      "author": "Maurice Baring",
+      "authorId": "maurice-baring",
+      "category": "Literature",
+      "tradition": "Catholic tradition",
+      "description": "Maurice Baring's 1924 novel following Caryl Bramsley, called C., from his boyhood.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-20",
+      "date": "1924",
+      "editions": [
+        {
+          "id": "pga-0500731",
+          "label": "Project Gutenberg Australia #0500731",
+          "source": "https://gutenberg.net.au/ebooks05/0500731h.html",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Project Gutenberg Australia notices retained.",
+          "checked": "2026-11-20",
+          "note": "First published 1924, the year the source's title page prints. Rebuilt from a PDF print of the Project Gutenberg Australia page. No dated scan of this printing exists on archive.org or Open Library (searched November 20, 2026), so it was not compared with a scan; hosted by an owner-approved exception, with the read gate passed (99.70%).",
+          "sourceTitle": "C",
+          "access": "full-text",
+          "text": "data/texts/pga-0500731.txt",
+          "sha256": "81a9ecf6375d9adccc116eec3603bbbf9383d619ac883ed9bf5f4eb84edf5179",
+          "rightsBasis": "pd-date"
         }
       ]
     },

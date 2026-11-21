@@ -19,6 +19,12 @@
    "sha256": "ba01838fac60a03460b42edaf96531e21df1972ef78f9b630bace858acda4732",
    "size": 990527
   },
+  "pg-22295": {
+   "work": "aquinas-prayer-contemplative",
+   "path": "downloads/epub/aquinas-prayer-contemplative-pg-22295.b80c7d9394a8.epub",
+   "sha256": "b80c7d9394a8fe9cbc7a4c1dc8963f79fbcfe71555356ee1b436662018693cef",
+   "size": 479411
+  },
   "pg-5265": {
    "work": "ball-and-cross",
    "path": "downloads/epub/ball-and-cross-pg-5265.ae7fe218b882.epub",
@@ -55,6 +61,12 @@
    "sha256": "179708dce392787051b383183749ba500c7045a440888a7dc78cf1cbfe8838d5",
    "size": 182205
   },
+  "pg-68682": {
+   "work": "charles-dickens-critical-study",
+   "path": "downloads/epub/charles-dickens-critical-study-pg-68682.bdd800b48564.epub",
+   "sha256": "bdd800b485646db696c853752aae03a9b874b2e02d00dd7c84095a0f1dd65f05",
+   "size": 424391
+  },
   "pg-63084": {
    "work": "chesterton-francis",
    "path": "downloads/epub/chesterton-francis-pg-63084.c40e71bc560d.epub",
@@ -79,11 +91,23 @@
    "sha256": "5592f99a75940f0c47903a6c5e3ff76f28bc2ed1a6c3d536a0a8f79eed950450",
    "size": 299548
   },
+  "peo-trent-1848-r2": {
+   "work": "council-of-trent",
+   "path": "downloads/epub/council-of-trent-peo-trent-1848-r2.8906a081e2eb.epub",
+   "sha256": "8906a081e2eb0485c0da5e20b26eb8aa13226772530bbcfaccf0fe0d792c9a32",
+   "size": 600446
+  },
   "pg-35110": {
    "work": "development-doctrine",
    "path": "downloads/epub/development-doctrine-pg-35110.1fac4092caa4.epub",
    "sha256": "1fac4092caa42feacab8cc781825a70fe259917436fa7973115abee06b1359d1",
    "size": 882501
+  },
+  "pg-25308": {
+   "work": "eugenics-other-evils",
+   "path": "downloads/epub/eugenics-other-evils-pg-25308.f458f2aa619b.epub",
+   "sha256": "f458f2aa619be1b220c1ff2ca0008ff7cc54cbbae2dd73d9705e072ccd59d8af",
+   "size": 326853
   },
   "pg-8442": {
    "work": "europe-faith",
@@ -91,11 +115,29 @@
    "sha256": "a01b4b92c0cbc0863a178760d7956fa93625bdbf38bd6dbd9b697093c312e454",
    "size": 448379
   },
+  "pg-65688": {
+   "work": "everlasting-man",
+   "path": "downloads/epub/everlasting-man-pg-65688.7074f7bbbc04.epub",
+   "sha256": "7074f7bbbc0447e0ef75259cab04309284e99d2cf8abda04319262da96b916b4",
+   "size": 646204
+  },
   "pg-59239": {
    "work": "flying-inn",
    "path": "downloads/epub/flying-inn-pg-59239.bef98cf3f8a9.epub",
    "sha256": "bef98cf3f8a9ba1021c1576efd799bd0ffded529ef79c848d0d91b1808976ec5",
    "size": 570552
+  },
+  "pga-0300781": {
+   "work": "four-faultless-felons",
+   "path": "downloads/epub/four-faultless-felons-pga-0300781.19d0781c8aa5.epub",
+   "sha256": "19d0781c8aa5015b749f3cdcdc844114e091e11a75d57b070f29c7b353608cd9",
+   "size": 446829
+  },
+  "pg-72411": {
+   "work": "glories-of-mary",
+   "path": "downloads/epub/glories-of-mary-pg-72411.e4c05c3c3e38.epub",
+   "sha256": "e4c05c3c3e38186332fb3369e78c8d03e3b956030429864e14483697044c80b9",
+   "size": 1258403
   },
   "pg-34022": {
    "work": "grammar-assent",
@@ -109,6 +151,12 @@
    "sha256": "3f7baef4cc68c9820c9c7eccdc8bbf025cdf16ce57b372718b7a59ef35b39cfb",
    "size": 412881
   },
+  "pg-24526": {
+   "work": "idea-university",
+   "path": "downloads/epub/idea-university-pg-24526.189a03225a9e.epub",
+   "sha256": "189a03225a9efbd2719ba8a87e2f3a0d97d0eb87c3702552acaf4104cda8cf63",
+   "size": 981040
+  },
   "se-incredulity-father-brown": {
    "work": "incredulity-father-brown",
    "path": "downloads/epub/incredulity-father-brown-se-incredulity-father-brown.e3d8cfb81487.epub",
@@ -120,6 +168,12 @@
    "path": "downloads/epub/innocence-father-brown-pg-204.30a00c84d13c.epub",
    "sha256": "30a00c84d13cbec7f176f2baef74f277c9a0f1fa830e3fe3483dbb91bf80114f",
    "size": 501326
+  },
+  "pg-61758": {
+   "work": "irish-impressions",
+   "path": "downloads/epub/irish-impressions-pg-61758.a504a5f1deec.epub",
+   "sha256": "a504a5f1deec2d8b9bb98c50840fd1c387a19c2e98c61916639673bf61352a9f",
+   "size": 276496
   },
   "pg-8120": {
    "work": "life-of-teresa",
@@ -145,6 +199,18 @@
    "sha256": "656128e12fef7806108222b065682c492057b7ec9255181ac5d8a0348e5063dd",
    "size": 375676
   },
+  "pg-20058": {
+   "work": "napoleon-notting-hill",
+   "path": "downloads/epub/napoleon-notting-hill-pg-20058.8058f9ad337e.epub",
+   "sha256": "8058f9ad337e301097843413095a7c2d36ba01c2e66bd60cd03912af0047a051",
+   "size": 377693
+  },
+  "pg-13468": {
+   "work": "new-jerusalem",
+   "path": "downloads/epub/new-jerusalem-pg-13468.fa9802233bbb.epub",
+   "sha256": "fa9802233bbb3c563fe7c095c8e507f457e409644bae466225c717fc388df606",
+   "size": 562930
+  },
   "pg-130": {
    "work": "orthodoxy",
    "path": "downloads/epub/orthodoxy-pg-130.64ae296bc11e.epub",
@@ -157,11 +223,29 @@
    "sha256": "e26d9ae5c717ff2f4f00bb5f2400e7d00a9641743f04fa3c3347e7a1471dde8f",
    "size": 241637
   },
+  "pga-0900711": {
+   "work": "poet-and-lunatics",
+   "path": "downloads/epub/poet-and-lunatics-pga-0900711.b7e47679c45a.epub",
+   "sha256": "b7e47679c45ae85b83de0225877eb42314cc25c538f9e78f234ce14349215d9a",
+   "size": 399862
+  },
+  "pga-0900401": {
+   "work": "return-don-quixote",
+   "path": "downloads/epub/return-don-quixote-pga-0900401.bbdb17c9b8a3.epub",
+   "sha256": "bbdb17c9b8a33849d82642e98581acb3d89c46f9c30b848ba10be844774d5ceb",
+   "size": 460239
+  },
   "pg-52958": {
    "work": "revelations-divine-love",
    "path": "downloads/epub/revelations-divine-love-pg-52958.1a089a0fbbcb.epub",
    "sha256": "1a089a0fbbcb54e7aa410e0493096e438abd28e7b177cae9608f80080e640b89",
    "size": 566432
+  },
+  "pga-0900631": {
+   "work": "robert-louis-stevenson-1927",
+   "path": "downloads/epub/robert-louis-stevenson-1927-pga-0900631.6c3fd6f06c1b.epub",
+   "sha256": "6c3fd6f06c1b524b3143c3bb55203026fd1a4097e64a63ca2fde1ee719bfd5b4",
+   "size": 263882
   },
   "pg-70175": {
    "work": "secret-father-brown",
@@ -181,11 +265,29 @@
    "sha256": "0ec84c22044c09391791200ab60b77a34c34cfe87198d56979aab85c2a9787ad",
    "size": 640197
   },
+  "pg-69185": {
+   "work": "tales-long-bow",
+   "path": "downloads/epub/tales-long-bow-pg-69185.cb0597092026.epub",
+   "sha256": "cb0597092026eff0efa802b7cb8f20b92a461a37819beb78fcaa5ba46a4655af",
+   "size": 398469
+  },
   "pg-1721": {
    "work": "trees-of-pride",
    "path": "downloads/epub/trees-of-pride-pg-1721.08dda6e9dc92.epub",
    "sha256": "08dda6e9dc9263b1d1cfcbc7826e03175ff935268346ff8ac686d634fc240023",
    "size": 178192
+  },
+  "pg-8092": {
+   "work": "tremendous-trifles",
+   "path": "downloads/epub/tremendous-trifles-pg-8092.8a816f05478a.epub",
+   "sha256": "8a816f05478a7122e01b1b5032a8e73ce8a6057d4792a75f83012212212088a8",
+   "size": 371075
+  },
+  "pg-18639": {
+   "work": "victorian-age-literature",
+   "path": "downloads/epub/victorian-age-literature-pg-18639.f023e6f62f30.epub",
+   "sha256": "f023e6f62f308b3c333b05e0a37427af783a571e28818aa21d820102c5760456",
+   "size": 286108
   },
   "pg-53841": {
    "work": "virgin-saints-and-martyrs",
@@ -198,6 +300,12 @@
    "path": "downloads/epub/whats-wrong-world-pg-1717.01af330b7045.epub",
    "sha256": "01af330b70459f82d2953c6c034d63a5cf0eb69dac8680456e4840561329b126",
    "size": 409025
+  },
+  "pga-0900441": {
+   "work": "william-cobbett",
+   "path": "downloads/epub/william-cobbett-pga-0900441.c77e85e111a1.epub",
+   "sha256": "c77e85e111a1d0e1655361255eab03600e28d028f798fe24557cab44608a0523",
+   "size": 281161
   },
   "pg-223": {
    "work": "wisdom-father-brown",

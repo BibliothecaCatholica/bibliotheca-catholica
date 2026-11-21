@@ -609,6 +609,44 @@
     "indented line": 1
    }
   },
+  "peo-trent-1848-r2": {
+   "work": "The Canons and Decrees of the Council of Trent",
+   "multiLineBlocks": 24,
+   "reflowed": 0,
+   "kept": 24,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 16,
+    "short line": 8
+   }
+  },
+  "peo-trent-1848": {
+   "work": "The Canons and Decrees of the Council of Trent",
+   "multiLineBlocks": 24,
+   "reflowed": 0,
+   "kept": 24,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 16,
+    "short line": 8
+   }
+  },
+  "ia-cathencyc-1907-advent": {
+   "work": "Advent (The Catholic Encyclopedia, 1907)",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1
+   }
+  },
   "pg-20450": {
    "work": "The Lives of the Saints: January, February, and March",
    "multiLineBlocks": 1525,
@@ -1578,6 +1616,18 @@
     "all-capitals line": 1
    }
   },
+  "ia-superstitionsofs0000unse-q9f6": {
+   "work": "The Superstitions of the Sceptic",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1
+   }
+  },
   "ia-generallyspeakin00ches-r2": {
    "work": "Generally Speaking",
    "multiLineBlocks": 1,
@@ -1602,8 +1652,44 @@
     "all-capitals line": 1
    }
   },
+  "ia-doweagree0000gkch": {
+   "work": "Do We Agree? A Debate between G. K. Chesterton and Bernard Shaw",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1
+   }
+  },
+  "ia-gkcasmcbeingcoll0000gkch": {
+   "work": "G.K.C. as M.C.",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1
+   }
+  },
   "ia-simplicitytolsto00chesuoft": {
    "work": "Simplicity and Tolstoy",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1
+   }
+  },
+  "ia-samueljohnson00chesuoft": {
+   "work": "Samuel Johnson",
    "multiLineBlocks": 1,
    "reflowed": 0,
    "kept": 1,
@@ -1641,6 +1727,18 @@
     "short line": 2
    }
   },
+  "ia-robertlouisstev00nicogoog": {
+   "work": "Robert Louis Stevenson (Bookman Booklet)",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1
+   }
+  },
   "ia-prayer00moor": {
    "work": "Prayer",
    "multiLineBlocks": 1,
@@ -1651,6 +1749,44 @@
    "pinnedHtml": false,
    "keptBecause": {
     "all-capitals line": 1
+   }
+  },
+  "pga-1100451": {
+   "work": "The World's Debt to the Catholic Church",
+   "multiLineBlocks": 449,
+   "reflowed": 420,
+   "kept": 29,
+   "share": 0.935,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 2,
+    "short line": 27
+   }
+  },
+  "pga-0900731": {
+   "work": "The Sword of Wood",
+   "multiLineBlocks": 65,
+   "reflowed": 56,
+   "kept": 9,
+   "share": 0.862,
+   "emphasisSpans": 6,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "short line": 9
+   }
+  },
+  "pga-0500731": {
+   "work": "C",
+   "multiLineBlocks": 2744,
+   "reflowed": 2623,
+   "kept": 121,
+   "share": 0.956,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 8,
+    "short line": 113
    }
   },
   "ia-rightswrongsinin00haas": {

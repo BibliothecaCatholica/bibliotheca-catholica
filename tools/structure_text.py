@@ -79,7 +79,21 @@ for _wid, _ed in (('innocence-father-brown', 'pg-204'), ('wisdom-father-brown', 
                   # Orthodoxy flow batch 2 (November 19, 2026)
                   ('bede-ecclesiastical-history', 'pg-38326'), ('consolation-philosophy', 'pg-14328'), ('abandonment', 'pg-52057'),
                   # Orthodoxy flow batch 3 (November 20, 2026)
-                  ('catherine-letters', 'pg-7403'), ('apostolic-fathers', 'pg-77576'), ('europe-faith', 'pg-8442')):
+                  ('catherine-letters', 'pg-7403'), ('apostolic-fathers', 'pg-77576'), ('europe-faith', 'pg-8442'),
+                  # Orthodoxy flow batch 4 (November 20, 2026)
+                  ('idea-university', 'pg-24526'), ('aquinas-prayer-contemplative', 'pg-22295'), ('glories-of-mary', 'pg-72411'),
+                  # Councils Part 3 (November 20, 2026)
+                  ('council-of-trent', 'peo-trent-1848-r2'),
+                  # Chesterton polish batch 1 (November 21, 2026)
+                  ('everlasting-man', 'pg-65688'), ('tremendous-trifles', 'pg-8092'), ('new-jerusalem', 'pg-13468'),
+                  # Chesterton polish batch 2 (November 21, 2026)
+                  ('charles-dickens-critical-study', 'pg-68682'), ('poet-and-lunatics', 'pga-0900711'), ('return-don-quixote', 'pga-0900401'),
+                  # Chesterton polish batch 3 (November 21, 2026)
+                  ('william-cobbett', 'pga-0900441'), ('robert-louis-stevenson-1927', 'pga-0900631'), ('irish-impressions', 'pg-61758'),
+                  # Chesterton polish batch 4 (November 21, 2026)
+                  ('napoleon-notting-hill', 'pg-20058'), ('victorian-age-literature', 'pg-18639'), ('four-faultless-felons', 'pga-0300781'),
+                  # Chesterton polish batch 5 (November 21, 2026)
+                  ('eugenics-other-evils', 'pg-25308'), ('tales-long-bow', 'pg-69185')):
     EDITIONS[(_wid, _ed)] = {'mode': 'map', 'out': 'data/structured/%s-%s.json' % (_wid, _ed)}
 
 

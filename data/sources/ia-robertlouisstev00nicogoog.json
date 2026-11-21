@@ -1,0 +1,346 @@
+{
+  "id": "ia-robertlouisstev00nicogoog",
+  "kind": "ocr-transcription",
+  "title": "Robert Louis Stevenson (New York: James Pott & Company, 1906)",
+  "author": "G. K. Chesterton and W. Robertson Nicoll",
+  "rights": "Public domain in the USA. First published 1902 (London: Hodder and Stoughton, Bookman Booklets); this printing New York: James Pott & Company, 1906 (\"First Impression April, 1906\"); the scanned printing is of 1902.",
+  "rightsBasis": "pd-date",
+  "volumes": [
+    {
+      "identifier": "robertlouisstev00nicogoog",
+      "url": "https://archive.org/details/robertlouisstev00nicogoog",
+      "year": 1902,
+      "publisher": "London Hodder and Stouoghton",
+      "ocr": "robertlouisstev00nicogoog_djvu.xml",
+      "ocrSha256": "34b0bfbead5ed76342ad7aa0e7d57890da2d99f63cdf4b567d6f42418a5ea807",
+      "leaves": [
+        9,
+        53
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed. 29 misreadings corrected by hand against the page images of this scan, each listed in handFixes; no wording was taken from another edition. 42 words the vocabulary does not know (names, Latin, and foreign titles) were checked by hand against the page images and are listed in verifiedWords.",
+  "words": 6940,
+  "unknownWords": 4,
+  "readRate": 0.9994,
+  "flaggedBlocks": 3,
+  "flagged": [
+    {
+      "block": 18,
+      "words": [
+        "commmiicating",
+        "^otism,"
+      ]
+    },
+    {
+      "block": 28,
+      "words": [
+        "Cornford's"
+      ]
+    },
+    {
+      "block": 38,
+      "words": [
+        "Bickford"
+      ]
+    }
+  ],
+  "corrections": 18,
+  "correctionList": [
+    {
+      "ocr": "imjust",
+      "reading": "unjust"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "misfortimes",
+      "reading": "misfortunes"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "groimd",
+      "reading": "ground"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "imthinkable",
+      "reading": "unthinkable"
+    },
+    {
+      "ocr": "modem",
+      "reading": "modern"
+    },
+    {
+      "ocr": "foimd",
+      "reading": "found"
+    },
+    {
+      "ocr": "imdeserved",
+      "reading": "undeserved"
+    },
+    {
+      "ocr": "Greneral",
+      "reading": "General"
+    },
+    {
+      "ocr": "imderstood",
+      "reading": "understood"
+    },
+    {
+      "ocr": "woimded",
+      "reading": "wounded"
+    },
+    {
+      "ocr": "Grod",
+      "reading": "God"
+    },
+    {
+      "ocr": "Greorge",
+      "reading": "George"
+    },
+    {
+      "ocr": "himdred",
+      "reading": "hundred"
+    },
+    {
+      "ocr": "moimt",
+      "reading": "mount"
+    }
+  ],
+  "text": "data/texts/ia-robertlouisstev00nicogoog.txt",
+  "sha256": "d05ba3320c02d3033cb8e8f376c9bfe81412adb2e3cb7eca1e5ae417c9cf86b8",
+  "checked": "2026-11-21",
+  "handFixes": [
+    {
+      "leaf": 9,
+      "page": "leaf 9",
+      "ocr": "NicoU",
+      "reading": "Nicoll"
+    },
+    {
+      "leaf": 10,
+      "page": "leaf 10",
+      "ocr": "Impresaon",
+      "reading": "Impression"
+    },
+    {
+      "leaf": 11,
+      "page": "leaf 11",
+      "ocr": "-XTa much",
+      "reading": "much"
+    },
+    {
+      "leaf": 23,
+      "page": "leaf 23",
+      "ocr": "Grerman prgfessor",
+      "reading": "German professor"
+    },
+    {
+      "leaf": 27,
+      "page": "leaf 27",
+      "ocr": "afficted",
+      "reading": "afflicted"
+    },
+    {
+      "leaf": 33,
+      "page": "leaf 33",
+      "ocr": "^imlitiei, and, indeedy as",
+      "reading": "qualities, and, indeed, as"
+    },
+    {
+      "leaf": 33,
+      "page": "leaf 33",
+      "ocr": "Steifcnson",
+      "reading": "Stevenson"
+    },
+    {
+      "leaf": 33,
+      "page": "leaf 33",
+      "ocr": "the M. Hdirew song",
+      "reading": "the old Hebrew song"
+    },
+    {
+      "leaf": 33,
+      "page": "leaf 33",
+      "ocr": "^^hnrdy and",
+      "reading": "“lovely and"
+    },
+    {
+      "leaf": 33,
+      "page": "leaf 33",
+      "ocr": "so Icmg",
+      "reading": "so long"
+    },
+    {
+      "leaf": 33,
+      "page": "leaf 33",
+      "ocr": "donnation of Ids moral judgment/^",
+      "reading": "demnation of his moral judgment.”"
+    },
+    {
+      "leaf": 33,
+      "page": "leaf 33",
+      "ocr": ";)ersonality so rich, Sterenson",
+      "reading": "personality so rich, Stevenson"
+    },
+    {
+      "leaf": 34,
+      "page": "leaf 34",
+      "ocr": "**preciou8,\"",
+      "reading": "“precious,\""
+    },
+    {
+      "leaf": 35,
+      "page": "leaf 35",
+      "ocr": "8ovl",
+      "reading": "soul"
+    },
+    {
+      "leaf": 36,
+      "page": "leaf 36",
+      "ocr": "— W. E. Hknlbt.",
+      "reading": "— W. E. Henley."
+    },
+    {
+      "leaf": 36,
+      "page": "leaf 36",
+      "ocr": "was bom",
+      "reading": "was born"
+    },
+    {
+      "leaf": 44,
+      "page": "leaf 44",
+      "ocr": "Steyenson",
+      "reading": "Stevenson"
+    },
+    {
+      "leaf": 44,
+      "page": "leaf 44",
+      "ocr": "Osboume",
+      "reading": "Osbourne"
+    },
+    {
+      "leaf": 45,
+      "page": "leaf 45",
+      "ocr": "Hyeres",
+      "reading": "Hyères"
+    },
+    {
+      "leaf": 48,
+      "page": "leaf 48",
+      "ocr": "gromid",
+      "reading": "ground"
+    },
+    {
+      "leaf": 49,
+      "page": "leaf 49",
+      "ocr": "Katoomba^ on September ISth, 1898.",
+      "reading": "Katoomba, on September 12th, 1893."
+    },
+    {
+      "leaf": 49,
+      "page": "leaf 49",
+      "ocr": "Bickf ord",
+      "reading": "Bickford"
+    },
+    {
+      "leaf": 50,
+      "page": "leaf 50",
+      "ocr": "Matetaf a",
+      "reading": "Mataafa"
+    },
+    {
+      "leaf": 51,
+      "page": "leaf 51",
+      "ocr": "^^Mataafa",
+      "reading": "“Mataafa"
+    },
+    {
+      "leaf": 51,
+      "page": "leaf 51",
+      "ocr": "iSne",
+      "reading": "fine"
+    },
+    {
+      "leaf": 51,
+      "page": "leaf 51",
+      "ocr": "Alof a",
+      "reading": "Alofa"
+    },
+    {
+      "leaf": 52,
+      "page": "leaf 52",
+      "ocr": "Eava",
+      "reading": "Kava"
+    },
+    {
+      "leaf": 52,
+      "page": "leaf 52",
+      "ocr": "Kfe.",
+      "reading": "life."
+    },
+    {
+      "leaf": 53,
+      "page": "leaf 53",
+      "ocr": "ahnost",
+      "reading": "almost"
+    }
+  ],
+  "verifiedWords": [
+    "Windemere's",
+    "Windemere",
+    "dispiriting",
+    "agglutinated",
+    "Greenaway",
+    "memorably",
+    "Inverleith",
+    "Swanston",
+    "Colinton",
+    "Manse",
+    "spunkies",
+    "podginess",
+    "malnutrition",
+    "Autolycus",
+    "roguery",
+    "tricksy",
+    "Chalet",
+    "Beulah",
+    "Eldorado",
+    "Bimini",
+    "Hawaiian",
+    "viridescent",
+    "Kalawao",
+    "Kalaupapa",
+    "Apia",
+    "Upolu",
+    "Vaea",
+    "Katoomba",
+    "Tembinoka",
+    "Apemama",
+    "interlards",
+    "Mataafa",
+    "Honolulu",
+    "buggy",
+    "Ala",
+    "Loto",
+    "Alofa",
+    "Kava",
+    "Hyères",
+    "Osbourne",
+    "Nicoll",
+    "Henley"
+  ]
+}

@@ -22,8 +22,7 @@ def row(c,lib,hosted,libw):
     acts=[]
     if c.get('work') and c['work'] in hosted:
         acts.append('<a class="council-read" href="/work/'+E(c['work'])+'/">Read on this site</a>')
-    else:
-        acts+=[ext(L['url'],L['label']) for L in c.get('links',[])]
+    acts+=[ext(L['url'],L['label']) for L in c.get('links',[])]  # kept when hosted: Trent's link is its edition's source
     sw=[w for w in c.get('siteWorks',[]) if w in libw]
     more=('<p class="council-more">In the reading room: '+', '.join('<a href="/work/'+E(w)+'/">'+E(libw[w]['title'])+'</a>' for w in sw)+'</p>') if sw else ''
     return ('<li class="council" id="'+E(c['id'])+'"><span class="council-n" aria-hidden="true">'+str(c['n'])+'</span><div class="council-body">'
@@ -32,7 +31,8 @@ def row(c,lib,hosted,libw):
 def body(lib=None):
     lib=lib or json.loads((ROOT/'data/library.json').read_text())
     D=load();hosted=hosted_works(lib);libw={w['id']:w for w in lib['works']}
-    h='<div class="page-head"><div class="eyebrow">Church Documents</div><h1>'+E(TITLE)+'</h1><p class="lede">'+E(LEDE)+'</p></div>'
+    import site_copy  # the section-header engraving (PR #95, option A)
+    h=site_copy.with_art('councils','<div class="page-head"><div class="eyebrow">Church Documents</div><h1>'+E(TITLE)+'</h1><p class="lede">'+E(LEDE)+'</p></div>')
     # no in-page #anchor links: app.js reads location.hash as the route
     for e in D['eras']:
         rows=[c for c in D['councils'] if c['era']==e['id']]

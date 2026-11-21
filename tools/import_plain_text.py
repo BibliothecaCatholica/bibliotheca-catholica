@@ -63,53 +63,78 @@ def collate(src, ocr):
             'method': 'difflib word alignment, lower case, letters and digits only; OCR noise counts as disagreement'}
 
 
+def check_basis(e):
+    out = ROOT / f"data/texts/{e['edition']}.txt"
+    assert not out.exists(), f"{e['edition']}: already hosted; a pinned text never changes"
+    basis = e.get('rightsBasis', 'pd-date')
+    if basis == 'pd-date':
+        assert pd_by_date(e['year']), e['edition']
+    else:  # pd-nonrenewal: the evidence must pass, and the witness scan must be the printing it names
+        assert basis == 'pd-nonrenewal', basis
+        assert not nonrenewal_problems(e.get('nonRenewal')), (e['edition'], nonrenewal_problems(e.get('nonRenewal')))
+        assert e['nonRenewal']['scan'] == e['ia'], e['edition']
+    return out, basis
+
+
+def scan_witness(e, text, basis):
+    """Downloads the dated scan's metadata and OCR and collates the source text with it (step 2)."""
+    meta = json.loads(get(f"https://archive.org/metadata/{e['ia']}"))
+    m = meta['metadata']
+    ocr_name = next(f['name'] for f in meta['files'] if f['name'].endswith('_djvu.txt'))
+    # archive.org/download redirects to numbered storage hosts; the /stream/ page serves the same OCR inline.
+    page = decode(get(f"https://archive.org/stream/{e['ia']}/{urllib.parse.quote(ocr_name)}"))
+    ocr = html.unescape(re.search(r'<pre[^>]*>(.*?)</pre>', page, re.S).group(1)).encode('utf-8')
+    year = int(re.search(r'\d{4}', str(m.get('date') or m.get('year'))).group())
+    assert pd_by_date(year) if basis == 'pd-date' else year == e['nonRenewal']['firstPublicationYear'], (e['ia'], year)
+    col = collate(text, decode(ocr))
+    witness = {'identifier': e['ia'], 'url': f"https://archive.org/details/{e['ia']}", 'year': year,
+               'publisher': m.get('publisher'), 'ocr': ocr_name, 'ocrSha256': hashlib.sha256(ocr).hexdigest(),
+               'ocrNote': 'SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)'}
+    return witness, col
+
+
+def host(e, raw, text, basis, out, witness, col, converted='Converted to UTF-8 plain text', extra=None):
+    """Writes the hosted text and its source record (step 3). `raw` is the source file as received."""
+    T = e['title'].upper()
+    x = e.get('scanException')
+    if witness is None:  # owner-approved exception (November 20, 2026): no dated scan exists to compare with
+        assert x and x.get('reason') and x.get('approved') == 'owner' and x.get('date') and pd_by_date(x['yearInText']), e['edition']
+        compared = (f"Not compared with a scan: {x['reason']} Hosted by an owner-approved exception ({x['date']}); "
+                    f"public domain in the USA by date ({x['yearInText']}, the year printed in the text).")
+    else:
+        year, m_pub = witness['year'], witness['publisher']
+        compared = (f"Compared word by word with the Internet Archive scan {e['ia']} ({m_pub or 'publisher not recorded'}, {year}): "
+                    f"{col['agreement']:.1%} of the source's words are confirmed by the scan's OCR, and the differences "
+                    f"are listed for review in the provenance record.")
+    head = [T, '', f"By {e['author']}", '',
+            f"First published {e['firstPublished']}. Public domain in the USA.", '',
+            f"Source: {e['sourceName']} ({e['sourcePage']}), reproduced unchanged below with its own notices. "
+            f"{converted} by Bibliotheca Catholica; no words were changed. " + compared, '',
+            f"*** START OF THE HOSTED TEXT: {T} ***", '']
+    body = '\n'.join(head) + text + f"\n\n*** END OF THE HOSTED TEXT: {T} ***\n"
+    data = body.encode('utf-8')
+    out.write_bytes(data)
+    sha = hashlib.sha256(data).hexdigest()
+    notice = text[:1500]
+    rec = {'id': e['edition'], 'kind': 'public-domain-text', 'title': e['sourceTitle'], 'author': e['author'],
+           'firstPublished': e['firstPublished'], 'rights': RIGHTS.format(name=e['sourceName']),
+           'rightsBasis': basis, **({'nonRenewal': e['nonRenewal']} if basis == 'pd-nonrenewal' else {}), 'sourceName': e['sourceName'], 'sourceUrl': e['sourceUrl'],
+           'sourcePage': e['sourcePage'], 'sourceNotice': notice, 'sourceFileSha256': hashlib.sha256(raw).hexdigest(),
+           **(extra or {}), **({'iaWitness': witness, 'collation': col} if witness else {'scanException': x}),
+           'sha256': sha, 'bytes': len(data),
+           'checked': time.strftime('%Y-%m-%d')}
+    (ROOT / f"data/sources/{e['edition']}.json").write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')
+    print(e['edition'], sha, f"agreement {col['agreement']:.1%} scan {e['ia']} {witness['year']}" if witness else 'scan exception')
+    return sha
+
+
 def main(spec_path):
     for e in json.loads(Path(spec_path).read_text()):
-        out = ROOT / f"data/texts/{e['edition']}.txt"
-        assert not out.exists(), f"{e['edition']}: already hosted; a pinned text never changes"
-        basis = e.get('rightsBasis', 'pd-date')
-        if basis == 'pd-date':
-            assert pd_by_date(e['year']), e['edition']
-        else:  # pd-nonrenewal: the evidence must pass, and the witness scan must be the printing it names
-            assert basis == 'pd-nonrenewal', basis
-            assert not nonrenewal_problems(e.get('nonRenewal')), (e['edition'], nonrenewal_problems(e.get('nonRenewal')))
-            assert e['nonRenewal']['scan'] == e['ia'], e['edition']
+        out, basis = check_basis(e)
         raw = get(e['sourceUrl'])
         text = decode(raw).replace('\r\n', '\n').replace('\r', '\n').strip('\n')
-        meta = json.loads(get(f"https://archive.org/metadata/{e['ia']}"))
-        m = meta['metadata']
-        ocr_name = next(f['name'] for f in meta['files'] if f['name'].endswith('_djvu.txt'))
-        # archive.org/download redirects to numbered storage hosts; the /stream/ page serves the same OCR inline.
-        page = decode(get(f"https://archive.org/stream/{e['ia']}/{urllib.parse.quote(ocr_name)}"))
-        ocr = html.unescape(re.search(r'<pre[^>]*>(.*?)</pre>', page, re.S).group(1)).encode('utf-8')
-        year = int(re.search(r'\d{4}', str(m.get('date') or m.get('year'))).group())
-        assert pd_by_date(year) if basis == 'pd-date' else year == e['nonRenewal']['firstPublicationYear'], (e['ia'], year)
-        col = collate(text, decode(ocr))
-        witness = {'identifier': e['ia'], 'url': f"https://archive.org/details/{e['ia']}", 'year': year,
-                   'publisher': m.get('publisher'), 'ocr': ocr_name, 'ocrSha256': hashlib.sha256(ocr).hexdigest(),
-                   'ocrNote': 'SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)'}
-        T = e['title'].upper()
-        head = [T, '', f"By {e['author']}", '',
-                f"First published {e['firstPublished']}. Public domain in the USA.", '',
-                f"Source: {e['sourceName']} ({e['sourcePage']}), reproduced unchanged below with its own notices. "
-                f"Converted to UTF-8 plain text by Bibliotheca Catholica; no words were changed. Compared word by word "
-                f"with the Internet Archive scan {e['ia']} ({m.get('publisher') or 'publisher not recorded'}, {year}): "
-                f"{col['agreement']:.1%} of the source's words are confirmed by the scan's OCR, and the differences "
-                f"are listed for review in the provenance record.", '',
-                f"*** START OF THE HOSTED TEXT: {T} ***", '']
-        body = '\n'.join(head) + text + f"\n\n*** END OF THE HOSTED TEXT: {T} ***\n"
-        data = body.encode('utf-8')
-        out.write_bytes(data)
-        sha = hashlib.sha256(data).hexdigest()
-        notice = text[:1500]
-        rec = {'id': e['edition'], 'kind': 'public-domain-text', 'title': e['sourceTitle'], 'author': e['author'],
-               'firstPublished': e['firstPublished'], 'rights': RIGHTS.format(name=e['sourceName']),
-               'rightsBasis': basis, **({'nonRenewal': e['nonRenewal']} if basis == 'pd-nonrenewal' else {}), 'sourceName': e['sourceName'], 'sourceUrl': e['sourceUrl'],
-               'sourcePage': e['sourcePage'], 'sourceNotice': notice, 'sourceFileSha256': hashlib.sha256(raw).hexdigest(),
-               'iaWitness': witness, 'collation': col, 'sha256': sha, 'bytes': len(data),
-               'checked': time.strftime('%Y-%m-%d')}
-        (ROOT / f"data/sources/{e['edition']}.json").write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')
-        print(e['edition'], sha, f"agreement {col['agreement']:.1%}", f"scan {e['ia']} {year}")
+        witness, col = scan_witness(e, text, basis)
+        host(e, raw, text, basis, out, witness, col)
         time.sleep(1)
 
 

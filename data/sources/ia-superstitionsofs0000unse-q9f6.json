@@ -1,0 +1,267 @@
+{
+  "id": "ia-superstitionsofs0000unse-q9f6",
+  "kind": "ocr-transcription",
+  "title": "The Superstitions of the Sceptic, with a Correspondence between the Author and Mr. G. G. Coulton",
+  "author": "G. K. Chesterton",
+  "rights": "Public domain in the USA. First published 1925 (Cambridge: W. Heffer and Sons); the scanned printing is of 1925.",
+  "rightsBasis": "pd-date",
+  "volumes": [
+    {
+      "identifier": "superstitionsofs0000unse_q9f6",
+      "url": "https://archive.org/details/superstitionsofs0000unse_q9f6",
+      "year": 1925,
+      "publisher": "W. Heffer and Sons Ltd",
+      "ocr": "superstitionsofs0000unse_q9f6_djvu.xml",
+      "ocrSha256": "a24fb63c830cc9a9e05dcb43d191855f04bc805b2cbbc251b9ef4ca7b2c9c9dd",
+      "leaves": [
+        4,
+        57
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed. 22 misreadings corrected by hand against the page images of this scan, each listed in handFixes; no wording was taken from another edition. 43 words the vocabulary does not know (names, Latin, and foreign titles) were checked by hand against the page images and are listed in verifiedWords.",
+  "words": 13936,
+  "unknownWords": 14,
+  "readRate": 0.999,
+  "flaggedBlocks": 7,
+  "flagged": [
+    {
+      "block": 30,
+      "words": [
+        "CouLTON"
+      ]
+    },
+    {
+      "block": 42,
+      "words": [
+        "CouLTon."
+      ]
+    },
+    {
+      "block": 64,
+      "words": [
+        "activa",
+        "contemplativa;",
+        "interdum",
+        "severitate",
+        "frangatur,",
+        "promptius",
+        "vacet",
+        "meritorius,"
+      ]
+    },
+    {
+      "block": 66,
+      "words": [
+        "CouLTON"
+      ]
+    },
+    {
+      "block": 67,
+      "words": [
+        "CouLTon."
+      ]
+    },
+    {
+      "block": 68,
+      "words": [
+        "CouLTon"
+      ]
+    },
+    {
+      "block": 72,
+      "words": [
+        "CouLTon."
+      ]
+    }
+  ],
+  "corrections": 1,
+  "correctionList": [
+    {
+      "ocr": "curis",
+      "reading": "curls"
+    }
+  ],
+  "text": "data/texts/ia-superstitionsofs0000unse-q9f6.txt",
+  "sha256": "9194287ecc528b22e1520627d0adf0dd8b57f2259d29f75806519509414e75ff",
+  "checked": "2026-11-21",
+  "handFixes": [
+    {
+      "leaf": 4,
+      "page": "leaf 4",
+      "ocr": "tina RAMA CAMBRIDGE... SS Oa",
+      "reading": "CAMBRIDGE"
+    },
+    {
+      "leaf": 4,
+      "page": "leaf 4",
+      "ocr": "pl lh nll FeeeER 8 ‘SONS LIDAR",
+      "reading": "W. HEFFER & SONS LTD."
+    },
+    {
+      "leaf": 5,
+      "page": "leaf 5",
+      "ocr": "Rae",
+      "reading": ""
+    },
+    {
+      "leaf": 5,
+      "page": "leaf 5",
+      "ocr": "inten }",
+      "reading": ""
+    },
+    {
+      "leaf": 27,
+      "page": "leaf 27",
+      "ocr": "oe WG Pe a py",
+      "reading": ""
+    },
+    {
+      "leaf": 20,
+      "page": "leaf 20",
+      "ocr": "wasa",
+      "reading": "was a"
+    },
+    {
+      "leaf": 21,
+      "page": "leaf 21",
+      "ocr": "Schoo].",
+      "reading": "School."
+    },
+    {
+      "leaf": 28,
+      "page": "leaf 28",
+      "ocr": "Joose",
+      "reading": "loose"
+    },
+    {
+      "leaf": 36,
+      "page": "leaf 36",
+      "ocr": "Iam nota",
+      "reading": "I am not a"
+    },
+    {
+      "leaf": 38,
+      "page": "leaf 38",
+      "ocr": "Provengal",
+      "reading": "Provençal"
+    },
+    {
+      "leaf": 43,
+      "page": "leaf 43",
+      "ocr": "cowp",
+      "reading": "coup"
+    },
+    {
+      "leaf": 45,
+      "page": "leaf 45",
+      "ocr": "JouHN LoPEs.",
+      "reading": "John Lopes."
+    },
+    {
+      "leaf": 47,
+      "page": "leaf 47",
+      "ocr": "Bzb.",
+      "reading": "Bib."
+    },
+    {
+      "leaf": 50,
+      "page": "leaf 50",
+      "ocr": "setiously",
+      "reading": "seriously"
+    },
+    {
+      "leaf": 50,
+      "page": "leaf 50",
+      "ocr": "hisown.",
+      "reading": "his own."
+    },
+    {
+      "leaf": 54,
+      "page": "leaf 54",
+      "ocr": "- y BE eg G. K. CHESTERTON",
+      "reading": "Yours, etc., G. K. Chesterton."
+    },
+    {
+      "leaf": 55,
+      "page": "leaf 55",
+      "ocr": "Finat",
+      "reading": "Final"
+    },
+    {
+      "leaf": 55,
+      "page": "leaf 55",
+      "ocr": "Judus;",
+      "reading": "ludus;"
+    },
+    {
+      "leaf": 55,
+      "page": "leaf 55",
+      "ocr": "(/udus",
+      "reading": "(ludus"
+    },
+    {
+      "leaf": 56,
+      "page": "leaf 56",
+      "ocr": "folevates",
+      "reading": "tolerates"
+    },
+    {
+      "leaf": 56,
+      "page": "leaf 56",
+      "ocr": "necessaty",
+      "reading": "necessary"
+    },
+    {
+      "leaf": 54,
+      "page": "leaf 54",
+      "ocr": "easily.",
+      "reading": "as easily."
+    }
+  ],
+  "verifiedWords": [
+    "Coulton",
+    "niblicks",
+    "brassies",
+    "Methusaleh",
+    "superstititions",
+    "libitum",
+    "singe",
+    "caterwauling",
+    "Regensburg",
+    "accidentaliter",
+    "tobacconing",
+    "tobacconising",
+    "byeway",
+    "shavelings",
+    "Malvolio",
+    "Protestanism",
+    "quaeritur",
+    "ludis",
+    "chorealibus",
+    "exerceri",
+    "plaudebant",
+    "arguit",
+    "dicendum",
+    "ludus",
+    "ordinatur",
+    "diverso",
+    "vestitur",
+    "circumstantiis",
+    "vitii",
+    "Aquinatis",
+    "prophetam",
+    "Parmae",
+    "Destruct",
+    "Giraud",
+    "Vicomte",
+    "flounces",
+    "decentest",
+    "polk",
+    "casuistic",
+    "Rumtifoo",
+    "abbreviating",
+    "intersperse",
+    "chorealis"
+  ]
+}

@@ -24,6 +24,11 @@ CC_BY_SA = 'https://creativecommons.org/licenses/by-sa/4.0/'
 PROVENANCE = 'https://texts.bibliothecacatholica.com/provenance/'
 URL = '/credits/'
 E = lambda s: html.escape(str(s), quote=True)
+
+
+def plural(n, one, many=None):
+    """'1 paragraph', '2 paragraphs', '1,204 words': every count on /credits/ agrees with its noun (QA, November 21, 2026)."""
+    return format(n, ',') + ' ' + (one if n == 1 else many or one + 's')
 BASIS = {  # one plain line per rights basis; the same words as BASIS in scripts/library.js
     'pd-date': 'Public domain in the USA by date of publication.',
     'pd-nonrenewal': 'Public domain in the USA: first published in the United States, and its copyright was not renewed.',
@@ -58,13 +63,17 @@ def checks(r):
         c = r['collation']
         w = r.get('iaWitness') or {}
         return ('Compared word by word with the Internet Archive scan ' + ext(w.get('url', ''), E(w.get('identifier', ''))) + ' ('
-                + E(w.get('year', '')) + '): ' + format(c['agreement'], '.1%') + ' of ' + format(c['sourceWords'], ',')
-                + ' words confirmed by its OCR; the differing passages are listed in the source record.')
+                + E(w.get('year', '')) + '): ' + format(c['agreement'], '.1%') + ' of ' + plural(c['sourceWords'], 'word')
+                + ' confirmed by its OCR; the differing passages are listed in the source record.')
+    if r.get('scanException'):  # owner-approved, per edition (November 20, 2026)
+        x = r['scanException']
+        return ('Not compared with a scan: ' + E(x['reason']) + ' Hosted by an owner-approved exception (' + E(x['date']) + '); '
+                + format(r['readGate']['readRate'], '.2%') + ' of ' + plural(r['readGate']['words'], 'word') + ' pass the read gate.')
     if r.get('readRate') is not None:
         fixes = len(r.get('handFixes') or [])
-        return ('Transcribed from the scan: ' + format(r['readRate'], '.2%') + ' of ' + format(r['words'], ',') + ' words read, '
-                + str(r.get('corrections', 0)) + ' OCR confusions repaired, ' + (str(fixes) + ' misreadings corrected by hand against the page images, ' if fixes else '')
-                + str(r.get('flaggedBlocks', 0)) + ' paragraphs flagged for an unread word. Not a manual proofread.')
+        return ('Transcribed from the scan: ' + format(r['readRate'], '.2%') + ' of ' + plural(r['words'], 'word') + ' read, '
+                + plural(r.get('corrections', 0), 'OCR confusion') + ' repaired, ' + (plural(fixes, 'misreading') + ' corrected by hand against the page images, ' if fixes else '')
+                + plural(r.get('flaggedBlocks', 0), 'paragraph') + ' flagged for an unread word. Not a manual proofread.')
     return 'The file is kept byte for byte as its source published it, with its own notices; no collation is recorded.'
 
 
@@ -122,7 +131,13 @@ def hosted_authors(lib):
     return {w['authorId'] for w in lib['works'] if w.get('authorId') and any(e.get('text') for e in w['editions'])}
 
 
+ART_LABELS = (('library', 'Reading room'), ('magisterium', 'Church Documents'), ('councils', 'Councils'), ('saints', 'Saints'),
+              ('summa', 'Summa'), ('prayers', 'Prayer'), ('doctors', 'Doctors of the Church'), ('rites', 'Rites & Liturgy'),
+              ('timeline', 'Timeline'), ('reading', 'Reading Lists'))  # section-header engravings (tools/site_copy.py PAGE_ART)
+
+
 def page_html(lib, hub, hero_credit):
+    import site_copy
     libw = {w['id']: w for w in lib['works']}
     books = [(w, e) for w in sorted(lib['works'], key=lambda w: (w['title'].lower(), w['id'])) for e in w['editions'] if e.get('text')]
     P = portrait_entries(hub)
@@ -141,4 +156,5 @@ def page_html(lib, hub, hero_credit):
             + '<h2 id="wikipedia">Wikipedia excerpts</h2><p>These excerpts are shortened from Wikipedia and shared under CC BY-SA 4.0; they are '
             'not covered by the site’s own licences.</p><ul class="credit-list">' + ''.join(wiki_entry(a) for a in W) + '</ul>'
             + '<h2 id="images">Other images</h2><ul class="credit-list"><li id="home-engraving">Home page engraving: ' + hero_credit + '</li>'
-            '<li>Book covers are Bibliotheca Catholica’s own typographic designs, with no third-party art.</li></ul>')
+            + ''.join('<li id="art-' + k + '">' + label + ' engraving: ' + site_copy.art_credit(k) + '</li>' for k, label in ART_LABELS)
+            + '<li>Book covers are Bibliotheca Catholica’s own typographic designs, with no third-party art.</li></ul>')

@@ -38,6 +38,18 @@
    "webp": "8528eb15f342e2ff21962208a17331aed02049f48949669d527e98893aae745f",
    "og": "e06ef1aa1223ba8ad7b802b3a5fa5b296ab0132068776ac7c4cf69bd5b64f9b4"
   },
+  "ia-cathencyc-1907-advent": {
+   "work": "catholic-encyclopedia-advent",
+   "svg": "231e722130e81d0e75b1202f4ce4f1b2fbd1d78d6c4f7feb3cdc7290f8750292",
+   "webp": "05ad5b70cae4941ea8380c743e9df89775b661f5ac9a041e92d07a370a113e6d",
+   "og": "fd45bd147a631a1fc7ff0f2a5f4774676092bf35465ad39d445c3174ae20847c"
+  },
+  "ia-doweagree0000gkch": {
+   "work": "do-we-agree",
+   "svg": "41ad92d3df47da8be788c71c26595f1492a243b1329518dfba007a75aec21bb1",
+   "webp": "fd9f331cd634cba4333f1ffbf9f4f60f42f022fa9502545b99efac0bbd9890c9",
+   "og": "797ae04b55858f230470f6c3db5c9f46224bae65d2d0f1127e0cfd2fe30b0df4"
+  },
   "ia-generallyspeakin00ches": {
    "work": "generally-speaking",
    "svg": "29d6f326ce93e739941279fcc4934576e0ae46ace80a38cc819bb7d5c559f816",
@@ -49,6 +61,12 @@
    "svg": "29d6f326ce93e739941279fcc4934576e0ae46ace80a38cc819bb7d5c559f816",
    "webp": "cdf68f5c72df7474852b2e337344050b1b6ca0a099ff26d9af39e4192b2706f7",
    "og": "d87ff7f3ebd6f44a475f9992f18415ecbe9eb0a252fa2c72326435216623fe4f"
+  },
+  "ia-gkcasmcbeingcoll0000gkch": {
+   "work": "gkc-as-mc",
+   "svg": "e2c64a3169ccae8fd6b39ac10358d39a825e61b8424b7dc6281fe1f47f9d982b",
+   "webp": "403b998a9d1b9c26de6ada52c066068a991d091dcc079dd4dbf7e59b16383f97",
+   "og": "9b2113dbd1ef6465004e087164103f2eeaa3475ade312218e3367a8926be3a39"
   },
   "ia-outlineofsanity0000ches": {
    "work": "outline-of-sanity",
@@ -80,6 +98,18 @@
    "webp": "c144f4093def8129a8f0e84d6f1e1c989b6479ffe033da482f218ff802b53a0e",
    "og": "fc68e5dc226a86c34fc22554076de67157110286d192ef3f96223b1fe1dd4a6c"
   },
+  "ia-robertlouisstev00nicogoog": {
+   "work": "chesterton-robert-louis-stevenson",
+   "svg": "43d2a3c46f523f5197633d62e7bdb0f7b2f77d5c95b6439ab6876316aafc3663",
+   "webp": "d713367a9482d6afcf472d886244e3113c13c23d186fa6b2ae4c2f8575ad8858",
+   "og": "be8f6d9b4ce6897ba2ca85aa964031efcf06015d2005d43106348027e3aef102"
+  },
+  "ia-samueljohnson00chesuoft": {
+   "work": "samuel-johnson-meynell",
+   "svg": "c0a2323a0470e0c47521d6209c2382a7c42ecea26f2efd392546235cc47bfd79",
+   "webp": "4285e4694b568ff53f1e5c9aecd37b733963cdecd9fe6fcdcbf3169bceacd89b",
+   "og": "c288cfdcee5febb1ba9bec6557fa87561c921f648f05bd72d8812595ad295ee1"
+  },
   "ia-simplicitytolsto00chesuoft": {
    "work": "simplicity-and-tolstoy",
    "svg": "0a1c0b1710907babb110540f9a5eb32901846cf92bb1decb42e3594573cc56ec",
@@ -92,6 +122,12 @@
    "webp": "9329e924960350fa011b016901b61d692b71989e2339dce6118cedf63c3edf2a",
    "og": "1a8dd75e22361e151138cbf1109e5fa32aeaa799840f5d3a26923b494d21e51e"
   },
+  "ia-superstitionsofs0000unse-q9f6": {
+   "work": "superstitions-of-the-sceptic",
+   "svg": "473935c1faec813e070f65dcfa463e3044a09edfdc9361977bbca3766f4e0062",
+   "webp": "8a5c395a2807b329a5b97ea73e05b0ad38577f9296038eae182829fc05a5ce3f",
+   "og": "e4d99845749286e97d053032c5943eea21b570fdd18af8fc499cac3bedf58722"
+  },
   "ia-thingwhyiamcatho00ches-0": {
    "work": "the-thing",
    "svg": "1d288235f7cb4ec9627d3c34fc6f97c57e10e9721da354726f0e8c829577d5dd",
@@ -103,6 +139,18 @@
    "svg": "1d288235f7cb4ec9627d3c34fc6f97c57e10e9721da354726f0e8c829577d5dd",
    "webp": "2c9d9812acb217957f48346ca455f201610fc54fd6e7098163fa67d6ecd53173",
    "og": "2d9ab7c78e7b0dedcdf904b07f5b0863359aa4bf9b1f2b9c03d168a0d66a3ded"
+  },
+  "peo-trent-1848": {
+   "work": "council-of-trent",
+   "svg": "bfe7eba5588e9d7114f6a9046ff242b9be6d2b52d9f70a5d5d6974701a578864",
+   "webp": "0d1132f06b5a267c1dde6866ed71400df97211d718c4d939fa36367b1d2b944e",
+   "og": "23e8dddcfeb61be467dca296b84cc7a1656e3c5b1ff8a89ace0f5ffe219591f8"
+  },
+  "peo-trent-1848-r2": {
+   "work": "council-of-trent",
+   "svg": "bfe7eba5588e9d7114f6a9046ff242b9be6d2b52d9f70a5d5d6974701a578864",
+   "webp": "0d1132f06b5a267c1dde6866ed71400df97211d718c4d939fa36367b1d2b944e",
+   "og": "23e8dddcfeb61be467dca296b84cc7a1656e3c5b1ff8a89ace0f5ffe219591f8"
   },
   "pg-1004": {
    "work": "divine-comedy",
@@ -770,6 +818,12 @@
    "webp": "e138bdeaf4395f95ca9a4466bb929c32e80cba90fb7dcaa3df6051169c0c6885",
    "og": "2e5f051892452f22910d279624d3e75fb478cb157d2183deacd9bde2c9a06893"
   },
+  "pga-0500731": {
+   "work": "baring-c",
+   "svg": "c89a2abf2cd8b6d66151aa15673823e1d01da5278aaafe4074f83bef252cbf7c",
+   "webp": "500bdf16104b0c6011f7ebc00d339605f4338382c34f295a99fd67fa6f4ca7f8",
+   "og": "f93fde1faa1c594e2be62ebddde12959e045060d613431655f297b77565ae7e8"
+  },
   "pga-0900401": {
    "work": "return-don-quixote",
    "svg": "4d89dc9b37e860a8a6e9cd6308c23e142903d4fe583d469960b6dcd2d71f2537",
@@ -793,6 +847,18 @@
    "svg": "b614c5c17f2e134178554f0a212df616664be02330feede76e95fc1cf88381dd",
    "webp": "5c2176447c05905d53f6c94e56d05d6137d63397f759e430e0a22b50273fd4fa",
    "og": "caeef0740cd38ecb8682a380e4e354550aec4eceae05d72b37952a7b40e8bb97"
+  },
+  "pga-0900731": {
+   "work": "sword-of-wood",
+   "svg": "704dfec6fd236986b375c1f9fac7c126f1448138ad6dbb22b866da0e485a0c8e",
+   "webp": "b620edfc931c7a5e87b48285e1ea31d141f72c705265a2145fc92def2377d05d",
+   "og": "d7c3f61e793d184b58acf98f9dd85681cff8eb1b38b615e8de90d9b8eb2b3712"
+  },
+  "pga-1100451": {
+   "work": "walsh-worlds-debt-catholic-church",
+   "svg": "1787acc010cd0edbd3ed9432a28aa1d422722493e6cc17741f8811beef90a082",
+   "webp": "a75226d595798f889848ac6caff9f723bfecf8d7f84939bad2e26d0c78afcb1b",
+   "og": "3e76e474c6d32be106c303b47084ff6e552948fb4eadca237a40533c4e5d351e"
   },
   "se-incredulity-father-brown": {
    "work": "incredulity-father-brown",

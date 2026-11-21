@@ -137,7 +137,9 @@ def reading_block(edition, text, index, anchor=False):
     role = block_role(edition, index)
     cls = ' '.join(x for x in (('reading-' + role) if role else '', 'reading-verse' if verse else 'reading-prose' if prose else '',
                                # a heading that already names itself ("CHAPTER I.", "Part I") gets no second label
-                               'ch-named' if role == 'chapter' and NAMED.match(text) else '') if x)
+                               'ch-named' if role == 'chapter' and NAMED.match(text) else '',
+                               # a block that opens with an editorial mark such as "[Page 53]" gets no drop cap (Trent, 2026-11-20)
+                               'lead-mark' if text.startswith('[Page ') and not role else '') if x)
     if verse:
         starts = verse['lineStarts'] + [len(text)]
         content = ''.join('<span class="verse-line">'+html.escape(text[a:b])+'</span>' for a, b in zip(starts, starts[1:]))

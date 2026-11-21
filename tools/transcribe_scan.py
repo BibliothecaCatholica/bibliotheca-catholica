@@ -247,6 +247,26 @@ def bounded(paras, e):
     return paras[a:b + 1]
 
 
+def join_lines(p, V):
+    """One paragraph's OCR lines as one string: line-end hyphens and lost hyphens resolved by the vocabulary."""
+    text = ''
+    for line in p:
+        head = text.rsplit(' ', 1)[-1] if text else ''
+        tail = line.split(' ', 1)[0]
+        if text.endswith(HYPHENS) and line[:1].islower():
+            joined = re.sub(r'[^A-Za-zæœ]', '', head + tail)
+            text = text[:-1] + line if known(joined, V) else text[:-1] + '-' + line
+        elif (head.isalpha() and (tc := re.sub(r"[^A-Za-z]+$", '', tail)).isalpha() and tc[:1].islower()
+              and (not known(head, V) and not known(tc, V) and known(head + tc, V)
+                   or V.get((head + tc).lower(), 0) >= 3 and (not known(head, V) or not known(tc, V)))):
+            # OCR lost the line-end hyphen: neither half is a word and the whole is; or one half is not a word and the
+            # whole is a common one ("imagina" / "tion", "per" / "formances"; November 21, 2026)
+            text = text + line
+        else:
+            text = (text + ' ' + line).strip()
+    return text
+
+
 def build(e, cache, V):
     xml, meta = fetch(e['ia'], cache)
     root = ET.fromstring(xml)
@@ -307,18 +327,7 @@ def build(e, cache, V):
     verified = set(e.get('verifiedWords', []))
     out = []
     for p in paras:
-        text = ''
-        for line in p:
-            head = text.rsplit(' ', 1)[-1] if text else ''
-            tail = line.split(' ', 1)[0]
-            if text.endswith(HYPHENS) and line[:1].islower():
-                joined = re.sub(r'[^A-Za-zæœ]', '', head + tail)
-                text = text[:-1] + line if known(joined, V) else text[:-1] + '-' + line
-            elif (head.isalpha() and tail.isalpha() and tail[:1].islower() and not known(head, V)
-                  and not known(tail, V) and known(head + tail, V)):
-                text = text + line  # OCR lost the line-end hyphen: neither half is a word, the whole is
-            else:
-                text = (text + ' ' + line).strip()
+        text = join_lines(p, V)
         text = re.sub(r'\s+([,;:.!?])', r'\1', re.sub(r'\s+', ' ', text))
         text, nj = re.subn(r'(?<=[A-Za-z]) j(?= [a-z])', ';', text)  # a semicolon the OCR read as a lone "j"
         corrections.extend({'ocr': 'j', 'reading': ';'} for _ in range(nj))

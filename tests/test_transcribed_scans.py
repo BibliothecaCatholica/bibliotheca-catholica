@@ -87,6 +87,16 @@ class Layout(unittest.TestCase):
                 self.assertEqual(set(f), {'leaf', 'page', 'ocr', 'reading'}, r['id'])
                 self.assertNotEqual(f['ocr'], f['reading'], r['id'])
 
+    def test_lost_line_end_hyphen_rejoined_when_the_whole_is_common(self):
+        # Samuel Johnson's scan drops every line-end hyphen: "the imagina" / "tion to riot" is one word, even though
+        # "tion" occurs in other texts; a known first half is never joined
+        v = {'imagination': 5, 'tion': 2, 'the': 99, 'and': 99, 'to': 99, 'riot': 4, 'suffer': 9, 'in': 99, 'at': 99}
+        self.assertEqual(T.join_lines(['and suffer the imagina', 'tion to riot'], v), 'and suffer the imagination to riot')
+        self.assertEqual(T.join_lines(['to riot', 'at the'], v), 'to riot at the')
+        v.update({'per': 50, 'performances': 4})
+        self.assertEqual(T.join_lines(['the per', 'formances of'], dict(v, of=99)), 'the performances of')
+        self.assertEqual(T.join_lines(['to the imagina', 'tion. Then'], dict(v, then=9)), 'to the imagination. Then')  # punctuation after
+
     def test_one_article_is_cut_from_shared_pages(self):
         paras = [['ADULTS ends here.'], ['Advent (Lat. ad-venio, to', 'come to) begins.'], ['More.'], ['Francis', 'Mershman.'], ['Adventists.']]
         e = {'startsWith': 'Advent (Lat. ad-venio', 'endsWith': 'Francis Mershman.'}

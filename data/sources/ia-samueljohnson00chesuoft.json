@@ -1,0 +1,1153 @@
+{
+  "id": "ia-samueljohnson00chesuoft",
+  "kind": "ocr-transcription",
+  "title": "Samuel Johnson (The Regent Library)",
+  "author": "G. K. Chesterton",
+  "rights": "Public domain in the USA. First published 1911 (London: Herbert and Daniel, The Regent Library), selections by Alice Meynell with an introduction by G. K. Chesterton; the scanned printing is of 1911.",
+  "rightsBasis": "pd-date",
+  "volumes": [
+    {
+      "identifier": "samueljohnson00chesuoft",
+      "url": "https://archive.org/details/samueljohnson00chesuoft",
+      "year": 1911,
+      "publisher": "London : Herbert & Daniel",
+      "ocr": "samueljohnson00chesuoft_djvu.xml",
+      "ocrSha256": "54e1568a9a9da74e8f9443665facc57d9df2db73a00477216440408e87569aee",
+      "leaves": [
+        8,
+        290
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed. 14 misreadings corrected by hand against the page images of this scan, each listed in handFixes; no wording was taken from another edition. 21 words the vocabulary does not know (names, Latin, and foreign titles) were checked by hand against the page images and are listed in verifiedWords.",
+  "words": 55808,
+  "unknownWords": 218,
+  "readRate": 0.9961,
+  "flaggedBlocks": 155,
+  "flagged": [
+    {
+      "block": 4,
+      "words": [
+        "Maddox"
+      ]
+    },
+    {
+      "block": 53,
+      "words": [
+        "tude"
+      ]
+    },
+    {
+      "block": 58,
+      "words": [
+        "istic"
+      ]
+    },
+    {
+      "block": 59,
+      "words": [
+        "sonian"
+      ]
+    },
+    {
+      "block": 60,
+      "words": [
+        "ging"
+      ]
+    },
+    {
+      "block": 61,
+      "words": [
+        "Tohnson"
+      ]
+    },
+    {
+      "block": 73,
+      "words": [
+        "methodize",
+        "lexicography,"
+      ]
+    },
+    {
+      "block": 96,
+      "words": [
+        "inadvertency"
+      ]
+    },
+    {
+      "block": 97,
+      "words": [
+        "lexi"
+      ]
+    },
+    {
+      "block": 98,
+      "words": [
+        "nee",
+        "vttia,",
+        "commensality",
+        "faralogical"
+      ]
+    },
+    {
+      "block": 100,
+      "words": [
+        "temerities",
+        "ardentia^"
+      ]
+    },
+    {
+      "block": 105,
+      "words": [
+        "proemial"
+      ]
+    },
+    {
+      "block": 108,
+      "words": [
+        "xrrijota",
+        "aV,"
+      ]
+    },
+    {
+      "block": 114,
+      "words": [
+        "Concurritur",
+        "horae",
+        "venitj"
+      ]
+    },
+    {
+      "block": 127,
+      "words": [
+        "Mancha"
+      ]
+    },
+    {
+      "block": 129,
+      "words": [
+        "momentaneous"
+      ]
+    },
+    {
+      "block": 130,
+      "words": [
+        "cathartics"
+      ]
+    },
+    {
+      "block": 132,
+      "words": [
+        "Laudis",
+        "piacula,",
+        "recreare"
+      ]
+    },
+    {
+      "block": 137,
+      "words": [
+        "meditare",
+        "canoros."
+      ]
+    },
+    {
+      "block": 144,
+      "words": [
+        "amaranthine"
+      ]
+    },
+    {
+      "block": 149,
+      "words": [
+        "Astrea,"
+      ]
+    },
+    {
+      "block": 168,
+      "words": [
+        "grandizing"
+      ]
+    },
+    {
+      "block": 169,
+      "words": [
+        "metalline"
+      ]
+    },
+    {
+      "block": 174,
+      "words": [
+        "ticements"
+      ]
+    },
+    {
+      "block": 181,
+      "words": [
+        "Phyllis,",
+        "Belinda,",
+        "Batson",
+        "Chloris",
+        "Plowden",
+        "Euphelia"
+      ]
+    },
+    {
+      "block": 182,
+      "words": [
+        "playhouse,"
+      ]
+    },
+    {
+      "block": 189,
+      "words": [
+        "improveable"
+      ]
+    },
+    {
+      "block": 190,
+      "words": [
+        "adscititious",
+        "casualty,"
+      ]
+    },
+    {
+      "block": 202,
+      "words": [
+        "Sardinian"
+      ]
+    },
+    {
+      "block": 209,
+      "words": [
+        "tributors"
+      ]
+    },
+    {
+      "block": 214,
+      "words": [
+        "prickles,"
+      ]
+    },
+    {
+      "block": 234,
+      "words": [
+        "Cheke,",
+        "Gardiner;",
+        "Haddon,"
+      ]
+    },
+    {
+      "block": 236,
+      "words": [
+        "sipidity",
+        "Palmerin"
+      ]
+    },
+    {
+      "block": 238,
+      "words": [
+        "Gamelyn^"
+      ]
+    },
+    {
+      "block": 247,
+      "words": [
+        "enterprize"
+      ]
+    },
+    {
+      "block": 250,
+      "words": [
+        "deprava"
+      ]
+    },
+    {
+      "block": 252,
+      "words": [
+        "encomiasts,"
+      ]
+    },
+    {
+      "block": 269,
+      "words": [
+        "meliorate,",
+        "drossy"
+      ]
+    },
+    {
+      "block": 277,
+      "words": [
+        "Soame",
+        "Jenyns."
+      ]
+    },
+    {
+      "block": 279,
+      "words": [
+        "exacerbation"
+      ]
+    },
+    {
+      "block": 285,
+      "words": [
+        "annuities;"
+      ]
+    },
+    {
+      "block": 288,
+      "words": [
+        "injected"
+      ]
+    },
+    {
+      "block": 309,
+      "words": [
+        "obtrusion."
+      ]
+    },
+    {
+      "block": 317,
+      "words": [
+        "cer-"
+      ]
+    },
+    {
+      "block": 324,
+      "words": [
+        "defecated"
+      ]
+    },
+    {
+      "block": 325,
+      "words": [
+        "longae",
+        "spatia"
+      ]
+    },
+    {
+      "block": 336,
+      "words": [
+        "Abissinia."
+      ]
+    },
+    {
+      "block": 339,
+      "words": [
+        "Amhara,"
+      ]
+    },
+    {
+      "block": 352,
+      "words": [
+        "culated",
+        "privacies"
+      ]
+    },
+    {
+      "block": 355,
+      "words": [
+        "excogitation"
+      ]
+    },
+    {
+      "block": 358,
+      "words": [
+        "expen"
+      ]
+    },
+    {
+      "block": 370,
+      "words": [
+        "contexture,"
+      ]
+    },
+    {
+      "block": 372,
+      "words": [
+        "indiscerptible.\""
+      ]
+    },
+    {
+      "block": 379,
+      "words": [
+        "Raasay"
+      ]
+    },
+    {
+      "block": 387,
+      "words": [
+        "precipit",
+        "corrosion"
+      ]
+    },
+    {
+      "block": 393,
+      "words": [
+        "bility,"
+      ]
+    },
+    {
+      "block": 401,
+      "words": [
+        "discordia",
+        "concors;"
+      ]
+    },
+    {
+      "block": 403,
+      "words": [
+        "exility"
+      ]
+    },
+    {
+      "block": 412,
+      "words": [
+        "Arethuse"
+      ]
+    },
+    {
+      "block": 413,
+      "words": [
+        "Hervey,"
+      ]
+    },
+    {
+      "block": 416,
+      "words": [
+        "Phcebus,"
+      ]
+    },
+    {
+      "block": 420,
+      "words": [
+        "sublimate"
+      ]
+    },
+    {
+      "block": 421,
+      "words": [
+        "hadaccustomed"
+      ]
+    },
+    {
+      "block": 428,
+      "words": [
+        "&gt;",
+        "&gt;"
+      ]
+    },
+    {
+      "block": 435,
+      "words": [
+        "iexcellent"
+      ]
+    },
+    {
+      "block": 438,
+      "words": [
+        "Walmsley,"
+      ]
+    },
+    {
+      "block": 444,
+      "words": [
+        "Wagstaffe,"
+      ]
+    },
+    {
+      "block": 445,
+      "words": [
+        "impracticably"
+      ]
+    },
+    {
+      "block": 463,
+      "words": [
+        "rous"
+      ]
+    },
+    {
+      "block": 469,
+      "words": [
+        "&gt;",
+        "&gt;"
+      ]
+    },
+    {
+      "block": 472,
+      "words": [
+        "inconse"
+      ]
+    },
+    {
+      "block": 474,
+      "words": [
+        "interception"
+      ]
+    },
+    {
+      "block": 475,
+      "words": [
+        "Delany"
+      ]
+    },
+    {
+      "block": 480,
+      "words": [
+        "superstructed?"
+      ]
+    },
+    {
+      "block": 485,
+      "words": [
+        "amplifies,",
+        "condense"
+      ]
+    },
+    {
+      "block": 491,
+      "words": [
+        "Corbet"
+      ]
+    },
+    {
+      "block": 499,
+      "words": [
+        "oblitus",
+        "obliviscendus"
+      ]
+    },
+    {
+      "block": 503,
+      "words": [
+        "obis"
+      ]
+    },
+    {
+      "block": 505,
+      "words": [
+        "pouns"
+      ]
+    },
+    {
+      "block": 508,
+      "words": [
+        "encrease"
+      ]
+    },
+    {
+      "block": 512,
+      "words": [
+        "Strahan,"
+      ]
+    },
+    {
+      "block": 530,
+      "words": [
+        "repairable"
+      ]
+    },
+    {
+      "block": 541,
+      "words": [
+        "rnends,"
+      ]
+    },
+    {
+      "block": 545,
+      "words": [
+        "carior^"
+      ]
+    },
+    {
+      "block": 547,
+      "words": [
+        "&gt;"
+      ]
+    },
+    {
+      "block": 552,
+      "words": [
+        "dearment."
+      ]
+    },
+    {
+      "block": 557,
+      "words": [
+        "deficience"
+      ]
+    },
+    {
+      "block": 564,
+      "words": [
+        "Herschel"
+      ]
+    },
+    {
+      "block": 566,
+      "words": [
+        "udgment."
+      ]
+    },
+    {
+      "block": 569,
+      "words": [
+        "i8th"
+      ]
+    },
+    {
+      "block": 573,
+      "words": [
+        "Chene,",
+        "errours"
+      ]
+    },
+    {
+      "block": 576,
+      "words": [
+        "supervenient"
+      ]
+    },
+    {
+      "block": 577,
+      "words": [
+        "zjt/?,"
+      ]
+    },
+    {
+      "block": 578,
+      "words": [
+        "^hrale"
+      ]
+    },
+    {
+      "block": 580,
+      "words": [
+        "Moisy",
+        "Vesey",
+        "Wraxal",
+        "frisks,"
+      ]
+    },
+    {
+      "block": 582,
+      "words": [
+        "fib.",
+        "gypsey",
+        "Branghton."
+      ]
+    },
+    {
+      "block": 607,
+      "words": [
+        "irremeable"
+      ]
+    },
+    {
+      "block": 616,
+      "words": [
+        "erspread",
+        "rous"
+      ]
+    },
+    {
+      "block": 621,
+      "words": [
+        "madded",
+        "sculks"
+      ]
+    },
+    {
+      "block": 622,
+      "words": [
+        "ioy;"
+      ]
+    },
+    {
+      "block": 629,
+      "words": [
+        "dedicator"
+      ]
+    },
+    {
+      "block": 632,
+      "words": [
+        "septennial"
+      ]
+    },
+    {
+      "block": 634,
+      "words": [
+        "eize."
+      ]
+    },
+    {
+      "block": 638,
+      "words": [
+        "Wentworth,"
+      ]
+    },
+    {
+      "block": 639,
+      "words": [
+        "effuse"
+      ]
+    },
+    {
+      "block": 640,
+      "words": [
+        "Lydiat"
+      ]
+    },
+    {
+      "block": 641,
+      "words": [
+        "glitt"
+      ]
+    },
+    {
+      "block": 654,
+      "words": [
+        "theirpower"
+      ]
+    },
+    {
+      "block": 656,
+      "words": [
+        "Pultowa"
+      ]
+    },
+    {
+      "block": 666,
+      "words": [
+        "Croatian,"
+      ]
+    },
+    {
+      "block": 673,
+      "words": [
+        "treach",
+        "rous"
+      ]
+    },
+    {
+      "block": 675,
+      "words": [
+        "Consciencecheers;"
+      ]
+    },
+    {
+      "block": 678,
+      "words": [
+        "Maryborough"
+      ]
+    },
+    {
+      "block": 705,
+      "words": [
+        "Durfeys,"
+      ]
+    },
+    {
+      "block": 720,
+      "words": [
+        "laureat",
+        "Miltonian"
+      ]
+    },
+    {
+      "block": 722,
+      "words": [
+        "Distrest"
+      ]
+    },
+    {
+      "block": 726,
+      "words": [
+        "begg"
+      ]
+    },
+    {
+      "block": 731,
+      "words": [
+        "doat"
+      ]
+    },
+    {
+      "block": 732,
+      "words": [
+        "tected.",
+        "drest"
+      ]
+    },
+    {
+      "block": 746,
+      "words": [
+        "unrefin"
+      ]
+    },
+    {
+      "block": 747,
+      "words": [
+        "hov"
+      ]
+    },
+    {
+      "block": 749,
+      "words": [
+        "retir"
+      ]
+    },
+    {
+      "block": 768,
+      "words": [
+        "i2mo."
+      ]
+    },
+    {
+      "block": 777,
+      "words": [
+        "Blagdon."
+      ]
+    },
+    {
+      "block": 780,
+      "words": [
+        "(Routledgc"
+      ]
+    },
+    {
+      "block": 787,
+      "words": [
+        "Lobo."
+      ]
+    },
+    {
+      "block": 796,
+      "words": [
+        "lamo."
+      ]
+    },
+    {
+      "block": 801,
+      "words": [
+        "1789,!793-99&gt;",
+        "&gt;",
+        "I8l",
+        "7&gt;",
+        "3&gt;"
+      ]
+    },
+    {
+      "block": 804,
+      "words": [
+        "&gt;",
+        "I8l8",
+        "&gt;",
+        "55&gt;"
+      ]
+    },
+    {
+      "block": 805,
+      "words": [
+        "Bengalee,"
+      ]
+    },
+    {
+      "block": 806,
+      "words": [
+        "I8oi",
+        "&gt;",
+        "4&gt;",
+        "&gt;",
+        "&gt;",
+        "I86o",
+        "&gt;",
+        "7&gt;"
+      ]
+    },
+    {
+      "block": 810,
+      "words": [
+        "I2mo."
+      ]
+    },
+    {
+      "block": 821,
+      "words": [
+        "I2mo."
+      ]
+    },
+    {
+      "block": 825,
+      "words": [
+        "I2mo."
+      ]
+    },
+    {
+      "block": 826,
+      "words": [
+        "I2mo."
+      ]
+    },
+    {
+      "block": 829,
+      "words": [
+        "izmo."
+      ]
+    },
+    {
+      "block": 840,
+      "words": [
+        "Stanhope,"
+      ]
+    },
+    {
+      "block": 843,
+      "words": [
+        ")&gt;",
+        "&gt;"
+      ]
+    },
+    {
+      "block": 846,
+      "words": [
+        "Duppa."
+      ]
+    },
+    {
+      "block": 848,
+      "words": [
+        "i6mo."
+      ]
+    },
+    {
+      "block": 853,
+      "words": [
+        "Blackie's"
+      ]
+    },
+    {
+      "block": 857,
+      "words": [
+        "Blackie's"
+      ]
+    },
+    {
+      "block": 870,
+      "words": [
+        "Elzevir"
+      ]
+    },
+    {
+      "block": 871,
+      "words": [
+        "i6mo."
+      ]
+    },
+    {
+      "block": 873,
+      "words": [
+        "Adelung",
+        "Buckland",
+        "Arblay),",
+        "Hazlitfs",
+        "Johnsorfs",
+        "Hobhouse",
+        "Mezieres",
+        "anglaise,"
+      ]
+    },
+    {
+      "block": 877,
+      "words": [
+        "Zobel"
+      ]
+    },
+    {
+      "block": 881,
+      "words": [
+        "(Kearsley"
+      ]
+    },
+    {
+      "block": 884,
+      "words": [
+        "Opie."
+      ]
+    },
+    {
+      "block": 885,
+      "words": [
+        "Bosland,"
+      ]
+    },
+    {
+      "block": 889,
+      "words": [
+        "Nollekens,"
+      ]
+    },
+    {
+      "block": 891,
+      "words": [
+        "Lamborn."
+      ]
+    },
+    {
+      "block": 892,
+      "words": [
+        "Luggan."
+      ]
+    },
+    {
+      "block": 893,
+      "words": [
+        "Northcote,"
+      ]
+    },
+    {
+      "block": 919,
+      "words": [
+        "Unzuin,"
+      ]
+    },
+    {
+      "block": 921,
+      "words": [
+        "delineator"
+      ]
+    }
+  ],
+  "corrections": 4,
+  "correctionList": [
+    {
+      "ocr": "tence",
+      "reading": "fence"
+    },
+    {
+      "ocr": "lona",
+      "reading": "iona"
+    },
+    {
+      "ocr": "j",
+      "reading": ";"
+    },
+    {
+      "ocr": "scries",
+      "reading": "series"
+    }
+  ],
+  "text": "data/texts/ia-samueljohnson00chesuoft.txt",
+  "sha256": "38ccf5ecbc3b10f663791d8a105828fe674fa9ecb6a76e1ddeebb255eb4025a6",
+  "checked": "2026-11-21",
+  "handFixes": [
+    {
+      "leaf": 8,
+      "page": "leaf 8",
+      "ocr": "fHE REGENT LIBRART",
+      "reading": "THE REGENT LIBRARY"
+    },
+    {
+      "leaf": 8,
+      "page": "leaf 8",
+      "ocr": "21 3\\4addox Street",
+      "reading": "21 Maddox Street"
+    },
+    {
+      "leaf": 9,
+      "page": "leaf 9",
+      "ocr": "1700 Born, i8th September.",
+      "reading": "1709 Born, 18th September."
+    },
+    {
+      "leaf": 9,
+      "page": "leaf 9",
+      "ocr": "The Gentleman: Maga",
+      "reading": "The Gentleman's Maga-"
+    },
+    {
+      "leaf": 10,
+      "page": "leaf 10",
+      "ocr": "Smith i6S",
+      "reading": "Smith 168"
+    },
+    {
+      "leaf": 10,
+      "page": "leaf 10",
+      "ocr": "Prior iji",
+      "reading": "Prior 171"
+    },
+    {
+      "leaf": 54,
+      "page": "leaf 54",
+      "ocr": "r vr i vr v J &",
+      "reading": ""
+    },
+    {
+      "leaf": 276,
+      "page": "leaf 276",
+      "ocr": "Another edition. lovols. London, 1818. I2mo.",
+      "reading": "Another edition. 10 vols. London, 1818. 12mo."
+    },
+    {
+      "leaf": 276,
+      "page": "leaf 276",
+      "ocr": "one vol. London, 1785. I2mo.",
+      "reading": "one vol. London, 1785. 12mo."
+    },
+    {
+      "leaf": 276,
+      "page": "leaf 276",
+      "ocr": "1785. I2mo.",
+      "reading": "1785. 12mo."
+    },
+    {
+      "leaf": 277,
+      "page": "leaf 277",
+      "ocr": "1805. i6mo.",
+      "reading": "1805. 16mo."
+    },
+    {
+      "leaf": 281,
+      "page": "leaf 281",
+      "ocr": "WISHES. Blackie s",
+      "reading": "WISHES. Blackie's"
+    },
+    {
+      "leaf": 281,
+      "page": "leaf 281",
+      "ocr": "POETS. Blackie s",
+      "reading": "POETS. Blackie's"
+    },
+    {
+      "leaf": 22,
+      "page": "leaf 22",
+      "ocr": "whethei",
+      "reading": "whether"
+    }
+  ],
+  "verifiedWords": [
+    "Ingpen",
+    "Imlac",
+    "Chalmers",
+    "lexicographer",
+    "enchain",
+    "Tetty",
+    "Finden",
+    "Elphinston",
+    "Levett",
+    "Nekayah",
+    "vainqueur",
+    "equiponderant",
+    "Suspirius",
+    "modish",
+    "laceration",
+    "Abissinian",
+    "Queeny",
+    "Piozzi",
+    "Gilfillan",
+    "Stourbridge",
+    "Boswellian"
+  ]
+}

@@ -71,7 +71,7 @@ test('v18: page_path never carries a search term or Index filter, and one view h
 });
 test('v18: gaPageView sends the normalized path and location, never location.href',()=>{
  const app=fs.readFileSync('app.js','utf8');const m=/function gaPageView\(\)\{[\s\S]*?\},400\)\}/.exec(app);assert.ok(m);
- assert.match(m[0],/var hash=creditsAnchor\(\)\?'':location\.hash,raw=location\.pathname\+hash;/);assert.match(m[0],/pagePath\(hash,window\.BC_BOOT\)/);  /* /credits/ anchors (#ed-…) are not routes: no page_view, no '/ed-…/' path */assert.match(m[0],/A\.pageLocation\(path,landing\?A\.landingSearch\(location\.search,hash\):''\)/);assert.match(m[0],/page_location:loc/);
+ assert.ok(m[0].includes("var hash=/^#\\//.test(location.hash)?location.hash:'',raw=location.pathname+hash;"));assert.match(m[0],/pagePath\(hash,window\.BC_BOOT\)/);  /* plain anchors (#cite, #privacy, #ed-…) are not routes: no extra page_view, no '/cite/' or '/privacy/' path */assert.match(m[0],/A\.pageLocation\(path,landing\?A\.landingSearch\(location\.search,location\.hash\):''\)/);assert.match(m[0],/page_location:loc/);
  assert.doesNotMatch(m[0],/location\.href/);
 });
 test('v18: outbound_click carries only link_domain and link_kind',()=>{
@@ -153,7 +153,7 @@ test('spec 2026-11-03: UTM tags on the landing page_view only; never utm_term, l
  assert.equal(u,O+'/?utm_source=s&utm_campaign='+'a'.repeat(100));
  assert.equal(A.pageLocation('/','?utm_source='),O+'/');assert.equal(A.pageLocation('/','?utm_source=%E0%A4%A'),O+'/');
  // app.js passes location.search only on the first page view
- const APP=fs.readFileSync('app.js','utf8');assert.match(APP,/var landing=!gaLanded,loc=A\.pageLocation\(path,landing\?A\.landingSearch\(location\.search,hash\):''\);gaLanded=true;/);
+ const APP=fs.readFileSync('app.js','utf8');assert.match(APP,/var landing=!gaLanded,loc=A\.pageLocation\(path,landing\?A\.landingSearch\(location\.search,location\.hash\):''\);gaLanded=true;/);
  assert.doesNotMatch(SRC,/utm_term'/);
 });
 
@@ -322,4 +322,51 @@ test('QA 2026-11-21: /study/ sends exactly one page_view, in path form, and no o
  // pages.dev previews send nothing
  const p=load(true,false,'x.pages.dev');p.ctx.BC_BOOT='study';let r=null;p.ctx.document={title:'t',addEventListener:(n,f)=>{r=f}};
  vm.runInNewContext(inline[0],p.ctx);r();assert.equal(p.calls.filter(c=>c[0]==='event').length,0);
+});
+
+test('2026-11-21: a hash is a route only when it starts with #/',()=>{
+ const {A}=load(false);
+ assert.equal(A.isRouteHash('#/library'),true);
+ assert.equal(A.isRouteHash('#/work/orthodoxy'),true);
+ assert.equal(A.isRouteHash('#cite'),false);
+ assert.equal(A.isRouteHash('#privacy'),false);
+ assert.equal(A.isRouteHash('#passages'),false);
+ assert.equal(A.isRouteHash('#ed-pg-130'),false);
+ assert.equal(A.isRouteHash(''),false);
+ assert.equal(A.pagePath('#cite','study'),'/study/');
+ assert.equal(A.pagePath('#privacy','policy'),'/policy/');
+ assert.equal(A.pagePath('#passages','study'),'/study/');
+ assert.equal(A.pagePath('#/library'),'/library/');
+ assert.equal(A.pagePath('#/library','study'),'/library/');
+ assert.equal(A.pagePath('','study'),'/study/');
+ // without a boot route, a plain anchor is not turned into a path
+ assert.equal(A.pagePath('#cite'),'/');
+ assert.equal(A.pagePath('#privacy'),'/');
+ // context() on /study/#cite and /policy/#privacy stays on the real page
+ const c=load(false);c.ctx.BC_BOOT='study';c.ctx.location.hash='#cite';c.ctx.location.pathname='/study/';c.ctx.document={title:'Study desk · Bibliotheca Catholica'};
+ assert.equal(c.A.context().path,'/study/');
+ assert.equal(c.A.context().location,'https://bibliothecacatholica.com/study/');
+ const pol=load(false);pol.ctx.BC_BOOT='policy';pol.ctx.location.hash='#privacy';pol.ctx.location.pathname='/policy/';pol.ctx.document={title:'Fidelity & Editorial Policy · Bibliotheca Catholica'};
+ assert.equal(pol.A.context().path,'/policy/');
+ assert.equal(pol.A.context().location,'https://bibliothecacatholica.com/policy/');
+ assert.doesNotMatch(pol.A.context().location,/\/privacy\//);
+});
+test('2026-11-21: /study/#cite affiliate clicks keep page location /study/, not /cite/',()=>{
+ const link=(href,attrs)=>{const a={getAttribute:k=>k==='href'?href:(attrs||{})[k]||null,closest:sel=>sel==='a[href]'?a:null,classList:{contains:()=>false}};return a};
+ const {A,calls,ctx}=load(true);ctx.BC_BOOT='study';ctx.BC_CLICK_KINDS=['affiliate'];
+ Object.assign(ctx.location,{pathname:'/study/',hash:'#cite'});
+ ctx.document={title:'Study desk · Bibliotheca Catholica'};
+ A.onClick({target:link('https://www.magisterium.com/pro/micah')});
+ const ev=calls.filter(c=>c[0]==='event');
+ assert.deepEqual(ev,[['event','outbound_click',{link_domain:'magisterium.com',link_kind:'affiliate'}]]);
+ assert.deepEqual(calls.filter(c=>c[0]==='set')[0],['set',{page_title:'Study desk · Bibliotheca Catholica',page_location:'https://bibliothecacatholica.com/study/'}]);
+ assert.equal(A.pagePath(ctx.location.hash,ctx.BC_BOOT),'/study/');
+});
+test('2026-11-21: gaPageView ignores plain-anchor hash changes, so /policy/#privacy does not send /privacy/',()=>{
+ const app=fs.readFileSync('app.js','utf8');const m=/function gaPageView\(\)\{[\s\S]*?\},400\)\}/.exec(app);assert.ok(m);
+ // only hashes that start with #/ enter the raw URL used for dedupe and pagePath
+ assert.ok(m[0].includes("var hash=/^#\\//.test(location.hash)?location.hash:'',"));
+ assert.match(m[0],/raw=location\.pathname\+hash/);
+ // a policy (or study, or credits) in-page anchor does not appear as a path
+ assert.doesNotMatch(m[0],/creditsAnchor\(\)\?'':location\.hash/);
 });

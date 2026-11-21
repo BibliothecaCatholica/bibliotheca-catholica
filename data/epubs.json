@@ -157,6 +157,12 @@
    "sha256": "30a00c84d13cbec7f176f2baef74f277c9a0f1fa830e3fe3483dbb91bf80114f",
    "size": 501326
   },
+  "pg-61758": {
+   "work": "irish-impressions",
+   "path": "downloads/epub/irish-impressions-pg-61758.a504a5f1deec.epub",
+   "sha256": "a504a5f1deec2d8b9bb98c50840fd1c387a19c2e98c61916639673bf61352a9f",
+   "size": 276496
+  },
   "pg-8120": {
    "work": "life-of-teresa",
    "path": "downloads/epub/life-of-teresa-pg-8120.748e44a9f8b9.epub",
@@ -217,6 +223,12 @@
    "sha256": "1a089a0fbbcb54e7aa410e0493096e438abd28e7b177cae9608f80080e640b89",
    "size": 566432
   },
+  "pga-0900631": {
+   "work": "robert-louis-stevenson-1927",
+   "path": "downloads/epub/robert-louis-stevenson-1927-pga-0900631.6c3fd6f06c1b.epub",
+   "sha256": "6c3fd6f06c1b524b3143c3bb55203026fd1a4097e64a63ca2fde1ee719bfd5b4",
+   "size": 263882
+  },
   "pg-70175": {
    "work": "secret-father-brown",
    "path": "downloads/epub/secret-father-brown-pg-70175.ec6dc658fba4.epub",
@@ -258,6 +270,12 @@
    "path": "downloads/epub/whats-wrong-world-pg-1717.01af330b7045.epub",
    "sha256": "01af330b70459f82d2953c6c034d63a5cf0eb69dac8680456e4840561329b126",
    "size": 409025
+  },
+  "pga-0900441": {
+   "work": "william-cobbett",
+   "path": "downloads/epub/william-cobbett-pga-0900441.c77e85e111a1.epub",
+   "sha256": "c77e85e111a1d0e1655361255eab03600e28d028f798fe24557cab44608a0523",
+   "size": 281161
   },
   "pg-223": {
    "work": "wisdom-father-brown",

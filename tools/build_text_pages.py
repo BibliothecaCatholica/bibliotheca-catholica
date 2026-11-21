@@ -78,6 +78,10 @@ PART_D={
     'charles-dickens-critical-study':{'about':'Project Gutenberg #68682: first published in 1906; the transcribed copy is the Dodd, Mead & Company, New York printing of 1911. Twelve chapters, divided as the hosted text heads them; no words were changed.'},
     'poet-and-lunatics':{'about':'Project Gutenberg Australia #0900711: first published in 1929. Eight stories of Gabriel Gale, divided as the hosted text heads them; no words were changed.'},
     'return-don-quixote':{'about':'Project Gutenberg Australia #0900401: first published in 1927. Nineteen chapters, divided as the hosted text heads them; no words were changed.'},
+    # Chesterton polish batch 3 (November 21, 2026). Each sentence restates the edition's record and its map.
+    'william-cobbett':{'about':'Project Gutenberg Australia #0900441: first published in 1925. Seven chapters, divided as the hosted text heads them; no words were changed.'},
+    'robert-louis-stevenson-1927':{'about':'Project Gutenberg Australia #0900631: first published in 1927. Ten chapters, divided as the hosted text heads them; no words were changed.'},
+    'irish-impressions':{'about':'Project Gutenberg #61758: first published in 1919; the transcribed copy is the second impression (Collins, London, January 1920). Nine chapters, divided as the hosted text heads them; no words were changed.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

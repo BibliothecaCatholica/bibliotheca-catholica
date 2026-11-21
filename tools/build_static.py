@@ -172,12 +172,13 @@ CC_BY_SA='https://creativecommons.org/licenses/by-sa/4.0/'
 def a(href,label,ext=False):
     return '<a href="'+E(href)+'"'+(' target="_blank" rel="noopener"' if ext else '')+'>'+E(label)+'</a>'
 TAN_REFERRAL='https://lddy.no/1qbrw'
-def resource_li(r):
+def resource_li(r, ask=False):
     # Affiliate preview: the libraries Publishers entry uses the TAN LeadDyno referral link, with the same
     # "Browse TAN Books" label, rel="noopener sponsored", as work pages (tools/build_print_editions.py).
     if r.get('url')==TAN_REFERRAL:
         return '<li>'+E(r['name'])+': <a href="'+E(r['url'])+'" target="_blank" rel="noopener sponsored">Browse TAN Books ↗</a>: '+E(r.get('desc',''))+'</li>'
-    return '<li>'+a(r['url'],r['name'],True)+': '+E(r.get('desc',''))+'</li>'
+    btn=(' '+study_partner.ask_button()) if ask and study_partner.is_vatican_url(r.get('url') or '') else ''
+    return '<li>'+a(r['url'],r['name'],True)+btn+': '+E(r.get('desc',''))+'</li>'
 def years(au):
     b,d=au.get('born'),au.get('died')
     f=lambda y:(str(-y)+' BC' if y<0 else str(y)) if isinstance(y,int) else ''
@@ -201,7 +202,7 @@ def write_home(tpl,counts,snapshot):
         return w['id'],w['title']
     people=[(i,hubA[i]['name'],(hubA[i].get('dshow') or (str(hubA[i]['born'])+'–'+str(hubA[i]['died']) if hubA[i].get('born') and hubA[i].get('died') else '')))+begin(i) for i in site_copy.HOME_PEOPLE if i in have and i in hubA]
     paths=site_copy.home_paths(counts,people)
-    home='<!-- static-home:start --><div class="static-prerender">'+hero+paths+about+site_copy.home_newsletter()+'</div><!-- static-home:end -->'
+    home='<!-- static-home:start --><div class="static-prerender">'+hero+paths+about+study_partner.ask_block('home')+site_copy.home_newsletter()+'</div><!-- static-home:end -->'
     s=tpl
     assert '<!-- static-home:start -->' in s,'index.html <main> must contain the static-home markers'
     s=HOME_RE.sub(lambda m:home,s,count=1)
@@ -213,7 +214,7 @@ def write_home(tpl,counts,snapshot):
     org={'@context':'https://schema.org','@type':'Organization','@id':SITE+'#organization','name':NAME,'url':SITE,'logo':OG_IMAGE,'sameAs':SAME_AS}
     web={'@context':'https://schema.org','@type':'WebSite','@id':SITE+'#website','name':NAME,'url':SITE,'description':HOME_DESC,'inLanguage':'en','publisher':{'@id':SITE+'#organization'}}
     s=LD_RE.sub('',s).replace('</head>','<!-- jsonld:start -->'+ld(web)+ld(org)+'<!-- jsonld:end -->\n</head>',1)
-    js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'acta':site_copy.acta_source(),'home':about,'hero':hero,'paths':paths,'about':site_copy.about_page(counts),'newsletter':site_copy.newsletter_box(),'homeNewsletter':site_copy.home_newsletter(),'disclosure':disclosure_html(),'studyPartner':study_partner.panel('magisterium'),'supportTools':study_partner.support_note(),'portraits':portrait_ids(),'pageArt':{k:site_copy.art_figure(k) for k in site_copy.PAGE_ART}},ensure_ascii=False,separators=(',',':'))+';\n'
+    js='window.SITE_COPY='+json.dumps({'homeTitle':HOME_TITLE,'homeDesc':HOME_DESC,'acta':site_copy.acta_source(),'home':about,'hero':hero,'paths':paths,'about':site_copy.about_page(counts),'newsletter':site_copy.newsletter_box(),'homeNewsletter':site_copy.home_newsletter(),'disclosure':disclosure_html(),'studyPartner':study_partner.panel('magisterium'),'supportTools':study_partner.support_note(),'studyAsks':study_partner.ask_blocks(),'bookAsks':study_partner.book_panels(),'whyMagisterium':study_partner.why_page(),'askButton':study_partner.ask_button(),'portraits':portrait_ids(),'pageArt':{k:site_copy.art_figure(k) for k in site_copy.PAGE_ART}},ensure_ascii=False,separators=(',',':'))+';\n'
     (ROOT/'data/site-copy.js').write_text(js)
     s=re.sub(r'data/site-copy\.js\?v=[0-9a-f]*','data/site-copy.js?v='+hashlib.sha256(js.encode()).hexdigest()[:10],s)
     s=re.sub(r'data/text-pages\.js\?v=[0-9a-f]*','data/text-pages.js?v='+hashlib.sha256((ROOT/'data/text-pages.js').read_bytes()).hexdigest()[:10],s)  # deep-link gaps: content token
@@ -748,7 +749,7 @@ def main():
         hosted=any(e.get('text') for e in w['editions'])
         by=byline(w)
         ra=RA.get(w['id']);ra_note=ra_note_html(ra,libw,True) if ra and w['id'] in ra.get('noteWorks',[]) else ''
-        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d).replace('<div class="page-head">','<div class="page-head work-head has-cover">'+cover_img(hosted_ed(w),'work-cover',220,False),1 if hosted else 0)+'<p>By '+by+'. '+('Not yet available online.' if w.get('status')=='not-yet-available' else E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.')))+'</p>'+ra_note+part_d_html(w,TPD.get(w['id'],{}).get('partD'))+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+(summa_work_html(SUMMA) if SUMMA and w['id']==SUMMA['work'] else '')+series_html(w,lib,TPD)+(PE['works'][w['id']]['html'] if w['id'] in PE['works'] else '')+work_related(w)+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
+        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d).replace('<div class="page-head">','<div class="page-head work-head has-cover">'+cover_img(hosted_ed(w),'work-cover',220,False),1 if hosted else 0)+'<p>By '+by+'. '+('Not yet available online.' if w.get('status')=='not-yet-available' else E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.')))+'</p>'+ra_note+part_d_html(w,TPD.get(w['id'],{}).get('partD'))+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+(summa_work_html(SUMMA) if SUMMA and w['id']==SUMMA['work'] else '')+series_html(w,lib,TPD)+(PE['works'][w['id']]['html'] if w['id'] in PE['works'] else '')+work_related(w)+(study_partner.book_panel(w['id']) if w['id'] in study_partner.BOOK_WORKS else '')+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
         book={'@context':'https://schema.org','@type':'Book','name':w['title'],'url':SITE+'work/'+w['id']+'/','author':{'@type':'Person','name':w['author']},'description':d,'genre':w['category']}
         if w.get('authorId') in auth_ids:book['author']['url']=SITE+'author/'+w['authorId']+'/'
         elif w['id'] in RA:book['author']['url']=SITE+'author/'+RA[w['id']]['id']+'/'
@@ -805,7 +806,7 @@ def main():
         extra=''
         if k in('scripture','magisterium','references','media','libraries','prayers'):
             rows=[r for r in hub['resources'] if r['section']==k]
-            extra='<ul>'+''.join(resource_li(r) for r in rows)+'</ul>'
+            extra='<ul>'+''.join(resource_li(r, ask=(k=='magisterium')) for r in rows)+'</ul>'
             if any(r.get('url')==TAN_REFERRAL for r in rows):extra+=PE['disclosure']
         if k=='libraries':
             from library_desk import desk_html
@@ -827,6 +828,8 @@ def main():
         elif k=='reading':extra='<h2>Reading plans</h2><ul>'+''.join('<li>'+a('/reading/'+P['id']+'/',P['t']+' ('+str(len(P['days']))+' days, '+PLAN_SPAN(P)+')')+'</li>' for P in plans)+'</ul><h2>Reading lists</h2><ul>'+''.join('<li>'+a('/reading/'+L['id']+'/',L['t'])+'</li>' for L in guide['lists'])+'</ul>'
         elif k=='substacks':extra=guide['own']['html']  # our own newsletter first (tools/substacks_src.py OWN, 2026-11-09)
         elif k=='doctors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors if x.get('doctor'))+'</ul>'
+        if k in study_partner.ASK_ROUTES and k!='home':
+            extra=(extra or '')+study_partner.ask_block(k)
         intro='<p class="section-intro">'+E(INTRO[k])+'</p>' if k in INTRO else ''
         if k=='magisterium':intro=councils_page.MAGISTERIUM_LINK+intro  # the councils, first on the page (2026-11-17)
         out[k]=(t+' · Bibliotheca Catholica',fit([d],DESC_EXTRA),site_copy.with_art(k,head('Bibliotheca Catholica',t,d))+intro+extra,[crumbs((t,k+'/'))])
@@ -855,6 +858,7 @@ def main():
     if m:counts['books']=int(m.group(1))
     out['disclosure']=(site_copy.DISCLOSURE_TITLE+' · Bibliotheca Catholica',site_copy.DISCLOSURE_DESC,disclosure_html(),[crumbs((site_copy.DISCLOSURE_TITLE,'disclosure/'))])
     out['about']=('About the library · Bibliotheca Catholica','About Bibliotheca Catholica: what the free Catholic library holds, where its texts come from, the hosting rule, rights badges, editorial policy, and goals.',site_copy.about_page(counts),[crumbs(('About the library','about/'))])
+    out['about/magisterium-ai']=('Why we use Magisterium AI · Bibliotheca Catholica','Why Bibliotheca Catholica links to Magisterium AI, that we are independent and not endorsed, and that answers should be checked against the sources.',crumb_html(('About the library','about/'),('Why we use Magisterium AI',''))+study_partner.why_page(),[crumbs(('About the library','about/'),('Why we use Magisterium AI','about/magisterium-ai/'))])
     directory=head('Find a text','Search and browse the library','Use the search box for interactive results. Without JavaScript, browse the titles and authors below, or use your browser’s Find command.')
     directory+='<h2>Selected reading editions</h2><ul class="search-browse">'+''.join('<li>'+a('/work/'+w['id']+'/',w['title'])+' by '+E(w['author'])+'</li>' for w in sorted(lib['works'],key=lambda w:w['title'].casefold()))+'</ul>'
     directory+='<h2>Authors</h2><ul class="search-browse">'+''.join('<li>'+a('/author/'+au['id']+'/',au['name'])+'</li>' for au in sorted(authors,key=lambda au:au['name'].casefold()))+'</ul>'

@@ -159,7 +159,7 @@ function work(render,id){var w=C.works.find(function(x){return x.id===id});if(!w
   +partsList(w)+seriesList(w)
   +(full.length?'<section class="work-editions"><h2>'+(full.length>1?'Editions':'Edition')+'</h2><ul class="rows">'+(hosted?editionRow(w,hosted,true):'')+(ext?editionRow(w,ext,false):'')+others.map(function(e){return editionRow(w,e,false)}).join('')+'</ul></section>':'')
   +'<section class="other-ways"><h2>Other ways to read</h2><ul class="rows ways">'+way('Excerpt',excerpt)+way('Listen',listenRow,'way-listen')+way('Download',dlRow)+way('Buy in print',buy)+way('Find in a library',libRow)+'</ul></section>'
-  +(refs.length?'<details class="work-refs"><summary>Bibliography &amp; publication references</summary>'+refs.map(function(e){return '<p>'+link(e.source,e.label)+'</p><p class="small">'+esc(e.note)+' '+esc(e.rights)+'</p>'}).join('')+'</details>':''),'library');document.title=w.title+' · Bibliotheca Catholica';
+  +(refs.length?'<details class="work-refs"><summary>Bibliography &amp; publication references</summary>'+refs.map(function(e){return '<p>'+link(e.source,e.label)+'</p><p class="small">'+esc(e.note)+' '+esc(e.rights)+'</p>'}).join('')+'</details>':'')+((window.SITE_COPY&&window.SITE_COPY.bookAsks&&window.SITE_COPY.bookAsks[w.id])||''),'library');document.title=w.title+' · Bibliotheca Catholica';
  var jb=document.querySelector('[data-jump]');if(jb)jb.onclick=function(){var t=document.getElementById(jb.getAttribute('data-jump'));if(t){t.scrollIntoView({block:'start'});var f=t.querySelector('a,button');if(f)f.focus()}};
 }
 function factsWords(n){return 'about '+(Math.round(n/1000)*1000).toLocaleString('en-US')+' words'}

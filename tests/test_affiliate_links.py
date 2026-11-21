@@ -214,32 +214,39 @@ class AffiliateLinkTests(unittest.TestCase):
         self.assertNotIn('support the library', m.lower())
 
     def test_magisterium_allowlist(self):
-        # rule 7 (owner-approved placements, November 19, 2026): the referral is on the pages in study_partner.PAGES only
+        # rule 7 (owner-approved placements, November 19, 2026, extended 21 November 2026): the referral is on the
+        # pages in study_partner.placement_files() only. Advent plan pages stay off the list for the freeze.
         import sys; sys.path.insert(0, str(ROOT / 'tools')); import study_partner as SP
         self.assertEqual(SP.partner(), ('Magisterium AI', MAG))  # read from partners.magisterium in data/affiliates.js
         study = (ROOT / 'study/index.html').read_text(encoding='utf-8')
         allp = dict(self.pages, **{'study/index.html': study})
         hits = {n for n, h in allp.items() if MAG in h}
-        self.assertEqual(hits, {r + '/index.html' for r in SP.PAGES})
+        self.assertEqual(hits, SP.placement_files())
+        self.assertIn('index.html', hits)  # home Ask block, 21 November 2026
+        self.assertTrue(hits >= {'work/confessions/index.html', 'work/orthodoxy/index.html', 'work/dei-verbum/index.html'})
         for name, html in allp.items():
             head = html[:html.index('<main')] if '<main' in html else html
             self.assertNotIn(MAG, head, name + ': header')
             self.assertNotIn(MAG, html[html.index('<footer'):], name + ': footer')
-            if name.startswith('author/') or '/ch/' in name or '/story/' in name or re.match(r'summa/[^/]+/', name) or name == 'index.html':
+            if name.startswith('author/') or '/ch/' in name or '/story/' in name or re.match(r'summa/[^/]+/', name) or name.startswith('reading/advent'):
                 self.assertNotIn(MAG, html, name)
         after = {'magisterium': '</ul>', 'councils': 'class="council-note', 'summa': 'class="dl-row"', 'study': 'id="scans"'}
         for r in SP.PANEL_ROUTES:
             m = main_of(allp[r + '/index.html'])
             self.assertEqual(m.count('class="study-partner"'), 1, r)  # one panel, no repeats
-            self.assertEqual(m.count(MAG), 1, r)
+            if r == 'magisterium':
+                self.assertGreater(m.count(MAG), 1, r)  # the panel link plus Ask buttons beside vatican.va links
+            else:
+                self.assertEqual(m.count(MAG), 1, r)
             panel = re.search(r'<aside class="study-partner".*?</aside>', m, re.S).group(0)
+            self.assertEqual(panel.count(MAG), 1, r)  # the panel itself still has one referral link
             self.assertIn('<h2 id="study-partner-h">Study with Magisterium AI</h2>', panel)
             self.assertEqual(re.findall(r'<a [^>]*href="' + re.escape(MAG) + r'"[^>]*>([^<]*)</a>', panel), ['Try Magisterium AI Pro ↗'], r)
             a = re.search(r'<a [^>]*href="' + re.escape(MAG) + r'"[^>]*>', panel).group(0)
             self.assertIn('rel="noopener sponsored"', a); self.assertIn('target="_blank"', a)
             self.assertNotRegex(a, r'data-(support|ga|track|event)', r)
             self.assertEqual(panel.count(DLINE), 1, r); self.assertEqual(m.count('class="disclosure'), 1, r)  # once per page
-            self.assertLess(m.rindex(after[r]) if r == 'magisterium' else m.index(after[r]), m.index(panel), r + ': below the free reading options')
+            self.assertLess(m.index(after[r]), m.index(panel), r + ': below the free reading options')
             copy = re.findall(r'<p>([^<]*)</p>', panel)[0]
             self.assertEqual(copy, html_escape(SP.COPY[r]))
             self.assertIn(len(re.findall(r'(?<!\bSt)[.!?](?:\s|$)', copy)), (1, 2), r)  # 'St.' does not end a sentence
@@ -249,7 +256,7 @@ class AffiliateLinkTests(unittest.TestCase):
         sc = jsvar('data/site-copy.js', 'SITE_COPY')
         self.assertEqual(sc['studyPartner'], SP.panel('magisterium'))
         app = (ROOT / 'app.js').read_text(encoding='utf-8')
-        self.assertIn("<div id=\"rs-out\"></div>'+(k==='magisterium'?(SC.studyPartner||''):'')", app)
+        self.assertIn("(k==='magisterium'?(SC.studyPartner||''):'')+((SC.studyAsks&&SC.studyAsks[k])||'')", app)
         # never hard-coded: the URL lives only in data/affiliates.js (and the pages built from it)
         for f in list((ROOT / 'tools').glob('*.py')) + [ROOT / 'app.js'] + list((ROOT / 'scripts').glob('*.js')):
             self.assertNotIn(MAG, f.read_text(encoding='utf-8'), f.name)

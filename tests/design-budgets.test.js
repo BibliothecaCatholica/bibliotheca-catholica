@@ -44,9 +44,11 @@ test('the reader keeps its storage keys and anchors',()=>{
  for(const k of ["NOTES_PREFIX='bc-notes:'","RECENT_KEY='bc-recent'",'rb-aa-menu'])assert.ok(rd.includes(k),k);
 });
 // Design part 2 budgets (home, navigation, portraits).
-test('home page: one search (the header), one filled button, and at most 25 links before the footer',()=>{
+test('home page: one search (the header), one filled button, and a short link budget before the footer',()=>{
+ // 25 was the 12 November 2026 budget. The 21 November 2026 Ask Magisterium AI block adds three links:
+ // the referral, Why we use Magisterium AI, and the disclosure Details link.
  const html=fs.readFileSync('index.html','utf8'),main=html.slice(html.indexOf('<main'),html.indexOf('</main>'));
- assert.ok(count(main,/<a\s/g)<=25,'links: '+count(main,/<a\s/g));
+ assert.ok(count(main,/<a\s/g)<=28,'links: '+count(main,/<a\s/g));
  assert.equal(count(html,/type="search"/g),1);assert.ok(!main.includes('hero-search'));
  assert.equal(filled(main),1);
 });

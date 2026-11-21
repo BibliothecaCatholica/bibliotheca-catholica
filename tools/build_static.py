@@ -572,7 +572,7 @@ def summa_pages(out,lib):
 def hosted_ed(w):return next((e for e in w['editions'] if e.get('text')),None)
 def cover_img(e,cls,wd,lazy=True):
     if not e or not (ROOT/'assets/covers'/(e['id']+'.webp')).exists():return ''
-    return '<img class="'+cls+'" src="/assets/covers/'+E(e['id'])+'.webp" width="'+str(wd)+'" height="'+str(round(wd*1.5))+'"'+(' loading="lazy"' if lazy else '')+' decoding="async" alt="">'
+    return '<img class="'+cls+'" src="/assets/covers/'+E(e['id'])+'.webp" width="'+str(wd)+'" height="'+str(round(wd*1.5))+'"'+(' loading="lazy"' if lazy else '')+' decoding="async" alt="" aria-hidden="true">'
 def facts_words(n):return 'about '+format(int(n/1000+0.5)*1000,',')+' words'
 def facts_time(m):
     m=int(m/10+0.5)*10;h,r=divmod(m,60)  # half up, as Math.round in scripts/library.js
@@ -847,6 +847,7 @@ def main():
         elif k=='doctors':extra='<ul>'+''.join('<li>'+a('/author/'+x['id']+'/',x['name']+years(x))+'</li>' for x in authors if x.get('doctor'))+'</ul>'
         intro='<p class="section-intro">'+E(INTRO[k])+'</p>' if k in INTRO else ''
         if k=='magisterium':intro=councils_page.MAGISTERIUM_LINK+intro  # the councils, first on the page (2026-11-17)
+        if k=='support':intro+='<p>Support is a gift.</p>'
         out[k]=(t+' · Bibliotheca Catholica',fit([d],DESC_EXTRA),site_copy.with_art(k,head('Bibliotheca Catholica',t,d))+intro+extra,[crumbs((t,k+'/'))])
     if flags.get('policy_html'):
         out['policy']=('Fidelity & Editorial Policy · Bibliotheca Catholica','Bibliotheca Catholica is faithful to the Magisterium. Listing is not endorsement; flagged records carry calm context notes. Privacy and how to report a concern.',flags['policy_html'],[crumbs(('Fidelity & Editorial Policy','policy/'))])

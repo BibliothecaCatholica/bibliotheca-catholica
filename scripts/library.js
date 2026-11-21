@@ -19,7 +19,7 @@ function libraryLinks(title,author){var query=encodeURIComponent(title+' '+(auth
 // Design part 2 (Step 7): works as rows (title, author and date, one-line description, text actions); no format chips
 // or "New" badges in rows: formats are shown on the work page.
 // Edition covers (design C; tools/covers.py): one for every hosted edition.
-function coverImg(e,cls,wd){return e&&e.text?'<img class="'+cls+'" src="/assets/covers/'+esc(e.id)+'.webp" width="'+wd+'" height="'+Math.round(wd*1.5)+'" loading="lazy" decoding="async" alt="">':''}
+function coverImg(e,cls,wd){return e&&e.text?'<img class="'+cls+'" src="/assets/covers/'+esc(e.id)+'.webp" width="'+wd+'" height="'+Math.round(wd*1.5)+'" loading="lazy" decoding="async" alt="" aria-hidden="true">':''}
 function wrow(w){var local=w.editions.find(function(e){return e.text}),external=w.editions.find(function(e){return e.access==='full-text'});
  return '<li class="wrow'+(local?' has-cover':'')+'">'+coverImg(local,'wrow-cover',48)+'<div class="wrow-main"><a class="wrow-t" href="#/work/'+w.id+'">'+esc(w.title)+'</a><span class="wrow-by">'+esc(w.author)+(w.date?' · '+esc(w.date):'')+'</span><span class="wrow-d">'+esc(firstSentence(w.description))+'</span></div><p class="wrow-acts">'+(local?'<a href="#/read/'+w.id+'/'+local.id+'">Read here</a> · ':external?extLink(external.source,'Read at source',w.id)+' · ':'')+'<a href="#/work/'+w.id+'">'+(local||external?'Details':'Find a copy')+'</a></p></li>'}
 function cards(works){return works.length?'<ul class="rows wrows">'+works.map(wrow).join('')+'</ul>':''}

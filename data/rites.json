@@ -2039,15 +2039,15 @@
     },
     {
      "title": "Official Church site (link only)",
-     "url": "https://www.grkatpo.sk/",
+     "url": "https://web.archive.org/web/20261106084759/https://www.grkatpo.sk/",
      "rights": "link_only",
      "evidence": "copyright of the publishing Church; no open licence found",
      "checked": "2026-10-26"
     }
    ],
-   "official": "https://www.grkatpo.sk/",
+   "official": "https://web.archive.org/web/20261106084759/https://www.grkatpo.sk/",
    "sources": [
-    "https://www.grkatpo.sk/",
+    "https://web.archive.org/web/20261106084759/https://www.grkatpo.sk/",
     "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-slovak-catholic-church/"
    ],
    "related": [

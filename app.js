@@ -660,6 +660,7 @@ function notfound(){render('<div class="empty"><h2>Not found</h2><p><a href="#/"
 var SUPPORT={paypal:'https://www.paypal.com/donate/?hosted_button_id=D48R9YU7SH43A'};
 function support(){var shop=AFF.bookshopShop||'';
   var h='<div class="page-head"><div class="eyebrow">Adiuva bibliothecam</div><h1>Support the Library</h1><p class="lede">Bibliotheca Catholica is free for everyone, with no ads and no paywall. Donations cover hosting and the hours of curation behind every author page, edition, and link.</p></div>'+
+   '<p>Support is a gift.</p>'+
    '<div class="sup-grid">'+
    '<div class="sup-card"><div class="sup-ico" aria-hidden="true">✠</div><h2>Donate with PayPal</h2><p>Give once, or set up a monthly gift that keeps the library growing.</p><a class="btn sup-btn sup-pp" data-support="paypal" href="'+SUPPORT.paypal+'" target="_blank" rel="noopener">Donate with PayPal ↗</a><p class="small muted">Choose one-time or monthly on the PayPal page.</p></div>'+
    '</div>'+

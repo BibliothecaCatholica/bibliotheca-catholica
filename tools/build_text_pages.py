@@ -74,6 +74,10 @@ PART_D={
     'everlasting-man':{'about':"Project Gutenberg #65688: the Hodder and Stoughton, London text, printed by T. and A. Constable. The introduction, fourteen chapters in two parts, the conclusion, and two appendices, divided as the hosted text heads them; the prefatory note and the transcriber's note stay in the reader. No words were changed."},
     'tremendous-trifles':{'about':'Project Gutenberg #8092: first published in 1909. Thirty-nine essays, divided as the hosted text heads them; no words were changed.'},
     'new-jerusalem':{'about':'Project Gutenberg #13468: first published in 1920. Thirteen chapters and the conclusion, divided as the hosted text heads them; the preface stays in the reader. No words were changed.'},
+    # Chesterton polish batch 2 (November 21, 2026). Each sentence restates the edition's record and its map.
+    'charles-dickens-critical-study':{'about':'Project Gutenberg #68682: first published in 1906; the transcribed copy is the Dodd, Mead & Company, New York printing of 1911. Twelve chapters, divided as the hosted text heads them; no words were changed.'},
+    'poet-and-lunatics':{'about':'Project Gutenberg Australia #0900711: first published in 1929. Eight stories of Gabriel Gale, divided as the hosted text heads them; no words were changed.'},
+    'return-don-quixote':{'about':'Project Gutenberg Australia #0900401: first published in 1927. Nineteen chapters, divided as the hosted text heads them; no words were changed.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

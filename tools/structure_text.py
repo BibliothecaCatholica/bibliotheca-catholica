@@ -85,7 +85,9 @@ for _wid, _ed in (('innocence-father-brown', 'pg-204'), ('wisdom-father-brown', 
                   # Councils Part 3 (November 20, 2026)
                   ('council-of-trent', 'peo-trent-1848-r2'),
                   # Chesterton polish batch 1 (November 21, 2026)
-                  ('everlasting-man', 'pg-65688'), ('tremendous-trifles', 'pg-8092'), ('new-jerusalem', 'pg-13468')):
+                  ('everlasting-man', 'pg-65688'), ('tremendous-trifles', 'pg-8092'), ('new-jerusalem', 'pg-13468'),
+                  # Chesterton polish batch 2 (November 21, 2026)
+                  ('charles-dickens-critical-study', 'pg-68682'), ('poet-and-lunatics', 'pga-0900711'), ('return-don-quixote', 'pga-0900401')):
     EDITIONS[(_wid, _ed)] = {'mode': 'map', 'out': 'data/structured/%s-%s.json' % (_wid, _ed)}
 
 

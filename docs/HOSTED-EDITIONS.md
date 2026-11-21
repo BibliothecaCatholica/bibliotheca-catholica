@@ -145,6 +145,7 @@ These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The
 | ia-samueljohnson00chesuoft | Samuel Johnson | 0% | · | · | yes | · |
 | ia-simplicitytolsto00chesuoft | Simplicity and Tolstoy | 0% | · | · | yes | · |
 | pg-70790 | Spiritual Exercises: adapted retreat edition | 91% | · | · | yes | · |
+| ia-thackeray-1890-eulalia | St. Eulalia (Peristephanon III) | excluded (verse) | · | · | yes | · |
 | pg-16772 | Story of a Soul | 92% | HTML | yes | yes | yes |
 | pg-17611 | Summa Theologiae | 93% | · | · | yes | · |
 | pg-17897 | Summa Theologiae | 94% | · | · | yes | · |

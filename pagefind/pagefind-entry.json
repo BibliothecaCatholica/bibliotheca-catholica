@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":"1.6.0","languages":{"en":{"hash":"en_e873cf7d75","wasm":"en","page_count":5290}},"include_characters":["_","‿","⁀","⁔","︳","︴","﹍","﹎","﹏","＿"]}
+=======
+{"version":"1.6.0","languages":{"en":{"hash":"en_fcb3524bad","wasm":"en","page_count":5290}},"include_characters":["_","‿","⁀","⁔","︳","︴","﹍","﹎","﹏","＿"]}
+>>>>>>> origin/main

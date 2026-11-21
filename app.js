@@ -697,13 +697,17 @@ document.addEventListener('click',function(e){if(e.defaultPrevented||e.button||e
 var gaT=null,gaLast=null,gaLanded=false;
 /* v18: dedupe on the raw URL, but report the normalized route (BCAnalytics.pagePath): never a search term or Index filter,
    and one path per view whether it was served from / or a static page. Since 2026-11-09 that route is a real path
-   (/author/x/, the page's canonical path), not /#/author/x, because GA4 ignores the fragment when it sets Page path. Free-text titles are replaced the same way. */
-function gaPageView(){clearTimeout(gaT);gaT=setTimeout(function(){var hash=creditsAnchor()?'':location.hash,raw=location.pathname+hash;if(raw===gaLast)return;gaLast=raw;
+   (/author/x/, the page's canonical path), not /#/author/x, because GA4 ignores the fragment when it sets Page path. Free-text titles are replaced the same way.
+   A hash is part of the raw URL only when it starts with '#/' (a route). Plain anchors do not change the raw URL, so they
+   do not send another page_view on hashchange (2026-11-21). */
+function gaPageView(){clearTimeout(gaT);gaT=setTimeout(function(){var hash=/^#\//.test(location.hash)?location.hash:'',raw=location.pathname+hash;if(raw===gaLast)return;gaLast=raw;
   var A=window.BCAnalytics;if(!A)return;var path=A.pagePath(hash,window.BC_BOOT),title=A.pageTitle(path,document.title);
   /* only the landing view keeps the four utm_ campaign tags (BCAnalytics.utmQuery), from location.search or, for links that
-     put them after the '#', from the hash (landingSearch); later views send the bare route. After the landing view the tags
-     are removed from the hash (stripHashUtm) and gaLast follows, so the same view is not sent twice (2026-11-09). */
-  var landing=!gaLanded,loc=A.pageLocation(path,landing?A.landingSearch(location.search,hash):'');gaLanded=true;
+     put them after the '#', from the hash (landingSearch uses the original location.hash, including a rare utm_ tag on a
+     plain anchor); later views send the bare route. After the landing view the tags are removed from the hash (stripHashUtm)
+     and gaLast follows, so the same view is not sent twice (2026-11-09). Plain anchors are left out of `hash` and `raw`, so
+     a hashchange from /policy/ to /policy/#privacy does not send another page_view. */
+  var landing=!gaLanded,loc=A.pageLocation(path,landing?A.landingSearch(location.search,location.hash):'');gaLanded=true;
   track('page_view',{page_title:title,page_location:loc,page_path:path});
   if(landing&&A.stripHashUtm&&A.stripHashUtm())gaLast=location.pathname+location.hash},400)}
 window.addEventListener('hashchange',gaPageView);

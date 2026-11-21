@@ -1,4 +1,4 @@
-/* Bibliotheca Catholica: GA4 event helper (v14; v18 page paths; real-path page views 2026-11-09).
+/* Bibliotheca Catholica: GA4 event helper (v14; v18 page paths; real-path page views 2026-11-09; hash routes 2026-11-21).
  * Uses only the existing Google tag (G-HFG445Y1LT) in <head>. No other tracking IDs, no Google Tag Manager,
  * no personal data. Every call is guarded with typeof gtag==='function' and wrapped in try/catch, so analytics
  * can never break the reader. Notes, highlights, quotes, and other free text are never sent; the only free text
@@ -57,7 +57,11 @@ function routeWork(hash){var m=/^#\/(?:work|read)\/([a-z0-9-]+)/i.exec(str(hash)
    Isidore Index filters are free text, so they collapse to /search/ and /isidore/; a segment that is not a plain slug
    ends the path. */
 var ORIGIN='https://bibliothecacatholica.com';
-function pagePath(hash,boot){var raw=str(hash).replace(/^#\/?/,'');if(!raw)raw=str(boot);raw=raw.split('?')[0];
+function isRouteHash(hash){return /^#\//.test(str(hash))}
+/* A hash is a route only when it starts with '#/' (#/library, #/work/x). Plain anchors
+   (/study/#cite, /policy/#privacy, /credits/#ed-…) are not routes: pagePath ignores them
+   and uses the page's BC_BOOT path, so clicks and page views stay on /study/ or /policy/. */
+function pagePath(hash,boot){var h=isRouteHash(hash)?str(hash):'';var raw=h.replace(/^#\/?/,'');if(!raw)raw=str(boot);raw=raw.split('?')[0];
   var p=raw.split('/').filter(Boolean),out=[];
   if(!p.length)return '/';
   if(p[0]==='search')return '/search/';
@@ -121,7 +125,7 @@ function onClick(e){try{var t=e.target&&e.target.closest?e.target.closest('a[hre
   if(kind==='audio'&&t.classList&&t.classList.contains('listen-btn')){var L=root.location||{},wid=routeWork(L.hash)||routeWork('#/'+str(root.BC_BOOT));
     if(wid&&once('listen_open',wid))track('listen_open',{work_id:wid,listen_source:'librivox'})}
   track('outbound_click',{link_domain:d,link_kind:kind})}catch(err){}}
-var api={utmQuery:utmQuery,hashUtm:hashUtm,campaignUrl:campaignUrl,landingSearch:landingSearch,stripHashUtm:stripHashUtm,hostIn:hostIn,AFFILIATE_HOSTS:AFFILIATE_HOSTS,EVENTS:EVENTS,MAX_TERM:MAX,allowedHost:allowedHost,track:track,cleanTerm:cleanTerm,clean:clean,domain:domain,linkKind:linkKind,publisherKey:publisherKey,routeWork:routeWork,pagePath:pagePath,pageLocation:pageLocation,pageTitle:pageTitle,context:context,once:once,reset:reset,onClick:onClick};
+var api={utmQuery:utmQuery,hashUtm:hashUtm,campaignUrl:campaignUrl,landingSearch:landingSearch,stripHashUtm:stripHashUtm,hostIn:hostIn,AFFILIATE_HOSTS:AFFILIATE_HOSTS,EVENTS:EVENTS,MAX_TERM:MAX,allowedHost:allowedHost,track:track,cleanTerm:cleanTerm,clean:clean,domain:domain,linkKind:linkKind,publisherKey:publisherKey,routeWork:routeWork,isRouteHash:isRouteHash,pagePath:pagePath,pageLocation:pageLocation,pageTitle:pageTitle,context:context,once:once,reset:reset,onClick:onClick};
 root.BCAnalytics=api;
 if(root.document&&root.document.addEventListener)root.document.addEventListener('click',onClick,true);
 if(typeof module!=='undefined'&&module.exports)module.exports=api;

@@ -5009,6 +5009,7 @@ work/catholic-church-conversion/ch/05-the-exception-proves-the-rule/index.html
 work/catholic-church-conversion/ch/06-a-note-on-present-prospects/index.html
 work/catholic-church-history/index.html
 work/catholic-encyclopedia-advent/index.html
+work/catholic-encyclopedia-o-antiphons/index.html
 work/charles-dickens-bookman/index.html
 work/charles-dickens-critical-study/index.html
 work/charles-dickens-critical-study/ch/01-the-dickens-period/index.html

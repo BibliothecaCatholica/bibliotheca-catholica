@@ -1,0 +1,299 @@
+[
+ {
+  "edition": "ia-cathencyc-1911-o-antiphons",
+  "ia": "catholicencyclop0011vari_p3b3",
+  "title": "O ANTIPHONS",
+  "sourceTitle": "O Antiphons (The Catholic Encyclopedia, vol. 11, 1911)",
+  "author": "H. T. Henry",
+  "year": 1911,
+  "firstPublished": "1911 (New York: Robert Appleton Company), in The Catholic Encyclopedia, vol. 11, p. 173",
+  "firstLeaf": 202,
+  "lastLeaf": 202,
+  "startsWith": "O Antiphons (Roman Breviary",
+  "endsWith": "H. T. Henry.",
+  "note": "One article cut from one page of the volume (startsWith/endsWith in the spec); the neighbouring articles are left out.",
+  "handFixes": [
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "O Antiphons (Roman Breviary: Antiphone ma-",
+    "reading": "O Antiphons (Roman Breviary: Antiphonæ ma-"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "jores, “greater antiphons”’), the seven antiphons to the",
+    "reading": "jores, “greater antiphons”), the seven antiphons to the"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Magnificat in the ferial Office of the seven days pre-",
+    "reading": "Magnificat in the ferial Office of the seven days preceeding"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "ceeding the vigil of Christmas; so called because all",
+    "reading": "the vigil of Christmas; so called because all"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "begin with the interjection “‘O”. Their opening words",
+    "reading": "begin with the interjection “O”. Their opening words"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "are: (1) ““O Sapientia”’, (2) ‘“O Adonai”’, (3) “O Radix",
+    "reading": "are: (1) “O Sapientia”, (2) “O Adonai”, (3) “O Radix"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Jesse”’, (4) ‘“O Clavis David”’, (5) ‘fO Oriens’’, (6) “O",
+    "reading": "Jesse”, (4) “O Clavis David”, (5) “O Oriens”, (6) “O"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Rex Gentium’’, (7) ‘‘O Emmanuel’. Addressed to",
+    "reading": "Rex Gentium”, (7) “O Emmanuel”. Addressed to"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "(e. g.: ““O Wisdom . . . come and teach us the way of",
+    "reading": "(e. g.: “O Wisdom . . . come and teach us the way of"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "prudence”’; ‘‘O Adonai... come and redeem us by thy",
+    "reading": "prudence”; “O Adonai . . . come and redeem us by thy"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "outstretched arm”’; ‘‘O Key of David . . . come and",
+    "reading": "outstretched arm”; “O Key of David . . . come and"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Breviaries added (1) ‘“‘O virgo virginum quomodo",
+    "reading": "Breviaries added (1) “O virgo virginum quomodo"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "fiet’”’ etc., still retained in the Roman Breviary as the",
+    "reading": "fiet” etc., still retained in the Roman Breviary as the"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "antiphon ‘‘O Adonai’? as a commemoration of the",
+    "reading": "antiphon “O Adonai” as a commemoration of the"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "ferial office of 18 December; (2) ‘“‘O Gabriel, nuntius",
+    "reading": "ferial office of 18 December; (2) “O Gabriel, nuntius"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "coelorum”’, subsequently replaced, almost universally,",
+    "reading": "cœlorum”, subsequently replaced, almost universally,"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Didyme’’, for the feast of the Apostle St. Thomas (21",
+    "reading": "Didyme”, for the feast of the Apostle St. Thomas (21"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Pacifice’”’, (2) “O Mundi Domina’’, (8) ‘“O Hierusa~",
+    "reading": "Pacifice”, (2) “O Mundi Domina”, (3) “O Hierusa-"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "lem”’, addressed respectively to Our Lord, Our Lady,",
+    "reading": "lem”, addressed respectively to Our Lord, Our Lady,"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "of these (except the ‘‘O Mundi Domina’’), with ver-",
+    "reading": "of these (except the “O Mundi Domina”), with ver-"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "nacular prose translation (“‘Liturgical Year’’, Advent,",
+    "reading": "nacular prose translation (“Liturgical Year”, Advent,"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "two antiphons (‘‘O sancte sanctorum”’ and ‘‘O pastor",
+    "reading": "two antiphons (“O sancte sanctorum” and “O pastor"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Israel’’) to the seven of the Roman Rite and began the",
+    "reading": "Israel”) to the seven of the Roman Rite and began the"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "“Tn some Churches it was formerly the practice to",
+    "reading": "“In some Churches it was formerly the practice to"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "the Gloria Patri, and after the Sicut erat’”’ (Guéranger).",
+    "reading": "the Gloria Patri, and after the Sicut erat” (Guéranger)."
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "that in Dom Gregory Ould’s ‘‘Book of Hymns",
+    "reading": "that in Dom Gregory Ould’s “Book of Hymns”"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "translation of the versicle and response (‘‘Rorate’’,",
+    "reading": "translation of the versicle and response (“Rorate”,"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "these is found in the hymn ‘Veni, veni, Emmanuel’”’",
+    "reading": "these is found in the hymn “Veni, veni, Emmanuel”"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Hymns and Sequences” (8rd ed., London, p. 171) and",
+    "reading": "Hymns and Sequences” (3rd ed., London, p. 171) and"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "in ‘The Roman Hymnal”, New York, 1884, 139).",
+    "reading": "in “ The Roman Hymnal”, New York, 1884, 139)."
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "translations, see “Julian’s Dict. of Hymnol.’” (2nd",
+    "reading": "translations, see “Julian’s Dict. of Hymnol.” (2nd"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "ed., London, 1907, 74, i; 1551, 1; 1721, i). For the",
+    "reading": "ed., London, 1907, 74, i; 1551, i; 1721, i). For the"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "quess of Bute, ‘‘Roman Breviary’’, Winter, 203, also",
+    "reading": "quess of Bute, “Roman Breviary”, Winter, 203, also"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Marbach’s ‘‘Carmina Scripturarum” etc. (Strasburg,",
+    "reading": "Marbach’s “Carmina Scripturarum” etc. (Strasburg,"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "1907) under ‘‘O”’ in the Index Alphabeticus.",
+    "reading": "1907) under “O” in the Index Alphabeticus."
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Tuurston, The Great Antiphons, Heralds of Christmas in The",
+    "reading": "Thurston, The Great Antiphons, Heralds of Christmas in The"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "tions the view of CaBrou, L’ Avent Liturgique in Revue Bénédictine",
+    "reading": "tions the view of Cabrol, L’Avent Liturgique in Revue Bénédictine"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "circa 800) to show that they ‘‘are much older”’, and knows ‘‘no",
+    "reading": "circa 800) to show that they “are much older”, and knows “no"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Roman Antiphonary or to the time of Pope Gregory himself’’;",
+    "reading": "Roman Antiphonary or to the time of Pope Gregory himself”;"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Casrou in Dict. d’archéologie et liturgie chrétienne, 8. v. Avent, re-",
+    "reading": "Cabrol in Dict. d’archéologie et liturgie chrétienne, s. v. Avent, re-"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "TuurRstTon’s article in The Month; Bayiwy, Greater Antiphons of",
+    "reading": "Thurston’s article in The Month; Bayley, Greater Antiphons of"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Sratny, O Sapientia in Church Times (13 Dee., 1907), p. 812;",
+    "reading": "Staley, O Sapientia in Church Times (13 Dec., 1907), p. 812;"
+   },
+   {
+    "leaf": 202,
+    "page": 173,
+    "ocr": "Wirsersy, O Sapientia, Seven Sermons on the Ancient Antiphons",
+    "reading": "Witherby, O Sapientia, Seven Sermons on the Ancient Antiphons"
+   }
+  ],
+  "verifiedWords": [
+   "Antiphonæ",
+   "preceeding",
+   "Didyme",
+   "Hierusalem",
+   "vergente",
+   "Cynewulf",
+   "Cabrol",
+   "Liturgique",
+   "liturgie",
+   "Thurston",
+   "Radix",
+   "nuntius",
+   "Pacifice",
+   "Hymnologicus",
+   "Hymnol",
+   "Alphabeticus",
+   "antedate",
+   "Avent",
+   "Bayley",
+   "Staley",
+   "Witherby"
+  ]
+ }
+]

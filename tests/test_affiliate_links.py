@@ -288,9 +288,12 @@ class AffiliateLinkTests(unittest.TestCase):
         html = main_of(self.pages['disclosure/index.html'])
         para = html[html.index('<h2>Magisterium AI</h2>'):]
         para = para[:para.index('</p>')]
+        self.assertIn('Those links appear on these pages:', para)
+        self.assertIn('The referral does not appear on author pages, chapter or reading pages, or in the header or footer.', para)
         for href in ('/', '/scripture/', '/libraries/', '/magisterium/', '/councils/', '/summa/', '/study/',
                      '/saints/', '/doctors/', '/prayers/', '/about/magisterium-ai/', '/work/confessions/', '/work/orthodoxy/'):
             self.assertIn('href="' + href + '"', para, href)
+        self.assertIn('Readers who subscribe to Magisterium AI through our links currently receive 25% off, and Bibliotheca Catholica earns a commission (currently 10%) on those subscriptions, at no extra cost to you. Magisterium AI does not endorse or control Bibliotheca Catholica.', para)
         self.assertIn(MAG, para)
 
     def test_agents_md_rules(self):

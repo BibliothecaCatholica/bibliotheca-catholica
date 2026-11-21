@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-95ebc28103c4",
+  "id": "bc-0ebe6f5cccdc",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "1b09e4ca7528c8e32a91280b10b7ae50875f8f4fb87713ac4a42c1b2447112e4",
@@ -117,7 +117,7 @@
     "tools/check_links.py": "eaca9fe8c0a299d514cb92f9889ea359645869913e53ddb5aea42b11c132e0d4",
     "tools/councils_page.py": "d46a61799f2bc1b07a69e472ab55fa28a77690773d9e5245d2345738db30629e",
     "tools/covers.py": "86adffcac39190c89225ff76d82a9aa98f4ead3aa25ef03faa5fc9cddf128f52",
-    "tools/credits_page.py": "703d76b2b19faa440aed335f326edfe78197cf2882e8fff0dae1dbe52b3b4620",
+    "tools/credits_page.py": "a79a7bc3d74cabffae7c2a68354cc4885caaa01ee7d531bec0624cf44b99cece",
     "tools/draft_text_map.py": "089eb682549c2fe928e1c06d725e804a148d72bfca82922ac038ad99d02303ec",
     "tools/edition_status.py": "2632a0df321a2f3ffdb0f217ce80d9896ccddc114b4cba50a6f7b4b94269d346",
     "tools/editions_data.py": "a5706f88af8b256d56deabfa2fee5515649e8c8dd019098d02d0ee7a39d18af6",

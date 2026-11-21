@@ -248,7 +248,7 @@ def why_page():
         '<h2>Affiliate disclosure</h2>'
         '<p>Bibliotheca Catholica is a participant in the Magisterium AI affiliate program. Links to Magisterium AI on this site, '
         'including Ask Magisterium AI buttons, use our referral address, '+E(url)+'. If you take out a paid Magisterium AI subscription '
-        'after following one of those links, you may receive a discount (the program currently advertises up to 25% off), and '
+        'after following one of those links, you may receive a discount (the program currently advertises 25% off), and '
         'Bibliotheca Catholica may receive a commission (currently 10% of qualifying subscription revenue). Those rates are set by '
         'Magisterium AI and may change. There is no extra cost to you. We recommend Magisterium AI because we use it and find it useful, '
         'not because of the commission. See also the <a href="/disclosure/">affiliate disclosure</a> for Bookshop.org, TAN Books, and Magisterium AI.</p>'

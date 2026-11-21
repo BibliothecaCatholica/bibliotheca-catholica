@@ -75,6 +75,7 @@
     h+='<h2 class="saint-ways-h">Ways into the saints</h2><ul class="rows saint-ways">'+tiles.map(function(x){return '<li><a href="'+x[0]+'">'+esc(x[2])+'</a>'+(x[4]!==''?' <span class="muted">'+x[4]+'</span>':'')+'<span class="way-p">'+esc(x[3])+'</span></li>'}).join('')+'</ul>';
     var all=D.saints.slice().sort(function(a,b){return a.name.localeCompare(b.name)});
     h+='<h2 class="saint-ways-h">All saints in the guide <span class="shelf-n">'+all.length+'</span></h2><ul class="saint-list">'+all.map(srow).join('')+'</ul>';
+    h+=(root.SITE_COPY&&root.SITE_COPY.studyAsks&&root.SITE_COPY.studyAsks.saints)||'';
     render(h,'saints');wireSearch()}
   function az(render,letter){var L={};D.saints.forEach(function(s){var c=key(s.name).charAt(0).toUpperCase();(L[c]=L[c]||[]).push(s)});var ks=Object.keys(L).sort();letter=(letter||'').toUpperCase();
     var list=(letter&&L[letter]?L[letter]:D.saints).slice().sort(function(a,b){return a.name.localeCompare(b.name)});

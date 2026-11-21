@@ -127,7 +127,8 @@ def hosted_authors(lib):
 
 
 ART_LABELS = (('library', 'Reading room'), ('magisterium', 'Church Documents'), ('councils', 'Councils'), ('saints', 'Saints'),
-              ('summa', 'Summa'))  # section-header engravings (tools/site_copy.py PAGE_ART)
+              ('summa', 'Summa'), ('prayers', 'Prayer'), ('doctors', 'Doctors of the Church'), ('rites', 'Rites & Liturgy'),
+              ('timeline', 'Timeline'), ('reading', 'Reading Lists'))  # section-header engravings (tools/site_copy.py PAGE_ART)
 
 
 def page_html(lib, hub, hero_credit):

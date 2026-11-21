@@ -70,6 +70,17 @@ PAGE_ART = {
              'Engraving: the Virgin enthroned in the highest heaven, ringed by countless angels, with saints below.'),
  'summa': ('dore-paradiso-12', 'Paradiso, Canto XII', _PDP + 'Gottliche_Komodie._T._3%2C_Das_Paradies_1871_%28148199891%29.jpg', 1235, 1544,
              'Engraving: Dante and Beatrice stand on a cloud between two rings of shining spirits.'),
+ # Extended to five more sections (November 21, 2026), no plate repeated
+ 'prayers': ('dore-paradiso-21', 'Paradiso, Canto XXI', _PDP + 'Gottliche_Komodie._T._3%2C_Das_Paradies_1871_%28148200170%29.jpg', 805, 1010,
+             'Engraving: Beatrice stands on a cloud beside Dante, with angels above them.'),
+ 'doctors': ('dore-paradiso-28', 'Paradiso, Canto XXVIII', _PDP + 'Gottliche_Komodie._T._3%2C_Das_Paradies_1871_%28148200346%29.jpg', 811, 1009,
+             'Engraving: Dante and Beatrice look up at vast concentric bands of angels.'),
+ 'rites': ('dore-paradiso-27', 'Paradiso, Canto XXVII', _PDP + 'Gottliche_Komodie._T._3%2C_Das_Paradies_1871_%28148200320%29.jpg', 779, 981,
+             'Engraving: rays of light fall through a host of angels gathered above the clouds.'),
+ 'timeline': ('dore-paradiso-19', 'Paradiso, Canto XIX', _PDP + 'Gottliche_Komodie._T._3%2C_Das_Paradies_1871_%28148200104%29.jpg', 822, 1022,
+             'Engraving: Dante and Beatrice watch a great flight of shining spirits gathering in the sky.'),
+ 'reading': ('dore-paradiso-16', 'Paradiso, Canto XVI', _PDP + 'Gottliche_Komodie._T._3%2C_Das_Paradies_1871_%28148200021%29.jpg', 816, 1017,
+             'Engraving: a spirit in shining robes stands on a cloud above Dante and Beatrice.'),
 }
 def art_credit(key):
     f, canto, url, w, h, alt = PAGE_ART[key]

@@ -1,0 +1,884 @@
+{
+  "id": "peo-trent-1848-r2",
+  "kind": "public-domain-text",
+  "title": "The Council of Trent: The canons and decrees of the sacred and ecumenical Council of Trent, Ed. and trans. J. Waterworth (London: Dolman, 1848)",
+  "author": "Council of Trent",
+  "firstPublished": "1848 (London: C. Dolman), translated by J. Waterworth",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. Papal Encyclicals Online notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "Papal Encyclicals Online",
+  "sourceUrl": "https://www.papalencyclicals.net/councils/trent.htm",
+  "sourcePage": "https://www.papalencyclicals.net/councils/trent.htm",
+  "sourceNotice": "Notes and J. Waterworth’s Preface\n\nNotes\nThe Rev. J. Waterworth’s translation of the Canons and Decrees of the Council of Trent was first published in 1848. The most recent translation was done by the Rev. H.J. Schroeder. It was published together with the Latin text in 1941. (Canons and Decrees of the Council of Trent. trans. H. J. Schroeder. St. Louis: Herder, 1941). It is under copyright. A paperback edition of Schroeder’s translation (English text only) is currently in print.\n\nThe page numbers of the 1848 edition of Waterworth’s translation have been placed in brackets within the text. Waterworth’s use of italic fonts and his citations (mostly references to Scripture) have not been reproduced, except for in the preface below. His historical essays and appendices have likewise been omitted. Waterworth’s preface is reproduced in full below.\n\nPlease report errors to\n\nhistorians@hanover.edu\n\n–FL 8-15-01\n\nJ. Waterworth’s Preface\n\nThe canons and decrees of the sacred\n\nand oecumenical Council of Trent,\n\nEd. and trans. J. Waterworth (London: Dolman, 1848), v-viii.\n[Page v] Many years have elapsed since the Editor of this work formed the design of publishing a translation of the General Councils. The advantage, or necessity, of studying the Councils, as one of the chief records of the faith, morals, and discipline of the Church; as the main basis and exponents of canon law; as containing much of the history of the Church and of heresy; and finall, as forming part of that deposit o",
+  "sourceFileSha256": "f05b18a1dded065b2a1c018efc4e2031ca7767e2356a54cbdb71583425b027bf",
+  "sourcePages": [
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/trpref.htm",
+      "sha256": "5882949514547abdec0ca30f00cae29f40ad5b27fc0a90d465ab055f8c9d9105",
+      "file": "data/sources/html-pages/peo-trent-1848/01.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/ctbull.htm",
+      "sha256": "ad330ef6a591b45bca39824567c44b67425f29dba9c92fb5343163b408036c13",
+      "file": "data/sources/html-pages/peo-trent-1848/02.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/firstsession.htm",
+      "sha256": "57e62081e41c90500064e7cd1caba19e73856e74b5844036bc432d4e3f4e749d",
+      "file": "data/sources/html-pages/peo-trent-1848/03.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/second-session.htm",
+      "sha256": "30c7233ef5c20b0acd6f3cf011b5e0ddbfb94c1abde2b790011debd1c1fccd64",
+      "file": "data/sources/html-pages/peo-trent-1848/04.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/third-session.htm",
+      "sha256": "871253c55596a865a8e8504e021a6343fa42905a62d55695860dd6a08f2fb213",
+      "file": "data/sources/html-pages/peo-trent-1848/05.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/fourth-session.htm",
+      "sha256": "abfce941b8a8ef07a6c6f4810148757a35e90c3313992be45574fe721e12ff65",
+      "file": "data/sources/html-pages/peo-trent-1848/06.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/fifth-session.htm",
+      "sha256": "4d91c52208da7df0bf7b40cab0c5fe80318b3ca21907fef7fb1eb7712e958052",
+      "file": "data/sources/html-pages/peo-trent-1848/07.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/sixth-session.htm",
+      "sha256": "fcc7435e248bdfe3f31f71cbd98c36cba58f90447df4647aac1db728b8fa83f7",
+      "file": "data/sources/html-pages/peo-trent-1848/08.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/seventh-session.htm",
+      "sha256": "aaeab9608d50dd7567bd0a432fa47e920e0263f7988e6edaef23fd8733096b2b",
+      "file": "data/sources/html-pages/peo-trent-1848/09.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/eighth-session.htm",
+      "sha256": "b348590e730480e9fc513254675d824ce99d063d6d7df9a5c87ebb90e6c15ed1",
+      "file": "data/sources/html-pages/peo-trent-1848/10.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/ninth-session.htm",
+      "sha256": "d0f546af7d8284a9f69ce2e6581f9d798c9dbcb0610862f4f59aa77c8411147d",
+      "file": "data/sources/html-pages/peo-trent-1848/11.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/tenth-session.htm",
+      "sha256": "9083c7bc53a333a6ee7482e045a39ec36b82b98a3e444db6e83ed48486925bc9",
+      "file": "data/sources/html-pages/peo-trent-1848/12.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/eleventh-session.htm",
+      "sha256": "36549e475899f0466f9c62cd0ce14586703ad06ddfbcfdc4a24315ba5239c8e4",
+      "file": "data/sources/html-pages/peo-trent-1848/13.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/twelfth-session.htm",
+      "sha256": "3c40bb4af0cf35b16806f8f66353ff9718a1d44b333e59e67fa5b6a0d53d029f",
+      "file": "data/sources/html-pages/peo-trent-1848/14.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/thirteenth-session.htm",
+      "sha256": "1691bdca3bf02508e3667712c798e7513e22b4bdc2da0ef747cc6b884006a22f",
+      "file": "data/sources/html-pages/peo-trent-1848/15.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/fourteenth-session.htm",
+      "sha256": "acee0df4eb7b0e91836443f69739f16128ce3201651e2b67ceca43596b372615",
+      "file": "data/sources/html-pages/peo-trent-1848/16.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/fifteenth-session.htm",
+      "sha256": "b77b6dc89a7f2a5498daeba1e9f980eb2754ecfdb9bb5df37b21ced62ca64e8c",
+      "file": "data/sources/html-pages/peo-trent-1848/17.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/sixteenth-session.htm",
+      "sha256": "82c4639da9f2d6873503a030e4e4fbc7701cbf41b3fc60d208f7e4218b22ce21",
+      "file": "data/sources/html-pages/peo-trent-1848/18.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/seventeenth-session.htm",
+      "sha256": "72bc1f782efe3c03d7a65199c4fb7ed0779ff47765c28ef2d8ac2c74331b2574",
+      "file": "data/sources/html-pages/peo-trent-1848/19.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/eighteenth-session.htm",
+      "sha256": "81766afd44943e2159e4a997188757414fb1c23551b4a42940703d69be639411",
+      "file": "data/sources/html-pages/peo-trent-1848/20.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/nineteenth-session.htm",
+      "sha256": "e0580c904fda43eb1d7ec8d534ec6447f46b4c2566de2a2d40cf4e6de1f27cf0",
+      "file": "data/sources/html-pages/peo-trent-1848/21.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/twentieth-session.htm",
+      "sha256": "29e08693e33145a96e73e4c502d4327110fde7d3eca0b1ab328d095276f873fb",
+      "file": "data/sources/html-pages/peo-trent-1848/22.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/twenty-first-session.htm",
+      "sha256": "7fdb85583de7db172dd945b72f2aa328b56203db34b843bab5fc27c7087fd9f8",
+      "file": "data/sources/html-pages/peo-trent-1848/23.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/twenty-second-session.htm",
+      "sha256": "0820f19a4278eeb62ba035e9b49ac80dc72beeb5c601aac0891332543c16da7d",
+      "file": "data/sources/html-pages/peo-trent-1848/24.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/twenty-third-session.htm",
+      "sha256": "f3307bfc97495f66b438b0e632e6dbaddb3a84e9d594eb5a52b2afd01989bfe4",
+      "file": "data/sources/html-pages/peo-trent-1848/25.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/twenty-fourth-session.htm",
+      "sha256": "f3badcc96f7f46cba89ac8f5f4c3182c7f5a70647ca022adf67166ea620a0fcf",
+      "file": "data/sources/html-pages/peo-trent-1848/26.html.gz"
+    },
+    {
+      "url": "https://www.papalencyclicals.net/councils/trent/twenty-fifth-session.htm",
+      "sha256": "9a5d390dfd03e95cb6fa2d61afbc91f5442291ada5dc10be369986fef200d628",
+      "file": "data/sources/html-pages/peo-trent-1848/27.html.gz"
+    }
+  ],
+  "sourceFileNote": "sourceFileSha256 is the SHA-256 of the pages' bytes joined in order; each page is pinned in sourcePages",
+  "siteNotice": "Papal Encyclicals Online's pages carry the site's own footer, \"© Copyright 2000-2026\", for the website. The text is the Hanover Historical Texts Project transcription of Waterworth's 1848 translation (its notes, kept at the top of the text, ask that errors be reported to historians@hanover.edu); the 1848 translation is public domain in the US by date.",
+  "readGate": {
+    "words": 94792,
+    "unknown": 177,
+    "readRate": 0.9981,
+    "gate": 0.995
+  },
+  "readGateUnknownWords": [
+    "AMASEUS",
+    "Adam’s",
+    "Aggaeus",
+    "Antwerpie",
+    "Aposotlic",
+    "Aposto",
+    "Apostolie",
+    "BARENGUS",
+    "BISH",
+    "CCLV",
+    "CRESCEN",
+    "Catechumen’s",
+    "Cathedralium",
+    "Cisalpine",
+    "Concillio",
+    "Contarini",
+    "Crescenzio",
+    "Cynthius",
+    "Damaso",
+    "Davidical",
+    "Dolman",
+    "Editor’s",
+    "Exigit",
+    "Expectatives",
+    "FAB",
+    "FLORIBELLUS",
+    "IIl",
+    "Iloliness",
+    "Istoria",
+    "LAVELLINUS",
+    "Laetare",
+    "Legatesof",
+    "MASSARELLI",
+    "MDLX",
+    "MDLXIV",
+    "MDLlI",
+    "MDXLVIII",
+    "MDXXXIX",
+    "MDXXXVIII",
+    "MOTTA",
+    "Marcellsu",
+    "Ninivites",
+    "Ordinarii",
+    "PROROGUING",
+    "Pallavicino",
+    "Periculoso",
+    "Plat’s",
+    "Pontiff’s",
+    "ReguIars",
+    "SAlNTS",
+    "SPOL",
+    "SUING",
+    "Schroeder’s",
+    "Sophonias",
+    "Soveriegn",
+    "TRANFER",
+    "Telesia",
+    "Trento",
+    "Turnorum",
+    "VlI",
+    "Wereas",
+    "abbies",
+    "abduced",
+    "abovenamed",
+    "acolyth",
+    "acquittances",
+    "adminstrators",
+    "admo",
+    "agreebly",
+    "andwhereas",
+    "another’s",
+    "appellee",
+    "aureus",
+    "author’s",
+    "avocate",
+    "bapized",
+    "benfice",
+    "benfices",
+    "capitular",
+    "cathe",
+    "cerain",
+    "coajutor",
+    "collator",
+    "commendatary",
+    "commixture",
+    "conciences",
+    "concomitancy",
+    "concurse",
+    "coucils",
+    "dained",
+    "day’s",
+    "deligated",
+    "demissory",
+    "deprivaiton",
+    "devolution",
+    "divaricated",
+    "docctrines",
+    "dral",
+    "ecclesastical",
+    "ecclesiastiscal",
+    "ecclesistical",
+    "edu",
+    "escheat",
+    "excomnunication",
+    "finall",
+    "forefend",
+    "forfend",
+    "glori",
+    "hierarchial",
+    "humi",
+    "ic",
+    "indiscrimately",
+    "inno",
+    "instru",
+    "laiiguage",
+    "legiate",
+    "lenit",
+    "liation",
+    "lucra",
+    "marquisses",
+    "mayjustlyapprove",
+    "metro",
+    "modious",
+    "munion",
+    "neccessary",
+    "niost",
+    "nished",
+    "noniminate",
+    "nouncing",
+    "ocecumenial",
+    "onehalf",
+    "opportunie",
+    "other’s",
+    "paperback",
+    "party’s",
+    "penitance",
+    "periol",
+    "perpeual",
+    "persistance",
+    "petual",
+    "politan",
+    "popu",
+    "pravity",
+    "privelege",
+    "propitiator",
+    "propritiatory",
+    "quittance",
+    "recom",
+    "reconmending",
+    "sacramnets",
+    "sacrement",
+    "sacrifising",
+    "sacriflce",
+    "sacrments",
+    "saltum",
+    "santification",
+    "sary",
+    "scrutinies",
+    "shepherd’s",
+    "simonical",
+    "sity",
+    "stitutions",
+    "subdeavonship",
+    "superinduce",
+    "takein",
+    "tection",
+    "themseIves",
+    "thoir",
+    "titularies",
+    "titulary",
+    "tke",
+    "touchingreligion",
+    "traduced",
+    "twentyfirst",
+    "vacate",
+    "whensover",
+    "year’s"
+  ],
+  "secondWitnesses": [
+    {
+      "identifier": "canonsdecreesofc0000revj",
+      "url": "https://archive.org/details/canonsdecreesofc0000revj",
+      "year": 1848,
+      "publisher": "London: C. Dolman",
+      "agreement": 0.8734,
+      "note": "The first printing (Graduate Theological Union copy, tesseract OCR), collated the same way on November 20, 2026. Its OCR keeps margin rules and splits words at line-end hyphens, which lowers the figure; no other cause was established. The witness of record is the later Burns and Oates issue of the same translation."
+    }
+  ],
+  "iaWitness": {
+    "identifier": "cu31924029369760",
+    "url": "https://archive.org/details/cu31924029369760",
+    "year": 1848,
+    "publisher": "London : Burns and Oates, N.Y., Catholic Publication Society",
+    "ocr": "cu31924029369760_djvu.txt",
+    "ocrSha256": "63a29ff653e60124787c11d096189fe5b719115c4bde75dfcc421800236c223e",
+    "ocrNote": "SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)"
+  },
+  "collation": {
+    "sourceWords": 95133,
+    "scanWords": 202666,
+    "matchedWords": 91870,
+    "agreement": 0.9657,
+    "sampleDifferences": [
+      {
+        "source": "the sacred and oecumenical council of trent",
+        "scan": "the sacred and cecumenical council of trent"
+      },
+      {
+        "source": "trent ed and trans j waterworth london",
+        "scan": "julius iii and pius iv translated by the rev j waterworth to"
+      },
+      {
+        "source": "of heresy and finall as forming part",
+        "scan": "of heresy and finally as forming part"
+      },
+      {
+        "source": "receive in the profession of faith of",
+        "scan": "receive in the pro fession of faith of"
+      },
+      {
+        "source": "class would be acceptable and advantageous not",
+        "scan": "class would be accept able and advantageous not"
+      },
+      {
+        "source": "with the real docctrines of the catholic",
+        "scan": "with the real doctrines of the catholic"
+      },
+      {
+        "source": "by the promised assistance of the holy",
+        "scan": "by the promised assist ance of the holy"
+      },
+      {
+        "source": "is there also page vi stated on",
+        "scan": "is there also vi preface stated"
+      },
+      {
+        "source": "to notice such details in the execution",
+        "scan": "to notice such detail s in the execution"
+      },
+      {
+        "source": "le plats copy a of the authentic",
+        "scan": "le plats copy of the authentic"
+      },
+      {
+        "source": "numerous references to previous councils had been",
+        "scan": "numerous references to pre vious councils had been"
+      },
+      {
+        "source": "a wise and extensive prohibition issued in",
+        "scan": "a wise and exten sive prohibition issued in"
+      },
+      {
+        "source": "this first translation b of the council",
+        "scan": "the first translation of the council"
+      },
+      {
+        "source": "prelates and theologians preparatory to each session",
+        "scan": "prelates and theologians prepa ratory to each session"
+      },
+      {
+        "source": "fixing the meaning of passages and decrees",
+        "scan": "fixing the meaning qf passages and decrees"
+      },
+      {
+        "source": "form of words page viii used in several",
+        "scan": "form of words used in several"
+      },
+      {
+        "source": "discipline and reformation 5 in compiling both",
+        "scan": "discipline and reformation s in compiling both"
+      },
+      {
+        "source": "work of pallavicino c and as nearly",
+        "scan": "work of pallavicino and as nearly"
+      },
+      {
+        "source": "antwerpie 1779 this edition is very valuable",
+        "scan": "london district this work is by permission"
+      },
+      {
+        "source": "absurd that it might be regarded rather as",
+        "scan": "trifling that it was regarded by the"
+      },
+      {
+        "source": "rather as a burlesque than a translation",
+        "scan": "rather as a grievance than as a"
+      },
+      {
+        "source": "bull of indiction of the sacred ecumenical and",
+        "scan": "bull of indiction sacred cecumenical and"
+      },
+      {
+        "source": "of the sacred ecumenical and general council",
+        "scan": "of indiction sacred cecumenical and general council"
+      },
+      {
+        "source": "pontiff paul iii page 1 paul bishop servant",
+        "scan": "pontiff paul iii paul bishop servant"
+      },
+      {
+        "source": "in order to page 2 maintain the",
+        "scan": "in order to hebr v 2 john x"
+      },
+      {
+        "source": "asunder by schisms dissensions heresies whereas we",
+        "scan": "asunder by schisms dissen sions heresies whereas we"
+      },
+      {
+        "source": "had recourse to ecumenical councils and general",
+        "scan": "had recourse to oecumenical councils and general"
+      },
+      {
+        "source": "attest indicted an ecumenical council and a",
+        "scan": "attest indicted an oecumenical council and a"
+      },
+      {
+        "source": "some other city andwhereas one fit and",
+        "scan": "some other city and whereas one fit and"
+      },
+      {
+        "source": "of the council unto the ensuing calends",
+        "scan": "of the council into the ensuing calends"
+      },
+      {
+        "source": "ensuing calends of november meanwhile the turk",
+        "scan": "ensuing calends of no vember meanwhile the turk"
+      },
+      {
+        "source": "would be a suitable place wherein to",
+        "scan": "would be a suit able place wherein to"
+      },
+      {
+        "source": "to be needless delay we with the",
+        "scan": "to be needless de lay we with the"
+      },
+      {
+        "source": "manner both unobstructed access and a safe",
+        "scan": "manner both unobstructed ac cess and a safe"
+      },
+      {
+        "source": "of making the announcement of this change",
+        "scan": "of making the announce ment of this change"
+      },
+      {
+        "source": "as regards the celebration of the council",
+        "scan": "as regards the celebra tion of the council"
+      },
+      {
+        "source": "conjure our most beloved sons in christ",
+        "scan": "conjure our most be loved sons in christ"
+      },
+      {
+        "source": "they have to render unto him they",
+        "scan": "they have to ren der unto him they"
+      },
+      {
+        "source": "we in the mean time applied ourselves to",
+        "scan": "we in the meantime applied ourselves to"
+      },
+      {
+        "source": "a reconciliation the page 5 princes themselves",
+        "scan": "a reconciliation the of indiction 5 princes themselves"
+      }
+    ],
+    "method": "difflib word alignment, lower case, letters and digits only; OCR noise counts as disagreement"
+  },
+  "sha256": "a276393839a4f271e5f68ffa756229b2819b4bce4cc077d6e7c68446d5cf65af",
+  "bytes": 558860,
+  "checked": "2026-11-20",
+  "correctedFrom": "peo-trent-1848",
+  "typoCorrections": [
+    {
+      "old": "finall",
+      "new": "finally",
+      "page1848": "v",
+      "context": "of heresy and finall as forming part",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "finally",
+        "cu31924029369760 (Burns and Oates issue)": "finally"
+      }
+    },
+    {
+      "old": "docctrines",
+      "new": "doctrines",
+      "page1848": "v",
+      "context": "with the real docctrines of the Catholic",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "doctrines",
+        "cu31924029369760 (Burns and Oates issue)": "doctrines"
+      }
+    },
+    {
+      "old": "coucils",
+      "new": "councils",
+      "page1848": "16",
+      "context": "the most sacred coucils at the beginning",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "councils",
+        "cu31924029369760 (Burns and Oates issue)": "councils"
+      }
+    },
+    {
+      "old": "sacramnets",
+      "new": "sacraments",
+      "page1848": "54",
+      "context": "differ from the sacramnets of the Old",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "sacraments",
+        "cu31924029369760 (Burns and Oates issue)": "sacraments"
+      }
+    },
+    {
+      "old": "sacrments",
+      "new": "sacraments",
+      "page1848": "55",
+      "context": "in the three sacrments Baptism to wit",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "sacraments",
+        "cu31924029369760 (Burns and Oates issue)": "sacraments"
+      }
+    },
+    {
+      "old": "benfices",
+      "new": "benefices",
+      "page1848": "60",
+      "context": "that the said benfices be nowise defrauded",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "benefices",
+        "cu31924029369760 (Burns and Oates issue)": "benefices"
+      }
+    },
+    {
+      "old": "TRANFER",
+      "new": "TRANSFER",
+      "page1848": "65",
+      "context": "WITH FACULTY TO TRANFER THE COUNCIL Paul",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "TRANSFER",
+        "cu31924029369760 (Burns and Oates issue)": "TRANSFER"
+      }
+    },
+    {
+      "old": "sity",
+      "new": "city",
+      "page1848": "66",
+      "context": "in the said sity of Trent and",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "city",
+        "cu31924029369760 (Burns and Oates issue)": "city"
+      }
+    },
+    {
+      "old": "opportunie",
+      "new": "opportune",
+      "page1848": "69",
+      "context": "it is good opportunie and expedient that",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "opportune",
+        "cu31924029369760 (Burns and Oates issue)": "opportune"
+      }
+    },
+    {
+      "old": "sacrement",
+      "new": "sacrament",
+      "page1848": "77",
+      "context": "also that this sacrement should be received",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "sacrament",
+        "cu31924029369760 (Burns and Oates issue)": "sacrament"
+      }
+    },
+    {
+      "old": "lenit",
+      "new": "lenity",
+      "page1848": "85",
+      "context": "mercy severity with lenit that so discipline",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "lenity",
+        "cu31924029369760 (Burns and Oates issue)": "lenity"
+      }
+    },
+    {
+      "old": "neccessary",
+      "new": "necessary",
+      "page1848": "93",
+      "context": "at all times neccessary in order to",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "necessary",
+        "cu31924029369760 (Burns and Oates issue)": "necessary"
+      }
+    },
+    {
+      "old": "reconmending",
+      "new": "recommending",
+      "page1848": "93",
+      "context": "of the apostoles reconmending penitence to sinners",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "recommending",
+        "cu31924029369760 (Burns and Oates issue)": "recommending"
+      }
+    },
+    {
+      "old": "penitance",
+      "new": "penitence",
+      "page1848": "93",
+      "context": "of Christ was penitance a sacrament nor",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "penitence",
+        "cu31924029369760 (Burns and Oates issue)": "penitence"
+      }
+    },
+    {
+      "old": "laiiguage",
+      "new": "language",
+      "page1848": "123",
+      "context": "railing and contumelious laiiguage being utterly discarded",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "language",
+        "cu31924029369760 (Burns and Oates issue)": "language"
+      }
+    },
+    {
+      "old": "cerain",
+      "new": "certain",
+      "page1848": "138",
+      "context": "therein has for cerain just and good",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "certain",
+        "cu31924029369760 (Burns and Oates issue)": "certain"
+      }
+    },
+    {
+      "old": "propritiatory",
+      "new": "propitiatory",
+      "page1848": "154",
+      "context": "sacrifice is truly propritiatory and that by",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "propitiatory",
+        "cu31924029369760 (Burns and Oates issue)": "propitiatory"
+      }
+    },
+    {
+      "old": "agreebly",
+      "new": "agreeably",
+      "page1848": "155",
+      "context": "it rightly offered agreebly to a tradition",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "agreeably",
+        "cu31924029369760 (Burns and Oates issue)": "agreeably"
+      }
+    },
+    {
+      "old": "conciences",
+      "new": "consciences",
+      "page1848": "163",
+      "context": "know that their conciences will be grievously",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "consciences",
+        "cu31924029369760 (Burns and Oates issue)": "consciences"
+      }
+    },
+    {
+      "old": "indiscrimately",
+      "new": "indiscriminately",
+      "page1848": "172",
+      "context": "that all Christians indiscrimately are priests of",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "indiscriminately",
+        "cu31924029369760 (Burns and Oates issue)": "indiscriminately"
+      }
+    },
+    {
+      "old": "periol",
+      "new": "peril",
+      "page1848": "176",
+      "context": "bound at their periol not to do",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "peril",
+        "cu31924029369760 (Burns and Oates issue)": "peril"
+      }
+    },
+    {
+      "old": "benfice",
+      "new": "benefice",
+      "page1848": "180",
+      "context": "for an ecclesiastical benfice who is to",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "benefice",
+        "cu31924029369760 (Burns and Oates issue)": "benefice"
+      }
+    },
+    {
+      "old": "Wereas",
+      "new": "Whereas",
+      "page1848": "187",
+      "context": "the same therein Wereas the age of",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "Whereas",
+        "cu31924029369760 (Burns and Oates issue)": "Whereas"
+      }
+    },
+    {
+      "old": "noniminate",
+      "new": "nominate",
+      "page1848": "191",
+      "context": "fit they shall noniminate another who is",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "nominate",
+        "cu31924029369760 (Burns and Oates issue)": "nominate"
+      }
+    },
+    {
+      "old": "SAlNTS",
+      "new": "SAINTS",
+      "page1848": "233",
+      "context": "AND RELICS OF SAlNTS AND ON SACRED",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "SAINTS",
+        "cu31924029369760 (Burns and Oates issue)": "SAINTS"
+      }
+    },
+    {
+      "old": "ReguIars",
+      "new": "Regulars",
+      "page1848": "237",
+      "context": "CHAPTER I All ReguIars shall order their",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "Regulars",
+        "cu31924029369760 (Burns and Oates issue)": "Regulars"
+      }
+    },
+    {
+      "old": "coajutor",
+      "new": "coadjutor",
+      "page1848": "262",
+      "context": "demands that a coajutor be granted to",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "coadjutor",
+        "cu31924029369760 (Burns and Oates issue)": "coadjutor"
+      }
+    },
+    {
+      "old": "Apostolie",
+      "new": "Apostolic",
+      "page1848": "267",
+      "context": "committed by the Apostolie See are to",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "Apostolic",
+        "cu31924029369760 (Burns and Oates issue)": "Apostolic"
+      }
+    },
+    {
+      "old": "privelege",
+      "new": "privilege",
+      "page1848": "268",
+      "context": "any indult or privelege whatsoever notwithstanding nor",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "privilege",
+        "cu31924029369760 (Burns and Oates issue)": "privilege"
+      }
+    },
+    {
+      "old": "ecclesiastiscal",
+      "new": "ecclesiastical",
+      "page1848": "268",
+      "context": "to leases of ecclesiastiscal things even though",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "ecclesiastical",
+        "cu31924029369760 (Burns and Oates issue)": "ecclesiastical"
+      }
+    },
+    {
+      "old": "ecclesastical",
+      "new": "ecclesiastical",
+      "page1848": "278",
+      "context": "by excessive facility ecclesastical discipline be enervated",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "ecclesiastical",
+        "cu31924029369760 (Burns and Oates issue)": "ecclesiastical"
+      }
+    },
+    {
+      "old": "Soveriegn",
+      "new": "Sovereign",
+      "page1848": "281",
+      "context": "the most blessed Soveriegn Pontiffs Paul III",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "Sovereign",
+        "cu31924029369760 (Burns and Oates issue)": "Sovereign"
+      }
+    },
+    {
+      "old": "takein",
+      "new": "taken",
+      "page1848": "284",
+      "context": "decree and having takein the advice of",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "taken",
+        "cu31924029369760 (Burns and Oates issue)": "taken"
+      }
+    },
+    {
+      "old": "deprivaiton",
+      "new": "deprivation",
+      "page1848": "287",
+      "context": "even those of deprivaiton to be inflicted",
+      "witnesses": {
+        "canonsdecreesofc0000revj (London: C. Dolman, 1848)": "deprivation",
+        "cu31924029369760 (Burns and Oates issue)": "deprivation"
+      }
+    }
+  ],
+  "typoCorrectionMethod": "Each word the read gate could not read was aligned word by word (difflib) with the OCR of both scans as served by archive.org/stream/. A correction is made only where both scans read the same known word at that place and it differs from the transcription by a keying slip. Words split across the source's own page markers (\"an nouncing\", \"Aposto ic\") are left as printed. Not checked against page images: the scans' servers are outside this environment.",
+  "typoCorrectionsNotMade": [
+    {
+      "word": "Aposotlic",
+      "page1848": "127",
+      "why": "the 1848 scan's OCR has no reading at this place (the Burns and Oates issue reads \"Apostolic\")"
+    },
+    {
+      "word": "excomnunication",
+      "why": "the 1848 scan's OCR is garbled here (\"Sommunication\"); the Burns and Oates issue reads \"excommunication\""
+    }
+  ]
+}

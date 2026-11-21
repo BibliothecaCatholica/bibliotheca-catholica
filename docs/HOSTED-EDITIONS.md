@@ -153,7 +153,7 @@ These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The
 | pg-1719 | The Ballad of the White Horse | excluded (verse) | map | yes | yes | yes |
 | pg-11560 | The Barbarism of Berlin | 100% | · | · | yes | · |
 | pg-35155 | The Betrothed | 100% | map | yes | yes | yes |
-| peo-trent-1848 | The Canons and Decrees of the Council of Trent | 0% | map | yes | yes | yes |
+| peo-trent-1848-r2 | The Canons and Decrees of the Council of Trent | 0% | map | yes | yes | yes |
 | pg-76305 | The Catholic Church and Conversion | 83% | map | yes | yes | yes |
 | pg-78085 | The Catholic Church and History | 96% | · | · | yes | · |
 | pg-45304 | The City of God | 64% | · | · | yes | · |

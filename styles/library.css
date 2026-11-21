@@ -89,7 +89,7 @@ body.has-listen-dock footer{padding-bottom:64px}
 .edition-designed p.reading-chapter .ch-n{display:block;font:500 2.6em/1.05 var(--display);color:var(--rubric);margin:.12em 0 .1em}
 .edition-designed p.reading-chapter .ch-t{display:block;font-variant-caps:all-small-caps;letter-spacing:.05em}
 .edition-designed p.reading-chapter::after{content:"❦";display:block;font-size:.8em;color:var(--gold);margin-top:.5em}
-.edition-designed p.reading-chapter+p:not(.reading-heading)::first-letter,.edition-designed p.reading-chapter+p.reading-heading+p::first-letter,.edition-designed>p:first-child::first-letter{float:left;font:500 3.3em/.82 var(--display);color:var(--rubric);padding:.08em .08em 0 0}
+.edition-designed p.reading-chapter+p:not(.reading-heading):not(.lead-mark)::first-letter,.edition-designed p.reading-chapter+p.reading-heading+p:not(.lead-mark)::first-letter,.edition-designed>p:first-child:not(.lead-mark)::first-letter{float:left;font:500 3.3em/.82 var(--display);color:var(--rubric);padding:.08em .08em 0 0}
 .ch-opener{text-align:center;margin:28px auto 34px;max-width:760px}
 .ch-opener .ch-label{margin:0;font:500 15px var(--serif);font-variant-caps:all-small-caps;letter-spacing:.18em;color:var(--muted)}
 .ch-opener .ch-num{margin:4px 0 2px;font:500 64px/1 var(--display);color:var(--rubric)}

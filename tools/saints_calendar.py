@@ -249,7 +249,8 @@ def attach_readings(md,entries,readings=None):
         e=by_name.get(name)
         if e is None:
             raise CalendarError('calendar reading does not match a day entry: '+name+' on '+md)
-        e['reading']=r
+        e.setdefault('readings', []).append(r)
+        e['reading']=e['readings'][0]
     return entries
 
 def day_page(md,entries,a):
@@ -264,7 +265,7 @@ def day_page(md,entries,a):
         h+='<section><h2>'+E(label)+' ('+str(len(L))+')</h2><ul class="saint-list cal-facts">'
         for x in L:
             nm=a(x['href'],x['name']) if x.get('href') else E(x['name'])
-            h+='<li class="saint-row"><b>'+nm+'</b>'+(' <span class="saint-meta">'+E(x['facts'])+'</span>' if x['facts'] else '')+(' <span class="saint-note small muted">'+E(' '.join(x['notes']))+'</span>' if x['notes'] else '')+((' <span class="saint-reading small">'+a(x['reading']['href'],x['reading']['label'])+'</span>') if x.get('reading') else '')+'</li>'
+            h+='<li class="saint-row"><b>'+nm+'</b>'+(' <span class="saint-meta">'+E(x['facts'])+'</span>' if x['facts'] else '')+(' <span class="saint-note small muted">'+E(' '.join(x['notes']))+'</span>' if x['notes'] else '')+((' <span class="saint-reading small">'+' · '.join(a(r['href'],r['label']) for r in (x.get('readings') or ([x['reading']] if x.get('reading') else [])))+'</span>') if (x.get('readings') or x.get('reading')) else '')+'</li>'
         h+='</ul></section>'
     prev,nxt=neighbours(md)
     h+='<p class="small muted">'+E(PAGE_NOTE)+' '+a('/references/','Resources')+' · '+a('/saints/about/','Sources & method')+'</p>'

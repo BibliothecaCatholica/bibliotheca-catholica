@@ -2268,6 +2268,34 @@
       ]
     },
     {
+      "id": "catholic-encyclopedia-o-antiphons",
+      "title": "O Antiphons (The Catholic Encyclopedia, 1911)",
+      "author": "H. T. Henry",
+      "category": "Liturgy",
+      "tradition": "Catholic tradition",
+      "description": "H. T. Henry's article on the seven great antiphons sung at the Magnificat from December 17 to 23, from the eleventh volume of The Catholic Encyclopedia: their texts, their place in the Office, and their history.",
+      "reviewStatus": "source-checked",
+      "added": "2026-11-21",
+      "date": "1911",
+      "editions": [
+        {
+          "id": "ia-cathencyc-1911-o-antiphons",
+          "label": "Transcription of the Internet Archive scan (New York: Robert Appleton Company, 1911), vol. 11, p. 173",
+          "source": "https://archive.org/details/catholicencyclop0011vari_p3b3",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-21",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1911 in The Catholic Encyclopedia, vol. 11 (New York: Robert Appleton Company). Transcribed by Bibliotheca Catholica from the Internet Archive scan: the article only, cut from page 173; running heads and page numbers removed, 43 misreadings (most of them quotation marks) corrected by hand against the page image, and 21 names and Latin words checked against it (100% of words read). Not a manual proofread. Wikisource's online text stays a link only.",
+          "sourceTitle": "O Antiphons (The Catholic Encyclopedia, vol. 11, 1911)",
+          "text": "data/texts/ia-cathencyc-1911-o-antiphons.txt",
+          "sha256": "b787de008d6a4eb8b68ab025ef1524a493d1fea4ca8ce9fbd15204ab976fc342"
+        }
+      ]
+    },
+    {
       "id": "fides-ratio",
       "title": "Fides et Ratio",
       "author": "John Paul II",

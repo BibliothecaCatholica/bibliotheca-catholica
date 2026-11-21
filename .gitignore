@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 .openai/
+node_modules
 node_modules/
 .local/
 .epub-build/

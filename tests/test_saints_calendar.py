@@ -174,5 +174,7 @@ class HostedReadings(unittest.TestCase):
         body=SC.day_page('12-10', SC.merged_day('12-10', doc, GUIDE, href), lambda u,lab: '<a href="%s">%s</a>'%(u,lab))[2]
         self.assertIn('/work/butler-eulalia-merida/', body)
         self.assertIn("Her life, from Butler's Lives (Derby, 1842)", body)
+        self.assertIn('/work/prudentius-eulalia/', body)
+        self.assertIn('Prudentius, Peristephanon III, tr. Thackeray (1890, a selection)', body)
         self.assertNotIn('href="https://', body)
         self.assertNotIn('catholicsaints', body.lower())

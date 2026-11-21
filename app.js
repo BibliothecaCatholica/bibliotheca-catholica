@@ -663,6 +663,7 @@ function notfound(){render('<div class="empty"><h2>Not found</h2><p><a href="#/"
 var SUPPORT={paypal:'https://www.paypal.com/donate/?hosted_button_id=D48R9YU7SH43A'};
 function support(){var shop=AFF.bookshopShop||'';
   var h='<div class="page-head"><div class="eyebrow">Adiuva bibliothecam</div><h1>Support the Library</h1><p class="lede">Bibliotheca Catholica is free for everyone, with no ads and no paywall. Donations cover hosting and the hours of curation behind every author page, edition, and link.</p></div>'+
+   '<p>Support is a gift.</p>'+
    '<div class="sup-grid">'+
    '<div class="sup-card"><div class="sup-ico" aria-hidden="true">✠</div><h2>Donate with PayPal</h2><p>Give once, or set up a monthly gift that keeps the library growing.</p><a class="btn sup-btn sup-pp" data-support="paypal" href="'+SUPPORT.paypal+'" target="_blank" rel="noopener">Donate with PayPal ↗</a><p class="small muted">Choose one-time or monthly on the PayPal page.</p></div>'+
    '</div>'+
@@ -679,7 +680,7 @@ function support(){var shop=AFF.bookshopShop||'';
    LIBRARY_DATA.relatedAuthors) are static documents built by tools/build_static.py, as are the Summa pages
    (/summa/, /summa/<part>/, /summa/<part>/q<n>/, /summa/<part>/q<n>/a<m>/, part 1, 1-2, 2-2, 3, or supp for the Supplement).
    On their own static page the pre-rendered text stays as the view; a hash link to one loads the static page. */
-function staticOnly(path){path=String(path||'').replace(/\/+$/,'');var m=/^author\/([a-z0-9-]+)$/.exec(path),L=typeof window!=='undefined'&&window.LIBRARY_DATA;if(m)return !!(L&&(L.relatedAuthors||[]).some(function(r){return r.id===m[1]}));if(/^saints\/calendar\/(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(path))return window.BC_BOOT===path&&!location.hash;if(path==='credits')return true;return path==='councils'||/^work\/[a-z0-9-]+\/(ch|story)\/\d\d-[a-z0-9-]+$/.test(path)||/^summa(\/(1|1-2|2-2|3|supp)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(path)}
+function staticOnly(path){path=String(path||'').replace(/\/+$/,'');var m=/^author\/([a-z0-9-]+)$/.exec(path),L=typeof window!=='undefined'&&window.LIBRARY_DATA;if(m)return !!(L&&(L.relatedAuthors||[]).some(function(r){return r.id===m[1]}));if(/^saints\/calendar\/(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(path))return window.BC_BOOT===path&&!location.hash;if(path==='credits')return true;return path==='councils'||/^work\/[a-z0-9-]+\/(ch|story)\/\d\d-[a-z0-9-]+$/.test(path)||/^summa(\/(1|1-2|2-2|3|supp)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(path)||path==='work/jerome-isaiah-prologue/ignoratio-scripturarum'}
 function keepStatic(path){path=path.replace(/\/+$/,'');if(!location.hash&&window.BC_BOOT===path&&main.querySelector('.static-prerender')){setNav(path==='councils'?'magisterium':'library');return}location.replace('/'+path+'/')}
 /* /credits/ is a static page whose entries are in-page anchors (#ed-…, #portrait-…, #wiki-…), not routes: the browser scrolls to them. */
 function creditsAnchor(){return window.BC_BOOT==='credits'&&!!location.hash&&!/^#\//.test(location.hash)}
@@ -700,13 +701,17 @@ document.addEventListener('click',function(e){if(e.defaultPrevented||e.button||e
 var gaT=null,gaLast=null,gaLanded=false;
 /* v18: dedupe on the raw URL, but report the normalized route (BCAnalytics.pagePath): never a search term or Index filter,
    and one path per view whether it was served from / or a static page. Since 2026-11-09 that route is a real path
-   (/author/x/, the page's canonical path), not /#/author/x, because GA4 ignores the fragment when it sets Page path. Free-text titles are replaced the same way. */
-function gaPageView(){clearTimeout(gaT);gaT=setTimeout(function(){var hash=creditsAnchor()?'':location.hash,raw=location.pathname+hash;if(raw===gaLast)return;gaLast=raw;
+   (/author/x/, the page's canonical path), not /#/author/x, because GA4 ignores the fragment when it sets Page path. Free-text titles are replaced the same way.
+   A hash is part of the raw URL only when it starts with '#/' (a route). Plain anchors do not change the raw URL, so they
+   do not send another page_view on hashchange (2026-11-21). */
+function gaPageView(){clearTimeout(gaT);gaT=setTimeout(function(){var hash=/^#\//.test(location.hash)?location.hash:'',raw=location.pathname+hash;if(raw===gaLast)return;gaLast=raw;
   var A=window.BCAnalytics;if(!A)return;var path=A.pagePath(hash,window.BC_BOOT),title=A.pageTitle(path,document.title);
   /* only the landing view keeps the four utm_ campaign tags (BCAnalytics.utmQuery), from location.search or, for links that
-     put them after the '#', from the hash (landingSearch); later views send the bare route. After the landing view the tags
-     are removed from the hash (stripHashUtm) and gaLast follows, so the same view is not sent twice (2026-11-09). */
-  var landing=!gaLanded,loc=A.pageLocation(path,landing?A.landingSearch(location.search,hash):'');gaLanded=true;
+     put them after the '#', from the hash (landingSearch uses the original location.hash, including a rare utm_ tag on a
+     plain anchor); later views send the bare route. After the landing view the tags are removed from the hash (stripHashUtm)
+     and gaLast follows, so the same view is not sent twice (2026-11-09). Plain anchors are left out of `hash` and `raw`, so
+     a hashchange from /policy/ to /policy/#privacy does not send another page_view. */
+  var landing=!gaLanded,loc=A.pageLocation(path,landing?A.landingSearch(location.search,location.hash):'');gaLanded=true;
   track('page_view',{page_title:title,page_location:loc,page_path:path});
   if(landing&&A.stripHashUtm&&A.stripHashUtm())gaLast=location.pathname+location.hash},400)}
 window.addEventListener('hashchange',gaPageView);
@@ -718,6 +723,7 @@ function canonicalFor(){var raw=(location.hash.replace(/^#\/?/,'')||window.BC_BO
   if(p.length===2&&/^(author|work)$/.test(p[0])&&/^[a-z0-9-]+$/.test(p[1]))return SITE+p[0]+'/'+p[1]+'/';
   if(/^summa(\/(1|1-2|2-2|3|supp)(\/q[1-9]\d{0,2}(\/a[1-9]\d?)?)?)?$/.test(p.join('/')))return SITE+p.join('/')+'/';
   if(p.length===4&&p[0]==='work'&&/^[a-z0-9-]+$/.test(p[1])&&/^(ch|story)$/.test(p[2])&&/^\d\d-[a-z0-9-]+$/.test(p[3]))return SITE+p.join('/')+'/';
+  if(p.length===3&&p[0]==='work'&&p[1]==='jerome-isaiah-prologue'&&p[2]==='ignoratio-scripturarum')return SITE+p.join('/')+'/';
   if(p.length===2&&p[0]==='editions'&&/^[a-z0-9_-]+$/.test(p[1]))return SITE+'editions/'+p[1]+'/';
   if(p.length===2&&p[0]==='reading'&&/^[a-z0-9-]+$/.test(p[1]))return SITE+'reading/'+p[1]+'/';
   if(p.length===2&&p[0]==='rites'&&/^[a-z0-9-]+$/.test(p[1]))return SITE+'rites/'+p[1]+'/';

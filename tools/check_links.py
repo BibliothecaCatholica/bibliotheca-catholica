@@ -36,9 +36,21 @@ def fetch(u,timeout):
     ctx=ssl.create_default_context()
     with urllib.request.urlopen(req,timeout=timeout,context=ctx) as r:
         body=r.read(65536).decode('utf-8','ignore');return r.status,r.geturl(),body
-def check(u):
+def check_timeouts(fast):
+    """Full mode retries once at 45 s; --fast uses one short timeout."""
+    return (8,) if fast else (20, 45)
+def parse_args(argv=None):
+    ap=argparse.ArgumentParser();ap.add_argument('--isidore-sample',type=int,default=None)
+    ap.add_argument('--workers',type=int,default=24)
+    ap.add_argument('--out',default=str(ROOT/'docs/link-health.json'))
+    ap.add_argument('--fast',action='store_true')
+    ap.add_argument('--max-seconds',type=float,default=None)
+    a=ap.parse_args(argv)
+    if a.isidore_sample is None:a.isidore_sample=10 if a.fast else 60
+    return a
+def check(u,timeouts=(20,45)):
     last=None
-    for t in (20,45):
+    for t in timeouts:
         try:
             st,final,body=fetch(u,t);title=(re.search(r'<title[^>]*>([^<]{0,200})',body,re.I) or [None,''])[1].strip()
             off=reg(urllib.parse.urlparse(final).hostname)!=reg(urllib.parse.urlparse(u).hostname)
@@ -53,18 +65,36 @@ def check(u):
         except Exception as e:
             last=dict(url=u,status=0,final=u,title=str(e)[:120],cls='timeout/error')
     return last
-def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--isidore-sample',type=int,default=60);ap.add_argument('--workers',type=int,default=24)
-    ap.add_argument('--out',default=str(ROOT/'docs/link-health.json'));a=ap.parse_args()
+def write_report(rep,out,isi,sample,S):
+    from collections import Counter
+    C=Counter(r['cls'] for r in rep['results'])
+    rep['summary']=dict(C)
+    Path(out).parent.mkdir(parents=True,exist_ok=True);Path(out).write_text(json.dumps(rep,ensure_ascii=False,indent=1)+'\n')
+    cap=(' Partial run: stopped after the time cap (%s s).'%(rep.get('max_seconds'),) if rep.get('capped') else '')
+    md=[f"# Link health ({rep['checked']})",'',f"Checked {rep['checked_urls']} of {rep['total_urls']} outbound URLs ({sample} sampled from {len(isi)} isidore.co book/folder URLs) in {rep['seconds']} s.{cap}",'','| Class | Count |','|---|---|']+[f'| {k} | {v} |' for k,v in C.most_common()]+['','## Needs review (not ok)','','| Class | Status | URL | Final URL / note | Files |','|---|---|---|---|---|']
+    md+=[f"| {r['cls']} | {r['status']} | {r['url']} | {(r['final'] if r['final']!=r['url'] else r['title'])[:90]} | {', '.join(r['files'])} |" for r in rep['results'] if r['cls']!='ok']
+    Path(out).with_suffix('.md').write_text('\n'.join(md)+'\n');print(json.dumps(rep['summary']),'->',out)
+def main(argv=None):
+    a=parse_args(argv)
+    timeouts=check_timeouts(a.fast)
     S=sources();isi=[u for u in S if 'isidore.co/' in u and ('/CalibreLibrary/' in u or '/calibre/' in u)]
     rest=[u for u in S if u not in isi];random.seed(1);sample=random.sample(isi,min(a.isidore_sample,len(isi)))
-    todo=sorted(rest)+sample;t0=time.time();res=[]
+    todo=sorted(rest)+sample;t0=time.time();res=[];capped=False;planned=len(todo)
     with cf.ThreadPoolExecutor(a.workers) as ex:
-        for r in ex.map(check,todo):r['files']=sorted(S[r['url']]);res.append(r)
-    from collections import Counter;C=Counter(r['cls'] for r in res)
-    rep=dict(checked=time.strftime('%Y-%m-%d %H:%M UTC',time.gmtime()),seconds=round(time.time()-t0),total_urls=len(S),checked_urls=len(todo),isidore_urls=len(isi),isidore_sampled=len(sample),summary=dict(C),results=sorted(res,key=lambda r:(r['cls']=='ok',r['url'])))
-    Path(a.out).parent.mkdir(parents=True,exist_ok=True);Path(a.out).write_text(json.dumps(rep,ensure_ascii=False,indent=1)+'\n')
-    md=[f"# Link health ({rep['checked']})",'',f"Checked {len(todo)} of {len(S)} outbound URLs ({len(sample)} sampled from {len(isi)} isidore.co book/folder URLs) in {rep['seconds']} s.",'','| Class | Count |','|---|---|']+[f'| {k} | {v} |' for k,v in C.most_common()]+['','## Needs review (not ok)','','| Class | Status | URL | Final URL / note | Files |','|---|---|---|---|---|']
-    md+=[f"| {r['cls']} | {r['status']} | {r['url']} | {(r['final'] if r['final']!=r['url'] else r['title'])[:90]} | {', '.join(r['files'])} |" for r in rep['results'] if r['cls']!='ok']
-    Path(a.out).with_suffix('.md').write_text('\n'.join(md)+'\n');print(json.dumps(rep['summary']),'->',a.out)
+        futs={ex.submit(check,u,timeouts):u for u in todo}
+        try:
+            for fut in cf.as_completed(futs):
+                if a.max_seconds is not None and (time.time()-t0)>=a.max_seconds:
+                    capped=True
+                    for f in futs:
+                        f.cancel()
+                    break
+                r=fut.result();r['files']=sorted(S[r['url']]);res.append(r)
+        finally:
+            if capped:
+                try:ex.shutdown(wait=False,cancel_futures=True)
+                except TypeError:ex.shutdown(wait=False)
+    from collections import Counter
+    rep=dict(checked=time.strftime('%Y-%m-%d %H:%M UTC',time.gmtime()),seconds=round(time.time()-t0,2),total_urls=len(S),planned_urls=planned,checked_urls=len(res),isidore_urls=len(isi),isidore_sampled=len(sample),capped=capped,max_seconds=a.max_seconds,summary=dict(Counter(r['cls'] for r in res)),results=sorted(res,key=lambda r:(r['cls']=='ok',r['url'])))
+    write_report(rep,a.out,isi,len(sample),S)
 if __name__=='__main__':main()

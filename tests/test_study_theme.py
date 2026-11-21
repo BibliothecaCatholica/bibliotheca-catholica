@@ -14,7 +14,13 @@ class StudyTheme(unittest.TestCase):
         study = (ROOT / 'study/index.html').read_text(encoding='utf-8')
         self.assertEqual(BOOT.findall(study), [home])
         self.assertLess(study.index(home), study.index('rel="stylesheet"'))
+        self.assertLess((ROOT / 'index.html').read_text(encoding='utf-8').index(home), (ROOT / 'index.html').read_text(encoding='utf-8').index('rel="stylesheet"'))
         self.assertIn("localStorage.getItem('hub-theme')", home)
+        for rel in ('support/index.html', 'prayers/index.html', 'doctors/index.html', 'reading/advent-2026/index.html'):
+            page = (ROOT / rel).read_text(encoding='utf-8')
+            with self.subTest(rel):
+                self.assertEqual(BOOT.findall(page), [home], rel)
+                self.assertLess(page.index(home), page.index('rel="stylesheet"'), rel)
 
     def test_dark_rules_use_site_tokens(self):
         css = (ROOT / 'assets/study/study.css').read_text(encoding='utf-8')

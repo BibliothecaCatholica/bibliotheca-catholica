@@ -1,0 +1,530 @@
+{
+  "id": "ebible-dra-ecclesiasticus",
+  "kind": "public-domain-text",
+  "title": "Ecclesiasticus (Douay-Rheims, American edition of 1899)",
+  "author": "English College at Douay (revised by Richard Challoner)",
+  "firstPublished": "1609 (Douay); revised by Richard Challoner, 1749-1752; eBible.org transcribes the American edition of 1899",
+  "rights": "Public domain in the USA. Outside the U.S., check local copyright rules. eBible.org notices retained.",
+  "rightsBasis": "pd-date",
+  "sourceName": "eBible.org",
+  "sourceUrl": "https://ebible.org/engDRA/SIR01.htm",
+  "sourcePage": "https://ebible.org/engDRA/",
+  "sourceNotice": "THE WISDOM OF JESUS THE SON OF SIRACH,\nOR\nECCLESIASTICUS\n\nSirach 1\n\n1 All wisdom is from the Lord God, and hath been always with him, and is before all time.\n\n2 Who hath numbered the sand of the sea, and the drops of rain, and the days of the world? Who hath measured the height of heaven, and the breadth of the earth, and the depth of the abyss?\n\n3 Who hath searched out the wisdom of God that goeth before all things?\n\n4 Wisdom hath been created before all things, and the understanding of prudence from everlasting.\n\n5 The word of God on high is the fountain of wisdom, and her ways are everlasting commandments.\n\n6 To whom hath the root of wisdom been revealed, and who hath known her wise counsels?\n\n7 To whom hath the discipline of wisdom been revealed and made manifest? and who hath understood the multiplicity of her steps?\n\n8 There is one most high Creator Almighty, and a powerful king, and greatly to be feared, who sitteth upon his throne, and is the God of dominion.\n\n9 He created her in the Holy Ghost, and saw her, and numbered her, and measured her.\n\n10 And he poured her out upon all his works, and upon all flesh according to his gift, and hath given her to them that love him.\n\n11 The fear of the Lord is honour, and glory, and gladness, and a crown of joy.\n\n12 The fear of the Lord shall delight the heart, and shall give joy, and gladness, and length of days.\n\n13 With him that feareth the Lord, it shall go well in the latter end, and in the day of his death he shall be bless",
+  "sourceFileSha256": "bd5e14c445c1c3d9ef9c8ae9e3a5d2be0aab0182734b31e15af06687310425d9",
+  "sourcePages": [
+    {
+      "url": "https://ebible.org/engDRA/SIR01.htm",
+      "sha256": "1e7ac7e175c155493a55555f9de19e547891d26a8366f9cab3a741e7d6ade121",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/01.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR02.htm",
+      "sha256": "a465460f462934b63bf83194dd3dff79c4a1e8a395c86d1321bdae649f7e23da",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/02.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR03.htm",
+      "sha256": "f826e20e9b6d51eb4d9013fe1622c2bce1e227d12954894af82cce195067bb67",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/03.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR04.htm",
+      "sha256": "902dac63a53b9667801b0d590cea135117df56e4874c519fd63c7d5434929473",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/04.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR05.htm",
+      "sha256": "856f2ff1784862b4c7954f4a577595d27a292422eab18cc3107aed6d1d801451",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/05.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR06.htm",
+      "sha256": "f5a22ceadc984f5fb1cea17b4fc1811123160cc946ccdea7884465052d916728",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/06.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR07.htm",
+      "sha256": "67074928b9ab2cc5c95fcd57d69f1111600bfaca0f357dc51686a57c044d2ddd",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/07.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR08.htm",
+      "sha256": "88f804a5c49821f923540e78c49148c1ccdf3c60e00cff358d68b69e8ce72d90",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/08.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR09.htm",
+      "sha256": "7f594c461fdb393fe2655d519a524fd36d60cb08c0f70b0451800aa715ff04cf",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/09.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR10.htm",
+      "sha256": "aa63ca0e1b36a172fb76a642dfb8ba6bba8dddf363e48f86c5a15556f9b5bd46",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/10.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR11.htm",
+      "sha256": "b474c05a9ca28ab529938f6572a20607aad2a548c65c3c4e145274baeff4686e",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/11.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR12.htm",
+      "sha256": "b41f34eab28732085a608b2288b5f23c0f4663101931af981a7f8da47ce3630f",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/12.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR13.htm",
+      "sha256": "5d958a516bc2f33d5d78dfb51f9e5757d7d72799f7ed309597ca404eb85e0fca",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/13.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR14.htm",
+      "sha256": "16424ef33e96ef6b2bbce6a84b4403b6fe40faf00cdcea12bf0dfa55204d7db5",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/14.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR15.htm",
+      "sha256": "08a11a89aa638837682fefbe153bd9ee8d5d4072aba416a8b1eeacc2b1db061a",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/15.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR16.htm",
+      "sha256": "97a5cb14b2a406531d1508cc76debeff812cc6ea876b66b2247500b73dc1268a",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/16.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR17.htm",
+      "sha256": "460aab0ae8928954a670542f83e6215bdaa98ce4ec713ad96ff8cd59cc371f49",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/17.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR18.htm",
+      "sha256": "0d09db5c208bac66dd9b3a7a1b5c12963ac443d1a9f707ec1fcc4a87b2c8430b",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/18.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR19.htm",
+      "sha256": "8946f8604d81d0298ebce577542f9d46f0d81c8a088f587f82b9bf195938ecc9",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/19.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR20.htm",
+      "sha256": "e908722a86ace262c7cecc7f1967d0aa03c1a9e062577287447bb742685f0245",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/20.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR21.htm",
+      "sha256": "e5d7b691064b3389aa7136324f131fe814ceb2dc5182d551703eb081cc063394",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/21.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR22.htm",
+      "sha256": "97c85c90c86fa2ae9a35dcb62dec8d533e4a7fd5e31f69fc97913542c7996efb",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/22.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR23.htm",
+      "sha256": "ebcae18b857c411ca28c6ee23ec7f8574127862075a35d495aedf38ca491cc52",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/23.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR24.htm",
+      "sha256": "01f1d49f62e03e7df7974a696aeee43c626e9c093fb789beec67d65ec5e549e9",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/24.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR25.htm",
+      "sha256": "b192ef9f05efe45399382dabb5075c38b4a60705fafea083777fad6767cd1874",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/25.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR26.htm",
+      "sha256": "9146d906152723432bc2e8ffaf6fa86f8a70331aa5cc922a5908d0bf8575ab54",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/26.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR27.htm",
+      "sha256": "b39f77dd5604aa1fdbec86e9968607fef19f770dd7bd148525b6072862fb5284",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/27.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR28.htm",
+      "sha256": "09ed55b6fdd67135f19ac941bba0ad73ac0cdc3a5c60a2f055f213829a626303",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/28.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR29.htm",
+      "sha256": "9ee7b2a4230bba14960506914edef98b26e14f50750d9c6eb0d719b914c6a05a",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/29.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR30.htm",
+      "sha256": "e9347c06e838eb5045b231647648f63aba19dc5808e851ce3d49e84e5f468b9f",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/30.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR31.htm",
+      "sha256": "d658d52f9a4f1e780346c0d6278964de805894e9e9d3918490e75736adb45383",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/31.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR32.htm",
+      "sha256": "9c3b2e84b85cff4ac0a8bc68f37900d57b93ce2b7f412002e33d8620bc2cb714",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/32.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR33.htm",
+      "sha256": "c3faaa5f156941e2ac334a6085a5e5b1ed189ed91bc987ed1c93fa02d71a319d",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/33.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR34.htm",
+      "sha256": "efe09d1a7790b79f6e4cb4c8b199b0adaf614672a657430724e32e0000454f0b",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/34.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR35.htm",
+      "sha256": "ea0460091f7116a36f9ca73dd75f8d7e3c0ff39173e98b46b181691d4f926ab9",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/35.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR36.htm",
+      "sha256": "5a10428d0111c549eaa0fb181f942b5ca86bb10daa4c6bc2004c84cbf1496dc3",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/36.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR37.htm",
+      "sha256": "cfda89214e8525373c53936ffd1b50d573c2c420cf3f8b69bb0e65dfca1a36e5",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/37.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR38.htm",
+      "sha256": "f5ecfc14f20db0b90f72555e3e1ace633e29ef7bf8a667eeda10bf31ed43dd29",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/38.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR39.htm",
+      "sha256": "df83d5a9aeff4105eab746857dc121b12d7fd40ce065b5ccd74fab9d558f90a2",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/39.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR40.htm",
+      "sha256": "e0bba129194b40b136d7694498cfaddeae555997dbca15fb65b010f29f331e71",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/40.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR41.htm",
+      "sha256": "c21a581623ffc735b4f0152dfa1361432ed31ce1fd80c3a48d8e5fb6191ffeb2",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/41.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR42.htm",
+      "sha256": "7dd493894de7954291a4530d0c0c5f5fae988b648be4b9dfc5e272c121735d7b",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/42.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR43.htm",
+      "sha256": "e6d03b84e5199446920aa95ca15ae514e551c41d92031fa9f169f20d0973eda0",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/43.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR44.htm",
+      "sha256": "3de759c3415a7b4bcd74c13842fed7e990fa7622f3187a17ae902ba35a55f603",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/44.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR45.htm",
+      "sha256": "628d270a4f939e7f44bafbd0093bc858357c89eb5896791bc482af21d387c9e5",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/45.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR46.htm",
+      "sha256": "9b9ed430bf0d8f1d4e2354f7b33888a95ee58f7ff98b75eabca2282da32711b8",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/46.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR47.htm",
+      "sha256": "0e61bf11b53df514cadd08fc7a3e8e937be315155dcaffaefff459d05dae50b9",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/47.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR48.htm",
+      "sha256": "8854b24acd48ceacbdd8a260137c5287417d8d7286ceb59b5f6c513e9963f3c6",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/48.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR49.htm",
+      "sha256": "3fe2dfefa1b136a605ca106b942abc74cb29548e05d8182019b037448de98fa4",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/49.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR50.htm",
+      "sha256": "63ffe1e48162ecf785d7cc326d6650e3598128317769df3131bacce5e5c9600e",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/50.html.gz"
+    },
+    {
+      "url": "https://ebible.org/engDRA/SIR51.htm",
+      "sha256": "70f6be926fd3b48f28e51a24f34977f5d96b9d5f3417d0f0c0c26142ba1980eb",
+      "file": "data/sources/html-pages/ebible-dra-ecclesiasticus/51.html.gz"
+    }
+  ],
+  "sourceFileNote": "sourceFileSha256 is the SHA-256 of the pages' bytes joined in order; each page is pinned in sourcePages",
+  "siteNotice": "eBible.org, \"Douay-Rheims 1899\" (engDRA): \"The Holy Bible in English, Douay-Rheims American Edition of 1899, translated from the Latin Vulgate. Public Domain.\" (https://ebible.org/engDRA/copyright.htm); each chapter page links \"Public Domain\" to that statement.",
+  "readGate": {
+    "words": 30932,
+    "unknown": 61,
+    "readRate": 0.998,
+    "gate": 0.995
+  },
+  "readGateUnknownWords": [
+    "Gehon",
+    "Jephone",
+    "Josedec",
+    "Nabat",
+    "Phison",
+    "Sina",
+    "Zorobabel",
+    "admireth",
+    "adoreth",
+    "anointedst",
+    "another’s",
+    "axletree",
+    "belly’s",
+    "blindeth",
+    "brokest",
+    "chastiseth",
+    "cheereth",
+    "cleareth",
+    "compasseth",
+    "condoleth",
+    "darkeneth",
+    "decreaseth",
+    "discloseth",
+    "establisheth",
+    "everybody’s",
+    "executeth",
+    "fancieth",
+    "fasteth",
+    "flingeth",
+    "fool’s",
+    "forgeth",
+    "freezeth",
+    "galbanum",
+    "glueth",
+    "grapegatherers",
+    "houseroom",
+    "king’s",
+    "lendest",
+    "lion’s",
+    "men’s",
+    "neighbour’s",
+    "neigheth",
+    "overwhelmeth",
+    "quencheth",
+    "replenisheth",
+    "rooteth",
+    "rusteth",
+    "shameth",
+    "sifteth",
+    "skippeth",
+    "sojournment",
+    "stayeth",
+    "stiffnecked",
+    "stumblingblocks",
+    "talebearer",
+    "tilleth",
+    "traceth",
+    "undertaketh",
+    "varieth",
+    "widow’s",
+    "wondereth"
+  ],
+  "sourceFormat": "ebible",
+  "iaWitness": {
+    "identifier": "holybibletransla00denv",
+    "url": "https://archive.org/details/holybibletransla00denv",
+    "year": 1899,
+    "publisher": "New York : Benziger",
+    "ocr": "holybibletransla00denv_djvu.txt",
+    "ocrSha256": "ffef700ad2f15707952716a6e0aeacf5a392c003ece0140920b4f2426c74a911",
+    "ocrNote": "SHA-256 of the OCR text as served inline by archive.org/stream/ (UTF-8)",
+    "excerpt": {
+      "from": "ECCLESIASTICUS. This Book is so called",
+      "to": "PROPHECY OF ISAIAS",
+      "words": 36645,
+      "note": "compared with the OCR from the first occurrence of `from` up to the next occurrence of `to` (whitespace-insensitive)"
+    }
+  },
+  "collation": {
+    "sourceWords": 32574,
+    "scanWords": 36645,
+    "matchedWords": 31339,
+    "agreement": 0.9621,
+    "sampleDifferences": [
+      {
+        "source": "the wisdom of jesus the son",
+        "scan": "all virtues the author ivas jesus the son"
+      },
+      {
+        "source": "wisdom is from the lord god and",
+        "scan": "wisdom is from tbe lord god and"
+      },
+      {
+        "source": "measured the height of heaven and the",
+        "scan": "measured the height ofi heaven and the"
+      },
+      {
+        "source": "high is the fountain of wisdom and",
+        "scan": "high is the foun tain of wisdom and"
+      },
+      {
+        "source": "lord it shall go well in the",
+        "scan": "lord it shall o well in the"
+      },
+      {
+        "source": "the day of his death he shall",
+        "scan": "the day of is death he shall"
+      },
+      {
+        "source": "honourable wisdom 15 ana they to whom",
+        "scan": "honourable wisdom 15 and they to whom"
+      },
+      {
+        "source": "she shall shew herself love her by",
+        "scan": "she shall shew her self love her by"
+      },
+      {
+        "source": "and by the knowledge of her great",
+        "scan": "and by the know ledge of her great"
+      },
+      {
+        "source": "her great works 16 the fear of",
+        "scan": "her great works lo the fear of"
+      },
+      {
+        "source": "created with the faithful in the womb",
+        "scan": "created with the faith ful in the womb"
+      },
+      {
+        "source": "the just and faithful 17 the fear",
+        "scan": "the just and faith ful 17 the fear"
+      },
+      {
+        "source": "lord is the religiousness of knowledge 18",
+        "scan": "lord is the religious ness of knowledge 18"
+      },
+      {
+        "source": "house with her increase and the storehouses",
+        "scan": "house with her in crease and the storehouses"
+      },
+      {
+        "source": "storehouses with her treasures 22 the fear",
+        "scan": "storehouses with her trea sures 22 the fear"
+      },
+      {
+        "source": "of prudence and exalteth the glory of",
+        "scan": "of prudence and exalt eth the glory of"
+      },
+      {
+        "source": "that hold her 25 the root of",
+        "scan": "that hold her 26 the root of"
+      },
+      {
+        "source": "branches thereof are longlived 26 in the",
+        "scan": "branches thereof are long lived 26 in the"
+      },
+      {
+        "source": "of wisdom is understanding and religiousness of",
+        "scan": "of wisdom is under standing and religiousness of"
+      },
+      {
+        "source": "fear cannot be justified for the wrath",
+        "scan": "fear cannot be ustified for the wrath"
+      },
+      {
+        "source": "high spirits is his ruin 29 a",
+        "scan": "high spirits is lis ruin 29 a"
+      },
+      {
+        "source": "wisdom is the signification of discipline 32",
+        "scan": "wisdom is the signi fication of discipline 32"
+      },
+      {
+        "source": "god is an abomination to a sinner",
+        "scan": "god is an abomina tion to a sinner"
+      },
+      {
+        "source": "desire wisdom keep justice and god will",
+        "scan": "desire wisdom keep jus tice and god will"
+      },
+      {
+        "source": "be not a hypocrite in the sight",
+        "scan": "be not a h poci iie in the sight"
+      },
+      {
+        "source": "in the sight of men and let",
+        "scan": "in the sight oi men jt pa"
+      },
+      {
+        "source": "lips be a stumblingblock to thee 38",
+        "scan": "lips be a stumbling block to thee 38"
+      },
+      {
+        "source": "40 because thou camest to the lord",
+        "scan": "40 because thou earnest to the lord"
+      },
+      {
+        "source": "to the service of god stand in",
+        "scan": "to the service ot o god stand in"
+      },
+      {
+        "source": "temptation 2 humble thy heart and endure",
+        "scan": "temptation 2 humble thjr heart and endure"
+      },
+      {
+        "source": "the words of understanding and make not",
+        "scan": "the words of understand ing and make not"
+      },
+      {
+        "source": "in the time of clouds 3 wait",
+        "scan": "in the time cf clouds 3 wait"
+      },
+      {
+        "source": "god with patience join thyself to god and",
+        "scan": "god with patience jointhysell to god and"
+      },
+      {
+        "source": "life may be increased in the latter",
+        "scan": "life may be in creased in the latter"
+      },
+      {
+        "source": "end 4 take all that shall be",
+        "scan": "end 4 take ail that shall be"
+      },
+      {
+        "source": "humiliation keep patience 5 for gold and",
+        "scan": "humiliation keep patience 6 for gold and"
+      },
+      {
+        "source": "the furnace of humiliation 6 believe god",
+        "scan": "the furnace of humili ation 6 believe god"
+      },
+      {
+        "source": "trust in him keep his fear and",
+        "scan": "trust in him keeji his fear and"
+      },
+      {
+        "source": "been confounded 12 for who hath continued",
+        "scan": "been confounded 12 efor who hath continued"
+      },
+      {
+        "source": "continued in his commandment and hath been",
+        "scan": "continued in his com mandment and hath been"
+      }
+    ],
+    "method": "difflib word alignment, lower case, letters and digits only; OCR noise counts as disagreement"
+  },
+  "sha256": "2378ab2fe96df31f629b117801e9ae9cdb7779814dde9de4e994c6f7eac04e39",
+  "bytes": 168604,
+  "checked": "2026-11-21"
+}

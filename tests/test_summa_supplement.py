@@ -62,7 +62,7 @@ class Supplement(unittest.TestCase):
         for p in ('data/library.json','AGENTS.md','docs/CATALOG.md','tools/build_static.py','summa/index.html','summa/3/index.html','work/summa-theologiae/index.html'):
             self.assertIsNone(stale.search(R(p)),p)
     def test_app_reader_and_archive(self):
-        self.assertIn('3|supp)',R('app.js'));self.assertIn("archive\\.org\\//.test(e.source)",R('scripts/library.js'))
+        self.assertIn('3|supp)',R('app.js'));self.assertIn("archive\\.org\\//.test(src)",R('scripts/library.js'))
         self.assertIn('ia-summa-supplement.txt',R('tools/build_text_archive.py'))
         self.assertNotIn('transcribe_supplement',R('package.json'))  # network tool, never part of the build
 if __name__=='__main__':unittest.main()

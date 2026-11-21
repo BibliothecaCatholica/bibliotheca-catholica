@@ -51,16 +51,38 @@ class TestAnalytics(unittest.TestCase):
         self.assertNotIn('googletagmanager', js)
 
     def test_pages_dev_headers_file(self):
-        # Cloudflare Pages host-scoped noindex only; never a bare /* rule (would noindex production)
+        # Cloudflare Pages: noindex only on the pages.dev hosts; the bare /* rule (security headers, 2026-11-19) must never
+        # carry X-Robots-Tag, because it applies to production too
         text = (ROOT / '_headers').read_text()
-        self.assertEqual(text, (
+        self.assertTrue(text.startswith(
             'https://:project.pages.dev/*\n'
             '  X-Robots-Tag: noindex\n'
             'https://:version.:project.pages.dev/*\n'
             '  X-Robots-Tag: noindex\n'
         ))
-        self.assertNotIn('\n/*', text)
-        self.assertNotRegex(text, r'(?m)^/\*')
+        blocks = re.split(r'\n(?=\S)', text.strip())
+        self.assertEqual([b.split('\n')[0] for b in blocks], ['https://:project.pages.dev/*', 'https://:version.:project.pages.dev/*', '/*'])
+        bare = blocks[2]
+        self.assertNotIn('X-Robots-Tag', bare)
+        self.assertNotIn('noindex', bare)
+
+    def test_security_headers(self):
+        text = (ROOT / '_headers').read_text()
+        bare = text[text.index('\n/*\n'):]
+        h = dict(l.strip().split(': ', 1) for l in bare.strip().split('\n')[1:])
+        self.assertEqual(h['X-Content-Type-Options'], 'nosniff')
+        self.assertEqual(h['Referrer-Policy'], 'strict-origin-when-cross-origin')
+        self.assertIn('camera=()', h['Permissions-Policy']); self.assertIn('geolocation=()', h['Permissions-Policy'])
+        csp = dict((d.split(' ', 1) + [''])[:2] for d in (x.strip() for x in h['Content-Security-Policy'].split(';')))
+        self.assertEqual(csp['default-src'], "'self'")
+        for src in ('https://*.googletagmanager.com', 'https://static.cloudflareinsights.com'):
+            self.assertIn(src, csp['script-src'])  # the one GA4 tag and the Cloudflare beacon
+        for src in ('https://*.google-analytics.com', 'https://cloudflareinsights.com', 'https://texts.bibliothecacatholica.com'):
+            self.assertIn(src, csp['connect-src'])
+        self.assertEqual(csp['frame-src'], 'https://bibliothecacatholica.substack.com')  # the Substack embed (Advent plan)
+        self.assertIn("'self'", csp['font-src'])  # fonts are self-hosted
+        self.assertEqual(csp['object-src'], "'none'"); self.assertEqual(csp['base-uri'], "'self'"); self.assertEqual(csp['frame-ancestors'], "'self'")
+        self.assertNotIn("'unsafe-eval'", h['Content-Security-Policy'])
 
     def test_events_only_via_helper(self):
         for name in ('app.js', 'scripts/library.js', 'scripts/reader.js', 'scripts/guides.js', 'scripts/search.js'):

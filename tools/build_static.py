@@ -264,19 +264,22 @@ def list_item_title(i,gid,libw):
 # sentence (clause 1.E.1), verbatim, never paraphrased, once per page at the end of the text in small type, with
 # "Project Gutenberg License" linked to the full licence. tests/test_text_pages.py checks it against the licence
 # text in data/texts/pg-130.txt. Same words as PG_LINE in scripts/library.js and tools/build_epub.py.
-from notices import PG_LINE  # noqa: E402  (verbatim 1.E.1 sentence)
-from notices import SE_NOTICE  # noqa: E402  (Standard Ebooks notice; same words as SE_NOTICE in scripts/library.js)
+from notices import PG_LINE, SE_NOTICE, notice_for, record_label, source_kind  # noqa: E402
 def edition_details(*rows):
     """Edition details (rules 2 and 10 of November 14, 2026): source and quality labels, collapsed. The licence notice is not repeated here (once per page)."""
     return '<details class="edition-details"><summary>Edition details</summary>'+''.join(r for r in rows if r)+'</details>'
-def is_pg(e):return 'gutenberg.org' in e['source']
+def is_pg(e):return source_kind(e.get('source') or '')=='pg'
 def text_notice(e):
-    """The notice a hosted part page shows: the Gutenberg license notice, or the Standard Ebooks notice (2026-11-09)."""
-    return '<p class="small pg-notice">'+(PG_LINE if is_pg(e) else SE_NOTICE)+'</p>'
+    """The notice a hosted part page shows, chosen by the source host (gutenberg.org, standardebooks.org, ebible.org, papalencyclicals.net, gutenberg.net.au, or a generic fallback)."""
+    return '<p class="small pg-notice">'+notice_for(e.get('source') or '')+'</p>'
 def text_source(e):
-    if is_pg(e):return a(e['source'],'Project Gutenberg record',True)+'. '+E(e['rights'])+' The full Project Gutenberg license is kept in the hosted text and its download.'
-    return (a(e['source'],'Standard Ebooks record',True)+'. '+E(e['rights'])+' '
-            +a('https://texts.bibliothecacatholica.com/provenance/'+e['id']+'.json','Provenance record and corrections',True)+'.')
+    kind=source_kind(e.get('source') or '')
+    rec=a(e['source'],record_label(e.get('source') or ''),True)+'. '+E(e['rights'])
+    if kind=='pg':
+        return rec+' The full Project Gutenberg license is kept in the hosted text and its download.'
+    if kind=='se':
+        return rec+' '+a('https://texts.bibliothecacatholica.com/provenance/'+e['id']+'.json','Provenance record and corrections',True)+'.'
+    return rec+'.'
 def text_split(path):
     return [p.strip() for p in re.split(r'\n\s*\n',(ROOT/path).read_text(encoding='utf-8').replace('\r','')) if p.strip()]
 def part_label(d,x,low=False):

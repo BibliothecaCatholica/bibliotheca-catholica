@@ -1,0 +1,122 @@
+[
+ {
+  "edition": "ia-samueljohnson00chesuoft",
+  "ia": "samueljohnson00chesuoft",
+  "title": "SAMUEL JOHNSON",
+  "sourceTitle": "Samuel Johnson (The Regent Library)",
+  "author": "G. K. Chesterton",
+  "year": 1911,
+  "firstPublished": "1911 (London: Herbert and Daniel, The Regent Library), selections by Alice Meynell with an introduction by G. K. Chesterton",
+  "firstLeaf": 8,
+  "lastLeaf": 290,
+  "handFixes": [
+   {
+    "leaf": 8,
+    "page": "leaf 8",
+    "ocr": "fHE REGENT LIBRART",
+    "reading": "THE REGENT LIBRARY"
+   },
+   {
+    "leaf": 8,
+    "page": "leaf 8",
+    "ocr": "21 3\\4addox Street",
+    "reading": "21 Maddox Street"
+   },
+   {
+    "leaf": 9,
+    "page": "leaf 9",
+    "ocr": "1700 Born, i8th September.",
+    "reading": "1709 Born, 18th September."
+   },
+   {
+    "leaf": 9,
+    "page": "leaf 9",
+    "ocr": "The Gentleman: Maga",
+    "reading": "The Gentleman's Maga-"
+   },
+   {
+    "leaf": 10,
+    "page": "leaf 10",
+    "ocr": "Smith i6S",
+    "reading": "Smith 168"
+   },
+   {
+    "leaf": 10,
+    "page": "leaf 10",
+    "ocr": "Prior iji",
+    "reading": "Prior 171"
+   },
+   {
+    "leaf": 54,
+    "page": "leaf 54",
+    "ocr": "r vr i vr v J &",
+    "reading": ""
+   },
+   {
+    "leaf": 276,
+    "page": "leaf 276",
+    "ocr": "Another edition. lovols. London, 1818. I2mo.",
+    "reading": "Another edition. 10 vols. London, 1818. 12mo."
+   },
+   {
+    "leaf": 276,
+    "page": "leaf 276",
+    "ocr": "one vol. London, 1785. I2mo.",
+    "reading": "one vol. London, 1785. 12mo."
+   },
+   {
+    "leaf": 276,
+    "page": "leaf 276",
+    "ocr": "1785. I2mo.",
+    "reading": "1785. 12mo."
+   },
+   {
+    "leaf": 277,
+    "page": "leaf 277",
+    "ocr": "1805. i6mo.",
+    "reading": "1805. 16mo."
+   },
+   {
+    "leaf": 281,
+    "page": "leaf 281",
+    "ocr": "WISHES. Blackie s",
+    "reading": "WISHES. Blackie's"
+   },
+   {
+    "leaf": 281,
+    "page": "leaf 281",
+    "ocr": "POETS. Blackie s",
+    "reading": "POETS. Blackie's"
+   },
+   {
+    "leaf": 22,
+    "page": "leaf 22",
+    "ocr": "whethei",
+    "reading": "whether"
+   }
+  ],
+  "verifiedWords": [
+   "Ingpen",
+   "Imlac",
+   "Chalmers",
+   "lexicographer",
+   "enchain",
+   "Tetty",
+   "Finden",
+   "Elphinston",
+   "Levett",
+   "Nekayah",
+   "vainqueur",
+   "equiponderant",
+   "Suspirius",
+   "modish",
+   "laceration",
+   "Abissinian",
+   "Queeny",
+   "Piozzi",
+   "Gilfillan",
+   "Stourbridge",
+   "Boswellian"
+  ]
+ }
+]

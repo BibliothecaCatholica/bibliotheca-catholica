@@ -5549,6 +5549,21 @@
       "date": "1911",
       "editions": [
         {
+          "id": "ia-samueljohnson00chesuoft",
+          "label": "Transcription of the Internet Archive scan (London: Herbert and Daniel, 1911)",
+          "source": "https://archive.org/details/samueljohnson00chesuoft",
+          "language": "English",
+          "contributors": [],
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-21",
+          "note": "First published 1911 (London: Herbert and Daniel, The Regent Library): selections from Johnson chosen by Alice Meynell, with an introduction by G. K. Chesterton. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, words rejoined across line breaks (the scan's OCR drops every line-end hyphen), 4 OCR confusions repaired, 14 misreadings corrected by hand against the page images, and 155 paragraphs that keep a word the OCR could not read (99.6% of words read). Not a manual proofread.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "Samuel Johnson (The Regent Library)",
+          "text": "data/texts/ia-samueljohnson00chesuoft.txt",
+          "sha256": "38ccf5ecbc3b10f663791d8a105828fe674fa9ecb6a76e1ddeebb255eb4025a6"
+        },
+        {
           "id": "ws-samuel-johnson-meynell-and-chesterton",
           "label": "Wikisource transcription",
           "source": "https://en.wikisource.org/wiki/Samuel_Johnson_(Meynell_%26_Chesterton)",
@@ -5558,19 +5573,9 @@
           "checked": "2026-11-15",
           "note": "First published 1911 (London: Herbert and Daniel). Link only.",
           "access": "full-text"
-        },
-        {
-          "id": "ia-samueljohnson00chesuoft",
-          "label": "Internet Archive scan (London: Herbert and Daniel, 1911)",
-          "source": "https://archive.org/details/samueljohnson00chesuoft",
-          "language": "English",
-          "contributors": [],
-          "rights": "External scan at the Internet Archive; not hosted here. Published 1911, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
-          "checked": "2026-11-15",
-          "note": "Internet Archive record: Herbert and Daniel, 1911, freely readable (not a lending copy). Link only.",
-          "access": "full-text"
         }
-      ]
+      ],
+      "added": "2026-11-21"
     },
     {
       "id": "how-to-help-annexation",

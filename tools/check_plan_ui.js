@@ -92,8 +92,11 @@ const report = (ok, name, detail) => { if (!ok) failed++; console.log((ok ? 'ok 
     const d = PLAN.days[t.day - 1];
     const page = await ctx.newPage();
     try {
-      await page.goto(BASE + '/#' + t.links.reader.split('#')[1], { waitUntil: 'networkidle' });
-      await page.waitForSelector('#reading-p-' + d.anchor, { timeout: 15000 });
+      // 'load', not 'networkidle': the large readers (day 19, Gerontius; day 22, the Divine Comedy) keep fetching their
+      // text past the 30 s networkidle limit on the live site (QA, November 21, 2026). The anchor wait below is the real
+      // readiness check, so give it the time the largest text needs.
+      await page.goto(BASE + '/#' + t.links.reader.split('#')[1], { waitUntil: 'load' });
+      await page.waitForSelector('#reading-p-' + d.anchor, { timeout: 45000 });
       await page.waitForTimeout(2500); // long chapters take a moment to scroll smoothly
       const r = await page.evaluate(([a, s, e]) => {
         const top = Math.round(document.getElementById('reading-p-' + a).getBoundingClientRect().top);

@@ -2,7 +2,7 @@
 "name": "doctors-free-texts",
 "description": "Key works of the 38 Doctors of the Church with free full-text links and per-edition rights status.",
 "license": "CC0-1.0",
-"generated": "2026-11-19",
+"generated": "2026-11-21",
 "count": 270,
 "fields": {
 "doctor_id": "authors.json id",
@@ -313,7 +313,7 @@
 "source": "CCEL",
 "translator": "Albert C. Outler",
 "edition_year": 1955,
-"rights": "uncertain - verify before hosting",
+"rights": "PD in US (published 1955, no renewal found)",
 "flag": null,
 "gap": null
 },
@@ -481,7 +481,7 @@
 "source": "CCEL",
 "translator": "Albert C. Outler",
 "edition_year": 1955,
-"rights": "uncertain - verify before hosting",
+"rights": "PD in US (published 1955, no renewal found)",
 "flag": null,
 "gap": null
 },
@@ -1057,7 +1057,7 @@
 "source": "CCEL",
 "translator": "appears to be 'A Religious of C.S.M.V.' (Sister Penelope Lawson)",
 "edition_year": null,
-"rights": "uncertain - verify before hosting",
+"rights": "copyrighted, link only (UK 1944; US copyright restored under URAA, through 2039)",
 "flag": null,
 "gap": null
 },
@@ -1129,7 +1129,7 @@
 "source": "CCEL",
 "translator": "George Boas (identified from preface; CCEL gives no name)",
 "edition_year": 1953,
-"rights": "uncertain - verify before hosting",
+"rights": "copyrighted, link only (renewed, RE94493)",
 "flag": null,
 "gap": "No verified, accessible PD English text (only modern, uncertain, original-language, borrow-only or HTTP-403 links)"
 },
@@ -1836,8 +1836,8 @@
 "url": "https://ccel.org/ccel/desales/devout_life/devout_life",
 "source": "CCEL",
 "translator": "not named ('Library of Spiritual Works for English Catholics' text)",
-"edition_year": null,
-"rights": "uncertain - verify before hosting",
+"edition_year": 1876,
+"rights": "PD in US (published 1876)",
 "flag": null,
 "gap": null
 },
@@ -1861,7 +1861,7 @@
 "source": "Internet Archive",
 "translator": "not stated",
 "edition_year": null,
-"rights": "uncertain - verify before hosting",
+"rights": "PD in US (Pustet US printing, cataloged ca. 1920; no copyright notice found)",
 "flag": null,
 "gap": null
 },
@@ -2389,7 +2389,7 @@
 "source": "CCEL",
 "translator": "E. Allison Peers",
 "edition_year": null,
-"rights": "uncertain - verify before hosting",
+"rights": "copyrighted, link only (UK 1934-35; US copyright restored under URAA, through 2029-30)",
 "flag": null,
 "gap": null
 },
@@ -2413,7 +2413,7 @@
 "source": "CCEL",
 "translator": "E. Allison Peers",
 "edition_year": 1959,
-"rights": "uncertain - verify before hosting",
+"rights": "copyrighted, link only (same Peers 1934-35 translation; 1959 is a later printing)",
 "flag": null,
 "gap": null
 },
@@ -2725,7 +2725,7 @@
 "source": "CCEL",
 "translator": "E. Allison Peers",
 "edition_year": 1964,
-"rights": "uncertain - verify before hosting",
+"rights": "copyrighted, link only (Peers Complete Works, Sheed & Ward, 1946; URAA; 1964 reprint)",
 "flag": null,
 "gap": null
 },

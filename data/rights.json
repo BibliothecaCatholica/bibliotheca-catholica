@@ -15422,8 +15422,11 @@
 "Automated renewal check: no matching renewal in NYPL CCE renewals data (title+surname match, +/-3 yrs)."
 ],
 "8823": [
-"U1a",
-"Automated renewal check: no matching renewal in NYPL CCE renewals data (title+surname match, +/-3 yrs)."
+"M",
+"US first publication: B. Herder Book Co., 1937, \"Printed in U. S. A.\", copyright 1937 (Internet Archive DisciplinaryCouncils; pd-nonrenewal basis approved 2026-11-20). Manual renewal search, NYPL cce-renewals transcription of the Copyright Office database (1950-1991 set), 2026-11-21: no matching renewal for Schroeder, Disciplinary Decrees of the General Councils. Public domain in the US by non-renewal. Not legal advice. Hosting the text is a separate step.",
+"2026-11-21",
+"public_domain_us",
+"Bibliotheca Catholica"
 ],
 "8824": [
 "L1"

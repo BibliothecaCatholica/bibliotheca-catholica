@@ -5385,16 +5385,21 @@
       "editions": [
         {
           "id": "ia-superstitionsofs0000unse-q9f6",
-          "label": "Internet Archive scan (Cambridge: W. Heffer and Sons, 1925)",
+          "label": "Transcription of the Internet Archive scan (Cambridge: W. Heffer and Sons, 1925)",
           "source": "https://archive.org/details/superstitionsofs0000unse_q9f6",
           "language": "English",
           "contributors": [],
-          "rights": "External scan at the Internet Archive; not hosted here. Published 1925, before 1931 (public domain in the USA); outside the U.S., check local copyright rules.",
-          "checked": "2026-11-15",
-          "note": "First published 1925. Internet Archive record: W. Heffer and Sons, 1925, freely readable (not a lending copy). Link only.",
-          "access": "full-text"
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "checked": "2026-11-21",
+          "note": "First published 1925 (Cambridge: W. Heffer and Sons), with the correspondence between Chesterton and G. G. Coulton. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, words rejoined across line breaks, 1 OCR confusion repaired, 22 misreadings corrected by hand against the page images (three lines of library-stamp noise dropped), and 7 paragraphs that keep a word the OCR could not read (99.9% of words read). The book's own misprints (superstititions, Protestanism) are kept. Not a manual proofread.",
+          "access": "full-text",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "The Superstitions of the Sceptic, with a Correspondence between the Author and Mr. G. G. Coulton",
+          "text": "data/texts/ia-superstitionsofs0000unse-q9f6.txt",
+          "sha256": "9194287ecc528b22e1520627d0adf0dd8b57f2259d29f75806519509414e75ff"
         }
-      ]
+      ],
+      "added": "2026-11-21"
     },
     {
       "id": "generally-speaking",

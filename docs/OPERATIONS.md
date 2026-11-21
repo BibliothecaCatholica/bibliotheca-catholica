@@ -68,7 +68,7 @@ This is a responsibility checklist, not proof of dashboard access. Never commit 
 | Service | Repository evidence | Responsibility / verification still needed |
 |---|---|---|
 | GitHub | Main site, texts repo, validation workflow | Owner confirms administrators and deploy permissions |
-| Cloudflare Pages / DNS | `_headers`; documented mirror; owner-reported cutover | Owner confirms production domains, project binding, DNS, deploy root, and rollback |
+| Cloudflare Pages / DNS | `_headers` (pages.dev noindex; site-wide security headers and CSP, `tests/test_analytics.py`); documented mirror; owner-reported cutover | Owner confirms production domains, project binding, DNS, deploy root, and rollback |
 | Squarespace registrar | Owner-reported registrar | Owner confirms renewal and nameserver control privately |
 | GA4 / Search Console | Existing tag and root verification file | Owner confirms admin access and enhanced-measurement settings |
 | Substack | Newsletter links and limited embeds | Owner/publishing role confirms draft and schedule state |

@@ -19716,6 +19716,621 @@
     "front": [],
     "em": []
    }
+  },
+  "robert-browning": {
+   "partD": {
+    "about": "Project Gutenberg #13342: first published in 1903; the file does not name the printing it follows. Eight chapters; the index stays in the reader.",
+    "words": 58543,
+    "minutes": 255
+   },
+   "edition": "pg-13342",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "fa9f9c7205633210ce206fd5934dfbcdc81ea442af8f6f72fdf56e8ba6708062",
+   "blocks": 664,
+   "items": [
+    {
+     "slug": "01-browning-in-early-life",
+     "num": "I",
+     "title": "Browning in Early Life",
+     "heading": 23,
+     "start": 25,
+     "end": 53,
+     "section": 0,
+     "words": 9807,
+     "firstWords": "On the subject of Browning's work innumerable things have been said and",
+     "titleBlocks": [
+      24
+     ]
+    },
+    {
+     "slug": "02-early-works",
+     "num": "II",
+     "title": "Early Works",
+     "heading": 54,
+     "start": 56,
+     "end": 82,
+     "section": 1,
+     "words": 6088,
+     "firstWords": "In 1840 Sordello was published. Its reception by the great majority of",
+     "titleBlocks": [
+      55
+     ]
+    },
+    {
+     "slug": "03-browning-and-his-marriage",
+     "num": "III",
+     "title": "Browning and His Marriage",
+     "heading": 83,
+     "start": 85,
+     "end": 117,
+     "section": 2,
+     "words": 7516,
+     "firstWords": "Robert Browning had his faults, and the general direction of those faults",
+     "titleBlocks": [
+      84
+     ]
+    },
+    {
+     "slug": "04-browning-in-italy",
+     "num": "IV",
+     "title": "Browning in Italy",
+     "heading": 118,
+     "start": 120,
+     "end": 143,
+     "section": 3,
+     "words": 6917,
+     "firstWords": "The married pair went to Pisa in 1846, and moved soon afterwards",
+     "titleBlocks": [
+      119
+     ]
+    },
+    {
+     "slug": "05-browning-in-later-life",
+     "num": "V",
+     "title": "Browning in Later Life",
+     "heading": 144,
+     "start": 146,
+     "end": 183,
+     "section": 4,
+     "words": 8000,
+     "firstWords": "Browning's confidences, what there were of them, immediately after his wife's death",
+     "titleBlocks": [
+      145
+     ]
+    },
+    {
+     "slug": "06-browning-as-a-literary-artist",
+     "num": "VI",
+     "title": "Browning as a Literary Artist",
+     "heading": 184,
+     "start": 186,
+     "end": 259,
+     "section": 5,
+     "words": 7649,
+     "firstWords": "Mr. William Sharp, in his Life of Browning, quotes the remarks of",
+     "titleBlocks": [
+      185
+     ]
+    },
+    {
+     "slug": "07-the-ring-and-the-book",
+     "num": "VII",
+     "title": "The Ring and the Book",
+     "heading": 260,
+     "start": 262,
+     "end": 283,
+     "section": 7,
+     "words": 4982,
+     "firstWords": "When we have once realised the great conception of the plan of",
+     "titleBlocks": [
+      261
+     ]
+    },
+    {
+     "slug": "08-the-philosophy-of-browning",
+     "num": "VIII",
+     "title": "The Philosophy of Browning",
+     "heading": 284,
+     "start": 286,
+     "end": 317,
+     "section": 8,
+     "words": 7584,
+     "firstWords": "The great fault of most of the appreciation of Browning lies in",
+     "titleBlocks": [
+      285
+     ]
+    }
+   ],
+   "structure": {
+    "sha256": "fa9f9c7205633210ce206fd5934dfbcdc81ea442af8f6f72fdf56e8ba6708062",
+    "source": "data/structured/robert-browning-pg-13342.json",
+    "roles": [
+     [
+      23,
+      "chapter"
+     ],
+     [
+      24,
+      "heading"
+     ],
+     [
+      54,
+      "chapter"
+     ],
+     [
+      55,
+      "heading"
+     ],
+     [
+      83,
+      "chapter"
+     ],
+     [
+      84,
+      "heading"
+     ],
+     [
+      118,
+      "chapter"
+     ],
+     [
+      119,
+      "heading"
+     ],
+     [
+      144,
+      "chapter"
+     ],
+     [
+      145,
+      "heading"
+     ],
+     [
+      184,
+      "chapter"
+     ],
+     [
+      185,
+      "heading"
+     ],
+     [
+      260,
+      "chapter"
+     ],
+     [
+      261,
+      "heading"
+     ],
+     [
+      284,
+      "chapter"
+     ],
+     [
+      285,
+      "heading"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "superstition-divorce": {
+   "partD": {
+    "about": "Project Gutenberg #62680: first published in 1920; the transcribed copy is the John Lane Company, New York printing. Five chapters and a conclusion, as the book's contents lists them; the footnotes stay with the conclusion.",
+    "words": 23974,
+    "minutes": 104
+   },
+   "edition": "pg-62680",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "efb85065135eaeb6648b4b19786356a4cfc8cb9b244bb821aea29b16ec1da55b",
+   "blocks": 170,
+   "items": [
+    {
+     "slug": "01-the-superstition-of-divorce",
+     "num": "1",
+     "title": "The Superstition of Divorce",
+     "heading": 32,
+     "start": 33,
+     "end": 64,
+     "section": 0,
+     "words": 8730,
+     "firstWords": "I.--The Superstition of Divorce"
+    },
+    {
+     "slug": "02-the-story-of-the-family",
+     "num": "2",
+     "title": "The Story of the Family",
+     "heading": 65,
+     "start": 66,
+     "end": 77,
+     "section": 1,
+     "words": 3790,
+     "firstWords": "V.--The Story of the Family"
+    },
+    {
+     "slug": "03-the-story-of-the-vow",
+     "num": "3",
+     "title": "The Story of the Vow",
+     "heading": 78,
+     "start": 79,
+     "end": 91,
+     "section": 2,
+     "words": 3667,
+     "firstWords": "VI.--The Story of the Vow"
+    },
+    {
+     "slug": "04-the-tragedies-of-marriage",
+     "num": "4",
+     "title": "The Tragedies of Marriage",
+     "heading": 92,
+     "start": 93,
+     "end": 104,
+     "section": 2,
+     "words": 3881,
+     "firstWords": "VII.--The Tragedies of Marriage"
+    },
+    {
+     "slug": "05-the-vista-of-divorce",
+     "num": "5",
+     "title": "The Vista of Divorce",
+     "heading": 105,
+     "start": 106,
+     "end": 112,
+     "section": 3,
+     "words": 3191,
+     "firstWords": "VIII.--The Vista of Divorce"
+    },
+    {
+     "slug": "06-conclusion",
+     "num": "6",
+     "title": "Conclusion",
+     "heading": 113,
+     "start": 114,
+     "end": 118,
+     "section": 3,
+     "words": 715,
+     "firstWords": "IX.--Conclusion"
+    }
+   ],
+   "structure": {
+    "sha256": "efb85065135eaeb6648b4b19786356a4cfc8cb9b244bb821aea29b16ec1da55b",
+    "source": "data/structured/superstition-divorce-pg-62680.json",
+    "roles": [
+     [
+      32,
+      "chapter"
+     ],
+     [
+      65,
+      "chapter"
+     ],
+     [
+      78,
+      "chapter"
+     ],
+     [
+      92,
+      "chapter"
+     ],
+     [
+      105,
+      "chapter"
+     ],
+     [
+      113,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "the-defendant": {
+   "partD": {
+    "about": "Project Gutenberg #12245: first published in 1901; the transcribed copy is the second edition (London: R. Brimley Johnson, 1902). The preface to the new edition, an introduction, and sixteen essays, each titled “A Defence of” something.",
+    "words": 26689,
+    "minutes": 116
+   },
+   "edition": "pg-12245",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Essay",
+   "nouns": "Essays",
+   "sha256": "c20ae3d0c20b04c445d416766ba3f1211fb21bb279a0d647008d86cbef2f0e58",
+   "blocks": 270,
+   "items": [
+    {
+     "slug": "01-in-defence-of-a-new-edition",
+     "num": "Preface",
+     "title": "In Defence of a New Edition",
+     "heading": 39,
+     "start": 40,
+     "end": 46,
+     "section": 1,
+     "words": 843,
+     "firstWords": "The reissue of a series of essays so ephemeral and even superfluous"
+    },
+    {
+     "slug": "02-introduction",
+     "num": "Introduction",
+     "title": "Introduction",
+     "heading": 48,
+     "start": 49,
+     "end": 57,
+     "section": 1,
+     "words": 1280,
+     "firstWords": "In certain endless uplands, uplands like great flats gone dizzy, slopes that",
+     "before": [
+      47
+     ]
+    },
+    {
+     "slug": "03-a-defence-of-penny-dreadfuls",
+     "num": "I",
+     "title": "A Defence of Penny Dreadfuls",
+     "heading": 58,
+     "start": 59,
+     "end": 69,
+     "section": 1,
+     "words": 1894,
+     "firstWords": "One of the strangest examples of the degree to which ordinary life"
+    },
+    {
+     "slug": "04-a-defence-of-rash-vows",
+     "num": "II",
+     "title": "A Defence of Rash Vows",
+     "heading": 70,
+     "start": 71,
+     "end": 83,
+     "section": 2,
+     "words": 1870,
+     "firstWords": "If a prosperous modern man, with a high hat and a frock-coat,"
+    },
+    {
+     "slug": "05-a-defence-of-skeletons",
+     "num": "III",
+     "title": "A Defence of Skeletons",
+     "heading": 84,
+     "start": 85,
+     "end": 92,
+     "section": 2,
+     "words": 1514,
+     "firstWords": "Some little time ago I stood among immemorial English trees that seemed"
+    },
+    {
+     "slug": "06-a-defence-of-publicity",
+     "num": "IV",
+     "title": "A Defence of Publicity",
+     "heading": 93,
+     "start": 94,
+     "end": 103,
+     "section": 2,
+     "words": 1582,
+     "firstWords": "It is a very significant fact that the form of art in"
+    },
+    {
+     "slug": "07-a-defence-of-nonsense",
+     "num": "V",
+     "title": "A Defence of Nonsense",
+     "heading": 104,
+     "start": 105,
+     "end": 117,
+     "section": 2,
+     "words": 1730,
+     "firstWords": "There are two equal and eternal ways of looking at this twilight"
+    },
+    {
+     "slug": "08-a-defence-of-planets",
+     "num": "VI",
+     "title": "A Defence of Planets",
+     "heading": 118,
+     "start": 119,
+     "end": 130,
+     "section": 3,
+     "words": 1542,
+     "firstWords": "A book has at one time come under my notice called 'Terra"
+    },
+    {
+     "slug": "09-a-defence-of-china-shepherdesses",
+     "num": "VII",
+     "title": "A Defence of China Shepherdesses",
+     "heading": 131,
+     "start": 132,
+     "end": 141,
+     "section": 3,
+     "words": 1400,
+     "firstWords": "There are some things of which the world does not like to"
+    },
+    {
+     "slug": "10-a-defence-of-useful-information",
+     "num": "VIII",
+     "title": "A Defence of Useful Information",
+     "heading": 142,
+     "start": 143,
+     "end": 147,
+     "section": 4,
+     "words": 1955,
+     "firstWords": "It is natural and proper enough that the masses of explosive ammunition"
+    },
+    {
+     "slug": "11-a-defence-of-heraldry",
+     "num": "IX",
+     "title": "A Defence of Heraldry",
+     "heading": 148,
+     "start": 149,
+     "end": 155,
+     "section": 4,
+     "words": 1212,
+     "firstWords": "The modern view of heraldry is pretty accurately represented by the words"
+    },
+    {
+     "slug": "12-a-defence-of-ugly-things",
+     "num": "X",
+     "title": "A Defence of Ugly Things",
+     "heading": 156,
+     "start": 157,
+     "end": 164,
+     "section": 4,
+     "words": 1327,
+     "firstWords": "There are some people who state that the exterior, sex, or physique"
+    },
+    {
+     "slug": "13-a-defence-of-farce",
+     "num": "XI",
+     "title": "A Defence of Farce",
+     "heading": 165,
+     "start": 166,
+     "end": 171,
+     "section": 4,
+     "words": 1578,
+     "firstWords": "I have never been able to understand why certain forms of art"
+    },
+    {
+     "slug": "14-a-defence-of-humility",
+     "num": "XII",
+     "title": "A Defence of Humility",
+     "heading": 172,
+     "start": 173,
+     "end": 181,
+     "section": 4,
+     "words": 1598,
+     "firstWords": "The act of defending any of the cardinal virtues has to-day all"
+    },
+    {
+     "slug": "15-a-defence-of-slang",
+     "num": "XIII",
+     "title": "A Defence of Slang",
+     "heading": 182,
+     "start": 183,
+     "end": 192,
+     "section": 5,
+     "words": 1366,
+     "firstWords": "The aristocrats of the nineteenth century have destroyed entirely their one solitary"
+    },
+    {
+     "slug": "16-a-defence-of-baby-worship",
+     "num": "XIV",
+     "title": "A Defence of Baby-Worship",
+     "heading": 193,
+     "start": 194,
+     "end": 201,
+     "section": 5,
+     "words": 1095,
+     "firstWords": "The two facts which attract almost every normal person to children are,"
+    },
+    {
+     "slug": "17-a-defence-of-detective-stories",
+     "num": "XV",
+     "title": "A Defence of Detective Stories",
+     "heading": 202,
+     "start": 203,
+     "end": 208,
+     "section": 5,
+     "words": 1219,
+     "firstWords": "In attempting to reach the genuine psychological reason for the popularity of"
+    },
+    {
+     "slug": "18-a-defence-of-patriotism",
+     "num": "XVI",
+     "title": "A Defence of Patriotism",
+     "heading": 209,
+     "start": 210,
+     "end": 216,
+     "section": 5,
+     "words": 1684,
+     "firstWords": "The decay of patriotism in England during the last year or two"
+    }
+   ],
+   "structure": {
+    "sha256": "c20ae3d0c20b04c445d416766ba3f1211fb21bb279a0d647008d86cbef2f0e58",
+    "source": "data/structured/the-defendant-pg-12245.json",
+    "roles": [
+     [
+      39,
+      "chapter"
+     ],
+     [
+      47,
+      "heading"
+     ],
+     [
+      48,
+      "chapter"
+     ],
+     [
+      58,
+      "chapter"
+     ],
+     [
+      70,
+      "chapter"
+     ],
+     [
+      84,
+      "chapter"
+     ],
+     [
+      93,
+      "chapter"
+     ],
+     [
+      104,
+      "chapter"
+     ],
+     [
+      118,
+      "chapter"
+     ],
+     [
+      131,
+      "chapter"
+     ],
+     [
+      142,
+      "chapter"
+     ],
+     [
+      148,
+      "chapter"
+     ],
+     [
+      156,
+      "chapter"
+     ],
+     [
+      165,
+      "chapter"
+     ],
+     [
+      172,
+      "chapter"
+     ],
+     [
+      182,
+      "chapter"
+     ],
+     [
+      193,
+      "chapter"
+     ],
+     [
+      202,
+      "chapter"
+     ],
+     [
+      209,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

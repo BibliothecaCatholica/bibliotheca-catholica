@@ -58,6 +58,16 @@ class Layout(unittest.TestCase):
         dotted = body + [self.L('10. Cf. Dark Night, I, xiv, 2.', 2300, 40), self.L('11 Dark Night of the Soul, II, vi, 2.', 2350, 40)]
         self.assertEqual(len(T.split_notes(dotted, 2600)[1]), 2)  # a number followed by a full stop is a note mark too
 
+    def test_a_chapter_opening_page_is_not_a_note(self):
+        # November 22, 2026 (Walsh, High Points of Medieval Culture): the numeral and title are a little taller than the text
+        # below them and set off by a wide gap; the text is the body, not a note
+        page = [self.L('VI', 300, 58), self.L('THE MEDIEVAL UNIVERSITIES', 480, 61)] + [
+            self.L('text line %d of the opening page' % i, 700 + 95 * i, 53) for i in range(15)]
+        self.assertEqual(T.split_notes(page, 2600), (page, []))
+        with_note = page + [self.L('1 Robertson, The British Universities, p. 1.', 2300, 40), self.L('more of the note', 2350, 40)]
+        kept, notes = T.split_notes(with_note, 2600)
+        self.assertEqual((kept, len(notes)), (page, 1))  # a real footnote on that page still leaves the body
+
     def test_continued_notes_starting_above_mid_page(self):
         # long Butler notes often begin above mid-page and may lack a fresh mark; type is compared to the
         # preceding lines, not the whole page (notes can fill most of it). The first note line is only slightly

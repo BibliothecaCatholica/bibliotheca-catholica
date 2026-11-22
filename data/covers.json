@@ -5,8 +5,8 @@
   "cc-pl24-1845-isaiah-prologue": {
    "work": "jerome-isaiah-prologue",
    "svg": "5faf7ee5d097fbd40395b556b5c2f8eca06b70d839baf90e1ebaa6b5ad7ed25f",
-   "webp": "96b895e25d7a16ea4e7fbe68b8045782f7917e1e8f9e3ba836bd5f9458ec1cb4",
-   "og": "9b520e76386be98e71a4be82b8b89a2ca3bd926edb2a7b1499113469e732c94a"
+   "webp": "e57fd7c910a5d09000a301a53e827f117a3ff09dbad4a79b31b9156c6c971379",
+   "og": "31097649cd3e4669ee903d4ef6ae2ce58683f8f38646e7415bd9f3c47e725624"
   },
   "ccel-npnf102-doctrine": {
    "work": "on-christian-doctrine",
@@ -59,8 +59,8 @@
   "ia-butler-1842-eulalia": {
    "work": "butler-eulalia-merida",
    "svg": "449c80bc105c1898429c3ba4bde033b3d9f1824d32021085a3b05ff303d4a8b3",
-   "webp": "556121caf61ade3860ebd02df71812f91f28d44488f5e8b345e2d8f1d1be121e",
-   "og": "e5c8dff333af7feab401369151a545ca6b2767c721f5cdcd1911e64d84b942b9"
+   "webp": "df79c50fdae0d512fe18acdb7f41196ba6efa2cfd4b07c748c8f4ef3e8b6c07f",
+   "og": "0e320054a3beca6ba27fba55268328f56586b10282a0caadad6b4f1e649320c1"
   },
   "ia-cathencyc-1907-advent": {
    "work": "catholic-encyclopedia-advent",
@@ -97,6 +97,12 @@
    "svg": "e2c64a3169ccae8fd6b39ac10358d39a825e61b8424b7dc6281fe1f47f9d982b",
    "webp": "403b998a9d1b9c26de6ada52c066068a991d091dcc079dd4dbf7e59b16383f97",
    "og": "9b2113dbd1ef6465004e087164103f2eeaa3475ade312218e3367a8926be3a39"
+  },
+  "ia-highpointsofmedi00wals": {
+   "work": "walsh-high-points-medieval-culture",
+   "svg": "c9d7882bc38e9088e36d4863631a91d59e852f8cd233aff1aa390c05bbdc7639",
+   "webp": "8ae7c7b19905c9320c6506a7b66115c0227ecc2d4efca0410b464fea0fb0f640",
+   "og": "a8520d87a816045f3d88f14bd4e2b020683ffd13317c2924719872badb7c9872"
   },
   "ia-outlineofsanity0000ches": {
    "work": "outline-of-sanity",
@@ -161,8 +167,8 @@
   "ia-thackeray-1890-eulalia": {
    "work": "prudentius-eulalia",
    "svg": "1ea60004931531264f50690fe0a4d2e34ab91dde5e01778f2a0e4f8d2cadde86",
-   "webp": "b89abb3fe04520e4f368518524ea8d072e672fc302f26bf2b79608e750035cd0",
-   "og": "ce3d47a31506ff49a9a86cb4c7a36c1890e9f3e4553c7a806107b2b05e7724cd"
+   "webp": "d1b050bdff2f9534de65dd03473cd09f15091ebc9dcea53698e76013dba422d0",
+   "og": "d06322151bbf1feaccbbe41a3f69943a34dca5eed99955a2bae1a1732c3357ed"
   },
   "ia-thingwhyiamcatho00ches-0": {
    "work": "the-thing",

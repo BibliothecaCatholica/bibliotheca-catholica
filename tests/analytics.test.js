@@ -274,8 +274,16 @@ test('2026-11-09: page_path is the real path GA4 can store, never a #/ route',()
  assert.equal(A.pageTitle('/search/','Search — x'),'Search · Bibliotheca Catholica');assert.equal(A.pageTitle('/isidore/','x'),'The Isidore Index · Bibliotheca Catholica');
 });
 test('2026-11-09: on every static page, page_path equals the path of its <link rel=canonical>',()=>{
- const {A}=load(false),{execSync}=require('child_process');
- const files=execSync('git ls-files "*index.html"',{encoding:'utf8'}).split('\n').filter(f=>f&&f!=='index.html');let n=0;
+ const {A}=load(false),path=require('path');
+ const SKIP_DIRS=new Set(['.git','node_modules','dist','tools','.validate','.study-index','.epub-build','.local','.openai','epub-review','__pycache__']);
+ const files=[];
+ (function walk(dir){
+  for(const ent of fs.readdirSync(dir,{withFileTypes:true})){
+   if(ent.isDirectory()){if(!SKIP_DIRS.has(ent.name))walk(path.join(dir,ent.name))}
+   else if(ent.name==='index.html'&&dir!=='.')files.push(path.join(dir,ent.name));
+  }
+ })('.');
+ files.sort();let n=0;
  for(const f of files){const html=fs.readFileSync(f,'utf8'),b=/window\.BC_BOOT="([^"]*)"/.exec(html),c=/<link rel="canonical" href="https:\/\/bibliothecacatholica\.com([^"]*)"/.exec(html);
   if(!b||!c)continue;n++;assert.equal(A.pagePath('',b[1]),c[1],f);assert.equal(A.pagePath('#/'+b[1]),c[1],f)}
  assert.ok(n>4000,'checked '+n+' static pages');

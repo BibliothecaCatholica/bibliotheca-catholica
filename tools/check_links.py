@@ -16,7 +16,7 @@ PARKED=re.compile(r'domain (is )?for sale|buy this domain|parked (free|domain)|s
 URL=re.compile(r'https?://[^\s"\'<>\\)\]]+')
 URLJ=re.compile(r'https?://[^\s"<>\\\]]+')  # JSON / generated data: apostrophes and parentheses are legal in URLs
 def sources():
-    files=[p for p in (ROOT/'data').glob('*.js')]+[p for p in (ROOT/'data').glob('*.json')]+[ROOT/'app.js',ROOT/'index.html']+list((ROOT/'scripts').glob('*.js'))
+    files=[p for p in (ROOT/'data').glob('*.js')]+[p for p in (ROOT/'data').glob('*.json')]+[ROOT/'app.js',ROOT/'index.html' if (ROOT/'index.html').exists() else ROOT/'tools/templates/index.html']+list((ROOT/'scripts').glob('*.js'))
     files=[p for p in files if p.name not in('books.json','catholic-hub.json')]  # books.js / data.js already cover these
     seen={}
     for p in files:

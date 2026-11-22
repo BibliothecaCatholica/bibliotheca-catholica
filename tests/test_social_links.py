@@ -2,7 +2,7 @@
 import json,re,unittest,pathlib
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 X='https://x.com/BiblioCatholica';BS='https://bsky.app/profile/bibliothecacatholica.com';NL='https://bibliothecacatholica.substack.com/subscribe'
-PAGES=[p for p in ROOT.glob('**/index.html') if 'node_modules' not in p.parts and p.parts[len(ROOT.parts)] not in ('docs','drafts')]
+PAGES=[p for p in ROOT.glob('**/index.html') if not ({'node_modules','dist','tools','.validate','.study-index','.epub-build','.local','epub-review'} & set(p.parts)) and p.parts[len(ROOT.parts)] not in ('docs','drafts')]
 def footer(s):
     m=re.search(r'<footer class="footer">.*?</footer>',s,re.S);return m.group(0) if m else ''
 class SocialLinks(unittest.TestCase):

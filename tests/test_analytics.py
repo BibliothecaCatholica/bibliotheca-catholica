@@ -6,7 +6,7 @@ VERIFICATION_FILE = 'google3b007babfa8923a4.html'
 
 class TestAnalytics(unittest.TestCase):
     def pages(self):
-        return [f for f in ROOT.rglob('*.html') if not ({'.git', 'node_modules', '.openai'} & set(f.relative_to(ROOT).parts)) and f != ROOT / VERIFICATION_FILE]
+        return [f for f in ROOT.rglob('*.html') if not ({'.git', 'node_modules', '.openai', 'dist', '.validate', '.study-index', '.epub-build', '.local', 'epub-review'} & set(f.relative_to(ROOT).parts)) and f != ROOT / VERIFICATION_FILE]
 
     def test_google_verification_file_remains_exact(self):
         self.assertEqual((ROOT / VERIFICATION_FILE).read_bytes(),

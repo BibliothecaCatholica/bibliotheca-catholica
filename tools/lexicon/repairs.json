@@ -1,5 +1,5 @@
 {
- "count": 305,
+ "count": 322,
  "repairs": [
   {
    "ocr": "3\\4addox",
@@ -288,6 +288,17 @@
    ]
   },
   {
+   "ocr": "belís",
+   "reading": "bells",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "Bettoc",
    "reading": "Belloc",
    "from": [
@@ -486,6 +497,17 @@
    ]
   },
   {
+   "ocr": "Chríst",
+   "reading": "Christ",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "CLEMfiNS",
    "reading": "CLEMENS",
    "from": [
@@ -596,6 +618,17 @@
    ]
   },
   {
+   "ocr": "couíd",
+   "reading": "could",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "cowp",
    "reading": "coup",
    "from": [
@@ -695,6 +728,17 @@
    ]
   },
   {
+   "ocr": "Delightíul",
+   "reading": "Delightful",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "DenkwUrdy/keiten",
    "reading": "Denkwürdigkeiten",
    "from": [
@@ -739,6 +783,17 @@
    ]
   },
   {
+   "ocr": "duríng",
+   "reading": "during",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "dwelhng",
    "reading": "dwelling",
    "from": [
@@ -746,6 +801,17 @@
      "edition": "ia-selectancientiri00meye",
      "record": "docs/research/irish-meyer-selections-2026-11/README.md",
      "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "díre",
+   "reading": "dire",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
     }
    ]
   },
@@ -855,6 +921,17 @@
     {
      "edition": "ia-highpointsofmedi00wals",
      "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Erín",
+   "reading": "Erin",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]
@@ -1888,6 +1965,17 @@
    ]
   },
   {
+   "ocr": "maríced",
+   "reading": "marked",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "mEN",
    "reading": "QUEEN",
    "from": [
@@ -2163,6 +2251,17 @@
    ]
   },
   {
+   "ocr": "offeríng",
+   "reading": "offering",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "ofices",
    "reading": "offices",
    "from": [
@@ -2383,6 +2482,17 @@
    ]
   },
   {
+   "ocr": "Plain4",
+   "reading": "Plain¹",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "Pliilip",
    "reading": "Philip",
    "from": [
@@ -2532,6 +2642,17 @@
     {
      "edition": "ia-superstitionsofs0000unse-q9f6",
      "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "proíit",
+   "reading": "profit",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]
@@ -2751,6 +2872,17 @@
    ]
   },
   {
+   "ocr": "scéne",
+   "reading": "scène",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "seriolisnees",
    "reading": "seriousness",
    "from": [
@@ -2768,6 +2900,17 @@
     {
      "edition": "ia-superstitionsofs0000unse-q9f6",
      "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "shoúld",
+   "reading": "should",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]
@@ -2839,6 +2982,17 @@
    ]
   },
   {
+   "ocr": "spríng",
+   "reading": "spring",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "Sratny",
    "reading": "Staley",
    "from": [
@@ -2878,6 +3032,17 @@
     {
      "edition": "ia-robertlouisstev00nicogoog",
      "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "stríveth",
+   "reading": "striveth",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]
@@ -3180,6 +3345,17 @@
    ]
   },
   {
+   "ocr": "vider",
+   "reading": "wider",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "Vill",
    "reading": "VIII",
    "from": [
@@ -3329,6 +3505,17 @@
     {
      "edition": "ia-gkcasmcbeingcoll0000gkch",
      "record": "docs/research/chesterton-gkc-as-mc-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Éríu",
+   "reading": "Ériu",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]

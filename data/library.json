@@ -6387,6 +6387,33 @@
         }
       ],
       "added": "2026-11-17"
+    },
+    {
+      "id": "meyer-ancient-irish-poetry",
+      "title": "Selections from Ancient Irish Poetry",
+      "author": "Kuno Meyer",
+      "category": "Poetry",
+      "tradition": "Christian tradition",
+      "description": "Kuno Meyer's 1911 prose translations of early Irish poems, many of them religious: hermit songs, prayers, and poems of the monastic life, with nature poetry, bardic poems, and laments.",
+      "reviewStatus": "source-checked",
+      "date": "1911",
+      "editions": [
+        {
+          "id": "ia-selectancientiri00meye",
+          "label": "Transcription of the Internet Archive scan (New York: E. P. Dutton and Company, 1911)",
+          "source": "https://archive.org/details/selectancientiri00meye",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-23",
+          "access": "full-text",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1911 (London: Constable and Company); this scan is the New York issue of the same year from E. P. Dutton. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed; the poems keep their printed lines and stanza breaks (leaves 20 to 131), and the introduction and notes are prose. 48 hand fixes against the page images (misreadings such as Xoisi for Noisi and Mohng for Moling, small-capital headings, accented letters, the Greek in the notes, and two lines of scanning noise dropped), 214 names and words checked against the images (mostly Irish names, kept as printed, not normalized), 14 automatic repairs each checked against the images, and 3 paragraphs that keep a word the OCR could not read: footnote numbers printed against a word (99.98% of words read). A second OCR (Tesseract) supplied lines where it read more words. Not a manual proofread.",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "Selections from Ancient Irish Poetry",
+          "text": "data/texts/ia-selectancientiri00meye.txt",
+          "sha256": "237cb57dba1fdbff6b6dcd4849598f6ef9aaaf18b1e0c1ca43c1c217ee156228"
+        }
+      ]
     }
   ],
   "series": [

@@ -1892,6 +1892,19 @@
    "keptBecause": {
     "all-capitals line": 1
    }
+  },
+  "ia-selectancientiri00meye": {
+   "work": "Selections from Ancient Irish Poetry",
+   "multiLineBlocks": 483,
+   "reflowed": 0,
+   "kept": 483,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 12,
+    "short line": 471
+   }
   }
  },
  "excluded": {

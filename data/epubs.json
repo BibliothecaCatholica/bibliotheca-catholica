@@ -145,6 +145,12 @@
    "sha256": "19d0781c8aa5015b749f3cdcdc844114e091e11a75d57b070f29c7b353608cd9",
    "size": 446829
   },
+  "pg-19535": {
+   "work": "george-bernard-shaw",
+   "path": "downloads/epub/george-bernard-shaw-pg-19535.eab8b1546461.epub",
+   "sha256": "eab8b15464617b75087710c3f65f0d1a8270eaa2eea4aa1c74f1299b9e1c0bed",
+   "size": 344854
+  },
   "pg-72411": {
    "work": "glories-of-mary",
    "path": "downloads/epub/glories-of-mary-pg-72411.e4c05c3c3e38.epub",
@@ -312,6 +318,18 @@
    "path": "downloads/epub/tremendous-trifles-pg-8092.8a816f05478a.epub",
    "sha256": "8a816f05478a7122e01b1b5032a8e73ce8a6057d4792a75f83012212212088a8",
    "size": 371075
+  },
+  "pg-12491": {
+   "work": "twelve-types",
+   "path": "downloads/epub/twelve-types-pg-12491.a0c7793203b8.epub",
+   "sha256": "a0c7793203b8eedf49a0e7e81e65fd7c3b63bfa2134e074910c661e868a3fc2f",
+   "size": 193837
+  },
+  "pg-14203": {
+   "work": "varied-types",
+   "path": "downloads/epub/varied-types-pg-14203.d16d93f331d0.epub",
+   "sha256": "d16d93f331d0ad71fa78c83fbc61b1f8075d27b3777fbed22c54992e70fc22cb",
+   "size": 273566
   },
   "pg-18639": {
    "work": "victorian-age-literature",

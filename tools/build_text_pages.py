@@ -96,6 +96,10 @@ PART_D={
     'robert-browning':{'about':'Project Gutenberg #13342: first published in 1903; the file does not name the printing it follows. Eight chapters; the index stays in the reader.'},
     'superstition-divorce':{'about':"Project Gutenberg #62680: first published in 1920; the transcribed copy is the John Lane Company, New York printing. Five chapters and a conclusion, as the book's contents lists them; the footnotes stay with the conclusion."},
     'the-defendant':{'about':'Project Gutenberg #12245: first published in 1901; the transcribed copy is the second edition (London: R. Brimley Johnson, 1902). The preface to the new edition, an introduction, and sixteen essays, each titled “A Defence of” something.'},
+    # Chesterton polish batch 7 (November 23, 2026). Each sentence restates the edition's record and its map.
+    'twelve-types':{'about':"Project Gutenberg #12491: first published in 1902 (London: Arthur L. Humphreys). Twelve essays on writers and historical figures, as the book's contents lists them."},
+    'george-bernard-shaw':{'about':'Project Gutenberg #19535: first published in 1909; the transcribed copy is the John Lane Company, New York printing, copyright 1909. An introduction, a preface, and six chapters.'},
+    'varied-types':{'about':'Project Gutenberg #14203: first published in 1903; the transcribed copy is the Dodd, Mead and Company, New York printing of September 1905. Twenty essays on writers and public figures, the twelve of Twelve Types among them.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

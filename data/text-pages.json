@@ -20331,6 +20331,730 @@
     "front": [],
     "em": []
    }
+  },
+  "twelve-types": {
+   "partD": {
+    "about": "Project Gutenberg #12491: first published in 1902 (London: Arthur L. Humphreys). Twelve essays on writers and historical figures, as the book's contents lists them.",
+    "words": 26151,
+    "minutes": 114
+   },
+   "edition": "pg-12491",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Essay",
+   "nouns": "Essays",
+   "sha256": "85f2279bba271ef88eb6cc10dbb65a291fa90ec7b2a7eaf73f640bc61cd5cd52",
+   "blocks": 214,
+   "items": [
+    {
+     "slug": "01-charlotte-bront",
+     "num": "I",
+     "title": "Charlotte Brontë",
+     "heading": 17,
+     "start": 18,
+     "end": 22,
+     "section": 0,
+     "words": 1754,
+     "firstWords": "Objection is often raised against realistic biography because it reveals so much"
+    },
+    {
+     "slug": "02-william-morris-and-his-school",
+     "num": "II",
+     "title": "William Morris and His School",
+     "heading": 23,
+     "start": 24,
+     "end": 28,
+     "section": 0,
+     "words": 2072,
+     "firstWords": "It is proper enough that the unveiling of the bust of William"
+    },
+    {
+     "slug": "03-the-optimism-of-byron",
+     "num": "III",
+     "title": "The Optimism of Byron",
+     "heading": 29,
+     "start": 30,
+     "end": 43,
+     "section": 0,
+     "words": 1851,
+     "firstWords": "Everything is against our appreciating the spirit and the age of Byron."
+    },
+    {
+     "slug": "04-pope-and-the-art-of-satire",
+     "num": "IV",
+     "title": "Pope and the Art of Satire",
+     "heading": 44,
+     "start": 45,
+     "end": 71,
+     "section": 1,
+     "words": 2290,
+     "firstWords": "The general critical theory common in this and the last century is"
+    },
+    {
+     "slug": "05-francis",
+     "num": "V",
+     "title": "Francis",
+     "heading": 72,
+     "start": 73,
+     "end": 85,
+     "section": 2,
+     "words": 2056,
+     "firstWords": "Asceticism is a thing which in its very nature, we tend in"
+    },
+    {
+     "slug": "06-rostand",
+     "num": "VI",
+     "title": "Rostand",
+     "heading": 86,
+     "start": 87,
+     "end": 88,
+     "section": 2,
+     "words": 1783,
+     "firstWords": "When 'Cyrano de Bergerac' was published, it bore the subordinate title of"
+    },
+    {
+     "slug": "07-charles-ii",
+     "num": "VII",
+     "title": "Charles II",
+     "heading": 89,
+     "start": 90,
+     "end": 100,
+     "section": 2,
+     "words": 1815,
+     "firstWords": "There are a great many bonds which still connect us with Charles"
+    },
+    {
+     "slug": "08-stevenson",
+     "num": "VIII",
+     "title": "Stevenson",
+     "heading": 101,
+     "start": 102,
+     "end": 109,
+     "section": 2,
+     "words": 1643,
+     "firstWords": "A recent incident has finally convinced us that Stevenson was, as we"
+    },
+    {
+     "slug": "09-thomas-carlyle",
+     "num": "IX",
+     "title": "Thomas Carlyle",
+     "heading": 110,
+     "start": 111,
+     "end": 121,
+     "section": 3,
+     "words": 2527,
+     "firstWords": "There are two main moral necessities for the work of a great"
+    },
+    {
+     "slug": "10-tolstoy-and-the-cult-of-simplicity",
+     "num": "X",
+     "title": "Tolstoy and the Cult of Simplicity",
+     "heading": 122,
+     "start": 123,
+     "end": 140,
+     "section": 3,
+     "words": 3625,
+     "firstWords": "The whole world is certainly heading for a great simplicity, not deliberately,"
+    },
+    {
+     "slug": "11-savonarola",
+     "num": "XI",
+     "title": "Savonarola",
+     "heading": 141,
+     "start": 142,
+     "end": 149,
+     "section": 4,
+     "words": 1488,
+     "firstWords": "Savonarola is a man whom we shall probably never understand until we"
+    },
+    {
+     "slug": "12-the-position-of-sir-walter-scott",
+     "num": "XII",
+     "title": "The Position of Sir Walter Scott",
+     "heading": 150,
+     "start": 151,
+     "end": 162,
+     "section": 4,
+     "words": 3247,
+     "firstWords": "Walter Scott is a writer who should just now be re-emerging into"
+    }
+   ],
+   "structure": {
+    "sha256": "85f2279bba271ef88eb6cc10dbb65a291fa90ec7b2a7eaf73f640bc61cd5cd52",
+    "source": "data/structured/twelve-types-pg-12491.json",
+    "roles": [
+     [
+      17,
+      "chapter"
+     ],
+     [
+      23,
+      "chapter"
+     ],
+     [
+      29,
+      "chapter"
+     ],
+     [
+      44,
+      "chapter"
+     ],
+     [
+      72,
+      "chapter"
+     ],
+     [
+      86,
+      "chapter"
+     ],
+     [
+      89,
+      "chapter"
+     ],
+     [
+      101,
+      "chapter"
+     ],
+     [
+      110,
+      "chapter"
+     ],
+     [
+      122,
+      "chapter"
+     ],
+     [
+      141,
+      "chapter"
+     ],
+     [
+      150,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "george-bernard-shaw": {
+   "partD": {
+    "about": "Project Gutenberg #19535: first published in 1909; the transcribed copy is the John Lane Company, New York printing, copyright 1909. An introduction, a preface, and six chapters.",
+    "words": 50804,
+    "minutes": 221
+   },
+   "edition": "pg-19535",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "5d3ac4eaa2b22d3707b92a1d0363b7d13763afbfac320a2b31a7d8a1fa0e8aee",
+   "blocks": 410,
+   "items": [
+    {
+     "slug": "01-introduction-to-the-first-edition",
+     "num": "Introduction",
+     "title": "Introduction to the First Edition",
+     "heading": 26,
+     "start": 27,
+     "end": 28,
+     "section": 0,
+     "words": 35,
+     "firstWords": "Most people either say that they agree with Bernard Shaw or that"
+    },
+    {
+     "slug": "02-the-problem-of-a-preface",
+     "num": "Preface",
+     "title": "The Problem of a Preface",
+     "heading": 29,
+     "start": 30,
+     "end": 32,
+     "section": 0,
+     "words": 868,
+     "firstWords": "A peculiar difficulty arrests the writer of this rough study at the"
+    },
+    {
+     "slug": "03-the-irishman",
+     "num": "I",
+     "title": "The Irishman",
+     "heading": 43,
+     "start": 44,
+     "end": 55,
+     "section": 1,
+     "words": 3522,
+     "firstWords": "The English public has commonly professed, with a kind of pride, that",
+     "before": [
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+     ]
+    },
+    {
+     "slug": "04-the-puritan",
+     "num": "II",
+     "title": "The Puritan",
+     "heading": 56,
+     "start": 57,
+     "end": 69,
+     "section": 1,
+     "words": 3941,
+     "firstWords": "It has been said in the first section that Bernard Shaw draws"
+    },
+    {
+     "slug": "05-the-progressive",
+     "num": "III",
+     "title": "The Progressive",
+     "heading": 70,
+     "start": 71,
+     "end": 94,
+     "section": 2,
+     "words": 7275,
+     "firstWords": "It is now partly possible to justify the Shavian method of putting"
+    },
+    {
+     "slug": "06-the-critic",
+     "num": "IV",
+     "title": "The Critic",
+     "heading": 95,
+     "start": 96,
+     "end": 118,
+     "section": 2,
+     "words": 5654,
+     "firstWords": "It appears a point of some mystery to the present writer that"
+    },
+    {
+     "slug": "07-the-dramatist",
+     "num": "V",
+     "title": "The Dramatist",
+     "heading": 119,
+     "start": 120,
+     "end": 158,
+     "section": 3,
+     "words": 11114,
+     "firstWords": "No one who was alive at the time and interested in such"
+    },
+    {
+     "slug": "08-the-philosopher",
+     "num": "VI",
+     "title": "The Philosopher",
+     "heading": 159,
+     "start": 160,
+     "end": 227,
+     "section": 4,
+     "words": 18395,
+     "firstWords": "I should suppose that Caesar and Cleopatra marks about the turning tide"
+    }
+   ],
+   "structure": {
+    "sha256": "5d3ac4eaa2b22d3707b92a1d0363b7d13763afbfac320a2b31a7d8a1fa0e8aee",
+    "source": "data/structured/george-bernard-shaw-pg-19535.json",
+    "roles": [
+     [
+      26,
+      "chapter"
+     ],
+     [
+      29,
+      "chapter"
+     ],
+     [
+      33,
+      "heading"
+     ],
+     [
+      34,
+      "heading"
+     ],
+     [
+      35,
+      "heading"
+     ],
+     [
+      36,
+      "heading"
+     ],
+     [
+      37,
+      "heading"
+     ],
+     [
+      38,
+      "heading"
+     ],
+     [
+      39,
+      "heading"
+     ],
+     [
+      40,
+      "heading"
+     ],
+     [
+      41,
+      "heading"
+     ],
+     [
+      42,
+      "heading"
+     ],
+     [
+      43,
+      "chapter"
+     ],
+     [
+      56,
+      "chapter"
+     ],
+     [
+      70,
+      "chapter"
+     ],
+     [
+      95,
+      "chapter"
+     ],
+     [
+      119,
+      "chapter"
+     ],
+     [
+      159,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "varied-types": {
+   "partD": {
+    "about": "Project Gutenberg #14203: first published in 1903; the transcribed copy is the Dodd, Mead and Company, New York printing of September 1905. Twenty essays on writers and public figures, the twelve of Twelve Types among them.",
+    "words": 39013,
+    "minutes": 170
+   },
+   "edition": "pg-14203",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Essay",
+   "nouns": "Essays",
+   "sha256": "2d46a2a05ef76332e784d4e3f8538bb3392dbed43b20605ca5db562f0227bb81",
+   "blocks": 303,
+   "items": [
+    {
+     "slug": "01-charlotte-bront",
+     "num": "I",
+     "title": "Charlotte Brontë",
+     "heading": 21,
+     "start": 22,
+     "end": 26,
+     "section": 0,
+     "words": 1754,
+     "firstWords": "Objection is often raised against realistic biography because it reveals so much"
+    },
+    {
+     "slug": "02-william-morris-and-his-school",
+     "num": "II",
+     "title": "William Morris and His School",
+     "heading": 27,
+     "start": 28,
+     "end": 34,
+     "section": 0,
+     "words": 2073,
+     "firstWords": "It is proper enough that the unveiling of the bust of William"
+    },
+    {
+     "slug": "03-optimism-of-byron",
+     "num": "III",
+     "title": "Optimism of Byron",
+     "heading": 35,
+     "start": 36,
+     "end": 51,
+     "section": 1,
+     "words": 1852,
+     "firstWords": "Everything is against our appreciating the spirit and the age of Byron."
+    },
+    {
+     "slug": "04-pope-and-the-art-of-satire",
+     "num": "IV",
+     "title": "Pope and the Art of Satire",
+     "heading": 52,
+     "start": 53,
+     "end": 79,
+     "section": 1,
+     "words": 2288,
+     "firstWords": "The general critical theory common in this and the last century is"
+    },
+    {
+     "slug": "05-francis",
+     "num": "V",
+     "title": "Francis",
+     "heading": 80,
+     "start": 81,
+     "end": 93,
+     "section": 2,
+     "words": 2057,
+     "firstWords": "Asceticism is a thing which, in its very nature, we tend in"
+    },
+    {
+     "slug": "06-rostand",
+     "num": "VI",
+     "title": "Rostand",
+     "heading": 94,
+     "start": 95,
+     "end": 96,
+     "section": 2,
+     "words": 1789,
+     "firstWords": "When \"Cyrano de Bergerac\" was published, it bore the subordinate title of"
+    },
+    {
+     "slug": "07-charles-ii",
+     "num": "VII",
+     "title": "Charles II",
+     "heading": 97,
+     "start": 98,
+     "end": 108,
+     "section": 2,
+     "words": 1815,
+     "firstWords": "There are a great many bonds which still connect us with Charles"
+    },
+    {
+     "slug": "08-stevenson",
+     "num": "VIII",
+     "title": "Stevenson",
+     "heading": 109,
+     "start": 110,
+     "end": 117,
+     "section": 3,
+     "words": 1643,
+     "firstWords": "A recent incident has finally convinced us that Stevenson was, as we"
+    },
+    {
+     "slug": "09-thomas-carlyle",
+     "num": "IX",
+     "title": "Thomas Carlyle",
+     "heading": 118,
+     "start": 119,
+     "end": 129,
+     "section": 3,
+     "words": 2531,
+     "firstWords": "There are two main moral necessities for the work of a great"
+    },
+    {
+     "slug": "10-tolstoy-and-the-cult-of-simplicity",
+     "num": "X",
+     "title": "Tolstoy and the Cult of Simplicity",
+     "heading": 130,
+     "start": 131,
+     "end": 148,
+     "section": 3,
+     "words": 3625,
+     "firstWords": "The whole world is certainly heading for a great simplicity, not deliberately,"
+    },
+    {
+     "slug": "11-savonarola",
+     "num": "XI",
+     "title": "Savonarola",
+     "heading": 149,
+     "start": 150,
+     "end": 157,
+     "section": 4,
+     "words": 1488,
+     "firstWords": "Savonarola is a man whom we shall probably never understand until we"
+    },
+    {
+     "slug": "12-the-position-of-sir-walter-scott",
+     "num": "XII",
+     "title": "The Position of Sir Walter Scott",
+     "heading": 158,
+     "start": 159,
+     "end": 171,
+     "section": 4,
+     "words": 3247,
+     "firstWords": "Walter Scott is a writer who should just now be re-emerging into"
+    },
+    {
+     "slug": "13-bret-harte",
+     "num": "XIII",
+     "title": "Bret Harte",
+     "heading": 172,
+     "start": 173,
+     "end": 189,
+     "section": 4,
+     "words": 2996,
+     "firstWords": "There are more than nine hundred and ninety-nine excellent reasons which we"
+    },
+    {
+     "slug": "14-alfred-the-great",
+     "num": "XIV",
+     "title": "Alfred the Great",
+     "heading": 190,
+     "start": 191,
+     "end": 198,
+     "section": 5,
+     "words": 1450,
+     "firstWords": "The celebrations in connection with the millenary of King Alfred struck a"
+    },
+    {
+     "slug": "15-maeterlinck",
+     "num": "XV",
+     "title": "Maeterlinck",
+     "heading": 199,
+     "start": 200,
+     "end": 203,
+     "section": 5,
+     "words": 1101,
+     "firstWords": "The selection of \"Thoughts from Maeterlinck\" is a very creditable and also"
+    },
+    {
+     "slug": "16-ruskin",
+     "num": "XVI",
+     "title": "Ruskin",
+     "heading": 204,
+     "start": 205,
+     "end": 211,
+     "section": 5,
+     "words": 947,
+     "firstWords": "I do not think anyone could find any fault with the way"
+    },
+    {
+     "slug": "17-queen-victoria",
+     "num": "XVII",
+     "title": "Queen Victoria",
+     "heading": 212,
+     "start": 213,
+     "end": 217,
+     "section": 6,
+     "words": 1687,
+     "firstWords": "Anyone who possesses spiritual or political courage has made up his mind"
+    },
+    {
+     "slug": "18-the-german-emperor",
+     "num": "XVIII",
+     "title": "The German Emperor",
+     "heading": 218,
+     "start": 219,
+     "end": 225,
+     "section": 6,
+     "words": 1636,
+     "firstWords": "The list of the really serious, the really convinced, the really important"
+    },
+    {
+     "slug": "19-tennyson",
+     "num": "XIX",
+     "title": "Tennyson",
+     "heading": 226,
+     "start": 227,
+     "end": 239,
+     "section": 6,
+     "words": 1454,
+     "firstWords": "Mr. Morton Luce has written a short study of Tennyson which has"
+    },
+    {
+     "slug": "20-elizabeth-barrett-browning",
+     "num": "XX",
+     "title": "Elizabeth Barrett Browning",
+     "heading": 240,
+     "start": 241,
+     "end": 251,
+     "section": 6,
+     "words": 1580,
+     "firstWords": "The delightful new edition of Mrs. Browning's \"Casa Guidi Windows\" which Mr."
+    }
+   ],
+   "structure": {
+    "sha256": "2d46a2a05ef76332e784d4e3f8538bb3392dbed43b20605ca5db562f0227bb81",
+    "source": "data/structured/varied-types-pg-14203.json",
+    "roles": [
+     [
+      21,
+      "chapter"
+     ],
+     [
+      27,
+      "chapter"
+     ],
+     [
+      35,
+      "chapter"
+     ],
+     [
+      52,
+      "chapter"
+     ],
+     [
+      80,
+      "chapter"
+     ],
+     [
+      94,
+      "chapter"
+     ],
+     [
+      97,
+      "chapter"
+     ],
+     [
+      109,
+      "chapter"
+     ],
+     [
+      118,
+      "chapter"
+     ],
+     [
+      130,
+      "chapter"
+     ],
+     [
+      149,
+      "chapter"
+     ],
+     [
+      158,
+      "chapter"
+     ],
+     [
+      172,
+      "chapter"
+     ],
+     [
+      190,
+      "chapter"
+     ],
+     [
+      199,
+      "chapter"
+     ],
+     [
+      204,
+      "chapter"
+     ],
+     [
+      212,
+      "chapter"
+     ],
+     [
+      218,
+      "chapter"
+     ],
+     [
+      226,
+      "chapter"
+     ],
+     [
+      240,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

@@ -50,7 +50,9 @@ class PartD(unittest.TestCase):
                                            # Douay-Rheims Wisdom and Ecclesiasticus (November 21, 2026)
                                            'book-of-wisdom-douay-rheims', 'ecclesiasticus-douay-rheims',
                                            # Chesterton polish batch 6 (November 22, 2026)
-                                           'robert-browning', 'superstition-divorce', 'the-defendant'})
+                                           'robert-browning', 'superstition-divorce', 'the-defendant',
+                                           # Chesterton polish batch 7 (November 23, 2026)
+                                           'twelve-types', 'george-bernard-shaw', 'varied-types'})
         for wid, d in TP.items():
             self.assertIn('partD', d, wid)
             self.assertEqual(d['partD']['words'], sum(x['words'] for x in d['items']))

@@ -52,7 +52,9 @@ class PartD(unittest.TestCase):
                                            # Chesterton polish batch 6 (November 22, 2026)
                                            'robert-browning', 'superstition-divorce', 'the-defendant',
                                            # Chesterton polish batch 8 (November 23, 2026)
-                                           'all-things-considered', 'alarms-discursions', 'miscellany-of-men'})
+                                           'all-things-considered', 'alarms-discursions', 'miscellany-of-men',
+                                           # Chesterton polish batch 9 (November 23, 2026)
+                                           'crimes-of-england', 'uses-of-diversity', 'fancies-versus-fads'})
         for wid, d in TP.items():
             self.assertIn('partD', d, wid)
             self.assertEqual(d['partD']['words'], sum(x['words'] for x in d['items']))

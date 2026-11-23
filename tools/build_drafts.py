@@ -19,7 +19,8 @@ OUT=ROOT/'drafts'
 E=lambda s: html.escape(s, quote=False)
 
 def ga_tag():
-    tpl=(ROOT/'index.html').read_text(encoding='utf-8')
+    home_tpl=ROOT/'tools/templates/index.html'
+    tpl=(home_tpl if home_tpl.exists() else ROOT/'index.html').read_text(encoding='utf-8')
     m=re.search(r'<!-- Google tag \(gtag\.js\) -->.*?</script>\n<script>.*?</script>\n',tpl,flags=re.S)
     assert m and tpl.count('googletagmanager.com/gtag/js')==1,'index.html must carry exactly one Google tag right after <head>'
     return m.group(0)

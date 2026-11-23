@@ -585,8 +585,10 @@ def part_d_html(w,pd):
             '<h2>About this edition</h2><p>'+E(pd['about'])+'</p>')
 def summa_work_html(S):
     return ('<h2>By question and article</h2><p>'+a('/summa/','The whole Summa, one page per question and article')+': '+', '.join(a('/summa/'+P['slug']+'/',P['name']) for P in S['parts'][:-1])+', and '+a('/summa/'+S['parts'][-1]['slug']+'/',S['parts'][-1]['name'])+'.</p>')
+HOME_TEMPLATE=ROOT/'tools/templates/index.html'
+STUDY_TEMPLATE=ROOT/'tools/templates/study/index.html'
 def main():
-    tpl=(ROOT/'index.html').read_text();global GA_TAG;GA_TAG=ga_tag(tpl);hub=json.loads((ROOT/'data/catholic-hub.json').read_text())
+    tpl=(HOME_TEMPLATE if HOME_TEMPLATE.exists() else ROOT/'index.html').read_text();global GA_TAG;GA_TAG=ga_tag(tpl);hub=json.loads((ROOT/'data/catholic-hub.json').read_text())
     lib=json.loads((ROOT/'data/library.json').read_text());guide=jsvar('data/guide.js','GUIDE_DATA')
     for w in lib['works']:
         e=hosted_ed(w)
@@ -907,8 +909,16 @@ def main():
     for route,v in out.items():
         t,d,body=v[:3];body=unhash(body);f=ROOT/route/'index.html';f.parent.mkdir(parents=True,exist_ok=True);f.write_text(page(tpl,route,t,d,body,jsonld=v[3] if len(v)>3 else ()))
     man.write_text(''.join(r+'/index.html\n' for r in sorted(out)))
-    # /study/ is maintained by hand (not in `out`) but is a real, linked page: indexed and listed (housekeeping, 2026-11-20)
-    urls=[SITE]+[SITE+r+'/' for r in sorted(list(out)+(['study'] if (ROOT/'study/index.html').exists() else []))]
+    study=ROOT/'study/index.html'
+    if STUDY_TEMPLATE.exists():
+        study.parent.mkdir(parents=True,exist_ok=True)
+        study.write_text(STUDY_TEMPLATE.read_text(encoding='utf-8'),encoding='utf-8')
+    study_partner.write_study(study)  # the panel between the study-partner markers (rule 7)
+    if study.exists():
+        footer=re.search(r'<footer class="footer">.*?</footer>',(ROOT/'index.html').read_text(),re.S).group(0)
+        study.write_text(re.sub(r'<footer class="footer">.*?</footer>',lambda m:footer,study.read_text(),flags=re.S))
+    # /study/ is built from tools/templates/study/index.html (not in `out`) and is a real, linked page: indexed and listed (housekeeping, 2026-11-20)
+    urls=[SITE]+[SITE+r+'/' for r in sorted(list(out)+(['study'] if study.exists() else []))]
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('  <url><loc>'+E(u)+'</loc></url>\n' for u in urls)+'</urlset>\n')
     (ROOT/'robots.txt').write_text('# Bibliotheca Catholica\nUser-agent: *\nAllow: /\nDisallow: /data/texts/\nDisallow: /drafts/\n\nSitemap: '+SITE+'sitemap.xml\n')
     (ROOT/'404.html').write_text('''<!doctype html><html lang="en"><head>
@@ -917,11 +927,6 @@ def main():
 if(p&&/^[A-Za-z0-9._~%\\/-]+$/.test(p)){location.replace('/#/'+p+location.search);return}location.replace('/#/404')})();</script></head>
 <body><p>Page not found. <a href="/">Go to Bibliotheca Catholica</a>.</p></body></html>
 ''')
-    study=ROOT/'study/index.html'
-    study_partner.write_study(study)  # the panel between the study-partner markers (rule 7)
-    if study.exists():
-        footer=re.search(r'<footer class="footer">.*?</footer>',(ROOT/'index.html').read_text(),re.S).group(0)
-        study.write_text(re.sub(r'<footer class="footer">.*?</footer>',lambda m:footer,study.read_text(),flags=re.S))
     print(len(out),'pages;',len(urls),'sitemap URLs')
     import build_drafts;build_drafts.build()
 if __name__=='__main__':main()

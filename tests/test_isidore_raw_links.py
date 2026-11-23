@@ -2,13 +2,23 @@
 (its results list raw get/ files whatever the badge); Markdown notes and tool comments may name it, and no static page may link raw files,
 folder listings, or the Calibre viewer.  The app builds get/ URLs only in its two download helpers,
 which are gated by the rights badge (tests/rights.test.js)."""
-import re,subprocess,unittest
+import os,re,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-FILES=subprocess.run(['git','ls-files'],cwd=ROOT,capture_output=True,text=True).stdout.split()
-SERVED=[f for f in FILES if not f.startswith(('tests/','docs/','.github/')) and f.endswith(('.html','.js','.json','.xml','.txt','.css'))
+SKIP_DIRS={'.git','node_modules','dist','.validate','.study-index','.epub-build','.local','.openai','epub-review','__pycache__'}
+def _walk_files():
+    out=[]
+    for dirpath,dirnames,filenames in os.walk(ROOT):
+        dirnames[:]=[d for d in sorted(dirnames) if d not in SKIP_DIRS]
+        rel_dir=Path(dirpath).relative_to(ROOT)
+        for fn in sorted(filenames):
+            rel=(rel_dir/fn).as_posix() if rel_dir!=Path('.') else fn
+            out.append(rel)
+    return out
+FILES=_walk_files()
+SERVED=[f for f in FILES if not f.startswith(('tests/','docs/','.github/','tools/')) and f.endswith(('.html','.js','.json','.xml','.txt','.css'))
         and not f.startswith(('data/texts/','data/sources/'))]
-HTML=[f for f in FILES if f.endswith('.html')]
+HTML=[f for f in FILES if f.endswith('.html') and not f.startswith('tools/')]
 RAW=re.compile(r'isidore\.co/(calibre/)?(get/|legacy/get/)|/get/(EPUB|PDF|MOBI|AZW3|DJVU|MP3)/|isidore\.co/CalibreLibrary/[^"\'\s<]|#book_id=')
 class IsidoreRawLinks(unittest.TestCase):
     def test_no_mobile_catalog_links(self):

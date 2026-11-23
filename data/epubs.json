@@ -115,6 +115,12 @@
    "sha256": "8906a081e2eb0485c0da5e20b26eb8aa13226772530bbcfaccf0fe0d792c9a32",
    "size": 600446
   },
+  "pg-11554": {
+   "work": "crimes-of-england",
+   "path": "downloads/epub/crimes-of-england-pg-11554.b76012b7bfcb.epub",
+   "sha256": "b76012b7bfcb65fefcf7d304ce5a494b213bd9cc4b951880e313720ace006686",
+   "size": 221315
+  },
   "pg-35110": {
    "work": "development-doctrine",
    "path": "downloads/epub/development-doctrine-pg-35110.1fac4092caa4.epub",
@@ -144,6 +150,12 @@
    "path": "downloads/epub/everlasting-man-pg-65688.7074f7bbbc04.epub",
    "sha256": "7074f7bbbc0447e0ef75259cab04309284e99d2cf8abda04319262da96b916b4",
    "size": 646204
+  },
+  "pg-60164": {
+   "work": "fancies-versus-fads",
+   "path": "downloads/epub/fancies-versus-fads-pg-60164.18204c71ec62.epub",
+   "sha256": "18204c71ec626095431c52c119f579a1aa2d57395dd87bbbd62b9d3d184ceba8",
+   "size": 449212
   },
   "pg-59239": {
    "work": "flying-inn",
@@ -330,6 +342,12 @@
    "path": "downloads/epub/tremendous-trifles-pg-8092.8a816f05478a.epub",
    "sha256": "8a816f05478a7122e01b1b5032a8e73ce8a6057d4792a75f83012212212088a8",
    "size": 371075
+  },
+  "pg-60057": {
+   "work": "uses-of-diversity",
+   "path": "downloads/epub/uses-of-diversity-pg-60057.72890fe2b1cf.epub",
+   "sha256": "72890fe2b1cf38c48937f7b18cc25578ab1a81029de598a96e1c9a9aba58cefc",
+   "size": 361106
   },
   "pg-18639": {
    "work": "victorian-age-literature",

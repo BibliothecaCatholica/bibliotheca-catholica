@@ -100,6 +100,10 @@ PART_D={
     'all-things-considered':{'about':"Project Gutenberg #11505: first published in 1908; the transcribed copy is the ninth edition (November 1915). Thirty-five essays, as the book's contents lists them."},
     'alarms-discursions':{'about':"Project Gutenberg #9656: first published in 1910; the file does not name the printing it follows. Thirty-nine essays, the first an introductory essay on gargoyles, as the book's contents numbers them."},
     'miscellany-of-men':{'about':"Project Gutenberg #2015: first published in 1912; the file does not name the printing it follows. Thirty-eight essays, as the book's contents lists them."},
+    # Chesterton polish batch 9 (November 23, 2026). Each sentence restates the edition's record and its map.
+    'crimes-of-england':{'about':'Project Gutenberg #11554: first published in 1915; the file names MCMXVI (1916). Ten chapters, the first a letter to “Professor Whirlwind,” and a closing note on the word “English.”'},
+    'uses-of-diversity':{'about':"Project Gutenberg #60057: first published in 1920; the transcribed copy is a Methuen & Co., London printing. Thirty-five essays, as the book's contents lists them; the publisher's catalogue at the end stays in the reader."},
+    'fancies-versus-fads':{'about':"Project Gutenberg #60164: first published in 1923; the transcribed copy is a Methuen & Co., London printing. The author's introduction and thirty essays, as the book's contents lists them; a short closing passage the contents does not list stays with the last essay, and the publisher's catalogue at the end stays in the reader."},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

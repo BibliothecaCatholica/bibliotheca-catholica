@@ -65,7 +65,7 @@ class TextArchiveTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             archive.export(Path(directory))
             h = (Path(directory) / '_headers').read_text()
-        self.assertNotIn('Strict-Transport-Security', h)  # HSTS waits for the owner's decision (separate PR)
+        self.assertIn('Strict-Transport-Security: max-age=300\n', h)  # short start; no includeSubDomains or preload
         self.assertIn("Content-Security-Policy: default-src 'self';", h)
         self.assertIn("object-src 'none'", h)
         self.assertNotIn('Access-Control-Allow-Origin', h)  # Cloudflare Pages' default (*) stays: the reader fetches cross-origin

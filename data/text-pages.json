@@ -20331,6 +20331,315 @@
     "front": [],
     "em": []
    }
+  },
+  "what-i-saw-america": {
+   "partD": {
+    "about": "Project Gutenberg #27250: first published in 1922; the transcribed copy is a Hodder and Stoughton, London printing. Nineteen chapters, as the book's contents lists them; the footnote stays with its chapter.",
+    "words": 90671,
+    "minutes": 394
+   },
+   "edition": "pg-27250",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Chapter",
+   "nouns": "Chapters",
+   "sha256": "ff9a27bf3d1b9a18467ad07cf1ca4938e1aa6b3fe839a5b8520030cfaa3873b8",
+   "blocks": 419,
+   "items": [
+    {
+     "slug": "01-what-is-america",
+     "num": "I",
+     "title": "What Is America?",
+     "heading": 38,
+     "start": 39,
+     "end": 58,
+     "section": 1,
+     "words": 5436,
+     "firstWords": "I have never managed to lose my old conviction that travel narrows"
+    },
+    {
+     "slug": "02-a-meditation-in-a-new-york-hotel",
+     "num": "II",
+     "title": "A Meditation in a New York Hotel",
+     "heading": 59,
+     "start": 60,
+     "end": 71,
+     "section": 1,
+     "words": 4357,
+     "firstWords": "All this must begin with an apology and not an apologia. When"
+    },
+    {
+     "slug": "03-a-meditation-in-broadway",
+     "num": "III",
+     "title": "A Meditation in Broadway",
+     "heading": 72,
+     "start": 73,
+     "end": 87,
+     "section": 2,
+     "words": 4131,
+     "firstWords": "When I had looked at the lights of Broadway by night, I"
+    },
+    {
+     "slug": "04-irish-and-other-interviewers",
+     "num": "IV",
+     "title": "Irish and Other Interviewers",
+     "heading": 88,
+     "start": 89,
+     "end": 109,
+     "section": 2,
+     "words": 4887,
+     "firstWords": "It is often asked what should be the first thing that a"
+    },
+    {
+     "slug": "05-some-american-cities",
+     "num": "V",
+     "title": "Some American Cities",
+     "heading": 110,
+     "start": 111,
+     "end": 130,
+     "section": 3,
+     "words": 4985,
+     "firstWords": "There is one point, almost to be called a paradox, to be"
+    },
+    {
+     "slug": "06-in-the-american-country",
+     "num": "VI",
+     "title": "In the American Country",
+     "heading": 131,
+     "start": 132,
+     "end": 154,
+     "section": 3,
+     "words": 4999,
+     "firstWords": "The sharpest pleasure of a traveller is in finding the things which"
+    },
+    {
+     "slug": "07-the-american-business-man",
+     "num": "VII",
+     "title": "The American Business Man",
+     "heading": 155,
+     "start": 156,
+     "end": 183,
+     "section": 4,
+     "words": 7055,
+     "firstWords": "It is a commonplace that men are all agreed in using symbols,"
+    },
+    {
+     "slug": "08-presidents-and-problems",
+     "num": "VIII",
+     "title": "Presidents and Problems",
+     "heading": 184,
+     "start": 185,
+     "end": 202,
+     "section": 5,
+     "words": 7130,
+     "firstWords": "All good Americans wish to fight the representatives they have chosen. All"
+    },
+    {
+     "slug": "09-prohibition-in-fact-and-fancy",
+     "num": "IX",
+     "title": "Prohibition in Fact and Fancy",
+     "heading": 203,
+     "start": 204,
+     "end": 218,
+     "section": 5,
+     "words": 5392,
+     "firstWords": "I went to America with some notion of not discussing Prohibition. But"
+    },
+    {
+     "slug": "10-fads-and-public-opinion",
+     "num": "X",
+     "title": "Fads and Public Opinion",
+     "heading": 219,
+     "start": 220,
+     "end": 237,
+     "section": 6,
+     "words": 5545,
+     "firstWords": "A foreigner is a man who laughs at everything except jokes. He"
+    },
+    {
+     "slug": "11-the-extraordinary-american",
+     "num": "XI",
+     "title": "The Extraordinary American",
+     "heading": 238,
+     "start": 239,
+     "end": 252,
+     "section": 6,
+     "words": 3613,
+     "firstWords": "When I was in America I had the feeling that it was"
+    },
+    {
+     "slug": "12-the-republican-in-the-ruins",
+     "num": "XII",
+     "title": "The Republican in the Ruins",
+     "heading": 253,
+     "start": 254,
+     "end": 272,
+     "section": 7,
+     "words": 3854,
+     "firstWords": "The heathen in his blindness bows down to wood and stone; especially"
+    },
+    {
+     "slug": "13-is-the-atlantic-narrowing",
+     "num": "XIII",
+     "title": "Is the Atlantic Narrowing?",
+     "heading": 273,
+     "start": 274,
+     "end": 284,
+     "section": 7,
+     "words": 4057,
+     "firstWords": "A certain kind of question is asked very earnestly in our time."
+    },
+    {
+     "slug": "14-lincoln-and-lost-causes",
+     "num": "XIV",
+     "title": "Lincoln and Lost Causes",
+     "heading": 285,
+     "start": 286,
+     "end": 296,
+     "section": 8,
+     "words": 3658,
+     "firstWords": "It has already been remarked here that the English know a great"
+    },
+    {
+     "slug": "15-wells-and-the-world-state",
+     "num": "XV",
+     "title": "Wells and the World State",
+     "heading": 297,
+     "start": 298,
+     "end": 312,
+     "section": 8,
+     "words": 5267,
+     "firstWords": "There was recently a highly distinguished gathering to celebrate the past, present,"
+    },
+    {
+     "slug": "16-a-new-martin-chuzzlewit",
+     "num": "XVI",
+     "title": "A New Martin Chuzzlewit",
+     "heading": 313,
+     "start": 314,
+     "end": 325,
+     "section": 8,
+     "words": 4079,
+     "firstWords": "The aim of this book, if it has one, is to suggest"
+    },
+    {
+     "slug": "17-the-spirit-of-america",
+     "num": "XVII",
+     "title": "The Spirit of America",
+     "heading": 326,
+     "start": 327,
+     "end": 339,
+     "section": 9,
+     "words": 3982,
+     "firstWords": "I suggest that diplomatists of the internationalist school should spend some of"
+    },
+    {
+     "slug": "18-the-spirit-of-england",
+     "num": "XVIII",
+     "title": "The Spirit of England",
+     "heading": 340,
+     "start": 341,
+     "end": 354,
+     "section": 9,
+     "words": 4206,
+     "firstWords": "Nine times out of ten a man's broad-mindedness is necessarily the narrowest"
+    },
+    {
+     "slug": "19-the-future-of-democracy",
+     "num": "XIX",
+     "title": "The Future of Democracy",
+     "heading": 355,
+     "start": 356,
+     "end": 366,
+     "section": 10,
+     "words": 4038,
+     "firstWords": "The title of this final chapter requires an apology. I do not"
+    }
+   ],
+   "structure": {
+    "sha256": "ff9a27bf3d1b9a18467ad07cf1ca4938e1aa6b3fe839a5b8520030cfaa3873b8",
+    "source": "data/structured/what-i-saw-america-pg-27250.json",
+    "roles": [
+     [
+      38,
+      "chapter"
+     ],
+     [
+      59,
+      "chapter"
+     ],
+     [
+      72,
+      "chapter"
+     ],
+     [
+      88,
+      "chapter"
+     ],
+     [
+      110,
+      "chapter"
+     ],
+     [
+      131,
+      "chapter"
+     ],
+     [
+      155,
+      "chapter"
+     ],
+     [
+      184,
+      "chapter"
+     ],
+     [
+      203,
+      "chapter"
+     ],
+     [
+      219,
+      "chapter"
+     ],
+     [
+      238,
+      "chapter"
+     ],
+     [
+      253,
+      "chapter"
+     ],
+     [
+      273,
+      "chapter"
+     ],
+     [
+      285,
+      "chapter"
+     ],
+     [
+      297,
+      "chapter"
+     ],
+     [
+      313,
+      "chapter"
+     ],
+     [
+      326,
+      "chapter"
+     ],
+     [
+      340,
+      "chapter"
+     ],
+     [
+      355,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

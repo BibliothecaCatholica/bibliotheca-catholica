@@ -96,6 +96,8 @@ PART_D={
     'robert-browning':{'about':'Project Gutenberg #13342: first published in 1903; the file does not name the printing it follows. Eight chapters; the index stays in the reader.'},
     'superstition-divorce':{'about':"Project Gutenberg #62680: first published in 1920; the transcribed copy is the John Lane Company, New York printing. Five chapters and a conclusion, as the book's contents lists them; the footnotes stay with the conclusion."},
     'the-defendant':{'about':'Project Gutenberg #12245: first published in 1901; the transcribed copy is the second edition (London: R. Brimley Johnson, 1902). The preface to the new edition, an introduction, and sixteen essays, each titled “A Defence of” something.'},
+    # Chesterton hand map: What I Saw in America (November 23, 2026). Each sentence restates the edition's record and its map.
+    'what-i-saw-america':{'about':"Project Gutenberg #27250: first published in 1922; the transcribed copy is a Hodder and Stoughton, London printing. Nineteen chapters, as the book's contents lists them; the footnote stays with its chapter."},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

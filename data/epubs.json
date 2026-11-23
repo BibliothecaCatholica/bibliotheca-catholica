@@ -325,6 +325,12 @@
    "sha256": "a8e5ca1103159fe496371f7a5b8b74b0e868a4574727faabae5dda8d0aec7070",
    "size": 428339
   },
+  "pg-27250": {
+   "work": "what-i-saw-america",
+   "path": "downloads/epub/what-i-saw-america-pg-27250.3c85f7a50ef8.epub",
+   "sha256": "3c85f7a50ef8a9158ab4573aea3b1f3c5e3517e3db874dee8d88d0ed9979272e",
+   "size": 563638
+  },
   "pg-1717": {
    "work": "whats-wrong-world",
    "path": "downloads/epub/whats-wrong-world-pg-1717.01af330b7045.epub",

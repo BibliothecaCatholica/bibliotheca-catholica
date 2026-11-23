@@ -18,7 +18,20 @@ tested tool for a single-scan book"). It does the same things and nothing more:
     copied to the provenance record (owner decision, November 17, 2026).
 Known words are those of the library's own hosted texts (data/texts/), so the vocabulary is period English.
 
-    python3 tools/transcribe_scan.py SPEC.json [--cache DIR]
+Read-gate process (owner approval, November 22, 2026; docs/PROJECT-RULES.md rule 1, "Read gate"):
+  * `secondOcr` {engine: "tesseract", langs: "eng+lat+ita", scale: 1}: each leaf's page image is re-read with Tesseract
+    and, line by line, its reading replaces the archive.org line only when it has strictly fewer unread words and about
+    the same number of words (choose_lines()); archive.org's OCR stays the default and the fallback;
+  * `foreignWords` {lat|ita|fra|deu|grc-translit: {forms, checked | allChecked + wrong}}: a language's unread forms count
+    as read when the reproducible random sample (foreign_sample(): at least 10% of the forms and at least 30) was
+    checked against the page images and every sampled form was right; otherwise every form is checked by hand;
+  * `omitted` [{what, leaves, pages}]: an index, bibliography, or long appendix after the body may be left out, with a
+    sentence in the text's header pointing to the full scan; body text, footnotes, and front matter never are;
+  * every score is saved with its method (readGate in the source record: engine, leaves scored, omissions, line
+    choices, hand fixes, verified words, foreign samples), and `--measure DIR` scores a book without hosting it and
+    writes DIR/<edition>.json with the method and every unread form; `--sample` prints the samples to check.
+
+    python3 tools/transcribe_scan.py SPEC.json [--cache DIR] [--measure DIR | --sample]
 
 SPEC is a list of {edition, ia, title, sourceTitle, author, year, firstPublished, firstLeaf, lastLeaf, note?, startsWith?,
 endsWith?, layout?, publisher?} (startsWith/endsWith cut one article from shared pages: see bounded(); layout 'verse'
@@ -28,7 +41,7 @@ are 0-based page indexes of the djvu.xml, chosen by looking at the scan (front m
 publisher's advertisements out). Output per entry: data/texts/<edition>.txt and data/sources/<edition>.json
 (kind `ocr-transcription`, validated by tools/build_library.py and tests/test_transcribed_scans.py).
 """
-import argparse, collections, difflib, glob, hashlib, html, json, re, statistics, sys, time, urllib.request
+import argparse, collections, difflib, glob, hashlib, html, json, math, random, re, statistics, subprocess, sys, time, urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -73,6 +86,7 @@ def fetch(ia, cache):
         assert not meta['metadata'].get('access-restricted-item'), f'{ia}: lending-only scan'
         p.write_bytes(get(f"https://{meta['server']}{meta['dir']}/{ia}_djvu.xml"))
         (Path(cache) / f'{ia}.meta.json').write_text(json.dumps(meta['metadata']))
+        (Path(cache) / f'{ia}.where.json').write_text(json.dumps({'server': meta['server'], 'dir': meta['dir']}))
     return p.read_bytes(), json.loads((Path(cache) / f'{ia}.meta.json').read_text())
 
 
@@ -117,6 +131,89 @@ def repair(tok, V):
     return tok, 'unknown'  # names included: kept as printed and flagged, never accepted silently
 
 
+def tesseract_version():
+    try:
+        return subprocess.run(['tesseract', '--version'], capture_output=True, text=True).stdout.split('\n')[0].strip()
+    except FileNotFoundError:
+        return None
+
+
+def page_image(ia, obj, cache, scale=1):
+    """The scan's own page image for one leaf (BookReader, the same JPEG 2000 the djvu.xml was made from), cached."""
+    where = json.loads((Path(cache) / f'{ia}.where.json').read_text())
+    n = re.search(r'_(\d{4})\.djvu', obj.get('usemap')).group(1)
+    out = Path(cache) / 'img' / ia / f'{n}-s{scale}.jpg'
+    if not out.exists():
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_bytes(get(f"https://{where['server']}/BookReader/BookReaderImages.php?zip={where['dir']}/{ia}_jp2.zip"
+                            f"&file={ia}_jp2/{ia}_{n}.jp2&id={ia}&scale={scale}&rotate=0"))
+    return out
+
+
+def tesseract_lines(img, langs, obj_width):
+    """Lines from Tesseract (TSV), in the djvu.xml's coordinate space: [{x, x2, top, y, h, text}]."""
+    tsv = img.with_suffix(f'.{langs.replace("+", "-")}.tsv')
+    if not tsv.exists():
+        # one thread per process: second_ocr() runs four at once, and Tesseract's own threads would oversubscribe the CPUs
+        r = subprocess.run(['tesseract', str(img), '-', '-l', langs, '--psm', '3', 'tsv'], capture_output=True, text=True,
+                           env={**__import__('os').environ, 'OMP_THREAD_LIMIT': '1'})
+        tsv.write_text(r.stdout)
+    rows = [l.split('\t') for l in tsv.read_text().splitlines()[1:]]
+    page_w = next((int(r[8]) for r in rows if len(r) >= 12 and r[0] == '1'), 0) or 1
+    k = obj_width / page_w
+    lines = collections.OrderedDict()
+    for r in rows:
+        if len(r) < 12 or r[0] != '5' or not r[11].strip():
+            continue
+        x, y, w, h = (int(v) for v in r[6:10])
+        lines.setdefault((r[2], r[3], r[4]), []).append((x, y, w, h, r[11].strip()))
+    out = []
+    for ws in lines.values():
+        out.append({'x': int(min(a[0] for a in ws) * k), 'x2': int(max(a[0] + a[2] for a in ws) * k),
+                    'top': int(min(a[1] for a in ws) * k), 'y': int(max(a[1] + a[3] for a in ws) * k),
+                    'h': int(statistics.median(a[3] for a in ws) * k), 'text': ' '.join(a[4] for a in ws)})
+    return out
+
+
+def unread(text, V, verified=frozenset()):
+    """Tokens of a line the scorer would flag: not a known word, not verified, and with no unique repair."""
+    n = 0
+    for t in text.split(' '):
+        if re.sub(r"^[^\w]+|[^\w]+$", '', t) in verified:
+            continue
+        if repair(t, V)[1] == 'unknown':
+            n += 1
+    return n
+
+
+def choose_lines(arch, tess, V, verified=frozenset()):
+    """For each line of the Internet Archive OCR, take the Tesseract reading of the same printed line instead when it has
+    strictly fewer unread words and about the same number of words (so no words are dropped or invented); otherwise keep
+    the archive.org line, which stays the default and the fallback (November 22, 2026). Lines are matched by their boxes:
+    most of the shorter line's height and some of its width must overlap. Returns (lines, counts)."""
+    counts = collections.Counter()
+    out = []
+    for a in arch:
+        best, best_ov = None, 0.0
+        for t in tess:
+            vy = min(a['y'], t['y']) - max(a['top'], t['top'])
+            vx = min(a['x2'], t['x2']) - max(a['x'], t['x'])
+            if vy <= 0 or vx <= 0:
+                continue
+            ov = vy / max(1, min(a['y'] - a['top'], t['y'] - t['top']))
+            if ov > best_ov:
+                best, best_ov = t, ov
+        na = len(a['text'].split())
+        if best is not None and best_ov >= 0.5 and abs(len(best['text'].split()) - na) <= max(1, na // 5) \
+                and unread(best['text'], V, verified) < unread(a['text'], V, verified):
+            out.append(dict(a, text=re.sub(r'\s+', ' ', best['text']), engine='tesseract'))
+            counts['tesseract'] += 1
+        else:
+            out.append(a)
+            counts['archive.org'] += 1
+    return out, counts
+
+
 def page_lines(obj):
     out = []
     for p_i, para in enumerate(obj.iter('PARAGRAPH')):
@@ -127,7 +224,8 @@ def page_lines(obj):
             boxes = [[int(x) for x in w.get('coords').split(',')[:4]] for w in ws]
             text = html.unescape(' '.join((w.text or '').strip() for w in ws).strip())  # some OCR files double-escape quotes
             if text:
-                out.append({'x': min(b[0] for b in boxes), 'y': max(b[1] for b in boxes), 'h': statistics.median(b[1] - b[3] for b in boxes),
+                out.append({'x': min(b[0] for b in boxes), 'x2': max(b[2] for b in boxes), 'top': min(b[3] for b in boxes),
+                            'y': max(b[1] for b in boxes), 'h': statistics.median(b[1] - b[3] for b in boxes),
                             'text': re.sub(r'\s+', ' ', text), 'paraStart': l_i == 0, 'para': p_i})
     return out
 
@@ -337,11 +435,68 @@ def join_lines(p, V):
     return text
 
 
+LANGS = ('lat', 'ita', 'fra', 'deu', 'grc-translit')
+
+
+def foreign_sample(edition, lang, forms):
+    """The random sample of distinct word forms to check against the page images: at least 10% of the forms and at least
+    30 (or every form, if there are fewer), drawn with a seed made of the edition id and the language so anyone can
+    draw the same sample again."""
+    forms = sorted(set(forms))
+    n = min(len(forms), max(30, math.ceil(0.1 * len(forms))))
+    return sorted(random.Random(f'{edition}:{lang}').sample(forms, n))
+
+
+def foreign_read(e):
+    """Sample-verified foreign words (owner approval, November 22, 2026): a language's unread forms count as read when every
+    form in the drawn sample was checked against the page images and found correct; if any sampled form was wrong,
+    every form of that language must be checked by hand (`allChecked`) and only the correct ones count. Returns
+    (set of forms read, record for the source record)."""
+    read, rec = set(), {}
+    for lang, d in (e.get('foreignWords') or {}).items():
+        assert lang in LANGS, (e['edition'], lang, 'language must be one of', LANGS)
+        forms = sorted(set(d['forms']))
+        wrong = sorted(set(d.get('wrong', [])))
+        sample = foreign_sample(e['edition'], lang, forms)
+        if wrong or d.get('allChecked'):
+            assert d.get('allChecked'), (e['edition'], lang, 'a wrong sampled form means every form must be checked by hand')
+            assert set(wrong) <= set(forms), (e['edition'], lang)
+            ok, result = [f for f in forms if f not in wrong], 'a sampled form was wrong, so every form was checked by hand'
+        else:
+            assert sorted(set(d.get('checked', []))) == sample, (e['edition'], lang, 'checked must be exactly the drawn sample')
+            ok, result = forms, 'every sampled form correct'
+        read |= set(ok)
+        rec[lang] = {'forms': forms, 'sampleSize': len(sample), 'sample': sample, 'wrong': wrong, 'result': result,
+                     'seed': f"{e['edition']}:{lang}"}
+    return read, rec
+
+
+def second_ocr(e, objs, raw_pages, cache, V, verified):
+    """Re-OCR each leaf's page image with Tesseract and let choose_lines() pick per line (spec `secondOcr`:
+    {"engine": "tesseract", "langs": "eng+lat+ita", "scale": 1}). Images and Tesseract output are cached."""
+    cfg = e['secondOcr']
+    assert cfg.get('engine', 'tesseract') == 'tesseract', cfg
+    langs, scale = cfg.get('langs', 'eng'), cfg.get('scale', 1)
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(4) as pool:
+        tess = list(pool.map(lambda o: tesseract_lines(page_image(e['ia'], o, cache, scale), langs, int(o.get('width'))), objs))
+    counts = collections.Counter()
+    for i, (height, ls) in enumerate(raw_pages):
+        chosen, c = choose_lines(ls, tess[i], V, verified)
+        raw_pages[i] = (height, chosen)
+        counts += c
+    return {'engine': tesseract_version(), 'langs': langs, 'scale': scale, 'lineChoices': dict(counts)}
+
+
 def build(e, cache, V):
     xml, meta = fetch(e['ia'], cache)
     root = ET.fromstring(xml)
     objs = root.findall('.//OBJECT')[e['firstLeaf']:e['lastLeaf'] + 1]
     raw_pages = [(int(o.get('height') or 3000), page_lines(o)) for o in objs]
+    foreign, foreign_rec = foreign_read(e)
+    verified = set(e.get('verifiedWords', [])) | foreign
+    info = {'foreignWords': foreign_rec, 'secondOcr': second_ocr(e, objs, raw_pages, cache, V, verified) if e.get('secondOcr') else None,
+            'unread': collections.Counter()}
     apply_hand_fixes(raw_pages, e)
     firsts = collections.Counter(norm_head(ls[0]['text']) for _, ls in raw_pages if ls and len(ls[0]['text']) < 70)
     heads = {h for h, n in firsts.items() if n >= 3 and h}
@@ -397,7 +552,6 @@ def build(e, cache, V):
         while pending:  # notes on the last pages
             paras.append([note_text(pending.pop(0))])
         paras = bounded(paras, e)
-    verified = set(e.get('verifiedWords', []))
     out = []
     verse = e.get('layout') == 'verse'
 
@@ -413,6 +567,7 @@ def build(e, cache, V):
                 corrections.append({'ocr': ch[0], 'reading': ch[1]})
             elif ch == 'unknown':
                 bad.append(t)
+                info['unread'][re.sub(r"^[^\w]+|[^\w]+$", '', t)] += 1
             toks.append(f)
         return ' '.join(toks)
 
@@ -427,17 +582,60 @@ def build(e, cache, V):
             corrections.extend({'ocr': 'j', 'reading': ';'} for _ in range(nj))
             text = score_line(text, bad)
             out.append(text)
-        if bad:
-            flagged.append({'block': len(out) - 1, 'words': bad[:8]})
+        if bad:  # the first 8 unread words are listed; n counts them all (a cap here once hid unread words)
+            flagged.append({'block': len(out) - 1, 'words': bad[:8], **({'n': len(bad)} if len(bad) > 8 else {})})
     words = sum(len(WORD.findall(p)) for p in out)
-    unknown = sum(len(f['words']) for f in flagged)
-    return out, corrections, flagged, words, unknown, meta, xml
+    unknown = sum(f.get('n', len(f['words'])) for f in flagged)
+    return out, corrections, flagged, words, unknown, meta, xml, info
 
 
-def main(spec, cache):
+def read_gate_record(e, words, unknown, info):
+    """How the score was made, printed and saved with it so it can be reproduced (owner, November 22, 2026)."""
+    so = info.get('secondOcr')
+    return {'gate': 0.995, 'words': words, 'unknown': unknown, 'readRate': round(1 - unknown / max(1, words), 4),
+            'scorer': 'tools/transcribe_scan.py; vocabulary of the proofread hosted texts in data/texts (ia-* excluded)',
+            'engine': ('archive.org djvu.xml OCR' + (f", with {so['engine']} ({so['langs']}, image scale {so['scale']}) chosen per "
+                       f"line where it reads more words" if so else '')),
+            **({'lineChoices': so['lineChoices']} if so else {}),
+            'leavesScored': [e['firstLeaf'], e['lastLeaf']],
+            'omitted': e.get('omitted', []),
+            'handFixes': len(e.get('handFixes', [])), 'verifiedWords': len(e.get('verifiedWords', [])),
+            'foreignWords': {k: {x: v[x] for x in ('sampleSize', 'wrong', 'result')} | {'forms': len(v['forms'])}
+                             for k, v in info.get('foreignWords', {}).items()},
+            'measured': time.strftime('%Y-%m-%d')}
+
+
+def check_omitted(e):
+    """Back matter only (owner, November 22, 2026): an index, bibliography, or long appendix after the body may be left out,
+    with a note on the text page and a link to the scan. Body text, footnotes, and front matter are never dropped."""
+    for o in e.get('omitted', []):
+        assert o['leaves'][0] > e['lastLeaf'] and o['leaves'][0] <= o['leaves'][1], (e['edition'], 'only back matter after the body', o)
+        assert o.get('what') and o.get('pages'), (e['edition'], o)
+
+
+def omitted_sentence(e):
+    om = e.get('omitted', [])
+    if not om:
+        return ''
+    parts = [f"{o['what']} (pages {o['pages']})" for o in om]
+    listed = parts[0] if len(parts) == 1 else ', '.join(parts[:-1]) + ', and ' + parts[-1]
+    return f" Left out of this text: {listed}; read them in the full scan at https://archive.org/details/{e['ia']}."
+
+
+def main(spec, cache, measure=None):
     V = vocabulary()
     for e in json.loads(Path(spec).read_text()):
+        check_omitted(e)
         out_path = ROOT / f"data/texts/{e['edition']}.txt"
+        if measure:  # score only: nothing is hosted, and the method and every unread form are saved for review
+            paras, corrections, flagged, words, unknown, meta, xml, info = build(e, cache, V)
+            rg = read_gate_record(e, words, unknown, info)
+            out = Path(measure) / f"{e['edition']}.json"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(json.dumps({'edition': e['edition'], 'ia': e['ia'], 'readGate': rg,
+                                       'unreadForms': dict(info['unread'].most_common())}, ensure_ascii=False, indent=1) + '\n')
+            print(e['edition'], json.dumps(rg, ensure_ascii=False))
+            continue
         assert not out_path.exists(), f"{e['edition']}: already hosted; a pinned text never changes"
         basis = e.get('rightsBasis', 'pd-date')
         if basis == 'pd-date':
@@ -446,7 +644,7 @@ def main(spec, cache):
             assert basis == 'pd-nonrenewal', basis
             assert not nonrenewal_problems(e.get('nonRenewal')), (e['edition'], nonrenewal_problems(e.get('nonRenewal')))
             assert e['nonRenewal']['scan'] == e['ia'], e['edition']
-        paras, corrections, flagged, words, unknown, meta, xml = build(e, cache, V)
+        paras, corrections, flagged, words, unknown, meta, xml, info = build(e, cache, V)
         meta_year = int(re.search(r'\d{4}', str(meta.get('date') or e['year'])).group())
         year = int(e['year'])
         publisher = e.get('publisher') or meta.get('publisher')
@@ -471,7 +669,7 @@ def main(spec, cache):
                 f"provenance record. No missing words were supplied. Not a manual proofread."
                 + (f" {len(e['handFixes'])} misreadings were corrected by hand against the page images of the same scan; "
                    f"each is listed in the provenance record." if e.get('handFixes') else '')
-                + (f" {e['correction']}" if e.get('correction') else ''), '',
+                + (f" {e['correction']}" if e.get('correction') else '') + omitted_sentence(e), '',
                 '*** START OF THE TRANSCRIPTION ***', '']
         data = ('\n'.join(head) + '\n\n'.join(paras) + '\n\n' + END + '\n').encode('utf-8')
         out_path.write_bytes(data)
@@ -503,18 +701,40 @@ def main(spec, cache):
             rec['verifiedWords'] = e['verifiedWords']
             rec['method'] += (f" {len(e['verifiedWords'])} words the vocabulary does not know (names, Latin, and foreign "
                               f"titles) were checked by hand against the page images and are listed in verifiedWords.")
+        rg = read_gate_record(e, words, unknown, info)
+        rec['readGate'] = rg
+        if info.get('secondOcr'):
+            rec['volumes'][0]['secondOcr'] = info['secondOcr']
+            rec['method'] += (f" A second OCR ({info['secondOcr']['engine']}, {info['secondOcr']['langs']}) was run on the scan's page "
+                              f"images and its reading taken for a line only where it read more words "
+                              f"({info['secondOcr']['lineChoices'].get('tesseract', 0)} of "
+                              f"{sum(info['secondOcr']['lineChoices'].values())} lines).")
+        if info.get('foreignWords'):
+            rec['foreignWords'] = info['foreignWords']
+            rec['method'] += (" Foreign words were counted as read by language after a random sample of their forms was checked "
+                              "against the page images (foreignWords).")
+        if e.get('omitted'):
+            rec['omitted'] = e['omitted']
         if e.get('layout'):
             rec['layout'] = e['layout']
         if e.get('note'):
             rec['note'] = e['note']
         (ROOT / f"data/sources/{e['edition']}.json").write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')
         print(e['edition'], sha[:12], f"{words} words, read rate {rec['readRate']:.2%}, {len(corrections)} repairs, {len(flagged)} flagged")
+        print(json.dumps(rg, ensure_ascii=False))
 
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('spec')
     ap.add_argument('--cache', default='/tmp/transcribe-scan-cache')
+    ap.add_argument('--measure', metavar='DIR', help='score only: write DIR/<edition>.json (method and unread forms); host nothing')
+    ap.add_argument('--sample', action='store_true', help="print each foreignWords language's sample to check on the images")
     a = ap.parse_args()
     Path(a.cache).mkdir(parents=True, exist_ok=True)
-    main(a.spec, a.cache)
+    if a.sample:
+        for e in json.loads(Path(a.spec).read_text()):
+            for lang, d in (e.get('foreignWords') or {}).items():
+                print(e['edition'], lang, json.dumps(foreign_sample(e['edition'], lang, d['forms']), ensure_ascii=False))
+    else:
+        main(a.spec, a.cache, a.measure)

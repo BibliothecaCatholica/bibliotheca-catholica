@@ -298,6 +298,49 @@ class ReadGateProcess(unittest.TestCase):
         self.assertEqual(unknown, 12)  # but all 12 count against the gate
         self.assertEqual(words_n, len(words) + 3)
 
+    def test_a_heading_fix_stands_alone_in_prose(self):
+        """A mixed-case chapter title marked `heading` in its hand fix is its own paragraph; without the flag it runs on."""
+        import tempfile
+        lines = [(['Spiritual', 'Whirlwind'], 900), (['the', 'church', 'of', 'rome', 'and', 'the', 'church', 'of'], 1000),
+                 (['rome', 'and', 'the', 'church', 'of', 'rome.'], 1100)]
+        out = ''.join('<LINE>' + ''.join('<WORD coords="%d,%d,%d,%d">%s</WORD>' % (200 + 160 * i, y + 90, 340 + 160 * i, y, w)
+                                         for i, w in enumerate(ws)) + '</LINE>' for ws, y in lines)
+        xml = ('<?xml version="1.0"?><DjVuXML><BODY><OBJECT usemap="scan_0001.djvu" width="2600" height="3000"><HIDDENTEXT>'
+               '<PAGECOLUMN><REGION><PARAGRAPH>' + out + '</PARAGRAPH></REGION></PAGECOLUMN></HIDDENTEXT></OBJECT></BODY></DjVuXML>')
+        V = dict(self.V, spiritual=5, whirlwind=5)
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / 'scan_djvu.xml').write_text(xml)
+            (Path(d) / 'scan.meta.json').write_text('{}')
+            e = {'edition': 'ia-scan', 'ia': 'scan', 'firstLeaf': 0, 'lastLeaf': 0}
+            plain = T.build(dict(e), d, V)[0]
+            marked = T.build(dict(e, handFixes=[{'leaf': 0, 'page': None, 'ocr': 'Spiritual Whirlwind', 'reading': 'Spiritual Whirlwind',
+                                                 'heading': True}]), d, V)[0]
+        self.assertTrue(any(p.startswith('Spiritual Whirlwind the church') for p in plain))
+        self.assertIn('Spiritual Whirlwind', marked)
+        self.assertTrue(any(p.startswith('the church of rome') for p in marked))
+
+    def test_blank_leaves_are_read_as_empty_and_recorded(self):
+        """A leaf checked on the image as blank (show-through only) yields no text, and the record lists it."""
+        import tempfile
+        def obj(n, words):
+            return ('<OBJECT usemap="scan_%04d.djvu" width="2600" height="3000"><HIDDENTEXT><PAGECOLUMN><REGION><PARAGRAPH><LINE>' % n
+                    + ''.join('<WORD coords="%d,990,%d,900">%s</WORD>' % (200 + 160 * i, 340 + 160 * i, w) for i, w in enumerate(words))
+                    + '</LINE></PARAGRAPH></REGION></PAGECOLUMN></HIDDENTEXT></OBJECT>')
+        xml = ('<?xml version="1.0"?><DjVuXML><BODY>' + obj(1, ['the', 'church', 'of', 'rome', 'and', 'the', 'church'])
+               + obj(2, ['mri', 'Wi', 'ee', 'a!', 'Lan']) + '</BODY></DjVuXML>')
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / 'scan_djvu.xml').write_text(xml)
+            (Path(d) / 'scan.meta.json').write_text('{}')
+            e = {'edition': 'ia-scan', 'ia': 'scan', 'firstLeaf': 0, 'lastLeaf': 1}
+            plain = T.build(dict(e), d, self.V)
+            blank = T.build(dict(e, blankLeaves=[1]), d, self.V)
+            with self.assertRaises(AssertionError):
+                T.build(dict(e, blankLeaves=[5]), d, self.V)
+        self.assertTrue(any('mri' in p for p in plain[0]))
+        self.assertFalse(any('mri' in p for p in blank[0]))
+        self.assertLess(blank[4], plain[4])  # fewer unread words
+        self.assertEqual(T.read_gate_record(dict(e, blankLeaves=[1]), blank[3], blank[4], blank[7])['blankLeaves'], [1])
+
     def test_verse_leaves_keep_lines_only_on_those_leaves(self):
         """Per-leaf verse ranges (Meyer, round 5): `verseLeaves` keeps printed lines on the leaves it names, while the
         other leaves are prose, so a line-end hyphen in the introduction is still rejoined. Without it nothing changes."""

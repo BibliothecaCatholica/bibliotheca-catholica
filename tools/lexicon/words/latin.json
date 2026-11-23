@@ -1,6 +1,6 @@
 {
  "language": "latin",
- "count": 232,
+ "count": 240,
  "words": {
   "accidentaliter": [
    {
@@ -92,6 +92,12 @@
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Aurelianensis": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "bibit": [
    {
     "edition": "ia-thackeray-1890-eulalia",
@@ -120,6 +126,12 @@
    {
     "edition": "ia-thackeray-1890-eulalia",
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Canisii": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "canitiem": [
@@ -246,6 +258,12 @@
    {
     "edition": "ia-moldersofmedieva00cass",
     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Complementa": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "concinentes": [
@@ -584,6 +602,12 @@
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
    }
   ],
+  "Ignatiana": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "inde": [
    {
     "edition": "ia-thackeray-1890-eulalia",
@@ -630,6 +654,12 @@
    {
     "edition": "ia-thackeray-1890-eulalia",
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Lainii": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "laxat": [
@@ -918,6 +948,12 @@
     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
    }
   ],
+  "paedagogica": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Palaeohibernicus": [
    {
     "edition": "ia-selectancientiri00meye",
@@ -958,6 +994,12 @@
    {
     "edition": "ia-superstitionsofs0000unse-q9f6",
     "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Polanci": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "populis": [
@@ -1114,6 +1156,12 @@
    {
     "edition": "ia-thackeray-1890-eulalia",
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Salmeronis": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Salvete": [

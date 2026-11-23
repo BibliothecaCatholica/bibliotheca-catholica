@@ -1,6 +1,6 @@
 {
  "language": "french",
- "count": 13,
+ "count": 14,
  "words": {
   "Avent": [
    {
@@ -64,6 +64,12 @@
    {
     "edition": "ia-highpointsofmedi00wals",
     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Parlement": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "portier": [

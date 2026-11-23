@@ -1,6 +1,6 @@
 {
  "language": "english",
- "count": 163,
+ "count": 169,
  "words": {
   "abbreviating": [
    {
@@ -236,6 +236,12 @@
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
+  "confrere": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "congressman": [
    {
     "edition": "ia-mysteryofiniquit00furf",
@@ -374,6 +380,12 @@
     "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
    }
   ],
+  "Footloose": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "forgather": [
    {
     "edition": "ia-selectancientiri00meye",
@@ -384,6 +396,12 @@
    {
     "edition": "ia-thackeray-1890-eulalia",
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "forthright": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "forthrightly": [
@@ -588,6 +606,12 @@
    {
     "edition": "ia-samueljohnson00chesuoft",
     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Moriscos": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "nationalistic": [
@@ -860,6 +884,12 @@
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
+  "subsidy": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "superstititions": [
    {
     "edition": "ia-superstitionsofs0000unse-q9f6",
@@ -918,6 +948,12 @@
    {
     "edition": "ia-mysteryofiniquit00furf",
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "usable": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "viridescent": [

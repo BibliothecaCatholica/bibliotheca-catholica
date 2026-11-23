@@ -1,0 +1,12 @@
+{
+ "language": "irish",
+ "count": 1,
+ "words": {
+  "Caill": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ]
+ }
+}

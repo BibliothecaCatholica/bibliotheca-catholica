@@ -1,0 +1,76 @@
+{
+ "language": "french",
+ "count": 11,
+ "words": {
+  "Avent": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Cie": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "emprise": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Jociste": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Jocistes": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "liturgie": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Liturgique": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   },
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "naïveté": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "portier": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "vainqueur": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Vicomte": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ]
+ }
+}

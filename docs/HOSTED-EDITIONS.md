@@ -237,3 +237,4 @@ These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The
 4. Prove fidelity: run `python3 tools/structure_text.py --check`, confirm `sha256sum data/texts/<file>.txt` against `data/library.json`, and run the full validation in [OPERATIONS.md](OPERATIONS.md#validation).
 5. Compare the result with Orthodoxy on desktop and phone, in both themes. Include screenshots in the PR.
 6. EPUBs are published for every edition with a structure file (owner decision, November 15, 2026). Never mark a text "proofread" without the owner's approval.
+7. Transcribing from a scan (`tools/transcribe_scan.py`): its second OCR (`secondOcr`) needs Tesseract with the Latin, Italian, French, and German packs. Cloud containers do not keep it between sessions, so run `bash tools/setup-ocr.sh` first (it installs them with apt and checks each pack), or have it in the environment's setup script.

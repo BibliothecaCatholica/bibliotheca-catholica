@@ -1,0 +1,819 @@
+[
+ {
+  "edition": "ia-highpointsofmedi00wals",
+  "ia": "highpointsofmedi00wals",
+  "title": "HIGH POINTS OF MEDIEVAL CULTURE",
+  "sourceTitle": "High Points of Medieval Culture",
+  "author": "James J. Walsh",
+  "year": 1937,
+  "firstPublished": "1937 (Milwaukee: The Bruce Publishing Company)",
+  "rightsBasis": "pd-nonrenewal",
+  "nonRenewal": {
+   "firstPublicationYear": 1937,
+   "firstPublicationCountry": "US",
+   "firstPublicationPlace": "Milwaukee",
+   "firstPublicationPublisher": "The Bruce Publishing Company",
+   "stanford": {
+    "result": "no renewal found",
+    "checked": "2026-11-16",
+    "method": "one plain curl query (title words and surname), default user agent"
+   },
+   "nypl": {
+    "result": "no renewal found",
+    "checked": "2026-11-16",
+    "method": "NYPL cce-renewals data"
+   },
+   "hathitrust": "pdus",
+   "hathitrustRecord": "pdus (mdp.39015002999285); pdus (uva.x030142591)",
+   "uraa": "US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page (Copyright, 1937); no earlier or simultaneous edition abroad was found, so URAA restoration does not apply.",
+   "scan": "highpointsofmedi00wals",
+   "research": "docs/research/us-pd-renewal-checks-2026-11.csv"
+  },
+  "firstLeaf": 8,
+  "lastLeaf": 291,
+  "handFixes": [
+   {
+    "leaf": 8,
+    "page": null,
+    "ocr": "IGE POINTS",
+    "reading": "HIGH POINTS"
+   },
+   {
+    "leaf": 8,
+    "page": null,
+    "ocr": "MEDIEVAL \\&",
+    "reading": "MEDIEVAL"
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "ee",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "~",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": ".",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "nay ne",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "wee",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "ae Copyright, 1937",
+    "reading": "Copyright, 1937"
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "1 De Bruce Publishing Company _",
+    "reading": "The Bruce Publishing Company"
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "rs ee ee rae Se a Printed in the a",
+    "reading": "Printed in the U.S.A."
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "7) aN",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "t",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "baa",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "pe",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "A, .",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "at",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "ah",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "‘",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "* ee",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": ": } k ,",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "i",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "¢",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": ". |",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "3 :",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "‘/",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": ": p",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": ">",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "‘ 1/9",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "ae r",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "6 Bar? (as",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "°",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "MEN",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": ": '",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "f ’ ‘",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "‘ %",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "oe",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": ". inde ® {",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "y i¢ ie",
+    "reading": ""
+   },
+   {
+    "leaf": 10,
+    "page": "vii",
+    "ocr": "ORE intimately than any other English-speaking",
+    "reading": "MORE intimately than any other English-speaking"
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "PREFACE",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "CHAPTER",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "1",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "II.",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "VIII.",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "XVI.",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "XVII.",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "XVITI.",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "CONTENTS",
+    "reading": "CONTENTS\nPREFACE BY THE GENERAL EDITOR vii\nCHAPTER\nI. MEN OF THE EARLY MIDDLE AGES 1\nII. THE IRISH CHAPTER 19\nIII. MONASTIC SCHOOLS — BEC 36\nIV. MONASTIC SCHOOLS — CLUNY 51\nV. MEDIEVAL CATHEDRALS AND THEIR TREASURES 62\nVI. THE MEDIEVAL UNIVERSITIES 83\nVII. THE COLLEGE CURRICULUM 100\nVIII. PARISH AND PUBLIC SCHOOLS 109\nIX. PEDAGOGICS OF THE MIDDLE AGES 126\nX. METHODS OF PHYSICAL EDUCATION 139\nXI. RULES OF CONDUCT 146\nXII. ADVANCED FEMININE EDUCATION 153\nXIII. WOMEN IN THE MIDDLE AGES 172\nXIV. THE MEDIEVAL ENCYCLOPEDISTS 189\nXV. THOMAS AQUINAS, GREATEST OF SCHOOLMEN 202\nXVI. DANTE, THE MEDIEVAL UNIVERSITY MAN 216\nXVII. THE FIRST GENERATION OF PRINTING 242\nXVIII. ST. FRANCIS, MEDIEVAL AND MODERN 258"
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "BY THE GENERAL EDITOR",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "MEN oF THE Earty Mippie AGEs .",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "Tue Irish CHAPTER",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "Monastic ScHooLts — BrEc",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "Monastic ScHooLts — CLUNY",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "MEDIEVAL CATHEDRALS AND THEIR TREASURES",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "Tue MEeEpDIEVAL UNIVERSITIES",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "THE COLLEGE CURRICULUM .",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "PaRIsH AND PUBLIC SCHOOLS",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "PEDAGOGICS OF THE MiIppLE AGES",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "Metuops or PuysicaL EDUCATION",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "RULES oF CONDUCT .",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "ADVANCED FEMININE EDUCATION",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "WoMEN IN THE MippLe AGEs",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "THe MeEprevAL ENCYCLOPEDISTS",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "THomAs AQUINAS, GREATEST OF SCHOOLMEN",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "DANTE, THE MeEpDIEVAL UNIVERSITY Man",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "THE Frrst GENERATION OF PRINTING",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "St. FRaNcis, MEDIEVAL AND MopERN",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "xi",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "PAGE",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "146",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "153",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "172",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "189",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "202",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "216",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "242",
+    "reading": ""
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "258",
+    "reading": ""
+   },
+   {
+    "leaf": 15,
+    "page": null,
+    "ocr": "PE Kaea",
+    "reading": ""
+   },
+   {
+    "leaf": 15,
+    "page": null,
+    "ocr": "Wat's",
+    "reading": ""
+   },
+   {
+    "leaf": 15,
+    "page": null,
+    "ocr": "ata he",
+    "reading": ""
+   },
+   {
+    "leaf": 15,
+    "page": null,
+    "ocr": "if",
+    "reading": ""
+   },
+   {
+    "leaf": 15,
+    "page": null,
+    "ocr": "eae",
+    "reading": ""
+   },
+   {
+    "leaf": 15,
+    "page": null,
+    "ocr": "oy ae",
+    "reading": ""
+   },
+   {
+    "leaf": 15,
+    "page": null,
+    "ocr": "ub",
+    "reading": ""
+   },
+   {
+    "leaf": 17,
+    "page": null,
+    "ocr": "BF 4",
+    "reading": ""
+   },
+   {
+    "leaf": 17,
+    "page": null,
+    "ocr": "bait os,",
+    "reading": ""
+   },
+   {
+    "leaf": 17,
+    "page": null,
+    "ocr": "post Bp",
+    "reading": ""
+   },
+   {
+    "leaf": 18,
+    "page": 1,
+    "ocr": "MEN OF THE EARLY MIDDLE AGES",
+    "reading": "I\nMEN OF THE EARLY MIDDLE AGES"
+   },
+   {
+    "leaf": 18,
+    "page": 1,
+    "ocr": "OHN FISKE, the well-known New England historical",
+    "reading": "JOHN FISKE, the well-known New England historical"
+   },
+   {
+    "leaf": 36,
+    "page": 19,
+    "ocr": "il",
+    "reading": "II"
+   },
+   {
+    "leaf": 36,
+    "page": 19,
+    "ocr": "HE first phase of the intellectual life and cultural",
+    "reading": "THE first phase of the intellectual life and cultural"
+   },
+   {
+    "leaf": 45,
+    "page": 28,
+    "ocr": "naiveté so characteristic of Irish poetry. It was probably",
+    "reading": "naïveté so characteristic of Irish poetry. It was probably"
+   },
+   {
+    "leaf": 53,
+    "page": 36,
+    "ocr": "IIT",
+    "reading": "III"
+   },
+   {
+    "leaf": 53,
+    "page": 36,
+    "ocr": "FTER the Irish schools, so many of which were founded",
+    "reading": "AFTER the Irish schools, so many of which were founded"
+   },
+   {
+    "leaf": 53,
+    "page": 36,
+    "ocr": "AX on the continent, came the monastery schools, especially",
+    "reading": "on the continent, came the monastery schools, especially"
+   },
+   {
+    "leaf": 68,
+    "page": 51,
+    "ocr": "HE culmination of monastic influence in Europe came",
+    "reading": "THE culmination of monastic influence in Europe came"
+   },
+   {
+    "leaf": 79,
+    "page": 62,
+    "ocr": "HE supreme triumph of the Middle Ages was the",
+    "reading": "THE supreme triumph of the Middle Ages was the"
+   },
+   {
+    "leaf": 100,
+    "page": 83,
+    "ocr": "\"PF HE greatest achievement of the Middle Ages, greater",
+    "reading": "THE greatest achievement of the Middle Ages, greater"
+   },
+   {
+    "leaf": 117,
+    "page": 100,
+    "ocr": "EDIEVAL schools, with minor and almost negligible",
+    "reading": "MEDIEVAL schools, with minor and almost negligible"
+   },
+   {
+    "leaf": 126,
+    "page": 109,
+    "ocr": "Vill",
+    "reading": "VIII"
+   },
+   {
+    "leaf": 126,
+    "page": 109,
+    "ocr": "ROM the very early days of the Church there were",
+    "reading": "FROM the very early days of the Church there were"
+   },
+   {
+    "leaf": 143,
+    "page": 126,
+    "ocr": "UR generation is firmly persuaded that if there is one",
+    "reading": "OUR generation is firmly persuaded that if there is one"
+   },
+   {
+    "leaf": 144,
+    "page": 127,
+    "ocr": "His educational work bears the title De liberorum erudittone,",
+    "reading": "His educational work bears the title De liberorum eruditione,"
+   },
+   {
+    "leaf": 156,
+    "page": 139,
+    "ocr": "Xx",
+    "reading": "X"
+   },
+   {
+    "leaf": 156,
+    "page": 139,
+    "ocr": "HYSICAL education, that is, the training of the body —",
+    "reading": "PHYSICAL education, that is, the training of the body —"
+   },
+   {
+    "leaf": 163,
+    "page": 146,
+    "ocr": "ANNERS are supposed to be one of those refinements",
+    "reading": "MANNERS are supposed to be one of those refinements"
+   },
+   {
+    "leaf": 170,
+    "page": 153,
+    "ocr": "XIT",
+    "reading": "XII"
+   },
+   {
+    "leaf": 170,
+    "page": 153,
+    "ocr": "OR most people probably the most astonishing feature",
+    "reading": "FOR most people probably the most astonishing feature"
+   },
+   {
+    "leaf": 189,
+    "page": 172,
+    "ocr": "AIT",
+    "reading": "XIII"
+   },
+   {
+    "leaf": 189,
+    "page": 172,
+    "ocr": "HE commonly accepted opinion is that women in the",
+    "reading": "THE commonly accepted opinion is that women in the"
+   },
+   {
+    "leaf": 206,
+    "page": 189,
+    "ocr": "VERY common impression exists that the men of the",
+    "reading": "A VERY common impression exists that the men of the"
+   },
+   {
+    "leaf": 219,
+    "page": 202,
+    "ocr": "ORE than twenty-five years ago, when writing the",
+    "reading": "MORE than twenty-five years ago, when writing the"
+   },
+   {
+    "leaf": 233,
+    "page": 216,
+    "ocr": "ANTE is the typical university man of the Middle Ages.",
+    "reading": "DANTE is the typical university man of the Middle Ages."
+   },
+   {
+    "leaf": 239,
+    "page": 222,
+    "ocr": "naiveté that add supremely to their interest. It has been said",
+    "reading": "naïveté that add supremely to their interest. It has been said"
+   },
+   {
+    "leaf": 259,
+    "page": 242,
+    "ocr": "HE last generation of the medieval period, during the",
+    "reading": "THE last generation of the medieval period, during the"
+   },
+   {
+    "leaf": 275,
+    "page": 258,
+    "ocr": "N THE concluding chapter of this book on medieval",
+    "reading": "IN THE concluding chapter of this book on medieval"
+   },
+   {
+    "leaf": 275,
+    "page": 258,
+    "ocr": "l culture we can perhaps do no better than to present in",
+    "reading": "culture we can perhaps do no better than to present in"
+   },
+   {
+    "leaf": 288,
+    "page": 271,
+    "ocr": "with Jorgensen, the Danish poet, whose life of St. Francis",
+    "reading": "with Jörgensen, the Danish poet, whose life of St. Francis"
+   },
+   {
+    "leaf": 288,
+    "page": 271,
+    "ocr": "lated into most of the modern languages. For a time Jorgensen",
+    "reading": "lated into most of the modern languages. For a time Jörgensen"
+   },
+   {
+    "leaf": 288,
+    "page": 271,
+    "ocr": "such an intense love of nature. Jorgensen soon came to realize",
+    "reading": "such an intense love of nature. Jörgensen soon came to realize"
+   },
+   {
+    "leaf": 288,
+    "page": 271,
+    "ocr": "Francis’ quest of the meaning of life. Jorgensen’s discovery of",
+    "reading": "Francis’ quest of the meaning of life. Jörgensen’s discovery of"
+   },
+   {
+    "leaf": 288,
+    "page": 271,
+    "ocr": "Jorgensen’s life of St. Francis has further won for him the",
+    "reading": "Jörgensen’s life of St. Francis has further won for him the"
+   }
+  ],
+  "verifiedWords": [
+   "Vegio",
+   "Vittorino",
+   "Geert",
+   "scriptoria",
+   "Mafeo",
+   "Christine",
+   "Cornell",
+   "Catholicon",
+   "bookmaking",
+   "Groote",
+   "Gerig",
+   "Finnen",
+   "Herluin",
+   "educative",
+   "affiliates",
+   "Odilon",
+   "stabilization",
+   "Kropotkin",
+   "Quaritch",
+   "Lenox",
+   "Haskins",
+   "Leacock",
+   "Pulleyn",
+   "directories",
+   "Riboulet",
+   "afterlife",
+   "alumni",
+   "liberorum",
+   "insofar",
+   "pedagogics",
+   "doctorate",
+   "bluestockings",
+   "Birgitta",
+   "Bernart",
+   "Etymologia",
+   "differentiis",
+   "encyclopedists",
+   "encyclopedic",
+   "sexcentenary",
+   "Lydgate",
+   "bibliophilic",
+   "Stillwell",
+   "Comenius",
+   "minuscule",
+   "Carolingian",
+   "Jörgensen",
+   "naïveté",
+   "eruditione"
+  ]
+ }
+]

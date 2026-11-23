@@ -2658,7 +2658,7 @@
         }
       ]
     },
-{
+    {
       "id": "jerome-isaiah-prologue",
       "title": "Commentary on Isaiah, Prologue",
       "author": "Jerome",
@@ -6170,16 +6170,22 @@
       "editions": [
         {
           "id": "ia-highpointsofmedi00wals",
-          "label": "Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1937)",
+          "label": "Transcription of the Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1937)",
           "source": "https://archive.org/details/highpointsofmedi00wals",
           "language": "English",
           "contributors": [],
-          "checked": "2026-11-17",
+          "checked": "2026-11-22",
           "access": "full-text",
-          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
-          "note": "First published in 1937 (Milwaukee: The Bruce Publishing Company). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in Milwaukee by The Bruce Publishing Company, 1937. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (99.30%), so it is linked, not hosted, for now."
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1937. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, footnotes placed after their paragraphs, 2 OCR confusions repaired, 42 lines corrected by hand against the page images (the title and copyright pages, the contents, the chapter numerals and drop capitals, and names) and 80 lines of scanning noise or scrambled contents dropped, 48 names and foreign words checked against the images, and 217 paragraphs that keep a word the OCR could not read (99.64% of words read). Not a manual proofread. Public domain in the USA because its copyright was not renewed.",
+          "rightsBasis": "pd-nonrenewal",
+          "rightsEvidence": "First published in Milwaukee by The Bruce Publishing Company, 1937. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page (Copyright, 1937; Printed in the U.S.A.); no earlier or simultaneous edition abroad was found, so URAA restoration does not apply.",
+          "sourceTitle": "High Points of Medieval Culture",
+          "text": "data/texts/ia-highpointsofmedi00wals.txt",
+          "sha256": "92bf64e871f0d7c1d3c7e757c1da02f660bfaf6df3857a099ba3279f155f9c9e"
         }
-      ]
+      ],
+      "added": "2026-11-22"
     },
     {
       "id": "walsh-worlds-debt-catholic-church",

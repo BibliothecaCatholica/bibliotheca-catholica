@@ -92,6 +92,10 @@ PART_D={
     # Douay-Rheims Wisdom and Ecclesiasticus (November 21, 2026). Each sentence restates the edition's record and its map.
     'book-of-wisdom-douay-rheims':{'about':"eBible.org's transcription of the Douay-Rheims American edition of 1899: the nineteen chapters of the Book of Wisdom, each verse a paragraph with its number."},
     'ecclesiasticus-douay-rheims':{'about':"eBible.org's transcription of the Douay-Rheims American edition of 1899: the fifty-one chapters of Ecclesiasticus, each verse a paragraph with its number."},
+    # Chesterton polish batch 6 (November 22, 2026). Each sentence restates the edition's record and its map.
+    'robert-browning':{'about':'Project Gutenberg #13342: first published in 1903; the file does not name the printing it follows. Eight chapters; the index stays in the reader.'},
+    'superstition-divorce':{'about':"Project Gutenberg #62680: first published in 1920; the transcribed copy is the John Lane Company, New York printing. Five chapters and a conclusion, as the book's contents lists them; the footnotes stay with the conclusion."},
+    'the-defendant':{'about':'Project Gutenberg #12245: first published in 1901; the transcribed copy is the second edition (London: R. Brimley Johnson, 1902). The preface to the new edition, an introduction, and sixteen essays, each titled “A Defence of” something.'},
 }
 def part_d(wid,d):
     """Facts for the title page: total words of the parts (rounded to the thousand) and reading time at 230 words a minute."""

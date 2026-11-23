@@ -1,0 +1,2271 @@
+{
+  "id": "ia-highpointsofmedi00wals",
+  "kind": "ocr-transcription",
+  "title": "High Points of Medieval Culture",
+  "author": "James J. Walsh",
+  "rights": "Public domain in the USA. First published in the United States in 1937 and not renewed; the evidence is in nonRenewal.",
+  "rightsBasis": "pd-nonrenewal",
+  "nonRenewal": {
+    "firstPublicationYear": 1937,
+    "firstPublicationCountry": "US",
+    "firstPublicationPlace": "Milwaukee",
+    "firstPublicationPublisher": "The Bruce Publishing Company",
+    "stanford": {
+      "result": "no renewal found",
+      "checked": "2026-11-16",
+      "method": "one plain curl query (title words and surname), default user agent"
+    },
+    "nypl": {
+      "result": "no renewal found",
+      "checked": "2026-11-16",
+      "method": "NYPL cce-renewals data"
+    },
+    "hathitrust": "pdus",
+    "hathitrustRecord": "pdus (mdp.39015002999285); pdus (uva.x030142591)",
+    "uraa": "US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page (Copyright, 1937); no earlier or simultaneous edition abroad was found, so URAA restoration does not apply.",
+    "scan": "highpointsofmedi00wals",
+    "research": "docs/research/us-pd-renewal-checks-2026-11.csv"
+  },
+  "volumes": [
+    {
+      "identifier": "highpointsofmedi00wals",
+      "url": "https://archive.org/details/highpointsofmedi00wals",
+      "year": 1937,
+      "publisher": "Milwaukee : The Bruce publishing company",
+      "ocr": "highpointsofmedi00wals_djvu.xml",
+      "ocrSha256": "0a013d093d8eb41bd03ac62c340eb7f159e8190b0b7da431878eea5d7579cd2b",
+      "leaves": [
+        8,
+        291
+      ]
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed. 122 misreadings corrected by hand against the page images of this scan, each listed in handFixes; no wording was taken from another edition. 48 words the vocabulary does not know (names, Latin, and foreign titles) were checked by hand against the page images and are listed in verifiedWords.",
+  "words": 94629,
+  "unknownWords": 338,
+  "readRate": 0.9964,
+  "flaggedBlocks": 217,
+  "flagged": [
+    {
+      "block": 11,
+      "words": [
+        "skimmed",
+        "prescinded"
+      ]
+    },
+    {
+      "block": 12,
+      "words": [
+        "limned",
+        "mountaintops"
+      ]
+    },
+    {
+      "block": 14,
+      "words": [
+        "mechanized"
+      ]
+    },
+    {
+      "block": 15,
+      "words": [
+        "Expiatis,"
+      ]
+    },
+    {
+      "block": 22,
+      "words": [
+        "JosepuH",
+        "Hussein,"
+      ]
+    },
+    {
+      "block": 30,
+      "words": [
+        "pailliaan"
+      ]
+    },
+    {
+      "block": 41,
+      "words": [
+        "tMankind."
+      ]
+    },
+    {
+      "block": 49,
+      "words": [
+        "ee",
+        "Hildegar.",
+        "iow",
+        "lish"
+      ]
+    },
+    {
+      "block": 51,
+      "words": [
+        "Wynfrith."
+      ]
+    },
+    {
+      "block": 54,
+      "words": [
+        "Zuyder",
+        "Zee.",
+        "Dokkum,"
+      ]
+    },
+    {
+      "block": 56,
+      "words": [
+        "Rudolphus",
+        "Fuldensis,",
+        "Walafried"
+      ]
+    },
+    {
+      "block": 59,
+      "words": [
+        "Margravates.",
+        "Raba"
+      ]
+    },
+    {
+      "block": 60,
+      "words": [
+        "Ejinhart),",
+        "Warnefried."
+      ]
+    },
+    {
+      "block": 62,
+      "words": [
+        "flection"
+      ]
+    },
+    {
+      "block": 64,
+      "words": [
+        "troduced"
+      ]
+    },
+    {
+      "block": 83,
+      "words": [
+        "Deirdre,",
+        "Emer",
+        "Cuhulain"
+      ]
+    },
+    {
+      "block": 88,
+      "words": [
+        "Dechelette,"
+      ]
+    },
+    {
+      "block": 89,
+      "words": [
+        "Clomancnois"
+      ]
+    },
+    {
+      "block": 90,
+      "words": [
+        "Wiirtzburg",
+        "Uncial",
+        "stabilized.?"
+      ]
+    },
+    {
+      "block": 93,
+      "words": [
+        "Hessen"
+      ]
+    },
+    {
+      "block": 97,
+      "words": [
+        "Hyneill.",
+        "Foyle."
+      ]
+    },
+    {
+      "block": 98,
+      "words": [
+        "Gemman.",
+        "Aranmore,",
+        "anbther",
+        "Glasnevin"
+      ]
+    },
+    {
+      "block": 103,
+      "words": [
+        "Negra,"
+      ]
+    },
+    {
+      "block": 111,
+      "words": [
+        "Joyce,"
+      ]
+    },
+    {
+      "block": 115,
+      "words": [
+        "castanet,"
+      ]
+    },
+    {
+      "block": 116,
+      "words": [
+        "wholeheartedly"
+      ]
+    },
+    {
+      "block": 117,
+      "words": [
+        "interlacements"
+      ]
+    },
+    {
+      "block": 119,
+      "words": [
+        "goldless"
+      ]
+    },
+    {
+      "block": 120,
+      "words": [
+        "McBurnam,”"
+      ]
+    },
+    {
+      "block": 122,
+      "words": [
+        "tn"
+      ]
+    },
+    {
+      "block": 124,
+      "words": [
+        "orfevrerie"
+      ]
+    },
+    {
+      "block": 129,
+      "words": [
+        "Danaans,"
+      ]
+    },
+    {
+      "block": 137,
+      "words": [
+        "grabbed"
+      ]
+    },
+    {
+      "block": 145,
+      "words": [
+        "Equutius"
+      ]
+    },
+    {
+      "block": 147,
+      "words": [
+        "nullified"
+      ]
+    },
+    {
+      "block": 149,
+      "words": [
+        "/s7s,?"
+      ]
+    },
+    {
+      "block": 153,
+      "words": [
+        "nuibanated"
+      ]
+    },
+    {
+      "block": 163,
+      "words": [
+        "Stigand,",
+        "suc-.",
+        "cessor."
+      ]
+    },
+    {
+      "block": 169,
+      "words": [
+        "Aosta"
+      ]
+    },
+    {
+      "block": 170,
+      "words": [
+        "Aelfheah.”"
+      ]
+    },
+    {
+      "block": 184,
+      "words": [
+        "chevet",
+        "apsidal",
+        "narthex",
+        "antechurch."
+      ]
+    },
+    {
+      "block": 186,
+      "words": [
+        "duting"
+      ]
+    },
+    {
+      "block": 188,
+      "words": [
+        "scriptorta."
+      ]
+    },
+    {
+      "block": 196,
+      "words": [
+        "Odilor"
+      ]
+    },
+    {
+      "block": 197,
+      "words": [
+        "shrift",
+        "feudatories."
+      ]
+    },
+    {
+      "block": 211,
+      "words": [
+        "*ZLa",
+        "XIIe®",
+        "Brunet,",
+        "Tremblay"
+      ]
+    },
+    {
+      "block": 218,
+      "words": [
+        "archi-",
+        "tecture."
+      ]
+    },
+    {
+      "block": 219,
+      "words": [
+        "modernistic"
+      ]
+    },
+    {
+      "block": 225,
+      "words": [
+        "“Tf",
+        "Slavonian"
+      ]
+    },
+    {
+      "block": 244,
+      "words": [
+        "Tykyll"
+      ]
+    },
+    {
+      "block": 245,
+      "words": [
+        "Astor"
+      ]
+    },
+    {
+      "block": 253,
+      "words": [
+        "multicolored"
+      ]
+    },
+    {
+      "block": 255,
+      "words": [
+        "glassmakers"
+      ]
+    },
+    {
+      "block": 257,
+      "words": [
+        "grayish",
+        "jewellike",
+        "glassmaking."
+      ]
+    },
+    {
+      "block": 259,
+      "words": [
+        "lacunae"
+      ]
+    },
+    {
+      "block": 273,
+      "words": [
+        "wniversitas,",
+        "vestrae,"
+      ]
+    },
+    {
+      "block": 275,
+      "words": [
+        "cluttering"
+      ]
+    },
+    {
+      "block": 281,
+      "words": [
+        "“Tf",
+        "polytechnic"
+      ]
+    },
+    {
+      "block": 282,
+      "words": [
+        "McGill"
+      ]
+    },
+    {
+      "block": 289,
+      "words": [
+        "Graecia."
+      ]
+    },
+    {
+      "block": 290,
+      "words": [
+        "clinic"
+      ]
+    },
+    {
+      "block": 291,
+      "words": [
+        "Kairouan,"
+      ]
+    },
+    {
+      "block": 292,
+      "words": [
+        "motherhouse"
+      ]
+    },
+    {
+      "block": 298,
+      "words": [
+        "afterworld"
+      ]
+    },
+    {
+      "block": 300,
+      "words": [
+        "Melum,",
+        "Poissy,"
+      ]
+    },
+    {
+      "block": 302,
+      "words": [
+        "scientiarum,"
+      ]
+    },
+    {
+      "block": 303,
+      "words": [
+        "Dartmouth,"
+      ]
+    },
+    {
+      "block": 306,
+      "words": [
+        "Erectio",
+        "Cathedrarum",
+        "medieva]",
+        "semesters"
+      ]
+    },
+    {
+      "block": 308,
+      "words": [
+        "institutiton"
+      ]
+    },
+    {
+      "block": 311,
+      "words": [
+        "Bulletin"
+      ]
+    },
+    {
+      "block": 312,
+      "words": [
+        "parch-"
+      ]
+    },
+    {
+      "block": 326,
+      "words": [
+        "/iberal"
+      ]
+    },
+    {
+      "block": 327,
+      "words": [
+        "rectorial"
+      ]
+    },
+    {
+      "block": 331,
+      "words": [
+        "guadrivium"
+      ]
+    },
+    {
+      "block": 335,
+      "words": [
+        "cogi,"
+      ]
+    },
+    {
+      "block": 342,
+      "words": [
+        "Jberal"
+      ]
+    },
+    {
+      "block": 348,
+      "words": [
+        "Pedagogie*"
+      ]
+    },
+    {
+      "block": 351,
+      "words": [
+        "sponsorship;"
+      ]
+    },
+    {
+      "block": 360,
+      "words": [
+        "gelehrten",
+        "Unterrichts,"
+      ]
+    },
+    {
+      "block": 362,
+      "words": [
+        "Cloveshoe"
+      ]
+    },
+    {
+      "block": 364,
+      "words": [
+        "Compayré,"
+      ]
+    },
+    {
+      "block": 366,
+      "words": [
+        "lovemaking"
+      ]
+    },
+    {
+      "block": 367,
+      "words": [
+        "headmastership"
+      ]
+    },
+    {
+      "block": 368,
+      "words": [
+        "Woodrow"
+      ]
+    },
+    {
+      "block": 372,
+      "words": [
+        "Doubleday,",
+        "Doran"
+      ]
+    },
+    {
+      "block": 374,
+      "words": [
+        "Capponi,’"
+      ]
+    },
+    {
+      "block": 375,
+      "words": [
+        "Firenze."
+      ]
+    },
+    {
+      "block": 378,
+      "words": [
+        "Gerhardus",
+        "impracticality"
+      ]
+    },
+    {
+      "block": 379,
+      "words": [
+        "Aeger,",
+        "Calcar,",
+        "Aeger",
+        "Ruysbroek,"
+      ]
+    },
+    {
+      "block": 382,
+      "words": [
+        "Gelders",
+        "Brinckerinck,",
+        "Brune,",
+        "Amilius",
+        "Viana,",
+        "Cacabus,",
+        "Scoonhoven."
+      ]
+    },
+    {
+      "block": 387,
+      "words": [
+        "percurreris",
+        "elige",
+        "excoquas,"
+      ]
+    },
+    {
+      "block": 393,
+      "words": [
+        "“Tn"
+      ]
+    },
+    {
+      "block": 395,
+      "words": [
+        "incidence"
+      ]
+    },
+    {
+      "block": 404,
+      "words": [
+        "otiosum,"
+      ]
+    },
+    {
+      "block": 414,
+      "words": [
+        "librartia",
+        "libraria"
+      ]
+    },
+    {
+      "block": 416,
+      "words": [
+        "takeh"
+      ]
+    },
+    {
+      "block": 417,
+      "words": [
+        "Parentucelli,"
+      ]
+    },
+    {
+      "block": 421,
+      "words": [
+        "ebullient"
+      ]
+    },
+    {
+      "block": 426,
+      "words": [
+        "“Tt"
+      ]
+    },
+    {
+      "block": 428,
+      "words": [
+        "Bartolomeus"
+      ]
+    },
+    {
+      "block": 429,
+      "words": [
+        "tatched",
+        "jape;",
+        "unneth",
+        "combeth",
+        "unneth"
+      ]
+    },
+    {
+      "block": 430,
+      "words": [
+        "Lyman",
+        "Wilbur,",
+        "Hoover,",
+        "Advisory",
+        "subtitle,"
+      ]
+    },
+    {
+      "block": 434,
+      "words": [
+        "immunization"
+      ]
+    },
+    {
+      "block": 442,
+      "words": [
+        "Verio"
+      ]
+    },
+    {
+      "block": 445,
+      "words": [
+        "subway"
+      ]
+    },
+    {
+      "block": 446,
+      "words": [
+        "Mather",
+        "plagosus",
+        "Orbilius,",
+        "“Orbilius"
+      ]
+    },
+    {
+      "block": 447,
+      "words": [
+        "Vogelweide,",
+        "minnesinger,",
+        "versemaking",
+        "quatrain"
+      ]
+    },
+    {
+      "block": 451,
+      "words": [
+        "mealtime"
+      ]
+    },
+    {
+      "block": 452,
+      "words": [
+        "evildoing"
+      ]
+    },
+    {
+      "block": 457,
+      "words": [
+        "fotfnd"
+      ]
+    },
+    {
+      "block": 460,
+      "words": [
+        "—Zin"
+      ]
+    },
+    {
+      "block": 463,
+      "words": [
+        "Neurologists",
+        "slouchy"
+      ]
+    },
+    {
+      "block": 469,
+      "words": [
+        "“Tf"
+      ]
+    },
+    {
+      "block": 474,
+      "words": [
+        "worsen."
+      ]
+    },
+    {
+      "block": 479,
+      "words": [
+        "lordlings,"
+      ]
+    },
+    {
+      "block": 501,
+      "words": [
+        "atterling"
+      ]
+    },
+    {
+      "block": 505,
+      "words": [
+        "chare"
+      ]
+    },
+    {
+      "block": 506,
+      "words": [
+        "popularizing"
+      ]
+    },
+    {
+      "block": 511,
+      "words": [
+        "altho"
+      ]
+    },
+    {
+      "block": 512,
+      "words": [
+        "Manfull",
+        "Sinfull."
+      ]
+    },
+    {
+      "block": 516,
+      "words": [
+        "Holyoke,"
+      ]
+    },
+    {
+      "block": 519,
+      "words": [
+        "Streonshalh,",
+        "Streonshalh"
+      ]
+    },
+    {
+      "block": 534,
+      "words": [
+        "Gerberga,",
+        "Ricard."
+      ]
+    },
+    {
+      "block": 538,
+      "words": [
+        "“Tt"
+      ]
+    },
+    {
+      "block": 542,
+      "words": [
+        "Medicinae",
+        "Compositae",
+        "Pairologia,"
+      ]
+    },
+    {
+      "block": 543,
+      "words": [
+        "Disibodenberg,"
+      ]
+    },
+    {
+      "block": 545,
+      "words": [
+        "goiter"
+      ]
+    },
+    {
+      "block": 549,
+      "words": [
+        "pulsate,",
+        "migraine"
+      ]
+    },
+    {
+      "block": 550,
+      "words": [
+        "Lapinska,",
+        "Medecins,"
+      ]
+    },
+    {
+      "block": 555,
+      "words": [
+        "“dumbhead.”"
+      ]
+    },
+    {
+      "block": 558,
+      "words": [
+        "Islesworth,",
+        "Philippa,",
+        "Islesworth"
+      ]
+    },
+    {
+      "block": 559,
+      "words": [
+        "Bateson,",
+        "Newnham"
+      ]
+    },
+    {
+      "block": 561,
+      "words": [
+        "Bateson"
+      ]
+    },
+    {
+      "block": 563,
+      "words": [
+        "ithe",
+        "Wadstena,"
+      ]
+    },
+    {
+      "block": 565,
+      "words": [
+        "Kuche,"
+      ]
+    },
+    {
+      "block": 567,
+      "words": [
+        "wholehearted"
+      ]
+    },
+    {
+      "block": 577,
+      "words": [
+        "Erik"
+      ]
+    },
+    {
+      "block": 584,
+      "words": [
+        "Jarrett",
+        "Ventadorn,",
+        "Chaytor,",
+        "minnesingers,"
+      ]
+    },
+    {
+      "block": 588,
+      "words": [
+        "Dymphna,"
+      ]
+    },
+    {
+      "block": 591,
+      "words": [
+        "Aldenberg,",
+        "Aldenberg",
+        "Hedlige"
+      ]
+    },
+    {
+      "block": 592,
+      "words": [
+        "Heckerborn,",
+        "Mechtilde.",
+        "Heckerborn"
+      ]
+    },
+    {
+      "block": 593,
+      "words": [
+        "Heckerborn.",
+        "Legatus",
+        "Divinae",
+        "Gratiae,"
+      ]
+    },
+    {
+      "block": 594,
+      "words": [
+        "Olier,",
+        "Sulpicians,",
+        "Gueranger,"
+      ]
+    },
+    {
+      "block": 598,
+      "words": [
+        "“Cilia",
+        "Gherardina"
+      ]
+    },
+    {
+      "block": 600,
+      "words": [
+        "Griselda,"
+      ]
+    },
+    {
+      "block": 602,
+      "words": [
+        "slapstick",
+        "quandary"
+      ]
+    },
+    {
+      "block": 603,
+      "words": [
+        "Jarrett,"
+      ]
+    },
+    {
+      "block": 611,
+      "words": [
+        "Fulgensis,",
+        "Astigi."
+      ]
+    },
+    {
+      "block": 614,
+      "words": [
+        "submerge"
+      ]
+    },
+    {
+      "block": 619,
+      "words": [
+        "Germaniae"
+      ]
+    },
+    {
+      "block": 623,
+      "words": [
+        "divinorum"
+      ]
+    },
+    {
+      "block": 624,
+      "words": [
+        "Fust",
+        "typography"
+      ]
+    },
+    {
+      "block": 625,
+      "words": [
+        "“Preome”"
+      ]
+    },
+    {
+      "block": 628,
+      "words": [
+        "prieth"
+      ]
+    },
+    {
+      "block": 637,
+      "words": [
+        "Nolae,"
+      ]
+    },
+    {
+      "block": 638,
+      "words": [
+        "assembleth"
+      ]
+    },
+    {
+      "block": 639,
+      "words": [
+        "denoteth"
+      ]
+    },
+    {
+      "block": 641,
+      "words": [
+        "subprior"
+      ]
+    },
+    {
+      "block": 643,
+      "words": [
+        "(labilitas)"
+      ]
+    },
+    {
+      "block": 646,
+      "words": [
+        "Rhazes,",
+        "Albumaser,"
+      ]
+    },
+    {
+      "block": 649,
+      "words": [
+        "Freudian"
+      ]
+    },
+    {
+      "block": 652,
+      "words": [
+        "Rells",
+        "accumulator",
+        "synthesize"
+      ]
+    },
+    {
+      "block": 655,
+      "words": [
+        "Llewelyn",
+        "Norgate"
+      ]
+    },
+    {
+      "block": 656,
+      "words": [
+        "Typography"
+      ]
+    },
+    {
+      "block": 665,
+      "words": [
+        "bulkiness"
+      ]
+    },
+    {
+      "block": 668,
+      "words": [
+        "hidebound"
+      ]
+    },
+    {
+      "block": 674,
+      "words": [
+        "Vewxilla"
+      ]
+    },
+    {
+      "block": 676,
+      "words": [
+        "Poetized."
+      ]
+    },
+    {
+      "block": 678,
+      "words": [
+        "“Tf"
+      ]
+    },
+    {
+      "block": 680,
+      "words": [
+        "sophistic"
+      ]
+    },
+    {
+      "block": 682,
+      "words": [
+        "poy"
+      ]
+    },
+    {
+      "block": 692,
+      "words": [
+        "“Tt",
+        "unreachable,"
+      ]
+    },
+    {
+      "block": 697,
+      "words": [
+        "elite,"
+      ]
+    },
+    {
+      "block": 702,
+      "words": [
+        "nee"
+      ]
+    },
+    {
+      "block": 703,
+      "words": [
+        "irrecognition"
+      ]
+    },
+    {
+      "block": 710,
+      "words": [
+        "Ramboldi"
+      ]
+    },
+    {
+      "block": 713,
+      "words": [
+        "Michelino,"
+      ]
+    },
+    {
+      "block": 714,
+      "words": [
+        "editto",
+        "Landino"
+      ]
+    },
+    {
+      "block": 715,
+      "words": [
+        "equaied"
+      ]
+    },
+    {
+      "block": 722,
+      "words": [
+        "galaxies"
+      ]
+    },
+    {
+      "block": 723,
+      "words": [
+        "Rinascimento,",
+        "Alfieri"
+      ]
+    },
+    {
+      "block": 726,
+      "words": [
+        "teenth",
+        "prigiont)"
+      ]
+    },
+    {
+      "block": 731,
+      "words": [
+        "apothegmatic"
+      ]
+    },
+    {
+      "block": 732,
+      "words": [
+        "Lamennais,"
+      ]
+    },
+    {
+      "block": 736,
+      "words": [
+        "Aenead"
+      ]
+    },
+    {
+      "block": 742,
+      "words": [
+        "loke,"
+      ]
+    },
+    {
+      "block": 750,
+      "words": [
+        "growest!"
+      ]
+    },
+    {
+      "block": 755,
+      "words": [
+        "Dantis",
+        "nist"
+      ]
+    },
+    {
+      "block": 764,
+      "words": [
+        "terza"
+      ]
+    },
+    {
+      "block": 768,
+      "words": [
+        "Moraga"
+      ]
+    },
+    {
+      "block": 769,
+      "words": [
+        "Slattery"
+      ]
+    },
+    {
+      "block": 770,
+      "words": [
+        "Caesare",
+        "“Dantean"
+      ]
+    },
+    {
+      "block": 773,
+      "words": [
+        "heartstrings"
+      ]
+    },
+    {
+      "block": 777,
+      "words": [
+        "zncunabula,"
+      ]
+    },
+    {
+      "block": 778,
+      "words": [
+        "fireproof"
+      ]
+    },
+    {
+      "block": 782,
+      "words": [
+        "booklovers",
+        "Vollbehr",
+        "Congressional"
+      ]
+    },
+    {
+      "block": 783,
+      "words": [
+        "Hain",
+        "Coppinger,",
+        "Reichling",
+        "Gesammt",
+        "Katalog,"
+      ]
+    },
+    {
+      "block": 784,
+      "words": [
+        "T7viple"
+      ]
+    },
+    {
+      "block": 786,
+      "words": [
+        "Loeffler,"
+      ]
+    },
+    {
+      "block": 787,
+      "words": [
+        "setup.",
+        "Americana?",
+        "Sweynheim",
+        "Pannartz",
+        "Jensen",
+        "Annmary"
+      ]
+    },
+    {
+      "block": 788,
+      "words": [
+        "Lenhart"
+      ]
+    },
+    {
+      "block": 790,
+      "words": [
+        "handscrew,"
+      ]
+    },
+    {
+      "block": 793,
+      "words": [
+        "incunables,"
+      ]
+    },
+    {
+      "block": 795,
+      "words": [
+        "Horae"
+      ]
+    },
+    {
+      "block": 801,
+      "words": [
+        "quartet:"
+      ]
+    },
+    {
+      "block": 804,
+      "words": [
+        "edttio"
+      ]
+    },
+    {
+      "block": 805,
+      "words": [
+        "Bartolus",
+        "Saxoferrato."
+      ]
+    },
+    {
+      "block": 808,
+      "words": [
+        "Mantuanus,",
+        "Mantuanus"
+      ]
+    },
+    {
+      "block": 815,
+      "words": [
+        "ee"
+      ]
+    },
+    {
+      "block": 819,
+      "words": [
+        "gloat"
+      ]
+    },
+    {
+      "block": 823,
+      "words": [
+        "Ritschl,"
+      ]
+    },
+    {
+      "block": 825,
+      "words": [
+        "atttitude"
+      ]
+    },
+    {
+      "block": 829,
+      "words": [
+        "marauder"
+      ]
+    },
+    {
+      "block": 836,
+      "words": [
+        "apostolicus,",
+        "Presbyterosque",
+        "reverert.®"
+      ]
+    },
+    {
+      "block": 837,
+      "words": [
+        "naiad"
+      ]
+    },
+    {
+      "block": 846,
+      "words": [
+        "zl"
+      ]
+    },
+    {
+      "block": 848,
+      "words": [
+        "rifiuto,"
+      ]
+    }
+  ],
+  "corrections": 2,
+  "correctionList": [
+    {
+      "ocr": "erew",
+      "reading": "crew"
+    },
+    {
+      "ocr": "Aimost",
+      "reading": "Almost"
+    }
+  ],
+  "text": "data/texts/ia-highpointsofmedi00wals.txt",
+  "sha256": "92bf64e871f0d7c1d3c7e757c1da02f660bfaf6df3857a099ba3279f155f9c9e",
+  "checked": "2026-11-22",
+  "handFixes": [
+    {
+      "leaf": 8,
+      "page": null,
+      "ocr": "IGE POINTS",
+      "reading": "HIGH POINTS"
+    },
+    {
+      "leaf": 8,
+      "page": null,
+      "ocr": "MEDIEVAL \\&",
+      "reading": "MEDIEVAL"
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "ee",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "~",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": ".",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "nay ne",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "wee",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "ae Copyright, 1937",
+      "reading": "Copyright, 1937"
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "1 De Bruce Publishing Company _",
+      "reading": "The Bruce Publishing Company"
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "rs ee ee rae Se a Printed in the a",
+      "reading": "Printed in the U.S.A."
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "7) aN",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "t",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "baa",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "pe",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "A, .",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "at",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "ah",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "‘",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "* ee",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": ": } k ,",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "i",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "¢",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": ". |",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "3 :",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "‘/",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": ": p",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": ">",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "‘ 1/9",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "ae r",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "6 Bar? (as",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "°",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "MEN",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": ": '",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "f ’ ‘",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "‘ %",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "oe",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": ". inde ® {",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "y i¢ ie",
+      "reading": ""
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "ORE intimately than any other English-speaking",
+      "reading": "MORE intimately than any other English-speaking"
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "PREFACE",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "CHAPTER",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "1",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "II.",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "VIII.",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "XVI.",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "XVII.",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "XVITI.",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "CONTENTS",
+      "reading": "CONTENTS\nPREFACE BY THE GENERAL EDITOR vii\nCHAPTER\nI. MEN OF THE EARLY MIDDLE AGES 1\nII. THE IRISH CHAPTER 19\nIII. MONASTIC SCHOOLS — BEC 36\nIV. MONASTIC SCHOOLS — CLUNY 51\nV. MEDIEVAL CATHEDRALS AND THEIR TREASURES 62\nVI. THE MEDIEVAL UNIVERSITIES 83\nVII. THE COLLEGE CURRICULUM 100\nVIII. PARISH AND PUBLIC SCHOOLS 109\nIX. PEDAGOGICS OF THE MIDDLE AGES 126\nX. METHODS OF PHYSICAL EDUCATION 139\nXI. RULES OF CONDUCT 146\nXII. ADVANCED FEMININE EDUCATION 153\nXIII. WOMEN IN THE MIDDLE AGES 172\nXIV. THE MEDIEVAL ENCYCLOPEDISTS 189\nXV. THOMAS AQUINAS, GREATEST OF SCHOOLMEN 202\nXVI. DANTE, THE MEDIEVAL UNIVERSITY MAN 216\nXVII. THE FIRST GENERATION OF PRINTING 242\nXVIII. ST. FRANCIS, MEDIEVAL AND MODERN 258"
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "BY THE GENERAL EDITOR",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "MEN oF THE Earty Mippie AGEs .",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "Tue Irish CHAPTER",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "Monastic ScHooLts — BrEc",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "Monastic ScHooLts — CLUNY",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "MEDIEVAL CATHEDRALS AND THEIR TREASURES",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "Tue MEeEpDIEVAL UNIVERSITIES",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "THE COLLEGE CURRICULUM .",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "PaRIsH AND PUBLIC SCHOOLS",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "PEDAGOGICS OF THE MiIppLE AGES",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "Metuops or PuysicaL EDUCATION",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "RULES oF CONDUCT .",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "ADVANCED FEMININE EDUCATION",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "WoMEN IN THE MippLe AGEs",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "THe MeEprevAL ENCYCLOPEDISTS",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "THomAs AQUINAS, GREATEST OF SCHOOLMEN",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "DANTE, THE MeEpDIEVAL UNIVERSITY Man",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "THE Frrst GENERATION OF PRINTING",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "St. FRaNcis, MEDIEVAL AND MopERN",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "xi",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "PAGE",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "146",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "153",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "172",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "189",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "202",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "216",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "242",
+      "reading": ""
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "258",
+      "reading": ""
+    },
+    {
+      "leaf": 15,
+      "page": null,
+      "ocr": "PE Kaea",
+      "reading": ""
+    },
+    {
+      "leaf": 15,
+      "page": null,
+      "ocr": "Wat's",
+      "reading": ""
+    },
+    {
+      "leaf": 15,
+      "page": null,
+      "ocr": "ata he",
+      "reading": ""
+    },
+    {
+      "leaf": 15,
+      "page": null,
+      "ocr": "if",
+      "reading": ""
+    },
+    {
+      "leaf": 15,
+      "page": null,
+      "ocr": "eae",
+      "reading": ""
+    },
+    {
+      "leaf": 15,
+      "page": null,
+      "ocr": "oy ae",
+      "reading": ""
+    },
+    {
+      "leaf": 15,
+      "page": null,
+      "ocr": "ub",
+      "reading": ""
+    },
+    {
+      "leaf": 17,
+      "page": null,
+      "ocr": "BF 4",
+      "reading": ""
+    },
+    {
+      "leaf": 17,
+      "page": null,
+      "ocr": "bait os,",
+      "reading": ""
+    },
+    {
+      "leaf": 17,
+      "page": null,
+      "ocr": "post Bp",
+      "reading": ""
+    },
+    {
+      "leaf": 18,
+      "page": 1,
+      "ocr": "MEN OF THE EARLY MIDDLE AGES",
+      "reading": "I\nMEN OF THE EARLY MIDDLE AGES"
+    },
+    {
+      "leaf": 18,
+      "page": 1,
+      "ocr": "OHN FISKE, the well-known New England historical",
+      "reading": "JOHN FISKE, the well-known New England historical"
+    },
+    {
+      "leaf": 36,
+      "page": 19,
+      "ocr": "il",
+      "reading": "II"
+    },
+    {
+      "leaf": 36,
+      "page": 19,
+      "ocr": "HE first phase of the intellectual life and cultural",
+      "reading": "THE first phase of the intellectual life and cultural"
+    },
+    {
+      "leaf": 45,
+      "page": 28,
+      "ocr": "naiveté so characteristic of Irish poetry. It was probably",
+      "reading": "naïveté so characteristic of Irish poetry. It was probably"
+    },
+    {
+      "leaf": 53,
+      "page": 36,
+      "ocr": "IIT",
+      "reading": "III"
+    },
+    {
+      "leaf": 53,
+      "page": 36,
+      "ocr": "FTER the Irish schools, so many of which were founded",
+      "reading": "AFTER the Irish schools, so many of which were founded"
+    },
+    {
+      "leaf": 53,
+      "page": 36,
+      "ocr": "AX on the continent, came the monastery schools, especially",
+      "reading": "on the continent, came the monastery schools, especially"
+    },
+    {
+      "leaf": 68,
+      "page": 51,
+      "ocr": "HE culmination of monastic influence in Europe came",
+      "reading": "THE culmination of monastic influence in Europe came"
+    },
+    {
+      "leaf": 79,
+      "page": 62,
+      "ocr": "HE supreme triumph of the Middle Ages was the",
+      "reading": "THE supreme triumph of the Middle Ages was the"
+    },
+    {
+      "leaf": 100,
+      "page": 83,
+      "ocr": "\"PF HE greatest achievement of the Middle Ages, greater",
+      "reading": "THE greatest achievement of the Middle Ages, greater"
+    },
+    {
+      "leaf": 117,
+      "page": 100,
+      "ocr": "EDIEVAL schools, with minor and almost negligible",
+      "reading": "MEDIEVAL schools, with minor and almost negligible"
+    },
+    {
+      "leaf": 126,
+      "page": 109,
+      "ocr": "Vill",
+      "reading": "VIII"
+    },
+    {
+      "leaf": 126,
+      "page": 109,
+      "ocr": "ROM the very early days of the Church there were",
+      "reading": "FROM the very early days of the Church there were"
+    },
+    {
+      "leaf": 143,
+      "page": 126,
+      "ocr": "UR generation is firmly persuaded that if there is one",
+      "reading": "OUR generation is firmly persuaded that if there is one"
+    },
+    {
+      "leaf": 144,
+      "page": 127,
+      "ocr": "His educational work bears the title De liberorum erudittone,",
+      "reading": "His educational work bears the title De liberorum eruditione,"
+    },
+    {
+      "leaf": 156,
+      "page": 139,
+      "ocr": "Xx",
+      "reading": "X"
+    },
+    {
+      "leaf": 156,
+      "page": 139,
+      "ocr": "HYSICAL education, that is, the training of the body —",
+      "reading": "PHYSICAL education, that is, the training of the body —"
+    },
+    {
+      "leaf": 163,
+      "page": 146,
+      "ocr": "ANNERS are supposed to be one of those refinements",
+      "reading": "MANNERS are supposed to be one of those refinements"
+    },
+    {
+      "leaf": 170,
+      "page": 153,
+      "ocr": "XIT",
+      "reading": "XII"
+    },
+    {
+      "leaf": 170,
+      "page": 153,
+      "ocr": "OR most people probably the most astonishing feature",
+      "reading": "FOR most people probably the most astonishing feature"
+    },
+    {
+      "leaf": 189,
+      "page": 172,
+      "ocr": "AIT",
+      "reading": "XIII"
+    },
+    {
+      "leaf": 189,
+      "page": 172,
+      "ocr": "HE commonly accepted opinion is that women in the",
+      "reading": "THE commonly accepted opinion is that women in the"
+    },
+    {
+      "leaf": 206,
+      "page": 189,
+      "ocr": "VERY common impression exists that the men of the",
+      "reading": "A VERY common impression exists that the men of the"
+    },
+    {
+      "leaf": 219,
+      "page": 202,
+      "ocr": "ORE than twenty-five years ago, when writing the",
+      "reading": "MORE than twenty-five years ago, when writing the"
+    },
+    {
+      "leaf": 233,
+      "page": 216,
+      "ocr": "ANTE is the typical university man of the Middle Ages.",
+      "reading": "DANTE is the typical university man of the Middle Ages."
+    },
+    {
+      "leaf": 239,
+      "page": 222,
+      "ocr": "naiveté that add supremely to their interest. It has been said",
+      "reading": "naïveté that add supremely to their interest. It has been said"
+    },
+    {
+      "leaf": 259,
+      "page": 242,
+      "ocr": "HE last generation of the medieval period, during the",
+      "reading": "THE last generation of the medieval period, during the"
+    },
+    {
+      "leaf": 275,
+      "page": 258,
+      "ocr": "N THE concluding chapter of this book on medieval",
+      "reading": "IN THE concluding chapter of this book on medieval"
+    },
+    {
+      "leaf": 275,
+      "page": 258,
+      "ocr": "l culture we can perhaps do no better than to present in",
+      "reading": "culture we can perhaps do no better than to present in"
+    },
+    {
+      "leaf": 288,
+      "page": 271,
+      "ocr": "with Jorgensen, the Danish poet, whose life of St. Francis",
+      "reading": "with Jörgensen, the Danish poet, whose life of St. Francis"
+    },
+    {
+      "leaf": 288,
+      "page": 271,
+      "ocr": "lated into most of the modern languages. For a time Jorgensen",
+      "reading": "lated into most of the modern languages. For a time Jörgensen"
+    },
+    {
+      "leaf": 288,
+      "page": 271,
+      "ocr": "such an intense love of nature. Jorgensen soon came to realize",
+      "reading": "such an intense love of nature. Jörgensen soon came to realize"
+    },
+    {
+      "leaf": 288,
+      "page": 271,
+      "ocr": "Francis’ quest of the meaning of life. Jorgensen’s discovery of",
+      "reading": "Francis’ quest of the meaning of life. Jörgensen’s discovery of"
+    },
+    {
+      "leaf": 288,
+      "page": 271,
+      "ocr": "Jorgensen’s life of St. Francis has further won for him the",
+      "reading": "Jörgensen’s life of St. Francis has further won for him the"
+    }
+  ],
+  "verifiedWords": [
+    "Vegio",
+    "Vittorino",
+    "Geert",
+    "scriptoria",
+    "Mafeo",
+    "Christine",
+    "Cornell",
+    "Catholicon",
+    "bookmaking",
+    "Groote",
+    "Gerig",
+    "Finnen",
+    "Herluin",
+    "educative",
+    "affiliates",
+    "Odilon",
+    "stabilization",
+    "Kropotkin",
+    "Quaritch",
+    "Lenox",
+    "Haskins",
+    "Leacock",
+    "Pulleyn",
+    "directories",
+    "Riboulet",
+    "afterlife",
+    "alumni",
+    "liberorum",
+    "insofar",
+    "pedagogics",
+    "doctorate",
+    "bluestockings",
+    "Birgitta",
+    "Bernart",
+    "Etymologia",
+    "differentiis",
+    "encyclopedists",
+    "encyclopedic",
+    "sexcentenary",
+    "Lydgate",
+    "bibliophilic",
+    "Stillwell",
+    "Comenius",
+    "minuscule",
+    "Carolingian",
+    "Jörgensen",
+    "naïveté",
+    "eruditione"
+  ]
+}

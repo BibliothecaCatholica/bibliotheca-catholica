@@ -1,0 +1,20 @@
+[
+ {
+  "edition": "ia-bethada02plumuoft",
+  "ia": "bethada02plumuoft",
+  "title": "BETHADA NÁEM NÉRENN: LIVES OF IRISH SAINTS, VOLUME II",
+  "sourceTitle": "Bethada Náem nÉrenn: Lives of Irish Saints, Volume II",
+  "author": "Charles Plummer",
+  "year": 1922,
+  "firstPublished": "1922",
+  "rightsBasis": "pd-date",
+  "firstLeaf": 4,
+  "lastLeaf": 416,
+  "omitted": [],
+  "secondOcr": {
+   "engine": "tesseract",
+   "langs": "eng+lat+ita",
+   "scale": 1
+  }
+ }
+]

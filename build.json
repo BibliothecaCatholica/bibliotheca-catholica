@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-7aa3346421a7",
+  "id": "bc-2491a9250f07",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "a3b4bb14885b3404bc50d6a8d32c60a056c732895b356f34b79be4c180a40a1b",
@@ -109,7 +109,7 @@
     "tools/build_rites.py": "0a81ecc92eaa1a8dff9034184970cdc5ca7ed948e5d9092ab262084b445207dd",
     "tools/build_saint_of_the_day.py": "5362103e6f80ab716579854bc9a8b711c8eecbe76a27d1dba8772bb6c8d25032",
     "tools/build_saints.py": "99f6730d39e59cfab510d738a5d0be396f499360a606bb23aa69914b9425818f",
-    "tools/build_static.py": "92fadfaceffbd0919302a34a82fd35fb9fce0d47e07d9d63a384bc05da01d505",
+    "tools/build_static.py": "963ca1f2d101a73625a0dc2fc0746b6231c0b5082480c1676a0deefb3babe5b7",
     "tools/build_study.py": "104e6678f138ea9075089850e99d976c84afd9a0cf0102801e5e8acb6af56a80",
     "tools/build_summa.py": "9640d60813c0cf2b89af3ddddef9974f5c28eb5bd8e6e8c048e5d048e4a65557",
     "tools/build_text_archive.py": "90888a41ce43aa35952b5f6211d2f772ceab0a5b9f1402241aecf087d959af2f",
@@ -148,6 +148,7 @@
     "tools/match_isidore.py": "99c52c70046c0ef4a6ecccb14ae8fd69a77a391f29af2943a2ceb4f66dafcd3c",
     "tools/notices.py": "941ec4a676de618bc440c8268df6bfb5473bfd949fbb3179ae045a72453150f3",
     "tools/r2_inventory.py": "a232a997c1ebcff47e5f2496caae3853c78c0f14762eded95eaa855694dc7916",
+    "tools/r2_links.py": "75ea29e4a4b42d85d4f56437619fef60863f54fe32adddacab6292b14008cac4",
     "tools/r2_upload.py": "7bc53b61b8d93f5c2f0e733e0918114fdad3dc8dfd3dd6b9f3e829eb98d93d3c",
     "tools/reader_formatting.py": "77b3b8f0ee3df74f60b80a98497a36f268f0db26a03551240728505435050357",
     "tools/reading_lists.py": "5339ad58f61b81e2408655893e0150e9ba4e000c2efcb03e0cd3b4f9e4382daa",

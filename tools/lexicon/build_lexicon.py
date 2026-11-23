@@ -22,7 +22,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
 sys.path.insert(0, str(ROOT / 'tools'))
 from transcribe_scan import CONFUSIONS  # noqa: E402  the tool's own list of OCR confusions
-LANGUAGES = ('latin', 'irish', 'german', 'french', 'greek', 'names', 'english')
+LANGUAGES = ('latin', 'irish', 'german', 'french', 'spanish', 'greek', 'names', 'english')
 TOKEN = re.compile(r"^[^\w]*(.*?)[^\w']*$", re.UNICODE)
 STATUS = 'candidate: check on this book\'s page image before recording it'
 

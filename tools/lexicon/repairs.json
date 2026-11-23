@@ -1,5 +1,5 @@
 {
- "count": 300,
+ "count": 305,
  "repairs": [
   {
    "ocr": "3\\4addox",
@@ -1663,6 +1663,17 @@
    ]
   },
   {
+   "ocr": "Jouvnal",
+   "reading": "Journal",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "Judus",
    "reading": "ludus",
    "from": [
@@ -1938,6 +1949,17 @@
     {
      "edition": "ia-doweagree0000gkch",
      "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Mohng",
+   "reading": "Moling",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]
@@ -2455,6 +2477,17 @@
     {
      "edition": "ia-butler-1842-eulalia",
      "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Praver",
+   "reading": "Prayer",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]
@@ -3103,6 +3136,17 @@
    ]
   },
   {
+   "ocr": "Uke",
+   "reading": "like",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "v/as",
    "reading": "was",
    "from": [
@@ -3263,6 +3307,17 @@
     {
      "edition": "ia-highpointsofmedi00wals",
      "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Yerily",
+   "reading": "Verily",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]

@@ -4,6 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'tools' / 'lexicon'))
 import build_lexicon as L  # noqa: E402
+import contact_sheet as C  # noqa: E402
 
 
 class LexiconTests(unittest.TestCase):
@@ -45,12 +46,40 @@ class LexiconTests(unittest.TestCase):
         for c in L.candidates('hved', lex) + cs:
             self.assertEqual(c['status'], L.STATUS)
             self.assertIn('page image', c['status'])
-        self.assertEqual(L.candidates('Aed', lex), [])
+        self.assertEqual(L.candidates('Qzxvk', lex), [])
 
     def test_the_read_gate_tool_never_reads_the_lexicon(self):
         # A lexicon word counts as read in a book only once it is recorded in that book's spec after an image check.
         src = (ROOT / 'tools' / 'transcribe_scan.py').read_text(encoding='utf-8')
         self.assertNotIn('lexicon', src)
+
+
+class ContactSheetTests(unittest.TestCase):
+    def test_apply_records_only_the_reviewers_decisions(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            spec = d / 'spec.json'
+            spec.write_text(json.dumps([{'edition': 'x', 'verifiedWords': ['Aed'], 'handFixes': []}]))
+            (d / 'occurrences.json').write_text(json.dumps([
+                {'id': 'o1', 'form': 'Liadin', 'leaf': 5, 'line': 'Since I parted from Liadin,'},
+                {'id': 'o2', 'form': 'Mohng', 'leaf': 6, 'line': "says Mohng. ' Why"},
+                {'id': 'o3', 'form': 'Mohng', 'leaf': 7, 'line': 'Mohng and Mohng'},
+                {'id': 'o4', 'form': 'Guare', 'leaf': 8, 'line': 'King Guare'}]))
+            dec = d / 'decisions.json'
+            dec.write_text(json.dumps({'Liadin': {'printed': True, 'checked': '2026-11-23'},
+                                       'Mohng': {'reading': 'Moling', 'checked': '2026-11-23', 'only': ['o2']}}))
+            C.apply(spec, 'x', d, dec)
+            e = json.loads(spec.read_text())[0]
+            self.assertEqual(e['verifiedWords'], ['Aed', 'Liadin'])  # Guare was not decided, so it stays unread
+            self.assertEqual(e['handFixes'], [{'leaf': 6, 'page': None, 'ocr': "says Mohng. ' Why", 'reading': "says Moling. ' Why"}])
+            dec.write_text(json.dumps({'Guare': {'printed': True}}))
+            with self.assertRaises(AssertionError):  # every decision records when the crops were checked
+                C.apply(spec, 'x', d, dec)
+
+    def test_sheets_are_never_written_inside_the_repository(self):
+        src = (ROOT / 'tools' / 'lexicon' / 'contact_sheet.py').read_text(encoding='utf-8')
+        self.assertIn("'write sheets outside the repository'", src)
 
 
 if __name__ == '__main__':

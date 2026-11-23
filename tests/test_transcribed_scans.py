@@ -126,7 +126,8 @@ class Layout(unittest.TestCase):
     def test_hand_fixes_are_logged(self):
         for r in RECORDS:
             for f in r.get('handFixes', []):
-                self.assertEqual(set(f), {'leaf', 'page', 'ocr', 'reading'}, r['id'])
+                self.assertLessEqual({'leaf', 'page', 'ocr', 'reading'}, set(f), r['id'])
+                self.assertLessEqual(set(f), {'leaf', 'page', 'ocr', 'reading', 'heading'}, r['id'])  # `heading`: a title line (Fichter)
                 # a reading equal to the OCR is a keep mark (a heading or body line checked on the image), never empty
                 self.assertTrue(f['ocr'] != f['reading'] or f['reading'].strip(), r['id'])
 

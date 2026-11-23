@@ -8,7 +8,7 @@ Bibliotheca Catholica is a free Catholic **reading room and curated resource ind
 
 Read [AGENTS](AGENTS.md) and [CENTRAL](CENTRAL.md), then the relevant [topic documentation](docs/README.md). Use [OPERATIONS](docs/OPERATIONS.md) for the current validation sequence and recovery procedures. Historical reviews describe their dated snapshots.
 
-Cloudflare Pages also deploys this source; the owner has reported a hosting transition. Verify current domain bindings before changing either host. Existing analytics are production-host gated and privacy constrained; affiliate placements use the configured Bookshop/TAN links with disclosures. Detailed boundaries are in [PROJECT-RULES](docs/PROJECT-RULES.md).
+Cloudflare Pages deploys `main` to https://bibliothecacatholica.com and gives every pull request a preview; GitHub Pages for this repository was turned off on November 15, 2026. Hosting and DNS settings are the owner's. Existing analytics are production-host gated and privacy constrained; affiliate placements use the configured Bookshop, TAN Books, and Magisterium AI links with disclosures. Detailed boundaries are in [PROJECT-RULES](docs/PROJECT-RULES.md).
 
 ## What readers will find
 
@@ -54,7 +54,7 @@ npm test         # run JavaScript and Python tests
 git diff --check
 ```
 
-Commit generated output after changing a template, route, application code, or source data. Re-run the builds and tests, then confirm `git diff --exit-code` is clean. CI (the "Validate library" workflow) runs the offline validation on every push and pull request, and the configured static hosts deploy `main`. Optional network checks are separate: they can be blocked or redirected and do not establish that a text is accurate, licensed, or the edition described.
+Commit generated output after changing a template, route, application code, or source data. Re-run the builds and tests, then confirm `git diff --exit-code` is clean. CI (the "Validate library" workflow) runs the offline validation on every push and pull request, and Cloudflare Pages deploys `main`. Optional network checks are separate: they can be blocked or redirected and do not establish that a text is accurate, licensed, or the edition described.
 
 ## Updating the catalog
 

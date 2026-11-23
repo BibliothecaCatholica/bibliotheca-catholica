@@ -1,0 +1,1849 @@
+{
+ "note": "Snapshot of Internet Archive file lists for tools/r2_inventory.py (python3 tools/r2_inventory.py --refresh rebuilds archiveOrg). readGate and candidates are maintained by hand, each with its source.",
+ "refreshed": "2026-11-23",
+ "readGate": {
+  "jameslaynezjesui00fich": {
+   "score": 99.57,
+   "note": "hand pass on draft PR #164 (Hosting: Micah to approve); HOLDS records the raw 99.02%"
+  },
+  "saintteresaofavi00wals": {
+   "score": 99.13,
+   "note": "partial hand pass on draft PR #165; HOLDS records the raw 98.82%"
+  },
+  "stanthonyofpadua00hube": {
+   "score": 95.69,
+   "note": "raw OCR re-measured November 23 (HOLDS)"
+  },
+  "selectancientiri00meye": {
+   "score": 99.98,
+   "note": "hand pass on draft PR #159; hosting PR #163 (QA then merge)"
+  }
+ },
+ "candidates": {
+  "selectancientiri00meye": {
+   "source": "HOLDS (Plummer, Reeves, and Meyer Irish editions); PR #163"
+  },
+  "DisciplinaryCouncils": {
+   "source": "HOLDS (Councils 8 to 18)",
+   "nonrenewal": "pd-nonrenewal approved November 20, 2026 (#87): docs/research/us-pd-renewal-checks-2026-11.csv"
+  },
+  "schroeder-disciplinary-councils": {
+   "source": "docs/research/councils-sources-2026-11.csv",
+   "exclude": "duplicate upload of DisciplinaryCouncils (same book, same PDF size); the first upload is listed"
+  },
+  "PatrologiaLatina": {
+   "source": "data/sources/cc-pl24-1845-isaiah-prologue.json",
+   "exclude": "a multi-volume collection item whose largest PDF is PL 95, not the PL 24 the hosted prologue was collated with; no edition-specific file identified"
+  },
+  "faustulanad34000aysc": {
+   "source": "HOLDS (Faustula)"
+  },
+  "cu31924013588847": {
+   "source": "HOLDS (Faustula)"
+  },
+  "sevenecumenicalc00perc": {
+   "source": "HOLDS (Councils Part 3)"
+  },
+  "cu31924029359332": {
+   "source": "HOLDS (Councils Part 3)"
+  }
+ },
+ "archiveOrg": {
+  "07470918.1.emory.edu": {
+   "title": "The Catholic encyclopedia ; an international work of reference on the constitution, doctrine, discipline and history of the Catholic Church",
+   "creator": "",
+   "date": "1907",
+   "restricted": false,
+   "servers": [
+    "ia601903.us.archive.org",
+    "ia801903.us.archive.org"
+   ],
+   "pdf": {
+    "name": "07470918_1.pdf",
+    "size": 69754821,
+    "md5": "50533e8ee627f6ed356a7ce8af946ce2",
+    "sha1": "f1d5e89968c04e2fdbfd52db11196d30e3552581"
+   },
+   "pageImagesBytes": 207839566
+  },
+  "30081003676057": {
+   "title": "Five types, a book of essays",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+   "date": "1910",
+   "restricted": false,
+   "servers": [
+    "ia600901.us.archive.org",
+    "ia800901.us.archive.org"
+   ],
+   "pdf": {
+    "name": "30081003676057.pdf",
+    "size": 2276503,
+    "md5": "25e269f45214daf711688741e7ca5c14",
+    "sha1": "4d457ee30531e5b9f347b92d3be467a6eb74cb0f"
+   },
+   "pageImagesBytes": 11952553
+  },
+  "DisciplinaryCouncils": {
+   "title": "Disciplinary decrees of the general councils, text, translation, and commentary",
+   "creator": "Schroeder, Henry Joseph, 1875-1942",
+   "date": "1937",
+   "restricted": false,
+   "servers": [
+    "ia600707.us.archive.org",
+    "ia800707.us.archive.org"
+   ],
+   "pdf": {
+    "name": "DisciplinaryCouncils.pdf",
+    "size": 52002596,
+    "md5": "cbaac2b18dfff52417ffe8ddcf388e61",
+    "sha1": "9570f2668c96fc648a1e2375e438eeed849b2756"
+   },
+   "pageImagesBytes": 131595864
+  },
+  "PatrologiaLatina": {
+   "title": "Patrologia Latina",
+   "creator": "St. Fathers of the West, notable Christian writers",
+   "date": "",
+   "restricted": false,
+   "servers": [
+    "ia601809.us.archive.org",
+    "ia801809.us.archive.org"
+   ],
+   "pdf": {
+    "name": "Patrologia Latina Vol. 95.pdf",
+    "size": 122550963,
+    "md5": "de7bda88c9e506cfb379cb7eee8833d2",
+    "sha1": "9a8be9bc7ddcee137a15147096ed00034ba7002d"
+   },
+   "pageImagesBytes": 92386453937
+  },
+  "TheCanonsAndDecrees": {
+   "title": "The canons and decrees of the sacred and ecumenical Council of Trent : celebrated under the sovereign pontiffs Paul III, Julius III and Pius IV",
+   "creator": "Council of Trent (1545-1563 : Trento, Italy); Waterworth, James, 1806-1876",
+   "date": "1848",
+   "restricted": false,
+   "servers": [
+    "ia601809.us.archive.org",
+    "ia801809.us.archive.org"
+   ],
+   "pdf": {
+    "name": "TheCanonsAndDecrees.pdf",
+    "size": 23886991,
+    "md5": "7a5160cb6903e672793eb8fefdb7b7b0",
+    "sha1": "d9cad864530f6f757d09503a4baa5f36e578ec15"
+   },
+   "pageImagesBytes": 284323229
+  },
+  "TheGoldenLegendV3": {
+   "title": "The Golden Legend: Or, Lives of the Saints, Volume 3",
+   "creator": "Jacobus, de Voragine, approximately 1229-1298; Caxton, William, approximately 1422-1491, translator",
+   "date": "1900",
+   "restricted": false,
+   "servers": [
+    "ia802803.us.archive.org",
+    "ia902803.us.archive.org"
+   ],
+   "pdf": {
+    "name": "TheGoldenLegendV3.pdf",
+    "size": 6586436,
+    "md5": "25484792520ee67c304ffdf7bf677c2b",
+    "sha1": "c1c7d22e794ae789f25f8482ce7c30d1cb70d4a1"
+   },
+   "pageImagesBytes": 240362331
+  },
+  "TheGoldenLegendVol2": {
+   "title": "The Golden Legend or Lives of the Saints, as englished by William Caxton",
+   "creator": "William Caxton, c. 1415 – c. 1492; Ellis, Frederick Startridge, 1830-1901",
+   "date": "1900",
+   "restricted": false,
+   "servers": [
+    "ia601002.us.archive.org",
+    "ia801002.us.archive.org"
+   ],
+   "pdf": {
+    "name": "The_Golden_Legend_vol2.pdf",
+    "size": 6090566,
+    "md5": "f32f714de9c5a4ea6cec375d617ae14e",
+    "sha1": "bbbbd606c3be0de5477e82be0c66b55c9933cc03"
+   },
+   "pageImagesBytes": 227345238
+  },
+  "TheGoldenLegendVol4": {
+   "title": "The Golden Legend or Lives of the Saints, as englished by William Caxton",
+   "creator": "William Caxton, c. 1415-c. 1492; Ellis, Frederick Startridge, 1830-1901",
+   "date": "1900",
+   "restricted": false,
+   "servers": [
+    "ia803207.us.archive.org",
+    "ia903207.us.archive.org"
+   ],
+   "pdf": {
+    "name": "The_Golden_Legend_vol4_text.pdf",
+    "size": 18819319,
+    "md5": "3c530cf503f53a6cf3af76b29fa9c90d",
+    "sha1": "10f2782b3d977dc38114413831afa0730fbdc246"
+   },
+   "pageImagesBytes": 215884964
+  },
+  "TheGoldenLegendVol7": {
+   "title": "The Golden Legend or Lives of the Saints, as englished by William Caxton",
+   "creator": "William Caxton, c. 1415-c. 1492; Jacobus de Voragine, ca. 1229-1298; Ellis, Frederick Startridge, 1830-1901; Ellis, Frederick Startridge, 1830-1901",
+   "date": "1900",
+   "restricted": false,
+   "servers": [
+    "ia601605.us.archive.org",
+    "ia801605.us.archive.org"
+   ],
+   "pdf": {
+    "name": "The_Golden_Legend_vol7_text.pdf",
+    "size": 11710570,
+    "md5": "e8449ac427186e96d4574aac3711d88e",
+    "sha1": "6d94c453be4075c2c7d219b2e56d60e74d1ccde6"
+   },
+   "pageImagesBytes": 228378848
+  },
+  "bookofsaintsdict00stau": {
+   "title": "The Book of saints : a dictionary of servants of God canonized by the Catholic Church :",
+   "creator": "St. Augustine's Abbey (Ramsgate, England)",
+   "date": "1921",
+   "restricted": false,
+   "servers": [
+    "ia600509.us.archive.org",
+    "ia800509.us.archive.org"
+   ],
+   "pdf": {
+    "name": "bookofsaintsdict00stau.pdf",
+    "size": 34687079,
+    "md5": "d7d575794b8f4e35b8d8bbad4fb14909",
+    "sha1": "55720a7be6aa0660de981beade324b5722ae23c0"
+   },
+   "pageImagesBytes": 726520835
+  },
+  "bwb_S0-DRI-815": {
+   "title": "Orthodoxy ",
+   "creator": "Gilbert Chesterton ",
+   "date": "1908",
+   "restricted": false,
+   "servers": [
+    "ia601008.us.archive.org",
+    "ia801008.us.archive.org"
+   ],
+   "pdf": {
+    "name": "bwb_S0-DRI-815.pdf",
+    "size": 11067925,
+    "md5": "b7f4857d4556253c15f8027e68fad78d",
+    "sha1": "084e279ae716df48079b3b92157a1719ad427313"
+   },
+   "pageImagesBytes": 676271695
+  },
+  "canonsdecreesofc0000revj": {
+   "title": "The canons and decrees of the council of trent ",
+   "creator": "Rev.j. waterworth",
+   "date": "1848",
+   "restricted": false,
+   "servers": [
+    "ia601403.us.archive.org",
+    "ia801403.us.archive.org"
+   ],
+   "pdf": {
+    "name": "canonsdecreesofc0000revj.pdf",
+    "size": 27601858,
+    "md5": "b36e315a1de8b1354daf4448d597eeda",
+    "sha1": "9c2b332de6ddfdcc2106c04a4e5ccecc95283a2c"
+   },
+   "pageImagesBytes": 1116401730
+  },
+  "catholicencyclop0011vari_p3b3": {
+   "title": "The Catholic Encyclopedia",
+   "creator": "various",
+   "date": "1911",
+   "restricted": false,
+   "servers": [
+    "ia601601.us.archive.org",
+    "ia801601.us.archive.org"
+   ],
+   "pdf": {
+    "name": "catholicencyclop0011vari_p3b3.pdf",
+    "size": 116361370,
+    "md5": "08841a365992cba1c4e764dde8ad91b4",
+    "sha1": "0d5700614d760a084db77084c541bd1426f3b59d"
+   },
+   "pageImagesBytes": 2301153795
+  },
+  "childsbookofsain00cant": {
+   "title": "A child's book of saints",
+   "creator": "Canton, William, 1845-1926; Robinson, T. H. (Thomas Heath), 1869-1950, ill",
+   "date": "1921",
+   "restricted": false,
+   "servers": [
+    "ia802801.us.archive.org",
+    "ia902801.us.archive.org"
+   ],
+   "pdf": null,
+   "pageImagesBytes": 0
+  },
+  "collectedpoemsof0000ches": {
+   "title": "The collected poems of G.K. Chesterton. --",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+   "date": "1927",
+   "restricted": false,
+   "servers": [
+    "ia600503.us.archive.org",
+    "ia800503.us.archive.org"
+   ],
+   "pdf": {
+    "name": "collectedpoemsof0000ches.pdf",
+    "size": 14810370,
+    "md5": "76a1c7eb934e26194b19f1a0522a6629",
+    "sha1": "0c516482ed52e429d0a5d5c5ef73608d1da84178"
+   },
+   "pageImagesBytes": 868288753
+  },
+  "coward00bens_0": {
+   "title": "The coward",
+   "creator": "Benson, Robert Hugh, 1871-1914",
+   "date": "1912",
+   "restricted": false,
+   "servers": [
+    "ia601400.us.archive.org",
+    "ia801400.us.archive.org"
+   ],
+   "pdf": {
+    "name": "coward00bens_0.pdf",
+    "size": 187777305,
+    "md5": "e4a5e243305215b9a1a56870ea939082",
+    "sha1": "79b0440672ffb0ed3c6b43573caae1c8ab9c437a"
+   },
+   "pageImagesBytes": 677089958
+  },
+  "creedschristendo02scha": {
+   "title": "The creeds of Christendom : with a history and critical notes",
+   "creator": "Schaff, Philip, 1819-1893",
+   "date": "1877",
+   "restricted": false,
+   "servers": [
+    "ia601608.us.archive.org",
+    "ia801608.us.archive.org"
+   ],
+   "pdf": {
+    "name": "creedschristendo02scha.pdf",
+    "size": 44121876,
+    "md5": "c7d9954fdf2b9b12d22325dcf7835f04",
+    "sha1": "85d1f14c5794ee13b5dd077bcfbdc782b690925a"
+   },
+   "pageImagesBytes": 590790107
+  },
+  "cu31924013588847": {
+   "title": "Faustula n. A.D. 340",
+   "creator": "Ayscough, John, 1858-1928",
+   "date": "1912",
+   "restricted": false,
+   "servers": [
+    "ia803203.us.archive.org",
+    "ia903203.us.archive.org"
+   ],
+   "pdf": {
+    "name": "cu31924013588847.pdf",
+    "size": 7674849,
+    "md5": "c88008748ec7e066f25c77de31b9bb6a",
+    "sha1": "94802f2093fd80dfe318147e90ad941d8a50d763"
+   },
+   "pageImagesBytes": 156637912
+  },
+  "cu31924014186161": {
+   "title": "Select historical documents of the middle ages",
+   "creator": "Henderson, Ernest F. (Ernest Flagg), 1861-1928",
+   "date": "1892",
+   "restricted": false,
+   "servers": [
+    "ia600102.us.archive.org",
+    "ia800102.us.archive.org"
+   ],
+   "pdf": {
+    "name": "cu31924014186161.pdf",
+    "size": 19527379,
+    "md5": "b8c96335c64908ad4c936dc1d34f963c",
+    "sha1": "50559c10aa8f7a2099712b855f0e817021642918"
+   },
+   "pageImagesBytes": 244866447
+  },
+  "cu31924027781024": {
+   "title": "A source book for mediæval history; selected documents illustrating the history of Europe in the Middle Age",
+   "creator": "Thatcher, Oliver J. (Oliver Joseph), 1857-1937; McNeal, Edgar Holmes, 1874- joint author",
+   "date": "1905",
+   "restricted": false,
+   "servers": [
+    "ia802805.us.archive.org",
+    "ia902805.us.archive.org"
+   ],
+   "pdf": {
+    "name": "cu31924027781024.pdf",
+    "size": 26657644,
+    "md5": "a0ee124ccda2acde86fe9568c6c813bc",
+    "sha1": "03c808429d8e152b4c093764e48b6b8149310b6b"
+   },
+   "pageImagesBytes": 253959591
+  },
+  "cu31924029359332": {
+   "title": "The Vatican council and its definitions : a pastoral letter to the clergy",
+   "creator": "Manning, Henry Edward, 1808-1892",
+   "date": "1870",
+   "restricted": false,
+   "servers": [
+    "ia600803.us.archive.org",
+    "ia800803.us.archive.org"
+   ],
+   "pdf": {
+    "name": "cu31924029359332.pdf",
+    "size": 26602478,
+    "md5": "3d310e2ba712977ea1e450ff9244e910",
+    "sha1": "49e68787de179a1adfdd79e09774444195535bfa"
+   },
+   "pageImagesBytes": 339428471
+  },
+  "cu31924029369760": {
+   "title": "The canons and decrees of the sacred and oecumenical Council of Trent, celebrated under the sovereign pontiffs, Paul III, Julius III and Pius IV",
+   "creator": "Council of Trent (1545-1563)",
+   "date": "1848",
+   "restricted": false,
+   "servers": [
+    "ia600708.us.archive.org",
+    "ia800708.us.archive.org"
+   ],
+   "pdf": {
+    "name": "cu31924029369760.pdf",
+    "size": 22903788,
+    "md5": "a4893a35eb049c4d97921e8743650323",
+    "sha1": "6c5cecdccca3c0ddbcd91c2b5577829aaac8edf6"
+   },
+   "pageImagesBytes": 300453910
+  },
+  "dialogueofseraph00cath": {
+   "title": "The dialogue of the seraphic virgin, Catherine of Siena : dictated by her, while in a state of ecstasy, to her secretaries, and completed in the year of our Lord 1370 : together with an account of her death by an eye-witness",
+   "creator": "Catherine, of Siena, Saint, 1347-1380; Thorold, Algar Labouchere, 1866-1936",
+   "date": "1907",
+   "restricted": false,
+   "servers": [
+    "ia600907.us.archive.org",
+    "ia800907.us.archive.org"
+   ],
+   "pdf": {
+    "name": "dialogueofseraph00cath.pdf",
+    "size": 15675595,
+    "md5": "55ce802563d1b2c8020ab62eb68b51db",
+    "sha1": "49380779ffa049d818989a79688e4ff7fb542e19"
+   },
+   "pageImagesBytes": 494082490
+  },
+  "dli.ernet.476361": {
+   "title": "Essays and Addresses On The Philosophy Of Religion (1921)",
+   "creator": "Friedrich Baron",
+   "date": "1921",
+   "restricted": false,
+   "servers": [
+    "ia601005.us.archive.org",
+    "ia801005.us.archive.org"
+   ],
+   "pdf": {
+    "name": "476361-Essays And Addresses On The Philosophy Of Religion (1921).pdf",
+    "size": 28513967,
+    "md5": "6984080d04b783a14cff9e5d19ffe61f",
+    "sha1": "2812cfa43d8fda702dbe33c605a69d11162343a2"
+   },
+   "pageImagesBytes": 396244126
+  },
+  "dli.ernet.531861": {
+   "title": "The Footsteps At The Lock",
+   "creator": "Knox Ronald A.",
+   "date": "1928",
+   "restricted": false,
+   "servers": [
+    "ia600603.us.archive.org",
+    "ia800603.us.archive.org"
+   ],
+   "pdf": {
+    "name": "531861-The Footsteps At The Lock.pdf",
+    "size": 120685015,
+    "md5": "bc11bd008e51072a683cfbe4646cc84c",
+    "sha1": "b9fe97b571d0faf488f69842e5c902c8ed19c835"
+   },
+   "pageImagesBytes": 45426886
+  },
+  "dogmaticcanonsan00unknuoft": {
+   "title": "Dogmatic canons and decrees : authorized translations of the dogmatic decrees of the Council of Trent, the decree on the Immaculate Conception, the Syllabus of Pope Pius IX, and the decrees of the Vatican Council",
+   "creator": "Catholic Church. Pope (1846-1878 : Pius IX); Council of Trent (1545-1563). Canones et decreta. English. Selections; Vatican Council (1st : 1869-1870)",
+   "date": "1912",
+   "restricted": false,
+   "servers": [
+    "ia600704.us.archive.org",
+    "ia800704.us.archive.org"
+   ],
+   "pdf": {
+    "name": "dogmaticcanonsan00unknuoft.pdf",
+    "size": 14431340,
+    "md5": "b91d3b9c3ed436ee6b2253a1b009557e",
+    "sha1": "35e21eea4f1af16ca6ef527cdd94a6a4e683c749"
+   },
+   "pageImagesBytes": 1031572212
+  },
+  "doweagree0000gkch": {
+   "title": "Do we Agree?",
+   "creator": "G.K. Chesterton,Bernard Shaw,Hilaire Belloc",
+   "date": "1928",
+   "restricted": false,
+   "servers": [
+    "ia600100.us.archive.org",
+    "ia800100.us.archive.org"
+   ],
+   "pdf": {
+    "name": "doweagree0000gkch.pdf",
+    "size": 3298570,
+    "md5": "11ff5796b52d37a0c0a75810db84a878",
+    "sha1": "8c1960195eccad60f3ff49e1ca60f1ae2b56ee27"
+   },
+   "pageImagesBytes": 82004466
+  },
+  "faustulanad34000aysc": {
+   "title": "Faustula n. A. D. 340",
+   "creator": "Ayscough, John, 1858-1928; Ayscough, John, 1858-1928",
+   "date": "1912",
+   "restricted": false,
+   "servers": [
+    "ia601004.us.archive.org",
+    "ia801004.us.archive.org"
+   ],
+   "pdf": {
+    "name": "faustulanad34000aysc.pdf",
+    "size": 23786333,
+    "md5": "49c40a6885e21c02e25218e363c1e6ed",
+    "sha1": "a29195d177dc84cb3b81801e9af59867e48d3178"
+   },
+   "pageImagesBytes": 469935669
+  },
+  "fourfaultlessfel0000gkch_i5f3": {
+   "title": "four faultless felons",
+   "creator": "g. k. chesterton",
+   "date": "1930",
+   "restricted": false,
+   "servers": [
+    "ia803203.us.archive.org",
+    "ia903203.us.archive.org"
+   ],
+   "pdf": {
+    "name": "fourfaultlessfel0000gkch_i5f3.pdf",
+    "size": 11012509,
+    "md5": "ba00d7b26a4462e60a777c3f52e92895",
+    "sha1": "ba0a2b1e4dc49269972827e8dc61cd1d5d86a404"
+   },
+   "pageImagesBytes": 898202270
+  },
+  "generallyspeakin00ches": {
+   "title": "Generally speaking",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+   "date": "1929",
+   "restricted": false,
+   "servers": [
+    "ia601408.us.archive.org",
+    "ia801408.us.archive.org"
+   ],
+   "pdf": {
+    "name": "generallyspeakin00ches.pdf",
+    "size": 13774785,
+    "md5": "e87e2f448042123c8b2751b4f4bb51e7",
+    "sha1": "1907d99b274a94dab4d49f84e83c44ce0979e6e4"
+   },
+   "pageImagesBytes": 351876919
+  },
+  "gkcasmcbeingcoll0000gkch": {
+   "title": "G.K.C. As M.C.: Being A Collection Of Thurty-Seven Introductions",
+   "creator": "G.K. Chesterton",
+   "date": "1929",
+   "restricted": false,
+   "servers": [
+    "ia600701.us.archive.org",
+    "ia800701.us.archive.org"
+   ],
+   "pdf": {
+    "name": "gkcasmcbeingcoll0000gkch.pdf",
+    "size": 10815999,
+    "md5": "834b53f9bcc4db555271f3e7a5b3fbd1",
+    "sha1": "c6e37c4bcab65ae8fae9714f3feb49d20680f7b8"
+   },
+   "pageImagesBytes": 788026318
+  },
+  "goldenlegendorli05jaco": {
+   "title": "The golden legend; or, Lives of the saints",
+   "creator": "Jacobus, de Voragine, ca. 1229-1298; Caxton, William, ca. 1422-1491 or 2",
+   "date": "1900",
+   "restricted": false,
+   "servers": [
+    "ia600105.us.archive.org"
+   ],
+   "pdf": {
+    "name": "goldenlegendorli05jaco.pdf",
+    "size": 11801835,
+    "md5": "62c1ad4160cb8a33d8deb42cbe5f88ec",
+    "sha1": "20491e38582d12a120ae19be732e2d17298125fc"
+   },
+   "pageImagesBytes": 381724187
+  },
+  "highpointsofmedi00wals": {
+   "title": "High points of medieval culture",
+   "creator": "Walsh, James J. (James Joseph), 1865-1942",
+   "date": "1937",
+   "restricted": false,
+   "servers": [
+    "ia600604.us.archive.org",
+    "ia800604.us.archive.org"
+   ],
+   "pdf": {
+    "name": "highpointsofmedi00wals.pdf",
+    "size": 22039320,
+    "md5": "c73c8ef59eab1682414eda382e05430e",
+    "sha1": "fac61f6a16dad1e46ba0de604d3f41ceab43411c"
+   },
+   "pageImagesBytes": 661620610
+  },
+  "holybibletransla00denv": {
+   "title": "The Holy Bible, translated from the Latin Vulgate : diligently compared with the Hebrew, Greek, and other editions in divers languages, the Old Testament first published by the English College at Douay, A.D. 1609, and the New Testament first published by the English College at Rheims, A.D. 1582, with annotations, references, and an historical and chronological index; the whole revised and diligently compared with the Latin Vulgate",
+   "creator": "Denvir, Dr",
+   "date": "1899",
+   "restricted": false,
+   "servers": [
+    "ia803108.us.archive.org",
+    "ia903108.us.archive.org"
+   ],
+   "pdf": {
+    "name": "holybibletransla00denv.pdf",
+    "size": 97815341,
+    "md5": "2858bc1ae2825269091835a489c88711",
+    "sha1": "2c1788eaec490c5301fbcb36e339af316019f2e1"
+   },
+   "pageImagesBytes": 2335412090
+  },
+  "imitationchrist01unkngoog": {
+   "title": "The imitation of Christ: four books, tr. by W. Benham",
+   "creator": "",
+   "date": "1874",
+   "restricted": false,
+   "servers": [
+    "ia600800.us.archive.org",
+    "ia800800.us.archive.org"
+   ],
+   "pdf": {
+    "name": "imitationchrist01unkngoog.pdf",
+    "size": 30136021,
+    "md5": "6a79f70e74540268acc8cf4a84c08d25",
+    "sha1": "b41f2cac7a85d33f20790f9dc0fe205e11246d4a"
+   },
+   "pageImagesBytes": 0
+  },
+  "imitationchrist07thomgoog": {
+   "title": "The Imitation of Christ: Four Books",
+   "creator": "Thomas",
+   "date": "1877",
+   "restricted": false,
+   "servers": [
+    "ia601602.us.archive.org",
+    "ia801602.us.archive.org"
+   ],
+   "pdf": {
+    "name": "imitationchrist07thomgoog.pdf",
+    "size": 9291783,
+    "md5": "8b19637a8fa483f6a01d9841a034045c",
+    "sha1": "c0143dbe13261a539cbafec8295cc648441d867d"
+   },
+   "pageImagesBytes": 0
+  },
+  "imitationofchris00benhrich": {
+   "title": "The imitation of Christ : four books",
+   "creator": "Benham, William, 1831-1910; Thomas, à Kempis, 1380-1471",
+   "date": "1886",
+   "restricted": false,
+   "servers": [
+    "ia601608.us.archive.org",
+    "ia801608.us.archive.org"
+   ],
+   "pdf": {
+    "name": "imitationofchris00benhrich.pdf",
+    "size": 50092833,
+    "md5": "ea0a694e1da2bc49d8a69b3b3a6c578f",
+    "sha1": "dd7d67b50e7f87b99a2526692bd3c40341eebeda"
+   },
+   "pageImagesBytes": 647693649
+  },
+  "in.ernet.dli.2015.463891": {
+   "title": "The Incredulity Of Father Brown",
+   "creator": "Chesterton, G. K.",
+   "date": "1926",
+   "restricted": false,
+   "servers": [
+    "ia601400.us.archive.org",
+    "ia801400.us.archive.org"
+   ],
+   "pdf": {
+    "name": "2015.463891.The-Incredulity-Of-Father-Brown.pdf",
+    "size": 15769240,
+    "md5": "6c2fe9b9517764ae3f746ac4971624c6",
+    "sha1": "d1d80f9276a7880cf463da5f070588f6ce5bc440"
+   },
+   "pageImagesBytes": 239386419
+  },
+  "incredulityoffat0000ches": {
+   "title": "The incredulity of Father Brown",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936, author",
+   "date": "1926",
+   "restricted": false,
+   "servers": [
+    "ia600803.us.archive.org",
+    "ia800803.us.archive.org"
+   ],
+   "pdf": {
+    "name": "incredulityoffat0000ches.pdf",
+    "size": 10665103,
+    "md5": "ee25c39491200560dff2bad66392c52d",
+    "sha1": "c064d262b5e9e6a4800c72fae0096212ecc8b9a8"
+   },
+   "pageImagesBytes": 464381293
+  },
+  "invisibleplaymat00cant": {
+   "title": "The invisible playmate and W. V. her book;",
+   "creator": "Canton, William, 1845-1926; Stone & Kimball; Brock, C. E. (Charles Edmund), 1870-1938, ill; Edwards, George Wharton, 1859-1950, binding designer",
+   "date": "1898",
+   "restricted": false,
+   "servers": [
+    "ia600901.us.archive.org",
+    "ia800901.us.archive.org"
+   ],
+   "pdf": {
+    "name": "invisibleplaymat00cant.pdf",
+    "size": 6028152,
+    "md5": "9a9b5480b804899a49cefd00ace6512f",
+    "sha1": "38006ac8e52f2c9ea66aa168e3136782d8cc2fde"
+   },
+   "pageImagesBytes": 167718932
+  },
+  "jameslaynezjesui00fich": {
+   "title": "James Laynez, Jesuit",
+   "creator": "Fichter, Joseph Henry, 1908-1994",
+   "date": "1944",
+   "restricted": false,
+   "servers": [
+    "ia601903.us.archive.org",
+    "ia801903.us.archive.org"
+   ],
+   "pdf": {
+    "name": "jameslaynezjesui00fich.pdf",
+    "size": 29745173,
+    "md5": "da283626ab2da9d558e39349450c43ac",
+    "sha1": "1c1a7b257723d7fa45176ebc96f852c7645177b6"
+   },
+   "pageImagesBytes": 694876107
+  },
+  "jesuitmartyrsofc0000devi": {
+   "title": "The Jesuit martyrs of Canada, together with the martyrs slain in the Mohawk Valley",
+   "creator": "Devine, E. J. (Edward James), 1860-1927",
+   "date": "1925",
+   "restricted": false,
+   "servers": [
+    "ia600804.us.archive.org",
+    "ia800804.us.archive.org"
+   ],
+   "pdf": {
+    "name": "jesuitmartyrsofc0000devi.pdf",
+    "size": 10957812,
+    "md5": "ab650492694e9b932ccf7ee174416bf8",
+    "sha1": "730c53eb37a88a8d9d7fb05dbab538c9f86076e1"
+   },
+   "pageImagesBytes": 841967156
+  },
+  "johnenglandameri00gran": {
+   "title": "John England, American Christopher",
+   "creator": "Grant, Dorothy Fremont, 1900-",
+   "date": "1949",
+   "restricted": false,
+   "servers": [
+    "ia600600.us.archive.org",
+    "ia800600.us.archive.org"
+   ],
+   "pdf": {
+    "name": "johnenglandameri00gran.pdf",
+    "size": 13567822,
+    "md5": "302fc7950aafe03a4ea180deccfc0718",
+    "sha1": "ccd6f039c1720d33f61ba003f356d0dc01bd9d90"
+   },
+   "pageImagesBytes": 381954256
+  },
+  "legendsmonastic00jame": {
+   "title": "Legends of the monastic orders as represented in the fine arts : forming the second series of Sacred and Legendary art",
+   "creator": "Jameson, Mrs. (Anna), 1794-1860",
+   "date": "1863",
+   "restricted": false,
+   "servers": [
+    "ia600108.us.archive.org",
+    "ia800108.us.archive.org"
+   ],
+   "pdf": {
+    "name": "legendsmonastic00jame.pdf",
+    "size": 50678966,
+    "md5": "76ac7a10ef037bf5c131096692c01dbc",
+    "sha1": "c39599132312d5abce4ee32c8ed606c67c1f4a32"
+   },
+   "pageImagesBytes": 837250379
+  },
+  "lifeofstfranciso00sabauoft": {
+   "title": "Life of St. Francis of Assisi",
+   "creator": "Sabatier, Paul, 1858-1928; Houghton, Louise Seymour, 1838-1920",
+   "date": "1919",
+   "restricted": false,
+   "servers": [
+    "ia600704.us.archive.org",
+    "ia800704.us.archive.org"
+   ],
+   "pdf": {
+    "name": "lifeofstfranciso00sabauoft.pdf",
+    "size": 27245816,
+    "md5": "1e3be610748a8cb305ccf144eca88edf",
+    "sha1": "f9366e965c0eb688ff39dc95fb4a57c3501863b9"
+   },
+   "pageImagesBytes": 1827336646
+  },
+  "littleflowersofs00fioriala": {
+   "title": "The little flowers of Saint Francis of Assisi ..",
+   "creator": "Fioretti di San Francesco; Alger, Abby Langdon, 1850-",
+   "date": "1887",
+   "restricted": false,
+   "servers": [
+    "ia600107.us.archive.org",
+    "ia800107.us.archive.org"
+   ],
+   "pdf": {
+    "name": "littleflowersofs00fioriala.pdf",
+    "size": 7073287,
+    "md5": "1ad5ad13e1fe7cba9a206d65ab16fb44",
+    "sha1": "e6f2709cd9eadfb62e6fe5f5b9e4a84d1410339d"
+   },
+   "pageImagesBytes": 277717412
+  },
+  "livesoffathersma01butl_0": {
+   "title": "The lives of the fathers, martyrs, and other principal saints; compiled from original monuments and other authentic records, illustrated with the remarks of judicious modern critics and historians.",
+   "creator": "Butler, Alban, 1711-1773",
+   "date": "1812",
+   "restricted": false,
+   "servers": [
+    "ia600106.us.archive.org",
+    "ia800106.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesoffathersma01butl_0.pdf",
+    "size": 40589706,
+    "md5": "0e3803ef9aa17ba741e2c85421d89f15",
+    "sha1": "451cc634bc960891ae8fd499dbe7247d02d199c7"
+   },
+   "pageImagesBytes": 1425509944
+  },
+  "livesoffathersma02butl_1": {
+   "title": "The lives of the fathers, martyrs, and other principal saints; compiled from original monuments and other authentic records, illustrated with the remarks of judicious modern critics and historians.",
+   "creator": "Butler, Alban, 1711-1773",
+   "date": "1812",
+   "restricted": false,
+   "servers": [
+    "ia601808.us.archive.org",
+    "ia801808.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesoffathersma02butl_1.pdf",
+    "size": 27976718,
+    "md5": "802f9a925577398f2ebbf7173a562b61",
+    "sha1": "b26e90184b554578e13d748a44e00a33824b25f8"
+   },
+   "pageImagesBytes": 685115655
+  },
+  "livesoffathersma04butl_1": {
+   "title": "The lives of the fathers, martyrs, and other principal saints; compiled from original monuments and other authentic records, illustrated with the remarks of judicious modern critics and historians.",
+   "creator": "Butler, Alban, 1711-1773",
+   "date": "1812",
+   "restricted": false,
+   "servers": [
+    "ia600706.us.archive.org",
+    "ia800706.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesoffathersma04butl_1.pdf",
+    "size": 35015546,
+    "md5": "accebb9faa69a20c166ed6921e11fcc0",
+    "sha1": "077822fe439a2357f652eff2c98fe18f9bac7e31"
+   },
+   "pageImagesBytes": 845704743
+  },
+  "livesoffathersma05butl_0": {
+   "title": "The lives of the fathers, martyrs, and other principal saints; compiled from original monuments and other authentic records, illustrated with the remarks of judicious modern critics and historians.",
+   "creator": "Butler, Alban, 1711-1773",
+   "date": "1812",
+   "restricted": false,
+   "servers": [
+    "ia601509.us.archive.org",
+    "ia801509.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesoffathersma05butl_0.pdf",
+    "size": 42904413,
+    "md5": "0bec0b78f9dd85559c71561426121753",
+    "sha1": "92e509509440f73e0a2284ff4c1d33d5b8055fd3"
+   },
+   "pageImagesBytes": 1062301133
+  },
+  "livesoffathersma06butl_0": {
+   "title": "The lives of the fathers, martyrs, and other principal saints; compiled from original monuments and other authentic records, illustrated with the remarks of judicious modern critics and historians.",
+   "creator": "Butler, Alban, 1711-1773",
+   "date": "1812",
+   "restricted": false,
+   "servers": [
+    "ia600605.us.archive.org",
+    "ia800605.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesoffathersma06butl_0.pdf",
+    "size": 43855984,
+    "md5": "2b7ff7d283702ed2d3ed9532b58fd9ec",
+    "sha1": "0c4cc650b34beb43f42965429b2d4a16b6368af8"
+   },
+   "pageImagesBytes": 1101914638
+  },
+  "livesoffathersma10butl_0": {
+   "title": "The lives of the fathers, martyrs, and other principal saints; compiled from original monuments and other authentic records, illustrated with the remarks of judicious modern critics and historians.",
+   "creator": "Butler, Alban, 1711-1773",
+   "date": "1812",
+   "restricted": false,
+   "servers": [
+    "ia600600.us.archive.org",
+    "ia800600.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesoffathersma10butl_0.pdf",
+    "size": 48186151,
+    "md5": "7fb4408074133bcf6b9f90a421789d3e",
+    "sha1": "f2458430f87a5994bf52772c42f9123989c864e9"
+   },
+   "pageImagesBytes": 1660632062
+  },
+  "livesoffathersma11butl_0": {
+   "title": "The lives of the fathers, martyrs, and other principal saints; compiled from original monuments and other authentic records, illustrated with the remarks of judicious modern critics and historians.",
+   "creator": "Butler, Alban, 1711-1773",
+   "date": "1812",
+   "restricted": false,
+   "servers": [
+    "ia600404.us.archive.org",
+    "ia800404.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesoffathersma11butl_0.pdf",
+    "size": 38392507,
+    "md5": "c5bfa9757419ae1542b3fa22a93fed41",
+    "sha1": "f461c00e0d0a5232becdbe32fe3b56dfdb6d2c80"
+   },
+   "pageImagesBytes": 1327726994
+  },
+  "livesoffathersma12butl": {
+   "title": "The lives of the fathers, martyrs, and other principal saints : compiled from original monuments and other authentic records : illustrated with the remarks of judicious modern critics and historians",
+   "creator": "Butler, Alban, 1711-1773; Butler, Charles, 1750-1832",
+   "date": "1842",
+   "restricted": false,
+   "servers": [
+    "ia600805.us.archive.org",
+    "ia800805.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesoffathersma12butl.pdf",
+    "size": 34183983,
+    "md5": "d7e9313f76077d5d6c5e962ba50fad99",
+    "sha1": "0d2ee3b12be0e01ce07721cf6164477b8acaa8e0"
+   },
+   "pageImagesBytes": 657341120
+  },
+  "livesoffathersma12butl_0": {
+   "title": "The lives of the fathers, martyrs, and other principal saints; compiled from original monuments and other authentic records, illustrated with the remarks of judicious modern critics and historians.",
+   "creator": "Butler, Alban, 1711-1773",
+   "date": "1812",
+   "restricted": false,
+   "servers": [
+    "ia600704.us.archive.org",
+    "ia800704.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesoffathersma12butl_0.pdf",
+    "size": 48958024,
+    "md5": "2b0ba97220f2b95944398ff0a0517c8d",
+    "sha1": "d24a32b3aa51bd2a40d5f3cec6c4023227d4fe58"
+   },
+   "pageImagesBytes": 1660508301
+  },
+  "livesofsaints0013bari": {
+   "title": "The lives of the saints",
+   "creator": "Baring-Gould, S. (Sabine), 1834-1924",
+   "date": "1897",
+   "restricted": false,
+   "servers": [
+    "ia601809.us.archive.org",
+    "ia801809.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesofsaints0013bari.pdf",
+    "size": 20143288,
+    "md5": "b3caafccf7442e64762b03fe45417490",
+    "sha1": "0df204e733e6b3beb39fdc417b64a9f55fa3a0d3"
+   },
+   "pageImagesBytes": 623307368
+  },
+  "livesofsaints05abari": {
+   "title": "The lives of the saints",
+   "creator": "Baring-Gould, S. (Sabine), 1834-1924",
+   "date": "1897",
+   "restricted": false,
+   "servers": [
+    "ia802802.us.archive.org",
+    "ia902802.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesofsaints05abari.pdf",
+    "size": 21702620,
+    "md5": "b0b007a277201984e603453201a10257",
+    "sha1": "76a2190f418788c6ec019c2066a71813f0c8a776"
+   },
+   "pageImagesBytes": 415071398
+  },
+  "livesofsaints06bari": {
+   "title": "The lives of the saints",
+   "creator": "Baring-Gould, S. (Sabine), 1834-1924",
+   "date": "1897",
+   "restricted": false,
+   "servers": [
+    "ia600403.us.archive.org",
+    "ia800403.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesofsaints06bari.pdf",
+    "size": 25721920,
+    "md5": "9949c568dc74bb2a9ec8d158c32f2207",
+    "sha1": "45851112d6bb825743f0b8ff9072b933db0bf146"
+   },
+   "pageImagesBytes": 492856470
+  },
+  "livesofsaints10abari": {
+   "title": "The lives of the saints",
+   "creator": "Baring-Gould, S. (Sabine), 1834-1924",
+   "date": "1897",
+   "restricted": false,
+   "servers": [
+    "ia601905.us.archive.org",
+    "ia801905.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesofsaints10abari.pdf",
+    "size": 22911844,
+    "md5": "efd7c9870a0d13333dcbbbc5278133b2",
+    "sha1": "4f69fec3cd45081771cab9d964efe637b8e3aae9"
+   },
+   "pageImagesBytes": 458052788
+  },
+  "livesofsaints14abari": {
+   "title": "The lives of the saints",
+   "creator": "Baring-Gould, S. (Sabine), 1834-1924",
+   "date": "1897",
+   "restricted": false,
+   "servers": [
+    "ia803207.us.archive.org",
+    "ia903207.us.archive.org"
+   ],
+   "pdf": {
+    "name": "livesofsaints14abari.pdf",
+    "size": 17341379,
+    "md5": "6e2a2b13698978280aed9a71e65edc9a",
+    "sha1": "ebea2e98fe6fa3b786f9aeef814d43f23da4c6a8"
+   },
+   "pageImagesBytes": 321097151
+  },
+  "meditationsforev00nepvuoft": {
+   "title": "Meditations for every day in the month",
+   "creator": "Nepveu, FranÃ§ois, 1639-1708; Ryan, Francis A. (Francis Aloysius), b. 1887",
+   "date": "c1911",
+   "restricted": false,
+   "servers": [
+    "ia600106.us.archive.org",
+    "ia800106.us.archive.org"
+   ],
+   "pdf": {
+    "name": "meditationsforev00nepvuoft.pdf",
+    "size": 9705593,
+    "md5": "408669cb612f4cb20975d28ba7131168",
+    "sha1": "c4e407e55e59267168eed54cb32460048e8a0915"
+   },
+   "pageImagesBytes": 758311541
+  },
+  "moldersofmedieva00cass": {
+   "title": "Molders of the medieval mind; the influence of the fathers of the church on the medieval schoolmen",
+   "creator": "Cassidy, Francis Patrick, 1895-",
+   "date": "1944",
+   "restricted": false,
+   "servers": [
+    "ia600107.us.archive.org",
+    "ia800107.us.archive.org"
+   ],
+   "pdf": {
+    "name": "moldersofmedieva00cass.pdf",
+    "size": 12343181,
+    "md5": "edb197dc7846d9c8edfbd80f32ffc340",
+    "sha1": "6b940321c3c3d4b366615ea1a39d0b6d1299d2f4"
+   },
+   "pageImagesBytes": 488362366
+  },
+  "mysteryofiniquit00furf": {
+   "title": "The mystery of iniquity",
+   "creator": "Furfey, Paul Hanly, 1896-1992",
+   "date": "1945",
+   "restricted": false,
+   "servers": [
+    "ia601907.us.archive.org",
+    "ia801907.us.archive.org"
+   ],
+   "pdf": {
+    "name": "mysteryofiniquit00furf.pdf",
+    "size": 15452214,
+    "md5": "f94dc16669d56076a5a8e62cb8e4490f",
+    "sha1": "38df0e4a40a8d08a4aacc8f8778484cfbadbea9e"
+   },
+   "pageImagesBytes": 556692411
+  },
+  "newcatholicdicti0000cond": {
+   "title": "The New Catholic dictionary : a complete work of reference on every subject in the life, belief, tradition, rites, symbolism, devotions, history, biography, laws, dioceses, missions, centers, institutions, organizations, statistics of the church and her part in promoting science, art, education, social welfare, morals and civilization",
+   "creator": "Pallen, Condé Bénoist, 1858-1929; Wynne, John J. (John Joseph), 1859-1948",
+   "date": "1929",
+   "restricted": false,
+   "servers": [
+    "ia601506.us.archive.org",
+    "ia801506.us.archive.org"
+   ],
+   "pdf": {
+    "name": "newcatholicdicti0000cond_jpg.pdf",
+    "size": 251989268,
+    "md5": "951a4bef251af3d36e958532dd9daf38",
+    "sha1": "dfe2be8dfe07bc133a08fdefead1cfd796f5af78"
+   },
+   "pageImagesBytes": 8150477958
+  },
+  "orthodoxy0000gilb": {
+   "title": "orthodoxy ",
+   "creator": "gilberrt k. chesterton",
+   "date": "1908",
+   "restricted": false,
+   "servers": [
+    "ia601406.us.archive.org",
+    "ia801406.us.archive.org"
+   ],
+   "pdf": {
+    "name": "orthodoxy0000gilb.pdf",
+    "size": 10842442,
+    "md5": "0639b0113c51fcd61e895dc9b8810cb0",
+    "sha1": "110f6fcf414616b3a31a13a639f8b78a28ab1a4e"
+   },
+   "pageImagesBytes": 749350925
+  },
+  "orthodoxy1909ches": {
+   "title": "Orthodoxy",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+   "date": "1909",
+   "restricted": false,
+   "servers": [
+    "ia803104.us.archive.org",
+    "ia903104.us.archive.org"
+   ],
+   "pdf": {
+    "name": "orthodoxy1909ches.pdf",
+    "size": 13761905,
+    "md5": "c1eae979b0f83a667866bcc9e8626139",
+    "sha1": "fbceee14c7834884dfd312671fb923cf2f93bfbc"
+   },
+   "pageImagesBytes": 392543357
+  },
+  "outlineofsanity0000ches": {
+   "title": "The outline of sanity",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+   "date": "1927",
+   "restricted": false,
+   "servers": [
+    "ia601009.us.archive.org",
+    "ia801009.us.archive.org"
+   ],
+   "pdf": {
+    "name": "outlineofsanity0000ches.pdf",
+    "size": 10355011,
+    "md5": "363e495f93ce6da94683c0ab699c9256",
+    "sha1": "4dbf48021bc3274e06955bf0d1f4c37989c0b116"
+   },
+   "pageImagesBytes": 491754062
+  },
+  "pictoriallives00unknuoft": {
+   "title": "Pictorial lives of the saints : with reflections for every day of the year : compiled from \"Butler's lives\" and other approved sources : to which are added lives of the American saints",
+   "creator": "Shea, John Gilmary, 1824-1892",
+   "date": "1887",
+   "restricted": false,
+   "servers": [
+    "ia601600.us.archive.org",
+    "ia801600.us.archive.org"
+   ],
+   "pdf": {
+    "name": "pictoriallives00unknuoft.pdf",
+    "size": 75254493,
+    "md5": "91ff27205c8d9abd011cc4486d264656",
+    "sha1": "9d493d5196930ffe01ce67f734351453628afdb0"
+   },
+   "pageImagesBytes": 2039154904
+  },
+  "poetlunaticsepis0000ches_c9m9": {
+   "title": "The poet and the lunatics, episodes in the life of Gabriel Gale ",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+   "date": "1929",
+   "restricted": false,
+   "servers": [
+    "ia600109.us.archive.org",
+    "ia800109.us.archive.org"
+   ],
+   "pdf": {
+    "name": "poetlunaticsepis0000ches_c9m9.pdf",
+    "size": 9356214,
+    "md5": "e6c4cd68341b7da44545faec6479b138",
+    "sha1": "e213847f516d9f5d1973e9d0568cc5e93f44e5d9"
+   },
+   "pageImagesBytes": 461724775
+  },
+  "prayer00moor": {
+   "title": "Prayer",
+   "creator": "Moore, Thomas Verner, 1877-1969",
+   "date": "1931",
+   "restricted": false,
+   "servers": [
+    "ia600800.us.archive.org",
+    "ia800800.us.archive.org"
+   ],
+   "pdf": {
+    "name": "prayer00moor.pdf",
+    "size": 10830269,
+    "md5": "243ea45e3f4f491666fc19a2a2be719a",
+    "sha1": "e6da8a7ed1d3abcf4269f707e417c342f0ca5afc"
+   },
+   "pageImagesBytes": 455291925
+  },
+  "queenofsevenswor0000ches": {
+   "title": "The queen of seven swords",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+   "date": "1926",
+   "restricted": false,
+   "servers": [
+    "ia600800.us.archive.org",
+    "ia800800.us.archive.org"
+   ],
+   "pdf": {
+    "name": "queenofsevenswor0000ches.pdf",
+    "size": 2463517,
+    "md5": "c0a6fd6c8ed7f83b63ffde644a496985",
+    "sha1": "fe12be1883c0639a25bc5e15c0c35f65f74e5fe3"
+   },
+   "pageImagesBytes": 116356667
+  },
+  "resurrectionofro0000gilb": {
+   "title": "The Resurrection Of Rome",
+   "creator": "G. K. Chesterton",
+   "date": "1930",
+   "restricted": false,
+   "servers": [
+    "ia803209.us.archive.org",
+    "ia903209.us.archive.org"
+   ],
+   "pdf": {
+    "name": "resurrectionofro0000gilb.pdf",
+    "size": 12960888,
+    "md5": "02f84e90db5861af7c37aa4256435fbd",
+    "sha1": "35b81ec0a062a126bcca8af07df5e05e08ff1000"
+   },
+   "pageImagesBytes": 649288655
+  },
+  "returnofdonquixo0000ches_i3m2": {
+   "title": "The return of Don Quixote",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+   "date": "1927",
+   "restricted": false,
+   "servers": [
+    "ia600806.us.archive.org",
+    "ia800806.us.archive.org"
+   ],
+   "pdf": {
+    "name": "returnofdonquixo0000ches_i3m2.pdf",
+    "size": 11948554,
+    "md5": "e1d4b8ea6a82289e686ee371e167c475",
+    "sha1": "df5629e3277c70b73ef6b946cde6b1ef2160304a"
+   },
+   "pageImagesBytes": 660944422
+  },
+  "rightswrongsinin00haas": {
+   "title": "Rights and wrongs in industry : Catholic doctrine on industrial problems",
+   "creator": "Haas, Francis J. (Francis Joseph), 1889-1953",
+   "date": "1933",
+   "restricted": false,
+   "servers": [
+    "ia600108.us.archive.org",
+    "ia800108.us.archive.org"
+   ],
+   "pdf": {
+    "name": "rightswrongsinin00haas.pdf",
+    "size": 4317818,
+    "md5": "1d54009a3452edcb0fd4ad56b9e48acf",
+    "sha1": "b5d4412b1de90bb27fc73ada13360385f99910a6"
+   },
+   "pageImagesBytes": 91687168
+  },
+  "robertlouisstev00nicogoog": {
+   "title": "Robert Louis Stevenson",
+   "creator": "Nicoll, W. Robertson (William Robertson), Sir, 1851-1923; Chesterton, G. K. (Gilbert Keith), 1874-1936",
+   "date": "1902",
+   "restricted": false,
+   "servers": [
+    "ia600106.us.archive.org",
+    "ia800106.us.archive.org"
+   ],
+   "pdf": {
+    "name": "robertlouisstev00nicogoog.pdf",
+    "size": 559150,
+    "md5": "52ffa1c066d111d1b522cf7779dcd71b",
+    "sha1": "d227daf2e9a922dfb37db8f74f7d4fb9e3113780"
+   },
+   "pageImagesBytes": 6680934
+  },
+  "robertlouissteve0000ches": {
+   "title": "Robert Louis Stevenson",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+   "date": "1927",
+   "restricted": false,
+   "servers": [
+    "ia600502.us.archive.org",
+    "ia800502.us.archive.org"
+   ],
+   "pdf": {
+    "name": "robertlouissteve0000ches.pdf",
+    "size": 9689544,
+    "md5": "bc75d88a8ae825141b8b43e342ce38db",
+    "sha1": "ad20dfb4dc96979e85d5d413562171b0322545f7"
+   },
+   "pageImagesBytes": 768270262
+  },
+  "romanmartyrology00cath": {
+   "title": "The Roman martyrology",
+   "creator": "Catholic Church. Liturgy and ritual",
+   "date": "1897",
+   "restricted": false,
+   "servers": [
+    "ia600108.us.archive.org",
+    "ia800108.us.archive.org"
+   ],
+   "pdf": {
+    "name": "romanmartyrology00cath.pdf",
+    "size": 30247266,
+    "md5": "06e9b1363afa3654e9ae5fb813a553ac",
+    "sha1": "6863546d5d230bdd8b565657bf7823d4c5e2b655"
+   },
+   "pageImagesBytes": 682474616
+  },
+  "sacredlegendaryar02jame": {
+   "title": "Sacred and legendary art",
+   "creator": "Jameson, Mrs. (Anna), 1794-1860",
+   "date": "1857",
+   "restricted": false,
+   "servers": [
+    "ia600408.us.archive.org",
+    "ia800408.us.archive.org"
+   ],
+   "pdf": {
+    "name": "sacredlegendaryar02jame.pdf",
+    "size": 20660863,
+    "md5": "76c7601bcaa89c404776f855cd2f8ccf",
+    "sha1": "8d503419d61e5a91a24032bb87a33d89e1b2949a"
+   },
+   "pageImagesBytes": 359920271
+  },
+  "saintlywomen01dunbuoft": {
+   "title": "A dictionary of saintly women",
+   "creator": "Dunbar, Agnes Baillie Cunninghame, 1830-1920",
+   "date": "1904-05",
+   "restricted": false,
+   "servers": [
+    "ia601402.us.archive.org",
+    "ia801402.us.archive.org"
+   ],
+   "pdf": {
+    "name": "saintlywomen01dunbuoft.pdf",
+    "size": 70686508,
+    "md5": "5f123a3f104e9eb991ec7d3e0b645ef2",
+    "sha1": "f6f7df25a7fb63dec3afed52365370b7d44e2db8"
+   },
+   "pageImagesBytes": 1840102149
+  },
+  "saintlywomen02dunbuoft": {
+   "title": "A dictionary of saintly women",
+   "creator": "Dunbar, Agnes Baillie Cunninghame, 1830-1920",
+   "date": "1904-05",
+   "restricted": false,
+   "servers": [
+    "ia803207.us.archive.org",
+    "ia903207.us.archive.org"
+   ],
+   "pdf": {
+    "name": "saintlywomen02dunbuoft.pdf",
+    "size": 50004598,
+    "md5": "7249ff2fb9a5175dadf50283f5ad93c2",
+    "sha1": "6204d920a03d6c5faef1445ab21e39a5a0128b44"
+   },
+   "pageImagesBytes": 1310856788
+  },
+  "saintteresaofavi00wals": {
+   "title": "Saint Teresa of Avila, a biography",
+   "creator": "Walsh, William Thomas, 1891-1949",
+   "date": "1943",
+   "restricted": false,
+   "servers": [
+    "ia601502.us.archive.org",
+    "ia801502.us.archive.org"
+   ],
+   "pdf": {
+    "name": "saintteresaofavi00wals.pdf",
+    "size": 51578347,
+    "md5": "c4c9550fc68cd340ec6b1ef3712cf25f",
+    "sha1": "d80be36300986f42f0a7995bc97534d6a0ba02ef"
+   },
+   "pageImagesBytes": 1807599047
+  },
+  "samueljohnson00chesuoft": {
+   "title": "Samuel Johnson",
+   "creator": "Meynell, Alice Christiana Thompson, 1847-1922; Chesterton, G. K. (Gilbert Keith), 1874-1936; Johnson, Samuel, 1709-1784",
+   "date": "1911",
+   "restricted": false,
+   "servers": [
+    "ia803200.us.archive.org",
+    "ia903200.us.archive.org"
+   ],
+   "pdf": {
+    "name": "samueljohnson00chesuoft.pdf",
+    "size": 19969924,
+    "md5": "3694d10d2e494c339f73e5f1382e8ffb",
+    "sha1": "ed4fe20091352503840493028a557c31643b9255"
+   },
+   "pageImagesBytes": 316533910
+  },
+  "schroeder-disciplinary-councils": {
+   "title": "Disciplinary Decrees of the General Councils",
+   "creator": "Schroeder, H.J.",
+   "date": "1937",
+   "restricted": false,
+   "servers": [
+    "ia600406.us.archive.org",
+    "ia800406.us.archive.org"
+   ],
+   "pdf": {
+    "name": "Schroeder Disciplinary Councils.pdf",
+    "size": 52002596,
+    "md5": "cbaac2b18dfff52417ffe8ddcf388e61",
+    "sha1": "9570f2668c96fc648a1e2375e438eeed849b2756"
+   },
+   "pageImagesBytes": 131625674
+  },
+  "selectancientiri00meye": {
+   "title": "Selections from ancient Irish poetry",
+   "creator": "Meyer, Kuno, 1858-1919",
+   "date": "1911",
+   "restricted": false,
+   "servers": [
+    "ia600602.us.archive.org",
+    "ia800602.us.archive.org"
+   ],
+   "pdf": {
+    "name": "selectancientiri00meye.pdf",
+    "size": 4636723,
+    "md5": "391098cdab08037dd3c8305189f36c6b",
+    "sha1": "67847e714c602c0fc346f00e93c9dab4d5a435f1"
+   },
+   "pageImagesBytes": 120588159
+  },
+  "selectlibraryofn0002unse": {
+   "title": "St. Augustin's City of God and Christian doctrine",
+   "creator": "Augustine, of Hippo, Saint, 354-430",
+   "date": "1887",
+   "restricted": false,
+   "servers": [
+    "ia802801.us.archive.org",
+    "ia902801.us.archive.org"
+   ],
+   "pdf": {
+    "name": "selectlibraryofn0002unse.pdf",
+    "size": 66732060,
+    "md5": "14062346460bd3174669184b58f56726",
+    "sha1": "f491fc231d99d7ce729689d60e6df9d7c0a19e5f"
+   },
+   "pageImagesBytes": 1505758626
+  },
+  "seraphicvirginca00cathuoft": {
+   "title": "The dialogue of the seraphic virgin Catherine of Siena",
+   "creator": "Catherine, of Siena, Saint, 1347-1380; Thorold, Algar Labouchere, 1866-1936",
+   "date": "1896",
+   "restricted": false,
+   "servers": [
+    "ia803206.us.archive.org",
+    "ia903206.us.archive.org"
+   ],
+   "pdf": {
+    "name": "seraphicvirginca00cathuoft.pdf",
+    "size": 21684604,
+    "md5": "fc10441a4ec4d5467f8b7c4fa67e553c",
+    "sha1": "d8106aa57e69c0e0d1df4c958ad99e3e68ab6bd1"
+   },
+   "pageImagesBytes": 1400492003
+  },
+  "sevenecumenicalc00perc": {
+   "title": "The Seven ecumenical councils of the undivided church : their canons and dogmatic decrees, together with the canons of all the local synods which have received ecumenical acceptance",
+   "creator": "Percival, Henry R, (Henry Robert), 1854-1903",
+   "date": "1900",
+   "restricted": false,
+   "servers": [
+    "ia600806.us.archive.org",
+    "ia800806.us.archive.org"
+   ],
+   "pdf": {
+    "name": "sevenecumenicalc00perc.pdf",
+    "size": 74242848,
+    "md5": "cbcbeffb18eed8ff84eff844e9fe1aee",
+    "sha1": "bbfdf912418e3f85f753340d3ee36672d44452b1"
+   },
+   "pageImagesBytes": 1494877849
+  },
+  "shilling191600chesuoft": {
+   "title": "A shilling for my thoughts : being a selection from the essays, stories, and other writings of..... -  1916",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936; Lucas, E. V. (Edward Verrall), 1868-1938",
+   "date": "1916",
+   "restricted": false,
+   "servers": [
+    "ia802805.us.archive.org",
+    "ia902805.us.archive.org"
+   ],
+   "pdf": {
+    "name": "shilling191600chesuoft.pdf",
+    "size": 17588837,
+    "md5": "4f1a72d62e5bf5f6503270e15a2abeae",
+    "sha1": "04317c5e8aa306dbce95eaffc96967afb5685ae2"
+   },
+   "pageImagesBytes": 316393623
+  },
+  "simplicitytolsto00chesuoft": {
+   "title": "Simplicity and Tolstoy",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+   "date": "1912",
+   "restricted": false,
+   "servers": [
+    "ia600900.us.archive.org",
+    "ia800900.us.archive.org"
+   ],
+   "pdf": {
+    "name": "simplicitytolsto00chesuoft.pdf",
+    "size": 4505863,
+    "md5": "8526674a3a51fd9893605166a24e2948",
+    "sha1": "ceb339a8372a7a15f9e20dd2d1fc6adedeeca482"
+   },
+   "pageImagesBytes": 74617981
+  },
+  "stanthonyofpadua00hube": {
+   "title": "St. Anthony of Padua, Doctor of the Church Universal; a critical study of the historical sources of the life, sanctity, learning, and miracles of the Saint of Padua and Lisbon",
+   "creator": "Huber, Raphael M. (Raphael Mary), 1883-1963",
+   "date": "1948",
+   "restricted": false,
+   "servers": [
+    "ia600103.us.archive.org",
+    "ia800103.us.archive.org"
+   ],
+   "pdf": {
+    "name": "stanthonyofpadua00hube.pdf",
+    "size": 16276242,
+    "md5": "d542c6724f8f9e4e3f06882144105734",
+    "sha1": "b20a652f6d9313863876fbbabfd609dac1954abd"
+   },
+   "pageImagesBytes": 512531990
+  },
+  "summatheologi18thom": {
+   "title": "The \"Summa theologica\" of St. Thomas Aquinas",
+   "creator": "Thomas, Aquinas, Saint, 1225?-1274",
+   "date": "1912",
+   "restricted": false,
+   "servers": [
+    "ia600905.us.archive.org",
+    "ia800905.us.archive.org"
+   ],
+   "pdf": {
+    "name": "summatheologi18thom.pdf",
+    "size": 30521687,
+    "md5": "a868bc616b866e9d8a6df729d60afa2f",
+    "sha1": "691bc9dedfea56dc4ec642216183ef782a14cc90"
+   },
+   "pageImagesBytes": 513717540
+  },
+  "summatheologi19thom": {
+   "title": "The \"Summa theologica\" of St. Thomas Aquinas",
+   "creator": "Thomas, Aquinas, Saint, 1225?-1274",
+   "date": "1912",
+   "restricted": false,
+   "servers": [
+    "ia601003.us.archive.org",
+    "ia801003.us.archive.org"
+   ],
+   "pdf": {
+    "name": "summatheologi19thom.pdf",
+    "size": 31695397,
+    "md5": "d38c182d8be56d0e7b4fbfe3807c8ff7",
+    "sha1": "0bd1ab67201b4422a858cc0dfb49c3cf1effb272"
+   },
+   "pageImagesBytes": 587046812
+  },
+  "summatheologi20thom": {
+   "title": "The \"Summa theologica\" of St. Thomas Aquinas",
+   "creator": "Thomas, Aquinas, Saint, 1225?-1274",
+   "date": "1912",
+   "restricted": false,
+   "servers": [
+    "ia600409.us.archive.org",
+    "ia800409.us.archive.org"
+   ],
+   "pdf": {
+    "name": "summatheologi20thom.pdf",
+    "size": 22406180,
+    "md5": "5fd4280fe1b65abbfdab4c995fe1d2ea",
+    "sha1": "82fc821ebde575b91141ac23ecb60b37e1963d14"
+   },
+   "pageImagesBytes": 527757077
+  },
+  "summatheologicao0000unse_f4n0": {
+   "title": "The Summa Theologica of St. Thomas Aquinas Third Part (Supplement) ",
+   "creator": "various",
+   "date": "1922",
+   "restricted": false,
+   "servers": [
+    "ia803204.us.archive.org",
+    "ia903204.us.archive.org"
+   ],
+   "pdf": {
+    "name": "summatheologicao0000unse_f4n0.pdf",
+    "size": 13018602,
+    "md5": "73f0ba26bae8599d553e914be54c399b",
+    "sha1": "68f7b25144e650c5ace07d5d6ad30f431aada0c1"
+   },
+   "pageImagesBytes": 524513412
+  },
+  "summatheologicao0020thom_q5p9": {
+   "title": "The \"Summa Theologica\" of St. Thomas Aquinas ",
+   "creator": "Thomas, Aquinas, Saint, 1225?-1274",
+   "date": "1912",
+   "restricted": false,
+   "servers": [
+    "ia601409.us.archive.org",
+    "ia801409.us.archive.org"
+   ],
+   "pdf": {
+    "name": "summatheologicao0020thom_q5p9.pdf",
+    "size": 13548141,
+    "md5": "14a6aa3a97978a6a955f2bfb590cc50d",
+    "sha1": "098016938d90426dd2a6b9d650e095819c0cdd28"
+   },
+   "pageImagesBytes": 383404933
+  },
+  "superstitionsofs0000unse_q9f6": {
+   "title": "The Superstitions of the Sceptic. With a Corresponence between the Author and Mr G. G. Coulton. (I.D.C. Club Booklets, 1)",
+   "creator": "Gilbert K. Chesterton",
+   "date": "1925",
+   "restricted": false,
+   "servers": [
+    "ia601801.us.archive.org",
+    "ia801801.us.archive.org"
+   ],
+   "pdf": {
+    "name": "superstitionsofs0000unse_q9f6.pdf",
+    "size": 2677400,
+    "md5": "b1ec5a7f314ed90a00d6f2e81ece47bb",
+    "sha1": "52d753befa04c37d718dec9f2794e452c4f0690b"
+   },
+   "pageImagesBytes": 141047566
+  },
+  "thecrownofsorrow00gooduoft": {
+   "title": "The crown of sorrow : quadragesima : meditatins on the Passion of Our Lord, together with a harmony on the Passion",
+   "creator": "Goodier, Alban, 1869-1939",
+   "date": "1918",
+   "restricted": false,
+   "servers": [
+    "ia600406.us.archive.org",
+    "ia800406.us.archive.org"
+   ],
+   "pdf": {
+    "name": "thecrownofsorrow00gooduoft.pdf",
+    "size": 8547626,
+    "md5": "8456bb610fbc9831387bf692f34b2a76",
+    "sha1": "fada3736f667efc4473129fda42179e8278c9b1c"
+   },
+   "pageImagesBytes": 588978756
+  },
+  "thegoldenlegendvol1_202609": {
+   "title": "The Golden Legend or Lives of the Saints, as englished by William Caxton",
+   "creator": "William Caxton, c. 1415 – c. 1492; Ellis, Frederick Startridge, 1830-1901",
+   "date": "1900",
+   "restricted": false,
+   "servers": [
+    "ia600600.us.archive.org",
+    "ia800600.us.archive.org"
+   ],
+   "pdf": {
+    "name": "thegoldenlegendvol1.pdf",
+    "size": 7497868,
+    "md5": "78c5ddcf633e33932c8cb41ec7058f37",
+    "sha1": "5cb1bc1ffe96d8aa895fbec0ac5cbe8768132a4f"
+   },
+   "pageImagesBytes": 250526931
+  },
+  "theholyangels00okenuoft": {
+   "title": "The holy angels",
+   "creator": "O'Kennedy, Richard, 1850-",
+   "date": "1887",
+   "restricted": false,
+   "servers": [
+    "ia600904.us.archive.org",
+    "ia800904.us.archive.org"
+   ],
+   "pdf": {
+    "name": "theholyangels00okenuoft.pdf",
+    "size": 12772970,
+    "md5": "696dae4f969aaa57619cb3509055f361",
+    "sha1": "4530a3f14fbbf3b28048885e71aabf5b9eba0308"
+   },
+   "pageImagesBytes": 1075837005
+  },
+  "thelegendsofthesa00deleuoft": {
+   "title": "The legends of the saints : an introduction to hagiography",
+   "creator": "Delehaye, Hippolyte, 1859-1941",
+   "date": "1907",
+   "restricted": false,
+   "servers": [
+    "ia600604.us.archive.org",
+    "ia800604.us.archive.org"
+   ],
+   "pdf": {
+    "name": "thelegendsofthesa00deleuoft.pdf",
+    "size": 17766978,
+    "md5": "b2e8a1c5dc98396367761603e1fe0512",
+    "sha1": "2585146e105ac8c9b392ad3a9a5889bc7b7397e1"
+   },
+   "pageImagesBytes": 1008392781
+  },
+  "themasss00yorkuoft": {
+   "title": "The Mass",
+   "creator": "Yorke, P. C. (Peter Christopher), 1864-1925",
+   "date": "1921",
+   "restricted": false,
+   "servers": [
+    "ia600903.us.archive.org",
+    "ia800903.us.archive.org"
+   ],
+   "pdf": {
+    "name": "themasss00yorkuoft.pdf",
+    "size": 15941368,
+    "md5": "95d18fb67a3c5a6555e6fdf9062814c5",
+    "sha1": "727e6d1da66d28b47373ceaba126b90bb69b4068"
+   },
+   "pageImagesBytes": 1104407066
+  },
+  "thingwhyiamcatho00ches_0": {
+   "title": "The thing; why I am a Catholic",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+   "date": "1930",
+   "restricted": false,
+   "servers": [
+    "ia600804.us.archive.org",
+    "ia800804.us.archive.org"
+   ],
+   "pdf": {
+    "name": "thingwhyiamcatho00ches_0.pdf",
+    "size": 45899267,
+    "md5": "f53a1c9b36f621cc8cfcd1354b4c5084",
+    "sha1": "52cc45984327a94e6c7302feca03a778066f46cd"
+   },
+   "pageImagesBytes": 583526268
+  },
+  "translationsfro00thacgoog": {
+   "title": "Estudio práctico sobre el culivo [!] del café",
+   "creator": "Cuevas, Hilario. [from old catalog]",
+   "date": "1895",
+   "restricted": false,
+   "servers": [
+    "ia600909.us.archive.org",
+    "ia800909.us.archive.org"
+   ],
+   "pdf": {
+    "name": "translationsfro00thacgoog.pdf",
+    "size": 3799319,
+    "md5": "3a74f04072333de95515c06aff904331",
+    "sha1": "340e80c1d776f95b1d24c024a4b3813eefbacd25"
+   },
+   "pageImagesBytes": 0
+  },
+  "williamcobbett0000unse": {
+   "title": "William Cobbett",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
+   "date": "1925",
+   "restricted": false,
+   "servers": [
+    "ia601903.us.archive.org",
+    "ia801903.us.archive.org"
+   ],
+   "pdf": {
+    "name": "williamcobbett0000unse.pdf",
+    "size": 9443340,
+    "md5": "2329a3a76493793b2146f4e3088318d2",
+    "sha1": "96440df1d355e99e1300d858cfabf2a533a52aa6"
+   },
+   "pageImagesBytes": 426836671
+  },
+  "witwisdomofgkche00ches": {
+   "title": "Wit and wisdom of G. K. Chesterton ..",
+   "creator": "Chesterton, G. K. (Gilbert Keith), 1874-1936; Chesterton, Frances, 1869-1938",
+   "date": "1911",
+   "restricted": false,
+   "servers": [
+    "ia802807.us.archive.org",
+    "ia902807.us.archive.org"
+   ],
+   "pdf": {
+    "name": "witwisdomofgkche00ches.pdf",
+    "size": 4007309,
+    "md5": "53fb6238fd5f7bd86360c5dea88a431b",
+    "sha1": "1a950476d87dce7cf845ee1c864f275197359a27"
+   },
+   "pageImagesBytes": 142889777
+  },
+  "worldsdebttocath0000wals": {
+   "title": "The world's debt to the Catholic Church",
+   "creator": "Walsh, James J. (James Joseph), 1865-1942",
+   "date": "1924",
+   "restricted": false,
+   "servers": [
+    "ia601904.us.archive.org",
+    "ia801904.us.archive.org"
+   ],
+   "pdf": {
+    "name": "worldsdebttocath0000wals.pdf",
+    "size": 13704481,
+    "md5": "b6ec0163f69eb1e35ba4c43ca9e2daf3",
+    "sha1": "f61592c44473e9e21fb25183c80d6349a35f145a"
+   },
+   "pageImagesBytes": 515381377
+  }
+ }
+}

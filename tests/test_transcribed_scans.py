@@ -318,6 +318,8 @@ class ReadGateProcess(unittest.TestCase):
         T.check_omitted(e)
         self.assertEqual(T.omitted_sentence(e), ' Left out of this text: the index (pages 205-209); read them in the full scan at '
                                                 'https://archive.org/details/scanid.')
+        two = dict(e, omitted=[{'what': 'the bibliography', 'leaves': [221, 221], 'pages': '181-188'}, {'what': 'the index', 'leaves': [222, 226], 'pages': '189-194'}])
+        self.assertIn('the bibliography (pages 181-188) and the index (pages 189-194); read', T.omitted_sentence(two))  # no comma for two
         with self.assertRaises(AssertionError):
             T.check_omitted({'edition': 'z', 'lastLeaf': 220, 'omitted': [{'what': 'chapter one', 'leaves': [30, 40], 'pages': '1-10'}]})
 

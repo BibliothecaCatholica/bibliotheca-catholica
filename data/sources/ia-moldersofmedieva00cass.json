@@ -1,0 +1,1527 @@
+{
+  "id": "ia-moldersofmedieva00cass",
+  "kind": "ocr-transcription",
+  "title": "Molders of the Medieval Mind",
+  "author": "Francis P. Cassidy",
+  "rights": "Public domain in the USA. First published in the United States in 1944 and not renewed; the evidence is in nonRenewal.",
+  "rightsBasis": "pd-nonrenewal",
+  "nonRenewal": {
+    "firstPublicationYear": 1944,
+    "firstPublicationCountry": "US",
+    "firstPublicationPlace": "St. Louis",
+    "firstPublicationPublisher": "B. Herder Book Co.",
+    "stanford": {
+      "result": "no renewal found",
+      "checked": "2026-11-16",
+      "method": "one plain curl query (title words and surname), default user agent"
+    },
+    "nypl": {
+      "result": "no renewal found",
+      "checked": "2026-11-16",
+      "method": "NYPL cce-renewals data"
+    },
+    "hathitrust": "pdus",
+    "hathitrustRecord": "pdus (uiug.30112124389443)",
+    "uraa": "Imprint names St. Louis and B. Herder's London office (33 Queen Square); the copyright page says Printed in U.S.A. No earlier London edition is indicated, so US publication was at least simultaneous, which excludes URAA restoration (17 USC 104A(h)(6)(D)); reading approved with PR #53.",
+    "scan": "moldersofmedieva00cass",
+    "research": "docs/research/us-pd-renewal-checks-2026-11.csv"
+  },
+  "volumes": [
+    {
+      "identifier": "moldersofmedieva00cass",
+      "url": "https://archive.org/details/moldersofmedieva00cass",
+      "year": 1944,
+      "publisher": "St. Louis, Mo. : and London, B. Herder book co.",
+      "ocr": "moldersofmedieva00cass_djvu.xml",
+      "ocrSha256": "4114b4e8e124d867c3d2942068f3cff79a88424f1ad55a48396c7f2415dd0ef7",
+      "leaves": [
+        4,
+        191
+      ],
+      "secondOcr": {
+        "engine": "tesseract 5.3.4",
+        "langs": "eng+lat+ita",
+        "scale": 1,
+        "lineChoices": {
+          "archive.org": 5577,
+          "tesseract": 79
+        }
+      }
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed. 100 misreadings corrected by hand against the page images of this scan, each listed in handFixes; no wording was taken from another edition. 38 words the vocabulary does not know (names, Latin, and foreign titles) were checked by hand against the page images and are listed in verifiedWords. A second OCR (tesseract 5.3.4, eng+lat+ita) was run on the scan's page images and its reading taken for a line only where it read more words (79 of 5656 lines).",
+  "words": 41563,
+  "unknownWords": 170,
+  "readRate": 0.9959,
+  "flaggedBlocks": 118,
+  "flagged": [
+    {
+      "block": 15,
+      "words": [
+        "Curley",
+        "Baltimorensis-",
+        "Washingtonensis"
+      ]
+    },
+    {
+      "block": 22,
+      "words": [
+        "altkirchlichen",
+        "Litteratur"
+      ]
+    },
+    {
+      "block": 26,
+      "words": [
+        "Cassidy"
+      ]
+    },
+    {
+      "block": 61,
+      "words": [
+        "2Taurie,"
+      ]
+    },
+    {
+      "block": 64,
+      "words": [
+        "praetexta",
+        "virilis,"
+      ]
+    },
+    {
+      "block": 66,
+      "words": [
+        "Livius"
+      ]
+    },
+    {
+      "block": 67,
+      "words": [
+        "Judi"
+      ]
+    },
+    {
+      "block": 68,
+      "words": [
+        "Dictionnaire",
+        "liturgie,"
+      ]
+    },
+    {
+      "block": 72,
+      "words": [
+        "unimprovable"
+      ]
+    },
+    {
+      "block": 73,
+      "words": [
+        "educandis,",
+        "Graecia",
+        "ferum",
+        "victorem"
+      ]
+    },
+    {
+      "block": 77,
+      "words": [
+        "/udus",
+        "litterator;",
+        "the*rbetores."
+      ]
+    },
+    {
+      "block": 78,
+      "words": [
+        "abacus;"
+      ]
+    },
+    {
+      "block": 79,
+      "words": [
+        "ft."
+      ]
+    },
+    {
+      "block": 80,
+      "words": [
+        "Jitterator"
+      ]
+    },
+    {
+      "block": 81,
+      "words": [
+        "/itterator,"
+      ]
+    },
+    {
+      "block": 93,
+      "words": [
+        "oratoria.",
+        "grammaticis",
+        "rhbetoricis;"
+      ]
+    },
+    {
+      "block": 94,
+      "words": [
+        "Abelson",
+        "Liberalium",
+        "Abelson,"
+      ]
+    },
+    {
+      "block": 97,
+      "words": [
+        "subsidized",
+        "ids;"
+      ]
+    },
+    {
+      "block": 109,
+      "words": [
+        "1Shahan,"
+      ]
+    },
+    {
+      "block": 111,
+      "words": [
+        "Graeco-"
+      ]
+    },
+    {
+      "block": 132,
+      "words": [
+        "Marique,"
+      ]
+    },
+    {
+      "block": 134,
+      "words": [
+        "apperception"
+      ]
+    },
+    {
+      "block": 149,
+      "words": [
+        "pedagogia",
+        "perennis"
+      ]
+    },
+    {
+      "block": 156,
+      "words": [
+        "ity;"
+      ]
+    },
+    {
+      "block": 159,
+      "words": [
+        "Katechumenklassen,”’",
+        "Theologische",
+        "Quartalschrift,"
+      ]
+    },
+    {
+      "block": 162,
+      "words": [
+        "insufflation,"
+      ]
+    },
+    {
+      "block": 170,
+      "words": [
+        "Fuerst,"
+      ]
+    },
+    {
+      "block": 173,
+      "words": [
+        "Cubberly,"
+      ]
+    },
+    {
+      "block": 176,
+      "words": [
+        "philus,",
+        "Melchion,"
+      ]
+    },
+    {
+      "block": 192,
+      "words": [
+        "Tarpho,"
+      ]
+    },
+    {
+      "block": 207,
+      "words": [
+        "encyclopedic"
+      ]
+    },
+    {
+      "block": 208,
+      "words": [
+        "Paedagogus,"
+      ]
+    },
+    {
+      "block": 209,
+      "words": [
+        "anthologies??",
+        "Sarapeion,"
+      ]
+    },
+    {
+      "block": 222,
+      "words": [
+        "Saccas,"
+      ]
+    },
+    {
+      "block": 223,
+      "words": [
+        "exege-"
+      ]
+    },
+    {
+      "block": 228,
+      "words": [
+        "Guyon.””"
+      ]
+    },
+    {
+      "block": 230,
+      "words": [
+        "Phocalia,"
+      ]
+    },
+    {
+      "block": 237,
+      "words": [
+        "redactions"
+      ]
+    },
+    {
+      "block": 247,
+      "words": [
+        "homoiousios,"
+      ]
+    },
+    {
+      "block": 250,
+      "words": [
+        "sidé"
+      ]
+    },
+    {
+      "block": 253,
+      "words": [
+        "procatechesis,"
+      ]
+    },
+    {
+      "block": 254,
+      "words": [
+        "procatechesis"
+      ]
+    },
+    {
+      "block": 264,
+      "words": [
+        "Dianius,"
+      ]
+    },
+    {
+      "block": 267,
+      "words": [
+        "Pontic"
+      ]
+    },
+    {
+      "block": 271,
+      "words": [
+        "Basilu",
+        "Cappadociae"
+      ]
+    },
+    {
+      "block": 277,
+      "words": [
+        "Maloney,"
+      ]
+    },
+    {
+      "block": 281,
+      "words": [
+        "catechetica"
+      ]
+    },
+    {
+      "block": 285,
+      "words": [
+        "Srawley,"
+      ]
+    },
+    {
+      "block": 293,
+      "words": [
+        "Proaeresius,",
+        "Himertus.®"
+      ]
+    },
+    {
+      "block": 298,
+      "words": [
+        "Arianzum,"
+      ]
+    },
+    {
+      "block": 299,
+      "words": [
+        "ncnesned"
+      ]
+    },
+    {
+      "block": 300,
+      "words": [
+        "sacerdotio"
+      ]
+    },
+    {
+      "block": 301,
+      "words": [
+        "Julianum",
+        "Inperatorem,"
+      ]
+    },
+    {
+      "block": 306,
+      "words": [
+        "invectivae."
+      ]
+    },
+    {
+      "block": 308,
+      "words": [
+        "sacerdotio.“"
+      ]
+    },
+    {
+      "block": 311,
+      "words": [
+        "ic7t.,"
+      ]
+    },
+    {
+      "block": 315,
+      "words": [
+        "sacerdotio,"
+      ]
+    },
+    {
+      "block": 320,
+      "words": [
+        "Eucharistiae."
+      ]
+    },
+    {
+      "block": 321,
+      "words": [
+        "educandis.",
+        "Combesis"
+      ]
+    },
+    {
+      "block": 323,
+      "words": [
+        "Upcott,"
+      ]
+    },
+    {
+      "block": 329,
+      "words": [
+        "sedulity,"
+      ]
+    },
+    {
+      "block": 336,
+      "words": [
+        "monasticae;"
+      ]
+    },
+    {
+      "block": 337,
+      "words": [
+        "tangibly."
+      ]
+    },
+    {
+      "block": 341,
+      "words": [
+        "florilegia"
+      ]
+    },
+    {
+      "block": 345,
+      "words": [
+        "Aeropagite,"
+      ]
+    },
+    {
+      "block": 349,
+      "words": [
+        "Christianize"
+      ]
+    },
+    {
+      "block": 350,
+      "words": [
+        "Saracenus",
+        "Darboy,"
+      ]
+    },
+    {
+      "block": 352,
+      "words": [
+        "Panarion"
+      ]
+    },
+    {
+      "block": 358,
+      "words": [
+        "Barlaam"
+      ]
+    },
+    {
+      "block": 359,
+      "words": [
+        "Burgundio,"
+      ]
+    },
+    {
+      "block": 361,
+      "words": [
+        "Krumbacher,",
+        "byzantinischen",
+        "Verlagsbuchhandlung,"
+      ]
+    },
+    {
+      "block": 380,
+      "words": [
+        "Monarchians;"
+      ]
+    },
+    {
+      "block": 399,
+      "words": [
+        "Catholicae",
+        "unitate,",
+        "unitate"
+      ]
+    },
+    {
+      "block": 402,
+      "words": [
+        "Battifol,"
+      ]
+    },
+    {
+      "block": 404,
+      "words": [
+        "Caelius",
+        "Firmianus"
+      ]
+    },
+    {
+      "block": 411,
+      "words": [
+        "evaluation",
+        "institutionum"
+      ]
+    },
+    {
+      "block": 416,
+      "words": [
+        "Docrors"
+      ]
+    },
+    {
+      "block": 425,
+      "words": [
+        "Trimitate,"
+      ]
+    },
+    {
+      "block": 430,
+      "words": [
+        "Aemilia,"
+      ]
+    },
+    {
+      "block": 433,
+      "words": [
+        "arr:"
+      ]
+    },
+    {
+      "block": 436,
+      "words": [
+        "Tbid.,"
+      ]
+    },
+    {
+      "block": 451,
+      "words": [
+        "Stridon"
+      ]
+    },
+    {
+      "block": 463,
+      "words": [
+        "hagiographic"
+      ]
+    },
+    {
+      "block": 466,
+      "words": [
+        "Jtala.",
+        "Gallicanum"
+      ]
+    },
+    {
+      "block": 468,
+      "words": [
+        "rz.",
+        "Pacatula."
+      ]
+    },
+    {
+      "block": 469,
+      "words": [
+        "Schanz,",
+        "Literatur",
+        "(Miinchen:",
+        "Verlags"
+      ]
+    },
+    {
+      "block": 484,
+      "words": [
+        "Dx"
+      ]
+    },
+    {
+      "block": 487,
+      "words": [
+        "doctorum",
+        "doctissimus.”®",
+        "doctius"
+      ]
+    },
+    {
+      "block": 488,
+      "words": [
+        "Filelfo,"
+      ]
+    },
+    {
+      "block": 490,
+      "words": [
+        "epistolarum",
+        "Roterodami",
+        "denuo",
+        "auctum"
+      ]
+    },
+    {
+      "block": 491,
+      "words": [
+        "Tomi",
+        "Tertii"
+      ]
+    },
+    {
+      "block": 501,
+      "words": [
+        "Cassiciacum,"
+      ]
+    },
+    {
+      "block": 502,
+      "words": [
+        "Megalius,®*"
+      ]
+    },
+    {
+      "block": 506,
+      "words": [
+        "Possidio"
+      ]
+    },
+    {
+      "block": 509,
+      "words": [
+        "polemist,"
+      ]
+    },
+    {
+      "block": 515,
+      "words": [
+        "Norgate,"
+      ]
+    },
+    {
+      "block": 520,
+      "words": [
+        "hermeneutics;"
+      ]
+    },
+    {
+      "block": 539,
+      "words": [
+        "Einhart",
+        "Freising",
+        "suet",
+        "Vhistoire"
+      ]
+    },
+    {
+      "block": 541,
+      "words": [
+        "Welldon,",
+        "Scienza",
+        "suprematus."
+      ]
+    },
+    {
+      "block": 545,
+      "words": [
+        "Therese",
+        "Aureli",
+        "Hipponiensis",
+        "Quartus"
+      ]
+    },
+    {
+      "block": 548,
+      "words": [
+        "visualize"
+      ]
+    },
+    {
+      "block": 550,
+      "words": [
+        "Boccard,"
+      ]
+    },
+    {
+      "block": 552,
+      "words": [
+        "utilizes"
+      ]
+    },
+    {
+      "block": 554,
+      "words": [
+        "Rongione,"
+      ]
+    },
+    {
+      "block": 555,
+      "words": [
+        "apperception."
+      ]
+    },
+    {
+      "block": 558,
+      "words": [
+        "educative"
+      ]
+    },
+    {
+      "block": 559,
+      "words": [
+        "Jhid.,"
+      ]
+    },
+    {
+      "block": 562,
+      "words": [
+        "Thid.,"
+      ]
+    },
+    {
+      "block": 566,
+      "words": [
+        "saecularium",
+        "Etymologiae"
+      ]
+    },
+    {
+      "block": 567,
+      "words": [
+        "Tuohy,"
+      ]
+    },
+    {
+      "block": 569,
+      "words": [
+        "‘hee"
+      ]
+    },
+    {
+      "block": 578,
+      "words": [
+        "Peducation",
+        "Sagnier"
+      ]
+    },
+    {
+      "block": 581,
+      "words": [
+        "Hachette"
+      ]
+    },
+    {
+      "block": 587,
+      "words": [
+        "intransigent"
+      ]
+    },
+    {
+      "block": 593,
+      "words": [
+        "Christa"
+      ]
+    },
+    {
+      "block": 597,
+      "words": [
+        "propaedeutic"
+      ]
+    },
+    {
+      "block": 612,
+      "words": [
+        "Deferrari"
+      ]
+    },
+    {
+      "block": 627,
+      "words": [
+        "Graeco-"
+      ]
+    }
+  ],
+  "corrections": 1,
+  "correctionList": [
+    {
+      "ocr": "nibil",
+      "reading": "nihil"
+    }
+  ],
+  "text": "data/texts/ia-moldersofmedieva00cass.txt",
+  "sha256": "adc1e8cf134ab28519cb2bdbd591caa8f44495b08182b93df7b62679b0ab8df9",
+  "checked": "2026-11-23",
+  "handFixes": [
+    {
+      "leaf": 4,
+      "page": null,
+      "ocr": "| of the Church",
+      "reading": "of the Church"
+    },
+    {
+      "leaf": 4,
+      "page": null,
+      "ocr": "Rev. FRANK P. CASSIDY, Pu.D.",
+      "reading": "REV. FRANK P. CASSIDY, PH.D."
+    },
+    {
+      "leaf": 4,
+      "page": null,
+      "ocr": "Pee RDER BOOK CoO.",
+      "reading": "B. HERDER BOOK CO."
+    },
+    {
+      "leaf": 4,
+      "page": null,
+      "ocr": "Seek mEN SQUARE, LONDON, W. C.",
+      "reading": "33 QUEEN SQUARE, LONDON, W. C."
+    },
+    {
+      "leaf": 5,
+      "page": null,
+      "ocr": "NIHIL OBST AT",
+      "reading": "NIHIL OBSTAT"
+    },
+    {
+      "leaf": 5,
+      "page": null,
+      "ocr": "i Michael J. Curley",
+      "reading": "✠ Michael J. Curley"
+    },
+    {
+      "leaf": 5,
+      "page": null,
+      "ocr": "W ashingtonensis",
+      "reading": "Washingtonensis"
+    },
+    {
+      "leaf": 5,
+      "page": null,
+      "ocr": "Vau-Ballow Press, Inc., Binghamton and New York",
+      "reading": "Vail-Ballou Press, Inc., Binghamton and New York"
+    },
+    {
+      "leaf": 6,
+      "page": "iii",
+      "ocr": "ee ee ee es ee ee",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "Digitized by the Internet Archive",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "in 2024 with funding from",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "Princeton. Theological Seminary Library",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "ehttps://archive.org/details/moldersofmedieva00cass",
+      "reading": ""
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "PNTRODUCTION §. 2 2 0 ¢",
+      "reading": "INTRODUCTION . . . iii"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "CHAPTER",
+      "reading": "CHAPTER"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "I.",
+      "reading": ""
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "II.",
+      "reading": ""
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "Ii.",
+      "reading": ""
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "RoMAN SCHOOLS AND EDUCATION",
+      "reading": "I. ROMAN SCHOOLS AND EDUCATION . . . 1"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "Early Roman Education .",
+      "reading": "Early Roman Education . . . 3"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "The Period of Transition. .",
+      "reading": "The Period of Transition . . . 5"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "Graeco-Roman Culture . .",
+      "reading": "Graeco-Roman Culture . . . 8"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "CHRISTIANITY AND EARLY WESTERN CIVILIZATION",
+      "reading": "II. CHRISTIANITY AND EARLY WESTERN CIVILIZATION . . . 18"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "Rapid Propagation of the New Faith .",
+      "reading": "Rapid Propagation of the New Faith . . . 18"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "New Conception of Life .",
+      "reading": "New Conception of Life . . . 21"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "New Social Gospel. . . .",
+      "reading": "New Social Gospel . . . 23"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "foneererrect Leacher . . °°.",
+      "reading": "The Perfect Teacher . . . 25"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "mmeyteaching Church . .",
+      "reading": "The Teaching Church . . . 31"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "Catechumens",
+      "reading": "Catechumens . . . 33"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "MP PEICIICES p's Se",
+      "reading": "Competentes . . . 34"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "Course of Instruction. . .",
+      "reading": "Course of Instruction . . . 36"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "Catecnetical Schools . . .",
+      "reading": "Catechetical Schools . . . 38"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "FATHERS OF THE East. . .",
+      "reading": "III. FATHERS OF THE EAST . . . 43"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "Bemustmiviattyr . 2. ke",
+      "reading": "St. Justin Martyr . . . 44"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "Clement of Alexandria . .",
+      "reading": "Clement of Alexandria . . . 46"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "een ‘yl Nags",
+      "reading": "Origen . . . 52"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "[ vii J",
+      "reading": ""
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "e",
+      "reading": ""
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "CHAPTER",
+      "reading": "CHAPTER"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "EN:",
+      "reading": ""
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "INDEX - .- 4+.",
+      "reading": ""
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "Fathers of the Golden Age. . . .",
+      "reading": "Fathers of the Golden Age . . . 58"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "St Athamasivis i aire hs i eis ht iaee",
+      "reading": "St. Athanasius . . . 59"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "St. Cyril of Jerusalem’, 7 u)(%) 2°). >.",
+      "reading": "St. Cyril of Jerusalem . . . 63"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "The Three Cappadocians. . . .",
+      "reading": "The Three Cappadocians . . . 66"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "“St. Basil the: Great. <) oot es",
+      "reading": "St. Basil the Great . . . 67"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "St. Gregory of INyssa 2570 vey, beeen is",
+      "reading": "St. Gregory of Nyssa . . . 72"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "St. Gregory of Nazianzus .",
+      "reading": "St. Gregory of Nazianzus . . . 76"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "“Great Teacher of the Earth” .",
+      "reading": "“Great Teacher of the Earth” . . . 80"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "Later Greek Fathers . i045 0 aoe ee",
+      "reading": "Later Greek Fathers . . . 90"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "Dionysius the Pseudo-Areopagite",
+      "reading": "Dionysius the Pseudo-Areopagite . . . 91"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "St: John of (Damascus 2\". oe eee",
+      "reading": "St. John of Damascus . . . 94"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "FATHERS OF THE WEST .",
+      "reading": "IV. FATHERS OF THE WEST . . . 99"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "RECCO oe cee ot aie NE",
+      "reading": "Tertullian . . . 102"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "Ot. COV OTIARY sith. ier cone",
+      "reading": "St. Cyprian . . . 106"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "Lactantius T. \"E ee TENTE",
+      "reading": "Lactantius . . . 109"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "The Great Doctors .",
+      "reading": "The Great Doctors . . . 112"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "St. Hilary of Poitiers. .",
+      "reading": "St. Hilary of Poitiers . . . 113"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "St. “AMDLTOSe)! 0 5",
+      "reading": "St. Ambrose . . . 115"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "St. Jerome: +",
+      "reading": "St. Jerome . . . 122"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "St. Auwustine! oes Soe or Valley eee",
+      "reading": "St. Augustine . . . 134"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "Tue Patristic ATTITUDE Towarp PAGAN",
+      "reading": "V. THE PATRISTIC ATTITUDE TOWARD PAGAN"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "LARNING | Ce eee",
+      "reading": "LEARNING . . . 159"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "SUMMARY (0,5 VUE oe",
+      "reading": "VI. SUMMARY . . . 175"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "BiQLioGRAPHY NO es",
+      "reading": "BIBLIOGRAPHY . . . 181"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": ". 189",
+      "reading": "INDEX . . . 189"
+    },
+    {
+      "leaf": 12,
+      "page": 1,
+      "ocr": "eee ee ee ee ee",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": 1,
+      "ocr": "HE Fathers of the Church have exercised a",
+      "reading": "THE Fathers of the Church have exercised a"
+    },
+    {
+      "leaf": 29,
+      "page": 18,
+      "ocr": "Se a",
+      "reading": ""
+    },
+    {
+      "leaf": 29,
+      "page": 18,
+      "ocr": "HEN the Fathers",
+      "reading": "WHEN the Fathers"
+    },
+    {
+      "leaf": 29,
+      "page": 18,
+      "ocr": "faith. ©",
+      "reading": "faith."
+    },
+    {
+      "leaf": 54,
+      "page": 43,
+      "ocr": "ee eee ee ee ee ee ee",
+      "reading": ""
+    },
+    {
+      "leaf": 54,
+      "page": 43,
+      "ocr": "Glee. era of",
+      "reading": "THE era of"
+    },
+    {
+      "leaf": 110,
+      "page": 99,
+      "ocr": "| am Fathers of the West",
+      "reading": "THE Fathers of the West"
+    },
+    {
+      "leaf": 170,
+      "page": 159,
+      "ocr": "ag T ra D Pa PT P ana",
+      "reading": ""
+    },
+    {
+      "leaf": 170,
+      "page": 159,
+      "ocr": "HE attitude of",
+      "reading": "THE attitude of"
+    },
+    {
+      "leaf": 186,
+      "page": 175,
+      "ocr": "Pe",
+      "reading": ""
+    },
+    {
+      "leaf": 186,
+      "page": 175,
+      "ocr": "Th was in the Roman Empire",
+      "reading": "IT was in the Roman Empire"
+    },
+    {
+      "leaf": 75,
+      "page": 64,
+      "ocr": "The first cate-",
+      "reading": "The first catechesis"
+    },
+    {
+      "leaf": 76,
+      "page": 65,
+      "ocr": "chesis recapitulates",
+      "reading": "recapitulates"
+    },
+    {
+      "leaf": 145,
+      "page": 134,
+      "ocr": "vel doctius vel sanc-",
+      "reading": "vel doctius vel sanctius.”"
+    },
+    {
+      "leaf": 145,
+      "page": 134,
+      "ocr": "AUS i eR",
+      "reading": ""
+    },
+    {
+      "leaf": 168,
+      "page": 157,
+      "ocr": "iure; op. cit., p. 278.",
+      "reading": "141 Turner, op. cit., p. 278."
+    },
+    {
+      "leaf": 20,
+      "page": 9,
+      "ocr": "About the Judus little",
+      "reading": "About the ludus little"
+    },
+    {
+      "leaf": 16,
+      "page": 5,
+      "ocr": "Tue Periop oF TRANSITION",
+      "reading": "THE PERIOD OF TRANSITION"
+    },
+    {
+      "leaf": 32,
+      "page": 21,
+      "ocr": "New Conception oF LIFE",
+      "reading": "NEW CONCEPTION OF LIFE"
+    },
+    {
+      "leaf": 34,
+      "page": 23,
+      "ocr": "New SocraL Gospei",
+      "reading": "NEW SOCIAL GOSPEL"
+    },
+    {
+      "leaf": 42,
+      "page": 31,
+      "ocr": "Tue TEacHING CHurcH",
+      "reading": "THE TEACHING CHURCH"
+    },
+    {
+      "leaf": 45,
+      "page": 34,
+      "ocr": "CoMPETENTES",
+      "reading": "COMPETENTES"
+    },
+    {
+      "leaf": 47,
+      "page": 36,
+      "ocr": "CoursE OF INSTRUCTION",
+      "reading": "COURSE OF INSTRUCTION"
+    },
+    {
+      "leaf": 74,
+      "page": 63,
+      "ocr": "ST. Cyrit oF JERUSALEM",
+      "reading": "ST. CYRIL OF JERUSALEM"
+    },
+    {
+      "leaf": 83,
+      "page": 72,
+      "ocr": "St. Grecory oF Nyssa",
+      "reading": "ST. GREGORY OF NYSSA"
+    },
+    {
+      "leaf": 87,
+      "page": 76,
+      "ocr": "St. GreGoRY OF NAZIANZUS",
+      "reading": "ST. GREGORY OF NAZIANZUS"
+    },
+    {
+      "leaf": 102,
+      "page": 91,
+      "ocr": "Dionysius THE PsEUDO-AREOPAGITE",
+      "reading": "DIONYSIUS THE PSEUDO-AREOPAGITE"
+    },
+    {
+      "leaf": 105,
+      "page": 94,
+      "ocr": "St. JoHN oF DaMAscus",
+      "reading": "ST. JOHN OF DAMASCUS"
+    },
+    {
+      "leaf": 117,
+      "page": 106,
+      "ocr": "St. CyprIAN",
+      "reading": "ST. CYPRIAN"
+    },
+    {
+      "leaf": 124,
+      "page": 113,
+      "ocr": "Sr. HiLary or Poitiers",
+      "reading": "ST. HILARY OF POITIERS"
+    },
+    {
+      "leaf": 29,
+      "page": 18,
+      "ocr": "Rapip PROPAGATION OF THE NEW FAITH",
+      "reading": "RAPID PROPAGATION OF THE NEW FAITH"
+    },
+    {
+      "leaf": 36,
+      "page": 25,
+      "ocr": "Tue Perrect TEACHER",
+      "reading": "THE PERFECT TEACHER"
+    },
+    {
+      "leaf": 4,
+      "page": null,
+      "ocr": "MOLDERS OF",
+      "reading": "MOLDERS OF"
+    }
+  ],
+  "verifiedWords": [
+    "Labriolle",
+    "Bardy",
+    "Hodgson",
+    "Laistner",
+    "Apologeticum",
+    "Kane",
+    "Laurie",
+    "catechumenate",
+    "Pantaenus",
+    "Eby",
+    "Arrowood",
+    "Drane",
+    "exegete",
+    "Leclerq",
+    "McCormick",
+    "Stromata",
+    "Grabmann",
+    "Scholastischen",
+    "Methode",
+    "Herdersche",
+    "Verlagshandlung",
+    "homoousios",
+    "Rhabanus",
+    "Divinae",
+    "Weiskotten",
+    "Marrou",
+    "Boissier",
+    "Heinemann",
+    "Hatchette",
+    "Cie",
+    "McGuire",
+    "Ueberweg",
+    "Carlovingian",
+    "Bardenhewer",
+    "competentes",
+    "Apologeticum",
+    "sanctius",
+    "ludus"
+  ],
+  "readGate": {
+    "gate": 0.995,
+    "words": 41563,
+    "unknown": 170,
+    "readRate": 0.9959,
+    "scorer": "tools/transcribe_scan.py; vocabulary of the proofread hosted texts in data/texts (ia-* excluded)",
+    "engine": "archive.org djvu.xml OCR, with tesseract 5.3.4 (eng+lat+ita, image scale 1) chosen per line where it reads more words",
+    "lineChoices": {
+      "archive.org": 5577,
+      "tesseract": 79
+    },
+    "leavesScored": [
+      4,
+      191
+    ],
+    "omitted": [
+      {
+        "what": "the bibliography",
+        "leaves": [
+          192,
+          199
+        ],
+        "pages": "181-188"
+      },
+      {
+        "what": "the index",
+        "leaves": [
+          200,
+          205
+        ],
+        "pages": "189-194"
+      }
+    ],
+    "handFixes": 100,
+    "verifiedWords": 38,
+    "foreignWords": {},
+    "measured": "2026-11-23"
+  },
+  "omitted": [
+    {
+      "what": "the bibliography",
+      "leaves": [
+        192,
+        199
+      ],
+      "pages": "181-188"
+    },
+    {
+      "what": "the index",
+      "leaves": [
+        200,
+        205
+      ],
+      "pages": "189-194"
+    }
+  ]
+}

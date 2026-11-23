@@ -1,0 +1,1579 @@
+{
+  "id": "ia-johnenglandameri00gran",
+  "kind": "ocr-transcription",
+  "title": "John England, American Christopher",
+  "author": "Dorothy Fremont Grant",
+  "rights": "Public domain in the USA. First published in the United States in 1949 and not renewed; the evidence is in nonRenewal.",
+  "rightsBasis": "pd-nonrenewal",
+  "nonRenewal": {
+    "firstPublicationYear": 1949,
+    "firstPublicationCountry": "US",
+    "firstPublicationPlace": "Milwaukee",
+    "firstPublicationPublisher": "The Bruce Publishing Company",
+    "stanford": {
+      "result": "no renewal found",
+      "checked": "2026-11-16",
+      "method": "one plain curl query (title words and surname), default user agent"
+    },
+    "nypl": {
+      "result": "no renewal found",
+      "checked": "2026-11-16",
+      "method": "NYPL cce-renewals data"
+    },
+    "hathitrust": "pd",
+    "hathitrustRecord": "pd (wu.89064449945)",
+    "uraa": "US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page (Copyright, 1949, Dorothy Fremont Grant); no earlier or simultaneous edition abroad was found, so URAA restoration does not apply.",
+    "scan": "johnenglandameri00gran",
+    "research": "docs/research/us-pd-renewal-checks-2026-11.csv"
+  },
+  "volumes": [
+    {
+      "identifier": "johnenglandameri00gran",
+      "url": "https://archive.org/details/johnenglandameri00gran",
+      "year": 1949,
+      "publisher": "Milwaukee : Bruce Pub. Co.",
+      "ocr": "johnenglandameri00gran_djvu.xml",
+      "ocrSha256": "212ac4cd4c95c223b7c0ea0c3b452cf20fc07e419b3bde873044b440b2d435c3",
+      "leaves": [
+        4,
+        186
+      ],
+      "secondOcr": {
+        "engine": "tesseract 5.3.4",
+        "langs": "eng+lat+ita",
+        "scale": 1,
+        "lineChoices": {
+          "archive.org": 5822,
+          "tesseract": 33
+        }
+      }
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed. 111 misreadings corrected by hand against the page images of this scan, each listed in handFixes; no wording was taken from another edition. 36 words the vocabulary does not know (names, Latin, and foreign titles) were checked by hand against the page images and are listed in verifiedWords. A second OCR (tesseract 5.3.4, eng+lat+ita) was run on the scan's page images and its reading taken for a line only where it read more words (33 of 5855 lines).",
+  "words": 53063,
+  "unknownWords": 178,
+  "readRate": 0.9966,
+  "flaggedBlocks": 122,
+  "flagged": [
+    {
+      "block": 6,
+      "words": [
+        "Fremont"
+      ]
+    },
+    {
+      "block": 22,
+      "words": [
+        "trusteeship"
+      ]
+    },
+    {
+      "block": 81,
+      "words": [
+        "sketchily"
+      ]
+    },
+    {
+      "block": 82,
+      "words": [
+        "Horrey"
+      ]
+    },
+    {
+      "block": 88,
+      "words": [
+        "Cheverus,",
+        "Bardstown,",
+        "Flaget.",
+        "DeBourg",
+        "Rockies.",
+        "Conwell",
+        "Portier",
+        "Rosati,"
+      ],
+      "n": 9
+    },
+    {
+      "block": 96,
+      "words": [
+        "tacticians",
+        "publicize"
+      ]
+    },
+    {
+      "block": 112,
+      "words": [
+        "coreligionists"
+      ]
+    },
+    {
+      "block": 114,
+      "words": [
+        "bedrock"
+      ]
+    },
+    {
+      "block": 116,
+      "words": [
+        "Laurens"
+      ]
+    },
+    {
+      "block": 118,
+      "words": [
+        "malpractice."
+      ]
+    },
+    {
+      "block": 119,
+      "words": [
+        "Sumter,"
+      ]
+    },
+    {
+      "block": 123,
+      "words": [
+        "stagecoach,"
+      ]
+    },
+    {
+      "block": 127,
+      "words": [
+        "Beaufort,",
+        "provably"
+      ]
+    },
+    {
+      "block": 140,
+      "words": [
+        "bestirring"
+      ]
+    },
+    {
+      "block": 142,
+      "words": [
+        "Stevedores"
+      ]
+    },
+    {
+      "block": 156,
+      "words": [
+        "ultrasocial"
+      ]
+    },
+    {
+      "block": 157,
+      "words": [
+        "nearsighted,"
+      ]
+    },
+    {
+      "block": 158,
+      "words": [
+        "“seizin",
+        "turffe",
+        "twigge”",
+        "cacique",
+        "landgrave,"
+      ]
+    },
+    {
+      "block": 160,
+      "words": [
+        "Oglethorpe."
+      ]
+    },
+    {
+      "block": 168,
+      "words": [
+        "sideburns,"
+      ]
+    },
+    {
+      "block": 181,
+      "words": [
+        "maneuvers"
+      ]
+    },
+    {
+      "block": 182,
+      "words": [
+        "coeducational"
+      ]
+    },
+    {
+      "block": 188,
+      "words": [
+        "Beauregard,"
+      ]
+    },
+    {
+      "block": 189,
+      "words": [
+        "Charlestonian"
+      ]
+    },
+    {
+      "block": 191,
+      "words": [
+        "Chalmers"
+      ]
+    },
+    {
+      "block": 193,
+      "words": [
+        "nullification"
+      ]
+    },
+    {
+      "block": 194,
+      "words": [
+        "Hayne,",
+        "Hayne"
+      ]
+    },
+    {
+      "block": 195,
+      "words": [
+        "Intendent",
+        "mulatto,",
+        "Vesey."
+      ]
+    },
+    {
+      "block": 196,
+      "words": [
+        "Prioleau."
+      ]
+    },
+    {
+      "block": 200,
+      "words": [
+        "(terrapin);",
+        "blancmange",
+        "Cornwallis,"
+      ]
+    },
+    {
+      "block": 202,
+      "words": [
+        "Pickney",
+        "antidueling"
+      ]
+    },
+    {
+      "block": 211,
+      "words": [
+        "dynamo"
+      ]
+    },
+    {
+      "block": 232,
+      "words": [
+        "Tondee,",
+        "Pulaski"
+      ]
+    },
+    {
+      "block": 235,
+      "words": [
+        "Gourgues,",
+        "Yamassee",
+        "O'Sullivan"
+      ]
+    },
+    {
+      "block": 236,
+      "words": [
+        "Verrazano,",
+        "Peckham,"
+      ]
+    },
+    {
+      "block": 237,
+      "words": [
+        "Roanoke"
+      ]
+    },
+    {
+      "block": 238,
+      "words": [
+        "forthright",
+        "Wriothesley,"
+      ]
+    },
+    {
+      "block": 240,
+      "words": [
+        "Albemarle,"
+      ]
+    },
+    {
+      "block": 242,
+      "words": [
+        "Hillsboro"
+      ]
+    },
+    {
+      "block": 245,
+      "words": [
+        "courthouse"
+      ]
+    },
+    {
+      "block": 251,
+      "words": [
+        "Appalachian",
+        "Smokies"
+      ]
+    },
+    {
+      "block": 254,
+      "words": [
+        "blasphemic"
+      ]
+    },
+    {
+      "block": 255,
+      "words": [
+        "Falicius",
+        "Illyricus",
+        "Vlacich",
+        "Francovich)"
+      ]
+    },
+    {
+      "block": 257,
+      "words": [
+        "fishpond."
+      ]
+    },
+    {
+      "block": 259,
+      "words": [
+        "Ecclesiastici",
+        "contraband"
+      ]
+    },
+    {
+      "block": 262,
+      "words": [
+        "Gottingen",
+        "Ecclesiasticae"
+      ]
+    },
+    {
+      "block": 263,
+      "words": [
+        "Falicus",
+        "Illyricus,"
+      ]
+    },
+    {
+      "block": 265,
+      "words": [
+        "coun-."
+      ]
+    },
+    {
+      "block": 282,
+      "words": [
+        "Keating",
+        "Keating,"
+      ]
+    },
+    {
+      "block": 285,
+      "words": [
+        "Trusteemania,"
+      ]
+    },
+    {
+      "block": 301,
+      "words": [
+        "Gallagher's"
+      ]
+    },
+    {
+      "block": 305,
+      "words": [
+        "Gallagher's",
+        "Picot",
+        "Limoelan"
+      ]
+    },
+    {
+      "block": 313,
+      "words": [
+        "humorsome"
+      ]
+    },
+    {
+      "block": 322,
+      "words": [
+        "Catholick",
+        "Junta.”"
+      ]
+    },
+    {
+      "block": 329,
+      "words": [
+        "bylaws"
+      ]
+    },
+    {
+      "block": 330,
+      "words": [
+        "originalities"
+      ]
+    },
+    {
+      "block": 341,
+      "words": [
+        "enrollment",
+        "pulpiteers"
+      ]
+    },
+    {
+      "block": 343,
+      "words": [
+        "Bermingham.",
+        "McEncroe"
+      ]
+    },
+    {
+      "block": 345,
+      "words": [
+        "shiploads,”"
+      ]
+    },
+    {
+      "block": 353,
+      "words": [
+        "Edenton,"
+      ]
+    },
+    {
+      "block": 377,
+      "words": [
+        "jogged",
+        "stagecoaches",
+        "courthouse.",
+        "coreligionists"
+      ]
+    },
+    {
+      "block": 378,
+      "words": [
+        "“pesthouse"
+      ]
+    },
+    {
+      "block": 380,
+      "words": [
+        "sizable"
+      ]
+    },
+    {
+      "block": 384,
+      "words": [
+        "vituperative"
+      ]
+    },
+    {
+      "block": 390,
+      "words": [
+        "barraged"
+      ]
+    },
+    {
+      "block": 395,
+      "words": [
+        "pulpiteer"
+      ]
+    },
+    {
+      "block": 396,
+      "words": [
+        "installments."
+      ]
+    },
+    {
+      "block": 399,
+      "words": [
+        "centenarian."
+      ]
+    },
+    {
+      "block": 401,
+      "words": [
+        "drawcansir,"
+      ]
+    },
+    {
+      "block": 409,
+      "words": [
+        "nativistic"
+      ]
+    },
+    {
+      "block": 417,
+      "words": [
+        "pulpiteers",
+        "Gavin's"
+      ]
+    },
+    {
+      "block": 418,
+      "words": [
+        "citizenry."
+      ]
+    },
+    {
+      "block": 420,
+      "words": [
+        "Leisler,"
+      ]
+    },
+    {
+      "block": 421,
+      "words": [
+        "Lyman"
+      ]
+    },
+    {
+      "block": 422,
+      "words": [
+        "locale,"
+      ]
+    },
+    {
+      "block": 423,
+      "words": [
+        "weariless"
+      ]
+    },
+    {
+      "block": 436,
+      "words": [
+        "timeworn"
+      ]
+    },
+    {
+      "block": 438,
+      "words": [
+        "dunking",
+        "doughnuts",
+        "debacle"
+      ]
+    },
+    {
+      "block": 440,
+      "words": [
+        "Beaufort,"
+      ]
+    },
+    {
+      "block": 451,
+      "words": [
+        "moldy."
+      ]
+    },
+    {
+      "block": 453,
+      "words": [
+        "Beaufort"
+      ]
+    },
+    {
+      "block": 456,
+      "words": [
+        "engrossment."
+      ]
+    },
+    {
+      "block": 463,
+      "words": [
+        "highlighted"
+      ]
+    },
+    {
+      "block": 466,
+      "words": [
+        "guiltiest"
+      ]
+    },
+    {
+      "block": 473,
+      "words": [
+        "nativistic",
+        "erupted"
+      ]
+    },
+    {
+      "block": 475,
+      "words": [
+        "ideology",
+        "erupt"
+      ]
+    },
+    {
+      "block": 480,
+      "words": [
+        "libelous"
+      ]
+    },
+    {
+      "block": 481,
+      "words": [
+        "inescapable"
+      ]
+    },
+    {
+      "block": 484,
+      "words": [
+        "rebuttal"
+      ]
+    },
+    {
+      "block": 500,
+      "words": [
+        "enroute"
+      ]
+    },
+    {
+      "block": 512,
+      "words": [
+        "Pise"
+      ]
+    },
+    {
+      "block": 513,
+      "words": [
+        "naturalization"
+      ]
+    },
+    {
+      "block": 518,
+      "words": [
+        "Duane,",
+        "Duane",
+        "Taney,"
+      ]
+    },
+    {
+      "block": 521,
+      "words": [
+        "“Tippecanoe"
+      ]
+    },
+    {
+      "block": 522,
+      "words": [
+        "plethora"
+      ]
+    },
+    {
+      "block": 525,
+      "words": [
+        "plethoric"
+      ]
+    },
+    {
+      "block": 535,
+      "words": [
+        "liquidate",
+        "liquidate"
+      ]
+    },
+    {
+      "block": 537,
+      "words": [
+        "worrisome"
+      ]
+    },
+    {
+      "block": 538,
+      "words": [
+        "inescapable",
+        "wellspring"
+      ]
+    },
+    {
+      "block": 539,
+      "words": [
+        "felonious"
+      ]
+    },
+    {
+      "block": 540,
+      "words": [
+        "vilified"
+      ]
+    },
+    {
+      "block": 544,
+      "words": [
+        "rebuttal",
+        "ossified"
+      ]
+    },
+    {
+      "block": 545,
+      "words": [
+        "rebuttal;"
+      ]
+    },
+    {
+      "block": 567,
+      "words": [
+        "Carolinian,"
+      ]
+    },
+    {
+      "block": 569,
+      "words": [
+        "citizenry."
+      ]
+    },
+    {
+      "block": 577,
+      "words": [
+        "scapegoat,",
+        "provable"
+      ]
+    },
+    {
+      "block": 578,
+      "words": [
+        "emeritus",
+        "Beaufort,"
+      ]
+    },
+    {
+      "block": 581,
+      "words": [
+        "Stalin"
+      ]
+    },
+    {
+      "block": 584,
+      "words": [
+        "emeritus"
+      ]
+    },
+    {
+      "block": 587,
+      "words": [
+        "installment"
+      ]
+    },
+    {
+      "block": 605,
+      "words": [
+        "underbrush"
+      ]
+    },
+    {
+      "block": 610,
+      "words": [
+        "deflated"
+      ]
+    },
+    {
+      "block": 613,
+      "words": [
+        "liquidate"
+      ]
+    },
+    {
+      "block": 621,
+      "words": [
+        "peek"
+      ]
+    },
+    {
+      "block": 625,
+      "words": [
+        "roughshod"
+      ]
+    },
+    {
+      "block": 628,
+      "words": [
+        "procurement",
+        "Wholeheartedly"
+      ]
+    },
+    {
+      "block": 634,
+      "words": [
+        "messy"
+      ]
+    },
+    {
+      "block": 636,
+      "words": [
+        "boresome"
+      ]
+    },
+    {
+      "block": 637,
+      "words": [
+        "“streamlined”",
+        "doused"
+      ]
+    },
+    {
+      "block": 640,
+      "words": [
+        "Beaufort"
+      ]
+    },
+    {
+      "block": 645,
+      "words": [
+        "Billington,",
+        "Asst."
+      ]
+    },
+    {
+      "block": 647,
+      "words": [
+        "Schneider,"
+      ]
+    }
+  ],
+  "corrections": 0,
+  "correctionList": [],
+  "text": "data/texts/ia-johnenglandameri00gran.txt",
+  "sha256": "73fd3a7351fd60af977cf09ffd330c2426679f87e952bc2e4e3465c0c53b11c7",
+  "checked": "2026-11-23",
+  "handFixes": [
+    {
+      "leaf": 4,
+      "page": null,
+      "ocr": "JOHN ENGLAND ... American Christopher",
+      "reading": "JOHN ENGLAND . . . American Christopher"
+    },
+    {
+      "leaf": 6,
+      "page": null,
+      "ocr": "JUN 2 1949",
+      "reading": ""
+    },
+    {
+      "leaf": 6,
+      "page": null,
+      "ocr": "JOHN ENGLANB% conn co’",
+      "reading": "JOHN ENGLAND"
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "+ a",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "BD igitizcet Aa ne Internet Archived |",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "in 2024 with funding from f",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "Princeton Theological Seminary Lib",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "nee vir",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": ", 1 i) Mit f Te mi &",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "F ‘",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": ". ~ ee. ? ‘ , i a)",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "td ¥ az 4‘ k aur aur\"",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "= i= a i a i A , ji",
+      "reading": ""
+    },
+    {
+      "leaf": 9,
+      "page": null,
+      "ocr": "i if",
+      "reading": ""
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "* od 3 E",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 10,
+      "page": "vii",
+      "ocr": "that mistake. .. . I have",
+      "reading": "that mistake. . . . I have"
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "THANK You...",
+      "reading": "THANK YOU . . ."
+    },
+    {
+      "leaf": 11,
+      "page": "viii",
+      "ocr": "x % ba %",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 12,
+      "page": "ix",
+      "ocr": "Jon ENGLAND,",
+      "reading": "JOHN ENGLAND,"
+    },
+    {
+      "leaf": 12,
+      "page": "ix",
+      "ocr": "BisHoP OF CHARLESTON,",
+      "reading": "BISHOP OF CHARLESTON,"
+    },
+    {
+      "leaf": 12,
+      "page": "ix",
+      "ocr": "OcroseR 11.",
+      "reading": "OCTOBER 11."
+    },
+    {
+      "leaf": 13,
+      "page": "x",
+      "ocr": "1818",
+      "reading": "1813"
+    },
+    {
+      "leaf": 13,
+      "page": "x",
+      "ocr": "Avucust 30.",
+      "reading": "AUGUST 30."
+    },
+    {
+      "leaf": 13,
+      "page": "x",
+      "ocr": "Jury 10.",
+      "reading": "JULY 10."
+    },
+    {
+      "leaf": 13,
+      "page": "x",
+      "ocr": "JuLy 12.",
+      "reading": "JULY 12."
+    },
+    {
+      "leaf": 13,
+      "page": "x",
+      "ocr": "comprising North. and South",
+      "reading": "comprising North and South"
+    },
+    {
+      "leaf": 13,
+      "page": "x",
+      "ocr": "Aucust 25.",
+      "reading": "AUGUST 25."
+    },
+    {
+      "leaf": 13,
+      "page": "x",
+      "ocr": "SEPTEMBER 24, In",
+      "reading": "SEPTEMBER 24. In"
+    },
+    {
+      "leaf": 13,
+      "page": "x",
+      "ocr": "OcToBER 22.",
+      "reading": "OCTOBER 22."
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "December 81,",
+      "reading": "December 31,"
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "January 15, 1828,",
+      "reading": "January 15, 1823,"
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "Marcu 1.",
+      "reading": "MARCH 1."
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "Apri 14, Sends",
+      "reading": "APRIL 14. Sends"
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "Jury 17.",
+      "reading": "JULY 17."
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "Aucust 81.",
+      "reading": "AUGUST 31."
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "NoveMBER. Visits",
+      "reading": "NOVEMBER. Visits"
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "NovEMBER 22, Detained",
+      "reading": "NOVEMBER 22. Detained"
+    },
+    {
+      "leaf": 14,
+      "page": "xi",
+      "ocr": "os",
+      "reading": ""
+    },
+    {
+      "leaf": 15,
+      "page": "xii",
+      "ocr": "Ocroser 9.",
+      "reading": "OCTOBER 9."
+    },
+    {
+      "leaf": 15,
+      "page": "xii",
+      "ocr": "DeceMBER 8.",
+      "reading": "DECEMBER 8."
+    },
+    {
+      "leaf": 15,
+      "page": "xii",
+      "ocr": "( Charleston )",
+      "reading": "(Charleston)"
+    },
+    {
+      "leaf": 15,
+      "page": "xii",
+      "ocr": "1824",
+      "reading": ""
+    },
+    {
+      "leaf": 15,
+      "page": "xii",
+      "ocr": "1826",
+      "reading": ""
+    },
+    {
+      "leaf": 15,
+      "page": "xii",
+      "ocr": "NovEMBER 24. Calls",
+      "reading": "NOVEMBER 24. Calls"
+    },
+    {
+      "leaf": 15,
+      "page": "xii",
+      "ocr": "January 4. United States",
+      "reading": "1824\nJanuary 4. United States"
+    },
+    {
+      "leaf": 15,
+      "page": "xii",
+      "ocr": "Marcu 17.",
+      "reading": "MARCH 17."
+    },
+    {
+      "leaf": 15,
+      "page": "xii",
+      "ocr": "NovEMBER 14-16.",
+      "reading": "NOVEMBER 14-16."
+    },
+    {
+      "leaf": 15,
+      "page": "xii",
+      "ocr": "January 8. Addresses the Congress",
+      "reading": "1826\nJanuary 8. Addresses the Congress"
+    },
+    {
+      "leaf": 16,
+      "page": "xiii",
+      "ocr": "FeBRUARY 6.",
+      "reading": "FEBRUARY 6."
+    },
+    {
+      "leaf": 16,
+      "page": "xiii",
+      "ocr": "Apri 2.",
+      "reading": "APRIL 2."
+    },
+    {
+      "leaf": 16,
+      "page": "xiii",
+      "ocr": "Jury 22.",
+      "reading": "JULY 22."
+    },
+    {
+      "leaf": 16,
+      "page": "xiii",
+      "ocr": "OcroBer 14.",
+      "reading": "OCTOBER 14."
+    },
+    {
+      "leaf": 16,
+      "page": "xiii",
+      "ocr": "NovemsBer. Address",
+      "reading": "NOVEMBER. Address"
+    },
+    {
+      "leaf": 16,
+      "page": "xiii",
+      "ocr": "Ocroser 1.",
+      "reading": "OCTOBER 1."
+    },
+    {
+      "leaf": 16,
+      "page": "xiii",
+      "ocr": "Jury 10. Sails",
+      "reading": "JULY 10. Sails"
+    },
+    {
+      "leaf": 17,
+      "page": "xiv",
+      "ocr": "OctoBER 20-27.",
+      "reading": "OCTOBER 20-27."
+    },
+    {
+      "leaf": 17,
+      "page": "xiv",
+      "ocr": "NovEMBER 17.",
+      "reading": "NOVEMBER 17."
+    },
+    {
+      "leaf": 17,
+      "page": "xiv",
+      "ocr": "ApriL. Sails",
+      "reading": "APRIL. Sails"
+    },
+    {
+      "leaf": 17,
+      "page": "xiv",
+      "ocr": "an*academy",
+      "reading": "an academy"
+    },
+    {
+      "leaf": 17,
+      "page": "xiv",
+      "ocr": "January 8. Ursulines",
+      "reading": "January 3. Ursulines"
+    },
+    {
+      "leaf": 17,
+      "page": "xiv",
+      "ocr": "summer of 1885",
+      "reading": "summer of 1835"
+    },
+    {
+      "leaf": 17,
+      "page": "xiv",
+      "ocr": "Apri 27.",
+      "reading": "APRIL 27."
+    },
+    {
+      "leaf": 18,
+      "page": "xv",
+      "ocr": "NoveMBER 17, State",
+      "reading": "NOVEMBER 17. State"
+    },
+    {
+      "leaf": 18,
+      "page": "xv",
+      "ocr": "Aucust 5, Addresses",
+      "reading": "AUGUST 5. Addresses"
+    },
+    {
+      "leaf": 18,
+      "page": "xv",
+      "ocr": "(Works, Messmer, Vol. I, pp.",
+      "reading": "(Works, Messmer, Vol. II, pp."
+    },
+    {
+      "leaf": 18,
+      "page": "xv",
+      "ocr": "NoveMBER 11-19.",
+      "reading": "NOVEMBER 11-19."
+    },
+    {
+      "leaf": 18,
+      "page": "xv",
+      "ocr": "First WeEK.",
+      "reading": "FIRST WEEK."
+    },
+    {
+      "leaf": 18,
+      "page": "xv",
+      "ocr": "Aprit, Catholics",
+      "reading": "APRIL. Catholics"
+    },
+    {
+      "leaf": 18,
+      "page": "xv",
+      "ocr": "NoveMBER 1. Arrives",
+      "reading": "NOVEMBER 1. Arrives"
+    },
+    {
+      "leaf": 18,
+      "page": "xv",
+      "ocr": "First SunDAY IN LENT.",
+      "reading": "FIRST SUNDAY IN LENT."
+    },
+    {
+      "leaf": 18,
+      "page": "xv",
+      "ocr": "Marcu 25.",
+      "reading": "MARCH 25."
+    },
+    {
+      "leaf": 19,
+      "page": "xvi",
+      "ocr": "1842",
+      "reading": ""
+    },
+    {
+      "leaf": 19,
+      "page": "xvi",
+      "ocr": "APRIL 10, Sunpay.",
+      "reading": "APRIL 10, SUNDAY."
+    },
+    {
+      "leaf": 19,
+      "page": "xvi",
+      "ocr": "Aprit 11, Monpay.",
+      "reading": "APRIL 11, MONDAY."
+    },
+    {
+      "leaf": 19,
+      "page": "xvi",
+      "ocr": "Metropolitan Catholic. Directory,",
+      "reading": "1842\nMetropolitan Catholic Directory,"
+    },
+    {
+      "leaf": 19,
+      "page": "xvi",
+      "ocr": "Bishop England’s. own",
+      "reading": "Bishop England’s own"
+    },
+    {
+      "leaf": 19,
+      "page": "xvi",
+      "ocr": "—D.F.G.",
+      "reading": "—D. F. G."
+    },
+    {
+      "leaf": 20,
+      "page": 1,
+      "ocr": "Introducing .",
+      "reading": "Introducing . . ."
+    },
+    {
+      "leaf": 20,
+      "page": 1,
+      "ocr": "*% * * *",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 35,
+      "page": 16,
+      "ocr": "ne ha",
+      "reading": ". . 1 . ."
+    },
+    {
+      "leaf": 41,
+      "page": 22,
+      "ocr": "Mo",
+      "reading": ". . 2 . ."
+    },
+    {
+      "leaf": 59,
+      "page": 40,
+      "ocr": "tert",
+      "reading": ". . 3 . ."
+    },
+    {
+      "leaf": 72,
+      "page": null,
+      "ocr": "elma",
+      "reading": ". . 4 . ."
+    },
+    {
+      "leaf": 88,
+      "page": null,
+      "ocr": "fic ay eet",
+      "reading": ". . 5 . ."
+    },
+    {
+      "leaf": 101,
+      "page": 82,
+      "ocr": "may oe",
+      "reading": ". . 6 . ."
+    },
+    {
+      "leaf": 115,
+      "page": null,
+      "ocr": "ya",
+      "reading": ". . 7 . ."
+    },
+    {
+      "leaf": 134,
+      "page": 115,
+      "ocr": "OD",
+      "reading": ". . 8 . ."
+    },
+    {
+      "leaf": 152,
+      "page": null,
+      "ocr": "rue",
+      "reading": ". . 9 . ."
+    },
+    {
+      "leaf": 167,
+      "page": 148,
+      "ocr": "ley",
+      "reading": ". . 10 . ."
+    },
+    {
+      "leaf": 178,
+      "page": null,
+      "ocr": "a ed",
+      "reading": ". . 11 . ."
+    },
+    {
+      "leaf": 35,
+      "page": 16,
+      "ocr": "od a bo %",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 36,
+      "page": 17,
+      "ocr": "> 9 Ore >",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 41,
+      "page": 22,
+      "ocr": "» i aii a",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 41,
+      "page": 22,
+      "ocr": "Americans are not obstinate heretics .. .",
+      "reading": "Americans are not obstinate heretics . . ."
+    },
+    {
+      "leaf": 59,
+      "page": 40,
+      "ocr": "% bo J %",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 59,
+      "page": 40,
+      "ocr": "++ + +",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 88,
+      "page": null,
+      "ocr": "CAO OL,",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 101,
+      "page": 82,
+      "ocr": "guise of piety. 5",
+      "reading": "guise of piety."
+    },
+    {
+      "leaf": 101,
+      "page": 82,
+      "ocr": "+++ 4+",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 115,
+      "page": null,
+      "ocr": "++ + +",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 152,
+      "page": null,
+      "ocr": "* % i sod",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 152,
+      "page": null,
+      "ocr": "T T * 3",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 152,
+      "page": null,
+      "ocr": "+++ 4",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 167,
+      "page": 148,
+      "ocr": "Ou. ;",
+      "reading": "you."
+    },
+    {
+      "leaf": 167,
+      "page": 148,
+      "ocr": ": First Epistle of St. Peter",
+      "reading": "First Epistle of St. Peter"
+    },
+    {
+      "leaf": 167,
+      "page": 148,
+      "ocr": "+++ +",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 178,
+      "page": null,
+      "ocr": "+++ +",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 73,
+      "page": null,
+      "ocr": "+++ +",
+      "reading": "* * * *"
+    },
+    {
+      "leaf": 94,
+      "page": 75,
+      "ocr": "seeking the orly aid",
+      "reading": "seeking the only aid"
+    },
+    {
+      "leaf": 27,
+      "page": 8,
+      "ocr": "Olic a “lost soul”?",
+      "reading": "olic a “lost soul”?"
+    },
+    {
+      "leaf": 131,
+      "page": 112,
+      "ocr": "DLA ee JOHN ENGLAND Gs.",
+      "reading": ""
+    }
+  ],
+  "verifiedWords": [
+    "Miscellaney",
+    "Guilday",
+    "Savannah",
+    "Charlestonians",
+    "Fenwick",
+    "Bandon",
+    "Messmer",
+    "Wilmington",
+    "Quincy",
+    "Carolinians",
+    "Moylan",
+    "Haiti",
+    "Corkery",
+    "Carlow",
+    "Gelston",
+    "Dioecesanis",
+    "Georgetown",
+    "Farrand",
+    "Corcoran",
+    "Haitian",
+    "Demosthenian",
+    "Phi",
+    "Kappa",
+    "Johnston",
+    "Waynesville",
+    "Fayetteville",
+    "Gallagher",
+    "Whitefield",
+    "Ravenel",
+    "Ryan",
+    "Hasell",
+    "trusteemania",
+    "pastorate",
+    "Pinet",
+    "antislavery",
+    "repetitious"
+  ],
+  "readGate": {
+    "gate": 0.995,
+    "words": 53063,
+    "unknown": 178,
+    "readRate": 0.9966,
+    "scorer": "tools/transcribe_scan.py; vocabulary of the proofread hosted texts in data/texts (ia-* excluded)",
+    "engine": "archive.org djvu.xml OCR, with tesseract 5.3.4 (eng+lat+ita, image scale 1) chosen per line where it reads more words",
+    "lineChoices": {
+      "archive.org": 5822,
+      "tesseract": 33
+    },
+    "leavesScored": [
+      4,
+      186
+    ],
+    "omitted": [],
+    "handFixes": 111,
+    "verifiedWords": 36,
+    "foreignWords": {},
+    "measured": "2026-11-23"
+  }
+}

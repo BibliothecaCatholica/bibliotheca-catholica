@@ -1,0 +1,23 @@
+[
+ {
+  "edition": "ia-selectancientiri00meye",
+  "ia": "selectancientiri00meye",
+  "title": "SELECTIONS FROM ANCIENT IRISH POETRY",
+  "sourceTitle": "Selections from Ancient Irish Poetry",
+  "author": "Kuno Meyer",
+  "year": 1911,
+  "firstPublished": "1911 (London: Constable and Company; this scan is the New York: E. P. Dutton issue of the same year)",
+  "rightsBasis": "pd-date",
+  "firstLeaf": 4,
+  "lastLeaf": 145,
+  "omitted": [],
+  "secondOcr": {
+   "engine": "tesseract",
+   "langs": "eng+lat",
+   "scale": 1
+  },
+  "layout": "verse",
+  "handFixes": [],
+  "verifiedWords": []
+ }
+]

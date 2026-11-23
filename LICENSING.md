@@ -41,7 +41,7 @@ The texts in `data/texts/` and at https://texts.bibliothecacatholica.com are edi
 - **Project Gutenberg.** Texts and catalog snapshots from Project Gutenberg follow the [Project Gutenberg License](https://www.gutenberg.org/policy/license.html) and terms of use.
 - **Isidore Index.** The Index reproduces catalog information from the St. Isidore e-book library (isidore.co). Files listed there are held by isidore.co, not by this site; Bibliotheca Catholica does not host, and does not vouch for, any file at isidore.co.
 - **Natural Earth.** The Rites & Liturgy map is drawn from [Natural Earth](https://www.naturalearthdata.com/) country and state boundaries, which are in the public domain ([terms of use](https://www.naturalearthdata.com/about/terms-of-use/)). Made with Natural Earth. Borders are illustrative and imply no position.
-- **Facts and links.** Names, titles, dates, ISBNs, and links are facts.
+- **Facts and links.** Names, titles, dates, ISBNs, and links are facts. A link is not a license or an endorsement: for example, the EPUB guide links Amazon's generic Kindle help pages, the only Amazon links on the site (no product or affiliate links).
 
 This note is also shown on the site at https://bibliothecacatholica.com/licensing/.
 

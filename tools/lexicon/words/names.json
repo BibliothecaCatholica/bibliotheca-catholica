@@ -1,0 +1,1264 @@
+{
+ "language": "names",
+ "count": 209,
+ "words": {
+  "Abissinian": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Ala": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Alofa": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Apemama": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Apia": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Apollinaris": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Arrowood": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Autolycus": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Baillet": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Bandon": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Bardenhewer": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Bardy": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Bayley": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Bernart": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Beulah": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Bimini": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Binterim": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "Birgitta": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Boissier": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Bossard": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Boswellian": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Brookings": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Busiris": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Cabrol": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Calaborra": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Calagurit": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Calahorra": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Calpurnianus": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "CANTIUS": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Cardijn": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Carlovingian": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Carlow": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Carolingian": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Carolinians": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Ceillier": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Cellarius": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Chalmers": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Chamillard": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Charlestonians": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Christine": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Civiltà": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Colinton": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Comenius": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Compostella": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Corcoran": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Corkery": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Cornell": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Coulton": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Cynewulf": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Dacianus": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Delplancq": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Demosthenian": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Denziger": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Derricotte": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Didyme": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Dittmer": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Drane": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Eby": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Eldorado": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Elphinston": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Elzevir": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Eppstein": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Estremadura": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Eulalie": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Fabricius": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Farrand": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Fayetteville": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Fenwick": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Finden": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Finnen": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Freudian": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Furfey": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Gabalda": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Gallagher": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Geert": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Gelston": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Georgetown": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Georgias": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Gerig": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Gilfillan": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Gillin": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Giraud": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Grabmann": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Greenaway": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Grogory": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Groote": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Gueranger": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "Guilday": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Haiti": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Haitian": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Hasell": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Haskins": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Hatchette": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Hawaiian": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Heinemann": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Heinsius": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Henley": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Herluin": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Higgins": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Hodgson": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Honolulu": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Hoonacker": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Hyères": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Imlac": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Imola": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Ingpen": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Innspruck": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "Inverleith": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Isocrates": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Johnston": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Juliette": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Juvencus": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Jörgensen": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Kalaupapa": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Kalawao": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Kane": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Kanty": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Katoomba": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Kava": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Kellner": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "Kropotkin": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Labriolle": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Laistner": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Lauerman": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Laurie": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Leacock": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Leclerq": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Lenox": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Levett": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Loto": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Lundberg": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Lusitania": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Lydgate": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Mafeo": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Malvolio": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Mangold": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Marrou": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Mataafa": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "McCormick": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "McGuire": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Merida": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   },
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Mershman": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "Messmer": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Methusaleh": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Minutius": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Moylan": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Mulvaney": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Nekayah": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Nicoll": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Odilon": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Osbourne": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Oviedo": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Pantaenus": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Paulinus": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Phædrus": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Pinet": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Piozzi": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Pollentia": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Pomponius": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Probst": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "Pulleyn": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Quaritch": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Queeny": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Quincy": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Ravenel": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Regensburg": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Rhabanus": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Riboulet": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Rumtifoo": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Ruthenians": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "Ryan": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Sangnier": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Saturninus": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Savannah": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Sedulins": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Sedulius": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Sidonius": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Sixt": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Spengler": [
+   {
+    "edition": "ia-doweagree0000gkch",
+    "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json"
+   }
+  ],
+  "Staley": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Stilico": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Stillwell": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Stourbridge": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Sunderland": [
+   {
+    "edition": "ia-doweagree0000gkch",
+    "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json"
+   }
+  ],
+  "Suspirius": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Swanston": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Symmach": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Tembinoka": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Tenney": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Terman": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Tetty": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Thurston": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Trithem": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Trithemius": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Ueberweg": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Upolu": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Vaea": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Vegio": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Venuleius": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Vittorino": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Waynesville": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Weiskotten": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Weitzius": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Whitefield": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Whitehaven": [
+   {
+    "edition": "ia-doweagree0000gkch",
+    "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json"
+   }
+  ],
+  "Wilmington": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Windemere": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Windemere's": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Witherby": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ]
+ }
+}

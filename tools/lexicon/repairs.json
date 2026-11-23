@@ -1,0 +1,3315 @@
+{
+ "count": 300,
+ "repairs": [
+  {
+   "ocr": "3\\4addox",
+   "reading": "Maddox",
+   "from": [
+    {
+     "edition": "ia-samueljohnson00chesuoft",
+     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "8ovl",
+   "reading": "soul",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "_can",
+   "reading": "can",
+   "from": [
+    {
+     "edition": "ia-mysteryofiniquit00furf",
+     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "afficted",
+   "reading": "afflicted",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ahnost",
+   "reading": "almost",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "aie",
+   "reading": "are",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "altnr",
+   "reading": "altar",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Amonc",
+   "reading": "AMONG",
+   "from": [
+    {
+     "edition": "ia-mysteryofiniquit00furf",
+     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Annee",
+   "reading": "Année",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ANNERS",
+   "reading": "MANNERS",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ANTE",
+   "reading": "DANTE",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Antiphone",
+   "reading": "Antiphonæ",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1911-o-antiphons",
+     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ANY",
+   "reading": "MANY",
+   "from": [
+    {
+     "edition": "ia-mysteryofiniquit00furf",
+     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Apri",
+   "reading": "APRIL",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Aprit",
+   "reading": "APRIL",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Araaiti",
+   "reading": "Amarti",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "artfuiness",
+   "reading": "artfulness",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ATHOLICS",
+   "reading": "CATHOLICS",
+   "from": [
+    {
+     "edition": "ia-mysteryofiniquit00furf",
+     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Aucust",
+   "reading": "AUGUST",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "AUgcmeine",
+   "reading": "Allgemeine",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "AuRELins",
+   "reading": "AURELIUS",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "autunmal",
+   "reading": "autumnal",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Au£(ust",
+   "reading": "August",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Avucust",
+   "reading": "AUGUST",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "awea",
+   "reading": "aurea",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Bayiwy",
+   "reading": "Bayley",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1911-o-antiphons",
+     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Bettoc",
+   "reading": "Belloc",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "bhght",
+   "reading": "blight",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "bHviaire",
+   "reading": "bréviaire",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Binder'",
+   "reading": "Binder",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "bom",
+   "reading": "born",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "but'",
+   "reading": "but",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Bzb",
+   "reading": "Bib",
+   "from": [
+    {
+     "edition": "ia-superstitionsofs0000unse-q9f6",
+     "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "camtalist",
+   "reading": "capitalist",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "canHle",
+   "reading": "candle",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "cardine",
+   "reading": "curdine",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "CarroU",
+   "reading": "Carroll",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "Cas",
+   "reading": "Cassiano",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Casrou",
+   "reading": "Cabrol",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1911-o-antiphons",
+     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "cate",
+   "reading": "catechesis",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Catecnetical",
+   "reading": "Catechetical",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Cathc",
+   "reading": "Cathe",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "centpry",
+   "reading": "century",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "charactéristic",
+   "reading": "characteristic",
+   "from": [
+    {
+     "edition": "ia-mysteryofiniquit00furf",
+     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "CLEMfiNS",
+   "reading": "CLEMENS",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "clift",
+   "reading": "cliff",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "coelorum",
+   "reading": "cœlorum",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1911-o-antiphons",
+     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "comantíbus",
+   "reading": "comantibus",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "comjpany",
+   "reading": "company",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Compostel",
+   "reading": "Compostella",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "concorfi",
+   "reading": "concord",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "coniniitEion",
+   "reading": "commission",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "CoO",
+   "reading": "CO",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Coustantine",
+   "reading": "Constantine",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "cowp",
+   "reading": "coup",
+   "from": [
+    {
+     "edition": "ia-superstitionsofs0000unse-q9f6",
+     "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "cquld",
+   "reading": "could",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "crepuncia",
+   "reading": "crepundia",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "culi",
+   "reading": "cull",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Curtey",
+   "reading": "CURLEY",
+   "from": [
+    {
+     "edition": "ia-mysteryofiniquit00furf",
+     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Cyrit",
+   "reading": "CYRIL",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Decembei'",
+   "reading": "December",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "dedioate",
+   "reading": "dedicate",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Dee",
+   "reading": "Dec",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1911-o-antiphons",
+     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "DenkwUrdy/keiten",
+   "reading": "Denkwürdigkeiten",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "dificult",
+   "reading": "difficult",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "dioro",
+   "reading": "choro",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "donnation",
+   "reading": "demnation",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "dwelhng",
+   "reading": "dwelling",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "Eava",
+   "reading": "Kava",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "eccc",
+   "reading": "ecce",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Eccleaiee",
+   "reading": "Ecclesiæ",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "EDIEVAL",
+   "reading": "MEDIEVAL",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Emerítam",
+   "reading": "Emeritam",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ennoblecí",
+   "reading": "ennobled",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Epiacoporum",
+   "reading": "Episcoporum",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ERMINE",
+   "reading": "GERMINE",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ersonality",
+   "reading": "personality",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "erudittone",
+   "reading": "eruditione",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Falmu",
+   "reading": "Palma",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "faots",
+   "reading": "facts",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "fcr",
+   "reading": "for",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Feagta",
+   "reading": "Feasts",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "fehowed",
+   "reading": "showed",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "fhat",
+   "reading": "that",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "fHE",
+   "reading": "THE",
+   "from": [
+    {
+     "edition": "ia-samueljohnson00chesuoft",
+     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "fiame",
+   "reading": "flame",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "fiare",
+   "reading": "flare",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "fiesta",
+   "reading": "festa",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "fiifancy",
+   "reading": "infancy",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "fiir",
+   "reading": "für",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Finat",
+   "reading": "Final",
+   "from": [
+    {
+     "edition": "ia-superstitionsofs0000unse-q9f6",
+     "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "fiowers",
+   "reading": "flowers",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "Fohnson",
+   "reading": "Johnson",
+   "from": [
+    {
+     "edition": "ia-gkcasmcbeingcoll0000gkch",
+     "record": "docs/research/chesterton-gkc-as-mc-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "fol",
+   "reading": "for",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "folevates",
+   "reading": "tolerates",
+   "from": [
+    {
+     "edition": "ia-superstitionsofs0000unse-q9f6",
+     "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Fonszxa",
+   "reading": "Fonseka",
+   "from": [
+    {
+     "edition": "ia-gkcasmcbeingcoll0000gkch",
+     "record": "docs/research/chesterton-gkc-as-mc-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "fromi",
+   "reading": "from",
+   "from": [
+    {
+     "edition": "ia-gkcasmcbeingcoll0000gkch",
+     "record": "docs/research/chesterton-gkc-as-mc-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "frora",
+   "reading": "from",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "FTER",
+   "reading": "AFTER",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "fur",
+   "reading": "für",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "fuU",
+   "reading": "full",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Gavern4",
+   "reading": "Govern",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Gentleman",
+   "reading": "Gentleman's",
+   "from": [
+    {
+     "edition": "ia-samueljohnson00chesuoft",
+     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Geor<je",
+   "reading": "George",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "gloiy",
+   "reading": "glory",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "God*s",
+   "reading": "God's",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Gospei",
+   "reading": "GOSPEL",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "granteii",
+   "reading": "granted",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Grecory",
+   "reading": "GREGORY",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Grerman",
+   "reading": "German",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "gromid",
+   "reading": "ground",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Gueranqer'",
+   "reading": "Gueranger",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "haying",
+   "reading": "having",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Hdirew",
+   "reading": "Hebrew",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "HEN",
+   "reading": "WHEN",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Hiat",
+   "reading": "Hist",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "hira",
+   "reading": "him",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "HisTOHicAL",
+   "reading": "Historical",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Hknlbt",
+   "reading": "Henley",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "hterature",
+   "reading": "literature",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "hved",
+   "reading": "lived",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "Hyeres",
+   "reading": "Hyères",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "hymni",
+   "reading": "hymns",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "HYSICAL",
+   "reading": "PHYSICAL",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "i*rudentius",
+   "reading": "Prudentius",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "iDishop",
+   "reading": "bishop",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Ids",
+   "reading": "his",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ieg",
+   "reading": "Leg",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "IGE",
+   "reading": "HIGH",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Ihe",
+   "reading": "The",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Iheodosius",
+   "reading": "Theodosius",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "iiis",
+   "reading": "his",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "IIT",
+   "reading": "III",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ijiz",
+   "reading": "viz",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Ills",
+   "reading": "his",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "IMartyrologies",
+   "reading": "Martyrologies",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "imlitiei",
+   "reading": "qualities",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Impresaon",
+   "reading": "Impression",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "indeedy",
+   "reading": "indeed",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "inpositmxi",
+   "reading": "inpositum",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ins",
+   "reading": "his",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "INyssa",
+   "reading": "Nyssa",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Irom",
+   "reading": "from",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "iSne",
+   "reading": "fine",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "itt",
+   "reading": "it",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Ivish",
+   "reading": "Irish",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Janguage",
+   "reading": "language",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Jon",
+   "reading": "JOHN",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Joose",
+   "reading": "loose",
+   "from": [
+    {
+     "edition": "ia-superstitionsofs0000unse-q9f6",
+     "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Jorgensen",
+   "reading": "Jörgensen",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "JouHN",
+   "reading": "John",
+   "from": [
+    {
+     "edition": "ia-superstitionsofs0000unse-q9f6",
+     "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Judus",
+   "reading": "ludus",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    },
+    {
+     "edition": "ia-superstitionsofs0000unse-q9f6",
+     "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "jurisdiction.'",
+   "reading": "jurisdiction",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Jury",
+   "reading": "JULY",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Kalen4anum",
+   "reading": "Kalendarium",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Kfe",
+   "reading": "life",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Kinif",
+   "reading": "King",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Krakow",
+   "reading": "Kraków",
+   "from": [
+    {
+     "edition": "ia-mysteryofiniquit00furf",
+     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "l.e",
+   "reading": "Le",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Lcgrtt",
+   "reading": "Legat",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "lessoTis",
+   "reading": "lessons",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "libeti",
+   "reading": "libet",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "LIBRART",
+   "reading": "LIBRARY",
+   "from": [
+    {
+     "edition": "ia-samueljohnson00chesuoft",
+     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "lieavenly",
+   "reading": "heavenly",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ligui^s",
+   "reading": "figures",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Liisitania",
+   "reading": "Lusitania",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Liturgigue",
+   "reading": "Liturgique",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "luuere",
+   "reading": "ludere",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Marcu",
+   "reading": "MARCH",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "martyrs.'",
+   "reading": "martyrs",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "mEN",
+   "reading": "QUEEN",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Merída",
+   "reading": "Merida",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "MicuaeL",
+   "reading": "MICHAEL",
+   "from": [
+    {
+     "edition": "ia-mysteryofiniquit00furf",
+     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "mieals",
+   "reading": "meals",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Miisses",
+   "reading": "Masses",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "mme",
+   "reading": "mine",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Monpay",
+   "reading": "MONDAY",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "monília",
+   "reading": "monilia",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "mow",
+   "reading": "now",
+   "from": [
+    {
+     "edition": "ia-mysteryofiniquit00furf",
+     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "msist",
+   "reading": "insist",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "muñera",
+   "reading": "munera",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "nadonalion",
+   "reading": "nationalism",
+   "from": [
+    {
+     "edition": "ia-mysteryofiniquit00furf",
+     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "naiveté",
+   "reading": "naïveté",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "necessaty",
+   "reading": "necessary",
+   "from": [
+    {
+     "edition": "ia-superstitionsofs0000unse-q9f6",
+     "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "nesoia",
+   "reading": "nescia",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "NicoU",
+   "reading": "Nicoll",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Nilleb",
+   "reading": "Nilles",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "nobüis",
+   "reading": "nobilis",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "NovemsBer",
+   "reading": "NOVEMBER",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "o.f",
+   "reading": "of",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "OcroBer",
+   "reading": "OCTOBER",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "OcroseR",
+   "reading": "OCTOBER",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Ocroser",
+   "reading": "OCTOBER",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ODAY",
+   "reading": "TODAY",
+   "from": [
+    {
+     "edition": "ia-mysteryofiniquit00furf",
+     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ofices",
+   "reading": "offices",
+   "from": [
+    {
+     "edition": "ia-gkcasmcbeingcoll0000gkch",
+     "record": "docs/research/chesterton-gkc-as-mc-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "oflered",
+   "reading": "offered",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "OHN",
+   "reading": "JOHN",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ohnson",
+   "reading": "Johnson",
+   "from": [
+    {
+     "edition": "ia-gkcasmcbeingcoll0000gkch",
+     "record": "docs/research/chesterton-gkc-as-mc-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "omat",
+   "reading": "ornat",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ORE",
+   "reading": "MORE",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "orly",
+   "reading": "only",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ORN",
+   "reading": "BORN",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Osboume",
+   "reading": "Osbourne",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "othei",
+   "reading": "other",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "oíd",
+   "reading": "old",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "p\\Ta",
+   "reading": "pyra",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Pauhi",
+   "reading": "Paulus",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Pbudentius",
+   "reading": "PRUDENTIUS",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "pegin",
+   "reading": "begin",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Periop",
+   "reading": "PERIOD",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "perqué",
+   "reading": "perque",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Perrect",
+   "reading": "PERFECT",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Pha^drus",
+   "reading": "Phædrus",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Pientiful",
+   "reading": "Plentiful",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "Pliilip",
+   "reading": "Philip",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "pnest",
+   "reading": "priest",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Pnnlinus",
+   "reading": "Paulinus",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "pohshed",
+   "reading": "polished",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "poimt",
+   "reading": "point",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Pomponiua",
+   "reading": "Pomponius",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "praetorium",
+   "reading": "prætorium",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Prajf",
+   "reading": "Præf",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "praters",
+   "reading": "prayers",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "preciou8",
+   "reading": "precious",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "prgfessor",
+   "reading": "professor",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "priii",
+   "reading": "prin",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Provengal",
+   "reading": "Provençal",
+   "from": [
+    {
+     "edition": "ia-superstitionsofs0000unse-q9f6",
+     "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Prtef",
+   "reading": "Præf",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "pubhshed",
+   "reading": "published",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "pue^ue",
+   "reading": "puerque",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "puiily",
+   "reading": "purity",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "puré",
+   "reading": "pure",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Rapip",
+   "reading": "RAPID",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "RDER",
+   "reading": "HERDER",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Realencyklopadte",
+   "reading": "Realencyklopædie",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "regium",
+   "reading": "egregium",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "región",
+   "reading": "region",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "reh",
+   "reading": "reli",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "relies",
+   "reading": "relics",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "repuleíat",
+   "reading": "repulerat",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ROM",
+   "reading": "FROM",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    },
+    {
+     "edition": "ia-mysteryofiniquit00furf",
+     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Rouie",
+   "reading": "Rome",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "S^c",
+   "reading": "c",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "sanc",
+   "reading": "sanctius",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Saturuinus",
+   "reading": "Saturninus",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Schoo",
+   "reading": "School",
+   "from": [
+    {
+     "edition": "ia-superstitionsofs0000unse-q9f6",
+     "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "seriolisnees",
+   "reading": "seriousness",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "setiously",
+   "reading": "seriously",
+   "from": [
+    {
+     "edition": "ia-superstitionsofs0000unse-q9f6",
+     "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "sinoothest",
+   "reading": "smoothest",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "so/is",
+   "reading": "solis",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "SocraL",
+   "reading": "SOCIAL",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "sohcited",
+   "reading": "solicited",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "sonls",
+   "reading": "souls",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Spemere",
+   "reading": "Spernere",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Sratny",
+   "reading": "Staley",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1911-o-antiphons",
+     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Steifcnson",
+   "reading": "Stevenson",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Sterenson",
+   "reading": "Stevenson",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Steyenson",
+   "reading": "Stevenson",
+   "from": [
+    {
+     "edition": "ia-robertlouisstev00nicogoog",
+     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "suflered",
+   "reading": "suffered",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Sunpay",
+   "reading": "SUNDAY",
+   "from": [
+    {
+     "edition": "ia-johnenglandameri00gran",
+     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Syramachus",
+   "reading": "Symmachus",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "taiicy",
+   "reading": "fancy",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "talis",
+   "reading": "falls",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "tameii",
+   "reading": "tamen",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "te'l",
+   "reading": "tell",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "thour^h",
+   "reading": "though",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "threat",
+   "reading": "great",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "thut",
+   "reading": "that",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "tiner",
+   "reading": "finer",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "tite",
+   "reading": "the",
+   "from": [
+    {
+     "edition": "ia-doweagree0000gkch",
+     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "tl)e",
+   "reading": "the",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "tliat",
+   "reading": "that",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Tlie",
+   "reading": "The",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "tlie",
+   "reading": "the",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "TnDspnick",
+   "reading": "Innspruck",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "toni",
+   "reading": "tom",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Towarp",
+   "reading": "TOWARD",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "trépidos",
+   "reading": "trepidos",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Tue",
+   "reading": "THE",
+   "from": [
+    {
+     "edition": "ia-moldersofmedieva00cass",
+     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Tuurston",
+   "reading": "Thurston",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1911-o-antiphons",
+     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "udus",
+   "reading": "ludus",
+   "from": [
+    {
+     "edition": "ia-superstitionsofs0000unse-q9f6",
+     "record": "docs/research/chesterton-superstitions-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "v/as",
+   "reading": "was",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Valentiniaii",
+   "reading": "Valentinian",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "versihca",
+   "reading": "versifica",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Vill",
+   "reading": "VIII",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "viígo",
+   "reading": "virgo",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "vriters",
+   "reading": "writers",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Vv'hom",
+   "reading": "whom",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "wfth",
+   "reading": "with",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "whethei",
+   "reading": "whether",
+   "from": [
+    {
+     "edition": "ia-samueljohnson00chesuoft",
+     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Wiggins",
+   "reading": "Higgins",
+   "from": [
+    {
+     "edition": "ia-butler-1842-eulalia",
+     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Wirsersy",
+   "reading": "Witherby",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1911-o-antiphons",
+     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "wonld",
+   "reading": "would",
+   "from": [
+    {
+     "edition": "ia-selectancientiri00meye",
+     "record": "docs/research/irish-meyer-selections-2026-11/README.md",
+     "kind": "automatic repair checked on the image"
+    }
+   ]
+  },
+  {
+   "ocr": "worlcs",
+   "reading": "works",
+   "from": [
+    {
+     "edition": "ia-cathencyc-1907-advent",
+     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "wreathfed",
+   "reading": "wreathèd",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "XIT",
+   "reading": "XII",
+   "from": [
+    {
+     "edition": "ia-highpointsofmedi00wals",
+     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Yohnson",
+   "reading": "Johnson",
+   "from": [
+    {
+     "edition": "ia-gkcasmcbeingcoll0000gkch",
+     "record": "docs/research/chesterton-gkc-as-mc-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "índole",
+   "reading": "indole",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ñames",
+   "reading": "flames",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "ñowers",
+   "reading": "flowers",
+   "from": [
+    {
+     "edition": "ia-thackeray-1890-eulalia",
+     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  }
+ ]
+}

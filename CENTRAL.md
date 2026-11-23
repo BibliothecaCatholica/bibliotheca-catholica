@@ -26,10 +26,10 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 ## Verified snapshot
 
-As of November 22, 2026, `main` after PR #130 (`bff50fcb6e`):
+As of November 23, 2026: `main` after PR #136 (`2c3f5465ff`), with #139 (Walsh) included:
 
-- 206 work records; 146 hosted editions of 141 works in `data/library.json` (228 editions in all, 4 retired); 54 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
-- 5,968 sitemap URLs; 9,132 tracked files, most generated (`linguist-generated` in `.gitattributes`); build-on-deploy is planned for about December 26 (draft #135, `docs/plans/build-on-deploy-plan.md`).
+- 206 work records; 147 hosted editions of 142 works in `data/library.json` (228 editions in all, 4 retired); 54 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 5,968 sitemap URLs; 9,147 tracked files, most generated (`linguist-generated` in `.gitattributes`); build-on-deploy is planned for about December 26 (draft #135, `docs/plans/build-on-deploy-plan.md`).
 - Tests: 127 Node and 337 Python.
 
 ## Standing decisions

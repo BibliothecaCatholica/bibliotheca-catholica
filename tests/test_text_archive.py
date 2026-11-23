@@ -50,7 +50,16 @@ class TextArchiveTests(unittest.TestCase):
                     self.assertEqual(['Public domain in the USA.'], record['metadata']['Copyright'])
             exported = {e['editionId'] for e in manifest['documents']}
             self.assertTrue({'pg-50040', 'pg-18269', 'pg-5657'}.isdisjoint(exported))
-            self.assertEqual('texts.bibliothecacatholica.com\n', (Path(directory) / 'CNAME').read_text())
+            self.assertFalse((Path(directory) / 'CNAME').exists())
+            readme = (Path(directory) / 'README.md').read_text()
+            self.assertIn('by Cloudflare Pages', readme)
+            self.assertNotIn('GitHub Pages', readme)
+
+    def test_export_writes_no_cname_and_removes_a_stale_one(self):
+        with tempfile.TemporaryDirectory() as directory:
+            (Path(directory) / 'CNAME').write_text('texts.bibliothecacatholica.com\n')
+            archive.export(Path(directory))
+            self.assertFalse((Path(directory) / 'CNAME').exists())
 
     def test_export_cannot_overwrite_the_main_website(self):
         with self.assertRaises(ValueError):

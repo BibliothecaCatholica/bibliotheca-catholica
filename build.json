@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-bf188f1831ca",
+  "id": "bc-813523b3884b",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "a3b4bb14885b3404bc50d6a8d32c60a056c732895b356f34b79be4c180a40a1b",
@@ -61,7 +61,7 @@
     "data/summa.json": "9c3b70d71741ba9623fb1808d3bf9945715f036a08ae22ad4fe181194ddc4164",
     "data/text-pages.js": "66cbbd1d76bd82ff4b290c12a94f0c029f922ac77c5fe5bea5cc78881f484df1",
     "data/text-pages.json": "032339eed52111a65ab8907f839dfbf73ce55e9505dafb7c706724f3b694789a",
-    "index.template": "c8665803931606b7d4e8de16e1b27272a10ca0dfb0e319dd95b2afdddef726a7",
+    "index.template": "7ef24be470961bea115e60c63a15a78c603163682750816fbd80cfdd482078d1",
     "scripts/analytics.js": "0927edf785ab99b9e4153ca846bbe3564edfe6879bdbe1292cfab04704640a49",
     "scripts/boot.js": "aacd6fd1dbf3b9ba84d2dbe4d0b72d4e7a931fa3ff96da23af94d73e05e5547b",
     "scripts/guides.js": "a77f6dfdeffbef2490b218b6acb671aed8f067f8f1c3d53c40b8d8fdf10629bf",
@@ -107,7 +107,7 @@
     "tools/build_rites.py": "0a81ecc92eaa1a8dff9034184970cdc5ca7ed948e5d9092ab262084b445207dd",
     "tools/build_saint_of_the_day.py": "5362103e6f80ab716579854bc9a8b711c8eecbe76a27d1dba8772bb6c8d25032",
     "tools/build_saints.py": "99f6730d39e59cfab510d738a5d0be396f499360a606bb23aa69914b9425818f",
-    "tools/build_static.py": "92fadfaceffbd0919302a34a82fd35fb9fce0d47e07d9d63a384bc05da01d505",
+    "tools/build_static.py": "4a144ec4b6d04b4732e16c53fb99913d80e8350c699ff43dda0f078dc6562522",
     "tools/build_study.py": "104e6678f138ea9075089850e99d976c84afd9a0cf0102801e5e8acb6af56a80",
     "tools/build_summa.py": "9640d60813c0cf2b89af3ddddef9974f5c28eb5bd8e6e8c048e5d048e4a65557",
     "tools/build_text_archive.py": "90888a41ce43aa35952b5f6211d2f772ceab0a5b9f1402241aecf087d959af2f",

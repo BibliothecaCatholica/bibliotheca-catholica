@@ -921,7 +921,9 @@ if(p&&/^[A-Za-z0-9._~%\\/-]+$/.test(p)){location.replace('/#/'+p+location.search
     study_partner.write_study(study)  # the panel between the study-partner markers (rule 7)
     if study.exists():
         footer=re.search(r'<footer class="footer">.*?</footer>',(ROOT/'index.html').read_text(),re.S).group(0)
-        study.write_text(re.sub(r'<footer class="footer">.*?</footer>',lambda m:footer,study.read_text(),flags=re.S))
+        st=re.sub(r'<footer class="footer">.*?</footer>',lambda m:footer,study.read_text(),flags=re.S)
+        st=re.sub(r'<!-- Google tag \(gtag\.js\) -->.*?</script>\n<script>.*?</script>\n',lambda m:GA_TAG,st,count=1,flags=re.S)  # the same host-gated tag
+        study.write_text(st)
     print(len(out),'pages;',len(urls),'sitemap URLs')
     import build_drafts;build_drafts.build()
 if __name__=='__main__':main()

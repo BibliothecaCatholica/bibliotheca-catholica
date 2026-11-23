@@ -52,6 +52,19 @@ class TextArchiveTests(unittest.TestCase):
             self.assertTrue({'pg-50040', 'pg-18269', 'pg-5657'}.isdisjoint(exported))
             self.assertEqual('texts.bibliothecacatholica.com\n', (Path(directory) / 'CNAME').read_text())
 
+    def test_texts_site_headers(self):
+        with tempfile.TemporaryDirectory() as directory:
+            archive.export(Path(directory))
+            h = (Path(directory) / '_headers').read_text()
+        self.assertIn('Strict-Transport-Security: max-age=31536000', h)
+        self.assertIn("Content-Security-Policy: default-src 'self';", h)
+        self.assertIn("object-src 'none'", h)
+        self.assertNotIn('Access-Control-Allow-Origin', h)  # Cloudflare Pages' default (*) stays: the reader fetches cross-origin
+        main = (ROOT / '_headers').read_text()
+        for line in ('X-Content-Type-Options: nosniff', 'Referrer-Policy: strict-origin-when-cross-origin', 'bluetooth=()'):
+            self.assertIn(line, main)
+            self.assertIn(line, h)
+
     def test_export_cannot_overwrite_the_main_website(self):
         with self.assertRaises(ValueError):
             archive.export(ROOT)

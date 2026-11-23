@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-bf188f1831ca",
+  "id": "bc-fccbddafeb12",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "a3b4bb14885b3404bc50d6a8d32c60a056c732895b356f34b79be4c180a40a1b",
@@ -78,7 +78,7 @@
     "styles/fonts.css": "f21d9b1dd0e28f61dcdae827643f71d2de11999d84a99122ce663eb28539bba1",
     "styles/home.css": "2d0e41b77b69916cd917e3a3fc729688fa11cb2830aa5f162ba92ae2131a8028",
     "styles/library-desk.css": "583835c1bff6b68d5c7f79e8576c9df3981538ced1ff7e65a6013887049e9fd8",
-    "styles/library.css": "ec891de5adc4b60954fff73797f14130e8dc43f5a1adcb5756ae5981927fa080",
+    "styles/library.css": "1dd0515498fbe74e1cc51ce79f068174e8d59a1ff744b2c92e54cd0c45ae509d",
     "styles/plans.css": "38f184970cff0d022a1d8cd5b1c350b3d18220de3b49fedc3b26c4a42230ad03",
     "styles/reader.css": "af8b7e11ac46fef05479fb1f5b60f5ca9854e113dcab51c9fc6eba1aaf9c0c45",
     "styles/refresh.css": "765db99ec7143d3b6c5b9925d8f11431358be0343c0b9ce92b756131881d6e2f",
@@ -110,7 +110,7 @@
     "tools/build_static.py": "92fadfaceffbd0919302a34a82fd35fb9fce0d47e07d9d63a384bc05da01d505",
     "tools/build_study.py": "104e6678f138ea9075089850e99d976c84afd9a0cf0102801e5e8acb6af56a80",
     "tools/build_summa.py": "9640d60813c0cf2b89af3ddddef9974f5c28eb5bd8e6e8c048e5d048e4a65557",
-    "tools/build_text_archive.py": "90888a41ce43aa35952b5f6211d2f772ceab0a5b9f1402241aecf087d959af2f",
+    "tools/build_text_archive.py": "6576ba50ce156a4497605cf608df315a52fc0952e2c1891f13a7e86e78cf591a",
     "tools/build_text_pages.py": "492ee30f298ede6b426439445f33c8a25c488b303133e848c8993807ca20e3eb",
     "tools/build_v3_data.py": "4f2e17132b8fb8bf3065d95ea2edcf81199ce332dc11fa6deb6b921190c3fc0d",
     "tools/build_v4_data.py": "5e5dc32de5cba26c4535f20b31eaf59c9b937e41682f8d36539a978f686c0a7b",

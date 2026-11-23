@@ -105,6 +105,7 @@ input.addEventListener('input',()=>{const terms=norm(input.value).trim().split(/
     (output / '.nojekyll').touch()
     (output / 'robots.txt').write_text('User-agent: *\nAllow: /\nDisallow: /texts/\nDisallow: /provenance/\n')
     (output / 'README.md').write_text(readme())
+    (output / '_headers').write_text(TEXTS_HEADERS)
     (output / 'NOTICE.md').write_text('''# Notice
 
 This repository holds copies of texts whose basis for hosting Bibliotheca Catholica (https://bibliothecacatholica.com) checked and recorded, edition by edition: usually public domain in the United States, otherwise an open license or the holder's written permission. This notice is a summary, not legal advice.
@@ -120,6 +121,23 @@ This repository holds copies of texts whose basis for hosting Bibliotheca Cathol
                                'comparison with a dated scan: ' + ', '.join(converted) + '.') if converted else ''))
     print(f"Exported {len(entries)} texts, {manifest['totalBytes']:,} bytes, to {output}")
     return manifest
+
+
+# Cloudflare Pages response headers for texts.bibliothecacatholica.com (Round 8, Job D, November 23, 2026). They follow the main
+# site's _headers where it fits: the same nosniff, referrer, and permissions lines; a CSP for a page with one inline style and one
+# inline script and no outside resources; HSTS. Cloudflare Pages already sends `Access-Control-Allow-Origin: *`, which the reader
+# on bibliothecacatholica.com needs to fetch the texts, so these lines leave CORS alone.
+TEXTS_HEADERS = """https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
+/*
+  Strict-Transport-Security: max-age=31536000
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), bluetooth=(), browsing-topics=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'self' https://bibliothecacatholica.com
+"""
 
 
 def readme():

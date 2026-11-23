@@ -51,6 +51,10 @@ class PartD(unittest.TestCase):
                                            'book-of-wisdom-douay-rheims', 'ecclesiasticus-douay-rheims',
                                            # Chesterton polish batch 6 (November 22, 2026)
                                            'robert-browning', 'superstition-divorce', 'the-defendant',
+                                           # Chesterton polish batch 8 (November 23, 2026)
+                                           'all-things-considered', 'alarms-discursions', 'miscellany-of-men',
+                                           # Chesterton polish batch 9 (November 23, 2026)
+                                           'crimes-of-england', 'uses-of-diversity', 'fancies-versus-fads',
                                            # Chesterton hand map: What I Saw in America (November 23, 2026)
                                            'what-i-saw-america'})
         for wid, d in TP.items():

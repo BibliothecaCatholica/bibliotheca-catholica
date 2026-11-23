@@ -1,0 +1,179 @@
+[
+ {
+  "edition": "ia-moldersofmedieva00cass",
+  "ia": "moldersofmedieva00cass",
+  "title": "MOLDERS OF THE MEDIEVAL MIND",
+  "sourceTitle": "Molders of the Medieval Mind",
+  "author": "Francis P. Cassidy",
+  "year": 1944,
+  "firstPublished": "1944",
+  "rightsBasis": "pd-nonrenewal",
+  "firstLeaf": 4,
+  "lastLeaf": 191,
+  "omitted": [
+   {
+    "what": "the bibliography",
+    "leaves": [
+     192,
+     199
+    ],
+    "pages": "181-188"
+   },
+   {
+    "what": "the index",
+    "leaves": [
+     200,
+     205
+    ],
+    "pages": "189-194"
+   }
+  ],
+  "secondOcr": {
+   "engine": "tesseract",
+   "langs": "eng+lat+ita",
+   "scale": 1
+  }
+ },
+ {
+  "edition": "ia-jameslaynezjesui00fich",
+  "ia": "jameslaynezjesui00fich",
+  "title": "JAMES LAYNEZ, JESUIT",
+  "sourceTitle": "James Laynez, Jesuit",
+  "author": "Joseph H. Fichter",
+  "year": 1944,
+  "firstPublished": "1944",
+  "rightsBasis": "pd-nonrenewal",
+  "firstLeaf": 5,
+  "lastLeaf": 304,
+  "omitted": [
+   {
+    "what": "the index",
+    "leaves": [
+     306,
+     318
+    ],
+    "pages": "287-299"
+   }
+  ],
+  "secondOcr": {
+   "engine": "tesseract",
+   "langs": "eng+lat+ita",
+   "scale": 1
+  }
+ },
+ {
+  "edition": "ia-saintteresaofavi00wals",
+  "ia": "saintteresaofavi00wals",
+  "title": "SAINT TERESA OF AVILA",
+  "sourceTitle": "Saint Teresa of Avila",
+  "author": "William Thomas Walsh",
+  "year": 1943,
+  "firstPublished": "1943",
+  "rightsBasis": "pd-nonrenewal",
+  "firstLeaf": 10,
+  "lastLeaf": 609,
+  "omitted": [
+   {
+    "what": "the index",
+    "leaves": [
+     610,
+     617
+    ],
+    "pages": "585-592"
+   }
+  ],
+  "secondOcr": {
+   "engine": "tesseract",
+   "langs": "eng+lat+ita",
+   "scale": 1
+  }
+ },
+ {
+  "edition": "ia-stanthonyofpadua00hube",
+  "ia": "stanthonyofpadua00hube",
+  "title": "ST. ANTHONY OF PADUA, DOCTOR OF THE CHURCH UNIVERSAL",
+  "sourceTitle": "St. Anthony of Padua, Doctor of the Church Universal",
+  "author": "Raphael M. Huber",
+  "year": 1948,
+  "firstPublished": "1948",
+  "rightsBasis": "pd-nonrenewal",
+  "firstLeaf": 6,
+  "lastLeaf": 180,
+  "omitted": [
+   {
+    "what": "the bibliography",
+    "leaves": [
+     181,
+     216
+    ],
+    "pages": "164-199"
+   },
+   {
+    "what": "the appendix of three sermons in Latin",
+    "leaves": [
+     217,
+     221
+    ],
+    "pages": "200-204"
+   },
+   {
+    "what": "the index",
+    "leaves": [
+     222,
+     226
+    ],
+    "pages": "205-209"
+   }
+  ],
+  "secondOcr": {
+   "engine": "tesseract",
+   "langs": "eng+lat+ita",
+   "scale": 1
+  }
+ },
+ {
+  "edition": "ia-johnenglandameri00gran",
+  "ia": "johnenglandameri00gran",
+  "title": "JOHN ENGLAND, AMERICAN CHRISTOPHER",
+  "sourceTitle": "John England, American Christopher",
+  "author": "Dorothy Fremont Grant",
+  "year": 1949,
+  "firstPublished": "1949",
+  "rightsBasis": "pd-nonrenewal",
+  "firstLeaf": 4,
+  "lastLeaf": 186,
+  "omitted": [],
+  "secondOcr": {
+   "engine": "tesseract",
+   "langs": "eng+lat+ita",
+   "scale": 1
+  }
+ },
+ {
+  "edition": "ia-mysteryofiniquit00furf",
+  "ia": "mysteryofiniquit00furf",
+  "title": "THE MYSTERY OF INIQUITY",
+  "sourceTitle": "The Mystery of Iniquity",
+  "author": "Paul Hanly Furfey",
+  "year": 1945,
+  "firstPublished": "1945",
+  "rightsBasis": "pd-nonrenewal",
+  "firstLeaf": 4,
+  "lastLeaf": 193,
+  "omitted": [
+   {
+    "what": "the index",
+    "leaves": [
+     194,
+     195
+    ],
+    "pages": "191-192"
+   }
+  ],
+  "secondOcr": {
+   "engine": "tesseract",
+   "langs": "eng+lat+ita",
+   "scale": 1
+  }
+ }
+]

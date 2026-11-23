@@ -7,3 +7,4 @@ node_modules/
 .epub-build/
 epub-review/
 .validate/
+.r2-cache/

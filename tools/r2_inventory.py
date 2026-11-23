@@ -130,14 +130,20 @@ def catalogue_scans(library):
 
 
 def witness_scans(library):
-    """{identifier: (work, edition)} for the dated scans that hosted texts were checked against (`iaWitness`)."""
+    """{identifier: (work, edition)} for the dated scans that hosted texts were checked against: `iaWitness` first, then any
+    other scan a hosted edition's source record cites."""
     editions = {e['id']: (w, e) for w in library['works'] for e in w['editions']}
     out = {}
     for p in sorted((ROOT / 'data/sources').glob('*.json')):
-        rec = json.loads(p.read_text())
+        text = p.read_text()
+        rec = json.loads(text)
         wit = rec.get('iaWitness') if isinstance(rec, dict) else None
         if isinstance(wit, dict) and wit.get('identifier') and p.stem in editions:
             out.setdefault(wit['identifier'], editions[p.stem])
+    for p in sorted((ROOT / 'data/sources').glob('*.json')):  # other scans a hosted edition's record cites (comparison copies)
+        if p.stem in editions and editions[p.stem][1].get('text'):
+            for ident in re.findall(r'archive\.org/(?:details|download|stream)/([A-Za-z0-9_][A-Za-z0-9_.-]*[A-Za-z0-9_])', p.read_text()):
+                out.setdefault(ident, editions[p.stem])
     return out
 
 
@@ -179,6 +185,8 @@ def build(snap, library, old):
             year = first_published(e) or year_of(meta['date'], e.get('rights'), e.get('label'))
             if any(ed.get('text') for _, ed in current):
                 kind, gate = 'pairs', 'hosted'
+            elif any(ed.get('text') and not ed.get('retired') for ed in work['editions']):
+                kind, gate = 'witness', 'hosted'  # another printing of a work hosted here from a different edition
             elif ident in notes:
                 kind, gate = 'near', 'near gate' if notes[ident]['score'] >= 98.5 else 'below'
             elif len({ed['id'] for ed in work['editions']}) > 1 and all(not ed.get('text') for ed in work['editions']):

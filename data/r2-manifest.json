@@ -3100,6 +3100,48 @@
   {
    "source": {
     "kind": "archive.org",
+    "id": "imitationchrist07thomgoog",
+    "url": "https://archive.org/details/imitationchrist07thomgoog"
+   },
+   "fringe": false,
+   "slug": "ia-imitationchrist07thomgoog",
+   "title": "The Imitation of Christ",
+   "author": "Thomas à Kempis",
+   "year": 1877,
+   "rightsBasis": "pd-date",
+   "rightsEvidence": "first published 1877, before 1931",
+   "readGate": "hosted",
+   "workId": "imitation-of-christ",
+   "editionId": null,
+   "hostedEditionId": "pg-1653",
+   "files": [
+    {
+     "kind": "pdf",
+     "key": "pdf/ia-imitationchrist07thomgoog.pdf",
+     "bytes": 9291783,
+     "sha256": null,
+     "sourceUrl": "https://archive.org/download/imitationchrist07thomgoog/imitationchrist07thomgoog.pdf",
+     "sourceSha1": "c0143dbe13261a539cbafec8295cc648441d867d",
+     "localPath": null,
+     "contentType": "application/pdf",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "url": "https://files.bibliothecacatholica.com/pdf/ia-imitationchrist07thomgoog.pdf",
+     "upload": null
+    }
+   ],
+   "pageImagesBytes": 0,
+   "servers": [
+    "ia601602.us.archive.org",
+    "ia801602.us.archive.org"
+   ],
+   "tier": 3,
+   "priorityReason": "the dated printing a hosted text was checked against",
+   "priority": 83,
+   "batch": "batch-1"
+  },
+  {
+   "source": {
+    "kind": "archive.org",
     "id": "poetlunaticsepis0000ches_c9m9",
     "url": "https://archive.org/details/poetlunaticsepis0000ches_c9m9"
    },
@@ -3136,7 +3178,7 @@
    ],
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 83,
+   "priority": 84,
    "batch": "batch-1"
   },
   {
@@ -3178,7 +3220,7 @@
    ],
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 84,
+   "priority": 85,
    "batch": "batch-1"
   },
   {
@@ -3220,7 +3262,91 @@
    ],
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 85,
+   "priority": 86,
+   "batch": "batch-1"
+  },
+  {
+   "source": {
+    "kind": "archive.org",
+    "id": "incredulityoffat0000ches",
+    "url": "https://archive.org/details/incredulityoffat0000ches"
+   },
+   "fringe": false,
+   "slug": "ia-incredulityoffat0000ches",
+   "title": "The Incredulity of Father Brown",
+   "author": "G. K. Chesterton",
+   "year": 1926,
+   "rightsBasis": "pd-date",
+   "rightsEvidence": "first published 1926, before 1931",
+   "readGate": "hosted",
+   "workId": "incredulity-father-brown",
+   "editionId": null,
+   "hostedEditionId": "ia-incredulityoffat0000ches",
+   "files": [
+    {
+     "kind": "pdf",
+     "key": "pdf/ia-incredulityoffat0000ches.pdf",
+     "bytes": 10665103,
+     "sha256": null,
+     "sourceUrl": "https://archive.org/download/incredulityoffat0000ches/incredulityoffat0000ches.pdf",
+     "sourceSha1": "c064d262b5e9e6a4800c72fae0096212ecc8b9a8",
+     "localPath": null,
+     "contentType": "application/pdf",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "url": "https://files.bibliothecacatholica.com/pdf/ia-incredulityoffat0000ches.pdf",
+     "upload": null
+    }
+   ],
+   "pageImagesBytes": 464381293,
+   "servers": [
+    "ia600803.us.archive.org",
+    "ia800803.us.archive.org"
+   ],
+   "tier": 3,
+   "priorityReason": "the dated printing a hosted text was checked against",
+   "priority": 87,
+   "batch": "batch-1"
+  },
+  {
+   "source": {
+    "kind": "archive.org",
+    "id": "orthodoxy0000gilb",
+    "url": "https://archive.org/details/orthodoxy0000gilb"
+   },
+   "fringe": false,
+   "slug": "ia-orthodoxy0000gilb",
+   "title": "Orthodoxy",
+   "author": "G. K. Chesterton",
+   "year": 1908,
+   "rightsBasis": "pd-date",
+   "rightsEvidence": "first published 1908, before 1931",
+   "readGate": "hosted",
+   "workId": "orthodoxy",
+   "editionId": null,
+   "hostedEditionId": "pg-130",
+   "files": [
+    {
+     "kind": "pdf",
+     "key": "pdf/ia-orthodoxy0000gilb.pdf",
+     "bytes": 10842442,
+     "sha256": null,
+     "sourceUrl": "https://archive.org/download/orthodoxy0000gilb/orthodoxy0000gilb.pdf",
+     "sourceSha1": "110f6fcf414616b3a31a13a639f8b78a28ab1a4e",
+     "localPath": null,
+     "contentType": "application/pdf",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "url": "https://files.bibliothecacatholica.com/pdf/ia-orthodoxy0000gilb.pdf",
+     "upload": null
+    }
+   ],
+   "pageImagesBytes": 749350925,
+   "servers": [
+    "ia601406.us.archive.org",
+    "ia801406.us.archive.org"
+   ],
+   "tier": 3,
+   "priorityReason": "the dated printing a hosted text was checked against",
+   "priority": 88,
    "batch": "batch-1"
   },
   {
@@ -3262,7 +3388,7 @@
    ],
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 86,
+   "priority": 89,
    "batch": "batch-1"
   },
   {
@@ -3304,7 +3430,49 @@
    ],
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 87,
+   "priority": 90,
+   "batch": "batch-1"
+  },
+  {
+   "source": {
+    "kind": "archive.org",
+    "id": "bwb_S0-DRI-815",
+    "url": "https://archive.org/details/bwb_S0-DRI-815"
+   },
+   "fringe": false,
+   "slug": "ia-bwb-s0-dri-815",
+   "title": "Orthodoxy",
+   "author": "G. K. Chesterton",
+   "year": 1908,
+   "rightsBasis": "pd-date",
+   "rightsEvidence": "first published 1908, before 1931",
+   "readGate": "hosted",
+   "workId": "orthodoxy",
+   "editionId": null,
+   "hostedEditionId": "pg-130",
+   "files": [
+    {
+     "kind": "pdf",
+     "key": "pdf/ia-bwb-s0-dri-815.pdf",
+     "bytes": 11067925,
+     "sha256": null,
+     "sourceUrl": "https://archive.org/download/bwb_S0-DRI-815/bwb_S0-DRI-815.pdf",
+     "sourceSha1": "084e279ae716df48079b3b92157a1719ad427313",
+     "localPath": null,
+     "contentType": "application/pdf",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "url": "https://files.bibliothecacatholica.com/pdf/ia-bwb-s0-dri-815.pdf",
+     "upload": null
+    }
+   ],
+   "pageImagesBytes": 676271695,
+   "servers": [
+    "ia601008.us.archive.org",
+    "ia801008.us.archive.org"
+   ],
+   "tier": 3,
+   "priorityReason": "the dated printing a hosted text was checked against",
+   "priority": 91,
    "batch": "batch-1"
   },
   {
@@ -3346,7 +3514,49 @@
    ],
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 88,
+   "priority": 92,
+   "batch": "batch-1"
+  },
+  {
+   "source": {
+    "kind": "archive.org",
+    "id": "summatheologicao0020thom_q5p9",
+    "url": "https://archive.org/details/summatheologicao0020thom_q5p9"
+   },
+   "fringe": false,
+   "slug": "ia-summatheologicao0020thom-q5p9",
+   "title": "Summa Theologiae",
+   "author": "Thomas Aquinas",
+   "year": 1912,
+   "rightsBasis": "pd-date",
+   "rightsEvidence": "first published 1912, before 1931",
+   "readGate": "hosted",
+   "workId": "summa-theologiae",
+   "editionId": null,
+   "hostedEditionId": "ia-summa-supplement",
+   "files": [
+    {
+     "kind": "pdf",
+     "key": "pdf/ia-summatheologicao0020thom-q5p9.pdf",
+     "bytes": 13548141,
+     "sha256": null,
+     "sourceUrl": "https://archive.org/download/summatheologicao0020thom_q5p9/summatheologicao0020thom_q5p9.pdf",
+     "sourceSha1": "098016938d90426dd2a6b9d650e095819c0cdd28",
+     "localPath": null,
+     "contentType": "application/pdf",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "url": "https://files.bibliothecacatholica.com/pdf/ia-summatheologicao0020thom-q5p9.pdf",
+     "upload": null
+    }
+   ],
+   "pageImagesBytes": 383404933,
+   "servers": [
+    "ia601409.us.archive.org",
+    "ia801409.us.archive.org"
+   ],
+   "tier": 3,
+   "priorityReason": "the dated printing a hosted text was checked against",
+   "priority": 93,
    "batch": "batch-1"
   },
   {
@@ -3388,7 +3598,49 @@
    ],
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 89,
+   "priority": 94,
+   "batch": "batch-1"
+  },
+  {
+   "source": {
+    "kind": "archive.org",
+    "id": "orthodoxy1909ches",
+    "url": "https://archive.org/details/orthodoxy1909ches"
+   },
+   "fringe": false,
+   "slug": "ia-orthodoxy1909ches",
+   "title": "Orthodoxy",
+   "author": "G. K. Chesterton",
+   "year": 1909,
+   "rightsBasis": "pd-date",
+   "rightsEvidence": "first published 1909, before 1931",
+   "readGate": "hosted",
+   "workId": "orthodoxy",
+   "editionId": null,
+   "hostedEditionId": "pg-130",
+   "files": [
+    {
+     "kind": "pdf",
+     "key": "pdf/ia-orthodoxy1909ches.pdf",
+     "bytes": 13761905,
+     "sha256": null,
+     "sourceUrl": "https://archive.org/download/orthodoxy1909ches/orthodoxy1909ches.pdf",
+     "sourceSha1": "fbceee14c7834884dfd312671fb923cf2f93bfbc",
+     "localPath": null,
+     "contentType": "application/pdf",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "url": "https://files.bibliothecacatholica.com/pdf/ia-orthodoxy1909ches.pdf",
+     "upload": null
+    }
+   ],
+   "pageImagesBytes": 392543357,
+   "servers": [
+    "ia803104.us.archive.org",
+    "ia903104.us.archive.org"
+   ],
+   "tier": 3,
+   "priorityReason": "the dated printing a hosted text was checked against",
+   "priority": 95,
    "batch": "batch-1"
   },
   {
@@ -3430,7 +3682,91 @@
    ],
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 90,
+   "priority": 96,
+   "batch": "batch-1"
+  },
+  {
+   "source": {
+    "kind": "archive.org",
+    "id": "sacredlegendaryar02jame",
+    "url": "https://archive.org/details/sacredlegendaryar02jame"
+   },
+   "fringe": false,
+   "slug": "ia-sacredlegendaryar02jame",
+   "title": "Sacred and Legendary Art",
+   "author": "Anna Jameson",
+   "year": 1857,
+   "rightsBasis": "pd-date",
+   "rightsEvidence": "first published 1857, before 1931",
+   "readGate": "hosted",
+   "workId": "sacred-legendary-art",
+   "editionId": null,
+   "hostedEditionId": "ia-sacredlegendaryar02jame",
+   "files": [
+    {
+     "kind": "pdf",
+     "key": "pdf/ia-sacredlegendaryar02jame.pdf",
+     "bytes": 20660863,
+     "sha256": null,
+     "sourceUrl": "https://archive.org/download/sacredlegendaryar02jame/sacredlegendaryar02jame.pdf",
+     "sourceSha1": "8d503419d61e5a91a24032bb87a33d89e1b2949a",
+     "localPath": null,
+     "contentType": "application/pdf",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "url": "https://files.bibliothecacatholica.com/pdf/ia-sacredlegendaryar02jame.pdf",
+     "upload": null
+    }
+   ],
+   "pageImagesBytes": 359920271,
+   "servers": [
+    "ia600408.us.archive.org",
+    "ia800408.us.archive.org"
+   ],
+   "tier": 3,
+   "priorityReason": "the dated printing a hosted text was checked against",
+   "priority": 97,
+   "batch": "batch-1"
+  },
+  {
+   "source": {
+    "kind": "archive.org",
+    "id": "summatheologi20thom",
+    "url": "https://archive.org/details/summatheologi20thom"
+   },
+   "fringe": false,
+   "slug": "ia-summatheologi20thom",
+   "title": "Summa Theologiae",
+   "author": "Thomas Aquinas",
+   "year": 1912,
+   "rightsBasis": "pd-date",
+   "rightsEvidence": "first published 1912, before 1931",
+   "readGate": "hosted",
+   "workId": "summa-theologiae",
+   "editionId": null,
+   "hostedEditionId": "ia-summa-supplement",
+   "files": [
+    {
+     "kind": "pdf",
+     "key": "pdf/ia-summatheologi20thom.pdf",
+     "bytes": 22406180,
+     "sha256": null,
+     "sourceUrl": "https://archive.org/download/summatheologi20thom/summatheologi20thom.pdf",
+     "sourceSha1": "82fc821ebde575b91141ac23ecb60b37e1963d14",
+     "localPath": null,
+     "contentType": "application/pdf",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "url": "https://files.bibliothecacatholica.com/pdf/ia-summatheologi20thom.pdf",
+     "upload": null
+    }
+   ],
+   "pageImagesBytes": 527757077,
+   "servers": [
+    "ia600409.us.archive.org",
+    "ia800409.us.archive.org"
+   ],
+   "tier": 3,
+   "priorityReason": "the dated printing a hosted text was checked against",
+   "priority": 98,
    "batch": "batch-1"
   },
   {
@@ -3472,7 +3808,49 @@
    ],
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 91,
+   "priority": 99,
+   "batch": "batch-1"
+  },
+  {
+   "source": {
+    "kind": "archive.org",
+    "id": "canonsdecreesofc0000revj",
+    "url": "https://archive.org/details/canonsdecreesofc0000revj"
+   },
+   "fringe": false,
+   "slug": "ia-canonsdecreesofc0000revj",
+   "title": "The Canons and Decrees of the Council of Trent",
+   "author": "Council of Trent",
+   "year": 1848,
+   "rightsBasis": "pd-date",
+   "rightsEvidence": "first published 1848, before 1931",
+   "readGate": "hosted",
+   "workId": "council-of-trent",
+   "editionId": null,
+   "hostedEditionId": "peo-trent-1848-r2",
+   "files": [
+    {
+     "kind": "pdf",
+     "key": "pdf/ia-canonsdecreesofc0000revj.pdf",
+     "bytes": 27601858,
+     "sha256": null,
+     "sourceUrl": "https://archive.org/download/canonsdecreesofc0000revj/canonsdecreesofc0000revj.pdf",
+     "sourceSha1": "9c2b332de6ddfdcc2106c04a4e5ccecc95283a2c",
+     "localPath": null,
+     "contentType": "application/pdf",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "url": "https://files.bibliothecacatholica.com/pdf/ia-canonsdecreesofc0000revj.pdf",
+     "upload": null
+    }
+   ],
+   "pageImagesBytes": 1116401730,
+   "servers": [
+    "ia601403.us.archive.org",
+    "ia801403.us.archive.org"
+   ],
+   "tier": 3,
+   "priorityReason": "the dated printing a hosted text was checked against",
+   "priority": 100,
    "batch": "batch-1"
   },
   {
@@ -3514,7 +3892,175 @@
    ],
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 92,
+   "priority": 101,
+   "batch": "batch-1"
+  },
+  {
+   "source": {
+    "kind": "archive.org",
+    "id": "imitationchrist01unkngoog",
+    "url": "https://archive.org/details/imitationchrist01unkngoog"
+   },
+   "fringe": false,
+   "slug": "ia-imitationchrist01unkngoog",
+   "title": "The Imitation of Christ",
+   "author": "Thomas à Kempis",
+   "year": 1874,
+   "rightsBasis": "pd-date",
+   "rightsEvidence": "first published 1874, before 1931",
+   "readGate": "hosted",
+   "workId": "imitation-of-christ",
+   "editionId": null,
+   "hostedEditionId": "pg-1653",
+   "files": [
+    {
+     "kind": "pdf",
+     "key": "pdf/ia-imitationchrist01unkngoog.pdf",
+     "bytes": 30136021,
+     "sha256": null,
+     "sourceUrl": "https://archive.org/download/imitationchrist01unkngoog/imitationchrist01unkngoog.pdf",
+     "sourceSha1": "b41f2cac7a85d33f20790f9dc0fe205e11246d4a",
+     "localPath": null,
+     "contentType": "application/pdf",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "url": "https://files.bibliothecacatholica.com/pdf/ia-imitationchrist01unkngoog.pdf",
+     "upload": null
+    }
+   ],
+   "pageImagesBytes": 0,
+   "servers": [
+    "ia600800.us.archive.org",
+    "ia800800.us.archive.org"
+   ],
+   "tier": 3,
+   "priorityReason": "the dated printing a hosted text was checked against",
+   "priority": 102,
+   "batch": "batch-1"
+  },
+  {
+   "source": {
+    "kind": "archive.org",
+    "id": "summatheologi18thom",
+    "url": "https://archive.org/details/summatheologi18thom"
+   },
+   "fringe": false,
+   "slug": "ia-summatheologi18thom",
+   "title": "Summa Theologiae",
+   "author": "Thomas Aquinas",
+   "year": 1912,
+   "rightsBasis": "pd-date",
+   "rightsEvidence": "first published 1912, before 1931",
+   "readGate": "hosted",
+   "workId": "summa-theologiae",
+   "editionId": null,
+   "hostedEditionId": "ia-summa-supplement",
+   "files": [
+    {
+     "kind": "pdf",
+     "key": "pdf/ia-summatheologi18thom.pdf",
+     "bytes": 30521687,
+     "sha256": null,
+     "sourceUrl": "https://archive.org/download/summatheologi18thom/summatheologi18thom.pdf",
+     "sourceSha1": "691bc9dedfea56dc4ec642216183ef782a14cc90",
+     "localPath": null,
+     "contentType": "application/pdf",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "url": "https://files.bibliothecacatholica.com/pdf/ia-summatheologi18thom.pdf",
+     "upload": null
+    }
+   ],
+   "pageImagesBytes": 513717540,
+   "servers": [
+    "ia600905.us.archive.org",
+    "ia800905.us.archive.org"
+   ],
+   "tier": 3,
+   "priorityReason": "the dated printing a hosted text was checked against",
+   "priority": 103,
+   "batch": "batch-1"
+  },
+  {
+   "source": {
+    "kind": "archive.org",
+    "id": "summatheologi19thom",
+    "url": "https://archive.org/details/summatheologi19thom"
+   },
+   "fringe": false,
+   "slug": "ia-summatheologi19thom",
+   "title": "Summa Theologiae",
+   "author": "Thomas Aquinas",
+   "year": 1912,
+   "rightsBasis": "pd-date",
+   "rightsEvidence": "first published 1912, before 1931",
+   "readGate": "hosted",
+   "workId": "summa-theologiae",
+   "editionId": null,
+   "hostedEditionId": "ia-summa-supplement",
+   "files": [
+    {
+     "kind": "pdf",
+     "key": "pdf/ia-summatheologi19thom.pdf",
+     "bytes": 31695397,
+     "sha256": null,
+     "sourceUrl": "https://archive.org/download/summatheologi19thom/summatheologi19thom.pdf",
+     "sourceSha1": "0bd1ab67201b4422a858cc0dfb49c3cf1effb272",
+     "localPath": null,
+     "contentType": "application/pdf",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "url": "https://files.bibliothecacatholica.com/pdf/ia-summatheologi19thom.pdf",
+     "upload": null
+    }
+   ],
+   "pageImagesBytes": 587046812,
+   "servers": [
+    "ia601003.us.archive.org",
+    "ia801003.us.archive.org"
+   ],
+   "tier": 3,
+   "priorityReason": "the dated printing a hosted text was checked against",
+   "priority": 104,
+   "batch": "batch-1"
+  },
+  {
+   "source": {
+    "kind": "archive.org",
+    "id": "imitationofchris00benhrich",
+    "url": "https://archive.org/details/imitationofchris00benhrich"
+   },
+   "fringe": false,
+   "slug": "ia-imitationofchris00benhrich",
+   "title": "The Imitation of Christ",
+   "author": "Thomas à Kempis",
+   "year": 1886,
+   "rightsBasis": "pd-date",
+   "rightsEvidence": "first published 1886, before 1931",
+   "readGate": "hosted",
+   "workId": "imitation-of-christ",
+   "editionId": null,
+   "hostedEditionId": "pg-1653",
+   "files": [
+    {
+     "kind": "pdf",
+     "key": "pdf/ia-imitationofchris00benhrich.pdf",
+     "bytes": 50092833,
+     "sha256": null,
+     "sourceUrl": "https://archive.org/download/imitationofchris00benhrich/imitationofchris00benhrich.pdf",
+     "sourceSha1": "dd7d67b50e7f87b99a2526692bd3c40341eebeda",
+     "localPath": null,
+     "contentType": "application/pdf",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "url": "https://files.bibliothecacatholica.com/pdf/ia-imitationofchris00benhrich.pdf",
+     "upload": null
+    }
+   ],
+   "pageImagesBytes": 647693649,
+   "servers": [
+    "ia601608.us.archive.org",
+    "ia801608.us.archive.org"
+   ],
+   "tier": 3,
+   "priorityReason": "the dated printing a hosted text was checked against",
+   "priority": 105,
    "batch": "batch-1"
   },
   {
@@ -3556,7 +4102,7 @@
    ],
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 93,
+   "priority": 106,
    "batch": "batch-1"
   },
   {
@@ -3598,7 +4144,7 @@
    ],
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 94,
+   "priority": 107,
    "batch": "batch-1"
   },
   {
@@ -3641,7 +4187,7 @@
    "large": true,
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 95,
+   "priority": 108,
    "batch": "batch-1"
   },
   {
@@ -3684,7 +4230,7 @@
    "large": true,
    "tier": 3,
    "priorityReason": "the dated printing a hosted text was checked against",
-   "priority": 96,
+   "priority": 109,
    "batch": "batch-1"
   },
   {
@@ -3728,7 +4274,7 @@
    "readGateNote": "hand pass on draft PR #159; hosting PR #163 (QA then merge)",
    "tier": 4,
    "priorityReason": "near the read gate: an original-scan page while the transcription is finished",
-   "priority": 97,
+   "priority": 110,
    "batch": "batch-2"
   },
   {
@@ -3773,7 +4319,7 @@
    "ownerReview": "pd-nonrenewal scan not yet approved for hosting; the owner reviews it before upload",
    "tier": 4,
    "priorityReason": "near the read gate: an original-scan page while the transcription is finished",
-   "priority": 98
+   "priority": 111
   },
   {
    "source": {
@@ -3817,7 +4363,7 @@
    "ownerReview": "pd-nonrenewal scan not yet approved for hosting; the owner reviews it before upload",
    "tier": 4,
    "priorityReason": "near the read gate: an original-scan page while the transcription is finished",
-   "priority": 99
+   "priority": 112
   },
   {
    "source": {
@@ -3861,7 +4407,7 @@
    "ownerReview": "pd-nonrenewal scan not yet approved for hosting; the owner reviews it before upload",
    "tier": 4,
    "priorityReason": "near the read gate: an original-scan page while the transcription is finished",
-   "priority": 100
+   "priority": 113
   },
   {
    "source": {
@@ -3902,7 +4448,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 101,
+   "priority": 114,
    "batch": "batch-2"
   },
   {
@@ -3944,7 +4490,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 102,
+   "priority": 115,
    "batch": "batch-2"
   },
   {
@@ -3986,7 +4532,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 103,
+   "priority": 116,
    "batch": "batch-2"
   },
   {
@@ -4028,7 +4574,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 104,
+   "priority": 117,
    "batch": "batch-2"
   },
   {
@@ -4070,7 +4616,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 105,
+   "priority": 118,
    "batch": "batch-2"
   },
   {
@@ -4112,49 +4658,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 106,
-   "batch": "batch-2"
-  },
-  {
-   "source": {
-    "kind": "archive.org",
-    "id": "incredulityoffat0000ches",
-    "url": "https://archive.org/details/incredulityoffat0000ches"
-   },
-   "fringe": false,
-   "slug": "ia-incredulityoffat0000ches",
-   "title": "The Incredulity of Father Brown",
-   "author": "G. K. Chesterton",
-   "year": 1926,
-   "rightsBasis": "pd-date",
-   "rightsEvidence": "first published 1926, before 1931",
-   "readGate": "below",
-   "workId": "incredulity-father-brown",
-   "editionId": "ia-incredulityoffat0000ches",
-   "hostedEditionId": null,
-   "files": [
-    {
-     "kind": "pdf",
-     "key": "pdf/ia-incredulityoffat0000ches.pdf",
-     "bytes": 10665103,
-     "sha256": null,
-     "sourceUrl": "https://archive.org/download/incredulityoffat0000ches/incredulityoffat0000ches.pdf",
-     "sourceSha1": "c064d262b5e9e6a4800c72fae0096212ecc8b9a8",
-     "localPath": null,
-     "contentType": "application/pdf",
-     "cacheControl": "public, max-age=31536000, immutable",
-     "url": "https://files.bibliothecacatholica.com/pdf/ia-incredulityoffat0000ches.pdf",
-     "upload": null
-    }
-   ],
-   "pageImagesBytes": 464381293,
-   "servers": [
-    "ia600803.us.archive.org",
-    "ia800803.us.archive.org"
-   ],
-   "tier": 5,
-   "priorityReason": "completes a series the library already lists",
-   "priority": 107,
+   "priority": 119,
    "batch": "batch-2"
   },
   {
@@ -4196,7 +4700,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 108,
+   "priority": 120,
    "batch": "batch-2"
   },
   {
@@ -4237,7 +4741,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 109,
+   "priority": 121,
    "batch": "batch-2"
   },
   {
@@ -4279,7 +4783,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 110,
+   "priority": 122,
    "batch": "batch-2"
   },
   {
@@ -4321,7 +4825,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 111,
+   "priority": 123,
    "batch": "batch-2"
   },
   {
@@ -4363,7 +4867,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 112,
+   "priority": 124,
    "batch": "batch-2"
   },
   {
@@ -4405,7 +4909,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 113,
+   "priority": 125,
    "batch": "batch-2"
   },
   {
@@ -4447,7 +4951,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 114,
+   "priority": 126,
    "batch": "batch-2"
   },
   {
@@ -4489,7 +4993,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 115,
+   "priority": 127,
    "batch": "batch-2"
   },
   {
@@ -4531,49 +5035,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 116,
-   "batch": "batch-2"
-  },
-  {
-   "source": {
-    "kind": "archive.org",
-    "id": "sacredlegendaryar02jame",
-    "url": "https://archive.org/details/sacredlegendaryar02jame"
-   },
-   "fringe": false,
-   "slug": "ia-sacredlegendaryar02jame",
-   "title": "Sacred and Legendary Art",
-   "author": "Anna Jameson",
-   "year": 1857,
-   "rightsBasis": "pd-date",
-   "rightsEvidence": "first published 1857, before 1931",
-   "readGate": "below",
-   "workId": "sacred-legendary-art",
-   "editionId": "ia-sacredlegendaryar02jame",
-   "hostedEditionId": null,
-   "files": [
-    {
-     "kind": "pdf",
-     "key": "pdf/ia-sacredlegendaryar02jame.pdf",
-     "bytes": 20660863,
-     "sha256": null,
-     "sourceUrl": "https://archive.org/download/sacredlegendaryar02jame/sacredlegendaryar02jame.pdf",
-     "sourceSha1": "8d503419d61e5a91a24032bb87a33d89e1b2949a",
-     "localPath": null,
-     "contentType": "application/pdf",
-     "cacheControl": "public, max-age=31536000, immutable",
-     "url": "https://files.bibliothecacatholica.com/pdf/ia-sacredlegendaryar02jame.pdf",
-     "upload": null
-    }
-   ],
-   "pageImagesBytes": 359920271,
-   "servers": [
-    "ia600408.us.archive.org",
-    "ia800408.us.archive.org"
-   ],
-   "tier": 5,
-   "priorityReason": "completes a series the library already lists",
-   "priority": 117,
+   "priority": 128,
    "batch": "batch-2"
   },
   {
@@ -4615,7 +5077,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 118,
+   "priority": 129,
    "batch": "batch-2"
   },
   {
@@ -4657,7 +5119,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 119,
+   "priority": 130,
    "batch": "batch-2"
   },
   {
@@ -4699,7 +5161,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 120,
+   "priority": 131,
    "batch": "batch-2"
   },
   {
@@ -4741,7 +5203,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 121,
+   "priority": 132,
    "batch": "batch-2"
   },
   {
@@ -4783,7 +5245,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 122,
+   "priority": 133,
    "batch": "batch-2"
   },
   {
@@ -4825,7 +5287,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 123,
+   "priority": 134,
    "batch": "batch-2"
   },
   {
@@ -4867,7 +5329,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 124,
+   "priority": 135,
    "batch": "batch-2"
   },
   {
@@ -4909,7 +5371,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 125,
+   "priority": 136,
    "batch": "batch-2"
   },
   {
@@ -4951,7 +5413,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 126,
+   "priority": 137,
    "batch": "batch-2"
   },
   {
@@ -4993,7 +5455,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 127,
+   "priority": 138,
    "batch": "batch-2"
   },
   {
@@ -5035,7 +5497,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 128,
+   "priority": 139,
    "batch": "batch-2"
   },
   {
@@ -5077,7 +5539,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 129,
+   "priority": 140,
    "batch": "batch-2"
   },
   {
@@ -5119,7 +5581,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 130,
+   "priority": 141,
    "batch": "batch-2"
   },
   {
@@ -5161,7 +5623,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 131,
+   "priority": 142,
    "batch": "batch-2"
   },
   {
@@ -5203,7 +5665,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 132,
+   "priority": 143,
    "batch": "batch-2"
   },
   {
@@ -5245,7 +5707,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 133,
+   "priority": 144,
    "batch": "batch-2"
   },
   {
@@ -5287,7 +5749,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 134,
+   "priority": 145,
    "batch": "batch-2"
   },
   {
@@ -5329,7 +5791,7 @@
    ],
    "tier": 5,
    "priorityReason": "completes a series the library already lists",
-   "priority": 135,
+   "priority": 146,
    "batch": "batch-2"
   },
   {
@@ -5371,7 +5833,7 @@
    ],
    "tier": 6,
    "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 136,
+   "priority": 147,
    "batch": "batch-3"
   },
   {
@@ -5413,7 +5875,7 @@
    ],
    "tier": 6,
    "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 137,
+   "priority": 148,
    "batch": "batch-3"
   },
   {
@@ -5455,7 +5917,7 @@
    ],
    "tier": 6,
    "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 138,
+   "priority": 149,
    "batch": "batch-3"
   },
   {
@@ -5497,217 +5959,7 @@
    ],
    "tier": 6,
    "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 139,
-   "batch": "batch-3"
-  },
-  {
-   "source": {
-    "kind": "archive.org",
-    "id": "imitationchrist07thomgoog",
-    "url": "https://archive.org/details/imitationchrist07thomgoog"
-   },
-   "fringe": false,
-   "slug": "ia-imitationchrist07thomgoog",
-   "title": "The Imitation of Christ: Four Books",
-   "author": "Thomas",
-   "year": 1877,
-   "rightsBasis": "pd-date",
-   "rightsEvidence": "first published 1877, before 1931",
-   "readGate": "below",
-   "workId": null,
-   "editionId": null,
-   "hostedEditionId": null,
-   "files": [
-    {
-     "kind": "pdf",
-     "key": "pdf/ia-imitationchrist07thomgoog.pdf",
-     "bytes": 9291783,
-     "sha256": null,
-     "sourceUrl": "https://archive.org/download/imitationchrist07thomgoog/imitationchrist07thomgoog.pdf",
-     "sourceSha1": "c0143dbe13261a539cbafec8295cc648441d867d",
-     "localPath": null,
-     "contentType": "application/pdf",
-     "cacheControl": "public, max-age=31536000, immutable",
-     "url": "https://files.bibliothecacatholica.com/pdf/ia-imitationchrist07thomgoog.pdf",
-     "upload": null
-    }
-   ],
-   "pageImagesBytes": 0,
-   "servers": [
-    "ia601602.us.archive.org",
-    "ia801602.us.archive.org"
-   ],
-   "tier": 6,
-   "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 140,
-   "batch": "batch-3"
-  },
-  {
-   "source": {
-    "kind": "archive.org",
-    "id": "orthodoxy0000gilb",
-    "url": "https://archive.org/details/orthodoxy0000gilb"
-   },
-   "fringe": false,
-   "slug": "ia-orthodoxy0000gilb",
-   "title": "orthodoxy ",
-   "author": "gilberrt k. chesterton",
-   "year": 1908,
-   "rightsBasis": "pd-date",
-   "rightsEvidence": "first published 1908, before 1931",
-   "readGate": "below",
-   "workId": null,
-   "editionId": null,
-   "hostedEditionId": null,
-   "files": [
-    {
-     "kind": "pdf",
-     "key": "pdf/ia-orthodoxy0000gilb.pdf",
-     "bytes": 10842442,
-     "sha256": null,
-     "sourceUrl": "https://archive.org/download/orthodoxy0000gilb/orthodoxy0000gilb.pdf",
-     "sourceSha1": "110f6fcf414616b3a31a13a639f8b78a28ab1a4e",
-     "localPath": null,
-     "contentType": "application/pdf",
-     "cacheControl": "public, max-age=31536000, immutable",
-     "url": "https://files.bibliothecacatholica.com/pdf/ia-orthodoxy0000gilb.pdf",
-     "upload": null
-    }
-   ],
-   "pageImagesBytes": 749350925,
-   "servers": [
-    "ia601406.us.archive.org",
-    "ia801406.us.archive.org"
-   ],
-   "tier": 6,
-   "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 141,
-   "batch": "batch-3"
-  },
-  {
-   "source": {
-    "kind": "archive.org",
-    "id": "bwb_S0-DRI-815",
-    "url": "https://archive.org/details/bwb_S0-DRI-815"
-   },
-   "fringe": false,
-   "slug": "ia-bwb-s0-dri-815",
-   "title": "Orthodoxy ",
-   "author": "Gilbert Chesterton ",
-   "year": 1908,
-   "rightsBasis": "pd-date",
-   "rightsEvidence": "first published 1908, before 1931",
-   "readGate": "below",
-   "workId": null,
-   "editionId": null,
-   "hostedEditionId": null,
-   "files": [
-    {
-     "kind": "pdf",
-     "key": "pdf/ia-bwb-s0-dri-815.pdf",
-     "bytes": 11067925,
-     "sha256": null,
-     "sourceUrl": "https://archive.org/download/bwb_S0-DRI-815/bwb_S0-DRI-815.pdf",
-     "sourceSha1": "084e279ae716df48079b3b92157a1719ad427313",
-     "localPath": null,
-     "contentType": "application/pdf",
-     "cacheControl": "public, max-age=31536000, immutable",
-     "url": "https://files.bibliothecacatholica.com/pdf/ia-bwb-s0-dri-815.pdf",
-     "upload": null
-    }
-   ],
-   "pageImagesBytes": 676271695,
-   "servers": [
-    "ia601008.us.archive.org",
-    "ia801008.us.archive.org"
-   ],
-   "tier": 6,
-   "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 142,
-   "batch": "batch-3"
-  },
-  {
-   "source": {
-    "kind": "archive.org",
-    "id": "summatheologicao0020thom_q5p9",
-    "url": "https://archive.org/details/summatheologicao0020thom_q5p9"
-   },
-   "fringe": false,
-   "slug": "ia-summatheologicao0020thom-q5p9",
-   "title": "The \"Summa Theologica\" of St. Thomas Aquinas ",
-   "author": "Thomas, Aquinas, Saint, 1225?-1274",
-   "year": 1912,
-   "rightsBasis": "pd-date",
-   "rightsEvidence": "first published 1912, before 1931",
-   "readGate": "below",
-   "workId": null,
-   "editionId": null,
-   "hostedEditionId": null,
-   "files": [
-    {
-     "kind": "pdf",
-     "key": "pdf/ia-summatheologicao0020thom-q5p9.pdf",
-     "bytes": 13548141,
-     "sha256": null,
-     "sourceUrl": "https://archive.org/download/summatheologicao0020thom_q5p9/summatheologicao0020thom_q5p9.pdf",
-     "sourceSha1": "098016938d90426dd2a6b9d650e095819c0cdd28",
-     "localPath": null,
-     "contentType": "application/pdf",
-     "cacheControl": "public, max-age=31536000, immutable",
-     "url": "https://files.bibliothecacatholica.com/pdf/ia-summatheologicao0020thom-q5p9.pdf",
-     "upload": null
-    }
-   ],
-   "pageImagesBytes": 383404933,
-   "servers": [
-    "ia601409.us.archive.org",
-    "ia801409.us.archive.org"
-   ],
-   "tier": 6,
-   "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 143,
-   "batch": "batch-3"
-  },
-  {
-   "source": {
-    "kind": "archive.org",
-    "id": "orthodoxy1909ches",
-    "url": "https://archive.org/details/orthodoxy1909ches"
-   },
-   "fringe": false,
-   "slug": "ia-orthodoxy1909ches",
-   "title": "Orthodoxy",
-   "author": "Chesterton, G. K. (Gilbert Keith), 1874-1936",
-   "year": 1909,
-   "rightsBasis": "pd-date",
-   "rightsEvidence": "first published 1909, before 1931",
-   "readGate": "below",
-   "workId": null,
-   "editionId": null,
-   "hostedEditionId": null,
-   "files": [
-    {
-     "kind": "pdf",
-     "key": "pdf/ia-orthodoxy1909ches.pdf",
-     "bytes": 13761905,
-     "sha256": null,
-     "sourceUrl": "https://archive.org/download/orthodoxy1909ches/orthodoxy1909ches.pdf",
-     "sourceSha1": "fbceee14c7834884dfd312671fb923cf2f93bfbc",
-     "localPath": null,
-     "contentType": "application/pdf",
-     "cacheControl": "public, max-age=31536000, immutable",
-     "url": "https://files.bibliothecacatholica.com/pdf/ia-orthodoxy1909ches.pdf",
-     "upload": null
-    }
-   ],
-   "pageImagesBytes": 392543357,
-   "servers": [
-    "ia803104.us.archive.org",
-    "ia903104.us.archive.org"
-   ],
-   "tier": 6,
-   "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 144,
+   "priority": 150,
    "batch": "batch-3"
   },
   {
@@ -5749,7 +6001,7 @@
    ],
    "tier": 6,
    "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 145,
+   "priority": 151,
    "batch": "batch-3"
   },
   {
@@ -5791,7 +6043,7 @@
    ],
    "tier": 6,
    "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 146,
+   "priority": 152,
    "batch": "batch-3"
   },
   {
@@ -5833,7 +6085,7 @@
    ],
    "tier": 6,
    "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 147,
+   "priority": 153,
    "batch": "batch-3"
   },
   {
@@ -5875,49 +6127,7 @@
    ],
    "tier": 6,
    "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 148,
-   "batch": "batch-3"
-  },
-  {
-   "source": {
-    "kind": "archive.org",
-    "id": "summatheologi20thom",
-    "url": "https://archive.org/details/summatheologi20thom"
-   },
-   "fringe": false,
-   "slug": "ia-summatheologi20thom",
-   "title": "The \"Summa theologica\" of St. Thomas Aquinas",
-   "author": "Thomas, Aquinas, Saint, 1225?-1274",
-   "year": 1912,
-   "rightsBasis": "pd-date",
-   "rightsEvidence": "first published 1912, before 1931",
-   "readGate": "below",
-   "workId": null,
-   "editionId": null,
-   "hostedEditionId": null,
-   "files": [
-    {
-     "kind": "pdf",
-     "key": "pdf/ia-summatheologi20thom.pdf",
-     "bytes": 22406180,
-     "sha256": null,
-     "sourceUrl": "https://archive.org/download/summatheologi20thom/summatheologi20thom.pdf",
-     "sourceSha1": "82fc821ebde575b91141ac23ecb60b37e1963d14",
-     "localPath": null,
-     "contentType": "application/pdf",
-     "cacheControl": "public, max-age=31536000, immutable",
-     "url": "https://files.bibliothecacatholica.com/pdf/ia-summatheologi20thom.pdf",
-     "upload": null
-    }
-   ],
-   "pageImagesBytes": 527757077,
-   "servers": [
-    "ia600409.us.archive.org",
-    "ia800409.us.archive.org"
-   ],
-   "tier": 6,
-   "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 149,
+   "priority": 154,
    "batch": "batch-3"
   },
   {
@@ -5959,7 +6169,7 @@
    ],
    "tier": 6,
    "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 150,
+   "priority": 155,
    "batch": "batch-3"
   },
   {
@@ -6001,7 +6211,7 @@
    ],
    "tier": 6,
    "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 151,
+   "priority": 156,
    "batch": "batch-3"
   },
   {
@@ -6043,7 +6253,7 @@
    ],
    "tier": 6,
    "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 152,
+   "priority": 157,
    "batch": "batch-3"
   },
   {
@@ -6085,7 +6295,7 @@
    ],
    "tier": 6,
    "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 153,
+   "priority": 158,
    "batch": "batch-3"
   },
   {
@@ -6127,175 +6337,7 @@
    ],
    "tier": 6,
    "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 154,
-   "batch": "batch-3"
-  },
-  {
-   "source": {
-    "kind": "archive.org",
-    "id": "canonsdecreesofc0000revj",
-    "url": "https://archive.org/details/canonsdecreesofc0000revj"
-   },
-   "fringe": false,
-   "slug": "ia-canonsdecreesofc0000revj",
-   "title": "The canons and decrees of the council of trent ",
-   "author": "Rev.j. waterworth",
-   "year": 1848,
-   "rightsBasis": "pd-date",
-   "rightsEvidence": "first published 1848, before 1931",
-   "readGate": "below",
-   "workId": null,
-   "editionId": null,
-   "hostedEditionId": null,
-   "files": [
-    {
-     "kind": "pdf",
-     "key": "pdf/ia-canonsdecreesofc0000revj.pdf",
-     "bytes": 27601858,
-     "sha256": null,
-     "sourceUrl": "https://archive.org/download/canonsdecreesofc0000revj/canonsdecreesofc0000revj.pdf",
-     "sourceSha1": "9c2b332de6ddfdcc2106c04a4e5ccecc95283a2c",
-     "localPath": null,
-     "contentType": "application/pdf",
-     "cacheControl": "public, max-age=31536000, immutable",
-     "url": "https://files.bibliothecacatholica.com/pdf/ia-canonsdecreesofc0000revj.pdf",
-     "upload": null
-    }
-   ],
-   "pageImagesBytes": 1116401730,
-   "servers": [
-    "ia601403.us.archive.org",
-    "ia801403.us.archive.org"
-   ],
-   "tier": 6,
-   "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 155,
-   "batch": "batch-3"
-  },
-  {
-   "source": {
-    "kind": "archive.org",
-    "id": "imitationchrist01unkngoog",
-    "url": "https://archive.org/details/imitationchrist01unkngoog"
-   },
-   "fringe": false,
-   "slug": "ia-imitationchrist01unkngoog",
-   "title": "The imitation of Christ: four books, tr. by W. Benham",
-   "author": "",
-   "year": 1874,
-   "rightsBasis": "pd-date",
-   "rightsEvidence": "first published 1874, before 1931",
-   "readGate": "below",
-   "workId": null,
-   "editionId": null,
-   "hostedEditionId": null,
-   "files": [
-    {
-     "kind": "pdf",
-     "key": "pdf/ia-imitationchrist01unkngoog.pdf",
-     "bytes": 30136021,
-     "sha256": null,
-     "sourceUrl": "https://archive.org/download/imitationchrist01unkngoog/imitationchrist01unkngoog.pdf",
-     "sourceSha1": "b41f2cac7a85d33f20790f9dc0fe205e11246d4a",
-     "localPath": null,
-     "contentType": "application/pdf",
-     "cacheControl": "public, max-age=31536000, immutable",
-     "url": "https://files.bibliothecacatholica.com/pdf/ia-imitationchrist01unkngoog.pdf",
-     "upload": null
-    }
-   ],
-   "pageImagesBytes": 0,
-   "servers": [
-    "ia600800.us.archive.org",
-    "ia800800.us.archive.org"
-   ],
-   "tier": 6,
-   "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 156,
-   "batch": "batch-3"
-  },
-  {
-   "source": {
-    "kind": "archive.org",
-    "id": "summatheologi18thom",
-    "url": "https://archive.org/details/summatheologi18thom"
-   },
-   "fringe": false,
-   "slug": "ia-summatheologi18thom",
-   "title": "The \"Summa theologica\" of St. Thomas Aquinas",
-   "author": "Thomas, Aquinas, Saint, 1225?-1274",
-   "year": 1912,
-   "rightsBasis": "pd-date",
-   "rightsEvidence": "first published 1912, before 1931",
-   "readGate": "below",
-   "workId": null,
-   "editionId": null,
-   "hostedEditionId": null,
-   "files": [
-    {
-     "kind": "pdf",
-     "key": "pdf/ia-summatheologi18thom.pdf",
-     "bytes": 30521687,
-     "sha256": null,
-     "sourceUrl": "https://archive.org/download/summatheologi18thom/summatheologi18thom.pdf",
-     "sourceSha1": "691bc9dedfea56dc4ec642216183ef782a14cc90",
-     "localPath": null,
-     "contentType": "application/pdf",
-     "cacheControl": "public, max-age=31536000, immutable",
-     "url": "https://files.bibliothecacatholica.com/pdf/ia-summatheologi18thom.pdf",
-     "upload": null
-    }
-   ],
-   "pageImagesBytes": 513717540,
-   "servers": [
-    "ia600905.us.archive.org",
-    "ia800905.us.archive.org"
-   ],
-   "tier": 6,
-   "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 157,
-   "batch": "batch-3"
-  },
-  {
-   "source": {
-    "kind": "archive.org",
-    "id": "summatheologi19thom",
-    "url": "https://archive.org/details/summatheologi19thom"
-   },
-   "fringe": false,
-   "slug": "ia-summatheologi19thom",
-   "title": "The \"Summa theologica\" of St. Thomas Aquinas",
-   "author": "Thomas, Aquinas, Saint, 1225?-1274",
-   "year": 1912,
-   "rightsBasis": "pd-date",
-   "rightsEvidence": "first published 1912, before 1931",
-   "readGate": "below",
-   "workId": null,
-   "editionId": null,
-   "hostedEditionId": null,
-   "files": [
-    {
-     "kind": "pdf",
-     "key": "pdf/ia-summatheologi19thom.pdf",
-     "bytes": 31695397,
-     "sha256": null,
-     "sourceUrl": "https://archive.org/download/summatheologi19thom/summatheologi19thom.pdf",
-     "sourceSha1": "0bd1ab67201b4422a858cc0dfb49c3cf1effb272",
-     "localPath": null,
-     "contentType": "application/pdf",
-     "cacheControl": "public, max-age=31536000, immutable",
-     "url": "https://files.bibliothecacatholica.com/pdf/ia-summatheologi19thom.pdf",
-     "upload": null
-    }
-   ],
-   "pageImagesBytes": 587046812,
-   "servers": [
-    "ia601003.us.archive.org",
-    "ia801003.us.archive.org"
-   ],
-   "tier": 6,
-   "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 158,
+   "priority": 159,
    "batch": "batch-3"
   },
   {
@@ -6331,48 +6373,6 @@
     }
    ],
    "pageImagesBytes": 590790107,
-   "servers": [
-    "ia601608.us.archive.org",
-    "ia801608.us.archive.org"
-   ],
-   "tier": 6,
-   "priorityReason": "a research candidate (HOLDS or a sourced list): original scan before any transcription",
-   "priority": 159,
-   "batch": "batch-3"
-  },
-  {
-   "source": {
-    "kind": "archive.org",
-    "id": "imitationofchris00benhrich",
-    "url": "https://archive.org/details/imitationofchris00benhrich"
-   },
-   "fringe": false,
-   "slug": "ia-imitationofchris00benhrich",
-   "title": "The imitation of Christ : four books",
-   "author": "Benham, William, 1831-1910; Thomas, à Kempis, 1380-1471",
-   "year": 1886,
-   "rightsBasis": "pd-date",
-   "rightsEvidence": "first published 1886, before 1931",
-   "readGate": "below",
-   "workId": null,
-   "editionId": null,
-   "hostedEditionId": null,
-   "files": [
-    {
-     "kind": "pdf",
-     "key": "pdf/ia-imitationofchris00benhrich.pdf",
-     "bytes": 50092833,
-     "sha256": null,
-     "sourceUrl": "https://archive.org/download/imitationofchris00benhrich/imitationofchris00benhrich.pdf",
-     "sourceSha1": "dd7d67b50e7f87b99a2526692bd3c40341eebeda",
-     "localPath": null,
-     "contentType": "application/pdf",
-     "cacheControl": "public, max-age=31536000, immutable",
-     "url": "https://files.bibliothecacatholica.com/pdf/ia-imitationofchris00benhrich.pdf",
-     "upload": null
-    }
-   ],
-   "pageImagesBytes": 647693649,
    "servers": [
     "ia601608.us.archive.org",
     "ia801608.us.archive.org"
@@ -6633,22 +6633,35 @@
     "glories-of-mary-pg-72411.e4c05c3c3e38",
     "pga-0500731",
     "ia-queenofsevenswor0000ches",
+    "ia-imitationchrist07thomgoog",
     "ia-poetlunaticsepis0000ches-c9m9",
     "ia-williamcobbett0000unse",
     "ia-robertlouissteve0000ches",
+    "ia-incredulityoffat0000ches",
+    "ia-orthodoxy0000gilb",
     "ia-jesuitmartyrsofc0000devi",
     "ia-fourfaultlessfel0000gkch-i5f3",
+    "ia-bwb-s0-dri-815",
     "ia-returnofdonquixo0000ches-i3m2",
+    "ia-summatheologicao0020thom-q5p9",
     "ia-worldsdebttocath0000wals",
+    "ia-orthodoxy1909ches",
     "ia-in-ernet-dli-2015-463891",
+    "ia-sacredlegendaryar02jame",
+    "ia-summatheologi20thom",
     "ia-cu31924029369760",
+    "ia-canonsdecreesofc0000revj",
     "ia-dli-ernet-476361",
+    "ia-imitationchrist01unkngoog",
+    "ia-summatheologi18thom",
+    "ia-summatheologi19thom",
+    "ia-imitationofchris00benhrich",
     "ia-selectlibraryofn0002unse",
     "ia-holybibletransla00denv",
     "ia-dli-ernet-531861",
     "ia-coward00bens-0"
    ],
-   "bytes": 1091114647
+   "bytes": 1373406785
   },
   "batch-2": {
    "items": [
@@ -6659,7 +6672,6 @@
     "ia-thegoldenlegendvol1-202609",
     "ia-thecrownofsorrow00gooduoft",
     "ia-meditationsforev00nepvuoft",
-    "ia-incredulityoffat0000ches",
     "ia-thegoldenlegendvol7",
     "ia-goldenlegendorli05jaco",
     "ia-theholyangels00okenuoft",
@@ -6669,7 +6681,6 @@
     "ia-thelegendsofthesa00deleuoft",
     "ia-thegoldenlegendvol4",
     "ia-livesofsaints0013bari",
-    "ia-sacredlegendaryar02jame",
     "ia-seraphicvirginca00cathuoft",
     "ia-livesofsaints05abari",
     "ia-livesofsaints10abari",
@@ -6689,7 +6700,7 @@
     "ia-saintlywomen01dunbuoft",
     "ia-pictoriallives00unknuoft"
    ],
-   "bytes": 952896314
+   "bytes": 921570348
   },
   "batch-3": {
    "items": [
@@ -6697,31 +6708,20 @@
     "ia-witwisdomofgkche00ches",
     "ia-invisibleplaymat00cant",
     "ia-cu31924013588847",
-    "ia-imitationchrist07thomgoog",
-    "ia-orthodoxy0000gilb",
-    "ia-bwb-s0-dri-815",
-    "ia-summatheologicao0020thom-q5p9",
-    "ia-orthodoxy1909ches",
     "ia-dogmaticcanonsan00unknuoft",
     "ia-collectedpoemsof0000ches",
     "ia-shilling191600chesuoft",
     "ia-cu31924014186161",
-    "ia-summatheologi20thom",
     "ia-faustulanad34000aysc",
     "ia-thecanonsanddecrees",
     "ia-cu31924029359332",
     "ia-cu31924027781024",
     "ia-lifeofstfranciso00sabauoft",
-    "ia-canonsdecreesofc0000revj",
-    "ia-imitationchrist01unkngoog",
-    "ia-summatheologi18thom",
-    "ia-summatheologi19thom",
     "ia-creedschristendo02scha",
-    "ia-imitationofchris00benhrich",
     "ia-sevenecumenicalc00perc",
     "ia-newcatholicdicti0000cond"
    ],
-   "bytes": 835844165
+   "bytes": 584877993
   }
  }
 }

@@ -50,13 +50,22 @@ class TextArchiveTests(unittest.TestCase):
                     self.assertEqual(['Public domain in the USA.'], record['metadata']['Copyright'])
             exported = {e['editionId'] for e in manifest['documents']}
             self.assertTrue({'pg-50040', 'pg-18269', 'pg-5657'}.isdisjoint(exported))
-            self.assertEqual('texts.bibliothecacatholica.com\n', (Path(directory) / 'CNAME').read_text())
+            self.assertFalse((Path(directory) / 'CNAME').exists())
+            readme = (Path(directory) / 'README.md').read_text()
+            self.assertIn('by Cloudflare Pages', readme)
+            self.assertNotIn('GitHub Pages', readme)
+
+    def test_export_writes_no_cname_and_removes_a_stale_one(self):
+        with tempfile.TemporaryDirectory() as directory:
+            (Path(directory) / 'CNAME').write_text('texts.bibliothecacatholica.com\n')
+            archive.export(Path(directory))
+            self.assertFalse((Path(directory) / 'CNAME').exists())
 
     def test_texts_site_headers(self):
         with tempfile.TemporaryDirectory() as directory:
             archive.export(Path(directory))
             h = (Path(directory) / '_headers').read_text()
-        self.assertIn('Strict-Transport-Security: max-age=31536000', h)
+        self.assertNotIn('Strict-Transport-Security', h)  # HSTS waits for the owner's decision (separate PR)
         self.assertIn("Content-Security-Policy: default-src 'self';", h)
         self.assertIn("object-src 'none'", h)
         self.assertNotIn('Access-Control-Allow-Origin', h)  # Cloudflare Pages' default (*) stays: the reader fetches cross-origin

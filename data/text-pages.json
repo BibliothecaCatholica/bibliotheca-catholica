@@ -20331,6 +20331,1758 @@
     "front": [],
     "em": []
    }
+  },
+  "all-things-considered": {
+   "partD": {
+    "about": "Project Gutenberg #11505: first published in 1908; the transcribed copy is the ninth edition (November 1915). Thirty-five essays, as the book's contents lists them.",
+    "words": 59422,
+    "minutes": 258
+   },
+   "edition": "pg-11505",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Essay",
+   "nouns": "Essays",
+   "sha256": "b7c220b94c52d4e495b79551e5b604416899ca346490a03f32ac20d458850eef",
+   "blocks": 354,
+   "items": [
+    {
+     "slug": "01-the-case-for-the-ephemeral",
+     "num": "I",
+     "title": "The Case for the Ephemeral",
+     "heading": 16,
+     "start": 17,
+     "end": 22,
+     "section": 0,
+     "words": 1808,
+     "firstWords": "I cannot understand the people who take literature seriously; but I can"
+    },
+    {
+     "slug": "02-cockneys-and-their-jokes",
+     "num": "II",
+     "title": "Cockneys and Their Jokes",
+     "heading": 23,
+     "start": 24,
+     "end": 32,
+     "section": 0,
+     "words": 2338,
+     "firstWords": "A writer in the Yorkshire Evening Post is very angry indeed with"
+    },
+    {
+     "slug": "03-the-fallacy-of-success",
+     "num": "III",
+     "title": "The Fallacy of Success",
+     "heading": 33,
+     "start": 34,
+     "end": 44,
+     "section": 0,
+     "words": 2061,
+     "firstWords": "There has appeared in our time a particular class of books and"
+    },
+    {
+     "slug": "04-on-running-after-one-s-hat",
+     "num": "IV",
+     "title": "On Running After One’s Hat",
+     "heading": 45,
+     "start": 46,
+     "end": 51,
+     "section": 1,
+     "words": 1327,
+     "firstWords": "I feel an almost savage envy on hearing that London has been"
+    },
+    {
+     "slug": "05-the-vote-and-the-house",
+     "num": "V",
+     "title": "The Vote and the House",
+     "heading": 52,
+     "start": 53,
+     "end": 59,
+     "section": 1,
+     "words": 2246,
+     "firstWords": "Most of us will be canvassed soon, I suppose; some of us"
+    },
+    {
+     "slug": "06-conceit-and-caricature",
+     "num": "VI",
+     "title": "Conceit and Caricature",
+     "heading": 60,
+     "start": 61,
+     "end": 67,
+     "section": 1,
+     "words": 1868,
+     "firstWords": "If a man must needs be conceited, it is certainly better that"
+    },
+    {
+     "slug": "07-patriotism-and-sport",
+     "num": "VII",
+     "title": "Patriotism and Sport",
+     "heading": 68,
+     "start": 69,
+     "end": 77,
+     "section": 1,
+     "words": 1551,
+     "firstWords": "I notice that some papers, especially papers that call themselves patriotic, have"
+    },
+    {
+     "slug": "08-an-essay-on-two-cities",
+     "num": "VIII",
+     "title": "An Essay on Two Cities",
+     "heading": 78,
+     "start": 79,
+     "end": 83,
+     "section": 2,
+     "words": 1401,
+     "firstWords": "A little while ago I fell out of England into the town"
+    },
+    {
+     "slug": "09-french-and-english",
+     "num": "IX",
+     "title": "French and English",
+     "heading": 84,
+     "start": 85,
+     "end": 88,
+     "section": 2,
+     "words": 1652,
+     "firstWords": "It is obvious that there is a great deal of difference between"
+    },
+    {
+     "slug": "10-the-zola-controversy",
+     "num": "X",
+     "title": "The Zola Controversy",
+     "heading": 89,
+     "start": 90,
+     "end": 96,
+     "section": 2,
+     "words": 1694,
+     "firstWords": "The difference between two great nations can be illustrated by the coincidence"
+    },
+    {
+     "slug": "11-oxford-from-without",
+     "num": "XI",
+     "title": "Oxford from Without",
+     "heading": 97,
+     "start": 98,
+     "end": 111,
+     "section": 2,
+     "words": 2209,
+     "firstWords": "Some time ago I ventured to defend that race of hunted and"
+    },
+    {
+     "slug": "12-woman",
+     "num": "XII",
+     "title": "Woman",
+     "heading": 112,
+     "start": 113,
+     "end": 121,
+     "section": 3,
+     "words": 1808,
+     "firstWords": "A correspondent has written me an able and interesting letter in the"
+    },
+    {
+     "slug": "13-the-modern-martyr",
+     "num": "XIII",
+     "title": "The Modern Martyr",
+     "heading": 122,
+     "start": 123,
+     "end": 127,
+     "section": 3,
+     "words": 1663,
+     "firstWords": "The incident of the Suffragettes who chained themselves with iron chains to"
+    },
+    {
+     "slug": "14-on-political-secrecy",
+     "num": "XIV",
+     "title": "On Political Secrecy",
+     "heading": 128,
+     "start": 129,
+     "end": 137,
+     "section": 3,
+     "words": 1837,
+     "firstWords": "Generally, instinctively, in the absence of any special reason, humanity hates the"
+    },
+    {
+     "slug": "15-edward-vii-and-scotland",
+     "num": "XV",
+     "title": "Edward VII. and Scotland",
+     "heading": 138,
+     "start": 139,
+     "end": 145,
+     "section": 3,
+     "words": 1844,
+     "firstWords": "I have received a serious, and to me, at any rate, an"
+    },
+    {
+     "slug": "16-thoughts-around-koepenick",
+     "num": "XVI",
+     "title": "Thoughts Around Koepenick",
+     "heading": 146,
+     "start": 147,
+     "end": 153,
+     "section": 4,
+     "words": 1913,
+     "firstWords": "A famous and epigrammatic author said that life copied literature; it seems"
+    },
+    {
+     "slug": "17-the-boy",
+     "num": "XVII",
+     "title": "The Boy",
+     "heading": 154,
+     "start": 155,
+     "end": 166,
+     "section": 4,
+     "words": 2141,
+     "firstWords": "I have no sympathy with international aggression when it is taken seriously,"
+    },
+    {
+     "slug": "18-limericks-and-counsels-of-perfection",
+     "num": "XVIII",
+     "title": "Limericks and Counsels of Perfection",
+     "heading": 167,
+     "start": 168,
+     "end": 174,
+     "section": 4,
+     "words": 1585,
+     "firstWords": "It is customary to remark that modern problems cannot easily be attacked"
+    },
+    {
+     "slug": "19-anonymity-and-further-counsels",
+     "num": "XIX",
+     "title": "Anonymity and Further Counsels",
+     "heading": 175,
+     "start": 176,
+     "end": 182,
+     "section": 5,
+     "words": 1300,
+     "firstWords": "The end of the article which I write is always cut off,"
+    },
+    {
+     "slug": "20-on-the-cryptic-and-the-elliptic",
+     "num": "XX",
+     "title": "On the Cryptic and the Elliptic",
+     "heading": 183,
+     "start": 184,
+     "end": 195,
+     "section": 5,
+     "words": 1972,
+     "firstWords": "Surely the art of reporting speeches is in a strange state of"
+    },
+    {
+     "slug": "21-the-worship-of-the-wealthy",
+     "num": "XXI",
+     "title": "The Worship of the Wealthy",
+     "heading": 196,
+     "start": 197,
+     "end": 200,
+     "section": 5,
+     "words": 1442,
+     "firstWords": "There has crept, I notice, into our literature and journalism a new"
+    },
+    {
+     "slug": "22-science-and-religion",
+     "num": "XXII",
+     "title": "Science and Religion",
+     "heading": 201,
+     "start": 202,
+     "end": 208,
+     "section": 5,
+     "words": 1549,
+     "firstWords": "In these days we are accused of attacking science because we want"
+    },
+    {
+     "slug": "23-the-methuselahite",
+     "num": "XXIII",
+     "title": "The Methuselahite",
+     "heading": 209,
+     "start": 210,
+     "end": 214,
+     "section": 5,
+     "words": 926,
+     "firstWords": "I Saw in a newspaper paragraph the other day the following entertaining"
+    },
+    {
+     "slug": "24-spiritualism",
+     "num": "XXIV",
+     "title": "Spiritualism",
+     "heading": 215,
+     "start": 216,
+     "end": 222,
+     "section": 6,
+     "words": 1550,
+     "firstWords": "I Have received a letter from a gentleman who is very indignant"
+    },
+    {
+     "slug": "25-the-error-of-impartiality",
+     "num": "XXV",
+     "title": "The Error of Impartiality",
+     "heading": 223,
+     "start": 224,
+     "end": 227,
+     "section": 6,
+     "words": 1082,
+     "firstWords": "The refusal of the jurors in the Thaw trial to come to"
+    },
+    {
+     "slug": "26-phonetic-spelling",
+     "num": "XXVI",
+     "title": "Phonetic Spelling",
+     "heading": 228,
+     "start": 229,
+     "end": 232,
+     "section": 6,
+     "words": 1253,
+     "firstWords": "A correspondent asks me to make more lucid my remarks about phonetic"
+    },
+    {
+     "slug": "27-humanitarianism-and-strength",
+     "num": "XXVII",
+     "title": "Humanitarianism and Strength",
+     "heading": 233,
+     "start": 234,
+     "end": 243,
+     "section": 6,
+     "words": 1844,
+     "firstWords": "Somebody writes complaining of something I said about progress. I have forgotten"
+    },
+    {
+     "slug": "28-wine-when-it-is-red",
+     "num": "XXVIII",
+     "title": "Wine When It Is Red",
+     "heading": 244,
+     "start": 245,
+     "end": 249,
+     "section": 6,
+     "words": 1291,
+     "firstWords": "I suppose that there will be some wigs on the green in"
+    },
+    {
+     "slug": "29-demagogues-and-mystagogues",
+     "num": "XXIX",
+     "title": "Demagogues and Mystagogues",
+     "heading": 250,
+     "start": 251,
+     "end": 257,
+     "section": 7,
+     "words": 1510,
+     "firstWords": "I once heard a man call this age the age of demagogues."
+    },
+    {
+     "slug": "30-the-eatanswill-gazette",
+     "num": "XXX",
+     "title": "The “Eatanswill Gazette”",
+     "heading": 258,
+     "start": 259,
+     "end": 264,
+     "section": 7,
+     "words": 1715,
+     "firstWords": "The other day some one presented me with a paper called the"
+    },
+    {
+     "slug": "31-fairy-tales",
+     "num": "XXXI",
+     "title": "Fairy Tales",
+     "heading": 265,
+     "start": 266,
+     "end": 270,
+     "section": 7,
+     "words": 1267,
+     "firstWords": "Some solemn and superficial people (for nearly all very superficial people are"
+    },
+    {
+     "slug": "32-tom-jones-and-morality",
+     "num": "XXXII",
+     "title": "Tom Jones and Morality",
+     "heading": 271,
+     "start": 272,
+     "end": 276,
+     "section": 7,
+     "words": 1821,
+     "firstWords": "The two hundredth anniversary of Henry Fielding is very justly celebrated, even"
+    },
+    {
+     "slug": "33-the-maid-of-orleans",
+     "num": "XXXIII",
+     "title": "The Maid of Orleans",
+     "heading": 277,
+     "start": 278,
+     "end": 284,
+     "section": 7,
+     "words": 1436,
+     "firstWords": "A considerable time ago (at far too early an age, in fact)"
+    },
+    {
+     "slug": "34-a-dead-poet",
+     "num": "XXXIV",
+     "title": "A Dead Poet",
+     "heading": 285,
+     "start": 286,
+     "end": 290,
+     "section": 8,
+     "words": 1412,
+     "firstWords": "With Francis Thompson we lose the greatest poetic energy since Browning. His"
+    },
+    {
+     "slug": "35-christmas",
+     "num": "XXXV",
+     "title": "Christmas",
+     "heading": 291,
+     "start": 292,
+     "end": 302,
+     "section": 8,
+     "words": 3106,
+     "firstWords": "There is no more dangerous or disgusting habit than that of celebrating"
+    }
+   ],
+   "structure": {
+    "sha256": "b7c220b94c52d4e495b79551e5b604416899ca346490a03f32ac20d458850eef",
+    "source": "data/structured/all-things-considered-pg-11505.json",
+    "roles": [
+     [
+      16,
+      "chapter"
+     ],
+     [
+      23,
+      "chapter"
+     ],
+     [
+      33,
+      "chapter"
+     ],
+     [
+      45,
+      "chapter"
+     ],
+     [
+      52,
+      "chapter"
+     ],
+     [
+      60,
+      "chapter"
+     ],
+     [
+      68,
+      "chapter"
+     ],
+     [
+      78,
+      "chapter"
+     ],
+     [
+      84,
+      "chapter"
+     ],
+     [
+      89,
+      "chapter"
+     ],
+     [
+      97,
+      "chapter"
+     ],
+     [
+      112,
+      "chapter"
+     ],
+     [
+      122,
+      "chapter"
+     ],
+     [
+      128,
+      "chapter"
+     ],
+     [
+      138,
+      "chapter"
+     ],
+     [
+      146,
+      "chapter"
+     ],
+     [
+      154,
+      "chapter"
+     ],
+     [
+      167,
+      "chapter"
+     ],
+     [
+      175,
+      "chapter"
+     ],
+     [
+      183,
+      "chapter"
+     ],
+     [
+      196,
+      "chapter"
+     ],
+     [
+      201,
+      "chapter"
+     ],
+     [
+      209,
+      "chapter"
+     ],
+     [
+      215,
+      "chapter"
+     ],
+     [
+      223,
+      "chapter"
+     ],
+     [
+      228,
+      "chapter"
+     ],
+     [
+      233,
+      "chapter"
+     ],
+     [
+      244,
+      "chapter"
+     ],
+     [
+      250,
+      "chapter"
+     ],
+     [
+      258,
+      "chapter"
+     ],
+     [
+      265,
+      "chapter"
+     ],
+     [
+      271,
+      "chapter"
+     ],
+     [
+      277,
+      "chapter"
+     ],
+     [
+      285,
+      "chapter"
+     ],
+     [
+      291,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "alarms-discursions": {
+   "partD": {
+    "about": "Project Gutenberg #9656: first published in 1910; the file does not name the printing it follows. Thirty-nine essays, the first an introductory essay on gargoyles, as the book's contents numbers them.",
+    "words": 50166,
+    "minutes": 218
+   },
+   "edition": "pg-9656",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Essay",
+   "nouns": "Essays",
+   "sha256": "f52bec8aa9f82e8dbff8e6240bf3e0b43663ed52f2f3bfa53bc3872d1e56d350",
+   "blocks": 507,
+   "items": [
+    {
+     "slug": "01-introductory-on-gargoyles",
+     "num": "I",
+     "title": "Introductory: On Gargoyles",
+     "heading": 51,
+     "start": 52,
+     "end": 64,
+     "section": 1,
+     "words": 1519,
+     "firstWords": "Alone at some distance from the wasting walls of a disused abbey"
+    },
+    {
+     "slug": "02-the-surrender-of-a-cockney",
+     "num": "II",
+     "title": "The Surrender of a Cockney",
+     "heading": 65,
+     "start": 66,
+     "end": 83,
+     "section": 1,
+     "words": 1203,
+     "firstWords": "Every man, though he were born in the very belfry of Bow"
+    },
+    {
+     "slug": "03-the-nightmare",
+     "num": "III",
+     "title": "The Nightmare",
+     "heading": 84,
+     "start": 85,
+     "end": 92,
+     "section": 2,
+     "words": 1282,
+     "firstWords": "A sunset of copper and gold had just broken down and gone"
+    },
+    {
+     "slug": "04-the-telegraph-poles",
+     "num": "IV",
+     "title": "The Telegraph Poles",
+     "heading": 93,
+     "start": 94,
+     "end": 111,
+     "section": 2,
+     "words": 1340,
+     "firstWords": "My friend and I were walking in one of those wastes of"
+    },
+    {
+     "slug": "05-a-drama-of-dolls",
+     "num": "V",
+     "title": "A Drama of Dolls",
+     "heading": 112,
+     "start": 113,
+     "end": 122,
+     "section": 3,
+     "words": 1160,
+     "firstWords": "In a small grey town of stone in one of the great"
+    },
+    {
+     "slug": "06-the-man-and-his-newspaper",
+     "num": "VI",
+     "title": "The Man and His Newspaper",
+     "heading": 123,
+     "start": 124,
+     "end": 145,
+     "section": 3,
+     "words": 1553,
+     "firstWords": "At a little station, which I decline to specify, somewhere between Oxford"
+    },
+    {
+     "slug": "07-the-appetite-of-earth",
+     "num": "VII",
+     "title": "The Appetite of Earth",
+     "heading": 146,
+     "start": 147,
+     "end": 151,
+     "section": 4,
+     "words": 1169,
+     "firstWords": "I was walking the other day in a kitchen garden, which I"
+    },
+    {
+     "slug": "08-simmons-and-the-social-tie",
+     "num": "VIII",
+     "title": "Simmons and the Social Tie",
+     "heading": 152,
+     "start": 153,
+     "end": 161,
+     "section": 4,
+     "words": 1581,
+     "firstWords": "It is a platitude, and none the less true for that, that"
+    },
+    {
+     "slug": "09-cheese",
+     "num": "IX",
+     "title": "Cheese",
+     "heading": 162,
+     "start": 163,
+     "end": 165,
+     "section": 4,
+     "words": 1075,
+     "firstWords": "My forthcoming work in five volumes, “The Neglect of Cheese in European"
+    },
+    {
+     "slug": "10-the-red-town",
+     "num": "X",
+     "title": "The Red Town",
+     "heading": 166,
+     "start": 167,
+     "end": 177,
+     "section": 4,
+     "words": 1359,
+     "firstWords": "When a man says that democracy is false because most people are"
+    },
+    {
+     "slug": "11-the-furrows",
+     "num": "XI",
+     "title": "The Furrows",
+     "heading": 178,
+     "start": 179,
+     "end": 184,
+     "section": 5,
+     "words": 861,
+     "firstWords": "As I see the corn grow green all about my neighbourhood, there"
+    },
+    {
+     "slug": "12-the-philosophy-of-sight-seeing",
+     "num": "XII",
+     "title": "The Philosophy of Sight-seeing",
+     "heading": 185,
+     "start": 186,
+     "end": 191,
+     "section": 5,
+     "words": 1430,
+     "firstWords": "It would be really interesting to know exactly why an intelligent person--by"
+    },
+    {
+     "slug": "13-a-criminal-head",
+     "num": "XIII",
+     "title": "A Criminal Head",
+     "heading": 192,
+     "start": 193,
+     "end": 201,
+     "section": 5,
+     "words": 1343,
+     "firstWords": "When men of science (or, more often, men who talk about science)"
+    },
+    {
+     "slug": "14-the-wrath-of-the-roses",
+     "num": "XIV",
+     "title": "The Wrath of the Roses",
+     "heading": 202,
+     "start": 203,
+     "end": 210,
+     "section": 5,
+     "words": 1035,
+     "firstWords": "The position of the rose among flowers is like that of the"
+    },
+    {
+     "slug": "15-the-gold-of-glastonbury",
+     "num": "XV",
+     "title": "The Gold of Glastonbury",
+     "heading": 211,
+     "start": 212,
+     "end": 216,
+     "section": 6,
+     "words": 1157,
+     "firstWords": "One silver morning I walked into a small grey town of stone,"
+    },
+    {
+     "slug": "16-the-futurists",
+     "num": "XVI",
+     "title": "The Futurists",
+     "heading": 217,
+     "start": 218,
+     "end": 226,
+     "section": 6,
+     "words": 1489,
+     "firstWords": "It was a warm golden evening, fit for October, and I was"
+    },
+    {
+     "slug": "17-dukes",
+     "num": "XVII",
+     "title": "Dukes",
+     "heading": 227,
+     "start": 228,
+     "end": 253,
+     "section": 6,
+     "words": 1550,
+     "firstWords": "The Duc de Chambertin-Pommard was a small but lively relic of a"
+    },
+    {
+     "slug": "18-the-glory-of-grey",
+     "num": "XVIII",
+     "title": "The Glory of Grey",
+     "heading": 254,
+     "start": 255,
+     "end": 259,
+     "section": 7,
+     "words": 1238,
+     "firstWords": "I suppose that, taking this summer as a whole, people will not"
+    },
+    {
+     "slug": "19-the-anarchist",
+     "num": "XIX",
+     "title": "The Anarchist",
+     "heading": 260,
+     "start": 261,
+     "end": 278,
+     "section": 7,
+     "words": 1483,
+     "firstWords": "I have now lived for about two months in the country, and"
+    },
+    {
+     "slug": "20-how-i-found-the-superman",
+     "num": "XX",
+     "title": "How I Found the Superman",
+     "heading": 279,
+     "start": 280,
+     "end": 295,
+     "section": 7,
+     "words": 1185,
+     "firstWords": "Readers of Mr. Bernard Shaw and other modern writers may be interested"
+    },
+    {
+     "slug": "21-the-new-house",
+     "num": "XXI",
+     "title": "The New House",
+     "heading": 296,
+     "start": 297,
+     "end": 301,
+     "section": 8,
+     "words": 1164,
+     "firstWords": "Within a stone's throw of my house they are building another house."
+    },
+    {
+     "slug": "22-the-wings-of-stone",
+     "num": "XXII",
+     "title": "The Wings of Stone",
+     "heading": 302,
+     "start": 303,
+     "end": 306,
+     "section": 8,
+     "words": 984,
+     "firstWords": "The preceding essay is about a half-built house upon my private horizon;"
+    },
+    {
+     "slug": "23-the-three-kinds-of-men",
+     "num": "XXIII",
+     "title": "The Three Kinds of Men",
+     "heading": 307,
+     "start": 308,
+     "end": 314,
+     "section": 8,
+     "words": 1370,
+     "firstWords": "Roughly speaking, there are three kinds of people in this world. The"
+    },
+    {
+     "slug": "24-the-steward-of-the-chiltern-hundreds",
+     "num": "XXIV",
+     "title": "The Steward of the Chiltern Hundreds",
+     "heading": 315,
+     "start": 316,
+     "end": 320,
+     "section": 9,
+     "words": 1047,
+     "firstWords": "The other day on a stray spur of the Chiltern Hills I"
+    },
+    {
+     "slug": "25-the-field-of-blood",
+     "num": "XXV",
+     "title": "The Field of Blood",
+     "heading": 321,
+     "start": 322,
+     "end": 330,
+     "section": 9,
+     "words": 960,
+     "firstWords": "In my daily paper this morning I read the following interesting paragraphs,"
+    },
+    {
+     "slug": "26-the-strangeness-of-luxury",
+     "num": "XXVI",
+     "title": "The Strangeness of Luxury",
+     "heading": 331,
+     "start": 332,
+     "end": 339,
+     "section": 9,
+     "words": 1375,
+     "firstWords": "It is an English misfortune that what is called “public spirit” is"
+    },
+    {
+     "slug": "27-the-triumph-of-the-donkey",
+     "num": "XXVII",
+     "title": "The Triumph of the Donkey",
+     "heading": 340,
+     "start": 341,
+     "end": 354,
+     "section": 9,
+     "words": 1560,
+     "firstWords": "Doubtless the unsympathetic might state my doctrine that one should not own"
+    },
+    {
+     "slug": "28-the-wheel",
+     "num": "XXVIII",
+     "title": "The Wheel",
+     "heading": 355,
+     "start": 356,
+     "end": 361,
+     "section": 10,
+     "words": 930,
+     "firstWords": "In a quiet and rustic though fairly famous church in my neighbourhood"
+    },
+    {
+     "slug": "29-five-hundred-and-fifty-five",
+     "num": "XXIX",
+     "title": "Five Hundred and Fifty-five",
+     "heading": 362,
+     "start": 363,
+     "end": 367,
+     "section": 10,
+     "words": 974,
+     "firstWords": "Life is full of a ceaseless shower of small coincidences: too small"
+    },
+    {
+     "slug": "30-ethandune",
+     "num": "XXX",
+     "title": "Ethandune",
+     "heading": 368,
+     "start": 369,
+     "end": 374,
+     "section": 10,
+     "words": 1377,
+     "firstWords": "Perhaps you do not know where Ethandune is. Nor do I; nor"
+    },
+    {
+     "slug": "31-the-flat-freak",
+     "num": "XXXI",
+     "title": "The Flat Freak",
+     "heading": 375,
+     "start": 376,
+     "end": 384,
+     "section": 10,
+     "words": 1441,
+     "firstWords": "Some time ago a Sub-Tropical Dinner was given by some South African"
+    },
+    {
+     "slug": "32-the-garden-of-the-sea",
+     "num": "XXXII",
+     "title": "The Garden of the Sea",
+     "heading": 385,
+     "start": 386,
+     "end": 389,
+     "section": 11,
+     "words": 1043,
+     "firstWords": "One sometimes hears from persons of the chillier type of culture the"
+    },
+    {
+     "slug": "33-the-sentimentalist",
+     "num": "XXXIII",
+     "title": "The Sentimentalist",
+     "heading": 390,
+     "start": 391,
+     "end": 402,
+     "section": 11,
+     "words": 1231,
+     "firstWords": "“Sentimentalism is the most broken reed on which righteousness can lean”; these"
+    },
+    {
+     "slug": "34-the-white-horses",
+     "num": "XXXIV",
+     "title": "The White Horses",
+     "heading": 403,
+     "start": 404,
+     "end": 412,
+     "section": 11,
+     "words": 1441,
+     "firstWords": "It is within my experience, which is very brief and occasional in"
+    },
+    {
+     "slug": "35-the-long-bow",
+     "num": "XXXV",
+     "title": "The Long Bow",
+     "heading": 413,
+     "start": 414,
+     "end": 421,
+     "section": 11,
+     "words": 1738,
+     "firstWords": "I find myself still sitting in front of the last book by"
+    },
+    {
+     "slug": "36-the-modern-scrooge",
+     "num": "XXXVI",
+     "title": "The Modern Scrooge",
+     "heading": 422,
+     "start": 423,
+     "end": 433,
+     "section": 12,
+     "words": 1783,
+     "firstWords": "Mr. Vernon-Smith, of Trinity, and the Social Settlement, Tooting, author of “A"
+    },
+    {
+     "slug": "37-the-high-plains",
+     "num": "XXXVII",
+     "title": "The High Plains",
+     "heading": 434,
+     "start": 435,
+     "end": 442,
+     "section": 12,
+     "words": 1146,
+     "firstWords": "By high plains I do not mean table-lands; table-lands do not interest"
+    },
+    {
+     "slug": "38-the-chorus",
+     "num": "XXXVIII",
+     "title": "The Chorus",
+     "heading": 443,
+     "start": 444,
+     "end": 450,
+     "section": 12,
+     "words": 1284,
+     "firstWords": "One of the most marked instances of the decline of true popular"
+    },
+    {
+     "slug": "39-a-romance-of-the-marshes",
+     "num": "XXXIX",
+     "title": "A Romance of the Marshes",
+     "heading": 451,
+     "start": 452,
+     "end": 455,
+     "section": 12,
+     "words": 1306,
+     "firstWords": "In books as a whole marshes are described as desolate and colourless,"
+    }
+   ],
+   "structure": {
+    "sha256": "f52bec8aa9f82e8dbff8e6240bf3e0b43663ed52f2f3bfa53bc3872d1e56d350",
+    "source": "data/structured/alarms-discursions-pg-9656.json",
+    "roles": [
+     [
+      51,
+      "chapter"
+     ],
+     [
+      65,
+      "chapter"
+     ],
+     [
+      84,
+      "chapter"
+     ],
+     [
+      93,
+      "chapter"
+     ],
+     [
+      112,
+      "chapter"
+     ],
+     [
+      123,
+      "chapter"
+     ],
+     [
+      146,
+      "chapter"
+     ],
+     [
+      152,
+      "chapter"
+     ],
+     [
+      162,
+      "chapter"
+     ],
+     [
+      166,
+      "chapter"
+     ],
+     [
+      178,
+      "chapter"
+     ],
+     [
+      185,
+      "chapter"
+     ],
+     [
+      192,
+      "chapter"
+     ],
+     [
+      202,
+      "chapter"
+     ],
+     [
+      211,
+      "chapter"
+     ],
+     [
+      217,
+      "chapter"
+     ],
+     [
+      227,
+      "chapter"
+     ],
+     [
+      254,
+      "chapter"
+     ],
+     [
+      260,
+      "chapter"
+     ],
+     [
+      279,
+      "chapter"
+     ],
+     [
+      296,
+      "chapter"
+     ],
+     [
+      302,
+      "chapter"
+     ],
+     [
+      307,
+      "chapter"
+     ],
+     [
+      315,
+      "chapter"
+     ],
+     [
+      321,
+      "chapter"
+     ],
+     [
+      331,
+      "chapter"
+     ],
+     [
+      340,
+      "chapter"
+     ],
+     [
+      355,
+      "chapter"
+     ],
+     [
+      362,
+      "chapter"
+     ],
+     [
+      368,
+      "chapter"
+     ],
+     [
+      375,
+      "chapter"
+     ],
+     [
+      385,
+      "chapter"
+     ],
+     [
+      390,
+      "chapter"
+     ],
+     [
+      403,
+      "chapter"
+     ],
+     [
+      413,
+      "chapter"
+     ],
+     [
+      422,
+      "chapter"
+     ],
+     [
+      434,
+      "chapter"
+     ],
+     [
+      443,
+      "chapter"
+     ],
+     [
+      451,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
+  },
+  "miscellany-of-men": {
+   "partD": {
+    "about": "Project Gutenberg #2015: first published in 1912; the file does not name the printing it follows. Thirty-eight essays, as the book's contents lists them.",
+    "words": 52281,
+    "minutes": 227
+   },
+   "edition": "pg-2015",
+   "kind": "ch",
+   "editionLine": "",
+   "noun": "Essay",
+   "nouns": "Essays",
+   "sha256": "0eefdc9c4c8e2552d49dcf5f92754c069e36bf549f861d7b451f00cf88f61023",
+   "blocks": 475,
+   "items": [
+    {
+     "slug": "01-the-suffragist",
+     "num": "I",
+     "title": "The Suffragist",
+     "heading": 50,
+     "start": 51,
+     "end": 56,
+     "section": 1,
+     "words": 1507,
+     "firstWords": "Rightly or wrongly, it is certain that a man both liberal and"
+    },
+    {
+     "slug": "02-the-poet-and-the-cheese",
+     "num": "II",
+     "title": "The Poet and the Cheese",
+     "heading": 57,
+     "start": 58,
+     "end": 71,
+     "section": 1,
+     "words": 1275,
+     "firstWords": "There is something creepy in the flat Eastern Counties; a brush of"
+    },
+    {
+     "slug": "03-the-thing",
+     "num": "III",
+     "title": "The Thing",
+     "heading": 72,
+     "start": 73,
+     "end": 80,
+     "section": 2,
+     "words": 1194,
+     "firstWords": "The wind awoke last night with so noble a violence that it"
+    },
+    {
+     "slug": "04-the-man-who-thinks-backwards",
+     "num": "IV",
+     "title": "The Man Who Thinks Backwards",
+     "heading": 81,
+     "start": 82,
+     "end": 88,
+     "section": 2,
+     "words": 1580,
+     "firstWords": "The man who thinks backwards is a very powerful person to-day: indeed,"
+    },
+    {
+     "slug": "05-the-nameless-man",
+     "num": "V",
+     "title": "The Nameless Man",
+     "heading": 89,
+     "start": 90,
+     "end": 98,
+     "section": 2,
+     "words": 1521,
+     "firstWords": "There are only two forms of government—the monarchy or personal government, and"
+    },
+    {
+     "slug": "06-the-gardener-and-the-guinea",
+     "num": "VI",
+     "title": "The Gardener and the Guinea",
+     "heading": 99,
+     "start": 100,
+     "end": 107,
+     "section": 2,
+     "words": 1317,
+     "firstWords": "Strictly speaking, there is no such thing as an English Peasant. Indeed,"
+    },
+    {
+     "slug": "07-the-voter-and-the-two-voices",
+     "num": "VII",
+     "title": "The Voter and the Two Voices",
+     "heading": 108,
+     "start": 109,
+     "end": 115,
+     "section": 3,
+     "words": 1742,
+     "firstWords": "The real evil of our Party System is commonly stated wrong. It"
+    },
+    {
+     "slug": "08-the-mad-official",
+     "num": "VIII",
+     "title": "The Mad Official",
+     "heading": 116,
+     "start": 117,
+     "end": 126,
+     "section": 3,
+     "words": 1293,
+     "firstWords": "Going mad is the slowest and dullest business in the world. I"
+    },
+    {
+     "slug": "09-the-enchanted-man",
+     "num": "IX",
+     "title": "The Enchanted Man",
+     "heading": 127,
+     "start": 128,
+     "end": 136,
+     "section": 3,
+     "words": 1332,
+     "firstWords": "When I arrived to see the performance of the Buckinghamshire Players, who"
+    },
+    {
+     "slug": "10-the-sun-worshipper",
+     "num": "X",
+     "title": "The Sun Worshipper",
+     "heading": 137,
+     "start": 138,
+     "end": 152,
+     "section": 3,
+     "words": 2047,
+     "firstWords": "There is a shrewd warning to be given to all people who"
+    },
+    {
+     "slug": "11-the-wrong-incendiary",
+     "num": "XI",
+     "title": "The Wrong Incendiary",
+     "heading": 153,
+     "start": 154,
+     "end": 162,
+     "section": 4,
+     "words": 1421,
+     "firstWords": "I stood looking at the Coronation Procession--I mean the one in Beaconsfield;"
+    },
+    {
+     "slug": "12-the-free-man",
+     "num": "XII",
+     "title": "The Free Man",
+     "heading": 163,
+     "start": 164,
+     "end": 169,
+     "section": 4,
+     "words": 1242,
+     "firstWords": "The idea of liberty has ultimately a religious root; that is why"
+    },
+    {
+     "slug": "13-the-hypothetical-householder",
+     "num": "XIII",
+     "title": "The Hypothetical Householder",
+     "heading": 170,
+     "start": 171,
+     "end": 185,
+     "section": 4,
+     "words": 1348,
+     "firstWords": "We have read of some celebrated philosopher who was so absent-minded that"
+    },
+    {
+     "slug": "14-the-priest-of-spring",
+     "num": "XIV",
+     "title": "The Priest of Spring",
+     "heading": 186,
+     "start": 187,
+     "end": 194,
+     "section": 5,
+     "words": 1691,
+     "firstWords": "The sun has strengthened and the air softened just before Easter Day."
+    },
+    {
+     "slug": "15-the-real-journalist",
+     "num": "XV",
+     "title": "The Real Journalist",
+     "heading": 195,
+     "start": 196,
+     "end": 205,
+     "section": 5,
+     "words": 1568,
+     "firstWords": "Our age which has boasted of realism will fail chiefly through lack"
+    },
+    {
+     "slug": "16-the-sentimental-scot",
+     "num": "XVI",
+     "title": "The Sentimental Scot",
+     "heading": 206,
+     "start": 207,
+     "end": 212,
+     "section": 5,
+     "words": 1199,
+     "firstWords": "Of all the great nations of Christendom, the Scotch are by far"
+    },
+    {
+     "slug": "17-the-sectarian-of-society",
+     "num": "XVII",
+     "title": "The Sectarian of Society",
+     "heading": 213,
+     "start": 214,
+     "end": 222,
+     "section": 6,
+     "words": 1319,
+     "firstWords": "A fixed creed is absolutely indispensable to freedom. For while men are"
+    },
+    {
+     "slug": "18-the-fool",
+     "num": "XVIII",
+     "title": "The Fool",
+     "heading": 223,
+     "start": 224,
+     "end": 244,
+     "section": 6,
+     "words": 1456,
+     "firstWords": "For many years I had sought him, and at last I found"
+    },
+    {
+     "slug": "19-the-conscript-and-the-crisis",
+     "num": "XIX",
+     "title": "The Conscript and the Crisis",
+     "heading": 245,
+     "start": 246,
+     "end": 259,
+     "section": 7,
+     "words": 1726,
+     "firstWords": "Very few of us ever see the history of our own time"
+    },
+    {
+     "slug": "20-the-miser-and-his-friends",
+     "num": "XX",
+     "title": "The Miser and His Friends",
+     "heading": 260,
+     "start": 261,
+     "end": 269,
+     "section": 7,
+     "words": 1347,
+     "firstWords": "It is a sign of sharp sickness in a society when it"
+    },
+    {
+     "slug": "21-the-mystagogue",
+     "num": "XXI",
+     "title": "The Mystagogue",
+     "heading": 270,
+     "start": 271,
+     "end": 277,
+     "section": 7,
+     "words": 1252,
+     "firstWords": "Whenever you hear much of things being unutterable and indefinable and impalpable"
+    },
+    {
+     "slug": "22-the-red-reactionary",
+     "num": "XXII",
+     "title": "The Red Reactionary",
+     "heading": 278,
+     "start": 279,
+     "end": 288,
+     "section": 7,
+     "words": 1312,
+     "firstWords": "The one case for Revolution is that it is the only quite"
+    },
+    {
+     "slug": "23-the-separatist-and-sacred-things",
+     "num": "XXIII",
+     "title": "The Separatist and Sacred Things",
+     "heading": 289,
+     "start": 290,
+     "end": 296,
+     "section": 8,
+     "words": 1483,
+     "firstWords": "In the very laudable and fascinating extensions of our interest in Asiatic"
+    },
+    {
+     "slug": "24-the-mummer",
+     "num": "XXIV",
+     "title": "The Mummer",
+     "heading": 297,
+     "start": 298,
+     "end": 303,
+     "section": 8,
+     "words": 1255,
+     "firstWords": "The night before Christmas Eve I heard a burst of musical voices"
+    },
+    {
+     "slug": "25-the-aristocratic-arry",
+     "num": "XXV",
+     "title": "The Aristocratic 'Arry",
+     "heading": 304,
+     "start": 305,
+     "end": 314,
+     "section": 8,
+     "words": 1274,
+     "firstWords": "The Cheap Tripper, pursued by the curses of the aesthetes and the"
+    },
+    {
+     "slug": "26-the-new-theologian",
+     "num": "XXVI",
+     "title": "The New Theologian",
+     "heading": 315,
+     "start": 316,
+     "end": 325,
+     "section": 9,
+     "words": 1655,
+     "firstWords": "It is an old story that names do not fit things; it"
+    },
+    {
+     "slug": "27-the-romantic-in-the-rain",
+     "num": "XXVII",
+     "title": "The Romantic in the Rain",
+     "heading": 326,
+     "start": 327,
+     "end": 333,
+     "section": 9,
+     "words": 1006,
+     "firstWords": "The middle classes of modern England are quite fanatically fond of washing;"
+    },
+    {
+     "slug": "28-the-false-photographer",
+     "num": "XXVIII",
+     "title": "The False Photographer",
+     "heading": 334,
+     "start": 335,
+     "end": 341,
+     "section": 9,
+     "words": 1153,
+     "firstWords": "When, as lately, events have happened that seem (to the fancy, at"
+    },
+    {
+     "slug": "29-the-sultan",
+     "num": "XXIX",
+     "title": "The Sultan",
+     "heading": 342,
+     "start": 343,
+     "end": 349,
+     "section": 9,
+     "words": 1084,
+     "firstWords": "There is one deep defect in our extension of cosmopolitan and Imperial"
+    },
+    {
+     "slug": "30-the-architect-of-spears",
+     "num": "XXX",
+     "title": "The Architect of Spears",
+     "heading": 350,
+     "start": 351,
+     "end": 356,
+     "section": 10,
+     "words": 1281,
+     "firstWords": "The other day, in the town of Lincoln, I suffered an optical"
+    },
+    {
+     "slug": "31-the-man-on-top",
+     "num": "XXXI",
+     "title": "The Man on Top",
+     "heading": 357,
+     "start": 358,
+     "end": 365,
+     "section": 10,
+     "words": 1341,
+     "firstWords": "There is a fact at the root of all realities to-day which"
+    },
+    {
+     "slug": "32-the-other-kind-of-man",
+     "num": "XXXII",
+     "title": "The Other Kind of Man",
+     "heading": 366,
+     "start": 367,
+     "end": 373,
+     "section": 10,
+     "words": 1304,
+     "firstWords": "There are some who are conciliated by Conciliation Boards. There are some"
+    },
+    {
+     "slug": "33-the-medi-val-villain",
+     "num": "XXXIII",
+     "title": "The Mediæval Villain",
+     "heading": 374,
+     "start": 375,
+     "end": 383,
+     "section": 10,
+     "words": 1387,
+     "firstWords": "I see that there have been more attempts at the whitewashing of"
+    },
+    {
+     "slug": "34-the-divine-detective",
+     "num": "XXXIV",
+     "title": "The Divine Detective",
+     "heading": 384,
+     "start": 385,
+     "end": 390,
+     "section": 10,
+     "words": 1145,
+     "firstWords": "Every person of sound education enjoys detective stories, and there are even"
+    },
+    {
+     "slug": "35-the-elf-of-japan",
+     "num": "XXXV",
+     "title": "The Elf of Japan",
+     "heading": 391,
+     "start": 392,
+     "end": 395,
+     "section": 11,
+     "words": 1232,
+     "firstWords": "There are things in this world of which I can say seriously"
+    },
+    {
+     "slug": "36-the-chartered-libertine",
+     "num": "XXXVI",
+     "title": "The Chartered Libertine",
+     "heading": 396,
+     "start": 397,
+     "end": 401,
+     "section": 11,
+     "words": 1268,
+     "firstWords": "I find myself in agreement with Mr. Robert Lynd for his most"
+    },
+    {
+     "slug": "37-the-contented-man",
+     "num": "XXXVII",
+     "title": "The Contented Man",
+     "heading": 402,
+     "start": 403,
+     "end": 413,
+     "section": 11,
+     "words": 1329,
+     "firstWords": "The word content is not inspiring nowadays; rather it is irritating because"
+    },
+    {
+     "slug": "38-the-angry-author-his-farewell",
+     "num": "XXXVIII",
+     "title": "The Angry Author: His Farewell",
+     "heading": 414,
+     "start": 415,
+     "end": 423,
+     "section": 11,
+     "words": 1395,
+     "firstWords": "I have republished all these old articles of mine because they cover"
+    }
+   ],
+   "structure": {
+    "sha256": "0eefdc9c4c8e2552d49dcf5f92754c069e36bf549f861d7b451f00cf88f61023",
+    "source": "data/structured/miscellany-of-men-pg-2015.json",
+    "roles": [
+     [
+      50,
+      "chapter"
+     ],
+     [
+      57,
+      "chapter"
+     ],
+     [
+      72,
+      "chapter"
+     ],
+     [
+      81,
+      "chapter"
+     ],
+     [
+      89,
+      "chapter"
+     ],
+     [
+      99,
+      "chapter"
+     ],
+     [
+      108,
+      "chapter"
+     ],
+     [
+      116,
+      "chapter"
+     ],
+     [
+      127,
+      "chapter"
+     ],
+     [
+      137,
+      "chapter"
+     ],
+     [
+      153,
+      "chapter"
+     ],
+     [
+      163,
+      "chapter"
+     ],
+     [
+      170,
+      "chapter"
+     ],
+     [
+      186,
+      "chapter"
+     ],
+     [
+      195,
+      "chapter"
+     ],
+     [
+      206,
+      "chapter"
+     ],
+     [
+      213,
+      "chapter"
+     ],
+     [
+      223,
+      "chapter"
+     ],
+     [
+      245,
+      "chapter"
+     ],
+     [
+      260,
+      "chapter"
+     ],
+     [
+      270,
+      "chapter"
+     ],
+     [
+      278,
+      "chapter"
+     ],
+     [
+      289,
+      "chapter"
+     ],
+     [
+      297,
+      "chapter"
+     ],
+     [
+      304,
+      "chapter"
+     ],
+     [
+      315,
+      "chapter"
+     ],
+     [
+      326,
+      "chapter"
+     ],
+     [
+      334,
+      "chapter"
+     ],
+     [
+      342,
+      "chapter"
+     ],
+     [
+      350,
+      "chapter"
+     ],
+     [
+      357,
+      "chapter"
+     ],
+     [
+      366,
+      "chapter"
+     ],
+     [
+      374,
+      "chapter"
+     ],
+     [
+      384,
+      "chapter"
+     ],
+     [
+      391,
+      "chapter"
+     ],
+     [
+      396,
+      "chapter"
+     ],
+     [
+      402,
+      "chapter"
+     ],
+     [
+      414,
+      "chapter"
+     ]
+    ],
+    "front": [],
+    "em": []
+   }
   }
  }
 }

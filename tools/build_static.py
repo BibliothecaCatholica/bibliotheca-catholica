@@ -140,6 +140,8 @@ def one_disclosure(body):
         n[0]+=1;return m.group(0) if n[0]==1 else ''
     return DISCL_RE.sub(keep,body)
 EPUBS=json.loads((ROOT/'data/epubs.json').read_text())['epubs'] if (ROOT/'data/epubs.json').exists() else {}  # published EPUBs (tools/build_epub.py --publish)
+from r2_links import R2Links  # noqa: E402  (Round 8, Job B3: links to verified R2 uploads only)
+R2L=R2Links.load()
 COVER_OG={}  # work id -> (edition id, alt text), filled in main() for hosted works with a rendered cover
 def page(tpl,route,title,desc,body,noindex=False,jsonld=()):
     url=SITE+(route+'/' if route else '');t=E(title);d=E(desc)
@@ -744,7 +746,7 @@ def main():
                    lambda w:dict({'@type':'Person','name':w['author']},**({'url':SITE+'author/'+w['authorId']+'/'} if w.get('authorId') in auth_ids else {})))
     SUMMA=summa_pages(out,lib) if (ROOT/'data/summa.json').exists() else None
     for w in lib['works']:
-        eds=''.join('<li>'+E(e['label'])+''.join(' · '+E(c['role'])+': '+E(c['name']) for c in e.get('contributors',[]) if 'translat' in c['role'].lower())+(' · '+a('/#/read/'+w['id']+'/'+e['id'],'Read here') if e.get('text') else '')+(' · <a download href="/'+E(EPUBS[e['id']]['path'])+'">EPUB (this edition)</a>' if e['id'] in EPUBS else '')+' · '+a(e['source'],'Source',True)+'</li>' for e in w['editions'])
+        eds=''.join('<li>'+E(e['label'])+''.join(' · '+E(c['role'])+': '+E(c['name']) for c in e.get('contributors',[]) if 'translat' in c['role'].lower())+(' · '+a('/#/read/'+w['id']+'/'+e['id'],'Read here') if e.get('text') else '')+(' · <a download href="/'+E(EPUBS[e['id']]['path'])+'">EPUB (this edition)</a>' if e['id'] in EPUBS else '')+R2L.edition_links(e['id'])+' · '+a(e['source'],'Source',True)+'</li>' for e in w['editions'])
         d=w.get('description') or (w['title']+' by '+w['author']+': free reading edition with source, credits, and rights notes.')
         hosted=any(e.get('text') for e in w['editions'])
         by=byline(w)
@@ -762,6 +764,10 @@ def main():
                 '<p>This is the Latin prologue only. No English translation published before 1931 is known, so none is hosted here. The line <i lang="la">ignoratio Scripturarum, ignoratio Christi est</i> has a stable page at '+a('/work/jerome-isaiah-prologue/ignoratio-scripturarum/','/work/jerome-isaiah-prologue/ignoratio-scripturarum/')+'.</p>'
                 +'<h2>Reading editions &amp; sources</h2>')
         out['work/'+w['id']]=(w['title']+' · Bibliotheca Catholica',md,body,[book,crumbs(('Discover & Read','library/'),(w['title'],'work/'+w['id']+'/'))])
+    # Original-scan pages (R2, Round 8 Job B3): books not yet transcribed whose scan is uploaded and verified; none while the bucket is empty
+    for it in R2L.scan_pages():
+        sr=R2L.scan_page(it,'/work/'+it['workId']+'/' if it.get('workId') in libw else None)
+        out[sr[0]]=(sr[1],sr[2],sr[3],[crumbs(('Discover & Read','library/'),(it['title'],sr[0]+'/'))],sr[5])
     # Stable Media URL for Jerome's line (a path, not a hash fragment: the app router would swallow a fragment).
     if 'jerome-isaiah-prologue' in libw:
         jw=libw['jerome-isaiah-prologue']; je=next(x for x in jw['editions'] if x.get('text'))
@@ -905,10 +911,10 @@ def main():
     # Hash routes with no static page (#/read/..., #/isidore/author=...) stay, each beside a real fallback link.
     unhash=lambda body:re.sub(r'href="/?#/([a-z0-9/-]+?)/?"',lambda m:'href="/'+m.group(1)+'/"' if m.group(1) in out else m.group(0),body)
     for route,v in out.items():
-        t,d,body=v[:3];body=unhash(body);f=ROOT/route/'index.html';f.parent.mkdir(parents=True,exist_ok=True);f.write_text(page(tpl,route,t,d,body,jsonld=v[3] if len(v)>3 else ()))
+        t,d,body=v[:3];body=unhash(body);f=ROOT/route/'index.html';f.parent.mkdir(parents=True,exist_ok=True);f.write_text(page(tpl,route,t,d,body,noindex=len(v)>4 and v[4],jsonld=v[3] if len(v)>3 else ()))
     man.write_text(''.join(r+'/index.html\n' for r in sorted(out)))
     # /study/ is maintained by hand (not in `out`) but is a real, linked page: indexed and listed (housekeeping, 2026-11-20)
-    urls=[SITE]+[SITE+r+'/' for r in sorted(list(out)+(['study'] if (ROOT/'study/index.html').exists() else []))]
+    urls=[SITE]+[SITE+r+'/' for r in sorted([r for r in out if not (len(out[r])>4 and out[r][4])]+(['study'] if (ROOT/'study/index.html').exists() else []))]  # noindex pages stay out
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('  <url><loc>'+E(u)+'</loc></url>\n' for u in urls)+'</urlset>\n')
     (ROOT/'robots.txt').write_text('# Bibliotheca Catholica\nUser-agent: *\nAllow: /\nDisallow: /data/texts/\nDisallow: /drafts/\n\nSitemap: '+SITE+'sitemap.xml\n')
     (ROOT/'404.html').write_text('''<!doctype html><html lang="en"><head>

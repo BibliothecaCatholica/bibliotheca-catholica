@@ -1,0 +1,14 @@
+<PAGE><BLOCK>title<LEVEL1>[180,120,820,190]<FORK>THE MYSTERY OF INIQUITY
+<BLOCK>text[300,260,700,300]<FORK>By
+<BLOCK>text[250,310,750,360]<FORK>PAUL HANLY FURFEY
+<BLOCK>text[200,820,800,880]<FORK>THE BRUCE PUBLISHING COMPANY
+MILWAUKEE
+<BLOCK>text[350,900,650,930]<FORK>1944<PAGE><PAGE><BLOCK>title<LEVEL2>[300,150,700,200]<FORK>Chapter 1
+<BLOCK>title<LEVEL1>[200,220,800,270]<FORK>SATAN AND SOCIAL PROBLEMS
+<BLOCK>text[100,300,900,500]<FORK>CATHOLICS have their own distinctive doctrine about
+the ills which plague society, their causes and their
+remedies.
+<BLOCK>figure[120,520,880,760]<FORK>
+<BLOCK>cross_text[100,780,900,950]<FORK>The two viewpoints are completely<PAGE><BLOCK>append_text[100,60,900,120]<FORK>and utterly different.
+<BLOCK>title<LEVEL2>[300,400,700,450]<FORK>Chapter 2
+<BLOCK>text[100,470,900,520]<FORK>FROM the considerations of the last chapter one corollary follows.

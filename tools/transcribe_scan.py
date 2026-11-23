@@ -186,7 +186,7 @@ def unread(text, V, verified=frozenset()):
     return n
 
 
-def choose_lines(arch, tess, V, verified=frozenset()):
+def choose_lines(arch, tess, V, verified=frozenset(), engine='tesseract'):
     """For each line of the Internet Archive OCR, take the Tesseract reading of the same printed line instead when it has
     strictly fewer unread words and about the same number of words (so no words are dropped or invented); otherwise keep
     the archive.org line, which stays the default and the fallback (November 22, 2026). Lines are matched by their boxes:
@@ -206,8 +206,8 @@ def choose_lines(arch, tess, V, verified=frozenset()):
         na = len(a['text'].split())
         if best is not None and best_ov >= 0.5 and abs(len(best['text'].split()) - na) <= max(1, na // 5) \
                 and unread(best['text'], V, verified) < unread(a['text'], V, verified):
-            out.append(dict(a, text=re.sub(r'\s+', ' ', best['text']), engine='tesseract'))
-            counts['tesseract'] += 1
+            out.append(dict(a, text=re.sub(r'\s+', ' ', best['text']), engine=engine))
+            counts[engine] += 1
         else:
             out.append(a)
             counts['archive.org'] += 1
@@ -488,7 +488,35 @@ def second_ocr(e, objs, raw_pages, cache, V, verified):
     return {'engine': tesseract_version(), 'langs': langs, 'scale': scale, 'lineChoices': dict(counts)}
 
 
-def build(e, cache, V):
+def third_ocr(e, objs, raw_pages, cache, V, verified, endpoint, client=None):
+    """Optional third engine, off by default: Baidu's Unlimited-OCR-2 served by SGLang at `endpoint`
+    (tools/ocr/unlimited/), chosen per line by the same rule as Tesseract (choose_lines). Runs only when the command line
+    gives --unlimited-ocr and --unlimited-endpoint; never in validate, build, or CI. Each leaf's page image is sent as a
+    one-page request and the raw layout output is cached; a block's lines are placed evenly down its box. Like every engine,
+    its readings still need page-image verification before anything is hosted."""
+    from ocr.unlimited.client import UnlimitedOCRClient, UnlimitedOCRConfig
+    from ocr.unlimited.postprocess import page_lines as uocr_lines, parse as uocr_parse
+    client = client or UnlimitedOCRClient(UnlimitedOCRConfig(endpoint=endpoint, page_window=1))
+    counts = collections.Counter()
+    for i, o in enumerate(objs):
+        img = page_image(e['ia'], o, cache, 1)
+        raw_path = Path(cache) / 'uocr' / e['ia'] / (img.stem + '.txt')
+        if raw_path.exists():
+            raw = raw_path.read_text(encoding='utf-8')
+        else:
+            raw = client.raw_for_images([img])
+            raw_path.parent.mkdir(parents=True, exist_ok=True)
+            raw_path.write_text(raw, encoding='utf-8')
+        pages = uocr_parse(raw)
+        lines = uocr_lines(pages[0] if pages else [], int(o.get('width')), int(o.get('height') or 3000))
+        height, ls = raw_pages[i]
+        chosen, c = choose_lines(ls, lines, V, verified, engine='unlimited-ocr')
+        raw_pages[i] = (height, chosen)
+        counts['unlimited-ocr'] += c.get('unlimited-ocr', 0)
+    return {'engine': 'unlimited-ocr-2 (SGLang, OpenAI-compatible API)', 'lineChoices': dict(counts)}
+
+
+def build(e, cache, V, unlimited=None):
     xml, meta = fetch(e['ia'], cache)
     root = ET.fromstring(xml)
     objs = root.findall('.//OBJECT')[e['firstLeaf']:e['lastLeaf'] + 1]
@@ -497,6 +525,8 @@ def build(e, cache, V):
     verified = set(e.get('verifiedWords', [])) | foreign
     info = {'foreignWords': foreign_rec, 'secondOcr': second_ocr(e, objs, raw_pages, cache, V, verified) if e.get('secondOcr') else None,
             'unread': collections.Counter()}
+    if unlimited:  # optional third engine: only with --unlimited-ocr and --unlimited-endpoint (off by default)
+        info['thirdOcr'] = third_ocr(e, objs, raw_pages, cache, V, verified, unlimited)
     apply_hand_fixes(raw_pages, e)
     firsts = collections.Counter(norm_head(ls[0]['text']) for _, ls in raw_pages if ls and len(ls[0]['text']) < 70)
     heads = {h for h, n in firsts.items() if n >= 3 and h}
@@ -597,6 +627,7 @@ def read_gate_record(e, words, unknown, info):
             'engine': ('archive.org djvu.xml OCR' + (f", with {so['engine']} ({so['langs']}, image scale {so['scale']}) chosen per "
                        f"line where it reads more words" if so else '')),
             **({'lineChoices': so['lineChoices']} if so else {}),
+            **({'thirdOcr': info['thirdOcr']} if info.get('thirdOcr') else {}),
             'leavesScored': [e['firstLeaf'], e['lastLeaf']],
             'omitted': e.get('omitted', []),
             'handFixes': len(e.get('handFixes', [])), 'verifiedWords': len(e.get('verifiedWords', [])),
@@ -622,13 +653,13 @@ def omitted_sentence(e):
     return f" Left out of this text: {listed}; read them in the full scan at https://archive.org/details/{e['ia']}."
 
 
-def main(spec, cache, measure=None):
+def main(spec, cache, measure=None, unlimited=None):
     V = vocabulary()
     for e in json.loads(Path(spec).read_text()):
         check_omitted(e)
         out_path = ROOT / f"data/texts/{e['edition']}.txt"
         if measure:  # score only: nothing is hosted, and the method and every unread form are saved for review
-            paras, corrections, flagged, words, unknown, meta, xml, info = build(e, cache, V)
+            paras, corrections, flagged, words, unknown, meta, xml, info = build(e, cache, V, unlimited)
             rg = read_gate_record(e, words, unknown, info)
             out = Path(measure) / f"{e['edition']}.json"
             out.parent.mkdir(parents=True, exist_ok=True)
@@ -644,7 +675,7 @@ def main(spec, cache, measure=None):
             assert basis == 'pd-nonrenewal', basis
             assert not nonrenewal_problems(e.get('nonRenewal')), (e['edition'], nonrenewal_problems(e.get('nonRenewal')))
             assert e['nonRenewal']['scan'] == e['ia'], e['edition']
-        paras, corrections, flagged, words, unknown, meta, xml, info = build(e, cache, V)
+        paras, corrections, flagged, words, unknown, meta, xml, info = build(e, cache, V, unlimited)
         meta_year = int(re.search(r'\d{4}', str(meta.get('date') or e['year'])).group())
         year = int(e['year'])
         publisher = e.get('publisher') or meta.get('publisher')
@@ -730,11 +761,15 @@ if __name__ == '__main__':
     ap.add_argument('--cache', default='/tmp/transcribe-scan-cache')
     ap.add_argument('--measure', metavar='DIR', help='score only: write DIR/<edition>.json (method and unread forms); host nothing')
     ap.add_argument('--sample', action='store_true', help="print each foreignWords language's sample to check on the images")
+    ap.add_argument('--unlimited-ocr', action='store_true', help='also try Unlimited-OCR-2 per line (optional; needs --unlimited-endpoint)')
+    ap.add_argument('--unlimited-endpoint', metavar='URL', help='a running SGLang server for Unlimited-OCR-2, e.g. http://127.0.0.1:10000')
     a = ap.parse_args()
+    if bool(a.unlimited_ocr) != bool(a.unlimited_endpoint):
+        ap.error('--unlimited-ocr and --unlimited-endpoint go together')
     Path(a.cache).mkdir(parents=True, exist_ok=True)
     if a.sample:
         for e in json.loads(Path(a.spec).read_text()):
             for lang, d in (e.get('foreignWords') or {}).items():
                 print(e['edition'], lang, json.dumps(foreign_sample(e['edition'], lang, d['forms']), ensure_ascii=False))
     else:
-        main(a.spec, a.cache, a.measure)
+        main(a.spec, a.cache, a.measure, a.unlimited_endpoint if a.unlimited_ocr else None)

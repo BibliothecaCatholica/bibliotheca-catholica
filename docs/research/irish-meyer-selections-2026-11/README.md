@@ -47,7 +47,7 @@ Round 4, Job 2b. Not hosted: the raw score is below the 99.5% read gate, and the
 ## Round 7 (November 23, 2026): hosting
 
 Micah approved hosting once QA passes it ("Yes, host Meyer once QA passes it", November 23).
-- **Before hosting, the whole text was read again for OCR debris the scorer doesn't count:** accented letters inside English words, backslashes, and digits run into words. 31 lines were fixed against the page images:
+- **Before hosting, the whole text was read again for OCR debris the scorer doesn't count:** accented letters inside English words, backslashes, and digits run into words. 30 lines were fixed against the page images (30 new hand fixes; 48 in the record with the hand pass's 18):
   - "191 1" → 1911;
   - offeríng, \vider, liíerature, maríced, Chríst, couíd, stríveth, spríng, yew-berríes, shoúld, Delightíul, Erín, díre, proíit, belís, and duríng;
   - "x\n" → An;

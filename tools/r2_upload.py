@@ -15,7 +15,9 @@ An object already recorded with the same SHA-256 is skipped. Items under `ownerR
 
 Auth: the Cloudflare API at api.cloudflare.com with an API token that has R2 Storage Edit. Set CLOUDFLARE_API_TOKEN
 (in the cloud environment the network proxy injects the real token, so any placeholder value works there) and
-CLOUDFLARE_ACCOUNT_ID, or rely on the manifest's `accountId`. The token is never printed. Docs: docs/R2-RUNBOOK.md.
+optionally CLOUDFLARE_ACCOUNT_ID. Without it the tool asks the API for the token's one account (GET /accounts), so the account
+ID is never written into the repository (QA, Round 8: tests/test_r2.py fails if it appears). The token is never printed.
+Docs: docs/R2-RUNBOOK.md.
 """
 import argparse
 import datetime
@@ -170,11 +172,24 @@ def write(manifest):
     MANIFEST.write_text(json.dumps(manifest, indent=1, ensure_ascii=False) + '\n')
 
 
-def client_from_env(manifest):
+def account_from_api(token):
+    """The token's one Cloudflare account ID, asked of the API (kept in memory only, never written or printed)."""
+    req = urllib.request.Request(API + '/accounts', headers={'Authorization': 'Bearer ' + token})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            accounts = json.load(r).get('result') or []
+    except urllib.error.HTTPError as e:
+        raise Failed(f'GET /accounts: HTTP {e.code}') from None
+    if len(accounts) != 1:
+        raise Failed(f'the token sees {len(accounts)} accounts; set CLOUDFLARE_ACCOUNT_ID')
+    return accounts[0]['id']
+
+
+def client_from_env(manifest, lookup=account_from_api):
     token = os.environ.get('CLOUDFLARE_API_TOKEN')
     if not token:
         raise Failed('set CLOUDFLARE_API_TOKEN (any placeholder where the network proxy injects the token)')
-    account = os.environ.get('CLOUDFLARE_ACCOUNT_ID') or manifest.get('accountId')
+    account = os.environ.get('CLOUDFLARE_ACCOUNT_ID') or lookup(token)
     return Client(account, manifest['bucket'], token)
 
 

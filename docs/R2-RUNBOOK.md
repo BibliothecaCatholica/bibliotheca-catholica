@@ -35,7 +35,8 @@ https://files.bibliothecacatholica.com. The inventory is [R2-INVENTORY](R2-INVEN
    ```
 
    In the cloud environment the network proxy injects the real token for api.cloudflare.com, so the variable holds a placeholder.
-   Elsewhere, set it to a token with R2 Storage Edit. Each file is read (or downloaded and checked against the source SHA-1),
+   Elsewhere, set it to a token with R2 Storage Edit. The account ID is read from `CLOUDFLARE_ACCOUNT_ID` or asked of the API;
+   it is never committed (a test fails if it appears in the repository). Each file is read (or downloaded and checked against the source SHA-1),
    PUT with its Content-Type and cache header, read back, and checked (SHA-256, size, Content-Type, Cache-Control). Its `upload`
    record is written into the manifest as soon as it verifies.
 5. Commit `data/r2-manifest.json` with `python3 tools/r2_inventory.py` rerun (the doc shows the batch as uploaded), in a PR.

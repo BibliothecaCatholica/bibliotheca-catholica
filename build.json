@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-7aa3346421a7",
+  "id": "bc-52de41e13b38",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "a3b4bb14885b3404bc50d6a8d32c60a056c732895b356f34b79be4c180a40a1b",
@@ -40,7 +40,7 @@
     "data/print-editions.js": "d82ca8844bb76fec8c97dd5c2150c241a2e436e10ed739fdd28664a4daa5e79e",
     "data/print-editions.json": "82a99e38c4089a4e9fa0547b8e7c394b9c7a99275bc1341b20adae0c9281c5bc",
     "data/projects.js": "54b7f0307fe0d128b7d9fb52de625188c42bc426db797b75b2be19676a8dbf57",
-    "data/r2-manifest.json": "967ecb94c4503b1eee74ae1548f90c25fc00eaab63af7b364e36d2d50a3f9828",
+    "data/r2-manifest.json": "24db4556828558260e467944e07314f24d4f67a147575466f2006eaffda9bf71",
     "data/r2-sources.json": "0404f8eeba1780ba1957172f2aa3cd85005c8f093a3ef6c56a8191896094c909",
     "data/rare.js": "5a5e80203afa50211671aacab326f1a7e86bc6212b6489140050419527a3536f",
     "data/reading-options.js": "b708d4879dcc916091a27a8ecdc676a1162c4991ee2c7a403dec03f4aa04195e",
@@ -147,8 +147,8 @@
     "tools/make_og_image.py": "3178e4e26fed5fe06c12a2e10b46dbb792200156c004e2006acb4a1150a5f351",
     "tools/match_isidore.py": "99c52c70046c0ef4a6ecccb14ae8fd69a77a391f29af2943a2ceb4f66dafcd3c",
     "tools/notices.py": "941ec4a676de618bc440c8268df6bfb5473bfd949fbb3179ae045a72453150f3",
-    "tools/r2_inventory.py": "a232a997c1ebcff47e5f2496caae3853c78c0f14762eded95eaa855694dc7916",
-    "tools/r2_upload.py": "7bc53b61b8d93f5c2f0e733e0918114fdad3dc8dfd3dd6b9f3e829eb98d93d3c",
+    "tools/r2_inventory.py": "1a76fec2e20ce0cf6e65881115650f0773365942190f366bf1f6fb8da3dfb7a6",
+    "tools/r2_upload.py": "d388c9f8066ea3d22ceb82ff6865800834f98caa2b8e69f1b07a0ccb577545b7",
     "tools/reader_formatting.py": "77b3b8f0ee3df74f60b80a98497a36f268f0db26a03551240728505435050357",
     "tools/reading_lists.py": "5339ad58f61b81e2408655893e0150e9ba4e000c2efcb03e0cd3b4f9e4382daa",
     "tools/reading_plans.py": "330ad88de01cb3cf315a4b035f3480b7315796eb71de0acc832eb9a3001c3aef",

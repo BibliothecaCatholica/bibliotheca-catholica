@@ -42,7 +42,7 @@ def tiny_manifest(directory):
     """A one-batch manifest whose single file is a local file in `directory`."""
     path = Path(directory) / 'a.pdf'
     path.write_bytes(b'%PDF-1.4 test')
-    return {'bucket': 'b', 'accountId': 'x', 'freeTierBytes': 10**10, 'batches': {'batch-1': {'items': ['ia-a'], 'bytes': 13}},
+    return {'bucket': 'b', 'freeTierBytes': 10**10, 'batches': {'batch-1': {'items': ['ia-a'], 'bytes': 13}},
             'items': [{'slug': 'ia-a', 'files': [{'kind': 'pdf', 'key': 'pdf/ia-a.pdf', 'bytes': 13, 'sha256': None, 'localPath': str(path),
                                                    'sourceUrl': None, 'contentType': 'application/pdf', 'cacheControl': I.IMMUTABLE, 'upload': None}]}]}
 
@@ -108,6 +108,36 @@ class Inventory(unittest.TestCase):
         old['items'][0]['files'][0]['upload'] = {'at': '2026-12-01', 'batch': 'batch-1', 'bytes': 1, 'sha256': 'a', 'verified': True}
         m = I.build(json.loads(I.SOURCES.read_text()), json.loads((ROOT / 'data/library.json').read_text()), old)
         self.assertEqual(next(f for it in m['items'] for f in it['files'] if f['key'] == key)['upload']['at'], '2026-12-01')
+
+
+class AccountIdNeverCommitted(unittest.TestCase):
+    """QA, Round 8 (security): the Cloudflare account ID is read from the environment or the API, never committed.
+    Only its SHA-256 is here, so this test does not leak it either."""
+    ACCOUNT_SHA256 = '9c5372b04182dae97de7110e56ba32f568a1da474344428accb64be0db5d6d5c'
+
+    def test_no_tracked_file_contains_the_account_id(self):
+        import re
+        import subprocess
+        files = subprocess.run(['git', 'ls-files', '-z'], cwd=ROOT, capture_output=True, check=True).stdout.decode().split('\0')
+        hits = []
+        for f in files:
+            p = ROOT / f
+            if not f or not p.is_file() or p.stat().st_size > 50_000_000:
+                continue
+            for tok in set(re.findall(rb'(?<![0-9a-f])[0-9a-f]{32}(?![0-9a-f])', p.read_bytes())):
+                if hashlib.sha256(tok).hexdigest() == self.ACCOUNT_SHA256:
+                    hits.append(f)
+        self.assertEqual(hits, [], 'the Cloudflare account ID is committed in these files')
+
+    def test_manifest_and_tools_carry_no_account_field(self):
+        self.assertNotIn('accountId', MANIFEST)
+        self.assertNotIn('ACCOUNT_ID', (ROOT / 'tools/r2_inventory.py').read_text())
+
+    def test_account_comes_from_env_or_the_api(self):
+        import os
+        with unittest.mock.patch.dict(os.environ, {'CLOUDFLARE_API_TOKEN': 'placeholder', 'CLOUDFLARE_ACCOUNT_ID': ''}):
+            c = U.client_from_env({'bucket': 'b'}, lookup=lambda token: 'acct-from-api')
+        self.assertIn('/accounts/acct-from-api/r2/buckets/b', c.base)
 
 
 class Upload(unittest.TestCase):

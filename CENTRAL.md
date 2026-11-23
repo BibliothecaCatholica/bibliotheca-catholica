@@ -26,10 +26,10 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 ## Verified snapshot
 
-As of November 21, 2026, `main` after PR #114:
+As of November 23, 2026: `main` after PR #136 (`2c3f5465ff`), with #139 (Walsh) included:
 
-- 206 work records; 147 hosted editions of 142 works in `data/library.json` (222 editions in all, 4 retired); 52 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
-- 5,327 sitemap URLs; 8,132 tracked files, most generated (`linguist-generated` in `.gitattributes`).
+- 206 work records; 147 hosted editions of 142 works in `data/library.json` (228 editions in all, 4 retired); 54 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 5,968 sitemap URLs; 9,147 tracked files, most generated (`linguist-generated` in `.gitattributes`); build-on-deploy is planned for about December 26 (draft #135, `docs/plans/build-on-deploy-plan.md`).
 - Tests: 127 Node and 337 Python.
 
 ## Standing decisions
@@ -40,11 +40,16 @@ As of November 21, 2026, `main` after PR #114:
 - **Standing approval:** presentation, docs, tests, and tooling may merge on green CI, and so do hosted texts public domain by date (November 15, 2026); the owner's review is still required for new hosted texts on any other basis (each `pd-nonrenewal` batch), rights-rule changes, hosted-text wording, rights or licence statements, affiliate placements, analytics, hosting or DNS, takedown identity, and outreach ([OPERATIONS](docs/OPERATIONS.md#owner-decisions)).
 - **Settled (November 15, 2026):** Story of a Soul matching rule; EPUBs published for structured editions; hero engraving; takedown contact email; covers design C; Summa Design A.
 - **Donations (November 19, 2026):** Buy Me a Coffee was removed. PayPal is the only donation option.
+- **Kindle help links (November 22, 2026):** the EPUB guide may link Amazon's generic Kindle help pages; no Amazon product or affiliate links anywhere (PROJECT-RULES rule 7).
 - **Magisterium AI (November 19, 2026):** the placements as built in #73 (PROJECT-RULES rule 7, `PAGES` in `tools/study_partner.py`), and counting its /study/ clicks as the existing affiliate kind (#75).
 
 ## Handoff log
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
+
+### 2026-11-22, Claude (Claude Code): docs cleanup
+
+- Brought CENTRAL, AGENTS rule 8, PROJECT-RULES (Amazon exception, preserved files), LICENSING, and `.gitattributes` (`councils/`, `credits/`) in line with the code. HOLDS: the Media December-texts row is finished on main (Butler's St. Eulalia #128, Prudentius #131, Jerome #132) and was deleted. Build-on-deploy: the plan is on #135 with QA's corrections; the public-paths `dist/` PR is stacked on it.
 
 ### 2026-11-21, Claude (Claude Code): open run 2
 
@@ -56,19 +61,13 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 - Merged #98 (Catholic Encyclopedia "Advent"; `transcribe_scan.py` learns article bounds, two columns, `verifiedWords`), #99 and #106 (Doré heads on ten sections; #95 closed), #100 (The Sword of Wood and C under an owner-approved `scanException`), #101 (Benham 1874), #102 (Trent r2: 34 confirmed typos; Session VII drop cap), #103 to #105 (G.K.C. as M.C., Do We Agree?, The Superstitions of the Sceptic). Bug sweep clean: no broken internal links or missing alt text in 5,726 pages, no console errors, plan check 26/26.
 - Refused or down: la.wikisource.org; ia600703, ia800703 (PL 24); every free Catholic Encyclopedia vol. 11 server; babel.hathitrust.org (bot check); books.google.com; ia600805, ia800805 (Butler XII); gutenberg.org (503, maintenance, November 20 and 21). Wikimedia rate-limits uploads at times. Owner: the session could not delete branches; the 29 merged ones are listed in the run's final reply with a ready command. Next: Douay-Rheims once Gutenberg is back, Samuel Johnson, the non-renewal review batch, Candles' Beams, Robert Louis Stevenson, then the Orthodoxy flow.
 
-### 2026-11-20, Claude (Claude Code): network pass
-
-- Merged #90: Walsh's The World's Debt to the Catholic Church hosted (97.5% scan agreement); The Sword of Wood and C held (no dated scan). #96: Trent (Waterworth, 1848) hosted and structured by session via the new `tools/import_html_pages.py` (read gate 99.81%, 96.6% agreement), linked from /councils/. #95 (do not merge): Doré header options for five pages; the owner picks.
-- Refused archive.org file servers (HOLDS rows name them): ia600707, ia800707, ia600406, ia800406 (Schroeder); ia600806, ia800806 (Percival); ia600803, ia800803 (Manning); ia601608, ia801608, ia600704, ia800704 (second printings).
-- Stopped here: the transcription backlog (its scans are on allowed servers; G.K.C. as M.C., at 99.49%, is nearest the gate). #83 waits for the owner after the Nov 22 preview.
-
 ## Open items
 
 - Parked items, owners, and next steps: [HOLDS.md](HOLDS.md).
 - Owner: the takedown agent's name and postal address, and DMCA agent registration (the page shows only the contact email).
 - Hosted texts: further editions batches; manual proofread of Orthodoxy Chapter IV; Supplement Q1 scan review.
 - Advent launches November 29: data and local UI verified (#72); live-site checks and the publishing steps remain ([checklist](docs/ADVENT-LAUNCH.md), HOLDS row). Social readiness for Advent is owned by the Grok bot, not tracked here.
-- Libraries research candidates need rights and provenance review before import. No Report-Only CSP exists in `_headers`; the enforced CSP is #83, which the owner merges after the November 22 preview. Low-priority npm audit findings are paused. Page-audit decisions: the publish allowlist. `/study/` is indexed, canonical, and in the sitemap (November 20). CI's Study drift check names the missing `study/passages` (harmless).
+- Libraries research candidates need rights and provenance review before import. The enforced CSP and security headers are live in `_headers` (#83, merged). Low-priority npm audit findings are paused. Page-audit decisions: the publish allowlist. `/study/` is indexed, canonical, and in the sitemap (November 20). CI's Study drift check names the missing `study/passages` (harmless).
 - Recover the evidence listed in the [repository audit](docs/REPOSITORY-AUDIT-2026-11-09.md); confirm backups and account responsibilities ([OPERATIONS](docs/OPERATIONS.md)).
 
 ## Reference map

@@ -1,0 +1,747 @@
+[
+ {
+  "edition": "ia-johnenglandameri00gran",
+  "ia": "johnenglandameri00gran",
+  "title": "JOHN ENGLAND, AMERICAN CHRISTOPHER",
+  "sourceTitle": "John England, American Christopher",
+  "author": "Dorothy Fremont Grant",
+  "year": 1949,
+  "firstPublished": "1949 (Milwaukee: The Bruce Publishing Company)",
+  "rightsBasis": "pd-nonrenewal",
+  "nonRenewal": {
+   "firstPublicationYear": 1949,
+   "firstPublicationCountry": "US",
+   "firstPublicationPlace": "Milwaukee",
+   "firstPublicationPublisher": "The Bruce Publishing Company",
+   "stanford": {
+    "result": "no renewal found",
+    "checked": "2026-11-16",
+    "method": "one plain curl query (title words and surname), default user agent"
+   },
+   "nypl": {
+    "result": "no renewal found",
+    "checked": "2026-11-16",
+    "method": "NYPL cce-renewals data"
+   },
+   "hathitrust": "pd",
+   "hathitrustRecord": "pd (wu.89064449945)",
+   "uraa": "US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page (Copyright, 1949, Dorothy Fremont Grant); no earlier or simultaneous edition abroad was found, so URAA restoration does not apply.",
+   "scan": "johnenglandameri00gran",
+   "research": "docs/research/us-pd-renewal-checks-2026-11.csv"
+  },
+  "firstLeaf": 4,
+  "lastLeaf": 186,
+  "omitted": [],
+  "secondOcr": {
+   "engine": "tesseract",
+   "langs": "eng+lat+ita",
+   "scale": 1
+  },
+  "handFixes": [
+   {
+    "leaf": 4,
+    "page": null,
+    "ocr": "JOHN ENGLAND ... American Christopher",
+    "reading": "JOHN ENGLAND . . . American Christopher"
+   },
+   {
+    "leaf": 6,
+    "page": null,
+    "ocr": "JUN 2 1949",
+    "reading": ""
+   },
+   {
+    "leaf": 6,
+    "page": null,
+    "ocr": "JOHN ENGLANB% conn co’",
+    "reading": "JOHN ENGLAND"
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "+ a",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "BD igitizcet Aa ne Internet Archived |",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "in 2024 with funding from f",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "Princeton Theological Seminary Lib",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "nee vir",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": ", 1 i) Mit f Te mi &",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "F ‘",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": ". ~ ee. ? ‘ , i a)",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "td ¥ az 4‘ k aur aur\"",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "= i= a i a i A , ji",
+    "reading": ""
+   },
+   {
+    "leaf": 9,
+    "page": null,
+    "ocr": "i if",
+    "reading": ""
+   },
+   {
+    "leaf": 10,
+    "page": "vii",
+    "ocr": "* od 3 E",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 10,
+    "page": "vii",
+    "ocr": "that mistake. .. . I have",
+    "reading": "that mistake. . . . I have"
+   },
+   {
+    "leaf": 11,
+    "page": "viii",
+    "ocr": "THANK You...",
+    "reading": "THANK YOU . . ."
+   },
+   {
+    "leaf": 11,
+    "page": "viii",
+    "ocr": "x % ba %",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 12,
+    "page": "ix",
+    "ocr": "Jon ENGLAND,",
+    "reading": "JOHN ENGLAND,"
+   },
+   {
+    "leaf": 12,
+    "page": "ix",
+    "ocr": "BisHoP OF CHARLESTON,",
+    "reading": "BISHOP OF CHARLESTON,"
+   },
+   {
+    "leaf": 12,
+    "page": "ix",
+    "ocr": "OcroseR 11.",
+    "reading": "OCTOBER 11."
+   },
+   {
+    "leaf": 13,
+    "page": "x",
+    "ocr": "1818",
+    "reading": "1813"
+   },
+   {
+    "leaf": 13,
+    "page": "x",
+    "ocr": "Avucust 30.",
+    "reading": "AUGUST 30."
+   },
+   {
+    "leaf": 13,
+    "page": "x",
+    "ocr": "Jury 10.",
+    "reading": "JULY 10."
+   },
+   {
+    "leaf": 13,
+    "page": "x",
+    "ocr": "JuLy 12.",
+    "reading": "JULY 12."
+   },
+   {
+    "leaf": 13,
+    "page": "x",
+    "ocr": "comprising North. and South",
+    "reading": "comprising North and South"
+   },
+   {
+    "leaf": 13,
+    "page": "x",
+    "ocr": "Aucust 25.",
+    "reading": "AUGUST 25."
+   },
+   {
+    "leaf": 13,
+    "page": "x",
+    "ocr": "SEPTEMBER 24, In",
+    "reading": "SEPTEMBER 24. In"
+   },
+   {
+    "leaf": 13,
+    "page": "x",
+    "ocr": "OcToBER 22.",
+    "reading": "OCTOBER 22."
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "December 81,",
+    "reading": "December 31,"
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "January 15, 1828,",
+    "reading": "January 15, 1823,"
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "Marcu 1.",
+    "reading": "MARCH 1."
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "Apri 14, Sends",
+    "reading": "APRIL 14. Sends"
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "Jury 17.",
+    "reading": "JULY 17."
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "Aucust 81.",
+    "reading": "AUGUST 31."
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "NoveMBER. Visits",
+    "reading": "NOVEMBER. Visits"
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "NovEMBER 22, Detained",
+    "reading": "NOVEMBER 22. Detained"
+   },
+   {
+    "leaf": 14,
+    "page": "xi",
+    "ocr": "os",
+    "reading": ""
+   },
+   {
+    "leaf": 15,
+    "page": "xii",
+    "ocr": "Ocroser 9.",
+    "reading": "OCTOBER 9."
+   },
+   {
+    "leaf": 15,
+    "page": "xii",
+    "ocr": "DeceMBER 8.",
+    "reading": "DECEMBER 8."
+   },
+   {
+    "leaf": 15,
+    "page": "xii",
+    "ocr": "( Charleston )",
+    "reading": "(Charleston)"
+   },
+   {
+    "leaf": 15,
+    "page": "xii",
+    "ocr": "1824",
+    "reading": ""
+   },
+   {
+    "leaf": 15,
+    "page": "xii",
+    "ocr": "1826",
+    "reading": ""
+   },
+   {
+    "leaf": 15,
+    "page": "xii",
+    "ocr": "NovEMBER 24. Calls",
+    "reading": "NOVEMBER 24. Calls"
+   },
+   {
+    "leaf": 15,
+    "page": "xii",
+    "ocr": "January 4. United States",
+    "reading": "1824\nJanuary 4. United States"
+   },
+   {
+    "leaf": 15,
+    "page": "xii",
+    "ocr": "Marcu 17.",
+    "reading": "MARCH 17."
+   },
+   {
+    "leaf": 15,
+    "page": "xii",
+    "ocr": "NovEMBER 14-16.",
+    "reading": "NOVEMBER 14-16."
+   },
+   {
+    "leaf": 15,
+    "page": "xii",
+    "ocr": "January 8. Addresses the Congress",
+    "reading": "1826\nJanuary 8. Addresses the Congress"
+   },
+   {
+    "leaf": 16,
+    "page": "xiii",
+    "ocr": "FeBRUARY 6.",
+    "reading": "FEBRUARY 6."
+   },
+   {
+    "leaf": 16,
+    "page": "xiii",
+    "ocr": "Apri 2.",
+    "reading": "APRIL 2."
+   },
+   {
+    "leaf": 16,
+    "page": "xiii",
+    "ocr": "Jury 22.",
+    "reading": "JULY 22."
+   },
+   {
+    "leaf": 16,
+    "page": "xiii",
+    "ocr": "OcroBer 14.",
+    "reading": "OCTOBER 14."
+   },
+   {
+    "leaf": 16,
+    "page": "xiii",
+    "ocr": "NovemsBer. Address",
+    "reading": "NOVEMBER. Address"
+   },
+   {
+    "leaf": 16,
+    "page": "xiii",
+    "ocr": "Ocroser 1.",
+    "reading": "OCTOBER 1."
+   },
+   {
+    "leaf": 16,
+    "page": "xiii",
+    "ocr": "Jury 10. Sails",
+    "reading": "JULY 10. Sails"
+   },
+   {
+    "leaf": 17,
+    "page": "xiv",
+    "ocr": "OctoBER 20-27.",
+    "reading": "OCTOBER 20-27."
+   },
+   {
+    "leaf": 17,
+    "page": "xiv",
+    "ocr": "NovEMBER 17.",
+    "reading": "NOVEMBER 17."
+   },
+   {
+    "leaf": 17,
+    "page": "xiv",
+    "ocr": "ApriL. Sails",
+    "reading": "APRIL. Sails"
+   },
+   {
+    "leaf": 17,
+    "page": "xiv",
+    "ocr": "an*academy",
+    "reading": "an academy"
+   },
+   {
+    "leaf": 17,
+    "page": "xiv",
+    "ocr": "January 8. Ursulines",
+    "reading": "January 3. Ursulines"
+   },
+   {
+    "leaf": 17,
+    "page": "xiv",
+    "ocr": "summer of 1885",
+    "reading": "summer of 1835"
+   },
+   {
+    "leaf": 17,
+    "page": "xiv",
+    "ocr": "Apri 27.",
+    "reading": "APRIL 27."
+   },
+   {
+    "leaf": 18,
+    "page": "xv",
+    "ocr": "NoveMBER 17, State",
+    "reading": "NOVEMBER 17. State"
+   },
+   {
+    "leaf": 18,
+    "page": "xv",
+    "ocr": "Aucust 5, Addresses",
+    "reading": "AUGUST 5. Addresses"
+   },
+   {
+    "leaf": 18,
+    "page": "xv",
+    "ocr": "(Works, Messmer, Vol. I, pp.",
+    "reading": "(Works, Messmer, Vol. II, pp."
+   },
+   {
+    "leaf": 18,
+    "page": "xv",
+    "ocr": "NoveMBER 11-19.",
+    "reading": "NOVEMBER 11-19."
+   },
+   {
+    "leaf": 18,
+    "page": "xv",
+    "ocr": "First WeEK.",
+    "reading": "FIRST WEEK."
+   },
+   {
+    "leaf": 18,
+    "page": "xv",
+    "ocr": "Aprit, Catholics",
+    "reading": "APRIL. Catholics"
+   },
+   {
+    "leaf": 18,
+    "page": "xv",
+    "ocr": "NoveMBER 1. Arrives",
+    "reading": "NOVEMBER 1. Arrives"
+   },
+   {
+    "leaf": 18,
+    "page": "xv",
+    "ocr": "First SunDAY IN LENT.",
+    "reading": "FIRST SUNDAY IN LENT."
+   },
+   {
+    "leaf": 18,
+    "page": "xv",
+    "ocr": "Marcu 25.",
+    "reading": "MARCH 25."
+   },
+   {
+    "leaf": 19,
+    "page": "xvi",
+    "ocr": "1842",
+    "reading": ""
+   },
+   {
+    "leaf": 19,
+    "page": "xvi",
+    "ocr": "APRIL 10, Sunpay.",
+    "reading": "APRIL 10, SUNDAY."
+   },
+   {
+    "leaf": 19,
+    "page": "xvi",
+    "ocr": "Aprit 11, Monpay.",
+    "reading": "APRIL 11, MONDAY."
+   },
+   {
+    "leaf": 19,
+    "page": "xvi",
+    "ocr": "Metropolitan Catholic. Directory,",
+    "reading": "1842\nMetropolitan Catholic Directory,"
+   },
+   {
+    "leaf": 19,
+    "page": "xvi",
+    "ocr": "Bishop England’s. own",
+    "reading": "Bishop England’s own"
+   },
+   {
+    "leaf": 19,
+    "page": "xvi",
+    "ocr": "—D.F.G.",
+    "reading": "—D. F. G."
+   },
+   {
+    "leaf": 20,
+    "page": 1,
+    "ocr": "Introducing .",
+    "reading": "Introducing . . ."
+   },
+   {
+    "leaf": 20,
+    "page": 1,
+    "ocr": "*% * * *",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 35,
+    "page": 16,
+    "ocr": "ne ha",
+    "reading": ". . 1 . ."
+   },
+   {
+    "leaf": 41,
+    "page": 22,
+    "ocr": "Mo",
+    "reading": ". . 2 . ."
+   },
+   {
+    "leaf": 59,
+    "page": 40,
+    "ocr": "tert",
+    "reading": ". . 3 . ."
+   },
+   {
+    "leaf": 72,
+    "page": null,
+    "ocr": "elma",
+    "reading": ". . 4 . ."
+   },
+   {
+    "leaf": 88,
+    "page": null,
+    "ocr": "fic ay eet",
+    "reading": ". . 5 . ."
+   },
+   {
+    "leaf": 101,
+    "page": 82,
+    "ocr": "may oe",
+    "reading": ". . 6 . ."
+   },
+   {
+    "leaf": 115,
+    "page": null,
+    "ocr": "ya",
+    "reading": ". . 7 . ."
+   },
+   {
+    "leaf": 134,
+    "page": 115,
+    "ocr": "OD",
+    "reading": ". . 8 . ."
+   },
+   {
+    "leaf": 152,
+    "page": null,
+    "ocr": "rue",
+    "reading": ". . 9 . ."
+   },
+   {
+    "leaf": 167,
+    "page": 148,
+    "ocr": "ley",
+    "reading": ". . 10 . ."
+   },
+   {
+    "leaf": 178,
+    "page": null,
+    "ocr": "a ed",
+    "reading": ". . 11 . ."
+   },
+   {
+    "leaf": 35,
+    "page": 16,
+    "ocr": "od a bo %",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 36,
+    "page": 17,
+    "ocr": "> 9 Ore >",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 41,
+    "page": 22,
+    "ocr": "» i aii a",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 41,
+    "page": 22,
+    "ocr": "Americans are not obstinate heretics .. .",
+    "reading": "Americans are not obstinate heretics . . ."
+   },
+   {
+    "leaf": 59,
+    "page": 40,
+    "ocr": "% bo J %",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 59,
+    "page": 40,
+    "ocr": "++ + +",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 88,
+    "page": null,
+    "ocr": "CAO OL,",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 101,
+    "page": 82,
+    "ocr": "guise of piety. 5",
+    "reading": "guise of piety."
+   },
+   {
+    "leaf": 101,
+    "page": 82,
+    "ocr": "+++ 4+",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 115,
+    "page": null,
+    "ocr": "++ + +",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 152,
+    "page": null,
+    "ocr": "* % i sod",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 152,
+    "page": null,
+    "ocr": "T T * 3",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 152,
+    "page": null,
+    "ocr": "+++ 4",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 167,
+    "page": 148,
+    "ocr": "Ou. ;",
+    "reading": "you."
+   },
+   {
+    "leaf": 167,
+    "page": 148,
+    "ocr": ": First Epistle of St. Peter",
+    "reading": "First Epistle of St. Peter"
+   },
+   {
+    "leaf": 167,
+    "page": 148,
+    "ocr": "+++ +",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 178,
+    "page": null,
+    "ocr": "+++ +",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 73,
+    "page": null,
+    "ocr": "+++ +",
+    "reading": "* * * *"
+   },
+   {
+    "leaf": 94,
+    "page": 75,
+    "ocr": "seeking the orly aid",
+    "reading": "seeking the only aid"
+   },
+   {
+    "leaf": 27,
+    "page": 8,
+    "ocr": "Olic a “lost soul”?",
+    "reading": "olic a “lost soul”?"
+   },
+   {
+    "leaf": 131,
+    "page": 112,
+    "ocr": "DLA ee JOHN ENGLAND Gs.",
+    "reading": ""
+   }
+  ],
+  "verifiedWords": [
+   "Miscellaney",
+   "Guilday",
+   "Savannah",
+   "Charlestonians",
+   "Fenwick",
+   "Bandon",
+   "Messmer",
+   "Wilmington",
+   "Quincy",
+   "Carolinians",
+   "Moylan",
+   "Haiti",
+   "Corkery",
+   "Carlow",
+   "Gelston",
+   "Dioecesanis",
+   "Georgetown",
+   "Farrand",
+   "Corcoran",
+   "Haitian",
+   "Demosthenian",
+   "Phi",
+   "Kappa",
+   "Johnston",
+   "Waynesville",
+   "Fayetteville",
+   "Gallagher",
+   "Whitefield",
+   "Ravenel",
+   "Ryan",
+   "Hasell",
+   "trusteemania",
+   "pastorate",
+   "Pinet",
+   "antislavery",
+   "repetitious"
+  ]
+ }
+]

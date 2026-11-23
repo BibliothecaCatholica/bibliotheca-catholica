@@ -238,6 +238,53 @@ class ReadGateProcess(unittest.TestCase):
         self.assertEqual(counts, {'tesseract': 1, 'archive.org': 2})  # a worse or shorter reading never replaces a line
         self.assertEqual(out[0]['engine'], 'tesseract')
 
+
+    def test_hand_fixed_numeral_and_ornament_are_kept_and_stand_alone(self):
+        """A chapter numeral or ornament row restored by hand (Grant, November 23, 2026) is printed text: body() keeps it
+        though it has no known word near the top of the page, and it is a paragraph of its own."""
+        page = [self.line('ne ha', 700, 790, x=400, x2=600)] + [self.line('the church of Rome and the church', 1100 + 60 * i, 1140 + 60 * i)
+                                                             for i in range(6)]
+        self.assertNotIn('ne ha', [l['text'] for l in T.body([dict(l) for l in page], 3800, set(), self.V)])
+        e = {'edition': 'ed-x', 'firstLeaf': 0, 'handFixes': [{'leaf': 0, 'page': None, 'ocr': 'ne ha', 'reading': '. . 1 . .'}]}
+        raw = [(3800, [dict(l) for l in page])]
+        T.apply_hand_fixes(raw, e)
+        kept = T.body(raw[0][1], 3800, set(), self.V)
+        self.assertEqual(kept[0]['text'], '. . 1 . .')
+        self.assertTrue(T.alone('. . 1 . .') and T.alone('* * * *'))
+        self.assertFalse(T.alone('JOHN ENGLAND') or T.alone('1824 January 4.') or T.alone(''))
+
+    def test_imprint_and_text_after_an_ornament_are_not_footnotes(self):
+        body = [self.line('the church of Rome and the church of Rome', 400 + 60 * i, 440 + 60 * i) for i in range(5)]
+        imprint = [self.line('THE BRUCE PUBLISHING COMPANY', 3000, 3030), self.line('MILWAUKEE', 3060, 3090)]
+        kept, notes = T.split_notes(body + imprint, 3800)
+        self.assertEqual(notes, [])
+        orn = dict(self.line('* * * *', 760, 790), hand=True)
+        after = [self.line('in the church of Rome and', 900 + 40 * i, 925 + 40 * i) for i in range(4)]
+        kept, notes = T.split_notes(body + [orn] + after, 3800)
+        self.assertEqual(notes, [])
+
+    def test_a_paragraph_with_more_than_eight_unread_words_counts_them_all(self):
+        """The record lists at most 8 unread words per flagged paragraph, but the score counts every one (the bug fixed
+        with this process, November 22, 2026: the old count stopped at 8). Built end to end from a one-page djvu file."""
+        import tempfile
+        bad = ['blorf', 'zinth', 'quapple', 'drevvin', 'skorl', 'mimbat', 'vrask', 'plinth', 'grozzle', 'thwamp', 'kriv', 'blenth']
+        words = ['the', 'church'] + bad[:6] + ['of', 'rome'] + bad[6:] + ['and', 'the']
+        line = lambda ws, y: '<LINE>' + ''.join('<WORD coords="%d,%d,%d,%d">%s</WORD>' % (200 + 150 * i, y + 90, 330 + 150 * i, y, w)
+                                                for i, w in enumerate(ws)) + '</LINE>'
+        xml = ('<?xml version="1.0"?><DjVuXML><BODY><OBJECT usemap="scan_0001.djvu" width="2600" height="3000"><HIDDENTEXT>'
+               '<PAGECOLUMN><REGION><PARAGRAPH>' + line(words[:8], 900) + line(words[8:], 1000) + line(['and', 'the', 'church'], 1100) +
+               '</PARAGRAPH></REGION></PAGECOLUMN></HIDDENTEXT></OBJECT></BODY></DjVuXML>')
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / 'scan_djvu.xml').write_text(xml)
+            (Path(d) / 'scan.meta.json').write_text('{}')
+            out = T.build({'edition': 'ia-scan', 'ia': 'scan', 'firstLeaf': 0, 'lastLeaf': 0}, d, self.V)
+        flagged, words_n, unknown = out[2], out[3], out[4]
+        self.assertEqual(len(flagged), 1)
+        self.assertEqual(len(flagged[0]['words']), 8)  # the record lists the first 8
+        self.assertEqual(flagged[0]['n'], 12)
+        self.assertEqual(unknown, 12)  # but all 12 count against the gate
+        self.assertEqual(words_n, len(words) + 3)
+
     def test_tesseract_tsv_is_scaled_to_the_djvu_coordinates(self):
         import tempfile
         with tempfile.TemporaryDirectory() as d:

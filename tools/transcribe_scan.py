@@ -267,7 +267,8 @@ def body(lines, height, heads, V=None, keep_roman=False):
     if V is not None and keep and keep[0]['y'] < 0.25 * height and len(keep[0]['text'].split()) <= 6 \
             and not any(len(w) > 2 and known(w, V) for w in WORD.findall(keep[0]['text'])):
         keep = keep[1:]
-    return keep
+    # a line corrected by hand against the page image (a chapter numeral, an ornament row) is printed text, not noise
+    return [l for l in lines if any(l is k for k in keep) or (l.get('hand') and l['text'].strip())]
 
 
 def norm_head(t):
@@ -304,6 +305,10 @@ def split_notes(lines, height):
         med_before = statistics.median(before)
         if not (lines[k]['h'] < 0.90 * med_before and statistics.median(l['h'] for l in rest) < 0.88 * med_before):
             continue
+        # not a note: an all-capital imprint at the foot of a title page, or text right after a printed ornament row
+        if not any(c.islower() for l in rest for c in l['text']) or alone(lines[k]['text']) \
+                or (lines[k - 1].get('hand') and alone(lines[k - 1]['text'])):
+            continue
         if gaps[k - 1] > 1.4 * step or NOTE_MARK.match(lines[k]['text']):
             starts.append(k)
     if starts:
@@ -316,6 +321,11 @@ def split_notes(lines, height):
                 notes[-1].append(l['text'])
         return lines[:k], notes
     return lines, []
+
+
+def alone(t):
+    """A printed line with no lowercase letter and no run of capitals: a chapter numeral ('. . 3 . .') or an ornament row."""
+    return bool(t.strip()) and not re.search(r'[a-z]|[A-Z]{2}', t)
 
 
 def note_text(lines):
@@ -354,6 +364,7 @@ def apply_hand_fixes(raw_pages, e):
             lines.remove(hits[0])
         else:
             hits[0]['text'] = hits[0]['text'].replace(f['ocr'], f['reading'])
+        hits[0]['hand'] = True  # checked on the page image: body() never drops it as a running head or noise
 
 
 
@@ -554,6 +565,7 @@ def build(e, cache, V, unlimited=None):
             wide = [l['x'] for l in ls if len(l['text']) > 30]
             two_col = bool(wide) and max(wide) - min(wide) > 300
             prev_y = None
+            prev_solo = False
             for k, l in enumerate(ls):
                 col_top = two_col and prev_y is not None and l['y'] < prev_y - 3 * l['h']
                 prev_y = l['y']
@@ -571,11 +583,13 @@ def build(e, cache, V, unlimited=None):
                 indent = l['x'] > left + 25 and not prev_end.endswith('-')
                 sentence_end = bool(re.search(r'[.!?:;"”’)]\s*[\d*°†‡§]{0,2}$', prev_end))  # a note mark may follow
                 heading = l['text'].isupper() and len(l['text'].split()) <= 10 and not prev_end.endswith('-')
-                new = cur and (heading or (l['paraStart'] and sentence_end) or (indent and sentence_end)
-                               or (cur and cur[-1].isupper() and len(cur[-1].split()) <= 10))
+                # a chapter numeral or an ornament row restored by hand stands alone, as printed
+                solo = l.get('hand') and alone(l['text'])
+                new = cur and (heading or solo or (l['paraStart'] and sentence_end) or (indent and sentence_end)
+                               or (cur and cur[-1].isupper() and len(cur[-1].split()) <= 10) or (cur and alone(cur[-1]) and prev_solo))
                 if new:
                     close(cur); cur = []
-                cur.append(l['text']); prev_end = l['text']
+                cur.append(l['text']); prev_end = l['text']; prev_solo = bool(solo)
             pending.extend(notes)
         if cur:
             close(cur)

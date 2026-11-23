@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-bf188f1831ca",
+  "id": "bc-45aa017214ab",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "a3b4bb14885b3404bc50d6a8d32c60a056c732895b356f34b79be4c180a40a1b",
@@ -117,8 +117,9 @@
     "tools/build_v6_data.py": "5d6ab931f1c2086eafe89f8d18e2900ec80d170f97976174302dd113fd6c5be7",
     "tools/catalog_fixes.py": "2fe8ae2f1c2b006cecca0d36faaf804cf3efe6af6968116b109aef247ecea974",
     "tools/check_author_links.py": "66fedd54256d46e200b29cd1b36217be395cf0a0a4452a9f491b6989d8406d7a",
+    "tools/check_internal_links.py": "3e3c00618ceaf1a2ac4b810856d2d095afa02074581691561cd304d0d8a80c63",
     "tools/check_library_links.py": "c9cddcddb22a5aef83bb86cba01ce80a433c04c2c7422a6d92d0158797889771",
-    "tools/check_links.py": "bfc699771512ee0d1204414ada8db0059b6d7a6a3fff7be10805abcf06769bfa",
+    "tools/check_links.py": "ca67af29ac3f5ff945aee59b77dfaf9e19286a343b0726683fe11a5ef7103f1f",
     "tools/councils_page.py": "d46a61799f2bc1b07a69e472ab55fa28a77690773d9e5245d2345738db30629e",
     "tools/covers.py": "86adffcac39190c89225ff76d82a9aa98f4ead3aa25ef03faa5fc9cddf128f52",
     "tools/credits_page.py": "36de152e9c38976e18681c371a6fdc79ab8c0abad48914db3271c425bd7323fb",
@@ -142,6 +143,7 @@
     "tools/import_saints_pilot.py": "331568adebc1859f21d48e86228a7d71de106d7d4be1a59ee1409da792290504",
     "tools/import_standard_ebooks.py": "297bba7318ec9e15ea5febbb29af7dbcc68c52cee9f96d100c84e6722fec0c91",
     "tools/library_desk.py": "0933a0a5a9023c0a286cb14a9dbac1351d15ce60b7f52817f07c906692f31a05",
+    "tools/link_check_issue.py": "7b0f6cb5f1701ef4ae4d33c2d95cfb1d495130987e79796dae479eedf6af7a12",
     "tools/make_og_image.py": "3178e4e26fed5fe06c12a2e10b46dbb792200156c004e2006acb4a1150a5f351",
     "tools/match_isidore.py": "99c52c70046c0ef4a6ecccb14ae8fd69a77a391f29af2943a2ceb4f66dafcd3c",
     "tools/notices.py": "941ec4a676de618bc440c8268df6bfb5473bfd949fbb3179ae045a72453150f3",

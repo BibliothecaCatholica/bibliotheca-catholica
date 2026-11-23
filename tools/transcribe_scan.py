@@ -634,7 +634,7 @@ def omitted_sentence(e):
     if not om:
         return ''
     parts = [f"{o['what']} (pages {o['pages']})" for o in om]
-    listed = parts[0] if len(parts) == 1 else ', '.join(parts[:-1]) + ', and ' + parts[-1]
+    listed = parts[0] if len(parts) == 1 else ' and '.join(parts) if len(parts) == 2 else ', '.join(parts[:-1]) + ', and ' + parts[-1]
     return f" Left out of this text: {listed}; read them in the full scan at https://archive.org/details/{e['ia']}."
 
 

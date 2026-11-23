@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-f4fc612223f3",
+  "id": "bc-00ab045fd9fa",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "a3b4bb14885b3404bc50d6a8d32c60a056c732895b356f34b79be4c180a40a1b",
@@ -61,7 +61,7 @@
     "data/summa.json": "9c3b70d71741ba9623fb1808d3bf9945715f036a08ae22ad4fe181194ddc4164",
     "data/text-pages.js": "66cbbd1d76bd82ff4b290c12a94f0c029f922ac77c5fe5bea5cc78881f484df1",
     "data/text-pages.json": "032339eed52111a65ab8907f839dfbf73ce55e9505dafb7c706724f3b694789a",
-    "index.template": "c8665803931606b7d4e8de16e1b27272a10ca0dfb0e319dd95b2afdddef726a7",
+    "index.template": "ffb631ca71b8867dc0329e60ecf6811e174f570faafc3a0c71f4c21f729e4558",
     "scripts/analytics.js": "0927edf785ab99b9e4153ca846bbe3564edfe6879bdbe1292cfab04704640a49",
     "scripts/boot.js": "aacd6fd1dbf3b9ba84d2dbe4d0b72d4e7a931fa3ff96da23af94d73e05e5547b",
     "scripts/guides.js": "a77f6dfdeffbef2490b218b6acb671aed8f067f8f1c3d53c40b8d8fdf10629bf",

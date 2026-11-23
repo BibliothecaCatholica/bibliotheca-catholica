@@ -1,6 +1,6 @@
 {
  "language": "french",
- "count": 11,
+ "count": 13,
  "words": {
   "Avent": [
    {
@@ -8,10 +8,22 @@
     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
    }
   ],
+  "cante": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Cie": [
    {
     "edition": "ia-moldersofmedieva00cass",
     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "dedans": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "emprise": [

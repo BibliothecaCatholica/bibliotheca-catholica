@@ -1,6 +1,6 @@
 {
  "language": "names",
- "count": 209,
+ "count": 322,
  "words": {
   "Abissinian": [
    {
@@ -8,10 +8,40 @@
     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
    }
   ],
+  "Achelis": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Aed": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Aidne": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Ainnle": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Ala": [
    {
     "edition": "ia-robertlouisstev00nicogoog",
     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Alill": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Alofa": [
@@ -38,10 +68,22 @@
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Ardan": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Arrowood": [
    {
     "edition": "ia-moldersofmedieva00cass",
     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Aucassin": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Autolycus": [
@@ -56,10 +98,22 @@
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Baithin": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Bandon": [
    {
     "edition": "ia-johnenglandameri00gran",
     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Banva": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Bardenhewer": [
@@ -84,6 +138,12 @@
    {
     "edition": "ia-highpointsofmedi00wals",
     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Bethech": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Beulah": [
@@ -128,6 +188,12 @@
     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
    }
   ],
+  "Bregon": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Brookings": [
    {
     "edition": "ia-mysteryofiniquit00furf",
@@ -146,10 +212,22 @@
     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
    }
   ],
+  "Cairenn's": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Calaborra": [
    {
     "edition": "ia-butler-1842-eulalia",
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Caladnet": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Calagurit": [
@@ -170,10 +248,28 @@
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Canainne": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Canann": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "CANTIUS": [
    {
     "edition": "ia-mysteryofiniquit00furf",
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Carbery": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Cardijn": [
@@ -206,6 +302,12 @@
     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
    }
   ],
+  "Cathba's": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Ceillier": [
    {
     "edition": "ia-butler-1842-eulalia",
@@ -216,6 +318,12 @@
    {
     "edition": "ia-butler-1842-eulalia",
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Cerball": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Chalmers": [
@@ -248,6 +356,24 @@
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
    }
   ],
+  "Claragh": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Cnogva": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Coisse": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Colinton": [
    {
     "edition": "ia-robertlouisstev00nicogoog",
@@ -266,10 +392,28 @@
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Conglinne": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Coolney": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Corcoran": [
    {
     "edition": "ia-johnenglandameri00gran",
     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Corkaguiney": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Corkery": [
@@ -290,6 +434,60 @@
     "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
    }
   ],
+  "Craeb": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Crede": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Criffan": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Crimthainn's": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Crinog": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Culcinne's": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Curithir": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Curithir's": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Cymmrodorion": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Cynewulf": [
    {
     "edition": "ia-cathencyc-1911-o-antiphons",
@@ -300,6 +498,18 @@
    {
     "edition": "ia-butler-1842-eulalia",
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Deirdre": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Deirdre's": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Delplancq": [
@@ -332,16 +542,58 @@
     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
    }
   ],
+  "Dinertach": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Dinoll": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Dittmer": [
    {
     "edition": "ia-mysteryofiniquit00furf",
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
    }
   ],
+  "Domnaill": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Domnall": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Drane": [
    {
     "edition": "ia-moldersofmedieva00cass",
     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Drumcliff": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Drumhome": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Dunling": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Eby": [
@@ -368,6 +620,12 @@
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Ennel": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Eppstein": [
    {
     "edition": "ia-mysteryofiniquit00furf",
@@ -380,16 +638,34 @@
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Etive": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Eulalie": [
    {
     "edition": "ia-thackeray-1890-eulalia",
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
    }
   ],
+  "Evna": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Fabricius": [
    {
     "edition": "ia-butler-1842-eulalia",
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Falvey": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Farrand": [
@@ -404,10 +680,46 @@
     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
    }
   ],
+  "Femen": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Fenwick": [
    {
     "edition": "ia-johnenglandameri00gran",
     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Ferchorb": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Fermuid": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Feval": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Fidga": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Fidgenti": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Finden": [
@@ -422,10 +734,40 @@
     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
    }
   ],
+  "Finnliath": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Fothad": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Fothaid": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Foyle": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Freudian": [
    {
     "edition": "ia-mysteryofiniquit00furf",
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Frosach": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Furfey": [
@@ -518,6 +860,12 @@
     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
    }
   ],
+  "Guare": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Gueranger": [
    {
     "edition": "ia-cathencyc-1907-advent",
@@ -528,6 +876,12 @@
    {
     "edition": "ia-johnenglandameri00gran",
     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Gullion": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Haiti": [
@@ -614,6 +968,12 @@
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
    }
   ],
+  "Howth": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Hyères": [
    {
     "edition": "ia-robertlouisstev00nicogoog",
@@ -648,6 +1008,12 @@
    {
     "edition": "ia-robertlouisstev00nicogoog",
     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Irluachair": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Isocrates": [
@@ -722,6 +1088,12 @@
     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
    }
   ],
+  "Kilgarrow": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Kropotkin": [
    {
     "edition": "ia-highpointsofmedi00wals",
@@ -732,6 +1104,12 @@
    {
     "edition": "ia-moldersofmedieva00cass",
     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Laegaire": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Laistner": [
@@ -758,6 +1136,12 @@
     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
    }
   ],
+  "Leafin": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Leclerq": [
    {
     "edition": "ia-moldersofmedieva00cass",
@@ -770,16 +1154,46 @@
     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
    }
   ],
+  "Ler": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Levett": [
    {
     "edition": "ia-samueljohnson00chesuoft",
     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
    }
   ],
+  "Liadin": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Linny": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Loeguire": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Loto": [
    {
     "edition": "ia-robertlouisstev00nicogoog",
     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Lugh": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Lundberg": [
@@ -800,6 +1214,18 @@
     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
    }
   ],
+  "Mackay": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Maelisu's": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Mafeo": [
    {
     "edition": "ia-highpointsofmedi00wals",
@@ -812,6 +1238,12 @@
     "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
    }
   ],
+  "Manannan": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Mangold": [
    {
     "edition": "ia-mysteryofiniquit00furf",
@@ -822,6 +1254,18 @@
    {
     "edition": "ia-moldersofmedieva00cass",
     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Marvan": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Massan": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Mataafa": [
@@ -870,10 +1314,28 @@
     "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
    }
   ],
+  "Milklet": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Minutius": [
    {
     "edition": "ia-butler-1842-eulalia",
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Monidh": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Morrigan": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Moylan": [
@@ -882,10 +1344,58 @@
     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
    }
   ],
+  "Moylurg": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Muckraw": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Mugh": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Muiregan": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Mulvaney": [
    {
     "edition": "ia-mysteryofiniquit00furf",
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Murchad": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Muredach's": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Murigan": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Navan": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Nekayah": [
@@ -894,16 +1404,82 @@
     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
    }
   ],
+  "Nia": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Nicolete": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Nicoll": [
    {
     "edition": "ia-robertlouisstev00nicogoog",
     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
    }
   ],
+  "Nicomedes": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Niemeyer": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Noisi": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Noisi's": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Norgate": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Oakridge": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Ochtair": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Odba": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Odilon": [
    {
     "edition": "ia-highpointsofmedi00wals",
     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Oivlen": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Osbourne": [
@@ -916,6 +1492,12 @@
    {
     "edition": "ia-butler-1842-eulalia",
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Pangur": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Pantaenus": [
@@ -990,6 +1572,12 @@
     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
    }
   ],
+  "Raphoe": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Ravenel": [
    {
     "edition": "ia-johnenglandameri00gran",
@@ -1012,6 +1600,24 @@
    {
     "edition": "ia-highpointsofmedi00wals",
     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Roiny": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Ruadh": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Rumann": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Rumtifoo": [
@@ -1062,16 +1668,34 @@
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Sganarelle": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Sidonius": [
    {
     "edition": "ia-butler-1842-eulalia",
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Silverland": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Sixt": [
    {
     "edition": "ia-butler-1842-eulalia",
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Slemish": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Spengler": [
@@ -1104,6 +1728,18 @@
     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
    }
   ],
+  "Strachan": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Strachan's": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Sunderland": [
    {
     "edition": "ia-doweagree0000gkch",
@@ -1120,6 +1756,12 @@
    {
     "edition": "ia-robertlouisstev00nicogoog",
     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Sweeny": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Symmach": [
@@ -1152,6 +1794,12 @@
     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
    }
   ],
+  "Tholcha": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Thurston": [
    {
     "edition": "ia-cathencyc-1911-o-antiphons",
@@ -1182,6 +1830,18 @@
     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
    }
   ],
+  "Urchain": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Usnech": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Vaea": [
    {
     "edition": "ia-robertlouisstev00nicogoog",
@@ -1198,6 +1858,12 @@
    {
     "edition": "ia-butler-1842-eulalia",
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Vercingetorix": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Vittorino": [
@@ -1224,6 +1890,12 @@
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Wheatlet": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Whitefield": [
    {
     "edition": "ia-johnenglandameri00gran",
@@ -1234,6 +1906,12 @@
    {
     "edition": "ia-doweagree0000gkch",
     "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json"
+   }
+  ],
+  "Whitley": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Wilmington": [

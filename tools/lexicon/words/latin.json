@@ -1,6 +1,6 @@
 {
  "language": "latin",
- "count": 214,
+ "count": 232,
  "words": {
   "accidentaliter": [
    {
@@ -102,6 +102,12 @@
    {
     "edition": "ia-butler-1842-eulalia",
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Caesarem": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "calathos": [
@@ -242,6 +248,18 @@
     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
    }
   ],
+  "concinentes": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "conhospita": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "coronis": [
    {
     "edition": "ia-butler-1842-eulalia",
@@ -306,6 +324,12 @@
    {
     "edition": "ia-thackeray-1890-eulalia",
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "demus": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Destruct": [
@@ -470,6 +494,12 @@
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
    }
   ],
+  "Gadelica": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "genialis": [
    {
     "edition": "ia-thackeray-1890-eulalia",
@@ -486,6 +516,12 @@
    {
     "edition": "ia-thackeray-1890-eulalia",
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Goidelica": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "gradu": [
@@ -534,6 +570,12 @@
    {
     "edition": "ia-cathencyc-1911-o-antiphons",
     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Hymnus": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Iam": [
@@ -672,6 +714,12 @@
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
    }
   ],
+  "marg": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "martyrii": [
    {
     "edition": "ia-thackeray-1890-eulalia",
@@ -700,6 +748,12 @@
    {
     "edition": "ia-thackeray-1890-eulalia",
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Merseiana": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "metite": [
@@ -852,10 +906,22 @@
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
    }
   ],
+  "Otia": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "Pacifice": [
    {
     "edition": "ia-cathencyc-1911-o-antiphons",
     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Palaeohibernicus": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "Parmae": [
@@ -880,6 +946,12 @@
    {
     "edition": "ia-thackeray-1890-eulalia",
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "personet": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
   "plaudebant": [
@@ -1116,6 +1188,24 @@
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
    }
   ],
+  "subegit": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "subintroducta": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Subintroductae": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "sucina": [
    {
     "edition": "ia-thackeray-1890-eulalia",
@@ -1206,6 +1296,12 @@
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
    }
   ],
+  "triumphat": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
   "tulit": [
    {
     "edition": "ia-thackeray-1890-eulalia",
@@ -1288,6 +1384,18 @@
    {
     "edition": "ia-thackeray-1890-eulalia",
     "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Ymnum": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "ymnum": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ]
  }

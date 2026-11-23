@@ -238,6 +238,7 @@ class ReadGateProcess(unittest.TestCase):
         self.assertEqual(counts, {'tesseract': 1, 'archive.org': 2})  # a worse or shorter reading never replaces a line
         self.assertEqual(out[0]['engine'], 'tesseract')
 
+
     def test_hand_fixed_numeral_and_ornament_are_kept_and_stand_alone(self):
         """A chapter numeral or ornament row restored by hand (Grant, November 23, 2026) is printed text: body() keeps it
         though it has no known word near the top of the page, and it is a paragraph of its own."""

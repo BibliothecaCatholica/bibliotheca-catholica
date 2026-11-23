@@ -154,7 +154,9 @@ def tesseract_lines(img, langs, obj_width):
     """Lines from Tesseract (TSV), in the djvu.xml's coordinate space: [{x, x2, top, y, h, text}]."""
     tsv = img.with_suffix(f'.{langs.replace("+", "-")}.tsv')
     if not tsv.exists():
-        r = subprocess.run(['tesseract', str(img), '-', '-l', langs, '--psm', '3', 'tsv'], capture_output=True, text=True)
+        # one thread per process: second_ocr() runs four at once, and Tesseract's own threads would oversubscribe the CPUs
+        r = subprocess.run(['tesseract', str(img), '-', '-l', langs, '--psm', '3', 'tsv'], capture_output=True, text=True,
+                           env={**__import__('os').environ, 'OMP_THREAD_LIMIT': '1'})
         tsv.write_text(r.stdout)
     rows = [l.split('\t') for l in tsv.read_text().splitlines()[1:]]
     page_w = next((int(r[8]) for r in rows if len(r) >= 12 and r[0] == '1'), 0) or 1

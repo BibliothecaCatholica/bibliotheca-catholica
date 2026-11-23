@@ -184,6 +184,8 @@ def split_notes(lines, height):
     than the line spacing and set in smaller type than the lines before the break (not the whole-page median, which
     hides the break when notes fill most of the page). The first line of the remainder must itself be smaller, so a
     still-body line is not pulled into the notes. A note mark is not required (a continued note often has none).
+    Heading lines (more than 1.25 times the page's median height, or with no lowercase letter: a chapter numeral or
+    title) are left out of that comparison.
     Returns (body lines, [note lines per note])."""
     if len(lines) < 4:
         return lines, []
@@ -191,11 +193,17 @@ def split_notes(lines, height):
     gaps = [b - a for a, b in zip(ys, ys[1:])]
     step = statistics.median(g for g in gaps if g > 0) if any(g > 0 for g in gaps) else 0
     starts = []
+    page_h = statistics.median(l['h'] for l in lines)
     for k in range(1, len(lines)):
         rest = lines[k:]
         if len(rest) < 2:
             continue
-        med_before = statistics.median(l['h'] for l in lines[:k])
+        # a chapter's opening page: its numeral and title are set larger than the text, so measure the type before
+        # the break without heading-size lines, and never start notes right after headings alone (November 22, 2026)
+        before = [l['h'] for l in lines[:k] if l['h'] <= 1.25 * page_h and any(c.islower() for c in l['text'])]
+        if not before:
+            continue
+        med_before = statistics.median(before)
         if not (lines[k]['h'] < 0.90 * med_before and statistics.median(l['h'] for l in rest) < 0.88 * med_before):
             continue
         if gaps[k - 1] > 1.4 * step or NOTE_MARK.match(lines[k]['text']):

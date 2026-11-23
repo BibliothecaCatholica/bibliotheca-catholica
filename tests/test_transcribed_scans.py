@@ -127,7 +127,8 @@ class Layout(unittest.TestCase):
         for r in RECORDS:
             for f in r.get('handFixes', []):
                 self.assertEqual(set(f), {'leaf', 'page', 'ocr', 'reading'}, r['id'])
-                self.assertNotEqual(f['ocr'], f['reading'], r['id'])
+                # a reading equal to the OCR is a keep mark (a heading or body line checked on the image), never empty
+                self.assertTrue(f['ocr'] != f['reading'] or f['reading'].strip(), r['id'])
 
     def test_lost_line_end_hyphen_rejoined_when_the_whole_is_common(self):
         # Samuel Johnson's scan drops every line-end hyphen: "the imagina" / "tion to riot" is one word, even though
@@ -261,6 +262,19 @@ class ReadGateProcess(unittest.TestCase):
         after = [self.line('in the church of Rome and', 900 + 40 * i, 925 + 40 * i) for i in range(4)]
         kept, notes = T.split_notes(body + [orn] + after, 3800)
         self.assertEqual(notes, [])
+
+    def test_keep_mark_holds_a_heading_and_keeps_body_text_out_of_the_notes(self):
+        """A hand fix whose reading equals the OCR is a keep mark (Furfey, November 23, 2026): the line is printed body
+        text, so body() keeps a heading the layout rules took for a running head, and no footnote starts at it."""
+        body = [self.line('the church of Rome and the church of Rome', 400 + 60 * i, 440 + 60 * i) for i in range(5)]
+        small = [self.line('in the church of Rome and', 2900 + 40 * i, 2925 + 40 * i) for i in range(3)]
+        self.assertTrue(T.split_notes(body + [dict(l) for l in small], 3800)[1])  # smaller type set apart: a note
+        e = {'edition': 'ed-x', 'firstLeaf': 0, 'handFixes': [{'leaf': 0, 'page': None, 'ocr': 'in the church of Rome and', 'reading': 'in the church of Rome and'}]}
+        raw = [(3800, body + [dict(l) for l in small[:1]])]
+        T.apply_hand_fixes(raw, e)
+        lines = raw[0][1] + [dict(l) for l in small[1:]]
+        self.assertTrue(lines[5].get('kept'))
+        self.assertEqual(T.split_notes(lines, 3800)[1], [])
 
     def test_tesseract_tsv_is_scaled_to_the_djvu_coordinates(self):
         import tempfile

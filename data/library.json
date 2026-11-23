@@ -6101,14 +6101,19 @@
       "editions": [
         {
           "id": "ia-moldersofmedieva00cass",
-          "label": "Internet Archive scan (St. Louis: B. Herder Book Co., 1944)",
+          "label": "Transcription of the Internet Archive scan (St. Louis: B. Herder Book Co., 1944)",
           "source": "https://archive.org/details/moldersofmedieva00cass",
           "language": "English",
           "contributors": [],
-          "checked": "2026-11-17",
+          "checked": "2026-11-23",
           "access": "full-text",
-          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
-          "note": "First published in 1944 (St. Louis: B. Herder Book Co.). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in St. Louis by B. Herder Book Co., 1944. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. Imprint names St. Louis and B. Herder's London office (33 Queen Square); the copyright page says Printed in U.S.A. No earlier London edition is indicated, so US publication was at least simultaneous, which excludes URAA restoration (17 USC 104A(h)(6)(D)). Proposed reading, approved only with PR #53. Its OCR reads below the 99.5% transcription gate (98.72%), so it is linked, not hosted, for now."
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1944. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, footnotes placed after their paragraphs, 79 lines corrected by hand against the page images (the title and copyright pages, the contents rebuilt line by line, the chapter drop capitals, the small-capital section headings, and misreadings), 3 headings kept that the layout rules took for running heads, and 18 lines of scanning noise and printed rules dropped, 38 names and words checked against the images, and 118 paragraphs that keep a word the OCR could not read (99.59% of words read). The bibliography (pages 181 to 188) and the index (pages 189 to 194) are left out; see the scan. Not a manual proofread. Public domain in the USA because its copyright was not renewed.",
+          "rightsBasis": "pd-nonrenewal",
+          "rightsEvidence": "First published in St. Louis by B. Herder Book Co., 1944 (copyright page: Copyright 1944; Printed in U.S.A.). No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. Imprint names St. Louis and B. Herder's London office (33 Queen Square); the copyright page says Printed in U.S.A. No earlier London edition is indicated, so US publication was at least simultaneous, which excludes URAA restoration (17 USC 104A(h)(6)(D)); reading approved with PR #53.",
+          "sourceTitle": "Molders of the Medieval Mind",
+          "text": "data/texts/ia-moldersofmedieva00cass.txt",
+          "sha256": "adc1e8cf134ab28519cb2bdbd591caa8f44495b08182b93df7b62679b0ab8df9"
         }
       ]
     },
@@ -6359,14 +6364,19 @@
       "editions": [
         {
           "id": "ia-mysteryofiniquit00furf",
-          "label": "Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1945)",
+          "label": "Transcription of the Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1945)",
           "source": "https://archive.org/details/mysteryofiniquit00furf",
           "language": "English",
           "contributors": [],
-          "checked": "2026-11-17",
+          "checked": "2026-11-23",
           "access": "full-text",
-          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
-          "note": "First published in 1945 (Milwaukee: The Bruce Publishing Company). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in Milwaukee by The Bruce Publishing Company, 1945. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page; no earlier or simultaneous edition abroad was found, so URAA restoration does not apply. Its OCR reads below the 99.5% transcription gate (99.12%), so it is linked, not hosted, for now."
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1944; transcribed from the second printing (1945). Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, footnotes placed after their paragraphs, 39 lines corrected by hand against the page images (the title and copyright pages, the contents rebuilt line by line, the preface and chapter drop capitals, and misreadings), 10 headings kept that the layout rules took for running heads, and 23 lines of scanning noise dropped, 73 names and words checked against the images, and 145 paragraphs that keep a word the OCR could not read (99.52% of words read). The index (pages 191 to 192) is left out; see the scan. A second OCR (Tesseract) supplied lines where it read more words. Not a manual proofread. Public domain in the USA because its copyright was not renewed.",
+          "rightsBasis": "pd-nonrenewal",
+          "rightsEvidence": "First published in Milwaukee by The Bruce Publishing Company in 1944 (copyright page: Copyright, 1944; the scan is the second printing, 1945). No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page (Printed in the United States of America); no earlier or simultaneous edition abroad was found, so URAA restoration does not apply.",
+          "sourceTitle": "The Mystery of Iniquity",
+          "text": "data/texts/ia-mysteryofiniquit00furf.txt",
+          "sha256": "97be6cd9d911d343c0461105ae4f0efdc58ca267fcd29bb9b0042ff01bfa05cd"
         }
       ]
     },

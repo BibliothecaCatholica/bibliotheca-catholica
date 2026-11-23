@@ -1795,6 +1795,18 @@
     "all-capitals line": 1
    }
   },
+  "ia-moldersofmedieva00cass": {
+   "work": "Molders of the Medieval Mind",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1
+   }
+  },
   "ia-highpointsofmedi00wals-r2": {
    "work": "High Points of Medieval Culture",
    "multiLineBlocks": 1,
@@ -1859,6 +1871,18 @@
   },
   "ia-johnenglandameri00gran": {
    "work": "John England, American Christopher",
+   "multiLineBlocks": 1,
+   "reflowed": 0,
+   "kept": 1,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 1
+   }
+  },
+  "ia-mysteryofiniquit00furf": {
+   "work": "The Mystery of Iniquity",
    "multiLineBlocks": 1,
    "reflowed": 0,
    "kept": 1,

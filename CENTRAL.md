@@ -28,7 +28,7 @@ Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, 
 
 As of November 23, 2026: `main` after PR #139 (`69bd7366c2`), with #140 (Chesterton batch 6) included:
 
-- 206 work records; 148 hosted editions of 143 works in `data/library.json` (228 editions in all, 4 retired); 57 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 206 work records; 150 hosted editions of 145 works in `data/library.json` (228 editions in all, 4 retired); 57 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 6,000 sitemap URLs; 9,185 tracked files, most generated (`linguist-generated` in `.gitattributes`); build-on-deploy is planned for about December 26 (draft #135, `docs/plans/build-on-deploy-plan.md`).
 - Tests: 127 Node and 337 Python.
 

@@ -287,6 +287,19 @@ class ReadGateProcess(unittest.TestCase):
         kept, notes = T.split_notes(body + [orn] + after, 3800)
         self.assertEqual(notes, [])
 
+    def test_keep_mark_holds_a_heading_and_keeps_body_text_out_of_the_notes(self):
+        """A hand fix whose reading equals the OCR is a keep mark (Furfey, November 23, 2026): the line is printed body
+        text, so body() keeps a heading the layout rules took for a running head, and no footnote starts at it."""
+        body = [self.line('the church of Rome and the church of Rome', 400 + 60 * i, 440 + 60 * i) for i in range(5)]
+        small = [self.line('in the church of Rome and', 2900 + 40 * i, 2925 + 40 * i) for i in range(3)]
+        self.assertTrue(T.split_notes(body + [dict(l) for l in small], 3800)[1])  # smaller type set apart: a note
+        e = {'edition': 'ed-x', 'firstLeaf': 0, 'handFixes': [{'leaf': 0, 'page': None, 'ocr': 'in the church of Rome and', 'reading': 'in the church of Rome and'}]}
+        raw = [(3800, body + [dict(l) for l in small[:1]])]
+        T.apply_hand_fixes(raw, e)
+        lines = raw[0][1] + [dict(l) for l in small[1:]]
+        self.assertTrue(lines[5].get('kept'))
+        self.assertEqual(T.split_notes(lines, 3800)[1], [])
+
     def test_a_paragraph_with_more_than_eight_unread_words_counts_them_all(self):
         """The record lists at most 8 unread words per flagged paragraph, but the score counts every one (the bug fixed
         with this process, November 22, 2026: the old count stopped at 8). Built end to end from a one-page djvu file."""
@@ -351,6 +364,8 @@ class ReadGateProcess(unittest.TestCase):
         T.check_omitted(e)
         self.assertEqual(T.omitted_sentence(e), ' Left out of this text: the index (pages 205-209); read them in the full scan at '
                                                 'https://archive.org/details/scanid.')
+        two = dict(e, omitted=[{'what': 'the bibliography', 'leaves': [221, 221], 'pages': '181-188'}, {'what': 'the index', 'leaves': [222, 226], 'pages': '189-194'}])
+        self.assertIn('the bibliography (pages 181-188) and the index (pages 189-194); read', T.omitted_sentence(two))  # no comma for two
         with self.assertRaises(AssertionError):
             T.check_omitted({'edition': 'z', 'lastLeaf': 220, 'omitted': [{'what': 'chapter one', 'leaves': [30, 40], 'pages': '1-10'}]})
 

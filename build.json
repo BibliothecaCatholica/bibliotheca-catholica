@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-f66ec2f2745b",
+  "id": "bc-1bdd6a93104f",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "a216f8a377447c665dd479658af51291b730b18cb96e3200a76af2370f6c2be1",
@@ -13,7 +13,7 @@
     "data/books.json": "cd0905aa65ea5d9e595ac5983a1884ba8ae2cbf450efb394fea7288ec59433d6",
     "data/catholic-hub.json": "a7dc6717941774253b91b43d085cc37e4e4fe02ee66ac459d19f373649b52237",
     "data/councils.json": "71ad1509e563269ce80e3444ce3f224a8a6eb62dbf1e66a57f043ac134858a73",
-    "data/covers.json": "8752caca83ddf436f6fa136ba3b70ba1393cf48d6522fc1b50c8865bb632a8ee",
+    "data/covers.json": "353118bd875de58ec7d9a4b8122578041251cbf693d6b58b21cfaee7af4e0671",
     "data/data.js": "ff744f818d07d45cd93bb5bf6d4148506159cb44de1825bd95c002ffee521e75",
     "data/doctors.js": "735b0dce6e3ffb1f178119864339be9ab11f7a0944c607eef4ed6f7c249499de",
     "data/editorial-flags.js": "057a12dc9ef14346981a465b05856ddbe2dde6afe524b65f9d65d425fb62168e",
@@ -28,8 +28,8 @@
     "data/isidore-matches.json": "1d1c9f3edb6f5e56479a3174d4f97b7e5755d86f8011d39720b4ab35967395ea",
     "data/lectionary-references-2026.json": "ece6535c44a4210313982801b2508334c6f69b8d06e9b51a54e880575287a4d9",
     "data/library-desk.js": "11b06f7e54d7e5916b5c713258c8ba8a9b4de87709ffbce84d9cb1e8b7959032",
-    "data/library.js": "648a9b29b9f26c8f991d026ba9a28e92a83a1ee63d881d128d12430a5952841c",
-    "data/library.json": "3ec3a6b53624349eaa11d782512dba95ee0806582ee35128997782f1dd7a76bd",
+    "data/library.js": "02892fe73c2277c899b4058b9def7245769da039d64a228739e53f350a8e5e3b",
+    "data/library.json": "32f46e451dc4af37a20b16984e782b9225d670055f24246b90c937f4fcbfa9a1",
     "data/librivox.js": "f887bf833f7868dd4c5c13145e46a54019de40d43ed93311f9f0b5a933047712",
     "data/librivox.json": "2b2a8e92a23d1bb7610fc202a05b17a8bca70a9be4098bb3043df08d5a0a5b63",
     "data/modern-authors.json": "a4c24c17593d33ee2ea7033cab89fd8f1d2591f4c049aca722d27f0515145a15",
@@ -162,7 +162,7 @@
     "tools/study_partner.py": "95e19b979658ff31938dc96affeec3b96a037906b086b8267d4190b3be8ce4f5",
     "tools/substacks_src.py": "e02dd1b54559bbc0cf3dda1a747e820c9fc7dff30f8cbf036952f5733b2bda1a",
     "tools/text_pages.py": "9a27fb6465651fca0f5fa0b5d4f88337eb73511c32d8b433f365b8357165e0e2",
-    "tools/transcribe_scan.py": "e01c5bdc8eb1bf41f231cd82d404428ef9183fbfab7338be2c502fe7f2118543",
+    "tools/transcribe_scan.py": "ee82327f38ad07cce1efaa0465c9f7dd7e0526653f3815de7bcd50d6bba1df07",
     "tools/transcribe_supplement.py": "f574af64df26a17dd0c2664b9345a3537ae94b92ada43fe30b4f5279abd5f2e6",
     "tools/verify_text_archive.py": "5255fb5783996417d8e145e70e415bb2183393303d0c9916089695766569fd53"
   },

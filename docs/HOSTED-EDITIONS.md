@@ -116,7 +116,7 @@ These follow [DESIGN.md](DESIGN.md). The first group is built for Orthodoxy. The
 | pg-19535 | George Bernard Shaw | 79% | · | · | yes | · |
 | pg-14706 | Greybeards at Play | 0% | · | · | yes | · |
 | pg-470 | Heretics | 97% | map | yes | yes | yes |
-| ia-highpointsofmedi00wals | High Points of Medieval Culture | 0% | · | · | yes | · |
+| ia-highpointsofmedi00wals-r2 | High Points of Medieval Culture | 0% | · | · | yes | · |
 | pg-61758 | Irish Impressions | 92% | map | yes | yes | yes |
 | ia-johnenglandameri00gran | John England, American Christopher | 0% | · | · | yes | · |
 | pg-12047 | Legends of the Madonna | 89% | · | · | yes | · |

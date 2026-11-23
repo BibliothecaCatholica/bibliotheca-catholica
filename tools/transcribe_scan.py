@@ -306,7 +306,7 @@ def split_notes(lines, height):
         if not (lines[k]['h'] < 0.90 * med_before and statistics.median(l['h'] for l in rest) < 0.88 * med_before):
             continue
         # not a note: an all-capital imprint at the foot of a title page, or text right after a printed ornament row
-        if not any(c.islower() for l in rest for c in l['text']) or alone(lines[k]['text']) \
+        if not any(c.islower() for l in rest for c in l['text']) or alone(lines[k]['text']) or lines[k].get('kept') \
                 or (lines[k - 1].get('hand') and alone(lines[k - 1]['text'])):
             continue
         if gaps[k - 1] > 1.4 * step or NOTE_MARK.match(lines[k]['text']):
@@ -365,6 +365,8 @@ def apply_hand_fixes(raw_pages, e):
         else:
             hits[0]['text'] = hits[0]['text'].replace(f['ocr'], f['reading'])
         hits[0]['hand'] = True  # checked on the page image: body() never drops it as a running head or noise
+        if f['reading'] == f['ocr']:
+            hits[0]['kept'] = True  # a keep mark: printed body text as read, never the start of a footnote
 
 
 

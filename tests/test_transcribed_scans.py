@@ -127,7 +127,8 @@ class Layout(unittest.TestCase):
         for r in RECORDS:
             for f in r.get('handFixes', []):
                 self.assertEqual(set(f), {'leaf', 'page', 'ocr', 'reading'}, r['id'])
-                self.assertNotEqual(f['ocr'], f['reading'], r['id'])
+                # a reading equal to the OCR is a keep mark (a heading or body line checked on the image), never empty
+                self.assertTrue(f['ocr'] != f['reading'] or f['reading'].strip(), r['id'])
 
     def test_lost_line_end_hyphen_rejoined_when_the_whole_is_common(self):
         # Samuel Johnson's scan drops every line-end hyphen: "the imagina" / "tion to riot" is one word, even though

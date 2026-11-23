@@ -6169,8 +6169,24 @@
       "date": "1937",
       "editions": [
         {
+          "id": "ia-highpointsofmedi00wals-r2",
+          "label": "Transcription of the Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1937), corrected",
+          "source": "https://archive.org/details/highpointsofmedi00wals",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-23",
+          "access": "full-text",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1937. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, footnotes placed after their paragraphs, 2 OCR confusions repaired, 42 lines corrected by hand against the page images (the title and copyright pages, the contents, the chapter numerals and drop capitals, and names) and 80 lines of scanning noise or scrambled contents dropped, 48 names and foreign words checked against the images, and 217 paragraphs that keep a word the OCR could not read (99.64% of words read). Not a manual proofread. Public domain in the USA because its copyright was not renewed. Corrected edition (November 23, 2026): replaces ia-highpointsofmedi00wals; the title-page imprint is body text, no longer a footnote, and chapter numerals II to XVIII are kept as printed (checked on the page images).",
+          "rightsBasis": "pd-nonrenewal",
+          "rightsEvidence": "First published in Milwaukee by The Bruce Publishing Company, 1937. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page (Copyright, 1937; Printed in the U.S.A.); no earlier or simultaneous edition abroad was found, so URAA restoration does not apply.",
+          "sourceTitle": "High Points of Medieval Culture",
+          "text": "data/texts/ia-highpointsofmedi00wals-r2.txt",
+          "sha256": "35ef3042e251664645fd0bd723941d2d538f1c50ca41631f42232b283591d789"
+        },
+        {
           "id": "ia-highpointsofmedi00wals",
-          "label": "Transcription of the Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1937)",
+          "label": "Transcription of the Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1937) (retired; replaced by the corrected edition)",
           "source": "https://archive.org/details/highpointsofmedi00wals",
           "language": "English",
           "contributors": [],
@@ -6182,7 +6198,12 @@
           "rightsEvidence": "First published in Milwaukee by The Bruce Publishing Company, 1937. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page (Copyright, 1937; Printed in the U.S.A.); no earlier or simultaneous edition abroad was found, so URAA restoration does not apply.",
           "sourceTitle": "High Points of Medieval Culture",
           "text": "data/texts/ia-highpointsofmedi00wals.txt",
-          "sha256": "92bf64e871f0d7c1d3c7e757c1da02f660bfaf6df3857a099ba3279f155f9c9e"
+          "sha256": "92bf64e871f0d7c1d3c7e757c1da02f660bfaf6df3857a099ba3279f155f9c9e",
+          "retired": {
+            "date": "2026-11-23",
+            "replacedBy": "ia-highpointsofmedi00wals-r2",
+            "reason": "The title page's imprint was set as a footnote and the chapter numerals were dropped. Kept so that earlier links and reader notes still open it."
+          }
         }
       ],
       "added": "2026-11-22"

@@ -262,6 +262,28 @@ class ReadGateProcess(unittest.TestCase):
         kept, notes = T.split_notes(body + [orn] + after, 3800)
         self.assertEqual(notes, [])
 
+    def test_a_paragraph_with_more_than_eight_unread_words_counts_them_all(self):
+        """The record lists at most 8 unread words per flagged paragraph, but the score counts every one (the bug fixed
+        with this process, November 22, 2026: the old count stopped at 8). Built end to end from a one-page djvu file."""
+        import tempfile
+        bad = ['blorf', 'zinth', 'quapple', 'drevvin', 'skorl', 'mimbat', 'vrask', 'plinth', 'grozzle', 'thwamp', 'kriv', 'blenth']
+        words = ['the', 'church'] + bad[:6] + ['of', 'rome'] + bad[6:] + ['and', 'the']
+        line = lambda ws, y: '<LINE>' + ''.join('<WORD coords="%d,%d,%d,%d">%s</WORD>' % (200 + 150 * i, y + 90, 330 + 150 * i, y, w)
+                                                for i, w in enumerate(ws)) + '</LINE>'
+        xml = ('<?xml version="1.0"?><DjVuXML><BODY><OBJECT usemap="scan_0001.djvu" width="2600" height="3000"><HIDDENTEXT>'
+               '<PAGECOLUMN><REGION><PARAGRAPH>' + line(words[:8], 900) + line(words[8:], 1000) + line(['and', 'the', 'church'], 1100) +
+               '</PARAGRAPH></REGION></PAGECOLUMN></HIDDENTEXT></OBJECT></BODY></DjVuXML>')
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / 'scan_djvu.xml').write_text(xml)
+            (Path(d) / 'scan.meta.json').write_text('{}')
+            out = T.build({'edition': 'ia-scan', 'ia': 'scan', 'firstLeaf': 0, 'lastLeaf': 0}, d, self.V)
+        flagged, words_n, unknown = out[2], out[3], out[4]
+        self.assertEqual(len(flagged), 1)
+        self.assertEqual(len(flagged[0]['words']), 8)  # the record lists the first 8
+        self.assertEqual(flagged[0]['n'], 12)
+        self.assertEqual(unknown, 12)  # but all 12 count against the gate
+        self.assertEqual(words_n, len(words) + 3)
+
     def test_tesseract_tsv_is_scaled_to_the_djvu_coordinates(self):
         import tempfile
         with tempfile.TemporaryDirectory() as d:

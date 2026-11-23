@@ -298,6 +298,31 @@ class ReadGateProcess(unittest.TestCase):
         self.assertEqual(unknown, 12)  # but all 12 count against the gate
         self.assertEqual(words_n, len(words) + 3)
 
+    def test_verse_leaves_keep_lines_only_on_those_leaves(self):
+        """Per-leaf verse ranges (Meyer, round 5): `verseLeaves` keeps printed lines on the leaves it names, while the
+        other leaves are prose, so a line-end hyphen in the introduction is still rejoined. Without it nothing changes."""
+        import tempfile
+        def obj(n, lines):
+            out = ''.join('<LINE>' + ''.join('<WORD coords="%d,%d,%d,%d">%s</WORD>' % (200 + 160 * i, y + 90, 340 + 160 * i, y, w)
+                                             for i, w in enumerate(ws)) + '</LINE>' for ws, y in lines)
+            return ('<OBJECT usemap="scan_%04d.djvu" width="2600" height="3000"><HIDDENTEXT><PAGECOLUMN><REGION><PARAGRAPH>' % n
+                    + out + '</PARAGRAPH></REGION></PAGECOLUMN></HIDDENTEXT></OBJECT>')
+        prose = [(['the', 'church', 'of', 'rome', 'and', 'the', 'devel-'], 900), (['opment', 'of', 'the', 'church', 'and', 'rome'], 1000),
+                 (['and', 'the', 'church', 'of', 'rome', 'and', 'the'], 1100)]
+        verse = [(['the', 'church', 'of', 'rome'], 900), (['and', 'the', 'rome'], 1000), (['of', 'the', 'church'], 1100)]
+        xml = '<?xml version="1.0"?><DjVuXML><BODY>' + obj(1, prose) + obj(2, verse) + '</BODY></DjVuXML>'
+        V = dict(self.V, development=5)
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / 'scan_djvu.xml').write_text(xml)
+            (Path(d) / 'scan.meta.json').write_text('{}')
+            e = {'edition': 'ia-scan', 'ia': 'scan', 'firstLeaf': 0, 'lastLeaf': 1}
+            plain = T.build(dict(e), d, V)[0]
+            mixed = T.build(dict(e, verseLeaves=[[1, 1]]), d, V)[0]
+        self.assertTrue(any('development of the church' in p for p in plain))
+        self.assertTrue(any('development of the church' in p for p in mixed))  # the prose leaf still rejoins
+        self.assertIn('the church of rome\nand the rome\nof the church', mixed)  # the verse leaf keeps its lines
+        self.assertFalse(any('\n' in p for p in plain))
+
     def test_tesseract_tsv_is_scaled_to_the_djvu_coordinates(self):
         import tempfile
         with tempfile.TemporaryDirectory() as d:

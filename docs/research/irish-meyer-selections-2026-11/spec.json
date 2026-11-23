@@ -9,15 +9,35 @@
   "firstPublished": "1911 (London: Constable and Company; this scan is the New York: E. P. Dutton issue of the same year)",
   "rightsBasis": "pd-date",
   "firstLeaf": 4,
-  "lastLeaf": 145,
+  "lastLeaf": 135,
   "omitted": [],
   "secondOcr": {
    "engine": "tesseract",
    "langs": "eng+lat",
    "scale": 1
   },
-  "layout": "verse",
-  "handFixes": [],
-  "verifiedWords": []
+  "handFixes": [
+   {
+    "leaf": 132,
+    "page": null,
+    "ocr": "Festschrift fiir Whitley",
+    "reading": "Festschrift für Whitley"
+   },
+   {
+    "leaf": 134,
+    "page": null,
+    "ocr": "Zeitschrift fur celtische",
+    "reading": "Zeitschrift für celtische"
+   }
+  ],
+  "verifiedWords": [
+   "Caill"
+  ],
+  "verseLeaves": [
+   [
+    20,
+    131
+   ]
+  ]
  }
 ]

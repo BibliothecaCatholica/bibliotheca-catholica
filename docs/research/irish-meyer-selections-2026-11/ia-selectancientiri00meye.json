@@ -3,22 +3,22 @@
  "ia": "selectancientiri00meye",
  "readGate": {
   "gate": 0.995,
-  "words": 17725,
-  "unknown": 344,
-  "readRate": 0.9806,
+  "words": 17670,
+  "unknown": 325,
+  "readRate": 0.9816,
   "scorer": "tools/transcribe_scan.py; vocabulary of the proofread hosted texts in data/texts (ia-* excluded)",
   "engine": "archive.org djvu.xml OCR, with tesseract 5.3.4 (eng+lat, image scale 1) chosen per line where it reads more words",
   "lineChoices": {
-   "archive.org": 2830,
-   "tesseract": 122
+   "archive.org": 2825,
+   "tesseract": 121
   },
   "leavesScored": [
    4,
-   145
+   135
   ],
   "omitted": [],
-  "handFixes": 0,
-  "verifiedWords": 0,
+  "handFixes": 2,
+  "verifiedWords": 1,
   "foreignWords": {},
   "measured": "2026-11-23"
  },
@@ -74,18 +74,8 @@
   "Merseiana": 2,
   "Palaeohibernicus": 2,
   "ct": 1,
-  "velopment": 1,
-  "denational": 1,
-  "ising": 1,
   "Vercingetorix": 1,
   "latecomers": 1,
-  "autho": 1,
-  "rity": 1,
-  "instruc": 1,
-  "stroyed": 1,
-  "nental": 1,
-  "narra": 1,
-  "expres": 1,
   "cante": 1,
   "Aucassin": 1,
   "Nicolete": 1,
@@ -239,10 +229,7 @@
   "Crimthainn's": 1,
   "Norgate": 1,
   "Conglinne": 1,
-  "bur": 1,
-  "lesque": 1,
   "Festschrift": 1,
-  "rassowitz": 1,
   "Cerball": 1,
   "Muiregan": 1,
   "Lexikographie": 1,
@@ -250,11 +237,9 @@
   "Rumann": 1,
   "Agallamh": 1,
   "Strachan": 1,
-  "versity": 1,
   "Praver": 1,
   "Strachan's": 1,
   "Philologie": 1,
-  "tianity": 1,
   "subintroducta": 1,
   "conhospita": 1,
   "Uke": 1,
@@ -262,12 +247,8 @@
   "Subintroductae": 1,
   "Beitrag": 1,
   "Kor": 1,
-  "lation": 1,
   "Goidelica": 1,
   "Maelisu's": 1,
-  "Jouvnal": 1,
-  "LCelt": 1,
-  "Kuno": 1,
-  "M6127se": 1
+  "Jouvnal": 1
  }
 }

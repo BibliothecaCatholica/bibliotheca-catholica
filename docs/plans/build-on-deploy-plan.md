@@ -59,9 +59,11 @@ Phase 1 had to exclude `dist/` (and `tools/templates/`) from the scans in `tests
 
 **No longer published:** `tools/`, `tests/`, `src/`, `.github/`, `docs/` (except `CATALOG.md`), `data/sources/`, `data/structured/`, `data/rites-src/`, and the repo files (`AGENTS.md`, `CENTRAL.md`, `HOLDS.md`, `README.md`, `CONTRIBUTING.md`, `SECURITY.md`, `LICENSING.md`, `LICENSE`, `package.json`, `package-lock.json`, `.gitattributes`, `.gitignore`). No page or script links or fetches them. The site links `LICENSE` and `LICENSING.md` on GitHub, and the credits page links source records on texts.bibliothecacatholica.com. They stay in the repository.
 
+**Proof result (November 22, #138 at `4e482dfd97`):** a fresh clone with the 6,016 generated pages and root outputs deleted, rebuilt by `tools/deploy_build.sh`, gave `MATCH: 8442 files identical by sha256` against the committed public files.
+
 ## 6. The removal PR (after parity is proven)
 
-- **Delete from git** every generated path: the `linguist-generated` page trees, `404.html`, `sitemap.xml`, `robots.txt`, `build.json`, `docs/static-pages.txt`, `index.html`, and `study/index.html`.
+- **Delete from git** the generated pages and root outputs only: the `linguist-generated` page trees, `404.html`, `sitemap.xml`, `robots.txt`, `build.json`, `docs/static-pages.txt`, `index.html`, and `study/index.html`. Not every `linguist-generated` file can be rebuilt: `data/guide.js` is also an input (`build_v3_data.py --catalog-only` keeps its feed snapshot, which needs the network to refresh), so the data bundles stay committed (November 22 proof).
 - **`.gitignore`:** add the same paths.
 - **CI:** keep build, static, study, and tests. Replace the page-tree `git diff --exit-code` with a guard that no generated page is tracked, plus a sitemap count floor. Keep the drift checks on the still-committed data bundles.
 - **Docs:**

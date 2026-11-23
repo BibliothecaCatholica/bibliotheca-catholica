@@ -222,6 +222,75 @@ class VerseLayout(unittest.TestCase):
         self.assertIn('longed-for', text.split('\n')[0])
 
 
+class ReadGateProcess(unittest.TestCase):
+    """Owner-approved read-gate process (November 22, 2026): a second OCR chosen per line, sample-verified foreign words,
+    back matter that may be left out, and a recorded method for every score."""
+    V = {'the': 99, 'church': 50, 'of': 99, 'in': 99, 'rome': 20, 'and': 99}
+
+    def line(self, text, top, y, x=100, x2=900):
+        return {'x': x, 'x2': x2, 'top': top, 'y': y, 'h': y - top, 'text': text, 'paraStart': False, 'para': 0}
+
+    def test_second_ocr_line_taken_only_when_it_reads_more_words(self):
+        arch = [self.line('the cxqrch of Rome', 100, 140), self.line('in the church', 160, 200), self.line('and Rome', 220, 260)]
+        tess = [self.line('the church of Rome', 102, 141), self.line('in tlie church', 161, 199), self.line('and', 221, 259)]
+        out, counts = T.choose_lines(arch, tess, self.V)
+        self.assertEqual([l['text'] for l in out], ['the church of Rome', 'in the church', 'and Rome'])
+        self.assertEqual(counts, {'tesseract': 1, 'archive.org': 2})  # a worse or shorter reading never replaces a line
+        self.assertEqual(out[0]['engine'], 'tesseract')
+
+    def test_tesseract_tsv_is_scaled_to_the_djvu_coordinates(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            img = Path(d) / '0001-s2.jpg'
+            img.write_bytes(b'')
+            img.with_suffix('.eng.tsv').write_text(
+                'level\tpage_num\tblock_num\tpar_num\tline_num\tword_num\tleft\ttop\twidth\theight\tconf\ttext\n'
+                '1\t1\t0\t0\t0\t0\t0\t0\t1000\t1500\t-1\t\n'
+                '5\t1\t1\t1\t1\t1\t100\t200\t50\t20\t95\tThe\n5\t1\t1\t1\t1\t2\t160\t200\t80\t20\t95\tChurch\n')
+            lines = T.tesseract_lines(img, 'eng', 2000)
+        self.assertEqual(lines, [{'x': 200, 'x2': 480, 'top': 400, 'y': 440, 'h': 40, 'text': 'The Church'}])
+
+    def test_foreign_sample_is_reproducible_and_large_enough(self):
+        forms = ['form%d' % i for i in range(400)]
+        a = T.foreign_sample('ed-x', 'lat', forms)
+        self.assertEqual(a, T.foreign_sample('ed-x', 'lat', list(reversed(forms))))
+        self.assertEqual(len(a), 40)  # 10% of 400
+        self.assertEqual(len(T.foreign_sample('ed-x', 'lat', forms[:100])), 30)  # at least 30
+        self.assertEqual(len(T.foreign_sample('ed-x', 'lat', forms[:12])), 12)  # every form when fewer than 30
+
+    def test_foreign_words_count_only_with_a_clean_sample_or_a_full_check(self):
+        forms = ['verbum%d' % i for i in range(50)]
+        e = {'edition': 'ed-y', 'foreignWords': {'lat': {'forms': forms, 'checked': T.foreign_sample('ed-y', 'lat', forms)}}}
+        read, rec = T.foreign_read(e)
+        self.assertEqual(read, set(forms))
+        self.assertEqual(rec['lat']['result'], 'every sampled form correct')
+        e['foreignWords']['lat']['checked'] = forms[:30]  # not the drawn sample
+        with self.assertRaises(AssertionError):
+            T.foreign_read(e)
+        e['foreignWords']['lat'] = {'forms': forms, 'wrong': ['verbum3']}  # a wrong form without a full check
+        with self.assertRaises(AssertionError):
+            T.foreign_read(e)
+        e['foreignWords']['lat']['allChecked'] = True
+        read, rec = T.foreign_read(e)
+        self.assertNotIn('verbum3', read)
+        self.assertEqual(len(read), 49)
+
+    def test_only_back_matter_may_be_left_out(self):
+        e = {'edition': 'z', 'ia': 'scanid', 'lastLeaf': 220, 'omitted': [{'what': 'the index', 'leaves': [222, 226], 'pages': '205-209'}]}
+        T.check_omitted(e)
+        self.assertEqual(T.omitted_sentence(e), ' Left out of this text: the index (pages 205-209); read them in the full scan at '
+                                                'https://archive.org/details/scanid.')
+        with self.assertRaises(AssertionError):
+            T.check_omitted({'edition': 'z', 'lastLeaf': 220, 'omitted': [{'what': 'chapter one', 'leaves': [30, 40], 'pages': '1-10'}]})
+
+    def test_the_method_is_recorded_with_the_score(self):
+        rg = T.read_gate_record({'firstLeaf': 6, 'lastLeaf': 221, 'verifiedWords': ['a', 'b']}, 1000, 4,
+                                {'secondOcr': {'engine': 'tesseract 5.3.4', 'langs': 'eng+lat', 'scale': 1,
+                                               'lineChoices': {'archive.org': 9, 'tesseract': 1}}, 'foreignWords': {}})
+        self.assertEqual((rg['readRate'], rg['gate'], rg['leavesScored'], rg['verifiedWords']), (0.996, 0.995, [6, 221], 2))
+        self.assertIn('tesseract 5.3.4 (eng+lat', rg['engine'])
+        self.assertEqual(rg['lineChoices'], {'archive.org': 9, 'tesseract': 1})
+
 class Records(unittest.TestCase):
     def test_every_transcription_is_pinned_flagged_and_dated(self):
         for r in RECORDS:
@@ -232,6 +301,14 @@ class Records(unittest.TestCase):
             self.assertIn('Not a manual proofread.', text, r['id'])
             self.assertIn('*** START OF THE TRANSCRIPTION ***', text, r['id'])
             self.assertGreaterEqual(r['readRate'], 0.995, r['id'])  # unread words stay flagged; this is the gate
+            if 'readGate' in r:  # recorded with every score since November 22, 2026
+                self.assertEqual((r['readGate']['readRate'], r['readGate']['gate']), (r['readRate'], 0.995), r['id'])
+                self.assertEqual(r['unknownWords'], sum(f.get('n', len(f['words'])) for f in r['flagged']), r['id'])
+            for lang, d in r.get('foreignWords', {}).items():
+                if not d['wrong']:
+                    self.assertEqual(d['sample'], T.foreign_sample(r['id'], lang, d['forms']), (r['id'], lang))
+            if r.get('omitted'):
+                self.assertIn('Left out of this text:', text, r['id'])
             self.assertEqual(r['flaggedBlocks'], len(r['flagged']), r['id'])
             self.assertEqual(r['corrections'], len(r['correctionList']), r['id'])
             self.assertIn(r['rightsBasis'], ('pd-date', 'pd-nonrenewal'), r['id'])

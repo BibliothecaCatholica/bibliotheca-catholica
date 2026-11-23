@@ -1,0 +1,41 @@
+[
+ {
+  "edition": "ia-bethada02plumuoft",
+  "ia": "bethada02plumuoft",
+  "title": "BETHADA NÁEM NÉRENN: LIVES OF IRISH SAINTS, VOLUME II",
+  "sourceTitle": "Bethada Náem nÉrenn: Lives of Irish Saints, Volume II",
+  "author": "Charles Plummer",
+  "year": 1922,
+  "firstPublished": "1922",
+  "rightsBasis": "pd-date",
+  "firstLeaf": 4,
+  "lastLeaf": 416,
+  "omitted": []
+ },
+ {
+  "edition": "ia-bub_gb_8VULAAAAYAAJ",
+  "ia": "bub_gb_8VULAAAAYAAJ",
+  "title": "THE LIFE OF SAINT COLUMBA, FOUNDER OF HY",
+  "sourceTitle": "The Life of Saint Columba, Founder of Hy",
+  "author": "Adamnan; William Reeves (editor)",
+  "year": 1874,
+  "firstPublished": "1874",
+  "rightsBasis": "pd-date",
+  "firstLeaf": 4,
+  "lastLeaf": 568,
+  "omitted": []
+ },
+ {
+  "edition": "ia-selectancientiri00meye",
+  "ia": "selectancientiri00meye",
+  "title": "SELECTIONS FROM ANCIENT IRISH POETRY",
+  "sourceTitle": "Selections from Ancient Irish Poetry",
+  "author": "Kuno Meyer",
+  "year": 1911,
+  "firstPublished": "1911",
+  "rightsBasis": "pd-date",
+  "firstLeaf": 4,
+  "lastLeaf": 142,
+  "omitted": []
+ }
+]

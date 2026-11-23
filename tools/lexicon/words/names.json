@@ -1,6 +1,6 @@
 {
  "language": "names",
- "count": 364,
+ "count": 382,
  "words": {
   "Abissinian": [
    {
@@ -140,10 +140,22 @@
     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
    }
   ],
+  "Bartolomé": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
   "Bayley": [
    {
     "edition": "ia-cathencyc-1911-o-antiphons",
     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Beas": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
    }
   ],
   "Bernart": [
@@ -302,6 +314,12 @@
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
    }
   ],
+  "Caravaca": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
   "Carbery": [
    {
     "edition": "ia-selectancientiri00meye",
@@ -342,6 +360,18 @@
    {
     "edition": "ia-jameslaynezjesui00fich",
     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "Casilda": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
+  "Castilla": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
    }
   ],
   "Cathba's": [
@@ -408,6 +438,12 @@
    {
     "edition": "ia-selectancientiri00meye",
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Cobos": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
    }
   ],
   "Cogordan": [
@@ -674,6 +710,12 @@
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
+  "Duruelo": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
   "Eby": [
    {
     "edition": "ia-moldersofmedieva00cass",
@@ -714,6 +756,12 @@
    {
     "edition": "ia-mysteryofiniquit00furf",
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Escorial": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
    }
   ],
   "Estremadura": [
@@ -1394,6 +1442,12 @@
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
    }
   ],
+  "Mariano": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
   "Marrou": [
    {
     "edition": "ia-moldersofmedieva00cass",
@@ -1626,6 +1680,12 @@
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
+  "Ormaneto": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
   "Ortiz": [
    {
     "edition": "ia-jameslaynezjesui00fich",
@@ -1818,6 +1878,12 @@
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
+  "Rubeo": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
   "Rumann": [
    {
     "edition": "ia-selectancientiri00meye",
@@ -1884,10 +1950,22 @@
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Sega": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
   "Seripando": [
    {
     "edition": "ia-jameslaynezjesui00fich",
     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "Sevilla": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
    }
   ],
   "Sganarelle": [
@@ -1906,6 +1984,12 @@
    {
     "edition": "ia-jameslaynezjesui00fich",
     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "Silverio": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
    }
   ],
   "Silverland": [
@@ -1942,6 +2026,12 @@
    {
     "edition": "ia-cathencyc-1911-o-antiphons",
     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Stanbrook": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
    }
   ],
   "Stilico": [
@@ -2016,6 +2106,12 @@
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
    }
   ],
+  "Teresita": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
   "Terman": [
    {
     "edition": "ia-mysteryofiniquit00furf",
@@ -2044,6 +2140,12 @@
    {
     "edition": "ia-cathencyc-1911-o-antiphons",
     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Tostado": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
    }
   ],
   "Trithem": [
@@ -2188,6 +2290,12 @@
    {
     "edition": "ia-jameslaynezjesui00fich",
     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "Zugasti": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
    }
   ]
  }

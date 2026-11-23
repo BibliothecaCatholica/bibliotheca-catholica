@@ -95,7 +95,9 @@ for _wid, _ed in (('innocence-father-brown', 'pg-204'), ('wisdom-father-brown', 
                   # Chesterton polish batch 5 (November 21, 2026)
                   ('eugenics-other-evils', 'pg-25308'), ('tales-long-bow', 'pg-69185'),
                   # Douay-Rheims Wisdom and Ecclesiasticus (November 21, 2026)
-                  ('book-of-wisdom-douay-rheims', 'ebible-dra-wisdom'), ('ecclesiasticus-douay-rheims', 'ebible-dra-ecclesiasticus')):
+                  ('book-of-wisdom-douay-rheims', 'ebible-dra-wisdom'), ('ecclesiasticus-douay-rheims', 'ebible-dra-ecclesiasticus'),
+                  # Chesterton polish batch 6 (November 22, 2026)
+                  ('robert-browning', 'pg-13342'), ('superstition-divorce', 'pg-62680'), ('the-defendant', 'pg-12245')):
     EDITIONS[(_wid, _ed)] = {'mode': 'map', 'out': 'data/structured/%s-%s.json' % (_wid, _ed)}
 
 

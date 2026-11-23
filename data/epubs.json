@@ -253,6 +253,12 @@
    "sha256": "1a089a0fbbcb54e7aa410e0493096e438abd28e7b177cae9608f80080e640b89",
    "size": 566432
   },
+  "pg-13342": {
+   "work": "robert-browning",
+   "path": "downloads/epub/robert-browning-pg-13342.b5a00a936b08.epub",
+   "sha256": "b5a00a936b0866dc0b534c5b36322f4a5e072215fb7b029829784ca5fb36fcfc",
+   "size": 398316
+  },
   "pga-0900631": {
    "work": "robert-louis-stevenson-1927",
    "path": "downloads/epub/robert-louis-stevenson-1927-pga-0900631.6c3fd6f06c1b.epub",
@@ -277,11 +283,23 @@
    "sha256": "0ec84c22044c09391791200ab60b77a34c34cfe87198d56979aab85c2a9787ad",
    "size": 640197
   },
+  "pg-62680": {
+   "work": "superstition-divorce",
+   "path": "downloads/epub/superstition-divorce-pg-62680.297035e6d119.epub",
+   "sha256": "297035e6d11986f3caa565f74747fc9799ae564ed62adc3b7221e0f7bbe45edf",
+   "size": 177232
+  },
   "pg-69185": {
    "work": "tales-long-bow",
    "path": "downloads/epub/tales-long-bow-pg-69185.cb0597092026.epub",
    "sha256": "cb0597092026eff0efa802b7cb8f20b92a461a37819beb78fcaa5ba46a4655af",
    "size": 398469
+  },
+  "pg-12245": {
+   "work": "the-defendant",
+   "path": "downloads/epub/the-defendant-pg-12245.5bdf178dd066.epub",
+   "sha256": "5bdf178dd066ff619e44a24963fbc7a07a20dbbef24dc95ec1c921da0582dd5d",
+   "size": 201875
   },
   "pg-1721": {
    "work": "trees-of-pride",

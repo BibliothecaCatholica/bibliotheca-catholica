@@ -101,7 +101,9 @@ input.addEventListener('input',()=>{const terms=norm(input.value).trim().split(/
 </script></body></html>
 '''
     (output / 'index.html').write_text(template.replace('__COUNT__', str(len(entries))).replace('__SIZE__', f"{manifest['totalBytes']/1_000_000:.2f}").replace('__ROWS__', '\n'.join(rows)))
-    (output / 'CNAME').write_text('texts.bibliothecacatholica.com\n')
+    # Cloudflare Pages serves texts.bibliothecacatholica.com (custom domain set on the Pages project), so the export
+    # writes no CNAME file, and removes one left by an earlier export.
+    (output / 'CNAME').unlink(missing_ok=True)
     (output / '.nojekyll').touch()
     (output / 'robots.txt').write_text('User-agent: *\nAllow: /\nDisallow: /texts/\nDisallow: /provenance/\n')
     (output / 'README.md').write_text(readme())
@@ -127,7 +129,7 @@ def readme():
     y = pd_last_year()
     return f'''# Bibliotheca Catholica text collection
 
-Served at https://texts.bibliothecacatholica.com by GitHub Pages from `main`.
+Served at https://texts.bibliothecacatholica.com by Cloudflare Pages from `main`. The custom domain is set on the Cloudflare Pages project, so this repository has no `CNAME` file.
 
 Read these texts in the reader at [Bibliotheca Catholica](https://bibliothecacatholica.com), the free library of Catholic authors and classics this collection serves.
 
@@ -193,7 +195,7 @@ New hosted editions also require edition-specific rights review under the main r
 
 ## Limits and housekeeping
 
-Keep GitHub Pages below its published size and traffic limits; prefer text over page images, and split oversized files by book or chapter rather than by page. Keep an independent backup: this repository is a delivery copy, not the archive of record.
+Keep Cloudflare Pages below its published limits (file size and files per deployment); prefer text over page images, and split oversized files by book or chapter rather than by page. Keep an independent backup: this repository is a delivery copy, not the archive of record.
 
 ## Corrections and takedown
 

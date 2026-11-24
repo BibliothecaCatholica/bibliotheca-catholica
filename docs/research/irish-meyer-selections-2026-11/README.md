@@ -43,3 +43,19 @@ Round 4, Job 2b. Not hosted: the raw score is below the 99.5% read gate, and the
 - **Line-choice check:** verifying words changes which engine wins some lines, so every changed line was compared before and after. Three small-capital headings (MARVAN, GUARE, LIADIN) are kept in capitals by hand, matching the image. Two Tesseract superscripts ("Lugh,?" and "Bethech.!") and an opening quote ("*O Cormac") are corrected to the printed "Lugh,³", "Bethech.¹", and "‘O Cormac".
 - **Score:** **99.98%** (3 of 17,668 unread), up from 98.16%. The three words left are footnote numbers printed against a word (Lugh,³ Bethech.¹ Moinmoy.¹), kept as printed. The method and remaining forms are in `ia-selectancientiri00meye.json`.
 - **Not hosted** in this round. The book now passes the read gate, so hosting it is a separate PR for the owner to approve.
+
+## Round 7 (November 23, 2026): hosting
+
+Micah approved hosting once QA passes it ("Yes, host Meyer once QA passes it", November 23).
+- **Before hosting, the whole text was read again for OCR debris the scorer doesn't count:** accented letters inside English words, backslashes, and digits run into words. 30 lines were fixed against the page images (30 new hand fixes; 48 in the record with the hand pass's 18):
+  - "191 1" → 1911;
+  - offeríng, \vider, liíerature, maríced, Chríst, couíd, stríveth, spríng, yew-berríes, shoúld, Delightíul, Erín, díre, proíit, belís, and duríng;
+  - "x\n" → An;
+  - stray backslashes → semicolons, and stray marks → footnote numbers;
+  - Moliére → Molière and scéne → scène;
+  - "4and" → "4 and", and fúv → für;
+  - Éríu → Ériu;
+  - the Greek ἀγάπητή and συνεισάκτος in the notes;
+  - a page foot, "H 113", dropped.
+- **Correct as printed, and kept:** Dallán, Móre, Senórach, Maelísu, and Brolcháin.
+- **Score:** 99.98% (3 of 17,643 unread). The text and its provenance record are `data/texts/ia-selectancientiri00meye.txt` and `data/sources/ia-selectancientiri00meye.json`.

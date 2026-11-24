@@ -3,7 +3,7 @@
  "ia": "selectancientiri00meye",
  "readGate": {
   "gate": 0.995,
-  "words": 17668,
+  "words": 17643,
   "unknown": 3,
   "readRate": 0.9998,
   "scorer": "tools/transcribe_scan.py; vocabulary of the proofread hosted texts in data/texts (ia-* excluded)",
@@ -17,7 +17,7 @@
    135
   ],
   "omitted": [],
-  "handFixes": 18,
+  "handFixes": 48,
   "verifiedWords": 214,
   "foreignWords": {},
   "measured": "2026-11-23"

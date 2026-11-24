@@ -123,6 +123,30 @@ class Layout(unittest.TestCase):
         with self.assertRaises(AssertionError):  # dropping part of a line is not allowed
             T.apply_hand_fixes(pages, {'edition': 'x', 'firstLeaf': 5, 'handFixes': [{'leaf': 5, 'ocr': 'victim', 'reading': ''}]})
 
+    def test_keep_mark_holds_a_line_as_body_text(self):
+        # November 23, 2026 (Walsh -r2): a hand fix whose reading equals the OCR is a keep mark. It changes no word,
+        # marks the line as checked on the page image, and stops split_notes from starting a footnote there (the
+        # title-page imprint in smaller type had been set as a note).
+        L = lambda t, y, h: {'x': 100, 'y': y, 'h': h, 'text': t, 'paraStart': False, 'para': 0}
+        def page():
+            return [L('text line %d of the title page' % i, 400 + 95 * i, 53) for i in range(8)] + [
+                L('New York: Fordham University Press', 1600, 40), L('and the Catholic Summer School', 1650, 40)]
+        unmarked = page()
+        self.assertEqual(len(T.split_notes(unmarked, 2600)[1]), 1)  # without the mark, the imprint reads as a note
+        pages = [(2600, page())]
+        T.apply_hand_fixes(pages, {'edition': 'x', 'firstLeaf': 5, 'handFixes': [
+            {'leaf': 5, 'page': 'title', 'ocr': 'New York: Fordham University Press', 'reading': 'New York: Fordham University Press'}]})
+        lines = pages[0][1]
+        marked = [l for l in lines if l.get('kept')]
+        self.assertEqual([l['text'] for l in marked], ['New York: Fordham University Press'])  # text unchanged
+        self.assertTrue(marked[0]['hand'])
+        self.assertEqual(T.split_notes(lines, 2600), (lines, []))  # kept as body text, no note
+        self.assertFalse(any(l.get('kept') for l in page()))  # an ordinary correction is never a keep mark
+        fixed = [(2600, page())]
+        T.apply_hand_fixes(fixed, {'edition': 'x', 'firstLeaf': 5, 'handFixes': [
+            {'leaf': 5, 'page': 'title', 'ocr': 'Fordham', 'reading': 'Fordham,'}]})
+        self.assertFalse(any(l.get('kept') for l in fixed[0][1]))
+
     def test_hand_fixes_are_logged(self):
         for r in RECORDS:
             for f in r.get('handFixes', []):

@@ -64,6 +64,10 @@
    {
     "edition": "ia-highpointsofmedi00wals",
     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   },
+   {
+    "edition": "ia-highpointsofmedi00wals-r2",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec-r2.json"
    }
   ],
   "Parlement": [

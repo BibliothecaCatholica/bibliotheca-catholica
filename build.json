@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-17814a9fe153",
+  "id": "bc-34e1d04e000d",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "483f6a2bf881ed9674ff355a46f38eb2a77c701e9639e47735ae62acc41bcbb5",
@@ -13,7 +13,7 @@
     "data/books.json": "cd0905aa65ea5d9e595ac5983a1884ba8ae2cbf450efb394fea7288ec59433d6",
     "data/catholic-hub.json": "a7dc6717941774253b91b43d085cc37e4e4fe02ee66ac459d19f373649b52237",
     "data/councils.json": "71ad1509e563269ce80e3444ce3f224a8a6eb62dbf1e66a57f043ac134858a73",
-    "data/covers.json": "f334b018836ab2963ff93ac858ca5fbfa51706f784363f2f4d89819bd15c38d3",
+    "data/covers.json": "3a0ab75a0e12845fa02847bcee0d3d2086d16c0f66e2ba92a54d0965547f7481",
     "data/data.js": "ff744f818d07d45cd93bb5bf6d4148506159cb44de1825bd95c002ffee521e75",
     "data/doctors.js": "735b0dce6e3ffb1f178119864339be9ab11f7a0944c607eef4ed6f7c249499de",
     "data/editorial-flags.js": "057a12dc9ef14346981a465b05856ddbe2dde6afe524b65f9d65d425fb62168e",
@@ -28,8 +28,8 @@
     "data/isidore-matches.json": "1d1c9f3edb6f5e56479a3174d4f97b7e5755d86f8011d39720b4ab35967395ea",
     "data/lectionary-references-2026.json": "ece6535c44a4210313982801b2508334c6f69b8d06e9b51a54e880575287a4d9",
     "data/library-desk.js": "11b06f7e54d7e5916b5c713258c8ba8a9b4de87709ffbce84d9cb1e8b7959032",
-    "data/library.js": "145d1e62d4225f1d30f456f0a8953e852184baa296c66ec00ddc6418658e20c6",
-    "data/library.json": "324000106bf61c691bb310506c77edac5ca1a2971d2208d9567d6cb3d1d80ed7",
+    "data/library.js": "7cc70215f4d3cf894dcd7ae5715bb73b0ff8d155b18edb55e1dfc1ee08b95cb8",
+    "data/library.json": "bc6fb1b9cdbd7ee0e2bb53cd5354891925d1689d45c2de2499250407cccceab8",
     "data/librivox.js": "f887bf833f7868dd4c5c13145e46a54019de40d43ed93311f9f0b5a933047712",
     "data/librivox.json": "2b2a8e92a23d1bb7610fc202a05b17a8bca70a9be4098bb3043df08d5a0a5b63",
     "data/modern-authors.json": "a4c24c17593d33ee2ea7033cab89fd8f1d2591f4c049aca722d27f0515145a15",

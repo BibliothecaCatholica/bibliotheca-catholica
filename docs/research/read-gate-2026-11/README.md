@@ -18,3 +18,14 @@ Every book that HOLDS lists below the 99.5% read gate, measured again with `tool
 None of the six reaches 99.5% on OCR alone. The gap to the gate is the hand-pass size: about 155 more words read for Grant (420 unread, at most 265 allowed), 131 for Cassidy, 189 for Furfey, 533 for Fichter, 1,729 for *Teresa*, and 2,222 for Huber. Many unread forms are proper names or Latin, Spanish, Italian, or French words. Under the new process those can be counted as read by sampling at least 10% of each language's distinct forms (minimum 30) against the page images, so the real hand-pass size is smaller than these gaps.
 
 Tesseract helps most where archive.org's OCR broke whole lines (Cassidy gains 0.19 points). On the cleaner scans it adds 0.04 to 0.06 points (Grant, Furfey, Fichter); *Teresa* and Huber gain 0.16 and 0.20. Both engines are kept: archive.org stays the default and Tesseract replaces a line only when it reads strictly more words with about the same word count.
+
+## Irish editions (November 23, 2026; Round 8, for #160)
+
+`measure-irish-tesseract.json` is the Plummer spec from #150 (`docs/research/irish-editions-2026-11/`) with the same `secondOcr`; its result is `tesseract/ia-bethada02plumuoft.json`.
+
+| Book (edition) | Leaves scored | with Tesseract per line | Lines taken from Tesseract | #160 records |
+|---|---|---|---|---|
+| Plummer, *Bethada Náem nÉrenn* vol. II (`ia-bethada02plumuoft`) | 4–416 | **95.10%** (8,651 / 176,691) | 1,542 of 20,176 | 95.07% |
+
+Reeves, *Life of Saint Columba* (`ia-bub_gb_8VULAAAAYAAJ`, #160: 90.02%) could not be re-run here: the page-image downloads from its file server (ia800609) were reset twice, so no run record is committed for it and the 90.02% stays unconfirmed. Re-run with the Reeves spec in `docs/research/irish-editions-2026-11/measure.json` plus `secondOcr`.
+

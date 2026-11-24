@@ -6129,14 +6129,19 @@
       "editions": [
         {
           "id": "ia-jameslaynezjesui00fich",
-          "label": "Internet Archive scan (St. Louis: B. Herder Book Co., 1944)",
+          "label": "Transcription of the Internet Archive scan (St. Louis: B. Herder Book Co., 1944)",
           "source": "https://archive.org/details/jameslaynezjesui00fich",
           "language": "English",
           "contributors": [],
-          "checked": "2026-11-17",
+          "checked": "2026-11-23",
           "access": "full-text",
-          "rights": "External scan at the Internet Archive, freely viewable there; not hosted here. Outside the U.S., check local copyright rules.",
-          "note": "First published in 1944 (St. Louis: B. Herder Book Co.). Our renewal check found no renewal (docs/research/us-pd-renewal-checks-2026-11.csv): First published in St. Louis by B. Herder Book Co., 1944. No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. Imprint names St. Louis and B. Herder's London office (33 Queen Square); the copyright page says Printed in U.S.A. No earlier London edition is indicated, so US publication was at least simultaneous, which excludes URAA restoration (17 USC 104A(h)(6)(D)). Proposed reading, approved only with PR #53. Its OCR reads below the 99.5% transcription gate (98.87%), so it is linked, not hosted, for now."
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1944 (St. Louis: B. Herder Book Co.). Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed, footnotes placed after their paragraphs, 217 hand fixes against the page images (the title and imprimatur pages, the contents rebuilt line by line, the twenty chapter and seven appendix openings with their small-capital first words, running heads and stray marks the OCR left, and misreadings such as Lainit for Lainii and 1s for is), three blank leaves read as empty, 57 names and words checked against the images, and 283 paragraphs that keep a word the OCR could not read (99.57% of words read). The index (pages 287 to 299) is left out; see the scan. A second OCR (Tesseract) supplied lines where it read more words. Not a manual proofread. Public domain in the USA because its copyright was not renewed.",
+          "rightsBasis": "pd-nonrenewal",
+          "rightsEvidence": "First published in St. Louis by B. Herder Book Co., 1944 (copyright page: Copyright 1944; Printed in U.S.A.). No renewal was found in the Stanford Copyright Renewal Database or in NYPL's renewal data (checked 2026-11-16); HathiTrust rights code pdus. The imprint names St. Louis and B. Herder's London office (33 Queen Square); no earlier London edition is indicated, so US publication was at least simultaneous, which excludes URAA restoration (17 USC 104A(h)(6)(D)).",
+          "sourceTitle": "James Laynez, Jesuit",
+          "text": "data/texts/ia-jameslaynezjesui00fich.txt",
+          "sha256": "828aa3e7389565ffe07a30b4d384880e1555d9fd8003f868437a207f08b5b5d4"
         }
       ]
     },
@@ -6358,13 +6363,13 @@
       "author": "Paul Hanly Furfey",
       "category": "Philosophy",
       "tradition": "Catholic tradition",
-      "description": "Paul Hanly Furfey's 1945 book on Catholic social thought.",
+      "description": "Paul Hanly Furfey's 1944 book on Catholic social thought.",
       "reviewStatus": "source-checked",
-      "date": "1945",
+      "date": "1944",
       "editions": [
         {
           "id": "ia-mysteryofiniquit00furf",
-          "label": "Transcription of the Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1945)",
+          "label": "Transcription of the Internet Archive scan (Milwaukee: The Bruce Publishing Company, 1944; second printing, 1945)",
           "source": "https://archive.org/details/mysteryofiniquit00furf",
           "language": "English",
           "contributors": [],
@@ -6408,6 +6413,33 @@
         }
       ],
       "added": "2026-11-17"
+    },
+    {
+      "id": "meyer-ancient-irish-poetry",
+      "title": "Selections from Ancient Irish Poetry",
+      "author": "Kuno Meyer",
+      "category": "Poetry",
+      "tradition": "Christian tradition",
+      "description": "Kuno Meyer's 1911 prose translations of early Irish poems, many of them religious: hermit songs, prayers, and poems of the monastic life, with nature poetry, bardic poems, and laments.",
+      "reviewStatus": "source-checked",
+      "date": "1911",
+      "editions": [
+        {
+          "id": "ia-selectancientiri00meye",
+          "label": "Transcription of the Internet Archive scan (New York: E. P. Dutton and Company, 1911)",
+          "source": "https://archive.org/details/selectancientiri00meye",
+          "language": "English",
+          "contributors": [],
+          "checked": "2026-11-23",
+          "access": "full-text",
+          "rights": "Public domain in the USA. Outside the U.S., check local copyright rules.",
+          "note": "First published in 1911 (London: Constable and Company); this scan is the New York issue of the same year from E. P. Dutton. Transcribed by Bibliotheca Catholica from the scan: running heads and page numbers removed; the poems keep their printed lines and stanza breaks (leaves 20 to 131), and the introduction and notes are prose. 48 hand fixes against the page images (misreadings such as Xoisi for Noisi and Mohng for Moling, small-capital headings, accented letters, the Greek in the notes, and two lines of scanning noise dropped), 214 names and words checked against the images (mostly Irish names, kept as printed, not normalized), 14 automatic repairs each checked against the images, and 3 paragraphs that keep a word the OCR could not read: footnote numbers printed against a word (99.98% of words read). A second OCR (Tesseract) supplied lines where it read more words. Not a manual proofread.",
+          "rightsBasis": "pd-date",
+          "sourceTitle": "Selections from Ancient Irish Poetry",
+          "text": "data/texts/ia-selectancientiri00meye.txt",
+          "sha256": "237cb57dba1fdbff6b6dcd4849598f6ef9aaaf18b1e0c1ca43c1c217ee156228"
+        }
+      ]
     }
   ],
   "series": [

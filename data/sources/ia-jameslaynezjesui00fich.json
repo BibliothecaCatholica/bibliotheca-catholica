@@ -1,0 +1,3380 @@
+{
+  "id": "ia-jameslaynezjesui00fich",
+  "kind": "ocr-transcription",
+  "title": "James Laynez, Jesuit",
+  "author": "Joseph H. Fichter",
+  "rights": "Public domain in the USA. First published in the United States in 1944 and not renewed; the evidence is in nonRenewal.",
+  "rightsBasis": "pd-nonrenewal",
+  "nonRenewal": {
+    "firstPublicationYear": 1944,
+    "firstPublicationCountry": "US",
+    "firstPublicationPlace": "St. Louis",
+    "firstPublicationPublisher": "B. Herder Book Co.",
+    "stanford": {
+      "result": "no renewal found",
+      "checked": "2026-11-16",
+      "method": "one plain curl query (title words and surname), default user agent"
+    },
+    "nypl": {
+      "result": "no renewal found",
+      "checked": "2026-11-16",
+      "method": "NYPL cce-renewals data"
+    },
+    "hathitrust": "pdus",
+    "hathitrustRecord": "pdus (umn.31951001693734l)",
+    "uraa": "Imprint names St. Louis and B. Herder's London office (33 Queen Square); the copyright page says Printed in U.S.A. No earlier London edition is indicated, so US publication was at least simultaneous, which excludes URAA restoration (17 USC 104A(h)(6)(D)).",
+    "scan": "jameslaynezjesui00fich",
+    "research": "docs/research/us-pd-renewal-checks-2026-11.csv"
+  },
+  "volumes": [
+    {
+      "identifier": "jameslaynezjesui00fich",
+      "url": "https://archive.org/details/jameslaynezjesui00fich",
+      "year": 1944,
+      "publisher": "St. Louis : B. Herder Book Co.",
+      "ocr": "jameslaynezjesui00fich_djvu.xml",
+      "ocrSha256": "a94822d0bacb11ecf96a47df629221673e1b6d92b423b046ef34f1d8a75e5221",
+      "leaves": [
+        5,
+        304
+      ],
+      "secondOcr": {
+        "engine": "tesseract 5.3.4",
+        "langs": "eng+lat+ita",
+        "scale": 1,
+        "lineChoices": {
+          "archive.org": 10333,
+          "tesseract": 86
+        }
+      }
+    }
+  ],
+  "method": "tools/transcribe_scan.py: Internet Archive djvu.xml OCR, running heads and page numbers removed, paragraphs from the scan, words rejoined across line breaks, the space the printer set before punctuation closed, unique known-word OCR repairs recorded, unread words flagged and kept as printed. 217 misreadings corrected by hand against the page images of this scan, each listed in handFixes; no wording was taken from another edition. 57 words the vocabulary does not know (names, Latin, and foreign titles) were checked by hand against the page images and are listed in verifiedWords. A second OCR (tesseract 5.3.4, eng+lat+ita) was run on the scan's page images and its reading taken for a line only where it read more words (86 of 10419 lines). Verse lines and stanza breaks are kept as printed on the verse leaves (6-8, 12-12), and words are not rejoined there.",
+  "words": 110708,
+  "unknownWords": 473,
+  "readRate": 0.9957,
+  "flaggedBlocks": 283,
+  "flagged": [
+    {
+      "block": 0,
+      "words": [
+        "Praepositorum",
+        "Westerhout,"
+      ]
+    },
+    {
+      "block": 6,
+      "words": [
+        "Praepositus"
+      ]
+    },
+    {
+      "block": 7,
+      "words": [
+        "Glennon,",
+        "Ludovici"
+      ]
+    },
+    {
+      "block": 19,
+      "words": [
+        "Coyle,",
+        "Torralba,",
+        "Agathonicus",
+        "Montero,",
+        "Philipines.",
+        "McEwen,"
+      ]
+    },
+    {
+      "block": 23,
+      "words": [
+        "adulthood"
+      ]
+    },
+    {
+      "block": 27,
+      "words": [
+        "limpieza",
+        "sangre",
+        "Alfaro,",
+        "Zapata",
+        "Alcalde",
+        "Regidor",
+        "hijosdalgo"
+      ]
+    },
+    {
+      "block": 28,
+      "words": [
+        "emparentado",
+        "nobleza",
+        "espariola."
+      ]
+    },
+    {
+      "block": 32,
+      "words": [
+        "Perez"
+      ]
+    },
+    {
+      "block": 33,
+      "words": [
+        "Asistencia",
+        "Espana,"
+      ]
+    },
+    {
+      "block": 39,
+      "words": [
+        "Violante",
+        "Campanario,"
+      ]
+    },
+    {
+      "block": 41,
+      "words": [
+        "maravedi,"
+      ]
+    },
+    {
+      "block": 43,
+      "words": [
+        "Librada"
+      ]
+    },
+    {
+      "block": 49,
+      "words": [
+        "Monzon,"
+      ]
+    },
+    {
+      "block": 56,
+      "words": [
+        "Forthright"
+      ]
+    },
+    {
+      "block": 58,
+      "words": [
+        "Lerma)",
+        "Ribas",
+        "Carrasco).",
+        "Cacalla",
+        "Causo"
+      ]
+    },
+    {
+      "block": 59,
+      "words": [
+        "salvific",
+        "Ricafuente."
+      ]
+    },
+    {
+      "block": 61,
+      "words": [
+        "Uriarte,"
+      ]
+    },
+    {
+      "block": 65,
+      "words": [
+        "Ignatit",
+        "Loiolae"
+      ]
+    },
+    {
+      "block": 70,
+      "words": [
+        "progressu"
+      ]
+    },
+    {
+      "block": 71,
+      "words": [
+        "Valencian"
+      ]
+    },
+    {
+      "block": 86,
+      "words": [
+        "delicts,"
+      ]
+    },
+    {
+      "block": 87,
+      "words": [
+        "likwise"
+      ]
+    },
+    {
+      "block": 89,
+      "words": [
+        "inconscipuous",
+        "chauvinistic"
+      ]
+    },
+    {
+      "block": 110,
+      "words": [
+        "hardheaded"
+      ]
+    },
+    {
+      "block": 114,
+      "words": [
+        "wintertime"
+      ]
+    },
+    {
+      "block": 119,
+      "words": [
+        "Lievin"
+      ]
+    },
+    {
+      "block": 121,
+      "words": [
+        "rainfall."
+      ]
+    },
+    {
+      "block": 126,
+      "words": [
+        "Musso,"
+      ]
+    },
+    {
+      "block": 131,
+      "words": [
+        "Pucci",
+        "Santiquarto,",
+        "titulum",
+        "voluntariae",
+        "titulum",
+        "sufficientts",
+        "litteraturae,"
+      ]
+    },
+    {
+      "block": 138,
+      "words": [
+        "Negusanti,",
+        "Arba."
+      ]
+    },
+    {
+      "block": 139,
+      "words": [
+        "Verallo,"
+      ]
+    },
+    {
+      "block": 148,
+      "words": [
+        "Vivarolo,"
+      ]
+    },
+    {
+      "block": 149,
+      "words": [
+        "Monteselice,",
+        "Montemartre"
+      ]
+    },
+    {
+      "block": 150,
+      "words": [
+        "tT,]"
+      ]
+    },
+    {
+      "block": 152,
+      "words": [
+        "Vincenza."
+      ]
+    },
+    {
+      "block": 159,
+      "words": [
+        "Storta,"
+      ]
+    },
+    {
+      "block": 162,
+      "words": [
+        "saro",
+        "conscriptam."
+      ]
+    },
+    {
+      "block": 165,
+      "words": [
+        "Ornifrius,"
+      ]
+    },
+    {
+      "block": 167,
+      "words": [
+        "appointees."
+      ]
+    },
+    {
+      "block": 169,
+      "words": [
+        "Cosci,",
+        "citizenry."
+      ]
+    },
+    {
+      "block": 170,
+      "words": [
+        "facz"
+      ]
+    },
+    {
+      "block": 171,
+      "words": [
+        "cofounder"
+      ]
+    },
+    {
+      "block": 173,
+      "words": [
+        "Lactanzio"
+      ]
+    },
+    {
+      "block": 175,
+      "words": [
+        "Quirino",
+        "Garzoni,"
+      ]
+    },
+    {
+      "block": 181,
+      "words": [
+        "Saluces,"
+      ]
+    },
+    {
+      "block": 183,
+      "words": [
+        "Castilla",
+        "Mudarra,",
+        "vacillated"
+      ]
+    },
+    {
+      "block": 184,
+      "words": [
+        "Mudarra",
+        "Castilla"
+      ]
+    },
+    {
+      "block": 185,
+      "words": [
+        "Conversini,",
+        "obloquies,"
+      ]
+    },
+    {
+      "block": 186,
+      "words": [
+        "Melangolo",
+        "Frangipani"
+      ]
+    },
+    {
+      "block": 187,
+      "words": [
+        "inoe."
+      ]
+    },
+    {
+      "block": 189,
+      "words": [
+        "Frangipani",
+        "Codacio"
+      ]
+    },
+    {
+      "block": 201,
+      "words": [
+        "Philonard,",
+        "Sanangelo,"
+      ]
+    },
+    {
+      "block": 202,
+      "words": [
+        "graviores",
+        "eruditiores"
+      ]
+    },
+    {
+      "block": 204,
+      "words": [
+        "retreatant,"
+      ]
+    },
+    {
+      "block": 205,
+      "words": [
+        "Ugoletti,",
+        "Landini,",
+        "Criminali,",
+        "Palmio,"
+      ]
+    },
+    {
+      "block": 210,
+      "words": [
+        "Seftor",
+        "ayude!",
+        "Philonard,"
+      ]
+    },
+    {
+      "block": 213,
+      "words": [
+        "lucrifecit."
+      ]
+    },
+    {
+      "block": 214,
+      "words": [
+        "barnlike"
+      ]
+    },
+    {
+      "block": 226,
+      "words": [
+        "Lepidi,"
+      ]
+    },
+    {
+      "block": 231,
+      "words": [
+        "schoolbooks,"
+      ]
+    },
+    {
+      "block": 251,
+      "words": [
+        "Otell",
+        "Baroell"
+      ]
+    },
+    {
+      "block": 258,
+      "words": [
+        "putty"
+      ]
+    },
+    {
+      "block": 271,
+      "words": [
+        "Laybach,"
+      ]
+    },
+    {
+      "block": 284,
+      "words": [
+        "Rhem"
+      ]
+    },
+    {
+      "block": 285,
+      "words": [
+        "Nuntiaturberichte"
+      ]
+    },
+    {
+      "block": 296,
+      "words": [
+        "nagion",
+        "espagnola,",
+        "cosquillosa,"
+      ]
+    },
+    {
+      "block": 297,
+      "words": [
+        "footgear"
+      ]
+    },
+    {
+      "block": 302,
+      "words": [
+        "extemporaneous"
+      ]
+    },
+    {
+      "block": 312,
+      "words": [
+        "Pighius,",
+        "Pflug,",
+        "Gropper."
+      ]
+    },
+    {
+      "block": 317,
+      "words": [
+        "imputative",
+        "imputative"
+      ]
+    },
+    {
+      "block": 320,
+      "words": [
+        "imputata,"
+      ]
+    },
+    {
+      "block": 324,
+      "words": [
+        "varits",
+        "probatur."
+      ]
+    },
+    {
+      "block": 325,
+      "words": [
+        "Tridentinae"
+      ]
+    },
+    {
+      "block": 335,
+      "words": [
+        "symbolorum,"
+      ]
+    },
+    {
+      "block": 348,
+      "words": [
+        "Loffredo",
+        "Capaccio."
+      ]
+    },
+    {
+      "block": 354,
+      "words": [
+        "dicussions"
+      ]
+    },
+    {
+      "block": 358,
+      "words": [
+        "evaluation"
+      ]
+    },
+    {
+      "block": 359,
+      "words": [
+        "Diariorum",
+        "Merkle"
+      ]
+    },
+    {
+      "block": 362,
+      "words": [
+        "Guidonibus,"
+      ]
+    },
+    {
+      "block": 369,
+      "words": [
+        "antagonize"
+      ]
+    },
+    {
+      "block": 372,
+      "words": [
+        "Coudret,",
+        "Coudret"
+      ]
+    },
+    {
+      "block": 373,
+      "words": [
+        "Rosi,"
+      ]
+    },
+    {
+      "block": 374,
+      "words": [
+        "rarum",
+        "insolitum.”"
+      ]
+    },
+    {
+      "block": 376,
+      "words": [
+        "Strozzio,"
+      ]
+    },
+    {
+      "block": 378,
+      "words": [
+        "unpredictable",
+        "quandry"
+      ]
+    },
+    {
+      "block": 379,
+      "words": [
+        "fructified"
+      ]
+    },
+    {
+      "block": 380,
+      "words": [
+        "Eugubio,"
+      ]
+    },
+    {
+      "block": 386,
+      "words": [
+        "spellbinds"
+      ]
+    },
+    {
+      "block": 388,
+      "words": [
+        "avisos",
+        "comienzan",
+        "predicar,"
+      ]
+    },
+    {
+      "block": 405,
+      "words": [
+        "Aversa,",
+        "Severin,"
+      ]
+    },
+    {
+      "block": 406,
+      "words": [
+        "trireme"
+      ]
+    },
+    {
+      "block": 412,
+      "words": [
+        "Calatagirona."
+      ]
+    },
+    {
+      "block": 433,
+      "words": [
+        "nueva",
+        "tierra."
+      ]
+    },
+    {
+      "block": 435,
+      "words": [
+        "Osorio,"
+      ]
+    },
+    {
+      "block": 437,
+      "words": [
+        "trireme."
+      ]
+    },
+    {
+      "block": 441,
+      "words": [
+        "Herennium",
+        "Botell,",
+        "Boter,",
+        "enrollment"
+      ]
+    },
+    {
+      "block": 444,
+      "words": [
+        "capitalized"
+      ]
+    },
+    {
+      "block": 447,
+      "words": [
+        "Osorio."
+      ]
+    },
+    {
+      "block": 448,
+      "words": [
+        "Suerus),"
+      ]
+    },
+    {
+      "block": 453,
+      "words": [
+        "Dragut,"
+      ]
+    },
+    {
+      "block": 456,
+      "words": [
+        "Zornoza.",
+        "Fanagnana,"
+      ]
+    },
+    {
+      "block": 457,
+      "words": [
+        "quartermasters"
+      ]
+    },
+    {
+      "block": 458,
+      "words": [
+        "Aphrodisium,"
+      ]
+    },
+    {
+      "block": 460,
+      "words": [
+        "Tolentino,",
+        "capitanes"
+      ]
+    },
+    {
+      "block": 461,
+      "words": [
+        "Dragut"
+      ]
+    },
+    {
+      "block": 470,
+      "words": [
+        "Goleta"
+      ]
+    },
+    {
+      "block": 471,
+      "words": [
+        "Adriani"
+      ]
+    },
+    {
+      "block": 477,
+      "words": [
+        "antedating"
+      ]
+    },
+    {
+      "block": 478,
+      "words": [
+        "advisory",
+        "Hispanicus),",
+        "ccxxv."
+      ]
+    },
+    {
+      "block": 482,
+      "words": [
+        "Aragonese"
+      ]
+    },
+    {
+      "block": 486,
+      "words": [
+        "Altovita"
+      ]
+    },
+    {
+      "block": 495,
+      "words": [
+        "Ugoletti"
+      ]
+    },
+    {
+      "block": 497,
+      "words": [
+        "appointee,"
+      ]
+    },
+    {
+      "block": 499,
+      "words": [
+        "Crescenzi,"
+      ]
+    },
+    {
+      "block": 501,
+      "words": [
+        "Fioribello]",
+        "storekeeper",
+        "Crescenzi"
+      ]
+    },
+    {
+      "block": 504,
+      "words": [
+        "quartana,"
+      ]
+    },
+    {
+      "block": 506,
+      "words": [
+        "Foscarari,"
+      ]
+    },
+    {
+      "block": 508,
+      "words": [
+        "Aegidius",
+        "Foscarari",
+        "Sanfelice,",
+        "Sanangelo"
+      ]
+    },
+    {
+      "block": 509,
+      "words": [
+        "“Tt"
+      ]
+    },
+    {
+      "block": 515,
+      "words": [
+        "Orlandini"
+      ]
+    },
+    {
+      "block": 518,
+      "words": [
+        "evidenly"
+      ]
+    },
+    {
+      "block": 519,
+      "words": [
+        "Salo,"
+      ]
+    },
+    {
+      "block": 525,
+      "words": [
+        "wholehearted",
+        "ofhcial"
+      ]
+    },
+    {
+      "block": 526,
+      "words": [
+        "Luco,",
+        "Luco"
+      ]
+    },
+    {
+      "block": 529,
+      "words": [
+        "Carvajal,"
+      ]
+    },
+    {
+      "block": 543,
+      "words": [
+        "merdas!"
+      ]
+    },
+    {
+      "block": 547,
+      "words": [
+        "provincialate"
+      ]
+    },
+    {
+      "block": 551,
+      "words": [
+        "firsthand"
+      ]
+    },
+    {
+      "block": 553,
+      "words": [
+        "Gropillo,"
+      ]
+    },
+    {
+      "block": 558,
+      "words": [
+        "schoolwork"
+      ]
+    },
+    {
+      "block": 579,
+      "words": [
+        "Giocomo",
+        "illegibility;"
+      ]
+    },
+    {
+      "block": 581,
+      "words": [
+        "Abiendo",
+        "entendido",
+        "conjeturas",
+        "Santidad,",
+        "celebrado",
+        "muchas",
+        "mucho",
+        "otros"
+      ],
+      "n": 37
+    },
+    {
+      "block": 582,
+      "words": [
+        "habil"
+      ]
+    },
+    {
+      "block": 587,
+      "words": [
+        "nevei"
+      ]
+    },
+    {
+      "block": 590,
+      "words": [
+        "evict"
+      ]
+    },
+    {
+      "block": 591,
+      "words": [
+        "donatio",
+        "successum"
+      ]
+    },
+    {
+      "block": 597,
+      "words": [
+        "reminiscing"
+      ]
+    },
+    {
+      "block": 599,
+      "words": [
+        "Sauli,"
+      ]
+    },
+    {
+      "block": 605,
+      "words": [
+        "variisque",
+        "mercatorum,"
+      ]
+    },
+    {
+      "block": 606,
+      "words": [
+        "Aegidius",
+        "Falconetta,"
+      ]
+    },
+    {
+      "block": 617,
+      "words": [
+        "scudo,"
+      ]
+    },
+    {
+      "block": 624,
+      "words": [
+        "bothersome"
+      ]
+    },
+    {
+      "block": 625,
+      "words": [
+        "Ricasoli,"
+      ]
+    },
+    {
+      "block": 628,
+      "words": [
+        "Manrique"
+      ]
+    },
+    {
+      "block": 639,
+      "words": [
+        "stabilized",
+        "phobia"
+      ]
+    },
+    {
+      "block": 640,
+      "words": [
+        "Durante",
+        "Duranti,",
+        "Alghero."
+      ]
+    },
+    {
+      "block": 642,
+      "words": [
+        "disrupted",
+        "Beccatello,"
+      ]
+    },
+    {
+      "block": 644,
+      "words": [
+        "breathtaking;"
+      ]
+    },
+    {
+      "block": 648,
+      "words": [
+        "Compostello,"
+      ]
+    },
+    {
+      "block": 654,
+      "words": [
+        "wholehearted"
+      ]
+    },
+    {
+      "block": 656,
+      "words": [
+        "cancellation"
+      ]
+    },
+    {
+      "block": 666,
+      "words": [
+        "Ginuccio,"
+      ]
+    },
+    {
+      "block": 668,
+      "words": [
+        "Navagero"
+      ]
+    },
+    {
+      "block": 676,
+      "words": [
+        "Cambrasi,"
+      ]
+    },
+    {
+      "block": 677,
+      "words": [
+        "decia",
+        "temblaba",
+        "cuando",
+        "querian",
+        "confesar"
+      ]
+    },
+    {
+      "block": 678,
+      "words": [
+        "datary,",
+        "Bacodio,"
+      ]
+    },
+    {
+      "block": 682,
+      "words": [
+        "Gropper",
+        "Siliceo"
+      ]
+    },
+    {
+      "block": 684,
+      "words": [
+        "aiute",
+        "forze).",
+        "synopsizes"
+      ]
+    },
+    {
+      "block": 689,
+      "words": [
+        "devilment,"
+      ]
+    },
+    {
+      "block": 692,
+      "words": [
+        "fucu",
+        "ornatu"
+      ]
+    },
+    {
+      "block": 700,
+      "words": [
+        "fuco",
+        "ornatu"
+      ]
+    },
+    {
+      "block": 711,
+      "words": [
+        "overdue"
+      ]
+    },
+    {
+      "block": 712,
+      "words": [
+        "caliber"
+      ]
+    },
+    {
+      "block": 720,
+      "words": [
+        "guaranties"
+      ]
+    },
+    {
+      "block": 724,
+      "words": [
+        "Bibona,",
+        "Bibona"
+      ]
+    },
+    {
+      "block": 737,
+      "words": [
+        "Billom,",
+        "Gaudan",
+        "Adriaenssens",
+        "Vink"
+      ]
+    },
+    {
+      "block": 740,
+      "words": [
+        "conscientiae."
+      ]
+    },
+    {
+      "block": 752,
+      "words": [
+        "Adriaenssens"
+      ]
+    },
+    {
+      "block": 754,
+      "words": [
+        "impasssioned,"
+      ]
+    },
+    {
+      "block": 765,
+      "words": [
+        "Trivulzio",
+        "Estrada,"
+      ]
+    },
+    {
+      "block": 767,
+      "words": [
+        "Adriani,",
+        "Gaudan."
+      ]
+    },
+    {
+      "block": 769,
+      "words": [
+        "Barma,"
+      ]
+    },
+    {
+      "block": 773,
+      "words": [
+        "involvement"
+      ]
+    },
+    {
+      "block": 774,
+      "words": [
+        "Barma,",
+        "Goyson,",
+        "Miron,",
+        "Vinck.]"
+      ]
+    },
+    {
+      "block": 776,
+      "words": [
+        "chicanery"
+      ]
+    },
+    {
+      "block": 781,
+      "words": [
+        "consecutae",
+        "triduo"
+      ]
+    },
+    {
+      "block": 783,
+      "words": [
+        "assistencies,"
+      ]
+    },
+    {
+      "block": 788,
+      "words": [
+        "invervention"
+      ]
+    },
+    {
+      "block": 798,
+      "words": [
+        "maneuvering"
+      ]
+    },
+    {
+      "block": 831,
+      "words": [
+        "mixtae,"
+      ]
+    },
+    {
+      "block": 840,
+      "words": [
+        "Rubiola",
+        "Loarti",
+        "chocarrero,"
+      ]
+    },
+    {
+      "block": 846,
+      "words": [
+        "underestimate"
+      ]
+    },
+    {
+      "block": 848,
+      "words": [
+        "Ribadeneirae"
+      ]
+    },
+    {
+      "block": 849,
+      "words": [
+        "Ribadeneirae"
+      ]
+    },
+    {
+      "block": 857,
+      "words": [
+        "maneuvering",
+        "Saraceni,",
+        "Ranuccio"
+      ]
+    },
+    {
+      "block": 869,
+      "words": [
+        "stabilize",
+        "visitators."
+      ]
+    },
+    {
+      "block": 870,
+      "words": [
+        "muneribus",
+        "episcopalibus",
+        "diversae.’®"
+      ]
+    },
+    {
+      "block": 880,
+      "words": [
+        "instructio",
+        "confessariorum??"
+      ]
+    },
+    {
+      "block": 885,
+      "words": [
+        "custodianship"
+      ]
+    },
+    {
+      "block": 890,
+      "words": [
+        "Pefia"
+      ]
+    },
+    {
+      "block": 897,
+      "words": [
+        "acrem",
+        "congressum,"
+      ]
+    },
+    {
+      "block": 908,
+      "words": [
+        "Pou"
+      ]
+    },
+    {
+      "block": 913,
+      "words": [
+        "Adorno,"
+      ]
+    },
+    {
+      "block": 917,
+      "words": [
+        "Bobadillae",
+        "Roderict."
+      ]
+    },
+    {
+      "block": 927,
+      "words": [
+        "Hippolyte"
+      ]
+    },
+    {
+      "block": 932,
+      "words": [
+        "Caprarolla,"
+      ]
+    },
+    {
+      "block": 933,
+      "words": [
+        "Perosa,"
+      ]
+    },
+    {
+      "block": 937,
+      "words": [
+        "Marloratus,"
+      ]
+    },
+    {
+      "block": 941,
+      "words": [
+        "haereticos",
+        "perturbatores.]"
+      ]
+    },
+    {
+      "block": 947,
+      "words": [
+        "Coudrey,",
+        "Caligari"
+      ]
+    },
+    {
+      "block": 949,
+      "words": [
+        "Caligari"
+      ]
+    },
+    {
+      "block": 956,
+      "words": [
+        "onetime",
+        "Perrenot",
+        "Granvelle,",
+        "Zwichem,",
+        "Walhain,"
+      ]
+    },
+    {
+      "block": 958,
+      "words": [
+        "Hammont,"
+      ]
+    },
+    {
+      "block": 959,
+      "words": [
+        "Leyen",
+        "Brendel,"
+      ]
+    },
+    {
+      "block": 972,
+      "words": [
+        "thein"
+      ]
+    },
+    {
+      "block": 974,
+      "words": [
+        "hidebound"
+      ]
+    },
+    {
+      "block": 975,
+      "words": [
+        "astutias",
+        "argutias).”"
+      ]
+    },
+    {
+      "block": 984,
+      "words": [
+        "seditiosos)."
+      ]
+    },
+    {
+      "block": 986,
+      "words": [
+        "candidacy"
+      ]
+    },
+    {
+      "block": 987,
+      "words": [
+        "Niquet,"
+      ]
+    },
+    {
+      "block": 990,
+      "words": [
+        "cooperative"
+      ]
+    },
+    {
+      "block": 994,
+      "words": [
+        "Molina,"
+      ]
+    },
+    {
+      "block": 1000,
+      "words": [
+        "Corna,"
+      ]
+    },
+    {
+      "block": 1002,
+      "words": [
+        "Cuvillon,"
+      ]
+    },
+    {
+      "block": 1021,
+      "words": [
+        "Bramberger,"
+      ]
+    },
+    {
+      "block": 1025,
+      "words": [
+        "proponents"
+      ]
+    },
+    {
+      "block": 1030,
+      "words": [
+        "synthesizing"
+      ]
+    },
+    {
+      "block": 1038,
+      "words": [
+        "Chenda,"
+      ]
+    },
+    {
+      "block": 1040,
+      "words": [
+        "Consultatio",
+        "laicts",
+        "porrigendo,",
+        "“Jakob",
+        "Laienkelches",
+        "Trient,”",
+        "katholische"
+      ]
+    },
+    {
+      "block": 1042,
+      "words": [
+        "pertinency."
+      ]
+    },
+    {
+      "block": 1044,
+      "words": [
+        "Sarpi"
+      ]
+    },
+    {
+      "block": 1046,
+      "words": [
+        "bedrock"
+      ]
+    },
+    {
+      "block": 1047,
+      "words": [
+        "Calino"
+      ]
+    },
+    {
+      "block": 1048,
+      "words": [
+        "jurisdictionis",
+        "primatu."
+      ]
+    },
+    {
+      "block": 1049,
+      "words": [
+        "proponent"
+      ]
+    },
+    {
+      "block": 1050,
+      "words": [
+        "postponment"
+      ]
+    },
+    {
+      "block": 1052,
+      "words": [
+        "Ugo",
+        "Boncompagni",
+        "Fachinetti,"
+      ]
+    },
+    {
+      "block": 1058,
+      "words": [
+        "stalemate"
+      ]
+    },
+    {
+      "block": 1063,
+      "words": [
+        "arthritis"
+      ]
+    },
+    {
+      "block": 1066,
+      "words": [
+        "Innsbruck,"
+      ]
+    },
+    {
+      "block": 1071,
+      "words": [
+        "Innsbruck."
+      ]
+    },
+    {
+      "block": 1072,
+      "words": [
+        "Navagiero,"
+      ]
+    },
+    {
+      "block": 1078,
+      "words": [
+        "rescindable"
+      ]
+    },
+    {
+      "block": 1081,
+      "words": [
+        "reformatione,"
+      ]
+    },
+    {
+      "block": 1089,
+      "words": [
+        "Jadra",
+        "Cornaro"
+      ]
+    },
+    {
+      "block": 1092,
+      "words": [
+        "sidelight",
+        "Rene"
+      ]
+    },
+    {
+      "block": 1106,
+      "words": [
+        "symbolorum,",
+        "mantained"
+      ]
+    },
+    {
+      "block": 1108,
+      "words": [
+        "pastorates."
+      ]
+    },
+    {
+      "block": 1109,
+      "words": [
+        "diriment",
+        "Navagiero"
+      ]
+    },
+    {
+      "block": 1110,
+      "words": [
+        "anathama"
+      ]
+    },
+    {
+      "block": 1126,
+      "words": [
+        "Lainu,",
+        "Celsi"
+      ]
+    },
+    {
+      "block": 1128,
+      "words": [
+        "innovate",
+        "Mello"
+      ]
+    },
+    {
+      "block": 1130,
+      "words": [
+        "Mello,"
+      ]
+    },
+    {
+      "block": 1131,
+      "words": [
+        "innovate"
+      ]
+    },
+    {
+      "block": 1142,
+      "words": [
+        "Hippolyte",
+        "Guerrin,"
+      ]
+    },
+    {
+      "block": 1146,
+      "words": [
+        "Miron,"
+      ]
+    },
+    {
+      "block": 1156,
+      "words": [
+        "Valderrabano,"
+      ]
+    },
+    {
+      "block": 1167,
+      "words": [
+        "Valderrabano."
+      ]
+    },
+    {
+      "block": 1170,
+      "words": [
+        "Perpifia,"
+      ]
+    },
+    {
+      "block": 1174,
+      "words": [
+        "highminded",
+        "seminarian",
+        "Cesarini,"
+      ]
+    },
+    {
+      "block": 1175,
+      "words": [
+        "gleeful"
+      ]
+    },
+    {
+      "block": 1176,
+      "words": [
+        "trative"
+      ]
+    },
+    {
+      "block": 1180,
+      "words": [
+        "Peruschi,"
+      ]
+    },
+    {
+      "block": 1183,
+      "words": [
+        "examinatons,"
+      ]
+    },
+    {
+      "block": 1185,
+      "words": [
+        "blueprint",
+        "Scholaris"
+      ]
+    },
+    {
+      "block": 1194,
+      "words": [
+        "assistencies",
+        "Commentariola,"
+      ]
+    },
+    {
+      "block": 1195,
+      "words": [
+        "Moluccas;",
+        "Angola,",
+        "Monomotapa,"
+      ]
+    },
+    {
+      "block": 1196,
+      "words": [
+        "Complenenta"
+      ]
+    },
+    {
+      "block": 1204,
+      "words": [
+        "Charisstmo",
+        "Xro.",
+        "fratello."
+      ]
+    },
+    {
+      "block": 1205,
+      "words": [
+        "clsss"
+      ]
+    },
+    {
+      "block": 1211,
+      "words": [
+        "erence",
+        "Godspeed"
+      ]
+    },
+    {
+      "block": 1212,
+      "words": [
+        "Monteacuto,"
+      ]
+    },
+    {
+      "block": 1213,
+      "words": [
+        "gruelling"
+      ]
+    },
+    {
+      "block": 1215,
+      "words": [
+        "Utquid",
+        "occupo?"
+      ]
+    },
+    {
+      "block": 1227,
+      "words": [
+        "Alessandrino,"
+      ]
+    },
+    {
+      "block": 1228,
+      "words": [
+        "Commentariola,"
+      ]
+    },
+    {
+      "block": 1235,
+      "words": [
+        "Botell"
+      ]
+    },
+    {
+      "block": 1236,
+      "words": [
+        "mortuary"
+      ]
+    },
+    {
+      "block": 1254,
+      "words": [
+        "Astudillo,"
+      ]
+    },
+    {
+      "block": 1256,
+      "words": [
+        "nineetenth"
+      ]
+    },
+    {
+      "block": 1257,
+      "words": [
+        "Montk,"
+      ]
+    },
+    {
+      "block": 1266,
+      "words": [
+        "Tostado",
+        "Basan"
+      ]
+    },
+    {
+      "block": 1270,
+      "words": [
+        "grabbed"
+      ]
+    },
+    {
+      "block": 1272,
+      "words": [
+        "Siervo"
+      ]
+    },
+    {
+      "block": 1274,
+      "words": [
+        "passageway,"
+      ]
+    },
+    {
+      "block": 1280,
+      "words": [
+        "Commentarii"
+      ]
+    },
+    {
+      "block": 1284,
+      "words": [
+        "tm"
+      ]
+    },
+    {
+      "block": 1285,
+      "words": [
+        "Monita",
+        "suscipiunt."
+      ]
+    },
+    {
+      "block": 1294,
+      "words": [
+        "Jimenez"
+      ]
+    },
+    {
+      "block": 1297,
+      "words": [
+        "Medinaceli,"
+      ]
+    },
+    {
+      "block": 1301,
+      "words": [
+        "veterinarians"
+      ]
+    },
+    {
+      "block": 1317,
+      "words": [
+        "attinet,",
+        "inferioribus.",
+        "conscientia,"
+      ]
+    },
+    {
+      "block": 1324,
+      "words": [
+        "praepositorum"
+      ]
+    }
+  ],
+  "corrections": 2,
+  "correctionList": [
+    {
+      "ocr": "fiir",
+      "reading": "fur"
+    },
+    {
+      "ocr": "inteliectual",
+      "reading": "intellectual"
+    }
+  ],
+  "text": "data/texts/ia-jameslaynezjesui00fich.txt",
+  "sha256": "828aa3e7389565ffe07a30b4d384880e1555d9fd8003f868437a207f08b5b5d4",
+  "checked": "2026-11-23",
+  "handFixes": [
+    {
+      "leaf": 16,
+      "page": null,
+      "ocr": "de la Compania de Jesus en la Asistencia de Espana, I, 74 f.",
+      "reading": "de la Compañia de Jesus en la Asistencia de Espana, I, 74 f."
+    },
+    {
+      "leaf": 18,
+      "page": null,
+      "ocr": "Numerous other details of Laynez’ pany history are barely dis-",
+      "reading": "Numerous other details of Laynez’ family history are barely dis-"
+    },
+    {
+      "leaf": 136,
+      "page": null,
+      "ocr": "Compania;) * y que serviré mas a nuestro Senor y 4 la iglesia y a",
+      "reading": "Compañía;) * y que serviré mas a nuestro Senor y 4 la iglesia y a"
+    },
+    {
+      "leaf": 213,
+      "page": null,
+      "ocr": "10 All of these are reproduced in Monumenta Lainit, VIII, 681-91.",
+      "reading": "10 All of these are reproduced in Monumenta Lainii, VIII, 681-91."
+    },
+    {
+      "leaf": 251,
+      "page": null,
+      "ocr": "4 Cf. the Appendix of Monumenta Lainit, III, 820.",
+      "reading": "4 Cf. the Appendix of Monumenta Lainii, III, 820."
+    },
+    {
+      "leaf": 281,
+      "page": null,
+      "ocr": "a Oe ee ee ae ee",
+      "reading": ""
+    },
+    {
+      "leaf": 6,
+      "page": null,
+      "ocr": "Beeb Re DE RY BOO. KR GO.",
+      "reading": "B. HERDER BOOK CO."
+    },
+    {
+      "leaf": 6,
+      "page": null,
+      "ocr": "15x & 17 SOUTH BROADWAY, ST. LOUIS 2, MO.",
+      "reading": "15 & 17 SOUTH BROADWAY, ST. LOUIS 2, MO."
+    },
+    {
+      "leaf": 6,
+      "page": null,
+      "ocr": "33 QUEEN SQUARE, LONDON, W. CG.",
+      "reading": "AND 33 QUEEN SQUARE, LONDON, W. C."
+    },
+    {
+      "leaf": 7,
+      "page": null,
+      "ocr": ">< Joannes J. Glennon, S.1",
+      "reading": "✠ Joannes J. Glennon, S.T.D."
+    },
+    {
+      "leaf": 7,
+      "page": null,
+      "ocr": "Sti. Ludovice",
+      "reading": "Sti. Ludovici"
+    },
+    {
+      "leaf": 8,
+      "page": null,
+      "ocr": "Sociis Mets",
+      "reading": "Sociis Meis"
+    },
+    {
+      "leaf": 10,
+      "page": null,
+      "ocr": "V/",
+      "reading": ""
+    },
+    {
+      "leaf": 11,
+      "page": null,
+      "ocr": "and speeches as edited by Hartmann Grisar in the Disputationes Tr1-",
+      "reading": "and speeches as edited by Hartmann Grisar in the Disputationes Tri-"
+    },
+    {
+      "leaf": 11,
+      "page": null,
+      "ocr": "illustrative material was provided by John F. X. McEwen, S.]., of",
+      "reading": "illustrative material was provided by John F. X. McEwen, S.J., of"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "Contents",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "CHAPTER",
+      "reading": "Contents"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "Vii",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "Ty lo-Paris, Frarice. .",
+      "reading": "I. To Paris, France . . . 1"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "II. Footloose in Europe .",
+      "reading": "II. Footloose in Europe . . . 17"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "III. The Start to Fame",
+      "reading": "III. The Start to Fame . . . 30"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "IV. Spiritual Whirlwind .",
+      "reading": "IV. Spiritual Whirlwind . . . 43"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "V. ‘The Pope’s Own Man",
+      "reading": "V. The Pope’s Own Man . . . 55"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "VI. In the City of Savonarola .",
+      "reading": "VI. In the City of Savonarola . . . 69"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "VII. In Peace and War",
+      "reading": "VII. In Peace and War . . . 83"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "VIII. At Trent Again",
+      "reading": "VIII. At Trent Again . . . 96"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "IX. Work and Conflict :",
+      "reading": "IX. Work and Conflict . . . 111"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "X. The Provincial and the Duchess",
+      "reading": "X. The Provincial and the Duchess . . . 123"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "XI. Threat of the Red Hat .",
+      "reading": "XI. Threat of the Red Hat . . . 137"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "XII. Laynez’ Papal Friend",
+      "reading": "XII. Laynez’ Papal Friend . . . 149"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "XIII. General of the Jesuits",
+      "reading": "XIII. General of the Jesuits . . . 163"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "XIV. His Brother, Christopher e$ uns",
+      "reading": "XIV. His Brother, Christopher . . . 174"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "XV. ‘Trouble with Cano and the French Pivement",
+      "reading": "XV. Trouble with Cano and the French Parlement . . . 189"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "XVI. The Third Sojourn at Trent .",
+      "reading": "XVI. The Third Sojourn at Trent . . . 204"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "XVII. The Chalice and the Episcopate .",
+      "reading": "XVII. The Chalice and the Episcopate . . . 216"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "XVIII. Defender of the Papacy .",
+      "reading": "XVIII. Defender of the Papacy . . . 229"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "XIX. The Last Year",
+      "reading": "XIX. The Last Year . . . 243"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "XX. The Last Month .",
+      "reading": "XX. The Last Month . . . 256"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "I. Ribadeneira’s Description of Laynez .",
+      "reading": "I. Ribadeneira’s Description of Laynez . . . 267"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "IJ. Laynez’ Three Narrow Escapes from Drowning .",
+      "reading": "II. Laynez’ Three Narrow Escapes from Drowning . . . 269"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "III. Salmeron’s Appreciation of Laynez :",
+      "reading": "III. Salmeron’s Appreciation of Laynez . . . 271"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "IV. How to Use the Voice in Public Speaking .",
+      "reading": "IV. How to Use the Voice in Public Speaking . . . 272"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "V. Advice to a Military Leader ae.",
+      "reading": "V. Advice to a Military Leader . . . 276"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "VI. Practical Advice for Boys in Jesuit Schools .",
+      "reading": "VI. Practical Advice for Boys in Jesuit Schools . . . 279"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "VII. Letter to the Jesuits in India .",
+      "reading": "VII. Letter to the Jesuits in India . . . 282"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "Index ;",
+      "reading": "Index . . . 287"
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "pain a Aa OF |",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "wh,",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "- 149",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "- 174",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": ". 204",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": ". 216",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "1220",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "- 243",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": ". 256",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "207",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": ". 269",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "25271",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "272",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": ". 276",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "ado",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "LES:",
+      "reading": ""
+    },
+    {
+      "leaf": 12,
+      "page": null,
+      "ocr": "p27",
+      "reading": ""
+    },
+    {
+      "leaf": 10,
+      "page": null,
+      "ocr": "Preface",
+      "reading": "Preface",
+      "heading": true
+    },
+    {
+      "leaf": 10,
+      "page": null,
+      "ocr": "From one point of view",
+      "reading": "FROM one point of view"
+    },
+    {
+      "leaf": 14,
+      "page": null,
+      "ocr": "To Paris, France",
+      "reading": "To Paris, France",
+      "heading": true
+    },
+    {
+      "leaf": 14,
+      "page": null,
+      "ocr": "An enthusiastic biographer",
+      "reading": "AN enthusiastic biographer"
+    },
+    {
+      "leaf": 30,
+      "page": null,
+      "ocr": "Gori A Eon Ree iil",
+      "reading": "CHAPTER II"
+    },
+    {
+      "leaf": 30,
+      "page": null,
+      "ocr": "Footloose in Europe",
+      "reading": "Footloose in Europe",
+      "heading": true
+    },
+    {
+      "leaf": 30,
+      "page": null,
+      "ocr": "Laynez and his fellow travelers",
+      "reading": "LAYNEZ and his fellow travelers"
+    },
+    {
+      "leaf": 43,
+      "page": null,
+      "ocr": "CHUA Pi Tea ed",
+      "reading": "CHAPTER III"
+    },
+    {
+      "leaf": 43,
+      "page": null,
+      "ocr": "The Start to Fame",
+      "reading": "The Start to Fame",
+      "heading": true
+    },
+    {
+      "leaf": 43,
+      "page": null,
+      "ocr": "On THAT bleak",
+      "reading": "ON THAT bleak"
+    },
+    {
+      "leaf": 56,
+      "page": null,
+      "ocr": "Spiritual Whirlwind",
+      "reading": "Spiritual Whirlwind",
+      "heading": true
+    },
+    {
+      "leaf": 56,
+      "page": null,
+      "ocr": "Tue fame of Ignatius",
+      "reading": "THE fame of Ignatius"
+    },
+    {
+      "leaf": 68,
+      "page": null,
+      "ocr": "GEA PPG Rev,",
+      "reading": "CHAPTER V"
+    },
+    {
+      "leaf": 68,
+      "page": null,
+      "ocr": "The Pope’s Own Man",
+      "reading": "The Pope’s Own Man",
+      "heading": true
+    },
+    {
+      "leaf": 68,
+      "page": null,
+      "ocr": "Tue famous Council",
+      "reading": "THE famous Council"
+    },
+    {
+      "leaf": 82,
+      "page": null,
+      "ocr": "GAA Pele Ros VoL",
+      "reading": "CHAPTER VI"
+    },
+    {
+      "leaf": 82,
+      "page": null,
+      "ocr": "In the City of Savonarola",
+      "reading": "In the City of Savonarola",
+      "heading": true
+    },
+    {
+      "leaf": 96,
+      "page": null,
+      "ocr": "Onis hyelde 1. Oak Ve]",
+      "reading": "CHAPTER VII"
+    },
+    {
+      "leaf": 96,
+      "page": null,
+      "ocr": "In Peace and War",
+      "reading": "In Peace and War",
+      "heading": true
+    },
+    {
+      "leaf": 96,
+      "page": null,
+      "ocr": "To THE casual observer",
+      "reading": "TO THE casual observer"
+    },
+    {
+      "leaf": 109,
+      "page": null,
+      "ocr": "COBWASP Ske Rae lal",
+      "reading": "CHAPTER VIII"
+    },
+    {
+      "leaf": 109,
+      "page": null,
+      "ocr": "At Trent Again",
+      "reading": "At Trent Again",
+      "heading": true
+    },
+    {
+      "leaf": 124,
+      "page": null,
+      "ocr": "GaEPAS Pe licka Ra Xs.",
+      "reading": "CHAPTER IX"
+    },
+    {
+      "leaf": 124,
+      "page": null,
+      "ocr": "Work and Conflict",
+      "reading": "Work and Conflict",
+      "heading": true
+    },
+    {
+      "leaf": 140,
+      "page": null,
+      "ocr": "GEASS OR RIX",
+      "reading": "CHAPTER X"
+    },
+    {
+      "leaf": 140,
+      "page": null,
+      "ocr": "The Provincial and the Duchess",
+      "reading": "The Provincial and the Duchess",
+      "heading": true
+    },
+    {
+      "leaf": 154,
+      "page": null,
+      "ocr": "Threat of the Red Hat",
+      "reading": "Threat of the Red Hat",
+      "heading": true
+    },
+    {
+      "leaf": 154,
+      "page": null,
+      "ocr": "Ir was the notable",
+      "reading": "IT WAS the notable"
+    },
+    {
+      "leaf": 166,
+      "page": null,
+      "ocr": "Laynez’ Papal Friend",
+      "reading": "Laynez’ Papal Friend",
+      "heading": true
+    },
+    {
+      "leaf": 166,
+      "page": null,
+      "ocr": "As FAR as the Society",
+      "reading": "AS FAR as the Society"
+    },
+    {
+      "leaf": 180,
+      "page": null,
+      "ocr": "Gen Ae Pale Regex LT",
+      "reading": "CHAPTER XIII"
+    },
+    {
+      "leaf": 180,
+      "page": null,
+      "ocr": "General of the fesurts",
+      "reading": "General of the Jesuits",
+      "heading": true
+    },
+    {
+      "leaf": 180,
+      "page": null,
+      "ocr": "Durinc the first few months",
+      "reading": "DURING the first few months"
+    },
+    {
+      "leaf": 183,
+      "page": null,
+      "ocr": "—_—— a",
+      "reading": ""
+    },
+    {
+      "leaf": 193,
+      "page": null,
+      "ocr": "GHA P TER XLV",
+      "reading": "CHAPTER XIV"
+    },
+    {
+      "leaf": 193,
+      "page": null,
+      "ocr": "is Brother, Christopher",
+      "reading": "His Brother, Christopher",
+      "heading": true
+    },
+    {
+      "leaf": 193,
+      "page": null,
+      "ocr": "OnE of the disagreeable",
+      "reading": "ONE of the disagreeable"
+    },
+    {
+      "leaf": 208,
+      "page": null,
+      "ocr": "(ACP eek RXV",
+      "reading": "CHAPTER XV"
+    },
+    {
+      "leaf": 208,
+      "page": null,
+      "ocr": "Trouble with Cano and the French",
+      "reading": "Trouble with Cano and the French Parlement",
+      "heading": true
+    },
+    {
+      "leaf": 208,
+      "page": null,
+      "ocr": "Parlement",
+      "reading": ""
+    },
+    {
+      "leaf": 208,
+      "page": null,
+      "ocr": "For A brief moment",
+      "reading": "FOR A brief moment"
+    },
+    {
+      "leaf": 223,
+      "page": null,
+      "ocr": "CHAR TER, Xvid",
+      "reading": "CHAPTER XVI"
+    },
+    {
+      "leaf": 223,
+      "page": null,
+      "ocr": "The Third Sojourn at Trent",
+      "reading": "The Third Sojourn at Trent",
+      "heading": true
+    },
+    {
+      "leaf": 235,
+      "page": null,
+      "ocr": "CHAP PER XV AT",
+      "reading": "CHAPTER XVII"
+    },
+    {
+      "leaf": 235,
+      "page": null,
+      "ocr": "The Chalice and the Episcopate",
+      "reading": "The Chalice and the Episcopate",
+      "heading": true
+    },
+    {
+      "leaf": 235,
+      "page": null,
+      "ocr": "WE May be sure",
+      "reading": "WE MAY be sure"
+    },
+    {
+      "leaf": 248,
+      "page": null,
+      "ocr": "CWA Pall ER On eT",
+      "reading": "CHAPTER XVIII"
+    },
+    {
+      "leaf": 248,
+      "page": null,
+      "ocr": "Defender of the Papacy",
+      "reading": "Defender of the Papacy",
+      "heading": true
+    },
+    {
+      "leaf": 248,
+      "page": null,
+      "ocr": "Ir 1s almost axiomatic",
+      "reading": "IT IS almost axiomatic"
+    },
+    {
+      "leaf": 262,
+      "page": null,
+      "ocr": "COPPA Cali Ra NGTEX",
+      "reading": "CHAPTER XIX"
+    },
+    {
+      "leaf": 262,
+      "page": null,
+      "ocr": "The Last Year",
+      "reading": "The Last Year",
+      "heading": true
+    },
+    {
+      "leaf": 275,
+      "page": null,
+      "ocr": "GREASE ST. ba Rapes",
+      "reading": "CHAPTER XX"
+    },
+    {
+      "leaf": 275,
+      "page": null,
+      "ocr": "The Last Month",
+      "reading": "The Last Month",
+      "heading": true
+    },
+    {
+      "leaf": 275,
+      "page": null,
+      "ocr": "Ir 1s doubtful",
+      "reading": "IT IS doubtful"
+    },
+    {
+      "leaf": 284,
+      "page": null,
+      "ocr": "Appendixes",
+      "reading": "Appendixes",
+      "heading": true
+    },
+    {
+      "leaf": 286,
+      "page": null,
+      "ocr": "Ribadeneira’s Description of Laynez",
+      "reading": "Ribadeneira’s Description of Laynez",
+      "heading": true
+    },
+    {
+      "leaf": 288,
+      "page": null,
+      "ocr": "That",
+      "reading": "II"
+    },
+    {
+      "leaf": 288,
+      "page": null,
+      "ocr": "Laynez’ Three Narrow Escapes",
+      "reading": "Laynez’ Three Narrow Escapes from Drowning",
+      "heading": true
+    },
+    {
+      "leaf": 288,
+      "page": null,
+      "ocr": "from Drowning",
+      "reading": ""
+    },
+    {
+      "leaf": 290,
+      "page": null,
+      "ocr": "II!",
+      "reading": "III"
+    },
+    {
+      "leaf": 290,
+      "page": null,
+      "ocr": "Salmeron’s Appreciation of Laynez",
+      "reading": "Salmeron’s Appreciation of Laynez",
+      "heading": true
+    },
+    {
+      "leaf": 291,
+      "page": null,
+      "ocr": "LV,",
+      "reading": "IV"
+    },
+    {
+      "leaf": 291,
+      "page": null,
+      "ocr": "How to Use the Voice in Public",
+      "reading": "How to Use the Voice in Public Speaking",
+      "heading": true
+    },
+    {
+      "leaf": 291,
+      "page": null,
+      "ocr": "Speaking",
+      "reading": ""
+    },
+    {
+      "leaf": 291,
+      "page": null,
+      "ocr": "To OBTAIN the right",
+      "reading": "TO OBTAIN the right"
+    },
+    {
+      "leaf": 295,
+      "page": null,
+      "ocr": "Advice to a Military Leader",
+      "reading": "Advice to a Military Leader",
+      "heading": true
+    },
+    {
+      "leaf": 295,
+      "page": null,
+      "ocr": "ILLustrious Sir",
+      "reading": "ILLUSTRIOUS Sir"
+    },
+    {
+      "leaf": 298,
+      "page": null,
+      "ocr": "Vi",
+      "reading": "VI"
+    },
+    {
+      "leaf": 298,
+      "page": null,
+      "ocr": "Practical Advice for Boys in fesuit",
+      "reading": "Practical Advice for Boys in Jesuit Schools",
+      "heading": true
+    },
+    {
+      "leaf": 298,
+      "page": null,
+      "ocr": "Schools",
+      "reading": ""
+    },
+    {
+      "leaf": 301,
+      "page": null,
+      "ocr": "Letter to the Jesuits in India",
+      "reading": "Letter to the Jesuits in India",
+      "heading": true
+    },
+    {
+      "leaf": 301,
+      "page": null,
+      "ocr": "My pear Brothers",
+      "reading": "MY DEAR Brothers"
+    },
+    {
+      "leaf": 14,
+      "page": null,
+      "ocr": "CHAPTER I",
+      "reading": "CHAPTER I"
+    },
+    {
+      "leaf": 56,
+      "page": null,
+      "ocr": "CHAPTER IV",
+      "reading": "CHAPTER IV"
+    },
+    {
+      "leaf": 154,
+      "page": null,
+      "ocr": "CHAPTER XI",
+      "reading": "CHAPTER XI"
+    },
+    {
+      "leaf": 166,
+      "page": null,
+      "ocr": "CHAPTER XII",
+      "reading": "CHAPTER XII"
+    },
+    {
+      "leaf": 286,
+      "page": null,
+      "ocr": "APPENDIXES",
+      "reading": "APPENDIXES"
+    },
+    {
+      "leaf": 286,
+      "page": null,
+      "ocr": "I",
+      "reading": "I"
+    },
+    {
+      "leaf": 301,
+      "page": null,
+      "ocr": "VII",
+      "reading": "VII"
+    },
+    {
+      "leaf": 6,
+      "page": null,
+      "ocr": "JAMES LAYNEZ",
+      "reading": "JAMES LAYNEZ"
+    },
+    {
+      "leaf": 6,
+      "page": null,
+      "ocr": "1944",
+      "reading": "1944"
+    },
+    {
+      "leaf": 18,
+      "page": null,
+      "ocr": "_ If there was any disgrace or any disedification attached to a Jewish",
+      "reading": "If there was any disgrace or any disedification attached to a Jewish"
+    },
+    {
+      "leaf": 18,
+      "page": null,
+      "ocr": "the burdensome limitations that had been put upon his race.” > But",
+      "reading": "the burdensome limitations that had been put upon his race.” But"
+    },
+    {
+      "leaf": 18,
+      "page": null,
+      "ocr": "Catholic life. }",
+      "reading": "Catholic life."
+    },
+    {
+      "leaf": 20,
+      "page": null,
+      "ocr": "TO PARIS, FRANCE ~",
+      "reading": ""
+    },
+    {
+      "leaf": 28,
+      "page": null,
+      "ocr": "TO PARIS, FRANCE 1B",
+      "reading": ""
+    },
+    {
+      "leaf": 30,
+      "page": null,
+      "ocr": "Ly |",
+      "reading": ""
+    },
+    {
+      "leaf": 41,
+      "page": null,
+      "ocr": "forty days they would pray, meditate, and do~penance, and at the",
+      "reading": "forty days they would pray, meditate, and do penance, and at the"
+    },
+    {
+      "leaf": 46,
+      "page": null,
+      "ocr": "_for the sick, and begged for the poor. As the others, they spoke Italian",
+      "reading": "for the sick, and begged for the poor. As the others, they spoke Italian"
+    },
+    {
+      "leaf": 46,
+      "page": null,
+      "ocr": "had entertained a saint in its midst. |",
+      "reading": "had entertained a saint in its midst."
+    },
+    {
+      "leaf": 56,
+      "page": null,
+      "ocr": "This 1s less true of",
+      "reading": "This is less true of"
+    },
+    {
+      "leaf": 57,
+      "page": null,
+      "ocr": "who were absent, with the exception of Bobadilla, had left their |",
+      "reading": "who were absent, with the exception of Bobadilla, had left their"
+    },
+    {
+      "leaf": 58,
+      "page": null,
+      "ocr": "SPIRITUAL WHIRLWIND 4m",
+      "reading": ""
+    },
+    {
+      "leaf": 63,
+      "page": null,
+      "ocr": "50 JAMES LAYNEZ_",
+      "reading": ""
+    },
+    {
+      "leaf": 73,
+      "page": null,
+      "ocr": "logians were not entirely sound, so the Cardinal [Cervini] suggested |",
+      "reading": "logians were not entirely sound, so the Cardinal [Cervini] suggested"
+    },
+    {
+      "leaf": 75,
+      "page": null,
+      "ocr": "because it 1s the one which Laynez had in mind when he gave his own",
+      "reading": "because it is the one which Laynez had in mind when he gave his own"
+    },
+    {
+      "leaf": 75,
+      "page": null,
+      "ocr": "present. }",
+      "reading": "present."
+    },
+    {
+      "leaf": 76,
+      "page": null,
+      "ocr": "such; and this 1s false.”",
+      "reading": "such; and this is false.”"
+    },
+    {
+      "leaf": 77,
+      "page": null,
+      "ocr": "The first servitor is an example of the way the Protestant theory of |",
+      "reading": "The first servitor is an example of the way the Protestant theory of"
+    },
+    {
+      "leaf": 81,
+      "page": null,
+      "ocr": "three hours or more at a time.” ® |",
+      "reading": "three hours or more at a time.” 9"
+    },
+    {
+      "leaf": 81,
+      "page": null,
+      "ocr": "quest of Alphonsus.” *° |",
+      "reading": "quest of Alphonsus.” 10"
+    },
+    {
+      "leaf": 82,
+      "page": null,
+      "ocr": "~ to Rome. Paul III wished to leave the members of the Council free",
+      "reading": "to Rome. Paul III wished to leave the members of the Council free"
+    },
+    {
+      "leaf": 84,
+      "page": null,
+      "ocr": "for four hours, and | reported the results to Cardinal Cervini. June 4,",
+      "reading": "for four hours, and I reported the results to Cardinal Cervini. June 4,"
+    },
+    {
+      "leaf": 86,
+      "page": null,
+      "ocr": "that there were still numerous devoted followers of the great Domin1-",
+      "reading": "that there were still numerous devoted followers of the great Domini-"
+    },
+    {
+      "leaf": 91,
+      "page": null,
+      "ocr": "is to preach.” |",
+      "reading": "is to preach.”"
+    },
+    {
+      "leaf": 92,
+      "page": null,
+      "ocr": "these men. ‘To them^he showed the papal bull confirming the Society",
+      "reading": "these men. To them he showed the papal bull confirming the Society"
+    },
+    {
+      "leaf": 94,
+      "page": null,
+      "ocr": "_ It was the custom at Naples on New Year’s Day for some representa-",
+      "reading": "It was the custom at Naples on New Year’s Day for some representa-"
+    },
+    {
+      "leaf": 107,
+      "page": null,
+      "ocr": "heard the confessions not only of caballeros and_capitanes but also of",
+      "reading": "heard the confessions not only of caballeros and capitanes but also of"
+    },
+    {
+      "leaf": 110,
+      "page": null,
+      "ocr": "In the early years of the Society 1t was Laynez who pointed out to",
+      "reading": "In the early years of the Society it was Laynez who pointed out to"
+    },
+    {
+      "leaf": 111,
+      "page": null,
+      "ocr": "98 | JAMES LAYNEZ",
+      "reading": ""
+    },
+    {
+      "leaf": 111,
+      "page": null,
+      "ocr": "(Textus Hispanicus), U1, cxlviii",
+      "reading": "(Textus Hispanicus), II, cxlviii"
+    },
+    {
+      "leaf": 117,
+      "page": null,
+      "ocr": "ter stay in this hot oven. So that night he slept on a chest, and John and ~",
+      "reading": "ter stay in this hot oven. So that night he slept on a chest, and John and"
+    },
+    {
+      "leaf": 124,
+      "page": null,
+      "ocr": "city until April 21, he spent the intervening months in visiting 1m-",
+      "reading": "city until April 21, he spent the intervening months in visiting im-"
+    },
+    {
+      "leaf": 126,
+      "page": null,
+      "ocr": "follow their own will rather than that of the Superior, Father E1-",
+      "reading": "follow their own will rather than that of the Superior, Father El-"
+    },
+    {
+      "leaf": 143,
+      "page": null,
+      "ocr": "whether it is a sin because it 1s prohibited, or rather prohibited be-",
+      "reading": "whether it is a sin because it is prohibited, or rather prohibited be-"
+    },
+    {
+      "leaf": 143,
+      "page": null,
+      "ocr": "law; (d) what kind of sin and how harmful it 1s; (e) what are the most",
+      "reading": "law; (d) what kind of sin and how harmful it is; (e) what are the most"
+    },
+    {
+      "leaf": 145,
+      "page": null,
+      "ocr": "ness solely for the sake of making money. But he 1s willing to admit",
+      "reading": "ness solely for the sake of making money. But he is willing to admit"
+    },
+    {
+      "leaf": 145,
+      "page": null,
+      "ocr": "man may judge whether any particular kind of exchange 1s illicit or",
+      "reading": "man may judge whether any particular kind of exchange is illicit or"
+    },
+    {
+      "leaf": 150,
+      "page": null,
+      "ocr": "_ ess, who was steadfast in her determination to keep Father Laynez be-",
+      "reading": "ess, who was steadfast in her determination to keep Father Laynez be-"
+    },
+    {
+      "leaf": 152,
+      "page": null,
+      "ocr": "_the scandalous lives of the clergy, almost all of whom had concubines.\"",
+      "reading": "the scandalous lives of the clergy, almost all of whom had concubines.\""
+    },
+    {
+      "leaf": 158,
+      "page": null,
+      "ocr": "_ division. Graces and spiritual faculties are infused or conceded to men",
+      "reading": "division. Graces and spiritual faculties are infused or conceded to men"
+    },
+    {
+      "leaf": 165,
+      "page": null,
+      "ocr": "148 _ JAMES LAYNEZ",
+      "reading": ""
+    },
+    {
+      "leaf": 165,
+      "page": null,
+      "ocr": "~ of overwork. Almost as though he were bodily sympathetic with Ig-",
+      "reading": "of overwork. Almost as though he were bodily sympathetic with Ig-"
+    },
+    {
+      "leaf": 168,
+      "page": null,
+      "ocr": "Father Ignatius.” }",
+      "reading": "Father Ignatius.” 1"
+    },
+    {
+      "leaf": 168,
+      "page": null,
+      "ocr": "those of Laynez. They had seen the despotism occurring 1n religious",
+      "reading": "those of Laynez. They had seen the despotism occurring in religious"
+    },
+    {
+      "leaf": 174,
+      "page": null,
+      "ocr": "promised a long delay. |",
+      "reading": "promised a long delay."
+    },
+    {
+      "leaf": 184,
+      "page": null,
+      "ocr": "what they wished on this point. |",
+      "reading": "what they wished on this point."
+    },
+    {
+      "leaf": 187,
+      "page": null,
+      "ocr": "understand that they would be perfectly free in fixing the term of |",
+      "reading": "understand that they would be perfectly free in fixing the term of"
+    },
+    {
+      "leaf": 187,
+      "page": null,
+      "ocr": "we remain your obedient sons and are most ready to do whatever You1",
+      "reading": "we remain your obedient sons and are most ready to do whatever Your"
+    },
+    {
+      "leaf": 196,
+      "page": null,
+      "ocr": "_ law, John Hurtado de Mendoza. In March, 1561, Nadal reported to",
+      "reading": "law, John Hurtado de Mendoza. In March, 1561, Nadal reported to"
+    },
+    {
+      "leaf": 196,
+      "page": null,
+      "ocr": "S. Franciscus Borgia, U1, 590",
+      "reading": "S. Franciscus Borgia, III, 590"
+    },
+    {
+      "leaf": 213,
+      "page": null,
+      "ocr": "role in France. |",
+      "reading": "role in France."
+    },
+    {
+      "leaf": 214,
+      "page": null,
+      "ocr": "_THE COLLOQUY OF POISSY",
+      "reading": "THE COLLOQUY OF POISSY"
+    },
+    {
+      "leaf": 218,
+      "page": null,
+      "ocr": "PEODICIS.<.< .",
+      "reading": "problems. . . ."
+    },
+    {
+      "leaf": 229,
+      "page": null,
+      "ocr": "Council of Trentp>amust",
+      "reading": "Council of Trent"
+    },
+    {
+      "leaf": 230,
+      "page": null,
+      "ocr": "barely indicates the start of a mighty Jesuit tradition 1n theological astuteness.",
+      "reading": "barely indicates the start of a mighty Jesuit tradition in theological astuteness."
+    },
+    {
+      "leaf": 232,
+      "page": null,
+      "ocr": "Cardinal Charles Borromeo, young nephew and secretary to His Hol1-",
+      "reading": "Cardinal Charles Borromeo, young nephew and secretary to His Holi-"
+    },
+    {
+      "leaf": 233,
+      "page": null,
+      "ocr": "_ external pomp, thought the matter too trivial to argue about, and",
+      "reading": "external pomp, thought the matter too trivial to argue about, and"
+    },
+    {
+      "leaf": 237,
+      "page": null,
+      "ocr": "~",
+      "reading": ""
+    },
+    {
+      "leaf": 244,
+      "page": null,
+      "ocr": "On December 9g, Laynez rose",
+      "reading": "On December 9, Laynez rose"
+    },
+    {
+      "leaf": 250,
+      "page": null,
+      "ocr": "continue until he had completely spoken his mind on_all the articles,",
+      "reading": "continue until he had completely spoken his mind on all the articles,"
+    },
+    {
+      "leaf": 258,
+      "page": null,
+      "ocr": "APPROBATION OF THE SOCIETY OF JESUS |",
+      "reading": "APPROBATION OF THE SOCIETY OF JESUS"
+    },
+    {
+      "leaf": 259,
+      "page": null,
+      "ocr": "_ said in part:",
+      "reading": "said in part:"
+    },
+    {
+      "leaf": 261,
+      "page": null,
+      "ocr": "tory statement which Laynez had appended was actually improved |",
+      "reading": "tory statement which Laynez had appended was actually improved"
+    },
+    {
+      "leaf": 262,
+      "page": null,
+      "ocr": "ing the problems of Germany. _",
+      "reading": "ing the problems of Germany."
+    },
+    {
+      "leaf": 263,
+      "page": null,
+      "ocr": "much good. |",
+      "reading": "much good. 1"
+    },
+    {
+      "leaf": 265,
+      "page": null,
+      "ocr": "‘There can be no doubt that the influence of both John Baptist R1-",
+      "reading": "There can be no doubt that the influence of both John Baptist Ri-"
+    },
+    {
+      "leaf": 270,
+      "page": null,
+      "ocr": "commission to investigate them all.1t When he had received the",
+      "reading": "commission to investigate them all.11 When he had received the"
+    },
+    {
+      "leaf": 277,
+      "page": null,
+      "ocr": "—_—— a a a",
+      "reading": ""
+    },
+    {
+      "leaf": 278,
+      "page": null,
+      "ocr": "S. Franciscus Borgia, U1, 725",
+      "reading": "S. Franciscus Borgia, III, 725"
+    },
+    {
+      "leaf": 280,
+      "page": null,
+      "ocr": "Complemenia Polanci, 1, }33.",
+      "reading": "Complementa Polanci, I, 533."
+    },
+    {
+      "leaf": 296,
+      "page": null,
+      "ocr": "APPENDIXES 27m",
+      "reading": ""
+    },
+    {
+      "leaf": 303,
+      "page": null,
+      "ocr": "labor. |",
+      "reading": "labor."
+    },
+    {
+      "leaf": 145,
+      "page": null,
+      "ocr": "But 1f a",
+      "reading": "But if a"
+    }
+  ],
+  "verifiedWords": [
+    "Polanco",
+    "Lainii",
+    "Grisar",
+    "Broet",
+    "Salmeronis",
+    "Domenech",
+    "Freux",
+    "Seripando",
+    "Pallavicini",
+    "Ortiz",
+    "Camara",
+    "Lippomani",
+    "Guerrero",
+    "Cogordan",
+    "Parlement",
+    "Polanci",
+    "Zacchinus",
+    "Complementa",
+    "Poissy",
+    "Azagra",
+    "Madruzzi",
+    "Palacin",
+    "Carpi",
+    "Otello",
+    "Ignatiana",
+    "Boero",
+    "Siguenza",
+    "Landivar",
+    "Pelletier",
+    "scudi",
+    "Grimani",
+    "Coronel",
+    "Hurtado",
+    "subsidy",
+    "Kessel",
+    "Theiner",
+    "Reumano",
+    "Soria",
+    "Angunciana",
+    "Santacruz",
+    "Canisii",
+    "confrere",
+    "Postell",
+    "Manares",
+    "paedagogica",
+    "forthright",
+    "Rebiba",
+    "Vaz",
+    "Commendone",
+    "Delfino",
+    "Brodrick",
+    "Drascovitz",
+    "Aurelianensis",
+    "usable",
+    "Footloose",
+    "Moriscos",
+    "Eguia"
+  ],
+  "readGate": {
+    "gate": 0.995,
+    "words": 110708,
+    "unknown": 473,
+    "readRate": 0.9957,
+    "scorer": "tools/transcribe_scan.py; vocabulary of the proofread hosted texts in data/texts (ia-* excluded)",
+    "engine": "archive.org djvu.xml OCR, with tesseract 5.3.4 (eng+lat+ita, image scale 1) chosen per line where it reads more words",
+    "lineChoices": {
+      "archive.org": 10333,
+      "tesseract": 86
+    },
+    "leavesScored": [
+      5,
+      304
+    ],
+    "omitted": [
+      {
+        "what": "the index",
+        "leaves": [
+          306,
+          318
+        ],
+        "pages": "287-299"
+      }
+    ],
+    "blankLeaves": [
+      9,
+      13,
+      182
+    ],
+    "handFixes": 217,
+    "verifiedWords": 57,
+    "foreignWords": {},
+    "measured": "2026-11-23"
+  },
+  "omitted": [
+    {
+      "what": "the index",
+      "leaves": [
+        306,
+        318
+      ],
+      "pages": "287-299"
+    }
+  ],
+  "verseLeaves": [
+    [
+      6,
+      8
+    ],
+    [
+      12,
+      12
+    ]
+  ]
+}

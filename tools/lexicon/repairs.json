@@ -1,5 +1,5 @@
 {
- "count": 322,
+ "count": 339,
  "repairs": [
   {
    "ocr": "3\\4addox",
@@ -30,6 +30,39 @@
     {
      "edition": "ia-mysteryofiniquit00furf",
      "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "_for",
+   "reading": "for",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "_THE",
+   "reading": "THE",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "_the",
+   "reading": "the",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]
@@ -563,6 +596,39 @@
    ]
   },
   {
+   "ocr": "Compania",
+   "reading": "Compañia",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Compania",
+   "reading": "Compañía",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Complemenia",
+   "reading": "Complementa",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "Compostel",
    "reading": "Compostella",
    "from": [
@@ -772,12 +838,34 @@
    ]
   },
   {
+   "ocr": "Domin1",
+   "reading": "Domini",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "donnation",
    "reading": "demnation",
    "from": [
     {
      "edition": "ia-robertlouisstev00nicogoog",
      "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Durinc",
+   "reading": "DURING",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]
@@ -987,6 +1075,17 @@
     {
      "edition": "ia-butler-1842-eulalia",
      "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "fesurts",
+   "reading": "Jesuits",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]
@@ -1383,6 +1482,17 @@
     {
      "edition": "ia-robertlouisstev00nicogoog",
      "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Hol1",
+   "reading": "Holi",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]
@@ -1844,6 +1954,17 @@
    ]
   },
   {
+   "ocr": "Lainit",
+   "reading": "Lainii",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "Lcgrtt",
    "reading": "Legat",
    "from": [
@@ -1932,6 +2053,17 @@
    ]
   },
   {
+   "ocr": "Ludovice",
+   "reading": "Ludovici",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "luuere",
    "reading": "ludere",
    "from": [
@@ -1993,6 +2125,17 @@
     {
      "edition": "ia-thackeray-1890-eulalia",
      "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Mets",
+   "reading": "Meis",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]
@@ -2411,6 +2554,17 @@
     {
      "edition": "ia-butler-1842-eulalia",
      "record": "docs/research/butler-eulalia-1842-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "pear",
+   "reading": "DEAR",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]
@@ -3257,6 +3411,28 @@
    ]
   },
   {
+   "ocr": "Tr1",
+   "reading": "Tri",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "Trentp>amust",
+   "reading": "Trent",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
    "ocr": "trépidos",
    "reading": "trepidos",
    "from": [
@@ -3271,6 +3447,11 @@
    "ocr": "Tue",
    "reading": "THE",
    "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
+     "kind": "hand fix"
+    },
     {
      "edition": "ia-moldersofmedieva00cass",
      "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json",
@@ -3505,6 +3686,17 @@
     {
      "edition": "ia-gkcasmcbeingcoll0000gkch",
      "record": "docs/research/chesterton-gkc-as-mc-2026-11/spec.json",
+     "kind": "hand fix"
+    }
+   ]
+  },
+  {
+   "ocr": "You1",
+   "reading": "Your",
+   "from": [
+    {
+     "edition": "ia-jameslaynezjesui00fich",
+     "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json",
      "kind": "hand fix"
     }
    ]

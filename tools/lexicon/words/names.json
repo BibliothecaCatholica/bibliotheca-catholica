@@ -1,6 +1,6 @@
 {
  "language": "names",
- "count": 322,
+ "count": 364,
  "words": {
   "Abissinian": [
    {
@@ -50,6 +50,12 @@
     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
    }
   ],
+  "Angunciana": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Apemama": [
    {
     "edition": "ia-robertlouisstev00nicogoog",
@@ -90,6 +96,12 @@
    {
     "edition": "ia-robertlouisstev00nicogoog",
     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Azagra": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Baillet": [
@@ -170,6 +182,12 @@
     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
    }
   ],
+  "Boero": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Boissier": [
    {
     "edition": "ia-moldersofmedieva00cass",
@@ -192,6 +210,18 @@
    {
     "edition": "ia-selectancientiri00meye",
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Brodrick": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "Broet": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Brookings": [
@@ -248,6 +278,12 @@
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Camara": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Canainne": [
    {
     "edition": "ia-selectancientiri00meye",
@@ -300,6 +336,12 @@
    {
     "edition": "ia-johnenglandameri00gran",
     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Carpi": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Cathba's": [
@@ -368,6 +410,12 @@
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
+  "Cogordan": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Coisse": [
    {
     "edition": "ia-selectancientiri00meye",
@@ -384,6 +432,12 @@
    {
     "edition": "ia-highpointsofmedi00wals",
     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Commendone": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Compostella": [
@@ -426,6 +480,12 @@
    {
     "edition": "ia-highpointsofmedi00wals",
     "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Coronel": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Coulton": [
@@ -512,6 +572,12 @@
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
+  "Delfino": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Delplancq": [
    {
     "edition": "ia-mysteryofiniquit00furf",
@@ -560,6 +626,12 @@
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
    }
   ],
+  "Domenech": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Domnaill": [
    {
     "edition": "ia-selectancientiri00meye",
@@ -576,6 +648,12 @@
    {
     "edition": "ia-moldersofmedieva00cass",
     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Drascovitz": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Drumcliff": [
@@ -600,6 +678,12 @@
    {
     "edition": "ia-moldersofmedieva00cass",
     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Eguia": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Eldorado": [
@@ -764,6 +848,12 @@
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
    }
   ],
+  "Freux": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Frosach": [
    {
     "edition": "ia-selectancientiri00meye",
@@ -848,6 +938,18 @@
     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
    }
   ],
+  "Grimani": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "Grisar": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Grogory": [
    {
     "edition": "ia-butler-1842-eulalia",
@@ -870,6 +972,12 @@
    {
     "edition": "ia-cathencyc-1907-advent",
     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "Guerrero": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Guilday": [
@@ -972,6 +1080,12 @@
    {
     "edition": "ia-selectancientiri00meye",
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Hurtado": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Hyères": [
@@ -1088,6 +1202,12 @@
     "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
    }
   ],
+  "Kessel": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Kilgarrow": [
    {
     "edition": "ia-selectancientiri00meye",
@@ -1116,6 +1236,12 @@
    {
     "edition": "ia-moldersofmedieva00cass",
     "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Landivar": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Lauerman": [
@@ -1178,6 +1304,12 @@
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
+  "Lippomani": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Loeguire": [
    {
     "edition": "ia-selectancientiri00meye",
@@ -1220,6 +1352,12 @@
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
+  "Madruzzi": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Maelisu's": [
    {
     "edition": "ia-selectancientiri00meye",
@@ -1242,6 +1380,12 @@
    {
     "edition": "ia-selectancientiri00meye",
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Manares": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Mangold": [
@@ -1482,16 +1626,40 @@
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
    }
   ],
+  "Ortiz": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Osbourne": [
    {
     "edition": "ia-robertlouisstev00nicogoog",
     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
    }
   ],
+  "Otello": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Oviedo": [
    {
     "edition": "ia-butler-1842-eulalia",
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Palacin": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "Pallavicini": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Pangur": [
@@ -1512,6 +1680,12 @@
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Pelletier": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Phædrus": [
    {
     "edition": "ia-butler-1842-eulalia",
@@ -1530,6 +1704,18 @@
     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
    }
   ],
+  "Poissy": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "Polanco": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Pollentia": [
    {
     "edition": "ia-butler-1842-eulalia",
@@ -1540,6 +1726,12 @@
    {
     "edition": "ia-butler-1842-eulalia",
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Postell": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Probst": [
@@ -1584,10 +1776,22 @@
     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
    }
   ],
+  "Rebiba": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Regensburg": [
    {
     "edition": "ia-superstitionsofs0000unse-q9f6",
     "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Reumano": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Rhabanus": [
@@ -1644,6 +1848,12 @@
     "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
    }
   ],
+  "Santacruz": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Saturninus": [
    {
     "edition": "ia-butler-1842-eulalia",
@@ -1654,6 +1864,12 @@
    {
     "edition": "ia-johnenglandameri00gran",
     "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "scudi": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Sedulins": [
@@ -1668,6 +1884,12 @@
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
    }
   ],
+  "Seripando": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Sganarelle": [
    {
     "edition": "ia-selectancientiri00meye",
@@ -1678,6 +1900,12 @@
    {
     "edition": "ia-butler-1842-eulalia",
     "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Siguenza": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Silverland": [
@@ -1696,6 +1924,12 @@
    {
     "edition": "ia-selectancientiri00meye",
     "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Soria": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Spengler": [
@@ -1794,6 +2028,12 @@
     "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
    }
   ],
+  "Theiner": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
   "Tholcha": [
    {
     "edition": "ia-selectancientiri00meye",
@@ -1846,6 +2086,12 @@
    {
     "edition": "ia-robertlouisstev00nicogoog",
     "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "Vaz": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ],
   "Vegio": [
@@ -1936,6 +2182,12 @@
    {
     "edition": "ia-cathencyc-1911-o-antiphons",
     "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Zacchinus": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
    }
   ]
  }

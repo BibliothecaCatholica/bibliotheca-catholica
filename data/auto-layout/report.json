@@ -1807,6 +1807,19 @@
     "all-capitals line": 1
    }
   },
+  "ia-jameslaynezjesui00fich": {
+   "work": "James Laynez, Jesuit",
+   "multiLineBlocks": 9,
+   "reflowed": 0,
+   "kept": 9,
+   "share": 0.0,
+   "emphasisSpans": 0,
+   "pinnedHtml": false,
+   "keptBecause": {
+    "all-capitals line": 8,
+    "short line": 1
+   }
+  },
   "ia-highpointsofmedi00wals": {
    "work": "High Points of Medieval Culture",
    "multiLineBlocks": 1,

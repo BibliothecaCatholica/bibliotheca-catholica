@@ -1,0 +1,103 @@
+{
+ "about": "Automatic repairs made by tools/transcribe_scan.py that were then checked one by one against the page image of the same scan. Only repairs recorded as checked go here; the tool's other automatic repairs are not verified readings.",
+ "repairs": [
+  {
+   "ocr": "hterature",
+   "reading": "literature",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  },
+  {
+   "ocr": "clift",
+   "reading": "cliff",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  },
+  {
+   "ocr": "fhat",
+   "reading": "that",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  },
+  {
+   "ocr": "fiowers",
+   "reading": "flowers",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  },
+  {
+   "ocr": "fiame",
+   "reading": "flame",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  },
+  {
+   "ocr": "CarroU",
+   "reading": "Carroll",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  },
+  {
+   "ocr": "bhght",
+   "reading": "blight",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  },
+  {
+   "ocr": "pohshed",
+   "reading": "polished",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  },
+  {
+   "ocr": "Pientiful",
+   "reading": "Plentiful",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  },
+  {
+   "ocr": "wonld",
+   "reading": "would",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  },
+  {
+   "ocr": "dwelhng",
+   "reading": "dwelling",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  },
+  {
+   "ocr": "sohcited",
+   "reading": "solicited",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  },
+  {
+   "ocr": "pubhshed",
+   "reading": "published",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  },
+  {
+   "ocr": "hved",
+   "reading": "lived",
+   "edition": "ia-selectancientiri00meye",
+   "checked": "2026-11-23",
+   "evidence": "docs/research/irish-meyer-selections-2026-11/README.md"
+  }
+ ]
+}

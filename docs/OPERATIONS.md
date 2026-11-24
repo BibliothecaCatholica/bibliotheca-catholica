@@ -55,6 +55,10 @@ Stop treating the branch as ready. Record the failing command, commit, and relev
 
 For a production incident, identify the last known-good deployed commit and compare its `build.json` with the failing deployment. Prepare a revert of the smallest responsible commit on a branch; preserve unrelated work and validate it. Deploy through the established authorized path. Use a host's previous deployment only with owner authorization and recorded deployment ID; dashboard access is not implied. Check home, affected routes, reader, canonical/robots, assets, and live build identifier after recovery. Record incident and recovery evidence in CENTRAL. No destructive Git reset or force-push to main.
 
+## Weekly link check
+
+`.github/workflows/link-check.yml` runs on Sundays at 10:23 UTC (and by hand from the Actions tab). It checks internal links in every tracked page (`tools/check_internal_links.py`, offline) and the outbound links in the site's data (`tools/check_links.py`, 8 workers, 1 s between requests to one host, a 40-minute cap), then opens or updates one issue labelled `link-check`, and closes it when a run is clean. Bot-protection answers (401, 403, 429) are listed but not counted. It runs on no push or pull request and every step tolerates failure, so it never fails a build. Fix a reported link in its maintained source, never in a generated page.
+
 ## Backup and restore
 
 Independent backup is not verified by this audit. Git history and a second delivery repository do not establish an independent recoverable backup.

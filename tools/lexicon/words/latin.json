@@ -1,0 +1,1450 @@
+{
+ "language": "latin",
+ "count": 240,
+ "words": {
+  "accidentaliter": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Alphabeticus": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Antiphonæ": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "apicem": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Apologeticum": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "appetit": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Aquinatis": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "arcano": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "arguit": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "arva": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "aspera": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "astra": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "atque": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "attigerat": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "aurea": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Aurelianensis": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "bibit": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Bruto": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Caesarem": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "calathos": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "candidior": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Canisii": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "canitiem": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "caret": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Caritate": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "caritatis": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "carmine": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "carnifices": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Carpite": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Cassiano": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Catholicon": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "celer": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Ceremoniale": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "chorealibus": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "chorealis": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "choro": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "circumstantiis": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "citum": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "colit": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "columba": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "comantibus": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "comas": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "competentes": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Complementa": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "concinentes": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "conhospita": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "coronis": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "crepans": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "crepitante": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "crepundia": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "crocos": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "cuius": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "cumulet": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "cupiens": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "curdine": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Curriculis": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "dactylico": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "demus": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Destruct": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "dicata": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "dicendum": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "differentiis": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Dioecesanis": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "diverso": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Divinae": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "egregium": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Emeritam": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Emicat": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "eruditione": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "et": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Etymologia": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "EULALIAE": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Eulaliae": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "exerceri": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Exteri": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "exuperatque": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "faciem": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "feram": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "festa": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Flamma": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "flare": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "floribus": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "foliis": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "fovet": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "fulva": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Gadelica": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "genialis": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "GERMINE": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "glacies": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Goidelica": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "gradu": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "hiemes": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "hiems": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Hierusalem": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Hippolyto": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "his": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "HONOREM": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Hymnologicus": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "Hymnus": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Iam": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Ignatiana": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "inde": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "indicium": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "indole": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "innocuus": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "inpositum": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Ista": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "labarum": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "lacteolus": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Lainii": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "laxat": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Legati": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "liberorum": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "libet": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "libitum": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "locuples": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "ludere": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "ludis": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "luditis": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "ludus": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   },
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Lusitanæ": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "mage": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "marcida": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "marg": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "martyrii": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "MARTYRIS": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "martyris": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "meditata": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "membra": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Merseiana": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "metite": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Mirae": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "modesta": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "monilia": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "moribus": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "mundi": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "munera": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "necnon": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "nescia": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "nimium": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "nive": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "nobilior": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "nobilis": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "non": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "novem": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "nubila": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "nuntius": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "obitum": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "occiduo": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "occupat": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Orat": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "ordinatur": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "ore": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "ornat": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "ossa": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Otia": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Pacifice": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "paedagogica": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "Palaeohibernicus": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Parmae": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "patriae": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "patronos": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "perque": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "personet": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "plaudebant": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Polanci": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "populis": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "populosque": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "potens": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "prius": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Procons": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "progenita": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "prophetam": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "propitiata": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "prospicit": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Proximus": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "prætorium": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "puerque": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "purpureas": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "pusiola": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "pyra": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Quadragesimo": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "quaedam": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "quaeritur": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "quater": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Radix": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "rata": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "relinquere": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "repens": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "repulerat": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "respuere": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "rogum": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Salmeronis": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "Salvete": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "sanctius": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "sanguine": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "sanguineosque": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "senum": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "sequi": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "serta": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "severa": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "socialis": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "solium": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Spernere": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "spiritus": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "subegit": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "subintroducta": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Subintroductae": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "sucina": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "supplicium": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "surgit": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Symmachum": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "sæc": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "tendere": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "teneris": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "tepens": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "terruit": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "texta": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "titulo": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "toro": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "trepidos": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "tribus": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "tris": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "triumphat": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "tulit": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "ubere": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "ut": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "vegetata": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "venerarier": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "vergente": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "vestitur": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "vilia": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "violas": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "virgineoque": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "virgo": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "visa": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "vitii": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "volat": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Ymnum": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "ymnum": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ]
+ }
+}

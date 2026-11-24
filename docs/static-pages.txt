@@ -5544,6 +5544,7 @@ work/manalive/ch/07-the-two-curates-or-the-burglary-charge/index.html
 work/manalive/ch/08-the-round-road-or-the-desertion-charge/index.html
 work/manalive/ch/09-the-wild-weddings-or-the-polygamy-charge/index.html
 work/manalive/ch/10-how-the-great-wind-went-from-beacon-house/index.html
+work/meyer-ancient-irish-poetry/index.html
 work/miscellany-of-men/index.html
 work/moore-prayer/index.html
 work/napoleon-notting-hill/index.html

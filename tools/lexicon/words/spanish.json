@@ -1,0 +1,66 @@
+{
+ "language": "spanish",
+ "count": 10,
+ "words": {
+  "Camino": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
+  "climas": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Corregidor": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
+  "Epistolario": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
+  "Fundaciones": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
+  "maravedis": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
+  "meridionales": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "patio": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
+  "Provisor": [
+   {
+    "edition": "ia-saintteresaofavi00wals",
+    "record": "docs/research/nonrenewal-walsh-teresa-2026-11/spec.json"
+   }
+  ],
+  "transparente": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ]
+ }
+}

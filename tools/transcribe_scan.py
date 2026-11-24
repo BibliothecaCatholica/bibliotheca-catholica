@@ -15,7 +15,8 @@ tested tool for a single-scan book"). It does the same things and nothing more:
   * applies the spec's `handFixes`, if any, before all of the above: each is {leaf, page, ocr, reading}, a misread checked
     by a person against the page image of the same scan (never another edition). `ocr` must be one whole OCR line of
     that leaf or occur exactly once in its lines and is replaced by `reading` (an empty reading drops a whole line of OCR noise). Every fix is
-    copied to the provenance record (owner decision, November 17, 2026).
+    copied to the provenance record (owner decision, November 17, 2026). A fix with `"heading": true` marks a heading set apart on
+    the page (a chapter title in mixed case): in prose it is its own paragraph, never run into the text before or after it.
 Known words are those of the library's own hosted texts (data/texts/), so the vocabulary is period English.
 
 Read-gate process (owner approval, November 22, 2026; docs/PROJECT-RULES.md rule 1, "Read gate"):
@@ -27,6 +28,9 @@ Read-gate process (owner approval, November 22, 2026; docs/PROJECT-RULES.md rule
     checked against the page images and every sampled form was right; otherwise every form is checked by hand;
   * `omitted` [{what, leaves, pages}]: an index, bibliography, or long appendix after the body may be left out, with a
     sentence in the text's header pointing to the full scan; body text, footnotes, and front matter never are;
+  * `blankLeaves` [leaf, ...]: leaves checked on the page image to carry no print (show-through from the facing page, a
+    tissue guard), whose OCR is only noise; they are read as empty and listed in the record. A leaf with any print is
+    never listed;
   * every score is saved with its method (readGate in the source record: engine, leaves scored, omissions, line
     choices, hand fixes, verified words, foreign samples), and `--measure DIR` scores a book without hosting it and
     writes DIR/<edition>.json with the method and every unread form; `--sample` prints the samples to check.
@@ -368,6 +372,8 @@ def apply_hand_fixes(raw_pages, e):
         hits[0]['hand'] = True  # checked on the page image: body() never drops it as a running head or noise
         if f['reading'] == f['ocr']:
             hits[0]['kept'] = True  # a keep mark: printed body text as read, never the start of a footnote
+        if f.get('heading'):
+            hits[0]['heading'] = True  # a heading set apart on the page (checked on the image): its own paragraph
 
 
 
@@ -507,6 +513,9 @@ def build(e, cache, V):
     root = ET.fromstring(xml)
     objs = root.findall('.//OBJECT')[e['firstLeaf']:e['lastLeaf'] + 1]
     raw_pages = [(int(o.get('height') or 3000), page_lines(o)) for o in objs]
+    for leaf in e.get('blankLeaves', []):  # checked on the page image: no print, only show-through or a tissue guard
+        assert e['firstLeaf'] <= leaf <= e['lastLeaf'], (e['edition'], 'blankLeaves must lie inside the scored range', leaf)
+        raw_pages[leaf - e['firstLeaf']] = (raw_pages[leaf - e['firstLeaf']][0], [])
     foreign, foreign_rec = foreign_read(e)
     verified = set(e.get('verifiedWords', [])) | foreign
     info = {'foreignWords': foreign_rec, 'secondOcr': second_ocr(e, objs, raw_pages, cache, V, verified) if e.get('secondOcr') else None,
@@ -540,6 +549,7 @@ def build(e, cache, V):
             two_col = bool(wide) and max(wide) - min(wide) > 300
             prev_y = None
             prev_solo = False
+            prev_head = False
             for k, l in enumerate(ls):
                 col_top = two_col and prev_y is not None and l['y'] < prev_y - 3 * l['h']
                 prev_y = l['y']
@@ -559,11 +569,11 @@ def build(e, cache, V):
                 heading = l['text'].isupper() and len(l['text'].split()) <= 10 and not prev_end.endswith('-')
                 # a chapter numeral or an ornament row restored by hand stands alone, as printed
                 solo = l.get('hand') and alone(l['text'])
-                new = cur and (heading or solo or (l['paraStart'] and sentence_end) or (indent and sentence_end)
+                new = cur and (heading or solo or l.get('heading') or prev_head or (l['paraStart'] and sentence_end) or (indent and sentence_end)
                                or (cur and cur[-1].isupper() and len(cur[-1].split()) <= 10) or (cur and alone(cur[-1]) and prev_solo))
                 if new:
                     close(cur); cur = []
-                cur.append(l['text']); prev_end = l['text']; prev_solo = bool(solo)
+                cur.append(l['text']); prev_end = l['text']; prev_solo = bool(solo); prev_head = bool(l.get('heading'))
             pending.extend(notes)
         if cur:
             close(cur)
@@ -636,6 +646,7 @@ def read_gate_record(e, words, unknown, info):
             **({'lineChoices': so['lineChoices']} if so else {}),
             'leavesScored': [e['firstLeaf'], e['lastLeaf']],
             'omitted': e.get('omitted', []),
+            **({'blankLeaves': e['blankLeaves']} if e.get('blankLeaves') else {}),
             'handFixes': len(e.get('handFixes', [])), 'verifiedWords': len(e.get('verifiedWords', [])),
             'foreignWords': {k: {x: v[x] for x in ('sampleSize', 'wrong', 'result')} | {'forms': len(v['forms'])}
                              for k, v in info.get('foreignWords', {}).items()},

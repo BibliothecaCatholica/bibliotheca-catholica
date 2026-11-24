@@ -1,0 +1,1020 @@
+{
+ "language": "english",
+ "count": 169,
+ "words": {
+  "abbreviating": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "affiliates": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "afterlife": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "agglutinated": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "alignment": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "alumni": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "antagonized": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "antedate": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "anticlerical": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "antislavery": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "baseball": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "bedfellows": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "behavioristic": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "bibliophilic": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "biestings": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "birthless": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "blaeberries": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "blossomless": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "bluestockings": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "bondmaid": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "bookmaking": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "bragget": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "brassies": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "braveries": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "brose": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "buggy": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "byeway": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "capitalized": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "carnated": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "casuistic": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "catalectic": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "catechumenate": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "caterwauling": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "chal": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Chalet": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "chiels": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "clinic": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "clinics": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "clinkest": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "confrere": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "congressman": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "contraception": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "corncrake": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "custards": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "dactyls": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "decentest": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "diggest": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "directories": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "dispiriting": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "doctorate": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "educative": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "elite": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "enchain": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "encyclopedic": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "encyclopedists": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "equiponderant": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "evelation": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "executant": [
+   {
+    "edition": "ia-doweagree0000gkch",
+    "record": "docs/research/chesterton-do-we-agree-2026-11/spec.json"
+   }
+  ],
+  "exegete": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "fash": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "firsthand": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "fleshfork": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "flounces": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "Footloose": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "forgather": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "forgone": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "forthright": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "forthrightly": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "gillie": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "guileless": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "handbreadth": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "handbreadths": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "heathpoults": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "heptasyllabic": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "hollies": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "housewifery": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Hymnol": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "insofar": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Intercredal": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "interlards": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "interlocking": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "interracial": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "intersperse": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "intransigently": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Invitatory": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "kenning": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "laceration": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "latecomers": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "layst": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "leftest": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "lenged": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "lexicographer": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "malnutrition": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "maneuvers": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Manse": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "marjoram": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "memorably": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "methodology": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "minuscule": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "Miscellaney": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "modish": [
+   {
+    "edition": "ia-samueljohnson00chesuoft",
+    "record": "docs/research/chesterton-samuel-johnson-2026-11/spec.json"
+   }
+  ],
+  "Moriscos": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "nationalistic": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "niblicks": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "nontotalitarian": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "oaklets": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "oakwood": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "oozy": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "osity": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "ousel": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "outmoded": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "pagandom": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "parison": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "pastorate": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "peashooter": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "pedagogics": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "penalizing": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Pignuts": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "pitchpine": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "podginess": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "polk": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "popularize": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "positivistic": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "preceeding": [
+   {
+    "edition": "ia-cathencyc-1911-o-antiphons",
+    "record": "docs/research/catholic-encyclopedia-o-antiphons-2026-11/spec.json"
+   }
+  ],
+  "privi": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Protestanism": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "psychiatrists": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "psychiatry": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "pursuivants": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "quatrain": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "repetitious": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "roguery": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "rowest": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "sanctimonious": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "sappy": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "scriptoria": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "semester": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "sexcentenary": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "shavelings": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "shieling": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "singe": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "sociopolitical": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "spicuous": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "spunkies": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "stabilization": [
+   {
+    "edition": "ia-highpointsofmedi00wals",
+    "record": "docs/research/nonrenewal-walsh-high-points-2026-11/spec.json"
+   }
+  ],
+  "stabilizing": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "stuttering": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "subsidy": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "superstititions": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "tetrameter": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "tobacconing": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "tobacconising": [
+   {
+    "edition": "ia-superstitionsofs0000unse-q9f6",
+    "record": "docs/research/chesterton-superstitions-2026-11/spec.json"
+   }
+  ],
+  "totalitarian": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "totalitarianism": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "tricksy": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "trilling": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "trusteemania": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "underemphasis": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "usable": [
+   {
+    "edition": "ia-jameslaynezjesui00fich",
+    "record": "docs/research/nonrenewal-fichter-james-laynez-2026-11/spec.json"
+   }
+  ],
+  "viridescent": [
+   {
+    "edition": "ia-robertlouisstev00nicogoog",
+    "record": "docs/research/chesterton-rls-booklet-2026-11/spec.json"
+   }
+  ],
+  "warmeth": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "wede": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "whortleberries": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "willful": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "woodpeckers": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "wooer's": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "wrapt": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "wreathèd": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "yearnful": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ]
+ }
+}

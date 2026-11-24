@@ -127,13 +127,15 @@ This repository holds copies of texts whose basis for hosting Bibliotheca Cathol
 
 # Cloudflare Pages response headers for texts.bibliothecacatholica.com (Round 8, Job D, November 23, 2026). They follow the main
 # site's _headers where it fits: the same nosniff, referrer, and permissions lines; a CSP for a page with one inline style and one
-# inline script and no outside resources. HSTS is the owner's decision and is proposed separately. Cloudflare Pages already sends `Access-Control-Allow-Origin: *`, which the reader
+# inline script and no outside resources. HSTS starts short (max-age=300, five minutes): the owner decides
+# whether and when to raise it. Cloudflare Pages already sends `Access-Control-Allow-Origin: *`, which the reader
 # on bibliothecacatholica.com needs to fetch the texts, so these lines leave CORS alone.
 TEXTS_HEADERS = """https://:project.pages.dev/*
   X-Robots-Tag: noindex
 https://:version.:project.pages.dev/*
   X-Robots-Tag: noindex
 /*
+  Strict-Transport-Security: max-age=300
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), bluetooth=(), browsing-topics=()

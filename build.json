@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-d19d8ac95901",
+  "id": "bc-fcf6cdeeb790",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "483f6a2bf881ed9674ff355a46f38eb2a77c701e9639e47735ae62acc41bcbb5",
@@ -110,7 +110,7 @@
     "tools/build_static.py": "92fadfaceffbd0919302a34a82fd35fb9fce0d47e07d9d63a384bc05da01d505",
     "tools/build_study.py": "104e6678f138ea9075089850e99d976c84afd9a0cf0102801e5e8acb6af56a80",
     "tools/build_summa.py": "9640d60813c0cf2b89af3ddddef9974f5c28eb5bd8e6e8c048e5d048e4a65557",
-    "tools/build_text_archive.py": "6fc51e56be1a244bb4d835b366b148a87bf2e96e0e5219a41bd1a1b5d76b408d",
+    "tools/build_text_archive.py": "4bc502342bc82669030f1c07128d38acee19b58440094c555f342eab7249ef41",
     "tools/build_text_pages.py": "492ee30f298ede6b426439445f33c8a25c488b303133e848c8993807ca20e3eb",
     "tools/build_v3_data.py": "4f2e17132b8fb8bf3065d95ea2edcf81199ce332dc11fa6deb6b921190c3fc0d",
     "tools/build_v4_data.py": "5e5dc32de5cba26c4535f20b31eaf59c9b937e41682f8d36539a978f686c0a7b",

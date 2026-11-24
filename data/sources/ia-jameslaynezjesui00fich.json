@@ -2313,7 +2313,8 @@
       "leaf": 10,
       "page": null,
       "ocr": "Preface",
-      "reading": "Preface"
+      "reading": "Preface",
+      "heading": true
     },
     {
       "leaf": 10,
@@ -2325,7 +2326,8 @@
       "leaf": 14,
       "page": null,
       "ocr": "To Paris, France",
-      "reading": "To Paris, France"
+      "reading": "To Paris, France",
+      "heading": true
     },
     {
       "leaf": 14,
@@ -2343,7 +2345,8 @@
       "leaf": 30,
       "page": null,
       "ocr": "Footloose in Europe",
-      "reading": "Footloose in Europe"
+      "reading": "Footloose in Europe",
+      "heading": true
     },
     {
       "leaf": 30,
@@ -2361,7 +2364,8 @@
       "leaf": 43,
       "page": null,
       "ocr": "The Start to Fame",
-      "reading": "The Start to Fame"
+      "reading": "The Start to Fame",
+      "heading": true
     },
     {
       "leaf": 43,
@@ -2373,7 +2377,8 @@
       "leaf": 56,
       "page": null,
       "ocr": "Spiritual Whirlwind",
-      "reading": "Spiritual Whirlwind"
+      "reading": "Spiritual Whirlwind",
+      "heading": true
     },
     {
       "leaf": 56,
@@ -2391,7 +2396,8 @@
       "leaf": 68,
       "page": null,
       "ocr": "The Pope’s Own Man",
-      "reading": "The Pope’s Own Man"
+      "reading": "The Pope’s Own Man",
+      "heading": true
     },
     {
       "leaf": 68,
@@ -2409,7 +2415,8 @@
       "leaf": 82,
       "page": null,
       "ocr": "In the City of Savonarola",
-      "reading": "In the City of Savonarola"
+      "reading": "In the City of Savonarola",
+      "heading": true
     },
     {
       "leaf": 96,
@@ -2421,7 +2428,8 @@
       "leaf": 96,
       "page": null,
       "ocr": "In Peace and War",
-      "reading": "In Peace and War"
+      "reading": "In Peace and War",
+      "heading": true
     },
     {
       "leaf": 96,
@@ -2439,7 +2447,8 @@
       "leaf": 109,
       "page": null,
       "ocr": "At Trent Again",
-      "reading": "At Trent Again"
+      "reading": "At Trent Again",
+      "heading": true
     },
     {
       "leaf": 124,
@@ -2451,7 +2460,8 @@
       "leaf": 124,
       "page": null,
       "ocr": "Work and Conflict",
-      "reading": "Work and Conflict"
+      "reading": "Work and Conflict",
+      "heading": true
     },
     {
       "leaf": 140,
@@ -2463,13 +2473,15 @@
       "leaf": 140,
       "page": null,
       "ocr": "The Provincial and the Duchess",
-      "reading": "The Provincial and the Duchess"
+      "reading": "The Provincial and the Duchess",
+      "heading": true
     },
     {
       "leaf": 154,
       "page": null,
       "ocr": "Threat of the Red Hat",
-      "reading": "Threat of the Red Hat"
+      "reading": "Threat of the Red Hat",
+      "heading": true
     },
     {
       "leaf": 154,
@@ -2481,7 +2493,8 @@
       "leaf": 166,
       "page": null,
       "ocr": "Laynez’ Papal Friend",
-      "reading": "Laynez’ Papal Friend"
+      "reading": "Laynez’ Papal Friend",
+      "heading": true
     },
     {
       "leaf": 166,
@@ -2499,7 +2512,8 @@
       "leaf": 180,
       "page": null,
       "ocr": "General of the fesurts",
-      "reading": "General of the Jesuits"
+      "reading": "General of the Jesuits",
+      "heading": true
     },
     {
       "leaf": 180,
@@ -2523,7 +2537,8 @@
       "leaf": 193,
       "page": null,
       "ocr": "is Brother, Christopher",
-      "reading": "His Brother, Christopher"
+      "reading": "His Brother, Christopher",
+      "heading": true
     },
     {
       "leaf": 193,
@@ -2541,7 +2556,8 @@
       "leaf": 208,
       "page": null,
       "ocr": "Trouble with Cano and the French",
-      "reading": "Trouble with Cano and the French Parlement"
+      "reading": "Trouble with Cano and the French Parlement",
+      "heading": true
     },
     {
       "leaf": 208,
@@ -2565,7 +2581,8 @@
       "leaf": 223,
       "page": null,
       "ocr": "The Third Sojourn at Trent",
-      "reading": "The Third Sojourn at Trent"
+      "reading": "The Third Sojourn at Trent",
+      "heading": true
     },
     {
       "leaf": 235,
@@ -2577,7 +2594,8 @@
       "leaf": 235,
       "page": null,
       "ocr": "The Chalice and the Episcopate",
-      "reading": "The Chalice and the Episcopate"
+      "reading": "The Chalice and the Episcopate",
+      "heading": true
     },
     {
       "leaf": 235,
@@ -2595,7 +2613,8 @@
       "leaf": 248,
       "page": null,
       "ocr": "Defender of the Papacy",
-      "reading": "Defender of the Papacy"
+      "reading": "Defender of the Papacy",
+      "heading": true
     },
     {
       "leaf": 248,
@@ -2613,7 +2632,8 @@
       "leaf": 262,
       "page": null,
       "ocr": "The Last Year",
-      "reading": "The Last Year"
+      "reading": "The Last Year",
+      "heading": true
     },
     {
       "leaf": 275,
@@ -2625,7 +2645,8 @@
       "leaf": 275,
       "page": null,
       "ocr": "The Last Month",
-      "reading": "The Last Month"
+      "reading": "The Last Month",
+      "heading": true
     },
     {
       "leaf": 275,
@@ -2637,13 +2658,15 @@
       "leaf": 284,
       "page": null,
       "ocr": "Appendixes",
-      "reading": "Appendixes"
+      "reading": "Appendixes",
+      "heading": true
     },
     {
       "leaf": 286,
       "page": null,
       "ocr": "Ribadeneira’s Description of Laynez",
-      "reading": "Ribadeneira’s Description of Laynez"
+      "reading": "Ribadeneira’s Description of Laynez",
+      "heading": true
     },
     {
       "leaf": 288,
@@ -2655,7 +2678,8 @@
       "leaf": 288,
       "page": null,
       "ocr": "Laynez’ Three Narrow Escapes",
-      "reading": "Laynez’ Three Narrow Escapes from Drowning"
+      "reading": "Laynez’ Three Narrow Escapes from Drowning",
+      "heading": true
     },
     {
       "leaf": 288,
@@ -2673,7 +2697,8 @@
       "leaf": 290,
       "page": null,
       "ocr": "Salmeron’s Appreciation of Laynez",
-      "reading": "Salmeron’s Appreciation of Laynez"
+      "reading": "Salmeron’s Appreciation of Laynez",
+      "heading": true
     },
     {
       "leaf": 291,
@@ -2685,7 +2710,8 @@
       "leaf": 291,
       "page": null,
       "ocr": "How to Use the Voice in Public",
-      "reading": "How to Use the Voice in Public Speaking"
+      "reading": "How to Use the Voice in Public Speaking",
+      "heading": true
     },
     {
       "leaf": 291,
@@ -2703,7 +2729,8 @@
       "leaf": 295,
       "page": null,
       "ocr": "Advice to a Military Leader",
-      "reading": "Advice to a Military Leader"
+      "reading": "Advice to a Military Leader",
+      "heading": true
     },
     {
       "leaf": 295,
@@ -2721,7 +2748,8 @@
       "leaf": 298,
       "page": null,
       "ocr": "Practical Advice for Boys in fesuit",
-      "reading": "Practical Advice for Boys in Jesuit Schools"
+      "reading": "Practical Advice for Boys in Jesuit Schools",
+      "heading": true
     },
     {
       "leaf": 298,
@@ -2733,7 +2761,8 @@
       "leaf": 301,
       "page": null,
       "ocr": "Letter to the Jesuits in India",
-      "reading": "Letter to the Jesuits in India"
+      "reading": "Letter to the Jesuits in India",
+      "heading": true
     },
     {
       "leaf": 301,

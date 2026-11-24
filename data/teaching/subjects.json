@@ -1,0 +1,1281 @@
+{
+ "about": "What tools/teaching/teaching.py looks for. 'cites' are citation forms exactly as the Catechism's footnotes print them (with inText, also its paragraph text); 'ranges' are [first, last, a heading on the page of the first paragraph]; 'documents' are magisterial texts on vatican.va with a phrase the page must contain. Edited by hand. Works flagged in data/editorial-flags.json are never listed.",
+ "subjects": [
+  {
+   "kind": "work",
+   "id": "confessions",
+   "name": "Confessions",
+   "cites": [
+    "St. Augustine, Conf."
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "city-of-god",
+   "name": "The City of God",
+   "cites": [
+    "De civ. Dei",
+    "De civ Dei"
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "on-christian-doctrine",
+   "name": "On Christian Doctrine",
+   "cites": [
+    "De doctrina christiana",
+    "De doctr. christ."
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "summa-theologiae",
+   "name": "Summa Theologiae",
+   "cites": [
+    "STh ",
+    "S Th "
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "imitation-of-christ",
+   "name": "The Imitation of Christ",
+   "cites": [
+    "The Imitation of Christ"
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "story-of-a-soul",
+   "name": "Story of a Soul",
+   "cites": [
+    "Autobiography of a Saint",
+    "Ms. autob."
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "life-of-teresa",
+   "name": "The Life of Saint Teresa of Jesus",
+   "cites": [
+    "St. Teresa of Avila, Life"
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "spiritual-exercises-adapted",
+   "name": "Spiritual Exercises",
+   "cites": [
+    "Spiritual Exercises"
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "revelations-divine-love",
+   "name": "Revelations of Divine Love",
+   "cites": [
+    "Revelations of Divine Love"
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "apologia",
+   "name": "Apologia pro vita sua",
+   "cites": [
+    "Apologia pro vita sua"
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "catherine-dialogue",
+   "name": "The Dialogue of St. Catherine of Siena",
+   "cites": [
+    "St. Catherine of Siena, Dialogue",
+    "St. Catherine of Siena, Dial."
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "apostolic-fathers",
+   "name": "The Writings of the Apostolic Fathers",
+   "cites": [
+    "St. Clement of Rome",
+    "St. Ignatius of Antioch",
+    "St. Polycarp",
+    "Martyrium Polycarpi",
+    "Didache"
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "council-of-trent",
+   "name": "The Canons and Decrees of the Council of Trent",
+   "cites": [
+    "Council of Trent"
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "jerome-isaiah-prologue",
+   "name": "Commentary on Isaiah, Prologue",
+   "cites": [
+    "St. Jerome, Commentariorum in Isaiam",
+    "In Is. prol.",
+    "Comm. in Is."
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "rule-of-benedict",
+   "name": "Rule of Saint Benedict",
+   "cites": [
+    "St. Benedict, Regula"
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "athanasius-of-alexandria-on-the-incarnation-of-the-word",
+   "name": "On the Incarnation of the Word",
+   "cites": [
+    "St. Athanasius, De inc."
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "basil-the-great-de-spiritu-sancto",
+   "name": "De Spiritu Sancto",
+   "cites": [
+    "St. Basil, De Spiritu Sancto"
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "justin-martyr-first-apology",
+   "name": "First Apology",
+   "cites": [
+    "St. Justin, Apol. 1"
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "justin-martyr-dialogue-with-trypho",
+   "name": "Dialogue with Trypho",
+   "cites": [
+    "St. Justin, Dial."
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "ignatius-of-antioch-epistle-to-the-ephesians",
+   "name": "Epistle to the Ephesians",
+   "cites": [
+    "St. Ignatius of Antioch, Ad Eph."
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "ignatius-of-antioch-epistle-to-the-romans",
+   "name": "Epistle to the Romans",
+   "cites": [
+    "St. Ignatius of Antioch, Ad Rom."
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "dei-verbum",
+   "name": "Dei Verbum",
+   "cites": [
+    "DV "
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "lumen-gentium",
+   "name": "Lumen Gentium",
+   "cites": [
+    "LG "
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "sacrosanctum-concilium",
+   "name": "Sacrosanctum Concilium",
+   "cites": [
+    "SC "
+   ]
+  },
+  {
+   "kind": "work",
+   "id": "gaudium-spes",
+   "name": "Gaudium et Spes",
+   "cites": [
+    "GS "
+   ]
+  },
+  {
+   "kind": "author",
+   "id": "augustine-of-hippo",
+   "name": "Augustine of Hippo",
+   "cites": [
+    "St. Augustine"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "thomas-aquinas",
+   "name": "Thomas Aquinas",
+   "cites": [
+    "St. Thomas Aquinas"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "teresa-of-avila",
+   "name": "Teresa of Avila",
+   "cites": [
+    "St. Teresa of Avila",
+    "St. Teresa of Jesus"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "therese-of-lisieux",
+   "name": "Thérèse of Lisieux",
+   "cites": [
+    "St. Therese of Lisieux"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "catherine-of-siena",
+   "name": "Catherine of Siena",
+   "cites": [
+    "St. Catherine of Siena"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "john-henry-newman",
+   "name": "John Henry Newman",
+   "cites": [
+    "John Henry Cardinal Newman"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "julian-of-norwich",
+   "name": "Julian of Norwich",
+   "cites": [
+    "Julian of Norwich"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "jerome",
+   "name": "Jerome",
+   "cites": [
+    "St. Jerome"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "ignatius-of-loyola",
+   "name": "Ignatius of Loyola",
+   "cites": [
+    "St. Ignatius of Loyola"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "ignatius-of-antioch",
+   "name": "Ignatius of Antioch",
+   "cites": [
+    "St. Ignatius of Antioch"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "benedict-of-nursia",
+   "name": "Benedict of Nursia",
+   "cites": [
+    "St. Benedict, Regula"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "athanasius-of-alexandria",
+   "name": "Athanasius of Alexandria",
+   "cites": [
+    "St. Athanasius"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "basil-the-great",
+   "name": "Basil the Great",
+   "cites": [
+    "St. Basil"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "john-chrysostom",
+   "name": "John Chrysostom",
+   "cites": [
+    "St. John Chrysostom",
+    "John Chrysostom,"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "justin-martyr",
+   "name": "Justin Martyr",
+   "cites": [
+    "St. Justin"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "irenaeus-of-lyons",
+   "name": "Irenaeus of Lyons",
+   "cites": [
+    "St. Irenaeus"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "cyril-of-jerusalem",
+   "name": "Cyril of Jerusalem",
+   "cites": [
+    "St. Cyril of Jerusalem"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "ambrose-of-milan",
+   "name": "Ambrose of Milan",
+   "cites": [
+    "St. Ambrose"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "gregory-the-great",
+   "name": "Gregory the Great",
+   "cites": [
+    "St. Gregory the Great"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "leo-the-great",
+   "name": "Leo the Great",
+   "cites": [
+    "St. Leo the Great"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "gregory-of-nyssa",
+   "name": "Gregory of Nyssa",
+   "cites": [
+    "St. Gregory of Nyssa"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "gregory-of-nazianzus",
+   "name": "Gregory of Nazianzus",
+   "cites": [
+    "St. Gregory of Nazianzus",
+    "St. Gregory Nazianzen"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "john-of-the-cross",
+   "name": "John of the Cross",
+   "cites": [
+    "St. John of the Cross"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "bernard-of-clairvaux",
+   "name": "Bernard of Clairvaux",
+   "cites": [
+    "St. Bernard"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "bonaventure",
+   "name": "Bonaventure",
+   "cites": [
+    "St. Bonaventure"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "john-of-damascus",
+   "name": "John of Damascus",
+   "cites": [
+    "St. John Damascene"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "hilary-of-poitiers",
+   "name": "Hilary of Poitiers",
+   "cites": [
+    "St. Hilary of Poitiers"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "cyprian-of-carthage",
+   "name": "Cyprian of Carthage",
+   "cites": [
+    "St. Cyprian"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "tertullian",
+   "name": "Tertullian",
+   "cites": [
+    "Tertullian"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "origen",
+   "name": "Origen",
+   "cites": [
+    "Origen,"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "clement-of-alexandria",
+   "name": "Clement of Alexandria",
+   "cites": [
+    "Clement of Alexandria",
+    "Clement of Alex."
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "clement-of-rome",
+   "name": "Clement of Rome",
+   "cites": [
+    "St. Clement of Rome"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "polycarp-of-smyrna",
+   "name": "Polycarp of Smyrna",
+   "cites": [
+    "St. Polycarp",
+    "Martyrium Polycarpi"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "louis-de-montfort",
+   "name": "Louis de Montfort",
+   "cites": [
+    "Grignion de Montfort"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "thomas-more",
+   "name": "Thomas More",
+   "cites": [
+    "St. Thomas More"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "francis-of-assisi",
+   "name": "Francis of Assisi",
+   "cites": [
+    "St. Francis of Assisi"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "catherine-of-genoa",
+   "name": "Catherine of Genoa",
+   "cites": [
+    "St. Catherine of Genoa"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "elizabeth-of-the-trinity",
+   "name": "Elizabeth of the Trinity",
+   "cites": [
+    "Elizabeth of the Trinity"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "peter-chrysologus",
+   "name": "Peter Chrysologus",
+   "cites": [
+    "St. Peter Chrysologus"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "cyril-of-alexandria",
+   "name": "Cyril of Alexandria",
+   "cites": [
+    "St. Cyril of Alexandria"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "ephrem-the-syrian",
+   "name": "Ephrem the Syrian",
+   "cites": [
+    "St. Ephraem"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "anselm-of-canterbury",
+   "name": "Anselm of Canterbury",
+   "cites": [
+    "St. Anselm"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "maximus-the-confessor",
+   "name": "Maximus the Confessor",
+   "cites": [
+    "St. Maximus the Confessor"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "john-cassian",
+   "name": "John Cassian",
+   "cites": [
+    "Cassian"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "caesarius-of-arles",
+   "name": "Caesarius of Arles",
+   "cites": [
+    "St. Caesarius of Arles"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "fulgentius-of-ruspe",
+   "name": "Fulgentius of Ruspe",
+   "cites": [
+    "St. Fulgentius of Ruspe"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "albert-the-great",
+   "name": "Albert the Great",
+   "cites": [
+    "St. Albert the Great"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "author",
+   "id": "pope-leo-xiii",
+   "name": "Pope Leo XIII",
+   "cites": [
+    "Leo XIII"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "agatha-of-sicily",
+   "name": "Agatha of Sicily",
+   "cites": [
+    "St. Agatha of Catania",
+    "St. Agatha of Sicily",
+    "St. Agathe"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "agnes-of-rome",
+   "name": "Agnes of Rome",
+   "cites": [
+    "St. Agnes of Rome",
+    "St. Santa Inez"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "andrew-the-apostle",
+   "name": "Andrew the Apostle",
+   "cites": [
+    "St. Andrew",
+    "St. Andrew the Apostle",
+    "St. St Andrew",
+    "St. St Andrew the Apostle"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "anne",
+   "name": "Saint Anne",
+   "cites": [
+    "Saint Anne",
+    "St. St Anna",
+    "St. St Anne"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "apollonia",
+   "name": "Saint Apollonia",
+   "cites": [
+    "Saint Apollonia",
+    "St. Apollonia of Alexandria"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "barbara",
+   "name": "Saint Barbara",
+   "cites": [
+    "Saint Barbara",
+    "St. Barbara",
+    "St. Barbara of Nicomedia",
+    "St. Great Martyr Barbara",
+    "St. St Barbara"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "bernadette-soubirous",
+   "name": "Bernadette Soubirous",
+   "cites": [
+    "St. Bernadeta Sobiros",
+    "St. Bernadeta Sobirós",
+    "St. Bernadette Soubirous",
+    "St. Bernadette of Lourdes",
+    "St. Marie-Bernarde Soubirous"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "blaise-of-sebaste",
+   "name": "Blaise of Sebaste",
+   "cites": [
+    "St. Blaise",
+    "St. Blaise of Sebaste",
+    "St. Blasius",
+    "St. Blasius of Sebaste"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "catherine-of-alexandria",
+   "name": "Catherine of Alexandria",
+   "cites": [
+    "St. Catharine of Alexandria",
+    "St. Catherine of Alexandria",
+    "St. Katherine of Alexandria"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "cecilia",
+   "name": "Saint Cecilia",
+   "cites": [
+    "Saint Cecilia",
+    "St. Cecilia"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "christopher",
+   "name": "Saint Christopher",
+   "cites": [
+    "Saint Christopher",
+    "St. Christopher"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "denis-of-paris",
+   "name": "Denis of Paris",
+   "cites": [
+    "St. Denis of Paris",
+    "St. Dionysius Parisiensis"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "george",
+   "name": "Saint George",
+   "cites": [
+    "Saint George",
+    "St. George",
+    "St. George of Lydda",
+    "St. Red Cross Knight",
+    "St. St George"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "isidore-the-farmer",
+   "name": "Isidore the Laborer",
+   "cites": [
+    "St. Isidore",
+    "St. Isidore the Farmer",
+    "St. Isidore the Laborer"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "joan-of-arc",
+   "name": "Joan of Arc",
+   "cites": [
+    "St. Joan of Arc",
+    "St. Maid of Orleans",
+    "St. Maid of Orléans",
+    "St. The Maid of Orleans",
+    "St. The Maid of Orléans"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "john-the-apostle",
+   "name": "John the Apostle",
+   "cites": [
+    "St. John the Apostle",
+    "St. St John the Apostle"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "john-the-baptist",
+   "name": "John the Baptist",
+   "cites": [
+    "St. Ioannes Baptista",
+    "St. John the Baptist",
+    "St. St John the Baptist"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "joseph",
+   "name": "Saint Joseph",
+   "cites": [
+    "Saint Joseph",
+    "St. Joseph",
+    "St. St Joseph"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "juan-diego",
+   "name": "Juan Diego Cuauhtlatoatzin",
+   "cites": [
+    "St. Juan Diego",
+    "St. Juan Diego Cuauhtlatoatzin"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "jude-the-apostle",
+   "name": "Jude the Apostle",
+   "cites": [
+    "St. Iudas Thaddaeus",
+    "St. Judas Thaddaeus",
+    "St. Jude Thaddaeus",
+    "St. Jude the Apostle",
+    "St. St Jude",
+    "St. St Jude Thaddeus"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "kateri-tekakwitha",
+   "name": "Kateri Tekakwitha",
+   "cites": [
+    "St. Catherine Lily of the Mohawks",
+    "St. Catherine Tekakwitha",
+    "St. Kateri Tekakwitha",
+    "St. Lily of the Mohawks"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "lawrence-of-rome",
+   "name": "Lawrence of Rome",
+   "cites": [
+    "St. Laurence of Rome",
+    "St. Lawrence",
+    "St. Lawrence of Rome",
+    "St. Lawrence the Martyr"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "lucy-of-syracuse",
+   "name": "Saint Lucy",
+   "cites": [
+    "Saint Lucy",
+    "St. Lucy of Syracuse"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "margaret-of-antioch",
+   "name": "Margaret the Virgin",
+   "cites": [
+    "St. Maid of Antioch",
+    "St. Margaret",
+    "St. Margaret of Antioch",
+    "St. Margaret the Dragon Slayer",
+    "St. Margaret the Virgin",
+    "St. Margarete the Dragon Slayer",
+    "St. Marina of Antioch"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "maria-goretti",
+   "name": "Maria Goretti",
+   "cites": [
+    "St. Maria Goretti",
+    "St. Maria Teresa Goretti"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "martin-of-tours",
+   "name": "Martin of Tours",
+   "cites": [
+    "St. Martin",
+    "St. Martin of Tours",
+    "St. Martinus Turonensis",
+    "St. Sanctus Martinus Turonensis"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "mary-magdalene",
+   "name": "Mary Magdalene",
+   "cites": [
+    "St. Mary Magdalen",
+    "St. Mary Magdalena",
+    "St. Mary Magdalene",
+    "St. Mary of Magdala",
+    "St. St Mary Magdalene",
+    "St. The Madeleine",
+    "St. The Magdalene"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "monica",
+   "name": "Monica of Hippo",
+   "cites": [
+    "St. Monica",
+    "St. Monica of Hippo"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "nicholas-of-myra",
+   "name": "Saint Nicholas",
+   "cites": [
+    "Saint Nicholas",
+    "St. Nicolau de Bari",
+    "St. Nicolau de Mira",
+    "St. Nikolaos de Mira",
+    "St. Sanctus Nicolaus",
+    "St. São Nicolau",
+    "St. São Nicolau de Bari",
+    "St. São Nicolau de Mira"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "patrick",
+   "name": "Saint Patrick",
+   "cites": [
+    "Saint Patrick",
+    "St. Apostle of Ireland",
+    "St. Enlightener of Ireland",
+    "St. Maewyn Succat",
+    "St. Patrick",
+    "St. Patrick of Ireland",
+    "St. St Patrick"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "paul-the-apostle",
+   "name": "Paul the Apostle",
+   "cites": [
+    "St. Apostle Paul",
+    "St. Paul of Tarsus",
+    "St. Paul the Apostle",
+    "St. Paulus Tarsensis",
+    "St. Paulus of Tarsus",
+    "St. Paulus the Apostle",
+    "St. Saul of Tarsus",
+    "St. Saulus Tarsensis"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "peter-the-apostle",
+   "name": "Saint Peter",
+   "cites": [
+    "Pope Peter",
+    "Saint Peter",
+    "St. Apostle Peter",
+    "St. Peter the Apostle",
+    "St. Shimoun Bar Younah",
+    "St. St Peter"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "rita-of-cascia",
+   "name": "Rita of Cascia",
+   "cites": [
+    "St. Margherita Lotti",
+    "St. Rita of Cascia"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "roch",
+   "name": "Saint Roch",
+   "cites": [
+    "Saint Roch",
+    "St. Rochus of Montpellier",
+    "St. St Roch"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "sebastian",
+   "name": "Saint Sebastian",
+   "cites": [
+    "Saint Sebastian",
+    "St. Sebastian",
+    "St. St Sebastian"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "stephen-protomartyr",
+   "name": "Saint Stephen",
+   "cites": [
+    "Saint Stephen",
+    "St. Stephen the Protomartyr"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "thomas-becket",
+   "name": "Thomas Becket",
+   "cites": [
+    "St. Archbishop of Canterbury Thomas Becket",
+    "St. Thomas Becket",
+    "St. Thomas a Becket",
+    "St. Thomas of Canterbury",
+    "St. Thomas of London",
+    "St. Thomas the Martyr",
+    "St. Thomas À Becket"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "thomas-the-apostle",
+   "name": "Thomas the Apostle",
+   "cites": [
+    "St. Doubting Thomas",
+    "St. Thomas the Apostle"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "ursula",
+   "name": "Saint Ursula",
+   "cites": [
+    "Saint Ursula",
+    "St. St Ursula",
+    "St. Ursula"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "valentine",
+   "name": "Saint Valentine",
+   "cites": [
+    "Saint Valentine",
+    "St. Valentin de Rome",
+    "St. Valentine"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "saint",
+   "id": "veronica",
+   "name": "Saint Veronica",
+   "cites": [
+    "Saint Veronica",
+    "St. Veronica"
+   ],
+   "inText": true
+  },
+  {
+   "kind": "topic",
+   "id": "grace",
+   "name": "Grace",
+   "ranges": [
+    [
+     1987,
+     2029,
+     "GRACE AND JUSTIFICATION"
+    ]
+   ],
+   "documents": []
+  },
+  {
+   "kind": "topic",
+   "id": "eucharist",
+   "name": "The Eucharist",
+   "ranges": [
+    [
+     1322,
+     1419,
+     "THE SACRAMENT OF THE EUCHARIST"
+    ]
+   ],
+   "documents": [
+    {
+     "title": "Sacrosanctum Concilium",
+     "label": "Sacrosanctum Concilium (Vatican II, 1963)",
+     "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
+     "expect": "Sacrosanctum Concilium"
+    },
+    {
+     "title": "Ecclesia de Eucharistia",
+     "label": "Ecclesia de Eucharistia (John Paul II, 2003)",
+     "url": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_20030417_eccl-de-euch.html",
+     "expect": "Ecclesia de Eucharistia"
+    },
+    {
+     "title": "Mysterium Fidei",
+     "label": "Mysterium Fidei (Paul VI, 1965)",
+     "url": "https://www.vatican.va/content/paul-vi/en/encyclicals/documents/hf_p-vi_enc_03091965_mysterium.html",
+     "expect": "Mysterium Fidei"
+    },
+    {
+     "title": "Sacramentum Caritatis",
+     "label": "Sacramentum Caritatis (Benedict XVI, 2007)",
+     "url": "https://www.vatican.va/content/benedict-xvi/en/apost_exhortations/documents/hf_ben-xvi_exh_20070222_sacramentum-caritatis.html",
+     "expect": "Sacramentum Caritatis"
+    }
+   ]
+  },
+  {
+   "kind": "topic",
+   "id": "mary",
+   "name": "Mary",
+   "ranges": [
+    [
+     484,
+     511,
+     "BORN OF THE VIRGIN MARY"
+    ],
+    [
+     963,
+     975,
+     "MOTHER OF THE CHURCH"
+    ]
+   ],
+   "documents": [
+    {
+     "title": "Lumen Gentium",
+     "label": "Lumen Gentium (Vatican II, 1964)",
+     "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html",
+     "expect": "Lumen Gentium"
+    },
+    {
+     "title": "Redemptoris Mater",
+     "label": "Redemptoris Mater (John Paul II, 1987)",
+     "url": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_25031987_redemptoris-mater.html",
+     "expect": "Redemptoris Mater"
+    },
+    {
+     "title": "Marialis Cultus",
+     "label": "Marialis Cultus (Paul VI, 1974)",
+     "url": "https://www.vatican.va/content/paul-vi/en/apost_exhortations/documents/hf_p-vi_exh_19740202_marialis-cultus.html",
+     "expect": "Marialis Cultus"
+    },
+    {
+     "title": "Munificentissimus Deus",
+     "label": "Munificentissimus Deus (Pius XII, 1950)",
+     "url": "https://www.vatican.va/content/pius-xii/en/apost_constitutions/documents/hf_p-xii_apc_19501101_munificentissimus-deus.html",
+     "expect": "Munificentissimus Deus"
+    }
+   ]
+  },
+  {
+   "kind": "topic",
+   "id": "church",
+   "name": "The Church",
+   "ranges": [
+    [
+     748,
+     975,
+     "I BELIEVE IN THE HOLY CATHOLIC CHURCH"
+    ]
+   ],
+   "documents": [
+    {
+     "title": "Lumen Gentium",
+     "label": "Lumen Gentium (Vatican II, 1964)",
+     "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html",
+     "expect": "Lumen Gentium"
+    },
+    {
+     "title": "Mystici Corporis Christi",
+     "label": "Mystici Corporis Christi (Pius XII, 1943)",
+     "url": "https://www.vatican.va/content/pius-xii/en/encyclicals/documents/hf_p-xii_enc_29061943_mystici-corporis-christi.html",
+     "expect": "Mystici Corporis"
+    }
+   ]
+  },
+  {
+   "kind": "topic",
+   "id": "moral-life",
+   "name": "The moral life",
+   "ranges": [
+    [
+     1691,
+     2557,
+     "LIFE IN CHRIST"
+    ]
+   ],
+   "documents": [
+    {
+     "title": "Gaudium et Spes",
+     "label": "Gaudium et Spes (Vatican II, 1965)",
+     "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html",
+     "expect": "Gaudium et Spes"
+    },
+    {
+     "title": "Veritatis Splendor",
+     "label": "Veritatis Splendor (John Paul II, 1993)",
+     "url": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_06081993_veritatis-splendor.html",
+     "expect": "Veritatis Splendor"
+    }
+   ]
+  }
+ ]
+}

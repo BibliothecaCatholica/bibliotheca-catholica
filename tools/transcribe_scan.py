@@ -15,7 +15,8 @@ tested tool for a single-scan book"). It does the same things and nothing more:
   * applies the spec's `handFixes`, if any, before all of the above: each is {leaf, page, ocr, reading}, a misread checked
     by a person against the page image of the same scan (never another edition). `ocr` must be one whole OCR line of
     that leaf or occur exactly once in its lines and is replaced by `reading` (an empty reading drops a whole line of OCR noise). Every fix is
-    copied to the provenance record (owner decision, November 17, 2026).
+    copied to the provenance record (owner decision, November 17, 2026). A fix with `"heading": true` marks a heading set apart on
+    the page (a chapter title in mixed case): in prose it is its own paragraph, never run into the text before or after it.
 Known words are those of the library's own hosted texts (data/texts/), so the vocabulary is period English.
 
 Read-gate process (owner approval, November 22, 2026; docs/PROJECT-RULES.md rule 1, "Read gate"):
@@ -27,6 +28,9 @@ Read-gate process (owner approval, November 22, 2026; docs/PROJECT-RULES.md rule
     checked against the page images and every sampled form was right; otherwise every form is checked by hand;
   * `omitted` [{what, leaves, pages}]: an index, bibliography, or long appendix after the body may be left out, with a
     sentence in the text's header pointing to the full scan; body text, footnotes, and front matter never are;
+  * `blankLeaves` [leaf, ...]: leaves checked on the page image to carry no print (show-through from the facing page, a
+    tissue guard), whose OCR is only noise; they are read as empty and listed in the record. A leaf with any print is
+    never listed;
   * every score is saved with its method (readGate in the source record: engine, leaves scored, omissions, line
     choices, hand fixes, verified words, foreign samples), and `--measure DIR` scores a book without hosting it and
     writes DIR/<edition>.json with the method and every unread form; `--sample` prints the samples to check.
@@ -34,8 +38,9 @@ Read-gate process (owner approval, November 22, 2026; docs/PROJECT-RULES.md rule
     python3 tools/transcribe_scan.py SPEC.json [--cache DIR] [--measure DIR | --sample]
 
 SPEC is a list of {edition, ia, title, sourceTitle, author, year, firstPublished, firstLeaf, lastLeaf, note?, startsWith?,
-endsWith?, layout?, publisher?} (startsWith/endsWith cut one article from shared pages: see bounded(); layout 'verse'
-keeps printed line and stanza breaks and does not rejoin words across line ends; publisher and year override a
+endsWith?, layout?, verseLeaves?, publisher?} (startsWith/endsWith cut one article from shared pages: see bounded(); layout 'verse'
+keeps printed line and stanza breaks and does not rejoin words across line ends; verseLeaves [[first, last], ...] does that
+only on those leaves, so a book of poems with a prose introduction and notes keeps its rejoins there; publisher and year override a
 mislabeled Internet Archive catalog entry when the printed title page is recorded in note); leaves
 are 0-based page indexes of the djvu.xml, chosen by looking at the scan (front matter in, library stamps and
 publisher's advertisements out). Output per entry: data/texts/<edition>.txt and data/sources/<edition>.json
@@ -367,6 +372,8 @@ def apply_hand_fixes(raw_pages, e):
         hits[0]['hand'] = True  # checked on the page image: body() never drops it as a running head or noise
         if f['reading'] == f['ocr']:
             hits[0]['kept'] = True  # a keep mark: printed body text as read, never the start of a footnote
+        if f.get('heading'):
+            hits[0]['heading'] = True  # a heading set apart on the page (checked on the image): its own paragraph
 
 
 
@@ -506,6 +513,9 @@ def build(e, cache, V):
     root = ET.fromstring(xml)
     objs = root.findall('.//OBJECT')[e['firstLeaf']:e['lastLeaf'] + 1]
     raw_pages = [(int(o.get('height') or 3000), page_lines(o)) for o in objs]
+    for leaf in e.get('blankLeaves', []):  # checked on the page image: no print, only show-through or a tissue guard
+        assert e['firstLeaf'] <= leaf <= e['lastLeaf'], (e['edition'], 'blankLeaves must lie inside the scored range', leaf)
+        raw_pages[leaf - e['firstLeaf']] = (raw_pages[leaf - e['firstLeaf']][0], [])
     foreign, foreign_rec = foreign_read(e)
     verified = set(e.get('verifiedWords', [])) | foreign
     info = {'foreignWords': foreign_rec, 'secondOcr': second_ocr(e, objs, raw_pages, cache, V, verified) if e.get('secondOcr') else None,
@@ -516,15 +526,16 @@ def build(e, cache, V):
     stamps = library_stamps(raw_pages, heads)
     paras, corrections, flagged, pending = [], [], [], []
     cur, prev_end = [], ''
-    if e.get('layout') == 'verse':
-        paras = verse_paras(raw_pages, e, heads, stamps, V)
-    else:
+    def prose_paras(pages):
+        """Paragraphs, footnotes, and headings for a run of prose pages (the default layout)."""
+        paras, pending = [], []
+        cur, prev_end = [], ''
 
         def close(par):
             paras.append(par)
             while pending:  # a page's footnotes follow the paragraph that was running on that page
                 paras.append([note_text(pending.pop(0))])
-        for height, ls in raw_pages:
+        for height, ls in pages:
             ls = [l for l in ls if not is_stamp(l['text'], stamps)]
             ls = body(ls, height, heads, V)
             ls, notes = split_notes(ls, height)
@@ -538,6 +549,7 @@ def build(e, cache, V):
             two_col = bool(wide) and max(wide) - min(wide) > 300
             prev_y = None
             prev_solo = False
+            prev_head = False
             for k, l in enumerate(ls):
                 col_top = two_col and prev_y is not None and l['y'] < prev_y - 3 * l['h']
                 prev_y = l['y']
@@ -557,19 +569,38 @@ def build(e, cache, V):
                 heading = l['text'].isupper() and len(l['text'].split()) <= 10 and not prev_end.endswith('-')
                 # a chapter numeral or an ornament row restored by hand stands alone, as printed
                 solo = l.get('hand') and alone(l['text'])
-                new = cur and (heading or solo or (l['paraStart'] and sentence_end) or (indent and sentence_end)
+                new = cur and (heading or solo or l.get('heading') or prev_head or (l['paraStart'] and sentence_end) or (indent and sentence_end)
                                or (cur and cur[-1].isupper() and len(cur[-1].split()) <= 10) or (cur and alone(cur[-1]) and prev_solo))
                 if new:
                     close(cur); cur = []
-                cur.append(l['text']); prev_end = l['text']; prev_solo = bool(solo)
+                cur.append(l['text']); prev_end = l['text']; prev_solo = bool(solo); prev_head = bool(l.get('heading'))
             pending.extend(notes)
         if cur:
             close(cur)
         while pending:  # notes on the last pages
             paras.append([note_text(pending.pop(0))])
-        paras = bounded(paras, e)
+        return paras
+
+    ranges = e.get('verseLeaves')  # per-leaf verse layout (Meyer, November 23, 2026): [[first, last], ...] leaves in verse
+    if e.get('layout') == 'verse':
+        paras = verse_paras(raw_pages, e, heads, stamps, V)
+        kinds = [True] * len(paras)
+    elif ranges:
+        assert not e.get('startsWith') and not e.get('endsWith'), 'verseLeaves with an article cut is not supported'
+        in_verse = lambda k: any(a <= e['firstLeaf'] + k <= b for a, b in ranges)
+        paras, kinds, k = [], [], 0
+        while k < len(raw_pages):  # consecutive leaves of one kind form a run; a paragraph never crosses a run edge
+            j = k
+            while j < len(raw_pages) and in_verse(j) == in_verse(k):
+                j += 1
+            run = verse_paras(raw_pages[k:j], {}, heads, stamps, V) if in_verse(k) else prose_paras(raw_pages[k:j])
+            paras += run
+            kinds += [in_verse(k)] * len(run)
+            k = j
+    else:
+        paras = bounded(prose_paras(raw_pages), e)
+        kinds = [False] * len(paras)
     out = []
-    verse = e.get('layout') == 'verse'
 
     def score_line(line, bad):
         toks = []
@@ -587,7 +618,7 @@ def build(e, cache, V):
             toks.append(f)
         return ' '.join(toks)
 
-    for p in paras:
+    for p, verse in zip(paras, kinds):
         bad = []
         if verse:
             out.append('\n'.join(score_line(line, bad) for line in p))
@@ -615,6 +646,7 @@ def read_gate_record(e, words, unknown, info):
             **({'lineChoices': so['lineChoices']} if so else {}),
             'leavesScored': [e['firstLeaf'], e['lastLeaf']],
             'omitted': e.get('omitted', []),
+            **({'blankLeaves': e['blankLeaves']} if e.get('blankLeaves') else {}),
             'handFixes': len(e.get('handFixes', [])), 'verifiedWords': len(e.get('verifiedWords', [])),
             'foreignWords': {k: {x: v[x] for x in ('sampleSize', 'wrong', 'result')} | {'forms': len(v['forms'])}
                              for k, v in info.get('foreignWords', {}).items()},
@@ -674,6 +706,9 @@ def main(spec, cache, measure=None):
         if e.get('layout') == 'verse':
             cleaned = ("running heads and page numbers removed, verse lines and stanza breaks kept as printed, "
                        "words not rejoined across line breaks, and ")
+        elif e.get('verseLeaves'):
+            cleaned = ("running heads and page numbers removed, words rejoined across line breaks except on the verse leaves ("
+                       + ', '.join(f'{a}-{b}' for a, b in e['verseLeaves']) + "), where printed lines and stanza breaks are kept, and ")
         else:
             cleaned = "running heads and page numbers removed, words rejoined across line breaks, and "
         head = [T, '', f"By {e['author']}", '', f"First published {e['firstPublished']}. Public domain in the USA.", '',
@@ -733,6 +768,10 @@ def main(spec, cache, measure=None):
             rec['omitted'] = e['omitted']
         if e.get('layout'):
             rec['layout'] = e['layout']
+        if e.get('verseLeaves'):
+            rec['verseLeaves'] = e['verseLeaves']
+            rec['method'] += (' Verse lines and stanza breaks are kept as printed on the verse leaves ('
+                              + ', '.join(f'{a}-{b}' for a, b in e['verseLeaves']) + '), and words are not rejoined there.')
         if e.get('note'):
             rec['note'] = e['note']
         (ROOT / f"data/sources/{e['edition']}.json").write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')

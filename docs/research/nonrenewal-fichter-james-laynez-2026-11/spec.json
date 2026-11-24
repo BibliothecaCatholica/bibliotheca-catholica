@@ -1,0 +1,1457 @@
+[
+ {
+  "edition": "ia-jameslaynezjesui00fich",
+  "ia": "jameslaynezjesui00fich",
+  "title": "JAMES LAYNEZ, JESUIT",
+  "sourceTitle": "James Laynez, Jesuit",
+  "author": "Joseph H. Fichter",
+  "year": 1944,
+  "firstPublished": "1944 (St. Louis: B. Herder Book Co.)",
+  "rightsBasis": "pd-nonrenewal",
+  "nonRenewal": {
+   "firstPublicationYear": 1944,
+   "firstPublicationCountry": "US",
+   "firstPublicationPlace": "St. Louis",
+   "firstPublicationPublisher": "B. Herder Book Co.",
+   "stanford": {
+    "result": "no renewal found",
+    "checked": "2026-11-16",
+    "method": "one plain curl query (title words and surname), default user agent"
+   },
+   "nypl": {
+    "result": "no renewal found",
+    "checked": "2026-11-16",
+    "method": "NYPL cce-renewals data"
+   },
+   "hathitrust": "pdus",
+   "hathitrustRecord": "pdus (umn.31951001693734l)",
+   "uraa": "Imprint names St. Louis and B. Herder's London office (33 Queen Square); the copyright page says Printed in U.S.A. No earlier London edition is indicated, so US publication was at least simultaneous, which excludes URAA restoration (17 USC 104A(h)(6)(D)).",
+   "scan": "jameslaynezjesui00fich",
+   "research": "docs/research/us-pd-renewal-checks-2026-11.csv"
+  },
+  "firstLeaf": 5,
+  "lastLeaf": 304,
+  "omitted": [
+   {
+    "what": "the index",
+    "leaves": [
+     306,
+     318
+    ],
+    "pages": "287-299"
+   }
+  ],
+  "secondOcr": {
+   "engine": "tesseract",
+   "langs": "eng+lat+ita",
+   "scale": 1
+  },
+  "handFixes": [
+   {
+    "leaf": 16,
+    "page": null,
+    "ocr": "de la Compania de Jesus en la Asistencia de Espana, I, 74 f.",
+    "reading": "de la Compañia de Jesus en la Asistencia de Espana, I, 74 f."
+   },
+   {
+    "leaf": 18,
+    "page": null,
+    "ocr": "Numerous other details of Laynez’ pany history are barely dis-",
+    "reading": "Numerous other details of Laynez’ family history are barely dis-"
+   },
+   {
+    "leaf": 136,
+    "page": null,
+    "ocr": "Compania;) * y que serviré mas a nuestro Senor y 4 la iglesia y a",
+    "reading": "Compañía;) * y que serviré mas a nuestro Senor y 4 la iglesia y a"
+   },
+   {
+    "leaf": 213,
+    "page": null,
+    "ocr": "10 All of these are reproduced in Monumenta Lainit, VIII, 681-91.",
+    "reading": "10 All of these are reproduced in Monumenta Lainii, VIII, 681-91."
+   },
+   {
+    "leaf": 251,
+    "page": null,
+    "ocr": "4 Cf. the Appendix of Monumenta Lainit, III, 820.",
+    "reading": "4 Cf. the Appendix of Monumenta Lainii, III, 820."
+   },
+   {
+    "leaf": 281,
+    "page": null,
+    "ocr": "a Oe ee ee ae ee",
+    "reading": ""
+   },
+   {
+    "leaf": 6,
+    "page": null,
+    "ocr": "Beeb Re DE RY BOO. KR GO.",
+    "reading": "B. HERDER BOOK CO."
+   },
+   {
+    "leaf": 6,
+    "page": null,
+    "ocr": "15x & 17 SOUTH BROADWAY, ST. LOUIS 2, MO.",
+    "reading": "15 & 17 SOUTH BROADWAY, ST. LOUIS 2, MO."
+   },
+   {
+    "leaf": 6,
+    "page": null,
+    "ocr": "33 QUEEN SQUARE, LONDON, W. CG.",
+    "reading": "AND 33 QUEEN SQUARE, LONDON, W. C."
+   },
+   {
+    "leaf": 7,
+    "page": null,
+    "ocr": ">< Joannes J. Glennon, S.1",
+    "reading": "✠ Joannes J. Glennon, S.T.D."
+   },
+   {
+    "leaf": 7,
+    "page": null,
+    "ocr": "Sti. Ludovice",
+    "reading": "Sti. Ludovici"
+   },
+   {
+    "leaf": 8,
+    "page": null,
+    "ocr": "Sociis Mets",
+    "reading": "Sociis Meis"
+   },
+   {
+    "leaf": 10,
+    "page": null,
+    "ocr": "V/",
+    "reading": ""
+   },
+   {
+    "leaf": 11,
+    "page": null,
+    "ocr": "and speeches as edited by Hartmann Grisar in the Disputationes Tr1-",
+    "reading": "and speeches as edited by Hartmann Grisar in the Disputationes Tri-"
+   },
+   {
+    "leaf": 11,
+    "page": null,
+    "ocr": "illustrative material was provided by John F. X. McEwen, S.]., of",
+    "reading": "illustrative material was provided by John F. X. McEwen, S.J., of"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "Contents",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "CHAPTER",
+    "reading": "Contents"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "Vii",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "Ty lo-Paris, Frarice. .",
+    "reading": "I. To Paris, France . . . 1"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "II. Footloose in Europe .",
+    "reading": "II. Footloose in Europe . . . 17"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "III. The Start to Fame",
+    "reading": "III. The Start to Fame . . . 30"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "IV. Spiritual Whirlwind .",
+    "reading": "IV. Spiritual Whirlwind . . . 43"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "V. ‘The Pope’s Own Man",
+    "reading": "V. The Pope’s Own Man . . . 55"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "VI. In the City of Savonarola .",
+    "reading": "VI. In the City of Savonarola . . . 69"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "VII. In Peace and War",
+    "reading": "VII. In Peace and War . . . 83"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "VIII. At Trent Again",
+    "reading": "VIII. At Trent Again . . . 96"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "IX. Work and Conflict :",
+    "reading": "IX. Work and Conflict . . . 111"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "X. The Provincial and the Duchess",
+    "reading": "X. The Provincial and the Duchess . . . 123"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "XI. Threat of the Red Hat .",
+    "reading": "XI. Threat of the Red Hat . . . 137"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "XII. Laynez’ Papal Friend",
+    "reading": "XII. Laynez’ Papal Friend . . . 149"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "XIII. General of the Jesuits",
+    "reading": "XIII. General of the Jesuits . . . 163"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "XIV. His Brother, Christopher e$ uns",
+    "reading": "XIV. His Brother, Christopher . . . 174"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "XV. ‘Trouble with Cano and the French Pivement",
+    "reading": "XV. Trouble with Cano and the French Parlement . . . 189"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "XVI. The Third Sojourn at Trent .",
+    "reading": "XVI. The Third Sojourn at Trent . . . 204"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "XVII. The Chalice and the Episcopate .",
+    "reading": "XVII. The Chalice and the Episcopate . . . 216"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "XVIII. Defender of the Papacy .",
+    "reading": "XVIII. Defender of the Papacy . . . 229"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "XIX. The Last Year",
+    "reading": "XIX. The Last Year . . . 243"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "XX. The Last Month .",
+    "reading": "XX. The Last Month . . . 256"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "I. Ribadeneira’s Description of Laynez .",
+    "reading": "I. Ribadeneira’s Description of Laynez . . . 267"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "IJ. Laynez’ Three Narrow Escapes from Drowning .",
+    "reading": "II. Laynez’ Three Narrow Escapes from Drowning . . . 269"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "III. Salmeron’s Appreciation of Laynez :",
+    "reading": "III. Salmeron’s Appreciation of Laynez . . . 271"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "IV. How to Use the Voice in Public Speaking .",
+    "reading": "IV. How to Use the Voice in Public Speaking . . . 272"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "V. Advice to a Military Leader ae.",
+    "reading": "V. Advice to a Military Leader . . . 276"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "VI. Practical Advice for Boys in Jesuit Schools .",
+    "reading": "VI. Practical Advice for Boys in Jesuit Schools . . . 279"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "VII. Letter to the Jesuits in India .",
+    "reading": "VII. Letter to the Jesuits in India . . . 282"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "Index ;",
+    "reading": "Index . . . 287"
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "pain a Aa OF |",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "wh,",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "- 149",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "- 174",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": ". 204",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": ". 216",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "1220",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "- 243",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": ". 256",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "207",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": ". 269",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "25271",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "272",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": ". 276",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "ado",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "LES:",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": null,
+    "ocr": "p27",
+    "reading": ""
+   },
+   {
+    "leaf": 10,
+    "page": null,
+    "ocr": "Preface",
+    "reading": "Preface",
+    "heading": true
+   },
+   {
+    "leaf": 10,
+    "page": null,
+    "ocr": "From one point of view",
+    "reading": "FROM one point of view"
+   },
+   {
+    "leaf": 14,
+    "page": null,
+    "ocr": "To Paris, France",
+    "reading": "To Paris, France",
+    "heading": true
+   },
+   {
+    "leaf": 14,
+    "page": null,
+    "ocr": "An enthusiastic biographer",
+    "reading": "AN enthusiastic biographer"
+   },
+   {
+    "leaf": 30,
+    "page": null,
+    "ocr": "Gori A Eon Ree iil",
+    "reading": "CHAPTER II"
+   },
+   {
+    "leaf": 30,
+    "page": null,
+    "ocr": "Footloose in Europe",
+    "reading": "Footloose in Europe",
+    "heading": true
+   },
+   {
+    "leaf": 30,
+    "page": null,
+    "ocr": "Laynez and his fellow travelers",
+    "reading": "LAYNEZ and his fellow travelers"
+   },
+   {
+    "leaf": 43,
+    "page": null,
+    "ocr": "CHUA Pi Tea ed",
+    "reading": "CHAPTER III"
+   },
+   {
+    "leaf": 43,
+    "page": null,
+    "ocr": "The Start to Fame",
+    "reading": "The Start to Fame",
+    "heading": true
+   },
+   {
+    "leaf": 43,
+    "page": null,
+    "ocr": "On THAT bleak",
+    "reading": "ON THAT bleak"
+   },
+   {
+    "leaf": 56,
+    "page": null,
+    "ocr": "Spiritual Whirlwind",
+    "reading": "Spiritual Whirlwind",
+    "heading": true
+   },
+   {
+    "leaf": 56,
+    "page": null,
+    "ocr": "Tue fame of Ignatius",
+    "reading": "THE fame of Ignatius"
+   },
+   {
+    "leaf": 68,
+    "page": null,
+    "ocr": "GEA PPG Rev,",
+    "reading": "CHAPTER V"
+   },
+   {
+    "leaf": 68,
+    "page": null,
+    "ocr": "The Pope’s Own Man",
+    "reading": "The Pope’s Own Man",
+    "heading": true
+   },
+   {
+    "leaf": 68,
+    "page": null,
+    "ocr": "Tue famous Council",
+    "reading": "THE famous Council"
+   },
+   {
+    "leaf": 82,
+    "page": null,
+    "ocr": "GAA Pele Ros VoL",
+    "reading": "CHAPTER VI"
+   },
+   {
+    "leaf": 82,
+    "page": null,
+    "ocr": "In the City of Savonarola",
+    "reading": "In the City of Savonarola",
+    "heading": true
+   },
+   {
+    "leaf": 96,
+    "page": null,
+    "ocr": "Onis hyelde 1. Oak Ve]",
+    "reading": "CHAPTER VII"
+   },
+   {
+    "leaf": 96,
+    "page": null,
+    "ocr": "In Peace and War",
+    "reading": "In Peace and War",
+    "heading": true
+   },
+   {
+    "leaf": 96,
+    "page": null,
+    "ocr": "To THE casual observer",
+    "reading": "TO THE casual observer"
+   },
+   {
+    "leaf": 109,
+    "page": null,
+    "ocr": "COBWASP Ske Rae lal",
+    "reading": "CHAPTER VIII"
+   },
+   {
+    "leaf": 109,
+    "page": null,
+    "ocr": "At Trent Again",
+    "reading": "At Trent Again",
+    "heading": true
+   },
+   {
+    "leaf": 124,
+    "page": null,
+    "ocr": "GaEPAS Pe licka Ra Xs.",
+    "reading": "CHAPTER IX"
+   },
+   {
+    "leaf": 124,
+    "page": null,
+    "ocr": "Work and Conflict",
+    "reading": "Work and Conflict",
+    "heading": true
+   },
+   {
+    "leaf": 140,
+    "page": null,
+    "ocr": "GEASS OR RIX",
+    "reading": "CHAPTER X"
+   },
+   {
+    "leaf": 140,
+    "page": null,
+    "ocr": "The Provincial and the Duchess",
+    "reading": "The Provincial and the Duchess",
+    "heading": true
+   },
+   {
+    "leaf": 154,
+    "page": null,
+    "ocr": "Threat of the Red Hat",
+    "reading": "Threat of the Red Hat",
+    "heading": true
+   },
+   {
+    "leaf": 154,
+    "page": null,
+    "ocr": "Ir was the notable",
+    "reading": "IT WAS the notable"
+   },
+   {
+    "leaf": 166,
+    "page": null,
+    "ocr": "Laynez’ Papal Friend",
+    "reading": "Laynez’ Papal Friend",
+    "heading": true
+   },
+   {
+    "leaf": 166,
+    "page": null,
+    "ocr": "As FAR as the Society",
+    "reading": "AS FAR as the Society"
+   },
+   {
+    "leaf": 180,
+    "page": null,
+    "ocr": "Gen Ae Pale Regex LT",
+    "reading": "CHAPTER XIII"
+   },
+   {
+    "leaf": 180,
+    "page": null,
+    "ocr": "General of the fesurts",
+    "reading": "General of the Jesuits",
+    "heading": true
+   },
+   {
+    "leaf": 180,
+    "page": null,
+    "ocr": "Durinc the first few months",
+    "reading": "DURING the first few months"
+   },
+   {
+    "leaf": 183,
+    "page": null,
+    "ocr": "—_—— a",
+    "reading": ""
+   },
+   {
+    "leaf": 193,
+    "page": null,
+    "ocr": "GHA P TER XLV",
+    "reading": "CHAPTER XIV"
+   },
+   {
+    "leaf": 193,
+    "page": null,
+    "ocr": "is Brother, Christopher",
+    "reading": "His Brother, Christopher",
+    "heading": true
+   },
+   {
+    "leaf": 193,
+    "page": null,
+    "ocr": "OnE of the disagreeable",
+    "reading": "ONE of the disagreeable"
+   },
+   {
+    "leaf": 208,
+    "page": null,
+    "ocr": "(ACP eek RXV",
+    "reading": "CHAPTER XV"
+   },
+   {
+    "leaf": 208,
+    "page": null,
+    "ocr": "Trouble with Cano and the French",
+    "reading": "Trouble with Cano and the French Parlement",
+    "heading": true
+   },
+   {
+    "leaf": 208,
+    "page": null,
+    "ocr": "Parlement",
+    "reading": ""
+   },
+   {
+    "leaf": 208,
+    "page": null,
+    "ocr": "For A brief moment",
+    "reading": "FOR A brief moment"
+   },
+   {
+    "leaf": 223,
+    "page": null,
+    "ocr": "CHAR TER, Xvid",
+    "reading": "CHAPTER XVI"
+   },
+   {
+    "leaf": 223,
+    "page": null,
+    "ocr": "The Third Sojourn at Trent",
+    "reading": "The Third Sojourn at Trent",
+    "heading": true
+   },
+   {
+    "leaf": 235,
+    "page": null,
+    "ocr": "CHAP PER XV AT",
+    "reading": "CHAPTER XVII"
+   },
+   {
+    "leaf": 235,
+    "page": null,
+    "ocr": "The Chalice and the Episcopate",
+    "reading": "The Chalice and the Episcopate",
+    "heading": true
+   },
+   {
+    "leaf": 235,
+    "page": null,
+    "ocr": "WE May be sure",
+    "reading": "WE MAY be sure"
+   },
+   {
+    "leaf": 248,
+    "page": null,
+    "ocr": "CWA Pall ER On eT",
+    "reading": "CHAPTER XVIII"
+   },
+   {
+    "leaf": 248,
+    "page": null,
+    "ocr": "Defender of the Papacy",
+    "reading": "Defender of the Papacy",
+    "heading": true
+   },
+   {
+    "leaf": 248,
+    "page": null,
+    "ocr": "Ir 1s almost axiomatic",
+    "reading": "IT IS almost axiomatic"
+   },
+   {
+    "leaf": 262,
+    "page": null,
+    "ocr": "COPPA Cali Ra NGTEX",
+    "reading": "CHAPTER XIX"
+   },
+   {
+    "leaf": 262,
+    "page": null,
+    "ocr": "The Last Year",
+    "reading": "The Last Year",
+    "heading": true
+   },
+   {
+    "leaf": 275,
+    "page": null,
+    "ocr": "GREASE ST. ba Rapes",
+    "reading": "CHAPTER XX"
+   },
+   {
+    "leaf": 275,
+    "page": null,
+    "ocr": "The Last Month",
+    "reading": "The Last Month",
+    "heading": true
+   },
+   {
+    "leaf": 275,
+    "page": null,
+    "ocr": "Ir 1s doubtful",
+    "reading": "IT IS doubtful"
+   },
+   {
+    "leaf": 284,
+    "page": null,
+    "ocr": "Appendixes",
+    "reading": "Appendixes",
+    "heading": true
+   },
+   {
+    "leaf": 286,
+    "page": null,
+    "ocr": "Ribadeneira’s Description of Laynez",
+    "reading": "Ribadeneira’s Description of Laynez",
+    "heading": true
+   },
+   {
+    "leaf": 288,
+    "page": null,
+    "ocr": "That",
+    "reading": "II"
+   },
+   {
+    "leaf": 288,
+    "page": null,
+    "ocr": "Laynez’ Three Narrow Escapes",
+    "reading": "Laynez’ Three Narrow Escapes from Drowning",
+    "heading": true
+   },
+   {
+    "leaf": 288,
+    "page": null,
+    "ocr": "from Drowning",
+    "reading": ""
+   },
+   {
+    "leaf": 290,
+    "page": null,
+    "ocr": "II!",
+    "reading": "III"
+   },
+   {
+    "leaf": 290,
+    "page": null,
+    "ocr": "Salmeron’s Appreciation of Laynez",
+    "reading": "Salmeron’s Appreciation of Laynez",
+    "heading": true
+   },
+   {
+    "leaf": 291,
+    "page": null,
+    "ocr": "LV,",
+    "reading": "IV"
+   },
+   {
+    "leaf": 291,
+    "page": null,
+    "ocr": "How to Use the Voice in Public",
+    "reading": "How to Use the Voice in Public Speaking",
+    "heading": true
+   },
+   {
+    "leaf": 291,
+    "page": null,
+    "ocr": "Speaking",
+    "reading": ""
+   },
+   {
+    "leaf": 291,
+    "page": null,
+    "ocr": "To OBTAIN the right",
+    "reading": "TO OBTAIN the right"
+   },
+   {
+    "leaf": 295,
+    "page": null,
+    "ocr": "Advice to a Military Leader",
+    "reading": "Advice to a Military Leader",
+    "heading": true
+   },
+   {
+    "leaf": 295,
+    "page": null,
+    "ocr": "ILLustrious Sir",
+    "reading": "ILLUSTRIOUS Sir"
+   },
+   {
+    "leaf": 298,
+    "page": null,
+    "ocr": "Vi",
+    "reading": "VI"
+   },
+   {
+    "leaf": 298,
+    "page": null,
+    "ocr": "Practical Advice for Boys in fesuit",
+    "reading": "Practical Advice for Boys in Jesuit Schools",
+    "heading": true
+   },
+   {
+    "leaf": 298,
+    "page": null,
+    "ocr": "Schools",
+    "reading": ""
+   },
+   {
+    "leaf": 301,
+    "page": null,
+    "ocr": "Letter to the Jesuits in India",
+    "reading": "Letter to the Jesuits in India",
+    "heading": true
+   },
+   {
+    "leaf": 301,
+    "page": null,
+    "ocr": "My pear Brothers",
+    "reading": "MY DEAR Brothers"
+   },
+   {
+    "leaf": 14,
+    "page": null,
+    "ocr": "CHAPTER I",
+    "reading": "CHAPTER I"
+   },
+   {
+    "leaf": 56,
+    "page": null,
+    "ocr": "CHAPTER IV",
+    "reading": "CHAPTER IV"
+   },
+   {
+    "leaf": 154,
+    "page": null,
+    "ocr": "CHAPTER XI",
+    "reading": "CHAPTER XI"
+   },
+   {
+    "leaf": 166,
+    "page": null,
+    "ocr": "CHAPTER XII",
+    "reading": "CHAPTER XII"
+   },
+   {
+    "leaf": 286,
+    "page": null,
+    "ocr": "APPENDIXES",
+    "reading": "APPENDIXES"
+   },
+   {
+    "leaf": 286,
+    "page": null,
+    "ocr": "I",
+    "reading": "I"
+   },
+   {
+    "leaf": 301,
+    "page": null,
+    "ocr": "VII",
+    "reading": "VII"
+   },
+   {
+    "leaf": 6,
+    "page": null,
+    "ocr": "JAMES LAYNEZ",
+    "reading": "JAMES LAYNEZ"
+   },
+   {
+    "leaf": 6,
+    "page": null,
+    "ocr": "1944",
+    "reading": "1944"
+   },
+   {
+    "leaf": 18,
+    "page": null,
+    "ocr": "_ If there was any disgrace or any disedification attached to a Jewish",
+    "reading": "If there was any disgrace or any disedification attached to a Jewish"
+   },
+   {
+    "leaf": 18,
+    "page": null,
+    "ocr": "the burdensome limitations that had been put upon his race.” > But",
+    "reading": "the burdensome limitations that had been put upon his race.” But"
+   },
+   {
+    "leaf": 18,
+    "page": null,
+    "ocr": "Catholic life. }",
+    "reading": "Catholic life."
+   },
+   {
+    "leaf": 20,
+    "page": null,
+    "ocr": "TO PARIS, FRANCE ~",
+    "reading": ""
+   },
+   {
+    "leaf": 28,
+    "page": null,
+    "ocr": "TO PARIS, FRANCE 1B",
+    "reading": ""
+   },
+   {
+    "leaf": 30,
+    "page": null,
+    "ocr": "Ly |",
+    "reading": ""
+   },
+   {
+    "leaf": 41,
+    "page": null,
+    "ocr": "forty days they would pray, meditate, and do~penance, and at the",
+    "reading": "forty days they would pray, meditate, and do penance, and at the"
+   },
+   {
+    "leaf": 46,
+    "page": null,
+    "ocr": "_for the sick, and begged for the poor. As the others, they spoke Italian",
+    "reading": "for the sick, and begged for the poor. As the others, they spoke Italian"
+   },
+   {
+    "leaf": 46,
+    "page": null,
+    "ocr": "had entertained a saint in its midst. |",
+    "reading": "had entertained a saint in its midst."
+   },
+   {
+    "leaf": 56,
+    "page": null,
+    "ocr": "This 1s less true of",
+    "reading": "This is less true of"
+   },
+   {
+    "leaf": 57,
+    "page": null,
+    "ocr": "who were absent, with the exception of Bobadilla, had left their |",
+    "reading": "who were absent, with the exception of Bobadilla, had left their"
+   },
+   {
+    "leaf": 58,
+    "page": null,
+    "ocr": "SPIRITUAL WHIRLWIND 4m",
+    "reading": ""
+   },
+   {
+    "leaf": 63,
+    "page": null,
+    "ocr": "50 JAMES LAYNEZ_",
+    "reading": ""
+   },
+   {
+    "leaf": 73,
+    "page": null,
+    "ocr": "logians were not entirely sound, so the Cardinal [Cervini] suggested |",
+    "reading": "logians were not entirely sound, so the Cardinal [Cervini] suggested"
+   },
+   {
+    "leaf": 75,
+    "page": null,
+    "ocr": "because it 1s the one which Laynez had in mind when he gave his own",
+    "reading": "because it is the one which Laynez had in mind when he gave his own"
+   },
+   {
+    "leaf": 75,
+    "page": null,
+    "ocr": "present. }",
+    "reading": "present."
+   },
+   {
+    "leaf": 76,
+    "page": null,
+    "ocr": "such; and this 1s false.”",
+    "reading": "such; and this is false.”"
+   },
+   {
+    "leaf": 77,
+    "page": null,
+    "ocr": "The first servitor is an example of the way the Protestant theory of |",
+    "reading": "The first servitor is an example of the way the Protestant theory of"
+   },
+   {
+    "leaf": 81,
+    "page": null,
+    "ocr": "three hours or more at a time.” ® |",
+    "reading": "three hours or more at a time.” 9"
+   },
+   {
+    "leaf": 81,
+    "page": null,
+    "ocr": "quest of Alphonsus.” *° |",
+    "reading": "quest of Alphonsus.” 10"
+   },
+   {
+    "leaf": 82,
+    "page": null,
+    "ocr": "~ to Rome. Paul III wished to leave the members of the Council free",
+    "reading": "to Rome. Paul III wished to leave the members of the Council free"
+   },
+   {
+    "leaf": 84,
+    "page": null,
+    "ocr": "for four hours, and | reported the results to Cardinal Cervini. June 4,",
+    "reading": "for four hours, and I reported the results to Cardinal Cervini. June 4,"
+   },
+   {
+    "leaf": 86,
+    "page": null,
+    "ocr": "that there were still numerous devoted followers of the great Domin1-",
+    "reading": "that there were still numerous devoted followers of the great Domini-"
+   },
+   {
+    "leaf": 91,
+    "page": null,
+    "ocr": "is to preach.” |",
+    "reading": "is to preach.”"
+   },
+   {
+    "leaf": 92,
+    "page": null,
+    "ocr": "these men. ‘To them^he showed the papal bull confirming the Society",
+    "reading": "these men. To them he showed the papal bull confirming the Society"
+   },
+   {
+    "leaf": 94,
+    "page": null,
+    "ocr": "_ It was the custom at Naples on New Year’s Day for some representa-",
+    "reading": "It was the custom at Naples on New Year’s Day for some representa-"
+   },
+   {
+    "leaf": 107,
+    "page": null,
+    "ocr": "heard the confessions not only of caballeros and_capitanes but also of",
+    "reading": "heard the confessions not only of caballeros and capitanes but also of"
+   },
+   {
+    "leaf": 110,
+    "page": null,
+    "ocr": "In the early years of the Society 1t was Laynez who pointed out to",
+    "reading": "In the early years of the Society it was Laynez who pointed out to"
+   },
+   {
+    "leaf": 111,
+    "page": null,
+    "ocr": "98 | JAMES LAYNEZ",
+    "reading": ""
+   },
+   {
+    "leaf": 111,
+    "page": null,
+    "ocr": "(Textus Hispanicus), U1, cxlviii",
+    "reading": "(Textus Hispanicus), II, cxlviii"
+   },
+   {
+    "leaf": 117,
+    "page": null,
+    "ocr": "ter stay in this hot oven. So that night he slept on a chest, and John and ~",
+    "reading": "ter stay in this hot oven. So that night he slept on a chest, and John and"
+   },
+   {
+    "leaf": 124,
+    "page": null,
+    "ocr": "city until April 21, he spent the intervening months in visiting 1m-",
+    "reading": "city until April 21, he spent the intervening months in visiting im-"
+   },
+   {
+    "leaf": 126,
+    "page": null,
+    "ocr": "follow their own will rather than that of the Superior, Father E1-",
+    "reading": "follow their own will rather than that of the Superior, Father El-"
+   },
+   {
+    "leaf": 143,
+    "page": null,
+    "ocr": "whether it is a sin because it 1s prohibited, or rather prohibited be-",
+    "reading": "whether it is a sin because it is prohibited, or rather prohibited be-"
+   },
+   {
+    "leaf": 143,
+    "page": null,
+    "ocr": "law; (d) what kind of sin and how harmful it 1s; (e) what are the most",
+    "reading": "law; (d) what kind of sin and how harmful it is; (e) what are the most"
+   },
+   {
+    "leaf": 145,
+    "page": null,
+    "ocr": "ness solely for the sake of making money. But he 1s willing to admit",
+    "reading": "ness solely for the sake of making money. But he is willing to admit"
+   },
+   {
+    "leaf": 145,
+    "page": null,
+    "ocr": "man may judge whether any particular kind of exchange 1s illicit or",
+    "reading": "man may judge whether any particular kind of exchange is illicit or"
+   },
+   {
+    "leaf": 150,
+    "page": null,
+    "ocr": "_ ess, who was steadfast in her determination to keep Father Laynez be-",
+    "reading": "ess, who was steadfast in her determination to keep Father Laynez be-"
+   },
+   {
+    "leaf": 152,
+    "page": null,
+    "ocr": "_the scandalous lives of the clergy, almost all of whom had concubines.\"",
+    "reading": "the scandalous lives of the clergy, almost all of whom had concubines.\""
+   },
+   {
+    "leaf": 158,
+    "page": null,
+    "ocr": "_ division. Graces and spiritual faculties are infused or conceded to men",
+    "reading": "division. Graces and spiritual faculties are infused or conceded to men"
+   },
+   {
+    "leaf": 165,
+    "page": null,
+    "ocr": "148 _ JAMES LAYNEZ",
+    "reading": ""
+   },
+   {
+    "leaf": 165,
+    "page": null,
+    "ocr": "~ of overwork. Almost as though he were bodily sympathetic with Ig-",
+    "reading": "of overwork. Almost as though he were bodily sympathetic with Ig-"
+   },
+   {
+    "leaf": 168,
+    "page": null,
+    "ocr": "Father Ignatius.” }",
+    "reading": "Father Ignatius.” 1"
+   },
+   {
+    "leaf": 168,
+    "page": null,
+    "ocr": "those of Laynez. They had seen the despotism occurring 1n religious",
+    "reading": "those of Laynez. They had seen the despotism occurring in religious"
+   },
+   {
+    "leaf": 174,
+    "page": null,
+    "ocr": "promised a long delay. |",
+    "reading": "promised a long delay."
+   },
+   {
+    "leaf": 184,
+    "page": null,
+    "ocr": "what they wished on this point. |",
+    "reading": "what they wished on this point."
+   },
+   {
+    "leaf": 187,
+    "page": null,
+    "ocr": "understand that they would be perfectly free in fixing the term of |",
+    "reading": "understand that they would be perfectly free in fixing the term of"
+   },
+   {
+    "leaf": 187,
+    "page": null,
+    "ocr": "we remain your obedient sons and are most ready to do whatever You1",
+    "reading": "we remain your obedient sons and are most ready to do whatever Your"
+   },
+   {
+    "leaf": 196,
+    "page": null,
+    "ocr": "_ law, John Hurtado de Mendoza. In March, 1561, Nadal reported to",
+    "reading": "law, John Hurtado de Mendoza. In March, 1561, Nadal reported to"
+   },
+   {
+    "leaf": 196,
+    "page": null,
+    "ocr": "S. Franciscus Borgia, U1, 590",
+    "reading": "S. Franciscus Borgia, III, 590"
+   },
+   {
+    "leaf": 213,
+    "page": null,
+    "ocr": "role in France. |",
+    "reading": "role in France."
+   },
+   {
+    "leaf": 214,
+    "page": null,
+    "ocr": "_THE COLLOQUY OF POISSY",
+    "reading": "THE COLLOQUY OF POISSY"
+   },
+   {
+    "leaf": 218,
+    "page": null,
+    "ocr": "PEODICIS.<.< .",
+    "reading": "problems. . . ."
+   },
+   {
+    "leaf": 229,
+    "page": null,
+    "ocr": "Council of Trentp>amust",
+    "reading": "Council of Trent"
+   },
+   {
+    "leaf": 230,
+    "page": null,
+    "ocr": "barely indicates the start of a mighty Jesuit tradition 1n theological astuteness.",
+    "reading": "barely indicates the start of a mighty Jesuit tradition in theological astuteness."
+   },
+   {
+    "leaf": 232,
+    "page": null,
+    "ocr": "Cardinal Charles Borromeo, young nephew and secretary to His Hol1-",
+    "reading": "Cardinal Charles Borromeo, young nephew and secretary to His Holi-"
+   },
+   {
+    "leaf": 233,
+    "page": null,
+    "ocr": "_ external pomp, thought the matter too trivial to argue about, and",
+    "reading": "external pomp, thought the matter too trivial to argue about, and"
+   },
+   {
+    "leaf": 237,
+    "page": null,
+    "ocr": "~",
+    "reading": ""
+   },
+   {
+    "leaf": 244,
+    "page": null,
+    "ocr": "On December 9g, Laynez rose",
+    "reading": "On December 9, Laynez rose"
+   },
+   {
+    "leaf": 250,
+    "page": null,
+    "ocr": "continue until he had completely spoken his mind on_all the articles,",
+    "reading": "continue until he had completely spoken his mind on all the articles,"
+   },
+   {
+    "leaf": 258,
+    "page": null,
+    "ocr": "APPROBATION OF THE SOCIETY OF JESUS |",
+    "reading": "APPROBATION OF THE SOCIETY OF JESUS"
+   },
+   {
+    "leaf": 259,
+    "page": null,
+    "ocr": "_ said in part:",
+    "reading": "said in part:"
+   },
+   {
+    "leaf": 261,
+    "page": null,
+    "ocr": "tory statement which Laynez had appended was actually improved |",
+    "reading": "tory statement which Laynez had appended was actually improved"
+   },
+   {
+    "leaf": 262,
+    "page": null,
+    "ocr": "ing the problems of Germany. _",
+    "reading": "ing the problems of Germany."
+   },
+   {
+    "leaf": 263,
+    "page": null,
+    "ocr": "much good. |",
+    "reading": "much good. 1"
+   },
+   {
+    "leaf": 265,
+    "page": null,
+    "ocr": "‘There can be no doubt that the influence of both John Baptist R1-",
+    "reading": "There can be no doubt that the influence of both John Baptist Ri-"
+   },
+   {
+    "leaf": 270,
+    "page": null,
+    "ocr": "commission to investigate them all.1t When he had received the",
+    "reading": "commission to investigate them all.11 When he had received the"
+   },
+   {
+    "leaf": 277,
+    "page": null,
+    "ocr": "—_—— a a a",
+    "reading": ""
+   },
+   {
+    "leaf": 278,
+    "page": null,
+    "ocr": "S. Franciscus Borgia, U1, 725",
+    "reading": "S. Franciscus Borgia, III, 725"
+   },
+   {
+    "leaf": 280,
+    "page": null,
+    "ocr": "Complemenia Polanci, 1, }33.",
+    "reading": "Complementa Polanci, I, 533."
+   },
+   {
+    "leaf": 296,
+    "page": null,
+    "ocr": "APPENDIXES 27m",
+    "reading": ""
+   },
+   {
+    "leaf": 303,
+    "page": null,
+    "ocr": "labor. |",
+    "reading": "labor."
+   },
+   {
+    "leaf": 145,
+    "page": null,
+    "ocr": "But 1f a",
+    "reading": "But if a"
+   }
+  ],
+  "verifiedWords": [
+   "Polanco",
+   "Lainii",
+   "Grisar",
+   "Broet",
+   "Salmeronis",
+   "Domenech",
+   "Freux",
+   "Seripando",
+   "Pallavicini",
+   "Ortiz",
+   "Camara",
+   "Lippomani",
+   "Guerrero",
+   "Cogordan",
+   "Parlement",
+   "Polanci",
+   "Zacchinus",
+   "Complementa",
+   "Poissy",
+   "Azagra",
+   "Madruzzi",
+   "Palacin",
+   "Carpi",
+   "Otello",
+   "Ignatiana",
+   "Boero",
+   "Siguenza",
+   "Landivar",
+   "Pelletier",
+   "scudi",
+   "Grimani",
+   "Coronel",
+   "Hurtado",
+   "subsidy",
+   "Kessel",
+   "Theiner",
+   "Reumano",
+   "Soria",
+   "Angunciana",
+   "Santacruz",
+   "Canisii",
+   "confrere",
+   "Postell",
+   "Manares",
+   "paedagogica",
+   "forthright",
+   "Rebiba",
+   "Vaz",
+   "Commendone",
+   "Delfino",
+   "Brodrick",
+   "Drascovitz",
+   "Aurelianensis",
+   "usable",
+   "Footloose",
+   "Moriscos",
+   "Eguia"
+  ],
+  "blankLeaves": [
+   9,
+   13,
+   182
+  ],
+  "verseLeaves": [
+   [
+    6,
+    8
+   ],
+   [
+    12,
+    12
+   ]
+  ]
+ }
+]

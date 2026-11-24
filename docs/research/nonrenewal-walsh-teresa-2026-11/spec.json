@@ -1,0 +1,57 @@
+[
+ {
+  "edition": "ia-saintteresaofavi00wals",
+  "ia": "saintteresaofavi00wals",
+  "title": "SAINT TERESA OF AVILA",
+  "sourceTitle": "Saint Teresa of Avila",
+  "author": "William Thomas Walsh",
+  "year": 1943,
+  "firstPublished": "1943",
+  "rightsBasis": "pd-nonrenewal",
+  "firstLeaf": 10,
+  "lastLeaf": 609,
+  "omitted": [
+   {
+    "what": "the index",
+    "leaves": [
+     610,
+     617
+    ],
+    "pages": "585-592"
+   }
+  ],
+  "secondOcr": {
+   "engine": "tesseract",
+   "langs": "eng+lat+ita",
+   "scale": 1
+  },
+  "handFixes": [],
+  "verifiedWords": [
+   "Silverio",
+   "Sevilla",
+   "Mariano",
+   "Stanbrook",
+   "Fundaciones",
+   "Epistolario",
+   "Rubeo",
+   "Escorial",
+   "Beas",
+   "Castilla",
+   "Duruelo",
+   "Tostado",
+   "Ormaneto",
+   "Provisor",
+   "Bartolomé",
+   "maravedis",
+   "Casilda",
+   "Zugasti",
+   "patio",
+   "Camino",
+   "Corregidor",
+   "Cobos",
+   "Sega",
+   "Caravaca",
+   "Teresita"
+  ]
+ }
+]

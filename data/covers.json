@@ -104,11 +104,29 @@
    "webp": "8ae7c7b19905c9320c6506a7b66115c0227ecc2d4efca0410b464fea0fb0f640",
    "og": "a8520d87a816045f3d88f14bd4e2b020683ffd13317c2924719872badb7c9872"
   },
+  "ia-jameslaynezjesui00fich": {
+   "work": "fichter-james-laynez",
+   "svg": "09f2947b6fd2b032c564b0a5723ee40ccb77b134891b54ecad7105afe9d9945a",
+   "webp": "bc4807bf34700644c700fd5b247f5a692e948d1539881377be9fe23bc8849653",
+   "og": "2222f845c67a8f12e7d89432b8199b05953d61dc42dc938d8efb152491c9d283"
+  },
   "ia-johnenglandameri00gran": {
    "work": "grant-john-england",
    "svg": "9b4968d88e4dc697052ef365d9ee53c96c6e685ae363c76a32d9e1129c1cd1c5",
    "webp": "97a8f582f1a7b998890ddbea0192f87a765f0e06167fe386e4aedb3cb3c1dc2f",
    "og": "4468b4e87a79ab225c49bad3a965c1232fee34a1d1fc272199fc1fa144453c79"
+  },
+  "ia-moldersofmedieva00cass": {
+   "work": "cassidy-molders-of-the-medieval-mind",
+   "svg": "e78eb77e32b2b9be76846296a777c595aea7a37168dd189703350509e6d16462",
+   "webp": "f1df264ab054ccaa88fdcc5082a0090182e6062e8792ecb37a71151f15c6adff",
+   "og": "85715c9eb77257b7616109e8df5bb159974141560bd7b1e0644c61aadb53a54c"
+  },
+  "ia-mysteryofiniquit00furf": {
+   "work": "furfey-mystery-of-iniquity",
+   "svg": "3701dcb1ecbed878aa15a7360fe17a5625791f939ca1a9e1ff5b830800d20fa9",
+   "webp": "9ee00aa52bc16d09f955161b286aa1984c9da52416a7078e2fa46d783df29655",
+   "og": "6eacc54f7d10e68c9f0890eb98a6c7d190a5418fd080e5bdd4cc6f463f5bbb5e"
   },
   "ia-outlineofsanity0000ches": {
    "work": "outline-of-sanity",
@@ -151,6 +169,12 @@
    "svg": "c0a2323a0470e0c47521d6209c2382a7c42ecea26f2efd392546235cc47bfd79",
    "webp": "4285e4694b568ff53f1e5c9aecd37b733963cdecd9fe6fcdcbf3169bceacd89b",
    "og": "c288cfdcee5febb1ba9bec6557fa87561c921f648f05bd72d8812595ad295ee1"
+  },
+  "ia-selectancientiri00meye": {
+   "work": "meyer-ancient-irish-poetry",
+   "svg": "766a3e50be2a1e2438873879b3cf77c8cae3eed1271404eede339526e9aad271",
+   "webp": "b8e27ae8e32e62290e4ea8b997c795caa4a7c70bef3e60f501a1211134aeca85",
+   "og": "8689610b649cdf3846180654f1737de73466ee0e337c465a7ac01f410f3b7d2e"
   },
   "ia-simplicitytolsto00chesuoft": {
    "work": "simplicity-and-tolstoy",

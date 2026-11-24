@@ -20,15 +20,15 @@ Any tool can perform an assigned responsibility. References to Research, QA, and
 
 ## Hosting and data flow
 
-GitHub `main` is the source of truth. Cloudflare Pages deploys it automatically to https://bibliothecacatholica.com (every PR gets a preview check); confirm a deploy by comparing the live `/build.json` `id` with `git show origin/main:build.json`. The `CNAME` file stays. texts.bibliothecacatholica.com is served from `bibliotheca-texts`. DNS and the Cloudflare zone belong to Business. GitHub Pages for this repo was turned off on November 15, 2026, so Cloudflare is the only host; the texts repo keeps its own Pages site.
+GitHub `main` is the source of truth. Cloudflare Pages deploys it automatically to https://bibliothecacatholica.com (every PR gets a preview check); confirm a deploy by comparing the live `/build.json` `id` with `git show origin/main:build.json`. The `CNAME` file stays. texts.bibliothecacatholica.com is served from `bibliotheca-texts`. DNS and the Cloudflare zone belong to Business. GitHub Pages for this repo was turned off on November 15, 2026, so Cloudflare is the only host. The texts repo is served by the `bibliotheca-texts` Cloudflare Pages project (custom domain set there, so the export writes no `CNAME`).
 
-Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, provenance, and the original TXT files in `data/texts/`. (2) `bibliotheca-texts` is a delivery copy exported from here by `tools/build_text_archive.py` (texts, `manifest.json`, `provenance/`) and served by its own GitHub Pages at texts.bibliothecacatholica.com; the reader fetches `textArchive.baseUrl` first and falls back to the local copy. Never edit texts there by hand. (3) `aquinas` (new, November 14 and 15) is a separate local study tool: SQLite search over Summa I and I-II (Project Gutenberg 17611 and 17897) plus an experimental LFM3-1.7B model, the "Aquinas Neuron", released as GitHub prereleases for Ollama. It has no website or domain and does not feed this site; the site's `/summa/` pages are built here by `tools/build_summa.py`.
+Three repositories: (1) `bibliotheca-catholica` (this one) holds the catalogue, provenance, and the original TXT files in `data/texts/`. (2) `bibliotheca-texts` is a delivery copy exported from here by `tools/build_text_archive.py` (texts, `manifest.json`, `provenance/`) and served by Cloudflare Pages at texts.bibliothecacatholica.com; the reader fetches `textArchive.baseUrl` first and falls back to the local copy. Never edit texts there by hand. (3) `aquinas` (new, November 14 and 15) is a separate local study tool: SQLite search over Summa I and I-II (Project Gutenberg 17611 and 17897) plus an experimental LFM3-1.7B model, the "Aquinas Neuron", released as GitHub prereleases for Ollama. It has no website or domain and does not feed this site; the site's `/summa/` pages are built here by `tools/build_summa.py`.
 
 ## Verified snapshot
 
 As of November 23, 2026: `main` after PR #139 (`69bd7366c2`), with #140 (Chesterton batch 6) included:
 
-- 206 work records; 148 hosted editions of 143 works in `data/library.json` (228 editions in all, 4 retired); 57 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
+- 207 work records; 152 hosted editions of 147 works in `data/library.json` (228 editions in all, 4 retired); 57 structured editions with openers and EPUBs (`python3 tools/hosted_counts.py`).
 - 6,000 sitemap URLs; 9,185 tracked files, most generated (`linguist-generated` in `.gitattributes`); build-on-deploy is planned for about December 26 (draft #135, `docs/plans/build-on-deploy-plan.md`).
 - Tests: 127 Node and 337 Python.
 
@@ -47,6 +47,12 @@ As of November 23, 2026: `main` after PR #139 (`69bd7366c2`), with #140 (Chester
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-23, Claude (Claude Code): round 8 (R2 prep, QA lows, link check)
+
+- No merges: no PR has a QA PASS file under `qa/` (the directory does not exist on any branch). #157 got its keep-mark test and main merged in (head `ea232c96c7`). Cloudflare checks: bindings as expected (apex and www on `bibliotheca-catholica`, `texts.` on `bibliotheca-texts`, none on the preview project, `files.` on R2); #163's preview failed because the preview project builds `bash tools/deploy_build.sh`, which exists only on the #135/#138 branches (a project setting for Business).
+- Draft PRs: #166 (texts export writes no CNAME), #167 (R2 inventory, manifest, dry-run upload tool, runbook, migration plan: 163 items, 3.03 GB, nothing uploaded), #168 (R2 site links, stacked on #167), #169 (weekly link check), #170 (GA loads only on production, held for Advent), #171 (QA lows), #172 (gate-damage proposal), #173 (Furfey 1944 labels).
+- Not done: Teresa hand pass (#165), Grant/Furfey/Cassidy `-r2` editions (findings in #172), Jobs E, G, M, leftovers. Reeves' read-gate re-run failed twice (archive.org resets).
+
 ### 2026-11-22, Claude (Claude Code): docs cleanup
 
 - Brought CENTRAL, AGENTS rule 8, PROJECT-RULES (Amazon exception, preserved files), LICENSING, and `.gitattributes` (`councils/`, `credits/`) in line with the code. HOLDS: the Media December-texts row is finished on main (Butler's St. Eulalia #128, Prudentius #131, Jerome #132) and was deleted. Build-on-deploy: the plan is on #135 with QA's corrections; the public-paths `dist/` PR is stacked on it.
@@ -55,11 +61,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 
 - Chesterton polish (full Orthodoxy treatment, owner-approved): #108, #111, #112, #113, and #114 structure 14 more editions (Everlasting Man, Tremendous Trifles, New Jerusalem, Dickens, Poet and the Lunatics, Return of Don Quixote, Cobbett, Stevenson 1927, Irish Impressions, Napoleon of Notting Hill, Victorian Age, Four Faultless Felons, Eugenics, Tales of the Long Bow); about 45 Chesterton editions remain, several needing hand-built maps (`What I Saw in America` prints no headings). Hosted: Samuel Johnson (#109, 99.61%; `transcribe_scan.py` rejoins lost line-end hyphens) and the Stevenson booklet as its 1906 New York printing (#110). Essays and Addresses was already hosted with its evidence. Gloria in Profundis: no dated scan found.
 - Still refused: every server in the December-texts, councils, and Schroeder rows, the Faustula scans (ia601004, ia801004, ia601606, ia903203), ia601403 (Trent images, so "Aposotlic" and "excomnunication" stay), la.wikisource.org, books.google.com, www.mirrorservice.org; gutenberg.org 503; HathiTrust bot check. The non-renewal batch was probed (Cassidy 98.87% with the new tool; about 270 cited names to check per book). Next: more Chesterton maps, then the non-renewal review batch.
-
-### 2026-11-21, Claude (Claude Code): open run
-
-- Merged #98 (Catholic Encyclopedia "Advent"; `transcribe_scan.py` learns article bounds, two columns, `verifiedWords`), #99 and #106 (Doré heads on ten sections; #95 closed), #100 (The Sword of Wood and C under an owner-approved `scanException`), #101 (Benham 1874), #102 (Trent r2: 34 confirmed typos; Session VII drop cap), #103 to #105 (G.K.C. as M.C., Do We Agree?, The Superstitions of the Sceptic). Bug sweep clean: no broken internal links or missing alt text in 5,726 pages, no console errors, plan check 26/26.
-- Refused or down: la.wikisource.org; ia600703, ia800703 (PL 24); every free Catholic Encyclopedia vol. 11 server; babel.hathitrust.org (bot check); books.google.com; ia600805, ia800805 (Butler XII); gutenberg.org (503, maintenance, November 20 and 21). Wikimedia rate-limits uploads at times. Owner: the session could not delete branches; the 29 merged ones are listed in the run's final reply with a ready command. Next: Douay-Rheims once Gutenberg is back, Samuel Johnson, the non-renewal review batch, Candles' Beams, Robert Louis Stevenson, then the Orthodoxy flow.
 
 ## Open items
 

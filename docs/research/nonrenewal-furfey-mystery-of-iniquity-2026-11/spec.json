@@ -1,0 +1,559 @@
+[
+ {
+  "edition": "ia-mysteryofiniquit00furf",
+  "ia": "mysteryofiniquit00furf",
+  "title": "THE MYSTERY OF INIQUITY",
+  "sourceTitle": "The Mystery of Iniquity",
+  "author": "Paul Hanly Furfey",
+  "year": 1944,
+  "firstPublished": "1944 (Milwaukee: The Bruce Publishing Company); this scan is the second printing, 1945",
+  "rightsBasis": "pd-nonrenewal",
+  "nonRenewal": {
+   "firstPublicationYear": 1944,
+   "firstPublicationCountry": "US",
+   "firstPublicationPlace": "Milwaukee",
+   "firstPublicationPublisher": "The Bruce Publishing Company",
+   "stanford": {
+    "result": "no renewal found",
+    "checked": "2026-11-16",
+    "method": "one plain curl query (title words and surname), default user agent"
+   },
+   "nypl": {
+    "result": "no renewal found",
+    "checked": "2026-11-16",
+    "method": "NYPL cce-renewals data"
+   },
+   "hathitrust": "pdus",
+   "hathitrustRecord": "pdus (uiug.30112063379751)",
+   "uraa": "US imprint (Milwaukee: The Bruce Publishing Company) and US copyright page (Copyright, 1944; Printed in the United States of America); no earlier or simultaneous edition abroad was found, so URAA restoration does not apply.",
+   "scan": "mysteryofiniquit00furf",
+   "research": "docs/research/us-pd-renewal-checks-2026-11.csv"
+  },
+  "firstLeaf": 4,
+  "lastLeaf": 193,
+  "omitted": [
+   {
+    "what": "the index",
+    "leaves": [
+     194,
+     195
+    ],
+    "pages": "191-192"
+   }
+  ],
+  "secondOcr": {
+   "engine": "tesseract",
+   "langs": "eng+lat+ita",
+   "scale": 1
+  },
+  "handFixes": [
+   {
+    "leaf": 5,
+    "page": null,
+    "ocr": "i",
+    "reading": ""
+   },
+   {
+    "leaf": 5,
+    "page": null,
+    "ocr": "Watt te",
+    "reading": ""
+   },
+   {
+    "leaf": 5,
+    "page": null,
+    "ocr": "‘ may",
+    "reading": ""
+   },
+   {
+    "leaf": 5,
+    "page": null,
+    "ocr": "j “ee",
+    "reading": ""
+   },
+   {
+    "leaf": 5,
+    "page": null,
+    "ocr": "wedet",
+    "reading": ""
+   },
+   {
+    "leaf": 6,
+    "page": null,
+    "ocr": "The Caron sews",
+    "reading": "The"
+   },
+   {
+    "leaf": 6,
+    "page": null,
+    "ocr": "PAUL HANLY *FURFEY",
+    "reading": "PAUL HANLY FURFEY"
+   },
+   {
+    "leaf": 7,
+    "page": null,
+    "ocr": "Nihil obstat: Louis A. ARAND, S.S., S. T.D., Censor Deputatus",
+    "reading": "Nihil obstat: LOUIS A. ARAND, S.S., S.T.D., Censor Deputatus"
+   },
+   {
+    "leaf": 7,
+    "page": null,
+    "ocr": "Imprimatur: ‘K MicuaeL J. Curtey, D.D., Archiepiscopus",
+    "reading": "Imprimatur: ✠ MICHAEL J. CURLEY, D.D., Archiepiscopus"
+   },
+   {
+    "leaf": 10,
+    "page": 7,
+    "ocr": "ODAY, in the midst",
+    "reading": "TODAY, in the midst"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "il",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "es",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "bo = ©",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "Page",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "13",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "30",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "42",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "55",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "68",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "84",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "102",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "115",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "126",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "138",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "152",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "168",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "180",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "191",
+    "reading": ""
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "SATAN AND SOCIAL PROBLEMS",
+    "reading": "1. SATAN AND SOCIAL PROBLEMS . . . 13"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": ". CATHOLIC CONFORMISM",
+    "reading": "2. CATHOLIC CONFORMISM . . . 30"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": ". THE EXCUSES OF THE CONFORMISTS",
+    "reading": "3. THE EXCUSES OF THE CONFORMISTS . . . 42"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": ". CHRIST Was No CONFORMIST .",
+    "reading": "4. CHRIST WAS NO CONFORMIST . . . 55"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "CONFORMIST SOCIOLOGY",
+    "reading": "5. CONFORMIST SOCIOLOGY . . . 68"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "THE MAMMON OF WICKEDNESS",
+    "reading": "6. THE MAMMON OF WICKEDNESS . . . 84"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": ". CONFORMIST SOCIAL WoRK .",
+    "reading": "7. CONFORMIST SOCIAL WORK . . . 102"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": ". CONFORMISM AND THE LABOR PROBLEM",
+    "reading": "8. CONFORMISM AND THE LABOR PROBLEM . . . 115"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": ". SATAN INVADES THE HomE .",
+    "reading": "9. SATAN INVADES THE HOME . . . 126"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": ". CONFORMISM AND RACE",
+    "reading": "10. CONFORMISM AND RACE . . . 138"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": ". EXAGGERATED NATIONALISM",
+    "reading": "11. EXAGGERATED NATIONALISM . . . 152"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": ". “CoME Out From Amonc THEM, BE",
+    "reading": "12. “COME OUT FROM AMONG THEM, BE"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "SEPARATED”’",
+    "reading": "SEPARATED” . . . 168"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "FOOTNOTES",
+    "reading": "FOOTNOTES . . . 180"
+   },
+   {
+    "leaf": 12,
+    "page": 9,
+    "ocr": "INDEX .",
+    "reading": "INDEX . . . 191"
+   },
+   {
+    "leaf": 16,
+    "page": 13,
+    "ocr": "ATHOLICS have",
+    "reading": "CATHOLICS have"
+   },
+   {
+    "leaf": 33,
+    "page": 30,
+    "ocr": "ROM the considerations",
+    "reading": "FROM the considerations"
+   },
+   {
+    "leaf": 45,
+    "page": 42,
+    "ocr": "NE may well ask",
+    "reading": "ONE may well ask"
+   },
+   {
+    "leaf": 58,
+    "page": 55,
+    "ocr": "F ANY reader",
+    "reading": "IF ANY reader"
+   },
+   {
+    "leaf": 71,
+    "page": 68,
+    "ocr": "NE’S attitude",
+    "reading": "ONE’S attitude"
+   },
+   {
+    "leaf": 87,
+    "page": 84,
+    "ocr": "NE day our Lord",
+    "reading": "ONE day our Lord"
+   },
+   {
+    "leaf": 87,
+    "page": 84,
+    "ocr": "CHAPTER 6 m",
+    "reading": "CHAPTER 6"
+   },
+   {
+    "leaf": 105,
+    "page": 102,
+    "ocr": "T. JOHN CANTIUS",
+    "reading": "ST. JOHN CANTIUS"
+   },
+   {
+    "leaf": 105,
+    "page": 102,
+    "ocr": "was a-professor",
+    "reading": "was a professor"
+   },
+   {
+    "leaf": 105,
+    "page": 102,
+    "ocr": "University of Krakow",
+    "reading": "University of Kraków"
+   },
+   {
+    "leaf": 118,
+    "page": 115,
+    "ocr": "S THIS chapter",
+    "reading": "AS THIS chapter"
+   },
+   {
+    "leaf": 129,
+    "page": 126,
+    "ocr": "T IS a commonplace",
+    "reading": "IT IS a commonplace"
+   },
+   {
+    "leaf": 141,
+    "page": 138,
+    "ocr": "UR attitude toward",
+    "reading": "OUR attitude toward"
+   },
+   {
+    "leaf": 155,
+    "page": 152,
+    "ocr": "ANY recent papal",
+    "reading": "MANY recent papal"
+   },
+   {
+    "leaf": 171,
+    "page": 168,
+    "ocr": "E CATHOLICS cannot",
+    "reading": "WE CATHOLICS cannot"
+   },
+   {
+    "leaf": 96,
+    "page": 93,
+    "ocr": "_can family was poor.",
+    "reading": "can family was poor."
+   },
+   {
+    "leaf": 24,
+    "page": 21,
+    "ocr": "that it mow uses",
+    "reading": "that it now uses"
+   },
+   {
+    "leaf": 69,
+    "page": 66,
+    "ocr": "Exaggerated nadonalion is quite charactéristic",
+    "reading": "Exaggerated nationalism is quite characteristic"
+   },
+   {
+    "leaf": 83,
+    "page": 80,
+    "ocr": "socialis catholica. 'The usual",
+    "reading": "socialis catholica. The usual"
+   },
+   {
+    "leaf": 10,
+    "page": 7,
+    "ocr": "PREFACE",
+    "reading": "PREFACE"
+   },
+   {
+    "leaf": 7,
+    "page": null,
+    "ocr": "This book is reprinted in full accord with the regulations of the",
+    "reading": "This book is reprinted in full accord with the regulations of the"
+   },
+   {
+    "leaf": 16,
+    "page": 13,
+    "ocr": "CHAPTER 1",
+    "reading": "CHAPTER 1"
+   },
+   {
+    "leaf": 33,
+    "page": 30,
+    "ocr": "CHAPTER 2",
+    "reading": "CHAPTER 2"
+   },
+   {
+    "leaf": 45,
+    "page": 42,
+    "ocr": "CHAPTER 3",
+    "reading": "CHAPTER 3"
+   },
+   {
+    "leaf": 58,
+    "page": 55,
+    "ocr": "CHAPTER 4",
+    "reading": "CHAPTER 4"
+   },
+   {
+    "leaf": 71,
+    "page": 68,
+    "ocr": "CHAPTER 5",
+    "reading": "CHAPTER 5"
+   },
+   {
+    "leaf": 129,
+    "page": 126,
+    "ocr": "CHAPTER 9",
+    "reading": "CHAPTER 9"
+   },
+   {
+    "leaf": 141,
+    "page": 138,
+    "ocr": "CHAPTER 10",
+    "reading": "CHAPTER 10"
+   },
+   {
+    "leaf": 155,
+    "page": 152,
+    "ocr": "CHAPTER 11",
+    "reading": "CHAPTER 11"
+   }
+  ],
+  "verifiedWords": [
+   "Kanty",
+   "CANTIUS",
+   "Jocistes",
+   "Jociste",
+   "interracial",
+   "nationalistic",
+   "contraception",
+   "psychiatry",
+   "Quadragesimo",
+   "brennender",
+   "Sorge",
+   "Gillin",
+   "antagonized",
+   "semester",
+   "Eppstein",
+   "arcano",
+   "Mangold",
+   "Dittmer",
+   "totalitarian",
+   "totalitarianism",
+   "baseball",
+   "congressman",
+   "maneuvers",
+   "sanctimonious",
+   "positivistic",
+   "methodology",
+   "Brookings",
+   "Lauerman",
+   "Cardijn",
+   "Delplancq",
+   "Terman",
+   "Juliette",
+   "Derricotte",
+   "anticlerical",
+   "Denziger",
+   "Gabalda",
+   "Tenney",
+   "Hoonacker",
+   "Mulvaney",
+   "Caritate",
+   "Intercredal",
+   "portier",
+   "Freudian",
+   "Furfey",
+   "Civiltà",
+   "socialis",
+   "firsthand",
+   "clinic",
+   "clinics",
+   "stabilizing",
+   "popularize",
+   "patriae",
+   "capitalized",
+   "elite",
+   "Mirae",
+   "caritatis",
+   "Bossard",
+   "willful",
+   "alignment",
+   "interlocking",
+   "sociopolitical",
+   "nontotalitarian",
+   "peashooter",
+   "penalizing",
+   "outmoded",
+   "Sangnier",
+   "intransigently",
+   "forthrightly",
+   "underemphasis",
+   "psychiatrists",
+   "Lundberg",
+   "behavioristic",
+   "quaedam"
+  ]
+ }
+]

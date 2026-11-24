@@ -1,0 +1,57 @@
+name: Weekly link check
+# Round 8, Job F (November 23, 2026). Checks internal links in the built pages and the outbound links in the site's data,
+# then opens or updates one issue labelled `link-check` (and closes it when a run is clean). Its own workflow, on a schedule:
+# it never runs on pushes or pull requests, and every step tolerates failure, so it cannot fail a main build.
+on:
+  schedule:
+    - cron: '23 10 * * 0'  # Sundays 10:23 UTC
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: link-check
+  cancel-in-progress: false
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - name: Internal links (offline)
+        continue-on-error: true
+        run: python3 tools/check_internal_links.py --out link-report/internal.json
+      - name: 'Outbound links (polite, 8 workers, 1 s between requests to one host, 40-minute cap)'
+        continue-on-error: true
+        run: python3 tools/check_links.py --workers 8 --per-host-interval 1 --max-seconds 2400 --out link-report/outbound.json
+      - name: Issue body
+        id: report
+        if: always()
+        continue-on-error: true
+        run: python3 tools/link_check_issue.py link-report
+      - name: Open, update, or close the link-check issue
+        if: always()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FAILURES: ${{ steps.report.outputs.failures }}
+        run: |
+          gh label create link-check --color c5def5 --description "Weekly link check" --force >/dev/null 2>&1 || true
+          n=$(gh issue list --label link-check --state open --json number --jq '.[0].number' || true)
+          if [ -z "$FAILURES" ]; then echo "no report"; exit 0; fi
+          if [ "$FAILURES" != "0" ]; then
+            if [ -n "$n" ]; then gh issue edit "$n" --body-file link-report/issue.md; else gh issue create --title "Weekly link check: broken links" --label link-check --body-file link-report/issue.md; fi
+          elif [ -n "$n" ]; then
+            gh issue comment "$n" --body "The weekly run on $(date -u +%F) found no failures. Closing."
+            gh issue close "$n"
+          fi
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        continue-on-error: true
+        with:
+          name: link-report
+          path: link-report/
+          retention-days: 30

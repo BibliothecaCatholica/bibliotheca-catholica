@@ -47,6 +47,11 @@ As of November 23, 2026: `main` after PR #139 (`69bd7366c2`), with #140 (Chester
 
 Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRAL.md`.
 
+### 2026-11-24, Claude (Claude Code): round 9 (merges, Meyer and Fichter live)
+
+- Merged #162, #166 (texts export writes no CNAME), #154, #158, #159, #163 (Meyer), #164 (Fichter), #175 (hotfix: #159's squash had put conflict markers in every page footer; `tests/test_no_conflict_markers.py` now guards it), #171, #169, #172, #173, #161. Texts re-export for Meyer and Fichter merged (texts #8); both show Read here.
+- Waiting on QA: #167 (account ID removed; no R2 upload until it passes), #168, #157 (restack had conflicts), #160, #174 (HSTS, Micah decides), #176 (switch runbook), #177 (cleanup audit); #170 held to Dec 27. Not done: the Grant, Furfey, and Cassidy `-r2` editions (findings in `docs/research/gate-damage-2026-11/`), the Teresa hand pass, Jobs G and M, the #135/#138 parity re-proof, and Reeves.
+
 ### 2026-11-23, Claude (Claude Code): round 8 (R2 prep, QA lows, link check)
 
 - No merges: no PR has a QA PASS file under `qa/` (the directory does not exist on any branch). #157 got its keep-mark test and main merged in (head `ea232c96c7`). Cloudflare checks: bindings as expected (apex and www on `bibliotheca-catholica`, `texts.` on `bibliotheca-texts`, none on the preview project, `files.` on R2); #163's preview failed because the preview project builds `bash tools/deploy_build.sh`, which exists only on the #135/#138 branches (a project setting for Business).
@@ -56,11 +61,6 @@ Newest first, 3 entries of at most 5 lines. Older entries: `git log -p -- CENTRA
 ### 2026-11-22, Claude (Claude Code): docs cleanup
 
 - Brought CENTRAL, AGENTS rule 8, PROJECT-RULES (Amazon exception, preserved files), LICENSING, and `.gitattributes` (`councils/`, `credits/`) in line with the code. HOLDS: the Media December-texts row is finished on main (Butler's St. Eulalia #128, Prudentius #131, Jerome #132) and was deleted. Build-on-deploy: the plan is on #135 with QA's corrections; the public-paths `dist/` PR is stacked on it.
-
-### 2026-11-21, Claude (Claude Code): open run 2
-
-- Chesterton polish (full Orthodoxy treatment, owner-approved): #108, #111, #112, #113, and #114 structure 14 more editions (Everlasting Man, Tremendous Trifles, New Jerusalem, Dickens, Poet and the Lunatics, Return of Don Quixote, Cobbett, Stevenson 1927, Irish Impressions, Napoleon of Notting Hill, Victorian Age, Four Faultless Felons, Eugenics, Tales of the Long Bow); about 45 Chesterton editions remain, several needing hand-built maps (`What I Saw in America` prints no headings). Hosted: Samuel Johnson (#109, 99.61%; `transcribe_scan.py` rejoins lost line-end hyphens) and the Stevenson booklet as its 1906 New York printing (#110). Essays and Addresses was already hosted with its evidence. Gloria in Profundis: no dated scan found.
-- Still refused: every server in the December-texts, councils, and Schroeder rows, the Faustula scans (ia601004, ia801004, ia601606, ia903203), ia601403 (Trent images, so "Aposotlic" and "excomnunication" stay), la.wikisource.org, books.google.com, www.mirrorservice.org; gutenberg.org 503; HathiTrust bot check. The non-renewal batch was probed (Cassidy 98.87% with the new tool; about 270 cited names to check per book). Next: more Chesterton maps, then the non-renewal review batch.
 
 ## Open items
 

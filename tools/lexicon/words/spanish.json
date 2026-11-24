@@ -1,0 +1,24 @@
+{
+ "language": "spanish",
+ "count": 3,
+ "words": {
+  "climas": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "meridionales": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "transparente": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ]
+ }
+}

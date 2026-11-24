@@ -1,0 +1,114 @@
+{
+ "language": "german",
+ "count": 18,
+ "words": {
+  "Allgemeine": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "Beitrag": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "brennender": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "celtische": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Festschrift": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Heortologie": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "Herdersche": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Irische": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Kirchenlex": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "Kor": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Lexikographie": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Methode": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Philologie": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Realencyklopædie": [
+   {
+    "edition": "ia-cathencyc-1907-advent",
+    "record": "docs/research/catholic-encyclopedia-advent-2026-11/spec.json"
+   }
+  ],
+  "Scholastischen": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Sorge": [
+   {
+    "edition": "ia-mysteryofiniquit00furf",
+    "record": "docs/research/nonrenewal-furfey-mystery-of-iniquity-2026-11/spec.json"
+   }
+  ],
+  "Texte": [
+   {
+    "edition": "ia-selectancientiri00meye",
+    "record": "docs/research/irish-meyer-selections-2026-11/spec.json"
+   }
+  ],
+  "Verlagshandlung": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ]
+ }
+}

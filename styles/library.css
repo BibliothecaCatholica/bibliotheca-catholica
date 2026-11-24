@@ -162,6 +162,6 @@ body.has-listen-dock footer{padding-bottom:64px}
 .credit-fields{display:grid;grid-template-columns:9.5rem 1fr;gap:4px 14px;margin:8px 0 0;font-size:15px}
 .credit-fields dt{color:var(--muted)}
 .credit-fields dd{margin:0;overflow-wrap:anywhere}
-.credit-list li{margin:0 0 6px;scroll-margin-top:90px}
+.credit-list li{margin:0 0 6px;scroll-margin-top:90px;overflow-wrap:anywhere}  /* long file names (portrait credits) wrap at 390px */
 .credit-list li:target,.credit-record:target{background:var(--paper-2,rgba(201,162,74,.12))}
 @media (max-width:600px){.credit-fields{grid-template-columns:1fr}.credit-fields dd{margin:0 0 6px}}

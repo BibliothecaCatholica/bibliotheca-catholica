@@ -1,0 +1,96 @@
+{
+ "language": "greek",
+ "count": 15,
+ "words": {
+  "Amartigenia": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Apoth": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Apotheoses": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Cathem": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Cathemer": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Cathemerinon": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Enchiridion": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "homoousios": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "Kappa": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "PERISTEPHANON": [
+   {
+    "edition": "ia-thackeray-1890-eulalia",
+    "record": "docs/research/thackeray-prudentius-eulalia-1890-2026-11/spec.json"
+   }
+  ],
+  "Phi": [
+   {
+    "edition": "ia-johnenglandameri00gran",
+    "record": "docs/research/nonrenewal-grant-john-england-2026-11/spec.json"
+   }
+  ],
+  "Psych": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Psycomachia": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ],
+  "Stromata": [
+   {
+    "edition": "ia-moldersofmedieva00cass",
+    "record": "docs/research/nonrenewal-cassidy-molders-2026-11/spec.json"
+   }
+  ],
+  "στεφάνων": [
+   {
+    "edition": "ia-butler-1842-eulalia",
+    "record": "docs/research/butler-eulalia-1842-2026-11/spec.json"
+   }
+  ]
+ }
+}

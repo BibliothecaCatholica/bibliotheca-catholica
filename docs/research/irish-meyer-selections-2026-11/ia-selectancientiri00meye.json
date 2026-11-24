@@ -1,0 +1,30 @@
+{
+ "edition": "ia-selectancientiri00meye",
+ "ia": "selectancientiri00meye",
+ "readGate": {
+  "gate": 0.995,
+  "words": 17643,
+  "unknown": 3,
+  "readRate": 0.9998,
+  "scorer": "tools/transcribe_scan.py; vocabulary of the proofread hosted texts in data/texts (ia-* excluded)",
+  "engine": "archive.org djvu.xml OCR, with tesseract 5.3.4 (eng+lat, image scale 1) chosen per line where it reads more words",
+  "lineChoices": {
+   "archive.org": 2817,
+   "tesseract": 129
+  },
+  "leavesScored": [
+   4,
+   135
+  ],
+  "omitted": [],
+  "handFixes": 48,
+  "verifiedWords": 214,
+  "foreignWords": {},
+  "measured": "2026-11-23"
+ },
+ "unreadForms": {
+  "Moinmoy.¹": 1,
+  "Lugh,³": 1,
+  "Bethech.¹": 1
+ }
+}

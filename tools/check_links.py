@@ -1,6 +1,6 @@
 """Link-health check for every outbound URL in the site's data (no build step; network only).
 
-    python3 tools/check_links.py [--isidore-sample 60] [--workers 24] [--out docs/link-health.json]
+    python3 tools/check_links.py [--isidore-sample 60] [--workers 24] [--per-host-interval 1] [--out docs/link-health.json]
 
 * Extracts http(s) URLs from data/*.js, data/*.json, app.js, scripts/, and index.html.
 * isidore.co per-book/per-folder URLs (thousands) are sampled, not exhaustively crawled.
@@ -8,7 +8,7 @@
   ok | redirect-offsite (different registrable domain: possible hijack/parking) | soft-404/parked
   (title or body markers) | client-error | server-error | blocked (401/403/429, usually bot protection) | timeout/error.
 Writes a JSON report plus a Markdown summary next to it. Nothing on the site is changed."""
-import argparse,concurrent.futures as cf,json,random,re,ssl,time,urllib.parse,urllib.request
+import argparse,concurrent.futures as cf,json,random,re,ssl,threading,time,urllib.parse,urllib.request
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36 BibliothecaCatholica-linkcheck'
@@ -30,7 +30,18 @@ def sources():
     return seen
 def reg(host):
     parts=(host or '').lower().split('.');return '.'.join(parts[-3:] if len(parts)>2 and parts[-2] in('co','com','org','ac','gov','edu') and len(parts[-1])==2 else parts[-2:])
+HOST_INTERVAL=0.0  # --per-host-interval: polite spacing between requests to one host (the weekly workflow uses 1 s)
+_HOST_LOCK=threading.Lock();_HOST_NEXT={}
+def wait_turn(host,now=time.monotonic,sleep=time.sleep):
+    """Reserve the next slot for `host` at least HOST_INTERVAL seconds after the previous one, then sleep until it."""
+    if HOST_INTERVAL<=0:return 0.0
+    with _HOST_LOCK:
+        t=max(now(),_HOST_NEXT.get(host,0.0));_HOST_NEXT[host]=t+HOST_INTERVAL
+    d=t-now()
+    if d>0:sleep(d)
+    return d
 def fetch(u,timeout):
+    wait_turn((urllib.parse.urlparse(u).hostname or '').lower())
     u=urllib.parse.quote(u,safe=":/?#[]@!$&'()*+,;=%~")
     req=urllib.request.Request(u,headers={'User-Agent':UA,'Accept':'text/html,*/*;q=0.8','Range':'bytes=0-65535'})
     ctx=ssl.create_default_context()
@@ -45,6 +56,7 @@ def parse_args(argv=None):
     ap.add_argument('--out',default=str(ROOT/'docs/link-health.json'))
     ap.add_argument('--fast',action='store_true')
     ap.add_argument('--max-seconds',type=float,default=None)
+    ap.add_argument('--per-host-interval',type=float,default=0.0,help='seconds between requests to one host (politeness)')
     a=ap.parse_args(argv)
     if a.isidore_sample is None:a.isidore_sample=10 if a.fast else 60
     return a
@@ -76,6 +88,7 @@ def write_report(rep,out,isi,sample,S):
     Path(out).with_suffix('.md').write_text('\n'.join(md)+'\n');print(json.dumps(rep['summary']),'->',out)
 def main(argv=None):
     a=parse_args(argv)
+    global HOST_INTERVAL;HOST_INTERVAL=a.per_host_interval
     timeouts=check_timeouts(a.fast)
     S=sources();isi=[u for u in S if 'isidore.co/' in u and ('/CalibreLibrary/' in u or '/calibre/' in u)]
     rest=[u for u in S if u not in isi];random.seed(1);sample=random.sample(isi,min(a.isidore_sample,len(isi)))

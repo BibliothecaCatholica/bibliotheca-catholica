@@ -1,6 +1,6 @@
 {
   "dataSnapshot": "2026-10-21",
-  "id": "bc-39e5fb871a09",
+  "id": "bc-17814a9fe153",
   "note": "Content fingerprint, not a commit SHA or a claim that every record was reviewed on this date.",
   "sha256": {
     "README.md": "483f6a2bf881ed9674ff355a46f38eb2a77c701e9639e47735ae62acc41bcbb5",
@@ -28,8 +28,8 @@
     "data/isidore-matches.json": "1d1c9f3edb6f5e56479a3174d4f97b7e5755d86f8011d39720b4ab35967395ea",
     "data/lectionary-references-2026.json": "ece6535c44a4210313982801b2508334c6f69b8d06e9b51a54e880575287a4d9",
     "data/library-desk.js": "11b06f7e54d7e5916b5c713258c8ba8a9b4de87709ffbce84d9cb1e8b7959032",
-    "data/library.js": "a0e19450cce5e67c101d589ef759085ec68348e7784e4eb31155431e14c79b95",
-    "data/library.json": "230784b67b5a1439780e0523e29f8ce5d1e3c5c88f0b5f5b3f0c59be390df861",
+    "data/library.js": "145d1e62d4225f1d30f456f0a8953e852184baa296c66ec00ddc6418658e20c6",
+    "data/library.json": "324000106bf61c691bb310506c77edac5ca1a2971d2208d9567d6cb3d1d80ed7",
     "data/librivox.js": "f887bf833f7868dd4c5c13145e46a54019de40d43ed93311f9f0b5a933047712",
     "data/librivox.json": "2b2a8e92a23d1bb7610fc202a05b17a8bca70a9be4098bb3043df08d5a0a5b63",
     "data/modern-authors.json": "a4c24c17593d33ee2ea7033cab89fd8f1d2591f4c049aca722d27f0515145a15",

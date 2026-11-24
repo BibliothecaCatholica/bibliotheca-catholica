@@ -1,0 +1,4 @@
+{
+ "about": "Optional seed lists. Each entry must name its source, a URL, and an open licence; seeds only propose candidates, like every lexicon word, and none is used yet.",
+ "seeds": []
+}

@@ -18,3 +18,44 @@ Round 4, Job 2b. Not hosted: the raw score is below the 99.5% read gate, and the
   - 14 are right: literature, cliff, that, flowers, flame, Carroll, blight, polished, Plentiful, would, dwelling, solicited, published, lived.
   - 2 were wrong and are now fixed: "Caill Cuan !" is Irish (*caill*, wood), so it is now verified and no longer repaired to "Call"; and German "für" is restored by hand on leaves 132 and 134 (it had become "fur").
 - **Not hosted:** below 99.5%. Next is a hand pass of the 222 forms against the page images, without normalizing Irish spellings.
+
+## Round 6 (November 23, 2026): hand pass with the contact sheet
+
+- **Tool:** `tools/lexicon/contact_sheet.py` grouped the 227 unread forms (325 occurrences) and cropped every occurrence from the scan's own page image. All 325 were located line by line. Every crop was checked by eye; the sheets themselves are working files and were not committed.
+- **Printed as read (`verifiedWords`, 208 forms):** mostly Irish names and places (Aed, Liadin, Curithir, Carbery, Guare, Aidne, Fothad, Marvan, Pangur, Ériu). The rest are Irish words (*fidchell*, *mBó*, *Ochone*, *Mairg*), Latin, German, French, and Spanish quoted in the introduction and notes, and rare English or Scots words (shieling, blaeberries, bragget, chiels, heathpoults). Two line-end fragments are also kept, because this verse layout doesn't rejoin them: "chal-" / "lenged" and "privi-" / "osity". Irish spellings are kept as printed, not normalized.
+- **Misreadings fixed against the image:**
+  - Xoisi → Noisi (3);
+  - Mohng → Moling (2);
+  - Movlurg → Moylurg;
+  - vearnful → yearnful;
+  - Finnhath → Finnliath;
+  - Rilgarrow → Kilgarrow;
+  - Yerily → Verily;
+  - Praver → Prayer;
+  - Uke → like;
+  - Jouvnal → Journal;
+  - tCraeb → Craeb;
+  - Carberj^ → Carbery;
+  - Moinmo^ → Moinmoy;
+  - the contents' small capitals "deirdre's LAMENT" and "to crinog" → "DEIRDRE'S LAMENT" and "TO CRINOG";
+  - a handwritten library date on leaf 9, dropped.
+  The five corrected names and words (Noisi's, Moylurg, yearnful, Finnliath, Kilgarrow) were also verified as printed. With them verified, Tesseract's reading of five lines now matches the image exactly, so those lines need no hand fix.
+- **Line-choice check:** verifying words changes which engine wins some lines, so every changed line was compared before and after. Three small-capital headings (MARVAN, GUARE, LIADIN) are kept in capitals by hand, matching the image. Two Tesseract superscripts ("Lugh,?" and "Bethech.!") and an opening quote ("*O Cormac") are corrected to the printed "Lugh,³", "Bethech.¹", and "‘O Cormac".
+- **Score:** **99.98%** (3 of 17,668 unread), up from 98.16%. The three words left are footnote numbers printed against a word (Lugh,³ Bethech.¹ Moinmoy.¹), kept as printed. The method and remaining forms are in `ia-selectancientiri00meye.json`.
+- **Not hosted** in this round. The book now passes the read gate, so hosting it is a separate PR for the owner to approve.
+
+## Round 7 (November 23, 2026): hosting
+
+Micah approved hosting once QA passes it ("Yes, host Meyer once QA passes it", November 23).
+- **Before hosting, the whole text was read again for OCR debris the scorer doesn't count:** accented letters inside English words, backslashes, and digits run into words. 30 lines were fixed against the page images (30 new hand fixes; 48 in the record with the hand pass's 18):
+  - "191 1" → 1911;
+  - offeríng, \vider, liíerature, maríced, Chríst, couíd, stríveth, spríng, yew-berríes, shoúld, Delightíul, Erín, díre, proíit, belís, and duríng;
+  - "x\n" → An;
+  - stray backslashes → semicolons, and stray marks → footnote numbers;
+  - Moliére → Molière and scéne → scène;
+  - "4and" → "4 and", and fúv → für;
+  - Éríu → Ériu;
+  - the Greek ἀγάπητή and συνεισάκτος in the notes;
+  - a page foot, "H 113", dropped.
+- **Correct as printed, and kept:** Dallán, Móre, Senórach, Maelísu, and Brolcháin.
+- **Score:** 99.98% (3 of 17,643 unread). The text and its provenance record are `data/texts/ia-selectancientiri00meye.txt` and `data/sources/ia-selectancientiri00meye.json`.

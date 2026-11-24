@@ -61,6 +61,19 @@ class TextArchiveTests(unittest.TestCase):
             archive.export(Path(directory))
             self.assertFalse((Path(directory) / 'CNAME').exists())
 
+    def test_texts_site_headers(self):
+        with tempfile.TemporaryDirectory() as directory:
+            archive.export(Path(directory))
+            h = (Path(directory) / '_headers').read_text()
+        self.assertNotIn('Strict-Transport-Security', h)  # HSTS waits for the owner's decision (separate PR)
+        self.assertIn("Content-Security-Policy: default-src 'self';", h)
+        self.assertIn("object-src 'none'", h)
+        self.assertNotIn('Access-Control-Allow-Origin', h)  # Cloudflare Pages' default (*) stays: the reader fetches cross-origin
+        main = (ROOT / '_headers').read_text()
+        for line in ('X-Content-Type-Options: nosniff', 'Referrer-Policy: strict-origin-when-cross-origin', 'bluetooth=()'):
+            self.assertIn(line, main)
+            self.assertIn(line, h)
+
     def test_export_cannot_overwrite_the_main_website(self):
         with self.assertRaises(ValueError):
             archive.export(ROOT)

@@ -578,6 +578,27 @@ def facts_words(n):return 'about '+format(int(n/1000+0.5)*1000,',')+' words'
 def facts_time(m):
     m=int(m/10+0.5)*10;h,r=divmod(m,60)  # half up, as Math.round in scripts/library.js
     return 'about '+((str(h)+(' hour' if h==1 else ' hours')) if h else '')+(' ' if h and r else '')+((str(r)+' minutes') if r else '')+' of reading'
+
+def work_about_html(w):
+    """Optional unique copy, opening excerpt, and contents for a work page. Only works
+    that record about, excerpt, or contents in data/library.json receive this block."""
+    parts=[]
+    if w.get('about'):
+        parts.append('<section class="work-about"><h2>About this work</h2>'+''.join('<p>'+E(p)+'</p>' for p in w['about'])+'</section>')
+    ex=w.get('excerpt')
+    if ex and ex.get('text'):
+        paras=re.split(r'\n\s*\n', ex['text'].strip())
+        if ex.get('verse'):
+            body=''.join('<p>'+E(para).replace('\n','<br>\n')+'</p>' for para in paras if para.strip())
+        else:
+            body=''.join('<p>'+E(re.sub(r'\s+',' ',para).strip())+'</p>' for para in paras if para.strip())
+        lang=(' lang="'+E(ex['lang'])+'"') if ex.get('lang') else ''
+        credit=('<p class="small excerpt-credit">'+E(ex['note'])+'</p>') if ex.get('note') else ''
+        parts.append('<section class="work-excerpt"><h2>From the text</h2><blockquote'+lang+'>'+body+'</blockquote>'+credit+'</section>')
+    if w.get('contents'):
+        parts.append('<section class="work-contents"><h2>Contents</h2><ol>'+''.join('<li>'+E(c)+'</li>' for c in w['contents'])+'</ol></section>')
+    return ''.join(parts)
+
 def part_d_html(w,pd):
     """Part D title page (Orthodoxy pilot), static mirror of work() in scripts/library.js: facts line and About this edition."""
     if not pd:return ''
@@ -749,7 +770,7 @@ def main():
         hosted=any(e.get('text') for e in w['editions'])
         by=byline(w)
         ra=RA.get(w['id']);ra_note=ra_note_html(ra,libw,True) if ra and w['id'] in ra.get('noteWorks',[]) else ''
-        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d).replace('<div class="page-head">','<div class="page-head work-head has-cover">'+cover_img(hosted_ed(w),'work-cover',220,False),1 if hosted else 0)+'<p>By '+by+'. '+('Not yet available online.' if w.get('status')=='not-yet-available' else E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.')))+'</p>'+ra_note+part_d_html(w,TPD.get(w['id'],{}).get('partD'))+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+(summa_work_html(SUMMA) if SUMMA and w['id']==SUMMA['work'] else '')+series_html(w,lib,TPD)+(PE['works'][w['id']]['html'] if w['id'] in PE['works'] else '')+work_related(w)+(study_partner.book_panel(w['id']) if w['id'] in study_partner.BOOK_WORKS else '')+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
+        body=crumb_html(('Discover & Read','library/'),(w['title'],''))+head(w['category']+' · '+w['tradition'],w['title'],w['author']+'. '+d).replace('<div class="page-head">','<div class="page-head work-head has-cover">'+cover_img(hosted_ed(w),'work-cover',220,False),1 if hosted else 0)+'<p>By '+by+'. '+('Not yet available online.' if w.get('status')=='not-yet-available' else E(str(len(w['editions']))+(' edition' if len(w['editions'])==1 else ' editions')+(', with a text you can read on this site.' if hosted else ', each linked at its source.')))+'</p>'+ra_note+work_about_html(w)+part_d_html(w,TPD.get(w['id'],{}).get('partD'))+'<h2>Reading editions &amp; sources</h2><ul>'+eds+'</ul>'+(parts_list(w['id'],TPD[w['id']]) if w['id'] in TPD else '')+(summa_work_html(SUMMA) if SUMMA and w['id']==SUMMA['work'] else '')+series_html(w,lib,TPD)+(PE['works'][w['id']]['html'] if w['id'] in PE['works'] else '')+work_related(w)+(study_partner.book_panel(w['id']) if w['id'] in study_partner.BOOK_WORKS else '')+'<p>'+a('/library/','Selected library')+' · '+a('/rights/','Rights badges')+'</p>'
         book={'@context':'https://schema.org','@type':'Book','name':w['title'],'url':SITE+'work/'+w['id']+'/','author':{'@type':'Person','name':w['author']},'description':d,'genre':w['category']}
         if w.get('authorId') in auth_ids:book['author']['url']=SITE+'author/'+w['authorId']+'/'
         elif w['id'] in RA:book['author']['url']=SITE+'author/'+RA[w['id']]['id']+'/'

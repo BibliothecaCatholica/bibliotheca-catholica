@@ -130,6 +130,17 @@ function editionRow(w,e,primary){
  return '<li class="ed-row"><p class="ed-sum"><b>'+esc(e.label)+'</b> · '+esc(e.language||'English')+(who?' · '+who:'')+(window.BCRights?window.BCRights.badge(window.BCRights.edition(e)):'')+'</p><p class="ed-acts">'+acts.join(' · ')+'</p><details class="ed-details"><summary>Source and rights details</summary>'+(e.note?'<p>'+esc(e.note)+'</p>':'')+'<p>'+esc(e.rights)+' · Source checked '+esc(e.checked)+'</p></details></li>';
 }
 function way(label,body,id){return body?'<li class="way"'+(id?' id="'+id+'"':'')+'><h3>'+label+'</h3><div class="way-body">'+body+'</div></li>':''}
+function workAbout(w){
+ var h='';
+ if(w.about&&w.about.length)h+='<section class="work-about"><h2>About this work</h2>'+w.about.map(function(p){return '<p>'+esc(p)+'</p>'}).join('')+'</section>';
+ if(w.excerpt&&w.excerpt.text){
+  var paras=String(w.excerpt.text).trim().split(/\n\s*\n/);
+  var body=paras.filter(Boolean).map(function(p){return '<p>'+(w.excerpt.verse?esc(p).replace(/\n/g,'<br>\n'):esc(p.replace(/\s+/g,' ').trim()))+'</p>'}).join('');
+  h+='<section class="work-excerpt"><h2>From the text</h2><blockquote'+(w.excerpt.lang?' lang="'+esc(w.excerpt.lang)+'"':'')+'>'+body+'</blockquote>'+(w.excerpt.note?'<p class="small excerpt-credit">'+esc(w.excerpt.note)+'</p>':'')+'</section>';
+ }
+ if(w.contents&&w.contents.length)h+='<section class="work-contents"><h2>Contents</h2><ol>'+w.contents.map(function(c){return '<li>'+esc(c)+'</li>'}).join('')+'</ol></section>';
+ return h;
+}
 function work(render,id){var w=C.works.find(function(x){return x.id===id});if(!w){render('<h1>Work not found</h1><a href="#/library">Browse the library</a>','library');return}
  var full=w.editions.filter(function(e){return e.access==='full-text'}),refs=w.editions.filter(function(e){return e.access==='reference'});
  var hosted=full.find(function(e){return e.text}),ext=!hosted&&full[0];
@@ -154,7 +165,7 @@ function work(render,id){var w=C.works.find(function(x){return x.id===id});if(!w
  var PD=hosted&&(window.TEXT_PAGES||{})[w.id]&&window.TEXT_PAGES[w.id].d,titlePage='';
  if(PD){cta='<a class="btn" href="#/read/'+w.id+'/'+hosted.id+'">Read</a>'+(recs.length?'<button type="button" class="choice" data-jump="way-listen">Listen</button>':'')+'<a class="choice" download href="'+esc(hosted.text)+'">Download</a>';
   titlePage='<p class="work-facts">'+[factsWords(PD.words),factsTime(PD.minutes)].filter(Boolean).map(esc).join(' · ')+'</p>'}
- render('<a class="backlink" href="#/library">← Reading room</a><div class="page-head work-head'+(hosted?' has-cover':'')+'">'+coverImg(hosted,'work-cover',220).replace(' loading="lazy"','')+'<div class="eyebrow">'+esc(w.category)+'</div><h1>'+esc(w.title)+'</h1><p class="lede">'+(w.authorId?'<a href="#/author/'+w.authorId+'">'+esc(w.author)+'</a>':relatedBy(w))+(w.date?' <span class="muted">· '+esc(w.date)+'</span>':'')+'</p><p class="work-desc">'+esc(firstSentence(w.description))+'</p>'+relatedNote(w)+titlePage+(cta?'<p class="work-cta'+(PD?' work-choices':'')+'">'+cta+'</p>':'')+'</div>'+(PD?'<section class="about-edition"><h2>About this edition</h2><p>'+esc(PD.about)+'</p></section>':'')
+ render('<a class="backlink" href="#/library">← Reading room</a><div class="page-head work-head'+(hosted?' has-cover':'')+'">'+coverImg(hosted,'work-cover',220).replace(' loading="lazy"','')+'<div class="eyebrow">'+esc(w.category)+'</div><h1>'+esc(w.title)+'</h1><p class="lede">'+(w.authorId?'<a href="#/author/'+w.authorId+'">'+esc(w.author)+'</a>':relatedBy(w))+(w.date?' <span class="muted">· '+esc(w.date)+'</span>':'')+'</p><p class="work-desc">'+esc(firstSentence(w.description))+'</p>'+relatedNote(w)+titlePage+(cta?'<p class="work-cta'+(PD?' work-choices':'')+'">'+cta+'</p>':'')+'</div>'+(PD?'<section class="about-edition"><h2>About this edition</h2><p>'+esc(PD.about)+'</p></section>':'')+workAbout(w)
   +(full.length?'':'<p class="callout">The complete book is not available in this site’s reader. Excerpts and previews show only part of a book.</p>')
   +partsList(w)+seriesList(w)
   +(full.length?'<section class="work-editions"><h2>'+(full.length>1?'Editions':'Edition')+'</h2><ul class="rows">'+(hosted?editionRow(w,hosted,true):'')+(ext?editionRow(w,ext,false):'')+others.map(function(e){return editionRow(w,e,false)}).join('')+'</ul></section>':'')

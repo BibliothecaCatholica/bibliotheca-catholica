@@ -100,6 +100,7 @@ body.has-listen-dock footer{padding-bottom:64px}
 .work-facts{margin:10px 0 0;font:15px var(--sans);color:var(--muted)}
 .work-choices .choice{font:600 15px var(--sans);color:var(--rubric);background:none;border:0;padding:10px 4px;min-height:44px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .about-edition{max-width:66ch;margin:26px 0 30px}.about-edition h2{margin:0 0 6px}.about-edition p{margin:0;color:var(--ink2)}
+.work-about,.work-excerpt,.work-contents{max-width:66ch;margin:26px 0 30px}.work-about h2,.work-excerpt h2,.work-contents h2{margin:0 0 6px}.work-about p{margin:0 0 .8em;color:var(--ink2)}.work-excerpt blockquote{margin:0 0 .6em;padding:0 0 0 1em;border-left:2px solid var(--line,currentColor)}.work-excerpt blockquote p{margin:0 0 .6em}.work-excerpt .excerpt-credit{margin:0;color:var(--muted)}.work-contents ol{margin:.4em 0 0;padding-left:1.3em}.work-contents li{margin:0 0 .25em}
 @media print{.edition-designed p.reading-chapter{break-before:page}.ch-end a{display:none}}
 /* Edition covers (design C, chosen 2026-11-15; tools/covers.py): beside the title on work pages, small in rows and lists. */
 .work-head.has-cover::after{content:"";display:block;clear:both}

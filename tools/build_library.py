@@ -34,6 +34,28 @@ def validate(catalog):
         assert work['title'] and work['author'] and work['category'] and work['tradition']
         assert not work.get('authorId') or work['authorId'] in authors
         assert work['description'].strip(), f"Missing description: {work['id']}"
+        about = work.get('about')
+        if about is not None:
+            assert isinstance(about, list) and about, work['id']
+            assert all(isinstance(p, str) and p.strip() and '\u2014' not in p for p in about), work['id']
+        contents = work.get('contents')
+        if contents is not None:
+            assert isinstance(contents, list) and contents, work['id']
+            assert all(isinstance(p, str) and p.strip() and '\u2014' not in p for p in contents), work['id']
+        excerpt = work.get('excerpt')
+        if excerpt is not None:
+            assert isinstance(excerpt, dict) and excerpt.get('text') and excerpt.get('note'), work['id']
+            assert '\u2014' not in excerpt['note'], work['id']
+            extra = set(excerpt) - {'editionId', 'text', 'note', 'lang', 'verse'}
+            assert not extra, (work['id'], extra)
+            hosted = {e['id']: e for e in work['editions'] if e.get('text')}
+            eid = excerpt.get('editionId')
+            assert eid in hosted, (work['id'], eid)
+            raw = (ROOT / hosted[eid]['text']).read_text(encoding='utf-8')
+            norm = lambda s: re.sub(r'\s+', ' ', s)
+            body = norm(raw)
+            for para in re.split(r'\n\s*\n', excerpt['text'].strip()):
+                assert para.strip() and norm(para) in body, (work['id'], para[:80])
         assert work.get('status') in (None, 'not-yet-available'), work['id']
         if work.get('status') == 'not-yet-available':  # listed only: no online copy found yet, so no editions or samples
             assert not work['editions'] and not work.get('readingLinks') and not work.get('added'), work['id']

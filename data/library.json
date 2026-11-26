@@ -2246,6 +2246,21 @@
       "category": "Liturgy",
       "tradition": "Catholic tradition",
       "description": "Francis Mershman's article on the season of Advent from the first volume of The Catholic Encyclopedia: its symbolism in the liturgy, its duration and ritual, and its historical origin.",
+      "about": [
+        "Francis Mershman's article on Advent was first published in 1907 in volume 1 of The Catholic Encyclopedia (New York: Robert Appleton Company), on pages 165 and 166. The hosted text is Bibliotheca Catholica's transcription of the Emory University scan of that volume, limited to this article.",
+        "The article is in three sections: Symbolism, Duration and Ritual, and Historical Origin. It opens by deriving Advent from the Latin ad-venio, \"to come to,\" and by describing the season as it then stood in the Western churches: a period of four Sundays, beginning with the Sunday nearest the feast of St. Andrew (30 November). The first Sunday may fall as early as 27 November, giving the season twenty-eight days, or as late as 3 December, giving it only twenty-one. In the West, the ecclesiastical year begins with Advent. Mershman presents the season as a preparation for three related comings of the Lord: His coming in the flesh, commemorated at Christmas; His coming in Holy Communion and through grace; and His final coming as judge, at death and at the end of the world.",
+        "Under Symbolism he walks through the Advent liturgy: the Invitatory at Matins, the lessons from Isaias, a homily of Pope St. Leo (440-461) and, on the second Sunday, St. Jerome's commentary on Isaias 11:1, the seasonal hymns, the great antiphons of the Magnificat in the last days before the Vigil of the Nativity, and the Epistles and Gospels of the Masses. Duration and Ritual records the Advent discipline of the Office and Mass as the Encyclopedia described it in 1907, including the omission of the Te Deum and the Gloria in excelsis, the retention of the Alleluia, the use of violet vestments, and the prohibition of the Nuptial Mass through the feast of the Epiphany. Historical Origin is careful about what can and cannot be known. Mershman writes that the date when Advent was first introduced cannot be determined with certainty, notes that a feast of the Nativity is not in evidence before the end of the fourth century, and cites the fourth canon of a synod held at Saragossa in 380, which prescribed attendance at church from 17 December to the feast of the Epiphany, together with two Advent homilies of St. Maximus, Bishop of Turin (415-466)."
+      ],
+      "excerpt": {
+        "editionId": "ia-cathencyc-1907-advent",
+        "note": "The opening of Francis Mershman's 1907 article, from the hosted transcription of The Catholic Encyclopedia, volume 1, pages 165 and 166.",
+        "text": "Advent (Lat. ad-venio, to come to), according to present usage, is a period beginning with the Sunday nearest to the feast of St. Andrew the Apostle (30 November) and embracing four Sundays. The first Sunday may be as early as 27 November, and then Advent has twenty-eight days, or as late as 3 December, giving the season only twenty-one days. With Advent the ecclesiastical year begins in the Western churches. During this time the faithful are admonished to prepare themselves worthily to celebrate the anniversary of the Lord's coming into the world as the incarnate God of love, thus to make their souls fitting abodes for the Redeemer coming in Holy Communion and through grace, and thereby to make themselves ready for His final coming as judge, at death and at the end of the world."
+      },
+      "contents": [
+        "Symbolism",
+        "Duration and Ritual",
+        "Historical Origin"
+      ],
       "reviewStatus": "source-checked",
       "added": "2026-11-20",
       "date": "1907",
@@ -2274,6 +2289,25 @@
       "category": "Liturgy",
       "tradition": "Catholic tradition",
       "description": "H. T. Henry's article on the seven great antiphons sung at the Magnificat from December 17 to 23, from the eleventh volume of The Catholic Encyclopedia: their texts, their place in the Office, and their history.",
+      "about": [
+        "H. T. Henry's article on the O Antiphons was first published in 1911 in volume 11 of The Catholic Encyclopedia (New York: Robert Appleton Company), on page 173. The hosted text is Bibliotheca Catholica's transcription of that page from the Internet Archive scan.",
+        "Henry treats the seven greater antiphons of the Roman Breviary, the antiphonae majores, sung at the Magnificat in the ferial Office on the seven days preceding the vigil of Christmas. Each begins with \"O\" and addresses Christ under a Scriptural title: O Sapientia, O Adonai, O Radix Jesse, O Clavis David, O Oriens, O Rex Gentium, and O Emmanuel. Each ends with a petition to the coming Lord. He notes that they are sung in full both before and after the Magnificat, an exception to the usual ferial rule, and records Dom Prosper Gueranger's remark that they were assigned to Vespers because the Saviour came in the evening hour of the world, and attached to the Magnificat to honor her through whom He came.",
+        "The article also records medieval additions: \"O virgo virginum,\" still retained as the Magnificat antiphon at second Vespers of the Expectatio Partus on 18 December; \"O Gabriel,\" later widely replaced by the thirteenth-century \"O Thoma Didyme\" for the feast of St. Thomas on 21 December; and, in some churches, twelve greater antiphons, adding \"O Rex Pacifice,\" \"O Mundi Domina,\" and \"O Hierusalem.\" The Parisian Rite added two more and began the nine on 15 December. Henry discusses English verse translations, the later hymn \"Veni, veni, Emmanuel\" (which Neale thought to be of the twelfth century, but which Henry says has not been traced earlier than the first decade of the eighteenth century), and the debate between Herbert Thurston and Fernand Cabrol over how early the antiphons are. The seven have been found in manuscripts of the eleventh century. Thurston, writing in The Month in December 1905, argued that they may be as old as the Roman Antiphonary, or the time of Pope Gregory himself."
+      ],
+      "excerpt": {
+        "editionId": "ia-cathencyc-1911-o-antiphons",
+        "note": "The opening of H. T. Henry's 1911 article, from the hosted transcription of The Catholic Encyclopedia, volume 11, page 173.",
+        "text": "O Antiphons (Roman Breviary: Antiphonæ majores, “greater antiphons”), the seven antiphons to the Magnificat in the ferial Office of the seven days preceeding the vigil of Christmas; so called because all begin with the interjection “O”. Their opening words are: (1) “O Sapientia”, (2) “O Adonai”, (3) “O Radix Jesse”, (4) “O Clavis David”, (5) “O Oriens”, (6) “O Rex Gentium”, (7) “O Emmanuel”."
+      },
+      "contents": [
+        "O Sapientia",
+        "O Adonai",
+        "O Radix Jesse",
+        "O Clavis David",
+        "O Oriens",
+        "O Rex Gentium",
+        "O Emmanuel"
+      ],
       "reviewStatus": "source-checked",
       "added": "2026-11-21",
       "date": "1911",
@@ -2302,6 +2336,15 @@
       "category": "Scripture",
       "tradition": "Catholic tradition",
       "description": "The Book of Wisdom in the Douay-Rheims translation as revised by Bishop Richard Challoner: nineteen chapters on wisdom, justice, and immortality, including the praise of Wisdom in chapter 8.",
+      "about": [
+        "The Book of Wisdom, also called the Wisdom of Solomon, is one of the deuterocanonical books of the Old Testament. The edition hosted here is the Douay Old Testament of 1609, as revised by Bishop Richard Challoner in 1749-1752, in the text eBible.org gives as the Douay-Rheims American Edition of 1899. The hosted file has nineteen chapters, with each verse as its own paragraph. The chapter summaries and Challoner's annotations found in printed Douay-Rheims Bibles are not in this transcription. The text was compared word by word with the Internet Archive scan of the 1899 Benziger Brothers printing.",
+        "The book opens with an address to the judges of the earth, \"Love justice,\" and a warning that wisdom will not enter a malicious soul. It teaches that God did not make death, and that justice is perpetual and immortal. Later chapters praise Wisdom, including the passage in chapter 8 named in the catalog description, and recount Wisdom's work in the history of Israel. The nineteen chapters can be read on their own pages, and the whole book in the reading room."
+      ],
+      "excerpt": {
+        "editionId": "ebible-dra-wisdom",
+        "note": "Wisdom 1:1-5, from the hosted Douay-Rheims American Edition of 1899.",
+        "text": "1 Love justice, you that are the judges of the earth. Think of the Lord in goodness, and seek him in simplicity of heart.\n\n2 For he is found by them that tempt him not: and he sheweth himself to them that have faith in him.\n\n3 For perverse thoughts separate from God: and his power, when it is tried, reproveth the unwise:\n\n4 For wisdom will not enter into a malicious soul, nor dwell in a body subject to sins.\n\n5 For the Holy Spirit of discipline will flee from the deceitful, and will withdraw himself from thoughts that are without understanding, and he shall not abide when iniquity cometh in."
+      },
       "reviewStatus": "source-checked",
       "added": "2026-11-21",
       "date": "1609 (Challoner revision 1750)",
@@ -2339,6 +2382,15 @@
       "category": "Scripture",
       "tradition": "Catholic tradition",
       "description": "Ecclesiasticus, also called Sirach, in the Douay-Rheims translation as revised by Bishop Richard Challoner: fifty-one chapters of counsel, including Wisdom's praise of herself in chapter 24.",
+      "about": [
+        "Ecclesiasticus, also called Sirach, or the Wisdom of Jesus the Son of Sirach, is a deuterocanonical book of counsel. The hosted edition is the Douay-Rheims translation as revised by Bishop Richard Challoner, from eBible.org's Douay-Rheims American Edition of 1899, in fifty-one chapters, each verse a paragraph. As with the Book of Wisdom on this site, the printed chapter summaries and Challoner's notes are not in this transcription, which was compared word by word with the 1899 Benziger Brothers scan.",
+        "The book opens by placing all wisdom with the Lord God, \"before all time.\" Its chapters offer practical and religious counsel on the fear of the Lord, friendship, family, speech, and worship. Chapter 24, named in the catalog description, contains Wisdom's praise of herself. The fifty-one chapters can be read on their own pages, and the whole book in the reading room."
+      ],
+      "excerpt": {
+        "editionId": "ebible-dra-ecclesiasticus",
+        "note": "Ecclesiasticus 1:1-4, from the hosted Douay-Rheims American Edition of 1899.",
+        "text": "1 All wisdom is from the Lord God, and hath been always with him, and is before all time.\n\n2 Who hath numbered the sand of the sea, and the drops of rain, and the days of the world? Who hath measured the height of heaven, and the breadth of the earth, and the depth of the abyss?\n\n3 Who hath searched out the wisdom of God that goeth before all things?\n\n4 Wisdom hath been created before all things, and the understanding of prudence from everlasting."
+      },
       "reviewStatus": "source-checked",
       "added": "2026-11-21",
       "date": "1609 (Challoner revision 1750)",
@@ -2637,6 +2689,15 @@
       "category": "Biography",
       "tradition": "Catholic tradition",
       "description": "The life of St. Eulalia of Merida, virgin and martyr, for 10 December, from Alban Butler's Lives of the Fathers, Martyrs, and Other Principal Saints. This is the life only, from volume XII of the Derby edition of 1842, not the whole volume.",
+      "about": [
+        "This is the life of St. Eulalia of Merida, virgin and martyr, for 10 December, taken from Alban Butler's Lives of the Fathers, Martyrs, and Other Principal Saints. It is the life only, from volume XII of the Derby edition of 1842, printed pages 229-237 of the Internet Archive scan, including Butler's notes and the short notice of St. Eulalia of Barcelona printed at the end of this life. It is not the whole volume.",
+        "Butler opens by pointing to Prudentius, who \"has celebrated the triumph of this holy virgin,\" a native of Merida, once the capital of Lusitania in Spain. He records the tradition of her martyrdom, the church later raised over her relics, and Prudentius's witness that pilgrims came to venerate her bones. Her relics, he writes, are kept with great veneration at Oviedo, where she is honored as patroness, and her name stands in the Roman Martyrology on 10 December. A note discusses the lessons of the Church of Oviedo and the acts that say she was only twelve years old, and that another holy virgin, named Julia, suffered with her. As printed in this edition, the life is followed by a brief mention of another St. Eulalia, virgin and martyr, at Barcelona, for whom Butler says we have no authentic acts. Prudentius's hymn on the same martyr is also in this library, as a ten-stanza selection."
+      ],
+      "excerpt": {
+        "editionId": "ia-butler-1842-eulalia",
+        "note": "The opening of Butler's life of St. Eulalia of Merida, from the hosted 1842 Derby text.",
+        "text": "PRUDENTIUS¹ has celebrated the triumph of this holy virgin, who was a native of Merida, then the capital city of Lusitania in Spain, now a declining town in Estremadura, the archiepiscopal dignity having been translated to Compostella."
+      },
       "reviewStatus": "source-checked",
       "added": "2026-11-21",
       "date": "1756–1759 (this life from the Derby edition of 1842, vol. XII)",
@@ -2666,6 +2727,16 @@
       "category": "Church Fathers",
       "tradition": "Catholic tradition",
       "description": "Jerome's Latin prologue to his commentary on Isaiah, written for Eustochium around 408 to 410. This is the prologue only, from Migne's 1845 Patrologia Latina, volume 24, including the line ignoratio Scripturarum, ignoratio Christi est. No English translation published before 1931 is known, so none is hosted here.",
+      "about": [
+        "This is Jerome's Latin prologue to his Commentary on Isaiah, written for the virgin Eustochium around 408 to 410. He says he turns to Isaiah after finishing his work on the twelve prophets and on Daniel, and that he is keeping a promise made to Eustochium's mother, Paula, and to her brother Pammachius. The text is the prologue only, from J. P. Migne, Patrologia Latina, volume 24 (Paris: Petit-Montrouge, 1845), printed columns 17-22. The wording follows the Corpus Corporum edition at the University of Zurich and was collated word for word against the 1845 Migne scan.",
+        "No English translation published before 1931 is known, so none is hosted here. The prologue includes the line ignoratio Scripturarum, ignoratio Christi est (\"ignorance of the Scriptures is ignorance of Christ\"), which has its own stable page at /work/jerome-isaiah-prologue/ignoratio-scripturarum/. Jerome presents Isaiah not only as a prophet but as evangelist and apostle, and he writes as one who would imitate the householder who brings forth things new and old."
+      ],
+      "excerpt": {
+        "editionId": "cc-pl24-1845-isaiah-prologue",
+        "note": "From the opening of the prologue, in the hosted 1845 Migne Latin text.",
+        "lang": "la",
+        "text": "Si enim juxta apostolum Paulum (II Cor. I, 24) Christus Dei virtus est, Deique sapientia; et qui nescit Scripturas, nescit Dei virtutem ejusque sapientiam: ignoratio Scripturarum, ignoratio Christi est."
+      },
       "reviewStatus": "source-checked",
       "added": "2026-11-21",
       "date": "c. 408-410 (this text from Migne, Patrologia Latina, volume 24, 1845)",
@@ -2695,6 +2766,16 @@
       "category": "Poetry",
       "tradition": "Catholic tradition",
       "description": "A ten-stanza selection from Prudentius's hymn for St. Eulalia of Merida, Peristephanon III (The Martyrs' Garland), in F. St. J. Thackeray's 1890 English verse, with the Latin of those same stanzas. It is a selection, not the whole poem.",
+      "about": [
+        "This page hosts a ten-stanza selection from Prudentius's hymn for St. Eulalia of Merida, Peristephanon III, also called The Martyrs' Garland. It is a selection, not the whole poem. Aurelius Prudentius Clemens (348-413), the Christian Latin poet, wrote the Peristephanon as a cycle of hymns in honor of martyrs. The English verse is by F. St. J. Thackeray, first published in 1890 in Translations from Prudentius (London: George Bell and Sons), on printed pages 120-125, with the Latin of those stanzas on facing pages.",
+        "The selection presents Eulalia as a noble girl of Merida who, still young (Thackeray's English has \"thrice four winters\"), met death by fire. It includes the image of a dove leaving the martyr's mouth, and an invitation to gather flowers at her tomb. The Latin and English of the same ten stanzas are both in the hosted text. Alban Butler's life of St. Eulalia of Merida, also in this library, discusses the same martyr and points to this hymn."
+      ],
+      "excerpt": {
+        "editionId": "ia-thackeray-1890-eulalia",
+        "note": "The first Latin stanza of the selection, and Thackeray's facing English, from the hosted 1890 text.",
+        "verse": true,
+        "text": "GERMINE nobilis Eulalia,\nmortis et indole nobilior,\nEmeritam sacra virgo suam,\ncuius ab ubere progenita est,\nossibus ornat, amore colit.\n\nBORN of a noble race,\nMore by her death ennobled, Eulalie\nStill by her dust on Merida sheds grace,\nStill dowers it with her filial piety."
+      },
       "reviewStatus": "source-checked",
       "added": "2026-11-21",
       "date": "c. 400 (this selection from Thackeray's translation of 1890)",
@@ -6096,6 +6177,25 @@
       "category": "History",
       "tradition": "Catholic tradition",
       "description": "Francis P. Cassidy's survey of the teachers and schools that shaped medieval education.",
+      "about": [
+        "Molders of the Medieval Mind, subtitled on the title page \"The Influence of the Fathers of the Church on the Medieval Schoolmen,\" is a 1944 study by Rev. Frank P. Cassidy, Ph.D., of the Catholic University of America, published by B. Herder Book Co. at St. Louis and London. The printing carries a nihil obstat by Edward B. Jordan and the imprimatur of Archbishop Michael J. Curley, dated 21 April 1944. The catalog lists the author as Francis P. Cassidy, the form used in the library record; the title page of this printing uses Frank P. Cassidy. The work is public domain in the United States because its copyright was not renewed.",
+        "Cassidy's introduction states the subject directly: the influence of the Fathers of the Church on the Schoolmen of the Middle Ages. He describes Scholasticism as the leading educational movement of that long period, \"from Boethius in the sixth century to Erasmus in the sixteenth,\" and the Fathers as the immediate predecessors who gave the schoolmen inspiration and direction. The book then proceeds in six chapters: Roman Schools and Education; Christianity and Early Western Civilization; Fathers of the East; Fathers of the West; The Patristic Attitude toward Pagan Learning; and a Summary, followed by a bibliography and an index."
+      ],
+      "excerpt": {
+        "editionId": "ia-moldersofmedieva00cass",
+        "note": "The opening of Cassidy's introduction, from the hosted 1944 text.",
+        "text": "THE present study is concerned with the influence of the Fathers of the Church on the Schoolmen of the Middle Ages. The leading educational movement of the Middle Ages was Scholasticism. It was a movement of immense proportions extending over that wide range of time from Boethius in the sixth century to Erasmus in the sixteenth."
+      },
+      "contents": [
+        "I. Roman Schools and Education",
+        "II. Christianity and Early Western Civilization",
+        "III. Fathers of the East",
+        "IV. Fathers of the West",
+        "V. The Patristic Attitude toward Pagan Learning",
+        "VI. Summary",
+        "Bibliography",
+        "Index"
+      ],
       "reviewStatus": "source-checked",
       "date": "1944",
       "editions": [
@@ -6124,6 +6224,44 @@
       "category": "Biography",
       "tradition": "Catholic tradition",
       "description": "Joseph H. Fichter's biography of James Laynez, second General of the Society of Jesus.",
+      "about": [
+        "James Laynez, Jesuit, by Joseph H. Fichter, S.J., was first published in 1944 at St. Louis by B. Herder Book Co., with a London imprint at 33 Queen Square. The imprimatur, dated 30 January 1944, is that of John J. Glennon, Archbishop of St. Louis. The book also carries an imprimi potest of Thomas J. Shields, S.J., provincial of the New Orleans province, and is dedicated to Fichter's brethren in that province. It is public domain in the United States because its copyright was not renewed.",
+        "Fichter's preface presents Laynez as a \"simple man in a complex age,\" a leading figure both at the Council of Trent, where Fichter calls him the Council's outstanding theologian, and in the early Society of Jesus, of which he was the second General. Laynez was born at Almazan in the province of Soria, Castile, in 1512. Fichter notes that the exact date of his birth has not been preserved, and he discusses Laynez's Jewish ancestry at the opening of the first chapter. He writes that, as of 1944, there had been no biography of Laynez in English, and that he depended on primary sources, mainly letters in the Monumenta Historica Societatis Jesu and speeches edited by Hartmann Grisar in the Disputationes Tridentinae. The book has twenty chapters, from Laynez's journey to Paris and his years with Ignatius Loyola through three sojourns at Trent and his last month, followed by seven appendixes, including Ribadeneira's description of Laynez and a letter to the Jesuits in India."
+      ],
+      "excerpt": {
+        "editionId": "ia-jameslaynezjesui00fich",
+        "note": "The opening of Fichter's preface, from the hosted 1944 text.",
+        "text": "FROM one point of view, James Laynez is a rewarding subject for a curious biographer. He was a simple man in a complex age, and his very simplicity makes possible an easy access to the highly involved problems with which he was concerned. Simplicity is not shallowness. Complexity is not profundity. Only a profound man can be as simple and direct as Laynez was in pursuing the prime objectives of living. He saw clearly what Ignatius Loyola was trying to do with the small group of “reformed priests’ who later became the Society of Jesus. He was equally clear on the intentions of the so-called Tridentine Popes, Paul III, Julius III, Pius IV, in carrying on the Church Council over a period of eighteen years."
+      },
+      "contents": [
+        "I. To Paris, France",
+        "II. Footloose in Europe",
+        "III. The Start to Fame",
+        "IV. Spiritual Whirlwind",
+        "V. The Pope's Own Man",
+        "VI. In the City of Savonarola",
+        "VII. In Peace and War",
+        "VIII. At Trent Again",
+        "IX. Work and Conflict",
+        "X. The Provincial and the Duchess",
+        "XI. Threat of the Red Hat",
+        "XII. Laynez' Papal Friend",
+        "XIII. General of the Jesuits",
+        "XIV. His Brother, Christopher",
+        "XV. Trouble with Cano and the French Parlement",
+        "XVI. The Third Sojourn at Trent",
+        "XVII. The Chalice and the Episcopate",
+        "XVIII. Defender of the Papacy",
+        "XIX. The Last Year",
+        "XX. The Last Month",
+        "Appendix I. Ribadeneira's Description of Laynez",
+        "Appendix II. Laynez' Three Narrow Escapes from Drowning",
+        "Appendix III. Salmeron's Appreciation of Laynez",
+        "Appendix IV. How to Use the Voice in Public Speaking",
+        "Appendix V. Advice to a Military Leader",
+        "Appendix VI. Practical Advice for Boys in Jesuit Schools",
+        "Appendix VII. Letter to the Jesuits in India"
+      ],
       "reviewStatus": "source-checked",
       "date": "1944",
       "editions": [
@@ -6152,6 +6290,10 @@
       "category": "Biography",
       "tradition": "Catholic tradition",
       "description": "William Thomas Walsh's biography of St. Teresa of Avila.",
+      "about": [
+        "William Thomas Walsh's Saint Teresa of Avila: A Biography was first published in 1943 at Milwaukee by The Bruce Publishing Company, and printed in the United States. The copyright page of the scanned printing carries a nihil obstat and the imprimatur of the Archbishop of Milwaukee. A renewal check in November 2026 found no renewal in the Stanford Copyright Renewal Database or in NYPL's renewal data. HathiTrust records the work as public domain in the United States.",
+        "The book is a life of St. Teresa of Avila, the sixteenth-century Carmelite reformer and Doctor of the Church. In the Internet Archive scan used for the catalog (saintteresaofavi00wals), the main text runs through page 584, after which the index occupies pages 585-592. A transcription of that scan is under way, but the text is not yet hosted here, because it has not yet passed the site's read gate for a new hosted edition. Until that work is finished, the 1943 printing can be read at the source link below. Listing a scan is not the same as offering a proofread reading edition."
+      ],
       "reviewStatus": "source-checked",
       "date": "1943",
       "editions": [
@@ -6175,6 +6317,35 @@
       "category": "History",
       "tradition": "Catholic tradition",
       "description": "James J. Walsh's essays on medieval learning, books, and culture.",
+      "about": [
+        "High Points of Medieval Culture, by James J. Walsh, was first published in 1937 at Milwaukee by The Bruce Publishing Company, in the Science and Culture Series. A preface by the general editor, dated at St. Louis University on 22 October 1937, presents the volume as a gathering of Walsh's work on medieval life, education, and art, and notes that a separate volume would be required for the science of the same period, a subject set aside here for that reason. The book is public domain in the United States because its copyright was not renewed.",
+        "The contents list eighteen chapters. They begin with men of the early Middle Ages and an Irish chapter, then treat the monastic schools of Bec and Cluny, medieval cathedrals and their treasures, the universities, the college curriculum, parish and public schools, pedagogy, physical education, and rules of conduct. Later chapters turn to the education of women, women in the Middle Ages, the medieval encyclopedists, Thomas Aquinas, Dante, the first generation of printing, and St. Francis. The first chapter opens with a tribute, quoted from John Fiske's The Beginnings of New England, to Gregory, Benedict, Boniface, Alfred, and Charlemagne, whom Walsh then takes as illustrations of the early medieval contribution to culture."
+      ],
+      "excerpt": {
+        "editionId": "ia-highpointsofmedi00wals",
+        "note": "The opening of the general editor's preface to the Science and Culture Series, from the hosted 1937 text.",
+        "text": "MORE intimately than any other English-speaking author Dr. Walsh has become identified in our minds with the study and interpretation of the culture of the Middle Ages. Equally alert in his contact with the world about him, he has further understood how to make his knowledge available to the time in which he lives. His work, therefore, has exercised a predominant influence in revealing anew this period which stands unique in the history of the world.\n\nWe are all aware of the interest taken by men of learning and of science in the discoveries made in this field within our own generation; of the personal researches frequently carried out by them; and in general of the changed attitude toward everything pertaining to medieval life on the part of scholars and thinkers.\n\nThis knowledge, however, has percolated, but slowly, down to the general public and into the journalistic literature of our day."
+      },
+      "contents": [
+        "I. Men of the Early Middle Ages",
+        "II. The Irish Chapter",
+        "III. Monastic Schools, Bec",
+        "IV. Monastic Schools, Cluny",
+        "V. Medieval Cathedrals and Their Treasures",
+        "VI. The Medieval Universities",
+        "VII. The College Curriculum",
+        "VIII. Parish and Public Schools",
+        "IX. Pedagogics of the Middle Ages",
+        "X. Methods of Physical Education",
+        "XI. Rules of Conduct",
+        "XII. Advanced Feminine Education",
+        "XIII. Women in the Middle Ages",
+        "XIV. The Medieval Encyclopedists",
+        "XV. Thomas Aquinas, Greatest of Schoolmen",
+        "XVI. Dante, the Medieval University Man",
+        "XVII. The First Generation of Printing",
+        "XVIII. St. Francis, Medieval and Modern"
+      ],
       "reviewStatus": "source-checked",
       "date": "1937",
       "editions": [
@@ -6204,6 +6375,33 @@
       "category": "History",
       "tradition": "Catholic tradition",
       "description": "James J. Walsh's survey of what art, architecture, literature, science, education, and social care owe to the Catholic Church.",
+      "about": [
+        "James J. Walsh's The World's Debt to the Catholic Church was first published in September 1924 at Boston by The Stratford Company. The hosted text records a second edition in December 1924 and a third in March 1925. Walsh, whose title page lists the degrees M.D., Ph.D., and Sc.D., presents the book as a brief gathering of what civilization owes to the Church in the arts, education, science, philosophy, ethics, and the care of the poor and the life of the spirit.",
+        "The preface argues that the Church has, through the centuries, fostered the sense of beauty and the sense of duty. It names among \"the revolutionizers of science\" Roger Bacon, Copernicus, Vesalius, Galileo, Morgagni, and Mendel, \"all faithful sons of the Church, three of them indeed churchmen.\" After the preface, the book's own contents list fifteen chapters: an Introduction, then Architecture, Painting, Sculpture, Arts and Crafts, Music, Poetry, Education, Feminine Education, Science, Philosophy, Ethics, Helping the Helpless, Helping Men to Help Themselves, and The Life of the Spirit, with Notes at the end. The hosted text was rebuilt from a Project Gutenberg Australia page and compared word by word with the Internet Archive scan of the 1924 Boston printing."
+      ],
+      "excerpt": {
+        "editionId": "pga-1100451",
+        "note": "The opening of Walsh's 1924 preface, from the hosted text.",
+        "text": "For some nineteen hundred years the Church established by Christ when He said, \"Go teach all nations,\" has stood for all that is best in human life. The very fact that it has endured the cataclysmic changes from Roman Empire through Middle Ages and Renaissance down to modern times singles it out as a unique institution in the history of humanity. During all these profoundly trying vicissitudes of the race the Church has fostered the sense of beauty and the sense of duty. These are the sources of happiness for mankind more than any other factors. Architecture, painting, sculpture, music, poetry and the arts and crafts are indebted to the Church for constant inspiration, for the subjects that have touched men most deeply and for the opportunity to display art for the benefit of the mass of the people--the artist's greatest stimulus to achievement."
+      },
+      "contents": [
+        "I. Introduction",
+        "II. Architecture",
+        "III. Painting",
+        "IV. Sculpture",
+        "V. Arts and Crafts",
+        "VI. Music",
+        "VII. Poetry",
+        "VIII. Education",
+        "IX. Feminine Education",
+        "X. Science",
+        "XI. Philosophy",
+        "XII. Ethics",
+        "XIII. Helping the Helpless",
+        "XIV. Helping Men to Help Themselves",
+        "XV. The Life of the Spirit",
+        "Notes"
+      ],
       "reviewStatus": "source-checked",
       "added": "2026-11-20",
       "date": "1924",
@@ -6292,6 +6490,11 @@
       "category": "Biography",
       "tradition": "Catholic tradition",
       "description": "Raphael M. Huber's study of St. Anthony of Padua and his title Doctor of the Church.",
+      "about": [
+        "Raphael M. Huber's St. Anthony of Padua, Doctor of the Church Universal was first published in 1948 at Milwaukee by The Bruce Publishing Company, and printed in the United States. The full title of the 1948 printing, as recorded in library catalogs, continues: a critical study of the historical sources of the life, sanctity, learning, and miracles of the Saint of Padua and Lisbon. Huber (1883-1963) was a Conventual Franciscan. A renewal check in November 2026 found no renewal in the Stanford Copyright Renewal Database or in NYPL's renewal data. HathiTrust records the work as public domain in the United States.",
+        "Pope Pius XII declared St. Anthony of Padua a Doctor of the Church on 16 January 1946, in the apostolic letter Exulta, Lusitania Felix, with the title Doctor Evangelicus. Huber's book belongs to that moment. The Internet Archive catalogue for the scanned printing notes that it is based on a series of lectures delivered in 1946 at St. Bonaventure's College, Allegany, New York, and in Chicopee, Massachusetts, and Syracuse. A 1949 review in Franciscan Studies describes a volume of xiv and 209 pages, written to give English readers a coordinated study of St. Anthony's theology, which had been little treated in English when the doctorate was conferred.",
+        "The text is not yet hosted here. The 1948 printing can be read at the source link below. Listing a scan is not the same as offering a proofread reading edition."
+      ],
       "reviewStatus": "source-checked",
       "date": "1948",
       "editions": [
@@ -6343,6 +6546,29 @@
       "category": "Philosophy",
       "tradition": "Catholic tradition",
       "description": "Paul Hanly Furfey's 1944 book on Catholic social thought.",
+      "about": [
+        "The Mystery of Iniquity, by Paul Hanly Furfey, was first published in 1944 at Milwaukee by The Bruce Publishing Company. The hosted text is transcribed from the second printing (1945). The imprimatur, dated 8 January 1944, is that of Michael J. Curley, Archbishop of Baltimore and Washington, with a nihil obstat by Louis A. Arand, S.S. The book is dedicated to Margaret Hanly Furfey. It is public domain in the United States because its copyright was not renewed.",
+        "Furfey wrote in the midst of the Second World War, as he says in the preface, to review \"the Catholic position on social evil in its contemporary aspects,\" using both social science and the truths of revelation, and he warns that the subject demanded an extremely frank treatment. He quotes papal documents from official Vatican English translations when those are available, and otherwise translates them himself. New Testament quotations follow the Confraternity Version, and Old Testament quotations the Douay Version, with occasional revisions noted. The twelve chapters move from Satan and social problems through Catholic conformism and its excuses, the claim that \"Christ was no conformist,\" and then conformism in sociology, wealth, social work, labor, the home, race, and exaggerated nationalism, ending with the scriptural appeal \"Come out from among them, be separated.\""
+      ],
+      "excerpt": {
+        "editionId": "ia-mysteryofiniquit00furf",
+        "note": "The opening of Furfey's preface, from the hosted text of the 1945 second printing.",
+        "text": "TODAY, in the midst of the most terrible of wars, no thinking person can fail to reflect on the problem of evil in society. Social scientists and publicists have devoted earnest efforts to the consideration of the nature of this problem and its possible solutions. We Catholics are in a uniquely advantageous position for discussing this issue intelligently because we have at our disposal not only the data of social science but the truths of revelation as well. The present seems an appropriate time for reviewing the Catholic position on social evil in its contemporary aspects. This is my excuse for offering the present book to the public."
+      },
+      "contents": [
+        "1. Satan and Social Problems",
+        "2. Catholic Conformism",
+        "3. The Excuses of the Conformists",
+        "4. Christ Was No Conformist",
+        "5. Conformist Sociology",
+        "6. The Mammon of Wickedness",
+        "7. Conformist Social Work",
+        "8. Conformism and the Labor Problem",
+        "9. Satan Invades the Home",
+        "10. Conformism and Race",
+        "11. Exaggerated Nationalism",
+        "12. Come Out from among Them, Be Separated"
+      ],
       "reviewStatus": "source-checked",
       "date": "1944",
       "editions": [
@@ -6371,6 +6597,20 @@
       "category": "Philosophy",
       "tradition": "Catholic tradition",
       "description": "A 1933 pamphlet by Francis J. Haas on the roots of the Depression, moral values in industry, and papal teaching on labor.",
+      "about": [
+        "Rights and Wrongs in Industry is a 1933 pamphlet by Rev. Francis J. Haas, Ph.D., published in New York by The Paulist Press. It gathers three addresses delivered before regional meetings of the Catholic Conference on Industrial Problems: the first at Providence on 15 November 1932, the second at Albany on 13 December 1932, and the third at New York City on 7 February 1933. The three parts are \"Roots of the Depression,\" \"Moral Values in Industry,\" and \"Papal Teaching on Wages and Hours.\" The work is public domain in the United States because its copyright was not renewed.",
+        "An introductory note dated New York, 19 May 1933, standing with the nihil obstat of Arthur J. Scanlan, S.T.D., Censor Librorum, and the imprimatur of Patrick Cardinal Hayes, Archbishop of New York, says that the addresses take as their general topic Catholic teaching on industrial questions as found in Leo XIII's encyclical On the Condition of Labor (15 May 1891) and Pius XI's encyclical Forty Years After, Reconstructing the Social Order (15 May 1931). In the first address Haas traces the Depression to unregulated competition, speculation and credit, and unequal bargaining power between employer and worker, and he argues that both property and labor are social as well as individual. The later addresses turn to moral values in industry and to the papal teaching on wages and hours. The hosted text is a transcription of the Internet Archive scan of this Paulist Press pamphlet."
+      ],
+      "excerpt": {
+        "editionId": "ia-rightswrongsinin00haas",
+        "note": "The introductory note to the 1933 Paulist Press pamphlet, from the hosted transcription.",
+        "text": "THE following articles reproduce three addresses delivered before regional meetings of the Catholic Conference on Industrial Problems, the first at Providence on November 15, 1932, the second at Albany on December 13, 1932, and the third at New York City on February 7, 1933. They take as their general topic Catholic teaching on industrial questions as contained in the Encyclical of Pope Leo XIII, On the Condition of Labor, May 15, 1891, and the Encyclical of Pope Pius XI, Forty Years After, Reconstructing the Social Order, May 15, 1931. References in the text are to the English edition of the International Catholic Truth Society and of the National Catholic Welfare Conference, respectively. It is hoped that the present pamphlet will help, in however small a way, to stimulate greater study of these monumental documents."
+      },
+      "contents": [
+        "I. Roots of the Depression",
+        "II. Moral Values in Industry",
+        "III. Papal Teaching on Wages and Hours"
+      ],
       "reviewStatus": "source-checked",
       "date": "1933",
       "editions": [

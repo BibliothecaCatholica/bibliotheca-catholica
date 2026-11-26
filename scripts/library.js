@@ -138,7 +138,7 @@ function workAbout(w){
   var body=paras.filter(Boolean).map(function(p){return '<p>'+(w.excerpt.verse?esc(p).replace(/\n/g,'<br>\n'):esc(p.replace(/\s+/g,' ').trim()))+'</p>'}).join('');
   h+='<section class="work-excerpt"><h2>From the text</h2><blockquote'+(w.excerpt.lang?' lang="'+esc(w.excerpt.lang)+'"':'')+'>'+body+'</blockquote>'+(w.excerpt.note?'<p class="small excerpt-credit">'+esc(w.excerpt.note)+'</p>':'')+'</section>';
  }
- if(w.contents&&w.contents.length)h+='<section class="work-contents"><h2>Contents</h2><ol>'+w.contents.map(function(c){return '<li>'+esc(c)+'</li>'}).join('')+'</ol></section>';
+ if(w.contents&&w.contents.length)h+='<section class="work-contents"><h2>Contents</h2><ul>'+w.contents.map(function(c){return '<li>'+esc(c)+'</li>'}).join('')+'</ul></section>';
  return h;
 }
 function work(render,id){var w=C.works.find(function(x){return x.id===id});if(!w){render('<h1>Work not found</h1><a href="#/library">Browse the library</a>','library');return}

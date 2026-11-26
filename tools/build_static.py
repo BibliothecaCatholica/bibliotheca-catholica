@@ -596,7 +596,7 @@ def work_about_html(w):
         credit=('<p class="small excerpt-credit">'+E(ex['note'])+'</p>') if ex.get('note') else ''
         parts.append('<section class="work-excerpt"><h2>From the text</h2><blockquote'+lang+'>'+body+'</blockquote>'+credit+'</section>')
     if w.get('contents'):
-        parts.append('<section class="work-contents"><h2>Contents</h2><ol>'+''.join('<li>'+E(c)+'</li>' for c in w['contents'])+'</ol></section>')
+        parts.append('<section class="work-contents"><h2>Contents</h2><ul>'+''.join('<li>'+E(c)+'</li>' for c in w['contents'])+'</ul></section>')
     return ''.join(parts)
 
 def part_d_html(w,pd):

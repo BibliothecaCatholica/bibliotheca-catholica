@@ -91,5 +91,19 @@ class WorkAboutTests(unittest.TestCase):
                 self.assertIn("<blockquote", page, w["id"])
 
 
+    def test_contents_lists_are_not_double_numbered(self):
+        """Chapter numerals already live in the labels, so the list itself must not be an <ol>."""
+        for w in self.lib["works"]:
+            if not w.get("contents"):
+                continue
+            html = (ROOT / "work" / w["id"] / "index.html").read_text(encoding="utf-8")
+            m = __import__("re").search(r'<section class="work-contents">.*?</section>', html, __import__("re").S)
+            self.assertIsNotNone(m, w["id"])
+            block = m.group(0)
+            self.assertIn("<ul>", block, w["id"])
+            self.assertNotIn("<ol>", block, w["id"])
+
+
+
 if __name__ == "__main__":
     unittest.main()
